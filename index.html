@@ -444,8 +444,11 @@ const fileUrl = m => `https://archive.org/download/${encodeURIComponent(m.id)}/$
 
 // Build one channel's planned lineup for one 3-hour block: [{m, start, end, v0}] in epoch
 // seconds, where v0 is when the video's own clock reads 0:00. Programs play back to back and
-// the last one may run past the end of the block; it always plays in full.
+// the last one may run past the end of the block and still plays in full, up to 3 hours of
+// airtime per video. (Some uploads run 10–20+ hours; letting one overrun by more than a whole
+// block would scramble the timeline. Those air their first 3 hours, then the channel moves on.)
 // Same inputs give the same lineup on every device.
+const airtime = m => Math.min(m.dur, BLOCK);
 const schedCache = {}, effCache = {};
 function blockSchedule(ch, b) {
   const key = ch.q + "|" + b;
@@ -467,11 +470,11 @@ async function buildBlock(ch, b) {
     }
     const m = batch.shift(); scanned++;
     if (!m) continue;
-    items.push({ m, start: t, end: t + m.dur, v0: t }); t += m.dur;
+    items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m);
   }
   if (!items.length) throw new Error("no playable");
   // Ran out of candidates before the block filled: rerun what we have.
-  for (let k = 0; t < end; k++) { const m = items[k].m; items.push({ m, start: t, end: t + m.dur, v0: t }); t += m.dur; }
+  for (let k = 0; t < end; k++) { const m = items[k].m; items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m); }
   return items;
 }
 
@@ -489,7 +492,7 @@ function planBlock(ch, b) {
     const pool = raw.map(p => p.m).filter((m, i, a) => m.id !== skip && a.findIndex(x => x.id === m.id) === i);
     if (!skip || !pool.length || !raw.some(p => p.m.id === skip)) return raw;
     const start = blockStart(b), end = start + BLOCK, items = [];
-    for (let t = start, k = 0; t < end; k++) { const m = pool[k % pool.length]; items.push({ m, start: t, end: t + m.dur, v0: t }); t += m.dur; }
+    for (let t = start, k = 0; t < end; k++) { const m = pool[k % pool.length]; items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m); }
     return items;
   })().catch(e => { delete planCache[key]; throw e; });
   return planCache[key];
@@ -514,7 +517,9 @@ async function lineup(ch, t, count) {
   for (let b = b0 - 1; b <= b0 + 2 && out.length < count; b++) {
     let items;
     try { items = await effBlock(ch, b); } catch (e) { if (b < b0) continue; throw e; }
-    out.push(...items.filter(p => p.end > t));
+    // Skip anything an earlier block's show is still covering, so times always run forward.
+    const last = out.length ? out[out.length - 1].end : -Infinity;
+    out.push(...items.filter(p => p.end > t && p.start >= last - 1));
   }
   return out.slice(0, count);
 }

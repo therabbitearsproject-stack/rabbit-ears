@@ -32,6 +32,12 @@ To keep viewers in sync even as popularity shifts, the pool's order and each blo
 hashing each video's ID, so one video entering or leaving the pool doesn't reshuffle the rest.
 This changes every channel's schedule once; cached old pools are ignored (new cache key `re_pool_`).
 
+**Scheduling fix: a cap on very long videos.** Slow TV turned up uploads that run 20+ hours. One of those
+overrunning by more than a whole block scrambled the timeline (the guide showed 5:20 PM before 3:59 PM).
+Each video now gets at most 3 hours of airtime, then the channel moves on. Normal-length shows still play
+in full and can still run past the end of a block. The guide also skips anything an earlier show is still
+covering, so times always run forward.
+
 **Open:** the `SAFE` filter relies on Archive tags and titles, so something mislabeled can still slip through.
 The older channels (1–24) don't use it yet.
 
