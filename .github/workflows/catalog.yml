@@ -1,0 +1,43 @@
+# Rebuilds catalog.json (every channel's videos, pre-looked-up) so the TV guide loads instantly.
+name: Build catalog
+
+on:
+  schedule:
+    - cron: "17 9 * * *"   # daily, 09:17 UTC
+  workflow_dispatch:         # "Run workflow" button
+  push:
+    branches: [main]
+    paths: [index.html, scripts/build-catalog.mjs]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: catalog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build catalog.json
+        run: node scripts/build-catalog.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "Rabbit Ears"
+          git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
+          git add catalog.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update catalog"
+          git pull --rebase -q
+          git push
+      - name: Republish the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

@@ -384,22 +384,40 @@ const fmt = s => { s = Math.max(0, Math.floor(s)); const h = Math.floor(s / 3600
 
 // ---------- Internet Archive ----------
 const listCache = {}, metaCache = {};
-// A channel's pool is the 1,000 most-watched videos matching its search (not the first 1,000
+// catalog.json, rebuilt daily by .github/workflows/catalog.yml, already has every built-in
+// channel's playable videos with their file, length, title and year. With it the whole guide is
+// worked out in the browser with no Archive lookups. Custom channels, and any channel missing
+// from the catalog, fall back to live lookups.
+let catalog = null;
+async function loadCatalog(ms) {
+  try {
+    const r = await Promise.race([fetch("catalog.json"), new Promise((_, no) => setTimeout(no, ms))]);
+    if (r.ok) catalog = await r.json();
+  } catch {}
+}
+const poolOrder = (q, ids) => {
+  const rank = Object.fromEntries(ids.map(id => [id, hash(q + "|" + id)]));
+  return ids.sort((a, b) => rank[a] - rank[b] || (a < b ? -1 : 1));
+};
+// A channel's pool is the 300 most-watched videos matching its search (not the first matches
 // alphabetically, which on big searches is mostly filler). The pool is put in a fixed order by
 // hashing each id, so when popularity shifts and a video enters or leaves the pool, everything
 // else keeps its place and viewers on different days still see the same schedule.
 async function getList(ch) {
+  if (listCache[ch.q]) return listCache[ch.q];
+  const rows = catalog?.pools?.[ch.q];
+  if (rows?.length) {
+    const ids = rows.map(([id, file, dur, title, year]) => { if (!(id in metaCache)) metaCache[id] = { id, file, dur, title, year }; return id; });
+    return (listCache[ch.q] = poolOrder(ch.q, ids));
+  }
   const key = "re_pool_" + hash(ch.q);
   const cached = store.get(key, null);
   if (cached && Date.now() - cached.t < 864e5) return cached.ids;
-  if (listCache[ch.q]) return listCache[ch.q];
   const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${ch.q}) AND mediatype:movies`) +
-              "&fl[]=identifier&rows=1000&sort[]=downloads+desc&output=json";
+              "&fl[]=identifier&rows=300&sort[]=downloads+desc&output=json";
   const res = await fetch(url);
   const data = await res.json();
-  const ids = data.response.docs.map(d => d.identifier);
-  const rank = Object.fromEntries(ids.map(id => [id, hash(ch.q + "|" + id)]));
-  ids.sort((a, b) => rank[a] - rank[b] || (a < b ? -1 : 1));
+  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier));
   listCache[ch.q] = ids;
   store.set(key, { t: Date.now(), ids });
   return ids;
@@ -582,7 +600,8 @@ function renderGuide() {
     b.append(n, t, ...cells);
     b.onclick = () => { tune(i); $("screen").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
     $("chans").append(b);
-    return { ch: c, cells, el: b, seen: i === cur, painted: 0 };
+    // With the catalog every row is instant, so fill them all; without it, only rows on screen.
+    return { ch: c, cells, el: b, seen: i === cur || !!catalog?.pools?.[c.q], painted: 0 };
   });
   // Only look up listings for rows someone can see.
   rowObserver?.disconnect();
@@ -923,9 +942,13 @@ document.addEventListener("keydown", e => {
 });
 
 $("clock").textContent = clockFmt(nowSec());
-renderGuide();
-setMode(location.hash.slice(1));
-if (mode === "tv") tune(cur);
+// Wait briefly for the catalog (normally well under a second) so the first guide and the first
+// tune both come from it; if it's slow or missing, start anyway with live lookups.
+loadCatalog(4000).then(() => {
+  renderGuide();
+  setMode(location.hash.slice(1));
+  if (mode === "tv") tune(cur);
+});
 </script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
