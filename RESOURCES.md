@@ -53,4 +53,4 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 | Resource | Status |
 |---|---|
 | Original claude.ai artifact | Shows static (its sandbox blocks archive.org). Don't share: it carries the old byline. |
-| Old GitHub Pages copy under the personal account | Still up; to be turned off or deleted |
+| Old GitHub Pages copy under the personal account | Website turned off (404). The repo is still public with the earlier history; make it private or delete it to hide that too |

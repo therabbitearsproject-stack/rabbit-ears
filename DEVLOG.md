@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-05 — Old copy offline, project folder
+
+- Turned off GitHub Pages on the old copy under the personal account; its address now returns 404.
+  The old repo itself still exists (public) with its earlier history.
+- Local project folder `Project_Rabbit_Ears` is now the working copy of this repo, with its git identity set to
+  "Rabbit Ears" and the GitHub noreply address so new commits stay anonymous.
+
+---
+
 ## 2026-11-05 — Viewer counts, anonymous home, project docs
 
 **Moved to an anonymous home.**
