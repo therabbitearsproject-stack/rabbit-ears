@@ -315,8 +315,11 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script>
 // ---------- Channels ----------
+// Added to newer channels' searches so they stay safe to leave on: no adult content, no audio
+// podcasts, no TV-news recordings.
+const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
-  { name: "Ephemera",           desc: "Industrial and educational films",  q: "collection:prelinger" },
+  { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },
   { name: "Creature Feature",   desc: "Sci-fi and horror B movies",        q: "collection:SciFi_Horror" },
@@ -341,6 +344,16 @@ const BUILT_IN = [
   // The Archive has no Gilmore Girls episodes, so this is a hand-picked list of the real clips, promos and the Season 2 premiere tape.
   { name: "Gilmore Girls",      desc: "Promos, clips and a Season 2 tape", q: "identifier:(turner_video_136082 OR cameo-by-scottpatterson-via-cameo OR NJY-011_422161-422459 OR NJY-011_710526-711428 OR NJY-011_740665-740962 OR studio-project-26_202304 OR spautx-Gilmore_Girls_Cast_Interviews_-_ATX_2015_Reunion OR bliptv-20131013-214814-AnyoneButMe-LizaWeilGilmoreGirlsBadGirlWantsHerABM920 OR MelissaMccarthyGilmoreGirls_20250425_1 OR NJY-011_393234-394135 OR dvd-d-vlc-media-player-2023-06-15-20-25-37 OR 20251208-083214 OR 20251122-201151 OR 20251208-083325 OR turner_video_136084 OR NJY-011_101520-101814 OR gilmore-girls-lost-episode-ending-15-vhs-edition OR NJY-011_72674-73582 OR turner_video_136081 OR wb-s-2-gilmore-girls-angel-and-abc-thieves OR turner_video_136083 OR youtube-z7S08wuL5Sg)" },
   { name: "Christmas Movies",   desc: "Holiday films and TV specials",     q: '(((subject:christmas OR title:christmas) AND (collection:feature_films OR collection:classic_tv OR collection:classic_cartoons)) OR subject:"christmas movie" OR subject:"christmas movies" OR subject:"christmas film") AND NOT title:(podcast OR "stock footage" OR "new movies to watch")' },
+  { name: "Video Jukebox",      desc: "MTV-era music video shows",         q: `(title:("music videos" OR "video hits" OR "120 minutes" OR "headbangers ball" OR "yo! mtv raps" OR "friday night videos" OR "night tracks" OR "video jukebox" OR "mtv hits" OR "video countdown" OR "top 20 countdown" OR "pop-up video" OR "pop up video" OR "total request live" OR muchmusic OR "video soul") AND date:[1975-01-01 TO 2008-12-31] AND NOT title:(amv OR "music videos of 2"))` + SAFE },
+  { name: "Kung Fu Theater",    desc: "Martial arts movies",               q: `(subject:("kung fu" OR "shaw brothers" OR "bruce lee" OR "martial arts film" OR "martial arts movie" OR "kung fu theater") AND NOT title:(hypnotic OR countrockula* OR longplay OR gamevideoarchive OR championship OR commercials OR "god hand"))` + SAFE },
+  { name: "Frontier",           desc: "Westerns, on film and TV",          q: `(subject:(western OR westerns) AND (collection:feature_films OR collection:classic_tv OR collection:moviesandfilms))` + SAFE },
+  { name: "Big Prize",          desc: "Classic game shows",                q: `(title:("price is right" OR "family feud" OR "match game" OR "wheel of fortune" OR "$10,000 pyramid" OR "$25,000 pyramid" OR "$100,000 pyramid" OR "what's my line" OR "to tell the truth" OR "name that tune" OR "card sharks" OR "press your luck" OR "newlywed game" OR "dating game" OR "hollywood squares" OR "let's make a deal" OR "joker's wild" OR "tic tac dough" OR "supermarket sweep" OR "double dare") AND NOT title:(nazi OR camp OR camps))` + SAFE },
+  { name: "Arcade",             desc: "Retro game playthroughs and ads",   q: `(((subject:longplay AND title:(NES OR SNES OR "super nintendo" OR genesis OR "mega drive" OR N64 OR "nintendo 64" OR "game boy" OR atari OR "master system" OR playstation OR arcade OR turbografx OR "neo geo")) OR subject:("video game commercial" OR "video game commercials" OR "nintendo commercial")) AND NOT subject:(eroge OR "visual novel") AND NOT title:(hentai OR succubus OR babes OR eroge OR "pc-88" OR "pc-98"))` + SAFE },
+  { name: "Strange Signals",    desc: "UFOs, ghosts and Bigfoot",          q: `(subject:(ufo OR ufos OR paranormal OR bigfoot OR sasquatch OR "unsolved mysteries" OR "in search of" OR haunted))` + SAFE },
+  { name: "Slow TV",            desc: "Fireplaces, train rides, aquariums", q: `(title:(fireplace OR "yule log" OR aquarium OR "fish tank" OR "cab ride" OR "train ride" OR "slow tv" OR "drivers eye" OR "driver's eye") AND NOT title:(asmr OR slime))` + SAFE },
+  { name: "Sweatin'",           desc: "'80s and '90s workout tapes",       q: `(title:(jazzercise OR "richard simmons" OR "jane fonda" OR "denise austin" OR "tae bo" OR "buns of steel" OR sweatin OR "kathy smith" OR aerobics OR "body electric" OR gilad))` + SAFE },
+  { name: "'90s Kids",          desc: "Nickelodeon, Fox Kids and more",    q: `(subject:(nickelodeon OR "fox kids" OR "disney afternoon" OR snick OR "toon disney") AND date:[1988-01-01 TO 2003-12-31])` + SAFE },
+  { name: "TV Dinner",          desc: "Classic cooking shows",             q: `(title:("julia child" OR "french chef" OR "galloping gourmet" OR "graham kerr" OR "yan can cook" OR "frugal gourmet" OR "great chefs" OR "justin wilson" OR "cooking show"))` + SAFE },
 ];
 // The schedule is built in 3-hour blocks. Each block starts at a seeded spot in the
 // channel's shuffled list and plays programs back to back, skipping any program that
@@ -371,21 +384,32 @@ const fmt = s => { s = Math.max(0, Math.floor(s)); const h = Math.floor(s / 3600
 
 // ---------- Internet Archive ----------
 const listCache = {}, metaCache = {};
+// A channel's pool is the 1,000 most-watched videos matching its search (not the first 1,000
+// alphabetically, which on big searches is mostly filler). The pool is put in a fixed order by
+// hashing each id, so when popularity shifts and a video enters or leaves the pool, everything
+// else keeps its place and viewers on different days still see the same schedule.
 async function getList(ch) {
-  const key = "re_list_" + hash(ch.q);
+  const key = "re_pool_" + hash(ch.q);
   const cached = store.get(key, null);
   if (cached && Date.now() - cached.t < 864e5) return cached.ids;
   if (listCache[ch.q]) return listCache[ch.q];
   const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${ch.q}) AND mediatype:movies`) +
-              "&fl[]=identifier&rows=1000&sort[]=identifier+asc&output=json";
+              "&fl[]=identifier&rows=1000&sort[]=downloads+desc&output=json";
   const res = await fetch(url);
   const data = await res.json();
-  const ids = data.response.docs.map(d => d.identifier).sort();
-  const r = rng(hash(ch.q));
-  for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
+  const ids = data.response.docs.map(d => d.identifier);
+  const rank = Object.fromEntries(ids.map(id => [id, hash(ch.q + "|" + id)]));
+  ids.sort((a, b) => rank[a] - rank[b] || (a < b ? -1 : 1));
   listCache[ch.q] = ids;
   store.set(key, { t: Date.now(), ids });
   return ids;
+}
+// Where a block starts in the pool: the video whose hash for that block is lowest. Adding or
+// removing other videos doesn't move it.
+function blockFirst(ids, b) {
+  let best = 0, low = Infinity;
+  ids.forEach((id, i) => { const h = hash(id + ":" + b); if (h < low) { low = h; best = i; } });
+  return best;
 }
 // The Archive slows to a crawl when hit with many requests at once, so at most 6 run at a time.
 let active = 0; const waiting = [];
@@ -431,7 +455,7 @@ function blockSchedule(ch, b) {
 async function buildBlock(ch, b) {
   const ids = await getList(ch);
   if (!ids.length) throw new Error("empty");
-  const start = blockStart(b), end = start + BLOCK, first = hash(ch.q + ":" + b) % ids.length;
+  const start = blockStart(b), end = start + BLOCK, first = blockFirst(ids, b);
   const MAX_SCAN = Math.min(ids.length, 40), BATCH = 12;
   const items = [];
   let t = start, scanned = 0, batch = [];

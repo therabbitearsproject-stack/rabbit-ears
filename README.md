@@ -1,6 +1,6 @@
 # Rabbit Ears
 
-Forgotten Internet Archive video on 24 synchronized channels, plus live radio from around the world.
+Forgotten Internet Archive video on synchronized channels, plus live radio from around the world.
 
 **Live:** https://therabbitearsproject-stack.github.io/rabbit-ears/ · Radio: [`#radio`](https://therabbitearsproject-stack.github.io/rabbit-ears/#radio)
 

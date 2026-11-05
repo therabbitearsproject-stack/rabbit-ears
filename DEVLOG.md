@@ -4,6 +4,39 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-05 — 10 new channels, better picks on every channel
+
+**New channels (25–34)**, chosen to fill gaps and give new visitors something familiar to land on:
+
+| # | Channel | What's on |
+|---|---|---|
+| 25 | Video Jukebox | MTV-era music video shows: 120 Minutes, Headbangers Ball, countdowns, Pop-Up Video |
+| 26 | Kung Fu Theater | Martial arts movies: Shaw Brothers, Bruce Lee, ninja films |
+| 27 | Frontier | Westerns from the feature film and classic TV collections |
+| 28 | Big Prize | Classic game shows: What's My Line, Card Sharks, Press Your Luck, Double Dare, Supermarket Sweep |
+| 29 | Arcade | Console and arcade game playthroughs, plus old video game ads |
+| 30 | Strange Signals | UFOs, ghosts, Bigfoot, haunted-house movies |
+| 31 | Slow TV | Fireplaces, train rides, aquariums: put-it-on-in-the-background TV |
+| 32 | Sweatin' | '80s and '90s workout tapes: Richard Simmons, Jane Fonda, Tae Bo |
+| 33 | '90s Kids | Nickelodeon, Fox Kids and friends, 1988–2003 |
+| 34 | TV Dinner | Classic cooking shows: Julia Child, Yan Can Cook, the Frugal Gourmet |
+
+- First drafts of several searches pulled in junk: adult content (workout, game show, gaming and music
+  searches), Nazi concentration-camp films ("Concentration"), conspiracy videos (cooking), horror hosts
+  (kung fu), Jackass (music videos). Each search was tightened, and the new channels share a `SAFE`
+  filter that excludes adult content, audio podcasts and TV-news recordings.
+
+**Every channel now draws from its most-watched videos.** Pools used to be the first 1,000 matches sorted by
+Archive ID, which on big searches meant mostly filler. Now each pool is the 1,000 most-downloaded matches.
+To keep viewers in sync even as popularity shifts, the pool's order and each block's starting video come from
+hashing each video's ID, so one video entering or leaving the pool doesn't reshuffle the rest.
+This changes every channel's schedule once; cached old pools are ignored (new cache key `re_pool_`).
+
+**Open:** the `SAFE` filter relies on Archive tags and titles, so something mislabeled can still slip through.
+The older channels (1–24) don't use it yet.
+
+---
+
 ## 2026-11-05 — Link preview image
 
 - Shared links showed no picture: the page had no preview (Open Graph) tags.
