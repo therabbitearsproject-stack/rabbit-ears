@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rabbit Ears share card</title>
+<!-- Source for og.jpg, the image shown when the site's link is shared. Open at 1200×630 and capture. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: radial-gradient(120% 90% at 30% 0%, #2c1f14 0%, #120e0b 65%);
+    color: #efe6d6; font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    display: grid; grid-template-columns: 560px 1fr; align-items: center; gap: 56px; padding: 0 70px; box-sizing: border-box;
+  }
+  .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 36px; padding: 30px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 40px 70px -30px #000; position: relative; }
+  .ears { position: absolute; left: 50%; top: -118px; width: 0; height: 0; }
+  .ears i { position: absolute; bottom: 0; width: 6px; height: 150px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
+  .ears i:first-child { transform: rotate(-28deg); } .ears i:last-child { transform: rotate(28deg); }
+  .ears b { position: absolute; left: -26px; bottom: -14px; width: 58px; height: 26px; background: #1d1712; border-radius: 30px 30px 6px 6px; }
+  .screen { aspect-ratio: 4/3; border-radius: 7% / 9%; overflow: hidden; position: relative; box-shadow: inset 0 0 50px #000, 0 0 0 8px #0b0806;
+    background: repeating-linear-gradient(90deg, #f4f4f4 0 12.5%, #f2e64b 12.5% 25%, #5fe3e8 25% 37.5%, #5ee86a 37.5% 50%, #e85ee0 50% 62.5%, #e8504c 62.5% 75%, #4c5ee8 75% 87.5%, #161616 87.5% 100%); }
+  .screen::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(90deg, #1a2d6b 0 20%, #f4f4f4 20% 40%, #3a0b5c 40% 60%, #161616 60% 100%); }
+  .screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 5px), radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.6)); }
+  .osd { position: absolute; top: 6%; right: 7%; z-index: 2; font-family: "VT323", monospace; font-size: 64px; color: #8dffb4; text-shadow: 0 0 10px rgba(141,255,180,.8), 0 2px 0 #000; }
+  h1 { margin: 0; font-weight: 800; font-size: 104px; letter-spacing: -0.04em; line-height: .95; }
+  h1 span { color: #ffb648; }
+  .lede { margin: 22px 0 30px; font-size: 34px; line-height: 1.25; color: #d9cdb8; font-weight: 600; max-width: 18ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 12px; font-family: "VT323", monospace; font-size: 34px; }
+  .tags span { border: 2px solid #3a2c20; background: #1d1712; padding: 4px 16px; border-radius: 12px; color: #8dffb4; }
+  .tags span.a { color: #ffb648; }
+</style>
+</head>
+<body>
+  <div class="cabinet">
+    <div class="ears"><i></i><i></i><b></b></div>
+    <div class="screen"><div class="osd">CH 01</div></div>
+  </div>
+  <div>
+    <h1>Rabbit<span>·</span>Ears</h1>
+    <p class="lede">Forgotten TV on 24 channels, plus live radio from around the world.</p>
+    <div class="tags"><span>📺 24/7 TV GUIDE</span><span class="a">📻 LIVE RADIO</span><span>👁 WATCH TOGETHER</span></div>
+  </div>
+</body>
+</html>
