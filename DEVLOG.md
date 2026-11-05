@@ -4,6 +4,17 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-05 — Link preview image
+
+- Shared links showed no picture: the page had no preview (Open Graph) tags.
+- Added `og:` and `twitter:` tags with title, description and image.
+- Preview image `og.jpg` (800×420) is a capture of `share-card.html`: a retro TV with color bars, the Rabbit·Ears name,
+  and "Forgotten TV around the clock, plus live radio from around the world." (No channel count, by request.)
+- To change it: edit `share-card.html`, open it at 1200×630, capture it, and replace `og.jpg`.
+- Apps cache previews: a link already shared somewhere may keep showing the old (blank) preview for a while.
+
+---
+
 ## 2026-11-05 — Old copy offline, project folder
 
 - Turned off GitHub Pages on the old copy under the personal account; its address now returns 404.

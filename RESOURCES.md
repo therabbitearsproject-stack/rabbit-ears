@@ -33,6 +33,15 @@ Everything the project uses, what it's for, and what it costs.
 
 No build step, no frameworks, no other packages: the whole site is one HTML file.
 
+## Project files
+
+| File | What it is |
+|---|---|
+| `index.html` | The whole site |
+| `og.jpg` | Link preview image shown when the link is shared |
+| `share-card.html` | Source design for `og.jpg` (open at 1200×630 and capture) |
+| `README.md`, `DEVLOG.md`, `RESOURCES.md` | Project docs |
+
 ## Data the site stores
 
 | Where | What | Who can see it |
