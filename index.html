@@ -115,6 +115,8 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .chan:hover { border-color: var(--amber); }
 .chan .n { font-family: var(--osd); font-size: 1.6rem; color: var(--phosphor); }
 .chan .t { font-weight: 600; min-width: 0; }
+.vw { display: block; color: var(--phosphor); font-size: .78rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.vw:empty { display: none; }
 .chan .d { display: block; color: var(--dim); font-size: .8rem; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .chan.on { border-color: var(--phosphor); box-shadow: 0 0 0 1px var(--phosphor) inset; }
 .prog { min-width: 0; display: grid; gap: 2px; font-size: .88rem; }
@@ -211,6 +213,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
         <span class="vfd-k" id="rStatus">Pick a station</span>
         <b id="rName">— — —</b>
         <span class="vfd-sub" id="rSub"></span>
+        <span class="vfd-sub vw" id="rListeners"></span>
       </div>
       <div class="remote">
         <button class="btn ch" id="rPrev" type="button" aria-label="Previous station">◀◀</button>
@@ -261,6 +264,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <h2 id="title">Warming up the tubes…</h2>
     <span class="meta" id="meta"></span>
     <span class="meta" id="upnext"></span>
+    <span class="meta vw" id="viewers"></span>
     <a id="link" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
   </section>
 
@@ -591,6 +595,7 @@ async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_ch", cur);
   const ch = list[cur], my = ++tuneId;
+  if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   clearTimeout(waitTimer);
   markOn();
   snow.style.opacity = "1";
@@ -688,7 +693,7 @@ function renderStations() {
   }
   stations.forEach((s, i) => {
     const b = document.createElement("button");
-    b.type = "button"; b.className = "station" + (audio.dataset.id === s.stationuuid ? " on" : "");
+    b.type = "button"; b.className = "station" + (audio.dataset.id === s.stationuuid ? " on" : ""); b.dataset.id = s.stationuuid;
     let icon;
     if (s.favicon?.startsWith("https://")) {
       icon = Object.assign(document.createElement("img"), { src: s.favicon, alt: "", loading: "lazy", referrerPolicy: "no-referrer" });
@@ -696,7 +701,8 @@ function renderStations() {
     } else icon = Object.assign(document.createElement("span"), { className: "ph", textContent: "📻" });
     const tx = Object.assign(document.createElement("span"), { className: "tx" });
     tx.append(Object.assign(document.createElement("span"), { className: "nm", textContent: s.name }),
-              Object.assign(document.createElement("span"), { className: "tg", textContent: stationLine(s) }));
+              Object.assign(document.createElement("span"), { className: "tg", textContent: stationLine(s) }),
+              Object.assign(document.createElement("span"), { className: "vw" }));
     const fav = Object.assign(document.createElement("span"), { className: "fav" + (isFav(s) ? " on" : ""), textContent: isFav(s) ? "★" : "☆", role: "button" });
     fav.setAttribute("aria-label", (isFav(s) ? "Remove " : "Save ") + s.name + (isFav(s) ? " from" : " to") + " favorites");
     fav.onclick = e => { e.stopPropagation(); toggleFav(s); };
@@ -814,8 +820,41 @@ function setMode(m) {
   $("tagline").textContent = TAGLINES[mode];
   if (mode === "radio") { tvOn = false; vid.pause(); initRadio(); }
   else { audio.pause(); if (!tvOn) { tvOn = true; tune(cur); } }
+  roomChanged(); paintCounts();
 }
 window.addEventListener("hashchange", () => setMode(location.hash.slice(1)));
+
+// ---------- Viewer counts ----------
+// The Firebase module below reports which room this page is in ("tv-…" for a channel,
+// "radio-…" for a playing station) and hands back live counts for every room.
+let counts = {};
+const tvRoom = ch => "tv-" + hash(ch.q).toString(36);
+function currentRoom() {
+  if (mode === "tv") { const ch = channels()[cur]; return ch ? tvRoom(ch) : null; }
+  return audio.dataset.id && !audio.paused ? "radio-" + audio.dataset.id.toLowerCase() : null;
+}
+function roomChanged() { try { window.reSetRoom?.(currentRoom()); } catch {} }
+const people = (n, verb) => n === 1 ? `1 ${verb}` : `${n} ${verb}`;
+function paintCounts() {
+  rows.forEach(r => {
+    let v = r.el.querySelector(".vw");
+    const n = counts[tvRoom(r.ch)] || 0;
+    if (!v) { v = Object.assign(document.createElement("span"), { className: "vw" }); r.el.querySelector(".t").append(v); }
+    v.textContent = n ? "👁 " + n + " watching" : "";
+  });
+  const here = counts[currentRoom()] || 0;
+  $("viewers").textContent = mode === "tv" && here ? (here === 1 ? "👁 Just you watching right now" : `👁 ${here} people watching right now`) : "";
+  document.querySelectorAll(".station[data-id]").forEach(b => {
+    const n = counts["radio-" + b.dataset.id.toLowerCase()] || 0;
+    b.querySelector(".vw").textContent = n ? "🎧 " + people(n, "listening") : "";
+  });
+  const rn = audio.dataset.id && !audio.paused ? counts["radio-" + audio.dataset.id.toLowerCase()] || 0 : 0;
+  $("rListeners").textContent = rn ? (rn === 1 ? "🎧 Just you listening" : `🎧 ${rn} people listening`) : "";
+}
+window.reCounts = c => { counts = c || {}; paintCounts(); };
+window.reCurrentRoom = currentRoom;
+audio.addEventListener("playing", roomChanged);
+audio.addEventListener("pause", roomChanged);
 
 // ---------- Suggestions (posted as GitHub issues on the project) ----------
 const REPO = "https://github.com/therabbitearsproject-stack/rabbit-ears";
@@ -843,6 +882,34 @@ $("clock").textContent = clockFmt(nowSec());
 renderGuide();
 setMode(location.hash.slice(1));
 if (mode === "tv") tune(cur);
+</script>
+<script type="module">
+// Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
+// presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
+// is stored: no names, accounts or locations. If this fails to load, the site works without counts.
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, set, remove, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+const db = getDatabase(initializeApp({ databaseURL: "https://project-rabbitears-default-rtdb.firebaseio.com" }));
+const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const sid = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => abc[b % abc.length]).join("");
+let mine = null, room = null;
+window.reSetRoom = next => {
+  if (next === room) return;
+  if (mine) { onDisconnect(mine).cancel(); remove(mine); }
+  room = next; mine = null;
+  if (!room) return;
+  mine = ref(db, `presence/${room}/${sid}`);
+  onDisconnect(mine).remove();
+  set(mine, true);
+};
+onValue(ref(db, "presence"), snap => {
+  const counts = {};
+  snap.forEach(c => { counts[c.key] = c.size; });
+  window.reCounts?.(counts);
+});
+// Re-join after a dropped connection (Firebase clears our marker when it disconnects).
+onValue(ref(db, ".info/connected"), s => { if (s.val() && room) { const r = room; room = null; window.reSetRoom(r); } });
+window.reSetRoom(window.reCurrentRoom?.() ?? null);
 </script>
 </body>
 </html>
