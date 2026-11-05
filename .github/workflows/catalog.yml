@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # latest main, so a queued run reuses the catalog an earlier run just saved
       - uses: actions/setup-node@v4
         with:
           node-version: 20

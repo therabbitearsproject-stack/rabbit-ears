@@ -199,6 +199,9 @@ form.suggest select, form.suggest textarea { min-width: 0; background: var(--bg)
 form.suggest textarea { resize: vertical; min-height: 46px; }
 select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 .hint a { color: var(--amber); }
+.foot { border-top: 1px solid var(--line); padding-top: 16px; text-align: center; color: var(--dim); font-size: .9rem; }
+.foot #total { font-family: var(--osd); font-size: 1.35rem; color: var(--phosphor); letter-spacing: .03em; font-variant-numeric: tabular-nums; }
+.foot #total:empty { display: none; }
 @media (max-width: 640px) { form.suggest { grid-template-columns: 1fr; } }
 .hint { color: var(--dim); font-size: .85rem; margin: 0; max-width: 65ch; }
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
@@ -311,6 +314,8 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p class="hint" id="sugDone" hidden>Thanks! Finish posting it in the GitHub tab that just opened.</p>
     <p class="hint">Suggestions are posted publicly on GitHub, which needs a free account. <a href="https://github.com/therabbitearsproject-stack/rabbit-ears/issues" target="_blank" rel="noopener">See what others have suggested</a>.</p>
   </section>
+
+  <footer class="foot" aria-live="polite"><span id="total"></span></footer>
 </div>
 
 <script>
@@ -955,7 +960,7 @@ loadCatalog(4000).then(() => {
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
 // is stored: no names, accounts or locations. If this fails to load, the site works without counts.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, set, remove, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, ref, set, remove, onDisconnect, onValue, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 const db = getDatabase(initializeApp({ databaseURL: "https://project-rabbitears-default-rtdb.firebaseio.com" }));
 const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const sid = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => abc[b % abc.length]).join("");
@@ -977,6 +982,19 @@ onValue(ref(db, "presence"), snap => {
 // Re-join after a dropped connection (Firebase clears our marker when it disconnects).
 onValue(ref(db, ".info/connected"), s => { if (s.val() && room) { const r = room; room = null; window.reSetRoom(r); } });
 window.reSetRoom(window.reCurrentRoom?.() ?? null);
+
+// All-time visits: each browser adds 1 at most once a day. The database only accepts +1 steps.
+const visits = ref(db, "stats/visits");
+const today = new Date().toISOString().slice(0, 10);
+let lastCounted = null;
+try { lastCounted = localStorage.getItem("re_counted"); } catch {}
+if (lastCounted !== today) {
+  set(visits, increment(1)).then(() => { try { localStorage.setItem("re_counted", today); } catch {} }).catch(() => {});
+}
+onValue(visits, s => {
+  const n = s.val();
+  document.getElementById("total").textContent = n ? `📈 ${n.toLocaleString()} ${n === 1 ? "visit" : "visits"} since launch` : "";
+});
 </script>
 </body>
 </html>

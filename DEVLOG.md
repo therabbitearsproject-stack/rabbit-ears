@@ -4,6 +4,37 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-05 — All-time visit count
+
+- Bottom of the page: "📈 N visits since launch", live.
+- Stored in Firebase at `stats/visits`. Each browser adds 1 at most once per day (remembered in localStorage as
+  `re_counted`), so it counts daily visitors, not page reloads.
+- Rules only allow raising it by exactly 1 (or starting it at 1); setting any other number, text or deleting it is
+  refused. Tested from outside with curl: all refused (401). Nothing personal is stored.
+- Caveat: someone could still add 1 repeatedly with a script; fine for a feedback-stage counter.
+
+---
+
+## 2026-11-05 — Instant guide (pre-built catalog)
+
+**Problem:** the guide took many seconds to fill because every visitor's browser looked up hundreds of videos,
+one by one, at the Internet Archive before it could show anything.
+
+**Fix:** do the lookups ahead of time, once, for everyone.
+- `scripts/build-catalog.mjs` reads the channel list straight from `index.html`, takes each channel's 300
+  most-downloaded matches, looks up each video's file, length, title and year, and writes `catalog.json`.
+  Videos already in the previous catalog are reused, so after the first run only newly popular videos are looked up.
+- `.github/workflows/catalog.yml` runs it daily at 09:17 UTC, whenever `index.html` or the script changes,
+  and on demand ("Run workflow" in the repo's Actions tab). It commits the new `catalog.json` and republishes the site.
+- The page loads `catalog.json` first (waits at most 4 s), then draws the whole guide and tunes in with no Archive
+  lookups. Only the video itself streams from the Archive.
+- Custom channels, and any channel missing from the catalog, still use live lookups.
+- Pools are now 300 videos per channel (was 1,000) in both the catalog and the live fallback.
+
+**Note:** when the catalog is rebuilt each morning, a channel's lineup can shift slightly if popular videos changed.
+
+---
+
 ## 2026-11-05 — 10 new channels, better picks on every channel
 
 **New channels (25–34)**, chosen to fill gaps and give new visitors something familiar to land on:
