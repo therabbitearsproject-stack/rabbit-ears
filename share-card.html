@@ -10,11 +10,12 @@
   body {
     background: radial-gradient(120% 90% at 30% 0%, #2c1f14 0%, #120e0b 65%);
     color: #efe6d6; font-family: "Bricolage Grotesque", system-ui, sans-serif;
-    display: grid; grid-template-columns: 560px 1fr; align-items: center; gap: 56px; padding: 0 70px; box-sizing: border-box;
+    display: grid; grid-template-columns: 470px 1fr; align-items: center; gap: 60px; padding: 0 70px; box-sizing: border-box;
   }
+  .set { padding-top: 120px; }
   .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 36px; padding: 30px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 40px 70px -30px #000; position: relative; }
-  .ears { position: absolute; left: 50%; top: -118px; width: 0; height: 0; }
-  .ears i { position: absolute; bottom: 0; width: 6px; height: 150px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
+  .ears { position: absolute; left: 50%; top: 0; width: 0; height: 0; }
+  .ears i { position: absolute; bottom: 0; left: -3px; width: 6px; height: 130px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
   .ears i:first-child { transform: rotate(-28deg); } .ears i:last-child { transform: rotate(28deg); }
   .ears b { position: absolute; left: -26px; bottom: -14px; width: 58px; height: 26px; background: #1d1712; border-radius: 30px 30px 6px 6px; }
   .screen { aspect-ratio: 4/3; border-radius: 7% / 9%; overflow: hidden; position: relative; box-shadow: inset 0 0 50px #000, 0 0 0 8px #0b0806;
@@ -31,10 +32,10 @@
 </style>
 </head>
 <body>
-  <div class="cabinet">
+  <div class="set"><div class="cabinet">
     <div class="ears"><i></i><i></i><b></b></div>
     <div class="screen"><div class="osd">CH 01</div></div>
-  </div>
+  </div></div>
   <div>
     <h1>Rabbit<span>·</span>Ears</h1>
     <p class="lede">Forgotten TV on 24 channels, plus live radio from around the world.</p>
