@@ -12,7 +12,7 @@
 <meta property="og:title" content="Rabbit Ears TV">
 <meta property="og:description" content="Forgotten TV around the clock, plus live radio from around the world. Flip channels, check the guide, see who's watching.">
 <meta property="og:url" content="https://therabbitearsproject-stack.github.io/rabbit-ears/">
-<meta property="og:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=2">
+<meta property="og:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rabbit Ears TV">
 <meta name="twitter:description" content="Forgotten TV around the clock, plus live radio from around the world.">
-<meta name="twitter:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=2">
+<meta name="twitter:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
@@ -486,25 +486,39 @@ const BUILT_IN = [
   { name: "Chiller Hosts",      desc: "Elvira, Joe Bob, MonsterVision",     q: `(subject:("horror host" OR "horror hosts" OR elvira OR svengoolie OR "joe bob briggs" OR monstervision OR "chiller theatre" OR "creature double feature" OR "shock theater") OR title:(elvira OR svengoolie OR "joe bob" OR "monster vision" OR monstervision OR "creature double feature" OR "chiller theatre")) AND NOT title:(minx OR search OR "up all night")` + SAFE },
   { name: "Duck & Cover",       desc: "Cold War and civil defense films",  q: `(subject:("civil defense" OR "atomic bomb" OR "nuclear war" OR "cold war" OR "fallout shelter" OR "duck and cover") AND collection:(prelinger OR ephemera OR educationalfilms OR feature_films OR nasa OR FedFlix OR usgovernmentfilms))` + SAFE },
   { name: "Home Movies",        desc: "Amateur films, trips and travelogues", q: `(collection:(home_movies OR homemovies) OR subject:("home movies" OR "home movie" OR travelogue OR "amateur film"))` + SAFE },
+  // Sci-fi and anime batch. The anime searches skip uploads labeled as other-language dubs, since most viewers want English.
+  { name: "Hyperdrive",         desc: "Farscape, Red Dwarf, Stargate, Max Headroom", q: `(title:("babylon 5" OR farscape OR stargate OR seaquest OR sliders OR "red dwarf" OR andromeda OR "earth 2" OR "space: above and beyond" OR lexx OR "max headroom" OR "alien nation" OR "quantum leap" OR "v the series") AND NOT title:(game OR gameplay OR longplay OR review OR podcast OR trailer OR toy OR lego OR reaction OR "elite force") AND NOT subject:(longplay OR "video game")) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
+  { name: "Riff Raff",          desc: "Mystery Science Theater 3000 and friends", q: `(title:("mystery science theater" OR mst3k OR rifftrax OR "cinematic titanic") AND NOT title:(game OR podcast OR review OR trailer OR interview OR panel))` + SAFE },
+  { name: "Atomic Age",         desc: "'50s and '60s sci-fi movies",       q: `(subject:("science fiction" OR "sci-fi" OR scifi) AND (collection:feature_films OR collection:SciFi_Horror OR collection:moviesandfilms) AND date:[1945-01-01 TO 1969-12-31] AND NOT subject:(horror OR serial))` + SAFE },
+  { name: "Deep Space",         desc: "Space movies from the '70s to '90s", q: `(subject:("science fiction" OR "sci-fi" OR "space opera") AND title:(space OR galaxy OR galactic OR star OR stars OR planet OR planets OR cosmos OR cosmic OR moon OR mars OR alien OR aliens OR invaders OR orbit OR astro) AND (collection:feature_films OR collection:SciFi_Horror OR collection:moviesandfilms) AND date:[1966-01-01 TO 1995-12-31] AND NOT subject:(anime OR horror OR ova) AND NOT title:(violence OR jack OR ova))` + SAFE },
+  { name: "World of Tomorrow",  desc: "How the future looked in 1939–1965", q: `(subject:("world of tomorrow" OR futurism OR "the future" OR "world's fair" OR "worlds fair" OR "retro futurism" OR "home of the future" OR "city of the future") AND collection:(prelinger OR ephemera OR educationalfilms OR feature_films))` + SAFE },
+  { name: "Mecha Hangar",       desc: "Gundam, Evangelion, Macross, Mazinger", q: `(title:(gundam OR macross OR robotech OR evangelion OR "getter robo" OR mazinger OR votoms OR patlabor OR gurren OR "code geass" OR "the big o" OR escaflowne OR dougram OR ideon OR daimos OR combattler OR voltes) AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR model OR gunpla OR kit OR unboxing OR ost OR soundtrack) AND NOT subject:(longplay OR amv OR "video game")) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
+  { name: "Magical Girls",      desc: "Sailor Moon, Cardcaptors, DoReMi, Mew Mew", q: `(title:("sailor moon" OR cardcaptor OR "card captor" OR cardcaptors OR "magic knight rayearth" OR "creamy mami" OR "magical doremi" OR "tokyo mew mew" OR "pretty cure" OR precure OR "magical girl" OR "wedding peach" OR "minky momo" OR "princess tutu") AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR cosplay OR ost OR soundtrack OR unboxing) AND NOT subject:(longplay OR amv OR "video game")) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
+  { name: "Power Level",        desc: "Dragon Ball, Naruto, Yu Yu Hakusho, Inuyasha", q: `(title:("dragon ball" OR dragonball OR naruto OR "one piece" OR "yu yu hakusho" OR "yu-gi-oh" OR bleach OR "rurouni kenshin" OR inuyasha OR "hunter x hunter" OR "fist of the north star" OR "saint seiya" OR "shaman king" OR "zatch bell" OR beyblade) AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR cards OR ost OR soundtrack OR unboxing OR abridged OR tcg OR budokai OR tenkaichi OR xenoverse) AND NOT subject:(longplay OR amv OR "video game")) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
+  { name: "OVA Vault",          desc: "'80s and '90s anime on tape: Lodoss, Slayers, Dirty Pair", q: `(title:("bubblegum crisis" OR "bubblegum crash" OR "project a-ko" OR "record of lodoss war" OR "vampire hunter d" OR "cyber city oedo" OR gunbuster OR appleseed OR "dirty pair" OR "venus wars" OR armitage OR "ghost in the shell" OR "giant robo" OR "tenchi muyo" OR slayers OR "macross plus" OR "silent mobius" OR "a.d. police") AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR ost OR soundtrack OR trailer OR manga OR maid OR houshi OR "live action" OR "stand alone complex") AND NOT subject:(longplay OR amv OR "video game" OR hentai OR ecchi)) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
+  { name: "Toonami Tapes",      desc: "Toonami blocks taped off Cartoon Network", q: `(title:(toonami) AND NOT title:(game OR gameplay OR longplay OR review OR podcast OR soundtrack OR ost OR music))` + SAFE },
 ];
 // Channel numbers come in genre bands, like a cable lineup, with room to grow: 2–19 classic TV,
-// 20s kids, 30s–40s movies, 50s anime, 60s sports, 70s music, 80s–90s learning and oddities.
+// 20s kids, 30s–40s movies, 50s anime, 60s sports, 70s music, 80s learning and oddities, 90s sci-fi.
 // Custom channels start at 100.
-const BANDS = [[2, "Classic TV"], [20, "Kids"], [30, "Movies"], [50, "Anime"], [60, "Sports"], [70, "Music"], [80, "Learning & oddities"], [100, "Your channels"]];
+const BANDS = [[2, "Classic TV"], [20, "Kids"], [30, "Movies"], [50, "Anime"], [60, "Sports"], [70, "Music"], [80, "Learning & oddities"], [90, "Sci-fi"], [100, "Your channels"]];
 const LINEUP = {
   "Ad Break": [2, "📺"], "Rerun Alley": [3, "🛋️"], "Late Night": [4, "🌙"], "Big Prize": [5, "🎰"], "Brit TV": [6, "☕"],
   "PBS": [7, "🎨"], "Y2K WB": [8, "📼"], "Gilmore Girls": [9, "🍂"], "Prime Time Tapes": [10, "⭐"], "Strange Tales": [11, "🌀"],
-  "Starbase": [12, "🖖"], "Spooky '90s": [13, "👽"], "Order Now": [14, "☎️"], "Paint Along": [15, "🖌️"],
+  "Spooky '90s": [13, "👽"], "Order Now": [14, "☎️"], "Paint Along": [15, "🖌️"],
   "Saturday Toons": [20, "🥣"], "Cartoon Vault": [21, "🐭"], "Scooby & Friends": [22, "🐕"], "Toon Toys": [23, "🤖"], "'90s Kids": [24, "🧃"],
   "After School": [25, "🎒"], "Adult Swim": [26, "🦑"],
   "Drive-In": [30, "🚗"], "After Dark": [31, "🕵️"], "Creature Feature": [32, "🧟"], "Chiller Hosts": [33, "🦇"], "Silent Screen": [34, "🎩"],
-  "Laugh Track": [35, "😂"], "Kung Fu Theater": [36, "🥋"], "Frontier": [37, "🤠"], "Cliffhangers": [38, "🚀"], "Private Eye": [39, "🔍"],
+  "Laugh Track": [35, "😂"], "Kung Fu Theater": [36, "🥋"], "Frontier": [37, "🤠"], "Private Eye": [39, "🔍"],
   "Christmas Movies": [40, "🎄"],
-  "Anime Station": [50, "🌸"], "Dubbed Anime": [51, "🗣️"], "Retro Anime": [52, "⚡"], "AMV Hour": [53, "🎧"], "Kaiju Theater": [54, "🦖"],
+  "Anime Station": [50, "🌸"], "Dubbed Anime": [51, "🗣️"], "Retro Anime": [52, "⚡"], "AMV Hour": [53, "🎧"], "Kaiju Theater": [54, "🦖"], "Mecha Hangar": [55, "🦾"], "Magical Girls": [56, "✨"], "Power Level": [57, "💥"],
+  "OVA Vault": [58, "🗡️"], "Toonami Tapes": [59, "🌌"],
   "Gridiron": [60, "🏈"], "Rink Side": [61, "🏒"], "Ringside": [62, "🤼"], "Pit Lane": [63, "🏁"], "Skate & Surf": [64, "🛹"], "Sweatin'": [65, "🤸"],
   "Video Jukebox": [70, "🎸"], "Soul Train": [71, "🕺"],
   "Ephemera": [80, "🎞️"], "Duck & Cover": [81, "☢️"], "Home Movies": [82, "🎥"], "Computer Chronicles": [83, "💾"], "Mission Control": [84, "🛰️"],
   "Wild Kingdom": [85, "🦁"], "TV Dinner": [86, "🍳"], "Strange Signals": [87, "🛸"], "Slow TV": [88, "🔥"], "Arcade": [89, "🕹️"],
+  "Starbase": [90, "🖖"], "Hyperdrive": [91, "🌠"], "Riff Raff": [92, "🍿"], "Atomic Age": [93, "⚛️"], "Deep Space": [94, "🪐"],
+  "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"],
 };
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);

@@ -4,6 +4,41 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Sci-fi and anime batch (65 channels)
+
+**New Sci-fi band (90s)**, with Starbase (was 12) and Cliffhangers (was 38) moved into it:
+
+| # | Channel | What's on |
+|---|---|---|
+| 90 | 🖖 Starbase | (moved) Star Trek, Doctor Who, Space: 1999 |
+| 91 | 🌠 Hyperdrive | '80s–'00s sci-fi TV: Farscape, Red Dwarf, Stargate, Lexx, Max Headroom, Alien Nation |
+| 92 | 🍿 Riff Raff | Mystery Science Theater 3000, RiffTrax, Cinematic Titanic |
+| 93 | ⚛️ Atomic Age | '50s and '60s sci-fi movies |
+| 94 | 🪐 Deep Space | Space movies from the '70s to '90s |
+| 95 | 🏙️ World of Tomorrow | Retro-futurism films: Design for Dreaming, World's Fair films |
+| 96 | 🚀 Cliffhangers | (moved) Movie serials |
+
+**More anime (55–59):**
+
+| # | Channel | What's on |
+|---|---|---|
+| 55 | 🦾 Mecha Hangar | Gundam, Evangelion, Macross/Robotech, Mazinger |
+| 56 | ✨ Magical Girls | Sailor Moon, Cardcaptors, Magical DoReMi, Precure, Tokyo Mew Mew |
+| 57 | 💥 Power Level | Dragon Ball, Naruto, Yu Yu Hakusho, Inuyasha, One Piece |
+| 58 | 🗡️ OVA Vault | '80s–'90s tape-era anime: Lodoss War, Slayers, Dirty Pair, Vampire Hunter D, Venus Wars |
+| 59 | 🌌 Toonami Tapes | Toonami blocks taped off Cartoon Network |
+
+- The anime searches skip uploads labeled as Spanish, Portuguese, Italian, German or French dubs (most results
+  were), and disc images (ISO), which don't play.
+- Dropped after checking results: an anime openings channel (pulled in hateful and adult videos) and a cyberpunk
+  channel (too scattershot). The OVA list leaves out titles known for sexual-assault scenes (*Wicked City*,
+  *Ninja Scroll*) and excludes hentai/ecchi tags; the '70s–'90s space search excludes *Violence Jack*.
+- Logos are unique per channel. Share image re-rendered (Starbase is now 90), preview tag bumped to `og.jpg?v=3`.
+
+Tested locally: 65 channels, no duplicate numbers or logos, all 10 new channels fill.
+
+---
+
 ## 2026-11-08 — Share image, radio logos, "On now" page
 
 **New share image (`og.jpg`, now a full 1200×630).** A retro TV, the name, "Forgotten TV around the clock, plus live
