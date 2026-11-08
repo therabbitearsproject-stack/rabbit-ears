@@ -61,17 +61,6 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .byline { margin: 2px 0 0; font-family: var(--osd); font-size: 1.2rem; color: var(--amber); letter-spacing: .04em; }
 .tag { color: var(--dim); font-size: 0.95rem; margin: 0; }
 
-/* Star Trek's own little bridge. No animation: the picture stays the focus. */
-.trek-bridge { background: #080e1b; color: #e8eefc; border: 1px solid #394866; border-left: 12px solid #eeb47c; border-radius: 30px 8px 8px 30px; padding: clamp(16px, 4vw, 28px); }
-.trek-bridge .trek-k { color: #eeb47c; font-family: var(--osd); letter-spacing: .12em; }
-.trek-bridge h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 6px 0; letter-spacing: -.03em; }
-.trek-bridge p { line-height: 1.5; margin: 8px 0 16px; }
-.trek-fleet { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 16px 0; }
-.trek-fleet a { display: grid; gap: 5px; background: #17253c; border: 1px solid #52678e; border-radius: 4px 18px 18px 4px; padding: 11px 14px; color: #e8eefc; text-decoration: none; font-size: .9rem; }
-.trek-fleet a:hover, .trek-fleet a:focus-visible { background: #2c4166; outline: 2px solid #eeb47c; outline-offset: 2px; }
-.trek-fleet small { color: #b6c7e7; }
-.trek-bridge .trek-note { color: #bdc9df; font-size: .85rem; margin-bottom: 0; }
-.trek-bridge a { color: #b8d4ff; }
 .chan.trek-channel .n { color: #eeb47c; }
 
 /* The set */
@@ -395,14 +384,6 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
       <button class="chip" type="button" data-r="inappropriate">Not appropriate</button>
     </div>
     <span class="meta" id="reportDone" hidden>Thanks. It's flagged for a look.</span>
-  </section>
-
-  <section class="trek-bridge" id="trekBridge" aria-labelledby="trekHeading" hidden>
-    <span class="trek-k">CH 97 · SUBSPACE TRANSMISSION</span>
-    <h2 id="trekHeading">Star Trek: The Final Frontier</h2>
-    <p>Different crews. One extraordinary universe. Settle in for a shared voyage through the Archive's Star Trek episodes, films, interviews, promos and fan productions.</p>
-    <div class="trek-fleet" id="trekFleet" aria-label="Explore the Star Trek franchises"></div>
-    <p class="trek-note">Each tile opens that franchise's Archive search. Counts are playable uploads in today's channel pool, not complete seasons. Availability changes; some series may have only clips or no playable uploads. <a href="https://www.startrek.com/where-to-watch" target="_blank" rel="noopener">Find official streaming for every crew ↗</a></p>
   </section>
 
   <section class="guide">
@@ -1098,26 +1079,11 @@ function waitForNext(my) {
   const ms = Math.max(1000, (playing.end - nowSec()) * 1000);
   waitTimer = setTimeout(() => { if (my === tuneId) tune(cur); }, ms);
 }
-function updateTrekBridge(ch) {
-  $("trekBridge").hidden = !ch.franchises;
-  if (!ch.franchises) return;
-  $("trekFleet").replaceChildren(...ch.franchises.map(f => {
-    const a = document.createElement("a");
-    a.href = "https://archive.org/search?query=" + encodeURIComponent(`(${ch.q}) AND (${f.q}) AND mediatype:movies`);
-    a.target = "_blank"; a.rel = "noopener";
-    const count = catalog?.coverage?.[ch.q]?.[f.name];
-    a.append(Object.assign(document.createElement("b"), { textContent: f.name }),
-      Object.assign(document.createElement("small"), { textContent: count == null ? "Explore the Archive ↗" : count ? `${count} playable upload${count === 1 ? "" : "s"} · explore ↗` : "No playable uploads yet · explore ↗" }));
-    return a;
-  }));
-}
-
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
   if (mode === "tv") history.replaceState(null, "", "#ch" + list[cur].no); // shareable address for this channel
   const ch = list[cur], my = ++tuneId;
-  updateTrekBridge(ch);
   shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   clearTimeout(waitTimer);

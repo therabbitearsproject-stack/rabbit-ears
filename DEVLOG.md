@@ -4,6 +4,13 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Remove the Star Trek directory panel
+
+Removed the franchise directory panel below the player, including its styles and display logic.
+Channel 97 and its franchise-spanning programming remain in the TV guide.
+
+---
+
 ## 2026-11-07 — Clear picture on every TV channel
 
 Removed the shared CRT overlay (horizontal scanlines and darkened glass edges) from the TV
