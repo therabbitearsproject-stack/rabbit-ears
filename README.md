@@ -8,7 +8,7 @@ Forgotten Internet Archive video on synchronized channels, plus live radio from 
   A TV guide shows Now / Next / Later. Add your own channel with any Archive search.
 - **Radio:** live stations from the Radio Browser directory, with genres (including all-Christmas), search, country filter and favorites.
 - **Live counts:** how many people are watching each channel or listening to each station.
-- **Star Trek:** [channel 97](https://therabbitearsproject-stack.github.io/rabbit-ears/#ch97) plays a mix of series, films and fan productions across the franchise. Programming depends on playable Archive uploads.
+- **Star Trek:** [channel 97](https://therabbitearsproject-stack.github.io/rabbit-ears/#ch97) plays full episodes and films from reviewed sources, selecting the best available playable MP4 for each episode. HD is preferred; clean SD fills gaps. Trailers, commentary, and unreviewed broadcast tapes are excluded.
 - **Suggestion box:** opens a GitHub issue.
 
 ## Docs

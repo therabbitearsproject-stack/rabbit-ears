@@ -41,6 +41,8 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 |---|---|
 | `index.html` | The whole site, including the channel list |
 | `catalog.json` | Generated daily: every channel's videos, pre-looked-up, so the guide loads instantly. Don't edit by hand |
+| `scripts/star-trek-library.json` | Approved Star Trek collections and rejected sources; manually reviewed |
+| `scripts/trek-programming.mjs` | Expands reviewed collections into full episodes and selects the best playable copy |
 | `scripts/build-catalog.mjs` | Builds `catalog.json` (Node 18+, no packages) |
 | `scripts/fetch-subs.mjs` | Copies each video's subtitle file from the Archive into `subs/` as WebVTT (not committed; cached by the workflow) |
 | `.github/workflows/catalog.yml` | "Build and publish": catalog, subtitles, then publishes the site to Pages |

@@ -45,7 +45,7 @@ async function download(id, name) {
 
 const catalog = JSON.parse(await readFile(new URL("../catalog.json", import.meta.url), "utf8"));
 const wanted = new Map(); // file name -> [id, subtitle path]
-for (const rows of Object.values(catalog.pools)) for (const [id, , , , , sub] of rows) if (sub) wanted.set(subFile(id), [id, sub]);
+for (const rows of Object.values(catalog.pools)) for (const [id, , , , , sub, archiveId] of rows) if (sub) wanted.set(subFile(id), [archiveId || id, sub]);
 
 await mkdir(DIR, { recursive: true });
 const have = new Set(await readdir(DIR));

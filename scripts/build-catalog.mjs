@@ -9,6 +9,7 @@
 // Run: node scripts/build-catalog.mjs   (Node 18+; no packages needed)
 
 import { readFile, writeFile } from "node:fs/promises";
+import { buildTrekPool } from "./trek-programming.mjs";
 
 const POOL = 300;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -86,6 +87,12 @@ async function pool(fn, items) {
 const pools = {}, coverage = {}, memberships = {}, unplayable = new Set();
 let looked = 0, reused = 0, failed = 0;
 for (const ch of BUILT_IN) {
+  if (ch.library) {
+    const library = JSON.parse(await readFile(new URL("./star-trek-library.json", import.meta.url), "utf8"));
+    pools[ch.q] = await buildTrekPool(library, id => getJSON("https://archive.org/metadata/" + encodeURIComponent(id)), pickSub, prev.pools?.[ch.q]);
+    console.log(`${ch.name}: ${pools[ch.q].length} reviewed full programs`);
+    continue;
+  }
   let ids;
   try {
     const searches = ch.franchises ? [...ch.franchises.map(f => `(${ch.q}) AND (${f.q})`), ch.q] : [ch.q];

@@ -4,6 +4,30 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Full episodes and better picture quality on Star Trek
+
+Channel 97 now uses an approved source library instead of open searches. The heavily blurred
+July 1993 TNG recording and the other unreviewed broadcast tapes, promos and commentary
+are excluded. Collections are expanded into individual episodes: 704 full programs at launch,
+including 517 TNG/DS9/Voyager programs, 97 Enterprise, 50 Lower Decks, 16 animated-series
+episodes, the original-series pilot, 21 fan-series episodes and two films.
+
+The selector requires full-episode running times, rejects preview/extra files and very small
+encodes, and ranks copies of the same episode by actual dimensions then bitrate. This fixes
+Star Trek Continues choosing a 12-second 240p preview over a full 1080p episode, and Enterprise
+choosing 480p derivatives when 1080p originals exist. Missing HD sources remain clean SD;
+series without approved full-episode sources no longer fill the schedule with clips.
+
+Each episode has a stable schedule/report/caption key separate from its Archive item ID.
+Streaming, source links and subtitle downloads retain the real Archive ID. Old search caches
+are bypassed, and an unavailable catalog cannot restore unreviewed results. The library is
+re-evaluated from source metadata at each catalog build; failures can reuse only approved rows.
+
+Validated with selection/fallback regression tests, a catalog rebuild, and browser playback
+and visual sampling of replacement SD and HD sources and the revised channel.
+
+---
+
 ## 2026-11-08 — Custom domain: rabbit-ears.stream
 
 - Domain registered at Cloudflare under the Rabbit Ears Gmail account. DNS records (all "DNS only", grey cloud, so

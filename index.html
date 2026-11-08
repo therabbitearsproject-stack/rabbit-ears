@@ -426,26 +426,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 // podcasts, no TV-news recordings.
 const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
-  { name: "Star Trek", desc: "Every crew · series, films & the fandom", q: `(title:"star trek" AND NOT title:(xxx OR parody OR porn* OR game OR gameplay OR longplay OR walkthrough OR speedrun* OR review* OR react* OR critic* OR rant* OR discussion OR analysis OR recap OR podcast OR toy OR lego OR soundtrack OR ost OR iso OR "closing logos" OR "secret hideout" OR "elite force" OR "echoe from the past" OR "star trek online" OR "manic episodes" OR "movie skewer" OR silliest OR unethical OR "episode that killed" OR "first impressions" OR why OR "how was" OR "how strange" OR conservative OR cringe OR squirm OR predictions OR "blandly goes" OR "star wars versus" OR "star trek vs" OR "1950s" OR "1940s" OR "bridge recreation" OR "inside the enterprise" OR acne OR "droid torture" OR "beauty salon" OR psychologist OR "la série" OR raumschiff OR latino OR deutsch OR "segredos do universo" OR news OR "charlie brown" OR "northern exposure" OR alcs) AND NOT subject:("video game" OR longplay OR pornography))` + SAFE,
-    // Separate searches reserve space for less-downloaded crews in the 300-item pool.
-    franchises: [
-      { name: "The Original Series", q: 'title:("original series" OR "star trek 1966" OR "star trek tos" OR "star trek s01" OR "star trek s02" OR "star trek s03")' },
-      { name: "The Animated Series", q: 'title:("animated series" OR "star trek tas")' },
-      { name: "The Next Generation", q: 'title:("next generation" OR tng)' },
-      { name: "Deep Space Nine", q: 'title:("deep space nine" OR "deep space 9" OR ds9)' },
-      { name: "Voyager", q: 'title:voyager' },
-      { name: "Enterprise", q: 'title:enterprise' },
-      { name: "Discovery", q: 'title:discovery' },
-      { name: "Short Treks", q: 'title:"short treks" AND NOT title:"very short treks"' },
-      { name: "Picard", q: 'title:picard' },
-      { name: "Lower Decks", q: 'title:"lower decks"' },
-      { name: "Prodigy", q: 'title:prodigy' },
-      { name: "Strange New Worlds", q: 'title:"strange new worlds"' },
-      { name: "Very Short Treks", q: 'title:"very short treks"' },
-      { name: "Starfleet Academy", q: 'title:"starfleet academy"' },
-      { name: "The Films · all eras", q: 'title:("motion picture" OR "wrath of khan" OR "search for spock" OR "voyage home" OR "final frontier" OR "undiscovered country" OR generations OR "first contact" OR insurrection OR nemesis OR "star trek 2009" OR "into darkness" OR beyond OR "section 31")' },
-      { name: "Fan films & specials", q: 'title:(continues OR "new voyages" OR "phase ii" OR "fan film" OR "of gods and men" OR renegades OR documentary OR "25th anniversary" OR "30th anniversary")' },
-    ] },
+  { name: "Star Trek", desc: "Full episodes & films · quality-selected sources", library: "star-trek-v1", q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },
@@ -719,9 +700,11 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !blocked(r[0], ch)).map(([id, file, dur, title, year, sub]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub }); return id; });
+    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(([id, file, dur, title, year, sub, archiveId, width, height]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub, archiveId, width, height }); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
+  // Reviewed channels must never fall back to an unrestricted search or stale cached preview.
+  if (ch.library) throw new Error("The reviewed program catalog is temporarily unavailable");
   const key = "re_pool_" + hash(ch.q);
   const cached = store.get(key, null);
   if (cached && Date.now() - cached.t < 864e5) return cached.ids;
@@ -775,7 +758,7 @@ async function fetchMeta(id) {
   } catch { metaCache[id] = null; } // network errors aren't saved, so they get retried next load
   return metaCache[id];
 }
-const fileUrl = m => `https://archive.org/download/${encodeURIComponent(m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
+const fileUrl = m => `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
 
 // Build one channel's planned lineup for one 3-hour block: [{m, start, end, v0}] in epoch
 // seconds, where v0 is when the video's own clock reads 0:00. Programs play back to back and
@@ -923,7 +906,7 @@ function renderGuide() {
   rows = channels().map((c, i) => {
     if (bandOf(c.no) !== band) { band = bandOf(c.no); $("chans").append(Object.assign(document.createElement("h4"), { className: "band", textContent: band })); }
     const b = document.createElement("button");
-    b.type = "button"; b.className = "chan" + (c.franchises ? " trek-channel" : "") + (i === cur ? " on" : "");
+    b.type = "button"; b.className = "chan" + (c.library ? " trek-channel" : "") + (i === cur ? " on" : "");
     const n = Object.assign(document.createElement("span"), { className: "n", textContent: num(i) });
     const t = Object.assign(document.createElement("span"), { className: "t" });
     t.append(Object.assign(document.createElement("span"), { className: "ic", textContent: c.icon, ariaHidden: "true" }), c.name,
@@ -1109,7 +1092,7 @@ async function tune(i) {
     $("title").textContent = m.title;
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(p.start)}–${clockFmt(p.end)} · ${fmt(offset)} in`;
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
-    $("link").href = "https://archive.org/details/" + encodeURIComponent(m.id);
+    $("link").href = "https://archive.org/details/" + encodeURIComponent(m.archiveId || m.id);
     showOSD("CH " + num(cur), ch.icon + " " + ch.name + " — " + m.title);
     paintPos();
   } catch {

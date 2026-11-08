@@ -12,6 +12,7 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
   try {
     await mkdir(join(dir, "scripts"));
     await copyFile(new URL("build-catalog.mjs", import.meta.url), join(dir, "scripts/build-catalog.mjs"));
+    await copyFile(new URL("trek-programming.mjs", import.meta.url), join(dir, "scripts/trek-programming.mjs"));
     await writeFile(join(dir, "index.html"), `const SAFE = \`\`;
 const BUILT_IN = [
  {name:"Trek", q:"trek", franchises:[{name:"Old crew", q:"old"}, {name:"New crew", q:"new"}]},
