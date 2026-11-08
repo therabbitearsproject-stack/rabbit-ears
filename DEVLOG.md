@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Subspace 97 commercials restricted to the 1970s–1990s
+
+Restricted the internal commercial rotation to 1970–1999 inclusive. Removed pre-1970 spots
+from the approved list and enforced the range in fresh metadata selection, previous-catalog
+fallback, and playback planning. The resulting rotation has 24 spots dated 1974–1998.
+The existing break intervals and 15-second Subspace Snacks continue inside show slots.
+
+---
+
 ## 2026-11-08 — Automatic compatible audio selection across TV channels
 
 Added a shared selector for newly built catalog entries, custom-channel metadata and just-in-time

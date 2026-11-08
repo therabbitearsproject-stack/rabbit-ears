@@ -877,7 +877,7 @@ function makeSlot(m, ch, start, seed) {
   const program = { ...m, dur: Math.min(m.dur, BLOCK) };
   let timeline;
   if (ch.breaks) {
-    const ads = (catalog?.commercials || []).map(rowMedia);
+    const ads = (catalog?.commercials || []).filter(r => Number(r[4]) >= 1970 && Number(r[4]) <= 1999).map(rowMedia);
     if (!ads.length) throw new Error("Vintage commercial catalog is unavailable");
     timeline = CommercialTiming.build(program, ch.breaks, ads, catalog?.bumpers || [], seed || ch.q + "|" + m.id + "|" + start);
   }

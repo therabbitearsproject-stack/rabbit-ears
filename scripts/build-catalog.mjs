@@ -10,7 +10,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { buildTrekPool } from "./trek-programming.mjs";
-import { commercialRow } from "./commercial-library.mjs";
+import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
 
 const POOL = 300;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -170,7 +170,7 @@ if (BUILT_IN.some(ch => ch.breaks)) {
   const library = JSON.parse(await readFile(new URL("./commercial-library.json", import.meta.url), "utf8"));
   commercials = (await pool(async id => {
     try { return commercialRow(id, await getJSON("https://archive.org/metadata/" + encodeURIComponent(id))); }
-    catch { return prev.commercials?.find(r => r[0] === id && Number(r[4]) >= 1940 && Number(r[4]) <= 1999) || null; }
+    catch { return prev.commercials?.find(r => r[0] === id && commercialYearAllowed(r[4])) || null; }
   }, library.ids)).filter(Boolean).filter(r => {
     const reports = tally.get(r[0]);
     return !reports || (reports.broken < 3 && reports.inappropriate < 2 && (reports.wrong["Subspace 97"] || 0) < 2);

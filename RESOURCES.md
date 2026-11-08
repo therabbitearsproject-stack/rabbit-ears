@@ -46,7 +46,7 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 | `catalog.json` | Generated daily: every channel's videos, pre-looked-up, so the guide loads instantly. Don't edit by hand |
 | `media-compatibility.js` | Shared audio-compatible copy selection for the catalog and all TV playback |
 | `commercial-timing.js` | Shared-clock segment planning for Subspace 97’s internal commercial breaks |
-| `scripts/commercial-library.json` | Approved vintage spots, verified to be from 1999 or earlier |
+| `scripts/commercial-library.json` | Approved vintage spots, verified to be from 1970 through 1999 |
 | `assets/trek-bumpers/` | Six original 15-second text-and-music bumpers, plus fact sources |
 | `scripts/build-bumpers.mjs` | Optional authoring tool; needs ffmpeg-static and @resvg/resvg-js installed beside a passed package.json |
 | `scripts/star-trek-library.json` | Approved Star Trek collections and rejected sources; manually reviewed |

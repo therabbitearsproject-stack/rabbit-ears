@@ -37,9 +37,11 @@ test("other channels and short shows retain uninterrupted runtime; no break at t
   assert.equal(timing.build({ ...program, dur: 600 }, policy, ads, bumpers, "x").duration, 600);
 });
 
-test("only dated, pre-2000 individual commercial spots qualify", () => {
+test("only individual commercial spots dated 1970 through 1999 qualify", () => {
   const data = year => ({ metadata: { date: year, title: "Vintage ad" }, files: [{ name: "ad.mp4", width: 640, height: 480, length: 30, size: 1000000 }] });
   assert.equal(commercialRow("1999", data("1999-12-31"))[4], "1999");
+  assert.equal(commercialRow("1970", data("1970-01-01"))[4], "1970");
+  assert.equal(commercialRow("too-old", data("1969-12-31")), null);
   assert.equal(commercialRow("modern", data("2000-01-01")), null);
   assert.equal(commercialRow("undated", data("")), null);
   const compilation = data("1995"); compilation.files[0].length = 3600;
