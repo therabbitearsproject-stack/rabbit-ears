@@ -4,6 +4,16 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Eye-and-number viewer count beneath channel number
+
+Moved the guide's viewer count into the channel-number column and rendered an eye
+icon plus the number directly, removing visible words and the previous CSS-only
+replacement. Retained a descriptive accessible label and tooltip. Tightened the
+badge-to-listings gap to four pixels on desktop and three on phones. Versioned the
+interface asset URLs so refreshed pages receive the updated layout together.
+
+---
+
 ## 2026-11-08 — Tighter channel identity columns in the guide
 
 Removed unused space around the guide's channel numbers and square badges so the

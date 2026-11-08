@@ -309,7 +309,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .screen canvas, .osd, .lower { transition: none; } }
 </style>
-<link rel="stylesheet" href="assets/interface.css">
+<link rel="stylesheet" href="assets/interface.css?v=viewer-badge-2">
 </head>
 <body data-skin="retro" data-tv-page="guide">
 <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
@@ -1785,9 +1785,17 @@ function paintCounts() {
   rows.forEach(r => {
     let v = r.el.querySelector(".vw");
     const n = counts[tvRoom(r.ch)] || 0;
-    if (!v) { v = Object.assign(document.createElement("span"), { className: "vw" }); r.el.querySelector(".t").append(v); }
+    if (!v) v = Object.assign(document.createElement("span"), { className: "vw" });
+    const number = r.el.querySelector(".n");
+    if (v.parentElement !== number) number.append(v);
     v.dataset.count = n;
-    v.textContent = n ? "👁 " + n + " watching" : "";
+    v.textContent = "";
+    if (n) {
+      v.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span aria-hidden="true"></span>';
+      v.lastElementChild.textContent = n;
+    }
+    v.setAttribute("aria-label", n ? `${n} watching` : "");
+    v.title = n ? `${n} watching` : "";
   });
   const here = counts[currentRoom()] || 0;
   $("viewers").textContent = mode === "tv" && here ? (here === 1 ? "👁 Just you watching right now" : `👁 ${here} people watching right now`) : "";
@@ -1871,7 +1879,7 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js"></script>
+<script src="assets/interface.js?v=viewer-badge-2"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
