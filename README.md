@@ -2,7 +2,7 @@
 
 Forgotten Internet Archive video on synchronized channels, plus live radio from around the world.
 
-**Live:** https://therabbitearsproject-stack.github.io/rabbit-ears/ · Radio: [`#radio`](https://therabbitearsproject-stack.github.io/rabbit-ears/#radio)
+**Live:** https://rabbit-ears.stream/ · Radio: [`#radio`](https://rabbit-ears.stream/#radio)
 
 - **TV:** each channel is an Internet Archive search played on a shared clock, so everyone on a channel sees the same thing.
   A TV guide shows Now / Next / Later. Add your own channel with any Archive search.

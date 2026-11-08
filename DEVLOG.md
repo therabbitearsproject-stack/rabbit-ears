@@ -4,6 +4,24 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Custom domain: rabbit-ears.stream
+
+- Domain registered at Cloudflare under the Rabbit Ears Gmail account. DNS records (all "DNS only", grey cloud, so
+  GitHub can issue the HTTPS certificate): four `A @` → `185.199.108.153`, `.109`, `.110`, `.111`; `CNAME www` →
+  `therabbitearsproject-stack.github.io`.
+- GitHub Pages custom domain set to `rabbit-ears.stream` (repo Settings → Pages; with workflow publishing it's a
+  setting, not a CNAME file). The old `therabbitearsproject-stack.github.io/rabbit-ears/` address forwards to it, so
+  links already shared keep working.
+- Site links (preview tags, README, launch posts) now use `https://rabbit-ears.stream/`; preview image tag bumped to
+  `og.jpg?v=4`. Share links and "Copy post" build their address from the page, so they follow automatically.
+- **Lesson:** setting the custom domain before the DNS records existed made GitHub forward the old address to a
+  domain that didn't resolve yet; the site was unreachable for about ten minutes until the domain setting was
+  removed and the site re-published. Add DNS first, then set the domain.
+- Some home routers remember "domain doesn't exist" for a while after a new domain is created, so the address may
+  not load on a particular network for up to an hour or so even though it works everywhere else.
+
+---
+
 ## 2026-11-07 — Remove the Star Trek directory panel
 
 Removed the franchise directory panel below the player, including its styles and display logic.

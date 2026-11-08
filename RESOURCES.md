@@ -8,10 +8,11 @@ Everything the project uses, what it's for, and what it costs.
 |---|---|---|---|
 | GitHub account `therabbitearsproject-stack` | Owns the code and the website | Free | https://github.com/therabbitearsproject-stack |
 | GitHub repository `rabbit-ears` | The site's code (one file, `index.html`) plus these docs | Free (public repo) | https://github.com/therabbitearsproject-stack/rabbit-ears |
-| GitHub Pages | Hosts the live site; published by the "Build and publish" workflow after each push (a few minutes) | Free | https://therabbitearsproject-stack.github.io/rabbit-ears/ |
+| GitHub Pages | Hosts the live site at the custom domain; published by the "Build and publish" workflow after each push (a few minutes). The old github.io address forwards to it | Free | https://rabbit-ears.stream/ |
 | GitHub Issues | Where the suggestion box sends feedback (label `suggestion`) | Free | https://github.com/therabbitearsproject-stack/rabbit-ears/issues |
 | GitHub Actions | Workflow "Build and publish": rebuilds `catalog.json`, copies subtitle files (kept in the Actions cache), publishes the site. Daily, on push, on demand | Free for public repos | https://github.com/therabbitearsproject-stack/rabbit-ears/actions |
-| Google account (project Gmail) | Owns the Firebase project | Free | — |
+| Google account (project Gmail) | Owns the Firebase project and the Cloudflare account | Free | — |
+| Domain `rabbit-ears.stream` | The site's address. Registered and DNS hosted at Cloudflare (Rabbit Ears Gmail account). Records: four `A @` → `185.199.108–111.153` and `CNAME www` → `therabbitearsproject-stack.github.io`, all "DNS only" (grey cloud) so GitHub can issue the HTTPS certificate | Yearly registration | https://dash.cloudflare.com |
 | Firebase project `project-rabbitears` | Live viewer/listener counts (Realtime Database) | Free Spark plan: 100 simultaneous connections, 1 GB stored, 10 GB/month downloaded | https://console.firebase.google.com/project/project-rabbitears |
 
 ## Content sources
