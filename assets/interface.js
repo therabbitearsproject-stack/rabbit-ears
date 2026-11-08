@@ -40,7 +40,7 @@
     const a=$(id);a.innerHTML=icon(name)+`<span class="nav-name">${label}</span>`;a.title=label;a.setAttribute('aria-label',label);
   }
   const skinButton=button('',()=>openDialog(skinDialog),'btn theme-picker');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette');skinButton.title='Choose theme';skinButton.setAttribute('aria-label','Choose theme');document.querySelector('header').append(skinButton);
-  const currentSkin=make('span','current-skin');document.querySelector('header').append(currentSkin);
+  const currentSkin=make('span','current-skin');skinButton.append(currentSkin);
   function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='retro'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();}
   syncSkin();
   const pack=make('div','player-pack');const cabinet=tv.querySelector('.cabinet');

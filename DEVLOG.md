@@ -4,6 +4,14 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Smaller theme name beneath its icon
+
+Stacked the active theme name beneath the top-right palette icon, using smaller
+11-pixel text on desktop and 10-pixel text on phones. Both remain part of the same
+accessible theme-picker button; the label updates when selecting a theme.
+
+---
+
 ## 2026-11-08 — More compact TV guide rows
 
 Reduced guide rows by approximately one third: 125 to 83 pixels on desktop and

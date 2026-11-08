@@ -35,6 +35,10 @@ body[data-tv-page="guide"] .channel-rail{display:none!important}
 .theme-picker{position:absolute;top:12px;right:0;min-width:44px;min-height:44px;justify-content:center;background:transparent;border-color:transparent;padding:10px}
 .theme-picker:hover{background:var(--panel);border-color:var(--line)}
 @media(max-width:640px){.wrap>header{padding-right:54px}.theme-picker{top:3px}.current-skin{display:none}}
+.wrap>header{padding-right:130px}
+.theme-picker{width:118px;flex-direction:column;gap:5px;padding:8px 4px}
+.theme-picker .current-skin{display:block;margin:0;font:11px/1.25 var(--osd);letter-spacing:0;white-space:nowrap;color:var(--dim)}
+@media(max-width:640px){.wrap>header{padding-right:118px}.theme-picker{width:108px}.theme-picker .current-skin{font-size:10px}}
 .channel-identity{width:154px;grid-template-columns:24px minmax(0,1fr)}
 .logo-mat{width:120px;height:120px;aspect-ratio:1;padding:6px;flex-shrink:0}
 .compact .logo-mat{width:104px;height:104px;padding:4px}
