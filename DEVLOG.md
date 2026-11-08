@@ -4,6 +4,13 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Remove the add-channel section
+
+Removed the Add your own channel heading, form, explanatory text, form styles and submit
+handler from the TV guide. Previously saved custom channels remain available.
+
+---
+
 ## 2026-11-08 — Subspace 97 commercials restricted to the 1970s–1990s
 
 Restricted the internal commercial rotation to 1970–1999 inclusive. Removed pre-1970 spots

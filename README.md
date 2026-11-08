@@ -5,7 +5,7 @@ Forgotten Internet Archive video on synchronized channels, plus live radio from 
 **Live:** https://rabbit-ears.stream/ · Radio: [`#radio`](https://rabbit-ears.stream/#radio)
 
 - **TV:** each channel is an Internet Archive search played on a shared clock, so everyone on a channel sees the same thing.
-  A TV guide shows Now / Next / Later. Add your own channel with any Archive search.
+  A TV guide shows Now / Next / Later.
 - **Radio:** live stations from the Radio Browser directory, with genres (including all-Christmas), search, country filter and favorites.
 - **Compatible audio:** TV playback automatically selects a matching browser-compatible copy when the Archive provides one, including older catalog entries.
 - **Live counts:** how many people are watching each channel or listening to each station.

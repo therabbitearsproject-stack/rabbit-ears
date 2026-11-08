@@ -183,8 +183,6 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .golive.behind { color: var(--amber); border-color: var(--amber); }
 .golive:not(.behind) { cursor: default; }
 
-form.add { display: grid; grid-template-columns: 1fr 2fr auto; gap: 8px; }
-form.add input { min-width: 0; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: 10px; padding: 12px; font: inherit; }
 /* Tabs */
 .view { display: grid; gap: 18px; min-width: 0; }
 .tabs { display: flex; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 5px; justify-self: start; }
@@ -275,7 +273,6 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 @media (max-width: 640px) { form.suggest { grid-template-columns: 1fr; } }
 .hint { color: var(--dim); font-size: .85rem; margin: 0; max-width: 65ch; }
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
-@media (max-width: 560px) { form.add { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .screen canvas, .osd, .lower { transition: none; } }
 </style>
 </head>
@@ -466,13 +463,6 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
       <div class="ruler" aria-hidden="true"><div class="ticks" id="ticks"></div></div>
       <div class="chans" id="chans"></div>
     </div>
-    <h3>Add your own channel</h3>
-    <form class="add" id="add">
-      <input id="addName" placeholder="Channel name" required maxlength="24">
-      <input id="addQuery" placeholder="Archive search, e.g. subject:bowling" required>
-      <button class="btn" type="submit">Add</button>
-    </form>
-    <p class="hint">Any Internet Archive search works, like <code>collection:prelinger</code> or <code>subject:"roller derby"</code>. Everyone who adds the same search sees the same schedule.</p>
   </section>
   </div>
 
@@ -1322,13 +1312,6 @@ $("mute").onclick = () => setMuted(!vid.muted);
 $("up").onclick = () => tune(cur + 1);
 $("down").onclick = () => tune(cur - 1);
 $("full").onclick = () => { const s = $("screen"); (s.requestFullscreen || s.webkitRequestFullscreen || (() => vid.webkitEnterFullscreen?.())).call(s)?.catch?.(() => {}); };
-$("add").onsubmit = e => {
-  e.preventDefault();
-  const name = $("addName").value.trim(), q = $("addQuery").value.trim();
-  if (!name || !q) return;
-  custom.push({ name, q, desc: q }); store.set("re_custom", custom);
-  $("add").reset(); cur = channels().length - 1; renderGuide(); tune(cur);
-};
 
 // ---------- Radio (live stations from the Radio Browser directory) ----------
 const RB_HOSTS = ["https://all.api.radio-browser.info", "https://de1.api.radio-browser.info", "https://de2.api.radio-browser.info"];
