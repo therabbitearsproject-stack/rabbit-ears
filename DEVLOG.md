@@ -9,7 +9,8 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 - **`robots.txt` and `sitemap.xml`** (new, published by the workflow): let every search engine crawl the site, skip `subs/` and the share-card source, and point to the sitemap.
 - **Canonical link and structured data** in the page head: the official address is `https://rabbit-ears.stream/`. A schema.org `WebSite` + `WebApplication` block gives Google the site name "Rabbit-Ears.stream" (with "Rabbit Ears" as another name) and a description.
 - **About box** above the footer (collapsed by default): a short plain-text description of the TV channels, radio and games. The page is built by JavaScript, so this gives search engines real words to match. It is visible to everyone, not hidden text, which Google penalizes.
-- Open: register the site with Google Search Console and Bing Webmaster Tools and submit the sitemap. Channels and games live behind `#` links, which Google treats as one page, so separate pages per channel or game would be the next step for search.
+- **Google Search Console:** the domain property `rabbit-ears.stream` is set up under the Rabbit Ears Gmail. It is verified by a `TXT @` record in Cloudflare (`google-site-verification=…`); removing that record loses verification. The sitemap is submitted and the home page has had indexing requested.
+- Open: Bing Webmaster Tools (can import from Search Console). Channels and games live behind `#` links, which Google treats as one page, so separate pages per channel or game would be the next step for search.
 
 ---
 
