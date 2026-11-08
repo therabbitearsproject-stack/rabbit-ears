@@ -11,6 +11,7 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
   const originalTimeout = globalThis.setTimeout;
   try {
     await mkdir(join(dir, "scripts"));
+    await copyFile(new URL("../media-compatibility.js", import.meta.url), join(dir, "media-compatibility.js"));
     await copyFile(new URL("build-catalog.mjs", import.meta.url), join(dir, "scripts/build-catalog.mjs"));
     await copyFile(new URL("trek-programming.mjs", import.meta.url), join(dir, "scripts/trek-programming.mjs"));
     await copyFile(new URL("commercial-library.mjs", import.meta.url), join(dir, "scripts/commercial-library.mjs"));

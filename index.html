@@ -494,6 +494,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
 </div>
 
+<script src="media-compatibility.js"></script>
 <script src="commercial-timing.js"></script>
 <script>
 // ---------- Channels ----------
@@ -775,7 +776,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(([id, file, dur, title, year, sub, archiveId, width, height]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub, archiveId, width, height }); return id; });
+    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(([id, file, dur, title, year, sub, archiveId, width, height, compatibility]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub, archiveId, width, height, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version }); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   // Reviewed channels must never fall back to an unrestricted search or stale cached preview.
@@ -814,7 +815,7 @@ async function limited(fn) {
 const pendingMeta = {};
 function getMeta(id) {
   if (id in metaCache) return Promise.resolve(metaCache[id]);
-  const saved = store.get("re_m_" + id, undefined);
+  const saved = store.get("re_m_audio1_" + id, undefined);
   if (saved !== undefined) return Promise.resolve(metaCache[id] = tidy(saved));
   return pendingMeta[id] || (pendingMeta[id] = fetchMeta(id).finally(() => delete pendingMeta[id]));
 }
@@ -823,16 +824,46 @@ async function fetchMeta(id) {
     const d = await limited(async () => (await fetch("https://archive.org/metadata/" + encodeURIComponent(id))).json());
     const files = (d.files || []).filter(f => /\.mp4$/i.test(f.name) && parseLen(f.length) > 5);
     files.sort((a, b) => (/h\.264/i.test(b.format) ? 1 : 0) - (/h\.264/i.test(a.format) ? 1 : 0) || a.name.localeCompare(b.name));
-    const f = files[0];
+    const f = MediaCompatibility.choose(d.files || [], files[0]);
     metaCache[id] = f ? {
-      id, file: f.name, dur: parseLen(f.length),
+      id, file: f.name, dur: parseLen(f.length), audioCompatible: MediaCompatibility.knownCompatible(f),
       title: cleanTitle([].concat(d.metadata?.title || id)[0]),
       year: [].concat(d.metadata?.year || d.metadata?.date || "")[0].toString().slice(0, 4),
     } : null;
-    store.set("re_m_" + id, metaCache[id]);
+    store.set("re_m_audio1_" + id, metaCache[id]);
   } catch { metaCache[id] = null; } // network errors aren't saved, so they get retried next load
   return metaCache[id];
 }
+// Resolve older catalog selections lazily, without thousands of extra guide-time requests.
+const resolvedMedia = new Map(), sourceMetadata = new Map();
+async function resolveCompatibleMedia(media) {
+  if (media.local || media.audioCompatible || /\.ia\.mp4$/i.test(media.file)) return media;
+  const key = (media.archiveId || media.id) + "|" + media.file;
+  if (resolvedMedia.has(key)) return resolvedMedia.get(key);
+  const cached = store.get("re_audio1_" + hash(key), null);
+  if (cached?.key === key && Date.now() - cached.t < 7 * 864e5) return { ...media, file: cached.file };
+  const promise = (async () => {
+    try {
+      const id = media.archiveId || media.id;
+      if (!sourceMetadata.has(id)) sourceMetadata.set(id, limited(async () => {
+        const response = await fetch("https://archive.org/metadata/" + encodeURIComponent(id), { signal: AbortSignal.timeout(12000) });
+        if (!response.ok) throw new Error("Metadata unavailable");
+        return response.json();
+      }).catch(error => { sourceMetadata.delete(id); throw error; }));
+      if (sourceMetadata.size > 24) sourceMetadata.delete(sourceMetadata.keys().next().value);
+      const data = await sourceMetadata.get(id), selected = data.files?.find(f => f.name === media.file);
+      const chosen = MediaCompatibility.choose(data.files || [], selected);
+      if (!chosen) return media;
+      if (MediaCompatibility.knownCompatible(chosen)) store.set("re_audio1_" + hash(key), { key, t: Date.now(), file: chosen.name });
+      return { ...media, file: chosen.name };
+    } catch { return media; }
+  })();
+  resolvedMedia.set(key, promise);
+  const result = await promise;
+  resolvedMedia.delete(key);
+  return result;
+}
+
 const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
 
 // Build one channel's planned lineup for one 3-hour block: [{m, start, end, v0}] in epoch
@@ -1164,6 +1195,7 @@ function syncMedia(forceSeek = false) {
   }
   const token = ++mediaToken, my = tuneId;
   activeSegment = { ...segment, key };
+  vid.pause();
   snow.style.opacity = "1";
   vid.onloadedmetadata = () => {
     if (token !== mediaToken || my !== tuneId || !playing) return;
@@ -1194,8 +1226,12 @@ function syncMedia(forceSeek = false) {
       vid.src = fileUrl(fallback);
     }
   };
-  vid.src = fileUrl(segment.media);
-  applyCaptions(); resetReport();
+  (segment.kind === "program" ? resolveCompatibleMedia(segment.media) : Promise.resolve(segment.media)).then(media => {
+    if (token !== mediaToken || my !== tuneId || !playing) return;
+    activeSegment.media = media;
+    vid.src = fileUrl(media);
+    applyCaptions(); resetReport();
+  });
   return segment;
 }
 

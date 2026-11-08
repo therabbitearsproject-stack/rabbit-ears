@@ -18,6 +18,7 @@ const UA = "RabbitEarsCatalog/1.0 (+https://github.com/therabbitearsproject-stac
 
 // ---- channels, straight from index.html ----
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const MediaCompatibility = new Function(await readFile(new URL("../media-compatibility.js", import.meta.url), "utf8") + ";return MediaCompatibility;")();
 const safeSrc = html.match(/^const SAFE = `[^`]*`;$/m)?.[0];
 const listStart = html.indexOf("const BUILT_IN = [");
 const listEnd = html.indexOf("\n];", listStart);
@@ -70,11 +71,12 @@ async function videoRow(id) {
   const all = d?.files || [];
   const files = all.filter(f => /\.mp4$/i.test(f.name) && parseLen(f.length) > 5);
   files.sort((a, b) => (/h\.264/i.test(b.format) ? 1 : 0) - (/h\.264/i.test(a.format) ? 1 : 0) || a.name.localeCompare(b.name));
-  const f = files[0];
+  const f = MediaCompatibility.choose(all, files[0]);
   if (!f) return null;
   const title = String([].concat(d.metadata?.title || id)[0]);
   const year = String([].concat(d.metadata?.year || d.metadata?.date || "")[0]).slice(0, 4);
-  return [id, f.name, Math.round(parseLen(f.length) * 10) / 10, title, year, pickSub(all, f.name)];
+  return [id, f.name, Math.round(parseLen(f.length) * 10) / 10, title, year, pickSub(all, f.name), "", Number(f.width) || 0, Number(f.height) || 0,
+    MediaCompatibility.knownCompatible(f) ? MediaCompatibility.version : ""];
 }
 async function pool(fn, items) {
   const out = new Array(items.length); let next = 0;

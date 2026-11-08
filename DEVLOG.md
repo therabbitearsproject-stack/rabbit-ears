@@ -4,6 +4,32 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Automatic compatible audio selection across TV channels
+
+Added a shared selector for newly built catalog entries, custom-channel metadata and just-in-time
+playback of legacy catalog entries. It follows Archive original-file relationships, accepts only
+matching program files with essentially the same runtime, and chooses the best-resolution known
+browser-compatible copy. It never substitutes an unrelated episode, preview, language-folder
+variant or shortened cut. Existing reviewed Subspace 97 files and its ad/bumpers retain their
+separate approved policies.
+
+Legacy catalog entries are checked on tune rather than forcing about 17,600 video lookups before
+anyone can watch. Successful compatible choices are cached for seven days; transient lookup
+failures are not persisted. Custom metadata uses a new cache version, and channel changes invalidate
+pending playback changes so a late lookup cannot replace the newly selected channel.
+
+Audio sampling covered the other 65 channels: 64 samples were confirmed AAC with the decoder;
+one slow-loading Scooby movie was inspected through its MP4 track headers and contains both
+mp4a and AC-3 entries. No additional AC-3-only failure was confirmed in this sample. This is
+sampling, not a claim that every historical upload was decoded. When no compatible alternate
+exists, the original is retained; automatic transcoding requires separate hosting.
+
+Validated matching, AAC-original quality preservation, derivative chains, unrelated-file rejection,
+missing-alternate behavior and existing scheduling tests. A browser fixture using an old AC-3
+Angel One entry on a normal channel automatically loaded the AAC copy and retained the show title.
+
+---
+
 ## 2026-11-08 — Fix silent audio on Subspace 97
 
 The ST9 TNG/DS9/Voyager originals and the animated-series originals use AC-3 surround audio.
