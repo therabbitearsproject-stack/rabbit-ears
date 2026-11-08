@@ -1,5 +1,10 @@
-# Rebuilds catalog.json (every channel's videos, pre-looked-up) so the TV guide loads instantly.
-name: Build catalog
+# Builds and publishes the site.
+# - catalog.json (every channel's videos, pre-looked-up, so the TV guide loads instantly) is rebuilt
+#   daily, on demand, and whenever index.html or the scripts change; it's committed to the repo.
+# - Subtitle files are copied from the Internet Archive into subs/ (cached between runs, not committed)
+#   because archive.org doesn't let other sites read them directly.
+# - The site (the repo's files plus subs/) is then published to GitHub Pages.
+name: Build and publish
 
 on:
   schedule:
@@ -7,30 +12,43 @@ on:
   workflow_dispatch:         # "Run workflow" button
   push:
     branches: [main]
-    paths: [index.html, scripts/build-catalog.mjs]
 
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 concurrency:
-  group: catalog
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main   # latest main, so a queued run reuses the catalog an earlier run just saved
+          fetch-depth: 20
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Decide whether to rebuild the catalog
+        id: need
+        run: |
+          if [ "${{ github.event_name }}" != "push" ]; then echo "catalog=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null | grep -qE '^(index\.html|scripts/)'; then
+            echo "catalog=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "catalog=no" >> "$GITHUB_OUTPUT"
+          fi
       - name: Build catalog.json
+        if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-catalog.mjs
-      - name: Commit if changed
+      - name: Commit catalog if changed
+        if: steps.need.outputs.catalog == 'yes'
         run: |
           git config user.name "Rabbit Ears"
           git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
@@ -39,7 +57,37 @@ jobs:
           git commit -m "Update catalog"
           git pull --rebase -q
           git push
-      - name: Republish the site
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+
+      - name: Restore subtitles
+        uses: actions/cache/restore@v4
+        with:
+          path: subs
+          key: subs-${{ github.run_id }}
+          restore-keys: subs-
+      - name: Fetch subtitles
+        run: node scripts/fetch-subs.mjs
+      - name: Save subtitles
+        uses: actions/cache/save@v4
+        with:
+          path: subs
+          key: subs-${{ github.run_id }}
+
+      - name: Assemble the site
+        run: |
+          mkdir _site
+          cp index.html catalog.json og.jpg share-card.html _site/
+          cp -r subs _site/subs
+          du -sh _site _site/subs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

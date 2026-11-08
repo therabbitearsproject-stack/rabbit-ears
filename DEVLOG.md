@@ -4,6 +4,50 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Channel numbers, logos, captions, tape reports, welcome screen
+
+**Channel numbers in genre bands, with logos.** Like a cable lineup: 2–9 Classic TV, 10s Kids, 20s Movies,
+30s Anime, 40s Sports, 50s Music, 60s Learning & oddities, 100+ your own channels. The guide is grouped under
+band headings and every channel has an emoji logo (also shown on the on-screen display). Numbers and logos live in
+`LINEUP` / `BANDS` in `index.html`, right after the channel list.
+- Type a number on the keyboard like a remote: "4", "2" → channel 42 (Ringside). Unknown numbers say "No channel here".
+- The last channel watched is now remembered by its search instead of its position (key `re_chq`), so adding
+  channels doesn't move people. Returning visitors start once on channel 2 (Ad Break).
+
+**CC (captions).** About 30% of videos have subtitle files on the Archive, mostly its automatic speech-recognition
+captions (rough, like YouTube's auto captions); the button says so when they're automatic. Press CC or C; the
+choice is remembered (`re_captions`).
+- archive.org doesn't let other websites read subtitle files (no CORS), so the nightly job copies them onto this
+  site: `build-catalog.mjs` records each video's subtitle file (new 6th catalog field), and the new
+  `scripts/fetch-subs.mjs` downloads them, converts SRT to WebVTT and writes `subs/<id>.vtt`.
+- The subtitle files are not committed to git (too big). The workflow keeps them in the Actions cache between
+  runs and publishes them with the site. To allow that, **GitHub Pages now publishes from the workflow** instead
+  of straight from the `main` branch, and the workflow is renamed "Build and publish". It runs on every push
+  (rebuilding the catalog only when `index.html` or the scripts change), daily, and on demand.
+- First run after this change looks up every video again once (to find subtitle files) and downloads all the
+  captions, so it takes a while; later runs only handle new videos.
+- Custom channels don't get captions (their videos aren't in the catalog).
+
+**⚑ Report this tape.** Under Now Playing: Won't play / Bad picture or sound / Wrong channel / Not appropriate.
+Each report stores `{ tape id, channel, reason, server time }` in Firebase at `/reports`; nothing about the viewer.
+A browser only sends the same report once. Rules: anyone can add a report but not change or delete one, only those
+four fields, only those four reasons, and the time must be the server's. Reports are publicly readable (they're just
+tape IDs): `curl https://project-rabbitears-default-rtdb.firebaseio.com/reports.json`. Tested from outside with
+curl: a valid report is accepted; a fake time, unknown reason, extra field or delete is refused (401). One test
+report (`rulecheck-test`) is in there; delete it from the Firebase console's Data tab if wanted.
+
+**Donate link.** Footer: "Every program streams from the Internet Archive. ♥ Donate to the Archive".
+
+**Welcome screen.** First visit only (not when arriving on `#radio`): what the site is, three stats (channels,
+hours of tape from the catalog, 24/7 in sync), "📺 Tune in" (turns the TV on with sound) or "📻 Listen to radio",
+and keyboard tips. Closes with Escape or a click outside; remembered as `re_welcomed`.
+
+Tested locally (desktop and phone width, no sideways scroll): welcome stats (44 channels, 9,564 hours), Tune in,
+band headings, number dialing, report flow (with a stubbed send), CC on/off with a sample caption file, and the SRT
+converter on a real Archive caption file (568 cues read by the browser).
+
+---
+
 ## 2026-11-07 — Timeline guide, pause/rewind, Surprise me
 
 Ideas taken from looking at a similar site (Spelunkr); built our own way.

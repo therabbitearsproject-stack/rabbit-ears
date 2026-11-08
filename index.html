@@ -105,6 +105,24 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 }
 .btn:hover { border-color: var(--amber); }
 .btn:focus-visible, .chan:focus-visible, input:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+/* First-visit welcome */
+.welcome { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; background: rgba(10,7,5,.82); backdrop-filter: blur(3px); overflow-y: auto; }
+.wcard { width: min(100%, 560px); display: grid; gap: 14px; text-align: center; padding: clamp(20px, 5vw, 36px); border-radius: 24px;
+  background: linear-gradient(160deg, var(--wood-hi), var(--wood) 60%); box-shadow: 0 30px 80px -20px #000, inset 0 1px 0 rgba(255,255,255,.08); }
+.wcard p { margin: 0; }
+.wlead { font-family: var(--osd); font-size: clamp(1.4rem, 5vw, 1.8rem); color: var(--phosphor); text-shadow: 0 0 8px rgba(141,255,180,.45); }
+.wbody { color: var(--ink); line-height: 1.5; text-wrap: pretty; }
+.wstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.wstats span { background: rgba(0,0,0,.3); border: 1px solid var(--line); border-radius: 12px; padding: 10px 6px; color: var(--dim); font-size: .8rem; display: grid; gap: 2px; }
+.wstats b { font-family: var(--osd); font-size: clamp(1.6rem, 6vw, 2.2rem); font-weight: 400; color: var(--amber); line-height: 1; font-variant-numeric: tabular-nums; }
+.wgo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.wtune { background: var(--amber); color: #1a1208; border-color: var(--amber); font-size: 1.05rem; padding-inline: 22px; }
+.wtune:hover { border-color: var(--ink); }
+.whint { color: var(--dim); font-size: .82rem; }
+.btn:disabled { opacity: .45; cursor: default; border-color: var(--line); }
+.btn[aria-pressed="true"] { background: var(--amber); color: #1a1208; border-color: var(--amber); }
+#cc { font-family: var(--osd); font-size: 1.3rem; font-weight: 400; letter-spacing: .05em; }
+.screen video::cue { font-family: var(--display); font-size: .95em; color: #fff; background: rgba(0,0,0,.72); }
 .btn.ch { font-family: var(--osd); font-size: 1.5rem; font-weight: 400; padding: 8px 18px; }
 .spacer { flex: 1; }
 
@@ -144,6 +162,8 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .chan .t { font-weight: 600; min-width: 0; }
 .vw { display: block; color: var(--phosphor); font-size: .78rem; font-weight: 600; font-variant-numeric: tabular-nums; }
 .vw:empty { display: none; }
+.chan .ic { margin-right: .35em; }
+.band { margin: 10px 0 0; padding: 0 4px; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); font-weight: 600; }
 .chan .d { display: block; color: var(--dim); font-size: .8rem; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .chan.on { border-color: var(--phosphor); box-shadow: 0 0 0 1px var(--phosphor) inset; }
 .bar { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
@@ -215,7 +235,12 @@ form.suggest select, form.suggest textarea { min-width: 0; background: var(--bg)
 form.suggest textarea { resize: vertical; min-height: 46px; }
 select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 .hint a { color: var(--amber); }
-.foot { border-top: 1px solid var(--line); padding-top: 16px; text-align: center; color: var(--dim); font-size: .9rem; }
+.foot { border-top: 1px solid var(--line); padding-top: 16px; text-align: center; color: var(--dim); font-size: .9rem; display: grid; gap: 6px; justify-items: center; }
+.foot a { color: var(--amber); }
+.acts { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
+.linkbtn { appearance: none; border: 0; background: none; padding: 0; color: var(--dim); font: inherit; font-size: .92rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.linkbtn:hover { color: var(--amber); }
+.reportbox { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--dim); font-size: .9rem; padding-top: 4px; }
 .foot #total { font-family: var(--osd); font-size: 1.35rem; color: var(--phosphor); letter-spacing: .03em; font-variant-numeric: tabular-nums; }
 .foot #total:empty { display: none; }
 @media (max-width: 640px) { form.suggest { grid-template-columns: 1fr; } }
@@ -226,6 +251,23 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </style>
 </head>
 <body>
+<div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
+  <div class="wcard">
+    <p class="brand" id="wTitle">Rabbit<span>·</span>Ears</p>
+    <p class="wlead">Forgotten TV, on the air around the clock.</p>
+    <p class="wbody">Old commercials, kung fu movies, '80s and '90s cartoons, game shows, Slow TV and more, all streaming from the Internet Archive. Everyone tuned to a channel sees the same thing at the same moment, just like broadcast TV.</p>
+    <div class="wstats">
+      <span><b id="wChannels">44</b>channels</span>
+      <span><b id="wHours">—</b>hours of tape</span>
+      <span><b>24/7</b>in sync</span>
+    </div>
+    <div class="wgo">
+      <button class="btn wtune" id="wTune" type="button">📺 Tune in</button>
+      <button class="btn" id="wRadio" type="button">📻 Listen to radio</button>
+    </div>
+    <p class="whint">↑ ↓ flip channels · type a number to jump · R for a surprise · C for captions</p>
+  </div>
+</div>
 <div class="wrap">
   <header>
     <h1 class="brand">Rabbit<span>·</span>Ears</h1>
@@ -294,6 +336,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <button class="btn" id="fwd" type="button" aria-label="Forward 15 seconds" title="Forward 15 seconds (→)">15 ⏩</button>
     <span class="spacer"></span>
     <button class="btn" id="mute" type="button" title="Sound (M)">Sound off</button>
+    <button class="btn" id="cc" type="button" aria-pressed="false" disabled title="No captions for this show">CC</button>
     <button class="btn" id="full" type="button">Full screen</button>
   </div>
 
@@ -307,7 +350,18 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <span class="meta" id="meta"></span>
     <span class="meta" id="upnext"></span>
     <span class="meta vw" id="viewers"></span>
-    <a id="link" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
+    <div class="acts">
+      <a id="link" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
+      <button class="linkbtn" id="report" type="button" aria-expanded="false" aria-controls="reportBox">⚑ Report this tape</button>
+    </div>
+    <div class="reportbox" id="reportBox" hidden>
+      <span>What's wrong with it?</span>
+      <button class="chip" type="button" data-r="broken">Won't play</button>
+      <button class="chip" type="button" data-r="quality">Bad picture or sound</button>
+      <button class="chip" type="button" data-r="wrong">Wrong channel</button>
+      <button class="chip" type="button" data-r="inappropriate">Not appropriate</button>
+    </div>
+    <span class="meta" id="reportDone" hidden>Thanks. It's flagged for a look.</span>
   </section>
 
   <section class="guide">
@@ -341,7 +395,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p class="hint">Suggestions are posted publicly on GitHub, which needs a free account. <a href="https://github.com/therabbitearsproject-stack/rabbit-ears/issues" target="_blank" rel="noopener">See what others have suggested</a>.</p>
   </section>
 
-  <footer class="foot" aria-live="polite"><span id="total"></span></footer>
+  <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span></footer>
 </div>
 
 <script>
@@ -396,6 +450,23 @@ const BUILT_IN = [
   { name: "Wild Kingdom",       desc: "Nature and wildlife documentaries", q: `(subject:(wildlife OR "nature documentary" OR "national geographic" OR attenborough OR "wild kingdom" OR cousteau OR "animal documentary" OR "wild america"))` + SAFE },
   { name: "Soul Train",         desc: "Soul Train, Top of the Pops, concerts", q: `(subject:("concert film" OR "live concert" OR "concert video" OR "soul train" OR "american bandstand" OR "top of the pops") AND NOT collection:etree)` + SAFE },
 ];
+// Channel numbers come in genre bands, like a cable lineup: 2–9 classic TV, 10s kids, 20s movies,
+// 30s anime, 40s sports, 50s music, 60s learning and oddities. Custom channels start at 100.
+const BANDS = [[2, "Classic TV"], [10, "Kids"], [20, "Movies"], [30, "Anime"], [40, "Sports"], [50, "Music"], [60, "Learning & oddities"], [100, "Your channels"]];
+const LINEUP = {
+  "Ad Break": [2, "📺"], "Rerun Alley": [3, "🛋️"], "Late Night": [4, "🌙"], "Big Prize": [5, "🎰"], "Brit TV": [6, "☕"],
+  "PBS": [7, "🎨"], "Y2K WB": [8, "📼"], "Gilmore Girls": [9, "🍂"],
+  "Saturday Toons": [10, "🥣"], "Cartoon Vault": [11, "🐭"], "Toon Toys": [12, "🤖"], "'90s Kids": [13, "🧃"], "Adult Swim": [14, "🦑"],
+  "Drive-In": [20, "🚗"], "After Dark": [21, "🕵️"], "Creature Feature": [22, "🧟"], "Silent Screen": [23, "🎩"], "Laugh Track": [24, "😂"],
+  "Kung Fu Theater": [25, "🥋"], "Frontier": [26, "🤠"], "Cliffhangers": [27, "🚀"], "Gumshoe": [28, "🔍"], "Christmas Movies": [29, "🎄"],
+  "Anime Station": [30, "🌸"], "Dubbed Anime": [31, "🗣️"], "Retro Anime": [32, "⚡"], "AMV Hour": [33, "🎧"], "Kaiju Theater": [34, "🦖"],
+  "Gridiron": [40, "🏈"], "Rink Side": [41, "🏒"], "Ringside": [42, "🤼"], "Pit Lane": [43, "🏁"], "Skate & Surf": [44, "🛹"], "Sweatin'": [45, "🤸"],
+  "Video Jukebox": [50, "🎸"], "Soul Train": [51, "🕺"],
+  "Ephemera": [60, "🎞️"], "Computer Chronicles": [61, "💾"], "Mission Control": [62, "🛰️"], "Wild Kingdom": [63, "🦁"], "TV Dinner": [64, "🍳"],
+  "Strange Signals": [65, "🛸"], "Slow TV": [66, "🔥"], "Arcade": [67, "🕹️"],
+};
+BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
+BUILT_IN.sort((a, b) => a.no - b.no);
 // The schedule is built in 3-hour blocks. Each block starts at a seeded spot in the
 // channel's shuffled list and plays programs back to back, skipping any program that
 // wouldn't finish before the block ends, so shows play to the end.
@@ -410,7 +481,8 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
 };
 let custom = store.get("re_custom", []);
-const channels = () => [...BUILT_IN, ...custom.map(c => ({ ...c, custom: true }))];
+const channels = () => [...BUILT_IN, ...custom.map((c, k) => ({ ...c, custom: true, no: 100 + k, icon: "⭐" }))];
+const bandOf = no => BANDS.filter(([from]) => no >= from).pop()?.[1] || "";
 
 // ---------- Deterministic helpers (same result on every device) ----------
 function hash(str) { let h = 2166136261; for (const c of str) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
@@ -487,7 +559,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !BLOCKED.has(r[0])).map(([id, file, dur, title, year]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year }); return id; });
+    const ids = rows.filter(r => !BLOCKED.has(r[0])).map(([id, file, dur, title, year, sub]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub }); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   const key = "re_pool_" + hash(ch.q);
@@ -632,9 +704,10 @@ async function whatsOn(ch) {
 const $ = id => document.getElementById(id);
 const vid = $("vid"), snow = $("snow"), ctx = snow.getContext("2d");
 let tvOn = true, mode = "tv";
-let cur = store.get("re_ch", 0), tuneId = 0, playing = null, osdTimer, waitTimer;
+// The last channel is remembered by its search (not its position, which changes when channels are added).
+let cur = Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer, waitTimer;
 const clockFmt = t => new Date(t * 1000).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-const num = i => String(i + 1).padStart(2, "0");
+const num = i => String(channels()[i]?.no ?? i + 1).padStart(2, "0");
 
 function drawSnow() {
   if (snow.style.opacity !== "0") {
@@ -679,12 +752,15 @@ matchMedia("(max-width: 600px)").addEventListener?.("change", guideTick);
 function renderGuide() {
   renderRuler();
   $("chans").innerHTML = "";
+  let band = null;
   rows = channels().map((c, i) => {
+    if (bandOf(c.no) !== band) { band = bandOf(c.no); $("chans").append(Object.assign(document.createElement("h4"), { className: "band", textContent: band })); }
     const b = document.createElement("button");
     b.type = "button"; b.className = "chan" + (i === cur ? " on" : "");
     const n = Object.assign(document.createElement("span"), { className: "n", textContent: num(i) });
     const t = Object.assign(document.createElement("span"), { className: "t" });
-    t.append(c.name, Object.assign(document.createElement("span"), { className: "d", textContent: c.desc || c.q }));
+    t.append(Object.assign(document.createElement("span"), { className: "ic", textContent: c.icon, ariaHidden: "true" }), c.name,
+             Object.assign(document.createElement("span"), { className: "d", textContent: c.desc || c.q }));
     if (c.custom) {
       const x = document.createElement("span"); x.className = "x"; x.textContent = "Remove"; x.setAttribute("role", "button");
       x.onclick = e => { e.stopPropagation(); custom = custom.filter(k => k.q !== c.q); store.set("re_custom", custom); if (cur >= channels().length) cur = 0; renderGuide(); tune(cur); };
@@ -794,6 +870,35 @@ function goLive() {
   vid.currentTime = nowSec() - playing.v0; vid.play().catch(() => {});
   paintPos();
 }
+// Closed captions. The nightly job copies each video's subtitle file into subs/ on this site
+// (archive.org doesn't let other sites read them). Most are the Archive's automatic captions.
+// Custom channels have none.
+const subFile = id => "subs/" + id.replace(/[^A-Za-z0-9._-]/g, "_") + ".vtt"; // must match scripts/fetch-subs.mjs
+let ccOn = store.get("re_captions", false);
+function applyCaptions() {
+  vid.querySelectorAll("track").forEach(t => t.remove());
+  const sub = playing?.m.sub, auto = /\.(asr|autogenerated)\./i.test(sub || "");
+  $("cc").disabled = !sub;
+  $("cc").setAttribute("aria-pressed", String(!!sub && ccOn));
+  $("cc").title = !sub ? "No captions for this show" : (ccOn ? "Captions on" : "Captions off") + (auto ? " (automatic, may be rough)" : "") + " (C)";
+  if (!sub || !ccOn) return;
+  const tr = Object.assign(document.createElement("track"), { kind: "captions", srclang: "en", label: auto ? "English (automatic)" : "English", src: subFile(playing.m.id), default: true });
+  vid.append(tr);
+  tr.track.mode = "showing";
+}
+function toggleCaptions() { if ($("cc").disabled) return; ccOn = !ccOn; store.set("re_captions", ccOn); applyCaptions(); }
+// Type a channel number like a remote: digits collect for a moment, then it tunes.
+let dialed = "", dialTimer;
+function dial(d) {
+  dialed = (dialed + d).slice(-3);
+  showOSD("CH " + dialed.padEnd(2, "_"), "");
+  clearTimeout(dialTimer);
+  dialTimer = setTimeout(() => {
+    const i = channels().findIndex(c => c.no === +dialed);
+    if (i >= 0) tune(i); else showOSD("CH " + dialed, "No channel here");
+    dialed = "";
+  }, dialed.length >= 3 ? 0 : 1300);
+}
 function surf() {
   const n = channels().length;
   if (n < 2) return;
@@ -809,14 +914,14 @@ function waitForNext(my) {
 }
 async function tune(i) {
   const list = channels();
-  cur = (i + list.length) % list.length; store.set("re_ch", cur);
+  cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
   const ch = list[cur], my = ++tuneId;
-  shift = 0; held = false; paintPause();
+  shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   clearTimeout(waitTimer);
   markOn();
   snow.style.opacity = "1";
-  showOSD("CH " + num(cur), ch.name);
+  showOSD("CH " + num(cur), ch.icon + " " + ch.name);
   $("title").textContent = "Tuning in " + ch.name + "…"; $("meta").textContent = ""; $("upnext").textContent = "";
   try {
     const { p, next, offset } = await whatsOn(ch);
@@ -824,6 +929,7 @@ async function tune(i) {
     playing = p;
     const m = p.m;
     vid.src = fileUrl(m);
+    applyCaptions();
     vid.onloadedmetadata = () => {
       const want = nowSec() - p.v0;
       if (want >= vid.duration - 1) return waitForNext(my);
@@ -836,11 +942,11 @@ async function tune(i) {
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(p.start)}–${clockFmt(p.end)} · ${fmt(offset)} in`;
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
     $("link").href = "https://archive.org/details/" + encodeURIComponent(m.id);
-    showOSD("CH " + num(cur), ch.name + " — " + m.title);
+    showOSD("CH " + num(cur), ch.icon + " " + ch.name + " — " + m.title);
     paintPos();
   } catch {
     if (my !== tuneId) return;
-    playing = null; paintPos();
+    playing = null; paintPos(); applyCaptions();
     $("title").textContent = "Nothing but static on " + ch.name;
     $("meta").textContent = "The Internet Archive didn't answer, or this search has no videos. Try another channel.";
   }
@@ -862,7 +968,22 @@ setInterval(() => {
   }
 }, 1000);
 setInterval(fillGuide, 60000);
+// "Report this tape": stores { tape id, channel, reason, time } in the project database so broken
+// or unsuitable tapes can be blocked. Nothing about the viewer is sent.
+function resetReport() { $("reportBox").hidden = true; $("reportDone").hidden = true; $("report").hidden = false; $("report").setAttribute("aria-expanded", "false"); }
+$("report").onclick = () => { const open = $("reportBox").hidden; $("reportBox").hidden = !open; $("report").setAttribute("aria-expanded", String(open)); };
+$("reportBox").onclick = e => {
+  const reason = e.target.dataset?.r;
+  if (!reason || !playing) return;
+  const id = playing.m.id, sent = store.get("re_reported", []);
+  if (!sent.includes(id + reason)) {
+    try { window.reReport?.({ id, ch: channels()[cur].name, reason }); } catch {}
+    store.set("re_reported", [...sent, id + reason].slice(-200));
+  }
+  $("reportBox").hidden = true; $("report").hidden = true; $("reportDone").hidden = false;
+};
 $("surf").onclick = surf;
+$("cc").onclick = toggleCaptions;
 $("pause").onclick = togglePause;
 $("back").onclick = () => seek(-15);
 $("fwd").onclick = () => seek(15);
@@ -1095,7 +1216,7 @@ $("suggest").onsubmit = e => {
 };
 
 document.addEventListener("keydown", e => {
-  if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || !$("welcome").hidden) return;
   if (mode === "radio") { if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); stepStation(1); } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); stepStation(-1); } return; }
   if (e.key === "ArrowUp") { e.preventDefault(); tune(cur + 1); }
   else if (e.key === "ArrowDown") { e.preventDefault(); tune(cur - 1); }
@@ -1104,7 +1225,8 @@ document.addEventListener("keydown", e => {
   else if (e.key === " " && e.target.tagName !== "BUTTON") { e.preventDefault(); togglePause(); }
   else if (e.key === "r" && !e.ctrlKey && !e.metaKey) surf();
   else if (e.key === "m") setMuted(!vid.muted);
-  else if (/^[1-9]$/.test(e.key)) tune(+e.key - 1);
+  else if (e.key === "c") toggleCaptions();
+  else if (/^[0-9]$/.test(e.key)) dial(e.key);
 });
 
 $("clock").textContent = clockFmt(nowSec());
@@ -1114,14 +1236,30 @@ loadCatalog(4000).then(() => {
   renderGuide();
   setMode(location.hash.slice(1));
   if (mode === "tv") tune(cur);
+  if (mode === "tv" && !store.get("re_welcomed", false)) showWelcome();
 });
+
+// ---------- First-visit welcome ----------
+function showWelcome() {
+  $("wChannels").textContent = BUILT_IN.length;
+  const seen = new Set(); let secs = 0;
+  for (const rows of Object.values(catalog?.pools || {})) for (const [id, , dur] of rows) if (!seen.has(id)) { seen.add(id); secs += dur; }
+  $("wHours").textContent = secs ? Math.round(secs / 3600).toLocaleString() : "1000s";
+  $("welcome").hidden = false;
+  $("wTune").focus();
+}
+function closeWelcome() { $("welcome").hidden = true; store.set("re_welcomed", true); }
+$("wTune").onclick = () => { closeWelcome(); $("power").click(); };
+$("wRadio").onclick = () => { closeWelcome(); location.hash = "radio"; };
+$("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
+$("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
 // is stored: no names, accounts or locations. If this fails to load, the site works without counts.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, set, remove, onDisconnect, onValue, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, ref, set, remove, push, onDisconnect, onValue, increment, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 const db = getDatabase(initializeApp({ databaseURL: "https://project-rabbitears-default-rtdb.firebaseio.com" }));
 const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const sid = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => abc[b % abc.length]).join("");
@@ -1143,6 +1281,9 @@ onValue(ref(db, "presence"), snap => {
 // Re-join after a dropped connection (Firebase clears our marker when it disconnects).
 onValue(ref(db, ".info/connected"), s => { if (s.val() && room) { const r = room; room = null; window.reSetRoom(r); } });
 window.reSetRoom(window.reCurrentRoom?.() ?? null);
+
+// Tape reports from the "Report this tape" button (tape id, channel name, reason, time).
+window.reReport = r => push(ref(db, "reports"), { id: r.id, ch: r.ch, reason: r.reason, t: serverTimestamp() });
 
 // All-time visits: each browser adds 1 at most once a day. The database only accepts +1 steps.
 const visits = ref(db, "stats/visits");
