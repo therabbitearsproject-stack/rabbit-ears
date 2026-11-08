@@ -295,6 +295,15 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .reportbox { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--dim); font-size: .9rem; padding-top: 4px; }
 .foot #total { font-family: var(--osd); font-size: 1.35rem; color: var(--phosphor); letter-spacing: .03em; font-variant-numeric: tabular-nums; }
 .foot #total:empty { display: none; }
+.foot #onFoot { font-family: var(--osd); font-size: 1.35rem; color: var(--phosphor); letter-spacing: .03em; }
+.foot #onFoot:empty { display: none; }
+.online { margin: 0; display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; background: rgba(141,255,180,.08); border: 1px solid rgba(141,255,180,.35); color: var(--phosphor); font-family: var(--osd); font-size: 1.2rem; letter-spacing: .02em; white-space: nowrap; }
+.online i { width: 9px; height: 9px; border-radius: 50%; background: #3ee06e; box-shadow: 0 0 8px #3ee06e; animation: onpulse 2s ease-in-out infinite; }
+.online b { font-weight: 400; }
+.online span { color: var(--dim); }
+@media (max-width: 600px) { .online span { display: none; } }
+@keyframes onpulse { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .online i { animation: none; } }
 @media (max-width: 640px) { form.suggest { grid-template-columns: 1fr; } }
 .hint { color: var(--dim); font-size: .85rem; margin: 0; max-width: 65ch; }
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
@@ -324,6 +333,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   <header>
     <h1 class="brand">Rabbit-Ears<span>.stream</span></h1>
     <p class="tag" id="tagline">Forgotten Internet Archive video, on the air around the clock.</p>
+    <p class="online" id="online" aria-live="polite" hidden><i aria-hidden="true"></i><b id="onN"></b> <span id="onMix"></span></p>
   </header>
 
   <nav class="tabs" role="tablist" aria-label="Choose TV, radio or games">
@@ -511,7 +521,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p>Rabbit-Ears.stream is free online TV made from the Internet Archive. Over 60 channels play around the clock on a shared schedule, so everyone tuned in sees the same thing at the same moment, like broadcast TV. Watch vintage commercials and old TV shows, '80s and '90s Saturday morning cartoons, game shows, public-domain movies, drive-in horror and kung fu films, retro anime, classic sci-fi serials, music videos, educational films and Slow TV, with a TV guide, captions and channel numbers.</p>
     <p>The <a href="#radio">Radio</a> tab streams thousands of live radio stations from around the world: oldies, jazz, lo-fi, talk and all-Christmas stations. The <a href="#games">Games</a> tab has hundreds of classic Flash games, such as Line Rider, Bloxorz, QWOP, Papa's Pizzeria and Bloons Tower Defense, played right in your browser without the Flash plugin.</p>
   </details>
-  <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
+  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
 </div>
 
 <script src="media-compatibility.js"></script>
@@ -1753,6 +1763,17 @@ function paintCounts() {
   document.querySelectorAll(".gcard[data-id]").forEach(b => { const n = counts[gameRoom(b.dataset.id)] || 0; b.querySelector(".vw").textContent = n ? "🎮 " + people(n, "playing") : ""; });
   const gn = mode === "games" && gCur ? counts[gameRoom(gCur)] || 0 : 0;
   $("gPlayers").textContent = gn ? (gn === 1 ? "🎮 Just you playing" : `🎮 ${gn} people playing`) : "";
+  // Everyone with the site open (the "online" room), split by what they're doing right now.
+  const sum = p => Object.keys(counts).filter(k => k.startsWith(p)).reduce((a, k) => a + counts[k], 0);
+  const tvN = sum("tv-"), radioN = sum("radio-"), gameN = sum("game-");
+  // Never fewer than the people watching, listening or playing (pages opened before this count existed only report their room).
+  const on = Math.max(counts.online || 0, tvN + radioN + gameN);
+  const mix = [[tvN, "watching"], [radioN, "listening"], [gameN, "playing"]].filter(([n]) => n).map(([n, v]) => `${n} ${v}`).join(" · ");
+  $("online").hidden = !on;
+  $("onN").textContent = on === 1 ? "1 on now" : `${on.toLocaleString()} on now`;
+  $("onMix").textContent = mix && "· " + mix;
+  $("online").title = on ? `${on} ${on === 1 ? "person has" : "people have"} Rabbit-Ears.stream open right now` + (mix ? ` (${mix})` : "") : "";
+  $("onFoot").textContent = on ? `🟢 ${on === 1 ? "1 person" : on.toLocaleString() + " people"} on right now` : "";
 }
 window.reCounts = c => { counts = c || {}; paintCounts(); };
 window.reCurrentRoom = currentRoom;
@@ -1837,8 +1858,11 @@ onValue(ref(db, "presence"), snap => {
   snap.forEach(c => { counts[c.key] = c.size; });
   window.reCounts?.(counts);
 });
-// Re-join after a dropped connection (Firebase clears our marker when it disconnects).
-onValue(ref(db, ".info/connected"), s => { if (s.val() && room) { const r = room; room = null; window.reSetRoom(r); } });
+// Everyone with the page open also gets one marker in the "online" room, for the "N on now" count.
+const here = ref(db, `presence/online/${sid}`);
+const joinSite = () => { onDisconnect(here).remove(); set(here, true); };
+// Re-join after a dropped connection (Firebase clears our markers when it disconnects).
+onValue(ref(db, ".info/connected"), s => { if (!s.val()) return; joinSite(); if (room) { const r = room; room = null; window.reSetRoom(r); } });
 window.reSetRoom(window.reCurrentRoom?.() ?? null);
 
 // Tape reports from the "Report this tape" button (tape id, channel name, reason, time).

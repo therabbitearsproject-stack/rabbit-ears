@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Live "on now" count
+
+- **Header badge:** a green pulsing "N on now" next to the tagline on every tab, followed on wider screens by what people are doing ("· 5 watching · 2 listening · 1 playing"). Hovering shows the full sentence. The footer also says "🟢 N people on right now" above the all-time visits.
+- **How it counts:** every open page adds one marker, `presence/online/<random id>`, alongside its existing room marker, and Firebase removes it when the page closes or loses connection (it rejoins on reconnect). The existing presence rules already allowed it, so no rules change. Like the room counts, nothing personal is stored.
+- The total is never shown lower than watching + listening + playing, because pages opened before this change only report their room. Those catch up when visitors reload.
+- People with the page open but idle (radio stopped, no game picked) count as "on" but not in the breakdown. Background tabs count too.
+
+---
+
 ## 2026-11-08 — Traffic stats and an installable app icon
 
 - **Cloudflare Web Analytics:** a small script before `</body>` counts page views and visits, plus where visitors came from (referrers), countries and devices. It is cookieless and keeps no personal data, so no consent banner is needed. The site is "DNS only" (not proxied), so Cloudflare can't inject the script automatically; it's set to "Enable with JS Snippet installation". Dashboard: Cloudflare → Web analytics → rabbit-ears.stream. It doesn't count from `localhost` (CORS error there is expected).
