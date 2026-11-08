@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Share image and descriptions cover TV, radio and games
+
+- **Share image (`og.jpg`, source `share-card.html`):** redesigned now that there are three tabs. The TV and title stay on top with the line "Forgotten TV, live radio and classic Flash games." Below are three panels: a TV guide (15 Paint Along, 33 Chiller Hosts, 90 Starbase, 22 Scooby & Friends), live radio (on-air display, level meter, genre chips) and Games (Line Rider 2, Bloxorz, Papa's Pizzeria, Learn to Fly 2). Rendered with headless Edge at 1200×630 and saved as JPEG quality 90.
+- **Link-preview text:** the page description, `og:description`, `twitter:description` and the image's alt text now mention all three. The image address moved to `og.jpg?v=6` so apps that cached the old picture fetch the new one.
+- **README:** the intro and links mention games, with a Games bullet. The channel 97 link now uses rabbit-ears.stream instead of the old github.io address.
+- Open: Facebook and Discord can keep an old preview for a while. Facebook's Sharing Debugger ("Scrape again") refreshes it right away.
+
+---
+
 ## 2026-11-08 — Remove the add-channel section
 
 Removed the Add your own channel heading, form, explanatory text, form styles and submit

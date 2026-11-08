@@ -4,43 +4,49 @@
 <meta charset="utf-8">
 <title>Rabbit-Ears.stream share card</title>
 <!-- Source for og.jpg, the image shown when the site's link is shared. Rendered at 1200×630 with
-     headless Edge (see DEVLOG). The guide rows use real programs from the channels. -->
+     headless Edge (see DEVLOG). Shows the three tabs: TV (real programs from the channels), radio and games. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
 <style>
   html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
   body {
     background: radial-gradient(120% 90% at 20% 0%, #2c1f14 0%, #120e0b 65%);
     color: #efe6d6; font-family: "Bricolage Grotesque", system-ui, sans-serif;
-    box-sizing: border-box; padding: 26px 56px 30px; display: grid; grid-template-rows: auto 1fr; gap: 18px;
+    box-sizing: border-box; padding: 22px 48px 34px; display: grid; grid-template-rows: auto 1fr; gap: 22px;
   }
-  .top { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: end; }
-  .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 22px; padding: 16px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 30px 50px -24px #000; position: relative; margin-top: 58px; }
+  .top { display: grid; grid-template-columns: 196px 1fr; gap: 40px; align-items: end; }
+  .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 20px; padding: 14px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 30px 50px -24px #000; position: relative; margin-top: 56px; }
   .ears { position: absolute; left: 50%; top: 0; }
-  .ears i { position: absolute; bottom: 0; left: -2px; width: 5px; height: 78px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
+  .ears i { position: absolute; bottom: 0; left: -2px; width: 5px; height: 72px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
   .ears i:first-child { transform: rotate(-28deg); } .ears i:last-child { transform: rotate(28deg); }
   .ears b { position: absolute; left: -18px; bottom: -9px; width: 40px; height: 18px; background: #1d1712; border-radius: 20px 20px 4px 4px; }
   .screen { aspect-ratio: 4/3; border-radius: 7% / 9%; overflow: hidden; position: relative; box-shadow: inset 0 0 30px #000, 0 0 0 5px #0b0806;
     background: repeating-linear-gradient(90deg, #f4f4f4 0 12.5%, #f2e64b 12.5% 25%, #5fe3e8 25% 37.5%, #5ee86a 37.5% 50%, #e85ee0 50% 62.5%, #e8504c 62.5% 75%, #4c5ee8 75% 87.5%, #161616 87.5% 100%); }
   .screen::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(90deg, #1a2d6b 0 20%, #f4f4f4 20% 40%, #3a0b5c 40% 60%, #161616 60% 100%); }
   .screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 4px), radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.6)); }
-  .osd { position: absolute; top: 5%; right: 7%; z-index: 2; font-family: "VT323", monospace; font-size: 40px; color: #8dffb4; text-shadow: 0 0 8px rgba(141,255,180,.8), 0 2px 0 #000; }
-  h1 { margin: 0; font-weight: 800; font-size: 74px; letter-spacing: -0.04em; line-height: .9; }
+  .osd { position: absolute; top: 5%; right: 7%; z-index: 2; font-family: "VT323", monospace; font-size: 36px; color: #8dffb4; text-shadow: 0 0 8px rgba(141,255,180,.8), 0 2px 0 #000; }
+  h1 { margin: 0; font-weight: 800; font-size: 76px; letter-spacing: -0.04em; line-height: .9; }
   h1 span { color: #ffb648; }
-  .lede { margin: 12px 0 0; font-size: 30px; line-height: 1.2; color: #d9cdb8; font-weight: 600; }
+  .lede { margin: 12px 0 0; font-size: 31px; line-height: 1.2; color: #d9cdb8; font-weight: 600; }
   .lede b { display: block; margin-top: 4px; color: #8dffb4; font-family: "VT323", monospace; font-weight: 400; font-size: 36px; }
 
-  /* Mini timeline guide */
-  .guide { --name: 300px; display: grid; gap: 8px; align-content: start; position: relative; }
-  .ruler, .row { display: grid; grid-template-columns: var(--name) 1fr; gap: 14px; align-items: center; }
-  .ticks { position: relative; height: 30px; font-family: "VT323", monospace; font-size: 30px; color: #ffb648; }
-  .ticks span { position: absolute; top: 0; padding-left: 6px; border-left: 2px solid #3a2c20; line-height: 1; }
-  .row { background: #1d1712; border: 2px solid #3a2c20; border-radius: 14px; padding: 6px 12px; }
-  .ch { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 25px; white-space: nowrap; }
-  .ch .n { font-family: "VT323", monospace; font-size: 34px; color: #8dffb4; width: 2ch; }
-  .track { position: relative; height: 42px; background: rgba(0,0,0,.28); border-radius: 9px; overflow: hidden; }
-  .track::after { content: ""; position: absolute; top: 0; bottom: 0; left: 18%; width: 3px; background: #ffb648; box-shadow: 0 0 8px #ffb648; }
-  .blk { position: absolute; top: 0; bottom: 0; display: block; line-height: 42px; box-sizing: border-box; padding: 0 12px; background: #2b2119; border-radius: 8px; font-size: 21px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .blk.live { background: #24301f; box-shadow: inset 0 0 0 2px rgba(141,255,180,.6); color: #fff; }
+  /* Three panels, one per tab */
+  .tabs { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 18px; }
+  .panel { background: #1d1712; border: 2px solid #3a2c20; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .panel h2 { margin: 0; display: flex; align-items: baseline; justify-content: space-between; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+  .panel h2 small { font-family: "VT323", monospace; font-weight: 400; font-size: 27px; color: #ffb648; letter-spacing: 0; }
+  .line { display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,.28); border-radius: 10px; padding: 0 12px; flex: 1; min-height: 0; font-size: 22px; white-space: nowrap; overflow: hidden; }
+  .line .n { font-family: "VT323", monospace; font-size: 30px; color: #8dffb4; width: 2ch; flex: none; }
+  .line .t { overflow: hidden; text-overflow: ellipsis; color: #d9cdb8; }
+  .line.on { background: #24301f; box-shadow: inset 0 0 0 2px rgba(141,255,180,.6); }
+  .line.on .t { color: #fff; }
+  .line .t b { display: block; font-size: 22px; color: #efe6d6; } .line .t em { display: block; font-style: normal; font-size: 18px; color: #a99b84; overflow: hidden; text-overflow: ellipsis; }
+  .line.on .t em { color: #cfe9d6; }
+  .dial { font-family: "VT323", monospace; font-size: 30px; color: #8dffb4; text-shadow: 0 0 8px rgba(141,255,180,.5); background: #0d1410; border-radius: 10px; padding: 6px 12px; line-height: 1.05; }
+  .dial span { color: #ffb648; }
+  .eq { display: flex; align-items: flex-end; gap: 5px; flex: 1; min-height: 60px; }
+  .eq i { flex: 1; background: linear-gradient(#ffb648, #8dffb4); border-radius: 3px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chips span { font-size: 18px; padding: 4px 11px; border-radius: 999px; background: #2b2119; border: 1px solid #3a2c20; color: #d9cdb8; }
 </style>
 </head>
 <body>
@@ -48,19 +54,30 @@
     <div class="cabinet"><div class="ears"><i></i><i></i><b></b></div><div class="screen"><div class="osd">CH 15</div></div></div>
     <div>
       <h1>Rabbit-Ears<span>.stream</span></h1>
-      <p class="lede">Forgotten TV around the clock, plus live radio. <b>Flip channels. Everyone sees the same thing.</b></p>
+      <p class="lede">Forgotten TV, live radio and classic Flash games. <b>Flip channels. Everyone sees the same thing.</b></p>
     </div>
   </div>
-  <div class="guide">
-    <div class="ruler"><span></span><div class="ticks"><span style="left:0">9:00 PM</span><span style="left:33.3%">9:30</span><span style="left:66.6%">10:00</span></div></div>
-    <div class="row"><span class="ch"><span class="n">15</span>🖌️ Paint Along</span><div class="track">
-      <span class="blk live" style="left:0;width:calc(31% - 2px)">Winter in Pastel</span><span class="blk" style="left:31%;width:calc(31% - 2px)">Daisy Delight</span><span class="blk" style="left:62%;width:38%">Little Home in the Meadow</span></div></div>
-    <div class="row"><span class="ch"><span class="n">33</span>🦇 Chiller Hosts</span><div class="track">
-      <span class="blk live" style="left:0;width:calc(72% - 2px)">MonsterVision with Joe Bob Briggs: Critters</span><span class="blk" style="left:72%;width:28%">Svengoolie</span></div></div>
-    <div class="row"><span class="ch"><span class="n">90</span>🖖 Starbase</span><div class="track">
-      <span class="blk live" style="left:0;width:calc(36% - 2px)">Space Patrol (1953)</span><span class="blk" style="left:36%;width:64%">Battlestar Galactica</span></div></div>
-    <div class="row"><span class="ch"><span class="n">22</span>🐕 Scooby &amp; Friends</span><div class="track">
-      <span class="blk live" style="left:0;width:calc(40% - 2px)">A Pup Named Scooby-Doo</span><span class="blk" style="left:40%;width:calc(28% - 2px)">The Flintstones</span><span class="blk" style="left:68%;width:32%">Hong Kong Phooey</span></div></div>
+  <div class="tabs">
+    <div class="panel">
+      <h2>📺 TV <small>66 CHANNELS</small></h2>
+      <div class="line on"><span class="n">15</span>🖌️<span class="t"><b>Paint Along</b><em>Now: Winter in Pastel</em></span></div>
+      <div class="line"><span class="n">33</span>🦇<span class="t"><b>Chiller Hosts</b><em>MonsterVision</em></span></div>
+      <div class="line"><span class="n">90</span>🖖<span class="t"><b>Starbase</b><em>Space Patrol (1953)</em></span></div>
+      <div class="line"><span class="n">22</span>🐕<span class="t"><b>Scooby &amp; Friends</b><em>A Pup Named Scooby-Doo</em></span></div>
+    </div>
+    <div class="panel">
+      <h2>📻 Radio <small>LIVE</small></h2>
+      <div class="dial">ON AIR <span>●</span><br>Stations worldwide</div>
+      <div class="eq"><i style="height:45%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:50%"></i><i style="height:75%"></i><i style="height:35%"></i><i style="height:85%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:40%"></i><i style="height:90%"></i></div>
+      <div class="chips"><span>Oldies</span><span>Jazz</span><span>Lo-fi</span><span>Christmas</span><span>Talk</span></div>
+    </div>
+    <div class="panel">
+      <h2>🎮 Games <small>FLASH</small></h2>
+      <div class="line on"><span class="t">▶ Line Rider 2</span></div>
+      <div class="line"><span class="t">▶ Bloxorz</span></div>
+      <div class="line"><span class="t">▶ Papa's Pizzeria</span></div>
+      <div class="line"><span class="t">▶ Learn to Fly 2</span></div>
+    </div>
   </div>
 </body>
 </html>
