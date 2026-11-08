@@ -117,7 +117,7 @@
     requestAnimationFrame(()=>{window.scrollTo(0,guideScroll);guideFocus?.focus({preventScroll:true});});
   }
   $('tabTv').addEventListener('click',e=>{e.preventDefault();showGuide();});
-  home.addEventListener('click',e=>{e.preventDefault();showGuide();});
+  home.addEventListener('click',e=>{e.preventDefault();guideScroll=0;guideFocus=null;showGuide();});
   function modeChanged(){
     body.dataset.mode=mode;if(mode!=='tv'&&full)exitFull();
     if(mode==='tv')body.dataset.tvPage=/^#ch\d+$/.test(location.hash)?'channel':'guide';

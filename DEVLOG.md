@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Site logo returns to the landing page
+
+Clicking the site logo now opens the TV guide landing page at the top, clearing
+the saved guide scroll position and focus. The channel page's TV guide back button
+continues to restore the previous guide position. Checked logo navigation from
+channel, radio and games views and from a scrolled landing page.
+
+---
+
 ## 2026-11-08 — Smaller theme name beneath its icon
 
 Stacked the active theme name beneath the top-right palette icon, using smaller
