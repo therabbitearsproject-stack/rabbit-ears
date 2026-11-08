@@ -53,4 +53,8 @@ body[data-tv-page="guide"] .channel-rail{display:none!important}
 .schedule-title{appearance:none;background:none;border:0;padding:6px 0;min-height:44px;color:var(--ink);font:600 15px/1.4 var(--display);text-align:left;cursor:pointer;overflow-wrap:anywhere}
 .schedule-title:hover{text-decoration:underline;text-underline-offset:4px}.schedule-status{font-size:13px;color:var(--dim)}
 body[data-tv-page=guide] .channel-schedule{display:none}
+.chan .track{height:70px}.chan .compact .logo-mat{width:70px;height:70px}
+.chan .t{display:flex;align-items:center;gap:6px}.chan .t>.channel-identity{flex:0 0 70px}
+.chan .t>.vw{min-width:0;line-height:1.2;overflow-wrap:anywhere}
 @media(max-width:640px){.channel-identity{width:120px;grid-template-columns:20px minmax(0,1fr);gap:5px}.logo-mat{width:90px;height:90px;padding:4px}.compact .logo-mat{width:80px;height:80px}.ruler,.chan{grid-template-columns:24px 86px minmax(440px,1fr);min-width:590px}.chan .compact .logo-mat{width:78px;height:78px}.chan .track{height:86px}.rail-channel{min-height:90px}.fullscreen-controls .compact .logo-mat{width:60px;height:60px}.channel-schedule-item{grid-template-columns:68px minmax(0,1fr);gap:4px 12px;padding:12px 0}.schedule-title{grid-column:2;grid-row:1/3;font-size:13px}.schedule-time{grid-column:1;font-size:11px}.schedule-state{font-size:12px}.channel-schedule h3{font-size:16px}}
+@media(max-width:640px){.ruler,.chan{grid-template-columns:24px 100px minmax(440px,1fr);min-width:604px}.chan .track{height:54px}.chan .compact .logo-mat{width:54px;height:54px}.chan .t{gap:4px}.chan .t>.channel-identity{flex-basis:54px}}

@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — More compact TV guide rows
+
+Reduced guide rows by approximately one third: 125 to 83 pixels on desktop and
+99 to 67 pixels on phones. Scaled the guide's square logo badges with the rows,
+retained programme text sizes and placed viewer counts beside the badges.
+Checked row heights, square badges and phone fit with and without viewer counts.
+
+---
+
 ## 2026-11-08 — Theme icon in the header
 
 Moved the theme picker to a palette icon in the top-right corner and removed its
