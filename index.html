@@ -21,6 +21,16 @@
 <meta name="twitter:title" content="Rabbit-Ears.stream">
 <meta name="twitter:description" content="Forgotten TV around the clock, live radio and classic Flash games.">
 <meta name="twitter:image" content="https://rabbit-ears.stream/og.jpg?v=6">
+<link rel="canonical" href="https://rabbit-ears.stream/">
+<!-- Tells search engines what the site is (shown as the site name in Google results). -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","name":"Rabbit-Ears.stream","alternateName":["Rabbit Ears","Rabbit Ears Stream"],"url":"https://rabbit-ears.stream/",
+  "description":"Forgotten TV on synchronized 24/7 channels, live radio from around the world, and classic Flash games, all streaming from the Internet Archive."},
+ {"@type":"WebApplication","name":"Rabbit-Ears.stream","url":"https://rabbit-ears.stream/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any (web browser)",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"image":"https://rabbit-ears.stream/og.jpg"}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
@@ -264,6 +274,13 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .hint a { color: var(--amber); }
 .foot { border-top: 1px solid var(--line); padding-top: 16px; text-align: center; color: var(--dim); font-size: .9rem; display: grid; gap: 6px; justify-items: center; }
 .foot a { color: var(--amber); }
+.about { color: var(--dim); font-size: .9rem; line-height: 1.5; max-width: 62ch; margin: 0 auto 4px; text-align: center; }
+.about summary { cursor: pointer; color: var(--amber); list-style: none; }
+.about summary::-webkit-details-marker { display: none; }
+.about summary::after { content: " ▾"; }
+.about[open] summary::after { content: " ▴"; }
+.about p { margin: 10px 0 0; text-align: left; }
+.about a { color: var(--amber); }
 .acts { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
 .linkbtn { appearance: none; border: 0; background: none; padding: 0; color: var(--dim); font: inherit; font-size: .92rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .linkbtn:hover { color: var(--amber); }
@@ -481,6 +498,11 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p class="hint">Suggestions are posted publicly on GitHub, which needs a free account. <a href="https://github.com/therabbitearsproject-stack/rabbit-ears/issues" target="_blank" rel="noopener">See what others have suggested</a>.</p>
   </section>
 
+  <details class="about">
+    <summary>About Rabbit-Ears.stream</summary>
+    <p>Rabbit-Ears.stream is free online TV made from the Internet Archive. Over 60 channels play around the clock on a shared schedule, so everyone tuned in sees the same thing at the same moment, like broadcast TV. Watch vintage commercials and old TV shows, '80s and '90s Saturday morning cartoons, game shows, public-domain movies, drive-in horror and kung fu films, retro anime, classic sci-fi serials, music videos, educational films and Slow TV, with a TV guide, captions and channel numbers.</p>
+    <p>The <a href="#radio">Radio</a> tab streams thousands of live radio stations from around the world: oldies, jazz, lo-fi, talk and all-Christmas stations. The <a href="#games">Games</a> tab has hundreds of classic Flash games, such as Line Rider, Bloxorz, QWOP, Papa's Pizzeria and Bloons Tower Defense, played right in your browser without the Flash plugin.</p>
+  </details>
   <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
 </div>
 

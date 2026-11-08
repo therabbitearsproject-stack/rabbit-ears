@@ -81,7 +81,7 @@ jobs:
       - name: Assemble the site
         run: |
           mkdir _site
-          cp index.html catalog.json og.jpg share-card.html commercial-timing.js media-compatibility.js _site/
+          cp index.html catalog.json og.jpg share-card.html commercial-timing.js media-compatibility.js robots.txt sitemap.xml _site/
           cp -r assets _site/assets
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs

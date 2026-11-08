@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Help search engines find the site
+
+- **`robots.txt` and `sitemap.xml`** (new, published by the workflow): let every search engine crawl the site, skip `subs/` and the share-card source, and point to the sitemap.
+- **Canonical link and structured data** in the page head: the official address is `https://rabbit-ears.stream/`. A schema.org `WebSite` + `WebApplication` block gives Google the site name "Rabbit-Ears.stream" (with "Rabbit Ears" as another name) and a description.
+- **About box** above the footer (collapsed by default): a short plain-text description of the TV channels, radio and games. The page is built by JavaScript, so this gives search engines real words to match. It is visible to everyone, not hidden text, which Google penalizes.
+- Open: register the site with Google Search Console and Bing Webmaster Tools and submit the sitemap. Channels and games live behind `#` links, which Google treats as one page, so separate pages per channel or game would be the next step for search.
+
+---
+
 ## 2026-11-08 — Share image and descriptions cover TV, radio and games
 
 - **Share image (`og.jpg`, source `share-card.html`):** redesigned now that there are three tabs. The TV and title stay on top with the line "Forgotten TV, live radio and classic Flash games." Below are three panels: a TV guide (15 Paint Along, 33 Chiller Hosts, 90 Starbase, 22 Scooby & Friends), live radio (on-air display, level meter, genre chips) and Games (Line Rider 2, Bloxorz, Papa's Pizzeria, Learn to Fly 2). Rendered with headless Edge at 1200×630 and saved as JPEG quality 90.
