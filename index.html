@@ -759,7 +759,7 @@ const tidy = m => m && { ...m, title: TITLE_FIX[m.id] || cleanTitle(m.title) };
 let catalog = null;
 async function loadCatalog(ms) {
   try {
-    const r = await Promise.race([fetch("catalog.json"), new Promise((_, no) => setTimeout(no, ms))]);
+    const r = await Promise.race([fetch("catalog.json", { cache: "no-cache" }), new Promise((_, no) => setTimeout(no, ms))]);
     if (r.ok) catalog = await r.json();
   } catch {}
 }

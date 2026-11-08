@@ -16,6 +16,7 @@ function better(a, b) {
 }
 export function selectEpisodeFiles(files, source) {
   const candidates = files.filter(f => /\.mp4$/i.test(f.name) && !f.private &&
+    (source.audioPolicy !== "archive-aac" || (/\.ia\.mp4$/i.test(f.name) && f.source === "derivative" && /h\.264/i.test(f.format || ""))) &&
     seconds(f.length) >= (source.kind === "film" ? 3600 : 1200) && seconds(f.length) <= 10800 &&
     Number(f.width) >= 600 && Number(f.height) >= (source.minHeight || 480) &&
     !/\b(trailer|teaser|promo|preview|sample|interview|making.of|behind.the.scenes|extras?|bonus|commentary|recap)\b/i.test(f.name));
@@ -52,7 +53,7 @@ export async function buildTrekPool(library, loadMetadata, pickSub, previous = [
       console.log(`  ${source.series}: ${episodes.length} full programs`);
     } catch (error) {
       // Reuse only this approved collection's already-migrated episodes, never the old search pool.
-      const saved = previous.filter(r => r[6] === source.id);
+      const saved = previous.filter(r => r[6] === source.id && (source.audioPolicy !== "archive-aac" || /\.ia\.mp4$/i.test(r[1])));
       rows.push(...saved);
       console.log(`! ${source.series}: ${error.message}; kept ${saved.length} previously approved programs`);
     }

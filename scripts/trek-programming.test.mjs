@@ -19,6 +19,23 @@ test("same-resolution originals with more detail win over lower-bitrate derivati
   assert.equal(selectEpisodeFiles(files, source)[0].name, "S01E01.mp4");
 });
 
+test("collections with incompatible surround originals require the browser-compatible copy at full resolution", () => {
+  const policy = { ...source, audioPolicy: "archive-aac" };
+  const original = file("S01E01.mp4", 1440, 1080, 2700, { source: "original", size: 900_000_000 });
+  const compatible = file("S01E01.ia.mp4", 1440, 1080, 2700, { source: "derivative", format: "h.264 IA", size: 700_000_000 });
+  assert.deepEqual(selectEpisodeFiles([original, compatible], policy), [compatible]);
+  assert.deepEqual(selectEpisodeFiles([original], policy), []);
+  assert.equal(episodeRows({ files: [original, compatible] }, policy)[0][8], 1080);
+});
+
+test("failed refreshes cannot bring an old incompatible-audio original back from the cache", async () => {
+  const policy = { ...source, audioPolicy: "archive-aac" };
+  const original = ["ep1", "S01E01.mp4", 2700, "Episode", "", "", source.id, 1440, 1080];
+  const compatible = ["ep2", "S01E02.ia.mp4", 2700, "Episode", "", "", source.id, 1440, 1080];
+  const rows = await buildTrekPool({ sources: [policy] }, async () => { throw new Error("offline"); }, undefined, [original, compatible]);
+  assert.deepEqual(rows, [compatible]);
+});
+
 test("each full episode gets a distinct stable key, real Archive item and own captions", () => {
   const data = { files: [file("ST9001.TNG-s01e01.Pilot.mp4", 642, 496), file("ST9002.DS9-s01e01.Pilot.mp4", 629, 480)] };
   const rows = episodeRows(data, { id: "ST9_mp4", series: "Star Trek" }, (_, name) => name + ".srt");

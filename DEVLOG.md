@@ -4,6 +4,26 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Fix silent audio on Subspace 97
+
+The ST9 TNG/DS9/Voyager originals and the animated-series originals use AC-3 surround audio.
+Some browsers render their video without decoding the sound. Verified Archive derivatives
+use AAC-LC instead: select those copies for these two collections, retaining their listed
+SD/1080-line dimensions. Other reviewed collections keep their higher-quality originals;
+sampled originals, including Enterprise HD and Star Trek Continues HD, already contain AAC.
+
+The source-specific compatibility policy runs before resolution/bitrate ranking. Unsafe originals
+cannot return from the previous catalog if a metadata refresh fails. Startup revalidates the
+catalog so refreshing the page picks up corrected media choices rather than a cached old file.
+All 704 programs remain available, including the same 85 HD programs. Commercials, fact
+bumpers and the integrated break schedule remain enabled.
+
+Validation: inspected audio streams across all approved collections; confirmed AAC-LC and
+non-silent decoded samples in Angel One and The Animated Series; added selection and failed-
+refresh regression checks and rebuilt the catalog.
+
+---
+
 ## 2026-11-08 — 🎮 Games tab: classic Flash games
 
 A third tab next to TV and Radio: classic Flash games from the Internet Archive's Flash collection (about 6,600

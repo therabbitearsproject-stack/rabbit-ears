@@ -1,13 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "notes": "Reviewed collections of full episodes and feature films. No open-ended searches: broadcast tapes, trailers, interviews and commentary are deliberately excluded. Resolution is a screening aid; source collections must also be visually reviewed. Only browser-playable MP4 files are used.",
   "rejected": [
     { "id": "Star_Trek_Next_Generation_July_1993", "reason": "Visually reviewed: severely smeared picture, tape damage and loss of facial detail." }
   ],
   "sources": [
-    { "id": "ST9_mp4", "series": "Star Trek", "notes": "Individual TNG, DS9 and Voyager episodes; disc-sourced SD. Preserve original MP4s over lower-bitrate derivatives." },
+    { "id": "ST9_mp4", "series": "Star Trek", "audioPolicy": "archive-aac", "notes": "Individual TNG, DS9 and Voyager episodes; disc-sourced SD. Originals contain AC-3 surround audio. Use the Archive's H.264/AAC derivatives at the same listed resolution so browser playback includes sound." },
     { "id": "star-trek-1x-01-the-cage_20231231", "series": "The Original Series", "notes": "Only files meeting the 480-line floor qualify; smaller encodes are excluded." },
-    { "id": "star-trek-tas-s-01-e-05", "series": "The Animated Series", "notes": "Full episodes with 1080-line originals and matching derivatives." },
+    { "id": "star-trek-tas-s-01-e-05", "series": "The Animated Series", "audioPolicy": "archive-aac", "notes": "Full 1080-line episodes. Originals have AC-3 audio; use the matching H.264/AAC Archive derivatives, which retain the 1080-line picture." },
     { "id": "star-trek-enterprise-complete", "series": "Enterprise", "minHeight": 400, "notes": "Clean widescreen SD for seasons 1–2; choose 1080p originals over 480p derivatives for seasons 3–4." },
     { "id": "star-trek-lower-decks-complete", "series": "Lower Decks", "notes": "Full episodes in clean 480p MP4. Higher-resolution MKV/ZIP sources are not playable by this player." },
     { "id": "startrekcontinues_202006", "series": "Star Trek Continues (fan series)", "notes": "Select the full 1080p episodes, not the 12-second EP101 preview." },
