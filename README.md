@@ -1,4 +1,4 @@
-# Rabbit Ears
+# Rabbit-Ears.stream
 
 Forgotten Internet Archive video on synchronized channels, plus live radio from around the world.
 

@@ -4,6 +4,16 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Name matches the domain: Rabbit-Ears.stream
+
+- The site's name is now **Rabbit-Ears.stream** everywhere it's shown: browser tab title, header, welcome screen,
+  link previews (title, site name, image description), the share-sheet text, the lock-screen radio label and the
+  suggestion box. ".stream" uses the amber accent color. Web addresses stay lowercase.
+- Share image re-rendered with the new name (`og.jpg?v=5`).
+- Checked at phone width: the header fits on one line, no sideways scroll.
+
+---
+
 ## 2026-11-08 — Full episodes and better picture quality on Star Trek
 
 Channel 97 now uses an approved source library instead of open searches. The heavily blurred

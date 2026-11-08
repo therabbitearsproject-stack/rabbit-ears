@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rabbit Ears TV</title>
+<title>Rabbit-Ears.stream</title>
 <meta name="description" content="Synchronized 24/7 channels of Internet Archive video.">
 <meta name="theme-color" content="#120e0b">
 <!-- Link previews (iMessage, WhatsApp, Discord, Facebook, X, Slack…). Image source: share-card.html -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Rabbit Ears">
-<meta property="og:title" content="Rabbit Ears TV">
+<meta property="og:site_name" content="Rabbit-Ears.stream">
+<meta property="og:title" content="Rabbit-Ears.stream">
 <meta property="og:description" content="Forgotten TV around the clock, plus live radio from around the world. Flip channels, check the guide, see who's watching.">
 <meta property="og:url" content="https://rabbit-ears.stream/">
-<meta property="og:image" content="https://rabbit-ears.stream/og.jpg?v=4">
+<meta property="og:image" content="https://rabbit-ears.stream/og.jpg?v=5">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rabbit Ears: a retro TV with color bars above a TV guide listing Paint Along, Chiller Hosts, Starbase and Scooby &amp; Friends">
+<meta property="og:image:alt" content="Rabbit-Ears.stream: a retro TV with color bars above a TV guide listing Paint Along, Chiller Hosts, Starbase and Scooby &amp; Friends">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rabbit Ears TV">
+<meta name="twitter:title" content="Rabbit-Ears.stream">
 <meta name="twitter:description" content="Forgotten TV around the clock, plus live radio from around the world.">
-<meta name="twitter:image" content="https://rabbit-ears.stream/og.jpg?v=4">
+<meta name="twitter:image" content="https://rabbit-ears.stream/og.jpg?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
@@ -263,7 +263,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 <body>
 <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
   <div class="wcard">
-    <p class="brand" id="wTitle">Rabbit<span>·</span>Ears</p>
+    <p class="brand" id="wTitle">Rabbit-Ears<span>.stream</span></p>
     <p class="wlead">Forgotten TV, on the air around the clock.</p>
     <p class="wbody">Old commercials, kung fu movies, '80s and '90s cartoons, game shows, Slow TV and more, all streaming from the Internet Archive. Everyone tuned to a channel sees the same thing at the same moment, just like broadcast TV.</p>
     <div class="wstats">
@@ -280,7 +280,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </div>
 <div class="wrap">
   <header>
-    <h1 class="brand">Rabbit<span>·</span>Ears</h1>
+    <h1 class="brand">Rabbit-Ears<span>.stream</span></h1>
     <p class="tag" id="tagline">Forgotten Internet Archive video, on the air around the clock.</p>
   </header>
 
@@ -410,7 +410,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
         <option>Feature request</option>
         <option>Something's broken</option>
       </select>
-      <textarea id="sugText" rows="3" required maxlength="2000" placeholder="What should Rabbit Ears add? e.g. a channel of 80s music videos"></textarea>
+      <textarea id="sugText" rows="3" required maxlength="2000" placeholder="What should Rabbit-Ears.stream add? e.g. a channel of 80s music videos"></textarea>
       <button class="btn" type="submit">Send suggestion</button>
     </form>
     <p class="hint" id="sugDone" hidden>Thanks! Finish posting it in the GitHub tab that just opened.</p>
@@ -1138,9 +1138,9 @@ $("share").onclick = async () => {
   const ch = channels()[cur];
   if (ch.custom) { $("share").textContent = "Your own channels can't be shared"; return; }
   const url = location.origin + location.pathname + "#ch" + ch.no;
-  const text = `${ch.icon} ${ch.name} on Rabbit Ears${playing ? ": " + playing.m.title : ""}`;
+  const text = `${ch.icon} ${ch.name} on Rabbit-Ears.stream${playing ? ": " + playing.m.title : ""}`;
   try {
-    if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ title: "Rabbit Ears", text, url });
+    if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ title: "Rabbit-Ears.stream", text, url });
     else { await navigator.clipboard.writeText(url); $("share").textContent = "✓ Link copied"; setTimeout(() => $("share").textContent = "🔗 Share this channel", 2500); }
   } catch {}
 };
@@ -1290,7 +1290,7 @@ function showStation(s) {
   // Lock screen / headphone controls show the station too.
   if (s && "mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: stationLine(s), album: "Rabbit Ears Radio",
+      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: stationLine(s), album: "Rabbit-Ears.stream Radio",
         artwork: s.favicon?.startsWith("https://") ? [{ src: s.favicon }] : [] });
       navigator.mediaSession.setActionHandler("previoustrack", () => stepStation(-1));
       navigator.mediaSession.setActionHandler("nexttrack", () => stepStation(1));
@@ -1424,7 +1424,7 @@ $("suggest").onsubmit = e => {
   const kind = $("sugKind").value, text = $("sugText").value.trim();
   if (!text) return;
   const title = `${kind}: ${text.split("\n")[0].slice(0, 70)}`;
-  const url = `${REPO}/issues/new?labels=suggestion&title=${encodeURIComponent(title)}&body=${encodeURIComponent(text + "\n\n_Sent from the Rabbit Ears suggestion box._")}`;
+  const url = `${REPO}/issues/new?labels=suggestion&title=${encodeURIComponent(title)}&body=${encodeURIComponent(text + "\n\n_Sent from the Rabbit-Ears.stream suggestion box._")}`;
   window.open(url, "_blank", "noopener");
   $("suggest").reset();
   $("sugDone").hidden = false;
