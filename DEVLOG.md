@@ -4,6 +4,17 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Lock screen shows what's on
+
+- **TV on the lock screen / Control Center / headphones:** the title is the show that's on, the line under it is the channel ("CH 90 🖖 Starbase · 1975"), and the album line says "Live on Rabbit-Ears.stream". The picture is the tape's Archive thumbnail (`archive.org/services/img/<id>`), with the app icon as a fallback. Before, iPhones showed only the plain icon and "rabbit-ears.stream".
+- **Commercial breaks** show "📺 Commercial break" with "Back to <show> in a moment".
+- **Controls:** ⏮ ⏭ change channel down/up like a remote. The ±10-second buttons are turned off so phones show the channel buttons. Play/pause go through the site's pause, so the picture rejoins the schedule properly.
+- **Radio:** a "📻" before the station details, "Live radio on Rabbit-Ears.stream", and the app icon when a station has no logo.
+- Updated only when the show, channel or break changes (`setTvMeta`), not every second.
+- Open: Flash games play sound through Web Audio, which phones don't show on the lock screen, so games have nothing there.
+
+---
+
 ## 2026-11-08 — Live "on now" count
 
 - **Header badge:** a green pulsing "N on now" next to the tagline on every tab, followed on wider screens by what people are doing ("· 5 watching · 2 listening · 1 playing"). Hovering shows the full sentence. The footer also says "🟢 N people on right now" above the all-time visits.

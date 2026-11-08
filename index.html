@@ -1265,6 +1265,34 @@ function syncMedia(forceSeek = false) {
   return segment;
 }
 
+// Lock screen, Control Center and headphone controls: the show that's on, the channel, the tape's
+// thumbnail, and ⏮ ⏭ flip channels like a remote. Only rewritten when the show or a break changes.
+const ICON = new URL("assets/icon-512.png", location.href).href, ICON_SMALL = new URL("assets/icon-192.png", location.href).href;
+let tvMetaKey = "";
+function setTvMeta(segKind = "program") {
+  if (!("mediaSession" in navigator) || mode !== "tv" || !playing) return;
+  const ch = channels()[cur], m = playing.m, brk = segKind !== "program";
+  const key = ch.no + "|" + m.id + "|" + brk;
+  if (key === tvMetaKey) return;
+  tvMetaKey = key;
+  try {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: brk ? "📺 Commercial break" : m.title,
+      artist: `CH ${ch.no} ${ch.icon} ${ch.name}${!brk && m.year ? " · " + m.year : ""}`,
+      album: brk ? "Back to " + m.title + " in a moment · Rabbit-Ears.stream" : "Live on Rabbit-Ears.stream",
+      artwork: [
+        { src: "https://archive.org/services/img/" + encodeURIComponent(m.archiveId || m.id), sizes: "512x512" }, // listed largest so phones pick it over the fallback icon
+        { src: ICON_SMALL, sizes: "192x192", type: "image/png" },
+      ],
+    });
+    const ms = navigator.mediaSession, h = (a, f) => { try { ms.setActionHandler(a, f); } catch {} };
+    h("previoustrack", () => tune(cur - 1));
+    h("nexttrack", () => tune(cur + 1));
+    h("seekbackward", null); h("seekforward", null); // so the lock screen shows ⏮ ⏭ (channels) instead of ±10 s
+    h("play", () => { if (held) togglePause(); else vid.play().catch(() => {}); });
+    h("pause", () => { if (!held) togglePause(); });
+  } catch {}
+}
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
@@ -1288,6 +1316,7 @@ async function tune(i) {
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
     $("link").href = "https://archive.org/details/" + encodeURIComponent(m.archiveId || m.id);
     showOSD("CH " + num(cur), ch.icon + " " + ch.name + " — " + m.title);
+    setTvMeta();
     paintPos();
   } catch {
     if (my !== tuneId) return;
@@ -1306,6 +1335,7 @@ setInterval(() => {
   const t = showNow();
   if (t >= playing.end) return tune(cur);
   const segment = syncMedia();
+  setTvMeta(segment.kind);
   if (!vid.paused && !vid.seeking) {
     const want = activeSegment?.fallbackDur ? segment.position % activeSegment.fallbackDur : segment.position;
     if (Math.abs(vid.currentTime - want) > 20 && want < vid.duration - 1) vid.currentTime = want; // caught up after buffering
@@ -1478,8 +1508,9 @@ function showStation(s) {
   // Lock screen / headphone controls show the station too.
   if (s && "mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: stationLine(s), album: "Rabbit-Ears.stream Radio",
-        artwork: s.favicon?.startsWith("https://") ? [{ src: s.favicon }] : [] });
+      tvMetaKey = ""; // so returning to TV rewrites the lock screen
+      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: "📻 " + stationLine(s), album: "Live radio on Rabbit-Ears.stream",
+        artwork: [...(s.favicon?.startsWith("https://") ? [{ src: s.favicon }] : []), { src: ICON, sizes: "512x512", type: "image/png" }] });
       navigator.mediaSession.setActionHandler("previoustrack", () => stepStation(-1));
       navigator.mediaSession.setActionHandler("nexttrack", () => stepStation(1));
     } catch {}
