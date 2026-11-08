@@ -53,7 +53,8 @@ tab so arrow keys and space go to the game. The welcome screen has a "🎮 Play 
 **Safety:** every shelf and search excludes adult, gory, shock/prank and hateful content by title and tags, and
 the builder double-checks each game's full tags. Caught while reviewing the top results and now excluded:
 Mutilate-a-Doll, the "You Are An Idiot" virus prank, Whack Your Boss, Don't Shit Your Pants, Beach Flirting Game,
-The Great Sperm Race, SpongeBob Saw Game, Road of the Dead. Pico's School left out of Classics (school-shooting
+The Great Sperm Race, SpongeBob Saw Game, Road of the Dead. Also excluded after the first live build: Happy Wheels (gore), Madness: Project Nexus (bloody shooter) and
+Pico's School, which had appeared on Most played. Pico's School is also left out of Classics (school-shooting
 plot).
 
 **Classics test:** 40 well-known games were each loaded in Ruffle from the Archive. 38 started (Line Rider, QWOP,

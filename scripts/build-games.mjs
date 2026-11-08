@@ -17,7 +17,7 @@ const BASE = "collection:softwarelibrary_flash_games";
 
 // Kept off every shelf: adult content, gore, shock/prank "games" (fake viruses, screamers) and
 // hateful content. Archive tags are inconsistent, so titles are checked as well as subjects.
-const BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk)`;
+const BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk OR "pico's school" OR "happy wheels" OR madness)`;
 const SAFE_GAMES = ` AND NOT subject:${BAD} AND NOT title:${BAD}`;
 
 // Hand-picked famous games, each tested to start in Ruffle. Game of the Day comes from this list.
@@ -70,7 +70,7 @@ async function gameRow(id) {
   const year = String([].concat(d.metadata?.year || d.metadata?.date || "")[0]).slice(0, 4);
   const blob = (title + " " + [].concat(d.metadata?.subject || []).join(" ")).toLowerCase();
   // A second check on the full tags, which the search can't always see.
-  if (/\b(nude|naked|sex|sexy|porn|hentai|erotic|nsfw|stripper|fetish|gore|mutilat\w*|tortur\w*|suicide|hitler|nazi|screamer|rape|shit|fuck\w*|flirt\w*|sperm|whack your)\b/.test(blob)) return null;
+  if (/\b(nude|naked|sex|sexy|porn|hentai|erotic|nsfw|stripper|fetish|gore|mutilat\w*|tortur\w*|suicide|hitler|nazi|screamer|rape|shit|fuck\w*|flirt\w*|sperm|whack your|pico's school|happy wheels|madness)\b/.test(blob)) return null;
   return [id, file, title, year, mb];
 }
 async function pool(fn, items) {

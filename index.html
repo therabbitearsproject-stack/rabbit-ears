@@ -1503,7 +1503,7 @@ async function renderNow() {
 // Files load through archive.org/cors/, the Archive's download address other sites may read.
 // Ruffle (the Flash emulator) is only downloaded the first time someone opens the Games tab.
 const GAME_BASE = "collection:softwarelibrary_flash_games";
-const GAME_BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk)`;
+const GAME_BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk OR "pico's school" OR "happy wheels" OR madness)`;
 let gamesData = null, gPlayer = null, gCur = null, gShelf = store.get("re_gshelf", "Classics"), gSearchResults = null;
 let gFavs = store.get("re_gfavs", []), gRecent = store.get("re_grecent", []);
 const gameRoom = id => "game-" + hash(id).toString(36);
