@@ -4,6 +4,31 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — 10 more channels (35–44)
+
+| # | Channel | What's on |
+|---|---|---|
+| 35 | Toon Toys | '80s Saturday morning cartoons: He-Man, Transformers, G.I. Joe, Care Bears, DuckTales |
+| 36 | Cliffhangers | Movie serials, chapter by chapter: Flash Gordon, Captain America, Dick Tracy |
+| 37 | Gumshoe | Detective and mystery films and TV: Sherlock Holmes, Mr. Wong, Dragnet |
+| 38 | Kaiju Theater | Godzilla, Gamera, Ultraman, Power Rangers |
+| 39 | Late Night | Carson, Letterman, Conan, Arsenio, Cavett |
+| 40 | Ringside | Classic pro wrestling and boxing |
+| 41 | Pit Lane | F1, NASCAR, Daytona, Le Mans, drag racing |
+| 42 | Skate & Surf | Skate videos, surf films, BMX |
+| 43 | Wild Kingdom | Nature and wildlife documentaries |
+| 44 | Soul Train | Soul Train, Top of the Pops, American Bandstand, concert tapes |
+
+- All use the `SAFE` filter. Extra exclusions after checking the top results: video game footage (racing,
+  skating, kaiju), Jackass/CKY/Bam (skate), strip-poker and "Divas Undressed" segments (wrestling), Conan Doyle
+  (late night), soundtrack uploads (kaiju), Grateful Dead audience tapes (`etree`, concerts).
+- Tested locally: all 10 rows filled with Now/Next/Later. The nightly catalog job picks them up on push.
+- Considered and skipped: Bollywood (mostly recent pirated films), stand-up (thin, mixed with lectures),
+  public access (search too broad), travelogues.
+- **Open:** Late Night also pulls whole VHS tapes that contain a talk show among other recordings.
+
+---
+
 ## 2026-11-05 — All-time visit count
 
 - Bottom of the page: "📈 N visits since launch", live.
