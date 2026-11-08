@@ -4,6 +4,14 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Traffic stats and an installable app icon
+
+- **Cloudflare Web Analytics:** a small script before `</body>` counts page views and visits, plus where visitors came from (referrers), countries and devices. It is cookieless and keeps no personal data, so no consent banner is needed. The site is "DNS only" (not proxied), so Cloudflare can't inject the script automatically; it's set to "Enable with JS Snippet installation". Dashboard: Cloudflare → Web analytics → rabbit-ears.stream. It doesn't count from `localhost` (CORS error there is expected).
+- **App icon and install:** new icon (the walnut TV with color bars and rabbit ears), drawn in `assets/icon.html` and rendered with headless Edge to `assets/icon-512.png`, `-192`, `-180` (iPhone home screen) and `-32` (browser tab — the site had no favicon before). `manifest.webmanifest` makes the site installable: "Install app" in Chrome/Edge, "Add to Home Screen" on Android and iPhone opens it full screen with the name "Rabbit-Ears". Long-pressing the icon on Android offers TV, Radio and Games shortcuts. No service worker, so it still needs a connection (everything streams anyway).
+- The workflow now also publishes `manifest.webmanifest`.
+
+---
+
 ## 2026-11-08 — Help search engines find the site
 
 - **`robots.txt` and `sitemap.xml`** (new, published by the workflow): let every search engine crawl the site, skip `subs/` and the share-card source, and point to the sitemap.

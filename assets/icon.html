@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rabbit-Ears.stream icon</title>
+<!-- Source for the app icons (assets/icon-*.png). Rendered at 512×512 with headless Edge (see DEVLOG),
+     then scaled down. Everything important sits inside the middle 80% so Android's "maskable" crop keeps it. -->
+<style>
+  html, body { margin: 0; width: 512px; height: 512px; overflow: hidden; }
+  body { background: radial-gradient(110% 100% at 30% 10%, #2c1f14, #120e0b 70%); position: relative; }
+  .ears { position: absolute; left: 256px; top: 178px; }
+  .ears i { position: absolute; bottom: 0; left: -7px; width: 14px; height: 120px; background: linear-gradient(#e8e8e8, #8a8a8a); border-radius: 7px; transform-origin: bottom center; }
+  .ears i:first-child { transform: rotate(-30deg); } .ears i:nth-child(2) { transform: rotate(30deg); }
+  .ears i::before { content: ""; position: absolute; top: -10px; left: -4px; width: 22px; height: 22px; border-radius: 50%; background: #ffb648; }
+  .ears b { position: absolute; left: -36px; bottom: -14px; width: 72px; height: 32px; background: #3a2c20; border-radius: 36px 36px 6px 6px; }
+  .cab { position: absolute; left: 76px; top: 172px; width: 360px; height: 270px; box-sizing: border-box; padding: 22px;
+    background: linear-gradient(160deg, #6a4226, #2a1a10 60%); border-radius: 44px; box-shadow: inset 0 3px 0 rgba(255,255,255,.12); }
+  .scr { width: 100%; height: 100%; border-radius: 30px / 34px; overflow: hidden; position: relative; box-shadow: 0 0 0 8px #0b0806;
+    background: repeating-linear-gradient(90deg, #f4f4f4 0 14.28%, #f2e64b 14.28% 28.56%, #5fe3e8 28.56% 42.84%, #5ee86a 42.84% 57.12%, #e85ee0 57.12% 71.4%, #e8504c 71.4% 85.68%, #4c5ee8 85.68% 100%); }
+  .scr::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 24%; background: linear-gradient(90deg, #1a2d6b 0 25%, #f4f4f4 25% 50%, #3a0b5c 50% 75%, #161616 75%); }
+  .scr::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 3px, transparent 3px 6px), radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.55)); }
+</style>
+</head>
+<body>
+  <div class="ears"><i></i><i></i><b></b></div>
+  <div class="cab"><div class="scr"></div></div>
+</body>
+</html>

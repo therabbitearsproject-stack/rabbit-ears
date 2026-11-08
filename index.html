@@ -6,6 +6,14 @@
 <title>Rabbit-Ears.stream</title>
 <meta name="description" content="Forgotten TV on synchronized 24/7 channels, live radio from around the world, and classic Flash games. All free, all in your browser.">
 <meta name="theme-color" content="#120e0b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Rabbit-Ears">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <!-- Link previews (iMessage, WhatsApp, Discord, Facebook, X, Slack…). Image source: share-card.html -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rabbit-Ears.stream">
@@ -1849,5 +1857,7 @@ onValue(visits, s => {
   document.getElementById("total").textContent = n ? `📈 ${n.toLocaleString()} ${n === 1 ? "visit" : "visits"} since launch` : "";
 });
 </script>
+<!-- Cloudflare Web Analytics: cookieless page-view counts (no personal data, no consent banner needed). Dashboard: Cloudflare → Web analytics. -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fe796e3b927f4fac9859a69fa39a9e1f"}'></script>
 </body>
 </html>

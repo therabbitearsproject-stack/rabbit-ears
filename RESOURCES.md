@@ -14,6 +14,7 @@ Everything the project uses, what it's for, and what it costs.
 | Google account (project Gmail) | Owns the Firebase project and the Cloudflare account | Free | — |
 | Domain `rabbit-ears.stream` | The site's address. Registered and DNS hosted at Cloudflare (Rabbit Ears Gmail account). Records: four `A @` → `185.199.108–111.153` and `CNAME www` → `therabbitearsproject-stack.github.io`, all "DNS only" (grey cloud) so GitHub can issue the HTTPS certificate; plus `TXT @` `google-site-verification=…`, which keeps Google Search Console verified (do not delete) | Yearly registration | https://dash.cloudflare.com |
 | Google Search Console | Search indexing reports, sitemap (`sitemap.xml`) submission, "Request indexing" | Free; Rabbit Ears Gmail, domain property `rabbit-ears.stream` | https://search.google.com/search-console |
+| Cloudflare Web Analytics | Cookieless visit counts, referrers, countries, devices (script `static.cloudflareinsights.com/beacon.min.js`, manual snippet with the site token) | Free; same Cloudflare account | https://dash.cloudflare.com → Web analytics |
 | Firebase project `project-rabbitears` | Live viewer/listener counts (Realtime Database) | Free Spark plan: 100 simultaneous connections, 1 GB stored, 10 GB/month downloaded | https://console.firebase.google.com/project/project-rabbitears |
 
 ## Content sources
