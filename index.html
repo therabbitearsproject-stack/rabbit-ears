@@ -119,10 +119,22 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .guide h3 { margin: 0; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
 .guide-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .guide-head .clock { font-family: var(--osd); font-size: 1.3rem; color: var(--phosphor); }
+/* Timeline grid: each row's programs are blocks sized by length on a shared time ruler. */
+.grid { display: grid; gap: 6px; --now: -10%; }
 .chans { display: grid; gap: 6px; }
-.cols, .chan { display: grid; grid-template-columns: 3ch minmax(8rem, 11rem) 1fr 1fr 1fr; gap: 12px; align-items: center; }
-.cols { padding: 0 14px; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
-.cols span:first-child { grid-column: 3; }
+.ruler, .chan { display: grid; grid-template-columns: 3ch 11rem 1fr; gap: 12px; align-items: center; }
+.ruler { padding: 0 14px; position: sticky; top: 0; z-index: 2; background: var(--bg); padding-block: 4px; }
+.ticks { grid-column: 3; position: relative; height: 1.3rem; }
+.ticks span { position: absolute; top: 0; font-family: var(--osd); font-size: 1.1rem; color: var(--amber); white-space: nowrap; line-height: 1.2; padding-left: 4px; border-left: 1px solid var(--line); }
+.track { position: relative; height: 3.1rem; min-width: 0; border-radius: 8px; background: rgba(0,0,0,.28); overflow: hidden; }
+.track::after { content: ""; position: absolute; top: 0; bottom: 0; left: var(--now); width: 2px; background: var(--amber); box-shadow: 0 0 6px var(--amber); z-index: 1; }
+.track .tw { position: absolute; inset: 0; display: grid; align-items: center; padding: 0 10px; color: var(--dim); font-size: .85rem; }
+.blk { position: absolute; top: 0; bottom: 0; display: grid; align-content: center; gap: 2px; padding: 0 8px; min-width: 0; overflow: hidden; background: #2b2119; border-radius: 6px; font-size: .84rem; }
+.blk time { font-family: var(--osd); font-size: 1rem; line-height: 1; color: var(--dim); white-space: nowrap; }
+.blk b { font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.blk.live { background: #24301f; box-shadow: inset 0 0 0 1px rgba(141,255,180,.55); }
+.blk.live time { color: var(--phosphor); }
+.blk.tiny > * { display: none; }
 .chan {
   text-align: left; appearance: none; background: var(--panel); border: 1px solid var(--line); color: var(--ink);
   border-radius: 12px; padding: 10px 14px; cursor: pointer; font: inherit; min-width: 0;
@@ -134,22 +146,26 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .vw:empty { display: none; }
 .chan .d { display: block; color: var(--dim); font-size: .8rem; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .chan.on { border-color: var(--phosphor); box-shadow: 0 0 0 1px var(--phosphor) inset; }
-.prog { min-width: 0; display: grid; gap: 2px; font-size: .88rem; }
-.prog time { font-family: var(--osd); font-size: 1.1rem; color: var(--amber); line-height: 1; }
-.prog b { font-weight: 400; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
-.prog.wait b { color: var(--dim); }
 .bar { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--phosphor); }
 .chan .x { color: var(--dim); font-size: .8rem; padding: 4px 6px; border-radius: 6px; justify-self: start; }
 .chan .x:hover { color: var(--amber); }
-@media (max-width: 760px) {
-  .cols { display: none; }
-  .chan { grid-template-columns: 3ch 1fr 1fr; row-gap: 8px; }
-  .chan .t { grid-column: 2 / -1; }
-  .chan .prog.onair { grid-column: 2; }
-  .chan .prog.later { display: none; }
-  .prog time::before { content: attr(data-k) " "; color: var(--dim); }
+@media (max-width: 600px) {
+  .ruler, .chan { grid-template-columns: 2.4ch 6.2rem 1fr; gap: 8px; }
+  .ruler { padding-inline: 10px; }
+  .chan { padding: 8px 10px; }
+  .chan .n { font-size: 1.3rem; }
+  .chan .t { font-size: .88rem; }
+  .chan .d { display: none; }
+  .ticks span { font-size: 1rem; }
 }
+
+/* Position in the current show */
+.pos { display: grid; grid-template-columns: auto 1fr auto auto; gap: 10px; align-items: center; font-family: var(--osd); font-size: 1.1rem; color: var(--dim); font-variant-numeric: tabular-nums; }
+.pos .bar { height: 5px; }
+.golive { appearance: none; border: 1px solid var(--line); background: none; color: var(--phosphor); border-radius: 999px; padding: 2px 10px; font: inherit; cursor: pointer; white-space: nowrap; }
+.golive.behind { color: var(--amber); border-color: var(--amber); }
+.golive:not(.behind) { cursor: default; }
 
 form.add { display: grid; grid-template-columns: 1fr 2fr auto; gap: 8px; }
 form.add input { min-width: 0; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: 10px; padding: 12px; font: inherit; }
@@ -270,16 +286,24 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   </div>
 
   <div class="remote">
-    <button class="btn ch" id="down" type="button" aria-label="Channel down">CH ▼</button>
-    <button class="btn ch" id="up" type="button" aria-label="Channel up">CH ▲</button>
-    <button class="btn" id="mute" type="button">Sound off</button>
+    <button class="btn ch" id="down" type="button" aria-label="Channel down" title="Channel down (↓)">CH ▼</button>
+    <button class="btn ch" id="up" type="button" aria-label="Channel up" title="Channel up (↑)">CH ▲</button>
+    <button class="btn" id="surf" type="button" title="Random channel (R)">🎲 Surprise me</button>
+    <button class="btn" id="back" type="button" aria-label="Back 15 seconds" title="Back 15 seconds (←)">⏪ 15</button>
+    <button class="btn" id="pause" type="button" title="Pause (Space)">⏸ Pause</button>
+    <button class="btn" id="fwd" type="button" aria-label="Forward 15 seconds" title="Forward 15 seconds (→)">15 ⏩</button>
     <span class="spacer"></span>
+    <button class="btn" id="mute" type="button" title="Sound (M)">Sound off</button>
     <button class="btn" id="full" type="button">Full screen</button>
   </div>
 
   <section class="now" aria-live="polite">
     <span class="k">Now playing</span>
     <h2 id="title">Warming up the tubes…</h2>
+    <div class="pos" id="pos" hidden>
+      <span id="elapsed"></span><span class="bar"><i id="pbar"></i></span><span id="remain"></span>
+      <button class="golive" id="live" type="button">● LIVE</button>
+    </div>
     <span class="meta" id="meta"></span>
     <span class="meta" id="upnext"></span>
     <span class="meta vw" id="viewers"></span>
@@ -288,8 +312,10 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
   <section class="guide">
     <div class="guide-head"><h3>TV guide</h3><span class="clock" id="clock"></span></div>
-    <div class="cols" aria-hidden="true"><span>Now</span><span>Next</span><span>Later</span></div>
-    <div class="chans" id="chans"></div>
+    <div class="grid" id="grid">
+      <div class="ruler" aria-hidden="true"><div class="ticks" id="ticks"></div></div>
+      <div class="chans" id="chans"></div>
+    </div>
     <h3>Add your own channel</h3>
     <form class="add" id="add">
       <input id="addName" placeholder="Channel name" required maxlength="24">
@@ -628,16 +654,30 @@ function showOSD(text, lower) {
 }
 
 // ---------- TV guide ----------
+// A cable-style grid: a time ruler starting at the current half hour, 3 hours wide (90 minutes on
+// phones), with each channel's programs drawn as blocks sized by their length.
 let rows = [];
-function progCell(cls, k) {
-  const s = document.createElement("span"); s.className = "prog wait " + cls;
-  const tm = document.createElement("time"); tm.dataset.k = k;
-  const b = document.createElement("b"); b.textContent = "…";
-  s.append(tm, b);
-  if (cls === "onair") { const bar = document.createElement("span"); bar.className = "bar"; bar.append(document.createElement("i")); s.append(bar); }
-  return s;
+const SLOT = 1800;
+const guideWindow = () => ({ w0: Math.floor(nowSec() / SLOT) * SLOT, span: matchMedia("(max-width: 600px)").matches ? 5400 : 10800 });
+let win = guideWindow();
+const pct = t => (t - win.w0) / win.span * 100;
+function renderRuler() {
+  $("ticks").innerHTML = "";
+  for (let t = win.w0; t < win.w0 + win.span; t += SLOT)
+    $("ticks").append(Object.assign(document.createElement("span"), {
+      textContent: win.span < 10800 && t > win.w0 ? clockFmt(t).replace(/\s?[AP]M$/i, "") : clockFmt(t), style: `left:${pct(t)}%` }));
+  markNow();
 }
+function markNow() { $("grid").style.setProperty("--now", pct(nowSec()) + "%"); }
+function guideTick() {
+  const w = guideWindow();
+  if (w.w0 !== win.w0 || w.span !== win.span) { win = w; renderRuler(); rows.forEach(r => r.painted = 0); fillGuide(); }
+  markNow();
+}
+setInterval(guideTick, 15000);
+matchMedia("(max-width: 600px)").addEventListener?.("change", guideTick);
 function renderGuide() {
+  renderRuler();
   $("chans").innerHTML = "";
   rows = channels().map((c, i) => {
     const b = document.createElement("button");
@@ -650,12 +690,13 @@ function renderGuide() {
       x.onclick = e => { e.stopPropagation(); custom = custom.filter(k => k.q !== c.q); store.set("re_custom", custom); if (cur >= channels().length) cur = 0; renderGuide(); tune(cur); };
       t.append(x);
     }
-    const cells = [progCell("onair", "Now"), progCell("next", "Next"), progCell("later", "Later")];
-    b.append(n, t, ...cells);
+    const track = Object.assign(document.createElement("span"), { className: "track" });
+    track.append(Object.assign(document.createElement("span"), { className: "tw", textContent: "Tuning…" }));
+    b.append(n, t, track);
     b.onclick = () => { tune(i); $("screen").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
     $("chans").append(b);
     // With the catalog every row is instant, so fill them all; without it, only rows on screen.
-    return { ch: c, cells, el: b, seen: i === cur || !!catalog?.pools?.[c.q], painted: 0 };
+    return { ch: c, track, el: b, seen: i === cur || !!catalog?.pools?.[c.q], painted: 0 };
   });
   // Only look up listings for rows someone can see.
   rowObserver?.disconnect();
@@ -667,19 +708,30 @@ function renderGuide() {
   fillGuide();
 }
 let rowObserver = null;
-function markOn() { rows.forEach((r, i) => r.cells[0].closest(".chan").classList.toggle("on", i === cur)); }
+function markOn() { rows.forEach((r, i) => r.el.classList.toggle("on", i === cur)); }
 
 function paintRow(r, progs) {
-  const t = nowSec();
-  r.cells.forEach((cell, k) => {
-    const p = progs[k], tm = cell.querySelector("time"), b = cell.querySelector("b");
-    cell.classList.toggle("wait", !p);
-    if (!p) { b.textContent = k ? "—" : "No signal"; tm.textContent = ""; return; }
-    tm.textContent = clockFmt(p.start);
-    b.textContent = p.m.title;
-    cell.title = `${p.m.title} · ${clockFmt(p.start)}–${clockFmt(p.end)}`;
-    if (k === 0) cell.querySelector(".bar i").style.width = Math.min(100, (t - p.start) / (p.end - p.start) * 100) + "%";
-  });
+  const t = nowSec(), w1 = win.w0 + win.span;
+  const shown = progs.filter(p => p.end > win.w0 && p.start < w1);
+  r.track.innerHTML = "";
+  if (!shown.length) { r.track.append(Object.assign(document.createElement("span"), { className: "tw", textContent: "No signal" })); return; }
+  // Runs of programs too short to label (commercials, clips, AMVs) become one block: "Title + 12 more".
+  const TINY = 0.035, groups = [];
+  for (const p of shown) {
+    const tiny = (Math.min(p.end, w1) - Math.max(p.start, win.w0)) / win.span < TINY, g = groups[groups.length - 1];
+    if (tiny && g?.tiny) g.ps.push(p); else groups.push({ tiny, ps: [p] });
+  }
+  for (const { ps } of groups) {
+    const first = ps[0], last = ps[ps.length - 1];
+    const a = Math.max(first.start, win.w0), z = Math.min(last.end, w1);
+    const blk = document.createElement("span");
+    blk.className = "blk" + (first.start <= t && t < last.end ? " live" : "") + ((z - a) / win.span < TINY ? " tiny" : "");
+    blk.style.left = `calc(${pct(a)}% + 1px)`; blk.style.width = `calc(${(z - a) / win.span * 100}% - 2px)`;
+    blk.title = ps.slice(0, 12).map(p => `${clockFmt(p.start)} ${p.m.title}`).join("\n") + (ps.length > 12 ? `\n…and ${ps.length - 12} more` : "");
+    blk.append(Object.assign(document.createElement("time"), { textContent: (first.start < win.w0 ? "◂ " : "") + clockFmt(first.start) }),
+               Object.assign(document.createElement("b"), { textContent: first.m.title + (ps.length > 1 ? ` + ${ps.length - 1} more` : "") }));
+    r.track.append(blk);
+  }
 }
 // Up to 3 rows load at once. Each time a slot frees up it takes, in order: the channel you're
 // watching, then rows on screen right now, then rows seen earlier. Rows painted in the last
@@ -695,12 +747,59 @@ function fillGuide() {
     const r = nextRow();
     if (!r) return;
     workers++; r.busy = true;
-    lineup(r.ch, nowSec(), 3).then(p => paintRow(r, p), () => paintRow(r, []))
+    lineup(r.ch, win.w0, 200).then(p => paintRow(r, p), () => paintRow(r, []))
       .finally(() => { r.busy = false; r.painted = Date.now(); workers--; fillGuide(); });
   }
 }
 
 // ---------- Tuning ----------
+// Pause and ±15 s shift your own picture off the shared clock: `shift` is how far behind live you
+// are (0 or negative), and while paused the show's clock stands still at `heldAt`. Changing channel,
+// or reaching the end of the show, puts you back on live.
+let shift = 0, held = false, heldAt = 0;
+const showNow = () => (held ? heldAt : nowSec()) + shift;
+function paintPause() {
+  $("pause").textContent = held ? "▶ Play" : "⏸ Pause";
+  $("pause").setAttribute("aria-label", held ? "Play" : "Pause");
+}
+function paintPos() {
+  $("pos").hidden = !playing;
+  if (!playing) return;
+  const st = showNow(), total = playing.end - playing.v0, el = Math.min(total, Math.max(0, st - playing.v0));
+  $("elapsed").textContent = fmt(el);
+  $("remain").textContent = "−" + fmt(Math.max(0, playing.end - st));
+  $("pbar").style.width = (el / total * 100) + "%";
+  const behind = held || shift < -2;
+  $("live").classList.toggle("behind", behind);
+  $("live").textContent = behind ? "↻ Back to live" : "● LIVE";
+}
+function seek(d) {
+  if (!playing) return;
+  const base = held ? heldAt : nowSec();
+  const st = Math.min(nowSec(), playing.end - 1, Math.max(playing.v0, showNow() + d));
+  shift = st - base;
+  if (vid.readyState) vid.currentTime = st - playing.v0;
+  paintPos();
+}
+function togglePause() {
+  if (!playing) return;
+  if (held) { shift -= nowSec() - heldAt; held = false; vid.play().catch(() => {}); }
+  else { held = true; heldAt = nowSec(); vid.pause(); }
+  paintPause(); paintPos();
+}
+function goLive() {
+  if (!playing || (!held && shift > -2)) return;
+  held = false; shift = 0; paintPause();
+  if (nowSec() >= playing.end) return tune(cur);
+  vid.currentTime = nowSec() - playing.v0; vid.play().catch(() => {});
+  paintPos();
+}
+function surf() {
+  const n = channels().length;
+  if (n < 2) return;
+  let j = Math.floor(Math.random() * (n - 1)); if (j >= cur) j++;
+  tune(j);
+}
 function waitForNext(my) {
   // The video ended (or isn't there yet) before its slot did: show static and the next show.
   snow.style.opacity = "1";
@@ -712,6 +811,7 @@ async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_ch", cur);
   const ch = list[cur], my = ++tuneId;
+  shift = 0; held = false; paintPause();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   clearTimeout(waitTimer);
   markOn();
@@ -730,26 +830,29 @@ async function tune(i) {
       vid.currentTime = want; if (tvOn) vid.play().catch(() => {});
     };
     vid.onplaying = () => { if (my === tuneId) snow.style.opacity = "0"; };
-    vid.onended = () => { if (my !== tuneId) return; nowSec() < p.end - 2 ? waitForNext(my) : tune(cur); };
+    vid.onended = () => { if (my !== tuneId) return; shift === 0 && nowSec() < p.end - 2 ? waitForNext(my) : tune(cur); };
     vid.onerror = () => { if (my === tuneId) { metaCache[m.id] = null; setTimeout(() => tune(cur), 800); } };
     $("title").textContent = m.title;
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(p.start)}–${clockFmt(p.end)} · ${fmt(offset)} in`;
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
     $("link").href = "https://archive.org/details/" + encodeURIComponent(m.id);
     showOSD("CH " + num(cur), ch.name + " — " + m.title);
+    paintPos();
   } catch {
     if (my !== tuneId) return;
-    playing = null;
+    playing = null; paintPos();
     $("title").textContent = "Nothing but static on " + ch.name;
     $("meta").textContent = "The Internet Archive didn't answer, or this search has no videos. Try another channel.";
   }
 }
 
-// Every few seconds: switch shows when the slot ends, keep the picture on schedule, tick the clock.
+// Every second: switch shows when the slot ends, keep the picture on schedule, tick the clock.
 setInterval(() => {
-  const t = nowSec();
-  $("clock").textContent = clockFmt(t);
+  $("clock").textContent = clockFmt(nowSec());
   if (!playing || !tvOn) return;
+  paintPos();
+  if (held) return;
+  const t = showNow();
   if (t >= playing.end) return tune(cur);
   if (!vid.paused && !vid.seeking) {
     const want = t - playing.v0;
@@ -757,8 +860,13 @@ setInterval(() => {
     const ch = channels()[cur], m = playing.m;
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(playing.start)}–${clockFmt(playing.end)} · ${fmt(vid.currentTime)} in`;
   }
-}, 5000);
+}, 1000);
 setInterval(fillGuide, 60000);
+$("surf").onclick = surf;
+$("pause").onclick = togglePause;
+$("back").onclick = () => seek(-15);
+$("fwd").onclick = () => seek(15);
+$("live").onclick = goLive;
 
 function setMuted(m) { vid.muted = m; $("mute").textContent = m ? "Sound off" : "Sound on"; }
 $("power").onclick = () => { $("power").hidden = true; setMuted(false); vid.play().catch(() => {}); };
@@ -991,6 +1099,10 @@ document.addEventListener("keydown", e => {
   if (mode === "radio") { if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); stepStation(1); } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); stepStation(-1); } return; }
   if (e.key === "ArrowUp") { e.preventDefault(); tune(cur + 1); }
   else if (e.key === "ArrowDown") { e.preventDefault(); tune(cur - 1); }
+  else if (e.key === "ArrowLeft") { e.preventDefault(); seek(-15); }
+  else if (e.key === "ArrowRight") { e.preventDefault(); seek(15); }
+  else if (e.key === " " && e.target.tagName !== "BUTTON") { e.preventDefault(); togglePause(); }
+  else if (e.key === "r" && !e.ctrlKey && !e.metaKey) surf();
   else if (e.key === "m") setMuted(!vid.muted);
   else if (/^[1-9]$/.test(e.key)) tune(+e.key - 1);
 });

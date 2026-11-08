@@ -4,6 +4,29 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Timeline guide, pause/rewind, Surprise me
+
+Ideas taken from looking at a similar site (Spelunkr); built our own way.
+
+**Timeline guide.** The Now/Next/Later columns are replaced by a cable-style grid: a time ruler starting at the
+current half hour, 3 hours wide (90 minutes on phones), with each program drawn as a block sized by its length
+and an amber line marking the current time. The block on air now is outlined in green. Hover a block for its times.
+- Runs of programs too short to label (commercials, clips, AMVs) merge into one block, e.g.
+  "Gilmore Girls Theme + 68 more"; hovering lists them.
+- The window moves forward every half hour by itself; the ruler stays pinned while scrolling the guide.
+
+**Remote.**
+- 🎲 **Surprise me** (or R): random channel.
+- ⏸ **Pause** (Space), ⏪ **15** / **15** ⏩ (← →): pause or rewind your own picture. Fast-forward stops at live.
+  "↻ Back to live" appears whenever you're behind; changing channel or reaching the end of the show also puts
+  you back on live. Everyone else's schedule is unaffected.
+- Now Playing has a progress bar with elapsed and remaining time.
+
+Tested locally at desktop and phone widths (no sideways scroll), including pause, rewind, forward clamping,
+back to live, Surprise me and the R key.
+
+---
+
 ## 2026-11-07 — Clean program titles
 
 Archive titles are whatever the uploader typed, so the guide showed things like
