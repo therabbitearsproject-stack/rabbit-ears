@@ -4,6 +4,55 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — 11 more channels, channel links, report handling, better titles
+
+**New channels (55 total)**, filling gaps found by comparing with a similar site (our own names and searches):
+
+| # | Channel | What's on |
+|---|---|---|
+| 10 | ⭐ Prime Time Tapes | Network nights taped with the ads: TGIF, NBC Thursdays, Sunday Night Movies |
+| 11 | 🌀 Strange Tales | Twilight Zone, Outer Limits, Alfred Hitchcock Presents, One Step Beyond, Thriller |
+| 12 | 🖖 Starbase | Star Trek, Doctor Who, Space: 1999, Battlestar Galactica, Space Patrol |
+| 13 | 👽 Spooky '90s | X-Files, Unsolved Mysteries, Are You Afraid of the Dark?, Goosebumps |
+| 14 | ☎️ Order Now | Late-night infomercials |
+| 15 | 🖌️ Paint Along | The Joy of Painting episodes |
+| 22 | 🐕 Scooby & Friends | Hanna-Barbera: Scooby-Doo, Flintstones, Jetsons, Jonny Quest, Super Friends |
+| 25 | 🎒 After School | Bill Nye, Magic School Bus, Wishbone, Beakman, 3-2-1 Contact |
+| 33 | 🦇 Chiller Hosts | Horror hosts: Elvira, Joe Bob Briggs' MonsterVision, Svengoolie |
+| 81 | ☢️ Duck & Cover | Cold War and civil defense films |
+| 82 | 🎥 Home Movies | Amateur films, family trips, travelogues |
+
+- Excluded after checking top results: Twitch streams (Paint Along), *Office Space* (Starbase), "USA Up All Night"
+  (mostly risqué B-movies; Chiller Hosts), *Godzilla 2000: Millennium* (Spooky '90s), a concert tape matched by
+  "call now" (Order Now).
+- "Gumshoe" renamed **Private Eye** (the other site has a channel called Gumshoe).
+- **Renumbered** with room to grow: 2–19 Classic TV, 20s Kids, 30s–40s Movies, 50s Anime, 60s Sports, 70s Music,
+  80s–90s Learning & oddities.
+
+**Channel links.** The address follows the channel (`…/#ch62` = Ringside), so copying the address shares the
+channel, and opening such a link tunes straight to it. "🔗 Share this channel" under Now Playing opens the phone's
+share sheet, or copies the link on a computer.
+
+**Report handling (nightly).** `build-catalog.mjs` reads `/reports`: a tape reported "not appropriate" twice or
+"won't play" three times leaves every channel; "wrong channel" twice leaves that channel. Every reported tape is
+listed with counts and links in the summary of each "Build and publish" run (GitHub → Actions → the run).
+
+**Better titles.**
+- Film uploads lose their credits: "Laura (1944) Dir: Otto Preminger, Starring Gene Tierney…" → "Laura (1944)";
+  "1959 - Anatomy of a Murder - Anatomía de un asesinato - VOSE" → "Anatomy of a Murder (1959)".
+- "WOC" → "with ads"; "Sold as Blank:", "Beta #26:", "Tape #441:" and leftover date prefixes removed.
+- `TITLE_FIX` in `index.html`: hand-written titles for 55 long, much-aired tapes, e.g.
+  "ABC Saturday Morning, October 27, 1990: Ghostbusters, Beetlejuice and More".
+
+**Blocklist can be per channel** (`"id@Channel name"`). Pulled while reviewing titles: a C-SPAN broadcast (Retro
+Anime), a Howard Stern clip show (Sweatin', everywhere), a Twitch stream (TV Dinner, everywhere), and mixed tapes
+on the wrong channel (Gridiron, Sweatin', Strange Signals, Wild Kingdom, Ringside).
+
+Tested locally: 55 channels, no duplicate numbers, all 12 new/renamed channels fill, `#ch62` link, title rules,
+per-channel blocks.
+
+---
+
 ## 2026-11-07 — Channel numbers, logos, captions, tape reports, welcome screen
 
 **Channel numbers in genre bands, with logos.** Like a cable lineup: 2–9 Classic TV, 10s Kids, 20s Movies,

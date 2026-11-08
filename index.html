@@ -352,6 +352,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <span class="meta vw" id="viewers"></span>
     <div class="acts">
       <a id="link" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
+      <button class="linkbtn" id="share" type="button">🔗 Share this channel</button>
       <button class="linkbtn" id="report" type="button" aria-expanded="false" aria-controls="reportBox">⚑ Report this tape</button>
     </div>
     <div class="reportbox" id="reportBox" hidden>
@@ -441,7 +442,7 @@ const BUILT_IN = [
   { name: "TV Dinner",          desc: "Classic cooking shows",             q: `(title:("julia child" OR "french chef" OR "galloping gourmet" OR "graham kerr" OR "yan can cook" OR "frugal gourmet" OR "great chefs" OR "justin wilson" OR "cooking show"))` + SAFE },
   { name: "Toon Toys",          desc: "'80s Saturday morning cartoons",    q: `(title:("he-man" OR "masters of the universe" OR "she-ra" OR transformers OR "g.i. joe" OR "gi joe" OR thundercats OR smurfs OR "care bears" OR "my little pony" OR jem OR "inspector gadget" OR "m.a.s.k" OR voltron OR ghostbusters OR "teenage mutant ninja turtles" OR "duck tales" OR ducktales OR "muppet babies" OR "pee-wee") AND date:[1980-01-01 TO 1995-12-31] AND NOT title:(game OR gameplay OR longplay OR nes OR snes OR genesis OR commercial OR toy) AND NOT subject:(longplay OR amv))` + SAFE },
   { name: "Cliffhangers",       desc: "Movie serials: Flash Gordon and co.", q: `(subject:(serial OR serials OR "movie serial" OR cliffhanger) AND (collection:feature_films OR collection:classic_tv OR collection:moviesandfilms OR collection:serials))` + SAFE },
-  { name: "Gumshoe",            desc: "Detectives and mysteries",          q: `(subject:(detective OR mystery OR "sherlock holmes" OR dragnet OR "private eye" OR "crime drama") AND (collection:classic_tv OR collection:feature_films OR collection:film_noir))` + SAFE },
+  { name: "Private Eye",        desc: "Detectives and mysteries",          q: `(subject:(detective OR mystery OR "sherlock holmes" OR dragnet OR "private eye" OR "crime drama") AND (collection:classic_tv OR collection:feature_films OR collection:film_noir))` + SAFE },
   { name: "Kaiju Theater",      desc: "Godzilla, Ultraman, Power Rangers", q: `(subject:(tokusatsu OR ultraman OR kaiju OR godzilla OR gamera OR "power rangers" OR "super sentai" OR "kamen rider") AND NOT subject:(longplay OR amv) AND NOT title:(boobs OR hypnotic OR countrockula OR ost OR soundtrack OR eost OR gameplay))` + SAFE },
   { name: "Late Night",         desc: "Carson, Letterman, Conan, Arsenio", q: `(title:("tonight show" OR "late night with" OR "johnny carson" OR arsenio OR letterman OR "late show with" OR "dick cavett" OR "merv griffin") AND NOT title:doyle)` + SAFE },
   { name: "Ringside",           desc: "Classic wrestling and boxing",      q: `(subject:("pro wrestling" OR "professional wrestling" OR wwf OR wcw OR nwa OR ecw OR "boxing match" OR "heavyweight championship") AND NOT title:(divas OR foxy OR undressed OR strip OR poker OR "weakest link" OR nollywood OR nigerian OR game OR longplay OR gameplay OR rip OR iso))` + SAFE },
@@ -449,21 +450,36 @@ const BUILT_IN = [
   { name: "Skate & Surf",       desc: "Skate videos, surf films, BMX",     q: `(subject:(skateboarding OR skateboard OR surfing OR "surf film" OR "surf movie" OR bmx) AND NOT title:(cky OR iso OR gamecube OR xxx OR viva OR jackass OR bam OR haggard OR rectal OR game OR gameplay OR longplay OR ps2 OR xbox) AND NOT subject:(longplay OR "video game"))` + SAFE },
   { name: "Wild Kingdom",       desc: "Nature and wildlife documentaries", q: `(subject:(wildlife OR "nature documentary" OR "national geographic" OR attenborough OR "wild kingdom" OR cousteau OR "animal documentary" OR "wild america"))` + SAFE },
   { name: "Soul Train",         desc: "Soul Train, Top of the Pops, concerts", q: `(subject:("concert film" OR "live concert" OR "concert video" OR "soul train" OR "american bandstand" OR "top of the pops") AND NOT collection:etree)` + SAFE },
+  { name: "Prime Time Tapes",   desc: "Network nights taped with the ads",  q: `(title:("with commercials" OR "w/ commercials" OR "with ads" OR "original broadcast" OR "must see tv" OR "tgif") AND title:(nbc OR cbs OR abc OR fox OR upn OR "the wb") AND date:[1975-01-01 TO 2008-12-31] AND NOT title:(news OR "saturday morning" OR cartoon OR kids))` + SAFE },
+  { name: "Strange Tales",      desc: "Twilight Zone, Outer Limits, Hitchcock", q: `(title:("twilight zone" OR "outer limits" OR "alfred hitchcock presents" OR "night gallery" OR "tales from the darkside" OR "one step beyond" OR "science fiction theatre" OR "amazing stories" OR "thriller") AND (collection:classic_tv OR collection:television OR subject:television OR subject:anthology) AND NOT title:(game OR michael OR jackson OR dinosaurs))` + SAFE },
+  { name: "Starbase",           desc: "Star Trek, Doctor Who, Space: 1999", q: `(title:("star trek" OR "lost in space" OR "space: 1999" OR "space 1999" OR "battlestar galactica" OR "buck rogers in the 25th" OR "doctor who" OR "blake's 7" OR "babylon 5" OR "quantum leap" OR "land of the giants" OR "captain video" OR "tom corbett" OR "space patrol") AND NOT title:(office OR game OR gameplay OR longplay OR review OR trailer OR podcast OR toy OR lego OR yts OR reaction) AND NOT subject:(longplay OR "video game"))` + SAFE },
+  { name: "Spooky '90s",        desc: "X-Files, Unsolved Mysteries, Goosebumps", q: `(title:("x-files" OR "x files" OR "twin peaks" OR "unsolved mysteries" OR "tales from the crypt" OR "are you afraid of the dark" OR goosebumps OR "the outer limits") AND date:[1988-01-01 TO 2003-12-31] AND NOT title:(game OR gameplay OR longplay OR podcast OR review OR soundtrack OR ost OR horrorland OR godzilla OR mambo))` + SAFE },
+  { name: "Order Now",          desc: "Late-night infomercials",           q: `(title:(infomercial OR infomercials OR "as seen on tv" OR ronco OR ginsu OR thighmaster OR "showtime rotisserie" OR popeil) AND NOT title:(game OR parody))` + SAFE },
+  { name: "Paint Along",        desc: "The Joy of Painting, start to finish", q: `(title:("joy of painting") OR (title:"bob ross" AND title:(season OR episode OR workshop OR "joy of"))) AND NOT title:(stream OR streams OR vinesauce OR pokimane OR munchies OR remix OR jacob OR mario OR cassette OR "and me" OR twitch)` + SAFE },
+  { name: "Scooby & Friends",   desc: "Hanna-Barbera: Scooby, Flintstones, Jetsons", q: `(title:(scooby OR flintstones OR jetsons OR "yogi bear" OR "huckleberry hound" OR "jonny quest" OR "wacky races" OR "top cat" OR "quick draw" OR herculoids OR "josie and the pussycats" OR "hong kong phooey" OR "super friends" OR "space ghost") AND date:[1958-01-01 TO 2002-12-31] AND NOT title:(game OR gameplay OR longplay OR nes OR snes OR toy OR review OR "coast to coast" OR upscale) AND NOT subject:(longplay OR amv))` + SAFE },
+  { name: "After School",       desc: "Bill Nye, Magic School Bus, Wishbone", q: `(title:(wishbone OR ghostwriter OR "3-2-1 contact" OR "bill nye" OR "square one" OR zoboomafoo OR kratts OR beakman OR "newton's apple" OR "mr. wizard" OR "magic school bus" OR "where in the world is carmen sandiego" OR "electric company") AND NOT title:(game OR gameplay OR longplay OR webinar))` + SAFE },
+  { name: "Chiller Hosts",      desc: "Elvira, Joe Bob, MonsterVision",     q: `(subject:("horror host" OR "horror hosts" OR elvira OR svengoolie OR "joe bob briggs" OR monstervision OR "chiller theatre" OR "creature double feature" OR "shock theater") OR title:(elvira OR svengoolie OR "joe bob" OR "monster vision" OR monstervision OR "creature double feature" OR "chiller theatre")) AND NOT title:(minx OR search OR "up all night")` + SAFE },
+  { name: "Duck & Cover",       desc: "Cold War and civil defense films",  q: `(subject:("civil defense" OR "atomic bomb" OR "nuclear war" OR "cold war" OR "fallout shelter" OR "duck and cover") AND collection:(prelinger OR ephemera OR educationalfilms OR feature_films OR nasa OR FedFlix OR usgovernmentfilms))` + SAFE },
+  { name: "Home Movies",        desc: "Amateur films, trips and travelogues", q: `(collection:(home_movies OR homemovies) OR subject:("home movies" OR "home movie" OR travelogue OR "amateur film"))` + SAFE },
 ];
-// Channel numbers come in genre bands, like a cable lineup: 2–9 classic TV, 10s kids, 20s movies,
-// 30s anime, 40s sports, 50s music, 60s learning and oddities. Custom channels start at 100.
-const BANDS = [[2, "Classic TV"], [10, "Kids"], [20, "Movies"], [30, "Anime"], [40, "Sports"], [50, "Music"], [60, "Learning & oddities"], [100, "Your channels"]];
+// Channel numbers come in genre bands, like a cable lineup, with room to grow: 2–19 classic TV,
+// 20s kids, 30s–40s movies, 50s anime, 60s sports, 70s music, 80s–90s learning and oddities.
+// Custom channels start at 100.
+const BANDS = [[2, "Classic TV"], [20, "Kids"], [30, "Movies"], [50, "Anime"], [60, "Sports"], [70, "Music"], [80, "Learning & oddities"], [100, "Your channels"]];
 const LINEUP = {
   "Ad Break": [2, "📺"], "Rerun Alley": [3, "🛋️"], "Late Night": [4, "🌙"], "Big Prize": [5, "🎰"], "Brit TV": [6, "☕"],
-  "PBS": [7, "🎨"], "Y2K WB": [8, "📼"], "Gilmore Girls": [9, "🍂"],
-  "Saturday Toons": [10, "🥣"], "Cartoon Vault": [11, "🐭"], "Toon Toys": [12, "🤖"], "'90s Kids": [13, "🧃"], "Adult Swim": [14, "🦑"],
-  "Drive-In": [20, "🚗"], "After Dark": [21, "🕵️"], "Creature Feature": [22, "🧟"], "Silent Screen": [23, "🎩"], "Laugh Track": [24, "😂"],
-  "Kung Fu Theater": [25, "🥋"], "Frontier": [26, "🤠"], "Cliffhangers": [27, "🚀"], "Gumshoe": [28, "🔍"], "Christmas Movies": [29, "🎄"],
-  "Anime Station": [30, "🌸"], "Dubbed Anime": [31, "🗣️"], "Retro Anime": [32, "⚡"], "AMV Hour": [33, "🎧"], "Kaiju Theater": [34, "🦖"],
-  "Gridiron": [40, "🏈"], "Rink Side": [41, "🏒"], "Ringside": [42, "🤼"], "Pit Lane": [43, "🏁"], "Skate & Surf": [44, "🛹"], "Sweatin'": [45, "🤸"],
-  "Video Jukebox": [50, "🎸"], "Soul Train": [51, "🕺"],
-  "Ephemera": [60, "🎞️"], "Computer Chronicles": [61, "💾"], "Mission Control": [62, "🛰️"], "Wild Kingdom": [63, "🦁"], "TV Dinner": [64, "🍳"],
-  "Strange Signals": [65, "🛸"], "Slow TV": [66, "🔥"], "Arcade": [67, "🕹️"],
+  "PBS": [7, "🎨"], "Y2K WB": [8, "📼"], "Gilmore Girls": [9, "🍂"], "Prime Time Tapes": [10, "⭐"], "Strange Tales": [11, "🌀"],
+  "Starbase": [12, "🖖"], "Spooky '90s": [13, "👽"], "Order Now": [14, "☎️"], "Paint Along": [15, "🖌️"],
+  "Saturday Toons": [20, "🥣"], "Cartoon Vault": [21, "🐭"], "Scooby & Friends": [22, "🐕"], "Toon Toys": [23, "🤖"], "'90s Kids": [24, "🧃"],
+  "After School": [25, "🎒"], "Adult Swim": [26, "🦑"],
+  "Drive-In": [30, "🚗"], "After Dark": [31, "🕵️"], "Creature Feature": [32, "🧟"], "Chiller Hosts": [33, "🦇"], "Silent Screen": [34, "🎩"],
+  "Laugh Track": [35, "😂"], "Kung Fu Theater": [36, "🥋"], "Frontier": [37, "🤠"], "Cliffhangers": [38, "🚀"], "Private Eye": [39, "🔍"],
+  "Christmas Movies": [40, "🎄"],
+  "Anime Station": [50, "🌸"], "Dubbed Anime": [51, "🗣️"], "Retro Anime": [52, "⚡"], "AMV Hour": [53, "🎧"], "Kaiju Theater": [54, "🦖"],
+  "Gridiron": [60, "🏈"], "Rink Side": [61, "🏒"], "Ringside": [62, "🤼"], "Pit Lane": [63, "🏁"], "Skate & Surf": [64, "🛹"], "Sweatin'": [65, "🤸"],
+  "Video Jukebox": [70, "🎸"], "Soul Train": [71, "🕺"],
+  "Ephemera": [80, "🎞️"], "Duck & Cover": [81, "☢️"], "Home Movies": [82, "🎥"], "Computer Chronicles": [83, "💾"], "Mission Control": [84, "🛰️"],
+  "Wild Kingdom": [85, "🦁"], "TV Dinner": [86, "🍳"], "Strange Signals": [87, "🛸"], "Slow TV": [88, "🔥"], "Arcade": [89, "🕹️"],
 };
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);
@@ -497,12 +513,97 @@ const fmt = s => { s = Math.max(0, Math.floor(s)); const h = Math.floor(s / 3600
 
 // ---------- Internet Archive ----------
 const listCache = {}, metaCache = {};
-// Uploads that slipped past a channel's search but shouldn't air anywhere.
-const BLOCKED = new Set(["nekromantik-hard-sub", "nekromantik.-1987.1080p.-blu-ray.x-264-yts.-lt"]);
+// Uploads that slipped past a channel's search. "id" keeps it off every channel; "id@Channel name"
+// keeps it off just that channel (it matched the search but isn't what the channel is about).
+// The nightly job also pulls tapes viewers report (see scripts/build-catalog.mjs).
+const BLOCKED = new Set([
+  "nekromantik-hard-sub", "nekromantik.-1987.1080p.-blu-ray.x-264-yts.-lt",   // extremely graphic film
+  "youtube-s4-DPqWdO7Y",                                                      // Howard Stern clip show (Sweatin')
+  "twitch-vod-v535773453",                                                    // a Twitch stream (TV Dinner)
+  "CSPAN_20120811_023000_Politics__Public_Policy_Today@Retro Anime",
+  "vhs-tape-november-1988-carebears-movie-ii-cartoons-childrens-shows-national-geog@Gridiron",
+  "3-stooges-evening-magazine-80s-tv-shows-news-start-of-a-new-day-on-tv-38@Sweatin'",
+  "vhs-tape-56-1988-mtv-new-years-eve-ball-1989-american-music-awards-ufo-live-the-misdemeanor-tour@Strange Signals",
+  "vhs-tape-vh1-8-mile-bet-american-gangsta-little-melvin-making-of-with-denzel-jay@Wild Kingdom",
+  "VHS-1991-CBS-Block@Ringside",
+]);
+const blocked = (id, ch) => BLOCKED.has(id) || BLOCKED.has(id + "@" + ch.name);
+// Hand-written titles for long, much-aired tapes whose uploaded titles are a jumble even after
+// cleanTitle() (mostly home-recorded VHS tapes with several shows on them).
+const TITLE_FIX = {
+  "20240806_20240806_1303": "NBC Monday Night Movie: Ghostbusters, and more (taped with ads)",
+  "vhs-tape-2002.05.20-koin-survivor-reunion-kgwt-fear-factor-kval-becker-48-hours-": "Oregon TV, May 2002: Survivor Reunion, Fear Factor, Becker, 48 Hours",
+  "DNALOUNGE-VIDEO-2020-12-25": "DNA Lounge Yule Log: 24 Hours of Fire and Music",
+  "youtube-cuMnf4DalH0": "Autumn Fireplace with Smooth Jazz",
+  "warm-relaxing-fireplace-burning-fireplace-with-crackling-fire-sounds-no-music": "Crackling Fireplace (no music)",
+  "4k-aquarium-jellyfish-8-hour-for-relaxation-sleep-relax-meditation": "Jellyfish Aquarium",
+  "6-hours-peaceful-relaxing-aquarium-ocean-voyager-3-close-up-view-screensaver-for-deep-sleep": "Ocean Voyager Aquarium, Up Close",
+  "3-hours-of-relaxing-aquarium-fish-coral-reef-fish-tank-relax-music-1080p-hd": "Coral Reef Fish Tank",
+  "cnas-nickelodeon-summer-2004-tape-woc": "Summer 2004: Adult Swim, Cartoon Network and Nickelodeon (with ads)",
+  "video-output-EDDECD4F-DQD1-4B17-80B7-DACE2B68D063-1": "Toonami All-Time Classics, Week 1 (with ads and bumps)",
+  "video-output-1B6EBA7C-6A45-43E2-B77C-15F52C4CCF9B-1": "Toonami All-Time Classics, Week 2 (with ads and bumps)",
+  "video-output-9560AA82-7223-4415-BACB-30B2B0FB3A12-1": "Toonami All-Time Classics, Week 4 (with ads and bumps)",
+  "vhs-tape-2008-ringo-starr-on-david-letterman-private-sessions-rachael-ray-paul-m": "Ringo Starr on Letterman, Private Sessions and more (2008 tape)",
+  "SmokesVHSTape441": "Nick at Nite, Disney Channel, USA and local TV (home tape #441)",
+  "SmokesVHSTape1308": "Minneapolis TV, April 1993 (home tape #1308)",
+  "vhs-tape-1992-nickelodeon-nick-at-night-bob-newhart-marathon-better-living-throu": "Nick at Nite: Bob Newhart Marathon (1992)",
+  "vhs-tape-1987-frugal-gourmet-gourmet-cooking-with-earl-peyroux-this-old-house-th": "PBS, 1987: Frugal Gourmet, This Old House, Lawrence Welk",
+  "2022-10-10-12-27-25": "Japanese TV Tape: Documentary, Cooking Show and More",
+  "1997_20251018": "1997 TV: Iowa vs. Wisconsin Football, Wheel of Fortune, The Pretender",
+  "saturday-morning-cartoons-thunder-cats-season-3-premiere-duck-tales-series-premiere-movie-1987-etc.": "Saturday Morning, 1987: ThunderCats and DuckTales Premieres",
+  "abc-the-wb-and-tv-land-tape-woc-2001-2005": "ABC, The WB and TV Land, 2001–2005 (with ads)",
+  "nickelodeonsummerbeachhouse2002spongebobpremiere": "Nickelodeon Summer Beach House 2002 (SpongeBob premiere)",
+  "wb-toonami-adult-swim-usa-channel-oxygen-channel-cartoon-network-2004": "2004 Tape: The WB, Toonami, Adult Swim and More",
+  "abc-cnas-tape-october-2004": "October 2004: ABC, Adult Swim and Cartoon Network (with ads)",
+  "20240803_20240803_2015": "KOAA 5, December 1998: Wheel of Fortune, Jeopardy!, Seinfeld and More",
+  "20240821_20240821_0611": "KOAA 5, December 1998: Wheel of Fortune, Jeopardy!, Seinfeld and More",
+  "kids-wb-and-cartoon-network-november-2003": "Kids' WB and Cartoon Network, November 2003 (with ads)",
+  "1991-03-xx-reading-rainbow-12-episodes-pbs-weta-26-washington-dc-te-nos": "Reading Rainbow: 12 Episodes (PBS, 1991)",
+  "2023-06-26-02-56-16": "2003 Christmas Tape: Nickelodeon, Disney and Cartoon Network",
+  "2025-06-20-15-38-32-2": "Cartoon Network and Adult Swim, December 10, 2011 (with ads)",
+  "2006-wb-4kids-tv-abc-family-cartoon-network-smallville-digimon-toonami-magical-doremi-winx-etc": "2006 Tape: Kids' WB, 4Kids TV, Toonami and More",
+  "vhs-tape-1988-kelo-knots-landing-kdlt-star-search-semifinals-kelo-dallas-falcon-": "South Dakota TV, 1988: Knots Landing, Star Search, Dallas, Falcon Crest",
+  "august-11-2013-c": "Toonami on Adult Swim, August 10, 2013 (with ads)",
+  "vhs-tape-1991-mtv-rockumentary-history-of-heavy-metal-assorted-headbangers-ball-": "MTV, 1991: History of Heavy Metal, Headbangers Ball and More",
+  "inuyasha-and-totally-spies-tape-winter-2003-and-may-2004": "Cartoon Network and Adult Swim, 2003–2004 (with ads)",
+  "rewind-sacramento-multi-sacramento-2003-t0024": "Sacramento TV, April–September 2003",
+  "vhs-tape-showtime-80s-comedy-segments-shows-the-palace-concert-recording": "Showtime: '80s Comedy and a Concert at The Palace",
+  "vhs-tape-kcet-bob-marley-and-the-wailers-the-jimi-hendrix-experience-american-la": "KCET: Bob Marley and the Wailers, Jimi Hendrix and More",
+  "vhs-tape-1985-mtv-collection-of-music-videos-mtv-feature-presentation-mtv-goes-h": "MTV, 1985: Music Videos and MTV Goes Hollywood",
+  "headbangersball92.movie": "Headbangers Ball 1992 with Riki Rachtman",
+  "20250711_20250711_1411": "MTV: Beavis and Butt-Head Marathon and Headbangers Ball Best of 1993",
+  "20250710_20250710_1712": "NBC Boston: Jennifer Lopez in Concert, Frasier, Scrubs and More",
+  "beta26servedcsnaustin": "Are You Being Served?, Austin City Limits and More (Beta tape)",
+  "vhs-31-disney-valentines-special-he-man-price-is-right": "Disney Valentine's Special, He-Man, The Price Is Right and More",
+  "20240726_20240726_0517": "MTV, August 7, 1993: Beavis and Butt-Head, Headbangers Ball, Ozzy",
+  "star-wars-mtv-new-video-hour-july-1986-david-letterman-july-17-1987-max-headroom-grace-jones": "MTV and Late Night with David Letterman, 1986–87",
+  "mtv-disney-speed-racer-my-little-pony-care-bears-disney-mickey-mouse-the-painter": "'80s Kids' Tape: Speed Racer, My Little Pony, Care Bears, Disney",
+  "abc-saturday-morning-block-ghostbusters-beetlejuice-new-kids-bugs-tweety-little-": "ABC Saturday Morning, October 27, 1990: Ghostbusters, Beetlejuice and More",
+  "20250201_20250201_1357": "ABC Saturday Morning, October 27, 1990: Ghostbusters, Beetlejuice and More",
+  "vhs-tape-atari-800-8-bit-demos-late-night-with-david-letterman-njn-art-of-the-we": "Late Night with David Letterman, Atari 800 Demos and More",
+  "vhs-tape-wesh-the-return-of-tv-censored-bloopers-3-episodes-of-mad-about-you-2-n": "TV Censored Bloopers, Mad About You and More (WESH tape)",
+  "vhs-tape-1990-02-01-wesh-david-lettermans-8th-anniversary-birthday-special-wftv-": "David Letterman's 8th Anniversary Special and More (1990)",
+  "beta-118-wheel-of-fortune-sitcoms-david-videos": "Wheel of Fortune, Sitcoms and Friday Night Videos (Beta tape)",
+  "mtv-4-hours-of-music-videos-and-beavis-and-butt-head-july-1993-full-episode-of-h": "MTV, July 1993: 4 Hours of Music Videos and Beavis and Butt-Head",
+  "mister-rogers-super-why-mecha-builders-cyberchase-and-nature-cat-october-2024": "PBS Kids, October 2024: Mister Rogers, Cyberchase and More",
+  "vts-01-1_20251224": "WCHS 8: ThunderCats, North and South, Football and '80s Local News",
+  "TMNTrescuerangerstape": "Fox Kids 1991 on WXTX 54: Ninja Turtles, Rescue Rangers (with ads)",
+};
 // Archive titles are whatever the uploader typed: "[VHS Rip] Show (1990) 1080p", file names like
 // "2020-bahrain-grand-prix-race", ALL CAPS, "| Own it on Blu-ray" promos. Tidy them for the guide.
 const TECH = /\b(\d{3,4}p|[48]k|uhd|hd|sd|dvd|bd|blu-?ray|rip|ripped|vhsrip|iso|isos|mkv|mp4|avi|x ?26[45]|hevc|aac|ac3|qaac|\d+ ?fps|upscaled?|remaster(ed)?|complete|full (movie|episode|show|series)|vhs|laserdisc|subbed|subtitled?|dubbed|dublado|mill creek|bootleg|interactive|open matte|re-c-dub|nws-\d+|mkv files)\b/i;
 const ACRONYM = /^(njpw|wwf|wwe|wcw|ecw|nwa|awa|iwgp|uwfi|mtv|vh1|tv|ces|nes|snes|usa|uk|bbc|pbs|cbs|nbc|abc|ufo|ufos|dx|ii|iii|iv|vi|nba|nfl|nhl|nascar|f1|dvd|amv|vj|tnt|hbo|wb|jfk|fbi|cia|nasa|rc|ok|dj)$/i;
+// Film uploads often carry the credits in the title: "Laura (1944) Dir: Otto Preminger, Starring
+// Gene Tierney… - Film Noir" or "1959 - Anatomy of a Murder - Anatomía de un asesinato - VOSE".
+function filmTitle(t) {
+  let m;
+  if ((m = t.match(/^(\d{4}) - (.+?)(?: - | \(|$).*(?:VOSE|Spanish Subtitles\)?)\s*$/i))) return `${m[2].trim()} (${m[1]})`;
+  t = t.replace(/\s*\((?:restored|uncut|restored, uncut|colorized)\)/gi, "")
+       .replace(/\((\d{4}),[^)]*\)/g, "($1)")                                   // "(1950, UK)" → "(1950)"
+       .replace(/\s*-?\s*(neo-)?film noir( full movies?| movie)?\s*$/i, "").replace(/\s*-?\s*neo-noir movie\s*$/i, "");
+  if ((m = t.match(/^(.+?\(\d{4}\))\s+(Dir\b|Dir\.|Directed|Director|Starring|Featuring|\||[A-Z][a-z]+\.? [A-Z][a-z'’]+)/))) t = m[1];
+  return t.replace(/\s+(Dir[.:]|Directed by|Director:)\s.*$/i, "").trim();
+}
 function cleanTitle(raw) {
   const orig = String(raw || "").replace(/[‎‏]/g, "").replace(/_/g, " ").replace(/\s+/g, " ").trim();
   let t = orig;
@@ -512,9 +613,13 @@ function cleanTitle(raw) {
   if (slug) t = t.replace(/[-.]+/g, " ");
   if (!/[\s()]/.test(t) && t.length >= 12 && /\d/.test(t) && /[a-z]/i.test(t)) return "Untitled tape"; // a random id
   t = t.replace(/^\s*["“](.+?)["”]/, "$1")
-       .replace(/^\d{4}\.\d{2}\.\d{2}\s*-\s*/, "")                      // "1990.05.19 - " date prefixes
+       .replace(/^(\d{4}[-. ]\d{2}[-. ](\d{2}|xx)|\d{2}-\d{2})\s*-\s*/i, "")   // "1990.05.19 - " date prefixes
+       .replace(/^(sold as blank|blank vhs( tape)?|recordings?):\s*/i, "").replace(/^blank vhs\s+/i, "")
+       .replace(/^(beta|tape)?\s*#\d+:\s*/i, "").replace(/^fb market box \d+ tape \d+( part \d+)?\s*/i, "")
        .replace(/\s*[\[{][^\]}]*[\]}]\s*/g, " ")                       // [720p], [AMV], {Blu Ray}
-       .replace(/\s*\(([^()]*)\)/g, (m, inner) => TECH.test(inner) && !/^\s*\d{4}\s*$/.test(inner) ? "" : " (" + inner.trim() + ")");
+       .replace(/\bW\/?O\/?C\b( recordings?)?/gi, "with ads");          // "WOC" = with original commercials
+  t = filmTitle(t);
+  t = t.replace(/\s*\(([^()]*)\)/g, (m, inner) => TECH.test(inner) && !/^\s*\d{4}\s*$/.test(inner) ? "" : " (" + inner.trim() + ")");
   // Split on " | " outside parentheses and drop promo segments.
   const parts = []; let depth = 0, buf = "";
   for (let i = 0; i < t.length; i++) {
@@ -535,7 +640,7 @@ function cleanTitle(raw) {
   if (t.length > 90) t = t.slice(0, 90).replace(/\s+\S*$/, "") + "…";
   return t || orig;
 }
-const tidy = m => m && { ...m, title: cleanTitle(m.title) };
+const tidy = m => m && { ...m, title: TITLE_FIX[m.id] || cleanTitle(m.title) };
 // catalog.json, rebuilt daily by .github/workflows/catalog.yml, already has every built-in
 // channel's playable videos with their file, length, title and year. With it the whole guide is
 // worked out in the browser with no Archive lookups. Custom channels, and any channel missing
@@ -559,7 +664,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !BLOCKED.has(r[0])).map(([id, file, dur, title, year, sub]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub }); return id; });
+    const ids = rows.filter(r => !blocked(r[0], ch)).map(([id, file, dur, title, year, sub]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub }); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   const key = "re_pool_" + hash(ch.q);
@@ -569,7 +674,7 @@ async function getList(ch) {
               "&fl[]=identifier&rows=300&sort[]=downloads+desc&output=json";
   const res = await fetch(url);
   const data = await res.json();
-  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier).filter(id => !BLOCKED.has(id)));
+  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier).filter(id => !blocked(id, ch)));
   listCache[ch.q] = ids;
   store.set(key, { t: Date.now(), ids });
   return ids;
@@ -705,7 +810,9 @@ const $ = id => document.getElementById(id);
 const vid = $("vid"), snow = $("snow"), ctx = snow.getContext("2d");
 let tvOn = true, mode = "tv";
 // The last channel is remembered by its search (not its position, which changes when channels are added).
-let cur = Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer, waitTimer;
+// A link like …/#ch62 opens on that channel; otherwise start where this browser left off.
+const chFromHash = () => { const n = location.hash.match(/^#ch(\d+)$/)?.[1]; return n ? channels().findIndex(c => c.no === +n) : -1; };
+let cur = chFromHash() >= 0 ? chFromHash() : Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer, waitTimer;
 const clockFmt = t => new Date(t * 1000).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
 const num = i => String(channels()[i]?.no ?? i + 1).padStart(2, "0");
 
@@ -915,6 +1022,7 @@ function waitForNext(my) {
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
+  if (mode === "tv") history.replaceState(null, "", "#ch" + list[cur].no); // shareable address for this channel
   const ch = list[cur], my = ++tuneId;
   shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
@@ -981,6 +1089,17 @@ $("reportBox").onclick = e => {
     store.set("re_reported", [...sent, id + reason].slice(-200));
   }
   $("reportBox").hidden = true; $("report").hidden = true; $("reportDone").hidden = false;
+};
+// Share: the phone's share sheet where there is one, otherwise copy the link.
+$("share").onclick = async () => {
+  const ch = channels()[cur];
+  if (ch.custom) { $("share").textContent = "Your own channels can't be shared"; return; }
+  const url = location.origin + location.pathname + "#ch" + ch.no;
+  const text = `${ch.icon} ${ch.name} on Rabbit Ears${playing ? ": " + playing.m.title : ""}`;
+  try {
+    if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ title: "Rabbit Ears", text, url });
+    else { await navigator.clipboard.writeText(url); $("share").textContent = "✓ Link copied"; setTimeout(() => $("share").textContent = "🔗 Share this channel", 2500); }
+  } catch {}
 };
 $("surf").onclick = surf;
 $("cc").onclick = toggleCaptions;
@@ -1168,7 +1287,11 @@ function setMode(m) {
   else { audio.pause(); if (!tvOn) { tvOn = true; tune(cur); } }
   roomChanged(); paintCounts();
 }
-window.addEventListener("hashchange", () => setMode(location.hash.slice(1)));
+window.addEventListener("hashchange", () => {
+  const i = chFromHash();
+  if (i >= 0) { if (mode !== "tv") setMode("tv"); if (i !== cur) tune(i); return; }
+  setMode(location.hash.slice(1));
+});
 
 // ---------- Viewer counts ----------
 // The Firebase module below reports which room this page is in ("tv-…" for a channel,

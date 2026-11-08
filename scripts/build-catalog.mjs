@@ -107,6 +107,44 @@ for (const ch of BUILT_IN) {
   console.log(`${ch.name}: ${pools[ch.q].length}/${ids.length} playable`);
 }
 
+// ---- viewer reports ("Report this tape") ----
+// Tapes reported "not appropriate" twice or "won't play" three times leave every channel; tapes
+// reported "wrong channel" twice leave that channel. Reports can't be tied to people, so these are
+// low bars on purpose; a mistaken removal costs one video out of 300. Everything reported is listed
+// in the workflow run's summary.
+const nameOf = Object.fromEntries(BUILT_IN.map(c => [c.q, c.name]));
+let reports = {};
+try { reports = (await getJSON("https://project-rabbitears-default-rtdb.firebaseio.com/reports.json")) || {}; }
+catch { console.log("! couldn't read reports"); }
+const tally = new Map(); // id -> { broken, quality, wrong: {channel: n}, inappropriate, last }
+for (const r of Object.values(reports)) {
+  if (!r?.id || !r.reason) continue;
+  const t = tally.get(r.id) || { broken: 0, quality: 0, inappropriate: 0, wrong: {}, last: 0 };
+  if (r.reason === "wrong") t.wrong[r.ch] = (t.wrong[r.ch] || 0) + 1; else t[r.reason] = (t[r.reason] || 0) + 1;
+  t.last = Math.max(t.last, r.t || 0);
+  tally.set(r.id, t);
+}
+const pulled = [];
+for (const [q, rows] of Object.entries(pools)) {
+  pools[q] = rows.filter(([id]) => {
+    const t = tally.get(id);
+    if (!t) return true;
+    const out = t.inappropriate >= 2 || t.broken >= 3 || (t.wrong[nameOf[q]] || 0) >= 2;
+    if (out) pulled.push(`${id} (${nameOf[q]})`);
+    return !out;
+  });
+}
+if (tally.size) {
+  const titleOf = id => { for (const rows of Object.values(prev.pools || {})) for (const r of rows) if (r[0] === id) return r[3]; return ""; };
+  const lines = ["## Tape reports", "", "| Tape | Won't play | Picture/sound | Wrong channel | Not appropriate | Last report |", "|---|---|---|---|---|---|"];
+  for (const [id, t] of [...tally].sort((a, b) => b[1].last - a[1].last))
+    lines.push(`| [${(titleOf(id) || id).replace(/\|/g, "/").slice(0, 70)}](https://archive.org/details/${encodeURIComponent(id)}) | ${t.broken || ""} | ${t.quality || ""} | ${Object.entries(t.wrong).map(([c, n]) => `${c} ×${n}`).join(", ")} | ${t.inappropriate || ""} | ${t.last ? new Date(t.last).toISOString().slice(0, 10) : ""} |`);
+  lines.push("", pulled.length ? `**Pulled automatically:** ${pulled.join(", ")}` : "Nothing pulled automatically.",
+             "", "To block a tape everywhere for good, add its id to `BLOCKED` in index.html.");
+  console.log(lines.join("\n"));
+  if (process.env.GITHUB_STEP_SUMMARY) await writeFile(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n", { flag: "a" });
+}
+
 const catalog = { generated: new Date().toISOString(), pools, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);
