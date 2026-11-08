@@ -10,6 +10,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { buildTrekPool } from "./trek-programming.mjs";
+import { commercialRow } from "./commercial-library.mjs";
 
 const POOL = 300;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -162,6 +163,22 @@ if (tally.size) {
 for (const [q, groups] of Object.entries(memberships)) {
   coverage[q] = Object.fromEntries(Object.entries(groups).map(([name, ids]) => [name, (pools[q] || []).filter(r => ids.has(r[0])).length]));
 }
-const catalog = { generated: new Date().toISOString(), pools, coverage, unplayable: [...unplayable] };
+let commercials = [], bumpers = [];
+if (BUILT_IN.some(ch => ch.breaks)) {
+  const library = JSON.parse(await readFile(new URL("./commercial-library.json", import.meta.url), "utf8"));
+  commercials = (await pool(async id => {
+    try { return commercialRow(id, await getJSON("https://archive.org/metadata/" + encodeURIComponent(id))); }
+    catch { return prev.commercials?.find(r => r[0] === id && Number(r[4]) >= 1940 && Number(r[4]) <= 1999) || null; }
+  }, library.ids)).filter(Boolean).filter(r => {
+    const reports = tally.get(r[0]);
+    return !reports || (reports.broken < 3 && reports.inappropriate < 2 && (reports.wrong["Subspace 97"] || 0) < 2);
+  });
+  if (commercials.length < 3) throw new Error("Not enough dated vintage commercials to publish a reliable shared schedule");
+  const facts = JSON.parse(await readFile(new URL("../assets/trek-bumpers/facts.json", import.meta.url), "utf8"));
+  bumpers = facts.map(f => ({ id: "bumper-" + f.id, title: f.fact, file: "assets/trek-bumpers/" + f.id + ".mp4", dur: 15, local: true }));
+  for (const bumper of bumpers) await readFile(new URL("../" + bumper.file, import.meta.url));
+  console.log(`${commercials.length} vintage commercials (latest ${Math.max(...commercials.map(r => Number(r[4])))}) and ${bumpers.length} original 15-second bumpers`);
+}
+const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);

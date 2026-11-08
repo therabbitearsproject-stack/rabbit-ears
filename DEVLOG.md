@@ -4,6 +4,31 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Subspace 97: vintage breaks and Subspace Snacks
+
+Renamed the dedicated Star Trek channel to Subspace 97. Its 704 full programs remain in rotation.
+Only this channel gets the new breaks: about three minutes after each ten minutes of content,
+with no break in the final two minutes. A show keeps one guide listing, and its advertised slot
+includes commercials. The shared clock deterministically selects whole spots and resumes the
+source episode at the correct content offset. A continuous playlist avoids clipping the next
+episode at the legacy three-hour boundaries. Pause, seek and Back to live use the same timeline.
+
+The initial approved pool contains 33 individual commercials dated 1952–1998. Build validation
+rejects undated spots, anything after 1999, and long compilations. These are entertainment
+archive spots, not paid placements. Viewer reports can remove bad spots at the next catalog build.
+
+Six original, exactly 15-second Subspace Snacks fact bumpers mix before or after ad pods.
+They use minimal text cards, original synthesized downtempo beats, H.264 video and AAC audio.
+Facts and primary-source links live in assets/trek-bumpers/facts.json; the renderer and original
+music generator are in scripts/build-bumpers.mjs. Production serves the committed MP4s.
+
+Checked timing determinism, content continuity, runtime accounting, year cutoff and legacy-channel
+behavior with tests; decoded all six MP4s and tested ad/bumper/episode transitions and paused
+seeking across a break in the browser. Failed remote spots use a local bumper while preserving
+the shared break duration. Other TV channels receive no added breaks.
+
+---
+
 ## 2026-11-08 — Name matches the domain: Rabbit-Ears.stream
 
 - The site's name is now **Rabbit-Ears.stream** everywhere it's shown: browser tab title, header, welcome screen,

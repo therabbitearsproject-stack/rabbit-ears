@@ -420,13 +420,14 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
 </div>
 
+<script src="commercial-timing.js"></script>
 <script>
 // ---------- Channels ----------
 // Added to newer channels' searches so they stay safe to leave on: no adult content, no audio
 // podcasts, no TV-news recordings.
 const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
-  { name: "Star Trek", desc: "Full episodes & films · quality-selected sources", library: "star-trek-v1", q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
+  { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { interval: 600, target: 180, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },
@@ -515,7 +516,7 @@ const LINEUP = {
   "Ephemera": [80, "🎞️"], "Duck & Cover": [81, "☢️"], "Home Movies": [82, "🎥"], "Computer Chronicles": [83, "💾"], "Mission Control": [84, "🛰️"],
   "Wild Kingdom": [85, "🦁"], "TV Dinner": [86, "🍳"], "Strange Signals": [87, "🛸"], "Slow TV": [88, "🔥"], "Arcade": [89, "🕹️"],
   "Starbase": [90, "🖖"], "Hyperdrive": [91, "🌠"], "Riff Raff": [92, "🍿"], "Atomic Age": [93, "⚛️"], "Deep Space": [94, "🪐"],
-  "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"], "Star Trek": [97, "🌟"],
+  "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"], "Subspace 97": [97, "🌟"],
 };
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);
@@ -758,7 +759,7 @@ async function fetchMeta(id) {
   } catch { metaCache[id] = null; } // network errors aren't saved, so they get retried next load
   return metaCache[id];
 }
-const fileUrl = m => `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
+const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
 
 // Build one channel's planned lineup for one 3-hour block: [{m, start, end, v0}] in epoch
 // seconds, where v0 is when the video's own clock reads 0:00. Programs play back to back and
@@ -766,7 +767,17 @@ const fileUrl = m => `https://archive.org/download/${encodeURIComponent(m.archiv
 // airtime per video. (Some uploads run 10–20+ hours; letting one overrun by more than a whole
 // block would scramble the timeline. Those air their first 3 hours, then the channel moves on.)
 // Same inputs give the same lineup on every device.
-const airtime = m => Math.min(m.dur, BLOCK);
+const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height]) => ({ id, file, dur, title, year, sub, archiveId, width, height });
+function makeSlot(m, ch, start, seed) {
+  const program = { ...m, dur: Math.min(m.dur, BLOCK) };
+  let timeline;
+  if (ch.breaks) {
+    const ads = (catalog?.commercials || []).map(rowMedia);
+    if (!ads.length) throw new Error("Vintage commercial catalog is unavailable");
+    timeline = CommercialTiming.build(program, ch.breaks, ads, catalog?.bumpers || [], seed || ch.q + "|" + m.id + "|" + start);
+  }
+  return { m, start, end: start + (timeline?.duration || program.dur), v0: start, timeline };
+}
 const schedCache = {}, effCache = {};
 function blockSchedule(ch, b) {
   const key = ch.q + "|" + b;
@@ -788,11 +799,11 @@ async function buildBlock(ch, b) {
     }
     const m = batch.shift(); scanned++;
     if (!m) continue;
-    items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m);
+    const slot = makeSlot(m, ch, t); items.push(slot); t = slot.end;
   }
   if (!items.length) throw new Error("no playable");
   // Ran out of candidates before the block filled: rerun what we have.
-  for (let k = 0; t < end; k++) { const m = items[k].m; items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m); }
+  for (let k = 0; t < end; k++) { const m = items[k].m; const slot = makeSlot(m, ch, t); items.push(slot); t = slot.end; }
   return items;
 }
 
@@ -810,7 +821,7 @@ function planBlock(ch, b) {
     const pool = raw.map(p => p.m).filter((m, i, a) => m.id !== skip && a.findIndex(x => x.id === m.id) === i);
     if (!skip || !pool.length || !raw.some(p => p.m.id === skip)) return raw;
     const start = blockStart(b), end = start + BLOCK, items = [];
-    for (let t = start, k = 0; t < end; k++) { const m = pool[k % pool.length]; items.push({ m, start: t, end: t + airtime(m), v0: t }); t += airtime(m); }
+    for (let t = start, k = 0; t < end; k++) { const m = pool[k % pool.length]; const slot = makeSlot(m, ch, t); items.push(slot); t = slot.end; }
     return items;
   })().catch(e => { delete planCache[key]; throw e; });
   return planCache[key];
@@ -830,7 +841,17 @@ function effBlock(ch, b) {
 
 // Programs airing from time t onward. A show that runs over still belongs to the block it
 // started in, so look one block back too.
+const continuousCache = {};
+async function continuousLineup(ch, t, count) {
+  if (!continuousCache[ch.q]) continuousCache[ch.q] = (async () => {
+    const ids = await getList(ch), programs = await Promise.all(ids.map(getMeta));
+    return programs.filter(Boolean).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
+  })().catch(error => { delete continuousCache[ch.q]; throw error; });
+  return CommercialTiming.cycle(await continuousCache[ch.q], EPOCH, t, count);
+}
 async function lineup(ch, t, count) {
+  // Full episodes and their internal breaks run continuously, including across the legacy block boundary.
+  if (ch.breaks) return continuousLineup(ch, t, count);
   const b0 = blockOf(t), out = [];
   for (let b = b0 - 1; b <= b0 + 2 && out.length < count; b++) {
     let items;
@@ -855,7 +876,7 @@ let tvOn = true, mode = "tv";
 // The last channel is remembered by its search (not its position, which changes when channels are added).
 // A link like …/#ch62 opens on that channel; otherwise start where this browser left off.
 const chFromHash = () => { const n = location.hash.match(/^#ch(\d+)$/)?.[1]; return n ? channels().findIndex(c => c.no === +n) : -1; };
-let cur = chFromHash() >= 0 ? chFromHash() : Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer, waitTimer;
+let cur = chFromHash() >= 0 ? chFromHash() : Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer;
 const clockFmt = t => new Date(t * 1000).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
 const num = i => String(channels()[i]?.no ?? i + 1).padStart(2, "0");
 
@@ -982,7 +1003,7 @@ function fillGuide() {
 // Pause and ±15 s shift your own picture off the shared clock: `shift` is how far behind live you
 // are (0 or negative), and while paused the show's clock stands still at `heldAt`. Changing channel,
 // or reaching the end of the show, puts you back on live.
-let shift = 0, held = false, heldAt = 0;
+let shift = 0, held = false, heldAt = 0, activeSegment = null, mediaToken = 0;
 const showNow = () => (held ? heldAt : nowSec()) + shift;
 function paintPause() {
   $("pause").textContent = held ? "▶ Play" : "⏸ Pause";
@@ -1004,7 +1025,7 @@ function seek(d) {
   const base = held ? heldAt : nowSec();
   const st = Math.min(nowSec(), playing.end - 1, Math.max(playing.v0, showNow() + d));
   shift = st - base;
-  if (vid.readyState) vid.currentTime = st - playing.v0;
+  syncMedia(true);
   paintPos();
 }
 function togglePause() {
@@ -1017,7 +1038,7 @@ function goLive() {
   if (!playing || (!held && shift > -2)) return;
   held = false; shift = 0; paintPause();
   if (nowSec() >= playing.end) return tune(cur);
-  vid.currentTime = nowSec() - playing.v0; vid.play().catch(() => {});
+  syncMedia(true); vid.play().catch(() => {});
   paintPos();
 }
 // Closed captions. The nightly job copies each video's subtitle file into subs/ on this site
@@ -1027,12 +1048,13 @@ const subFile = id => "subs/" + id.replace(/[^A-Za-z0-9._-]/g, "_") + ".vtt"; //
 let ccOn = store.get("re_captions", false);
 function applyCaptions() {
   vid.querySelectorAll("track").forEach(t => t.remove());
-  const sub = playing?.m.sub, auto = /\.(asr|autogenerated)\./i.test(sub || "");
+  const media = activeSegment?.media || playing?.m;
+  const sub = media?.sub, auto = /\.(asr|autogenerated)\./i.test(sub || "");
   $("cc").disabled = !sub;
   $("cc").setAttribute("aria-pressed", String(!!sub && ccOn));
   $("cc").title = !sub ? "No captions for this show" : (ccOn ? "Captions on" : "Captions off") + (auto ? " (automatic, may be rough)" : "") + " (C)";
   if (!sub || !ccOn) return;
-  const tr = Object.assign(document.createElement("track"), { kind: "captions", srclang: "en", label: auto ? "English (automatic)" : "English", src: subFile(playing.m.id), default: true });
+  const tr = Object.assign(document.createElement("track"), { kind: "captions", srclang: "en", label: auto ? "English (automatic)" : "English", src: subFile(media.id), default: true });
   vid.append(tr);
   tr.track.mode = "showing";
 }
@@ -1055,13 +1077,54 @@ function surf() {
   let j = Math.floor(Math.random() * (n - 1)); if (j >= cur) j++;
   tune(j);
 }
-function waitForNext(my) {
-  // The video ended (or isn't there yet) before its slot did: show static and the next show.
-  snow.style.opacity = "1";
-  clearTimeout(waitTimer);
-  const ms = Math.max(1000, (playing.end - nowSec()) * 1000);
-  waitTimer = setTimeout(() => { if (my === tuneId) tune(cur); }, ms);
+function currentSegment(p = playing) {
+  const elapsed = Math.max(0, showNow() - p.v0);
+  return p.timeline ? CommercialTiming.at(p.timeline, elapsed) : { index: 0, kind: "program", media: p.m, start: 0, end: p.end - p.v0, position: elapsed };
 }
+function syncMedia(forceSeek = false) {
+  if (!playing) return;
+  const segment = currentSegment(), key = tuneId + "|" + playing.v0 + "|" + segment.index;
+  if (activeSegment?.key === key) {
+    if (forceSeek && vid.readyState) vid.currentTime = Math.min(activeSegment?.fallbackDur ? segment.position % activeSegment.fallbackDur : segment.position, Math.max(0, vid.duration - .05));
+    return segment;
+  }
+  const token = ++mediaToken, my = tuneId;
+  activeSegment = { ...segment, key };
+  snow.style.opacity = "1";
+  vid.onloadedmetadata = () => {
+    if (token !== mediaToken || my !== tuneId || !playing) return;
+    const current = currentSegment();
+    if (current.index !== segment.index) return syncMedia();
+    vid.currentTime = Math.min(current.position, Math.max(0, vid.duration - .05));
+    if (tvOn && !held) vid.play().catch(() => {});
+  };
+  vid.onplaying = () => { if (token === mediaToken && my === tuneId) snow.style.opacity = "0"; };
+  vid.onseeked = () => { if (token === mediaToken && my === tuneId) snow.style.opacity = "0"; };
+  vid.onended = () => {
+    if (token !== mediaToken || my !== tuneId || !playing || held) return;
+    if (showNow() >= playing.end) return tune(cur);
+    // A file can end slightly ahead of the shared clock. Keep the full slot; the tick switches segments.
+    if (currentSegment().index !== segment.index) syncMedia();
+  };
+  vid.onerror = () => {
+    if (token !== mediaToken || my !== tuneId) return;
+    if (segment.kind === "program") { metaCache[segment.media.id] = null; setTimeout(() => tune(cur), 800); }
+    else {
+      // Keep the shared break duration if a remote spot fails. A local fact bumper fills its remaining time.
+      const fallback = catalog?.bumpers?.[0];
+      if (!fallback || segment.media.local) return;
+      activeSegment.fallbackDur = fallback.dur;
+      vid.onloadedmetadata = () => { if (token === mediaToken) { vid.currentTime = currentSegment().position % fallback.dur; if (tvOn && !held) vid.play().catch(() => {}); } };
+      vid.onended = () => { if (token !== mediaToken || !playing) return; if (currentSegment().index !== segment.index) syncMedia(); else { vid.currentTime = 0; if (tvOn && !held) vid.play().catch(() => {}); } };
+      vid.onerror = null;
+      vid.src = fileUrl(fallback);
+    }
+  };
+  vid.src = fileUrl(segment.media);
+  applyCaptions(); resetReport();
+  return segment;
+}
+
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
@@ -1069,7 +1132,6 @@ async function tune(i) {
   const ch = list[cur], my = ++tuneId;
   shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
-  clearTimeout(waitTimer);
   markOn();
   snow.style.opacity = "1";
   showOSD("CH " + num(cur), ch.icon + " " + ch.name);
@@ -1079,16 +1141,8 @@ async function tune(i) {
     if (my !== tuneId) return;
     playing = p;
     const m = p.m;
-    vid.src = fileUrl(m);
-    applyCaptions();
-    vid.onloadedmetadata = () => {
-      const want = nowSec() - p.v0;
-      if (want >= vid.duration - 1) return waitForNext(my);
-      vid.currentTime = want; if (tvOn) vid.play().catch(() => {});
-    };
-    vid.onplaying = () => { if (my === tuneId) snow.style.opacity = "0"; };
-    vid.onended = () => { if (my !== tuneId) return; shift === 0 && nowSec() < p.end - 2 ? waitForNext(my) : tune(cur); };
-    vid.onerror = () => { if (my === tuneId) { metaCache[m.id] = null; setTimeout(() => tune(cur), 800); } };
+    activeSegment = null;
+    syncMedia();
     $("title").textContent = m.title;
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(p.start)}–${clockFmt(p.end)} · ${fmt(offset)} in`;
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
@@ -1097,7 +1151,7 @@ async function tune(i) {
     paintPos();
   } catch {
     if (my !== tuneId) return;
-    playing = null; paintPos(); applyCaptions();
+    playing = null; activeSegment = null; ++mediaToken; vid.pause(); vid.removeAttribute("src"); vid.load(); paintPos(); applyCaptions();
     $("title").textContent = "Nothing but static on " + ch.name;
     $("meta").textContent = "The Internet Archive didn't answer, or this search has no videos. Try another channel.";
   }
@@ -1111,11 +1165,12 @@ setInterval(() => {
   if (held) return;
   const t = showNow();
   if (t >= playing.end) return tune(cur);
+  const segment = syncMedia();
   if (!vid.paused && !vid.seeking) {
-    const want = t - playing.v0;
+    const want = activeSegment?.fallbackDur ? segment.position % activeSegment.fallbackDur : segment.position;
     if (Math.abs(vid.currentTime - want) > 20 && want < vid.duration - 1) vid.currentTime = want; // caught up after buffering
     const ch = channels()[cur], m = playing.m;
-    $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(playing.start)}–${clockFmt(playing.end)} · ${fmt(vid.currentTime)} in`;
+    $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(playing.start)}–${clockFmt(playing.end)} · ${fmt(t - playing.v0)} in${segment.kind === "program" ? "" : " · Commercial break"}`;
   }
 }, 1000);
 setInterval(fillGuide, 60000);
@@ -1126,7 +1181,7 @@ $("report").onclick = () => { const open = $("reportBox").hidden; $("reportBox")
 $("reportBox").onclick = e => {
   const reason = e.target.dataset?.r;
   if (!reason || !playing) return;
-  const id = playing.m.id, sent = store.get("re_reported", []);
+  const id = (activeSegment?.media || playing.m).id, sent = store.get("re_reported", []);
   if (!sent.includes(id + reason)) {
     try { window.reReport?.({ id, ch: channels()[cur].name, reason }); } catch {}
     store.set("re_reported", [...sent, id + reason].slice(-200));
