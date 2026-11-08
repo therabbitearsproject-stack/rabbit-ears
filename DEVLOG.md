@@ -4,6 +4,28 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Star Trek: The Final Frontier (channel 97)
+
+- Added a dedicated Star Trek channel in the Sci-fi band. Starbase stays the mixed sci-fi channel.
+- A bridge-inspired panel appears when tuning to 97: 16 entries span all series (including Short Treks,
+  Very Short Treks and Starfleet Academy), films across all eras, and fan films/specials. Each entry
+  opens its Archive search; the panel also links to the official Star Trek viewing directory.
+- The catalog reserves search slots per franchise, plus a general search, within the existing
+  300-candidate budget. This keeps newer crews from disappearing behind popular older uploads.
+  Identifiers are deduplicated; playback and the shared clock use the existing scheduler.
+- Franchise counts describe playable uploads in the current pool after reports are applied, not
+  episode counts or full-season availability. Missing sources are explicitly labeled. The Archive
+  currently supplies no playable Starfleet Academy upload; some newer series have clips/promos only.
+- Excluded game footage, reaction/review videos, clickbait commentary and adult parodies from the
+  channel search. Availability and Archive metadata can change; the usual tape reports still apply.
+- Added a dependency-free catalog regression check (also run before publishing): reserved search
+  slots, deduplication, playable-only counts, report removal and preservation on search failure.
+
+Validation: rebuilt the catalog against the Archive; tested channel deep links, guide integration,
+  franchise links/counts, channel switching and mobile layout in Edge, including actual video playback.
+
+---
+
 ## 2026-11-08 — Sci-fi and anime batch (65 channels)
 
 **New Sci-fi band (90s)**, with Starbase (was 12) and Cliffhangers (was 38) moved into it:

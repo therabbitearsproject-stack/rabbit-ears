@@ -61,6 +61,19 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .byline { margin: 2px 0 0; font-family: var(--osd); font-size: 1.2rem; color: var(--amber); letter-spacing: .04em; }
 .tag { color: var(--dim); font-size: 0.95rem; margin: 0; }
 
+/* Star Trek's own little bridge. No animation: the picture stays the focus. */
+.trek-bridge { background: #080e1b; color: #e8eefc; border: 1px solid #394866; border-left: 12px solid #eeb47c; border-radius: 30px 8px 8px 30px; padding: clamp(16px, 4vw, 28px); }
+.trek-bridge .trek-k { color: #eeb47c; font-family: var(--osd); letter-spacing: .12em; }
+.trek-bridge h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 6px 0; letter-spacing: -.03em; }
+.trek-bridge p { line-height: 1.5; margin: 8px 0 16px; }
+.trek-fleet { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 16px 0; }
+.trek-fleet a { display: grid; gap: 5px; background: #17253c; border: 1px solid #52678e; border-radius: 4px 18px 18px 4px; padding: 11px 14px; color: #e8eefc; text-decoration: none; font-size: .9rem; }
+.trek-fleet a:hover, .trek-fleet a:focus-visible { background: #2c4166; outline: 2px solid #eeb47c; outline-offset: 2px; }
+.trek-fleet small { color: #b6c7e7; }
+.trek-bridge .trek-note { color: #bdc9df; font-size: .85rem; margin-bottom: 0; }
+.trek-bridge a { color: #b8d4ff; }
+.chan.trek-channel .n { color: #eeb47c; }
+
 /* The set */
 .cabinet {
   background: linear-gradient(160deg, var(--wood-hi), var(--wood) 55%);
@@ -390,6 +403,14 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <span class="meta" id="reportDone" hidden>Thanks. It's flagged for a look.</span>
   </section>
 
+  <section class="trek-bridge" id="trekBridge" aria-labelledby="trekHeading" hidden>
+    <span class="trek-k">CH 97 · SUBSPACE TRANSMISSION</span>
+    <h2 id="trekHeading">Star Trek: The Final Frontier</h2>
+    <p>Different crews. One extraordinary universe. Settle in for a shared voyage through the Archive's Star Trek episodes, films, interviews, promos and fan productions.</p>
+    <div class="trek-fleet" id="trekFleet" aria-label="Explore the Star Trek franchises"></div>
+    <p class="trek-note">Each tile opens that franchise's Archive search. Counts are playable uploads in today's channel pool, not complete seasons. Availability changes; some series may have only clips or no playable uploads. <a href="https://www.startrek.com/where-to-watch" target="_blank" rel="noopener">Find official streaming for every crew ↗</a></p>
+  </section>
+
   <section class="guide">
     <div class="guide-head"><h3>TV guide</h3><span class="clock" id="clock"></span></div>
     <div class="grid" id="grid">
@@ -430,6 +451,26 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 // podcasts, no TV-news recordings.
 const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
+  { name: "Star Trek", desc: "Every crew · series, films & the fandom", q: `(title:"star trek" AND NOT title:(xxx OR parody OR porn* OR game OR gameplay OR longplay OR walkthrough OR speedrun* OR review* OR react* OR critic* OR rant* OR discussion OR analysis OR recap OR podcast OR toy OR lego OR soundtrack OR ost OR iso OR "closing logos" OR "secret hideout" OR "elite force" OR "echoe from the past" OR "star trek online" OR "manic episodes" OR "movie skewer" OR silliest OR unethical OR "episode that killed" OR "first impressions" OR why OR "how was" OR "how strange" OR conservative OR cringe OR squirm OR predictions OR "blandly goes" OR "star wars versus" OR "star trek vs" OR "1950s" OR "1940s" OR "bridge recreation" OR "inside the enterprise" OR acne OR "droid torture" OR "beauty salon" OR psychologist OR "la série" OR raumschiff OR latino OR deutsch OR "segredos do universo" OR news OR "charlie brown" OR "northern exposure" OR alcs) AND NOT subject:("video game" OR longplay OR pornography))` + SAFE,
+    // Separate searches reserve space for less-downloaded crews in the 300-item pool.
+    franchises: [
+      { name: "The Original Series", q: 'title:("original series" OR "star trek 1966" OR "star trek tos" OR "star trek s01" OR "star trek s02" OR "star trek s03")' },
+      { name: "The Animated Series", q: 'title:("animated series" OR "star trek tas")' },
+      { name: "The Next Generation", q: 'title:("next generation" OR tng)' },
+      { name: "Deep Space Nine", q: 'title:("deep space nine" OR "deep space 9" OR ds9)' },
+      { name: "Voyager", q: 'title:voyager' },
+      { name: "Enterprise", q: 'title:enterprise' },
+      { name: "Discovery", q: 'title:discovery' },
+      { name: "Short Treks", q: 'title:"short treks" AND NOT title:"very short treks"' },
+      { name: "Picard", q: 'title:picard' },
+      { name: "Lower Decks", q: 'title:"lower decks"' },
+      { name: "Prodigy", q: 'title:prodigy' },
+      { name: "Strange New Worlds", q: 'title:"strange new worlds"' },
+      { name: "Very Short Treks", q: 'title:"very short treks"' },
+      { name: "Starfleet Academy", q: 'title:"starfleet academy"' },
+      { name: "The Films · all eras", q: 'title:("motion picture" OR "wrath of khan" OR "search for spock" OR "voyage home" OR "final frontier" OR "undiscovered country" OR generations OR "first contact" OR insurrection OR nemesis OR "star trek 2009" OR "into darkness" OR beyond OR "section 31")' },
+      { name: "Fan films & specials", q: 'title:(continues OR "new voyages" OR "phase ii" OR "fan film" OR "of gods and men" OR renegades OR documentary OR "25th anniversary" OR "30th anniversary")' },
+    ] },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },
@@ -518,7 +559,7 @@ const LINEUP = {
   "Ephemera": [80, "🎞️"], "Duck & Cover": [81, "☢️"], "Home Movies": [82, "🎥"], "Computer Chronicles": [83, "💾"], "Mission Control": [84, "🛰️"],
   "Wild Kingdom": [85, "🦁"], "TV Dinner": [86, "🍳"], "Strange Signals": [87, "🛸"], "Slow TV": [88, "🔥"], "Arcade": [89, "🕹️"],
   "Starbase": [90, "🖖"], "Hyperdrive": [91, "🌠"], "Riff Raff": [92, "🍿"], "Atomic Age": [93, "⚛️"], "Deep Space": [94, "🪐"],
-  "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"],
+  "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"], "Star Trek": [97, "🌟"],
 };
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);
@@ -709,11 +750,16 @@ async function getList(ch) {
   const key = "re_pool_" + hash(ch.q);
   const cached = store.get(key, null);
   if (cached && Date.now() - cached.t < 864e5) return cached.ids;
-  const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${ch.q}) AND mediatype:movies`) +
-              "&fl[]=identifier&rows=300&sort[]=downloads+desc&output=json";
-  const res = await fetch(url);
-  const data = await res.json();
-  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier).filter(id => !blocked(id, ch)));
+  const searches = ch.franchises ? [...ch.franchises.map(f => `(${ch.q}) AND (${f.q})`), ch.q] : [ch.q];
+  const results = await Promise.allSettled(searches.map(q => limited(async () => {
+    const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${q}) AND mediatype:movies`) +
+                `&fl[]=identifier&rows=${Math.floor(300 / searches.length)}&sort[]=downloads+desc&output=json`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+    if (!res.ok) throw new Error("Archive search failed");
+    return (await res.json()).response.docs.map(d => d.identifier);
+  })));
+  if (results.every(r => r.status === "rejected")) throw new Error("Archive unavailable");
+  const ids = poolOrder(ch.q, [...new Set(results.flatMap(r => r.status === "fulfilled" ? r.value : []))].filter(id => !blocked(id, ch)));
   listCache[ch.q] = ids;
   store.set(key, { t: Date.now(), ids });
   return ids;
@@ -902,7 +948,7 @@ function renderGuide() {
   rows = channels().map((c, i) => {
     if (bandOf(c.no) !== band) { band = bandOf(c.no); $("chans").append(Object.assign(document.createElement("h4"), { className: "band", textContent: band })); }
     const b = document.createElement("button");
-    b.type = "button"; b.className = "chan" + (i === cur ? " on" : "");
+    b.type = "button"; b.className = "chan" + (c.franchises ? " trek-channel" : "") + (i === cur ? " on" : "");
     const n = Object.assign(document.createElement("span"), { className: "n", textContent: num(i) });
     const t = Object.assign(document.createElement("span"), { className: "t" });
     t.append(Object.assign(document.createElement("span"), { className: "ic", textContent: c.icon, ariaHidden: "true" }), c.name,
@@ -1058,11 +1104,26 @@ function waitForNext(my) {
   const ms = Math.max(1000, (playing.end - nowSec()) * 1000);
   waitTimer = setTimeout(() => { if (my === tuneId) tune(cur); }, ms);
 }
+function updateTrekBridge(ch) {
+  $("trekBridge").hidden = !ch.franchises;
+  if (!ch.franchises) return;
+  $("trekFleet").replaceChildren(...ch.franchises.map(f => {
+    const a = document.createElement("a");
+    a.href = "https://archive.org/search?query=" + encodeURIComponent(`(${ch.q}) AND (${f.q}) AND mediatype:movies`);
+    a.target = "_blank"; a.rel = "noopener";
+    const count = catalog?.coverage?.[ch.q]?.[f.name];
+    a.append(Object.assign(document.createElement("b"), { textContent: f.name }),
+      Object.assign(document.createElement("small"), { textContent: count == null ? "Explore the Archive ↗" : count ? `${count} playable upload${count === 1 ? "" : "s"} · explore ↗` : "No playable uploads yet · explore ↗" }));
+    return a;
+  }));
+}
+
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
   if (mode === "tv") history.replaceState(null, "", "#ch" + list[cur].no); // shareable address for this channel
   const ch = list[cur], my = ++tuneId;
+  updateTrekBridge(ch);
   shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   clearTimeout(waitTimer);

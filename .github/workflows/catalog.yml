@@ -44,6 +44,8 @@ jobs:
           else
             echo "catalog=no" >> "$GITHUB_OUTPUT"
           fi
+      - name: Test catalog builder
+        run: node --test scripts/build-catalog.test.mjs
       - name: Build catalog.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-catalog.mjs

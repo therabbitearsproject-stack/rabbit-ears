@@ -83,16 +83,23 @@ async function pool(fn, items) {
 }
 
 // ---- build ----
-const pools = {}, unplayable = new Set();
+const pools = {}, coverage = {}, memberships = {}, unplayable = new Set();
 let looked = 0, reused = 0, failed = 0;
 for (const ch of BUILT_IN) {
-  const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${ch.q}) AND mediatype:movies`) +
-              `&fl[]=identifier&rows=${POOL}&sort[]=downloads+desc&output=json`;
   let ids;
-  try { ids = (await getJSON(url)).response.docs.map(d => d.identifier); }
+  try {
+    const searches = ch.franchises ? [...ch.franchises.map(f => `(${ch.q}) AND (${f.q})`), ch.q] : [ch.q];
+    const groups = await pool(async q => {
+      const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`(${q}) AND mediatype:movies`) +
+                  `&fl[]=identifier&rows=${Math.floor(POOL / searches.length)}&sort[]=downloads+desc&output=json`;
+      return (await getJSON(url)).response.docs.map(d => d.identifier);
+    }, searches);
+    ids = [...new Set(groups.flat())];
+    if (ch.franchises) memberships[ch.q] = Object.fromEntries(ch.franchises.map((f, i) => [f.name, new Set(groups[i])]));
+  }
   catch (e) {
     // Keep yesterday's pool rather than emptying the channel.
-    if (prev.pools?.[ch.q]) { pools[ch.q] = prev.pools[ch.q]; console.log(`! ${ch.name}: search failed, kept old pool`); }
+    if (prev.pools?.[ch.q]) { pools[ch.q] = prev.pools[ch.q]; if (prev.coverage?.[ch.q]) coverage[ch.q] = prev.coverage[ch.q]; console.log(`! ${ch.name}: search failed, kept old pool`); }
     else console.log(`! ${ch.name}: search failed`);
     continue;
   }
@@ -145,6 +152,9 @@ if (tally.size) {
   if (process.env.GITHUB_STEP_SUMMARY) await writeFile(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n", { flag: "a" });
 }
 
-const catalog = { generated: new Date().toISOString(), pools, unplayable: [...unplayable] };
+for (const [q, groups] of Object.entries(memberships)) {
+  coverage[q] = Object.fromEntries(Object.entries(groups).map(([name, ids]) => [name, (pools[q] || []).filter(r => ids.has(r[0])).length]));
+}
+const catalog = { generated: new Date().toISOString(), pools, coverage, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);
