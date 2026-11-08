@@ -200,6 +200,25 @@ form.add input { min-width: 0; background: var(--bg); border: 1px solid var(--li
 .scale::after { content: ""; position: absolute; left: 0; right: 0; top: 30px; height: 14px; background: repeating-linear-gradient(90deg, rgba(255,182,72,.55) 0 1px, transparent 1px 10px); }
 .needle { position: absolute; top: 6px; bottom: 6px; width: 3px; left: 10%; background: #ff5b3a; box-shadow: 0 0 10px #ff5b3a; border-radius: 2px; transition: left .6s cubic-bezier(.3,1.4,.5,1); }
 .vfd { background: #050806; border-radius: 12px; padding: 14px 18px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; box-shadow: inset 0 0 20px #000; min-width: 0; }
+/* Games */
+.gscreen { position: relative; aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: #000; box-shadow: inset 0 0 40px #000, 0 0 0 6px #0b0806; }
+.gscreen ruffle-player { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.gidle { position: absolute; inset: 0; display: grid; place-items: center; background: radial-gradient(90% 90% at 50% 40%, #2a1d12, #070504); }
+.gidle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35; filter: blur(2px) saturate(1.2); }
+.gidle img:not([src]) { display: none; }
+.gidle-txt { position: relative; display: grid; gap: 12px; justify-items: center; text-align: center; padding: 16px; }
+.gidle-txt b { font-family: var(--osd); font-weight: 400; font-size: clamp(1.8rem, 6vw, 3rem); color: var(--phosphor); text-shadow: 0 0 10px rgba(141,255,180,.6), 0 2px 0 #000; line-height: 1; }
+.gidle-txt .k { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); }
+.gsearch { grid-template-columns: 1fr auto; }
+.ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 10px; }
+.gcard { appearance: none; text-align: left; display: grid; gap: 6px; align-content: start; padding: 8px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; font: inherit; min-width: 0; }
+.gcard:hover, .gcard.on { border-color: var(--amber); }
+.gcard.on { box-shadow: 0 0 0 1px var(--amber) inset; }
+.gcard:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.gcard .thumb { position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #000; display: grid; place-items: center; font-size: 2rem; }
+.gcard .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gcard .nm { font-weight: 600; font-size: .9rem; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+.gcard .yr { color: var(--dim); font-size: .78rem; font-family: var(--osd); font-size: 1rem; }
 .nowlist { display: grid; gap: 6px; }
 .nowrow { display: grid; grid-template-columns: 3ch minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
 .nowrow .n { font-family: var(--osd); font-size: 1.5rem; color: var(--phosphor); grid-row: span 2; }
@@ -265,7 +284,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   <div class="wcard">
     <p class="brand" id="wTitle">Rabbit-Ears<span>.stream</span></p>
     <p class="wlead">Forgotten TV, on the air around the clock.</p>
-    <p class="wbody">Old commercials, kung fu movies, '80s and '90s cartoons, game shows, Slow TV and more, all streaming from the Internet Archive. Everyone tuned to a channel sees the same thing at the same moment, just like broadcast TV.</p>
+    <p class="wbody">Old commercials, kung fu movies, '80s and '90s cartoons, game shows, Slow TV and more, all streaming from the Internet Archive, plus live radio and classic Flash games. Everyone tuned to a channel sees the same thing at the same moment, just like broadcast TV.</p>
     <div class="wstats">
       <span><b id="wChannels">44</b>channels</span>
       <span><b id="wHours">—</b>hours of tape</span>
@@ -274,6 +293,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <div class="wgo">
       <button class="btn wtune" id="wTune" type="button">📺 Tune in</button>
       <button class="btn" id="wRadio" type="button">📻 Listen to radio</button>
+      <button class="btn" id="wGames" type="button">🎮 Play games</button>
     </div>
     <p class="whint">↑ ↓ flip channels · type a number to jump · R for a surprise · C for captions</p>
   </div>
@@ -284,10 +304,64 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p class="tag" id="tagline">Forgotten Internet Archive video, on the air around the clock.</p>
   </header>
 
-  <nav class="tabs" role="tablist" aria-label="Choose TV or radio">
+  <nav class="tabs" role="tablist" aria-label="Choose TV, radio or games">
     <a class="tab" id="tabTv" role="tab" href="#tv" aria-controls="tvView">📺 TV</a>
     <a class="tab" id="tabRadio" role="tab" href="#radio" aria-controls="radioView">📻 Radio</a>
+    <a class="tab" id="tabGames" role="tab" href="#games" aria-controls="gamesView">🎮 Games</a>
   </nav>
+
+  <div class="view" id="gamesView" role="tabpanel" aria-labelledby="tabGames" hidden>
+    <div class="cabinet">
+      <div class="gscreen" id="gScreen">
+        <div class="gidle" id="gIdle">
+          <img id="gIdleImg" alt="">
+          <div class="gidle-txt">
+            <span class="k">🎮 Game of the Day</span>
+            <b id="gIdleTitle">Loading the shelf…</b>
+            <button class="btn wtune" id="gIdlePlay" type="button" disabled>▶ Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="remote">
+      <button class="btn" id="gRandom" type="button">🎲 Random game</button>
+      <button class="btn" id="gFav" type="button" disabled>☆ Favorite</button>
+      <button class="btn" id="gStop" type="button" disabled>■ Stop</button>
+      <span class="spacer"></span>
+      <button class="btn" id="gFull" type="button" disabled>Full screen</button>
+    </div>
+
+    <section class="now" aria-live="polite">
+      <span class="k" id="gKicker">Game of the Day</span>
+      <h2 id="gTitle">—</h2>
+      <span class="meta" id="gMeta"></span>
+      <span class="meta vw" id="gPlayers"></span>
+      <span class="meta" id="gTouch" hidden>Most Flash games need a keyboard and mouse, so they play best on a computer.</span>
+      <div class="acts" id="gActs" hidden>
+        <a id="gLink" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
+        <button class="linkbtn" id="gShare" type="button">🔗 Share this game</button>
+        <button class="linkbtn" id="gReport" type="button" aria-expanded="false" aria-controls="gReportBox">⚑ Report this game</button>
+      </div>
+      <div class="reportbox" id="gReportBox" hidden>
+        <span>What's wrong with it?</span>
+        <button class="chip" type="button" data-r="broken">Won't play</button>
+        <button class="chip" type="button" data-r="inappropriate">Not appropriate</button>
+      </div>
+      <span class="meta" id="gReportDone" hidden>Thanks. It's flagged for a look.</span>
+    </section>
+
+    <section class="guide">
+      <div class="guide-head"><h3>Game shelves</h3><span class="hint" id="gCount"></span></div>
+      <div class="genres" id="gShelves" role="group" aria-label="Game shelves"></div>
+      <form class="rsearch gsearch" id="gSearch">
+        <input id="gQuery" type="search" placeholder="Search 6,000+ Flash games, e.g. Bloons, Fancy Pants" aria-label="Search games">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="ggrid" id="gGrid"></div>
+      <p class="hint">Classic Flash games from the Internet Archive's collection, played with the <a href="https://ruffle.rs" target="_blank" rel="noopener">Ruffle</a> emulator. Click the game first, then use the keyboard. Some later games don't fully work yet; ⚑ Report them and they'll be taken off the shelves.</p>
+    </section>
+  </div>
 
   <div class="view" id="nowView" hidden>
     <section class="guide">
@@ -1390,7 +1464,7 @@ function initRadio() {
 }
 
 // ---------- TV / Radio tabs ----------
-const TAGLINES = { tv: "Forgotten Internet Archive video, on the air around the clock.", radio: "Live radio from around the world.", now: "Everything on the air right now." };
+const TAGLINES = { tv: "Forgotten Internet Archive video, on the air around the clock.", radio: "Live radio from around the world.", now: "Everything on the air right now.", games: "Classic Flash games, ready to play." };
 
 // ---------- On now (#now): every channel's current and next show, with ready-to-post text ----------
 let nowTimer;
@@ -1424,19 +1498,179 @@ async function renderNow() {
   // Refresh every minute while the page is open.
   nowTimer = setTimeout(() => { if (mode === "now") renderNow(); }, 60000);
 }
+// ---------- Games (#games): classic Flash games from the Internet Archive, played with Ruffle ----------
+// games.json (built nightly by scripts/build-games.mjs) holds the shelves and each game's file.
+// Files load through archive.org/cors/, the Archive's download address other sites may read.
+// Ruffle (the Flash emulator) is only downloaded the first time someone opens the Games tab.
+const GAME_BASE = "collection:softwarelibrary_flash_games";
+const GAME_BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk)`;
+let gamesData = null, gPlayer = null, gCur = null, gShelf = store.get("re_gshelf", "Classics"), gSearchResults = null;
+let gFavs = store.get("re_gfavs", []), gRecent = store.get("re_grecent", []);
+const gameRoom = id => "game-" + hash(id).toString(36);
+async function loadGames() {
+  if (!gamesData) { try { gamesData = await (await fetch("games.json")).json(); } catch { gamesData = { shelves: [], games: {} }; } }
+  return gamesData;
+}
+let rufflePromise;
+function loadRuffle() {
+  return rufflePromise ||= new Promise((ok, no) => {
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = { autoplay: "on", unmuteOverlay: "hidden", splashScreen: true, letterbox: "on", contextMenu: "rightClickOnly", showSwfDownload: false, warnOnUnsupportedContent: false, openUrlMode: "deny", allowNetworking: "internal" };
+    const s = Object.assign(document.createElement("script"), { src: "https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.7.1/ruffle.js", onload: () => ok(window.RufflePlayer.newest()), onerror: () => { rufflePromise = null; no(new Error("ruffle")); } });
+    document.head.append(s);
+  });
+}
+// Same choice as scripts/build-games.mjs: the .swf named like the item, else the biggest one.
+function mainSwf(files, id) {
+  const swfs = files.filter(f => /\.swf$/i.test(f.name));
+  if (!swfs.length) return null;
+  const stem = s => s.toLowerCase().replace(/^.*\//, "").replace(/\.swf$/, "").replace(/[^a-z0-9]/g, "");
+  return swfs.find(f => stem(f.name) === stem(id)) || swfs.sort((a, b) => (+b.size || 0) - (+a.size || 0))[0];
+}
+const gTitles = {}; // titles from search results, for games not on a shelf
+async function gameInfo(id) {
+  const g = gamesData?.games?.[id];
+  if (g) return { id, file: g[0], title: cleanTitle(g[1]), year: g[2], mb: g[3] || 0 };
+  const d = await (await fetch("https://archive.org/metadata/" + encodeURIComponent(id))).json();
+  const f = mainSwf(d.files || [], id), file = f?.name;
+  return file ? { id, file, mb: Math.round((+f.size || 0) / 1e5) / 10, title: cleanTitle([].concat(d.metadata?.title || gTitles[id] || id)[0]), year: String([].concat(d.metadata?.year || d.metadata?.date || "")[0]).slice(0, 4) } : null;
+}
+const gameOfDay = () => { const c = gamesData?.shelves?.find(s => s.name === "Classics")?.ids || []; return c.length ? c[hash(new Date().toISOString().slice(0, 10)) % c.length] : null; };
+const thumbUrl = id => "https://archive.org/services/img/" + encodeURIComponent(id);
+function gameTitleOf(id) { const g = gamesData?.games?.[id]; return cleanTitle(g ? g[1] : gTitles[id] || id); }
+
+function stopGame() {
+  if (gPlayer) { try { gPlayer.remove(); } catch {} gPlayer = null; }
+  gCur = null; $("gIdle").hidden = false;
+  ["gFav", "gStop", "gFull"].forEach(b => $(b).disabled = true);
+  roomChanged(); paintGameIdle(); markGameCard();
+}
+function paintGameIdle() {
+  const id = gameOfDay();
+  $("gKicker").textContent = "Game of the Day"; $("gActs").hidden = true; $("gReportBox").hidden = true; $("gReportDone").hidden = true;
+  $("gPlayers").textContent = ""; $("gMeta").textContent = id ? "A different classic every day, the same one for everyone." : "";
+  $("gTitle").textContent = id ? gameTitleOf(id) : "—";
+  $("gIdleTitle").textContent = id ? gameTitleOf(id) : "No games loaded";
+  if (id) $("gIdleImg").src = thumbUrl(id); else $("gIdleImg").removeAttribute("src");
+  $("gIdlePlay").disabled = !id; $("gIdlePlay").onclick = () => id && playGame(id);
+}
+async function playGame(id) {
+  const my = gCur = id;
+  $("gKicker").textContent = "Now playing"; $("gTitle").textContent = gameTitleOf(id); $("gMeta").textContent = "Loading the game… bigger ones can take 10–20 seconds to arrive from the Archive.";
+  $("gReportBox").hidden = true; $("gReportDone").hidden = true; $("gReport").hidden = false;
+  $("gScreen").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  history.replaceState(null, "", "#play=" + encodeURIComponent(id));
+  roomChanged(); paintCounts(); markGameCard();
+  try {
+    const [ruffle, info] = await Promise.all([loadRuffle(), gameInfo(id)]);
+    if (my !== gCur) return;
+    if (!info) { $("gMeta").textContent = "This one has no Flash file to play. Try another game."; return; }
+    if (info.mb > 8) $("gMeta").textContent = `Loading… this one's big (${Math.round(info.mb)} MB), so it can take a minute to arrive from the Archive.`;
+    if (gPlayer) gPlayer.remove();
+    gPlayer = ruffle.createPlayer();
+    $("gScreen").append(gPlayer); $("gIdle").hidden = true;
+    gPlayer.addEventListener("loaderror", () => { if (my === gCur) $("gMeta").textContent = "This game won't start here. Try another, or ⚑ report it."; });
+    gPlayer.addEventListener("loadedmetadata", () => { if (my === gCur) $("gMeta").textContent = [info.year, "Click the game, then use your keyboard and mouse."].filter(Boolean).join(" · "); });
+    await gPlayer.ruffle().load({ url: `https://archive.org/cors/${encodeURIComponent(id)}/${info.file.split("/").map(encodeURIComponent).join("/")}`, backgroundColor: "#000000" });
+    $("gTitle").textContent = info.title;
+    $("gLink").href = "https://archive.org/details/" + encodeURIComponent(id); $("gActs").hidden = false;
+    ["gFav", "gStop", "gFull"].forEach(b => $(b).disabled = false); paintFav();
+    gRecent = [id, ...gRecent.filter(x => x !== id)].slice(0, 30); store.set("re_grecent", gRecent);
+    gPlayer.focus?.();
+  } catch { if (my === gCur) $("gMeta").textContent = "Couldn't load the game player. Check your connection and try again."; }
+}
+function paintFav() { const on = gCur && gFavs.includes(gCur); $("gFav").textContent = on ? "★ Favorite" : "☆ Favorite"; $("gFav").setAttribute("aria-pressed", String(!!on)); }
+function markGameCard() { document.querySelectorAll(".gcard").forEach(c => c.classList.toggle("on", c.dataset.id === gCur)); }
+
+function gameCard(id) {
+  const b = Object.assign(document.createElement("button"), { type: "button", className: "gcard" }); b.dataset.id = id;
+  const th = Object.assign(document.createElement("span"), { className: "thumb", textContent: "🎮" });
+  const img = Object.assign(document.createElement("img"), { loading: "lazy", alt: "", src: thumbUrl(id) });
+  img.onerror = () => img.remove();
+  th.append(img);
+  const g = gamesData?.games?.[id];
+  b.append(th, Object.assign(document.createElement("span"), { className: "nm", textContent: gameTitleOf(id) }),
+           Object.assign(document.createElement("span"), { className: "yr", textContent: g?.[2] || "" }),
+           Object.assign(document.createElement("span"), { className: "vw" }));
+  b.onclick = () => playGame(id);
+  return b;
+}
+function renderGameShelves() {
+  const shelves = [{ name: "Favorites", icon: "★", ids: gFavs }, { name: "Recent", icon: "🕘", ids: gRecent }, ...(gamesData?.shelves || [])];
+  $("gShelves").innerHTML = "";
+  for (const s of shelves) {
+    const c = Object.assign(document.createElement("button"), { type: "button", className: "chip", textContent: `${s.icon} ${s.name}` });
+    c.setAttribute("aria-pressed", String(!gSearchResults && gShelf === s.name));
+    c.onclick = () => { gSearchResults = null; $("gQuery").value = ""; gShelf = s.name; store.set("re_gshelf", gShelf); renderGameShelves(); };
+    $("gShelves").append(c);
+  }
+  const ids = gSearchResults || shelves.find(s => s.name === gShelf)?.ids || shelves[2]?.ids || [];
+  $("gGrid").replaceChildren(...ids.map(gameCard));
+  if (!ids.length) $("gGrid").append(Object.assign(document.createElement("p"), { className: "hint", textContent: gSearchResults ? "No games found. Try another search." : gShelf === "Favorites" ? "No favorites yet. Play a game and tap ☆ Favorite." : "Nothing here yet." }));
+  $("gCount").textContent = ids.length ? `${ids.length} games` : "";
+  markGameCard(); paintCounts();
+}
+$("gSearch").onsubmit = async e => {
+  e.preventDefault();
+  const q = $("gQuery").value.trim().replace(/[()":]/g, " ").trim();
+  if (!q) { gSearchResults = null; renderGameShelves(); return; }
+  $("gCount").textContent = "Searching…";
+  try {
+    const terms = q.split(/\s+/).map(w => `title:${w}*`).join(" AND ");
+    const url = "https://archive.org/advancedsearch.php?q=" + encodeURIComponent(`${GAME_BASE} AND (${terms}) AND NOT subject:${GAME_BAD} AND NOT title:${GAME_BAD}`) + "&fl[]=identifier&fl[]=title&rows=60&sort[]=downloads+desc&output=json";
+    const docs = (await (await fetch(url)).json()).response.docs;
+    docs.forEach(d => gTitles[d.identifier] = [].concat(d.title || d.identifier)[0]);
+    gSearchResults = docs.map(d => d.identifier);
+  } catch { gSearchResults = []; }
+  renderGameShelves();
+};
+$("gRandom").onclick = () => { const ids = gSearchResults || [{ name: "Favorites", ids: gFavs }, { name: "Recent", ids: gRecent }, ...(gamesData?.shelves || [])].find(s => s.name === gShelf)?.ids || []; if (ids.length) playGame(ids[Math.floor(Math.random() * ids.length)]); };
+$("gStop").onclick = () => { stopGame(); history.replaceState(null, "", "#games"); };
+$("gFav").onclick = () => { if (!gCur) return; gFavs = gFavs.includes(gCur) ? gFavs.filter(x => x !== gCur) : [gCur, ...gFavs]; store.set("re_gfavs", gFavs); paintFav(); if (gShelf === "Favorites" && !gSearchResults) renderGameShelves(); };
+$("gFull").onclick = () => { const s = $("gScreen"); (s.requestFullscreen || s.webkitRequestFullscreen)?.call(s)?.catch?.(() => {}); };
+$("gShare").onclick = async () => {
+  if (!gCur) return;
+  const url = location.origin + location.pathname + "#play=" + encodeURIComponent(gCur), text = `🎮 ${$("gTitle").textContent} on Rabbit-Ears.stream`;
+  try {
+    if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ title: "Rabbit-Ears.stream", text, url });
+    else { await navigator.clipboard.writeText(url); $("gShare").textContent = "✓ Link copied"; setTimeout(() => $("gShare").textContent = "🔗 Share this game", 2500); }
+  } catch {}
+};
+$("gReport").onclick = () => { const open = $("gReportBox").hidden; $("gReportBox").hidden = !open; $("gReport").setAttribute("aria-expanded", String(open)); };
+$("gReportBox").onclick = e => {
+  const reason = e.target.dataset?.r;
+  if (!reason || !gCur) return;
+  const sent = store.get("re_reported", []);
+  if (!sent.includes(gCur + reason)) { try { window.reReport?.({ id: gCur, ch: "Games", reason }); } catch {} store.set("re_reported", [...sent, gCur + reason].slice(-200)); }
+  $("gReportBox").hidden = true; $("gReport").hidden = true; $("gReportDone").hidden = false;
+};
+let gamesReady = false;
+async function initGames() {
+  $("gTouch").hidden = !matchMedia("(pointer: coarse)").matches;
+  if (!gamesReady) { gamesReady = true; await loadGames(); renderGameShelves(); if (!gCur) paintGameIdle(); }
+  const want = decodeURIComponent(location.hash.match(/^#play=(.+)$/)?.[1] || "");
+  if (want && want !== gCur) playGame(want);
+  loadRuffle().catch(() => {}); // start fetching the emulator in the background
+}
+
 function setMode(m) {
-  mode = m === "radio" || m === "now" ? m : "tv";
-  $("tvView").hidden = mode !== "tv"; $("radioView").hidden = mode !== "radio"; $("nowView").hidden = mode !== "now";
-  $("tabTv").setAttribute("aria-selected", String(mode === "tv")); $("tabRadio").setAttribute("aria-selected", String(mode === "radio"));
+  if (/^play=/.test(m)) m = "games";
+  const was = mode;
+  mode = m === "radio" || m === "now" || m === "games" ? m : "tv";
+  $("tvView").hidden = mode !== "tv"; $("radioView").hidden = mode !== "radio"; $("nowView").hidden = mode !== "now"; $("gamesView").hidden = mode !== "games";
+  $("tabTv").setAttribute("aria-selected", String(mode === "tv")); $("tabRadio").setAttribute("aria-selected", String(mode === "radio")); $("tabGames").setAttribute("aria-selected", String(mode === "games"));
   $("tagline").textContent = TAGLINES[mode];
+  if (was === "games" && mode !== "games") stopGame(); // leaving the arcade switches the game off
   if (mode === "radio") { tvOn = false; vid.pause(); initRadio(); }
   else if (mode === "now") { tvOn = false; vid.pause(); audio.pause(); renderNow(); }
+  else if (mode === "games") { tvOn = false; vid.pause(); audio.pause(); initGames(); }
   else { audio.pause(); if (!tvOn) { tvOn = true; tune(cur); } }
   roomChanged(); paintCounts();
 }
 window.addEventListener("hashchange", () => {
   const i = chFromHash();
   if (i >= 0) { if (mode !== "tv") setMode("tv"); if (i !== cur) tune(i); return; }
+  if (mode === "games" && /^#play=/.test(location.hash)) { initGames(); return; }
   setMode(location.hash.slice(1));
 });
 
@@ -1447,6 +1681,7 @@ let counts = {};
 const tvRoom = ch => "tv-" + hash(ch.q).toString(36);
 function currentRoom() {
   if (mode === "tv") { const ch = channels()[cur]; return ch ? tvRoom(ch) : null; }
+  if (mode === "games") return gCur ? gameRoom(gCur) : null;
   return audio.dataset.id && !audio.paused ? "radio-" + audio.dataset.id.toLowerCase() : null;
 }
 function roomChanged() { try { window.reSetRoom?.(currentRoom()); } catch {} }
@@ -1466,6 +1701,9 @@ function paintCounts() {
   });
   const rn = audio.dataset.id && !audio.paused ? counts["radio-" + audio.dataset.id.toLowerCase()] || 0 : 0;
   $("rListeners").textContent = rn ? (rn === 1 ? "🎧 Just you listening" : `🎧 ${rn} people listening`) : "";
+  document.querySelectorAll(".gcard[data-id]").forEach(b => { const n = counts[gameRoom(b.dataset.id)] || 0; b.querySelector(".vw").textContent = n ? "🎮 " + people(n, "playing") : ""; });
+  const gn = mode === "games" && gCur ? counts[gameRoom(gCur)] || 0 : 0;
+  $("gPlayers").textContent = gn ? (gn === 1 ? "🎮 Just you playing" : `🎮 ${gn} people playing`) : "";
 }
 window.reCounts = c => { counts = c || {}; paintCounts(); };
 window.reCurrentRoom = currentRoom;
@@ -1488,6 +1726,7 @@ $("suggest").onsubmit = e => {
 document.addEventListener("keydown", e => {
   if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || !$("welcome").hidden) return;
   if (mode === "radio") { if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); stepStation(1); } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); stepStation(-1); } return; }
+  if (mode !== "tv") return; // games need the arrow keys and space bar for themselves
   if (e.key === "ArrowUp") { e.preventDefault(); tune(cur + 1); }
   else if (e.key === "ArrowDown") { e.preventDefault(); tune(cur - 1); }
   else if (e.key === "ArrowLeft") { e.preventDefault(); seek(-15); }
@@ -1521,6 +1760,7 @@ function showWelcome() {
 function closeWelcome() { $("welcome").hidden = true; store.set("re_welcomed", true); }
 $("wTune").onclick = () => { closeWelcome(); $("power").click(); };
 $("wRadio").onclick = () => { closeWelcome(); location.hash = "radio"; };
+$("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>

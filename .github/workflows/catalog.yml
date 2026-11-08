@@ -3,6 +3,7 @@
 #   daily, on demand, and whenever index.html or the scripts change; it's committed to the repo.
 # - Subtitle files are copied from the Internet Archive into subs/ (cached between runs, not committed)
 #   because archive.org doesn't let other sites read them directly.
+# - games.json (the Games tab's shelves of Flash games) is rebuilt at the same times and committed too.
 # - The site (the repo's files plus subs/) is then published to GitHub Pages.
 name: Build and publish
 
@@ -49,12 +50,15 @@ jobs:
       - name: Build catalog.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-catalog.mjs
+      - name: Build games.json
+        if: steps.need.outputs.catalog == 'yes'
+        run: node scripts/build-games.mjs
       - name: Commit catalog if changed
         if: steps.need.outputs.catalog == 'yes'
         run: |
           git config user.name "Rabbit Ears"
           git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
-          git add catalog.json
+          git add catalog.json games.json
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update catalog"
           git pull --rebase -q
@@ -79,6 +83,7 @@ jobs:
           mkdir _site
           cp index.html catalog.json og.jpg share-card.html commercial-timing.js _site/
           cp -r assets _site/assets
+          if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs
           du -sh _site _site/subs
       - uses: actions/upload-pages-artifact@v3

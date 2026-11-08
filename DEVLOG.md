@@ -4,6 +4,55 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — 🎮 Games tab: classic Flash games
+
+A third tab next to TV and Radio: classic Flash games from the Internet Archive's Flash collection (about 6,600
+games), played right on the page.
+
+**How it works**
+- The Flash emulator **Ruffle 0.7.1** (from jsDelivr) runs the games; it's only downloaded the first time someone
+  opens the Games tab.
+- Game files load through `archive.org/cors/<id>/<file>`, the Archive's download address that other websites are
+  allowed to read. (The Archive's own embedded player was tried first but stalled in testing; hosting Ruffle
+  ourselves is simpler and in our own style.) Big games can take 10–25 seconds to arrive; Ruffle shows a loading bar.
+- `scripts/build-games.mjs` builds `games.json` nightly (same schedule and conditions as the catalog): shelves of
+  the most-downloaded games per category, each game's Flash file, title and year. It's committed like `catalog.json`
+  and published with the site.
+
+**Shelves:** ⭐ Classics (hand-picked, tested), 🔥 Most played, 🧩 Puzzle & brain, 🕹️ Action & arcade,
+🏁 Sports & racing, 🗡️ Adventure & RPG, 📺 Cartoon tie-ins, plus ★ Favorites and 🕘 Recent (saved per device) and
+a search box over the whole collection.
+
+**Also:** Game of the Day (from Classics, the same for everyone each day), 🎲 Random game, ★ Favorite, ■ Stop,
+Full screen, "🎮 N playing" counts (same Firebase presence as TV, room `game-<hash>`), 🔗 Share this game
+(`…/#play=<id>` opens straight to it), ⚑ Report this game (Won't play / Not appropriate). The nightly build drops
+games reported "not appropriate" twice or "won't play" three times. Leaving the tab switches the game off. On
+phones a note says most Flash games need a keyboard and mouse. The TV's keyboard shortcuts are off in the Games
+tab so arrow keys and space go to the game. The welcome screen has a "🎮 Play games" button.
+
+**Safety:** every shelf and search excludes adult, gory, shock/prank and hateful content by title and tags, and
+the builder double-checks each game's full tags. Caught while reviewing the top results and now excluded:
+Mutilate-a-Doll, the "You Are An Idiot" virus prank, Whack Your Boss, Don't Shit Your Pants, Beach Flirting Game,
+The Great Sperm Race, SpongeBob Saw Game, Road of the Dead. Pico's School left out of Classics (school-shooting
+plot).
+
+**Classics test:** 40 well-known games were each loaded in Ruffle from the Archive. 38 started (Line Rider, QWOP,
+Fancy Pants, Portal: The Flash Version, Super Mario 63, Age of War, Bloons TD 2, Learn to Fly 2, Papa's Pizzeria,
+Cubefield, Helicopter Game, Raft Wars, Duck Life 2, The Impossible Quiz 2, Alien Hominid…); Plants vs. Zombies has no
+Flash file. 34 made the Classics shelf (The Binding of Isaac and The Last Stand left out for theme). Load times ran
+3–41 seconds, almost all of it the download.
+
+**Big files:** the Archive sends game files at roughly 0.6 MB/s, so a 35 MB game takes about a minute. The builder
+leaves games over 25 MB off the shelves (`MAX_MB`), records each game's size, and the page warns "this one's big"
+for anything over 8 MB (e.g. a 35 MB Fancy Pants World 3 found by search).
+
+**Tested locally:** Game of the Day, shelves and thumbnails, playing from a card and from a `#play=` link, switching
+games (one player at a time), Favorites shelf, Recent, search (and an adult search term returning nothing), Stop,
+leaving the tab switching the game off, arrow keys and space going to the game, "Just you playing", phone layout.
+The first real `games.json` is built by the publish run.
+
+---
+
 ## 2026-11-08 — Subspace 97: vintage breaks and Subspace Snacks
 
 Renamed the dedicated Star Trek channel to Subspace 97. Its 704 full programs remain in rotation.
