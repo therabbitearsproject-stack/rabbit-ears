@@ -4,6 +4,13 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Clear picture on every TV channel
+
+Removed the shared CRT overlay (horizontal scanlines and darkened glass edges) from the TV
+player, so every channel displays its video without that effect.
+
+---
+
 ## 2026-11-07 — Star Trek: The Final Frontier (channel 97)
 
 - Added a dedicated Star Trek channel in the Sci-fi band. Starbase stays the mixed sci-fi channel.

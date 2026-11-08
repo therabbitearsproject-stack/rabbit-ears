@@ -92,12 +92,6 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 }
 .screen video, .screen canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
 .screen canvas { pointer-events: none; transition: opacity .35s; }
-.screen::after { /* scanlines + glass curve */
-  content: ""; position: absolute; inset: 0; pointer-events: none;
-  background:
-    repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px),
-    radial-gradient(120% 100% at 50% 50%, transparent 60%, rgba(0,0,0,.55));
-}
 .osd { position: absolute; top: 5%; right: 6%; font-family: var(--osd); color: var(--phosphor); font-size: clamp(2rem, 7vw, 3.6rem); text-shadow: 0 0 8px rgba(141,255,180,.7); z-index: 2; transition: opacity .6s; }
 .osd.fade { opacity: 0; }
 .lower { position: absolute; left: 5%; right: 5%; bottom: 6%; z-index: 2; font-family: var(--osd); color: var(--ink); font-size: clamp(1rem, 3.4vw, 1.4rem); text-shadow: 0 1px 3px #000, 0 0 6px #000; transition: opacity .6s; line-height: 1.1; }
