@@ -39,8 +39,7 @@
   for(const [id,name,label] of [['tabTv','tv','TV guide'],['tabRadio','radio','Radio'],['tabGames','game','Games']]){
     const a=$(id);a.innerHTML=icon(name)+`<span class="nav-name">${label}</span>`;a.title=label;a.setAttribute('aria-label',label);
   }
-  const nowLink=make('a','tab');nowLink.href='#now';nowLink.title='On now';nowLink.setAttribute('aria-label','On now');nowLink.innerHTML=icon('clock')+'<span class="nav-name">On now</span>';nav.insertBefore(nowLink,$('tabRadio'));
-  const skinButton=button('Skins',()=>openDialog(skinDialog),'tab');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette')+'<span class="nav-name">Skins</span>';skinButton.title='Choose a viewing skin';skinButton.setAttribute('aria-label','Choose a viewing skin');nav.append(skinButton);
+  const skinButton=button('',()=>openDialog(skinDialog),'btn theme-picker');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette');skinButton.title='Choose theme';skinButton.setAttribute('aria-label','Choose theme');document.querySelector('header').append(skinButton);
   const currentSkin=make('span','current-skin');document.querySelector('header').append(currentSkin);
   function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='retro'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();}
   syncSkin();
@@ -123,7 +122,6 @@
     body.dataset.mode=mode;if(mode!=='tv'&&full)exitFull();
     if(mode==='tv')body.dataset.tvPage=/^#ch\d+$/.test(location.hash)?'channel':'guide';
     if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();
-    nowLink.setAttribute('aria-current',mode==='now'?'page':'false');
   }
   function dialog(label){const d=make('dialog','interface-dialog');d.setAttribute('aria-label',label);const close=button('Close',()=>d.close(),'btn dialog-close');close.innerHTML=icon('close');close.title='Close';close.setAttribute('aria-label','Close');d.append(close);d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});d.addEventListener('close',()=>dialogOpener?.focus());body.append(d);return d;}
   function openDialog(d){dialogOpener=document.activeElement;d.showModal();}

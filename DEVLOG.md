@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Theme icon in the header
+
+Moved the theme picker to a palette icon in the top-right corner and removed its
+visible Skins label. The icon retains a Choose theme tooltip and accessible name.
+Removed On now from the main navigation. Checked the picker, theme switching and
+desktop/phone placement; the remaining navigation is TV guide, Radio and Games.
+
+---
+
 ## 2026-11-08 — Square channel badges and a channel-page schedule
 
 Channel artwork now sits in square, theme-aware badges in the guide, channel rail,

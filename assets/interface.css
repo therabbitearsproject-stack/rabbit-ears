@@ -31,6 +31,10 @@ body[data-tv-page="guide"] .channel-rail{display:none!important}
 .radio-set .vfd-k,.radio-set #rName{color:#c8e5c0;text-shadow:none}body[data-radio-look=car] .radio-set .vfd-k,body[data-radio-look=car] .radio-set #rName{color:#c0e4f5}
 .tonearm{right:3%;top:10%;transform:rotate(-55deg);pointer-events:none}
 /* Square artwork surfaces keep the channel badges consistent across views. */
+.wrap>header{position:relative;padding-right:60px}
+.theme-picker{position:absolute;top:12px;right:0;min-width:44px;min-height:44px;justify-content:center;background:transparent;border-color:transparent;padding:10px}
+.theme-picker:hover{background:var(--panel);border-color:var(--line)}
+@media(max-width:640px){.wrap>header{padding-right:54px}.theme-picker{top:3px}.current-skin{display:none}}
 .channel-identity{width:154px;grid-template-columns:24px minmax(0,1fr)}
 .logo-mat{width:120px;height:120px;aspect-ratio:1;padding:6px;flex-shrink:0}
 .compact .logo-mat{width:104px;height:104px;padding:4px}
