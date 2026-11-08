@@ -12,15 +12,15 @@
 <meta property="og:title" content="Rabbit Ears TV">
 <meta property="og:description" content="Forgotten TV around the clock, plus live radio from around the world. Flip channels, check the guide, see who's watching.">
 <meta property="og:url" content="https://therabbitearsproject-stack.github.io/rabbit-ears/">
-<meta property="og:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg">
+<meta property="og:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=2">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="420">
-<meta property="og:image:alt" content="A retro TV showing color bars next to the words Rabbit Ears">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rabbit Ears: a retro TV with color bars above a TV guide listing Paint Along, Chiller Hosts, Starbase and Scooby &amp; Friends">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rabbit Ears TV">
 <meta name="twitter:description" content="Forgotten TV around the clock, plus live radio from around the world.">
-<meta name="twitter:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg">
+<meta name="twitter:image" content="https://therabbitearsproject-stack.github.io/rabbit-ears/og.jpg?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
@@ -203,7 +203,21 @@ form.add input { min-width: 0; background: var(--bg); border: 1px solid var(--li
 .scale { position: absolute; inset: 10px 18px auto; display: flex; justify-content: space-between; font-family: var(--osd); color: var(--amber); font-size: 1.2rem; opacity: .8; }
 .scale::after { content: ""; position: absolute; left: 0; right: 0; top: 30px; height: 14px; background: repeating-linear-gradient(90deg, rgba(255,182,72,.55) 0 1px, transparent 1px 10px); }
 .needle { position: absolute; top: 6px; bottom: 6px; width: 3px; left: 10%; background: #ff5b3a; box-shadow: 0 0 10px #ff5b3a; border-radius: 2px; transition: left .6s cubic-bezier(.3,1.4,.5,1); }
-.vfd { background: #050806; border-radius: 12px; padding: 14px 18px; display: grid; gap: 2px; box-shadow: inset 0 0 20px #000; min-width: 0; }
+.vfd { background: #050806; border-radius: 12px; padding: 14px 18px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; box-shadow: inset 0 0 20px #000; min-width: 0; }
+.nowlist { display: grid; gap: 6px; }
+.nowrow { display: grid; grid-template-columns: 3ch minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+.nowrow .n { font-family: var(--osd); font-size: 1.5rem; color: var(--phosphor); grid-row: span 2; }
+.nowrow .nm { font-weight: 600; min-width: 0; }
+.nowrow .pg { color: var(--ink); font-size: .9rem; min-width: 0; overflow-wrap: anywhere; }
+.nowrow .pg small { color: var(--dim); font-family: var(--osd); font-size: 1rem; margin-right: 6px; }
+.nowrow .go { grid-row: span 2; display: flex; gap: 6px; flex-wrap: wrap; justify-content: end; }
+.nowrow .go a, .nowrow .go button { font-size: .85rem; min-height: 36px; padding: 6px 12px; }
+.nowrow .go a { text-decoration: none; }
+@media (max-width: 600px) { .nowrow { grid-template-columns: 2.4ch minmax(0, 1fr); } .nowrow .go { grid-column: 2; grid-row: auto; justify-content: start; } }
+.vfd-txt { display: grid; gap: 2px; min-width: 0; }
+.rlogo { width: clamp(56px, 14vw, 84px); aspect-ratio: 1; border-radius: 14px; display: grid; place-items: center; overflow: hidden;
+  background: #fff1; box-shadow: 0 0 0 1px #ffffff14, 0 0 18px rgba(141,255,180,.12); font-size: clamp(1.8rem, 6vw, 2.6rem); }
+.rlogo img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
 .vfd b { font-family: var(--osd); font-weight: 400; font-size: clamp(1.6rem, 6vw, 2.6rem); color: var(--phosphor); text-shadow: 0 0 8px rgba(141,255,180,.6); line-height: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .vfd-k { font-family: var(--osd); color: var(--amber); font-size: 1.1rem; letter-spacing: .06em; }
 .vfd-sub { color: var(--dim); font-size: .88rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -279,6 +293,14 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <a class="tab" id="tabRadio" role="tab" href="#radio" aria-controls="radioView">📻 Radio</a>
   </nav>
 
+  <div class="view" id="nowView" hidden>
+    <section class="guide">
+      <div class="guide-head"><h3>On now</h3><span class="clock" id="nowClock"></span></div>
+      <p class="hint">What's airing on every channel right now and next. <b>Copy post</b> gives a ready-to-share line with a link that opens straight to that channel. <a href="#tv">← Back to TV</a></p>
+      <div class="nowlist" id="nowList"></div>
+    </section>
+  </div>
+
   <div class="view" id="radioView" role="tabpanel" aria-labelledby="tabRadio" hidden>
     <div class="cabinet radio-set">
       <div class="dial">
@@ -286,10 +308,13 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
         <div class="needle" id="needle"></div>
       </div>
       <div class="vfd" aria-live="polite">
-        <span class="vfd-k" id="rStatus">Pick a station</span>
-        <b id="rName">— — —</b>
-        <span class="vfd-sub" id="rSub"></span>
-        <span class="vfd-sub vw" id="rListeners"></span>
+        <span class="rlogo" id="rLogo" aria-hidden="true">📻</span>
+        <div class="vfd-txt">
+          <span class="vfd-k" id="rStatus">Pick a station</span>
+          <b id="rName">— — —</b>
+          <span class="vfd-sub" id="rSub"></span>
+          <span class="vfd-sub vw" id="rListeners"></span>
+        </div>
       </div>
       <div class="remote">
         <button class="btn ch" id="rPrev" type="button" aria-label="Previous station">◀◀</button>
@@ -396,7 +421,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p class="hint">Suggestions are posted publicly on GitHub, which needs a free account. <a href="https://github.com/therabbitearsproject-stack/rabbit-ears/issues" target="_blank" rel="noopener">See what others have suggested</a>.</p>
   </section>
 
-  <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span></footer>
+  <footer class="foot"><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a></footer>
 </div>
 
 <script>
@@ -1238,6 +1263,21 @@ function moveNeedle() {
 function showStation(s) {
   $("rName").textContent = s ? s.name : "— — —";
   $("rSub").textContent = s ? stationLine(s) : "";
+  // The station's own logo when it has one (most do), otherwise a radio.
+  const logo = $("rLogo"); logo.textContent = "📻";
+  if (s?.favicon?.startsWith("https://")) {
+    const img = Object.assign(document.createElement("img"), { src: s.favicon, alt: "", referrerPolicy: "no-referrer" });
+    img.onload = () => { if (img.naturalWidth >= 16) logo.replaceChildren(img); };
+  }
+  // Lock screen / headphone controls show the station too.
+  if (s && "mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: stationLine(s), album: "Rabbit Ears Radio",
+        artwork: s.favicon?.startsWith("https://") ? [{ src: s.favicon }] : [] });
+      navigator.mediaSession.setActionHandler("previoustrack", () => stepStation(-1));
+      navigator.mediaSession.setActionHandler("nexttrack", () => stepStation(1));
+    } catch {}
+  }
 }
 function playStation(i) {
   if (!stations.length) return;
@@ -1277,13 +1317,47 @@ function initRadio() {
 }
 
 // ---------- TV / Radio tabs ----------
-const TAGLINES = { tv: "Forgotten Internet Archive video, on the air around the clock.", radio: "Live radio from around the world." };
+const TAGLINES = { tv: "Forgotten Internet Archive video, on the air around the clock.", radio: "Live radio from around the world.", now: "Everything on the air right now." };
+
+// ---------- On now (#now): every channel's current and next show, with ready-to-post text ----------
+let nowTimer;
+async function renderNow() {
+  clearTimeout(nowTimer);
+  $("nowClock").textContent = clockFmt(nowSec());
+  const base = location.origin + location.pathname;
+  const list = BUILT_IN.map(ch => {
+    const row = Object.assign(document.createElement("div"), { className: "nowrow" });
+    const pg = Object.assign(document.createElement("span"), { className: "pg", textContent: "Tuning…" });
+    const go = Object.assign(document.createElement("span"), { className: "go" });
+    row.append(Object.assign(document.createElement("span"), { className: "n", textContent: String(ch.no).padStart(2, "0") }),
+               Object.assign(document.createElement("span"), { className: "nm", textContent: `${ch.icon} ${ch.name}` }), go, pg);
+    return { ch, row, pg, go };
+  });
+  $("nowList").replaceChildren(...list.map(r => r.row));
+  const t = nowSec();
+  for (const r of list) {
+    lineup(r.ch, t, 2).then(([p, next]) => {
+      if (!p) throw 0;
+      r.pg.replaceChildren(Object.assign(document.createElement("small"), { textContent: "NOW" }), p.m.title,
+        ...(next ? [document.createElement("br"), Object.assign(document.createElement("small"), { textContent: clockFmt(next.start) }), next.m.title] : []));
+      const link = `${base}#ch${r.ch.no}`;
+      const post = `Right now on ${r.ch.icon} ${r.ch.name} (ch ${r.ch.no}): ${p.m.title}. Tune in → ${link}`;
+      const watch = Object.assign(document.createElement("a"), { className: "btn", href: `#ch${r.ch.no}`, textContent: "Watch" });
+      const copy = Object.assign(document.createElement("button"), { className: "btn", type: "button", textContent: "Copy post", title: post });
+      copy.onclick = async () => { try { await navigator.clipboard.writeText(post); copy.textContent = "✓ Copied"; setTimeout(() => copy.textContent = "Copy post", 2000); } catch {} };
+      r.go.replaceChildren(copy, watch);
+    }).catch(() => { r.pg.textContent = "No signal"; });
+  }
+  // Refresh every minute while the page is open.
+  nowTimer = setTimeout(() => { if (mode === "now") renderNow(); }, 60000);
+}
 function setMode(m) {
-  mode = m === "radio" ? "radio" : "tv";
-  $("tvView").hidden = mode !== "tv"; $("radioView").hidden = mode !== "radio";
+  mode = m === "radio" || m === "now" ? m : "tv";
+  $("tvView").hidden = mode !== "tv"; $("radioView").hidden = mode !== "radio"; $("nowView").hidden = mode !== "now";
   $("tabTv").setAttribute("aria-selected", String(mode === "tv")); $("tabRadio").setAttribute("aria-selected", String(mode === "radio"));
   $("tagline").textContent = TAGLINES[mode];
   if (mode === "radio") { tvOn = false; vid.pause(); initRadio(); }
+  else if (mode === "now") { tvOn = false; vid.pause(); audio.pause(); renderNow(); }
   else { audio.pause(); if (!tvOn) { tvOn = true; tune(cur); } }
   roomChanged(); paintCounts();
 }

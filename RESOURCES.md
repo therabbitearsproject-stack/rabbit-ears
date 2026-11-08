@@ -43,8 +43,8 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 | `scripts/build-catalog.mjs` | Builds `catalog.json` (Node 18+, no packages) |
 | `scripts/fetch-subs.mjs` | Copies each video's subtitle file from the Archive into `subs/` as WebVTT (not committed; cached by the workflow) |
 | `.github/workflows/catalog.yml` | "Build and publish": catalog, subtitles, then publishes the site to Pages |
-| `og.jpg` | Link preview image shown when the link is shared |
-| `share-card.html` | Source design for `og.jpg` (open at 1200×630 and capture) |
+| `og.jpg` | Link preview image shown when the link is shared (1200×630) |
+| `share-card.html` | Source design for `og.jpg` (render with headless Edge at 1200×630; see DEVLOG) |
 | `README.md`, `DEVLOG.md`, `RESOURCES.md` | Project docs |
 
 ## Data the site stores

@@ -4,6 +4,31 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Share image, radio logos, "On now" page
+
+**New share image (`og.jpg`, now a full 1200×630).** A retro TV, the name, "Forgotten TV around the clock, plus live
+radio. Flip channels. Everyone sees the same thing." and a mini TV guide with four real channels (Paint Along,
+Chiller Hosts, Starbase, Scooby & Friends). No channel count. The preview tags now point at `og.jpg?v=2` so apps
+that cached the old image fetch the new one.
+- To change it: edit `share-card.html`, then render it with headless Edge and save as JPEG:
+  `msedge --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 --screenshot=og.png share-card.html`
+  (then convert to `og.jpg`; quality 90 is about 130 KB).
+
+**Radio station logos.** The radio display shows the playing station's own logo (from the Radio Browser
+directory), or 📻 when it has none. The station also shows on phone lock screens and in headphone controls
+(Media Session), where next/previous change station.
+
+**"On now" page (`…/#now`, linked in the footer as "📋 Everything on now").** Every channel's current and next show.
+Each row has **Copy post** (e.g. "Right now on 🖌️ Paint Along (ch 15): Bob Ross 3-Hour Workshop. Tune in → …/#ch15")
+and **Watch**. Refreshes every minute. Made for writing social posts, useful to visitors as a quick schedule too.
+
+Tested locally: all 55 rows fill, Copy post text, Watch jumps to the channel, radio logo and lock-screen info.
+
+**Live check of the previous batch:** both publish runs succeeded; 55 channels, 2,825 videos with captions,
+the run summary lists tape reports (only the test report so far, nothing pulled).
+
+---
+
 ## 2026-11-08 — 11 more channels, channel links, report handling, better titles
 
 **New channels (55 total)**, filling gaps found by comparing with a similar site (our own names and searches):

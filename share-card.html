@@ -3,43 +3,64 @@
 <head>
 <meta charset="utf-8">
 <title>Rabbit Ears share card</title>
-<!-- Source for og.jpg, the image shown when the site's link is shared. Open at 1200×630 and capture. -->
+<!-- Source for og.jpg, the image shown when the site's link is shared. Rendered at 1200×630 with
+     headless Edge (see DEVLOG). The guide rows use real programs from the channels. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
 <style>
   html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
   body {
-    background: radial-gradient(120% 90% at 30% 0%, #2c1f14 0%, #120e0b 65%);
+    background: radial-gradient(120% 90% at 20% 0%, #2c1f14 0%, #120e0b 65%);
     color: #efe6d6; font-family: "Bricolage Grotesque", system-ui, sans-serif;
-    display: grid; grid-template-columns: 470px 1fr; align-items: center; gap: 60px; padding: 0 70px; box-sizing: border-box;
+    box-sizing: border-box; padding: 26px 56px 30px; display: grid; grid-template-rows: auto 1fr; gap: 18px;
   }
-  .set { padding-top: 120px; }
-  .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 36px; padding: 30px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 40px 70px -30px #000; position: relative; }
-  .ears { position: absolute; left: 50%; top: 0; width: 0; height: 0; }
-  .ears i { position: absolute; bottom: 0; left: -3px; width: 6px; height: 130px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
+  .top { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: end; }
+  .cabinet { background: linear-gradient(160deg, #4a2e1a, #2a1a10 55%); border-radius: 22px; padding: 16px; box-shadow: inset 0 2px 0 rgba(255,255,255,.08), 0 30px 50px -24px #000; position: relative; margin-top: 58px; }
+  .ears { position: absolute; left: 50%; top: 0; }
+  .ears i { position: absolute; bottom: 0; left: -2px; width: 5px; height: 78px; background: linear-gradient(#cfcfcf, #7a7a7a); border-radius: 3px; transform-origin: bottom center; }
   .ears i:first-child { transform: rotate(-28deg); } .ears i:last-child { transform: rotate(28deg); }
-  .ears b { position: absolute; left: -26px; bottom: -14px; width: 58px; height: 26px; background: #1d1712; border-radius: 30px 30px 6px 6px; }
-  .screen { aspect-ratio: 4/3; border-radius: 7% / 9%; overflow: hidden; position: relative; box-shadow: inset 0 0 50px #000, 0 0 0 8px #0b0806;
+  .ears b { position: absolute; left: -18px; bottom: -9px; width: 40px; height: 18px; background: #1d1712; border-radius: 20px 20px 4px 4px; }
+  .screen { aspect-ratio: 4/3; border-radius: 7% / 9%; overflow: hidden; position: relative; box-shadow: inset 0 0 30px #000, 0 0 0 5px #0b0806;
     background: repeating-linear-gradient(90deg, #f4f4f4 0 12.5%, #f2e64b 12.5% 25%, #5fe3e8 25% 37.5%, #5ee86a 37.5% 50%, #e85ee0 50% 62.5%, #e8504c 62.5% 75%, #4c5ee8 75% 87.5%, #161616 87.5% 100%); }
   .screen::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(90deg, #1a2d6b 0 20%, #f4f4f4 20% 40%, #3a0b5c 40% 60%, #161616 60% 100%); }
-  .screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 5px), radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.6)); }
-  .osd { position: absolute; top: 6%; right: 7%; z-index: 2; font-family: "VT323", monospace; font-size: 64px; color: #8dffb4; text-shadow: 0 0 10px rgba(141,255,180,.8), 0 2px 0 #000; }
-  h1 { margin: 0; font-weight: 800; font-size: 104px; letter-spacing: -0.04em; line-height: .95; }
+  .screen::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 4px), radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.6)); }
+  .osd { position: absolute; top: 5%; right: 7%; z-index: 2; font-family: "VT323", monospace; font-size: 40px; color: #8dffb4; text-shadow: 0 0 8px rgba(141,255,180,.8), 0 2px 0 #000; }
+  h1 { margin: 0; font-weight: 800; font-size: 88px; letter-spacing: -0.04em; line-height: .9; }
   h1 span { color: #ffb648; }
-  .lede { margin: 22px 0 30px; font-size: 34px; line-height: 1.25; color: #d9cdb8; font-weight: 600; max-width: 18ch; }
-  .tags { display: flex; flex-wrap: wrap; gap: 12px; font-family: "VT323", monospace; font-size: 34px; }
-  .tags span { border: 2px solid #3a2c20; background: #1d1712; padding: 4px 16px; border-radius: 12px; color: #8dffb4; }
-  .tags span.a { color: #ffb648; }
+  .lede { margin: 12px 0 0; font-size: 30px; line-height: 1.2; color: #d9cdb8; font-weight: 600; }
+  .lede b { display: block; margin-top: 4px; color: #8dffb4; font-family: "VT323", monospace; font-weight: 400; font-size: 36px; }
+
+  /* Mini timeline guide */
+  .guide { --name: 300px; display: grid; gap: 8px; align-content: start; position: relative; }
+  .ruler, .row { display: grid; grid-template-columns: var(--name) 1fr; gap: 14px; align-items: center; }
+  .ticks { position: relative; height: 30px; font-family: "VT323", monospace; font-size: 30px; color: #ffb648; }
+  .ticks span { position: absolute; top: 0; padding-left: 6px; border-left: 2px solid #3a2c20; line-height: 1; }
+  .row { background: #1d1712; border: 2px solid #3a2c20; border-radius: 14px; padding: 6px 12px; }
+  .ch { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 25px; white-space: nowrap; }
+  .ch .n { font-family: "VT323", monospace; font-size: 34px; color: #8dffb4; width: 2ch; }
+  .track { position: relative; height: 42px; background: rgba(0,0,0,.28); border-radius: 9px; overflow: hidden; }
+  .track::after { content: ""; position: absolute; top: 0; bottom: 0; left: 18%; width: 3px; background: #ffb648; box-shadow: 0 0 8px #ffb648; }
+  .blk { position: absolute; top: 0; bottom: 0; display: block; line-height: 42px; box-sizing: border-box; padding: 0 12px; background: #2b2119; border-radius: 8px; font-size: 21px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .blk.live { background: #24301f; box-shadow: inset 0 0 0 2px rgba(141,255,180,.6); color: #fff; }
 </style>
 </head>
 <body>
-  <div class="set"><div class="cabinet">
-    <div class="ears"><i></i><i></i><b></b></div>
-    <div class="screen"><div class="osd">CH 01</div></div>
-  </div></div>
-  <div>
-    <h1>Rabbit<span>·</span>Ears</h1>
-    <p class="lede">Forgotten TV around the clock, plus live radio from around the world.</p>
-    <div class="tags"><span>📺 24/7 TV GUIDE</span><span class="a">📻 LIVE RADIO</span><span>👁 WATCH TOGETHER</span></div>
+  <div class="top">
+    <div class="cabinet"><div class="ears"><i></i><i></i><b></b></div><div class="screen"><div class="osd">CH 15</div></div></div>
+    <div>
+      <h1>Rabbit<span>·</span>Ears</h1>
+      <p class="lede">Forgotten TV around the clock, plus live radio. <b>Flip channels. Everyone sees the same thing.</b></p>
+    </div>
+  </div>
+  <div class="guide">
+    <div class="ruler"><span></span><div class="ticks"><span style="left:0">9:00 PM</span><span style="left:33.3%">9:30</span><span style="left:66.6%">10:00</span></div></div>
+    <div class="row"><span class="ch"><span class="n">15</span>🖌️ Paint Along</span><div class="track">
+      <span class="blk live" style="left:0;width:calc(31% - 2px)">Winter in Pastel</span><span class="blk" style="left:31%;width:calc(31% - 2px)">Daisy Delight</span><span class="blk" style="left:62%;width:38%">Little Home in the Meadow</span></div></div>
+    <div class="row"><span class="ch"><span class="n">33</span>🦇 Chiller Hosts</span><div class="track">
+      <span class="blk live" style="left:0;width:calc(72% - 2px)">MonsterVision with Joe Bob Briggs: Critters</span><span class="blk" style="left:72%;width:28%">Svengoolie</span></div></div>
+    <div class="row"><span class="ch"><span class="n">12</span>🖖 Starbase</span><div class="track">
+      <span class="blk live" style="left:0;width:calc(36% - 2px)">Space Patrol (1953)</span><span class="blk" style="left:36%;width:64%">Battlestar Galactica</span></div></div>
+    <div class="row"><span class="ch"><span class="n">22</span>🐕 Scooby &amp; Friends</span><div class="track">
+      <span class="blk live" style="left:0;width:calc(40% - 2px)">A Pup Named Scooby-Doo</span><span class="blk" style="left:40%;width:calc(28% - 2px)">The Flintstones</span><span class="blk" style="left:68%;width:32%">Hong Kong Phooey</span></div></div>
   </div>
 </body>
 </html>
