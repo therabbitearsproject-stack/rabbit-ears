@@ -1,7 +1,7 @@
 # Builds and publishes the site.
 # - catalog.json (every channel's videos, pre-looked-up, so the TV guide loads instantly) is rebuilt
 #   daily, on demand, and whenever index.html or the scripts change; it's committed to the repo.
-# - Subtitle files are copied from the Internet Archive into subs/ (cached between runs, not committed)
+# - Archive subtitle files are cached in subs/; reviewed embedded tracks are copied from captions/.
 #   because archive.org doesn't let other sites read them directly.
 # - games.json (the Games tab's shelves of Flash games) is rebuilt at the same times and committed too.
 # - The site (the repo's files plus subs/) is then published to GitHub Pages.
@@ -40,7 +40,7 @@ jobs:
         id: need
         run: |
           if [ "${{ github.event_name }}" != "push" ]; then echo "catalog=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
-          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null | grep -qE '^(scripts/|assets/trek-bumpers/facts\.json)'; then
+          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null | grep -qE '^(scripts/|captions/|assets/trek-bumpers/facts\.json)'; then
             echo "catalog=yes" >> "$GITHUB_OUTPUT"
           else
             echo "catalog=no" >> "$GITHUB_OUTPUT"

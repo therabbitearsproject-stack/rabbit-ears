@@ -1180,8 +1180,8 @@ function goLive() {
   paintPos();
 }
 // Closed captions. The nightly job copies each video's subtitle file into subs/ on this site
-// (archive.org doesn't let other sites read them). Most are the Archive's automatic captions.
-// Custom channels have none.
+// (archive.org doesn't let other sites read them). Reviewed embedded tracks are
+// extracted from the source videos and copied into the same subtitle folder.
 const subFile = id => "subs/" + id.replace(/[^A-Za-z0-9._-]/g, "_") + ".vtt"; // must match scripts/fetch-subs.mjs
 let ccOn = store.get("re_captions", false);
 function applyCaptions() {

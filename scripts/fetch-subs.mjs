@@ -1,4 +1,4 @@
-// Copies each catalog video's subtitle file from the Internet Archive into subs/<id>.vtt, so the
+// Copies Archive sidecars and reviewed embedded captions into subs/<id>.vtt, so the
 // page can load captions from its own site (archive.org doesn't let other sites read the files
 // directly). SRT is converted to WebVTT, the format browsers play. Files already in subs/ are
 // kept (the workflow caches the folder between runs); ones no longer in the catalog are removed.
@@ -6,6 +6,7 @@
 // Run after build-catalog.mjs: node scripts/fetch-subs.mjs   (Node 18+; no packages needed)
 
 import { readFile, writeFile, readdir, unlink, mkdir } from "node:fs/promises";
+import { localCaption } from "./caption-library.mjs";
 
 const DIR = new URL("../subs/", import.meta.url);
 const CONCURRENCY = 6;
@@ -52,7 +53,15 @@ const have = new Set(await readdir(DIR));
 let removed = 0;
 for (const f of have) if (!wanted.has(f)) { await unlink(new URL(f, DIR)); removed++; }
 
-const todo = [...wanted].filter(([f]) => !have.has(f));
+// Reviewed embedded tracks are versioned with the site, not fetched from an
+// Archive sidecar URL. Always copy them, replacing an old cached/empty file.
+let local = 0;
+for (const [f, [, sub]] of wanted) if (sub.startsWith("local:")) {
+  const vtt = await localCaption(sub.slice(6));
+  if (!vtt.startsWith("WEBVTT\n") || !vtt.includes(" --> ")) throw Error("Invalid reviewed caption: " + f);
+  await writeFile(new URL(f, DIR), vtt); local++;
+}
+const todo = [...wanted].filter(([f, [, sub]]) => !sub.startsWith("local:") && !have.has(f));
 let got = 0, empty = 0, failed = 0, next = 0;
 await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
   while (next < todo.length) {
@@ -65,4 +74,4 @@ await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
     } catch { failed++; }
   }
 }));
-console.log(`subs: ${wanted.size} in catalog, ${have.size - removed} kept, ${got} fetched, ${empty} empty, ${failed} failed, ${removed} removed`);
+console.log(`subs: ${wanted.size} in catalog, ${local} reviewed local tracks, ${have.size - removed} kept, ${got} fetched, ${empty} empty, ${failed} failed, ${removed} removed`);

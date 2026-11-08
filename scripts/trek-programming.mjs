@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { applyReviewedCaptions } from "./caption-library.mjs";
 
 const seconds = value => String(value || 0).split(":").reduce((sum, part) => sum * 60 + Number(part), 0);
 const base = name => name.split("/").pop().replace(/(?:\.ia|_512kb)?\.mp4$/i, "");
@@ -63,5 +64,5 @@ export async function buildTrekPool(library, loadMetadata, pickSub, previous = [
     }
   }
   if (!rows.length) throw new Error("No approved Star Trek episodes available; refusing the old unreviewed pool");
-  return rows;
+  return applyReviewedCaptions(rows);
 }
