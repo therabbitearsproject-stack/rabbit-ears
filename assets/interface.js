@@ -14,7 +14,7 @@
   const make=(tag,cls,text)=>Object.assign(document.createElement(tag),{className:cls||'',textContent:text||''});
   const button=(label,fn,cls='btn')=>{const b=make('button',cls,label);b.type='button';b.onclick=fn;return b;};
   const donate=()=>{const a=make('a','archive-donate','Support the Internet Archive ↗');a.href='https://archive.org/donate';a.target='_blank';a.rel='noopener';return a;};
-  let logos={}, guideScroll=0, guideFocus=null, idleTimer, dialogOpener, channelNo;
+  let logos={}, guideScroll=0, guideFocus=null, idleTimer, dialogOpener, channelNo, scheduleToken=0;
   let full=false, radioLook=store.get('re_radio_look','vinyl');
   const body=document.body, tv=$('tvView'), screen=$('screen');
   const initialChannel=/^#ch\d+$/.test(location.hash);
@@ -57,6 +57,28 @@
   tv.prepend(hero); // same video node throughout guide, channel and fullscreen
   const guideBack=button('TV guide',showGuide,'btn guide-back');guideBack.innerHTML=icon('back')+'<span>TV guide</span>';pack.prepend(guideBack);
   const badge=make('div','playing-station');details.prepend(badge);
+  const channelSchedule=make('section','channel-schedule');channelSchedule.setAttribute('aria-label','Selected channel schedule');
+  const scheduleHeading=make('h3'),scheduleList=make('ol','channel-schedule-list'),scheduleStatus=make('p','schedule-status');
+  channelSchedule.append(scheduleHeading,scheduleStatus,scheduleList);pack.append(channelSchedule);
+  async function updateSchedule(){
+    const ch=channels()[cur];if(!ch)return;const token=++scheduleToken;
+    scheduleHeading.textContent=`CH ${String(ch.no).padStart(2,'0')} · ${ch.name} schedule`;
+    scheduleStatus.textContent='Loading the schedule…';scheduleStatus.hidden=false;scheduleList.replaceChildren();
+    try{
+      const programs=await lineup(ch,nowSec(),6);if(token!==scheduleToken)return;
+      if(!programs.length)throw Error('No programmes');
+      for(const [i,p] of programs.entries()){
+        const item=make('li','channel-schedule-item');item.dataset.start=p.start;item.dataset.channel=ch.no;
+        item.append(make('span','schedule-state',i===0?'ON NOW':i===1?'UP NEXT':'LATER'));
+        const time=make('time','schedule-time',`${clockFmt(p.start)}–${clockFmt(p.end)}`);time.dateTime=new Date(p.start*1000).toISOString();item.append(time);
+        const title=button(p.m.title,()=>{
+          if(p.start<=nowSec())openChannel(channels().findIndex(c=>c.no===ch.no));
+          else{const block=make('span');block.append(make('b','',p.m.title));block.title=`${clockFmt(p.start)}–${clockFmt(p.end)}`;showFuture(ch,block);}
+        },'schedule-title');title.title=i===0?'Watch the current broadcast':'Programme information';item.append(title);scheduleList.append(item);
+      }
+      scheduleStatus.hidden=true;
+    }catch{if(token===scheduleToken)scheduleStatus.textContent='The schedule is unavailable. Please try again in a moment.';}
+  }
   const hardware=make('div','tv-hardware');hardware.innerHTML='<span class="hardware-brand">RE<br>STREAM</span><div class="speaker-grille" aria-hidden="true"></div><i class="power-led" aria-hidden="true"></i>';
   const tuneUp=button('Next channel',()=>openChannel(cur+1),'tuning-knob');tuneUp.title='Next channel';tuneUp.setAttribute('aria-label','Next channel');
   const tuneDown=button('Previous channel',()=>openChannel(cur-1),'tuning-knob');tuneDown.title='Previous channel';tuneDown.setAttribute('aria-label','Previous channel');
@@ -77,11 +99,11 @@
     const changed=channelNo!==ch.no;channelNo=ch.no;
     landingStation.replaceChildren(station(ch));badge.replaceChildren(station(ch,true));fullStation.replaceChildren(station(ch,true));
     rail.querySelectorAll('.rail-channel').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===cur)));
-    if(changed)reveal();
+    if(changed){reveal();updateSchedule();}
   }
   function showChannel(){
     if(body.dataset.tvPage==='guide'){guideScroll=window.scrollY;guideFocus=document.activeElement?.closest('.chan');}
-    body.dataset.tvPage='channel';
+    const entering=body.dataset.tvPage!=='channel';body.dataset.tvPage='channel';if(entering)updateSchedule();
   }
   function openChannel(i){
     const was=mode,next=((i%channels().length)+channels().length)%channels().length;
@@ -100,6 +122,7 @@
   function modeChanged(){
     body.dataset.mode=mode;if(mode!=='tv'&&full)exitFull();
     if(mode==='tv')body.dataset.tvPage=/^#ch\d+$/.test(location.hash)?'channel':'guide';
+    if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();
     nowLink.setAttribute('aria-current',mode==='now'?'page':'false');
   }
   function dialog(label){const d=make('dialog','interface-dialog');d.setAttribute('aria-label',label);const close=button('Close',()=>d.close(),'btn dialog-close');close.innerHTML=icon('close');close.title='Close';close.setAttribute('aria-label','Close');d.append(close);d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});d.addEventListener('close',()=>dialogOpener?.focus());body.append(d);return d;}
@@ -174,6 +197,7 @@
     }
   },true);
   window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged};
+  setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
   fetch('assets/channel-logos/manifest.json').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();
 })();

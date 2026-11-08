@@ -57,3 +57,16 @@ test("failures can reuse approved episodes but never restore unreviewed blurry t
   assert.deepEqual(rows, [previous[1]]);
   await assert.rejects(buildTrekPool(library, async () => { throw new Error("offline"); }, undefined, [previous[0]]), /No approved/);
 });
+
+test("reviewed caption mappings enable only the matching episode and require a present public file", () => {
+  const policy = { id: "continues", series: "Continues", captionFiles: {
+    "1x01 Pilgrim.mp4": "101-English-CC.srt", "1x02 Lolani.mp4": "102-English-CC.srt",
+    "1x03 Fairest.mp4": "103-English-CC.srt"
+  } };
+  const files = [file("1x01 Pilgrim.ia.mp4", 1920, 1080), file("1x02 Lolani.mp4", 1920, 1080),
+    file("1x03 Fairest.mp4", 1920, 1080), { name: "101-English-CC.srt" },
+    { name: "103-English-CC.srt", private: true }, { name: "unrelated.srt" }];
+  const rows = episodeRows({ files }, policy);
+  assert.deepEqual(rows.map(r => r[5]), ["101-English-CC.srt", "", ""]);
+  assert.deepEqual(episodeRows({ files }, { ...policy, captionFiles: undefined }).map(r => r[5]), ["", "", ""]);
+});

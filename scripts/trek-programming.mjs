@@ -37,8 +37,12 @@ export function episodeRows(data, source, pickSub = () => "") {
     const title = source.kind === "film" ? source.series : broadcast ?
       `${names[broadcast[1].toUpperCase()]} · ${broadcast[2].toUpperCase()} · ${broadcast[3].replace(/\./g, " ")}` : `${source.series} · ${label}`;
     const year = String([].concat(data.metadata?.year || data.metadata?.date || "")[0]).slice(0, 4);
+    // Some reviewed collections number captions separately from their video filenames.
+    // Only use an explicit match for this source, and only while the file exists there.
+    const captionName = source.captionFiles?.[f.name.replace(/\.ia\.mp4$/i, ".mp4")];
+    const mappedCaption = (data.files || []).find(s => s.name === captionName && !s.private && /\.(srt|vtt)$/i.test(s.name));
     return [key, f.name, Math.round(seconds(f.length) * 10) / 10, title, year,
-      pickSub(data.files || [], f.name), source.id, Number(f.width), Number(f.height)];
+      pickSub(data.files || [], f.name) || mappedCaption?.name || "", source.id, Number(f.width), Number(f.height)];
   });
 }
 

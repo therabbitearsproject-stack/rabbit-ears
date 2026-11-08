@@ -4,6 +4,46 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Square channel badges and a channel-page schedule
+
+Channel artwork now sits in square, theme-aware badges in the guide, channel rail,
+programme details, landing view and fullscreen. Artwork retains its proportions
+within each badge; mobile uses smaller square badges and matching guide-row heights.
+
+Each channel page shows its current programme and up to five upcoming programmes,
+with start/end times and ON NOW / UP NEXT labels. The schedule follows channel
+changes, refreshes each minute and ignores stale responses from previous channels.
+Selecting a future programme opens information; it never starts a future broadcast.
+The full guide remains the landing view.
+
+Validation: browser checks cover square guide badges, current and upcoming programme
+rows, future-programme information, schedule updates when changing channels, all
+seven skins, native/fallback fullscreen and phone layouts in all destinations.
+
+---
+
+## 2026-11-08 — CC available on matching Subspace 97 episodes
+
+Linked the eleven English closed-caption files already uploaded with Star Trek
+Continues to their exact full episodes. The videos use names such as `1x01 Pilgrim
+of Eternity.mp4`, while the captions use `101-English-CC.srt`, so ordinary filename
+matching missed them. Source-specific mappings require the caption file to exist
+and be public. Exact-name subtitle matches retain priority; other episodes receive
+no speculative captions. The mappings survive nightly catalog rebuilds.
+
+Updated only those eleven caption fields in the existing catalog. The subtitle
+publishing job downloads and converts them to WebVTT. The existing CC button is
+enabled on these episodes, disabled on captionless episodes and commercials, and
+restored when a captioned episode resumes. Its on/off preference is retained.
+
+Validation: all 20 programming, catalog, commercial and audio compatibility tests
+pass, including missing/private/unrelated-caption and exact-episode checks. Local
+browser tests with the actual published catalog data cover three captioned episodes,
+commercial breaks and resumption, plus a captionless TNG episode. All eleven caption
+files were downloaded and validated; eight have not had a full playback review.
+
+---
+
 ## 2026-11-08 — Viewing skins, scrolling guide and channel identities
 
 - Retro Cabinet is the default. Movie Theatre, Stadium Seat, Silver Screen, Cozy Den,

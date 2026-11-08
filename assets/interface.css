@@ -30,3 +30,23 @@ body[data-skin="ivory"] .cabinet{border:4px solid #bba887;border-radius:18px;bac
 body[data-tv-page="guide"] .channel-rail{display:none!important}
 .radio-set .vfd-k,.radio-set #rName{color:#c8e5c0;text-shadow:none}body[data-radio-look=car] .radio-set .vfd-k,body[data-radio-look=car] .radio-set #rName{color:#c0e4f5}
 .tonearm{right:3%;top:10%;transform:rotate(-55deg);pointer-events:none}
+/* Square artwork surfaces keep the channel badges consistent across views. */
+.channel-identity{width:154px;grid-template-columns:24px minmax(0,1fr)}
+.logo-mat{width:120px;height:120px;aspect-ratio:1;padding:6px;flex-shrink:0}
+.compact .logo-mat{width:104px;height:104px;padding:4px}
+.logo-mat .channel-logo{width:100%!important;height:100%!important;max-width:100%;object-fit:contain}
+.ruler,.chan{grid-template-columns:28px 120px minmax(600px,1fr);min-width:800px}
+.chan .track{height:112px}.chan .channel-identity{justify-items:center}
+.chan .compact .logo-mat{width:104px;height:104px}.rail-channel{min-height:114px}
+.fullscreen-controls .compact .logo-mat{width:72px;height:72px}
+.channel-schedule{border-top:1px solid var(--line);padding:20px 0 10px;min-width:0}
+.channel-schedule h3{font:500 18px var(--osd);letter-spacing:1px;color:var(--amber);margin:0 0 18px}
+.channel-schedule-list{list-style:none;padding:0;margin:0;display:grid}
+.channel-schedule-item{display:grid;grid-template-columns:80px 150px minmax(0,1fr);align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.schedule-state{font:14px var(--osd);color:var(--dim);letter-spacing:1px}
+.channel-schedule-item:first-child .schedule-state{color:var(--amber);font-weight:bold}
+.schedule-time{font-size:13px;color:var(--dim);font-variant-numeric:tabular-nums}
+.schedule-title{appearance:none;background:none;border:0;padding:6px 0;min-height:44px;color:var(--ink);font:600 15px/1.4 var(--display);text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.schedule-title:hover{text-decoration:underline;text-underline-offset:4px}.schedule-status{font-size:13px;color:var(--dim)}
+body[data-tv-page=guide] .channel-schedule{display:none}
+@media(max-width:640px){.channel-identity{width:120px;grid-template-columns:20px minmax(0,1fr);gap:5px}.logo-mat{width:90px;height:90px;padding:4px}.compact .logo-mat{width:80px;height:80px}.ruler,.chan{grid-template-columns:24px 86px minmax(440px,1fr);min-width:590px}.chan .compact .logo-mat{width:78px;height:78px}.chan .track{height:86px}.rail-channel{min-height:90px}.fullscreen-controls .compact .logo-mat{width:60px;height:60px}.channel-schedule-item{grid-template-columns:68px minmax(0,1fr);gap:4px 12px;padding:12px 0}.schedule-title{grid-column:2;grid-row:1/3;font-size:13px}.schedule-time{grid-column:1;font-size:11px}.schedule-state{font-size:12px}.channel-schedule h3{font-size:16px}}
