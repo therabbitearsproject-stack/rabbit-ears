@@ -4,6 +4,16 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Tighter channel identity columns in the guide
+
+Removed unused space around the guide's channel numbers and square badges so the
+listings start closer to the logo. The time ruler follows the same compact columns.
+Viewer counts use a small indicator below the channel number while retaining their
+full accessible text. Row heights and logo dimensions are unchanged. Checked desktop,
+phone, viewer-count and horizontal-scrolling layouts.
+
+---
+
 ## 2026-11-08 — Site logo returns to the landing page
 
 Clicking the site logo now opens the TV guide landing page at the top, clearing

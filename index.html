@@ -1786,6 +1786,7 @@ function paintCounts() {
     let v = r.el.querySelector(".vw");
     const n = counts[tvRoom(r.ch)] || 0;
     if (!v) { v = Object.assign(document.createElement("span"), { className: "vw" }); r.el.querySelector(".t").append(v); }
+    v.dataset.count = n;
     v.textContent = n ? "👁 " + n + " watching" : "";
   });
   const here = counts[currentRoom()] || 0;
