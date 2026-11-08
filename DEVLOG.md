@@ -4,6 +4,44 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-08 — Viewing skins, scrolling guide and channel identities
+
+- Retro Cabinet is the default. Movie Theatre, Stadium Seat, Silver Screen, Cozy Den,
+  Midnight Metal and Ivory Console are available under Skins. Choices persist locally.
+- The TV landing page shows a preview above one continuous guide with all 66 channels.
+  Scroll vertically for channels and horizontally for later shows; channel identities
+  stay visible. No channel pagination. Current programmes open a dedicated channel page;
+  future programmes open information without playing a future broadcast.
+- All 66 custom channel logos appear in the guide, channel rail, programme details,
+  On Now and fullscreen. Transparent artwork sits on a subtle surface blended from
+  the active skin and that channel's accent, replacing the universal white plaques.
+- The same video element and playback session continue between guide and channel
+  views. TV uses a 4:3 viewing area, contain-fit video and natural letterboxing.
+  Fullscreen fits the available display. Temporary controls hide after three seconds,
+  return on interaction and remain visible while focused. Native fullscreen has an
+  in-page fallback; Escape and the exit button return to the channel page.
+- Radio offers a vinyl deck and an early-2000s car-stereo faceplate, both using the
+  existing live station directory, search, country filter, favorites and controls.
+- Internet Archive donation links appear in the landing view, channel information,
+  guide, first-visit welcome and footer. Familiar remote actions use labeled symbols.
+- The original interface is preserved in design-history, linked in the footer. The
+  exact pre-redesign source is tagged original-ui-2026-11-08 at 2f3b19c. A complete
+  Git bundle and source ZIP were created before editing. See design-history/README.md
+  for restoration. Existing catalog data, audio selection, break timing, media-session
+  metadata, counts, analytics and install metadata are retained.
+- Deployment publishes the history archive. UI-only changes skip the expensive catalog
+  rebuild; scheduling/script changes and daily runs continue to rebuild it.
+
+Validation: all 19 catalog, commercial timing, franchise and compatible-audio tests
+pass. Browser checks covered seven skins, all 66 logos, guide/channel navigation,
+native and fallback fullscreen, idle/reveal controls, radio appearances, games, mobile
+fit in all five destinations and the original-design archive, with no JavaScript errors.
+Live Archive playback of a 720x540 Voyager episode continued across guide/channel
+navigation with the same video element, file and running clock. This is a live media
+smoke check, not a verification of every Archive upload or every radio station.
+
+---
+
 ## 2026-11-08 — Lock screen shows what's on
 
 - **TV on the lock screen / Control Center / headphones:** the title is the show that's on, the line under it is the channel ("CH 90 🖖 Starbase · 1975"), and the album line says "Live on Rabbit-Ears.stream". The picture is the tape's Archive thumbnail (`archive.org/services/img/<id>`), with the app icon as a fallback. Before, iPhones showed only the plain icon and "rabbit-ears.stream".

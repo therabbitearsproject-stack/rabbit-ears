@@ -20,4 +20,6 @@ Forgotten Internet Archive video on synchronized channels, live radio from aroun
 
 ## Working on it
 
-The whole site is `index.html`. Edit it, commit, push to `main`; GitHub Pages republishes in about a minute.
+The playback and schedule engine is in `index.html`; the viewing skins and navigation are in `assets/interface.css` and `assets/interface.js`. Channel artwork and its name-to-file map live in `assets/channel-logos/`. Edit, commit and push to `main`; the Build and publish workflow deploys GitHub Pages. UI-only changes use the existing catalog; daily and programming changes rebuild it.
+
+The original interface is available from the footer and preserved under `design-history/`. See its README for the original source tag and rollback instructions.

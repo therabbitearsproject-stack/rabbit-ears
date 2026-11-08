@@ -309,8 +309,9 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .screen canvas, .osd, .lower { transition: none; } }
 </style>
+<link rel="stylesheet" href="assets/interface.css">
 </head>
-<body>
+<body data-skin="retro" data-tv-page="guide">
 <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
   <div class="wcard">
     <p class="brand" id="wTitle">Rabbit-Ears<span>.stream</span></p>
@@ -1075,7 +1076,7 @@ function renderGuide() {
     const track = Object.assign(document.createElement("span"), { className: "track" });
     track.append(Object.assign(document.createElement("span"), { className: "tw", textContent: "Tuning…" }));
     b.append(n, t, track);
-    b.onclick = () => { tune(i); $("screen").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
+    b.onclick = e => { const block=e.target.closest(".blk"); if(block && +block.dataset.start > nowSec()) { window.REUI?.showFuture(c,block); return; } if(window.REUI) window.REUI.openChannel(i); else tune(i); };
     $("chans").append(b);
     // With the catalog every row is instant, so fill them all; without it, only rows on screen.
     return { ch: c, track, el: b, seen: i === cur || !!catalog?.pools?.[c.q], painted: 0 };
@@ -1088,6 +1089,7 @@ function renderGuide() {
   }, { rootMargin: "200px" }) : null;
   rows.forEach(r => rowObserver ? rowObserver.observe(r.el) : (r.seen = true));
   fillGuide();
+  window.REUI?.decorateGuide();
 }
 let rowObserver = null;
 function markOn() { rows.forEach((r, i) => r.el.classList.toggle("on", i === cur)); }
@@ -1107,6 +1109,7 @@ function paintRow(r, progs) {
     const first = ps[0], last = ps[ps.length - 1];
     const a = Math.max(first.start, win.w0), z = Math.min(last.end, w1);
     const blk = document.createElement("span");
+    blk.dataset.start = first.start;
     blk.className = "blk" + (first.start <= t && t < last.end ? " live" : "") + ((z - a) / win.span < TINY ? " tiny" : "");
     blk.style.left = `calc(${pct(a)}% + 1px)`; blk.style.width = `calc(${(z - a) / win.span * 100}% - 2px)`;
     blk.title = ps.slice(0, 12).map(p => `${clockFmt(p.start)} ${p.m.title}`).join("\n") + (ps.length > 12 ? `\n…and ${ps.length - 12} more` : "");
@@ -1296,11 +1299,12 @@ function setTvMeta(segKind = "program") {
 async function tune(i) {
   const list = channels();
   cur = (i + list.length) % list.length; store.set("re_chq", list[cur].q);
-  if (mode === "tv") history.replaceState(null, "", "#ch" + list[cur].no); // shareable address for this channel
+  if (mode === "tv" && document.body.dataset.tvPage !== "guide") history.replaceState(null, "", "#ch" + list[cur].no); // shareable address for this channel
   const ch = list[cur], my = ++tuneId;
   shift = 0; held = false; paintPause(); resetReport();
   if (typeof roomChanged === "function") { roomChanged(); paintCounts(); }
   markOn();
+  window.REUI?.channelChanged();
   snow.style.opacity = "1";
   showOSD("CH " + num(cur), ch.icon + " " + ch.name);
   $("title").textContent = "Tuning in " + ch.name + "…"; $("meta").textContent = ""; $("upnext").textContent = "";
@@ -1756,10 +1760,11 @@ function setMode(m) {
   else if (mode === "games") { tvOn = false; vid.pause(); audio.pause(); initGames(); }
   else { audio.pause(); if (!tvOn) { tvOn = true; tune(cur); } }
   roomChanged(); paintCounts();
+  window.REUI?.modeChanged();
 }
 window.addEventListener("hashchange", () => {
   const i = chFromHash();
-  if (i >= 0) { if (mode !== "tv") setMode("tv"); if (i !== cur) tune(i); return; }
+  if (i >= 0) { if (mode !== "tv") setMode("tv"); window.REUI?.showChannel(); if (i !== cur) tune(i); return; }
   if (mode === "games" && /^#play=/.test(location.hash)) { initGames(); return; }
   setMode(location.hash.slice(1));
 });
@@ -1865,6 +1870,7 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
+<script src="assets/interface.js"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
