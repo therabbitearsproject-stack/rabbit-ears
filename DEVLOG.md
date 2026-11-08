@@ -4,6 +4,36 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-07 — Clean program titles
+
+Archive titles are whatever the uploader typed, so the guide showed things like
+"[Kirion] Astro Boy SUBBED (BD 1020x 720 X 264 QAAC)" or "2020-bahrain-grand-prix-formula-1-qualifying".
+`cleanTitle()` in `index.html` now tidies every title (catalog and live lookups alike) before it's shown:
+
+| Before | After |
+|---|---|
+| [VHS Rip] Teenage Mutant Ninja Turtles (1990) - Family Home Entertainment | Teenage Mutant Ninja Turtles (1990) - Family Home Entertainment |
+| 2020-bahrain-grand-prix-formula-1-qualifying | 2020 Bahrain Grand Prix Formula 1 Qualifying |
+| OCTOBER 2000 WWF SUNDAY NIGHT HEAT | October 2000 WWF Sunday Night Heat |
+| The Grinch \| Own it on 4K Ultra HD, Blu-ray, DVD & Digital \| Illumination | The Grinch · Illumination |
+| 1988.08.20 - MTV Headbangers Ball - Hosted by Adam Curry - August 20th, 1988 | MTV Headbangers Ball - Hosted by Adam Curry - August 20th, 1988 |
+| Harriet Craig (1950) Joan Crawford, Wendell Corey - Full Movie. | Harriet Craig (1950) Joan Crawford, Wendell Corey |
+
+- Removes: [bracketed tags], format/quality words (720p, VHS rip, 60fps, Blu-ray, x264…) and parentheses made
+  of them (a lone year stays), "YouTube: id -" and "VHS Tape -" prefixes, "1990.05.19 -" date prefixes,
+  website names, promo segments after " | ".
+- File-name titles get spaces and capitals; ALL-CAPS titles become Title Case, keeping acronyms (WWF, MTV, NJPW…).
+- Random-ID titles (e.g. "hnzrxy6cnbkhu86v") show as "Untitled tape". Titles over 90 characters are shortened.
+- Tested against all 12,556 catalog titles: about 3,000 changed, none came out empty.
+- Display-only: the catalog and Archive links keep the original titles.
+
+**Also:** found *Nekromantik* (an extremely graphic film) in Creature Feature, an older channel without the `SAFE`
+filter. Added a `BLOCKED` list of upload IDs that never air on any channel; those two uploads are on it.
+
+**Open:** older channels (1–24) still don't use `SAFE`; worth a pass over their top videos.
+
+---
+
 ## 2026-11-07 — 10 more channels (35–44)
 
 | # | Channel | What's on |

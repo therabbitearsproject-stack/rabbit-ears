@@ -399,6 +399,45 @@ const fmt = s => { s = Math.max(0, Math.floor(s)); const h = Math.floor(s / 3600
 
 // ---------- Internet Archive ----------
 const listCache = {}, metaCache = {};
+// Uploads that slipped past a channel's search but shouldn't air anywhere.
+const BLOCKED = new Set(["nekromantik-hard-sub", "nekromantik.-1987.1080p.-blu-ray.x-264-yts.-lt"]);
+// Archive titles are whatever the uploader typed: "[VHS Rip] Show (1990) 1080p", file names like
+// "2020-bahrain-grand-prix-race", ALL CAPS, "| Own it on Blu-ray" promos. Tidy them for the guide.
+const TECH = /\b(\d{3,4}p|[48]k|uhd|hd|sd|dvd|bd|blu-?ray|rip|ripped|vhsrip|iso|isos|mkv|mp4|avi|x ?26[45]|hevc|aac|ac3|qaac|\d+ ?fps|upscaled?|remaster(ed)?|complete|full (movie|episode|show|series)|vhs|laserdisc|subbed|subtitled?|dubbed|dublado|mill creek|bootleg|interactive|open matte|re-c-dub|nws-\d+|mkv files)\b/i;
+const ACRONYM = /^(njpw|wwf|wwe|wcw|ecw|nwa|awa|iwgp|uwfi|mtv|vh1|tv|ces|nes|snes|usa|uk|bbc|pbs|cbs|nbc|abc|ufo|ufos|dx|ii|iii|iv|vi|nba|nfl|nhl|nascar|f1|dvd|amv|vj|tnt|hbo|wb|jfk|fbi|cia|nasa|rc|ok|dj)$/i;
+function cleanTitle(raw) {
+  const orig = String(raw || "").replace(/[‎‏]/g, "").replace(/_/g, " ").replace(/\s+/g, " ").trim();
+  let t = orig;
+  if (/^\[[^\]]*\]$/.test(t)) t = t.slice(1, -1);
+  t = t.replace(/^(youtube:\s*\S+|yt ?1s\.com)\s*-?\s*/i, "").replace(/^vhs (tape|tv)\s*[-#:]?\s*\d*\s*[-:]\s*/i, "");
+  const slug = !/\s/.test(t) && /[-.]/.test(t);                       // a file name, not a title
+  if (slug) t = t.replace(/[-.]+/g, " ");
+  if (!/[\s()]/.test(t) && t.length >= 12 && /\d/.test(t) && /[a-z]/i.test(t)) return "Untitled tape"; // a random id
+  t = t.replace(/^\s*["“](.+?)["”]/, "$1")
+       .replace(/^\d{4}\.\d{2}\.\d{2}\s*-\s*/, "")                      // "1990.05.19 - " date prefixes
+       .replace(/\s*[\[{][^\]}]*[\]}]\s*/g, " ")                       // [720p], [AMV], {Blu Ray}
+       .replace(/\s*\(([^()]*)\)/g, (m, inner) => TECH.test(inner) && !/^\s*\d{4}\s*$/.test(inner) ? "" : " (" + inner.trim() + ")");
+  // Split on " | " outside parentheses and drop promo segments.
+  const parts = []; let depth = 0, buf = "";
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i]; if (c === "(") depth++; if (c === ")") depth = Math.max(0, depth - 1);
+    if (!depth && t.startsWith(" | ", i)) { parts.push(buf); buf = ""; i += 2; } else buf += c;
+  }
+  parts.push(buf);
+  t = parts.filter((s, i) => i === 0 || !/own it|available (now|on)|subscribe|official|trailer|www\.|\.com/i.test(s)).join(" · ");
+  t = t.replace(/\b(full movie|full episode|vhs rip|dvd ?rip|vhs|\d{3,4}p|4k|ultra hd|\d0 ?fps|25 ?fps|upscale|with mkv files|mkv|mp4|x264|hevc)\b/gi, "").replace(/\bHD\b/g, "")
+       .replace(/\bwww\.\S+|\S+\.(com|net|online)\b/gi, "")
+       .replace(/\(\s*\)/g, "").replace(/\s+([,:)])/g, "$1").replace(/\(\s+/g, "(").replace(/\s{2,}/g, " ")
+       .replace(/^[\s\-–—:·|~•,]+/, "").replace(/[\s\-–—:·|~•,(]+\.?$/, "").trim();
+  if (t.length > 4 && !/[a-z]/.test(t)) {                              // ALL CAPS → Title Case, keeping WWF, MTV…
+    const cap = w => ACRONYM.test(w.replace(/[^a-z0-9]/gi, "")) ? w : w.charAt(0) + w.slice(1).toLowerCase();
+    t = t.split(" ").map(w => /^\p{Lu}/u.test(w) ? cap(w) : w).join(" ").replace(/(^|[(\-"'/])(\p{Ll})/gu, (m, a, b) => a + b.toUpperCase());
+  }
+  if (slug && t === t.toLowerCase()) t = t.replace(/(^|\s)(\p{L})/gu, (m, a, b) => a + b.toUpperCase());
+  if (t.length > 90) t = t.slice(0, 90).replace(/\s+\S*$/, "") + "…";
+  return t || orig;
+}
+const tidy = m => m && { ...m, title: cleanTitle(m.title) };
 // catalog.json, rebuilt daily by .github/workflows/catalog.yml, already has every built-in
 // channel's playable videos with their file, length, title and year. With it the whole guide is
 // worked out in the browser with no Archive lookups. Custom channels, and any channel missing
@@ -422,7 +461,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.map(([id, file, dur, title, year]) => { if (!(id in metaCache)) metaCache[id] = { id, file, dur, title, year }; return id; });
+    const ids = rows.filter(r => !BLOCKED.has(r[0])).map(([id, file, dur, title, year]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year }); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   const key = "re_pool_" + hash(ch.q);
@@ -432,7 +471,7 @@ async function getList(ch) {
               "&fl[]=identifier&rows=300&sort[]=downloads+desc&output=json";
   const res = await fetch(url);
   const data = await res.json();
-  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier));
+  const ids = poolOrder(ch.q, data.response.docs.map(d => d.identifier).filter(id => !BLOCKED.has(id)));
   listCache[ch.q] = ids;
   store.set(key, { t: Date.now(), ids });
   return ids;
@@ -455,7 +494,7 @@ const pendingMeta = {};
 function getMeta(id) {
   if (id in metaCache) return Promise.resolve(metaCache[id]);
   const saved = store.get("re_m_" + id, undefined);
-  if (saved !== undefined) return Promise.resolve(metaCache[id] = saved);
+  if (saved !== undefined) return Promise.resolve(metaCache[id] = tidy(saved));
   return pendingMeta[id] || (pendingMeta[id] = fetchMeta(id).finally(() => delete pendingMeta[id]));
 }
 async function fetchMeta(id) {
@@ -466,7 +505,7 @@ async function fetchMeta(id) {
     const f = files[0];
     metaCache[id] = f ? {
       id, file: f.name, dur: parseLen(f.length),
-      title: [].concat(d.metadata?.title || id)[0],
+      title: cleanTitle([].concat(d.metadata?.title || id)[0]),
       year: [].concat(d.metadata?.year || d.metadata?.date || "")[0].toString().slice(0, 4),
     } : null;
     store.set("re_m_" + id, metaCache[id]);
