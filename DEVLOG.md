@@ -4,6 +4,28 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Problem log and the /problems/ dashboard
+
+Until now the only ways to hear about trouble were the ⚑ Report buttons, whose tally appeared only in each Actions run summary, and the suggestion box, which needs a GitHub account. Nothing recorded the failures visitors actually ran into.
+
+- **Automatic problem log.** The page logs these to Firebase `errors/`:
+  - script errors and unhandled promise rejections
+  - tapes that won't play (Archive id, channel, error type)
+  - radio stations that won't play, and failures to reach the radio directory
+  - games that won't start, and the game player failing to load
+
+  Each entry holds the kind, a short message, where it happened, a coarse browser tag such as "Chrome 130 · phone", and the server time. It's capped at 8 per page load, and each distinct problem is logged once. It only sends from rabbit-ears.stream, so local testing never fills the log.
+- **The Problems dashboard** lives at `/problems/`. It's unlisted, `noindex`, and disallowed in robots.txt. It has three tables:
+  - errors, grouped, with counts, how many this week, last seen and browsers
+  - viewer reports, grouped by tape or game
+  - open GitHub issues
+
+  Each row has a status (new, looking, fixed or ignored), saved in that browser. A row marked fixed that sees new activity comes back as "came back". The page refreshes every 5 minutes.
+- The dashboard is a page on the site, not a Claude artifact, because artifact pages aren't allowed to reach the Firebase database. The reports were already publicly readable, and errors follow the same rule: anyone can read or add, nobody can change or delete.
+- **Needs a Firebase rules change** before anything is logged. The site's existing rules only allow `presence`, `stats` and `reports`. Until the rule is added, writes fail silently and the dashboard says it couldn't load errors.
+
+---
+
 ## 2026-11-09 — Toward 20,000 hours
 
 Before this change the catalog held 20,702 unique videos, about 17,000 hours. The cap was the limit: the build kept only the top 300 matches per channel, and about 55 channels reached it.

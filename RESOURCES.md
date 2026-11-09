@@ -72,6 +72,7 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 | Firebase `/presence/<room>/<random id>` | One `true` marker per open page, removed when the page closes | Anyone (it's just counts; no names, accounts or locations) |
 | Firebase `/stats/visits` | All-time visit count (one per browser per day) | Anyone; can only go up by 1 |
 | Firebase `/reports` | "Report this tape" and "Report this game" reports (games use channel "Games"): id, channel, reason, server time | Anyone can read or add; nobody can change or delete (except in the Firebase console) |
+| Firebase `/errors` | Problems the page runs into on its own: kind (script, tape, radio, game), a short message, which tape/station/game, browser family and phone or computer, server time. At most 8 per page load, only from rabbit-ears.stream | Anyone can read or add; nobody can change or delete (except in the Firebase console). Shown on the unlisted /problems/ page |
 
 ## Tools used to build it
 

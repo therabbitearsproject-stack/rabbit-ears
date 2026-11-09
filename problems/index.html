@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Problems · Rabbit-Ears.stream</title>
+<!-- Unlisted maintenance page: everything the site has run into, in one place.
+     Reads Firebase errors/ (logged automatically by the page) and reports/ (⚑ Report buttons), plus
+     open GitHub issues. Statuses (new / looking / fixed / ignored) are kept in this browser only. -->
+<style>
+:root { --bg: #120e0b; --card: #1d1712; --line: #3a2c20; --ink: #efe6d6; --soft: #b9ab94; --amber: #ffb648; --green: #8dffb4;
+  --red: #ff7a66; --blue: #8cc8ff; --grey: #7d7264; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--amber); }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.brand { font-weight: 800; font-size: 20px; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--amber); }
+h1 { margin: 18px 0 4px; font-size: clamp(26px, 5vw, 36px); letter-spacing: -.02em; }
+.lede { color: var(--soft); margin: 0 0 18px; max-width: 70ch; }
+.mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 0 0 18px; }
+.tile { background: var(--card); border: 2px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.tile b { display: block; font-size: 28px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile small { color: var(--soft); }
+.tile.hot { border-color: var(--red); }
+.bar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 10px; color: var(--soft); }
+.bar button, select { font: inherit; background: var(--card); color: var(--ink); border: 2px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.bar button[aria-pressed="true"] { border-color: var(--amber); color: var(--amber); }
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+h2 { margin: 28px 0 8px; font-size: 20px; display: flex; gap: 10px; align-items: baseline; }
+h2 small { color: var(--soft); font-weight: 400; font-size: 14px; }
+.tablebox { overflow-x: auto; border: 2px solid var(--line); border-radius: 14px; background: var(--card); }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+th { font: 600 12px/1.2 ui-monospace, monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+td .sub { color: var(--soft); font-size: 13px; word-break: break-word; }
+.what { word-break: break-word; }
+.pill { display: inline-block; font: 600 12px/1 ui-monospace, monospace; padding: 4px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.k-script { color: var(--red); } .k-tape { color: var(--amber); } .k-radio { color: var(--blue); } .k-game { color: var(--green); }
+.r-inappropriate { color: var(--red); } .r-broken { color: var(--amber); } .r-quality { color: var(--blue); } .r-wrong { color: var(--soft); }
+.back { color: var(--red); font-weight: 700; font-size: 12px; }
+select.st-new { border-color: var(--red); } select.st-looking { border-color: var(--amber); } select.st-fixed { border-color: var(--green); } select.st-ignored { color: var(--grey); }
+tr.done td { opacity: .55; }
+.empty { padding: 18px; color: var(--soft); }
+.note { color: var(--soft); font-size: 13px; margin-top: 30px; }
+@media (prefers-reduced-motion: no-preference) { .tile, tr { transition: opacity .2s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="/">rabbit-ears<span>.stream</span></a>
+    <span class="mono" id="updated" style="color:var(--soft)">Loading…</span>
+  </div>
+  <h1>Problems</h1>
+  <p class="lede">Everything the site has run into: errors the page logs on its own, ⚑ reports from viewers, and open GitHub issues. Mark each one as you go. Statuses are saved in this browser only.</p>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="bar">
+    <span>Show</span>
+    <button type="button" id="fOpen" aria-pressed="true">Open</button>
+    <button type="button" id="fAll" aria-pressed="false">Everything</button>
+    <button type="button" id="refresh">↻ Refresh</button>
+  </div>
+
+  <h2>Errors <small>logged by visitors' browsers, grouped</small></h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Kind</th><th>What happened</th><th>Where</th><th class="num">Times</th><th>Last seen</th><th>Browsers</th><th>Status</th></tr></thead>
+    <tbody id="errors"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
+  </table></div>
+
+  <h2>Viewer reports <small>⚑ Report this tape / game</small></h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Tape or game</th><th>Channel</th><th>Reasons</th><th class="num">Reports</th><th>Last report</th><th>Status</th></tr></thead>
+    <tbody id="reports"><tr><td colspan="6" class="empty">Loading…</td></tr></tbody>
+  </table></div>
+
+  <h2>GitHub issues <small>open, from the suggestion box and work log</small></h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>#</th><th>Title</th><th>Labels</th><th>Opened</th><th>Status</th></tr></thead>
+    <tbody id="issues"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+  </table></div>
+
+  <p class="note">Tapes reported "won't play" 3 times or "not appropriate" 2 times leave the channels automatically at the nightly build. To block one for good, add its id to <span class="mono">BLOCKED</span> in index.html. Old entries can be cleared in the Firebase console (Realtime Database → Data).</p>
+</div>
+
+<script>
+const DB = "https://project-rabbitears-default-rtdb.firebaseio.com/";
+const REPO = "therabbitearsproject-stack/rabbit-ears";
+const REASONS = { broken: "won't play", quality: "picture/sound", wrong: "wrong channel", inappropriate: "not appropriate" };
+const STATUSES = ["new", "looking", "fixed", "ignored"];
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ago = t => { if (!t) return "—"; const m = (Date.now() - t) / 60000; return m < 60 ? Math.max(1, Math.round(m)) + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago"; };
+const day = t => t ? new Date(t).toISOString().slice(0, 10) : "";
+
+// Status per item: { status, at }. "Came back" = new activity after it was marked fixed.
+let marks = {};
+try { marks = JSON.parse(localStorage.getItem("re_problem_marks") || "{}"); } catch {}
+const saveMarks = () => { try { localStorage.setItem("re_problem_marks", JSON.stringify(marks)); } catch {} };
+let showAll = false, data = null;
+
+const statusOf = (key, last) => {
+  const m = marks[key];
+  if (!m) return { s: "new", back: false };
+  if (m.status === "fixed" && last && last > m.at) return { s: "new", back: true };
+  return { s: m.status, back: false };
+};
+const picker = (key, s) => `<select class="st-${s}" data-key="${esc(key)}" aria-label="Status">${STATUSES.map(x => `<option${x === s ? " selected" : ""}>${x}</option>`).join("")}</select>`;
+const getJSON = async url => { const r = await fetch(url, { cache: "no-store" }); if (!r.ok) throw new Error(r.status + " " + url); return r.json(); };
+
+async function load() {
+  $("updated").textContent = "Loading…";
+  const recent = node => getJSON(`${DB}${node}.json?orderBy=%22%24key%22&limitToLast=2000`);
+  const [errors, reports, issues] = await Promise.all([
+    recent("errors").catch(e => ({ __err: e.message })),
+    recent("reports").catch(e => ({ __err: e.message })),
+    getJSON(`https://api.github.com/repos/${REPO}/issues?state=open&per_page=50`).catch(e => ({ __err: e.message })),
+  ]);
+  data = { errors, reports, issues };
+  render();
+  $("updated").textContent = "Updated " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+}
+
+function render() {
+  const { errors, reports, issues } = data;
+  const week = Date.now() - 7 * 864e5;
+
+  // Errors, grouped by kind + message + where.
+  const eg = new Map();
+  if (errors && !errors.__err) for (const e of Object.values(errors)) {
+    if (!e?.kind) continue;
+    const key = "e|" + e.kind + "|" + e.msg + "|" + e.where;
+    const g = eg.get(key) || { key, kind: e.kind, msg: e.msg, where: e.where, n: 0, week: 0, last: 0, ua: new Map() };
+    g.n++; if (e.t > week) g.week++; g.last = Math.max(g.last, e.t || 0); g.ua.set(e.ua, (g.ua.get(e.ua) || 0) + 1);
+    eg.set(key, g);
+  }
+  // Reports, grouped by tape/game id.
+  const rg = new Map();
+  if (reports && !reports.__err) for (const r of Object.values(reports)) {
+    if (!r?.id) continue;
+    const key = "r|" + r.id;
+    const g = rg.get(key) || { key, id: r.id, ch: new Set(), reasons: {}, n: 0, last: 0 };
+    g.n++; g.ch.add(r.ch); g.reasons[r.reason] = (g.reasons[r.reason] || 0) + 1; g.last = Math.max(g.last, r.t || 0);
+    rg.set(key, g);
+  }
+  const iss = Array.isArray(issues) ? issues.filter(i => !i.pull_request) : [];
+
+  const decorate = list => list.map(g => ({ ...g, ...statusOf(g.key, g.last) }));
+  const keep = g => showAll || g.s === "new" || g.s === "looking";
+  const errs = decorate([...eg.values()]).sort((a, b) => (b.back - a.back) || (b.week - a.week) || (b.last - a.last));
+  const reps = decorate([...rg.values()]).sort((a, b) => (b.back - a.back) || ((b.reasons.inappropriate || 0) - (a.reasons.inappropriate || 0)) || (b.last - a.last));
+  const isss = iss.map(i => ({ ...i, key: "i|" + i.number, ...statusOf("i|" + i.number, Date.parse(i.updated_at)) }));
+
+  // Summary.
+  const open = l => l.filter(g => g.s === "new" || g.s === "looking").length;
+  const fresh = [...errs, ...reps, ...isss].filter(g => g.s === "new").length;
+  const tiles = [
+    [fresh, "new, not looked at", fresh > 0],
+    [errs.reduce((s, g) => s + g.week, 0), "errors in the last 7 days"],
+    [open(errs), "open error types"],
+    [open(reps), "open viewer reports"],
+    [open(isss), "open GitHub issues"],
+  ];
+  $("tiles").innerHTML = tiles.map(([n, label, hot]) => `<div class="tile${hot ? " hot" : ""}"><b>${n}</b><small>${label}</small></div>`).join("");
+
+  const fail = (x, cols, what) => x?.__err ? `<tr><td colspan="${cols}" class="empty">Couldn't load ${what} (${esc(x.__err)}).</td></tr>` : null;
+  const row = (g, cells) => `<tr class="${g.s === "fixed" || g.s === "ignored" ? "done" : ""}">${cells}<td>${picker(g.key, g.s)}${g.back ? ' <span class="back">came back</span>' : ""}</td></tr>`;
+  const link = where => {
+    const [id, ch] = String(where).split(" @ ");
+    return ch !== undefined ? `<a href="https://archive.org/details/${encodeURIComponent(id)}" target="_blank" rel="noopener" class="mono">${esc(id)}</a><div class="sub">${esc(ch)}</div>` : `<span class="mono sub">${esc(where)}</span>`;
+  };
+
+  const ev = errs.filter(keep);
+  $("errors").innerHTML = fail(errors, 7, "errors") || (ev.length ? ev.map(g => row(g,
+    `<td><span class="pill k-${esc(g.kind)}">${esc(g.kind)}</span></td><td class="what">${esc(g.msg)}</td><td>${g.kind === "game" ? `<a href="/#play=${encodeURIComponent(g.where)}" class="mono">${esc(g.where)}</a>` : link(g.where)}</td>` +
+    `<td class="num">${g.n}${g.week ? `<div class="sub">${g.week} this week</div>` : ""}</td><td title="${day(g.last)}">${ago(g.last)}</td>` +
+    `<td class="sub">${[...g.ua].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([u, n]) => esc(u) + (n > 1 ? " ×" + n : "")).join("<br>")}</td>`)).join("")
+    : `<tr><td colspan="7" class="empty">${errs.length ? "Nothing open. Switch to Everything to see the rest." : "No errors logged yet."}</td></tr>`);
+
+  const rv = reps.filter(keep);
+  $("reports").innerHTML = fail(reports, 6, "reports") || (rv.length ? rv.map(g => {
+    const games = g.ch.has("Games");
+    return row(g, `<td>${games ? `<a href="/#play=${encodeURIComponent(g.id)}" class="mono">${esc(g.id)}</a>` : `<a href="https://archive.org/details/${encodeURIComponent(g.id)}" target="_blank" rel="noopener" class="mono">${esc(g.id)}</a>`}</td>` +
+      `<td>${[...g.ch].map(esc).join(", ")}</td><td>${Object.entries(g.reasons).map(([r, n]) => `<span class="pill r-${esc(r)}">${esc(REASONS[r] || r)}${n > 1 ? " ×" + n : ""}</span>`).join(" ")}</td>` +
+      `<td class="num">${g.n}</td><td title="${day(g.last)}">${ago(g.last)}</td>`);
+  }).join("") : `<tr><td colspan="6" class="empty">${reps.length ? "Nothing open. Switch to Everything to see the rest." : "No reports yet."}</td></tr>`);
+
+  const iv = isss.filter(keep);
+  $("issues").innerHTML = fail(issues, 5, "GitHub issues") || (iv.length ? iv.map(i => row(i,
+    `<td class="num"><a href="${esc(i.html_url)}" target="_blank" rel="noopener">${i.number}</a></td><td class="what">${esc(i.title)}</td>` +
+    `<td>${i.labels.map(l => `<span class="pill" style="color:#${esc(l.color)}">${esc(l.name)}</span>`).join(" ")}</td><td title="${day(Date.parse(i.created_at))}">${ago(Date.parse(i.created_at))}</td>`)).join("")
+    : `<tr><td colspan="5" class="empty">${isss.length ? "Nothing open. Switch to Everything to see the rest." : "No open issues."}</td></tr>`);
+}
+
+document.addEventListener("change", e => {
+  const key = e.target.dataset?.key; if (!key) return;
+  marks[key] = { status: e.target.value, at: Date.now() }; saveMarks(); render();
+});
+$("fOpen").onclick = () => { showAll = false; $("fOpen").setAttribute("aria-pressed", "true"); $("fAll").setAttribute("aria-pressed", "false"); render(); };
+$("fAll").onclick = () => { showAll = true; $("fAll").setAttribute("aria-pressed", "true"); $("fOpen").setAttribute("aria-pressed", "false"); render(); };
+$("refresh").onclick = load;
+load();
+setInterval(() => { if (!document.hidden) load(); }, 5 * 60000);
+</script>
+</body>
+</html>

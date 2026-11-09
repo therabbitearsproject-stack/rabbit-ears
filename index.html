@@ -531,6 +531,27 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
 <script src="assets/captions.js?v=caption-size-3"></script>
 <script>
+// ---------- Problem log ----------
+// Script errors and tapes, stations or games that won't load are logged to the project database
+// (errors/…) so they can be fixed without anyone having to report them. Anonymous: what kind of
+// problem, a short message, which tape/station/game, and the browser family. The Firebase module at
+// the bottom of the page sends them; anything that happens before it loads waits in this queue.
+// At most 8 per page, and each distinct problem once.
+window.reErrQ = [];
+window.reError = (kind, msg, where) => {
+  const key = kind + "|" + msg + "|" + (where || "");
+  if (reErrQ.length >= 8 || reErrQ.some(e => e.key === key)) return;
+  const e = { key, kind, msg: String(msg || "").slice(0, 300), where: String(where || "").slice(0, 120) };
+  reErrQ.push(e); window.reErrSend?.(e);
+};
+window.addEventListener("error", e => {
+  if (!e.message) return; // failed images/scripts arrive here too, without a message; they're handled where they load
+  reError("script", e.message, (e.filename || "").replace(location.origin, "").slice(0, 60) + ":" + (e.lineno || 0));
+});
+window.addEventListener("unhandledrejection", e => {
+  const r = e.reason; reError("script", "Unhandled: " + (r?.message || String(r)), (r?.stack || "").split("\n")[1]?.trim().slice(0, 100) || "");
+});
+
 // ---------- Channels ----------
 // Added to every channel's search so it stays safe to leave on: no adult content, hentai, Nazi
 // propaganda, audio podcasts or TV-news recordings. (Adult Swim uses it without the word "adult".)
@@ -1296,6 +1317,8 @@ function syncMedia(forceSeek = false) {
   };
   vid.onerror = () => {
     if (token !== mediaToken || my !== tuneId) return;
+    const why = ["", "aborted", "network error", "can't decode", "format not supported"][vid.error?.code || 0] || "unknown";
+    reError("tape", "Video won't play: " + why, (activeSegment?.media || segment.media)?.id + " @ " + (channels()[cur]?.name || ""));
     if (segment.kind === "program") { metaCache[segment.media.id] = null; setTimeout(() => tune(cur), 800); }
     else {
       // Preserve the shared clock using a bumper from this channel's own library.
@@ -1549,6 +1572,7 @@ async function loadStations() {
     if (my !== rTune) return;
     stations = [];
     $("rCount").textContent = "Couldn't reach the radio directory. Try again in a moment.";
+    reError("radio", "Couldn't reach the radio directory", "");
     return;
   }
   sIdx = stations.findIndex(s => s.stationuuid === audio.dataset.id);
@@ -1602,7 +1626,12 @@ function stepStation(d) { if (stations.length) playStation(sIdx < 0 ? 0 : sIdx +
 audio.addEventListener("playing", () => { setStatus("● ON AIR"); $("rPlay").textContent = "■ Stop"; });
 audio.addEventListener("waiting", () => setStatus("Buffering…"));
 audio.addEventListener("pause", () => { setStatus(audio.src ? "Stopped" : "Pick a station"); $("rPlay").textContent = "▶ Play"; });
-audio.addEventListener("error", () => { if (audio.src) { setStatus("Off the air — try another station"); $("rPlay").textContent = "▶ Play"; } });
+audio.addEventListener("error", () => {
+  if (!audio.src) return;
+  setStatus("Off the air — try another station"); $("rPlay").textContent = "▶ Play";
+  const s = stations[sIdx];
+  reError("radio", "Station won't play: " + (["", "aborted", "network error", "can't decode", "format not supported"][audio.error?.code || 0] || "unknown"), s ? s.name.slice(0, 70) + " · " + s.stationuuid : audio.dataset.id);
+});
 $("rPlay").onclick = () => {
   if (!audio.paused) { audio.pause(); return; }
   if (audio.src) { audio.load(); audio.play().catch(() => {}); setStatus("Tuning…"); }
@@ -1729,7 +1758,7 @@ async function playGame(id) {
     if (gPlayer) gPlayer.remove();
     gPlayer = ruffle.createPlayer();
     $("gScreen").append(gPlayer); $("gIdle").hidden = true;
-    gPlayer.addEventListener("loaderror", () => { if (my === gCur) $("gMeta").textContent = "This game won't start here. Try another, or ⚑ report it."; });
+    gPlayer.addEventListener("loaderror", e => { reError("game", "Game won't start" + (e.detail?.error?.message ? ": " + e.detail.error.message : ""), id); if (my === gCur) $("gMeta").textContent = "This game won't start here. Try another, or ⚑ report it."; });
     gPlayer.addEventListener("loadedmetadata", () => { if (my === gCur) $("gMeta").textContent = [info.year, "Click the game, then use your keyboard and mouse."].filter(Boolean).join(" · "); });
     await gPlayer.ruffle().load({ url: `https://archive.org/cors/${encodeURIComponent(id)}/${info.file.split("/").map(encodeURIComponent).join("/")}`, backgroundColor: "#000000" });
     $("gTitle").textContent = info.title;
@@ -1737,7 +1766,7 @@ async function playGame(id) {
     ["gFav", "gStop", "gFull"].forEach(b => $(b).disabled = false); paintFav();
     gRecent = [id, ...gRecent.filter(x => x !== id)].slice(0, 30); store.set("re_grecent", gRecent);
     gPlayer.focus?.();
-  } catch { if (my === gCur) $("gMeta").textContent = "Couldn't load the game player. Check your connection and try again."; }
+  } catch (e) { reError("game", "Couldn't load the game player: " + (e?.message || e), id); if (my === gCur) $("gMeta").textContent = "Couldn't load the game player. Check your connection and try again."; }
 }
 function paintFav() { const on = gCur && gFavs.includes(gCur); $("gFav").textContent = on ? "★ Favorite" : "☆ Favorite"; $("gFav").setAttribute("aria-pressed", String(!!on)); }
 function markGameCard() { document.querySelectorAll(".gcard").forEach(c => c.classList.toggle("on", c.dataset.id === gCur)); }
@@ -1979,6 +2008,15 @@ window.reSetRoom(window.reCurrentRoom?.() ?? null);
 
 // Tape reports from the "Report this tape" button (tape id, channel name, reason, time).
 window.reReport = r => push(ref(db, "reports"), { id: r.id, ch: r.ch, reason: r.reason, t: serverTimestamp() });
+
+// Problems the page ran into (see "Problem log" near the top). The browser is kept coarse:
+// family, major version and phone or computer, nothing that could single anyone out.
+const ua = navigator.userAgent;
+const browser = (/Edg\/(\d+)/.exec(ua) ? "Edge " + RegExp.$1 : /SamsungBrowser\/(\d+)/.exec(ua) ? "Samsung " + RegExp.$1 : /Firefox\/(\d+)/.exec(ua) ? "Firefox " + RegExp.$1
+  : /CriOS\/(\d+)/.exec(ua) ? "Chrome iOS " + RegExp.$1 : /Chrome\/(\d+)/.exec(ua) ? "Chrome " + RegExp.$1 : /Version\/(\d+).*Safari/.exec(ua) ? "Safari " + RegExp.$1 : "Other")
+  + (/Mobi|iPhone|iPad|Android/.test(ua) ? " · phone" : " · computer");
+window.reErrSend = e => { if (!e.sent && location.hostname === "rabbit-ears.stream") { e.sent = true; push(ref(db, "errors"), { kind: e.kind, msg: e.msg, where: e.where, ua: browser, t: serverTimestamp() }).catch(() => {}); } };
+window.reErrQ.forEach(window.reErrSend);
 
 // All-time visits: each browser adds 1 at most once a day. The database only accepts +1 steps.
 const visits = ref(db, "stats/visits");

@@ -87,6 +87,7 @@ jobs:
           cp index.html catalog.json og.jpg share-card.html commercial-timing.js media-compatibility.js robots.txt sitemap.xml _site/
           cp -r assets _site/assets
           cp -r design-history _site/design-history
+          cp -r problems _site/problems   # unlisted Problems dashboard
           cp manifest.webmanifest _site/
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs
