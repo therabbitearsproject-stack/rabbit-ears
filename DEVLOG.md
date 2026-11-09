@@ -4,6 +4,29 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Safety review of every channel
+
+- Every channel's search now ends with `SAFE`. The 23 older channels (Ephemera, Ad Break, Rerun Alley, Drive-In,
+  Anime Station, AMV Hour, Laugh Track and others) never had it. Their searches are wrapped in parentheses first,
+  because several are `A OR B OR C` lists that `AND NOT …` would otherwise only attach to the last term. Adult Swim
+  uses `SAFE` without the word "adult". The two reviewed libraries (Subspace 97, Porchlight) are unchanged.
+- `SAFE` itself got stronger: porno, ecchi, hanime, sexploitation, nudie, softcore, x-rated, burlesque, lolicon,
+  shotacon, yaoi, nazi and white-power subjects, and titles naming Hitler, the Third Reich, Mein Kampf, the Horst
+  Wessel song, Boku no Pico and other specific items found in the pools.
+- What was in the lineups before this: hentai dumps and Boku no Pico on Anime Station; Hitler speeches, Mein Kampf
+  and Holocaust-denial videos on AMV Hour; sexploitation and nudie films on Drive-In, Laugh Track, Creature Feature
+  and Kung Fu Theater; erotic shorts and a Playboy TV promo on Ad Break; "Porno Corner" on Adult Swim; Nazi-UFO and
+  Holocaust-denial videos on Strange Signals. 93 more ids went into `BLOCKED` for items the keywords can't catch.
+- Cost of the filter: each channel loses 0–5% of matches (Laugh Track the most). A few classics with "naked" in
+  the title (The Naked City, The Naked Kiss) leave After Dark.
+- Checked afterwards by pulling each channel's top 300 results with the new search and scanning titles for adult,
+  hate and gore words. What's left is harmless (X-Files fan videos by "Media Cannibals", MST3K's Robot Holocaust,
+  Josie and the Pussycats, Ken Burns' The U.S. and the Holocaust).
+- Changing the searches changes the catalog keys, so the 23 channels fall back to live searches until the
+  catalog rebuilds (started by hand after this push).
+
+---
+
 ## 2026-11-09 — A page for every channel and game
 
 - The publish workflow now runs `scripts/build-pages.mjs`, which writes `/channels/<name>/` (76 pages), `/games/<name>/`
