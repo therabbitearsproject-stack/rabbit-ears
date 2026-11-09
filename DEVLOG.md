@@ -4,6 +4,12 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Problems page on the iPhone home screen
+
+`/problems/` now has the Rabbit Ears home-screen icon and the title "RE Problems", and opens full screen when it's added from Safari's Share → Add to Home Screen. The main site already supported this.
+
+---
+
 ## 2026-11-09 — Problem log and the /problems/ dashboard
 
 Until now the only ways to hear about trouble were the ⚑ Report buttons, whose tally appeared only in each Actions run summary, and the suggestion box, which needs a GitHub account. Nothing recorded the failures visitors actually ran into.
