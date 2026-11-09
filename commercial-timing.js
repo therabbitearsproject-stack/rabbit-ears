@@ -21,7 +21,27 @@ const CommercialTiming = (() => {
       const length = Math.min(interval, duration - content);
       append("program", program, length, content); content += length;
       if (!policy || !ads.length || duration - content < policy.minTail || content >= duration) continue;
-      const key = seed + ":break:" + breakNo++, bumper = bumpers.length ? bumpers[hash(key) % bumpers.length] : null;
+      const number = breakNo++, key = seed + ":break:" + number;
+      if (policy.mix === "trek-first") {
+        const choose = (items, salt) => items.length ? items[hash(key + salt) % items.length] : null;
+        const custom = choose(bumpers.filter(m => m.role === "custom-bumper"), ":custom");
+        const network = choose(bumpers.filter(m => m.role === "network-id"), ":network");
+        const bookends = [custom, network].filter(Boolean);
+        if (hash(key + ":position") % 2) bookends.reverse();
+        let budget = policy.target - bookends.reduce((n, m) => n + m.dur, 0);
+        const trek = ads.filter(m => m.role === "star-trek-commercial");
+        // One general vintage spot every third break; never use vintage ads to fill gaps.
+        const vintage = number % (policy.vintageEvery || 3) === (policy.vintageEvery || 3) - 1
+          ? choose(ads.filter(m => m.role !== "star-trek-commercial" && m.dur <= budget), ":vintage") : null;
+        if (vintage) budget -= vintage.dur;
+        const spots = pack(trek, budget, key);
+        if (vintage) spots.splice(hash(key + ":insert") % (spots.length + 1), 0, vintage);
+        if (bookends[0]) append("bumper", bookends[0], bookends[0].dur);
+        for (const ad of spots) append("commercial", ad, ad.dur);
+        if (bookends[1]) append("bumper", bookends[1], bookends[1].dur);
+        continue;
+      }
+      const bumper = bumpers.length ? bumpers[hash(key) % bumpers.length] : null;
       const before = hash(key + ":position") % 2 === 0;
       if (bumper && before) append("bumper", bumper, bumper.dur);
       for (const ad of pack(ads, policy.target - (bumper?.dur || 0), key)) append("commercial", ad, ad.dur);

@@ -185,6 +185,9 @@ if (BUILT_IN.some(ch => ch.breaks)) {
 const breakLibraries = {};
 for (const id of new Set(BUILT_IN.map(ch => ch.breaks?.library).filter(Boolean))) {
   breakLibraries[id] = await loadChannelBreakLibrary(id);
+  if (id === "sci-fi-channel") {
+    breakLibraries[id].bumpers.push(...bumpers.map(m => ({ ...m, role: "custom-bumper" })));
+  }
 }
 const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
