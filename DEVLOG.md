@@ -4,6 +4,23 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Ten new channels and 🤘 Metal radio
+
+- New channels, each with a logo in `assets/channel-logos` (vector art drawn in `new-logos.html`, rendered to 480×320 transparent PNGs with headless Edge using `--default-background-color=00000000`):
+  12 😄 Sitcom Gold, 16 🎤 Variety Hour, 27 🧸 Puppet Show, 28 🦸 Caped Crusaders, 41 💃 Showstoppers,
+  66 🏀 Hoops, 67 ⚾ Ballpark, 72 🤘 Headbangers, 73 🎷 Jazz Club, 74 🎙️ Encore.
+- Every search was tried on the Archive first and tightened to drop video-game uploads, reaction clips, music
+  without video and adult items. Woodstock is left out of Encore (nudity); Showstoppers stops at 1965.
+- A Honky Tonk country channel was drafted for 74 and replaced with Encore before launch.
+- Radio: new 🤘 Metal button. Ten hand-picked stations (`METAL` in index.html) come first, then the rest of the
+  directory's "metal" tag: FIP Metal, MetalON, Wacken Radio, 100 Greatest Heavy Metal, Rock Antenne Heavy Metal
+  and Modern Metal, Radio BOB Hair Metal and Nu Metal, Badrock Hard & Heavy, Exclusively Iron Maiden. All ten were
+  played in the browser. SomaFM Metal Detector was dropped because its stream refused connections.
+- Share card now says 76 channels; og.jpg re-rendered (`?v=7`). Logo manifest cache key bumped to `nov-batch-1`.
+- The new channels use live Archive searches until the next catalog build adds their pools.
+
+---
+
 ## 2026-11-09 — TikTok account linked
 
 - Made the TikTok account @rabbitears.stream (Rabbit Ears Gmail) and posted the first two videos.

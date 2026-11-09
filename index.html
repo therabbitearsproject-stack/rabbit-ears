@@ -20,7 +20,7 @@
 <meta property="og:title" content="Rabbit-Ears.stream">
 <meta property="og:description" content="Forgotten TV around the clock, live radio from around the world, and classic Flash games. Flip channels, check the guide, see who's watching.">
 <meta property="og:url" content="https://rabbit-ears.stream/">
-<meta property="og:image" content="https://rabbit-ears.stream/og.jpg?v=6">
+<meta property="og:image" content="https://rabbit-ears.stream/og.jpg?v=7">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rabbit-Ears.stream">
 <meta name="twitter:description" content="Forgotten TV around the clock, live radio and classic Flash games.">
-<meta name="twitter:image" content="https://rabbit-ears.stream/og.jpg?v=6">
+<meta name="twitter:image" content="https://rabbit-ears.stream/og.jpg?v=7">
 <link rel="canonical" href="https://rabbit-ears.stream/">
 <meta name="msvalidate.01" content="B6323362042B6224309E5BC05E60D3EA"><!-- Bing Webmaster Tools verification; keep -->
 <!-- Tells search engines what the site is (shown as the site name in Google results). -->
@@ -604,6 +604,17 @@ const BUILT_IN = [
   { name: "Power Level",        desc: "Dragon Ball, Naruto, Yu Yu Hakusho, Inuyasha", q: `(title:("dragon ball" OR dragonball OR naruto OR "one piece" OR "yu yu hakusho" OR "yu-gi-oh" OR bleach OR "rurouni kenshin" OR inuyasha OR "hunter x hunter" OR "fist of the north star" OR "saint seiya" OR "shaman king" OR "zatch bell" OR beyblade) AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR cards OR ost OR soundtrack OR unboxing OR abridged OR tcg OR budokai OR tenkaichi OR xenoverse) AND NOT subject:(longplay OR amv OR "video game")) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
   { name: "OVA Vault",          desc: "'80s and '90s anime on tape: Lodoss, Slayers, Dirty Pair", q: `(title:("bubblegum crisis" OR "bubblegum crash" OR "project a-ko" OR "record of lodoss war" OR "vampire hunter d" OR "cyber city oedo" OR gunbuster OR appleseed OR "dirty pair" OR "venus wars" OR armitage OR "ghost in the shell" OR "giant robo" OR "tenchi muyo" OR slayers OR "macross plus" OR "silent mobius" OR "a.d. police") AND NOT title:(game OR gameplay OR longplay OR amv OR review OR toy OR ost OR soundtrack OR trailer OR manga OR maid OR houshi OR "live action" OR "stand alone complex") AND NOT subject:(longplay OR amv OR "video game" OR hentai OR ecchi)) AND NOT title:(latino OR castellano OR espanol OR español OR dublado OR ptbr OR "pt-br" OR doblaje OR peliculas OR completo OR legendado OR italiano OR deutsch OR francais OR vostfr OR iso)` + SAFE },
   { name: "Toonami Tapes",      desc: "Toonami blocks taped off Cartoon Network", q: `(title:(toonami) AND NOT title:(game OR gameplay OR longplay OR review OR podcast OR soundtrack OR ost OR music))` + SAFE },
+  // November 2026 batch: classic TV, kids, musicals, sports and music.
+  { name: "Sitcom Gold",        desc: "Lucy, Andy Griffith, Beverly Hillbillies", q: `(title:("i love lucy" OR "dick van dyke" OR "andy griffith" OR "beverly hillbillies" OR "petticoat junction" OR "burns and allen" OR "jack benny" OR "make room for daddy" OR "my little margie" OR "life of riley" OR "our miss brooks" OR "mr. ed" OR "mister ed" OR "the honeymooners" OR "father knows best" OR "leave it to beaver" OR "bachelor father" OR "private secretary" OR "the real mccoys") AND NOT title:(game OR review OR podcast OR trailer OR reaction OR commercial))` + SAFE },
+  { name: "Variety Hour",       desc: "Ed Sullivan, Red Skelton, Colgate Comedy Hour", q: `(title:("ed sullivan" OR "carol burnett" OR "laugh-in" OR "sonny and cher" OR "sonny & cher" OR "dean martin show" OR "smothers brothers" OR "andy williams show" OR "colgate comedy hour" OR "your show of shows" OR "texaco star theater" OR "milton berle" OR "red skelton" OR "jackie gleason show" OR "perry como" OR "flip wilson") AND NOT title:(game OR review OR podcast OR trailer OR reaction))` + SAFE },
+  { name: "Puppet Show",        desc: "Howdy Doody, Sesame Street, Fraggle Rock", q: `(title:("muppet show" OR "sesame street" OR "howdy doody" OR "kukla, fran" OR "kukla fran" OR "lamb chop" OR "shari lewis" OR "fraggle rock" OR "captain kangaroo" OR lidsville OR pufnstuf OR "land of the lost" OR "eureeka") AND NOT title:(game OR gameplay OR review OR podcast OR trailer OR reaction OR toy OR unboxing OR soundtrack OR ost))` + SAFE },
+  { name: "Caped Crusaders",    desc: "Fleischer Superman, serials, '60s–'90s heroes", q: `(title:(superman OR "captain marvel" OR "spy smasher" OR "captain america" OR "green hornet" OR batman OR "mighty mouse" OR underdog OR "super friends" OR superfriends OR "spider-man" OR "captain midnight") AND date:[1938-01-01 TO 1995-12-31] AND NOT title:(game OR gameplay OR longplay OR review OR podcast OR trailer OR reaction OR toy OR lego OR unboxing OR ost OR soundtrack OR comic OR comics OR ps2 OR snes OR nes OR genesis OR amv OR "crank dat" OR capcut OR upscale) AND NOT subject:(longplay OR amv OR "video game"))` + SAFE },
+  { name: "Showstoppers",       desc: "Classic movie musicals, 1927–1965", q: `(subject:(musical OR musicals OR "movie musical") AND (collection:feature_films OR collection:moviesandfilms OR collection:Comedy_Films) AND date:[1927-01-01 TO 1965-12-31] AND NOT title:(trailer OR soundtrack OR ost OR bares OR nudist OR burlesque OR dolls))` + SAFE },
+  { name: "Hoops",              desc: "NBA Finals, Final Fours, Globetrotters", q: `((title:("nba finals" OR "final four" OR "ncaa championship" OR "harlem globetrotters" OR "nba classic games" OR "slam dunk contest" OR "dunk contest" OR "nba on nbc" OR "nba on cbs" OR "nba on tnt" OR "nba all-star game") OR subject:("basketball game" OR "college basketball")) AND NOT title:(youngboy OR "young boy" OR 2k OR "nba jam" OR "nba live" OR "nba street" OR scooby OR fortnite OR remix OR lyrics OR podcast OR ps2 OR xbox OR snes OR genesis OR "my career" OR myleague OR lingerie OR "dj self" OR turnover OR interview) AND NOT subject:(longplay OR "video game"))` + SAFE },
+  { name: "Ballpark",           desc: "World Series and All-Star baseball", q: `((title:("world series" AND (game OR dodgers OR yankees OR cardinals OR twins OR "red sox" OR mets OR giants OR braves OR astros OR "white sox" OR cubs OR orioles OR reds OR pirates OR tigers OR phillies)) OR title:("home run derby" OR "mlb classic" OR "baseball all-star game" OR "mlb all-star game")) AND NOT title:(hetalia OR klay OR nintendo OR "race across" OR babies OR "dj self" OR "ice cube" OR riot OR poker OR cricket OR "mlb the show" OR "mvp baseball" OR ps2 OR xbox OR snes OR genesis OR n64 OR gameplay OR longplay) AND NOT subject:(longplay OR "video game"))` + SAFE },
+  { name: "Headbangers",        desc: "Headbangers Ball and metal concerts", q: `(title:("headbangers ball" OR "monsters of rock" OR "live at donington" OR "live at wacken" OR "iron maiden" OR "judas priest" OR metallica OR megadeth OR "black sabbath" OR "ozzy osbourne" OR slayer OR anthrax OR motorhead OR "def leppard" OR "van halen" OR "motley crue" OR pantera OR dio OR "twisted sister" OR scorpions) AND title:(live OR concert OR "headbangers ball" OR "monsters of rock" OR festival OR "music videos" OR "video collection" OR tour) AND NOT title:(game OR gameplay OR longplay OR podcast OR review OR reaction OR lyrics OR "full album" OR karaoke OR cover OR guitar OR lesson OR tutorial OR sybian OR htod OR rip) AND NOT subject:(longplay OR "video game" OR podcast))` + SAFE },
+  { name: "Jazz Club",          desc: "Soundies, big bands and jazz on TV", q: `((subject:("jazz concert" OR "jazz performance" OR "jazz on film" OR soundies OR "jazz festival" OR "big band" OR "jazz films") OR title:("jazz casual" OR "jazz scene" OR "jazz 625" OR "newport jazz" OR "montreux jazz" OR "jazz at the" OR soundie OR soundies OR "duke ellington" OR "count basie" OR "louis armstrong" OR "cab calloway")) AND NOT collection:etree AND NOT title:(game OR podcast OR review OR lesson OR tutorial OR "full album" OR lyrics OR remix OR lofi OR "lo-fi" OR "jazz hop" OR relaxing OR "smooth jazz" OR burlesque OR "blue's clues") AND NOT subject:(podcast OR lofi OR burlesque))` + SAFE },
+  { name: "Encore",             desc: "Unplugged, Midnight Special, Live Aid", q: `(title:("mtv unplugged" OR "vh1 storytellers" OR "midnight special" OR "rock concert" OR "don kirshner" OR "live aid" OR rockpalast OR "old grey whistle test" OR "ready steady go" OR shindig OR hullabaloo OR "the monkees") AND NOT title:(woodstock OR trailer OR game OR gameplay OR podcast OR review OR reaction OR lyrics OR "full album" OR karaoke OR lesson OR tutorial OR audio OR mp3 OR flac OR "1938") AND NOT collection:etree AND NOT subject:(podcast OR longplay))` + SAFE },
 ];
 // Channel numbers come in genre bands, like a cable lineup, with room to grow: 2–19 classic TV,
 // 20s kids, 30s–40s movies, 50s anime, 60s sports, 70s music, 80s learning and oddities, 90s sci-fi.
@@ -612,16 +623,16 @@ const BANDS = [[2, "Classic TV"], [20, "Kids"], [30, "Movies"], [50, "Anime"], [
 const LINEUP = {
   "Ad Break": [2, "📺"], "Rerun Alley": [3, "🛋️"], "Late Night": [4, "🌙"], "Big Prize": [5, "🎰"], "Brit TV": [6, "☕"],
   "PBS": [7, "🎨"], "Y2K WB": [8, "📼"], "Porchlight": [9, "🏡"], "Prime Time Tapes": [10, "⭐"], "Strange Tales": [11, "🌀"],
-  "Spooky '90s": [13, "👽"], "Order Now": [14, "☎️"], "Paint Along": [15, "🖌️"],
+  "Sitcom Gold": [12, "😄"], "Spooky '90s": [13, "👽"], "Order Now": [14, "☎️"], "Paint Along": [15, "🖌️"], "Variety Hour": [16, "🎤"],
   "Saturday Toons": [20, "🥣"], "Cartoon Vault": [21, "🐭"], "Scooby & Friends": [22, "🐕"], "Toon Toys": [23, "🤖"], "'90s Kids": [24, "🧃"],
-  "After School": [25, "🎒"], "Adult Swim": [26, "🦑"],
+  "After School": [25, "🎒"], "Adult Swim": [26, "🦑"], "Puppet Show": [27, "🧸"], "Caped Crusaders": [28, "🦸"],
   "Drive-In": [30, "🚗"], "After Dark": [31, "🕵️"], "Creature Feature": [32, "🧟"], "Chiller Hosts": [33, "🦇"], "Silent Screen": [34, "🎩"],
   "Laugh Track": [35, "😂"], "Kung Fu Theater": [36, "🥋"], "Frontier": [37, "🤠"], "Private Eye": [39, "🔍"],
-  "Christmas Movies": [40, "🎄"],
+  "Christmas Movies": [40, "🎄"], "Showstoppers": [41, "💃"],
   "Anime Station": [50, "🌸"], "Dubbed Anime": [51, "🗣️"], "Retro Anime": [52, "⚡"], "AMV Hour": [53, "🎧"], "Kaiju Theater": [54, "🦖"], "Mecha Hangar": [55, "🦾"], "Magical Girls": [56, "✨"], "Power Level": [57, "💥"],
   "OVA Vault": [58, "🗡️"], "Toonami Tapes": [59, "🌌"],
-  "Gridiron": [60, "🏈"], "Rink Side": [61, "🏒"], "Ringside": [62, "🤼"], "Pit Lane": [63, "🏁"], "Skate & Surf": [64, "🛹"], "Sweatin'": [65, "🤸"],
-  "Video Jukebox": [70, "🎸"], "Soul Train": [71, "🕺"],
+  "Gridiron": [60, "🏈"], "Rink Side": [61, "🏒"], "Ringside": [62, "🤼"], "Pit Lane": [63, "🏁"], "Skate & Surf": [64, "🛹"], "Sweatin'": [65, "🤸"], "Hoops": [66, "🏀"], "Ballpark": [67, "⚾"],
+  "Video Jukebox": [70, "🎸"], "Soul Train": [71, "🕺"], "Headbangers": [72, "🤘"], "Jazz Club": [73, "🎷"], "Encore": [74, "🎙️"],
   "Ephemera": [80, "🎞️"], "Duck & Cover": [81, "☢️"], "Home Movies": [82, "🎥"], "Computer Chronicles": [83, "💾"], "Mission Control": [84, "🛰️"],
   "Wild Kingdom": [85, "🦁"], "TV Dinner": [86, "🍳"], "Strange Signals": [87, "🛸"], "Slow TV": [88, "🔥"], "Arcade": [89, "🕹️"],
   "Starbase": [90, "🖖"], "Hyperdrive": [91, "🌠"], "Riff Raff": [92, "🍿"], "Atomic Age": [93, "⚛️"], "Deep Space": [94, "🪐"],
@@ -1393,10 +1404,23 @@ async function rb(path) {
   throw new Error("radio directory unreachable");
 }
 const GENRES = [
-  ["★ Favorites", "fav"], ["🎄 Christmas", "xmas"], ["Top stations", ""], ["Jazz", "jazz"], ["Classical", "classical"], ["Rock", "rock"],
+  ["★ Favorites", "fav"], ["🎄 Christmas", "xmas"], ["Top stations", ""], ["Jazz", "jazz"], ["Classical", "classical"], ["Rock", "rock"], ["🤘 Metal", "metal"],
   ["Oldies", "oldies"], ["80s", "80s"], ["Country", "country"], ["Hip-hop", "hip hop"], ["Lo-fi", "lofi"],
   ["Electronic", "electronic"], ["Reggae", "reggae"], ["News", "news"], ["Talk", "talk"], ["Sports", "sports"],
   ["Old-time radio", "old time radio"],
+];
+// Hand-picked metal stations, shown first under 🤘 Metal (in this order), then the rest of the "metal" tag.
+const METAL = [
+  "75b6b22f-f4b7-43ae-aa73-96a7b47eeb4f", // FIP Metal (France)
+  "b05bc526-0822-4a8d-9e86-e0b19f119f30", // MetalON - The Heavy (Portugal)
+  "17028094-01a5-49f0-b35a-d792b6ea7da9", // Wacken Radio (Germany)
+  "d0df2a51-9cd3-4f3e-977d-aab92ddef7a3", // 100 Greatest Heavy Metal (Canada)
+  "4b473070-a3c2-41bd-8d98-c2db5f5954bc", // Rock Antenne Heavy Metal (Germany)
+  "ae6c1e45-2ec6-43de-99e3-75fc1e77465d", // Rock Antenne Modern Metal (Germany)
+  "a3bb290f-da44-48bb-a412-3ec8ecac5396", // Radio BOB Hair Metal (Germany)
+  "c2a05b77-3a27-48cb-9e39-6139c3045fd0", // Radio BOB Nu Metal (Germany)
+  "51408d80-4b67-40e0-9617-671759799c2b", // Badrock Hard & Heavy (Bulgaria)
+  "f41fc2e8-94ef-4c9e-b799-97b90c99e85a", // Exclusively Iron Maiden
 ];
 const audio = new Audio();
 audio.preload = "none";
@@ -1472,6 +1496,10 @@ async function loadStations() {
       }));
       const xmasName = /christmas|xmas|x-mas|weihnacht|no[eë]l|navidad|natal|santa|north pole|nordpol|kerst|lebkuchen|sleigh|jingle|holiday/i;
       list = lists.flat().filter(s => xmasName.test(s.name)).sort((a, b) => b.clickcount - a.clickcount);
+    } else if (genre === "metal" && !q) {
+      const [picks, rest] = await Promise.all([rb("/json/stations/byuuid?uuids=" + METAL.join(",")).catch(() => []), rb("/json/stations/search?" + p).catch(() => [])]);
+      const pick = METAL.map(u => picks.find(s => s.stationuuid === u)).filter(s => s && (!cc || s.countrycode === cc));
+      list = [...pick, ...rest];
     } else list = await rb("/json/stations/search?" + p);
     if (my !== rTune) return;
     const seen = new Set();
