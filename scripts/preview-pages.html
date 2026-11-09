@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Page preview</title>
+<!-- Previews a page from scripts/site-pages.mjs without Node. Serve the repo root (the "local" launch
+     config) and open /scripts/preview-pages.html?path=/channels/headbangers/  — leave path off for a list. -->
+<script type="module">
+const get = async (p, json = true) => { const r = await fetch("/" + p + "?x=" + Date.now()); return json ? r.json() : r.text(); };
+const src = await get("scripts/site-pages.mjs", false); // loaded as a blob: simple local servers send .mjs without a JS type
+const m = await import(URL.createObjectURL(new Blob([src], { type: "text/javascript" })));
+const { channels, bands, blocked } = m.channelsFromIndex(await get("index.html", false));
+const [logos, catalog, games] = await Promise.all([get("assets/channel-logos/manifest.json"), get("catalog.json"), get("games.json")]);
+const { pages } = m.buildPages({ channels, bands, logos, pools: catalog.pools || {}, games, blocked });
+const want = new URLSearchParams(location.search).get("path");
+const hit = pages.find(p => p.path === want);
+const html = hit ? hit.html.replaceAll('src="/', 'src="https://rabbit-ears.stream/')
+  : `<h1>${pages.length} pages</h1><ul>${pages.map(p => `<li><a href="?path=${encodeURIComponent(p.path)}">${p.path}</a></li>`).join("")}</ul>`;
+document.open(); document.write(html); document.close();
+</script>

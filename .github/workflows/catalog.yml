@@ -87,6 +87,7 @@ jobs:
           cp manifest.webmanifest _site/
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs
+          node scripts/build-pages.mjs _site   # /channels/…, /games/… and sitemap.xml
           du -sh _site _site/subs
       - uses: actions/upload-pages-artifact@v3
         with:

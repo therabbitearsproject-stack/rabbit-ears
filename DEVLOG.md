@@ -4,6 +4,28 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — A page for every channel and game
+
+- The publish workflow now runs `scripts/build-pages.mjs`, which writes `/channels/<name>/` (76 pages), `/games/<name>/`
+  (about 330), `/channels/` and `/games/` indexes, and a full `sitemap.xml` (replacing the one-line static sitemap in the
+  published site). The page logic lives in `scripts/site-pages.mjs` as a pure function, so it can be previewed without
+  Node: serve the repo with the "local" launch config and open `/scripts/preview-pages.html?path=/channels/headbangers/`.
+- Channel pages: logo, number and band, description, a "Watch channel N live" button (`/#chN`), up to 40 titles from
+  the channel's catalog pool, and the other channels in the same band. Game pages: thumbnail, a Play button
+  (`/#play=<id>`), and more games from the same shelf. Each page has its own title, description, canonical URL,
+  Open Graph image (the channel logo or game thumbnail) and JSON-LD (WebPage with breadcrumbs, or VideoGame).
+- Titles are tidied (no "[1080p]", "VHS rip" and similar), and adult-sounding titles are never listed on a page.
+- Footer links to "All channels" and "All games" so crawlers find the pages from the home page.
+- `scripts/site-pages.test.mjs` runs with the other builder tests and fails the build on duplicate paths, missing
+  channels or adult titles.
+- While checking the lists, found explicit items in the older channels' pools (those searches predate `SAFE`): an
+  HBO adult series on Rerun Alley, hentai on Anime Station, a porn clip on Brit TV, burlesque "stripper" reels on
+  Ephemera, nudie films on Drive-In and Laugh Track, and more. Added 41 ids to `BLOCKED`. Classic titles that only
+  contain a word like "naked" (The Naked City, Star Trek's "The Naked Now") were left alone. The older channels
+  still don't use `SAFE`, so a fuller review is worth doing.
+
+---
+
 ## 2026-11-09 — Ten new channels and 🤘 Metal radio
 
 - New channels, each with a logo in `assets/channel-logos` (vector art drawn in `new-logos.html`, rendered to 480×320 transparent PNGs with headless Edge using `--default-background-color=00000000`):

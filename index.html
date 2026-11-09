@@ -524,7 +524,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p>Rabbit-Ears.stream is free online TV made from the Internet Archive. Over 60 channels play around the clock on a shared schedule, so everyone tuned in sees the same thing at the same moment, like broadcast TV. Watch vintage commercials and old TV shows, '80s and '90s Saturday morning cartoons, game shows, public-domain movies, drive-in horror and kung fu films, retro anime, classic sci-fi serials, music videos, educational films and Slow TV, with a TV guide, captions and channel numbers.</p>
     <p>The <a href="#radio">Radio</a> tab streams thousands of live radio stations from around the world: oldies, jazz, lo-fi, talk and all-Christmas stations. The <a href="#games">Games</a> tab has hundreds of classic Flash games, such as Line Rider, Bloxorz, QWOP, Papa's Pizzeria and Bloons Tower Defense, played right in your browser without the Flash plugin.</p>
   </details>
-  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a></footer>
+  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a></footer>
 </div>
 
 <script src="media-compatibility.js"></script>
@@ -683,6 +683,18 @@ const BLOCKED = new Set([
   "vhs-tape-56-1988-mtv-new-years-eve-ball-1989-american-music-awards-ufo-live-the-misdemeanor-tour@Strange Signals",
   "vhs-tape-vh1-8-mile-bet-american-gangsta-little-melvin-making-of-with-denzel-jay@Wild Kingdom",
   "VHS-1991-CBS-Block@Ringside",
+  // Adult and nudity items found in the older channels' pools (Nov 2026); those searches predate SAFE.
+  "hborealsex", "PlayboyTVPromo", "DRENCHEDAShortEroticFilmByPeterCoukis", "Mommartz_Altersporno_1970",
+  "watch-stripper-of-the-year-1997-retro-british-babe-porn-spank-bang", "meaningoflifesexeducation",
+  "stripper_variety_girls", "stripper_betty_rowland", "stripper_1", "stripper_georgia_sothern", "stripper_betty_howard",
+  "stripper_red-headed_riot", "stripper_chinese_joy_dance", "stripper_nora", "stripper_dance_of_desire", "stripper_yvonne_marthay",
+  "IndianLove", "AfroMood", "TrapezeStripper", "0717_Is_Your_Daughter_Safe_erotica_16_29_22_00",
+  "animehentai", "isekai-meikyuu-de-harem-wo-sub-indo", "Prison-School-", "youtube-vundh68Ghhc", "youtube-2hQCr0mj-ps",
+  "fetish-fever-amv-zest-feat.-shirahiko-you-tube-2", "sports-illustrated-swimsuit-1996", "bikini-summer-worldmkv",
+  "erotic-and-wacky-tunnel-of-time-1983", "sex.-with.-the.-stars.-1981.720p.-blu-ray.x-264.-aac-yts.-mx",
+  "youtube-5d0BppzXRcU", "youtube-kmBlwAFRFJU", "WildGalsOfTheNakedWest", "TheNakedWitch", "NakedMassacre1976",
+  "slumber.-party.-massacre.-iii.-1990.-unrated.-720p.-blu-ray.x-264-sadpanda", "sex_madness", "sex_madness_ACM", "Dr.Sex",
+  "sex.-hood.-skate.-and.-videotape.-2006.-dvdrip.x-264-kg",
 ]);
 const blocked = (id, ch) => BLOCKED.has(id) || BLOCKED.has(id + "@" + ch.name);
 // Hand-written titles for long, much-aired tapes whose uploaded titles are a jumble even after
