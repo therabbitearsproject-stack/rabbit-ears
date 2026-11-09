@@ -6,7 +6,7 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ## 2026-11-09 — TikTok account linked
 
-- Nick made the TikTok account @rabbitears.stream (Rabbit Ears Gmail) and posted the first two videos.
+- Made the TikTok account @rabbitears.stream (Rabbit Ears Gmail) and posted the first two videos.
 - Added a "🎵 TikTok @rabbitears.stream" link to the footer and listed the profile as `sameAs` in the JSON-LD, so search engines connect it to the site.
 - Recorded in RESOURCES.md.
 
