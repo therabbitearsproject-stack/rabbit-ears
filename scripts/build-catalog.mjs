@@ -12,6 +12,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { buildTrekPool } from "./trek-programming.mjs";
 import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
 import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
+import { buildPorchlightPool } from "./porchlight-programming.mjs";
 
 const POOL = 300;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -92,6 +93,14 @@ const pools = {}, coverage = {}, memberships = {}, unplayable = new Set();
 let looked = 0, reused = 0, failed = 0;
 for (const ch of BUILT_IN) {
   if (ch.library) {
+    if (ch.library === "porchlight-v1") {
+      const library = JSON.parse(await readFile(new URL("./porchlight-library.json", import.meta.url), "utf8"));
+      const codecs = JSON.parse(await readFile(new URL("./porchlight-codecs.json", import.meta.url), "utf8"));
+      pools[ch.q] = await buildPorchlightPool(library, codecs, id => getJSON("https://archive.org/metadata/" + encodeURIComponent(id)), pickSub, prev.pools?.[ch.q]);
+      console.log(`${ch.name}: ${pools[ch.q].length} reviewed episodes only`);
+      continue;
+    }
+    if (ch.library !== "star-trek-v1") throw new Error("Unknown reviewed library: " + ch.library);
     const library = JSON.parse(await readFile(new URL("./star-trek-library.json", import.meta.url), "utf8"));
     pools[ch.q] = await buildTrekPool(library, id => getJSON("https://archive.org/metadata/" + encodeURIComponent(id)), pickSub, prev.pools?.[ch.q]);
     console.log(`${ch.name}: ${pools[ch.q].length} reviewed full programs`);
@@ -188,6 +197,11 @@ for (const id of new Set(BUILT_IN.map(ch => ch.breaks?.library).filter(Boolean))
   if (id === "sci-fi-channel") {
     breakLibraries[id].bumpers.push(...bumpers.map(m => ({ ...m, role: "custom-bumper" })));
   }
+}
+if (breakLibraries.porchlight) {
+  const reserved = new Set(["CadburysCrunchieAdvert1988", "DietcokeAdvert1988", "coca-cola-advert", "tmnt-video", "disney-fantasia-vhs-advert", "sonic3mcdonaldsad", "mars-twix-a-break-from-the-norm-advert", "mc-donalds-hercules-happy-meal-commercial-1998480p", "TWAImrpovementsAdvert"]);
+  breakLibraries.porchlight.commercials.push(...commercials.filter(r => reserved.has(r[0])).map(([id,file,dur,title,year]) => ({id,file,dur,title,year,role:"vintage-commercial"})),
+    ...(breakLibraries["sci-fi-channel"]?.commercials || []).filter(m => m.role === "recorded-advertiser-spot"));
 }
 const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));

@@ -14,6 +14,11 @@ const CommercialTiming = (() => {
     return result;
   }
   function build(program, policy, ads, bumpers, seed) {
+    if (policy?.mix === "era") {
+      const year = Number(program.year), window = policy.eraWindow || 2;
+      ads = ads.filter(m => Number.isFinite(year) && Math.abs(Number(m.year) - year) <= window);
+      bumpers = bumpers.filter(m => !m.series || program.title.startsWith(m.series + " · "));
+    }
     const duration = program.dur, segments = []; let content = 0, t = 0, breakNo = 0;
     const append = (kind, media, length, offset = 0) => { segments.push({ kind, media, start: t, end: t + length, offset, index: segments.length }); t += length; };
     const interval = policy?.interval || duration;
@@ -70,10 +75,34 @@ const CommercialTiming = (() => {
   // A named channel library must never silently use another channel's breaks.
   function library(catalog, id) {
     const source = id ? catalog?.breakLibraries?.[id] : catalog;
+    const [first, last] = source?.yearRange || [1970, 1999];
     const commercials = (source?.commercials || []).map(r => Array.isArray(r)
       ? { id: r[0], file: r[1], dur: r[2], title: r[3], year: r[4], archiveId: r[6] } : r)
-      .filter(m => Number(m.year) >= 1970 && Number(m.year) <= 1999);
+      .filter(m => Number(m.year) >= first && Number(m.year) <= last);
     return { commercials, bumpers: source?.bumpers || [] };
   }
-  return { build, at, pack, cycle, library };
+  function program(media) {
+    let duration = 0;
+    const segments = media.cuts.map(([from, to], index) => {
+      const start = duration; duration += to - from;
+      return { kind: "program", media, start, end: duration, offset: from, index };
+    });
+    return { segments, duration };
+  }
+  function edit(timeline, media) {
+    const segments = [];
+    for (const segment of timeline.segments) {
+      if (segment.kind !== "program") { segments.push({ ...segment }); continue; }
+      let cursor = 0;
+      for (const [from,to] of media.cuts) {
+        const end = cursor + to - from;
+        const a = Math.max(cursor, segment.offset), b = Math.min(end, segment.offset + segment.end - segment.start);
+        if (b > a) segments.push({ ...segment, start: segment.start + a - segment.offset, end: segment.start + b - segment.offset, offset: from + a - cursor });
+        cursor = end;
+      }
+    }
+    segments.forEach((s,i) => s.index = i);
+    return { ...timeline, segments };
+  }
+  return { build, at, pack, cycle, library, program, edit };
 })();

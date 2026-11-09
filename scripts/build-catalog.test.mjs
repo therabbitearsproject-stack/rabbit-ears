@@ -17,6 +17,8 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
     await copyFile(new URL("caption-library.mjs", import.meta.url), join(dir, "scripts/caption-library.mjs"));
     await copyFile(new URL("commercial-library.mjs", import.meta.url), join(dir, "scripts/commercial-library.mjs"));
     await copyFile(new URL("channel-break-library.mjs", import.meta.url), join(dir, "scripts/channel-break-library.mjs"));
+    await copyFile(new URL("reviewed-episodes.mjs", import.meta.url), join(dir, "scripts/reviewed-episodes.mjs"));
+    await copyFile(new URL("porchlight-programming.mjs", import.meta.url), join(dir, "scripts/porchlight-programming.mjs"));
     await writeFile(join(dir, "index.html"), `const SAFE = \`\`;
 const BUILT_IN = [
  {name:"Trek", q:"trek", franchises:[{name:"Old crew", q:"old"}, {name:"New crew", q:"new"}]},
