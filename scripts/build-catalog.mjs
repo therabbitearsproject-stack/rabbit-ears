@@ -14,7 +14,7 @@ import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
 import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 import { buildPorchlightPool } from "./porchlight-programming.mjs";
 
-const POOL = 300;          // most-downloaded matches kept per channel
+const POOL = 400;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
 const UA = "RabbitEarsCatalog/1.0 (+https://github.com/therabbitearsproject-stack/rabbit-ears)";
 

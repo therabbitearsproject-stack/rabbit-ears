@@ -52,8 +52,8 @@ const BUILT_IN = [
     assert.deepEqual(result.coverage.trek, { "Old crew": 1, "New crew": 2 });
     assert.deepEqual(result.pools.offline, [oldRow], "failed searches preserve the previous pool");
     assert.ok(result.unplayable.includes("unplayable"));
-    assert.equal(searches.find(s => s.q.includes("ordinary")).rows, 300);
-    assert.ok(searches.filter(s => s.q.includes("trek")).every(s => s.rows === 100));
+    assert.equal(searches.find(s => s.q.includes("ordinary")).rows, 400);
+    assert.ok(searches.filter(s => s.q.includes("trek")).every(s => s.rows === 133));
     assert.equal(searches.filter(s => s.q.includes("trek")).length, 3);
   } finally {
     globalThis.fetch = originalFetch;

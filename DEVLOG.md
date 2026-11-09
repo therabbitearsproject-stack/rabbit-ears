@@ -4,6 +4,18 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Toward 20,000 hours
+
+Before this change the catalog held 20,702 unique videos, about 17,000 hours. The cap was the limit: the build kept only the top 300 matches per channel, and about 55 channels reached it.
+
+- `POOL` in `scripts/build-catalog.mjs` is now 400 (Starbase's three franchise searches get 133 each). The estimate is about 21,000+ hours. `catalog.json` grows from about 1.0 MB to about 1.35 MB compressed, and the daily build takes longer.
+- **Saturday Toons:** went from 81 videos (9 h) to about 500. It also takes Fleischer, Famous Studios, Terrytoons, Van Beuren, Iwerks, Popeye, Betty Boop, Casper and Felix from `animationandcartoons`.
+- **Deep Space:** went from 87 short items (9 h) to about 440. It now also covers space TV such as Space: 1999, UFO, Fireball XL5, Battlestar Galactica and Star Cops, plus a wider date range (1960–1999), with no collection limit. It excludes trailers, reviews, soundtracks, anime and two softcore titles. The description is now "Space movies and shows, '60s to '90s".
+- **World of Tomorrow:** went from 53 to about 120 videos. It added world's fairs, Futurama and Motorama, automation, the space age, atomic power and computers, limited to 1933–1969 so the stray 1980s and 1990s items drop out.
+- `SAFE` now also blocks a racist-slur film title that the Deep Space search found.
+
+---
+
 ## 2026-11-09 — Classic films with "Naked" in the title are back
 
 The safety filter blocked any title containing "naked" or "nude", which also caught real classics. It now relies on the Archive's subject tags (nude, erotica, sexploitation, nudie, softcore and the rest) for nudity, and no longer on the title word, so *The Naked City*, *The Naked Kiss*, *Naked Alibi*, *The Naked Street*, *The Naked Island* and the *Naked City* TV series can play again. Porn, hentai, sexualized minors and hate content stay blocked: the title words for those are unchanged, and so is the blocklist.
