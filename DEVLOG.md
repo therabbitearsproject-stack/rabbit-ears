@@ -23,7 +23,11 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
   hate and gore words. What's left is harmless (X-Files fan videos by "Media Cannibals", MST3K's Robot Holocaust,
   Josie and the Pussycats, Ken Burns' The U.S. and the Holocaust).
 - Changing the searches changes the catalog keys, so the 23 channels fall back to live searches until the
-  catalog rebuilds (started by hand after this push).
+  catalog rebuilds. A GitHub Actions outage (Nov 9, ~18:10–18:30 UTC, "Internal server error" before any job
+  started) blocked the hand-started rebuild; the daily 09:17 UTC run or the next push will do it.
+- The workflow now rebuilds the catalog on its own when a push changes a channel's search (a `q:` line or
+  `SAFE` in index.html) or the workflow file, so new or edited channels get their pools without a manual run.
+- Resubmitted the 408-URL sitemap to Bing Webmaster Tools and Google Search Console.
 
 ---
 
