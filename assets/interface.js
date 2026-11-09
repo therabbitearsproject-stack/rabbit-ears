@@ -144,9 +144,10 @@
   }
   const exit=button('Exit fullscreen',exitFull);exit.innerHTML=icon('exit');exit.title='Exit fullscreen';exit.setAttribute('aria-label','Exit fullscreen');fullRemote.append(exit);
   fullControls.append(fullStation,fullTitle,fullNext,fullRemote);screen.append(fullControls);
+  captionUI.syncButtons();
   function reveal(){
     clearTimeout(idleTimer);body.classList.remove('controls-idle');
-    if(full)idleTimer=setTimeout(()=>{if(!fullControls.contains(document.activeElement))body.classList.add('controls-idle');},3000);
+    if(full)idleTimer=setTimeout(()=>{if(!fullControls.contains(document.activeElement)&&document.getElementById('caption-options').hidden)body.classList.add('controls-idle');},3000);
   }
   async function enterFull(){
     if(mode!=='tv')return;showChannel();full=true;body.classList.add('player-fullscreen');reveal();
@@ -161,6 +162,7 @@
   document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&full)exitFull();});
   document.addEventListener('webkitfullscreenchange',()=>{if(!document.webkitFullscreenElement&&full)exitFull();});
   screen.addEventListener('pointermove',reveal);screen.addEventListener('pointerdown',e=>{if(full&&body.classList.contains('controls-idle')){e.preventDefault();reveal();}});screen.addEventListener('touchstart',reveal,{passive:true});fullControls.addEventListener('focusin',reveal);fullControls.addEventListener('focusout',()=>setTimeout(reveal));
+  screen.addEventListener('captionmenuopen',reveal);
   const symbols={down:['down','Previous channel'],up:['up','Next channel'],surf:['shuffle','Random channel'],back:['rewind','Back 15 seconds'],fwd:['forward','Forward 15 seconds'],pause:['pause','Pause'],mute:['mute','Sound off'],cc:['cc','Captions'],full:['full','Fullscreen'],share:['share','Share channel'],report:['flag','Report tape'],gFull:['full','Fullscreen'],gShare:['share','Share game'],gReport:['flag','Report game']};
   function refreshSymbols(){for(const [id,[base,label]] of Object.entries(symbols)){
     const b=$(id);if(!b)continue;let name=base, accessible=b.getAttribute('aria-label')||label;
@@ -186,6 +188,7 @@
   const stereoBadge=make('span','stereo-badge','RE AUDIO / FM STEREO');radioSet.append(stereoBadge);
   audio.addEventListener('playing',()=>body.classList.add('radio-playing'));audio.addEventListener('pause',()=>body.classList.remove('radio-playing'));
   document.addEventListener('keydown',e=>{
+    if(e.target.closest('#caption-options'))return;
     if(document.querySelector('dialog[open]')||!$('welcome').hidden)return;
     if(e.key==='Escape'&&mode==='tv'){if(full){e.preventDefault();e.stopImmediatePropagation();exitFull();}else if(body.dataset.tvPage==='channel'){e.preventDefault();e.stopImmediatePropagation();showGuide();}return;}
     if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;

@@ -1,0 +1,22 @@
+/* Arial, video-relative sizing (6.25% font / 7.5% line height), safe margins.
+   EBU Tech 3380 and W3C media accessibility guidance; backing is user optional. */
+#screen .caption-layer{position:absolute;z-index:14;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;pointer-events:none;font-family:Arial,Helvetica,sans-serif;font-weight:600;font-style:normal;line-height:1.2;letter-spacing:normal;text-transform:none;color:#fff;text-align:center;overflow:visible}
+#screen .caption-layer[hidden],#screen .caption-options[hidden]{display:none}
+.caption-block{max-width:100%;white-space:pre-line;overflow-wrap:break-word}
+.caption-text{color:inherit;background:transparent;padding:.04em .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-text-stroke:.06em #000;paint-order:stroke fill;text-shadow:0 .06em .1em #000}
+#screen .caption-layer[data-color=yellow]{color:#ffff00}
+.caption-layer[data-backing=true] .caption-text{background:rgba(0,0,0,.85);-webkit-text-stroke:0;text-shadow:none}
+#screen .caption-options{position:absolute;z-index:20;right:5%;bottom:8.33%;max-width:90%;padding:12px;border:1px solid #aaa;border-radius:5px;background:#181818;color:#fff;box-shadow:0 4px 16px #0008;font:14px/1.3 Arial,Helvetica,sans-serif;text-shadow:none;letter-spacing:normal}
+.caption-options-title{font-weight:700;margin-bottom:8px}
+.caption-color-options{display:flex;gap:6px}
+.caption-color-options button{appearance:none;min-height:44px;min-width:44px;flex:1;border:1px solid #888;border-radius:3px;background:#292929;color:#fff;padding:8px;font:600 14px Arial,Helvetica,sans-serif;cursor:pointer}
+.caption-color-options [data-caption-choice=yellow]{color:#ffff00}
+.caption-color-options [aria-checked=true]{border-color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.caption-color-options button:focus-visible,.caption-backing-option input:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.caption-backing-option{display:flex;align-items:center;gap:8px;min-height:44px;margin-top:6px;cursor:pointer;color:#fff}
+.caption-backing-option input{width:18px;height:18px;accent-color:#fff;margin:0}
+/* Native picture-in-picture/system fullscreen fallback; site fullscreen uses
+   the DOM layer above so browser caption preferences cannot replace its style. */
+.screen video::cue{font-family:Arial,Helvetica,sans-serif;font-size:var(--caption-font-size,1em);font-weight:600;color:#fff;background:transparent;text-shadow:1px 1px 1px #000,-1px -1px 1px #000}
+.screen video[data-caption-color=yellow]::cue{color:#ffff00}
+.screen video[data-caption-backing=true]::cue{background:rgba(0,0,0,.85)}
