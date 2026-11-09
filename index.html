@@ -527,7 +527,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </div>
 
 <script src="media-compatibility.js"></script>
-<script src="commercial-timing.js?v=porchlight-era-4"></script>
+<script src="commercial-timing.js?v=trek-lighter-breaks-5"></script>
 <script src="assets/captions.js?v=caption-size-2"></script>
 <script>
 // ---------- Channels ----------
@@ -535,7 +535,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 // podcasts, no TV-news recordings.
 const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
-  { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { library: "sci-fi-channel", mix: "trek-first", vintageEvery: 3, interval: 600, target: 180, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
+  { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { library: "sci-fi-channel", mix: "trek-first", vintageEvery: 3, maxAds: 3, interval: 900, target: 120, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },

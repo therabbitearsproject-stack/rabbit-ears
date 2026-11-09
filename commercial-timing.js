@@ -1,14 +1,16 @@
 // Pure shared-clock planning: commercials belong to a show's slot, never the TV guide.
 const CommercialTiming = (() => {
   const hash = value => { let n = 2166136261; for (const c of String(value)) { n ^= c.charCodeAt(0); n = Math.imul(n, 16777619); } return n >>> 0; };
-  function pack(ads, target, seed) {
+  function pack(ads, target, seed, { unique = false, maxSpots = 30 } = {}) {
     const order = ads.map(media => ({ media, rank: hash(seed + media.id) }))
       .sort((a, b) => a.rank - b.rank || a.media.id.localeCompare(b.media.id)).map(a => a.media);
-    const result = []; let remaining = target;
-    for (let cycle = 0; cycle < 30 && remaining >= 8; cycle++) {
-      const next = order.find(a => a.dur <= remaining + .001 && (result.length === 0 || a.id !== result.at(-1).id));
+    const result = [], usedIds = new Set(), usedFiles = new Set(); let remaining = target;
+    for (let cycle = 0; cycle < 30 && result.length < maxSpots && remaining >= 8; cycle++) {
+      const next = order.find(a => a.dur <= remaining + .001 && (result.length === 0 || a.id !== result.at(-1).id) &&
+        (!unique || (!usedIds.has(a.id) && (!a.file || !usedFiles.has(a.file)))));
       if (!next) break;
       result.push(next); remaining -= next.dur;
+      usedIds.add(next.id); if (next.file) usedFiles.add(next.file);
       order.push(...order.splice(order.indexOf(next), 1));
     }
     return result;
@@ -39,7 +41,7 @@ const CommercialTiming = (() => {
         const vintage = number % (policy.vintageEvery || 3) === (policy.vintageEvery || 3) - 1
           ? choose(ads.filter(m => m.role !== "star-trek-commercial" && m.dur <= budget), ":vintage") : null;
         if (vintage) budget -= vintage.dur;
-        const spots = pack(trek, budget, key);
+        const spots = pack(trek, budget, key, { unique: true, maxSpots: (policy.maxAds || 3) - (vintage ? 1 : 0) });
         if (vintage) spots.splice(hash(key + ":insert") % (spots.length + 1), 0, vintage);
         if (bookends[0]) append("bumper", bookends[0], bookends[0].dur);
         for (const ad of spots) append("commercial", ad, ad.dur);

@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 const timing = new Function(await readFile(new URL("../commercial-timing.js", import.meta.url), "utf8") + ";return CommercialTiming")();
+const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const trekPolicy = new Function("return (" + html.match(/name: "Subspace 97"[^\n]*?breaks: (\{[^}]+\})/)[1] + ")")();
 
 test("SCI FI breaks are complete, checksum verified and isolated from the reserved library", async () => {
   const library = await loadChannelBreakLibrary("sci-fi-channel");
@@ -26,11 +28,14 @@ test("SCI FI breaks are complete, checksum verified and isolated from the reserv
   assert.deepEqual(catalog.commercials, reserved);
 });
 
-test("Trek mix restores custom bumpers, limits vintage ads and keeps full breaks near three minutes", async () => {
+test("Subspace uses fewer, shorter breaks with at most three unique complete ads", async () => {
   const library = await loadChannelBreakLibrary("sci-fi-channel");
   const facts = JSON.parse(await readFile(new URL("../assets/trek-bumpers/facts.json", import.meta.url), "utf8"));
   const custom = facts.map(f => ({ id: f.id, dur: 15, role: "custom-bumper" }));
-  const policy = { mix: "trek-first", vintageEvery: 3, interval: 600, target: 180, minTail: 120 };
+  const policy = trekPolicy;
+  assert.equal(policy.interval, 900);
+  assert.equal(policy.target, 120);
+  assert.equal(policy.maxAds, 3);
   for (let seed = 0; seed < 100; seed++) {
     const make = () => timing.build({ id: "episode", dur: 6000 }, policy, library.commercials, [...library.bumpers, ...custom], "slot" + seed);
     const plan = make();
@@ -47,12 +52,36 @@ test("Trek mix restores custom bumpers, limits vintage ads and keeps full breaks
       const vintage = segments.filter(s => s.kind === "commercial" && s.media.role !== "star-trek-commercial");
       assert.equal(vintage.length, i % 3 === 2 ? 1 : 0);
       const duration = segments.reduce((n, s) => n + s.end - s.start, 0);
-      // The shortest alternate spot is 10.56s; don't repeat the last ad to fill that final gap.
-      assert.ok(duration >= policy.target - 11 && duration <= policy.target + .001, "complete spots keep break near 180 seconds: " + duration);
+      assert.ok(duration > 0 && duration <= policy.target + .001, "two-minute limit includes both bumpers");
+      const ads = segments.filter(s => s.kind === "commercial");
+      assert.ok(ads.length <= 3);
+      assert.equal(new Set(ads.map(s => s.media.id)).size, ads.length, "no ad repeats inside a break");
+      assert.equal(new Set(ads.map(s => s.media.file)).size, ads.length, "aliases cannot repeat the same video");
       for (const s of segments) assert.ok(Math.abs(s.end - s.start - s.media.dur) < .00001);
     }
     const program = plan.segments.filter(s => s.kind === "program");
-    assert.deepEqual(program.map(s => s.offset), Array.from({ length: 10 }, (_, i) => i * 600));
+    assert.deepEqual(program.map(s => s.offset), Array.from({ length: 7 }, (_, i) => i * 900));
     assert.ok(Math.abs(program.reduce((n, s) => n + s.end - s.start, 0) - 6000) < .00001);
+  }
+});
+
+test("a 44-minute Subspace episode now has two breaks and retains every second of the episode", () => {
+  const program = { id: "episode", dur: 2640 };
+  const ads = [{ id: "short", file: "short.mp4", dur: 10, role: "star-trek-commercial" }];
+  const plan = timing.build(program, trekPolicy, ads, [], "single-ad");
+  assert.equal(plan.segments.filter(s => s.kind === "commercial").length, 2, "one available ad plays once in each of two breaks");
+  assert.deepEqual(plan.segments.filter(s => s.kind === "program").map(s => s.offset), [0,900,1800]);
+  assert.equal(plan.duration, 2660, "short breaks finish rather than repeating ads to pad the target");
+});
+
+test("unique packing rejects duplicate IDs and duplicate video files without truncating spots", () => {
+  const ads = [{ id: "a", file: "a.mp4", dur: 10 }, { id: "a", file: "alternate.mp4", dur: 10 },
+    { id: "alias", file: "a.mp4", dur: 10 }, { id: "b", file: "b.mp4", dur: 30 }];
+  for (let seed = 0; seed < 100; seed++) {
+    const result = timing.pack(ads, 120, "seed" + seed, { unique: true, maxSpots: 3 });
+    assert.ok(result.length <= 3);
+    assert.equal(new Set(result.map(m => m.id)).size, result.length);
+    assert.equal(new Set(result.map(m => m.file)).size, result.length);
+    assert.ok(result.every(m => m.dur === 10 || m.dur === 30));
   }
 });
