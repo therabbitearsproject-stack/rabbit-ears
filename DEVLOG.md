@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Listed on Bing
+
+- Added rabbit-ears.stream to Bing Webmaster Tools (Rabbit Ears Gmail, signed in with Google). Bing also feeds DuckDuckGo and Yahoo.
+- Verified with a `msvalidate.01` meta tag in `index.html`'s head instead of the "import from Google" button, so Bing didn't need access to the Google account.
+- Submitted `sitemap.xml` and the homepage for indexing.
+- Recorded in RESOURCES.md.
+
+---
+
 ## 2026-11-08 — Eye-and-number viewer count beneath channel number
 
 Moved the guide's viewer count into the channel-number column and rendered an eye
