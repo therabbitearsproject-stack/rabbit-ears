@@ -9,6 +9,7 @@
 // Run: node scripts/build-games.mjs   (Node 18+; no packages needed)
 
 import { readFile, writeFile } from "node:fs/promises";
+import { STYLES, SHELF_STYLE, stylesFor } from "./game-styles.mjs";
 
 const PER_SHELF = 60;
 const CONCURRENCY = 6;
@@ -28,6 +29,11 @@ const CLASSICS = [
   "flash_alien_hominid", "tiq2_swf", "supersmashflash_swf", "etp_20200826", "mother_load", "desktop-tower-defence_flash",
   "snailbob_flash", "achievementflash", "this-is-the-only-level", "ducklife2worldchampion_flash", "nv-12", "tetris_20201126",
   "frogger_swf", "shopping-cart-hero", "bubble-shooter_swf", "super-mario-flash-2", "dragracerv3_202012",
+  // Added November 2026, each tested in Ruffle.
+  "2611-territory-war", "Example_flash13", "fireboy-and-watergirl-3-in-the-ice-temple",
+  "fireboy-and-watergirl-4-in-the-crystal-temple", "gemcraft-1716", "toss_the_turtle_flash", "moto-x3m_202309", "sushi-cat-2",
+  "ragdollcannon2_flash", "redremover_flash", "wonderputt-kongregate", "duck-life-4_20210406", "jacksmithflashgame",
+  "sugarsugar_flash", "warfare-1917", "worlds-hardest-game", "penguin_diner", "tank-trouble_flash", "bloons-td-5_202205", "miniputt",
 ];
 
 const SHELVES = [
@@ -71,7 +77,7 @@ async function gameRow(id) {
   const blob = (title + " " + [].concat(d.metadata?.subject || []).join(" ")).toLowerCase();
   // A second check on the full tags, which the search can't always see.
   if (/\b(nude|naked|sex|sexy|porn|hentai|erotic|nsfw|stripper|fetish|gore|mutilat\w*|tortur\w*|suicide|hitler|nazi|screamer|rape|shit|fuck\w*|flirt\w*|sperm|whack your|pico's school|happy wheels|madness)\b/.test(blob)) return null;
-  return [id, file, title, year, mb];
+  return [id, file, title, year, mb, stylesFor(id, d.metadata?.title, d.metadata?.subject, d.metadata?.description)];
 }
 async function pool(fn, items) {
   const out = new Array(items.length); let next = 0;
@@ -102,15 +108,24 @@ for (const s of SHELVES) {
   }
   const rows = await pool(async id => {
     if (pulled.has(id)) return null;
-    if (known.has(id)) { reused++; return known.get(id); }
+    // Rows from before styles existed (5 fields) are looked up again once.
+    if (known.get(id)?.length >= 6) { reused++; return known.get(id); }
     looked++;
     try { const r = await gameRow(id); known.set(id, r); return r; } catch { failed++; return null; }
   }, ids);
   const keep = rows.filter(Boolean).slice(0, s.ids ? undefined : PER_SHELF);
-  for (const [id, file, title, year, mb] of keep) games[id] = [file, title, year, mb];
+  for (const [id, file, title, year, mb, styles] of keep) games[id] = [file, title, year, mb, styles];
   shelves.push({ name: s.name, icon: s.icon, ids: keep.map(r => r[0]) });
   console.log(`${s.icon} ${s.name}: ${keep.length} games`);
 }
 
-await writeFile(new URL("../games.json", import.meta.url), JSON.stringify({ generated: new Date().toISOString(), shelves, games }));
+// Games with no style of their own take their search shelf's style (Puzzle & brain → Puzzle, …).
+for (const s of shelves) if (SHELF_STYLE[s.name]) for (const id of s.ids) if (!games[id][4]?.length) games[id][4] = [SHELF_STYLE[s.name]];
+
+// Every game on any shelf, in shelf order, so the style filter can look across all of them.
+shelves.push({ name: "All games", icon: "🎮", ids: Object.keys(games) });
+for (const s of STYLES) console.log(`${s.icon} ${s.name}: ${Object.values(games).filter(g => g[4]?.includes(s.key)).length}`);
+console.log(`no style: ${Object.values(games).filter(g => !g[4]?.length).length}`);
+
+await writeFile(new URL("../games.json", import.meta.url), JSON.stringify({ generated: new Date().toISOString(), styles: STYLES, shelves, games }));
 console.log(`games: ${Object.keys(games).length} total; ${looked} looked up, ${reused} reused, ${failed} failed; ${pulled.size} pulled by reports`);

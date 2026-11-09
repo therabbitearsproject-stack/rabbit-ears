@@ -4,6 +4,45 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — 20 more Flash games and a style filter
+
+**Twenty new games on the Classics shelf.** Each one loaded in the site's own Ruffle player, with no crash panel after 7 seconds, and each is under the 25 MB size limit:
+- Territory War
+- Electric Man 2
+- Fireboy and Watergirl 3 (Ice Temple) and 4 (Crystal Temple)
+- GemCraft
+- Toss the Turtle
+- Moto X3M
+- Sushi Cat 2
+- Ragdoll Cannon 2
+- Red Remover
+- Wonderputt
+- Duck Life 4
+- Jacksmith
+- Sugar, Sugar
+- Warfare 1917
+- World's Hardest Game
+- Penguin Diner
+- Tank Trouble
+- Bloons TD 5
+- Mini Putt
+
+Tested but left out:
+- Too big: Fancy Pants Adventure World 3 (35 MB) and Epic Battle Fantasy 4 and 5 (36 MB and 137 MB).
+- Not needed: Interactive Buddy, Wii Tanks, Shift, Johnny Upgrade and Doodle Jump all worked, but weren't needed to reach 20.
+
+**Style filter.** The Games tab has a new "Style" row under the shelves, with 16 styles: Platformer, Puzzle, Physics & launch, Tower defense, Strategy, Shooter, Arcade & action, Fighting, Racing & driving, Sports, RPG & adventure, Point & click, Cooking & business, Quiz & trivia, Two-player, and Sandbox & toys.
+- It narrows whichever shelf is open, shows a count for each style, and hides styles with no games on that shelf.
+- It's remembered per browser, and 🎲 Random game picks from the filtered list.
+- It hides during a search, because search results come straight from the Archive without styles.
+- A new 🎮 All games shelf holds every game, so a filter can look across all of them.
+- Styles come from `scripts/game-styles.mjs`. Hand-set styles cover the Classics. Other games get up to 3 styles from their title, Archive tags and the start of the description; a game with none takes its search shelf's style (Puzzle & brain → Puzzle and so on).
+- `games.json` rows gain a 5th field, the style list, plus a top-level `styles` list. Rows from before this change are looked up again once.
+- Tests are in `scripts/game-styles.test.mjs`. The channel and game page generator ignores the All games shelf.
+- In a local check that used titles only, about 71 of 331 games were still unstyled. Archive tags and descriptions in the real build should bring that down.
+
+---
+
 ## 2026-11-09 — Problems page on the iPhone home screen
 
 `/problems/` now has the Rabbit Ears home-screen icon and the title "RE Problems", and opens full screen when it's added from Safari's Share → Add to Home Screen. The main site already supported this.

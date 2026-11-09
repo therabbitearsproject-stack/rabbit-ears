@@ -154,7 +154,7 @@ ${byBand.map(([name, cs]) => `<section class="band"><h2>${esc(name)}</h2><ul cla
 
   // ---- games ----
   const shelvesOf = new Map();
-  for (const s of games.shelves || []) for (const id of s.ids || []) {
+  for (const s of games.shelves || []) if (s.name !== "All games") for (const id of s.ids || []) {
     if (!shelvesOf.has(id)) shelvesOf.set(id, []);
     shelvesOf.get(id).push(s.name);
   }
@@ -194,7 +194,7 @@ ${related.length ? `<h2>More ${esc(shelf)} games</h2><ul class="grid">${related.
   {
     const path = "/games/", title = `${gameList.length} classic Flash games to play free — Rabbit-Ears.stream`;
     const description = `Line Rider, Bloxorz, QWOP, Papa's Pizzeria, Bloons and hundreds more classic Flash games, free in your browser with no plugin.`;
-    const shelfNames = (games.shelves || []).map(s => s.name);
+    const shelfNames = (games.shelves || []).map(s => s.name).filter(n => n !== "All games");
     out.push({ path, html: page({ path, title, description, image: ORIGIN + "/og.jpg", imageAlt: "Rabbit-Ears.stream",
       jsonld: { "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: ORIGIN + path },
       body: `<p class="kicker">Games</p><h1>${gameList.length} classic Flash games</h1><p class="lede">${esc(description)}</p>

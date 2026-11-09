@@ -261,6 +261,12 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 .chip:hover { border-color: var(--amber); }
 .chip[aria-pressed="true"] { background: var(--amber); color: #1a1208; border-color: var(--amber); }
 .chip:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.gstyles { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.gstyles .k { font: 600 .75rem var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.chip.sm { min-height: 32px; padding: 5px 10px; font-size: .8rem; background: transparent; }
+.chip.sm small { color: var(--dim); font-weight: 500; margin-left: 3px; }
+.chip.sm[aria-pressed="true"] { background: var(--amber); color: #1a1208; border-color: var(--amber); }
+.chip.sm[aria-pressed="true"] small { color: inherit; }
 form.rsearch { display: grid; grid-template-columns: 1fr 12rem auto; gap: 8px; }
 form.rsearch input, form.rsearch select { min-width: 0; background: var(--bg); border: 1px solid var(--line); color: var(--ink); border-radius: 10px; padding: 12px; font: inherit; }
 .stations { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 8px; }
@@ -389,6 +395,10 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <section class="guide">
       <div class="guide-head"><h3>Game shelves</h3><span class="hint" id="gCount"></span></div>
       <div class="genres" id="gShelves" role="group" aria-label="Game shelves"></div>
+      <div class="gstyles" id="gStylesWrap" hidden>
+        <span class="k">Style</span>
+        <div class="genres" id="gStyles" role="group" aria-label="Filter by game style"></div>
+      </div>
       <form class="rsearch gsearch" id="gSearch">
         <input id="gQuery" type="search" placeholder="Search 6,000+ Flash games, e.g. Bloons, Fancy Pants" aria-label="Search games">
         <button class="btn" type="submit">Search</button>
@@ -1693,7 +1703,7 @@ async function renderNow() {
 // Ruffle (the Flash emulator) is only downloaded the first time someone opens the Games tab.
 const GAME_BASE = "collection:softwarelibrary_flash_games";
 const GAME_BAD = `(nude OR nudity OR naked OR sex OR sexy OR porn OR hentai OR erotic OR nsfw OR strip OR stripper OR boobs OR breast OR bikini OR lingerie OR fetish OR adult OR "18+" OR xxx OR gore OR mutilate OR torture OR suicide OR shooting OR hitler OR nazi OR virus OR idiot OR screamer OR "scary maze" OR jumpscare OR rape OR drug OR drugs OR weed OR cocaine OR dating OR kissing OR "kiss" OR "hot girl" OR whack OR shit OR fuck OR flirt OR flirting OR sperm OR "saw game" OR blood OR bloody OR massacre OR "road of the dead" OR babe OR babes OR beer OR drunk OR "pico's school" OR "happy wheels" OR madness)`;
-let gamesData = null, gPlayer = null, gCur = null, gShelf = store.get("re_gshelf", "Classics"), gSearchResults = null;
+let gamesData = null, gPlayer = null, gCur = null, gShelf = store.get("re_gshelf", "Classics"), gSearchResults = null, gStyle = store.get("re_gstyle", "");
 let gFavs = store.get("re_gfavs", []), gRecent = store.get("re_grecent", []);
 const gameRoom = id => "game-" + hash(id).toString(36);
 async function loadGames() {
@@ -1793,11 +1803,39 @@ function renderGameShelves() {
     c.onclick = () => { gSearchResults = null; $("gQuery").value = ""; gShelf = s.name; store.set("re_gshelf", gShelf); renderGameShelves(); };
     $("gShelves").append(c);
   }
-  const ids = gSearchResults || shelves.find(s => s.name === gShelf)?.ids || shelves[2]?.ids || [];
+  const shelfIds = gSearchResults || shelves.find(s => s.name === gShelf)?.ids || shelves[2]?.ids || [];
+  // Style filter: narrows whichever shelf is open. Search results come straight from the Archive
+  // without styles, so the row hides while searching.
+  const styles = gamesData?.styles || [];
+  const showStyles = !gSearchResults && styles.length > 0 && shelfIds.length > 0;
+  $("gStylesWrap").hidden = !showStyles;
+  if (showStyles) {
+    const n = Object.fromEntries(styles.map(s => [s.key, shelfIds.filter(id => gameStyles(id).includes(s.key)).length]));
+    const chip = (key, label, count) => {
+      const c = Object.assign(document.createElement("button"), { type: "button", className: "chip sm" });
+      c.append(label); if (count !== undefined) c.append(Object.assign(document.createElement("small"), { textContent: count }));
+      c.setAttribute("aria-pressed", String(gStyle === key));
+      c.onclick = () => { gStyle = gStyle === key && key ? "" : key; store.set("re_gstyle", gStyle); renderGameShelves(); };
+      return c;
+    };
+    $("gStyles").replaceChildren(chip("", "All styles"), ...styles.filter(s => n[s.key] || s.key === gStyle).map(s => chip(s.key, `${s.icon} ${s.name}`, n[s.key])));
+  }
+  const style = showStyles && styles.find(s => s.key === gStyle);
+  const ids = gVisibleIds();
   $("gGrid").replaceChildren(...ids.map(gameCard));
-  if (!ids.length) $("gGrid").append(Object.assign(document.createElement("p"), { className: "hint", textContent: gSearchResults ? "No games found. Try another search." : gShelf === "Favorites" ? "No favorites yet. Play a game and tap ☆ Favorite." : "Nothing here yet." }));
-  $("gCount").textContent = ids.length ? `${ids.length} games` : "";
+  if (!ids.length) $("gGrid").append(Object.assign(document.createElement("p"), { className: "hint", textContent: gSearchResults ? "No games found. Try another search."
+    : style ? `No ${style.name.toLowerCase()} games on this shelf. Try 🎮 All games, or All styles.`
+    : gShelf === "Favorites" ? "No favorites yet. Play a game and tap ☆ Favorite." : "Nothing here yet." }));
+  $("gCount").textContent = ids.length ? `${ids.length} games${style ? " · " + style.name : ""}` : "";
   markGameCard(); paintCounts();
+}
+// The games the grid shows right now: the search results, or the open shelf narrowed by the style filter.
+function gameStyles(id) { return gamesData?.games?.[id]?.[4] || []; }
+function gVisibleIds() {
+  if (gSearchResults) return gSearchResults;
+  const shelves = [{ name: "Favorites", ids: gFavs }, { name: "Recent", ids: gRecent }, ...(gamesData?.shelves || [])];
+  const ids = shelves.find(s => s.name === gShelf)?.ids || shelves[2]?.ids || [];
+  return gStyle && gamesData?.styles?.some(s => s.key === gStyle) ? ids.filter(id => gameStyles(id).includes(gStyle)) : ids;
 }
 $("gSearch").onsubmit = async e => {
   e.preventDefault();
@@ -1813,7 +1851,7 @@ $("gSearch").onsubmit = async e => {
   } catch { gSearchResults = []; }
   renderGameShelves();
 };
-$("gRandom").onclick = () => { const ids = gSearchResults || [{ name: "Favorites", ids: gFavs }, { name: "Recent", ids: gRecent }, ...(gamesData?.shelves || [])].find(s => s.name === gShelf)?.ids || []; if (ids.length) playGame(ids[Math.floor(Math.random() * ids.length)]); };
+$("gRandom").onclick = () => { const ids = gVisibleIds(); if (ids.length) playGame(ids[Math.floor(Math.random() * ids.length)]); };
 $("gStop").onclick = () => { stopGame(); history.replaceState(null, "", "#games"); };
 $("gFav").onclick = () => { if (!gCur) return; gFavs = gFavs.includes(gCur) ? gFavs.filter(x => x !== gCur) : [gCur, ...gFavs]; store.set("re_gfavs", gFavs); paintFav(); if (gShelf === "Favorites" && !gSearchResults) renderGameShelves(); };
 $("gFull").onclick = () => { const s = $("gScreen"); (s.requestFullscreen || s.webkitRequestFullscreen)?.call(s)?.catch?.(() => {}); };
