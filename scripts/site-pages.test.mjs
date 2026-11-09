@@ -23,6 +23,6 @@ test("builds a page for every channel and game, with no adult titles listed", as
   assert.ok(paths.includes("/channels/") && paths.includes("/games/"));
   assert.ok(paths.filter(p => p.startsWith("/games/")).length > 100);
   const listed = pages.flatMap(p => [...p.html.matchAll(/<li>([^<]*)<\/li>/g)].map(m => m[1]));
-  assert.deepEqual(listed.filter(t => /\b(sex|porn|stripper|hentai|erotic|naked)\b/i.test(t)), []);
+  assert.deepEqual(listed.filter(t => /\b(sex|porn|stripper|hentai|erotic|nude)\b/i.test(t)), []);
   assert.equal((sitemap.match(/<loc>/g) || []).length, pages.length + 1);
 });

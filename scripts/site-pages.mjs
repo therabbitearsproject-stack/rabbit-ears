@@ -19,7 +19,7 @@ export function cleanTitle(t) {
   return s.length > 90 ? s.slice(0, 87).replace(/\s+\S*$/, "") + "…" : s;
 }
 // Titles that shouldn't be advertised on a public page even when the tape itself is harmless.
-const ADULT = /\b(sex|sexy|sexual|nude|nudity|naked|erotic|erotica|porn|playboy|penthouse|strip|stripper|striptease|xxx|fetish|bikini|lingerie|topless|hustler|swimsuit|burlesque|uncensored|unrated|hentai|harem)\b/i;
+const ADULT = /\b(sex|sexy|sexual|nudity|erotic|erotica|porn|playboy|penthouse|strip|stripper|striptease|xxx|fetish|bikini|lingerie|topless|hustler|swimsuit|burlesque|uncensored|unrated|hentai|harem)\b/i;
 const usable = t => t && /[a-z]{3}/i.test(t) && !/\?{3}/.test(t) && !ADULT.test(t);
 
 const STYLE = `

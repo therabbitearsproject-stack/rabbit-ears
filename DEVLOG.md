@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Classic films with "Naked" in the title are back
+
+The safety filter blocked any title containing "naked" or "nude", which also caught real classics. It now relies on the Archive's subject tags (nude, erotica, sexploitation, nudie, softcore and the rest) for nudity, and no longer on the title word, so *The Naked City*, *The Naked Kiss*, *Naked Alibi*, *The Naked Street*, *The Naked Island* and the *Naked City* TV series can play again. Porn, hentai, sexualized minors and hate content stay blocked: the title words for those are unchanged, and so is the blocklist.
+
+- Checked the newly allowed titles on After Dark, Drive-In, Creature Feature, Kung Fu Theater, Rerun Alley, Brit TV, Anime Station and Mission Control. Two junk anime videos turned up and were added to `BLOCKED`. The other channels couldn't be checked because the Archive's search was timing out; the next catalog build picks up the change on its own.
+- The channel pages' title filter (`scripts/site-pages.mjs`) dropped "naked" and "nude" to match.
+
+---
+
 ## 2026-11-09 — Safety review of every channel
 
 - Every channel's search now ends with `SAFE`. The 23 older channels (Ephemera, Ad Break, Rerun Alley, Drive-In,

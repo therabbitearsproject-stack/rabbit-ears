@@ -534,7 +534,8 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 // ---------- Channels ----------
 // Added to every channel's search so it stays safe to leave on: no adult content, hentai, Nazi
 // propaganda, audio podcasts or TV-news recordings. (Adult Swim uses it without the word "adult".)
-const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR porno OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini OR ecchi OR sexploitation OR nudie OR softcore OR "x-rated" OR xxx OR burlesque OR "h-anime" OR hanime OR lolicon OR shotacon OR yaoi OR nazi OR "neo-nazi" OR "white power") AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult OR porno OR hentai OR hanime OR ecchi OR xxx OR "x-rated" OR teaserama OR "boku no pico" OR seieki OR "2 girls 1 cup" OR oppai OR "mein kampf" OR "horst wessel" OR hitler OR "third reich" OR "uncle bane") AND NOT collection:tvnews`;
+// Nudity is filtered by subject tag, not title word, so classics like The Naked City and The Naked Kiss stay in.
+const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR porno OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini OR ecchi OR sexploitation OR nudie OR softcore OR "x-rated" OR xxx OR burlesque OR "h-anime" OR hanime OR lolicon OR shotacon OR yaoi OR nazi OR "neo-nazi" OR "white power") AND NOT title:(sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult OR porno OR hentai OR hanime OR ecchi OR xxx OR "x-rated" OR teaserama OR "boku no pico" OR seieki OR "2 girls 1 cup" OR oppai OR "mein kampf" OR "horst wessel" OR hitler OR "third reich" OR "uncle bane") AND NOT collection:tvnews`;
 const BUILT_IN = [
   { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { library: "sci-fi-channel", mix: "trek-first", vintageEvery: 3, maxAds: 3, interval: 900, target: 120, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "(" + "collection:prelinger" + ")" + SAFE },
@@ -695,6 +696,7 @@ const BLOCKED = new Set([
   "youtube-5d0BppzXRcU", "youtube-kmBlwAFRFJU", "WildGalsOfTheNakedWest", "TheNakedWitch", "NakedMassacre1976",
   "slumber.-party.-massacre.-iii.-1990.-unrated.-720p.-blu-ray.x-264-sadpanda", "sex_madness", "sex_madness_ACM", "Dr.Sex",
   "sex.-hood.-skate.-and.-videotape.-2006.-dvdrip.x-264-kg",
+  "Sakura-Gamer-Episode-8-Naked-Sexiness", "losing-my-damn-mind-in-a-room-made-of-naked-anime-girls",
   // Safety review, Nov 2026: items the keyword filter can't catch by title or subject alone.
   "soixante-neuf", "NYLONSTUDYWITHCROSSDRESSERSFilmByPeterCoukis", "yt-5s.com-go-daddy-body-paint-2012-super-bowl-ad-360p",
   "GoldilocksAndTheThreeBaresMkv", "HouseOnBareMountain", "beyond.-the.-valley.-of.-the.-dolls.-1970.1080p.-blu-ray.x-264-yts.-ag",
