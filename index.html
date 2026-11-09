@@ -527,7 +527,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </div>
 
 <script src="media-compatibility.js"></script>
-<script src="commercial-timing.js?v=trek-lighter-breaks-5"></script>
+<script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
 <script src="assets/captions.js?v=caption-size-2"></script>
 <script>
 // ---------- Channels ----------
@@ -559,7 +559,7 @@ const BUILT_IN = [
   { name: "PBS",               desc: "NOVA, Frontline, Bob Ross and more", q: '(subject:pbs OR title:pbs) AND title:(nova OR frontline OR "american experience" OR "great performances" OR masterpiece OR "ken burns" OR "this old house" OR "antiques roadshow" OR "bob ross" OR "joy of painting" OR cosmos OR "power of myth" OR "mister rogers" OR "reading rainbow" OR nature OR "austin city limits") AND NOT collection:tvnews' },
   { name: "Brit TV",            desc: "British comedy and drama",          q: 'subject:("british television" OR "british tv" OR "british comedy" OR "british sitcom" OR "fawlty towers" OR "monty python" OR "only fools and horses" OR "are you being served" OR "keeping up appearances" OR "red dwarf" OR "blackadder" OR "the prisoner" OR "benny hill") AND NOT collection:tvnews AND NOT title:("funny or die" OR bbcnews)' },
   // Only reviewed episode windows; never promos, interviews, fan edits or the rest of a mixed tape.
-  { name: "Porchlight", desc: "Small-town stories, family & relationship dramas", library: "porchlight-v1", breaks: { library: "porchlight", mix: "era", eraWindow: 2, interval: 600, target: 180, minTail: 120 }, q: "reviewed:porchlight-v1" },
+  { name: "Porchlight", desc: "Small-town stories, family & relationship dramas", library: "porchlight-v1", breaks: { library: "porchlight", mix: "era", eraWindow: 2, uniqueAds: true, maxAds: 3, interval: 900, target: 120, minTail: 120 }, q: "reviewed:porchlight-v1" },
   { name: "Christmas Movies",   desc: "Holiday films and TV specials",     q: '(((subject:christmas OR title:christmas) AND (collection:feature_films OR collection:classic_tv OR collection:classic_cartoons)) OR subject:"christmas movie" OR subject:"christmas movies" OR subject:"christmas film") AND NOT title:(podcast OR "stock footage" OR "new movies to watch")' },
   { name: "Video Jukebox",      desc: "MTV-era music video shows",         q: `(title:("music videos" OR "video hits" OR "120 minutes" OR "headbangers ball" OR "yo! mtv raps" OR "friday night videos" OR "night tracks" OR "video jukebox" OR "mtv hits" OR "video countdown" OR "top 20 countdown" OR "pop-up video" OR "pop up video" OR "total request live" OR muchmusic OR "video soul") AND date:[1975-01-01 TO 2008-12-31] AND NOT title:(amv OR "music videos of 2"))` + SAFE },
   { name: "Kung Fu Theater",    desc: "Martial arts movies",               q: `(subject:("kung fu" OR "shaw brothers" OR "bruce lee" OR "martial arts film" OR "martial arts movie" OR "kung fu theater") AND NOT title:(hypnotic OR countrockula* OR longplay OR gamevideoarchive OR championship OR commercials OR "god hand"))` + SAFE },

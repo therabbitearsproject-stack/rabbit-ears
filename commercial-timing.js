@@ -51,7 +51,7 @@ const CommercialTiming = (() => {
       const bumper = bumpers.length ? bumpers[hash(key) % bumpers.length] : null;
       const before = hash(key + ":position") % 2 === 0;
       if (bumper && before) append("bumper", bumper, bumper.dur);
-      for (const ad of pack(ads, policy.target - (bumper?.dur || 0), key)) append("commercial", ad, ad.dur);
+      for (const ad of pack(ads, policy.target - (bumper?.dur || 0), key, { unique: !!policy.uniqueAds, maxSpots: policy.maxAds || 30 })) append("commercial", ad, ad.dur);
       if (bumper && !before) append("bumper", bumper, bumper.dur);
     }
     return { segments, duration: t };
