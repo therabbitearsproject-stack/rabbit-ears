@@ -9,8 +9,8 @@ The face is Arial with Helvetica/sans-serif fallbacks. Text is white (`#fff`) or
 yellow (`#ffff00`), with a black outline over a transparent background. Optional
 backing uses 85% black. Skin colors and decorative display fonts do not affect it.
 
-Font size follows the active picture height at 5.5%, with a 12px floor for small
-players; line height is 1.2 (normally 6.6% of picture height). Captions sit within
+Font size follows the active picture height at 4.5%, with a 12px floor for small
+players; line height is 1.2 (normally 5.4% of picture height). Captions sit within
 5% side margins and at least 1/12 picture height above the bottom. Letterboxing
 is accounted for, and visible fullscreen controls move captions upward to avoid
 covering them. No cue text or timing is changed.

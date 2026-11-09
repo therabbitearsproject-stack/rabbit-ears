@@ -50,8 +50,8 @@ window.RabbitCaptions = (() => {
         const box = video.getBoundingClientRect(), panel = controls.getBoundingClientRect();
         bottom = Math.max(bottom, box.top + (h + pictureH) / 2 - panel.top + pictureH * .02);
       }
-      Object.assign(layer.style, { left: (w - pictureW) / 2 + 'px', top: (h - pictureH) / 2 + 'px', width: pictureW + 'px', height: pictureH + 'px', fontSize: Math.max(12, pictureH * .055) + 'px', padding: `0 ${pictureW * .05}px ${bottom}px` });
-      video.style.setProperty('--caption-font-size', Math.max(12, pictureH * .055) + 'px');
+      Object.assign(layer.style, { left: (w - pictureW) / 2 + 'px', top: (h - pictureH) / 2 + 'px', width: pictureW + 'px', height: pictureH + 'px', fontSize: Math.max(12, pictureH * .045) + 'px', padding: `0 ${pictureW * .05}px ${bottom}px` });
+      video.style.setProperty('--caption-font-size', Math.max(12, pictureH * .045) + 'px');
     }
     function clear() { lastText = ''; layer.replaceChildren(); layer.hidden = true; }
     function render() {
