@@ -4,6 +4,12 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-09 — Shift replaces Toss the Turtle
+
+Toss the Turtle loaded fine, but the Archive tags it "Blood" and "Gore", so the games safety filter left it off the Classics shelf, and there were only 19 new games. Shift (Armor Games, 2008), a puzzle platformer that had also passed the Ruffle test, takes its place.
+
+---
+
 ## 2026-11-09 — 20 more Flash games and a style filter
 
 **Twenty new games on the Classics shelf.** Each one loaded in the site's own Ruffle player, with no crash panel after 7 seconds, and each is under the 25 MB size limit:

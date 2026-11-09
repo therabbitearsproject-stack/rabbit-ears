@@ -31,7 +31,7 @@ const CLASSICS = [
   "frogger_swf", "shopping-cart-hero", "bubble-shooter_swf", "super-mario-flash-2", "dragracerv3_202012",
   // Added November 2026, each tested in Ruffle.
   "2611-territory-war", "Example_flash13", "fireboy-and-watergirl-3-in-the-ice-temple",
-  "fireboy-and-watergirl-4-in-the-crystal-temple", "gemcraft-1716", "toss_the_turtle_flash", "moto-x3m_202309", "sushi-cat-2",
+  "fireboy-and-watergirl-4-in-the-crystal-temple", "gemcraft-1716", "2369-shift", "moto-x3m_202309", "sushi-cat-2",
   "ragdollcannon2_flash", "redremover_flash", "wonderputt-kongregate", "duck-life-4_20210406", "jacksmithflashgame",
   "sugarsugar_flash", "warfare-1917", "worlds-hardest-game", "penguin_diner", "tank-trouble_flash", "bloons-td-5_202205", "miniputt",
 ];

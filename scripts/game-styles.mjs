@@ -61,7 +61,7 @@ export const OVERRIDES = {
   "fireboy-and-watergirl-3-in-the-ice-temple": ["platformer", "puzzle", "twoplayer"],
   "fireboy-and-watergirl-4-in-the-crystal-temple": ["platformer", "puzzle", "twoplayer"], "ageofwar2_202401": ["strategy"],
   "Example_flash4": ["shooter"], "gemcraft-1716": ["td"], "epic-battle-fantasy-5": ["rpg"], "embeddable_167318": ["rpg"],
-  "toss_the_turtle_flash": ["physics"], "moto-x3m_202309": ["racing", "physics"], "sushi-cat-2": ["physics", "puzzle"],
+  "2369-shift": ["puzzle", "platformer"], "moto-x3m_202309": ["racing", "physics"], "sushi-cat-2": ["physics", "puzzle"],
   "cactus-mccoy": ["platformer", "fighting"], "ragdollcannon2_flash": ["physics", "puzzle"], "redremover_flash": ["physics", "puzzle"],
   "wonderputt-kongregate": ["sports", "puzzle"], "duck-life-4_20210406": ["sports", "rpg"], "jacksmithflashgame": ["sim"],
   "sugarsugar_flash": ["puzzle", "physics"], "warfare-1917": ["strategy"], "worlds-hardest-game": ["puzzle"], "penguin_diner": ["sim"],
