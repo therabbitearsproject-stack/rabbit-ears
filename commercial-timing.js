@@ -47,5 +47,13 @@ const CommercialTiming = (() => {
     }
     return result;
   }
-  return { build, at, pack, cycle };
+  // A named channel library must never silently use another channel's breaks.
+  function library(catalog, id) {
+    const source = id ? catalog?.breakLibraries?.[id] : catalog;
+    const commercials = (source?.commercials || []).map(r => Array.isArray(r)
+      ? { id: r[0], file: r[1], dur: r[2], title: r[3], year: r[4], archiveId: r[6] } : r)
+      .filter(m => Number(m.year) >= 1970 && Number(m.year) <= 1999);
+    return { commercials, bumpers: source?.bumpers || [] };
+  }
+  return { build, at, pack, cycle, library };
 })();

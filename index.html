@@ -527,7 +527,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </div>
 
 <script src="media-compatibility.js"></script>
-<script src="commercial-timing.js"></script>
+<script src="commercial-timing.js?v=scifi-breaks-1"></script>
 <script src="assets/captions.js?v=caption-size-2"></script>
 <script>
 // ---------- Channels ----------
@@ -535,7 +535,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 // podcasts, no TV-news recordings.
 const SAFE = ` AND NOT subject:(nude OR nudity OR naked OR erotic OR erotica OR porn OR pornography OR sex OR sexy OR striptease OR stripper OR playboy OR fetish OR hentai OR nsfw OR bikini) AND NOT title:(nude OR naked OR sexy OR striptease OR playboy OR nsfw OR bikini OR podcast OR adult) AND NOT collection:tvnews`;
 const BUILT_IN = [
-  { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { interval: 600, target: 180, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
+  { name: "Subspace 97", desc: "Star Trek · full episodes, films & vintage breaks", library: "star-trek-v1", breaks: { library: "sci-fi-channel", interval: 600, target: 180, minTail: 120 }, q: "identifier:(ST9_mp4 OR star-trek-1x-01-the-cage_20231231 OR star-trek-tas-s-01-e-05 OR star-trek-enterprise-complete OR star-trek-lower-decks-complete OR startrekcontinues_202006 OR stnewvoyages OR Popcornarchive-starTrekGenerations1994 OR Popcornarchive-starTrekInsurrection1998)" },
   { name: "Ephemera",          desc: "Industrial and educational films",  q: "collection:prelinger" },
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "collection:classic_tv_commercials" },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: "collection:classic_cartoons" },
@@ -910,9 +910,10 @@ function makeSlot(m, ch, start, seed) {
   const program = { ...m, dur: Math.min(m.dur, BLOCK) };
   let timeline;
   if (ch.breaks) {
-    const ads = (catalog?.commercials || []).filter(r => Number(r[4]) >= 1970 && Number(r[4]) <= 1999).map(rowMedia);
+    const library = CommercialTiming.library(catalog, ch.breaks.library);
+    const ads = library.commercials;
     if (!ads.length) throw new Error("Vintage commercial catalog is unavailable");
-    timeline = CommercialTiming.build(program, ch.breaks, ads, catalog?.bumpers || [], seed || ch.q + "|" + m.id + "|" + start);
+    timeline = CommercialTiming.build(program, ch.breaks, ads, library.bumpers, seed || ch.q + "|" + m.id + "|" + start);
   }
   return { m, start, end: start + (timeline?.duration || program.dur), v0: start, timeline };
 }
@@ -1243,9 +1244,9 @@ function syncMedia(forceSeek = false) {
     if (token !== mediaToken || my !== tuneId) return;
     if (segment.kind === "program") { metaCache[segment.media.id] = null; setTimeout(() => tune(cur), 800); }
     else {
-      // Keep the shared break duration if a remote spot fails. A local fact bumper fills its remaining time.
-      const fallback = catalog?.bumpers?.[0];
-      if (!fallback || segment.media.local) return;
+      // Preserve the shared clock using a bumper from this channel's own library.
+      const fallback = CommercialTiming.library(catalog, channels()[cur]?.breaks?.library).bumpers[0];
+      if (!fallback || fallback.id === segment.media.id) return;
       activeSegment.fallbackDur = fallback.dur;
       vid.onloadedmetadata = () => { if (token === mediaToken) { vid.currentTime = currentSegment().position % fallback.dur; if (tvOn && !held) vid.play().catch(() => {}); } };
       vid.onended = () => { if (token !== mediaToken || !playing) return; if (currentSegment().index !== segment.index) syncMedia(); else { vid.currentTime = 0; if (tvOn && !held) vid.play().catch(() => {}); } };

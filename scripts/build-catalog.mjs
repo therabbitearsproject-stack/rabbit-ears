@@ -11,6 +11,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { buildTrekPool } from "./trek-programming.mjs";
 import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
+import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 
 const POOL = 300;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -181,6 +182,10 @@ if (BUILT_IN.some(ch => ch.breaks)) {
   for (const bumper of bumpers) await readFile(new URL("../" + bumper.file, import.meta.url));
   console.log(`${commercials.length} vintage commercials (latest ${Math.max(...commercials.map(r => Number(r[4])))}) and ${bumpers.length} original 15-second bumpers`);
 }
-const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, unplayable: [...unplayable] };
+const breakLibraries = {};
+for (const id of new Set(BUILT_IN.map(ch => ch.breaks?.library).filter(Boolean))) {
+  breakLibraries[id] = await loadChannelBreakLibrary(id);
+}
+const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);
