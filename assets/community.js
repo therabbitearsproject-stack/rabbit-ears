@@ -46,7 +46,7 @@ function openPopover(p,b){
 function makeDock(cls){
   const d=el('div',cls);d.setAttribute('role','group');d.setAttribute('aria-label','Comments and reactions');
   for(const [kind,label,p] of [['comment','Leave a comment',panel],['heart','React',reactionPopover]]){
-    const b=button('',()=>openPopover(p,b),'watch-dock-button');b.innerHTML=dockIcon(kind);b.title=label;b.setAttribute('aria-label',label);b.setAttribute('aria-haspopup','dialog');b.setAttribute('aria-controls',p.id);b.setAttribute('aria-expanded','false');triggers.push({button:b,popover:p});d.append(b);
+    const b=button('',e=>{e.preventDefault();openPopover(p,b);},'watch-dock-button');b.innerHTML=dockIcon(kind);b.title=label;b.setAttribute('popovertarget',p.id);b.setAttribute('aria-label',label);b.setAttribute('aria-haspopup','dialog');b.setAttribute('aria-controls',p.id);b.setAttribute('aria-expanded','false');triggers.push({button:b,popover:p});d.append(b);
   }
   return d;
 }
