@@ -145,23 +145,72 @@
   const exit=button('Exit fullscreen',exitFull);exit.innerHTML=icon('exit');exit.title='Exit fullscreen';exit.setAttribute('aria-label','Exit fullscreen');fullRemote.append(exit);
   fullControls.append(fullStation,fullTitle,fullNext,fullRemote);screen.append(fullControls);
   captionUI.syncButtons();
+  let fullRequest=0,nativeFull=false,inputMode='pointer';
+  const nativeElement=()=>document.fullscreenElement||document.webkitFullscreenElement;
+  function idleControls(){
+    if(!full)return;
+    const focused=fullControls.contains(document.activeElement);
+    const menuOpen=!document.getElementById('caption-options').hidden||screen.querySelector('[popover]:popover-open');
+    // Pointer focus survives a click indefinitely. Only keyboard focus holds controls open.
+    if(menuOpen||(inputMode==='keyboard'&&focused)){idleTimer=setTimeout(idleControls,3000);return;}
+    body.classList.add('controls-idle');
+  }
   function reveal(){
     clearTimeout(idleTimer);body.classList.remove('controls-idle');
-    if(full)idleTimer=setTimeout(()=>{if(!fullControls.contains(document.activeElement)&&document.getElementById('caption-options').hidden)body.classList.add('controls-idle');},3000);
+    if(full)idleTimer=setTimeout(idleControls,3000);
+  }
+  function closePlayerMenus(){
+    screen.querySelectorAll('[popover]:popover-open').forEach(p=>p.hidePopover());
+    captionUI.closeMenu(false);
   }
   async function enterFull(){
-    if(mode!=='tv')return;showChannel();full=true;body.classList.add('player-fullscreen');reveal();
-    try{const request=screen.requestFullscreen||screen.webkitRequestFullscreen;if(request)await request.call(screen);}catch{/* in-page fullscreen remains available */}
+    if(mode!=='tv'||full)return;
+    const requestId=++fullRequest;full=true;nativeFull=false;
+    closePlayerMenus();
+    if(inputMode==='pointer')document.activeElement?.blur();
+    let entering;
+    // Request native fullscreen in the original user gesture, before changing layout.
+    try{
+      if(screen.requestFullscreen)entering=screen.requestFullscreen({navigationUI:'hide'});
+      else if(screen.webkitRequestFullscreen)entering=screen.webkitRequestFullscreen();
+      else if(vid.webkitEnterFullscreen)entering=vid.webkitEnterFullscreen();
+    }catch{/* Browsers without native fullscreen retain the in-page layout. */}
+    showChannel();body.classList.add('player-fullscreen');reveal();
+    try{await entering;}catch{/* Native requests can be denied; keep the usable in-page view. */}
+    if(requestId!==fullRequest){
+      if(!full&&nativeElement()===screen)await leaveNativeFull();
+      return;
+    }
+    nativeFull=!!nativeElement()||!!vid.webkitDisplayingFullscreen;
+    reveal();
+  }
+  async function leaveNativeFull(){
+    try{
+      if(nativeElement())await (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+      else if(vid.webkitDisplayingFullscreen)vid.webkitExitFullscreen?.();
+    }catch{}
   }
   async function exitFull(){
-    full=false;clearTimeout(idleTimer);body.classList.remove('player-fullscreen','controls-idle');
-    if(document.fullscreenElement||document.webkitFullscreenElement){try{await (document.exitFullscreen||document.webkitExitFullscreen).call(document);}catch{}}
+    ++fullRequest;full=false;nativeFull=false;clearTimeout(idleTimer);closePlayerMenus();body.classList.remove('player-fullscreen','controls-idle');
+    await leaveNativeFull();
     showChannel();$('full').focus({preventScroll:true});
   }
   $('full').onclick=enterFull;
-  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&full)exitFull();});
-  document.addEventListener('webkitfullscreenchange',()=>{if(!document.webkitFullscreenElement&&full)exitFull();});
-  screen.addEventListener('pointermove',reveal);screen.addEventListener('pointerdown',e=>{if(full&&body.classList.contains('controls-idle')){e.preventDefault();reveal();}});screen.addEventListener('touchstart',reveal,{passive:true});fullControls.addEventListener('focusin',reveal);fullControls.addEventListener('focusout',()=>setTimeout(reveal));
+  function syncFullscreen(){
+    if(nativeElement()===screen){nativeFull=true;if(full)reveal();}
+    else if(nativeFull&&full)exitFull();
+  }
+  document.addEventListener('fullscreenchange',syncFullscreen);
+  document.addEventListener('webkitfullscreenchange',syncFullscreen);
+  vid.addEventListener('webkitbeginfullscreen',()=>{nativeFull=true;reveal();});
+  vid.addEventListener('webkitendfullscreen',()=>{if(full)exitFull();});
+  document.addEventListener('keydown',()=>{inputMode='keyboard';},true);
+  document.addEventListener('pointerdown',()=>{inputMode='pointer';},true);
+  screen.addEventListener('pointermove',e=>{if(e.pointerType!=='touch')reveal();});
+  screen.addEventListener('pointerdown',()=>{inputMode='pointer';reveal();});
+  screen.addEventListener('touchstart',()=>{inputMode='pointer';reveal();},{passive:true});
+  fullControls.addEventListener('focusin',reveal);fullControls.addEventListener('focusout',()=>setTimeout(reveal));
+  screen.addEventListener('toggle',reveal,true);
   screen.addEventListener('captionmenuopen',reveal);
   const symbols={down:['down','Previous channel'],up:['up','Next channel'],surf:['shuffle','Random channel'],back:['rewind','Back 15 seconds'],fwd:['forward','Forward 15 seconds'],pause:['pause','Pause'],mute:['mute','Sound off'],cc:['cc','Captions'],full:['full','Fullscreen'],share:['share','Share channel'],report:['flag','Report tape'],gFull:['full','Fullscreen'],gShare:['share','Share game'],gReport:['flag','Report game']};
   function refreshSymbols(){for(const [id,[base,label]] of Object.entries(symbols)){

@@ -100,3 +100,9 @@ body[data-tv-page=guide] .channel-schedule{display:none}
 
 /* White artwork on wood; black artwork on the pale ivory cabinet. */
 body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
+
+/* Native fullscreen fills the browser-provided screen rather than a stale mobile viewport. */
+.player-fullscreen #screen:fullscreen{width:100%;height:100%;inset:0}
+.player-fullscreen #screen:-webkit-full-screen{width:100%;height:100%;inset:0}
+.player-fullscreen .fullscreen-controls{padding-bottom:max(24px,env(safe-area-inset-bottom));padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+.player-fullscreen .player-pack>.remote{visibility:hidden}
