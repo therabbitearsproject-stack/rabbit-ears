@@ -900,7 +900,7 @@ async function loadCatalog(ms) {
     const r = await Promise.race([fetch("catalog.json", { cache: "no-cache" }), new Promise((_, no) => setTimeout(no, ms))]);
     if (r.ok) {
       const next = await r.json();
-      if (catalog && next.programming?.fingerprint && catalog.programming?.fingerprint !== next.programming.fingerprint) {
+      if (!catalog || next.programming?.fingerprint && catalog.programming?.fingerprint !== next.programming.fingerprint) {
         for (const ch of BUILT_IN) delete listCache[ch.q];
         for (const cache of [continuousCache, schedCache, effCache, planCache]) for (const key of Object.keys(cache)) delete cache[key];
         for (const key of Object.keys(metaCache)) delete metaCache[key];
@@ -908,6 +908,14 @@ async function loadCatalog(ms) {
       catalog = next;
     }
   } catch {}
+}
+const catalogRowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts], ch) =>
+  tidy({ id, file, dur, title, year, sub, archiveId, width, height, cuts, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version });
+function catalogMeta(id) {
+  for (const ch of BUILT_IN) {
+    const row = catalog?.pools?.[ch.q]?.find(r => r[0] === id);
+    if (row) return catalogRowMedia(row, ch);
+  }
 }
 const poolOrder = (q, ids) => {
   const rank = Object.fromEntries(ids.map(id => [id, hash(q + "|" + id)]));
@@ -921,7 +929,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts]) => { if (!(id in metaCache)) metaCache[id] = tidy({ id, file, dur, title, year, sub, archiveId, width, height, cuts, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version }); return id; });
+    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(row => { const id = row[0]; if (!(id in metaCache)) metaCache[id] = catalogRowMedia(row, ch); return id; });
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   // Reviewed channels must never fall back to an unrestricted search or stale cached preview.
@@ -937,6 +945,9 @@ async function getList(ch) {
     if (!res.ok) throw new Error("Archive search failed");
     return (await res.json()).response.docs.map(d => d.identifier);
   })));
+  // A live search may have started before the first catalog arrived. Its late
+  // response must yield to the now-published pool, including its caption metadata.
+  if (catalog?.pools?.[ch.q]?.length) return getList(ch);
   if (results.every(r => r.status === "rejected")) throw new Error("Archive unavailable");
   const ids = poolOrder(ch.q, [...new Set(results.flatMap(r => r.status === "fulfilled" ? r.value : []))].filter(id => !blocked(id, ch)));
   listCache[ch.q] = ids;
@@ -960,6 +971,8 @@ async function limited(fn) {
 const pendingMeta = {};
 function getMeta(id) {
   if (id in metaCache) return Promise.resolve(metaCache[id]);
+  const published = catalogMeta(id);
+  if (published) return Promise.resolve(metaCache[id] = published);
   const saved = store.get("re_m_audio1_" + id, undefined);
   if (saved !== undefined) return Promise.resolve(metaCache[id] = tidy(saved));
   return pendingMeta[id] || (pendingMeta[id] = fetchMeta(id).finally(() => delete pendingMeta[id]));
@@ -967,6 +980,8 @@ function getMeta(id) {
 async function fetchMeta(id) {
   try {
     const d = await limited(async () => (await fetch("https://archive.org/metadata/" + encodeURIComponent(id))).json());
+    const published = catalogMeta(id);
+    if (published) return (metaCache[id] = published);
     const files = (d.files || []).filter(f => /\.mp4$/i.test(f.name) && parseLen(f.length) > 5);
     files.sort((a, b) => (/h\.264/i.test(b.format) ? 1 : 0) - (/h\.264/i.test(a.format) ? 1 : 0) || a.name.localeCompare(b.name));
     const f = MediaCompatibility.choose(d.files || [], files[0]);
@@ -976,7 +991,7 @@ async function fetchMeta(id) {
       year: [].concat(d.metadata?.year || d.metadata?.date || "")[0].toString().slice(0, 4),
     } : null;
     store.set("re_m_audio1_" + id, metaCache[id]);
-  } catch { metaCache[id] = null; } // network errors aren't saved, so they get retried next load
+  } catch { metaCache[id] = catalogMeta(id) || null; } // a late failure must not erase newly published metadata
   return metaCache[id];
 }
 // Resolve older catalog selections lazily, without thousands of extra guide-time requests.

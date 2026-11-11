@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, readFile, writeFile, copyFile, rm } from "node:fs/promi
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
+import { createHash } from "node:crypto";
 
 test("franchise searches reserve slots, deduplicate uploads and count only playable, unreported tapes", async () => {
   const dir = await mkdtemp(join(tmpdir(), "rabbit-ears-catalog-"));
@@ -37,7 +38,15 @@ const BUILT_IN = [
     }}));
     const ad=(id,archiveId=id)=>({id,archiveId,file:id+'.mp4',title:'Sears home furniture commercial',year:1992,dur:30});
     await writeFile(join(dir,'scripts/themed-ads.json'),JSON.stringify({commercials:[ad('safe-ad'),ad('reported-ad','reported-source'),ad('episode-broken'),ad('blocked-ad','blocked-source'),ad('wrong-ad','wrong-source'),ad('channel-blocked-ad','channel-blocked-source')]}));
-    const oldRow = ["old-pool", "video.mp4", 600, "Old title", "2026", ""];
+    const captionText='WEBVTT\n\n00:00:01.000 --> 00:00:02.000\nReviewed dialogue\n';
+    await mkdir(join(dir,'captions'));
+    const captionEntries={};
+    for(const [id,video,archiveId] of [['ordinary','video.mp4','ordinary'],['collection-good','collection-good.mp4','good-source']]){
+      await writeFile(join(dir,'captions',id+'.vtt'),captionText);
+      captionEntries[id]={video,archiveId,duration:600,status:'passed',checks:[{fraction:.2,pass:true},{fraction:.8,pass:true}],sha256:createHash('sha256').update(captionText).digest('hex')};
+    }
+    await writeFile(join(dir,'captions/manifest.json'),JSON.stringify({episodes:captionEntries}));
+    const oldRow = ["old-pool", "video.mp4", 600, "Old title", "2026", "local:removed.vtt"];
     await writeFile(join(dir, "catalog.json"), JSON.stringify({ pools: { offline: [oldRow] } }));
     const searches = [],lookups=[];
     globalThis.setTimeout = (fn, ms, ...args) => originalTimeout(fn, Math.min(ms, 1), ...args);
@@ -67,10 +76,12 @@ const BUILT_IN = [
     const result = JSON.parse(await readFile(join(dir, "catalog.json"), "utf8"));
     assert.deepEqual(result.pools.trek.map(r => r[0]).sort(), ["extra", "new", "shared"]);
     assert.deepEqual(result.pools.ordinary.map(r=>r[0]).sort(),['collection-good','ordinary'], 'collection merges cannot restore reported or blocked episodes or their parent sources');
+    assert.equal(result.pools.ordinary.find(r=>r[0]==='ordinary')[5],'local:ordinary.vtt','ordinary source IDs support reviewed captions');
+    assert.equal(result.pools.ordinary.find(r=>r[0]==='collection-good')[5],'local:collection-good.vtt','reviewed captions apply after collection rows are merged');
     assert.deepEqual(result.channelAds[1].map(m=>m.id),['safe-ad'], 'new ads respect global and channel-specific source reports and blocks');
     assert.deepEqual(result.channelAds[2].map(m=>m.id),['safe-ad','wrong-ad','channel-blocked-ad'], 'wrong-channel exclusions do not spread to other channels');
     assert.deepEqual(result.coverage.trek, { "Old crew": 1, "New crew": 2 });
-    assert.deepEqual(result.pools.offline, [oldRow], "failed searches preserve the previous pool");
+    assert.deepEqual(result.pools.offline, [[...oldRow.slice(0,5),'']], "failed searches preserve programs but cannot preserve unreviewed local captions");
     assert.ok(result.unplayable.includes("unplayable"));
     assert.equal(searches.find(s => s.q.includes("ordinary")).rows, 400);
     assert.ok(searches.filter(s => s.q.includes("trek")).every(s => s.rows === 133));

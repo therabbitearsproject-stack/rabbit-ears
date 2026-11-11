@@ -6,15 +6,47 @@ import {siteCode,scheduleCode} from './tv-feed.mjs';
 
 export const fingerprint = ({html,catalog,commercialTiming,mediaCompatibility}) => createHash('sha256').update(JSON.stringify({code:scheduleCode(html),commercialTiming,mediaCompatibility,pools:catalog.pools,commercials:catalog.commercials,bumpers:catalog.bumpers,breakLibraries:catalog.breakLibraries,channelBumpers:catalog.channelBumpers,channelAds:catalog.channelAds})).digest('hex');
 
+// Captions may change without disturbing a protected program's playback identity.
+const mediaKey = m => m && Number.isFinite(m.dur) && m.dur > 0
+  ? JSON.stringify([m.id,m.file,m.archiveId||m.id,m.dur]) : null;
+function captionIndex(rows,target){
+  const entries=new Map();
+  for(const row of rows||[]){
+    const media=target.rowMedia(row),key=mediaKey(media);if(!key)continue;
+    // Conflicting duplicate rows do not establish an unambiguous caption choice.
+    if(entries.has(key)&&entries.get(key)!==(media.sub||''))entries.set(key,null);
+    else if(!entries.has(key))entries.set(key,media.sub||'');
+  }
+  return entries;
+}
+function refreshCaptions(slot,index){
+  const copy=structuredClone(slot);
+  const refresh=media=>{const sub=index.get(mediaKey(media));if(typeof sub==='string')media.sub=sub;};
+  if(copy.m)refresh(copy.m);
+  for(const segment of copy.timeline?.segments||[])if(segment.kind==='program'&&segment.media)refresh(segment.media);
+  return copy;
+}
+
 export async function stageProgramming({previous,next,now=Date.now()/1000,leadSeconds=2*3600+15*60}) {
   const signature=fingerprint(next);
-  if(previous.catalog.programming?.fingerprint===signature) return previous.catalog.programming;
-  const old=siteCode(previous),target=siteCode(next),channels={};
+  const target=siteCode(next);
+  if(previous.catalog.programming?.fingerprint===signature){
+    // Older deployments may already have this fingerprint but stale frozen CC metadata.
+    const programming=structuredClone(previous.catalog.programming);let changed=false;
+    for(const ch of target.BUILT_IN){
+      const stage=programming.channels[ch.no];if(!stage)continue;
+      const index=captionIndex(next.catalog.pools[ch.q],target);
+      stage.items=stage.items.map(slot=>{const copy=refreshCaptions(slot,index);if(JSON.stringify(copy)!==JSON.stringify(slot))changed=true;return copy;});
+    }
+    return changed?programming:previous.catalog.programming;
+  }
+  const old=siteCode(previous),channels={};
   const notBefore=now+leadSeconds;
   for(const ch of target.BUILT_IN){
     const source=old.BUILT_IN.find(c=>c.no===ch.no);
     // New stations can begin immediately; existing stations must never silently lose protection.
     if(!source)continue;
+    const captions=captionIndex(next.catalog.pools[ch.q],target);
     const items=[];let cursor=now,blockedSlot=false;
     while(cursor<notBefore&&!blockedSlot){
       const batch=await old.lineup(source,cursor,128);
@@ -25,7 +57,7 @@ export async function stageProgramming({previous,next,now=Date.now()/1000,leadSe
         if(target.blocked(p.m.id,ch)||target.blocked(p.m.archiveId||p.m.id,ch)){
           cursor=Math.max(now,p.start);blockedSlot=true;progressed=true;break;
         }
-        items.push(p);cursor=p.end;progressed=true;
+        items.push(refreshCaptions(p,captions));cursor=p.end;progressed=true;
         if(cursor>=notBefore)break;
       }
       if(!progressed||items.length>10000)throw Error('Cannot preserve published schedule: '+ch.name);

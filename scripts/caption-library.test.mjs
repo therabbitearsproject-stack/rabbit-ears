@@ -19,3 +19,25 @@ test('deleted, changed or unreadable assets cannot retain an old available CC fl
 test('local subtitle paths cannot escape the caption folder',async()=>{
  await assert.rejects(localCaption('../index.html'),/Invalid/);await assert.rejects(localCaption('sub/file.vtt'),/Invalid/);
 });
+
+test('ordinary items use their own source identity while expanded programs retain their parent source',async()=>{
+ const ordinary=['ordinary','exact/video.mp4',600,'Ordinary','','',''];
+ const directEntry={...entry,video:ordinary[1],duration:600,archiveId:'ordinary'};
+ const valid={episodes:{ordinary:directEntry,episode:entry}};
+ assert.deepEqual((await applyReviewedCaptions([ordinary,row],valid,async()=>text)).map(r=>r[5]),['local:ordinary.vtt','local:episode.vtt']);
+ for(const override of [{archiveId:''},{archiveId:'different'},{video:'video.mp4'},{duration:601},{sha256:'wrong'},{status:'unreviewed'}]){
+  const [result]=await applyReviewedCaptions([ordinary],{episodes:{ordinary:{...directEntry,...override}}},async()=>text);
+  assert.equal(result[5],'',JSON.stringify(override));
+ }
+ assert.equal((await applyReviewedCaptions([[...ordinary.slice(0,2),NaN,...ordinary.slice(3)]],valid,async()=>text))[0][5],'');
+ assert.equal((await applyReviewedCaptions([row],{episodes:{episode:{...entry,archiveId:'episode'}}},async()=>text))[0][5],'','expanded identity must not fall back past an explicit parent');
+});
+
+test('multiple ordinary rows independently clear stale locals and preserve remote sidecars',async()=>{
+ const make=(id,sub)=>[id,id+'.mp4',600,id,'',sub,''];
+ const rows=[make('passed',''),make('removed','local:removed.vtt'),make('unreviewed','local:unreviewed.vtt'),make('remote','English.srt')];
+ const episodes=Object.fromEntries(['passed','unreviewed','remote'].map(id=>[id,{...entry,archiveId:id,video:id+'.mp4',duration:600,status:id==='passed'?'passed':'needs-review'}]));
+ const result=await applyReviewedCaptions(rows,{episodes},async()=>text);
+ assert.deepEqual(result.map(r=>r[5]),['local:passed.vtt','','','English.srt']);
+ assert.equal(rows[1][5],'local:removed.vtt','source catalog rows are not mutated');
+});

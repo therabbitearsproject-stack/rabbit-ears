@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {stageProgramming} from './stage-programming.mjs';
+import {stageProgramming,fingerprint} from './stage-programming.mjs';
 import {siteCode} from './tv-feed.mjs';
 const root=new URL('../',import.meta.url);
 const [html,commercialTiming,mediaCompatibility,catalogText]=await Promise.all(['index.html','commercial-timing.js','media-compatibility.js','catalog.json'].map(p=>readFile(new URL(p,root),'utf8')));
@@ -54,4 +54,50 @@ test('the updated cycle introduces each new show before returning to the mixed r
  next.catalog.programming=await stageProgramming({previous,next,now});
  const site=siteCode(next),cutoff=next.catalog.programming.channels[30].until;
  const slots=await site.lineup(ch,cutoff,2);assert.deepEqual(slots.map(p=>p.m.id),['new-a-1','new-b-1']);
+});
+
+function captionFixture(sub=''){
+ const previous=changed(base(),'caption-film'),site=siteCode(previous),ch=site.BUILT_IN.find(c=>c.no===30),row=previous.catalog.pools[ch.q][0];
+ row[5]=sub;row[6]='caption-source';
+ const media=site.rowMedia(row),ad={...media,title:'Unchanged commercial',sub:'ad.srt'},bumper={...media,title:'Unchanged bumper',sub:'bumper.srt'};
+ const slot={start:now,end:now+14420,v0:now,m:structuredClone(media),cuts:[[0,7200],[7200,14400]],timeline:{duration:14420,segments:[
+  {kind:'program',media:structuredClone(media),start:0,end:7200,offset:0,index:0},
+  {kind:'commercial',media:ad,start:7200,end:7210,offset:0,index:1},
+  {kind:'custom-bumper',media:bumper,start:7210,end:7220,offset:0,index:2},
+  {kind:'program',media:structuredClone(media),start:7220,end:14420,offset:7200,index:3}
+ ]}};
+ previous.catalog.programming={version:1,fingerprint:'older',created:now-100,notBefore:now+7200,channels:{30:{until:slot.end,items:[slot],leadIds:[]}}};
+ return {previous,ch,slot};
+}
+
+test('protected programs gain and lose captions without changing any scheduling or break metadata',async()=>{
+ for(const [before,after] of [['','local:caption-film.vtt'],['local:caption-film.vtt','']]){
+  const {previous,ch,slot}=captionFixture(before),snapshot=structuredClone(previous),next=structuredClone(previous);
+  next.catalog.pools[ch.q][0][5]=after;
+  const staged=await stageProgramming({previous,next,now}),actual=staged.channels[30].items[0],expected=structuredClone(slot);
+  expected.m.sub=after;for(const s of expected.timeline.segments)if(s.kind==='program')s.media.sub=after;
+  assert.deepEqual(actual,expected,'only program caption links may change');
+  assert.deepEqual(previous,snapshot,'published input remains untouched');
+  assert.notEqual(actual,slot);assert.notEqual(actual.timeline,slot.timeline);
+ }
+});
+
+test('caption refresh refuses mismatched sources, filenames and program durations',async()=>{
+ for(const [field,value] of [[0,'different-id'],[1,'different.mp4'],[2,14399],[6,'different-source']]){
+  const {previous,ch,slot}=captionFixture('old.srt'),next=structuredClone(previous);
+  next.catalog.pools[ch.q][0][field]=value;next.catalog.pools[ch.q][0][5]='new.srt';
+  const stage=await stageProgramming({previous,next,now});
+  assert.deepEqual(stage.channels[30].items[0],slot,'identity field '+field+' must match exactly');
+ }
+});
+
+test('matching fingerprints refresh legacy frozen captions while retaining the existing rotation anchor',async()=>{
+ const {previous,ch,slot}=captionFixture('old.srt'),next=structuredClone(previous);
+ next.catalog.pools[ch.q][0][5]='new.srt';previous.catalog.programming.fingerprint=fingerprint(next);
+ const snapshot=structuredClone(previous),stage=await stageProgramming({previous,next,now:now+3600});
+ assert.equal(stage.created,previous.catalog.programming.created);assert.equal(stage.notBefore,previous.catalog.programming.notBefore);
+ assert.equal(stage.channels[30].until,previous.catalog.programming.channels[30].until);
+ assert.equal(stage.channels[30].items[0].m.sub,'new.srt');assert.equal(slot.m.sub,'old.srt');assert.deepEqual(previous,snapshot);
+ const deployed={...next,catalog:{...next.catalog,programming:stage}};
+ assert.equal(await stageProgramming({previous:deployed,next:deployed,now:now+7200}),stage,'an already refreshed unchanged deployment reuses its anchor');
 });

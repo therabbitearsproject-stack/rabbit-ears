@@ -16,6 +16,7 @@ import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 import { buildPorchlightPool } from "./porchlight-programming.mjs";
 import { strengthenPool,keepProgram } from "./program-quality.mjs";
 import { mergeAds,channelAdPools } from "./themed-ad-library.mjs";
+import { applyReviewedCaptions } from "./caption-library.mjs";
 
 const POOL = 400;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -237,6 +238,12 @@ try{themedAds=JSON.parse(await readFile(new URL('./themed-ads.json',import.meta.
 const channelNumbers=JSON.parse(await readFile(new URL('../community/channels.json',import.meta.url),'utf8'));
 const channelAds=channelAdPools(channelNumbers,mergeAds({commercials,breakLibraries},themedAds));
 for(const ch of channelNumbers)channelAds[ch.no]=channelAds[ch.no].filter(ad=>mediaAllowed(ad,ch));
+// Validate every final program, including newly expanded and retained offline pools.
+// A cached local CC flag alone never establishes that a reviewed asset still exists.
+let captionManifest;
+try { captionManifest = JSON.parse(await readFile(new URL('../captions/manifest.json', import.meta.url), 'utf8')); }
+catch (error) { if (error.code !== 'ENOENT') throw error; captionManifest = { episodes: {} }; }
+for (const [q, rows] of Object.entries(pools)) pools[q] = await applyReviewedCaptions(rows, captionManifest);
 const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, channelBumpers, channelAds, qualifiedOut, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);

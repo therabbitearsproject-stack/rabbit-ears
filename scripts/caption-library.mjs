@@ -18,7 +18,10 @@ export async function applyReviewedCaptions(rows, manifest, load = localCaption)
     // or validation record has been removed.
     if (out[5]?.startsWith('local:')) out[5] = '';
     const entry = manifest.episodes?.[out[0]];
-    if (!entry || entry.video !== out[1] || entry.archiveId !== out[6] || !Number.isFinite(entry.duration) || Math.abs(entry.duration - out[2]) > .1 || entry.status !== 'passed') return out;
+    const archiveId = out[6] || out[0];
+    if (!entry || !archiveId || entry.video !== out[1] || entry.archiveId !== archiveId ||
+        !Number.isFinite(entry.duration) || !Number.isFinite(out[2]) || entry.duration <= 0 ||
+        Math.abs(entry.duration - out[2]) > .1 || entry.status !== 'passed') return out;
     const checks = entry.checks || [];
     if (!checks.some(c => c.fraction < .5 && c.pass) || !checks.some(c => c.fraction > .5 && c.pass)) return out;
     try {
