@@ -1,4 +1,5 @@
-# Draws the Roku app's icons and splash screen from the site logo (assets/icon-512.png).
+# Draws the TV apps' icons, banner and splash screen from the site logo (assets/icon-512.png):
+# the Roku app's images/ and the Android app's launcher icon and TV banner.
 # Run from the repo root on Windows: powershell -File roku/make-images.ps1
 Add-Type -AssemblyName System.Drawing
 $root = Split-Path -Parent $PSScriptRoot
@@ -29,12 +30,17 @@ function Make($w, $h, $logoSize, $title, $sub, $out) {
     $g.DrawString($sub, $font2, (New-Object System.Drawing.SolidBrush $cream), (New-Object System.Drawing.RectangleF 0, ($ly + $logoSize + $h * 0.115), $w, ($h * 0.06)), $fmt)
   }
   $g.Dispose()
-  $bmp.Save((Join-Path $PSScriptRoot "images\$out"), [System.Drawing.Imaging.ImageFormat]::Png)
+  $bmp.Save((Join-Path $root $out), [System.Drawing.Imaging.ImageFormat]::Png)
   $bmp.Dispose()
 }
 
-Make 540 405 250 "Rabbit-Ears" $null "icon_fhd.png"
-Make 290 218 134 "Rabbit-Ears" $null "icon_hd.png"
-Make 1920 1080 420 "Rabbit-Ears.stream" "Forgotten TV, around the clock" "splash_fhd.png"
+Make 540 405 250 "Rabbit-Ears" $null "roku/images/icon_fhd.png"
+Make 290 218 134 "Rabbit-Ears" $null "roku/images/icon_hd.png"
+Make 1920 1080 420 "Rabbit-Ears.stream" "Forgotten TV, around the clock" "roku/images/splash_fhd.png"
+Make 640 360 190 "Rabbit-Ears.stream" $null "android/app/src/main/res/drawable-xhdpi/banner.png"
+# Launcher icon: the logo as it is, 192 px for xxxhdpi.
+$icon = New-Object System.Drawing.Bitmap 192, 192
+$gi = [System.Drawing.Graphics]::FromImage($icon); $gi.InterpolationMode = "HighQualityBicubic"; $gi.DrawImage($logo, 0, 0, 192, 192); $gi.Dispose()
+$icon.Save((Join-Path $root "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"), [System.Drawing.Imaging.ImageFormat]::Png); $icon.Dispose()
 $logo.Dispose()
-Get-ChildItem (Join-Path $PSScriptRoot "images") | Select-Object Name, Length
+Write-Output "Images written."
