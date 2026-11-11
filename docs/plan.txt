@@ -1,0 +1,234 @@
+BACKUP NOTE: Historical entries below record progress over time; later entries supersede earlier pending statuses. Personal delegate addresses and local account paths are omitted from this public backup. Credentials are never included.
+
+RABBIT EARS — PLAN
+Updated November 10, 2026
+Project: werk
+
+PRIORITIES
+1. Domain forwarding is active; real delivery and automatic labels verified.
+2. Confirm Jeremy and Nick can both use the shared Gmail inbox.
+3. Add a friendly website address for the Discord invite.
+4. Finish community setup as needed before promoting the server.
+
+CLOUDFLARE AND DOMAIN EMAIL
+Domain: rabbit-ears.stream
+Cloudflare account: [project owner email kept private]'s Account
+Cloudflare access obtained November 10, 2026; earlier access blocker resolved.
+Nameservers: riya.ns.cloudflare.com and nikon.ns.cloudflare.com.
+
+Completed and verified in Cloudflare:
+  - Inspected all six original DNS records; no previous mail service was present.
+  - Activated Cloudflare Email Routing; routing status is Enabled.
+  - Added rabbitearsemail@gmail.com and verified it through Cloudflare's email.
+  - Created all three routes, each shown Active:
+      hello@rabbit-ears.stream   -> rabbitearsemail@gmail.com
+      support@rabbit-ears.stream -> rabbitearsemail@gmail.com
+      discord@rabbit-ears.stream -> rabbitearsemail@gmail.com
+  - Catch-all remains disabled; only the named addresses are configured.
+  - Website A/CNAME records and Google site verification were preserved.
+
+Public DNS checks passed after activation:
+  MX route1.mx.cloudflare.net, priority 17
+  MX route2.mx.cloudflare.net, priority 43
+  MX route3.mx.cloudflare.net, priority 7
+  SPF: v=spf1 include:_spf.mx.cloudflare.net ~all
+  Cloudflare DKIM TXT at cf2024-1._domainkey.rabbit-ears.stream resolves.
+  Cloudflare reports its routing DNS records as Locked (managed by the service).
+
+Delivery test completed November 10, 2026:
+  Jeremy sent a message titled Test from his personal account to hello@,
+  support@, and discord@rabbit-ears.stream together at 9:18 PM Central.
+  The message arrived in rabbitearsemail@gmail.com's Inbox and automatically
+  received all three labels: Hello, Support, and Discord. No filter changes needed.
+  All three original recipients were confirmed in Gmail's message details.
+  This was one message addressed to all three aliases, not three separate tests.
+  Cloudflare's per-recipient activity log had not populated at the last check;
+  Gmail delivery and labeling were directly verified.
+
+Remaining account administration:
+  - Confirm both owners can maintain Cloudflare access; do not store
+    passwords or verification codes in this file.
+  - Finish acceptance and testing of shared Gmail delegation below.
+
+Outbound sending as @rabbit-ears.stream has NOT been configured. Forwarding
+alone does not provide an outgoing mailbox. If branded replies are wanted,
+choose an outgoing mail service and configure Gmail Send mail as, then test it.
+Current outgoing identity is rabbitearsemail@gmail.com.
+
+SHARED GMAIL
+Address: rabbitearsemail@gmail.com
+Display name: Rabbit Ears
+Purpose: project-owned inbox for domain forwarding and Discord administration.
+
+Delegation invitations were sent to:
+  [project owner email kept private]
+  [second delegate email kept private]
+Both invitations were still marked pending at the last verified check.
+
+Next steps:
+  - Each recipient accepts the delegation invitation in their own inbox.
+  - Confirm the shared inbox opens from each account.
+  - Test reading, sending, and replying through delegated access.
+  - Confirm the agreed owners have recovery access and keep recovery details
+    in an appropriate private place, not in this plan.
+
+Already configured:
+  Sender information: Show this address only (rabbitearsemail@gmail.com).
+  This keeps a delegate's personal address out of the visible sent-by identity.
+
+Labels and filters:
+  to:(hello@rabbit-ears.stream)   -> label Hello
+  to:(support@rabbit-ears.stream) -> label Support
+  to:(discord@rabbit-ears.stream) -> label Discord
+These filters apply labels and leave messages in the Inbox. They do not archive,
+mark read, delete, or bypass spam protection.
+
+DISCORD — COMPLETED
+Dedicated account: rabbit_ears_stream
+Account email: rabbitearsemail@gmail.com
+Server: Rabbit Ears
+Server ID: 1569894832615198771
+Permanent invite: https://discord.gg/Me827VV6
+Invite opens at welcome and is set never to expire.
+
+Branding:
+  Existing retro TV logo is the server icon.
+  Custom invite background is saved and verified.
+  Level 2 is active with 7 boosts at the last verified check.
+  Matching channel-list server banner is saved and verified live.
+  Server profile uses a warm brown theme, project description, and five traits:
+    Forgotten TV, Live Radio, Classic Games, Watch Parties, Channel Surfing.
+
+Channels:
+  welcome — read-only for ordinary members
+  rules — read-only for ordinary members
+  announcements — read-only for ordinary members
+  general
+  channel-suggestions
+  help-and-bugs
+  Watch Party — voice room
+Channel topics explain their purpose. No starter posts or pinned rules have
+been published. No one else has been invited by the assistant.
+
+DISCORD — POSSIBLE NEXT WORK
+  - Add Nick using his confirmed Discord identity and agree on his role.
+  - Prepare welcome, rules, and announcement posts for publication when requested.
+  - Decide whether to enable formal Discord Community mode, moderation tools,
+    onboarding, and any bots. These are not yet enabled/configured.
+  - Confirm email verification status if Discord requests it; it was not
+    conclusively verified in the last account-settings check.
+
+CUSTOM LINKS
+Discord's custom discord.gg/name link currently requires Level 3 (14 boosts).
+The server was at Level 2 with 7 boosts; the custom Discord address is not set.
+Availability of any desired name has not been checked.
+
+Proposed alternative, not yet implemented:
+  https://rabbit-ears.stream/discord
+    -> redirect to https://discord.gg/Me827VV6
+This avoids additional boosts for a branded website link. Implement through the
+website or Cloudflare after access is available; verify the public redirect and
+then add it to the website where appropriate. No redirect or website Discord
+link has been published yet.
+
+BRANDING FILES
+New artwork and screenshots are in:
+  Local chat outputs (not a repository path)
+  rabbit-ears-discord-invite-background.svg
+  rabbit-ears-discord-invite-background.png
+  rabbit-ears-discord-server-banner.svg
+  rabbit-ears-discord-server-banner.png
+  rabbit-ears-discord-branded-invite.jpg
+  rabbit-ears-discord-server-banner-live.jpg
+Original TV icon:
+  work/rabbit-ears/assets/icon-512.png (relative to the werk project folder)
+
+SPELUNKR DESKTOP — EARLIER WORK
+Original requests: make captions simple and work on first launch; default
+captions on with Whisper; remove None as an engine option in favor of on/off;
+make only the new beta publicly available.
+Prior work was reported complete: Beta 2 published for all platforms as the sole
+public release, older releases drafted, related issues #1 and #2 closed.
+If revisiting, inspect the repository and release checks before making changes.
+
+NEXT SESSION CHECKLIST
+[x] Obtain Cloudflare access and inspect domain DNS.
+[x] Verify the destination inbox and activate all three forwarding routes.
+[x] Verify combined test addressed to all three aliases reaches Inbox with all three labels.
+[ ] Have both delegates accept, then test shared inbox access and replies.
+[ ] Decide whether branded outbound email is needed and configure it if requested.
+[ ] Implement and test rabbit-ears.stream/discord if proceeding with that proposal.
+[ ] Confirm Nick's Discord identity and requested role before granting access.
+[ ] Prepare any remaining community content and moderation setup when requested.
+
+
+
+WEBSITE WATCH PARTY — NOVEMBER 10, 2026
+Requested: unframed/transparent channel logos, a vintage Restream manufacturer
+badge, adjustable TV volume, optional Discord sign-in, comments and emoji saved
+with each episode and replayed at the same moment, with originals posted into
+matching Discord channels.
+
+Implemented and saved in the Rabbit Ears repository:
+  - Transparent logo styling and a Porchlight cutout; original art retained.
+  - Restream SVG badge; remembered 0–100% TV volume in both normal/fullscreen UI.
+  - Episode-time comments/reactions, timeline markers, guest replay, authenticated
+    posting, delete controls, moderator support, and fullscreen reaction/comment UI.
+  - Edited episode timing excludes removed tape sections; edit identity prevents
+    a changed cut from inheriting comments at the wrong scene.
+
+Connected services:
+  Discord app: Rabbit Ears Watch Party, ID 1569918622103642233.
+  Bot installed by Jeremy with View Channels, Send Messages, Embed Links,
+    and Manage Channels. Both app and bot use the TV icon.
+  All 76 current broadcast channels now have tagged Discord text rooms in two
+    categories. Mapping is in community/channel-map.json.
+  Worker: https://community.rabbit-ears.stream
+  OAuth return: https://community.rabbit-ears.stream/auth/callback
+  Cloudflare D1 database: rabbit-ears-community
+  D1 ID: 0a73896d-68e3-4abf-bd10-330308ad41f9
+  One-minute scheduled retry of original Discord delivery is active.
+  Health check: 76 mappings and configured=true.
+  First real Discord OAuth sign-in succeeded.
+
+Credentials:
+  Client Secret, Bot Token and moderator IDs are Worker secrets.
+  Private local settings file: work/rabbit-ears/community/.dev.vars
+  The file is ignored by Git. Do not copy secret values into this plan.
+  Cloudflare deployment access was authorized through Wrangler OAuth.
+  No new Cloudflare API token was required.
+
+Validation so far:
+  Current repository regression/security/timing tests pass.
+  Local D1 integration checks pass for persistence, retries, episode isolation,
+    CSRF, concurrent posting limits, deletion and replay reads without new writes.
+  Live website deployment and real comment/emoji/Discord/replay acceptance checks
+    are still in progress. Do not treat those checks as complete yet.
+  Public privacy page now documents optional identity and public saved entries.
+
+Operations and setup: work/rabbit-ears/community/README.md.
+
+PLAYER DOCK CORRECTION — NOVEMBER 10, 2026
+The large watch-party section is replaced by two icons directly under the TV:
+a comment bubble opens a quick composer; an outline heart opens eight popular
+emoji. Recent moments and sign-in live inside the pop-outs. The same icons work
+in fullscreen. Sending closes the pop-out; Escape and outside clicks dismiss it.
+
+Live verification: Discord sign-in and original comment/emoji delivery succeeded.
+The two disposable test entries were removed from both the site and Discord.
+Seek/replay acceptance remains to be checked separately; automated replay and
+isolation checks pass. Current full regression suite: 74 passing tests.
+
+Verified live: quick comment and emoji pop-outs open under the player controls; Escape and close dismiss correctly. All 76 Discord broadcast rooms now begin with matching channel emoji, verified through Discord. Existing channel IDs and links remain valid.
+
+PLAYER CONTROLS — NOVEMBER 10: Volume is hidden behind the speaker button in a vertical pop-out with mute/unmute. Comment and heart icons share the regular controls row. Normal and fullscreen remotes use the same saved volume.
+
+SELECTED LOGO FAMILY — NOVEMBER 10: Single-line option A selected: bunny/antenna ears grow from the hyphen with a rust dot at their pivot. Transparent full rabbit-ears.stream, R-E.stream, square R-E badge, and R-E.stream with full-width rabbit-ears.stream subtitle are saved in work/rabbit-ears/assets/brand. Full wordmark replaces the website header. Exported SVGs and comparison are available in the current chat outputs.
+
+BRANDING ROLLOUT — NOVEMBER 10: User clarified Discord, not Reddit. Polished full-skull logos are now the only active variants in assets/brand/polished; earlier iterations removed from active files (retained in Git history). Site header supports black/white contrast per existing theme; browser/install icons and share artwork replaced. Discord Watch Party bot avatar and app icon successfully updated. Server icon/banner remain pending: bot API returned Missing Permissions (403), and browser controls timed out; user asked to reopen server. Prepared icon and banner are in this chat outputs as discord-rabbit-ears-avatar.png and discord-rabbit-ears-banner.png.
+
+DISCORD BRANDING COMPLETE — NOVEMBER 10: Browser reconnected after user reopened Discord. Saved polished skull server icon, black/white server banner (positioned below Discord title overlay), and matching invite background through signed-in server settings. Previous art replaced. Bot/app icon had already been updated. Server changes verified after saving; screenshot in chat outputs/discord-skull-branding-live.jpg.
+
+WATCH-PARTY COMPACT POSTS AND EMOJI — NOVEMBER 10: Discord mirrors now use one compact line (viewer, linked timestamp, comment or emoji), suppress previews and notifications, retain mention protection/idempotent delivery. Existing two user posts edited in place to remove cards. Website timeline now displays actual emoji and a readable reaction tooltip/count; comment wording singular/plural fixed. Deployed Worker version 61a8a6d1-bd21-4928-9fff-ab8ae100c3bc; site commit 20f580c deployed successfully. Tests: 10 worker tests and 5 local database integration checks pass, including reaction aggregation. Live verified 📺 marker and compact Discord messages.
+
+STACKED LOGO AND GITHUB BACKUP — NOVEMBER 10: Added R-E above .stream using the polished bunny skull dash, in transparent white and black SVG and 4096-pixel PNG. Added both to the full options collage. Masters: assets/brand/polished/stacked-dark.svg and stacked-light.svg. Collages: docs/branding/. Website/service code and earlier branding were already committed; this backup adds the new art and plan history. This records setup information, not a backup of live Gmail, Discord messages, or the Cloudflare D1 database.
