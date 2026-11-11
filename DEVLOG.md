@@ -4,6 +4,16 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-11 — Android TV / Fire TV app (first version)
+
+- New `android/` folder: one Android app for Android TV, Google TV, Fire TV, phones and tablets. It plays the same `tv/ch/<number>.json` schedule files as the Roku app with ExoPlayer, so it stays in step with the website.
+- TV remote: Up/Down changes channel, Left or Menu opens the guide, OK shows what's on and next. Phones: swipe up/down to change channel, tap for the guide. It remembers the last channel.
+- There's no Android tooling on the project computer, so the new "Android app" workflow builds it on GitHub. The first build passed and produced `rabbit-ears-tv.apk` (debug-signed, for sideloading).
+- `roku/make-images.ps1` now also draws the Android launcher icon and TV banner.
+- Not yet tried on a real TV. Radio, games and captions aren't in the app yet.
+
+---
+
 ## 2026-11-10 — Roku app (first version) and TV schedule files
 
 - New `roku/` folder: a Roku app that plays every TV channel in step with the website. Up/Down changes channel, Left opens the channel guide, OK shows what's on now and next. It remembers the last channel.
