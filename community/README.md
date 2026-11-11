@@ -7,10 +7,10 @@ This Worker adds Discord sign-in, durable episode-time comments/reactions, and o
 - Discord app: **Rabbit Ears Watch Party**, ID `1569918622103642233`.
 - Server: `1569894832615198771`.
 - OAuth return URL: `https://community.rabbit-ears.stream/auth/callback` (configured in the developer portal).
-- Only the `identify` scope is requested from viewers. Watching/replays need no sign-in or server membership. The service does not request email, join servers on viewers' behalf, or read their Discord messages.
+- Sign-in requests `identify` and `guilds.join`. After the viewer approves Discord's consent screen, the bot adds them only to Rabbit Ears; existing members are unchanged. Watching/replays need no sign-in or server membership. The service does not request email or read Discord messages.
 - Events use a stable SHA-256 key of the original episode ID and filename, plus the broadcast channel and the **source video's playback position**. Commercial insertions and later airing dates do not move reactions to the wrong scene. Reactions pause during separate commercial segments.
 - The website polls the current playback window and draws markers across the whole episode. Seeking skips intervening effects; revisiting a scene can replay its effects. Comments remain plain text; no HTML execution or mention pings.
-- Writes derive the author from an expiring, server-side session. HttpOnly host-only cookies, OAuth state, strict origin checks and CSRF tokens protect sign-in and writes. Discord access tokens are revoked after fetching the public identity and are not retained.
+- Writes derive the author from an expiring, server-side session. HttpOnly host-only cookies, OAuth state, strict origin checks and CSRF tokens protect sign-in and writes. Discord access tokens are revoked after the membership attempt, on success or failure, and are not retained. A failed join creates no new session. Existing signed-in viewers must sign out and back in to approve membership.
 - Viewers can remove their own entries; IDs in `MODERATOR_IDS` can remove any entry. The original bot post is also queued for removal. Set at least the project owner's Discord ID before promoting posting.
 
 ## Secrets
@@ -19,7 +19,7 @@ This Worker adds Discord sign-in, durable episode-time comments/reactions, and o
 
 The app owner must generate/reset the Client Secret in OAuth2 and the Bot Token on the Bot page themselves. The assistant cannot perform credential resets through browser automation. No privileged Gateway intents are needed.
 
-Install the bot in Rabbit Ears with View Channels, Send Messages, Embed Links, and Manage Channels. Manage Channels is used to create the matching rooms and categories and can be removed after provisioning. No Administrator, read-message-history, message-content intent, private-message access, or Manage Server permission is required. Discord authorization requires the owner's action-time approval.
+Install the bot in Rabbit Ears with Create Invite (required for OAuth member joins), View Channels, Send Messages, Embed Links, and Manage Channels. Effective Create Invite access was verified. Membership screening, bans, and channel permissions are not bypassed; sign-in assigns no roles or nicknames. Manage Channels is used to create the matching rooms and categories and can be removed after provisioning. No Administrator, read-message-history, message-content intent, private-message access, or Manage Server permission is required. Discord authorization requires the owner's action-time approval.
 
 ## Deploy
 

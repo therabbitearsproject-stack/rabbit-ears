@@ -30,6 +30,46 @@ test('Discord mentions are disabled and timestamps are content time',()=>{
 });
 const env={SITE_ORIGIN:'https://rabbit-ears.stream',API_ORIGIN:'https://community.rabbit-ears.stream'};
 const ctx={waitUntil(){}};
+const authEnv={...env,DISCORD_CLIENT_ID:'123',DISCORD_CLIENT_SECRET:'test-secret',DISCORD_BOT_TOKEN:'test-bot',DISCORD_GUILD_ID:'456'};
+test('Discord sign-in requests explicit membership consent and preserves the return channel',async()=>{
+  const response=await worker.fetch(new Request(env.API_ORIGIN+'/auth/discord?channel=97'),authEnv,ctx);
+  assert.equal(response.status,302);
+  const target=new URL(response.headers.get('Location'));
+  assert.equal(target.searchParams.get('scope'),'identify guilds.join');
+  assert.match(response.headers.get('Set-Cookie'),/__Host_re_return=97/);
+});
+for(const scenario of [
+  {name:'new member',status:201,expected:302},
+  {name:'existing member',status:204,expected:302},
+  {name:'membership rejected',status:403,expected:502},
+  {name:'join request interrupted',throws:true,expected:503},
+  {name:'old identity-only authorization',scope:'identify',expected:403},
+  {name:'profile unavailable',profileStatus:502,expected:502},
+])test('OAuth join flow: '+scenario.name,async t=>{
+  const calls=[],writes=[],pending=[];
+  t.mock.method(globalThis,'fetch',async (url,init={})=>{
+    calls.push({url:String(url),...init});
+    if(String(url).endsWith('/token'))return Response.json({access_token:'test-access',scope:scenario.scope||'identify guilds.join'});
+    if(String(url).endsWith('/users/@me'))return Response.json({id:'789',username:'Viewer'},{status:scenario.profileStatus||200});
+    if(String(url).includes('/members/')){
+      assert.equal(init.method,'PUT');assert.equal(init.headers.Authorization,'Bot test-bot');
+      assert.deepEqual(JSON.parse(init.body),{access_token:'test-access'});
+      assert.equal(String(url),'https://discord.com/api/v10/guilds/456/members/789');
+      if(scenario.throws)throw Error('network interrupted');
+      return new Response(null,{status:scenario.status});
+    }
+    if(String(url).endsWith('/token/revoke'))return new Response(null,{status:200});
+    throw Error('Unexpected request');
+  });
+  const DB={prepare(sql){return {bind(...args){return {async run(){writes.push({sql,args});}};}};}};
+  const response=await worker.fetch(new Request(env.API_ORIGIN+'/auth/callback?code=test&state=valid',{headers:{Cookie:'__Host_re_oauth=valid; __Host_re_return=97'}}),{...authEnv,DB},{waitUntil(p){pending.push(p);}});
+  await Promise.all(pending);
+  assert.equal(response.status,scenario.expected);
+  assert.equal(calls.filter(c=>c.url.endsWith('/token/revoke')).length,1);
+  assert.equal(writes.length,scenario.expected===302?1:0);
+  assert.ok(!JSON.stringify(writes).includes('test-access'));
+  if(scenario.expected===302){assert.equal(response.headers.get('Location'),env.SITE_ORIGIN+'/#ch97');assert.match(response.headers.get('Set-Cookie'),/__Host_re_session=/);}
+});
 test('writes reject foreign origins before touching the database',async()=>{
   const response=await worker.fetch(new Request(env.API_ORIGIN+'/api/events',{method:'POST',headers:{Origin:'https://evil.example','Content-Type':'application/json'},body:JSON.stringify(valid())}),env,ctx);
   assert.equal(response.status,403);assert.equal(response.headers.get('Access-Control-Allow-Origin'),null);

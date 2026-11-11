@@ -104,10 +104,10 @@ async function handle(request, env, ctx) {
     return json(request,env,{ok:true,channels:count.count,configured:!!(env.DISCORD_CLIENT_ID && env.DISCORD_CLIENT_SECRET && env.DISCORD_BOT_TOKEN && env.DB && count.count===channels.length)});
   }
   if (path === '/auth/discord' && request.method === 'GET') {
-    requireValue(env.DISCORD_CLIENT_ID && env.DISCORD_CLIENT_SECRET,'Discord sign-in is not available yet.',503);
+    requireValue(env.DISCORD_CLIENT_ID && env.DISCORD_CLIENT_SECRET && env.DISCORD_BOT_TOKEN && /^\d+$/.test(env.DISCORD_GUILD_ID || ''),'Discord sign-in is not available yet.',503);
     const state = random();
     const auth = new URL('https://discord.com/oauth2/authorize');
-    auth.search = new URLSearchParams({ client_id:env.DISCORD_CLIENT_ID, redirect_uri:env.API_ORIGIN+'/auth/callback', response_type:'code', scope:'identify', state });
+    auth.search = new URLSearchParams({ client_id:env.DISCORD_CLIENT_ID, redirect_uri:env.API_ORIGIN+'/auth/callback', response_type:'code', scope:'identify guilds.join', state });
     const channel = Number(url.searchParams.get('channel'));
     const returnChannel = CHANNELS.has(channel) ? String(channel) : '';
     const h = new Headers({Location:auth.href,'Cache-Control':'no-store'});
@@ -121,11 +121,21 @@ async function handle(request, env, ctx) {
     const response = await fetch('https://discord.com/api/oauth2/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({client_id:env.DISCORD_CLIENT_ID,client_secret:env.DISCORD_CLIENT_SECRET,grant_type:'authorization_code',code:url.searchParams.get('code'),redirect_uri:env.API_ORIGIN+'/auth/callback'})});
     requireValue(response.ok,'Discord sign-in could not be completed. Please try again.',502);
     const token = await response.json();
-    const profileResponse = await fetch('https://discord.com/api/v10/users/@me',{headers:{Authorization:`Bearer ${token.access_token}`}});
-    requireValue(profileResponse.ok,'Discord profile unavailable.',502);
-    const profile = await profileResponse.json();
-    // Keep only the public identity; never store Discord access/refresh tokens.
-    ctx.waitUntil(fetch('https://discord.com/api/oauth2/token/revoke',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({client_id:env.DISCORD_CLIENT_ID,client_secret:env.DISCORD_CLIENT_SECRET,token:token.access_token})}).catch(()=>{}));
+    let profile;
+    try {
+      requireValue(token.access_token && (token.scope || '').split(/\s+/).includes('guilds.join'),'Please sign in again and allow joining Rabbit Ears.',403);
+      const profileResponse = await fetch('https://discord.com/api/v10/users/@me',{headers:{Authorization:`Bearer ${token.access_token}`}});
+      requireValue(profileResponse.ok,'Discord profile unavailable.',502);
+      profile = await profileResponse.json();
+      requireValue(/^\d+$/.test(profile.id) && /^\d+$/.test(env.DISCORD_GUILD_ID || ''),'Discord membership is not configured.',503);
+      // Join only Rabbit Ears, only during the viewer-approved sign-in flow.
+      // No roles/nickname overrides; Discord screening and bans remain in force.
+      const joined = await discord(`/guilds/${env.DISCORD_GUILD_ID}/members/${profile.id}`,env,{method:'PUT',body:JSON.stringify({access_token:token.access_token})});
+      requireValue(joined.status === 201 || joined.status === 204,'Could not join Rabbit Ears on Discord. Please try signing in again; contact support if this continues.',502);
+    } finally {
+      // Revoke on success or failure; never retain access/refresh tokens.
+      if(token.access_token)ctx.waitUntil(fetch('https://discord.com/api/oauth2/token/revoke',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({client_id:env.DISCORD_CLIENT_ID,client_secret:env.DISCORD_CLIENT_SECRET,token:token.access_token})}).catch(()=>{}));
+    }
     const sid = random()+random(), csrf = random();
     await env.DB.prepare('INSERT INTO sessions(token_hash,user_id,display_name,avatar,csrf,expires_at) VALUES(?,?,?,?,?,?)').bind(await digest(sid),profile.id,(profile.global_name || profile.username).slice(0,80),null,csrf,now()+604800).run();
     const old = c.__Host_re_session;

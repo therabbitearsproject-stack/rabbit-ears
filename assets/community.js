@@ -77,7 +77,7 @@ function renderAuth(){
   for(const target of [auth,reactionAuth]){
     target.replaceChildren();
     if(user){if(target===auth)target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;renderAuth();controls();}catch(e){message(e.message);}},'community-signout'));}
-    else {const login=el('a','btn discord-signin','Sign in with Discord');login.href=api+'/auth/discord?channel='+(context()?.channel||97);login.addEventListener('click',()=>{login.href=api+'/auth/discord?channel='+(context()?.channel||97);});target.append(login);}
+    else {const login=el('a','btn discord-signin','Sign in & join Discord');login.href=api+'/auth/discord?channel='+(context()?.channel||97);login.addEventListener('click',()=>{login.href=api+'/auth/discord?channel='+(context()?.channel||97);});target.append(login,el('small','community-disclosure','Signing in also joins the Rabbit Ears Discord server.'));}
   }
 }
 function replayed(e,c){return e.createdAt<c.airingStart;}
