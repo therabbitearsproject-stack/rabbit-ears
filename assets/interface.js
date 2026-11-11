@@ -78,7 +78,7 @@
       scheduleStatus.hidden=true;
     }catch{if(token===scheduleToken)scheduleStatus.textContent='The schedule is unavailable. Please try again in a moment.';}
   }
-  const hardware=make('div','tv-hardware');hardware.innerHTML='<span class="hardware-brand">RE<br>STREAM</span><div class="speaker-grille" aria-hidden="true"></div><i class="power-led" aria-hidden="true"></i>';
+  const hardware=make('div','tv-hardware');hardware.innerHTML='<img class="hardware-brand" src="assets/restream.svg" alt="Restream" width="240" height="112"><div class="speaker-grille" aria-hidden="true"></div><i class="power-led" aria-hidden="true"></i>';
   const tuneUp=button('Next channel',()=>openChannel(cur+1),'tuning-knob');tuneUp.title='Next channel';tuneUp.setAttribute('aria-label','Next channel');
   const tuneDown=button('Previous channel',()=>openChannel(cur-1),'tuning-knob');tuneDown.title='Previous channel';tuneDown.setAttribute('aria-label','Previous channel');
   hardware.insertBefore(tuneUp,hardware.children[1]);hardware.insertBefore(tuneDown,hardware.children[2]);cabinet.append(hardware);
@@ -199,6 +199,6 @@
   },true);
   window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged};
   setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
-  fetch('assets/channel-logos/manifest.json?v=nov-batch-1').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
+  fetch('assets/channel-logos/manifest.json?v=transparent-2').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();
 })();

@@ -234,6 +234,33 @@ The safety filter blocked any title containing "naked" or "nude", which also cau
 
 ---
 
+## 2026-11-10 — Transparent identities, Restream badge, volume and watch-party service
+
+Removed the colored logo mats so existing transparent station artwork blends into
+all viewing skins. Porchlight now uses a transparent cutout of its original art;
+the original file remains available. Replaced the two-line RE/STREAM cabinet text
+with a transparent vintage manufacturer-style Restream script badge.
+
+Added a persistent 0–100% TV volume slider to both remotes. Mute remains separate;
+adjusting the slider restores sound, and zero mutes it. Checked keyboard operation
+and that the volume survives a reload.
+
+Added the Discord watch-party frontend and a Cloudflare Worker/D1 service under
+`community/`. Entries are keyed by channel and original episode/file, stamped with
+source playback position, and replay on subsequent airings. Only original writes
+enter the Discord outbox. The UI includes comments, reactions, timeline markers,
+fullscreen controls, replay visibility, sign-in/out and deletion. Guest viewing
+continues to work. The panel stays hidden until the backend and all channel mappings
+are configured. See `community/README.md` for setup and operational limits.
+
+Created the Rabbit Ears Watch Party Discord app and saved its OAuth callback.
+Cloudflare D1 database/schema created. Live connection, bot installation, channel
+provisioning and end-to-end OAuth/Discord validation remain pending the private
+credentials and final deployment authorization. Unit/regression tests and local
+D1 persistence/security tests passed. No secrets are committed.
+
+---
+
 ## 2026-11-08 — Eye-and-number viewer count beneath channel number
 
 Moved the guide's viewer count into the channel-number column and rendered an eye

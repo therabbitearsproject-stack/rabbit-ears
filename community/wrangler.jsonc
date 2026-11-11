@@ -1,0 +1,21 @@
+{
+  "name": "rabbit-ears-community",
+  "account_id": "088437319342b25a7454230108e99d16",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-10",
+  "workers_dev": false,
+  "routes": [{ "pattern": "community.rabbit-ears.stream", "custom_domain": true }],
+  "vars": {
+    "SITE_ORIGIN": "https://rabbit-ears.stream",
+    "API_ORIGIN": "https://community.rabbit-ears.stream",
+    "DISCORD_GUILD_ID": "1569894832615198771",
+    "DISCORD_CLIENT_ID": "1569918622103642233"
+  },
+  "triggers": { "crons": ["* * * * *"] },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "rabbit-ears-community",
+    "database_id": "0a73896d-68e3-4abf-bd10-330308ad41f9",
+    "migrations_dir": "migrations"
+  }]
+}

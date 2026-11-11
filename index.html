@@ -316,7 +316,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .screen canvas, .osd, .lower { transition: none; } }
 </style>
-<link rel="stylesheet" href="assets/interface.css?v=cozy-layout-1">
+<link rel="stylesheet" href="assets/interface.css?v=watch-party-1">
 <link rel="stylesheet" href="assets/captions.css?v=caption-size-3">
 </head>
 <body data-skin="retro" data-tv-page="guide">
@@ -1496,7 +1496,23 @@ $("back").onclick = () => seek(-15);
 $("fwd").onclick = () => seek(15);
 $("live").onclick = goLive;
 
+vid.volume = Math.max(0, Math.min(1, Number(store.get("re_tv_volume", .8)) || 0));
 function setMuted(m) { vid.muted = m; $("mute").textContent = m ? "Sound off" : "Sound on"; }
+function setTvVolume(value) {
+  vid.volume = Math.max(0, Math.min(1, Number(value) || 0));
+  store.set("re_tv_volume", vid.volume);
+  setMuted(vid.volume === 0);
+}
+window.rePlaybackContext = () => {
+  if (mode !== 'tv' || !playing || channels()[cur]?.custom) return null;
+  const segment = currentSegment();
+  if (segment.kind !== 'program') return null;
+  if (vid.readyState < 1 || !activeSegment?.media || vid.currentSrc !== new URL(fileUrl(activeSegment.media), location.href).href) return null;
+  return { channel: channels()[cur].no, channelName: channels()[cur].name,
+    mediaId: playing.m.id, file: playing.m.file, title: playing.m.title,
+    duration: playing.m.dur, position: vid.currentTime,
+    airingStart: playing.v0, paused: vid.paused || vid.seeking || vid.readyState < 2 };
+};
 $("power").onclick = () => { $("power").hidden = true; setMuted(false); vid.play().catch(() => {}); };
 $("mute").onclick = () => setMuted(!vid.muted);
 $("up").onclick = () => tune(cur + 1);
@@ -2046,7 +2062,10 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=porchlight-1"></script>
+<script src="assets/interface.js?v=watch-party-1"></script>
+<script src="assets/volume.js?v=1"></script>
+<script src="assets/community-config.js?v=1"></script>
+<script type="module" src="assets/community.js?v=1"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else

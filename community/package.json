@@ -1,0 +1,13 @@
+{
+  "name": "rabbit-ears-community",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test worker.test.mjs",
+    "test:integration": "node --test integration.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "provision": "node provision.mjs"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}
