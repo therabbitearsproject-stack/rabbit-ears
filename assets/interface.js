@@ -189,7 +189,7 @@
   audio.addEventListener('playing',()=>body.classList.add('radio-playing'));audio.addEventListener('pause',()=>body.classList.remove('radio-playing'));
   document.addEventListener('keydown',e=>{
     if(e.target.closest('#caption-options'))return;
-    if(document.querySelector('dialog[open]')||!$('welcome').hidden)return;
+    if(document.querySelector('dialog[open]')||document.querySelector('[popover]:popover-open')||!$('welcome').hidden)return;
     if(e.key==='Escape'&&mode==='tv'){if(full){e.preventDefault();e.stopImmediatePropagation();exitFull();}else if(body.dataset.tvPage==='channel'){e.preventDefault();e.stopImmediatePropagation();showGuide();}return;}
     if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;
     if(full)reveal();
