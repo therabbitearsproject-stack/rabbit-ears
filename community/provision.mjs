@@ -25,11 +25,12 @@ for(let start=0;start<channels.length;start+=40){
   for(const ch of group){
     const tag=`rabbit-ears:channel:${ch.no}`;
     let found=existing.find(c=>c.type===0&&c.topic?.split('\n').includes(tag));
-    const name=`ch-${String(ch.no).padStart(2,'0')}-${ch.name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`.slice(0,100);
+    const name=`${ch.emoji || '📺'}・ch-${String(ch.no).padStart(2,'0')}-${ch.name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`.slice(0,100);
     if(!found&&apply){
       found=await api(`/guilds/${guild}/channels`,'POST',{name,type:0,parent_id:category.id,topic:`${tag}\n${ch.name} · https://rabbit-ears.stream/#ch${ch.no}\nOriginal comments and reactions from the site appear here. Episode replays stay on the site.`,rate_limit_per_user:5});
       existing.push(found);await delay(400);
     }
+    if(found&&apply&&found.name!==name){await api(`/channels/${found.id}`,'PATCH',{name});found.name=name;await delay(400);}
     map.push({number:ch.no,name:ch.name,discordId:found?.id||null});
     console.log(`${found?'Ready':apply?'Created':'Would create'}: ${name}`);
   }
