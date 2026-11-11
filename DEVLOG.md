@@ -4,6 +4,14 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-11 — Cleaned up Kung Fu Theater
+
+- While checking the channel for a TikTok post, found uploads that slipped past the filters: a German lecture on ritual child abuse, eight "Video Nasty Project" uploads of banned 1980s horror films (graphic and sexual violence; seven on Kung Fu Theater, one on Strange Signals), and pirated rips of DreamWorks' Kung Fu Panda films and other studio movies.
+- All blocked by id in `BLOCKED` (everywhere), plus a few off-topic Kung Fu Panda clips and mockbusters (blocked on Kung Fu Theater only). Blocks apply at play time, so the website and the TV apps drop them on this publish without reshuffling the channels.
+- Open: a catalog-wide look for other pirated "WEB-DL / YTS / RARBG" rips (several exist on anime, kids and music channels).
+
+---
+
 ## 2026-11-11 — Android install file on the site
 
 - The Android TV / Fire TV / phone app is now downloadable at `rabbit-ears.stream/app/rabbit-ears-tv.apk`, so a Fire TV can install it with the Downloader app. Nothing on the site links to it, and `robots.txt` keeps search engines off `/app/`.
