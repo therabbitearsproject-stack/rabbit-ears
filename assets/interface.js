@@ -167,7 +167,7 @@
   function refreshSymbols(){for(const [id,[base,label]] of Object.entries(symbols)){
     const b=$(id);if(!b)continue;let name=base, accessible=b.getAttribute('aria-label')||label;
     if(id==='pause'){name=held?'play':'pause';accessible=held?'Play':'Pause';}
-    if(id==='mute'){name=vid.muted?'mute':'sound';accessible=vid.muted?'Sound off':'Sound on';}
+    if(id==='mute'){name=vid.muted?'mute':'sound';accessible='Volume';}
     if(id==='share'||id==='gShare'){if(/copied/i.test(b.textContent))accessible='Link copied';}
     const markup=icon(name)+(id==='back'||id==='fwd'?'<small>15</small>':'');
     if(!b.querySelector('svg')||b.dataset.icon!==name){b.innerHTML=markup;b.dataset.icon=name;}

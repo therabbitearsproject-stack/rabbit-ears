@@ -51,10 +51,10 @@ function makeDock(cls){
   return d;
 }
 for(const p of [panel,reactionPopover])p.addEventListener('toggle',()=>{for(const t of triggers)if(t.popover===p)t.button.setAttribute('aria-expanded',String(p.matches(':popover-open')));});
-const pack=document.querySelector('.player-pack'),dock=makeDock('watch-dock');dock.hidden=true;pack.querySelector('.cabinet').after(dock);
+const pack=document.querySelector('.player-pack'),dock=makeDock('watch-dock');dock.hidden=true;pack.querySelector('.remote').append(dock);
 const layer=el('div','reaction-layer');layer.setAttribute('aria-hidden','true');screen.append(layer);
 const quick=makeDock('fullscreen-community watch-dock');quick.hidden=true;
-screen.querySelector('.fullscreen-controls')?.append(quick);
+screen.querySelector('.fullscreen-remote')?.append(quick);
 const timeline=el('div','community-timeline');timeline.setAttribute('aria-label','Comments and reactions on this episode');document.getElementById('pos').after(timeline);
 function context(){const c=window.rePlaybackContext?.();if(!c)return null;c.position=contentPosition(c.position,c.cuts);if(c.position===null)return null;c.file=editionFile(c.file,c.cuts);return c;}
 function message(text){notice.textContent=text;reactionNotice.textContent=text;}
