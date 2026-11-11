@@ -103,7 +103,10 @@ function paintMarkers(c){
   timeline.replaceChildren();timeline.hidden=!c||!markers.length;
   for(const m of markers){
     const dot=el('span','community-marker');dot.tabIndex=0;dot.style.left=Math.min(99.5,m.position/c.duration*100)+'%';
-    dot.title=`${stamp(m.position)} · ${m.count} ${m.count===1?'entry':'entries'}${m.comments?' · '+m.comments+' comments':''}${m.sample?' — '+m.sample.slice(0,120):''}`;dot.setAttribute('aria-label',dot.title);
+    const emoji=(m.emoji||'').split(',').filter(e=>EMOJI.includes(e)),reactionCount=m.count-m.comments;
+    dot.title=`${stamp(m.position)}${m.comments?' · '+m.comments+(m.comments===1?' comment':' comments'):''}${reactionCount?' · '+reactionCount+(reactionCount===1?' reaction':' reactions')+(emoji.length?' '+emoji.join(' '):''):''}${m.sample?' — '+m.sample.slice(0,120):''}`;
+    dot.setAttribute('aria-label',dot.title);
+    if(emoji.length){const glyph=el('span','marker-reaction',emoji[0]);glyph.setAttribute('aria-hidden','true');dot.append(glyph);}
     const tooltip=el('span','marker-tooltip',dot.title);dot.append(tooltip);timeline.append(dot);
   }
 }

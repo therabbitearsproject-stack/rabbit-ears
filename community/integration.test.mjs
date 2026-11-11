@@ -22,7 +22,7 @@ test('authenticated write persists, retry is idempotent, reads replay without cr
   for(let i=0;i<3;i++){
     const data=await get(`/api/events?channel=97&media=${media}&from=100&to=150`);assert.equal(data.events.length,1);assert.equal(data.events[0].position,125.5);assert.equal(data.events[0].name,'Test Viewer');assert.equal(data.events[0].canDelete,true);
   }
-  const markers=await get(`/api/timeline?channel=97&media=${media}`);assert.deepEqual(markers.markers,[{position:120,count:1,comments:1,sample:body.body}]);
+  const markers=await get(`/api/timeline?channel=97&media=${media}`);assert.deepEqual(markers.markers,[{position:120,count:1,comments:1,sample:body.body,emoji:null}]);
 });
 test('another episode file and another channel do not inherit the first episode comments',async()=>{
   const other=await digest(JSON.stringify([body.mediaId,'other.mp4']));assert.deepEqual((await get(`/api/events?channel=97&media=${other}&from=100&to=150`)).events,[]);
@@ -34,6 +34,7 @@ test('CSRF prevents writes even when an authenticated session cookie is present'
 test('concurrent posting cannot exceed the per-user limit',async()=>{
   const results=await Promise.all(Array.from({length:20},()=>fetch(base+'/api/events',{method:'POST',headers,body:JSON.stringify({...body,kind:'emoji',body:'❤️',requestId:crypto.randomUUID()})})));
   assert.equal(results.filter(r=>r.status===201).length,11);assert.equal(results.filter(r=>r.status===429).length,9);
+  const timeline=await get(`/api/timeline?channel=97&media=${media}`);assert.equal(timeline.markers[0].emoji,'❤️');assert.equal(timeline.markers[0].count,12);assert.equal(timeline.markers[0].comments,1);
 });
 test('deleting a moment removes it from later playback',async()=>{
   const r=await fetch(base+'/api/events/'+event.id,{method:'DELETE',headers});assert.equal(r.status,200);

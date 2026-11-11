@@ -94,3 +94,6 @@ body[data-tv-page=guide] .channel-schedule{display:none}
 
 /* One active skull wordmark; preserve contrast across the existing themes. */
 .brand-home{color:#000!important}body[data-skin=theatre] .brand-home,body[data-skin=stadium] .brand-home,body[data-skin=metal] .brand-home,body[data-skin=modern] .brand-home,body[data-skin=cozy] .brand-home{color:#fff!important}.site-wordmark{transform:none!important;text-shadow:none!important}.site-wordmark>svg path{color:inherit}
+
+/* Reactions show their actual emoji instead of an anonymous timeline tick. */
+.marker-reaction{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font:13px/1.1 sans-serif;filter:drop-shadow(0 1px 1px #0005);pointer-events:none}.community-marker:has(.marker-reaction){background:transparent}.community-marker:has(.marker-reaction) .marker-tooltip{bottom:21px}

@@ -149,7 +149,7 @@ async function handle(request, env, ctx) {
     requireValue(CHANNELS.has(channel) && /^[a-f0-9]{64}$/.test(key || ''),'Invalid episode.');
     const user = await session(request,env); if (user) user.moderator = moderator(user,env);
     if (path === '/api/timeline') {
-      const {results} = await env.DB.prepare('SELECT CAST(position/10 AS INTEGER)*10 AS position,COUNT(*) AS count,SUM(kind=\'comment\') AS comments,MIN(CASE WHEN kind=\'comment\' THEN body END) AS sample FROM events WHERE channel=? AND media_key=? AND deleted_at IS NULL GROUP BY 1 ORDER BY 1 LIMIT 4321').bind(channel,key).all();
+      const {results} = await env.DB.prepare('SELECT CAST(position/10 AS INTEGER)*10 AS position,COUNT(*) AS count,SUM(kind=\'comment\') AS comments,MIN(CASE WHEN kind=\'comment\' THEN body END) AS sample,GROUP_CONCAT(DISTINCT CASE WHEN kind=\'emoji\' THEN body END) AS emoji FROM events WHERE channel=? AND media_key=? AND deleted_at IS NULL GROUP BY 1 ORDER BY 1 LIMIT 4321').bind(channel,key).all();
       return json(request,env,{markers:results});
     }
     const from = Math.max(0,Number(url.searchParams.get('from')) || 0), to = Math.min(43200,Number(url.searchParams.get('to')) || from+90);
