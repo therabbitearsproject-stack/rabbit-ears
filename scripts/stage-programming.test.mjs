@@ -39,3 +39,19 @@ test('another update during the protected window preserves both current and alre
  const cutoff=second.catalog.programming.channels[30].until;
  assert.equal((await b.lineup(ch,cutoff,1))[0].m.id,'second-new-film');
 });
+test('an explicitly blocked upload is removed rather than protected for another two hours',async()=>{
+ const previous=changed(base(),'removed-film');delete previous.catalog.programming;
+ const next=changed(previous,'replacement-film');next.html=next.html.replace('const BLOCKED = new Set([','const BLOCKED = new Set(["removed-film",');
+ next.catalog.programming=await stageProgramming({previous,next,now});
+ const stage=next.catalog.programming.channels[30];assert.equal(stage.earlyRemoval,true);assert.equal(stage.until,now);assert.deepEqual(stage.items,[]);
+ const site=siteCode(next),ch=site.BUILT_IN.find(c=>c.no===30);assert.equal((await site.lineup(ch,now,1))[0].m.id,'replacement-film');
+});
+test('the updated cycle introduces each new show before returning to the mixed rotation',async()=>{
+ const previous=base();delete previous.catalog.programming;
+ const next=structuredClone(previous),ch=siteCode(next).BUILT_IN.find(c=>c.no===30);
+ const episode=(id,source)=>[id,id+'.mp4',5400,id,'1992','',source];
+ next.catalog.pools[ch.q].push(episode('new-a-1','new-series-a'),episode('new-a-2','new-series-a'),episode('new-b-1','new-series-b'));
+ next.catalog.programming=await stageProgramming({previous,next,now});
+ const site=siteCode(next),cutoff=next.catalog.programming.channels[30].until;
+ const slots=await site.lineup(ch,cutoff,2);assert.deepEqual(slots.map(p=>p.m.id),['new-a-1','new-b-1']);
+});

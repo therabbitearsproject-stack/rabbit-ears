@@ -711,6 +711,8 @@ const listCache = {}, metaCache = {};
 // keeps it off just that channel (it matched the search but isn't what the channel is about).
 // The nightly job also pulls tapes viewers report (see scripts/build-catalog.mjs).
 const BLOCKED = new Set([
+  "yarichin-bitch-club-cap-2-sin-censura-bd-ver-anime.-top-2", "kaede-to-suzu-01-hd",
+  "kaifuku-jutsushi-no-yarinaoshi", "TapThatYosugaNoSora", "TapThatMeganMcCauleyYosugaNoSora",
   "nekromantik-hard-sub", "nekromantik.-1987.1080p.-blu-ray.x-264-yts.-lt",   // extremely graphic film
   "youtube-s4-DPqWdO7Y",                                                      // Howard Stern clip show (Sweatin')
   "twitch-vod-v535773453",                                                    // a Twitch stream (TV Dinner)
@@ -1111,7 +1113,8 @@ function effBlock(ch, b) {
 const continuousCache = {};
 async function continuousLineup(ch, t, count) {
   if (!continuousCache[ch.q]) continuousCache[ch.q] = (async () => {
-    const ids = await getList(ch), programs = await Promise.all(ids.map(getMeta));
+    const ids = await getList(ch), leading=(catalog?.programming?.channels?.[ch.no]?.leadIds||[]).filter(id=>ids.includes(id));
+    const ordered=[...leading,...ids.filter(id=>!leading.includes(id))], programs = await Promise.all(ordered.map(getMeta));
     return programs.filter(Boolean).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
   })().catch(error => { delete continuousCache[ch.q]; throw error; });
   const templates = await continuousCache[ch.q];

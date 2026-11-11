@@ -15,18 +15,26 @@ export async function stageProgramming({previous,next,now=Date.now()/1000,leadSe
     const source=old.BUILT_IN.find(c=>c.no===ch.no);
     // New stations can begin immediately; existing stations must never silently lose protection.
     if(!source)continue;
-    const items=[];let cursor=now;
-    while(cursor<notBefore){
+    const items=[];let cursor=now,blockedSlot=false;
+    while(cursor<notBefore&&!blockedSlot){
       const batch=await old.lineup(source,cursor,128);
       let progressed=false;
       for(const p of batch){
         if(p.end<=cursor||items.length&&p.start<items.at(-1).end-.01)continue;
+        // An explicit removal overrides schedule protection rather than retaining a bad upload.
+        if(target.blocked(p.m.id,ch)||target.blocked(p.m.archiveId||p.m.id,ch)){
+          cursor=Math.max(now,p.start);blockedSlot=true;progressed=true;break;
+        }
         items.push(p);cursor=p.end;progressed=true;
         if(cursor>=notBefore)break;
       }
       if(!progressed||items.length>10000)throw Error('Cannot preserve published schedule: '+ch.name);
     }
-    channels[ch.no]={until:items.at(-1).end,items};
+    // Introduce one program from each newly added source before the regular cycle,
+    // so a new series is visible promptly rather than buried weeks into the pool.
+    const oldSources=new Set((previous.catalog.pools[source.q]||[]).map(r=>r[6]||r[0])),seen=new Set(),leadIds=[];
+    for(const row of next.catalog.pools[ch.q]||[]){const id=row[6]||row[0];if(!oldSources.has(id)&&!seen.has(id)){seen.add(id);leadIds.push(row[0]);}}
+    channels[ch.no]={until:items.at(-1)?.end||cursor,items,leadIds,...(blockedSlot?{earlyRemoval:true}:{})};
   }
   return {version:1,fingerprint:signature,created:now,notBefore,channels};
 }

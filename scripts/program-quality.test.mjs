@@ -12,6 +12,8 @@ test('full-program gates reject previews but preserve real short-form channels',
  assert.equal(keepProgram({name:'Hoops'},row('NBA Finals full game',9000)),true);
  assert.equal(keepProgram({name:'Pit Lane'},row('Wrestling grand finale',9000)),false);
  assert.equal(keepProgram({name:'Slow TV'},row('Fish Tank Paradox election podcast',7200)),false);
+ assert.equal(keepProgram({name:'Anime Station'},row('Kaede To Suzu 01 HD',1500)),false);
+ assert.equal(keepProgram({name:'Anime Station'},row('Yarichin Bitch Club SIN CENSURA',1500)),false);
 });
 test('collections expand full episodes instead of retaining a twelve-second preview',()=>{
  const compatibility={choose:(_files,f)=>f,knownCompatible:()=>true,version:'test'};
@@ -21,6 +23,8 @@ test('collections expand full episodes instead of retaining a twelve-second prev
  ]},'collection',compatibility);
  assert.equal(rows.length,2);assert.ok(rows.every(r=>r[6]==='collection'&&r[2]>=1500));assert.notEqual(rows[0][0],rows[1][0]);
  assert.equal(strengthenPool({name:'Rerun Alley'},rows,rows).length,2);
+ const misleading=collectionPrograms({name:'Ballpark'},{metadata:{title:'Baseball World Series'},files:[{name:'Amos and Andy.mp4',length:7200},{name:'Boston Blackie.mp4',length:7200}]},'misleading',compatibility);
+ assert.deepEqual(misleading,[]);
 });
 test('ads stay on subject, with quiet channels deliberately free of inserted advertising',()=>{
  assert.ok(!topicsFor({id:'toyota',title:'Toyota commercial'}).includes('toys'));

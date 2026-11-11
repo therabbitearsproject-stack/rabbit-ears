@@ -39,7 +39,7 @@ const BUILT_IN = [
     await writeFile(join(dir,'scripts/themed-ads.json'),JSON.stringify({commercials:[ad('safe-ad'),ad('reported-ad','reported-source'),ad('episode-broken'),ad('blocked-ad','blocked-source'),ad('wrong-ad','wrong-source'),ad('channel-blocked-ad','channel-blocked-source')]}));
     const oldRow = ["old-pool", "video.mp4", 600, "Old title", "2026", ""];
     await writeFile(join(dir, "catalog.json"), JSON.stringify({ pools: { offline: [oldRow] } }));
-    const searches = [];
+    const searches = [],lookups=[];
     globalThis.setTimeout = (fn, ms, ...args) => originalTimeout(fn, Math.min(ms, 1), ...args);
     globalThis.fetch = async input => {
       const url = new URL(input);
@@ -48,11 +48,12 @@ const BUILT_IN = [
         const q = url.searchParams.get("q");
         searches.push({ q, rows: Number(url.searchParams.get("rows")) });
         if (q.includes("offline")) return { ok: false, status: 503 };
-        const ids = q.includes("ordinary") ? ["ordinary"] : q.includes("old") ? ["shared", "reported"] : q.includes("new") ? ["shared", "new", "unplayable"] : ["shared", "extra"];
+        const ids = q.includes("ordinary") ? ["ordinary","bad-preview"] : q.includes("old") ? ["shared", "reported"] : q.includes("new") ? ["shared", "new", "unplayable"] : ["shared", "extra"];
         data = { response: { docs: ids.map(identifier => ({ identifier })) } };
       } else if (url.pathname.startsWith("/metadata/")) {
         const id = url.pathname.split("/").pop();
-        data = { metadata: { title: id }, files: id === "unplayable" ? [] : [{ name: "video.mp4", length: "10:00", format: "h.264" }] };
+        lookups.push(id);
+        data = { metadata: { title: id==='bad-preview'?'Movie preview':id }, files: id === "unplayable" ? [] : [{ name: "video.mp4", length: "10:00", format: "h.264" }] };
       } else if (url.pathname === "/reports.json") {
         const reports=[...[1,2,3].map(()=>({id:'reported',reason:'broken',ch:'Trek'})),
           ...[1,2].map(()=>({id:'reported-source',reason:'inappropriate',ch:'Ordinary'})),
@@ -74,6 +75,12 @@ const BUILT_IN = [
     assert.equal(searches.find(s => s.q.includes("ordinary")).rows, 400);
     assert.ok(searches.filter(s => s.q.includes("trek")).every(s => s.rows === 133));
     assert.equal(searches.filter(s => s.q.includes("trek")).length, 3);
+    assert.ok(result.qualifiedOut.channels.Ordinary.includes('bad-preview'));
+    await import(pathToFileURL(join(dir,'scripts/build-catalog.mjs'))+'?refresh');
+    assert.equal(lookups.filter(id=>id==='bad-preview').length,1,'daily refresh does not refetch rejected clips');
+    await writeFile(join(dir,'scripts/channel-policies.json'),'\n',{flag:'a'});
+    await import(pathToFileURL(join(dir,'scripts/build-catalog.mjs'))+'?new-policy');
+    assert.equal(lookups.filter(id=>id==='bad-preview').length,2,'changed admission rules recheck cached exclusions');
   } finally {
     globalThis.fetch = originalFetch;
     globalThis.setTimeout = originalTimeout;

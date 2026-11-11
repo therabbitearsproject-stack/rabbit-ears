@@ -2,8 +2,8 @@ import {createHash} from 'node:crypto';
 import policies from './channel-policies.json' with {type:'json'};
 
 const seconds=v=>String(v||0).split(':').reduce((a,p)=>a*60+Number(p),0);
-const promotional=/\b(trailer|trailers|teaser|teasers|preview|previews|sample|samples|unboxing|walkthrough|retrospective|reaction video|fan edit|fan trailer|movie review|episode review)\b/i;
-const unsafe=/\b(hentai|porn|porno|pornography|nsfw|xxx|ecchi|harem|uncensored|sexploitation|striptease|nude|nudity|erotic|erotica|fetish|lolicon|shotacon)\b/i;
+const promotional=/\b(trailer|trailers|teaser|teasers|preview|previews|sample|samples|partial|incomplete|excerpts?|fragments?|unboxing|walkthrough|retrospective|reaction video|fan edit|fan trailer|movie review|episode review)\b/i;
+const unsafe=/\b(hentai|porn|porno|pornography|nsfw|xxx|ecchi|harem|uncensored|sexploitation|striptease|nude|nudity|erotic|erotica|fetish|lolicon|shotacon|yarichin|kaifuku|kaede\s+to\s+suzu|redo\s+of\s+healer|yosuga\s+no\s+sora|sin\s+censura)\b/i;
 export function policyFor(channel){return policies[channel.name]||{minSeconds:1,style:'ambient'};}
 export function keepProgram(channel,row){
   const p=policyFor(channel),title=String(row[3]||'');
@@ -38,7 +38,11 @@ export function collectionPrograms(channel,data,sourceId,compatibility,pickSub=(
   const label=f=>f.replace(/^.*\//,'').replace(/(?:\.ia|_512kb)?\.mp4$/i,'').replace(/[._]/g,' ').replace(/\b(1080p|720p|480p|x264|h264|aac)\b/gi,'').replace(/\s+/g,' ').trim();
   return [...unique.values()].slice(0,150).map(f=>{
     const id=sourceId+'--'+createHash('sha256').update(f.name.replace(/(?:\.ia|_512kb)?\.mp4$/i,'').toLowerCase()).digest('hex').slice(0,16);
-    const fileTitle=label(f.name),display=unique.size>1?`${title} · ${fileTitle}`:title;
+    const fileTitle=label(f.name),policy=policyFor(channel);
+    // A sport-named collection may contain unrelated shows. For multi-file items,
+    // require each file to identify the sport, teams or an actual game/race event.
+    if(unique.size>1&&policy.require&&!new RegExp(policy.require,'i').test(fileTitle)&&! /\b(game|match|race|grand prix|gp|vs|versus|finals?|bowl)\b/i.test(fileTitle))return null;
+    const display=unique.size>1?`${title} · ${fileTitle}`:title;
     return [id,f.name,Math.round(seconds(f.length)*10)/10,display.slice(0,300),String([].concat(data.metadata?.year||data.metadata?.date||'')[0]).slice(0,4),pickSub(data.files,f.name),sourceId,Number(f.width)||0,Number(f.height)||0,compatibility.knownCompatible(f)?compatibility.version:''];
-  }).filter(r=>keepProgram(channel,r));
+  }).filter(r=>r&&keepProgram(channel,r));
 }

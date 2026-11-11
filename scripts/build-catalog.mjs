@@ -9,11 +9,12 @@
 // Run: node scripts/build-catalog.mjs   (Node 18+; no packages needed)
 
 import { readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { buildTrekPool } from "./trek-programming.mjs";
 import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
 import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 import { buildPorchlightPool } from "./porchlight-programming.mjs";
-import { strengthenPool } from "./program-quality.mjs";
+import { strengthenPool,keepProgram } from "./program-quality.mjs";
 import { mergeAds,channelAdPools } from "./themed-ad-library.mjs";
 
 const POOL = 400;          // most-downloaded matches kept per channel
@@ -30,11 +31,16 @@ if (!safeSrc || listStart < 0 || listEnd < 0) throw new Error("couldn't find SAF
 const BUILT_IN = new Function(`${safeSrc}\n${html.slice(listStart, listEnd + 3)}\nreturn BUILT_IN;`)();
 const blockedSrc = html.match(/^const BLOCKED = new Set\(\[[\s\S]*?^\]\);/m)?.[0];
 const BLOCKED = blockedSrc ? new Function(blockedSrc + '\nreturn BLOCKED;')() : new Set();
+const admissionVersion=createHash('sha256').update((await readFile(new URL('./program-quality.mjs',import.meta.url),'utf8')).replace(/\r\n/g,'\n')+(await readFile(new URL('./channel-policies.json',import.meta.url),'utf8')).replace(/\r\n/g,'\n')).digest('hex');
 console.log(`${BUILT_IN.length} channels`);
 
 // ---- previous catalog, for reuse ----
 let prev = { meta: {} };
 try { prev = JSON.parse(await readFile(new URL("../catalog.json", import.meta.url), "utf8")); } catch {}
+// Cache channel-specific admission failures for a week. Without this, removing
+// thousands of short clips causes every daily build to fetch them all over again.
+const reuseAdmission=prev.qualifiedOut?.version===admissionVersion&&Date.now()-Date.parse(prev.qualifiedOut.generated)<7*86400000;
+const qualifiedOut={version:admissionVersion,generated:reuseAdmission?prev.qualifiedOut.generated:new Date().toISOString(),channels:reuseAdmission?prev.qualifiedOut.channels:{}};
 const known = new Map(); // id -> row (or null when the id had no playable video)
 // Rows from before subtitles were tracked (5 fields) are looked up again once.
 for (const rows of Object.values(prev.pools || {})) for (const r of rows) if (r.length >= 6) known.set(r[0], r);
@@ -128,7 +134,9 @@ for (const ch of BUILT_IN) {
     continue;
   }
   const rows = await pool(async id => {
+    if(BLOCKED.has(id)||BLOCKED.has(id+'@'+ch.name))return undefined;
     if (known.has(id)) { reused++; return known.get(id); }
+    if(qualifiedOut.channels[ch.name]?.includes(id)){reused++;return undefined;}
     looked++;
     try { const r = await videoRow(id); known.set(id, r); return r; }
     catch { failed++; return undefined; } // unknown this run; not marked unplayable
@@ -193,6 +201,7 @@ try{additions=JSON.parse(await readFile(new URL('./channel-programs.json',import
 for(const ch of BUILT_IN){
   if(!pools[ch.q])continue;
   const old=pools[ch.q].length;
+  qualifiedOut.channels[ch.name]=[...new Set([...(qualifiedOut.channels[ch.name]||[]),...pools[ch.q].filter(row=>!keepProgram(ch,row)).map(row=>row[0])])];
   pools[ch.q]=strengthenPool(ch,pools[ch.q],ch.library?[]:additions.channels[ch.name]?.rows||[]).filter(row=>mediaAllowed(row,ch));
   if(!pools[ch.q].length)throw new Error('No qualified programs for '+ch.name);
   console.log(`${ch.name}: ${old} -> ${pools[ch.q].length} duration/title-qualified programs`);
@@ -228,6 +237,6 @@ try{themedAds=JSON.parse(await readFile(new URL('./themed-ads.json',import.meta.
 const channelNumbers=JSON.parse(await readFile(new URL('../community/channels.json',import.meta.url),'utf8'));
 const channelAds=channelAdPools(channelNumbers,mergeAds({commercials,breakLibraries},themedAds));
 for(const ch of channelNumbers)channelAds[ch.no]=channelAds[ch.no].filter(ad=>mediaAllowed(ad,ch));
-const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, channelBumpers, channelAds, unplayable: [...unplayable] };
+const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, channelBumpers, channelAds, qualifiedOut, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);
