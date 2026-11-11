@@ -20,17 +20,23 @@ export function scheduleCode(html) {
   return html.slice(from, to);
 }
 
-// Returns { index, channels: { [no]: feed } } for every built-in channel.
-export async function buildTvFeed({ html, catalog, commercialTiming, mediaCompatibility, now = Date.now() / 1000, hours = HOURS }) {
+// The website's channel and schedule code, running against catalog.json with no network.
+// Also used by scripts/build-imdb.mjs for the site's own title cleanup (tidy) and channel list.
+export function siteCode({ html, catalog, commercialTiming, mediaCompatibility }) {
   const CommercialTiming = loadModule(commercialTiming, "CommercialTiming");
   const MediaCompatibility = loadModule(mediaCompatibility, "MediaCompatibility");
-  const noFetch = () => Promise.reject(new Error("offline: the TV feed only uses catalog.json"));
+  const noFetch = () => Promise.reject(new Error("offline: only catalog.json is used"));
   // The schedule code reads `catalog`, `fetch` and `localStorage`; give it the catalog and nothing else.
   const run = new Function("CommercialTiming", "MediaCompatibility", "fetch", "localStorage", "__catalog",
     scheduleCode(html) + `
     catalog = __catalog;
-    return { BUILT_IN, BANDS, lineup, fileUrl, EPOCH };`);
-  const S = run(CommercialTiming, MediaCompatibility, noFetch, undefined, catalog);
+    return { BUILT_IN, BANDS, NO_IMDB, lineup, fileUrl, EPOCH, tidy, rowMedia, blocked };`);
+  return run(CommercialTiming, MediaCompatibility, noFetch, undefined, catalog);
+}
+
+// Returns { index, channels: { [no]: feed } } for every built-in channel.
+export async function buildTvFeed({ html, catalog, commercialTiming, mediaCompatibility, now = Date.now() / 1000, hours = HOURS }) {
+  const S = siteCode({ html, catalog, commercialTiming, mediaCompatibility });
   const band = no => S.BANDS.filter(([f]) => no >= f).pop()?.[1] || "";
   const url = m => { const u = S.fileUrl(m); return /^https?:/.test(u) ? u : SITE + u.replace(/^\.?\//, ""); };
   const round = x => Math.round(x * 10) / 10;

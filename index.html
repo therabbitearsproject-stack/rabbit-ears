@@ -491,6 +491,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <span class="meta" id="upnext"></span>
     <span class="meta vw" id="viewers"></span>
     <div class="acts">
+      <a id="imdb" href="https://www.imdb.com" target="_blank" rel="noopener" hidden>🎬 IMDb</a>
       <a id="link" href="https://archive.org" target="_blank" rel="noopener">View on the Internet Archive</a>
       <button class="linkbtn" id="share" type="button">🔗 Share this channel</button>
       <button class="linkbtn" id="report" type="button" aria-expanded="false" aria-controls="reportBox">⚑ Report this tape</button>
@@ -670,6 +671,10 @@ const LINEUP = {
   "Starbase": [90, "🖖"], "Hyperdrive": [91, "🌠"], "Riff Raff": [92, "🍿"], "Atomic Age": [93, "⚛️"], "Deep Space": [94, "🪐"],
   "World of Tomorrow": [95, "🏙️"], "Cliffhangers": [96, "🚀"], "Subspace 97": [97, "🌟"],
 };
+// Channels of commercials, home movies, music videos and other clips rather than films and shows,
+// which get no IMDb link (scripts/build-imdb.mjs skips them too).
+const NO_IMDB = new Set(["Ad Break", "Order Now", "Ephemera", "Duck & Cover", "Home Movies", "AMV Hour", "Slow TV",
+  "Arcade", "Video Jukebox", "Headbangers", "Encore", "Sweatin'", "Strange Signals", "World of Tomorrow"]);
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);
 // The schedule is built in 3-hour blocks. Each block starts at a seeded spot in the
@@ -1402,7 +1407,7 @@ async function tune(i) {
   window.REUI?.channelChanged();
   snow.style.opacity = "1";
   showOSD("CH " + num(cur), ch.icon + " " + ch.name);
-  $("title").textContent = "Tuning in " + ch.name + "…"; $("meta").textContent = ""; $("upnext").textContent = "";
+  $("title").textContent = "Tuning in " + ch.name + "…"; $("meta").textContent = ""; $("upnext").textContent = ""; $("imdb").hidden = true;
   try {
     const { p, next, offset } = await whatsOn(ch);
     if (my !== tuneId) return;
@@ -1414,6 +1419,7 @@ async function tune(i) {
     $("meta").textContent = `${ch.name}${m.year ? " · " + m.year : ""} · ${clockFmt(p.start)}–${clockFmt(p.end)} · ${fmt(offset)} in`;
     $("upnext").textContent = next ? `Up next at ${clockFmt(next.start)}: ${next.m.title}` : "";
     $("link").href = "https://archive.org/details/" + encodeURIComponent(m.archiveId || m.id);
+    setImdb(ch, m);
     showOSD("CH " + num(cur), ch.icon + " " + ch.name + " — " + m.title);
     setTvMeta();
     paintPos();
@@ -1423,6 +1429,21 @@ async function tune(i) {
     $("title").textContent = "Nothing but static on " + ch.name;
     $("meta").textContent = "The Internet Archive didn't answer, or this search has no videos. Try another channel.";
   }
+}
+
+// IMDb link for what's playing: straight to its page when the nightly build matched it
+// (catalog.imdb, see scripts/build-imdb.mjs), otherwise an IMDb search for the show or film's name.
+// Episodes ("Show · S01E02 · Title") search for the show. None on channels of commercials and clips.
+function setImdb(ch, m) {
+  const a = $("imdb"), tt = catalog?.imdb?.[m.id];
+  if (ch.custom || NO_IMDB.has(ch.name)) { a.hidden = true; return; }
+  if (tt) { a.href = "https://www.imdb.com/title/" + tt + "/"; a.textContent = "🎬 IMDb"; a.title = "This " + (m.title.includes(" · ") ? "show" : "title") + " on IMDb"; a.hidden = false; return; }
+  let q = String(m.title || "").split(" · ")[0].replace(/\s*[[(][^\])]*[\])]\s*$/, "").trim();
+  const y = q.match(/^(.*?)[\s.(-]+((?:19|20)\d\d)\)?$/);
+  if (y) q = y[1] + " " + y[2]; else if (/^(19|20)\d\d$/.test(m.year) && !m.title.includes(" · ")) q += " " + m.year;
+  a.hidden = q.length < 2;
+  a.href = "https://www.imdb.com/find/?q=" + encodeURIComponent(q);
+  a.textContent = "🎬 Search IMDb"; a.title = "Search IMDb for " + q;
 }
 
 // Every second: switch shows when the slot ends, keep the picture on schedule, tick the clock.

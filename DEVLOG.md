@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-11 — IMDb links for what's playing
+
+- Under the show that's playing, a "🎬 IMDb" link goes straight to its IMDb page. When there's no confident match it's "🎬 Search IMDb" instead (an IMDb search for the show or film's name and year). Channels of commercials, clips, music videos and home movies (`NO_IMDB` in index.html) and custom channels get no link.
+- The Internet Archive almost never records IMDb ids, so the nightly build (`scripts/build-imdb.mjs`) matches titles through Wikidata, which lists the IMDb id for most films and series. It uses the site's own title cleanup, looks up the show for episode titles ("Mister Ed S02E14 …"), skips compilations, and only accepts exact title matches. When the year is known, exactly one match may be within a year; classic-TV channels prefer series and movie channels prefer films. Matches go into `catalog.json` as `imdb: { videoId: "tt…" }`.
+- Results are cached in `scripts/imdb-cache.json` (misses retried after 60 days), at most 2,500 new titles a night, so the links fill in over a few nights. A Wikidata outage only skips that night's lookups.
+- Tested against live Wikidata on Kung Fu Theater, Sitcom Gold, Creature Feature, Cartoon Vault and Rerun Alley: every match spot-checked was right (e.g. Come Drink With Me, Night of the Living Dead, The Andy Griffith Show).
+
+---
+
 ## 2026-11-11 — Cleaned up Kung Fu Theater
 
 - While checking the channel for a TikTok post, found uploads that slipped past the filters: a German lecture on ritual child abuse, eight "Video Nasty Project" uploads of banned 1980s horror films (graphic and sexual violence; seven on Kung Fu Theater, one on Strange Signals), and pirated rips of DreamWorks' Kung Fu Panda films and other studio movies.

@@ -56,12 +56,15 @@ jobs:
       - name: Build games.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-games.mjs
+      - name: Match shows to IMDb
+        if: steps.need.outputs.catalog == 'yes'
+        run: node scripts/build-imdb.mjs || echo "::warning::IMDb matching failed; the site keeps working without new links"
       - name: Commit catalog if changed
         if: steps.need.outputs.catalog == 'yes'
         run: |
           git config user.name "Rabbit Ears"
           git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
-          git add catalog.json games.json
+          git add catalog.json games.json scripts/imdb-cache.json
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update catalog"
           git pull --rebase -q
