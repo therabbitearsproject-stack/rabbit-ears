@@ -1,0 +1,52 @@
+{
+  "baselineCommit": "7c2d322",
+  "currentContentCommit": "a0cd3ad",
+  "method": "Distinct source-item/video-file pairs; repeats across channels counted once. Added means newly listed file, including collection expansion and replacement encodes; not necessarily a newly discovered episode or series.",
+  "videos": {
+    "added": 7675,
+    "addedHours": 4604.873916666635,
+    "removedOrReplaced": 6253,
+    "netCount": 1422,
+    "netHours": 3686.8141111106015,
+    "currentCount": 28677,
+    "currentHours": 25618.530422221676,
+    "deliberatelyResearchedAdditionsIncluded": {
+      "distinctFiles": 1537,
+      "hours": 774.180861111112,
+      "channelEntries": 1548,
+      "channelEntryHours": 785.6515277777787,
+      "sourceGroups": 130
+    }
+  },
+  "bumpers": {
+    "created": 948,
+    "seconds": 9552,
+    "stationIds": 456,
+    "stories": 492,
+    "sixfoldExpansionIncluded": {
+      "added": 790,
+      "seconds": 7960
+    }
+  },
+  "ads": {
+    "newDistinctSpots": 141,
+    "newSeconds": 4260.26,
+    "distinctActiveSpots": 196,
+    "baselineDistinctSpots": 55,
+    "themedSelections": 142,
+    "themedNewAfterDeduplication": 137,
+    "subspaceAdditions": 10,
+    "subspaceReusedFromThemedPool": 6,
+    "subspaceNewDistinct": 4,
+    "method": "Deduplicate source Archive ID, original source filename and segment start, across global, reviewed and themed ad pools."
+  },
+  "subtitles": {
+    "newlyEnabled": 0,
+    "validTimedTextCandidates": 295,
+    "candidatesReaching95PercentOfVideo": 282,
+    "partialOrMismatchedCandidates": 13,
+    "additionalEmbeddedCandidates": 2,
+    "existingCaptionLinkedVideos": 4052,
+    "note": "Language, transcript completeness and dialogue synchronization require review. Endpoint extent is not speech coverage."
+  }
+}
