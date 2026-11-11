@@ -44,13 +44,18 @@ async function discord(path, env, init = {}) {
 }
 export function discordPayload(event) {
   const p = Math.floor(event.position), stamp = `${Math.floor(p/60)}:${String(p%60).padStart(2,'0')}`;
+  const plain = text => String(text).replace(/\s+/g,' ').trim().replace(/([\\*_~`|>\[\]])/g,'\\$1');
+  const name = plain(event.display_name), body = event.kind === 'comment' ? plain(event.body) : event.body;
   return {
-    content: `${event.kind === 'emoji' ? event.body : '💬'} **${event.display_name.replace(/[\\*_~`|>]/g,'')}** · ${stamp}\n${event.kind === 'comment' ? event.body : ''}`.trim(),
-    embeds:[{ title:event.title.slice(0,256), description:`[Watch channel ${event.channel}](https://rabbit-ears.stream/#ch${event.channel}) · Posted on Rabbit Ears at ${stamp}`, color:0xA5452B, footer:{text:'Saved with this episode for future airings.'} }],
+    content: `**${name}** · [${stamp}](<https://rabbit-ears.stream/#ch${event.channel}>) ${event.kind === 'comment' ? '— ' : ''}${body}`,
+    embeds:[],
+    // Keep mirrored activity quiet: no link cards, push notifications or mention pings.
+    flags:(1 << 2) | (1 << 12),
     allowed_mentions:{ parse:[] },
     nonce:event.id.replaceAll('-','').slice(0,25), enforce_nonce:true,
   };
 }
+
 async function deliver(env) {
   if (!env.DISCORD_BOT_TOKEN) return;
   const time = now();

@@ -26,6 +26,7 @@ test('edited tapes use the episode clock and a changed edit has its own replay i
 test('Discord mentions are disabled and timestamps are content time',()=>{
   const payload=discordPayload({id:crypto.randomUUID(),display_name:'**Viewer**',position:125,kind:'comment',body:'@everyone hi <@123>',title:'A show',channel:97});
   assert.deepEqual(payload.allowed_mentions,{parse:[]});assert.match(payload.content,/2:05/);assert.equal(payload.enforce_nonce,true);
+  assert.deepEqual(payload.embeds,[]);assert.equal(payload.flags,4100);assert.equal(payload.content.includes('\n'),false);
 });
 const env={SITE_ORIGIN:'https://rabbit-ears.stream',API_ORIGIN:'https://community.rabbit-ears.stream'};
 const ctx={waitUntil(){}};
@@ -43,4 +44,13 @@ test('OAuth callback requires state, so unsolicited codes cannot create sessions
 test('CORS only allows the actual site and allows credentialed preflight',async()=>{
   const response=await worker.fetch(new Request(env.API_ORIGIN+'/api/events',{method:'OPTIONS',headers:{Origin:env.SITE_ORIGIN}}),env,ctx);
   assert.equal(response.status,204);assert.equal(response.headers.get('Access-Control-Allow-Origin'),env.SITE_ORIGIN);assert.equal(response.headers.get('Access-Control-Allow-Credentials'),'true');
+});
+
+test('Discord mirrors stay compact for multiline comments, markdown and emoji',()=>{
+  const base={id:crypto.randomUUID(),display_name:'Viewer',position:133,channel:97};
+  const comment=discordPayload({...base,kind:'comment',body:'First line\n\n# Heading *bold* [link](https://example.com)'});
+  assert.equal(comment.content.includes('\n'),false);assert.ok(comment.content.includes('First line # Heading \\*bold\\* \\[link\\]'));
+  const reaction=discordPayload({...base,kind:'emoji',body:'📺'});
+  assert.equal(reaction.content,'**Viewer** · [2:13](<https://rabbit-ears.stream/#ch97>) 📺');
+  assert.deepEqual(reaction.embeds,[]);assert.equal(reaction.flags,4100);
 });
