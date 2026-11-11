@@ -78,7 +78,7 @@
       scheduleStatus.hidden=true;
     }catch{if(token===scheduleToken)scheduleStatus.textContent='The schedule is unavailable. Please try again in a moment.';}
   }
-  const hardware=make('div','tv-hardware');hardware.innerHTML='<img class="hardware-brand" src="assets/restream.svg" alt="Restream" width="240" height="112"><div class="speaker-grille" aria-hidden="true"></div><i class="power-led" aria-hidden="true"></i>';
+  const hardware=make('div','tv-hardware');hardware.innerHTML='<img class="hardware-brand" src="assets/brand/polished/stacked-dark.svg" alt="Rabbit Ears — R-E.stream" width="162" height="176"><div class="speaker-grille" aria-hidden="true"></div><i class="power-led" aria-hidden="true"></i>';
   const tuneUp=button('Next channel',()=>openChannel(cur+1),'tuning-knob');tuneUp.title='Next channel';tuneUp.setAttribute('aria-label','Next channel');
   const tuneDown=button('Previous channel',()=>openChannel(cur-1),'tuning-knob');tuneDown.title='Previous channel';tuneDown.setAttribute('aria-label','Previous channel');
   hardware.insertBefore(tuneUp,hardware.children[1]);hardware.insertBefore(tuneDown,hardware.children[2]);cabinet.append(hardware);

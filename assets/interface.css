@@ -73,7 +73,7 @@ body[data-tv-page=guide] .channel-schedule{display:none}
 .chan .n>.vw{display:flex;align-items:center;justify-content:center;width:20px;gap:1px;font:10px/1.2 var(--osd);color:var(--phosphor);white-space:nowrap}
 .chan .n>.vw:empty{display:none}.chan .n>.vw svg{width:10px;height:10px}
 @media(max-width:640px){.ruler,.chan{grid-template-columns:20px 54px minmax(440px,1fr);gap:3px;min-width:534px;padding-inline:7px}.band{min-width:534px}.chan .n{left:7px}.chan .t{left:30px}}
-/* Unframed station artwork and the manufacturer's original transparent badge. */
+/* Unframed station artwork and transparent Rabbit Ears cabinet badge. */
 .logo-mat{background:transparent!important;border:0;box-shadow:none;border-radius:0}.channel-logo{filter:drop-shadow(0 1px 1px #0002)}
 .tv-hardware .hardware-brand{display:block;width:100%;height:auto;max-width:88px;object-fit:contain;margin:0 0 2px}
 .tv-volume{display:inline-flex;align-items:center;gap:8px;font:12px var(--display);min-height:44px;flex-wrap:nowrap}.tv-volume input{width:110px;max-width:23vw;accent-color:var(--amber);cursor:pointer}.tv-volume output{font-variant-numeric:tabular-nums;min-width:38px}.fullscreen-remote .tv-volume{color:#fff}.fullscreen-remote .tv-volume input{accent-color:#edbd84}
@@ -97,3 +97,6 @@ body[data-tv-page=guide] .channel-schedule{display:none}
 
 /* Reactions show their actual emoji instead of an anonymous timeline tick. */
 .marker-reaction{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font:13px/1.1 sans-serif;filter:drop-shadow(0 1px 1px #0005);pointer-events:none}.community-marker:has(.marker-reaction){background:transparent}.community-marker:has(.marker-reaction) .marker-tooltip{bottom:21px}
+
+/* White artwork on wood; black artwork on the pale ivory cabinet. */
+body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
