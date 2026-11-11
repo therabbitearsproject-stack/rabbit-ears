@@ -1,22 +1,27 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
-import {scoreFor,renderMusic} from './bumper-music.mjs';import branding from './channel-branding.json' with {type:'json'};
-test('each station has its own concise sourced story instead of repeated filler facts',()=>{
+import {scoreFor,renderMusic} from './bumper-music.mjs';import branding from './channel-branding.json' with {type:'json'};import trekStories from './trek-bumper-stories.json' with {type:'json'};
+test('six distinct IDs and stories per station, plus Trek extras, make exactly six times the original library',()=>{
  const stories=new Set();
- for(const ch of branding.channels){assert.ok(ch.fact?.hook,ch.name);assert.ok(ch.fact.fact.split(/\s+/).length<=38,ch.name);assert.ok(ch.fact.source.startsWith('https://'));assert.ok(ch.fact.credit);assert.ok(!stories.has(ch.fact.fact),'Repeated story on '+ch.name);stories.add(ch.fact.fact);}
- assert.equal(stories.size,76);
+ for(const ch of branding.channels){assert.equal(ch.tags.length,6,ch.name);assert.equal(new Set(ch.tags).size,6,ch.name);assert.equal(ch.facts.length,6,ch.name);assert.deepEqual(ch.facts[0],ch.fact);
+  for(const f of ch.facts){assert.ok(f.hook);assert.ok(f.fact.split(/\s+/).length<=38);assert.ok(f.source.startsWith('https://'));assert.ok(f.credit);assert.ok(!stories.has(f.fact),'Repeated story on '+ch.name);stories.add(f.fact);}}
+ assert.equal(trekStories.length,36);for(const f of trekStories){assert.ok(!stories.has(f.fact));stories.add(f.fact);}
+ assert.equal(stories.size,492);assert.equal(76*6+stories.size,158*6);
 });
-test('all 76 stations have two verified branded bumpers, with no reused audio recording',async()=>{
+test('all 948 videos are verified, have unique excerpts, and match their station copy',async()=>{
   const manifest=JSON.parse(await readFile(new URL('../assets/channel-bumpers/manifest.json',import.meta.url),'utf8'));
  const audio=new Set();assert.equal(branding.channels.length,76);
- for(const ch of branding.channels){const entries=manifest.channels[ch.no];assert.ok(entries.length>=2,ch.name);
+ let idCount=0,factCount=0;const filePaths=new Set();
+ for(const ch of branding.channels){const entries=manifest.channels[ch.no];assert.equal(entries.length,ch.no===97?48:12,ch.name);assert.equal(entries.filter(m=>m.kind==='station-id').length,6,ch.name);
+  assert.ok(new Set(entries.map(m=>m.music.isrc)).size>=3,'At least three distinct musical recordings for '+ch.name);
   const story=entries.find(m=>m.id===`ch${String(ch.no).padStart(2,'0')}-moment`);assert.equal(story?.kind,'fact',ch.name);assert.equal(story.title,ch.fact.fact,'Rendered story metadata must match the researched copy');assert.equal(story.source,ch.fact.source);
   for(const m of entries){assert.equal(m.channel,ch.no);assert.ok(m.dur===8||m.dur===12);assert.equal(m.music.style,ch.style);assert.ok(!audio.has(m.audioSha256),'repeated score');audio.add(m.audioSha256);
+   assert.ok(!filePaths.has(m.file),'Duplicate media path');filePaths.add(m.file);if(m.kind==='station-id'){idCount++;assert.ok(ch.tags.includes(m.title));}else{factCount++;assert.ok([...ch.facts,...(ch.no===97?trekStories:[])].some(f=>f.fact===m.title&&f.source===m.source),'Stale fact metadata');}
    const bytes=await readFile(new URL('../'+m.file,import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),m.sha256);
    assert.equal(m.music.license,'CC BY 4.0');assert.ok(m.music.source.startsWith('https://incompetech.com/'));
    if(m.kind==='fact')assert.ok(m.source?.startsWith('https://'));
   }
  }
- assert.ok(audio.size>=152);assert.ok(new Set(branding.channels.map(c=>c.style)).size>=16);
+ assert.equal(idCount,456);assert.equal(factCount,492);assert.equal(audio.size,948);assert.ok(new Set(branding.channels.map(c=>c.style)).size>=16);
 });
 test('music composition is deterministic and has distinct rhythm/timbre profiles',()=>{
  assert.deepEqual(scoreFor('jazz','same'),scoreFor('jazz','same'));assert.notDeepEqual(scoreFor('jazz','one'),scoreFor('jazz','two'));

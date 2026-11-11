@@ -11,7 +11,7 @@ Forgotten Internet Archive video on synchronized channels, live radio from aroun
 - **Compatible audio:** TV playback automatically selects a matching browser-compatible copy when the Archive provides one, including older catalog entries.
 - **Live counts:** how many people are watching each channel or listening to each station.
 - **Subspace 97 (Star Trek):** [channel 97](https://rabbit-ears.stream/#ch97) plays full episodes and films from reviewed sources, selecting the best available playable MP4 for each episode. HD is preferred; clean SD fills gaps. Trailers, commentary, and unreviewed broadcast tapes are excluded. Reviewed commercial breaks and branded fact bumpers play inside the shows’ guide slots.
-- **Station identity:** all 76 channels have branded IDs, their own researched behind-the-scenes story or unusual fact, and style-matched licensed music. See [bumper stories and sources](docs/bumper-facts.md), [music credits](https://rabbit-ears.stream/music-credits/) and [programming notes](docs/channel-programming.md).
+- **Station identity:** 948 bumpers: six branded station IDs and six distinct researched stories per channel, plus 36 extra Subspace stories. Compatible musical palettes vary the soundtrack. See [bumper stories and sources](docs/bumper-facts.md), [music credits](https://rabbit-ears.stream/music-credits/) and [programming notes](docs/channel-programming.md).
 - **Suggestion box:** opens a GitHub issue.
 
 ## Docs
