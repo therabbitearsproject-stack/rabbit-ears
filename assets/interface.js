@@ -31,7 +31,7 @@
     else mat.append(make('span','channel-name',ch.name));
     el.append(mat);return el;
   }
-  const wordmark=()=>'<span class="site-wordmark"><svg viewBox="0 0 80 32" aria-hidden="true"><path d="M24 3l16 22L56 3M13 29h54" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="3" r="3" fill="currentColor"/><circle cx="56" cy="3" r="3" fill="currentColor"/></svg><span>rabbit-ears<small>.stream<i></i></small></span></span>';
+  const wordmark=()=>'<span class="site-wordmark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 122" fill="none"  stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><g fill="currentColor" stroke="none" font-family="Arial,sans-serif" font-weight="800"><text x="16" y="101" font-size="46" letter-spacing="-2" textLength="134" lengthAdjust="spacingAndGlyphs">rabbit</text><text x="186" y="101" font-size="46" letter-spacing="-2" textLength="104" lengthAdjust="spacingAndGlyphs">ears</text><text x="293" y="101" font-size="46" letter-spacing="-2" textLength="184" lengthAdjust="spacingAndGlyphs">.stream</text></g><path d="M160 87h18" stroke-width="5"/><g transform="translate(169 87)"><path d="M0 0C-14-13-34-55-24-60C-14-65 2-25 0 0C1-27 19-66 28-60C37-54 16-13 0 0Z"/><path d="M-22-51L0 0 25-51"/></g><circle cx="169" cy="87" r="3.8" fill="#a54b2d" stroke="none"/></svg></span>';
   document.querySelectorAll('.brand').forEach(el=>{el.innerHTML=wordmark();});
   const home=make('a','brand-home');home.href='#tv';home.setAttribute('aria-label','Rabbit Ears home');home.innerHTML=wordmark();
   document.querySelector('h1.brand').replaceChildren(home);

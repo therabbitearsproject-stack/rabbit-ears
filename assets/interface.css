@@ -88,3 +88,6 @@ body[data-tv-page=guide] .channel-schedule{display:none}
 
 /* Keep all quick actions in the remote; reveal volume only on demand. */
 .remote>.watch-dock,.fullscreen-remote>.watch-dock{display:contents}.remote>.watch-dock[hidden],.fullscreen-remote>.watch-dock[hidden]{display:none!important}.volume-popover{width:106px;padding:14px;overflow:visible;text-align:center}.volume-popover .tv-volume{display:flex;flex-direction:column;gap:10px;min-height:0}.volume-popover input{writing-mode:vertical-lr;direction:rtl;width:24px;height:110px;max-width:none;accent-color:var(--amber)}.volume-popover output{font-size:12px}.volume-popover .volume-mute{font-size:12px;padding:7px;min-height:32px;margin-top:10px;width:100%}
+
+/* The selected wordmark joins bunny antennae to the hyphen. */
+.site-wordmark{padding:0;width:clamp(220px,26vw,330px);line-height:1;letter-spacing:normal}.site-wordmark>svg{position:static;display:block;width:100%;height:auto;left:auto;top:auto;color:inherit}.brand-home{max-width:100%}@media(max-width:640px){.site-wordmark{width:min(255px,65vw)}}
