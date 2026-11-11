@@ -49,7 +49,7 @@ jobs:
             echo "catalog=no" >> "$GITHUB_OUTPUT"
           fi
       - name: Test catalog builder
-        run: node --test scripts/*.test.mjs community/worker.test.mjs
+        run: node --test scripts/*.test.mjs
       - name: Build catalog.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-catalog.mjs

@@ -37,7 +37,7 @@ npm run deploy
 node configure-secrets.mjs
 ```
 
-Wrangler custom-domain deployment creates only the API subdomain; it does not replace the main website's GitHub Pages records. Cloudflare D1 ID is in `wrangler.jsonc`. Provisioning is sequential, respects rate limits, tags rooms with stable channel numbers, and reuses those rooms when rerun. There are 66 broadcast channels split across two categories (Discord permits at most 50 rooms per category).
+Wrangler custom-domain deployment creates only the API subdomain; it does not replace the main website's GitHub Pages records. Cloudflare D1 ID is in `wrangler.jsonc`. Provisioning is sequential, respects rate limits, tags rooms with stable channel numbers, and reuses those rooms when rerun. There are 76 broadcast channels split across two categories (Discord permits at most 50 rooms per category).
 
 Check `/health`, then deploy the static site via its normal GitHub Pages workflow. Verify a real viewer can sign in, comment and react, and that exactly one original reaches the corresponding Discord channel. Seek away/back and reload to verify replay without another Discord post. Check fullscreen and mobile, deletion, sign-out, and that anonymous viewers can still watch.
 
