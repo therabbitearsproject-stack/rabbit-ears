@@ -56,9 +56,11 @@ jobs:
       - name: Build games.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-games.mjs
-      - name: Match shows to IMDb
+      - name: Add IMDb matches
         if: steps.need.outputs.catalog == 'yes'
-        run: node scripts/build-imdb.mjs || echo "::warning::IMDb matching failed; the site keeps working without new links"
+        env:
+          IMDB_LIMIT: "0"   # the lookups happen in imdb.yml; this only applies the saved matches
+        run: node scripts/build-imdb.mjs || echo "::warning::Adding IMDb matches failed; the site keeps working without new links"
       - name: Commit catalog if changed
         if: steps.need.outputs.catalog == 'yes'
         run: |

@@ -4,6 +4,10 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-10 — IMDb matching runs on its own
+
+The first IMDb lookups never finished: each new push restarts the site's publish, and the slow lookups got cancelled with it. They now run in their own workflow (`.github/workflows/imdb.yml`, nightly and on demand) that saves matches to `scripts/imdb-cache.json` and then starts a publish. The publish itself only copies the saved matches into `catalog.json`, which takes seconds.
+
 ## 2026-11-11 — IMDb links for what's playing
 
 - Under the show that's playing, a "🎬 IMDb" link goes straight to its IMDb page. When there's no confident match it's "🎬 Search IMDb" instead (an IMDb search for the show or film's name and year). Channels of commercials, clips, music videos and home movies (`NO_IMDB` in index.html) and custom channels get no link.

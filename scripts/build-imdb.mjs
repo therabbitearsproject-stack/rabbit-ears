@@ -4,6 +4,8 @@
 // Titles are matched through Wikidata (see imdb-match.mjs). Results, found or not, are remembered in
 // scripts/imdb-cache.json and reused, so each title is looked up once; misses are retried after 60
 // days. Each run looks up at most LIMIT new titles, so the first fill takes a few nights.
+// .github/workflows/imdb.yml does the lookups; the site publish runs this with IMDB_LIMIT=0 to only
+// copy the saved matches into catalog.json.
 import { readFile, writeFile } from "node:fs/promises";
 import { siteCode } from "./tv-feed.mjs";
 import { parseTitle, cacheKey, entityYears, entityImdb, kindOf, pick, preferFor } from "./imdb-match.mjs";
