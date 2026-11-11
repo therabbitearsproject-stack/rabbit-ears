@@ -4,6 +4,13 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-11 — Android install file on the site
+
+- The Android TV / Fire TV / phone app is now downloadable at `rabbit-ears.stream/app/rabbit-ears-tv.apk`, so a Fire TV can install it with the Downloader app. Nothing on the site links to it, and `robots.txt` keeps search engines off `/app/`.
+- It's the debug-signed build from the "Android app" workflow (same code as the first build). Steps are in `android/README.md`.
+
+---
+
 ## 2026-11-11 — Roku app works on a real TV; getting ready for the Channel Store
 
 - The Roku app was sideloaded on an onn Roku TV and plays channels in step with the website.

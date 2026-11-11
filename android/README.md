@@ -24,7 +24,7 @@ It's debug-signed: fine for sideloading and testing, not for the Play Store.
 1. On the Fire TV: Settings → My Fire TV → Developer Options → turn on **Install unknown apps** for
    the Downloader app (install "Downloader" from the Amazon store first). On newer Fire TVs,
    Developer Options appears after clicking "About → Fire TV Stick" seven times.
-2. In Downloader, enter the APK's address and install it.
+2. In Downloader, enter `rabbit-ears.stream/app/rabbit-ears-tv.apk` and install it.
 
 On Android TV / Google TV, the same works with any file-manager or "Downloader" app.
 
@@ -40,3 +40,9 @@ On Android TV / Google TV, the same works with any file-manager or "Downloader" 
 - **Amazon Appstore** (Fire TV): free developer account.
 
 Radio, games and captions are website-only for now.
+
+## Download address
+
+The current build is published at **https://rabbit-ears.stream/app/rabbit-ears-tv.apk** (nothing on
+the site links to it, and robots.txt keeps search engines off `/app/`). To update it, download the
+APK from the latest "Android app" run and replace `app/rabbit-ears-tv.apk`.

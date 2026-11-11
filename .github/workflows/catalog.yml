@@ -89,6 +89,7 @@ jobs:
           cp -r design-history _site/design-history
           cp -r problems _site/problems   # unlisted Problems dashboard
           cp -r privacy _site/privacy     # privacy policy (linked from the footer and the app stores)
+          cp -r app _site/app             # Android TV / Fire TV install file (unlinked; for sideloading)
           cp manifest.webmanifest _site/
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs
