@@ -1,8 +1,5 @@
-Polished Rabbit Ears skull logos
-
-Dark: white artwork for dark backgrounds.
-Light: black artwork for light backgrounds.
-All SVG and PNG files have transparent backgrounds.
-SVG lettering is outlined; no fonts or external assets are needed.
-SVG is the master: scale it to any size without pixelation.
-PNG exports: 6000 pixels wide; square badges: 2048 x 2048.
+Active Rabbit Ears branding: polished full bunny skull, true black and white.
+Full wordmark, R-E.stream, signature with full-width domain, and square badge.
+Dark files contain white artwork. Light files contain black artwork.
+All lettering is outlined. SVGs have transparent backgrounds and no font dependencies.
+The site header and installation/share artwork use this branding.
