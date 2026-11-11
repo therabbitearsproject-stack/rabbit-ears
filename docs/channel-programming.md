@@ -42,3 +42,7 @@ Every deployment reads the currently published schedule and preserves all progra
 Staging runs after subtitle fetching, immediately before the catalog commit and site assembly. It fails the deployment if the published schedule cannot be read or preserved. Existing tabs on the new version poll for programming updates every five minutes; tabs opened before this feature first ships need one reload. Protection covers schedule changes, not a remote source disappearing or becoming unplayable. The 15-minute allowance assumes assembly and deployment finish within that interval.
 
 At the new cycle's start, one full program from each newly added source introduces the new shows before the regular mixed rotation. This avoids burying a new series weeks into a large existing pool.
+
+## Subspace 97 ad expansion
+
+The reviewed break library now contains 34 commercial/promo spots, including ten Trek-specific ads. Ten additions comprise four dated Trek merchandise/food promotions and six vintage computer/game spots (1976–1989). Provenance and date evidence live with each manifest entry; upload dates are not treated as broadcast dates. New general vintage spots are restricted to Subspace and excluded from Porchlight's copied advertiser pool. Break frequency and the two-minute/three-spot caps are unchanged. New assets are H.264/AAC, checksum verified and fully decoded before publishing; archival picture quality varies by source.

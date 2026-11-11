@@ -8,8 +8,11 @@ const trekPolicy = new Function("return (" + html.match(/name: "Subspace 97"[^\n
 
 test("SCI FI breaks are complete, checksum verified and isolated from the reserved library", async () => {
   const library = await loadChannelBreakLibrary("sci-fi-channel");
-  assert.equal(library.commercials.length, 24);
-  assert.equal(library.commercials.filter(m => m.role === "star-trek-commercial").length, 6);
+  assert.equal(library.commercials.length, 34);
+  assert.equal(library.commercials.filter(m => m.role === "star-trek-commercial").length, 10);
+  const addedVintage = library.commercials.filter(m => m.role === "subspace-vintage-spot");
+  assert.equal(addedVintage.length, 6);
+  assert.ok(addedVintage.every(m => m.source.yearEvidence && m.source.sha256), "new spots retain date evidence and original checksums");
   assert.equal(library.bumpers.length, 3);
   const reserved = [["old-ad", "old.mp4", 30, "Reserved ad", 1990]];
   const catalog = { commercials: reserved, bumpers: [{ id: "old-fact", dur: 15 }], breakLibraries: { "sci-fi-channel": library } };
