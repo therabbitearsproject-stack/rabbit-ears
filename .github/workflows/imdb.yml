@@ -34,12 +34,23 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git checkout -- catalog.json   # the publish rebuilds it; only the matches are kept here
+          # Only the matches are kept; the publish rebuilds catalog.json. Others push to main while the
+          # lookups run, so the new matches are merged into the latest file (retrying if main moves).
+          cp scripts/imdb-cache.json "$RUNNER_TEMP/new.json"
           git config user.name "Rabbit Ears"
           git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
-          git add scripts/imdb-cache.json
-          if git diff --cached --quiet; then echo "No new matches"; exit 0; fi
-          git commit -m "Update IMDb matches"
-          git pull --rebase -q
-          git push
-          gh workflow run catalog.yml --ref main
+          for attempt in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            node -e '
+              const fs = require("fs"), f = "scripts/imdb-cache.json";
+              let old = {}; try { old = JSON.parse(fs.readFileSync(f, "utf8")); } catch {}
+              const all = { ...old, ...JSON.parse(fs.readFileSync(process.argv[1], "utf8")) };
+              fs.writeFileSync(f, JSON.stringify(all, Object.keys(all).sort(), 0).replace(/\],"/g, "],\n\""));
+            ' "$RUNNER_TEMP/new.json"
+            git add scripts/imdb-cache.json
+            if git diff --cached --quiet; then echo "No new matches"; exit 0; fi
+            git commit -q -m "Update IMDb matches"
+            if git push -q; then gh workflow run catalog.yml --ref main; exit 0; fi
+            sleep $((attempt * 5))
+          done
+          exit 1

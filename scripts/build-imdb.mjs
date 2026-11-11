@@ -84,7 +84,7 @@ await Promise.all(Array.from({ length: 4 }, async () => {
 catalog.imdb = {};
 for (const [vid, k] of Object.entries(videoKey)) if (cache[k]?.[0]) catalog.imdb[vid] = cache[k][0];
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
-await writeFile(new URL("imdb-cache.json", import.meta.url), JSON.stringify(cache, Object.keys(cache).sort(), 0).replace(/\],"/g, '],\n"'));
+if (LIMIT > 0) await writeFile(new URL("imdb-cache.json", import.meta.url), JSON.stringify(cache, Object.keys(cache).sort(), 0).replace(/\],"/g, '],\n"'));
 
 const known = [...searches.keys()].filter(k => cache[k]).length;
 console.log(`🎬 IMDb: looked up ${done} titles (${hits} matched, ${failed} failed); ${known}/${searches.size} titles checked so far; ${Object.keys(catalog.imdb).length} videos linked`);
