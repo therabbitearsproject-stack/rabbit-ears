@@ -23,3 +23,17 @@ Forgotten Internet Archive video on synchronized channels, live radio from aroun
 The playback and schedule engine is in `index.html`; the viewing skins and navigation are in `assets/interface.css` and `assets/interface.js`. Channel artwork and its name-to-file map live in `assets/channel-logos/`. Edit, commit and push to `main`; the Build and publish workflow deploys GitHub Pages. UI-only changes use the existing catalog; daily and programming changes rebuild it.
 
 The original interface is available from the footer and preserved under `design-history/`. See its README for the original source tag and rollback instructions.
+
+## Discord watch parties
+
+The optional website watch party uses Discord sign-in, episode-timed comments and
+reactions, and matching rooms for the 76 shared broadcast channels. Original posts
+go to Discord; replay reads never post again. TV playback and anonymous viewing do
+not require sign-in. The panel appears after the community API is configured.
+
+The frontend is in `assets/community.js`; the Cloudflare Worker, D1 schema, channel
+map and setup instructions are in [community/README.md](community/README.md).
+Secrets are stored in the Worker and the ignored local `community/.dev.vars` file,
+never in website assets. Run `npm test` inside `community/` for its security and
+timing tests. The existing `node --test scripts/*.test.mjs` checks the player,
+catalog, generated pages, subtitles and schedules.

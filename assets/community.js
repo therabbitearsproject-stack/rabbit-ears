@@ -23,8 +23,8 @@ for(const emoji of EMOJI) reactions.append(button(emoji,()=>send('emoji',emoji),
 const form=el('form','community-composer');const input=el('textarea');input.rows=2;input.maxLength=500;input.placeholder='What’s on your mind at this moment?';input.setAttribute('aria-label','Comment on this moment');
 const submit=button('Leave a comment',()=>{});submit.type='submit';const disclosure=el('p','community-disclosure','Your Discord display name, comment or reaction, episode and playback time are public here and in this channel’s Discord room. Replays stay on the site.');
 form.append(input,submit);form.addEventListener('submit',e=>{e.preventDefault();send('comment',input.value);});
-const list=el('ol','community-comments');list.setAttribute('aria-label','Comments near this moment');
-const empty=el('p','community-empty','No comments at this moment yet.');
+const list=el('ol','community-comments');list.setAttribute('aria-label','Comments and reactions near this moment');
+const empty=el('p','community-empty','No moments here yet.');
 panel.append(heading,intro,notice,settings,reactions,form,disclosure,list,empty);
 const pack=document.querySelector('.player-pack');pack.insertBefore(panel,pack.querySelector('.channel-schedule'));
 const layer=el('div','reaction-layer');layer.setAttribute('aria-hidden','true');screen.append(layer);
@@ -65,10 +65,10 @@ function show(e,c){return replays||!replayed(e,c);}
 function paintList(){
   const c=context();if(!c||!room){list.replaceChildren();empty.hidden=false;return;}
   list.replaceChildren();
-  for(const e of events.filter(e=>e.kind==='comment'&&e.position<=c.position+.5&&e.position>=c.position-90&&show(e,c)).slice(-30)){
+  for(const e of events.filter(e=>e.position<=c.position+.5&&e.position>=c.position-90&&show(e,c)).slice(-30)){
     const item=el('li','community-comment');item.dataset.event=e.id;
     const meta=el('div','comment-meta');meta.append(el('strong','',e.name),el('span','',stamp(e.position)+(replayed(e,c)?' · replay':'')));
-    const text=el('p','',e.body);item.append(meta,text);
+    const text=el('p','',e.kind==='emoji'?'Reacted '+e.body:e.body);item.append(meta,text);
     if(e.canDelete)item.append(button('Remove',async()=>{try{await call('/api/events/'+e.id,{method:'DELETE'});events=events.filter(x=>x.id!==e.id);paintList();markerAt=0;}catch(err){message(err.message);}},'comment-remove'));
     list.append(item);
   }

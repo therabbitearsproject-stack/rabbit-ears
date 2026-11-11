@@ -18,6 +18,9 @@ Everything the project uses, what it's for, and what it costs.
 | TikTok `@rabbitears.stream` | Short promo videos; linked in the site footer and as `sameAs` in the JSON-LD | Free; Rabbit Ears Gmail | https://www.tiktok.com/@rabbitears.stream |
 | Cloudflare Web Analytics | Cookieless visit counts, referrers, countries, devices (script `static.cloudflareinsights.com/beacon.min.js`, manual snippet with the site token) | Free; same Cloudflare account | https://dash.cloudflare.com → Web analytics |
 | Firebase project `project-rabbitears` | Live viewer/listener counts (Realtime Database) | Free Spark plan: 100 simultaneous connections, 1 GB stored, 10 GB/month downloaded | https://console.firebase.google.com/project/project-rabbitears |
+| Discord app `Rabbit Ears Watch Party` (`1569918622103642233`) | Optional website identity and original comments/reactions posted into the matching server room | Bot token and OAuth secret stay in Cloudflare Worker secrets; viewer scope is only `identify` | https://discord.com/developers/applications/1569918622103642233/information |
+| Cloudflare Worker `rabbit-ears-community` | OAuth callback, sessions, public replay reads, authenticated submissions and Discord delivery retries | Free Workers allowance; monitor request usage as the audience grows | https://community.rabbit-ears.stream/health |
+| Cloudflare D1 `rabbit-ears-community` | Episode comments/reactions, 76 Discord channel mappings, expiring sessions and delivery outbox | Database ID `0a73896d-68e3-4abf-bd10-330308ad41f9`; managed through `community/wrangler.jsonc` | https://dash.cloudflare.com/088437319342b25a7454230108e99d16/workers/d1 |
 
 ## Content sources
 
@@ -72,6 +75,8 @@ No build step, no frameworks, no other packages: the whole site is one HTML file
 | Firebase `/presence/<room>/<random id>` | One `true` marker per open page, removed when the page closes | Anyone (it's just counts; no names, accounts or locations) |
 | Firebase `/stats/visits` | All-time visit count (one per browser per day) | Anyone; can only go up by 1 |
 | Firebase `/reports` | "Report this tape" and "Report this game" reports (games use channel "Games"): id, channel, reason, server time | Anyone can read or add; nobody can change or delete (except in the Firebase console) |
+| Cloudflare D1 `events` | Discord user ID/display name, comment or emoji, episode identity/edit, playback time, broadcast channel and creation time | Name and entry are public on the site and in the matching Discord room; authors and configured moderators can remove entries |
+| Cloudflare D1 `sessions` and API cookie | Hashed random session token, Discord identity, CSRF token and seven-day expiry | Server only; the host-only cookie is HttpOnly/Secure and is cleared on sign-out; Discord access tokens are not retained |
 | Firebase `/errors` | Problems the page runs into on its own: kind (script, tape, radio, game), a short message, which tape/station/game, browser family and phone or computer, server time. At most 8 per page load, only from rabbit-ears.stream | Anyone can read or add; nobody can change or delete (except in the Firebase console). Shown on the unlisted /problems/ page |
 
 ## Tools used to build it
