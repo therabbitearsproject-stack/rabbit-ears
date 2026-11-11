@@ -1,4 +1,5 @@
 /* Episode-time comments: reading/replaying never writes to Discord. */
+import {contentPosition,editionFile} from './community-timing.mjs';
 const config = window.RABBIT_COMMUNITY || {};
 const api = config.api?.replace(/\/$/, '');
 const video = document.getElementById('vid');
@@ -37,7 +38,7 @@ commentDialog.append(button('Close',()=>commentDialog.close(),'btn dialog-close'
 quick.append(button('Comment',()=>{commentDialog.showModal();fullInput.focus();},'btn'));
 screen.querySelector('.fullscreen-controls')?.append(quick);
 const timeline=el('div','community-timeline');timeline.setAttribute('aria-label','Comments and reactions on this episode');document.getElementById('pos').after(timeline);
-function context(){return window.rePlaybackContext?.();}
+function context(){const c=window.rePlaybackContext?.();if(!c)return null;c.position=contentPosition(c.position,c.cuts);if(c.position===null)return null;c.file=editionFile(c.file,c.cuts);return c;}
 function message(text){notice.textContent=text;}
 async function call(path,options={}){
   if(!api)throw Error('The watch party is being connected. Please try again later.');

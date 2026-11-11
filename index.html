@@ -1510,7 +1510,7 @@ window.rePlaybackContext = () => {
   if (vid.readyState < 1 || !activeSegment?.media || vid.currentSrc !== new URL(fileUrl(activeSegment.media), location.href).href) return null;
   return { channel: channels()[cur].no, channelName: channels()[cur].name,
     mediaId: playing.m.id, file: playing.m.file, title: playing.m.title,
-    duration: playing.m.dur, position: vid.currentTime,
+    duration: playing.m.dur, position: vid.currentTime, cuts: playing.m.cuts,
     airingStart: playing.v0, paused: vid.paused || vid.seeking || vid.readyState < 2 };
 };
 $("power").onclick = () => { $("power").hidden = true; setMuted(false); vid.play().catch(() => {}); };
@@ -2065,7 +2065,7 @@ $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 <script src="assets/interface.js?v=watch-party-1"></script>
 <script src="assets/volume.js?v=1"></script>
 <script src="assets/community-config.js?v=1"></script>
-<script type="module" src="assets/community.js?v=1"></script>
+<script type="module" src="assets/community.js?v=2"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else

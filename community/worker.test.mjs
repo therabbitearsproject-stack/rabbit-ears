@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import worker,{validateEvent,discordPayload,digest} from './worker.mjs';
+import {contentPosition,editionFile} from '../assets/community-timing.mjs';
 const valid=()=>({channel:97,mediaId:'episode-1',file:'episode.mp4',title:'A show',position:42.5,kind:'comment',body:'Hello!',requestId:crypto.randomUUID()});
 test('valid comments and reactions preserve original playback time',()=>{
   assert.equal(validateEvent(valid()).position,42.5);
@@ -12,6 +13,15 @@ test('reject forged channels, unsafe sizes, impossible timestamps, unknown emoji
 test('episode identity changes with file and remains stable between airings',async()=>{
   assert.equal(await digest(JSON.stringify(['a','one.mp4'])),await digest(JSON.stringify(['a','one.mp4'])));
   assert.notEqual(await digest(JSON.stringify(['a','one.mp4'])),await digest(JSON.stringify(['a','two.mp4'])));
+});
+test('edited tapes use the episode clock and a changed edit has its own replay identity',()=>{
+  const cuts=[[600,1200],[1380,1980]];
+  assert.equal(contentPosition(660,cuts),60);
+  assert.equal(contentPosition(1440,cuts),660);
+  assert.equal(contentPosition(1300,cuts),null);
+  assert.equal(contentPosition(125),125);
+  assert.equal(editionFile('tape.mp4',cuts),editionFile('tape.mp4',[[600,1200],[1380,1980]]));
+  assert.notEqual(editionFile('tape.mp4',cuts),editionFile('tape.mp4',[[600,1200],[1400,1980]]));
 });
 test('Discord mentions are disabled and timestamps are content time',()=>{
   const payload=discordPayload({id:crypto.randomUUID(),display_name:'**Viewer**',position:125,kind:'comment',body:'@everyone hi <@123>',title:'A show',channel:97});
