@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full-screen TV: the channel plays edge to edge, a banner shows what's on, and a side guide lists channels. -->
+<component name="MainScene" extends="Scene">
+  <script type="text/brightscript" uri="MainScene.brs" />
+  <children>
+    <Rectangle id="bg" width="1920" height="1080" color="0x14100CFF" />
+    <Video id="video" width="1920" height="1080" translation="[0,0]" enableUI="false" />
+
+    <Label id="msg" width="1920" height="80" translation="[0,500]" horizAlign="center" vertAlign="center"
+      color="0xF2E6CFFF" font="font:LargeBoldSystemFont" text="Warming up the set…" />
+
+    <Group id="banner" visible="false">
+      <Rectangle width="1920" height="250" translation="[0,830]" color="0x0B0805E6" />
+      <Rectangle width="1920" height="4" translation="[0,830]" color="0xE8A33DFF" />
+      <Label id="bChannel" translation="[96,858]" width="1700" color="0xE8A33DFF" font="font:LargeBoldSystemFont" />
+      <Label id="bTitle" translation="[96,920]" width="1728" color="0xF2E6CFFF" font="font:MediumBoldSystemFont" />
+      <Label id="bInfo" translation="[96,972]" width="1728" color="0xC9B99AFF" font="font:SmallSystemFont" />
+      <Label id="bHint" translation="[96,1020]" width="1728" color="0x8F8270FF" font="font:SmallestSystemFont"
+        text="Up / Down: change channel    ·    Left: channel guide    ·    OK: what's on" />
+    </Group>
+
+    <Group id="guide" visible="false">
+      <Rectangle width="820" height="1080" color="0x0B0805F0" />
+      <Rectangle width="4" height="1080" translation="[820,0]" color="0xE8A33DFF" />
+      <Label translation="[64,56]" text="Channel guide" color="0xE8A33DFF" font="font:LargeBoldSystemFont" />
+      <Label translation="[64,116]" text="Everyone watching sees the same thing at the same time." color="0xC9B99AFF" font="font:SmallestSystemFont" />
+      <LabelList id="list" translation="[64,180]" itemSize="[720,62]" numRows="13" vertFocusAnimationStyle="floatingFocus"
+        color="0xF2E6CFFF" focusedColor="0x14100CFF" focusBitmapBlendColor="0xE8A33DFF" />
+    </Group>
+
+    <Timer id="tick" repeat="true" duration="2" />
+    <Timer id="bannerTimer" repeat="false" duration="6" />
+  </children>
+</component>

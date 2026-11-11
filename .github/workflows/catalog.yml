@@ -92,6 +92,7 @@ jobs:
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs
           node scripts/build-pages.mjs _site   # channel and game pages plus sitemap.xml
+          node scripts/build-tv-feed.mjs _site # schedule files for the Roku and other TV apps
           du -sh _site _site/subs
       - uses: actions/upload-pages-artifact@v3
         with:

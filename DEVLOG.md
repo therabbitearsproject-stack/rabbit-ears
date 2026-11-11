@@ -4,6 +4,16 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-10 — Roku app (first version) and TV schedule files
+
+- New `roku/` folder: a Roku app that plays every TV channel in step with the website. Up/Down changes channel, Left opens the channel guide, OK shows what's on now and next. It remembers the last channel.
+- Roku can't run the website's code, so `scripts/build-tv-feed.mjs` now runs the site's own schedule code (taken straight from `index.html`) against `catalog.json` on every publish and writes `tv/channels.json` and `tv/ch/<number>.json`, about 54 hours ahead. Shows with commercial breaks list each show, bumper and ad part, so Roku airs the same breaks.
+- Checked in the browser: the files match the website's lineup on every channel tested. `scripts/tv-feed.test.mjs` checks every channel has a gap-free lineup with playable links.
+- `roku/package.ps1` builds the sideload zip; `roku/make-images.ps1` draws the icons and splash screen from the site logo. Steps to try it on a Roku are in `roku/README.md`.
+- Radio, games and captions aren't on Roku yet.
+
+---
+
 ## 2026-11-09 — Shift replaces Toss the Turtle
 
 Toss the Turtle loaded fine, but the Archive tags it "Blood" and "Gore", so the games safety filter left it off the Classics shelf, and there were only 19 new games. Shift (Armor Games, 2008), a puzzle platformer that had also passed the Ruffle test, takes its place.
