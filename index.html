@@ -536,7 +536,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p>Rabbit-Ears.stream is free online TV made from the Internet Archive. Over 60 channels play around the clock on a shared schedule, so everyone tuned in sees the same thing at the same moment, like broadcast TV. Watch vintage commercials and old TV shows, '80s and '90s Saturday morning cartoons, game shows, public-domain movies, drive-in horror and kung fu films, retro anime, classic sci-fi serials, music videos, educational films and Slow TV, with a TV guide, captions and channel numbers.</p>
     <p>The <a href="#radio">Radio</a> tab streams thousands of live radio stations from around the world: oldies, jazz, lo-fi, talk and all-Christmas stations. The <a href="#games">Games</a> tab has hundreds of classic Flash games, such as Line Rider, Bloxorz, QWOP, Papa's Pizzeria and Bloons Tower Defense, played right in your browser without the Flash plugin.</p>
   </details>
-  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="/privacy/">🔒 Privacy</a></footer>
+  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="/privacy/">🔒 Privacy</a><a href="/music-credits/">♫ Music credits</a></footer>
 </div>
 
 <script src="media-compatibility.js"></script>
@@ -678,9 +678,8 @@ const NO_IMDB = new Set(["Ad Break", "Order Now", "Ephemera", "Duck & Cover", "H
   "Arcade", "Video Jukebox", "Headbangers", "Encore", "Sweatin'", "Strange Signals", "World of Tomorrow"]);
 BUILT_IN.forEach(c => { [c.no, c.icon] = LINEUP[c.name] || [99, "📺"]; });
 BUILT_IN.sort((a, b) => a.no - b.no);
-// The schedule is built in 3-hour blocks. Each block starts at a seeded spot in the
-// channel's shuffled list and plays programs back to back, skipping any program that
-// wouldn't finish before the block ends, so shows play to the end.
+// Custom searches retain the legacy block clock. Built-in stations use full-program
+// cycles with a protected published window and a shared per-channel handover time.
 const BLOCK = 3 * 3600;
 const EPOCH = Date.UTC(2026, 0, 1) / 1000; // shared clock origin
 const nowSec = () => Date.now() / 1000;
@@ -897,7 +896,15 @@ let catalog = null;
 async function loadCatalog(ms) {
   try {
     const r = await Promise.race([fetch("catalog.json", { cache: "no-cache" }), new Promise((_, no) => setTimeout(no, ms))]);
-    if (r.ok) catalog = await r.json();
+    if (r.ok) {
+      const next = await r.json();
+      if (catalog && next.programming?.fingerprint && catalog.programming?.fingerprint !== next.programming.fingerprint) {
+        for (const ch of BUILT_IN) delete listCache[ch.q];
+        for (const cache of [continuousCache, schedCache, effCache, planCache]) for (const key of Object.keys(cache)) delete cache[key];
+        for (const key of Object.keys(metaCache)) delete metaCache[key];
+      }
+      catalog = next;
+    }
   } catch {}
 }
 const poolOrder = (q, ids) => {
@@ -1002,15 +1009,12 @@ async function resolveCompatibleMedia(media) {
 
 const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
 
-// Build one channel's planned lineup for one 3-hour block: [{m, start, end, v0}] in epoch
-// seconds, where v0 is when the video's own clock reads 0:00. Programs play back to back and
-// the last one may run past the end of the block and still plays in full, up to 3 hours of
-// airtime per video. (Some uploads run 10–20+ hours; letting one overrun by more than a whole
-// block would scramble the timeline. Those air their first 3 hours, then the channel moves on.)
+// Built-in channels run continuous full-program schedules, without a three-hour cutoff.
+// Only legacy custom search channels retain the older block planner.
 // Same inputs give the same lineup on every device.
 const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height]) => ({ id, file, dur, title, year, sub, archiveId, width, height });
 function makeSlot(m, ch, start, seed) {
-  const program = { ...m, dur: Math.min(m.dur, BLOCK) };
+  const program = { ...m, dur: ch.custom ? Math.min(m.dur, BLOCK) : m.dur };
   let timeline;
   if (ch.breaks) {
     const library = CommercialTiming.library(catalog, ch.breaks.library);
@@ -1019,6 +1023,26 @@ function makeSlot(m, ch, start, seed) {
     timeline = CommercialTiming.build(program, ch.breaks, ads, library.bumpers, seed || ch.q + "|" + m.id + "|" + start);
   }
   if (m.cuts?.length) timeline = timeline ? CommercialTiming.edit(timeline, program) : CommercialTiming.program(program);
+  // New subject-matched archival spots go BETWEEN full programs, not through scenes.
+  // Existing reviewed Trek/Porchlight break policies remain separate.
+  if(!ch.breaks){
+    const year=Number(m.year),key=(seed||ch.q+'|'+m.id)+'|archive-ads';
+    const eligible=(catalog?.channelAds?.[ch.no]||[]).filter(ad=>year>=1970&&year<=2008&&Math.abs(Number(ad.year)-year)<=5);
+    if(eligible.length&&(program.dur>=900||hash(key)%4===0)){
+      const ads=CommercialTiming.pack(eligible,60,key,{unique:true,maxSpots:2});
+      if(ads.length){
+        timeline ||= {duration:program.dur,segments:[{kind:'program',media:program,start:0,end:program.dur,offset:0,index:0}]};
+        timeline={...timeline,segments:[...timeline.segments]};
+        for(const ad of ads){timeline.segments.push({kind:'commercial',media:ad,start:timeline.duration,end:timeline.duration+ad.dur,offset:0,index:timeline.segments.length});timeline.duration+=ad.dur;}
+      }
+    }
+  }
+  const stationBumpers=catalog?.channelBumpers?.[ch.no]||[];
+  if(stationBumpers.length&&(program.dur>=180||hash(ch.q+'|'+m.id+'|short-id')%4===0)){
+    const bumper=stationBumpers[hash((seed||ch.q+'|'+m.id)+'|station-id')%stationBumpers.length];
+    timeline ||= {duration:program.dur,segments:[{kind:'program',media:program,start:0,end:program.dur,offset:0,index:0}]};
+    timeline={...timeline,segments:[...timeline.segments,{kind:'bumper',media:bumper,start:timeline.duration,end:timeline.duration+bumper.dur,offset:0,index:timeline.segments.length}],duration:timeline.duration+bumper.dur};
+  }
   return { m, start, end: start + (timeline?.duration || program.dur), v0: start, timeline };
 }
 const schedCache = {}, effCache = {};
@@ -1090,11 +1114,19 @@ async function continuousLineup(ch, t, count) {
     const ids = await getList(ch), programs = await Promise.all(ids.map(getMeta));
     return programs.filter(Boolean).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
   })().catch(error => { delete continuousCache[ch.q]; throw error; });
-  return CommercialTiming.cycle(await continuousCache[ch.q], EPOCH, t, count);
+  const templates = await continuousCache[ch.q];
+  const staged = catalog?.programming?.channels?.[ch.no];
+  const anchor = staged?.until || EPOCH;
+  if (staged?.items?.length && t >= staged.items[0].start && t < staged.until) {
+    const kept = staged.items.filter(p => p.end > t).slice(0, count);
+    if (kept.length >= count) return kept;
+    return [...kept, ...CommercialTiming.cycle(templates, anchor, anchor, count - kept.length)];
+  }
+  return CommercialTiming.cycle(templates, anchor, t, count);
 }
 async function lineup(ch, t, count) {
   // Full episodes and their internal breaks run continuously, including across the legacy block boundary.
-  if (ch.breaks || ch.library) return continuousLineup(ch, t, count);
+  if (!ch.custom || ch.breaks || ch.library) return continuousLineup(ch, t, count);
   const b0 = blockOf(t), out = [];
   for (let b = b0 - 1; b <= b0 + 2 && out.length < count; b++) {
     let items;
@@ -1351,7 +1383,8 @@ function syncMedia(forceSeek = false) {
     if (segment.kind === "program") { metaCache[segment.media.id] = null; setTimeout(() => tune(cur), 800); }
     else {
       // Preserve the shared clock using a bumper from this channel's own library.
-      const fallback = CommercialTiming.library(catalog, channels()[cur]?.breaks?.library).bumpers[0];
+      const channel=channels()[cur];
+      const fallback = catalog?.channelBumpers?.[channel?.no]?.[0] || CommercialTiming.library(catalog, channel?.breaks?.library).bumpers[0];
       if (!fallback || fallback.id === segment.media.id) return;
       activeSegment.fallbackDur = fallback.dur;
       vid.onloadedmetadata = () => { if (token === mediaToken) { vid.currentTime = currentSegment().position % fallback.dur; if (tvOn && !held) vid.play().catch(() => {}); } };
@@ -2046,6 +2079,8 @@ loadCatalog(4000).then(() => {
   if (mode === "tv") tune(cur);
   if (mode === "tv" && !store.get("re_welcomed", false)) showWelcome();
 });
+// Refresh programming in long-running tabs; protected slots keep current playback intact.
+setInterval(() => loadCatalog(15000), 5 * 60 * 1000);
 
 // ---------- First-visit welcome ----------
 function showWelcome() {

@@ -13,6 +13,11 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
     await mkdir(join(dir, "scripts"));
     await copyFile(new URL("../media-compatibility.js", import.meta.url), join(dir, "media-compatibility.js"));
     await copyFile(new URL("build-catalog.mjs", import.meta.url), join(dir, "scripts/build-catalog.mjs"));
+    await copyFile(new URL("program-quality.mjs", import.meta.url), join(dir, "scripts/program-quality.mjs"));
+    await copyFile(new URL("channel-policies.json", import.meta.url), join(dir, "scripts/channel-policies.json"));
+    await copyFile(new URL("themed-ad-library.mjs", import.meta.url), join(dir, "scripts/themed-ad-library.mjs"));
+    await mkdir(join(dir,'community'));
+    await writeFile(join(dir,'community/channels.json'),JSON.stringify([{no:1,name:'Ordinary'},{no:2,name:'Trek'}]));
     await copyFile(new URL("trek-programming.mjs", import.meta.url), join(dir, "scripts/trek-programming.mjs"));
     await copyFile(new URL("caption-library.mjs", import.meta.url), join(dir, "scripts/caption-library.mjs"));
     await copyFile(new URL("commercial-library.mjs", import.meta.url), join(dir, "scripts/commercial-library.mjs"));
@@ -25,6 +30,13 @@ const BUILT_IN = [
  {name:"Ordinary", q:"ordinary"},
  {name:"Offline", q:"offline"}
 ];`);
+    await writeFile(join(dir, 'index.html'), `\nconst BLOCKED = new Set([\n "blocked-source", "blocked-episode", "channel-blocked-source@Ordinary"\n]);\n`, {flag:'a'});
+    const expanded = (id,source) => [id,id+'.mp4',600,'Complete program','1992','',source];
+    await writeFile(join(dir,'scripts/channel-programs.json'),JSON.stringify({channels:{
+      Ordinary:{rows:[expanded('collection-good','good-source'),expanded('episode-broken','good-source'),expanded('reported-child','reported-source'),expanded('wrong-child','wrong-source'),expanded('blocked-child','blocked-source'),expanded('blocked-episode','good-source'),expanded('channel-blocked-child','channel-blocked-source')]}
+    }}));
+    const ad=(id,archiveId=id)=>({id,archiveId,file:id+'.mp4',title:'Sears home furniture commercial',year:1992,dur:30});
+    await writeFile(join(dir,'scripts/themed-ads.json'),JSON.stringify({commercials:[ad('safe-ad'),ad('reported-ad','reported-source'),ad('episode-broken'),ad('blocked-ad','blocked-source'),ad('wrong-ad','wrong-source'),ad('channel-blocked-ad','channel-blocked-source')]}));
     const oldRow = ["old-pool", "video.mp4", 600, "Old title", "2026", ""];
     await writeFile(join(dir, "catalog.json"), JSON.stringify({ pools: { offline: [oldRow] } }));
     const searches = [];
@@ -42,13 +54,20 @@ const BUILT_IN = [
         const id = url.pathname.split("/").pop();
         data = { metadata: { title: id }, files: id === "unplayable" ? [] : [{ name: "video.mp4", length: "10:00", format: "h.264" }] };
       } else if (url.pathname === "/reports.json") {
-        data = Object.fromEntries([1, 2, 3].map(i => [i, { id: "reported", reason: "broken", ch: "Trek" }]));
+        const reports=[...[1,2,3].map(()=>({id:'reported',reason:'broken',ch:'Trek'})),
+          ...[1,2].map(()=>({id:'reported-source',reason:'inappropriate',ch:'Ordinary'})),
+          ...[1,2,3].map(()=>({id:'episode-broken',reason:'broken',ch:'Ordinary'})),
+          ...[1,2].map(()=>({id:'wrong-source',reason:'wrong',ch:'Ordinary'}))];
+        data = Object.fromEntries(reports.map((r,i)=>[i,r]));
       } else throw new Error("Unexpected request " + input);
       return { ok: true, json: async () => data };
     };
     await import(pathToFileURL(join(dir, "scripts/build-catalog.mjs")));
     const result = JSON.parse(await readFile(join(dir, "catalog.json"), "utf8"));
     assert.deepEqual(result.pools.trek.map(r => r[0]).sort(), ["extra", "new", "shared"]);
+    assert.deepEqual(result.pools.ordinary.map(r=>r[0]).sort(),['collection-good','ordinary'], 'collection merges cannot restore reported or blocked episodes or their parent sources');
+    assert.deepEqual(result.channelAds[1].map(m=>m.id),['safe-ad'], 'new ads respect global and channel-specific source reports and blocks');
+    assert.deepEqual(result.channelAds[2].map(m=>m.id),['safe-ad','wrong-ad','channel-blocked-ad'], 'wrong-channel exclusions do not spread to other channels');
     assert.deepEqual(result.coverage.trek, { "Old crew": 1, "New crew": 2 });
     assert.deepEqual(result.pools.offline, [oldRow], "failed searches preserve the previous pool");
     assert.ok(result.unplayable.includes("unplayable"));

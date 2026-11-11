@@ -223,7 +223,7 @@ export function channelsFromIndex(html) {
   const lineup = grab("const LINEUP = {", "\n};");
   const blockedSrc = grab("const BLOCKED = new Set([", "\n]);");
   const { BUILT_IN, BANDS, LINEUP, BLOCKED } = new Function(`${safe}\n${list}\n${bands}\n${lineup}\n${blockedSrc}\nreturn { BUILT_IN, BANDS, LINEUP, BLOCKED };`)();
-  const channels = BUILT_IN.map(c => { const [no, icon] = LINEUP[c.name] || [99, "📺"]; return { name: c.name, desc: c.desc, q: c.q, no, icon }; })
+  const channels = BUILT_IN.map(c => { const [no, icon] = LINEUP[c.name] || [99, "📺"]; return { name: c.name, desc: c.desc, q: c.q, no, icon, library:c.library }; })
     .sort((a, b) => a.no - b.no);
   return { channels, bands: BANDS.filter(([from]) => from < 100), blocked: BLOCKED };
 }

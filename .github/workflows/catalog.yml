@@ -61,17 +61,6 @@ jobs:
         env:
           IMDB_LIMIT: "0"   # the lookups happen in imdb.yml; this only applies the saved matches
         run: node scripts/build-imdb.mjs || echo "::warning::Adding IMDb matches failed; the site keeps working without new links"
-      - name: Commit catalog if changed
-        if: steps.need.outputs.catalog == 'yes'
-        run: |
-          git config user.name "Rabbit Ears"
-          git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
-          git add catalog.json games.json
-          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "Update catalog"
-          git pull --rebase -q
-          git push
-
       - name: Restore subtitles
         uses: actions/cache/restore@v4
         with:
@@ -86,6 +75,18 @@ jobs:
           path: subs
           key: subs-${{ github.run_id }}
 
+      - name: Preserve the published next two hours
+        run: node scripts/stage-programming.mjs
+      - name: Commit catalog if changed
+        run: |
+          git config user.name "Rabbit Ears"
+          git config user.email "353049428+therabbitearsproject-stack@users.noreply.github.com"
+          git add catalog.json games.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update catalog"
+          git pull --rebase -q
+          git push
+
       - name: Assemble the site
         run: |
           mkdir _site
@@ -94,6 +95,7 @@ jobs:
           cp -r design-history _site/design-history
           cp -r problems _site/problems   # unlisted Problems dashboard
           cp -r privacy _site/privacy     # privacy policy (linked from the footer and the app stores)
+          cp -r music-credits _site/music-credits # attribution for licensed bumper recordings
           cp -r app _site/app             # Android TV / Fire TV install file (unlinked; for sideloading)
           cp manifest.webmanifest _site/
           if [ -f games.json ]; then cp games.json _site/; fi

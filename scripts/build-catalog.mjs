@@ -13,6 +13,8 @@ import { buildTrekPool } from "./trek-programming.mjs";
 import { commercialRow, commercialYearAllowed } from "./commercial-library.mjs";
 import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 import { buildPorchlightPool } from "./porchlight-programming.mjs";
+import { strengthenPool } from "./program-quality.mjs";
+import { mergeAds,channelAdPools } from "./themed-ad-library.mjs";
 
 const POOL = 400;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -26,6 +28,8 @@ const listStart = html.indexOf("const BUILT_IN = [");
 const listEnd = html.indexOf("\n];", listStart);
 if (!safeSrc || listStart < 0 || listEnd < 0) throw new Error("couldn't find SAFE / BUILT_IN in index.html");
 const BUILT_IN = new Function(`${safeSrc}\n${html.slice(listStart, listEnd + 3)}\nreturn BUILT_IN;`)();
+const blockedSrc = html.match(/^const BLOCKED = new Set\(\[[\s\S]*?^\]\);/m)?.[0];
+const BLOCKED = blockedSrc ? new Function(blockedSrc + '\nreturn BLOCKED;')() : new Set();
 console.log(`${BUILT_IN.length} channels`);
 
 // ---- previous catalog, for reuse ----
@@ -152,13 +156,21 @@ for (const r of Object.values(reports)) {
   tally.set(r.id, t);
 }
 const pulled = [];
-for (const [q, rows] of Object.entries(pools)) {
-  pools[q] = rows.filter(([id]) => {
+// Expanded episodes and archival ads carry both their own stable ID and the parent
+// Archive item. A report or manual block on either must survive subsequent merges.
+function mediaAllowed(media, channel) {
+  const ids = Array.isArray(media) ? [media[0], media[6]] : [media.id, media.archiveId];
+  return ids.filter(Boolean).every(id => {
+    if (BLOCKED.has(id) || BLOCKED.has(id + '@' + channel.name)) return false;
     const t = tally.get(id);
-    if (!t) return true;
-    const out = t.inappropriate >= 2 || t.broken >= 3 || (t.wrong[nameOf[q]] || 0) >= 2;
-    if (out) pulled.push(`${id} (${nameOf[q]})`);
-    return !out;
+    return !t || !(t.inappropriate >= 2 || t.broken >= 3 || (t.wrong[channel.name] || 0) >= 2);
+  });
+}
+for (const [q, rows] of Object.entries(pools)) {
+  pools[q] = rows.filter(row => {
+    const allowed = mediaAllowed(row, {name:nameOf[q]});
+    if (!allowed) pulled.push(`${row[0]} (${nameOf[q]})`);
+    return allowed;
   });
 }
 if (tally.size) {
@@ -176,20 +188,28 @@ for (const [q, groups] of Object.entries(memberships)) {
   coverage[q] = Object.fromEntries(Object.entries(groups).map(([name, ids]) => [name, (pools[q] || []).filter(r => ids.has(r[0])).length]));
 }
 let commercials = [], bumpers = [];
+let additions={channels:{}};
+try{additions=JSON.parse(await readFile(new URL('./channel-programs.json',import.meta.url),'utf8'));}catch{}
+for(const ch of BUILT_IN){
+  if(!pools[ch.q])continue;
+  const old=pools[ch.q].length;
+  pools[ch.q]=strengthenPool(ch,pools[ch.q],ch.library?[]:additions.channels[ch.name]?.rows||[]).filter(row=>mediaAllowed(row,ch));
+  if(!pools[ch.q].length)throw new Error('No qualified programs for '+ch.name);
+  console.log(`${ch.name}: ${old} -> ${pools[ch.q].length} duration/title-qualified programs`);
+}
+let channelBumpers={};
+try{channelBumpers=JSON.parse(await readFile(new URL('../assets/channel-bumpers/manifest.json',import.meta.url),'utf8')).channels;}catch(error){if(error.code!=='ENOENT')throw error;}
 if (BUILT_IN.some(ch => ch.breaks)) {
   const library = JSON.parse(await readFile(new URL("./commercial-library.json", import.meta.url), "utf8"));
   commercials = (await pool(async id => {
     try { return commercialRow(id, await getJSON("https://archive.org/metadata/" + encodeURIComponent(id))); }
     catch { return prev.commercials?.find(r => r[0] === id && commercialYearAllowed(r[4])) || null; }
-  }, library.ids)).filter(Boolean).filter(r => {
-    const reports = tally.get(r[0]);
-    return !reports || (reports.broken < 3 && reports.inappropriate < 2 && (reports.wrong["Subspace 97"] || 0) < 2);
-  });
+  }, library.ids)).filter(Boolean).filter(r => mediaAllowed(r,{name:'Subspace 97'}));
   if (commercials.length < 3) throw new Error("Not enough dated vintage commercials to publish a reliable shared schedule");
   const facts = JSON.parse(await readFile(new URL("../assets/trek-bumpers/facts.json", import.meta.url), "utf8"));
-  bumpers = facts.map(f => ({ id: "bumper-" + f.id, title: f.fact, file: "assets/trek-bumpers/" + f.id + ".mp4", dur: 15, local: true }));
+  bumpers = channelBumpers['97'] || facts.map(f => ({ id: "bumper-" + f.id, title: f.fact, file: "assets/trek-bumpers/" + f.id + ".mp4", dur: 15, local: true }));
   for (const bumper of bumpers) await readFile(new URL("../" + bumper.file, import.meta.url));
-  console.log(`${commercials.length} vintage commercials (latest ${Math.max(...commercials.map(r => Number(r[4])))}) and ${bumpers.length} original 15-second bumpers`);
+  console.log(`${commercials.length} vintage commercials (latest ${Math.max(...commercials.map(r => Number(r[4])))}) and ${bumpers.length} channel bumpers`);
 }
 const breakLibraries = {};
 for (const id of new Set(BUILT_IN.map(ch => ch.breaks?.library).filter(Boolean))) {
@@ -203,6 +223,11 @@ if (breakLibraries.porchlight) {
   breakLibraries.porchlight.commercials.push(...commercials.filter(r => reserved.has(r[0])).map(([id,file,dur,title,year]) => ({id,file,dur,title,year,role:"vintage-commercial"})),
     ...(breakLibraries["sci-fi-channel"]?.commercials || []).filter(m => m.role === "recorded-advertiser-spot"));
 }
-const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, unplayable: [...unplayable] };
+let themedAds=[];
+try{themedAds=JSON.parse(await readFile(new URL('./themed-ads.json',import.meta.url),'utf8')).commercials;}catch(error){if(error.code!=='ENOENT')throw error;}
+const channelNumbers=JSON.parse(await readFile(new URL('../community/channels.json',import.meta.url),'utf8'));
+const channelAds=channelAdPools(channelNumbers,mergeAds({commercials,breakLibraries},themedAds));
+for(const ch of channelNumbers)channelAds[ch.no]=channelAds[ch.no].filter(ad=>mediaAllowed(ad,ch));
+const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, channelBumpers, channelAds, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);
