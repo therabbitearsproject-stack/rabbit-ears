@@ -69,17 +69,22 @@ sub onFetched(event as object)
     if tag = "channels"
         if not ok or data.channels = invalid or data.channels.count() = 0
             m.msg.text = "Can't reach Rabbit-Ears.stream. Check your connection."
+            m.top.signalBeacon("AppLaunchComplete")
             return
         end if
         m.channels = data.channels
         buildGuide()
+        ' A deep link wins; otherwise pick up where the viewer left off.
         last = m.reg.Read("channel")
+        if m.top.deepLink <> "" then last = m.top.deepLink
         start = 0
         for i = 0 to m.channels.count() - 1
             if StrI(m.channels[i].no).Trim() = last then start = i
         end for
         m.tick.control = "start"
         tune(start)
+        ' Tells Roku the app is ready to use (required for the Channel Store).
+        m.top.signalBeacon("AppLaunchComplete")
     else
         key = tag
         m.loading.Delete(key)
@@ -90,6 +95,18 @@ sub onFetched(event as object)
             if m.feeds.DoesExist(key) then playNow(true) else m.msg.text = "No signal on this channel right now."
         end if
     end if
+end sub
+
+' A deep link while the app is open (from Roku search or a voice command): tune to that channel.
+sub onDeepLink()
+    want = m.top.deepLink
+    for i = 0 to m.channels.count() - 1
+        if chKey(i) = want
+            if m.guide.visible then closeGuide()
+            tune(i)
+            return
+        end if
+    end for
 end sub
 
 function chKey(i as integer) as string

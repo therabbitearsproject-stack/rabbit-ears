@@ -88,6 +88,7 @@ jobs:
           cp -r assets _site/assets
           cp -r design-history _site/design-history
           cp -r problems _site/problems   # unlisted Problems dashboard
+          cp -r privacy _site/privacy     # privacy policy (linked from the footer and the app stores)
           cp manifest.webmanifest _site/
           if [ -f games.json ]; then cp games.json _site/; fi
           cp -r subs _site/subs

@@ -4,6 +4,15 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-11 — Roku app works on a real TV; getting ready for the Channel Store
+
+- The Roku app was sideloaded on an onn Roku TV and plays channels in step with the website.
+- Added what Roku's store review checks for: the app signals `AppLaunchComplete` once it's ready, and deep links (`contentId=<channel number>`, at launch or while open) tune straight to a channel. Build 1.0.2.
+- New `/privacy/` page (linked in the footer), which app stores require: no accounts, no ads, no tracking cookies; lists the anonymous viewer counts, visit counter, problem reports and Cloudflare Web Analytics.
+- `roku/STORE-LISTING.md`: draft name, descriptions, category, rating and keywords for the Roku listing.
+
+---
+
 ## 2026-11-11 — Android TV / Fire TV app (first version)
 
 - New `android/` folder: one Android app for Android TV, Google TV, Fire TV, phones and tablets. It plays the same `tv/ch/<number>.json` schedule files as the Roku app with ExoPlayer, so it stays in step with the website.

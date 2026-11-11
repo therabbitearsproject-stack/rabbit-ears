@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Full-screen TV: the channel plays edge to edge, a banner shows what's on, and a side guide lists channels. -->
 <component name="MainScene" extends="Scene">
+  <interface>
+    <!-- A channel number to tune to, from a deep link (see source/main.brs). -->
+    <field id="deepLink" type="string" onChange="onDeepLink" alwaysNotify="true" />
+  </interface>
   <script type="text/brightscript" uri="MainScene.brs" />
   <children>
     <Rectangle id="bg" width="1920" height="1080" color="0x14100CFF" />
