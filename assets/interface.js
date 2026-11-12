@@ -50,10 +50,17 @@
   const landingStation=make('div','landing-station'),landingTitle=make('h2','landing-title');
   const eyebrow=make('p','eyebrow','ON THE AIR · SHARED BROADCAST');
   const landingNext=make('p','landing-next');
-  const watch=button('Watch channel',()=>openChannel(cur),'btn watch-channel');watch.innerHTML=icon('play')+'<span>Watch channel</span>';
+  const watch=button('Watch Channel',()=>openChannel(cur),'btn watch-channel');watch.innerHTML=icon('play')+'<span>Watch Channel</span>';
   copy.append(eyebrow,landingStation,landingTitle,landingNext,watch,donate());
   hero.append(copy,pack);const rail=make('aside','channel-rail');rail.setAttribute('aria-label','Tune to a channel');hero.append(rail);
   tv.prepend(hero); // same video node throughout guide, channel and fullscreen
+  const portraitChannel=make('div','portrait-channel-actions');
+  const phonePortrait=matchMedia('(max-width:640px) and (orientation:portrait)');
+  function placeChannelActions(){
+    if(phonePortrait.matches){portraitChannel.append(eyebrow,landingStation,watch);cabinet.after(portraitChannel);}
+    else{copy.prepend(eyebrow,landingStation);copy.insertBefore(watch,copy.querySelector('.archive-donate'));portraitChannel.remove();}
+  }
+  phonePortrait.addEventListener('change',placeChannelActions);placeChannelActions();
   const guideBack=button('TV guide',showGuide,'btn guide-back');guideBack.innerHTML=icon('back')+'<span>TV guide</span>';pack.prepend(guideBack);
   const badge=make('div','playing-station');details.prepend(badge);
   const channelSchedule=make('section','channel-schedule');channelSchedule.setAttribute('aria-label','Selected channel schedule');
