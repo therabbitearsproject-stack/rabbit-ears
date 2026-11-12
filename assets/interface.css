@@ -110,10 +110,14 @@ body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
 /* Keep the phone portrait preview and its full watch action together below the TV. */
 @media(max-width:640px) and (orientation:portrait){
   .landing-copy:empty{display:none}
-  .portrait-channel-actions{display:grid;gap:12px;min-width:0;padding:4px 0}
+  .portrait-channel-actions{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-areas:"title title" "next next" "support support" "air air" "station watch";gap:12px;min-width:0;padding:4px 0}
   .portrait-channel-actions p{margin:0}
-  .portrait-channel-actions .eyebrow{margin:0;font-size:10px}
-  .portrait-channel-actions .watch-channel{display:flex;align-items:center;justify-content:center;gap:9px;justify-self:stretch;width:100%;box-sizing:border-box}
+  .portrait-channel-actions .landing-title{grid-area:title}
+  .portrait-channel-actions .landing-next{grid-area:next}
+  .portrait-channel-actions .archive-donate{grid-area:support}
+  .portrait-channel-actions .eyebrow{grid-area:air;margin:0;font-size:10px}
+  .portrait-channel-actions .landing-station{grid-area:station}
+  .portrait-channel-actions .watch-channel{grid-area:watch;display:flex;align-items:center;justify-content:center;gap:9px;align-self:center;justify-self:stretch;min-width:0;width:100%;padding-inline:10px;box-sizing:border-box}
   .portrait-channel-actions .watch-channel span{display:inline;white-space:nowrap}
   body[data-tv-page=channel] .portrait-channel-actions{display:none}
 }
