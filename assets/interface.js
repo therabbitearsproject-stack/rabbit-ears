@@ -51,14 +51,15 @@
   const eyebrow=make('p','eyebrow','ON THE AIR · SHARED BROADCAST');
   const landingNext=make('p','landing-next');
   const watch=button('Watch Channel',()=>openChannel(cur),'btn watch-channel');watch.innerHTML=icon('play')+'<span>Watch Channel</span>';
-  copy.append(eyebrow,landingStation,landingTitle,landingNext,watch,donate());
+  const archiveSupport=donate();
+  copy.append(eyebrow,landingStation,landingTitle,landingNext,watch,archiveSupport);
   hero.append(copy,pack);const rail=make('aside','channel-rail');rail.setAttribute('aria-label','Tune to a channel');hero.append(rail);
   tv.prepend(hero); // same video node throughout guide, channel and fullscreen
   const portraitChannel=make('div','portrait-channel-actions');
   const phonePortrait=matchMedia('(max-width:640px) and (orientation:portrait)');
   function placeChannelActions(){
-    if(phonePortrait.matches){portraitChannel.append(eyebrow,landingStation,watch);cabinet.after(portraitChannel);}
-    else{copy.prepend(eyebrow,landingStation);copy.insertBefore(watch,copy.querySelector('.archive-donate'));portraitChannel.remove();}
+    if(phonePortrait.matches){portraitChannel.append(landingTitle,landingNext,archiveSupport,eyebrow,landingStation,watch);cabinet.after(portraitChannel);}
+    else{copy.append(eyebrow,landingStation,landingTitle,landingNext,watch,archiveSupport);portraitChannel.remove();}
   }
   phonePortrait.addEventListener('change',placeChannelActions);placeChannelActions();
   const guideBack=button('TV guide',showGuide,'btn guide-back');guideBack.innerHTML=icon('back')+'<span>TV guide</span>';pack.prepend(guideBack);
