@@ -161,3 +161,28 @@ test('late incident deployment removes only a corrupt replay begun after the req
  for(const ch of site.BUILT_IN){const p=next.catalog.programming.channels[ch.no];assert.equal(p.until,baseline+500);assert.equal(p.incidentBaseline,baseline);assert.deepEqual(p.items,[previous.catalog.programming.channels[ch.no].items[0]]);assert.equal(site.sameProgram((await site.lineup(ch,baseline+700,1))[0].m,p.items[0].m),false);}
  const later=structuredClone(next);later.catalog.programming=await stageProgramming({previous:next,next:later,now:baseline+800});assert.deepEqual(later.catalog.programming,next.catalog.programming,'migration baseline is never applied again after v2');
 });
+test('an explicit one-shot override replaces the current episode immediately and preserves every other station',async()=>{
+ const previous=mini(),start=siteCode(previous).EPOCH+100;previous.catalog.programming=await stageProgramming({previous,next:previous,now:start});
+ const old=siteCode(previous),channel=old.BUILT_IN.find(c=>c.no===97),current=(await old.lineup(channel,start,1))[0];
+ const target=previous.catalog.pools[channel.q].find(r=>r[0]!==current.m.id)[0];
+ const overrides={version:1,requests:[{id:'user-switch-97-once',channel:97,requestedAt:new Date(start*1000).toISOString(),programId:target}]};
+ const next=structuredClone(previous);next.catalog.programming=await stageProgramming({previous,next,now:start+10,overrides});
+ assert.notEqual(next.catalog.programming.fingerprint,previous.catalog.programming.fingerprint,'open tabs must see a new programming fingerprint');
+ assert.deepEqual(next.catalog.programming.channels[42],previous.catalog.programming.channels[42]);
+ assert.equal(next.catalog.programming.channels[97].until,start+10);assert.deepEqual(next.catalog.programming.channels[97].items,[]);
+ const site=siteCode(next),slots=await site.lineup(site.BUILT_IN.find(c=>c.no===97),start+10,5);assert.equal(slots[0].m.id,target);assert.equal(slots[0].start,start+10);for(let i=1;i<slots.length;i++)assert.equal(site.sameProgram(slots[i-1].m,slots[i].m),false);
+ const again=structuredClone(next);again.catalog.programming=await stageProgramming({previous:next,next:again,now:start+100,overrides});assert.deepEqual(again.catalog.programming,next.catalog.programming,'later deployment cannot restart a consumed override');
+ const expanded=structuredClone(again);expanded.catalog.pools['mini-97'].push(['extra','extra.mp4',600,'A Different Episode','1991','','extra']);expanded.catalog.programming=await stageProgramming({previous:again,next:expanded,now:start+200,overrides});assert.equal(expanded.catalog.programming.channels[97].overrideId,'user-switch-97-once');
+ const later=structuredClone(expanded);later.catalog.programming=await stageProgramming({previous:expanded,next:later,now:start+300,overrides});assert.deepEqual(later.catalog.programming,expanded.catalog.programming,'even a later genuine content update cannot forget the consumed override');
+});
+test('an unavailable requested override fails closed instead of choosing another or interrupting other channels',async()=>{
+ const previous=mini(),start=siteCode(previous).EPOCH+100,overrides={version:1,requests:[{id:'missing-program-97',channel:97,requestedAt:new Date(start*1000).toISOString(),programId:'missing'}]};
+ const snapshot=structuredClone(previous);await assert.rejects(stageProgramming({previous,next:structuredClone(previous),now:start,overrides}),/unavailable/);assert.deepEqual(previous,snapshot);
+});
+test('catalog refresh retunes only the active station whose explicit override changed, never captions or another station',async()=>{
+ const source=html.slice(html.indexOf('async function loadCatalog('),html.indexOf('const catalogRowMedia ='));
+ async function check(before,after,active=97){const calls=[];const run=new Function('fetch','initial','channels','cur','playing','tune','setTimeout',`let catalog=initial;const BUILT_IN=[],listCache={},continuousCache={},schedCache={},effCache={},planCache={},metaCache={};${source};return loadCatalog(100).then(()=>catalog);`);await run(async()=>({ok:true,json:async()=>after}),before,()=>[{no:active}],0,{m:{id:'current'}},async i=>calls.push(i),()=>{});return calls;}
+ const initial={programming:{fingerprint:'before',channels:{97:{overrideId:'old'}}}},next={programming:{fingerprint:'after',channels:{97:{overrideId:'new'}}}};
+ assert.deepEqual(await check(initial,next),[0]);assert.deepEqual(await check(initial,next,42),[]);assert.deepEqual(await check(next,structuredClone(next)),[]);
+ assert.deepEqual(await check(initial,{...initial,captions:{new:'track'}}),[]);
+});

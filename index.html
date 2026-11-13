@@ -902,12 +902,17 @@ async function loadCatalog(ms) {
     const r = await Promise.race([fetch("catalog.json", { cache: "no-cache" }), new Promise((_, no) => setTimeout(no, ms))]);
     if (r.ok) {
       const next = await r.json();
+      const activeNo = catalog && channels()[cur]?.no;
+      const oldOverride = activeNo && catalog.programming?.channels?.[activeNo]?.overrideId;
       if (!catalog || next.programming?.fingerprint && catalog.programming?.fingerprint !== next.programming.fingerprint) {
         for (const ch of BUILT_IN) delete listCache[ch.q];
         for (const cache of [continuousCache, schedCache, effCache, planCache]) for (const key of Object.keys(cache)) delete cache[key];
         for (const key of Object.keys(metaCache)) delete metaCache[key];
       }
       catalog = next;
+      // Only an explicitly authorized station override can interrupt playback.
+      // Caption-index refreshes and ordinary catalog updates never retune here.
+      if (playing && activeNo && next.programming?.channels?.[activeNo]?.overrideId && oldOverride !== next.programming.channels[activeNo].overrideId) await tune(cur);
     }
   } catch {}
 }

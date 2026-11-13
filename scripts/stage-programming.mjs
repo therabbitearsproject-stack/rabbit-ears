@@ -12,7 +12,7 @@ const mediaClock=m=>Array.isArray(m)?{id:m[0],file:m[1],dur:m[2],title:m[3],year
  Object.fromEntries(['id','file','dur','title','year','archiveId','cuts','role','series','local'].filter(k=>m?.[k]!=null).map(k=>[k,m[k]]));
 const clockLibrary=library=>library&&{yearRange:library.yearRange,commercials:(library.commercials||[]).map(mediaClock),bumpers:(library.bumpers||[]).map(mediaClock)};
 const poolClock=rows=>(rows||[]).map(mediaClock).sort((a,b)=>(a.id+'|'+a.file).localeCompare(b.id+'|'+b.file));
-export const fingerprint = ({html,catalog,commercialTiming,mediaCompatibility}) => createHash('sha256').update(JSON.stringify({code:scheduleCode(html).replace(/\r\n/g,'\n'),commercialTiming:commercialTiming.replace(/\r\n/g,'\n'),mediaCompatibility:mediaCompatibility.replace(/\r\n/g,'\n'),
+export const fingerprint = ({html,catalog,commercialTiming,mediaCompatibility,programmingOverrideIds=catalog.programming?.overrideIds||{}}) => createHash('sha256').update(JSON.stringify({overrideIds:programmingOverrideIds,code:scheduleCode(html).replace(/\r\n/g,'\n'),commercialTiming:commercialTiming.replace(/\r\n/g,'\n'),mediaCompatibility:mediaCompatibility.replace(/\r\n/g,'\n'),
  pools:Object.fromEntries(Object.entries(catalog.pools||{}).map(([q,rows])=>[q,poolClock(rows)])),commercials:(catalog.commercials||[]).map(mediaClock),bumpers:(catalog.bumpers||[]).map(mediaClock),
  breakLibraries:Object.fromEntries(Object.entries(catalog.breakLibraries||{}).map(([id,lib])=>[id,clockLibrary(lib)])),channelBumpers:Object.fromEntries(Object.entries(catalog.channelBumpers||{}).map(([id,rows])=>[id,rows.map(mediaClock)])),channelAds:Object.fromEntries(Object.entries(catalog.channelAds||{}).map(([id,rows])=>[id,rows.map(mediaClock)]))})).digest('hex');
 function channelSignature(snapshot,ch,site){
@@ -22,8 +22,17 @@ function channelSignature(snapshot,ch,site){
   bumpers:(catalog.channelBumpers?.[ch.no]||[]).map(mediaClock),ads:ch.breaks?[]:(catalog.channelAds?.[ch.no]||[]).map(mediaClock)})).digest('hex');
 }
 
-export async function stageProgramming({previous,next,now=Date.now()/1000,leadSeconds=2*3600+15*60}) {
-  const signature=fingerprint(next);
+export async function stageProgramming({previous,next,now=Date.now()/1000,leadSeconds=2*3600+15*60,overrides={version:1,requests:[]}}) {
+  if(overrides.version!==1||!Array.isArray(overrides.requests))throw Error('Invalid programming override document');
+  const requests=new Map(),seenOverrideIds=new Set();
+  for(const request of overrides.requests){
+    if(!/^[a-z0-9][a-z0-9_-]{2,100}$/.test(request.id||'')||seenOverrideIds.has(request.id)||!Number.isInteger(request.channel)||typeof request.programId!=='string'||!request.programId||!Number.isFinite(Date.parse(request.requestedAt)))throw Error('Invalid programming override request');
+    seenOverrideIds.add(request.id);if(Date.parse(request.requestedAt)/1000>now)continue;
+    if(!requests.has(request.channel)||Date.parse(request.requestedAt)>Date.parse(requests.get(request.channel).requestedAt))requests.set(request.channel,request);
+  }
+  const overrideIds={...previous.catalog.programming?.overrideIds};
+  for(const [no,request]of requests)overrideIds[no]=request.id;
+  const signature=fingerprint({...next,programmingOverrideIds:overrideIds});
   const target=siteCode(next),old=siteCode(previous),channels={};
   const notBefore=now+leadSeconds;
   for(const ch of target.BUILT_IN){
@@ -34,6 +43,13 @@ export async function stageProgramming({previous,next,now=Date.now()/1000,leadSe
     const validRows=(next.catalog.pools[ch.q]||[]).filter(r=>!target.blocked(r[0],ch)&&!target.blocked(r[6]||r[0],ch));
     const distinct=target.distinctPrograms(validRows.map(target.rowMedia));
     const same=target.sameProgram;
+    const request=requests.get(ch.no);
+    if(request&&oldChannel?.overrideId!==request.id){
+      const row=validRows.find(row=>row[0]===request.programId);
+      if(!row||!Number.isFinite(row[2])||row[2]<=0||!row[1]||!/^.+\.mp4$/i.test(row[1]))throw Error('Requested override program is unavailable: '+request.programId);
+      channels[ch.no]={until:now,items:[],leadIds:[],rotationStartId:request.programId,signature:perChannel,overrideId:request.id,overrideRequestedAt:request.requestedAt,overrideAppliedAt:now};
+      continue;
+    }
     const upcoming=await old.lineup(source,now,Math.max(12,oldChannel?.items?.length+2||12));
     const duplicate=distinct.length>1&&upcoming.some((p,i)=>i&&same(upcoming[i-1].m,p.m));
     // Captions and other stations' changes cannot restart an unchanged rotation.
@@ -75,13 +91,13 @@ export async function stageProgramming({previous,next,now=Date.now()/1000,leadSe
     const continuation=await old.lineup(source,until,Math.min(256,Math.max(16,(oldChannel?.items?.length||0)+distinct.length+2)));
     const nextOld=continuation.find(p=>distinct.some(m=>m.id===p.m.id)&&(!last||!same(last,p.m)));
     const rotationStartId=fresh||nextOld?.m.id||distinct.find(m=>!last||!same(last,m))?.id||distinct[0]?.id;
-    channels[ch.no]={until,items,leadIds:leadIds.length?leadIds:(oldChannel?.leadIds||[]),rotationStartId,signature:perChannel,...(blockedSlot?{earlyRemoval:true}:{}),...(repeatRepair?{repeatRepair:true}:{}),...(incidentRepair?{incidentBaseline:REPEAT_INCIDENT_BASELINE}:{})};
+    channels[ch.no]={until,items,leadIds:leadIds.length?leadIds:(oldChannel?.leadIds||[]),rotationStartId,signature:perChannel,...(oldChannel?.overrideId?{overrideId:oldChannel.overrideId,overrideRequestedAt:oldChannel.overrideRequestedAt,overrideAppliedAt:oldChannel.overrideAppliedAt}:{}),...(blockedSlot?{earlyRemoval:true}:{}),...(repeatRepair?{repeatRepair:true}:{}),...(incidentRepair?{incidentBaseline:REPEAT_INCIDENT_BASELINE}:{})};
   }
   if(previous.catalog.programming?.version>=2&&Object.keys(channels).every(no=>JSON.stringify(channels[no])===JSON.stringify(previous.catalog.programming.channels[no]))){
     if(previous.catalog.programming.fingerprint===signature)return previous.catalog.programming;
     return {...previous.catalog.programming,fingerprint:signature};
   }
-  return {version:2,fingerprint:signature,created:previous.catalog.programming?.fingerprint===signature?previous.catalog.programming.created:now,notBefore:previous.catalog.programming?.fingerprint===signature?previous.catalog.programming.notBefore:notBefore,channels};
+  return {version:2,fingerprint:signature,created:previous.catalog.programming?.fingerprint===signature?previous.catalog.programming.created:now,notBefore:previous.catalog.programming?.fingerprint===signature?previous.catalog.programming.notBefore:notBefore,channels,...(Object.keys(overrideIds).length?{overrideIds}:{})};
 }
 
 async function main(){
@@ -90,7 +106,8 @@ async function main(){
   const [html,catalogText,commercialTiming,mediaCompatibility]=await Promise.all(['index.html','catalog.json','commercial-timing.js','media-compatibility.js'].map(local));
   const [oldHtml,oldCatalog,oldTiming,oldCompatibility]=await Promise.all(['','catalog.json','commercial-timing.js','media-compatibility.js'].map(get));
   const next={html,catalog:JSON.parse(catalogText),commercialTiming,mediaCompatibility};
-  next.catalog.programming=await stageProgramming({previous:{html:oldHtml,catalog:JSON.parse(oldCatalog),commercialTiming:oldTiming,mediaCompatibility:oldCompatibility},next});
+  let overrides;try{overrides=JSON.parse(await local('programming-overrides.json'));}catch(error){if(error.code!=='ENOENT')throw error;}
+  next.catalog.programming=await stageProgramming({previous:{html:oldHtml,catalog:JSON.parse(oldCatalog),commercialTiming:oldTiming,mediaCompatibility:oldCompatibility},next,overrides});
   await writeFile(new URL('../catalog.json',import.meta.url),JSON.stringify(next.catalog));
   console.log('Protected published programs until at least '+new Date(next.catalog.programming.notBefore*1000).toISOString()+', then new cycles start at each channel’s next program boundary.');
 }
