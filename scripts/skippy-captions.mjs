@@ -5,7 +5,7 @@ import {resolve,dirname,join} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {randomUUID} from 'node:crypto';
 import {channelsFromIndex} from './site-pages.mjs';
-import {generateCaptionJobs,importCaptionCompletion,sha256} from './caption-jobs.mjs';
+import {generateCaptionJobs,importCaptionCompletion,sha256,captionJobIdentity,validateGeneratedVtt} from './caption-jobs.mjs';
 
 const repository=fileURLToPath(new URL('../',import.meta.url));
 const hex=/^[a-f0-9]{64}$/;
@@ -46,18 +46,25 @@ async function reviews(repo){
 }
 async function inputs(repo){
  await directory(repo);
- const [catalog,html,reviewedManifest,reviewDocuments,library]=await Promise.all([
+ const [catalog,html,reviewedManifest,reviewDocuments,library,generatedManifest]=await Promise.all([
   json(join(repo,'catalog.json')),
   regularFile(join(repo,'index.html'),8*1024*1024),
   json(join(repo,'captions','manifest.json'),{optional:true}),reviews(repo),
-  json(join(repo,'scripts','midnight-mirage-library.json'),{optional:true})
+  json(join(repo,'scripts','midnight-mirage-library.json'),{optional:true}),
+  json(join(repo,'captions','generated-manifest.json'),{optional:true})
  ]);
  const {channels}=channelsFromIndex(html.toString('utf8'));
- return {catalog,channels,reviewedManifest:reviewedManifest||{episodes:{}},reviewDocuments,sourceRecords:library?.sources||[]};
+ const verifiedGeneratedJobIds=new Set();
+ if(generatedManifest?.project==='rabbit-ears'&&generatedManifest.version===1)for(const [id,entry]of Object.entries(generatedManifest.jobs||{}))try{
+  if(!hex.test(id)||entry.jobId!==id||entry.identitySha256!==id||captionJobIdentity(entry)!==id||entry.file!=='auto-'+id+'.vtt')continue;
+  const text=(await regularFile(join(repo,'captions',entry.file),16*1024*1024)).toString('utf8');
+  if(sha256(text)!==entry.sha256)continue;validateGeneratedVtt(text,entry.duration);verifiedGeneratedJobIds.add(id);
+ }catch{/* Labels alone never authorize replacing an existing native-language track. */}
+ return {catalog,channels,reviewedManifest:reviewedManifest||{episodes:{}},generatedManifest,verifiedGeneratedJobIds,reviewDocuments,sourceRecords:library?.sources||[]};
 }
-export async function queueCaptions({repoRoot=repository,output,pilotJobId}={}){
+export async function queueCaptions({repoRoot=repository,output,pilotJobId,targetLanguage}={}){
  if(!output)throw Error('queue requires --output FILE');
- const data=await inputs(resolve(repoRoot)),queue=generateCaptionJobs(data);
+ const data=await inputs(resolve(repoRoot)),queue=generateCaptionJobs({...data,targetLanguage});
  if(pilotJobId){
   if(!hex.test(pilotJobId))throw Error('Invalid pilot job ID');
   const pilot=queue.jobs.find(job=>job.jobId===pilotJobId);if(!pilot)throw Error('Pilot job is not in the missing-caption queue');pilot.priority=-100;
@@ -68,7 +75,7 @@ export async function queueCaptions({repoRoot=repository,output,pilotJobId}={}){
  const bytes=JSON.stringify(queue)+'\n',path=resolve(output);
  if(Buffer.byteLength(bytes)>64*1024*1024)throw Error('Serialized caption queue exceeds service limit');
  await mkdir(dirname(path),{recursive:true});await atomicWrite(path,bytes);
- return {command:'queue',project:'rabbit-ears',output:path,jobs:queue.jobs.length,bytes:Buffer.byteLength(bytes),summary:queue.summary,pilotJobId:pilotJobId||null};
+ return {command:'queue',project:'rabbit-ears',output:path,jobs:queue.jobs.length,bytes:Buffer.byteLength(bytes),summary:queue.summary,pilotJobId:pilotJobId||null,...(targetLanguage?{targetLanguage}:{})};
 }
 
 export async function importCompleted({repoRoot=repository,queueFile,completedDir}={}){
@@ -109,10 +116,10 @@ export async function importCompleted({repoRoot=repository,queueFile,completedDi
 
 export async function main(args=process.argv.slice(2)){
  const [command,...rest]=args,options={};
- const allowed=command==='queue'?new Set(['--output','--pilot-job-id']):command==='import'?new Set(['--queue','--completed']):null;
- if(!allowed)throw Error('Usage: skippy-captions.mjs queue --output FILE [--pilot-job-id ID] | import --queue FILE --completed DIR');
+ const allowed=command==='queue'?new Set(['--output','--pilot-job-id','--target-language']):command==='import'?new Set(['--queue','--completed']):null;
+ if(!allowed)throw Error('Usage: skippy-captions.mjs queue --output FILE [--pilot-job-id ID] [--target-language en] | import --queue FILE --completed DIR');
  for(let i=0;i<rest.length;i+=2){if(!allowed.has(rest[i])||!rest[i+1]||rest[i+1].startsWith('--')||options[rest[i]]!==undefined)throw Error('Invalid command option: '+rest[i]);options[rest[i]]=rest[i+1];}
- return command==='queue'?queueCaptions({output:options['--output'],pilotJobId:options['--pilot-job-id']}):importCompleted({queueFile:options['--queue'],completedDir:options['--completed']});
+ return command==='queue'?queueCaptions({output:options['--output'],pilotJobId:options['--pilot-job-id'],targetLanguage:options['--target-language']}):importCompleted({queueFile:options['--queue'],completedDir:options['--completed']});
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
  try{process.stdout.write(JSON.stringify(await main())+'\n');}catch(error){process.stderr.write(JSON.stringify({error:String(error.message||error)})+'\n');process.exitCode=1;}

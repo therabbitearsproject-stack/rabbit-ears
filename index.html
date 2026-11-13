@@ -542,7 +542,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script src="media-compatibility.js"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
-<script src="assets/captions.js?v=skippy-auto-1"></script>
+<script src="assets/captions.js?v=caption-index-english-1"></script>
 <script>
 // ---------- Problem log ----------
 // Script errors and tapes, stations or games that won't load are logged to the project database
@@ -912,7 +912,7 @@ async function loadCatalog(ms) {
   } catch {}
 }
 const catalogRowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata], ch) =>
-  tidy({ id, file, dur, title, year, sub, archiveId, width, height, cuts, captionMetadata, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version });
+  tidy({ id, file, dur, title, identityTitle: title, year, sub, archiveId, width, height, cuts, captionMetadata, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version });
 function catalogMeta(id) {
   for (const ch of BUILT_IN) {
     const row = catalog?.pools?.[ch.q]?.find(r => r[0] === id);
@@ -931,7 +931,7 @@ async function getList(ch) {
   if (listCache[ch.q]) return listCache[ch.q];
   const rows = catalog?.pools?.[ch.q];
   if (rows?.length) {
-    const ids = rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(row => { const id = row[0]; if (!(id in metaCache)) metaCache[id] = catalogRowMedia(row, ch); return id; });
+    const ids = [...new Set(rows.filter(r => !blocked(r[0], ch) && !blocked(r[6] || r[0], ch)).map(row => { const id = row[0]; if (!(id in metaCache)) metaCache[id] = catalogRowMedia(row, ch); return id; }))];
     return (listCache[ch.q] = poolOrder(ch.q, ids));
   }
   // Reviewed channels must never fall back to an unrestricted search or stale cached preview.
@@ -1031,7 +1031,7 @@ const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeUR
 // Built-in channels run continuous full-program schedules, without a three-hour cutoff.
 // Only legacy custom search channels retain the older block planner.
 // Same inputs give the same lineup on every device.
-const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata]) => ({ id, file, dur, title, year, sub, archiveId, width, height, cuts, captionMetadata });
+const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata]) => ({ id, file, dur, title, identityTitle: title, year, sub, archiveId, width, height, cuts, captionMetadata });
 function makeSlot(m, ch, start, seed) {
   const program = { ...m, dur: ch.custom ? Math.min(m.dur, BLOCK) : m.dur };
   let timeline;
@@ -1128,11 +1128,34 @@ function effBlock(ch, b) {
 // Programs airing from time t onward. A show that runs over still belongs to the block it
 // started in, so look one block back too.
 const continuousCache = {};
+let identityTitleCatalog=null;const identityTitleCache=new Map();
+// Alternate encodings/uploads of one episode must not masquerade as more shows.
+function programKeys(media) {
+  const source=media.archiveId||media.id;
+  const file=String(media.file||'').replace(/\.(?:mp4|m4v|mkv|avi)$/i,'').replace(/(?:\.ia|_512kb|_h264)$/i,'').replace(/\.+$/,'').toLowerCase();
+  const normalize=value=>String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
+  if(!media.identityTitle&&identityTitleCatalog!==catalog){identityTitleCatalog=catalog;identityTitleCache.clear();for(const rows of Object.values(catalog?.pools||{}))for(const row of rows)identityTitleCache.set((row[6]||row[0])+'|'+row[1],row[3]);}
+  const rawTitle=media.identityTitle||identityTitleCache.get(source+'|'+media.file)||media.title||'';
+  const title=String(rawTitle).replace(/\b(?:1080p|720p|480p|bluray|blu-ray|web-dl|x264|h264|aac)\b/gi,'');
+  const episode=/^(.*?)\bs\s*(\d{1,3})\s*e\s*(\d{1,4})\b/i.exec(title);
+  const keys=['file:'+source+'|'+file];
+  if(episode){const series=normalize(episode[1]).replace(/^the /,'').replace(/^star trek /,'');if(series)keys.push('episode:'+series+'|'+Number(episode[2])+'|'+Number(episode[3]));}
+  else {const label=normalize(title).replace(/^the /,'');if(label.length>=8&&!/^(?:untitled(?: tape)?|unknown|episode|video|commercial|complete series|full movie)(?: \d+)?$/.test(label))keys.push('title:'+label+'|'+String(media.year||''));}
+  return keys;
+}
+const sameProgram=(a,b)=>{const keys=new Set(programKeys(a));return programKeys(b).some(key=>keys.has(key));};
+function distinctPrograms(programs){
+  const seen=new Set(),result=[];
+  for(const media of programs){const keys=programKeys(media),duplicate=keys.some(key=>seen.has(key));keys.forEach(key=>seen.add(key));if(!duplicate)result.push(media);}
+  return result;
+}
 async function continuousLineup(ch, t, count) {
   if (!continuousCache[ch.q]) continuousCache[ch.q] = (async () => {
-    const ids = await getList(ch), leading=(catalog?.programming?.channels?.[ch.no]?.leadIds||[]).filter(id=>ids.includes(id));
-    const ordered=[...leading,...ids.filter(id=>!leading.includes(id))], programs = await Promise.all(ordered.map(getMeta));
-    return programs.filter(Boolean).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
+    const ids = await getList(ch), stage=catalog?.programming?.channels?.[ch.no], leading=(stage?.leadIds||[]).filter(id=>ids.includes(id));
+    let ordered=[...new Set([...leading,...ids.filter(id=>!leading.includes(id))])];
+    const first=ordered.indexOf(stage?.rotationStartId);if(first>0)ordered=[...ordered.slice(first),...ordered.slice(0,first)];
+    const programs = await Promise.all(ordered.map(getMeta));
+    return distinctPrograms(programs.filter(Boolean)).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
   })().catch(error => { delete continuousCache[ch.q]; throw error; });
   const templates = await continuousCache[ch.q];
   const staged = catalog?.programming?.channels?.[ch.no];

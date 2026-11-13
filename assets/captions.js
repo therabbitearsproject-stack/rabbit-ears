@@ -6,7 +6,43 @@ window.RabbitCaptions = (() => {
     let style = store.get('re_caption_style', store.get('re_captions', false) ? 'white' : 'none');
     if (!choices.includes(style)) style = 'none';
     let backing = store.get('re_caption_backing', false) === true;
-    let media = null, track = null, opener = null, lastText = '', nativeOnly = false;
+    let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
+    let captionIndex = null, overlaySource = '', requestNumber = 0;
+    const exactKey=m=>m&&Number.isFinite(m.dur??m.duration)?JSON.stringify([m.archiveId||m.id,m.file||m.video,m.dur??m.duration]):'';
+    const isAuto=m=>m?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(m?.sub||'');
+    const indexRank=r=>r.burned?1000:r.captionMetadata?.kind==='reviewed'?200:r.captionMetadata?.language==='en'?(r.captionMetadata.translated?110:100):10;
+    function resolveMedia(){
+      let next=baseMedia, url='';
+      // Existing manual, embedded and reviewed tracks are never replaced by automatic additions.
+      if(baseMedia&&captionIndex&&(!baseMedia.sub||isAuto(baseMedia))){
+        const record=captionIndex.get(exactKey(baseMedia));
+        if(record?.burned||baseMedia.burnedCaptions||['burned-in','embedded'].includes(baseMedia.captionMetadata?.kind))next={...baseMedia,sub:'',captionMetadata:undefined};
+        else if(record?.captionMetadata?.kind==='auto-generated'&&record.captionMetadata.language!=='en'&&baseMedia.captionMetadata?.language==='en'&&baseMedia.sub){/* Keep an existing English track over a foreign automatic alternative. */}
+        else if(record){
+          next={...baseMedia,sub:record.sub,captionMetadata:record.captionMetadata};
+          url='/captions/'+encodeURIComponent(record.sub.slice(6))+(/^[a-f0-9]{64}$/i.test(record.sha256||'')?'?v='+record.sha256:'');
+        }else if(isAuto(baseMedia))next={...baseMedia,sub:'',captionMetadata:undefined};
+      }
+      if(next?.id!==media?.id||next?.sub!==media?.sub||url!==overlaySource){detach();closeMenu(false);}
+      media=next;overlaySource=url;updateAppearance();attach();
+    }
+    async function refreshIndex(){
+      const request=++requestNumber;
+      try{
+        const response=await fetch('/caption-index.json',{cache:'no-cache',signal:typeof AbortSignal!=='undefined'&&AbortSignal.timeout?AbortSignal.timeout(15000):undefined});
+        if(!response.ok)return;
+        const data=await response.json();
+        if(request!==requestNumber||data?.schemaVersion!==1||!Array.isArray(data.records))return;
+        const records=new Map();
+        for(const record of data.records){
+          if(!record||typeof record.archiveId!=='string'||typeof record.video!=='string'||!Number.isFinite(record.duration)||record.duration<=0)continue;
+          if(!record.burned&&(!/^local:[A-Za-z0-9._-]+\.vtt$/.test(record.sub||'')||record.sub.includes('..')||!['reviewed','auto-generated'].includes(record.captionMetadata?.kind)))continue;
+          const key=exactKey(record),old=records.get(key);
+          if(!old||indexRank(record)>indexRank(old))records.set(key,record);
+        }
+        captionIndex=records;resolveMedia();
+      }catch{/* A failed refresh preserves the last known caption availability. */}
+    }
     const layer = document.createElement('div');
     layer.className = 'caption-layer'; layer.hidden = true;
     layer.setAttribute('role', 'region'); layer.setAttribute('aria-label', 'Captions'); layer.setAttribute('aria-live', 'off');
@@ -15,7 +51,23 @@ window.RabbitCaptions = (() => {
     menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-modal', 'false'); menu.setAttribute('aria-label', 'Caption options');
     const heading = document.createElement('div'); heading.className = 'caption-options-title'; heading.textContent = 'Captions'; menu.append(heading);
     const automatic=()=>media?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(media?.sub||'');
-    function trackLabel(){let name='';try{name=new Intl.DisplayNames(['en'],{type:'language'}).of(media?.captionMetadata?.language||'en');}catch{name='Captions';}return name+(automatic()?' (auto-generated)':'');}
+    const translated=()=>automatic()&&media?.captionMetadata?.translated===true;
+    function languageName(code){
+      try{const name=new Intl.DisplayNames(['en'],{type:'language'}).of(code);if(name)return name;}catch{}
+      return ({en:'English',cs:'Czech',ja:'Japanese',fr:'French',de:'German',es:'Spanish',pl:'Polish',zh:'Chinese',ru:'Russian',ko:'Korean',it:'Italian',pt:'Portuguese',ar:'Arabic',hi:'Hindi'})[code]||code;
+    }
+    const trackLanguage=()=>translated()?'en':media?.captionMetadata?.language||'en';
+    function trackLabel(){
+      const name=languageName(trackLanguage());
+      if(!translated())return name+(automatic()?' (auto-generated)':'');
+      const metadata=media.captionMetadata,valid=code=>typeof code==='string'&&/^[a-z]{2,3}(?:-[a-z0-9]{2,8})?$/i.test(code)&&code.split('-')[0].toLowerCase()!=='en';
+      let codes=Array.isArray(metadata.sourceLanguages)?metadata.sourceLanguages.filter(valid):[];
+      if(!codes.length&&valid(metadata.sourceLanguage))codes=[metadata.sourceLanguage];
+      const names=[...new Set(codes.map(code=>code.toLowerCase()))].map(languageName);
+      let sources=names.join(', ');
+      try{sources=new Intl.ListFormat(['en'],{style:'long',type:'conjunction'}).format(names);}catch{}
+      return name+' (auto-translated'+(sources?' from '+sources:'')+')';
+    }
     const colors = document.createElement('div'); colors.className = 'caption-color-options'; colors.setAttribute('role', 'radiogroup'); colors.setAttribute('aria-label', 'Caption color');
     const radios = choices.map(value => {
       const b = document.createElement('button'); b.type = 'button'; b.dataset.captionChoice = value;
@@ -39,7 +91,7 @@ window.RabbitCaptions = (() => {
       for (const b of radios) { const selected = b.dataset.captionChoice === style; b.setAttribute('aria-checked', String(selected)); b.tabIndex = selected ? 0 : -1; }
     }
     function updateAppearance() {
-      heading.textContent=automatic()?'Auto-generated captions':'Captions';
+      heading.textContent=translated()?'Auto-translated captions':automatic()?'Auto-generated captions':'Captions';
       layer.dataset.color = style; layer.dataset.backing = String(backing);
       video.dataset.captionColor = style; video.dataset.captionBacking = String(backing);
       syncButtons();
@@ -68,8 +120,8 @@ window.RabbitCaptions = (() => {
     function detach() { const old = track; track = null; if (old) { old.track.mode = 'disabled'; old.remove(); } clear(); }
     function attach() {
       if (!media?.sub || style === 'none') { detach(); return; }
-      if (track) { render(); return; }
-      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = media?.captionMetadata?.language||'en'; tr.label = trackLabel(); tr.src = source(media.id);
+      if (track) { track.srclang=trackLanguage(); track.label=trackLabel(); render(); return; }
+      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = trackLanguage(); tr.label = trackLabel(); tr.src = overlaySource||source(media.id);
       track = tr; video.append(tr); tr.track.mode = nativeOnly ? 'showing' : 'hidden';
       tr.track.addEventListener('cuechange', render); tr.addEventListener('load', render); tr.addEventListener('error', clear);
       render();
@@ -80,8 +132,7 @@ window.RabbitCaptions = (() => {
       updateAppearance(); attach();
     }
     function setMedia(next) {
-      if (next?.id !== media?.id || next?.sub !== media?.sub) { detach(); closeMenu(false); }
-      media = next; updateAppearance(); attach();
+      baseMedia=next;resolveMedia();
     }
     function closeMenu(focus = true) { if (menu.hidden) return; menu.hidden = true; syncButtons(); if (focus && opener?.isConnected) opener.focus({ preventScroll: true }); }
     function toggleMenu() {
@@ -110,7 +161,9 @@ window.RabbitCaptions = (() => {
     video.addEventListener('webkitbeginfullscreen', () => nativeMode(true)); video.addEventListener('webkitendfullscreen', () => nativeMode(false));
     new ResizeObserver(resize).observe(video); updateAppearance(); resize();
     new MutationObserver(resize).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    return { setMedia, toggleMenu, syncButtons, closeMenu };
+    refreshIndex();
+    const refreshTimer=setInterval(refreshIndex,5*60*1000);refreshTimer?.unref?.();
+    return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex };
   }
   return { create };
 })();

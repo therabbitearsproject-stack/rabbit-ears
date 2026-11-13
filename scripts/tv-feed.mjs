@@ -30,7 +30,10 @@ export function siteCode({ html, catalog, commercialTiming, mediaCompatibility }
   const run = new Function("CommercialTiming", "MediaCompatibility", "fetch", "localStorage", "__catalog",
     scheduleCode(html) + `
     catalog = __catalog;
-    return { BUILT_IN, BANDS, NO_IMDB, lineup, fileUrl, EPOCH, tidy, rowMedia, blocked };`);
+    return { BUILT_IN, BANDS, NO_IMDB, lineup, fileUrl, EPOCH, tidy, rowMedia, blocked,
+      programKeys: typeof programKeys === 'function' ? programKeys : undefined,
+      sameProgram: typeof sameProgram === 'function' ? sameProgram : undefined,
+      distinctPrograms: typeof distinctPrograms === 'function' ? distinctPrograms : undefined };`);
   return run(CommercialTiming, MediaCompatibility, noFetch, undefined, catalog);
 }
 

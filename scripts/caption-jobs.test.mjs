@@ -94,3 +94,49 @@ test('automatic link application verifies assets, shares cache across aliases, a
  const wrongProject=await applyGeneratedCaptions(rows,{...r.manifest,project:'audiobooks'},load);assert.equal(wrongProject[0][5],'','other project manifests cannot retain or add automatic CC');
  const burned=await applyGeneratedCaptions([row()],r.manifest,load,{reviewDocuments:[{id:'archive-item',video:row()[1],burnedEnglish:'yes'}]});assert.equal(burned[0][5],'');
 });
+
+function foreignFixture(){
+ const f=fixture();f.completion.detectedLanguage='cs';const native=importCaptionCompletion(f),id=f.completion.jobId;
+ for(const r of [f.catalog.pools.midnight[0],f.catalog.pools.active[0]]){r[5]=native.links[0].sub;r[11]=native.links[0].captionMetadata;}
+ const verifiedGeneratedJobIds=new Set([id]),options={catalog:f.catalog,channels,generatedManifest:native.manifest,verifiedGeneratedJobIds,targetLanguage:'en',sourceRecords:[{id:'archive-item',video:row()[1],language:'cze'}]};
+ const queue=generateCaptionJobs(options),job=queue.jobs.find(j=>j.archiveId==='archive-item');
+ const completion={...f.completion,jobId:job.jobId,identitySha256:job.jobId,targetLanguage:'en',supersedesJobId:id,outputLanguage:'en',sourceLanguage:'cs',sourceLanguages:['cs'],translated:true,task:'translate',translationModel:'large-v3'};
+ return {...f,native,verifiedGeneratedJobIds,options,queue,job,completion,generatedManifest:native.manifest};
+}
+test('English target identity extends v1 without changing any legacy identity',()=>{
+ const identity={archiveId:'archive-item',video:'a.mp4',duration:120,language:'auto'};
+ assert.equal(captionJobIdentity(identity),sha256(JSON.stringify(['rabbit-ears','archive-item','a.mp4',120,'auto'])));
+ assert.equal(captionJobIdentity({...identity,targetLanguage:'en'}),sha256(JSON.stringify(['rabbit-ears','archive-item','a.mp4',120,'auto','target','en'])));
+ assert.notEqual(captionJobIdentity(identity),captionJobIdentity({...identity,targetLanguage:'en'}));assert.throws(()=>captionJobIdentity({...identity,targetLanguage:'fr'}),/target/);
+});
+test('English queue upgrades only SHA-verified owned foreign tracks and preserves their original requested-language identity',()=>{
+ const f=foreignFixture();assert.equal(f.job.language,'auto','later Czech metadata cannot change native parent identity');assert.equal(f.job.supersedesJobId,f.native.links[0].captionMetadata.jobId);assert.equal(f.job.targetLanguage,'en');
+ assert.equal(generateCaptionJobs({...f.options,verifiedGeneratedJobIds:new Set()}).jobs.some(j=>j.archiveId==='archive-item'),false);
+ for(const sub of ['English.srt','local:manual.vtt','local:auto-'+'0'.repeat(64)+'.vtt']){
+  const c=structuredClone(f.catalog);c.pools.active[0][5]=sub;assert.equal(generateCaptionJobs({...f.options,catalog:c}).jobs.some(j=>j.archiveId==='archive-item'),false);
+ }
+ const unlinked=structuredClone(f.catalog);for(const rows of Object.values(unlinked.pools))for(const r of rows)r[5]='';assert.equal(generateCaptionJobs({...f.options,catalog:unlinked}).jobs.find(j=>j.archiveId==='archive-item').language,'auto','verified pending native asset still identifies its original parent');
+});
+test('English import preserves immutable native assets and exposes truthful translation metadata',async()=>{
+ const f=foreignFixture(),result=importCaptionCompletion(f),oldId=f.native.links[0].captionMetadata.jobId;
+ assert.equal(Object.keys(result.manifest.jobs).length,2);assert.deepEqual(result.manifest.jobs[oldId],f.native.manifest.jobs[oldId]);assert.notEqual(result.asset.name,f.native.asset.name);
+ assert.deepEqual(result.links[0].captionMetadata,{kind:'auto-generated',language:'en',sourceLanguage:'cs',sourceLanguages:['cs'],translated:true,jobId:f.job.jobId});
+ const applied=await applyGeneratedCaptions([row()],result.manifest,async name=>{if(name===result.asset.name)return result.asset.text;return f.native.asset.text;});assert.equal(applied[0][5],result.links[0].sub);assert.equal(applied[0][11].translated,true);
+ const fallback=await applyGeneratedCaptions([row()],result.manifest,async name=>{if(name===result.asset.name)throw Error('pending download');return f.native.asset.text;});assert.equal(fallback[0][5],f.native.links[0].sub);assert.equal(fallback[0][11].language,'cs');assert.equal(fallback[0][11].translated,false);
+});
+test('English provenance rejects fake labels, wrong hashes and unverified supersedence but supports mixed-source speech',()=>{
+ const f=foreignFixture();
+ for(const patch of [{outputLanguage:'cs'},{sourceLanguage:'en'},{sourceLanguages:[]},{sourceLanguages:['en']},{translated:false},{task:'transcribe'},{translationModel:'large-v3-turbo'},{supersedesJobId:'0'.repeat(64)},{vttSha256:'0'.repeat(64)}])assert.throws(()=>importCaptionCompletion({...f,completion:{...f.completion,...patch}}),JSON.stringify(patch));
+ assert.throws(()=>importCaptionCompletion({...f,verifiedGeneratedJobIds:new Set()}),/protected/);
+ const mixed=importCaptionCompletion({...f,completion:{...f.completion,detectedLanguage:'en',sourceLanguage:'en',sourceLanguages:['en','cs'],translated:true}});assert.deepEqual(mixed.links[0].captionMetadata.sourceLanguages,['en','cs']);assert.equal(mixed.links[0].captionMetadata.translated,true);
+ const unchanged=importCaptionCompletion({...f,completion:{...f.completion,detectedLanguage:'en',sourceLanguage:'en',sourceLanguages:['en'],translated:false,task:'transcribe',translationModel:null}});assert.equal(unchanged.links[0].captionMetadata.translated,false);
+});
+test('existing English, reviewed and burned tracks are never upgrade targets; idempotent English imports retain both assets',()=>{
+ const f=foreignFixture(),result=importCaptionCompletion(f),verified=new Set([...f.verifiedGeneratedJobIds,f.job.jobId]);
+ assert.equal(generateCaptionJobs({...f.options,generatedManifest:result.manifest,verifiedGeneratedJobIds:verified}).jobs.some(j=>j.archiveId==='archive-item'),false);
+ const nativeEnglish=fixture(),englishResult=importCaptionCompletion(nativeEnglish);for(const r of [nativeEnglish.catalog.pools.midnight[0],nativeEnglish.catalog.pools.active[0]])r[5]=englishResult.links[0].sub;
+ assert.equal(generateCaptionJobs({catalog:nativeEnglish.catalog,channels,generatedManifest:englishResult.manifest,verifiedGeneratedJobIds:new Set([nativeEnglish.completion.jobId]),targetLanguage:'en'}).jobs.some(j=>j.archiveId==='archive-item'),false,'native English automatic captions are already sufficient');
+ for(const protection of [{reviewedManifest:{episodes:{film:{archiveId:'archive-item',video:row()[1],duration:120,status:'passed'}}}},{reviewDocuments:[{id:'archive-item',video:row()[1],burnedEnglish:'yes'}]}])assert.throws(()=>importCaptionCompletion({...f,...protection}),/protected/);
+ assert.equal(importCaptionCompletion({...f,generatedManifest:result.manifest}).duplicate,true);
+ const changed=vtt.replace('Hello there.','Changed translation.');assert.throws(()=>importCaptionCompletion({...f,generatedManifest:result.manifest,completion:{...f.completion,vtt:changed,vttSha256:sha256(changed)}}),/cannot be overwritten/);
+});

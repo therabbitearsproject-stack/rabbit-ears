@@ -20,3 +20,15 @@ GPU priority commissioned November 12, 2026: real Vulkan inference passed and th
 Caption reliability repaired November 13, 2026: exact thirty-second PCM windows, one GPU model load per batch, local Silero speech detection and reset text context prevent long silence loops and timeline remapping across silence. Co-located zero-width fragments and bounded end rounding are repaired without shifting source clocks; large drift, overlap and pathological repetition remain rejected. Short contextual repeated dialogue is retained after an independent-model check identified a false positive. Verified video-only sources become no-speech results rather than repeated extraction failures. Rejected timing evidence is retained with bounded storage; the two prior live pilots remain intact.
 
 Verified full sources and live website/native browser parsing: The Ruling Class, 2h33m, 1758 cues; Greaser's Palace, 1h30m, 281 cues. Both deployed SHA-256 values match Skippy output and both have auto-generated English metadata. The Shock has no audio track and was correctly skipped for speech transcription. All31worker tests pass on Windows/Linux; audiobook workers, output/promoter/EPUB routing and audiobook-first GPU priority remain unchanged. Source and rollback notes: Skippy repository services/rabbit-ears-caption-repair/. Machine-readable verification: docs/skippy-caption-repair-verification.json. Backlog continues; this is a generation/timing/delivery check, not manual certification of every word.
+2026-11-13 — Caption publication is separate from programming
+Caption-only publishes clone the exact last successfully deployed Pages artifact,
+then update only caption-index.json and immutable captions/*.vtt assets. They do
+not build or write catalog.json, games.json, TV feeds or staged programming. The
+runtime refreshes exact-source caption availability every five minutes and updates
+only the caption track: no video reload, seek, pause or broadcast-clock reset.
+The Windows bridge is being updated to verify the standalone index's exact source
+identity and SHA plus the immutable caption asset, instead of relying on the old
+subs/<rowID>.vtt alias. English-target jobs and truthful translation metadata are
+supported by the site contract, but backend English activation remains pending
+owner administrator installation/verification; this entry does not claim it live.
+

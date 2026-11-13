@@ -59,3 +59,22 @@ test('queue uses local burned-caption evidence and import rejects path metadata 
 test('unsupported commands/options fail before any service or repository operations',async()=>{
  await assert.rejects(main(['deploy']),/Usage/);await assert.rejects(main(['queue','--token','secret']),/Invalid command option/);await assert.rejects(main(['import','--queue']),/Invalid command option/);
 });
+test('CLI English target mode upgrades only intact owned foreign assets and retains the native file after import',async()=>{
+ const f=await setup();try{
+  const libraryPath=join(f.repo,'scripts','midnight-mirage-library.json'),library=JSON.parse(await readFile(libraryPath));library.sources.find(s=>s.id==='one').language=null;await writeFile(libraryPath,JSON.stringify(library));
+  await queueCaptions({repoRoot:f.repo,output:f.output});const legacy=JSON.parse(await readFile(f.output)),native=legacy.jobs.find(j=>j.archiveId==='one');assert.equal(native.language,'auto');
+  await complete(f,native,{detectedLanguage:'cs'});assert.equal((await importCompleted({repoRoot:f.repo,queueFile:f.output,completedDir:f.completed})).imported,1);
+  const nativeName='auto-'+native.jobId+'.vtt',nativePath=join(f.repo,'captions',nativeName),savedNative=await readFile(nativePath);
+  const c=JSON.parse(await readFile(join(f.repo,'catalog.json')));c.pools.query.find(r=>r[0]==='one')[5]='local:'+nativeName;await writeFile(join(f.repo,'catalog.json'),JSON.stringify(c));
+  library.sources.find(s=>s.id==='one').language='cze';await writeFile(libraryPath,JSON.stringify(library));
+  assert.equal((await queueCaptions({repoRoot:f.repo,output:f.output})).jobs,2,'default remains legacy');
+  assert.equal((await queueCaptions({repoRoot:f.repo,output:f.output,targetLanguage:'en'})).jobs,3);let target=JSON.parse(await readFile(f.output)).jobs.find(j=>j.archiveId==='one');assert.equal(target.supersedesJobId,native.jobId);assert.equal(target.language,'auto');
+  await writeFile(nativePath,'changed');assert.equal((await queueCaptions({repoRoot:f.repo,output:f.output,targetLanguage:'en'})).jobs,2,'manifest label without matching bytes cannot authorize upgrade');
+  await writeFile(nativePath,savedNative);await queueCaptions({repoRoot:f.repo,output:f.output,targetLanguage:'en'});target=JSON.parse(await readFile(f.output)).jobs.find(j=>j.archiveId==='one');
+  const english=join(f.repo,'english-completed');await mkdir(english);await complete({...f,completed:english},target,{targetLanguage:'en',supersedesJobId:native.jobId,detectedLanguage:'cs',sourceLanguage:'cs',sourceLanguages:['cs'],outputLanguage:'en',translated:true,task:'translate',translationModel:'large-v3'});
+  const imported=await importCompleted({repoRoot:f.repo,queueFile:f.output,completedDir:english});assert.equal(imported.imported,1);assert.deepEqual(await readFile(nativePath),savedNative);
+  const manifest=JSON.parse(await readFile(join(f.repo,'captions','generated-manifest.json')));assert.equal(Object.keys(manifest.jobs).length,2);assert.equal(manifest.jobs[target.jobId].outputLanguage,'en');
+  assert.equal((await queueCaptions({repoRoot:f.repo,output:f.output,targetLanguage:'en'})).jobs,2,'verified English target is not queued again');
+  await assert.rejects(queueCaptions({repoRoot:f.repo,output:f.output,targetLanguage:'fr'}),/target/);
+ }finally{await rm(f.repo,{recursive:true,force:true});}
+});
