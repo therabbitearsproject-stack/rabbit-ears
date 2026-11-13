@@ -259,6 +259,6 @@
   },true);
   window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged};
   setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
-  fetch('assets/channel-logos/manifest.json?v=readable-1').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
+  fetch('assets/channel-logos/manifest.json?v=readable-2').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();
 })();

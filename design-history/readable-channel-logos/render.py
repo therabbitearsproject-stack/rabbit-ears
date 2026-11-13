@@ -18,7 +18,7 @@ def save(im,p,title):
  p.with_suffix('.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 128 128" shape-rendering="crispEdges"><title>{html.escape(title)}</title>'+''.join(rects)+'</svg>',encoding='utf8')
 records=[]
 for s in specs:
- f=A/Path(manifest[s['name']].get('srcLight',manifest[s['name']]['src'])).name;im=Image.open(f.with_suffix('.png')).convert('RGBA').resize((128,128),Image.Resampling.NEAREST);art=im.copy();ImageDraw.Draw(art).rectangle((0,88,127,127),fill=(0,0,0,0))
+ f=A/Path(manifest[s['name']].get('srcLight',manifest[s['name']]['src']).split('?')[0]).name;im=Image.open(f.with_suffix('.png')).convert('RGBA').resize((128,128),Image.Resampling.NEAREST);art=im.copy();ImageDraw.Draw(art).rectangle((0,88,127,127),fill=(0,0,0,0))
  for variant,color in [('light','#18212D'),('dark','#FFF1D1')]:
   out=art.copy();d=ImageDraw.Draw(out)
   for i,line in enumerate(s['lines']):
@@ -31,8 +31,8 @@ for s in specs:
     x+=6*scale
   assert out.crop((0,0,128,88)).tobytes()==im.crop((0,0,128,88)).tobytes()
   save(out,f if variant=='light' else f.with_stem(f.stem+'-dark'),s['name'])
- manifest[s['name']]['srcLight']=str(f.relative_to(R)).replace('\\','/')
- manifest[s['name']]['srcDark']=str(f.with_stem(f.stem+'-dark').relative_to(R)).replace('\\','/')
+ manifest[s['name']]['srcLight']=str(f.relative_to(R)).replace('\\','/')+'?v=solid-1'
+ manifest[s['name']]['srcDark']=str(f.with_stem(f.stem+'-dark').relative_to(R)).replace('\\','/')+'?v=solid-1'
  manifest[s['name']]['src']=manifest[s['name']]['srcDark']
  records.append({'no':s['no'],'name':s['name'],'canvasUnchanged':[1024,1024],'iconPixelsUnchanged':True,'label':'Solid pixel lettering; ink on light skins, cream on dark skins; no text outlines or background plate.'})
 (R/'assets/channel-logos/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf8')
