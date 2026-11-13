@@ -108,6 +108,10 @@ body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
 .player-fullscreen .player-pack>.remote{visibility:hidden}
 
 /* Keep the phone portrait preview and its full watch action together below the TV. */
+.channel-rail{scrollbar-gutter:stable}
+.channel-rail .rail-channel{min-width:0;width:100%}
+.channel-rail .channel-identity{width:100%;min-width:0;grid-template-columns:20px minmax(0,1fr)}
+.channel-rail .compact .logo-mat{width:100%;max-width:104px;height:auto;aspect-ratio:1;justify-self:center;box-sizing:border-box}
 @media(max-width:640px) and (orientation:portrait){
   .landing-copy:empty{display:none}
   .portrait-channel-actions{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-areas:"title title" "next next" "support support" "air air" "station watch";gap:12px;min-width:0;padding:4px 0}
