@@ -14,14 +14,15 @@ function captionIndex(rows,target){
   for(const row of rows||[]){
     const media=target.rowMedia(row),key=mediaKey(media);if(!key)continue;
     // Conflicting duplicate rows do not establish an unambiguous caption choice.
-    if(entries.has(key)&&entries.get(key)!==(media.sub||''))entries.set(key,null);
-    else if(!entries.has(key))entries.set(key,media.sub||'');
+    const caption={sub:media.sub||'',metadata:media.captionMetadata||null};
+    if(entries.has(key)&&JSON.stringify(entries.get(key))!==JSON.stringify(caption))entries.set(key,null);
+    else if(!entries.has(key))entries.set(key,caption);
   }
   return entries;
 }
 function refreshCaptions(slot,index){
   const copy=structuredClone(slot);
-  const refresh=media=>{const sub=index.get(mediaKey(media));if(typeof sub==='string')media.sub=sub;};
+  const refresh=media=>{const caption=index.get(mediaKey(media));if(caption&&typeof caption.sub==='string'){media.sub=caption.sub;if(caption.metadata)media.captionMetadata=structuredClone(caption.metadata);else if(media.captionMetadata!==undefined)delete media.captionMetadata;}};
   if(copy.m)refresh(copy.m);
   for(const segment of copy.timeline?.segments||[])if(segment.kind==='program'&&segment.media)refresh(segment.media);
   return copy;

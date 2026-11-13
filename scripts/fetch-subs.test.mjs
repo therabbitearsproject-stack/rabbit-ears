@@ -8,7 +8,7 @@ test('publication replaces empty cached local captions, retains sidecars and rem
  const dir=await mkdtemp(join(tmpdir(),'rabbit-ears-subs-')),fetch=globalThis.fetch;
  try{
   for(const sub of ['scripts','captions','subs'])await mkdir(join(dir,sub));
-  for(const script of ['fetch-subs.mjs','caption-library.mjs'])await copyFile(new URL(script,import.meta.url),join(dir,'scripts',script));
+  for(const script of ['fetch-subs.mjs','caption-library.mjs','caption-jobs.mjs'])await copyFile(new URL(script,import.meta.url),join(dir,'scripts',script));
   const text='WEBVTT\n\n00:00:01.000 --> 00:00:02.000\nHello\n';
   await writeFile(join(dir,'captions','episode.vtt'),text);await writeFile(join(dir,'subs','episode.vtt'),'');
   await writeFile(join(dir,'subs','ordinary.vtt'),'cached sidecar');await writeFile(join(dir,'subs','removed.vtt'),'stale');

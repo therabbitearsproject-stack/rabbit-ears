@@ -16,7 +16,7 @@ import { loadChannelBreakLibrary } from "./channel-break-library.mjs";
 import { buildPorchlightPool } from "./porchlight-programming.mjs";
 import { strengthenPool,keepProgram } from "./program-quality.mjs";
 import { mergeAds,channelAdPools } from "./themed-ad-library.mjs";
-import { applyReviewedCaptions } from "./caption-library.mjs";
+import { applyAvailableCaptions } from "./caption-library.mjs";
 import { midnightMirageRows } from "./midnight-mirage-programming.mjs";
 
 const POOL = 400;          // most-downloaded matches kept per channel
@@ -251,7 +251,7 @@ for(const ch of channelNumbers)channelAds[ch.no]=channelAds[ch.no].filter(ad=>me
 let captionManifest;
 try { captionManifest = JSON.parse(await readFile(new URL('../captions/manifest.json', import.meta.url), 'utf8')); }
 catch (error) { if (error.code !== 'ENOENT') throw error; captionManifest = { episodes: {} }; }
-for (const [q, rows] of Object.entries(pools)) pools[q] = await applyReviewedCaptions(rows, captionManifest);
+for (const [q, rows] of Object.entries(pools)) pools[q] = await applyAvailableCaptions(rows, captionManifest);
 const catalog = { generated: new Date().toISOString(), pools, coverage, commercials, bumpers, breakLibraries, channelBumpers, channelAds, qualifiedOut, unplayable: [...unplayable] };
 await writeFile(new URL("../catalog.json", import.meta.url), JSON.stringify(catalog));
 console.log(`done: ${looked} looked up, ${reused} reused, ${failed} failed`);

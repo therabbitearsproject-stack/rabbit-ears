@@ -14,6 +14,8 @@ window.RabbitCaptions = (() => {
     menu.id = 'caption-options'; menu.className = 'caption-options'; menu.hidden = true;
     menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-modal', 'false'); menu.setAttribute('aria-label', 'Caption options');
     const heading = document.createElement('div'); heading.className = 'caption-options-title'; heading.textContent = 'Captions'; menu.append(heading);
+    const automatic=()=>media?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(media?.sub||'');
+    function trackLabel(){let name='';try{name=new Intl.DisplayNames(['en'],{type:'language'}).of(media?.captionMetadata?.language||'en');}catch{name='Captions';}return name+(automatic()?' (auto-generated)':'');}
     const colors = document.createElement('div'); colors.className = 'caption-color-options'; colors.setAttribute('role', 'radiogroup'); colors.setAttribute('aria-label', 'Caption color');
     const radios = choices.map(value => {
       const b = document.createElement('button'); b.type = 'button'; b.dataset.captionChoice = value;
@@ -37,6 +39,7 @@ window.RabbitCaptions = (() => {
       for (const b of radios) { const selected = b.dataset.captionChoice === style; b.setAttribute('aria-checked', String(selected)); b.tabIndex = selected ? 0 : -1; }
     }
     function updateAppearance() {
+      heading.textContent=automatic()?'Auto-generated captions':'Captions';
       layer.dataset.color = style; layer.dataset.backing = String(backing);
       video.dataset.captionColor = style; video.dataset.captionBacking = String(backing);
       syncButtons();
@@ -66,7 +69,7 @@ window.RabbitCaptions = (() => {
     function attach() {
       if (!media?.sub || style === 'none') { detach(); return; }
       if (track) { render(); return; }
-      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = 'en'; tr.label = 'English'; tr.src = source(media.id);
+      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = media?.captionMetadata?.language||'en'; tr.label = trackLabel(); tr.src = source(media.id);
       track = tr; video.append(tr); tr.track.mode = nativeOnly ? 'showing' : 'hidden';
       tr.track.addEventListener('cuechange', render); tr.addEventListener('load', render); tr.addEventListener('error', clear);
       render();

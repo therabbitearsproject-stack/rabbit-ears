@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import {applyGeneratedCaptions} from './caption-jobs.mjs';
 
 export const captionFile = id => id.replace(/[^A-Za-z0-9._-]/g, '_') + '.vtt';
 const root = new URL('../captions/', import.meta.url);
@@ -31,4 +32,15 @@ export async function applyReviewedCaptions(rows, manifest, load = localCaption)
     } catch { /* Missing or changed assets must not advertise working CC. */ }
     return out;
   }));
+}
+
+// Reviewed tracks take precedence; generated text is explicitly identified and
+// can only fill a missing track for the same source file and duration.
+let generatedCache,reviewCache;
+export async function applyAvailableCaptions(rows, reviewed, generated, load=localCaption) {
+  if(!generated)generated=await(generatedCache??=(async()=>{try{return JSON.parse(await readFile(new URL('generated-manifest.json',root),'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;return{version:1,project:'rabbit-ears',jobs:{}};}})());
+  const reviews=await(reviewCache??=Promise.all(['docs/midnight-mirage-subtitles-review.json','docs/midnight-mirage/additional-subtitle-review.json'].map(async file=>{
+    try{return JSON.parse(await readFile(new URL('../'+file,import.meta.url),'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;return{};}
+  })));
+  return applyGeneratedCaptions(await applyReviewedCaptions(rows,reviewed,load),generated,load,{reviewDocuments:reviews});
 }

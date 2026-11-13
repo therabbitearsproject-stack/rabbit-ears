@@ -22,6 +22,7 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
     await writeFile(join(dir,'community/channels.json'),JSON.stringify([{no:1,name:'Ordinary'},{no:2,name:'Trek'},{no:42,name:'Midnight Mirage'}]));
     await copyFile(new URL("trek-programming.mjs", import.meta.url), join(dir, "scripts/trek-programming.mjs"));
     await copyFile(new URL("caption-library.mjs", import.meta.url), join(dir, "scripts/caption-library.mjs"));
+    await copyFile(new URL("caption-jobs.mjs", import.meta.url), join(dir, "scripts/caption-jobs.mjs"));
     await copyFile(new URL("commercial-library.mjs", import.meta.url), join(dir, "scripts/commercial-library.mjs"));
     await copyFile(new URL("channel-break-library.mjs", import.meta.url), join(dir, "scripts/channel-break-library.mjs"));
     await copyFile(new URL("reviewed-episodes.mjs", import.meta.url), join(dir, "scripts/reviewed-episodes.mjs"));

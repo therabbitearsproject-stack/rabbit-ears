@@ -1,0 +1,13 @@
+Rabbit Ears automatic caption pipeline
+
+Project tag: rabbit-ears. Each job identifies the exact Archive item, video filename, duration and requested language with a SHA-256 ID. Existing linked/reviewed captions and confirmed on-picture subtitles are excluded. Jobs are metadata only until the private Skippy worker claims one.
+
+Skippy keeps Rabbit Ears queue, working audio, completed VTT and status files in a separate project directory. The existing installed transcription engine/model is reused; audiobook queue/media/worker units are isolated. One low-priority CPU worker uses two threads. Recordings over eight hours are held rather than partially transcribed.
+
+The private transcription dashboard displays Rabbit Ears counters, current title, stage, progress, elapsed time, held/no-speech/skipped counts and output sync state.
+
+Completed folders retain captions.vtt and completion.json. The Windows bridge mirrors them into the configured OneDrive folder, validates source identity, runtime, cue bounds and byte hashes, and only publishes automatic-caption files and their separate manifest. Reviewed caption files are never replaced.
+
+The CC menu labels generated text as Auto-generated captions. Detected source language is retained; this is transcription, not an automatic promise of English translation or complete sound-effect captions. Publication preserves protected broadcast timing. A result is counted as live only after its website VTT bytes match the generated hash.
+
+The Skippy service continues while this Windows computer is offline. The scheduled website handoff resumes when this computer is online and logged in. No transcript text or source audio is sent to a paid transcription API.

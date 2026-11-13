@@ -542,7 +542,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script src="media-compatibility.js"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
-<script src="assets/captions.js?v=caption-size-3"></script>
+<script src="assets/captions.js?v=skippy-auto-1"></script>
 <script>
 // ---------- Problem log ----------
 // Script errors and tapes, stations or games that won't load are logged to the project database
@@ -911,8 +911,8 @@ async function loadCatalog(ms) {
     }
   } catch {}
 }
-const catalogRowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts], ch) =>
-  tidy({ id, file, dur, title, year, sub, archiveId, width, height, cuts, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version });
+const catalogRowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata], ch) =>
+  tidy({ id, file, dur, title, year, sub, archiveId, width, height, cuts, captionMetadata, audioCompatible: !!ch.library || compatibility === MediaCompatibility.version });
 function catalogMeta(id) {
   for (const ch of BUILT_IN) {
     const row = catalog?.pools?.[ch.q]?.find(r => r[0] === id);
@@ -1031,7 +1031,7 @@ const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeUR
 // Built-in channels run continuous full-program schedules, without a three-hour cutoff.
 // Only legacy custom search channels retain the older block planner.
 // Same inputs give the same lineup on every device.
-const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height]) => ({ id, file, dur, title, year, sub, archiveId, width, height });
+const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata]) => ({ id, file, dur, title, year, sub, archiveId, width, height, cuts, captionMetadata });
 function makeSlot(m, ch, start, seed) {
   const program = { ...m, dur: ch.custom ? Math.min(m.dur, BLOCK) : m.dur };
   let timeline;

@@ -101,3 +101,12 @@ test('matching fingerprints refresh legacy frozen captions while retaining the e
  const deployed={...next,catalog:{...next.catalog,programming:stage}};
  assert.equal(await stageProgramming({previous:deployed,next:deployed,now:now+7200}),stage,'an already refreshed unchanged deployment reuses its anchor');
 });
+
+test('protected automatic captions keep their language and provenance without moving the program',async()=>{
+ const {previous,ch,slot}=captionFixture(''),next=structuredClone(previous),metadata={kind:'auto-generated',language:'cs',jobId:'a'.repeat(64)};
+ next.catalog.pools[ch.q][0][5]='local:auto-'+metadata.jobId+'.vtt';next.catalog.pools[ch.q][0][11]=metadata;
+ const staged=await stageProgramming({previous,next,now}),actual=staged.channels[30].items[0];
+ assert.deepEqual(actual.m.captionMetadata,metadata);assert.equal(actual.start,slot.start);assert.equal(actual.end,slot.end);
+ for(const s of actual.timeline.segments.filter(s=>s.kind==='program'))assert.deepEqual(s.media.captionMetadata,metadata);
+ assert.deepEqual(actual.timeline.segments.filter(s=>s.kind!=='program'),slot.timeline.segments.filter(s=>s.kind!=='program'));
+});
