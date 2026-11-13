@@ -6,6 +6,8 @@ const valid=()=>({channel:97,mediaId:'episode-1',file:'episode.mp4',title:'A sho
 test('valid comments and reactions preserve original playback time',()=>{
   assert.equal(validateEvent(valid()).position,42.5);
   assert.equal(validateEvent({...valid(),kind:'emoji',body:'🖖'}).body,'🖖');
+  assert.equal(validateEvent({...valid(),kind:'emoji',body:'😭'}).body,'😭');
+  assert.throws(()=>validateEvent({...valid(),kind:'emoji',body:'📺'}));
 });
 test('reject forged channels, unsafe sizes, impossible timestamps, unknown emoji and malformed identifiers',()=>{
   for(const b of [{channel:999},{position:-1},{position:Infinity},{position:'3'},{kind:'webhook'},{body:'x'.repeat(501)},{kind:'emoji',body:'@everyone'},{requestId:'bad'},{mediaId:''}])assert.throws(()=>validateEvent({...valid(),...b}));

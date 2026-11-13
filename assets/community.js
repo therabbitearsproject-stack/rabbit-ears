@@ -1,11 +1,13 @@
 /* Episode-time comments: reading/replaying never writes to Discord. */
 import {contentPosition,editionFile} from './community-timing.mjs';
+import {REACTIONS,LEGACY_REACTIONS} from './pixel-reactions.mjs';
 const config = window.RABBIT_COMMUNITY || {};
 const api = config.api?.replace(/\/$/, '');
 const video = document.getElementById('vid');
 const screen = document.getElementById('screen');
-const EMOJI = ['❤️','😂','👻','🔥','😮','👏','📺','🖖'];
+const reactionMap=new Map([...REACTIONS,...LEGACY_REACTIONS].map(r=>[r.emoji,r]));
 const el = (tag, cls, text) => Object.assign(document.createElement(tag), {className:cls || '',textContent:text || ''});
+function reactionIcon(emoji){const r=reactionMap.get(emoji);if(!r)return document.createTextNode(emoji);const im=el('img','reaction-icon');im.src=new URL('./reactions/'+r.id+'.svg',import.meta.url).href;im.alt=r.label;im.width=24;im.height=24;return im;}
 const button = (text, fn, cls='btn') => {const b=el('button',cls,text);b.type='button';b.addEventListener('click',fn);return b;};
 const stamp = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
 const hash = async s => [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join('');
@@ -21,7 +23,7 @@ const reactionPopover=el('div','watch-popover emoji-popover');reactionPopover.id
 const reactionHeading=el('div','popover-heading');reactionHeading.append(el('h3','','React'),button('×',()=>closePopover(reactionPopover),'popover-close'));reactionHeading.lastChild.setAttribute('aria-label','Close reactions');
 const reactionAuth=el('div','community-auth');
 const reactions=el('div','reaction-buttons');reactions.setAttribute('role','group');reactions.setAttribute('aria-label','React to this moment');
-for(const emoji of EMOJI) reactions.append(button(emoji,()=>send('emoji',emoji),'reaction-button'));
+for(const r of REACTIONS){const b=button('',()=>send('emoji',r.emoji),'reaction-button');b.dataset.emoji=r.emoji;b.setAttribute('aria-label',r.label);const im=reactionIcon(r.emoji);im.alt='';b.append(im);reactions.append(b);}
 const reactionNotice=el('p','community-status');reactionNotice.setAttribute('role','status');reactionPopover.append(reactionHeading,reactionAuth,reactions,reactionNotice);
 const form=el('form','community-composer');const input=el('textarea');input.rows=2;input.maxLength=500;input.placeholder='What’s on your mind at this moment?';input.setAttribute('aria-label','Comment on this moment');
 const submit=button('Post',()=>{});submit.type='submit';const disclosure=el('p','community-disclosure','Public here and in this channel’s Discord room. Saved with the episode for later replays.');
@@ -88,7 +90,7 @@ function paintList(){
   for(const e of events.filter(e=>e.position<=c.position+.5&&e.position>=c.position-90&&show(e,c)).slice(-30)){
     const item=el('li','community-comment');item.dataset.event=e.id;
     const meta=el('div','comment-meta');meta.append(el('strong','',e.name),el('span','',stamp(e.position)+(replayed(e,c)?' · replay':'')));
-    const text=el('p','',e.kind==='emoji'?'Reacted '+e.body:e.body);item.append(meta,text);
+    const text=el('p','',e.kind==='emoji'?'Reacted ':e.body);if(e.kind==='emoji')text.append(reactionIcon(e.body));item.append(meta,text);
     if(e.canDelete)item.append(button('Remove',async()=>{try{await call('/api/events/'+e.id,{method:'DELETE'});events=events.filter(x=>x.id!==e.id);paintList();markerAt=0;}catch(err){message(err.message);}},'comment-remove'));
     list.append(item);
   }
@@ -96,17 +98,17 @@ function paintList(){
 }
 function burst(event,c){
   if(!show(event,c)||document.hidden)return;
-  const node=el('span',event.kind==='emoji'?'floating-emoji':'floating-comment',event.kind==='emoji'?event.body:event.name+': '+event.body);
+  const node=el('span',event.kind==='emoji'?'floating-emoji':'floating-comment',event.kind==='emoji'?'':event.name+': '+event.body);if(event.kind==='emoji')node.append(reactionIcon(event.body));
   node.style.setProperty('--reaction-x',`${12+Math.random()*70}%`);layer.append(node);setTimeout(()=>node.remove(),event.kind==='emoji'?2600:4500);
 }
 function paintMarkers(c){
   timeline.replaceChildren();timeline.hidden=!c||!markers.length;
   for(const m of markers){
     const dot=el('span','community-marker');dot.tabIndex=0;dot.style.left=Math.min(99.5,m.position/c.duration*100)+'%';
-    const emoji=(m.emoji||'').split(',').filter(e=>EMOJI.includes(e)),reactionCount=m.count-m.comments;
-    dot.title=`${stamp(m.position)}${m.comments?' · '+m.comments+(m.comments===1?' comment':' comments'):''}${reactionCount?' · '+reactionCount+(reactionCount===1?' reaction':' reactions')+(emoji.length?' '+emoji.join(' '):''):''}${m.sample?' — '+m.sample.slice(0,120):''}`;
+    const emoji=(m.emoji||'').split(',').filter(e=>reactionMap.has(e)),reactionCount=m.count-m.comments;
+    dot.title=`${stamp(m.position)}${m.comments?' · '+m.comments+(m.comments===1?' comment':' comments'):''}${reactionCount?' · '+reactionCount+(reactionCount===1?' reaction':' reactions')+(emoji.length?' '+emoji.map(e=>reactionMap.get(e).label).join(', '):''):''}${m.sample?' — '+m.sample.slice(0,120):''}`;
     dot.setAttribute('aria-label',dot.title);
-    if(emoji.length){const glyph=el('span','marker-reaction',emoji[0]);glyph.setAttribute('aria-hidden','true');dot.append(glyph);}
+    if(emoji.length){const glyph=el('span','marker-reaction');glyph.append(reactionIcon(emoji[0]));glyph.setAttribute('aria-hidden','true');dot.append(glyph);}
     const tooltip=el('span','marker-tooltip',dot.title);dot.append(tooltip);timeline.append(dot);
   }
 }

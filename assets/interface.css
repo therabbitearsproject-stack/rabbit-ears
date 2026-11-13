@@ -125,3 +125,11 @@ body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
   .portrait-channel-actions .watch-channel span{display:inline;white-space:nowrap}
   body[data-tv-page=channel] .portrait-channel-actions{display:none}
 }
+
+/* Small native-grid reaction sprites; Unicode is retained only as event data. */
+.reaction-icon{display:inline-block;width:24px;height:24px;object-fit:contain;image-rendering:pixelated;vertical-align:middle}
+.reaction-button{display:inline-grid;place-items:center}
+.floating-emoji .reaction-icon{display:block;width:1em;height:1em}
+.marker-reaction .reaction-icon{display:block;width:14px;height:14px}
+.community-comment .reaction-icon{width:20px;height:20px}
+body[data-skin=pixel] :is(.watch-popover,.reaction-button){border-radius:0}

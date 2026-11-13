@@ -23,12 +23,14 @@
   body.dataset.skin=skins.some(s=>s[0]===skin)?skin:'retro';
   body.dataset.tvPage=initialChannel?'channel':'guide';
   body.dataset.radioLook=radioLook==='car'?'car':'vinyl';
+  const logoSource=info=>['retro','ivory'].includes(body.dataset.skin)?(info.srcLight||info.src):(info.srcDark||info.src);
+  function refreshLogoColors(){document.querySelectorAll('img.channel-logo').forEach(im=>{const info=logos[im.alt];if(info){const src=logoSource(info);if(im.getAttribute('src')!==src)im.src=src;}});}
   function station(ch,compact=false){
     const el=make('span','channel-identity'+(compact?' compact':''));
     const info=logos[ch.name];
     el.append(make('span','channel-no',String(ch.no).padStart(2,'0')));
     const mat=make('span','logo-mat');
-    if(info){el.style.setProperty('--channel-accent',info.accent);const im=make('img','channel-logo');im.src=info.src;im.alt=ch.name;im.width=180;im.height=100;im.decoding='async';mat.append(im);}
+    if(info){el.style.setProperty('--channel-accent',info.accent);const im=make('img','channel-logo');im.src=logoSource(info);im.alt=ch.name;im.width=180;im.height=100;im.decoding='async';mat.append(im);}
     else mat.append(make('span','channel-name',ch.name));
     el.append(mat);return el;
   }
@@ -42,7 +44,7 @@
   }
   const skinButton=button('',()=>openDialog(skinDialog),'btn theme-picker');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette');skinButton.title='Choose theme';skinButton.setAttribute('aria-label','Choose theme');document.querySelector('header').append(skinButton);
   const currentSkin=make('span','current-skin');skinButton.append(currentSkin);
-  function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='retro'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();}
+  function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='retro'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();refreshLogoColors();}
   syncSkin();
   const pack=make('div','player-pack');const cabinet=tv.querySelector('.cabinet');
   const controls=tv.querySelector('.remote'),details=tv.querySelector('.now'),guide=tv.querySelector('.guide');
@@ -257,6 +259,6 @@
   },true);
   window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged};
   setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
-  fetch('assets/channel-logos/manifest.json?v=pixel-42-1').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
+  fetch('assets/channel-logos/manifest.json?v=readable-1').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();
 })();

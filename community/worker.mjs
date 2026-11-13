@@ -1,6 +1,7 @@
 import channels from './channels.json' with { type: 'json' };
 
-export const EMOJI = ['❤️','😂','👻','🔥','😮','👏','📺','🖖'];
+import {REACTIONS} from '../assets/pixel-reactions.mjs';
+export const EMOJI = REACTIONS.map(r=>r.emoji);
 const CHANNELS = new Set(channels.map(c => c.no));
 const enc = new TextEncoder();
 const random = () => crypto.randomUUID();
