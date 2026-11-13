@@ -1,7 +1,8 @@
 import channels from './channels.json' with { type: 'json' };
 
-import {REACTIONS} from '../assets/pixel-reactions.mjs';
-export const EMOJI = REACTIONS.map(r=>r.emoji);
+import {REACTIONS,LEGACY_REACTIONS} from '../assets/pixel-reactions.mjs';
+// Cached clients keep working; only REACTIONS appear in the current picker.
+export const EMOJI = [...REACTIONS,...LEGACY_REACTIONS].map(r=>r.emoji);
 const CHANNELS = new Set(channels.map(c => c.no));
 const enc = new TextEncoder();
 const random = () => crypto.randomUUID();

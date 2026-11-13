@@ -1,6 +1,6 @@
 /* Episode-time comments: reading/replaying never writes to Discord. */
 import {contentPosition,editionFile} from './community-timing.mjs';
-import {REACTIONS,LEGACY_REACTIONS} from './pixel-reactions.mjs';
+import {REACTIONS,LEGACY_REACTIONS} from './pixel-reactions.mjs?v=2';
 const config = window.RABBIT_COMMUNITY || {};
 const api = config.api?.replace(/\/$/, '');
 const video = document.getElementById('vid');

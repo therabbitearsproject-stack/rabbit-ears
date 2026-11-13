@@ -3,7 +3,7 @@ from PIL import Image,ImageDraw
 import html
 A=Path(__file__).resolve().parents[2]/'assets/reactions';A.mkdir(exist_ok=True)
 K='#18212D';Y='#F6C969';H='#FFF1D1';B='#32A9DD';C='#93E5ED';R='#EC6076';O='#F18B43';P='#DCA578'
-for name in ['heart','laugh','ghost','fire','wow','clap','cry','vulcan','tv']:
+for name in ['heart','laugh','ghost','fire','wow','clap','cry','vulcan','skull','tv']:
  im=Image.new('RGBA',(24,24));d=ImageDraw.Draw(im)
  def rect(box,c):d.rectangle(box,fill=c)
  def poly(pts,c):d.polygon(pts,fill=c)
@@ -39,6 +39,10 @@ for name in ['heart','laugh','ghost','fire','wow','clap','cry','vulcan','tv']:
   poly([(7,22),(3,17),(1,13),(2,11),(4,11),(7,14),(5,3),(7,1),(9,2),(11,10),(13,2),(15,1),(17,3),(16,12),(20,5),(22,5),(23,7),(20,18),(16,22)],K)
   poly([(8,21),(4,16),(2,13),(3,12),(9,17),(6,4),(7,3),(9,5),(11,14),(14,3),(15,3),(16,4),(14,16),(21,6),(22,7),(19,17),(15,21)],H)
   d.line([(9,18),(12,16),(15,17)],fill=P,width=1);rect((9,22,15,23),B)
+ if name=='skull':
+  poly([(6,2),(17,2),(21,6),(21,14),(18,17),(18,22),(5,22),(5,17),(2,14),(2,6)],K)
+  poly([(7,3),(16,3),(20,7),(20,13),(17,16),(17,21),(6,21),(6,16),(3,13),(3,7)],H)
+  rect((5,8,9,12),K);rect((14,8,18,12),K);poly([(11,12),(9,16),(14,16)],K);rect((8,19,8,22),K);rect((11,18,11,22),K);rect((14,19,14,22),K)
  if name=='tv':
   d.line([(7,1),(12,5),(17,1)],fill=H,width=1);rect((1,5,22,20),K);rect((2,6,21,19),P);rect((4,8,16,17),K);rect((5,9,15,16),B);rect((18,8,20,10),H);rect((18,13,20,14),K);rect((5,20,7,22),K);rect((17,20,19,22),K)
  px=im.load();rs=[]
@@ -51,4 +55,4 @@ for name in ['heart','laugh','ghost','fire','wow','clap','cry','vulcan','tv']:
    while e<24 and px[e,y]==c:e+=1
    rs.append(f'<rect x="{x}" y="{y}" width="{e-x}" height="1" fill="#{c[0]:02x}{c[1]:02x}{c[2]:02x}"/>');x=e
  (A/(name+'.svg')).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" shape-rendering="crispEdges"><title>{html.escape(name)}</title>'+''.join(rs)+'</svg>',encoding='utf8')
-print('9 original transparent pixel reaction sprites, including replay-only TV.')
+print('10 original transparent pixel reaction sprites, including two replay-only icons.')

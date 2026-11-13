@@ -6,7 +6,7 @@ export const REACTIONS = [
   {emoji:'😮',id:'wow',label:'Surprised'},
   {emoji:'👏',id:'clap',label:'Applause'},
   {emoji:'😭',id:'cry',label:'Crying'},
-  {emoji:'🖖',id:'vulcan',label:'Live long and prosper'},
+  {emoji:'💀',id:'skull',label:'Skull'},
 ];
-// Old TV reactions retain their identity when their episode plays again.
-export const LEGACY_REACTIONS = [{emoji:'📺',id:'tv',label:'Television'}];
+// Retired reactions retain their identity when their episode plays again.
+export const LEGACY_REACTIONS = [{emoji:'📺',id:'tv',label:'Television'},{emoji:'🖖',id:'vulcan',label:'Live long and prosper'}];
