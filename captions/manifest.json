@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-11T14:24:03.361Z",
+  "updated": "2026-11-13T04:04:39.439Z",
   "validation": {
     "method": "Per-episode evidence records embedded source/stream clock checks or release-matched external subtitles; independent early and late dialogue checks against the selected streamed English audio.",
     "minimumSpeechSimilarity": 0.72,
@@ -31261,6 +31261,231 @@
         "generatedSubtitles": false,
         "timingShiftSeconds": 0
       }
+    },
+    "auteurhouse-theholymountain1973": {
+      "archiveId": "auteurhouse-theholymountain1973",
+      "video": "The.Holy.Mountain.1973.720p.BluRay.x264-[YTS.LT].mp4",
+      "source": "English.srt",
+      "duration": 6808.85,
+      "language": "en",
+      "sourceLanguage": "eng",
+      "cues": 352,
+      "sha256": "7d536e3fd6a1fcae6f09c44bdd3c2bdb26297fadc31e0827c3f0407833f3ab40",
+      "status": "passed",
+      "checks": [
+        {
+          "similarity": 1,
+          "wordF1": 1,
+          "heard": "The same force the vulture uses to seize the ox",
+          "audioStart": 2324.399,
+          "audioEnd": 2328.019,
+          "offsetSeconds": -0.34,
+          "pass": true,
+          "model": "base.en",
+          "fraction": 0.32,
+          "cueStart": 2324.739,
+          "cueEnd": 2328.366,
+          "expected": "The same force the vulture uses to seize the ox",
+          "audioDownload": {
+            "fallback": "ffmpeg bounded remote audio seek",
+            "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+          }
+        },
+        {
+          "similarity": 0.974,
+          "wordF1": 0.857,
+          "heard": "I am financial advisor to the president.",
+          "audioStart": 3854.095,
+          "audioEnd": 3857.155,
+          "offsetSeconds": -0.38,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.55,
+          "cueStart": 3854.475,
+          "cueEnd": 3857.352,
+          "expected": "I am financial adviser to the president.",
+          "audioDownload": {
+            "fallback": "ffmpeg bounded remote audio seek",
+            "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+          }
+        },
+        {
+          "similarity": 0.962,
+          "wordF1": 0.875,
+          "heard": "I drink alone, because newcomers are always abstainous.",
+          "audioStart": 5793.056,
+          "audioEnd": 5796.376,
+          "offsetSeconds": 1.02,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.85,
+          "cueStart": 5792.036,
+          "cueEnd": 5795.997,
+          "expected": "I drink alone because newcomers are always abstainers.",
+          "audioDownload": {
+            "fallback": "ffmpeg bounded remote audio seek",
+            "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+          }
+        }
+      ],
+      "extraction": "Exact Archive item English.srt sidecar; unchanged source timestamps",
+      "validation": "Independent English speech anchors at32%,55%,85%; sampled offset spread1.4s. Subtitle translation/dialogue track, not an assertion of complete SDH. Long sparse gaps retained from the source; no text invented or auto-retimed."
+    },
+    "the-trip-1967": {
+      "archiveId": "the-trip-1967",
+      "video": "The Trip (1967).ia.mp4",
+      "source": "The Trip (1967).srt",
+      "duration": 4894.49,
+      "language": "en",
+      "sourceLanguage": "eng",
+      "cues": 599,
+      "sha256": "291ca9fc1df3732915b47057375fb2426ebc7b90b538f74959653d35ba8c8f80",
+      "status": "passed",
+      "checks": [
+        {
+          "similarity": 0.95,
+          "wordF1": 0.895,
+          "heard": "It's true that I love her, but I don't know what that means for which I'm sure on suffering.",
+          "audioStart": 1179.666,
+          "audioEnd": 1184.006,
+          "offsetSeconds": -0.121,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.2,
+          "cueStart": 1179.787,
+          "cueEnd": 1185.415,
+          "expected": "It's true that I love her... but I don't know what that means,\nfor which I'm sure I'll suffer.",
+          "audioDownload": {
+            "start": 1177.7857596371882,
+            "end": 1192.8090702947845,
+            "packets": 647,
+            "requests": 6,
+            "bytes": 3578523
+          }
+        },
+        {
+          "similarity": 0.901,
+          "wordF1": 0.889,
+          "heard": "I will go in there, man. I don't care.",
+          "audioStart": 2456.875,
+          "audioEnd": 2458.815,
+          "offsetSeconds": -0.388,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.5,
+          "cueStart": 2457.263,
+          "cueEnd": 2459.788,
+          "expected": "I won't go in there, man. I don't care.",
+          "audioDownload": {
+            "start": 2455.254784580499,
+            "end": 2470.2780952380954,
+            "packets": 647,
+            "requests": 3,
+            "bytes": 278713
+          }
+        },
+        {
+          "similarity": 0.955,
+          "wordF1": 0.914,
+          "heard": "I don't want to bring you down, but, like, let's try to sort the reel from the trip.",
+          "audioStart": 4162.705,
+          "audioEnd": 4166.545,
+          "offsetSeconds": -0.522,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.85,
+          "cueStart": 4163.227,
+          "cueEnd": 4167.357,
+          "expected": "I don't want to bring you down,\nbut let's try to sort the real from the trip.",
+          "audioDownload": {
+            "start": 4161.22485260771,
+            "end": 4176.248163265306,
+            "packets": 647,
+            "requests": 3,
+            "bytes": 279445
+          }
+        }
+      ],
+      "extraction": "Exact Archive item English SRT sidecar; unchanged source timestamps",
+      "validation": "Three independent English dialogue anchors pass. No burned English in sampled dialogue frames. Source sparse gaps retained; not a complete SDH or line-by-line completeness audit."
+    },
+    "institute-benjamenta-or-this-dream-people-call-human-life": {
+      "archiveId": "institute-benjamenta-or-this-dream-people-call-human-life",
+      "video": "Institute Benjamenta, or This Dream People Call Human Life.mp4",
+      "source": "434783.institute.benjamenta.or.this.dream.that.one.calls.human.life.1996.english].srt",
+      "duration": 6295.05,
+      "language": "en",
+      "sourceLanguage": "eng",
+      "cues": 485,
+      "sha256": "96370850ebca3220224b6850de5eabbf382aeaef8e79a857a94125b846981205",
+      "status": "passed",
+      "checks": [
+        {
+          "similarity": 0.991,
+          "wordF1": 0.9,
+          "heard": "Well, it's small, and the windows scarcely merits the name.",
+          "audioStart": 1281.855,
+          "audioEnd": 1286.715,
+          "offsetSeconds": 0.896,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.2,
+          "cueStart": 1280.959,
+          "cueEnd": 1285.874,
+          "expected": "Well, it's small... and the window scarcely merits the name.",
+          "audioDownload": {
+            "start": 1278.9551020408164,
+            "end": 1293.9784126984127,
+            "packets": 647,
+            "requests": 4,
+            "bytes": 2577169
+          }
+        },
+        {
+          "similarity": 0.892,
+          "wordF1": 0.889,
+          "heard": "the moment I kept my eyes on this figure,",
+          "audioStart": 3298.073,
+          "audioEnd": 3301.273,
+          "offsetSeconds": -0.594,
+          "pass": true,
+          "model": "base.en",
+          "fraction": 0.5,
+          "cueStart": 3298.667,
+          "cueEnd": 3301.833,
+          "expected": "The moment I clapped my eyes on this figure,",
+          "audioDownload": {
+            "start": 3296.6530612244896,
+            "end": 3311.676371882086,
+            "packets": 647,
+            "requests": 1,
+            "bytes": 243648
+          }
+        },
+        {
+          "similarity": 1,
+          "wordF1": 1,
+          "heard": "Surely, the king is dead. Twice over.",
+          "audioStart": 5389.353,
+          "audioEnd": 5396.213,
+          "offsetSeconds": -0.439,
+          "pass": true,
+          "model": "tiny.en",
+          "fraction": 0.85,
+          "cueStart": 5389.792,
+          "cueEnd": 5396.374,
+          "expected": "Surely... the King is dead. Twice over.",
+          "audioDownload": {
+            "start": 5387.772517006802,
+            "end": 5402.795827664399,
+            "packets": 647,
+            "requests": 1,
+            "bytes": 244089
+          }
+        }
+      ],
+      "extraction": "Exact Archive item English SRT sidecar; unchanged source timestamps",
+      "validation": "Three independent English dialogue anchors pass. No burned English in sampled dialogue frames. Source sparse gaps retained; not a complete SDH or line-by-line completeness audit."
     }
   }
 }

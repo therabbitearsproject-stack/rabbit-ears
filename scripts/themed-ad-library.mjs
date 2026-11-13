@@ -14,6 +14,7 @@ const TOPICS={
 export const topicsFor=media=>Object.entries(TOPICS).filter(([key,re])=>re.test(media.title+' '+media.id)&&!(key==='kitchen'&&/cat food|dog food|pet food|whiskas|9 lives/i.test(media.title))).map(([key])=>key);
 export function adThemes(ch){
  const n=ch.name;
+ if(n==='Midnight Mirage')return []; // Dedicated, dated movie-TV-spots library only.
  if(/Ad Break|AMV Hour|Slow TV|Silent Screen|Home Movies|Ephemera|Duck & Cover|Order Now/.test(n))return [];
  if(/Computer Chronicles/.test(n))return ['computers','games'];
  if(/Arcade/.test(n))return ['games','computers'];

@@ -1,15 +1,15 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
 import {scoreFor,renderMusic} from './bumper-music.mjs';import branding from './channel-branding.json' with {type:'json'};import trekStories from './trek-bumper-stories.json' with {type:'json'};
-test('six distinct IDs and stories per station, plus Trek extras, make exactly six times the original library',()=>{
+test('six distinct IDs and stories per station, plus Trek extras, make the expanded station library',()=>{
  const stories=new Set();
  for(const ch of branding.channels){assert.equal(ch.tags.length,6,ch.name);assert.equal(new Set(ch.tags).size,6,ch.name);assert.equal(ch.facts.length,6,ch.name);assert.deepEqual(ch.facts[0],ch.fact);
   for(const f of ch.facts){assert.ok(f.hook);assert.ok(f.fact.split(/\s+/).length<=38);assert.ok(f.source.startsWith('https://'));assert.ok(f.credit);assert.ok(!stories.has(f.fact),'Repeated story on '+ch.name);stories.add(f.fact);}}
  assert.equal(trekStories.length,36);for(const f of trekStories){assert.ok(!stories.has(f.fact));stories.add(f.fact);}
- assert.equal(stories.size,492);assert.equal(76*6+stories.size,158*6);
+ assert.equal(stories.size,498);assert.equal(77*6+stories.size,960);
 });
-test('all 948 videos are verified, have unique excerpts, and match their station copy',async()=>{
+test('all 960 videos are verified, have unique excerpts, and match their station copy',async()=>{
   const manifest=JSON.parse(await readFile(new URL('../assets/channel-bumpers/manifest.json',import.meta.url),'utf8'));
- const audio=new Set();assert.equal(branding.channels.length,76);
+ const audio=new Set();assert.equal(branding.channels.length,77);
  let idCount=0,factCount=0;const filePaths=new Set();
  for(const ch of branding.channels){const entries=manifest.channels[ch.no];assert.equal(entries.length,ch.no===97?48:12,ch.name);assert.equal(entries.filter(m=>m.kind==='station-id').length,6,ch.name);
   assert.ok(new Set(entries.map(m=>m.music.isrc)).size>=3,'At least three distinct musical recordings for '+ch.name);
@@ -21,7 +21,7 @@ test('all 948 videos are verified, have unique excerpts, and match their station
    if(m.kind==='fact')assert.ok(m.source?.startsWith('https://'));
   }
  }
- assert.equal(idCount,456);assert.equal(factCount,492);assert.equal(audio.size,948);assert.ok(new Set(branding.channels.map(c=>c.style)).size>=16);
+ assert.equal(idCount,462);assert.equal(factCount,498);assert.equal(audio.size,960);assert.ok(new Set(branding.channels.map(c=>c.style)).size>=16);
 });
 test('music composition is deterministic and has distinct rhythm/timbre profiles',()=>{
  assert.deepEqual(scoreFor('jazz','same'),scoreFor('jazz','same'));assert.notDeepEqual(scoreFor('jazz','one'),scoreFor('jazz','two'));

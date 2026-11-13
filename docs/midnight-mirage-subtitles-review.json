@@ -1,0 +1,502 @@
+{
+  "checked": "2026-11-13T04:01:28.758Z",
+  "method": "Exact selected video filenames decoded without subtitle filters. Three stills near20%,50%,85% per foreign film; Daisies/Hourglass use real sidecar cue midpoints plus title checks. Additional1fps16-frame dialogue strips resolved between-caption samples for Fantastic Planet and Saragossa. English observations came from the video pixels, not filenames. Sparse confirmation proves burned text exists, not completeness or translation accuracy for every line.",
+  "policy": "Do not add separate tracks to burned-English videos. Nothing enabled or cataloged by this review.",
+  "summary": {
+    "totalCandidates": 14,
+    "foreignFilmsSampled": 10,
+    "burnedEnglishConfirmed": [
+      "El Topo",
+      "Fantastic Planet 1973 Full Movie French With English Subs Dir René Laloux Aka La Planete Sauvage",
+      "The Hourglass Sanatorium (1973)",
+      "The Saragossa Manuscript English Subtitled",
+      "Hausu (1977)",
+      "On The Silver Globe / Na Srebrnym Globie (1988) ENG SUBS"
+    ],
+    "unknown": [
+      "Valerie and Her Week of Wonders (1970)",
+      "Fando Y Lis (1968)",
+      "Daisies / Sedmikrásky (1966)",
+      "The. Color. Of. Pomegranates. 1969.720p."
+    ],
+    "unadjustedSidecarRejected": [
+      "The Hourglass Sanatorium"
+    ]
+  },
+  "films": [
+    {
+      "archiveId": "auteurhouse-theholymountain1973",
+      "title": "The Holy Mountain (1973)",
+      "video": "The.Holy.Mountain.1973.720p.BluRay.x264-[YTS.LT].mp4",
+      "source": "https://archive.org/details/auteurhouse-theholymountain1973",
+      "burnedEnglish": "unknown",
+      "status": "not-visually-checked",
+      "notes": "Root agent independently reviewing the English sidecar against speech."
+    },
+    {
+      "archiveId": "santa-sangre-1989",
+      "title": "Santa Sangre (1989)",
+      "video": "Santa Sangre  (1989).mp4",
+      "source": "https://archive.org/details/santa-sangre-1989",
+      "burnedEnglish": "unknown",
+      "status": "not-visually-checked",
+      "notes": "Inventory labels the source English audio; this visual foreign-subtitle review did not independently verify that audio claim."
+    },
+    {
+      "archiveId": "zardoz-1974-1080p",
+      "title": "Zardoz (1974)",
+      "video": "Zardoz (1974) - [1080p].mp4",
+      "source": "https://archive.org/details/zardoz-1974-1080p",
+      "burnedEnglish": "unknown",
+      "status": "not-visually-checked",
+      "notes": "Inventory labels the source English audio; this visual foreign-subtitle review did not independently verify that audio claim."
+    },
+    {
+      "archiveId": "el-topo",
+      "title": "El Topo",
+      "video": "el topo.mp4",
+      "source": "https://archive.org/details/el-topo",
+      "duration": 7479.58,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "Yellow English translation visible at 3740s; the other two samples fall between captions.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1496,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/el-topo-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 3740,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/el-topo-50.jpg",
+          "observation": "See its fineness!"
+        },
+        {
+          "fraction": 0.85,
+          "second": 6358,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/el-topo-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        }
+      ],
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    },
+    {
+      "archiveId": "valerie-and-her-week-of-wonders-1970",
+      "title": "Valerie and Her Week of Wonders (1970)",
+      "video": "Valerie and Her Week of Wonders (1970) USA Criterion Bluray.mp4",
+      "source": "https://archive.org/details/valerie-and-her-week-of-wonders-1970",
+      "duration": 4620.62,
+      "burnedEnglish": "unknown",
+      "status": "not-confirmed-in-bounded-samples",
+      "notes": "No English text visible in three sampled frames. This does not prove that no subtitles exist elsewhere or in another track.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 924,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/valerie-and-her-week-of-wonders-1970-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 2310,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/valerie-and-her-week-of-wonders-1970-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 3928,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/valerie-and-her-week-of-wonders-1970-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        }
+      ],
+      "separateSubtitleDecision": "Do not certify English access from the filename or source title alone."
+    },
+    {
+      "archiveId": "fantastic-planet-1973-full-movie-french-with-english-subs-dir-rene-laloux-aka-la-planete-sauvage",
+      "title": "Fantastic Planet 1973 Full Movie French With English Subs Dir René Laloux Aka La Planete Sauvage",
+      "video": "Fantastic Planet 1973 Full Movie French with English Subs Dir René Laloux aka La Planete Sauvage.mp4",
+      "source": "https://archive.org/details/fantastic-planet-1973-full-movie-french-with-english-subs-dir-rene-laloux-aka-la-planete-sauvage",
+      "duration": 4242.31,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "Initial samples fell in non-captioned animation. A 16-frame dialogue strip at 300–315s shows sustained English translation of a father speaking to Tiwa.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 848,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fantastic-planet-1973-full-movie-french-with-engli-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 2121,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fantastic-planet-1973-full-movie-french-with-engli-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 3606,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fantastic-planet-1973-full-movie-french-with-engli-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "start": 300,
+          "end": 315,
+          "stepSeconds": 1,
+          "evidence": "work/channel42-subtitles/burned-review/fantastic-planet-1973-full-movie-french-with-engli-dialogue-strip.jpg",
+          "visibleEnglish": "He’s very pretty, Tiwa.",
+          "observation": "He’s very pretty, Tiwa."
+        }
+      ],
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    },
+    {
+      "archiveId": "2199010347618",
+      "title": "Black Moon",
+      "video": "2199010347618.mp4",
+      "source": "https://archive.org/details/2199010347618",
+      "burnedEnglish": "unknown",
+      "status": "not-visually-checked",
+      "notes": "Inventory labels the source English audio; this visual foreign-subtitle review did not independently verify that audio claim."
+    },
+    {
+      "archiveId": "fando-y-lis-1968_202407",
+      "title": "Fando Y Lis (1968)",
+      "video": "Fando y Lis (1968).mp4",
+      "source": "https://archive.org/details/fando-y-lis-1968_202407",
+      "duration": 5805.8,
+      "burnedEnglish": "unknown",
+      "status": "not-confirmed-in-bounded-samples",
+      "notes": "No English text visible in three sampled frames; foreign dialogue accessibility remains unverified.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1161,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fando-y-lis-1968_202407-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 2903,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fando-y-lis-1968_202407-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 4935,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/fando-y-lis-1968_202407-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        }
+      ],
+      "separateSubtitleDecision": "Do not certify English access from the filename or source title alone."
+    },
+    {
+      "archiveId": "daisies-1966",
+      "title": "Daisies / Sedmikrásky (1966)",
+      "video": "Daisies.1966.SR.1080p.BluRay.x265.HEVC.AAC-SARTRE.mp4",
+      "source": "https://archive.org/details/daisies-1966",
+      "duration": 4553.37,
+      "burnedEnglish": "unknown",
+      "status": "not-confirmed-in-bounded-samples",
+      "notes": "No burned English visible at three selected sidecar cue midpoints. The opening Czech title is visible at 13.5s and agrees with the English title cue, but this alone cannot establish dialogue synchronization.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1237.0005,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/daisies-1966-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame.",
+          "sidecarCueInterval": [
+            1235.709,
+            1238.292
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "second": 2280.73,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/daisies-1966-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame.",
+          "sidecarCueInterval": [
+            2279.584,
+            2281.876
+          ]
+        },
+        {
+          "fraction": 0.85,
+          "second": 3874.7715,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/daisies-1966-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame.",
+          "sidecarCueInterval": [
+            3873.834,
+            3875.709
+          ]
+        },
+        {
+          "fraction": 0,
+          "second": 13.5,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/daisies-1966-title.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        }
+      ],
+      "sidecarReview": {
+        "status": "available-title-aligned-dialogue-not-verified",
+        "file": "Daisies_1966_SR_1080p_BluRay_x265_HEVC_AAC-SARTRE.eng.srt",
+        "titleCheck": {
+          "second": 13.5,
+          "visible": "SEDMIKRÁSKY",
+          "sidecarStart": 12.834,
+          "sidecarEnd": 15.959,
+          "englishTitle": "DAISIES"
+        },
+        "dialogueSynchronization": "unknown",
+        "decision": "Do not treat filename agreement and opening title as sufficient approval for the whole track."
+      },
+      "separateSubtitleDecision": "Do not certify English access from the filename or source title alone."
+    },
+    {
+      "archiveId": "the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-264-yts.-am",
+      "title": "The. Color. Of. Pomegranates. 1969.720p.",
+      "video": "The.Color.Of.Pomegranates.1969.720p.BluRay.x264-[YTS.AM].ia.mp4",
+      "source": "https://archive.org/details/the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-264-yts.-am",
+      "duration": 4784.71,
+      "burnedEnglish": "unknown",
+      "status": "not-confirmed-in-bounded-samples",
+      "notes": "All three film samples show a small subtitle-service watermark, but no translated dialogue or intertitles. A further 45–60s lower-frame strip also shows only that watermark. Watermark branding is not proof of usable English translation.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 957,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 2392,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 4067,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "start": 45,
+          "end": 60,
+          "stepSeconds": 1,
+          "evidence": "work/channel42-subtitles/burned-review/the.-color.-of.-pomegranates.-1969.720p.-blu-ray.x-dialogue-strip.jpg",
+          "visibleEnglish": "Subtitle-service watermark only; no dialogue translation observed.",
+          "observation": "Subtitle-service watermark only; no dialogue translation observed."
+        }
+      ],
+      "separateSubtitleDecision": "Do not certify English access from the filename or source title alone."
+    },
+    {
+      "archiveId": "thehourglasssanatorium1973",
+      "title": "The Hourglass Sanatorium (1973)",
+      "video": "THE HOURGLASS SANATORIUM (1973)   Polish Surreal Folk Horror Classic   HD.ia.mp4",
+      "source": "https://archive.org/details/thehourglasssanatorium1973",
+      "duration": 7434.84,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "English translations are burned into the selected IA derivative at 1543.7555s and 3721.0975s. The provided SRT does not match those words at those video times; its opening title also disagrees with the visible credit.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1543.7555,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/thehourglasssanatorium1973-20.jpg",
+          "observation": "English translation about praise with cymbals.",
+          "sidecarCueInterval": [
+            1541.56,
+            1545.951
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "second": 3721.0975,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/thehourglasssanatorium1973-50.jpg",
+          "observation": "English translation about faithfulness and a sense of mission.",
+          "sidecarCueInterval": [
+            3720,
+            3722.195
+          ]
+        },
+        {
+          "fraction": 0.85,
+          "second": 6443.4175,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/thehourglasssanatorium1973-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame.",
+          "sidecarCueInterval": [
+            6442.24,
+            6444.595
+          ]
+        },
+        {
+          "fraction": 0,
+          "second": 96,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/thehourglasssanatorium1973-title.jpg",
+          "observation": "Featuring"
+        }
+      ],
+      "sidecarReview": {
+        "status": "rejected-timing-mismatch",
+        "file": "Sanatorium pod klepsydrą.srt",
+        "checks": [
+          {
+            "second": 96,
+            "videoObservation": "Featuring credit",
+            "sidecarMeaning": "Film title"
+          },
+          {
+            "second": 1543.7555,
+            "videoObservation": "Praise using cymbals",
+            "sidecarMeaning": "Praise using harps and lyres"
+          },
+          {
+            "second": 3721.0975,
+            "videoObservation": "Accusation of ridiculous faithfulness and sense of mission",
+            "sidecarMeaning": "Reference to a black man"
+          }
+        ],
+        "dialogueSynchronization": "mismatch-observed",
+        "decision": "Do not enable the provided SRT unadjusted. No separate subtitle track is needed for this already burned-English version."
+      },
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    },
+    {
+      "archiveId": "saragosamanuscript-1965-english-sub",
+      "title": "The Saragossa Manuscript English Subtitled",
+      "video": "SARAGOSAMANUSCRIPT 1965 english sub.ia.mp4",
+      "source": "https://archive.org/details/saragosamanuscript-1965-english-sub",
+      "duration": 10921.17,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "The three initial samples fell between captions. A 16-frame dialogue strip at 9280–9295s shows yellow English translations through an extended conversation.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 2184,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/saragosamanuscript-1965-english-sub-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 5461,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/saragosamanuscript-1965-english-sub-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 9283,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/saragosamanuscript-1965-english-sub-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "start": 9280,
+          "end": 9295,
+          "stepSeconds": 1,
+          "evidence": "work/channel42-subtitles/burned-review/saragosamanuscript-1965-english-sub-dialogue-strip.jpg",
+          "visibleEnglish": "I can see, señor, that you’re an honest negotiator.",
+          "observation": "I can see, señor, that you’re an honest negotiator."
+        }
+      ],
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    },
+    {
+      "archiveId": "hausu-1977",
+      "title": "Hausu (1977)",
+      "video": "Hausu  (1977).mp4",
+      "source": "https://archive.org/details/hausu-1977",
+      "duration": 5277.95,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "A white English translation is visible at 1056s; other sampled frames show no current caption.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1056,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/hausu-1977-20.jpg",
+          "observation": "I haven’t seen her since."
+        },
+        {
+          "fraction": 0.5,
+          "second": 2639,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/hausu-1977-50.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.85,
+          "second": 4486,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/hausu-1977-85.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        }
+      ],
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    },
+    {
+      "archiveId": "on-the-silver-globe-1988",
+      "title": "On The Silver Globe / Na Srebrnym Globie (1988) ENG SUBS",
+      "video": "Na srebrnym globie (1988) ENG SUBS [HD].mp4",
+      "source": "https://archive.org/details/on-the-silver-globe-1988",
+      "duration": 9887.38,
+      "burnedEnglish": "yes",
+      "status": "burned-english-visually-confirmed",
+      "notes": "Bold white English translations are visible in both middle and late film samples.",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1977,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/on-the-silver-globe-1988-20.jpg",
+          "observation": "No English subtitle visible in this sampled frame."
+        },
+        {
+          "fraction": 0.5,
+          "second": 4944,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/on-the-silver-globe-1988-50.jpg",
+          "observation": "Now they are lying around, watching"
+        },
+        {
+          "fraction": 0.85,
+          "second": 8404,
+          "extracted": true,
+          "evidence": "work/channel42-subtitles/burned-review/on-the-silver-globe-1988-85.jpg",
+          "observation": "We should have held out to the end, for the Humans!"
+        }
+      ],
+      "separateSubtitleDecision": "Skip separate subtitles: English text is already in the picture, as requested."
+    }
+  ]
+}

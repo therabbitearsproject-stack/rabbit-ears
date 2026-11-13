@@ -17,6 +17,7 @@ import { buildPorchlightPool } from "./porchlight-programming.mjs";
 import { strengthenPool,keepProgram } from "./program-quality.mjs";
 import { mergeAds,channelAdPools } from "./themed-ad-library.mjs";
 import { applyReviewedCaptions } from "./caption-library.mjs";
+import { midnightMirageRows } from "./midnight-mirage-programming.mjs";
 
 const POOL = 400;          // most-downloaded matches kept per channel
 const CONCURRENCY = 6;     // the Archive slows down badly when flooded
@@ -104,6 +105,12 @@ const pools = {}, coverage = {}, memberships = {}, unplayable = new Set();
 let looked = 0, reused = 0, failed = 0;
 for (const ch of BUILT_IN) {
   if (ch.library) {
+    if (ch.library === "midnight-mirage-v1") {
+      const library = JSON.parse(await readFile(new URL("./midnight-mirage-library.json", import.meta.url), "utf8"));
+      pools[ch.q] = midnightMirageRows(library);
+      console.log(`${ch.name}: ${pools[ch.q].length} curated full films`);
+      continue;
+    }
     if (ch.library === "porchlight-v1") {
       const library = JSON.parse(await readFile(new URL("./porchlight-library.json", import.meta.url), "utf8"));
       const codecs = JSON.parse(await readFile(new URL("./porchlight-codecs.json", import.meta.url), "utf8"));
@@ -227,6 +234,7 @@ for (const id of new Set(BUILT_IN.map(ch => ch.breaks?.library).filter(Boolean))
   if (id === "sci-fi-channel") {
     breakLibraries[id].bumpers.push(...bumpers.map(m => ({ ...m, role: "custom-bumper" })));
   }
+  if (id === "midnight-mirage") breakLibraries[id].commercials = breakLibraries[id].commercials.filter(media => mediaAllowed(media, {name:'Midnight Mirage'}));
 }
 if (breakLibraries.porchlight) {
   const reserved = new Set(["CadburysCrunchieAdvert1988", "DietcokeAdvert1988", "coca-cola-advert", "tmnt-video", "disney-fantasia-vhs-advert", "sonic3mcdonaldsad", "mars-twix-a-break-from-the-norm-advert", "mc-donalds-hercules-happy-meal-commercial-1998480p", "TWAImrpovementsAdvert"]);

@@ -1,0 +1,131 @@
+{
+  "verificationVersion": 1,
+  "key": "additional-institute-benjamenta",
+  "id": "institute-benjamenta-or-this-dream-people-call-human-life",
+  "title": "Institute Benjamenta",
+  "archiveId": "institute-benjamenta-or-this-dream-people-call-human-life",
+  "video": "Institute Benjamenta, or This Dream People Call Human Life.mp4",
+  "duration": 6295.05,
+  "checks": [
+    {
+      "similarity": 0.991,
+      "wordF1": 0.9,
+      "heard": "Well, it's small, and the windows scarcely merits the name.",
+      "audioStart": 1281.855,
+      "audioEnd": 1286.715,
+      "offsetSeconds": 0.896,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.2,
+      "cueStart": 1280.959,
+      "cueEnd": 1285.874,
+      "expected": "Well, it's small... and the window scarcely merits the name.",
+      "audioDownload": {
+        "start": 1278.9551020408164,
+        "end": 1293.9784126984127,
+        "packets": 647,
+        "requests": 4,
+        "bytes": 2577169
+      }
+    },
+    {
+      "similarity": 0.679,
+      "wordF1": 0.696,
+      "heard": "The moment I kept my eyes on this figure, I",
+      "audioStart": 3297.218,
+      "audioEnd": 3302.578,
+      "offsetSeconds": 1.551,
+      "pass": false,
+      "model": "tiny.en",
+      "fraction": 0.5,
+      "cueStart": 3295.667,
+      "cueEnd": 3301.833,
+      "expected": "Glaub mir, Lisa. Wirklich. The moment I clapped my eyes on this figure,",
+      "audioDownload": {
+        "start": 3293.65768707483,
+        "end": 3308.6809977324265,
+        "packets": 647,
+        "requests": 1,
+        "bytes": 243975
+      }
+    },
+    {
+      "similarity": 0.892,
+      "wordF1": 0.889,
+      "heard": "the moment I kept my eyes on this figure,",
+      "audioStart": 3298.073,
+      "audioEnd": 3301.273,
+      "offsetSeconds": -0.594,
+      "pass": true,
+      "model": "base.en",
+      "fraction": 0.5,
+      "cueStart": 3298.667,
+      "cueEnd": 3301.833,
+      "expected": "The moment I clapped my eyes on this figure,",
+      "audioDownload": {
+        "start": 3296.6530612244896,
+        "end": 3311.676371882086,
+        "packets": 647,
+        "requests": 1,
+        "bytes": 243648
+      }
+    },
+    {
+      "similarity": 1,
+      "wordF1": 1,
+      "heard": "Surely, the king is dead. Twice over.",
+      "audioStart": 5389.353,
+      "audioEnd": 5396.213,
+      "offsetSeconds": -0.439,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.85,
+      "cueStart": 5389.792,
+      "cueEnd": 5396.374,
+      "expected": "Surely... the King is dead. Twice over.",
+      "audioDownload": {
+        "start": 5387.772517006802,
+        "end": 5402.795827664399,
+        "packets": 647,
+        "requests": 1,
+        "bytes": 244089
+      }
+    }
+  ],
+  "status": "passed-sampled-dialogue-timing",
+  "method": "Independent English dialogue anchors near 20%,50%,85% of selected streamed video, compared using cached local Whisper tiny/base models. No subtitle timing generated or shifted.",
+  "internalGapsOver120Seconds": [
+    {
+      "start": 233.374,
+      "end": 375.959
+    },
+    {
+      "start": 2087.791,
+      "end": 2298.375
+    },
+    {
+      "start": 2412.291,
+      "end": 2551
+    },
+    {
+      "start": 3080.166,
+      "end": 3235.334
+    },
+    {
+      "start": 4335.624,
+      "end": 4483.792
+    },
+    {
+      "start": 4524.249,
+      "end": 4691.584
+    },
+    {
+      "start": 5621.624,
+      "end": 5763.75
+    }
+  ],
+  "sampleOffsetSpreadSeconds": 1.49,
+  "reason": "Long internal caption gaps require completeness review",
+  "automatedStatus": "needs-review",
+  "notes": "Three independent English dialogue anchors pass. No burned English in sampled dialogue frames. Source sparse gaps retained; not a complete SDH or line-by-line completeness audit."
+}

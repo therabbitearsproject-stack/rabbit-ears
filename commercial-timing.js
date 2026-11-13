@@ -16,6 +16,19 @@ const CommercialTiming = (() => {
     return result;
   }
   function build(program, policy, ads, bumpers, seed) {
+    // Midnight Mirage's fixed-era movie spots are a BETWEEN-FILMS pod, never
+    // scene interruptions. The film's release year does not limit these spots.
+    if (policy?.mix === "between-films") {
+      const segments = [{ kind: "program", media: program, start: 0, end: program.dur, offset: 0, index: 0 }];
+      let duration = program.dur;
+      const eligible = ads.filter(m => m.role === "movie-tv-spot" && Number.isInteger(Number(m.year)) &&
+        Number(m.year) >= 1980 && Number(m.year) <= 1999 && Number.isFinite(m.dur) && m.dur >= 8 && m.dur <= 90);
+      for (const media of pack(eligible, policy.target || 120, seed + ":after-film", { unique: true, maxSpots: policy.maxAds || 3 })) {
+        segments.push({ kind: "commercial", media, start: duration, end: duration + media.dur, offset: 0, index: segments.length });
+        duration += media.dur;
+      }
+      return { segments, duration };
+    }
     if (policy?.mix === "era") {
       const year = Number(program.year), window = policy.eraWindow || 2;
       ads = ads.filter(m => Number.isFinite(year) && Math.abs(Number(m.year) - year) <= window);

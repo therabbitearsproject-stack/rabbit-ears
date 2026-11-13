@@ -1,0 +1,958 @@
+{
+  "checked": "2026-11-13T04:04:37.630Z",
+  "scope": "19additional channel42 films only. Initial14 handled separately by root/media_check.",
+  "method": "Cached metadata sidecar inventory;21bounded foreign-film frame attempts at20/50/85percent (sidecar-cue times where available), plus3Trip dialogue-cue frames. Local cached Whisper tiny.en/base.en independently compares English speech in3zones forTrip,Devils,Institute. No generated timing, paid APIs or source-library changes. A1second ThrowAwayaudio decoding attempt is timebounded; it timed out.",
+  "summary": {
+    "films": 19,
+    "sidecarsDownloadedAndParsed": 4,
+    "independentAsrFilms": 3,
+    "all3SampledDialogueZonesPass": [
+      "Institute Benjamenta",
+      "The Trip"
+    ],
+    "overallStrictVerifierPassed": 0,
+    "burnedEnglishVerified": [
+      "Pastoral: To Die in the Country"
+    ],
+    "failedOrMismatchedEnglishSidecars": [
+      "The Devils"
+    ],
+    "unrelatedSidecarRejected": [
+      "Performance → Walkabout.1971...srt"
+    ],
+    "throwAwayFrameAndAudioProbes": "timed out; no affirmative codec/subtitle claim",
+    "extraCaptionsEnabledByThisAgent": 0,
+    "sourceLibraryChanged": false
+  },
+  "films": [
+    {
+      "id": "eraserhead-hd",
+      "title": "Eraserhead",
+      "video": "Eraserhead.mp4",
+      "duration": 5358.19,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "tetsuo-the-iron-man-eng-sub",
+      "title": "Tetsuo: The Iron Man",
+      "video": "Tetsuo The Iron Man eng sub.mp4",
+      "duration": 4030.38,
+      "audioLanguageMetadata": "jpn",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 806,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-tetsuo-the-iron-man-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 2015,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-tetsuo-the-iron-man-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 3426,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-tetsuo-the-iron-man-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "Subtitle availability remains unknown; metadata/title claims are not verification.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "begotten1989",
+      "title": "Begotten",
+      "video": "Begotten [1991][Spanish DVDrip].mp4",
+      "duration": 4330.9,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "altered-states",
+      "title": "Altered States",
+      "video": "Altered States .mp4",
+      "duration": 6164.39,
+      "audioLanguageMetadata": null,
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "greasers-palace-1972",
+      "title": "Greaser’s Palace",
+      "video": "Greaser's Palace (1972).mp4",
+      "duration": 5428.97,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "the.-last.-movie.-1971.1080p.-blu-ray.x-264-yts.-am",
+      "title": "The Last Movie",
+      "video": "The.Last.Movie.1971.1080p.BluRay.x264-[YTS.AM].mp4",
+      "duration": 6513.2,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "psych-out-1968",
+      "title": "Psych-Out",
+      "video": "Psych-Out (1968).mp4",
+      "duration": 5146.83,
+      "audioLanguageMetadata": null,
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "institute-benjamenta-or-this-dream-people-call-human-life",
+      "title": "Institute Benjamenta",
+      "video": "Institute Benjamenta, or This Dream People Call Human Life.mp4",
+      "duration": 6295.05,
+      "audioLanguageMetadata": "ger",
+      "subtitleCandidates": [
+        {
+          "name": "434783.institute.benjamenta.or.this.dream.that.one.calls.human.life.1996.english].srt",
+          "url": "https://archive.org/download/institute-benjamenta-or-this-dream-people-call-human-life/434783.institute.benjamenta.or.this.dream.that.one.calls.human.life.1996.english%5D.srt",
+          "format": "SubRip",
+          "size": 32907,
+          "languageHint": "English filename hint; unreviewed"
+        },
+        {
+          "name": "Institut.Benjamenta.1995.720p.BluRay.x264-CiNEFiLE.srt",
+          "url": "https://archive.org/download/institute-benjamenta-or-this-dream-people-call-human-life/Institut.Benjamenta.1995.720p.BluRay.x264-CiNEFiLE.srt",
+          "format": "SubRip",
+          "size": 38624,
+          "languageHint": "unspecified; unreviewed"
+        },
+        {
+          "name": "Institute.Benjamenta.1995.BluRay.720p.800MB-Ganool.srt",
+          "url": "https://archive.org/download/institute-benjamenta-or-this-dream-people-call-human-life/Institute.Benjamenta.1995.BluRay.720p.800MB-Ganool.srt",
+          "format": "SubRip",
+          "size": 38624,
+          "languageHint": "unspecified; unreviewed"
+        }
+      ],
+      "selectedSidecar": {
+        "name": "434783.institute.benjamenta.or.this.dream.that.one.calls.human.life.1996.english].srt",
+        "url": "https://archive.org/download/institute-benjamenta-or-this-dream-people-call-human-life/434783.institute.benjamenta.or.this.dream.that.one.calls.human.life.1996.english%5D.srt",
+        "format": "SubRip",
+        "size": 32907,
+        "languageHint": "English filename hint; unreviewed",
+        "cues": 485,
+        "first": 228.25,
+        "last": 6114.458,
+        "local": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-institute-benjamenta.srt",
+        "sha256": "3752a147b6c59b8eaef5c00fb15cdbc5e45c93b910f3c377e8759f6a6b469013"
+      },
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1278.6455,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-institute-benjamenta-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 3236.2084999999997,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-institute-benjamenta-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 5382.791499999999,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-institute-benjamenta-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": {
+        "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\speech\\additional-institute-benjamenta.json",
+        "status": "needs-review",
+        "reason": "Long internal caption gaps require completeness review",
+        "all3DialogueZonesPassed": true,
+        "sampleOffsetSpreadSeconds": 1.49,
+        "internalGapsOver120Seconds": [
+          {
+            "start": 233.374,
+            "end": 375.959
+          },
+          {
+            "start": 2087.791,
+            "end": 2298.375
+          },
+          {
+            "start": 2412.291,
+            "end": 2551
+          },
+          {
+            "start": 3080.166,
+            "end": 3235.334
+          },
+          {
+            "start": 4335.624,
+            "end": 4483.792
+          },
+          {
+            "start": 4524.249,
+            "end": 4691.584
+          },
+          {
+            "start": 5621.624,
+            "end": 5763.75
+          }
+        ],
+        "checks": [
+          {
+            "similarity": 0.991,
+            "wordF1": 0.9,
+            "heard": "Well, it's small, and the windows scarcely merits the name.",
+            "audioStart": 1281.855,
+            "audioEnd": 1286.715,
+            "offsetSeconds": 0.896,
+            "pass": true,
+            "model": "tiny.en",
+            "fraction": 0.2,
+            "cueStart": 1280.959,
+            "cueEnd": 1285.874,
+            "expected": "Well, it's small... and the window scarcely merits the name.",
+            "audioDownload": {
+              "start": 1278.9551020408164,
+              "end": 1293.9784126984127,
+              "packets": 647,
+              "requests": 4,
+              "bytes": 2577169
+            }
+          },
+          {
+            "similarity": 0.679,
+            "wordF1": 0.696,
+            "heard": "The moment I kept my eyes on this figure, I",
+            "audioStart": 3297.218,
+            "audioEnd": 3302.578,
+            "offsetSeconds": 1.551,
+            "pass": false,
+            "model": "tiny.en",
+            "fraction": 0.5,
+            "cueStart": 3295.667,
+            "cueEnd": 3301.833,
+            "expected": "Glaub mir, Lisa. Wirklich. The moment I clapped my eyes on this figure,",
+            "audioDownload": {
+              "start": 3293.65768707483,
+              "end": 3308.6809977324265,
+              "packets": 647,
+              "requests": 1,
+              "bytes": 243975
+            }
+          },
+          {
+            "similarity": 0.892,
+            "wordF1": 0.889,
+            "heard": "the moment I kept my eyes on this figure,",
+            "audioStart": 3298.073,
+            "audioEnd": 3301.273,
+            "offsetSeconds": -0.594,
+            "pass": true,
+            "model": "base.en",
+            "fraction": 0.5,
+            "cueStart": 3298.667,
+            "cueEnd": 3301.833,
+            "expected": "The moment I clapped my eyes on this figure,",
+            "audioDownload": {
+              "start": 3296.6530612244896,
+              "end": 3311.676371882086,
+              "packets": 647,
+              "requests": 1,
+              "bytes": 243648
+            }
+          },
+          {
+            "similarity": 1,
+            "wordF1": 1,
+            "heard": "Surely, the king is dead. Twice over.",
+            "audioStart": 5389.353,
+            "audioEnd": 5396.213,
+            "offsetSeconds": -0.439,
+            "pass": true,
+            "model": "tiny.en",
+            "fraction": 0.85,
+            "cueStart": 5389.792,
+            "cueEnd": 5396.374,
+            "expected": "Surely... the King is dead. Twice over.",
+            "audioDownload": {
+              "start": 5387.772517006802,
+              "end": 5402.795827664399,
+              "packets": 647,
+              "requests": 1,
+              "bytes": 244089
+            }
+          }
+        ]
+      },
+      "captionAction": "Exact English sidecar passes3independent sampled dialogue/timing zones; long-gap completeness limitation remains. Root may apply as dialogue subtitles with that explicit limitation.",
+      "extraCaptionsEnabledByThisAgent": false,
+      "preparedFiles": {
+        "vtt": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-institute-benjamenta.vtt",
+        "cues": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\cues\\additional-institute-benjamenta.json",
+        "job": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\jobs\\additional-institute-benjamenta.json",
+        "speech": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\speech\\additional-institute-benjamenta.json"
+      }
+    },
+    {
+      "id": "angels-egg-jpn",
+      "title": "Angel’s Egg",
+      "video": "Angel's Egg (1985) AUS Umbrella Entertainment Bluray.mp4",
+      "duration": 4284.83,
+      "audioLanguageMetadata": "jpn",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 857,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-angel-s-egg-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 2142,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-angel-s-egg-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 3642,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-angel-s-egg-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "Subtitle availability remains unknown; metadata/title claims are not verification.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "Morgiana",
+      "title": "Morgiana",
+      "video": "Morgiana.mp4",
+      "duration": 6094.19,
+      "audioLanguageMetadata": "cze",
+      "subtitleCandidates": [
+        {
+          "name": "Morgiana-1.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana-1.srt",
+          "format": "SubRip",
+          "size": 47752,
+          "languageHint": "unspecified; unreviewed"
+        },
+        {
+          "name": "Morgiana-2.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana-2.srt",
+          "format": "SubRip",
+          "size": 46203,
+          "languageHint": "unspecified; unreviewed"
+        },
+        {
+          "name": "Morgiana.1972.1080p.BluRay.x265.HEVC.AAC-SARTRE_[eng].srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana.1972.1080p.BluRay.x265.HEVC.AAC-SARTRE_%5Beng%5D.srt",
+          "format": "SubRip",
+          "size": 47165,
+          "languageHint": "English filename hint; unreviewed"
+        },
+        {
+          "name": "Morgiana.1972.1080p.BluRay.x265.HEVC.AAC-SARTRE_[eng]_alternate.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana.1972.1080p.BluRay.x265.HEVC.AAC-SARTRE_%5Beng%5D_alternate.srt",
+          "format": "SubRip",
+          "size": 49306,
+          "languageHint": "English filename hint; unreviewed"
+        },
+        {
+          "name": "Morgiana.1972.GBR.Blu-ray.(Second_Run).PGS.English.729_captions.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana.1972.GBR.Blu-ray.(Second_Run).PGS.English.729_captions.srt",
+          "format": "SubRip",
+          "size": 50919,
+          "languageHint": "English filename hint; unreviewed"
+        },
+        {
+          "name": "Morgiana.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana.srt",
+          "format": "SubRip",
+          "size": 48523,
+          "languageHint": "unspecified; unreviewed"
+        },
+        {
+          "name": "Morgiana_1972.srt",
+          "url": "https://archive.org/download/Morgiana/Morgiana_1972.srt",
+          "format": "SubRip",
+          "size": 49113,
+          "languageHint": "unspecified; unreviewed"
+        }
+      ],
+      "selectedSidecar": {
+        "name": "Morgiana.1972.GBR.Blu-ray.(Second_Run).PGS.English.729_captions.srt",
+        "url": "https://archive.org/download/Morgiana/Morgiana.1972.GBR.Blu-ray.(Second_Run).PGS.English.729_captions.srt",
+        "format": "SubRip",
+        "size": 50919,
+        "languageHint": "English filename hint; unreviewed",
+        "cues": 728,
+        "first": 40.167,
+        "last": 6077.708,
+        "local": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-morgiana.srt",
+        "sha256": "f2b16cf6c0952887b2c8ce36ecd413e9db7ff09a49eeccae966949f4f7677a22"
+      },
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1221.625,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-morgiana-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 3049.9790000000003,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-morgiana-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 5188.021000000001,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-morgiana-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "English text sidecar candidate only; translated foreign dialogue and timing need independent review.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "viy-1967-eng-sub",
+      "title": "Viy",
+      "video": "Viy 1967 (Eng sub).mp4",
+      "duration": 4527.57,
+      "audioLanguageMetadata": "rus",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 906,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-viy-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 2264,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-viy-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 3848,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-viy-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "Subtitle availability remains unknown; metadata/title claims are not verification.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "pastoral-to-die-in-the-country-1974-eng-sub",
+      "title": "Pastoral: To Die in the Country",
+      "video": "Pastoral To Die in the Country 1974  (eng sub).mp4",
+      "duration": 6058.36,
+      "audioLanguageMetadata": "jpn",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "English burned subtitles directly observed in all3 sampled frames",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1212,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-pastoral-to-die-in-the-country-20.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": true
+        },
+        {
+          "fraction": 0.5,
+          "second": 3029,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-pastoral-to-die-in-the-country-50.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": true
+        },
+        {
+          "fraction": 0.85,
+          "second": 5150,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-pastoral-to-die-in-the-country-85.jpg",
+          "extractionCode": 0,
+          "timedOut": false,
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": true
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "Skip additional subtitles: burned English confirmed in sampled frames.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "head-1968",
+      "title": "Head",
+      "video": "Head (1968).mp4",
+      "duration": 5146.22,
+      "audioLanguageMetadata": null,
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "thedevils1971",
+      "title": "The Devils",
+      "video": "saveclips.org-6ae197fe6a9a9.mp4",
+      "duration": 6675.67,
+      "audioLanguageMetadata": null,
+      "subtitleCandidates": [
+        {
+          "name": "The.Devils.1971.1080p.BluRay.x264.AAC-[YTS.MX].EN-en.srt",
+          "url": "https://archive.org/download/thedevils1971/The.Devils.1971.1080p.BluRay.x264.AAC-%5BYTS.MX%5D.EN-en.srt",
+          "format": "SubRip",
+          "size": 101595,
+          "languageHint": "unspecified; unreviewed"
+        }
+      ],
+      "selectedSidecar": {
+        "name": "The.Devils.1971.1080p.BluRay.x264.AAC-[YTS.MX].EN-en.srt",
+        "url": "https://archive.org/download/thedevils1971/The.Devils.1971.1080p.BluRay.x264.AAC-%5BYTS.MX%5D.EN-en.srt",
+        "format": "SubRip",
+        "size": 101595,
+        "languageHint": "unspecified; unreviewed",
+        "cues": 1315,
+        "first": 40.18,
+        "last": 6183.741,
+        "local": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-the-devils.srt",
+        "sha256": "d57bcf1473ebf742107d1d6d73f4ad08b6dfad88326e0ba3801bfe67dea5c9cb"
+      },
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": {
+        "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\speech\\additional-the-devils.json",
+        "status": "needs-review",
+        "reason": "Unconfirmed dialogue/timing near 0.2",
+        "all3DialogueZonesPassed": false,
+        "internalGapsOver120Seconds": [
+          {
+            "start": 1933.569,
+            "end": 2082.331
+          }
+        ],
+        "checks": [
+          {
+            "similarity": 0.344,
+            "wordF1": 0.178,
+            "heard": "with the same care that your cousin, must your trinkle might select a weapon. My intention is different. You see, I need to turn",
+            "audioStart": 1344.803,
+            "audioEnd": 1355.043,
+            "offsetSeconds": -1.562,
+            "pass": false,
+            "model": "base.en",
+            "fraction": 0.2,
+            "cueStart": 1346.365,
+            "cueEnd": 1353.335,
+            "expected": "I attend Mass daily. I love God. And now that both my parents are dead,\nI am free to serve Him.",
+            "audioDownload": {
+              "start": 1344.3626666666667,
+              "end": 1359.3813333333333,
+              "packets": 704,
+              "requests": 4,
+              "bytes": 7236671
+            }
+          },
+          {
+            "similarity": 0.43,
+            "wordF1": 0.214,
+            "heard": "And bring about your own end? I have a great need to be united",
+            "audioStart": 1356.677,
+            "audioEnd": 1361.997,
+            "offsetSeconds": 6.231,
+            "pass": false,
+            "model": "tiny.en",
+            "fraction": 0.2,
+            "cueStart": 1350.446,
+            "cueEnd": 1353.335,
+            "expected": "And now that both my parents are dead,\nI am free to serve Him.",
+            "audioDownload": {
+              "start": 1348.4373333333333,
+              "end": 1363.4559791666666,
+              "packets": 704,
+              "requests": 1,
+              "bytes": 499050
+            }
+          }
+        ]
+      },
+      "captionAction": "Keep sidecar unlinked: initial sampled English dialogue/timing mismatch.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "the-trip-1967",
+      "title": "The Trip",
+      "video": "The Trip (1967).ia.mp4",
+      "duration": 4894.49,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [
+        {
+          "name": "The Trip (1967).srt",
+          "url": "https://archive.org/download/the-trip-1967/The%20Trip%20(1967).srt",
+          "format": "SubRip",
+          "size": 40363,
+          "languageHint": "unspecified; unreviewed"
+        }
+      ],
+      "selectedSidecar": {
+        "name": "The Trip (1967).srt",
+        "url": "https://archive.org/download/the-trip-1967/The%20Trip%20(1967).srt",
+        "format": "SubRip",
+        "size": 40363,
+        "languageHint": "unspecified; unreviewed",
+        "cues": 599,
+        "first": 25.2,
+        "last": 4681.707,
+        "local": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-the-trip.srt",
+        "sha256": "b5b48883b609f4c2b91b6c0b019d88b73a5650d7e737fe2452efbd66646d639e"
+      },
+      "burnedEnglishStatus": "No burned English text observed in3sampled frames; absence in samples is not proof of film-wide absence",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1182.601,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-the-trip-20.jpg",
+          "code": 0,
+          "error": "",
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 2458.5254999999997,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-the-trip-50.jpg",
+          "code": 0,
+          "error": "",
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 4165.2919999999995,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-the-trip-85.jpg",
+          "code": 0,
+          "error": "",
+          "visuallyInspected": true,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": {
+        "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\speech\\additional-the-trip.json",
+        "status": "needs-review",
+        "reason": "Long internal caption gaps require completeness review",
+        "all3DialogueZonesPassed": true,
+        "sampleOffsetSpreadSeconds": 0.401,
+        "internalGapsOver120Seconds": [
+          {
+            "start": 712.042,
+            "end": 867.642
+          },
+          {
+            "start": 982.421,
+            "end": 1179.787
+          },
+          {
+            "start": 1267.397,
+            "end": 1608.048
+          },
+          {
+            "start": 1849.25,
+            "end": 2045.285
+          },
+          {
+            "start": 2661.795,
+            "end": 2861.434
+          },
+          {
+            "start": 2974.206,
+            "end": 3135.374
+          },
+          {
+            "start": 3560.997,
+            "end": 3962.36
+          },
+          {
+            "start": 4352.904,
+            "end": 4650.981
+          }
+        ],
+        "checks": [
+          {
+            "similarity": 0.95,
+            "wordF1": 0.895,
+            "heard": "It's true that I love her, but I don't know what that means for which I'm sure on suffering.",
+            "audioStart": 1179.666,
+            "audioEnd": 1184.006,
+            "offsetSeconds": -0.121,
+            "pass": true,
+            "model": "tiny.en",
+            "fraction": 0.2,
+            "cueStart": 1179.787,
+            "cueEnd": 1185.415,
+            "expected": "It's true that I love her... but I don't know what that means,\nfor which I'm sure I'll suffer.",
+            "audioDownload": {
+              "start": 1177.7857596371882,
+              "end": 1192.8090702947845,
+              "packets": 647,
+              "requests": 6,
+              "bytes": 3578523
+            }
+          },
+          {
+            "similarity": 0.901,
+            "wordF1": 0.889,
+            "heard": "I will go in there, man. I don't care.",
+            "audioStart": 2456.875,
+            "audioEnd": 2458.815,
+            "offsetSeconds": -0.388,
+            "pass": true,
+            "model": "tiny.en",
+            "fraction": 0.5,
+            "cueStart": 2457.263,
+            "cueEnd": 2459.788,
+            "expected": "I won't go in there, man. I don't care.",
+            "audioDownload": {
+              "start": 2455.254784580499,
+              "end": 2470.2780952380954,
+              "packets": 647,
+              "requests": 3,
+              "bytes": 278713
+            }
+          },
+          {
+            "similarity": 0.955,
+            "wordF1": 0.914,
+            "heard": "I don't want to bring you down, but, like, let's try to sort the reel from the trip.",
+            "audioStart": 4162.705,
+            "audioEnd": 4166.545,
+            "offsetSeconds": -0.522,
+            "pass": true,
+            "model": "tiny.en",
+            "fraction": 0.85,
+            "cueStart": 4163.227,
+            "cueEnd": 4167.357,
+            "expected": "I don't want to bring you down,\nbut let's try to sort the real from the trip.",
+            "audioDownload": {
+              "start": 4161.22485260771,
+              "end": 4176.248163265306,
+              "packets": 647,
+              "requests": 3,
+              "bytes": 279445
+            }
+          }
+        ]
+      },
+      "captionAction": "Exact English sidecar passes3independent sampled dialogue/timing zones; long-gap completeness limitation remains. Root may apply as dialogue subtitles with that explicit limitation.",
+      "extraCaptionsEnabledByThisAgent": false,
+      "preparedFiles": {
+        "vtt": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\additional-the-trip.vtt",
+        "cues": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\cues\\additional-the-trip.json",
+        "job": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\jobs\\additional-the-trip.json",
+        "speech": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\speech\\additional-the-trip.json"
+      }
+    },
+    {
+      "id": "the-ruling-class-1972_202511",
+      "title": "The Ruling Class",
+      "video": "The Ruling Class 1972.mp4",
+      "duration": 9202.14,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "performance.-1970.1080p.-blu-ray.x-264",
+      "title": "Performance",
+      "video": "Performance.1970.1080p.BluRay.x264.mp4",
+      "duration": 6338.37,
+      "audioLanguageMetadata": null,
+      "subtitleCandidates": [
+        {
+          "name": "Walkabout.1971.1080p.BluRay.x264.srt",
+          "url": "https://archive.org/download/performance.-1970.1080p.-blu-ray.x-264/Walkabout.1971.1080p.BluRay.x264.srt",
+          "format": "SubRip",
+          "size": 93860,
+          "languageHint": "unspecified; unreviewed"
+        }
+      ],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "Reject listed Walkabout subtitle: different movie.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "the.-wicker.-man.-1973",
+      "title": "The Wicker Man",
+      "video": "The Wicker Man (1973)/The.Wicker.Man.1973.mp4",
+      "duration": 5588.54,
+      "audioLanguageMetadata": "eng",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Not frame-reviewed",
+      "frames": [],
+      "independentSpeechChecks": null,
+      "captionAction": "No sidecar listed in selected item; embedded tracks absent in previously inspected header, external subtitle availability not exhaustively searched.",
+      "extraCaptionsEnabledByThisAgent": false
+    },
+    {
+      "id": "throw.-away.-your.-books.-rally.in.the.-streets.-1971.1080p.-blu-ray.x-264-super",
+      "title": "Throw Away Your Books, Rally in the Streets",
+      "video": "Throw.Away.Your.Books.Rally.in.the.Streets.1971.1080p.BluRay.x264-SUPER.mp4",
+      "duration": 8251.25,
+      "audioLanguageMetadata": "jpn",
+      "subtitleCandidates": [],
+      "selectedSidecar": null,
+      "burnedEnglishStatus": "Unknown: all3 bounded frame attempts timed out",
+      "frames": [
+        {
+          "fraction": 0.2,
+          "second": 1650,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-throw-away-your-books-rally-in-the-streets-20.jpg",
+          "extractionCode": null,
+          "timedOut": true,
+          "visuallyInspected": false,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.5,
+          "second": 4126,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-throw-away-your-books-rally-in-the-streets-50.jpg",
+          "extractionCode": null,
+          "timedOut": true,
+          "visuallyInspected": false,
+          "englishBurnedTextObserved": false
+        },
+        {
+          "fraction": 0.85,
+          "second": 7014,
+          "path": "C:\\Users\\deato\\Documents\\Codex\\2026-11-09\\loo\\work\\channel42-additional-subtitles\\frames\\additional-throw-away-your-books-rally-in-the-streets-85.jpg",
+          "extractionCode": null,
+          "timedOut": true,
+          "visuallyInspected": false,
+          "englishBurnedTextObserved": false
+        }
+      ],
+      "independentSpeechChecks": null,
+      "captionAction": "Subtitle availability remains unknown; metadata/title claims are not verification.",
+      "extraCaptionsEnabledByThisAgent": false,
+      "ffmpegAudioProbe": {
+        "code": null,
+        "timedOut": true,
+        "stderr": ""
+      }
+    }
+  ]
+}

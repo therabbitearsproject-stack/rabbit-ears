@@ -17,8 +17,9 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
     await copyFile(new URL("program-quality.mjs", import.meta.url), join(dir, "scripts/program-quality.mjs"));
     await copyFile(new URL("channel-policies.json", import.meta.url), join(dir, "scripts/channel-policies.json"));
     await copyFile(new URL("themed-ad-library.mjs", import.meta.url), join(dir, "scripts/themed-ad-library.mjs"));
+    await copyFile(new URL("midnight-mirage-programming.mjs", import.meta.url), join(dir, "scripts/midnight-mirage-programming.mjs"));
     await mkdir(join(dir,'community'));
-    await writeFile(join(dir,'community/channels.json'),JSON.stringify([{no:1,name:'Ordinary'},{no:2,name:'Trek'}]));
+    await writeFile(join(dir,'community/channels.json'),JSON.stringify([{no:1,name:'Ordinary'},{no:2,name:'Trek'},{no:42,name:'Midnight Mirage'}]));
     await copyFile(new URL("trek-programming.mjs", import.meta.url), join(dir, "scripts/trek-programming.mjs"));
     await copyFile(new URL("caption-library.mjs", import.meta.url), join(dir, "scripts/caption-library.mjs"));
     await copyFile(new URL("commercial-library.mjs", import.meta.url), join(dir, "scripts/commercial-library.mjs"));
@@ -29,10 +30,16 @@ test("franchise searches reserve slots, deduplicate uploads and count only playa
 const BUILT_IN = [
  {name:"Trek", q:"trek", franchises:[{name:"Old crew", q:"old"}, {name:"New crew", q:"new"}]},
  {name:"Ordinary", q:"ordinary"},
- {name:"Offline", q:"offline"}
+ {name:"Offline", q:"offline"},
+ {name:"Midnight Mirage",q:"reviewed:midnight-mirage-v1",library:"midnight-mirage-v1"}
 ];`);
     await writeFile(join(dir, 'index.html'), `\nconst BLOCKED = new Set([\n "blocked-source", "blocked-episode", "channel-blocked-source@Ordinary"\n]);\n`, {flag:'a'});
     const expanded = (id,source) => [id,id+'.mp4',600,'Complete program','1992','',source];
+    await writeFile(join(dir,'scripts/midnight-mirage-library.json'),JSON.stringify({id:'midnight-mirage-v1',rows:[
+      ['curated-film','film.mp4',6000,'A Curated Film','1971','','film-source'],
+      ['curated-reported','reported.mp4',6000,'A Reported Film','1971','','reported-source'],
+      ['curated-trailer','trailer.mp4',30,'A Film Trailer','1971','','film-source']
+    ]}));
     await writeFile(join(dir,'scripts/channel-programs.json'),JSON.stringify({channels:{
       Ordinary:{rows:[expanded('collection-good','good-source'),expanded('episode-broken','good-source'),expanded('reported-child','reported-source'),expanded('wrong-child','wrong-source'),expanded('blocked-child','blocked-source'),expanded('blocked-episode','good-source'),expanded('channel-blocked-child','channel-blocked-source')]}
     }}));
@@ -75,6 +82,7 @@ const BUILT_IN = [
     await import(pathToFileURL(join(dir, "scripts/build-catalog.mjs")));
     const result = JSON.parse(await readFile(join(dir, "catalog.json"), "utf8"));
     assert.deepEqual(result.pools.trek.map(r => r[0]).sort(), ["extra", "new", "shared"]);
+    assert.deepEqual(result.pools['reviewed:midnight-mirage-v1'].map(r=>r[0]),['curated-film'],'curated full-film inputs survive daily builds but reported sources and trailers cannot return');
     assert.deepEqual(result.pools.ordinary.map(r=>r[0]).sort(),['collection-good','ordinary'], 'collection merges cannot restore reported or blocked episodes or their parent sources');
     assert.equal(result.pools.ordinary.find(r=>r[0]==='ordinary')[5],'local:ordinary.vtt','ordinary source IDs support reviewed captions');
     assert.equal(result.pools.ordinary.find(r=>r[0]==='collection-good')[5],'local:collection-good.vtt','reviewed captions apply after collection rows are merged');

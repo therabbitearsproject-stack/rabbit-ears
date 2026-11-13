@@ -575,6 +575,7 @@ const BUILT_IN = [
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "(" + "collection:classic_tv_commercials" + ")" + SAFE },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: `(collection:classic_cartoons OR (collection:animationandcartoons AND subject:(fleischer OR terrytoons OR "famous studios" OR "van beuren" OR iwerks OR popeye OR "betty boop" OR casper OR "felix the cat" OR "public domain cartoon" OR "public domain cartoons" OR "saturday morning cartoons")))` + SAFE },
   { name: "Creature Feature",   desc: "Sci-fi and horror B movies",        q: "(" + "collection:SciFi_Horror" + ")" + SAFE },
+  { name: "Midnight Mirage", desc: "Cult films, uninterrupted · '80s & '90s movie spots between features", library: "midnight-mirage-v1", breaks: { library: "midnight-mirage", mix: "between-films", target: 120, maxAds: 3 }, q: "reviewed:midnight-mirage-v1" },
   { name: "After Dark",         desc: "Film noir",                         q: "(" + 'subject:"film noir"' + ")" + SAFE },
   { name: "Computer Chronicles",desc: "The 80s–90s PC show",               q: "(collection:computerchronicles)" + SAFE },
   { name: "Rerun Alley",        desc: "Old TV episodes",                   q: "(" + "collection:classic_tv" + ")" + SAFE },
@@ -662,7 +663,7 @@ const LINEUP = {
   "After School": [25, "🎒"], "Adult Swim": [26, "🦑"], "Puppet Show": [27, "🧸"], "Caped Crusaders": [28, "🦸"],
   "Drive-In": [30, "🚗"], "After Dark": [31, "🕵️"], "Creature Feature": [32, "🧟"], "Chiller Hosts": [33, "🦇"], "Silent Screen": [34, "🎩"],
   "Laugh Track": [35, "😂"], "Kung Fu Theater": [36, "🥋"], "Frontier": [37, "🤠"], "Private Eye": [39, "🔍"],
-  "Christmas Movies": [40, "🎄"], "Showstoppers": [41, "💃"],
+  "Christmas Movies": [40, "🎄"], "Showstoppers": [41, "💃"], "Midnight Mirage": [42, "🌒"],
   "Anime Station": [50, "🌸"], "Dubbed Anime": [51, "🗣️"], "Retro Anime": [52, "⚡"], "AMV Hour": [53, "🎧"], "Kaiju Theater": [54, "🦖"], "Mecha Hangar": [55, "🦾"], "Magical Girls": [56, "✨"], "Power Level": [57, "💥"],
   "OVA Vault": [58, "🗡️"], "Toonami Tapes": [59, "🌌"],
   "Gridiron": [60, "🏈"], "Rink Side": [61, "🏒"], "Ringside": [62, "🤼"], "Pit Lane": [63, "🏁"], "Skate & Surf": [64, "🛹"], "Sweatin'": [65, "🤸"], "Hoops": [66, "🏀"], "Ballpark": [67, "⚾"],
@@ -1036,7 +1037,7 @@ function makeSlot(m, ch, start, seed) {
   if (ch.breaks) {
     const library = CommercialTiming.library(catalog, ch.breaks.library);
     const ads = library.commercials;
-    if (!ads.length) throw new Error("Vintage commercial catalog is unavailable");
+    if (!ads.length && ch.breaks.mix !== "between-films") throw new Error("Vintage commercial catalog is unavailable");
     timeline = CommercialTiming.build(program, ch.breaks, ads, library.bumpers, seed || ch.q + "|" + m.id + "|" + start);
   }
   if (m.cuts?.length) timeline = timeline ? CommercialTiming.edit(timeline, program) : CommercialTiming.program(program);
@@ -2116,7 +2117,7 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=portrait-actions-2"></script>
+<script src="assets/interface.js?v=pixel-42-1"></script>
 <script src="assets/volume.js?v=4"></script>
 <script src="assets/community-config.js?v=1"></script>
 <script type="module" src="assets/community.js?v=8"></script>

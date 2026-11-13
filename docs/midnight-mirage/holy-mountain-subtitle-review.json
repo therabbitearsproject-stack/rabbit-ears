@@ -1,0 +1,137 @@
+{
+  "verificationVersion": 1,
+  "key": "holy-mountain",
+  "id": "auteurhouse-theholymountain1973",
+  "title": "The Holy Mountain (1973)",
+  "archiveId": "auteurhouse-theholymountain1973",
+  "video": "The.Holy.Mountain.1973.720p.BluRay.x264-[YTS.LT].mp4",
+  "duration": 6808.85,
+  "checks": [
+    {
+      "similarity": 1,
+      "wordF1": 1,
+      "heard": "The same force the vulture uses to seize the ox",
+      "audioStart": 2324.399,
+      "audioEnd": 2328.019,
+      "offsetSeconds": -0.34,
+      "pass": true,
+      "model": "base.en",
+      "fraction": 0.32,
+      "cueStart": 2324.739,
+      "cueEnd": 2328.366,
+      "expected": "The same force the vulture uses to seize the ox",
+      "audioDownload": {
+        "fallback": "ffmpeg bounded remote audio seek",
+        "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+      }
+    },
+    {
+      "similarity": 0.762,
+      "wordF1": 0.625,
+      "heard": "the person who wants to report, hurry up!",
+      "audioStart": 3832.563,
+      "audioEnd": 3834.383,
+      "offsetSeconds": 0.36,
+      "pass": false,
+      "model": "base.en",
+      "fraction": 0.55,
+      "cueStart": 3832.203,
+      "cueEnd": 3835.997,
+      "expected": "The president wants the report. Hurry up! Hurry!",
+      "audioDownload": {
+        "fallback": "ffmpeg bounded remote audio seek",
+        "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+      }
+    },
+    {
+      "similarity": 0.974,
+      "wordF1": 0.857,
+      "heard": "I am financial advisor to the president.",
+      "audioStart": 3854.095,
+      "audioEnd": 3857.155,
+      "offsetSeconds": -0.38,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.55,
+      "cueStart": 3854.475,
+      "cueEnd": 3857.352,
+      "expected": "I am financial adviser to the president.",
+      "audioDownload": {
+        "fallback": "ffmpeg bounded remote audio seek",
+        "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+      }
+    },
+    {
+      "similarity": 0.962,
+      "wordF1": 0.875,
+      "heard": "I drink alone, because newcomers are always abstainous.",
+      "audioStart": 5793.056,
+      "audioEnd": 5796.376,
+      "offsetSeconds": 1.02,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.85,
+      "cueStart": 5792.036,
+      "cueEnd": 5795.997,
+      "expected": "I drink alone because newcomers are always abstainers.",
+      "audioDownload": {
+        "fallback": "ffmpeg bounded remote audio seek",
+        "rangeError": "size\r\n    at RangeReader.movie (file:///C:/Users/deato/.codex/.chatgpt-projects/g-p-6aaddcb538908191a977bf670679d469/work/rabbit-ears/scripts/embedded-captions.mjs:65:35)\r\n    at file:///C:/Users/deato/Documents/Codex/2026-11-09/loo/work/channel42-subtitles/audio-range.mjs:6:71\r\n\r\nNode.js v24.19.0\r\n"
+      }
+    }
+  ],
+  "status": "passed-sampled-dialogue-timing",
+  "method": "Independent English dialogue anchors near 32%,55%,85% of selected streamed video, compared using cached local Whisper tiny/base models. No subtitle timing generated or shifted.",
+  "internalGapsOver120Seconds": [
+    {
+      "start": 469.634,
+      "end": 817.066
+    },
+    {
+      "start": 824.155,
+      "end": 1833.206
+    },
+    {
+      "start": 1840.42,
+      "end": 2084.332
+    },
+    {
+      "start": 2480.602,
+      "end": 2601.181
+    },
+    {
+      "start": 3251.455,
+      "end": 3412.909
+    },
+    {
+      "start": 4100.47,
+      "end": 4243.948
+    },
+    {
+      "start": 4383.169,
+      "end": 4544.915
+    },
+    {
+      "start": 4834.537,
+      "end": 4975.679
+    },
+    {
+      "start": 6188.764,
+      "end": 6445.689
+    }
+  ],
+  "sampleOffsetSpreadSeconds": 1.4,
+  "reason": "All three sampled speech anchors pass; retained as a subtitle dialogue track. Long source gaps are retained and not claimed as complete SDH.",
+  "reviewStatus": "sampled-dialogue-timing-confirmed",
+  "notes": "This film has sparse English dialogue and long source gaps. Timing verified at three speech anchors, not a complete SDH or line-by-line translation audit. Initial20% had no suitable dialogue anchor; actual tested zones32%,55%,85%. Existing text/timestamps unchanged.",
+  "automatedStatus": "needs-review",
+  "burnedSubtitles": {
+    "checkedSeconds": [
+      2326,
+      3855,
+      5794
+    ],
+    "visibleEnglish": false,
+    "method": "Visual review of exact selected MP4 at confirmed dialogue timestamps"
+  }
+}

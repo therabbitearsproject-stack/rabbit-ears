@@ -1332,6 +1332,44 @@ Donald O'Connor completed Make ’Em Laugh's exhausting dance in one day. Overex
 
 Source: [American Film Institute](https://www.afi.com/news/afi-movie-club-singin-in-the-rain/)
 
+## 42 · Midnight Mirage
+
+### 1. These aliens began as paper.
+
+Fantastic Planet uses cutout animation designed by Roland Topor. Its strange creatures move like illustrations that have slipped free of a picture book.
+
+Source: [The Criterion Collection](https://www.criterion.com/films/28636)
+
+### 2. Two nightmares share an artist.
+
+Fantastic Planet artist Roland Topor cofounded the Panic Movement with Alejandro Jodorowsky. The blue giants and El Topo belong to a surprisingly connected creative universe.
+
+Source: [The Criterion Collection](https://www.criterion.com/current/posts/4122-roland-topor-the-unrecognizable-genius-behind-fantastic-planet)
+
+### 3. The apocalypse has a jazz score.
+
+Fantastic Planet pairs its alien landscapes with Alain Goraguer’s psychedelic jazz. Those giant blue creatures arrived with an unusually groovy soundtrack.
+
+Source: [The Criterion Collection](https://www.criterion.com/films/28636)
+
+### 4. The haunted house had a young architect.
+
+House credits Chigumi Obayashi, the director’s daughter, with its original concept. This cinematic nightmare really does have a child’s imagination in its foundations.
+
+Source: [The Criterion Collection](https://www.criterion.com/films/27523-house)
+
+### 5. This poem refuses to walk straight.
+
+The Color of Pomegranates explores poet Sayat-Nova’s inner world through symbolic tableaux. Its images draw on medieval Armenian culture rather than a conventional cradle-to-grave biography.
+
+Source: [The Criterion Collection](https://www.criterion.com/current/posts/5572-the-color-of-pomegranates-parajanov-unbound)
+
+### 6. Daisies was banned twice.
+
+Daisies was suppressed in 1967, briefly returned in 1968, then disappeared again after the Soviet invasion. Two mischievous Maries proved remarkably difficult for authorities to tolerate.
+
+Source: [The Criterion Collection](https://www.criterion.com/current/posts/7979-daisies-giggling-generals-one-and-two)
+
 ## 50 · Anime Station
 
 ### 1. They mixed fifty new colors.

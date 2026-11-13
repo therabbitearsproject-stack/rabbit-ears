@@ -1,0 +1,114 @@
+{
+  "verificationVersion": 1,
+  "key": "additional-the-trip",
+  "id": "the-trip-1967",
+  "title": "The Trip",
+  "archiveId": "the-trip-1967",
+  "video": "The Trip (1967).ia.mp4",
+  "duration": 4894.49,
+  "checks": [
+    {
+      "similarity": 0.95,
+      "wordF1": 0.895,
+      "heard": "It's true that I love her, but I don't know what that means for which I'm sure on suffering.",
+      "audioStart": 1179.666,
+      "audioEnd": 1184.006,
+      "offsetSeconds": -0.121,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.2,
+      "cueStart": 1179.787,
+      "cueEnd": 1185.415,
+      "expected": "It's true that I love her... but I don't know what that means,\nfor which I'm sure I'll suffer.",
+      "audioDownload": {
+        "start": 1177.7857596371882,
+        "end": 1192.8090702947845,
+        "packets": 647,
+        "requests": 6,
+        "bytes": 3578523
+      }
+    },
+    {
+      "similarity": 0.901,
+      "wordF1": 0.889,
+      "heard": "I will go in there, man. I don't care.",
+      "audioStart": 2456.875,
+      "audioEnd": 2458.815,
+      "offsetSeconds": -0.388,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.5,
+      "cueStart": 2457.263,
+      "cueEnd": 2459.788,
+      "expected": "I won't go in there, man. I don't care.",
+      "audioDownload": {
+        "start": 2455.254784580499,
+        "end": 2470.2780952380954,
+        "packets": 647,
+        "requests": 3,
+        "bytes": 278713
+      }
+    },
+    {
+      "similarity": 0.955,
+      "wordF1": 0.914,
+      "heard": "I don't want to bring you down, but, like, let's try to sort the reel from the trip.",
+      "audioStart": 4162.705,
+      "audioEnd": 4166.545,
+      "offsetSeconds": -0.522,
+      "pass": true,
+      "model": "tiny.en",
+      "fraction": 0.85,
+      "cueStart": 4163.227,
+      "cueEnd": 4167.357,
+      "expected": "I don't want to bring you down,\nbut let's try to sort the real from the trip.",
+      "audioDownload": {
+        "start": 4161.22485260771,
+        "end": 4176.248163265306,
+        "packets": 647,
+        "requests": 3,
+        "bytes": 279445
+      }
+    }
+  ],
+  "status": "passed-sampled-dialogue-timing",
+  "method": "Independent English dialogue anchors near 20%,50%,85% of selected streamed video, compared using cached local Whisper tiny/base models. No subtitle timing generated or shifted.",
+  "internalGapsOver120Seconds": [
+    {
+      "start": 712.042,
+      "end": 867.642
+    },
+    {
+      "start": 982.421,
+      "end": 1179.787
+    },
+    {
+      "start": 1267.397,
+      "end": 1608.048
+    },
+    {
+      "start": 1849.25,
+      "end": 2045.285
+    },
+    {
+      "start": 2661.795,
+      "end": 2861.434
+    },
+    {
+      "start": 2974.206,
+      "end": 3135.374
+    },
+    {
+      "start": 3560.997,
+      "end": 3962.36
+    },
+    {
+      "start": 4352.904,
+      "end": 4650.981
+    }
+  ],
+  "sampleOffsetSpreadSeconds": 0.401,
+  "reason": "Long internal caption gaps require completeness review",
+  "automatedStatus": "needs-review",
+  "notes": "Three independent English dialogue anchors pass. No burned English in sampled dialogue frames. Source sparse gaps retained; not a complete SDH or line-by-line completeness audit."
+}
