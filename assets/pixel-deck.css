@@ -1,0 +1,70 @@
+/* Pixel Deck: modular surfaces in the channel artwork's ink / cream palette. */
+body[data-skin=pixel]{
+  --bg:#101725;--panel:#1c293b;--ink:#fff1d1;--dim:#bbc9d8;--line:#53647c;
+  --amber:#32cec1;--phosphor:#f6c969;--wood:#243449;--wood-hi:#53647c;
+  color-scheme:dark;background-color:var(--bg);
+  background-image:linear-gradient(#24344966 1px,transparent 1px),linear-gradient(90deg,#24344966 1px,transparent 1px);
+  background-size:32px 32px;background-repeat:repeat;font-family:var(--display);
+}
+body[data-skin=pixel] .brand-home{color:#fff1d1!important}
+body[data-skin=pixel] .wrap{gap:24px}
+body[data-skin=pixel] .wrap>header{border-bottom:3px solid var(--line)}
+body[data-skin=pixel] :is(.online,.btn,.linkbtn,.tab,.chip,.skin-option,.interface-dialog,.volume-popover,.community-popover){border-radius:0}
+body[data-skin=pixel] .online{border:2px solid var(--line);background:var(--panel);box-shadow:3px 3px #050b14}
+body[data-skin=pixel] .online i{border-radius:0;box-shadow:none;animation:none;background:var(--amber)}
+body[data-skin=pixel] .tabs{gap:10px;border:0;padding:0}
+body[data-skin=pixel] .tab{border:2px solid var(--line);background:var(--panel);box-shadow:3px 3px #050b14}
+body[data-skin=pixel] .tab[aria-selected=true]{background:var(--amber);border-color:var(--amber);color:var(--bg);box-shadow:3px 3px #050b14}
+body[data-skin=pixel] .btn,body[data-skin=pixel] .linkbtn{background:var(--panel);color:var(--ink);border:2px solid var(--line);box-shadow:3px 3px #050b14}
+body[data-skin=pixel] .btn:hover,body[data-skin=pixel] .linkbtn:hover{border-color:var(--amber)}
+body[data-skin=pixel] .btn:active{box-shadow:1px 1px #050b14}
+body[data-skin=pixel] .watch-channel,body[data-skin=pixel] .btn[aria-pressed=true]{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+body[data-skin=pixel] .theme-picker{background:var(--panel);padding:8px;border-color:var(--line)}
+body[data-skin=pixel] :is(.landing-copy,.portrait-channel-actions,.now,.guide,.channel-rail){background:var(--panel);border:2px solid var(--line);box-shadow:5px 5px #050b14;padding:20px;min-width:0}
+body[data-skin=pixel] .landing-copy:empty{padding:0;border:0;box-shadow:none}
+body[data-skin=pixel] :is(.landing-title,.now h2,.fullscreen-title){font-family:var(--osd);font-weight:400;letter-spacing:.2px;line-height:1.05}
+body[data-skin=pixel] .landing-title{font-size:clamp(30px,3.6vw,48px)}
+body[data-skin=pixel] .eyebrow{color:var(--phosphor);letter-spacing:1.6px}
+body[data-skin=pixel] .cabinet{border:3px solid #53647c;border-top-color:#8e9bb0;border-left-color:#8e9bb0;border-radius:0;background:#243449;padding:16px;gap:14px;box-shadow:6px 6px #050b14}
+body[data-skin=pixel]:not(.player-fullscreen) .screen:not(:fullscreen){border:6px solid #080f1c;border-radius:0;box-shadow:0 0 0 2px #53647c}
+body[data-skin=pixel] .tv-hardware{background:#101725;border:2px solid #53647c;padding:10px 5px;gap:14px}
+body[data-skin=pixel] .tuning-knob{width:44px;height:44px;border:3px solid #53647c;border-top-color:#bbc9d8;border-left-color:#bbc9d8;border-radius:0;background:#243449;box-shadow:2px 2px #050b14}
+body[data-skin=pixel] .tuning-knob::after{left:18px;top:6px;width:4px;height:15px;background:var(--amber);transform:rotate(25deg);transform-origin:center 15px}
+body[data-skin=pixel] .speaker-grille{border-radius:0;border-color:#53647c;background:repeating-linear-gradient(0deg,#101725 0 3px,#53647c 3px 5px)}
+body[data-skin=pixel] .power-led{width:8px;height:8px;border-radius:0;box-shadow:none;background:var(--amber)}
+body[data-skin=pixel] .channel-logo{image-rendering:pixelated;filter:none}
+body[data-skin=pixel] .logo-mat{border-radius:0}
+body[data-skin=pixel] .channel-no{color:var(--phosphor)}
+body[data-skin=pixel] .remote{gap:10px;padding:8px 0 3px}
+body[data-skin=pixel] .rail-channel{background:var(--bg);border:2px solid #34455d;border-radius:0}
+body[data-skin=pixel] .rail-channel[aria-pressed=true]{border-color:var(--amber);box-shadow:inset 4px 0 var(--amber)}
+body[data-skin=pixel] .guide-head{padding-bottom:10px;border-bottom:2px solid var(--line)}
+body[data-skin=pixel] .band{color:var(--phosphor);background:#101725}
+body[data-skin=pixel] .chan{border-bottom:3px solid #101725}
+body[data-skin=pixel] .blk{border-width:2px;background:#243449}
+body[data-skin=pixel] .blk.live{background:#244747;border-color:var(--amber)}
+body[data-skin=pixel] :is(.radio-set,.vfd,.gcard,.gscreen){border-radius:0;border-color:var(--line);background-color:var(--panel);box-shadow:4px 4px #050b14}
+body[data-skin=pixel] .radio-set{background:#243449;border:3px solid var(--line)}
+body[data-skin=pixel] .radio-set .vfd{background:#101725}
+body[data-skin=pixel] #gamesView .cabinet{grid-template-columns:minmax(0,1fr)}
+body[data-skin=pixel] .radio-set :is(.vfd-k,#rName){color:var(--phosphor)}
+body[data-skin=pixel] .interface-dialog{border:3px solid var(--line);box-shadow:8px 8px #050b14}
+body[data-skin=pixel] .interface-dialog h2{font-family:var(--osd);font-size:36px}
+body[data-skin=pixel] .fullscreen-remote .btn{background:#101725ed;color:var(--ink)}
+.skin-option[data-preview=pixel] .skin-mini{border-radius:0;border:3px solid #53647c;background:#243449;box-shadow:3px 3px #101725;padding:7px;gap:6px}
+.skin-option[data-preview=pixel] .skin-mini i{border-radius:0;border:3px solid #101725;background:#101725;box-shadow:inset 0 -4px #32cec1}
+.skin-option[data-preview=pixel] .skin-mini b{border-radius:0;border-color:#f6c969;background:#32cec1}
+@media(max-width:640px){
+  body[data-skin=pixel] .wrap{gap:18px}
+  body[data-skin=pixel] :is(.landing-copy,.portrait-channel-actions,.now,.guide,.channel-rail){padding:12px;box-shadow:3px 3px #050b14}
+  body[data-skin=pixel] .landing-copy:empty{padding:0}
+  body[data-skin=pixel] .portrait-channel-actions{grid-template-columns:110px minmax(0,1fr);gap:12px 8px}
+  body[data-skin=pixel] .portrait-channel-actions .watch-channel{font-size:13px;padding-inline:6px;gap:6px}
+  body[data-skin=pixel] .cabinet{padding:10px;gap:10px;grid-template-columns:minmax(0,1fr) 43px;box-shadow:3px 3px #050b14}
+  body[data-skin=pixel] .tv-hardware{padding:7px 2px;gap:10px}
+  body[data-skin=pixel] .tuning-knob{width:30px;height:30px;border-width:2px}
+  body[data-skin=pixel] .tuning-knob::after{left:12px;top:4px;width:3px;height:11px;transform-origin:center 11px}
+  body[data-skin=pixel] .landing-title{font-size:32px}
+  body[data-skin=pixel] .guide{padding:12px 8px}
+  body[data-skin=pixel] .remote{gap:7px}
+}
