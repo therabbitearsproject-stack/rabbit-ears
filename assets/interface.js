@@ -19,8 +19,8 @@
   let full=false, radioLook=store.get('re_radio_look','vinyl');
   const body=document.body, tv=$('tvView'), screen=$('screen');
   const initialChannel=/^#ch\d+$/.test(location.hash);
-  const skin=store.get('re_skin','retro');
-  body.dataset.skin=skins.some(s=>s[0]===skin)?skin:'retro';
+  const skin=store.get('re_skin','pixel');
+  body.dataset.skin=skins.some(s=>s[0]===skin)?skin:'pixel';
   body.dataset.tvPage=initialChannel?'channel':'guide';
   body.dataset.radioLook=radioLook==='car'?'car':'vinyl';
   const logoSource=info=>['retro','ivory'].includes(body.dataset.skin)?(info.srcLight||info.src):(info.srcDark||info.src);
@@ -44,7 +44,7 @@
   }
   const skinButton=button('',()=>openDialog(skinDialog),'btn theme-picker');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette');skinButton.title='Choose theme';skinButton.setAttribute('aria-label','Choose theme');document.querySelector('header').append(skinButton);
   const currentSkin=make('span','current-skin');skinButton.append(currentSkin);
-  function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='retro'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();refreshLogoColors();}
+  function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='pixel'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();refreshLogoColors();}
   syncSkin();
   const pack=make('div','player-pack');const cabinet=tv.querySelector('.cabinet');
   const controls=tv.querySelector('.remote'),details=tv.querySelector('.now'),guide=tv.querySelector('.guide');
@@ -141,7 +141,7 @@
   for(const [key,name,desc,col] of skins){const b=button('',()=>{
     body.dataset.skin=key;store.set('re_skin',key);syncSkin();skinGrid.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));
   },'skin-option');b.dataset.preview=key;b.style.setProperty('--sample',col);b.setAttribute('aria-pressed',String(body.dataset.skin===key));
-  const mini=make('span','skin-mini');mini.setAttribute('aria-hidden','true');mini.innerHTML='<i></i><b></b>';b.append(mini,make('strong','',name+(key==='retro'?' · Default':'')),make('small','',desc));skinGrid.append(b);}
+  const mini=make('span','skin-mini');mini.setAttribute('aria-hidden','true');mini.innerHTML='<i></i><b></b>';b.append(mini,make('strong','',name+(key==='pixel'?' · Default':'')),make('small','',desc));skinGrid.append(b);}
   skinDialog.append(skinGrid);
   const futureDialog=dialog('Upcoming programme');
   const futureTitle=make('h2'),futureInfo=make('p');futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
