@@ -24,7 +24,21 @@ async function fixture(mode){
  </script><script src="/assets/tv-popout.js"></script></body></html>`);
  });await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
- const context=await browser.newContext(),page=await context.newPage();await page.goto('http://127.0.0.1:'+server.address().port+'/#ch97');
+ const context=await browser.newContext((mode.startsWith('mobile')||mode==='phone-real')?{userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1'}:{});
+ if(mode.startsWith('mobile'))await context.addInitScript(mode=>{
+  window.pipRequests=0;window.pipExits=0;let pip=null,presentation='inline';
+  Object.defineProperty(HTMLMediaElement.prototype,'readyState',{configurable:true,get:()=>mode==='mobile-unready'?0:4});
+  Object.defineProperty(document,'pictureInPictureElement',{configurable:true,get:()=>pip});
+  Object.defineProperty(document,'pictureInPictureEnabled',{configurable:true,value:mode!=='mobile-unsupported'});
+  HTMLVideoElement.prototype.requestPictureInPicture=async function(){pipRequests++;if(mode==='mobile-denied')throw Error('Picture-in-picture denied');pip=this;this.dispatchEvent(new Event('enterpictureinpicture'));return {};};
+  document.exitPictureInPicture=async()=>{pipExits++;const old=pip;pip=null;old?.dispatchEvent(new Event('leavepictureinpicture'));};
+  if(mode==='mobile-webkit'){
+   HTMLVideoElement.prototype.webkitSupportsPresentationMode=mode=>mode==='picture-in-picture';
+   Object.defineProperty(HTMLVideoElement.prototype,'webkitPresentationMode',{configurable:true,get:()=>presentation});
+   HTMLVideoElement.prototype.webkitSetPresentationMode=function(mode){mode==='inline'?pipExits++:pipRequests++;presentation=mode;this.dispatchEvent(new Event('webkitpresentationmodechanged'));};
+  }
+ },mode);
+ const page=await context.newPage();await page.goto('http://127.0.0.1:'+server.address().port+'/#ch97');
  return {page,context,async close(){await browser.close();await new Promise(r=>server.close(r));}};
 }
 
@@ -91,5 +105,35 @@ test('native Chrome Document Picture-in-Picture preserves TV identity when the b
   const result=await page.evaluate(()=>({native:documentPictureInPicture.window===RETVPopout.document.defaultView,same:RETVPopout.document.getElementById('vid')===originalVideo,loads,plays}));
   assert.deepEqual(result,{native:true,same:true,loads:0,plays:0});
   await page.evaluate(()=>RETVPopout.close());await page.waitForFunction(()=>!RETVPopout.active&&document.contains(originalTV));
+ }finally{await f.close();}
+});
+
+for(const mode of ['mobile-standard','mobile-webkit'])test(mode+' uses native video PiP, survives backgrounding and returns without moving or restarting the TV',{skip:!chromium},async()=>{
+ const f=await fixture(mode);try{const {page}=f;await page.locator('#popoutTv').click();await page.waitForFunction(()=>RETVPopout.active);
+ assert.deepEqual(await page.evaluate(()=>({same:document.getElementById('vid')===originalVideo,tv:document.contains(originalTV),requests:pipRequests,openCalls,loads,plays,time:originalVideo.currentTime})),{same:true,tv:true,requests:1,openCalls:0,loads:0,plays:0,time:42});
+ assert.equal(await page.locator('#popoutTv').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#full').isDisabled(),true);
+ await page.evaluate(()=>window.dispatchEvent(new Event('pagehide')));assert.equal(await page.evaluate(()=>RETVPopout.active),true);
+ await page.locator('.tv-popout-placeholder button').click();await page.waitForFunction(()=>!RETVPopout.active);
+ assert.equal(await page.evaluate(()=>pipExits),1);assert.equal(await page.locator('#full').isDisabled(),false);assert.equal(await page.locator('.tv-popout-placeholder').isVisible(),false);
+ await page.locator('#popoutTv').click();await page.waitForFunction(()=>RETVPopout.active);await page.locator('#popoutTv').click();await page.waitForFunction(()=>!RETVPopout.active);
+ assert.deepEqual(await page.evaluate(()=>({requests:pipRequests,exits:pipExits,openCalls,loads,plays,time:originalVideo.currentTime})),{requests:2,exits:2,openCalls:0,loads:0,plays:0,time:42});
+ }finally{await f.close();}
+});
+for(const mode of ['mobile-denied','mobile-unsupported','mobile-unready'])test(mode+' gives a usable message and never opens a browser tab',{skip:!chromium},async()=>{
+ const f=await fixture(mode);try{const {page}=f;await page.locator('#popoutTv').click();await page.locator('.tv-popout-placeholder').waitFor({state:'visible'});
+ assert.deepEqual(await page.evaluate(()=>({active:RETVPopout.active,same:document.getElementById('vid')===originalVideo,openCalls,loads,plays})),{active:false,same:true,openCalls:0,loads:0,plays:0});
+ const message=await page.locator('.tv-popout-placeholder p').textContent();assert.match(message,mode==='mobile-unready'?/Start the TV/:mode==='mobile-unsupported'?/cannot open a floating/:/denied/);
+ }finally{await f.close();}
+});
+
+test('native video PiP keeps a real playing source in the original mobile page',{skip:!chromium},async t=>{
+ const f=await fixture('phone-real');try{const {page}=f;if(!await page.evaluate(()=>document.pictureInPictureEnabled&&typeof originalVideo.requestPictureInPicture==='function')){t.skip('Browser has no native video PiP');return;}
+ await page.evaluate(async()=>{delete originalVideo.play;delete originalVideo.load;originalVideo.muted=true;originalVideo.src='/fixture.mp4';await new Promise((resolve,reject)=>{originalVideo.onloadedmetadata=resolve;originalVideo.onerror=reject;});originalVideo.currentTime=2;await originalVideo.play();});
+ await page.waitForFunction(()=>originalVideo.currentTime>2.2);const before=await page.evaluate(()=>originalVideo.currentTime);await page.locator('#popoutTv').click();
+ await page.waitForFunction(()=>RETVPopout.active||!document.querySelector('.tv-popout-placeholder').hidden);
+ if(!await page.evaluate(()=>RETVPopout.active)){t.skip('Native video PiP refused by this browser environment: '+await page.locator('.tv-popout-placeholder p').textContent());return;}
+ assert.equal(await page.evaluate(()=>document.pictureInPictureElement===originalVideo&&document.contains(originalTV)&&openCalls===0),true);
+ await page.waitForFunction(position=>originalVideo.currentTime>position+.2,before);await page.evaluate(()=>document.exitPictureInPicture());await page.waitForFunction(()=>!RETVPopout.active);
+ assert.equal(await page.locator('#full').isDisabled(),false);assert.equal(await page.evaluate(()=>originalVideo.paused),false);
  }finally{await f.close();}
 });

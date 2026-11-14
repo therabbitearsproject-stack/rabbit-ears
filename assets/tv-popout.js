@@ -50,7 +50,39 @@
     if (restoreFocus) trigger.focus({preventScroll:true});
     if (!old.closed) old.close();
   }
-  function close() { restore(); }
+  const mobile = navigator.userAgentData?.mobile || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+  const nativeActive=()=>document.pictureInPictureElement===video || video.webkitPresentationMode==='picture-in-picture';
+  function syncNative(){
+    if(!mobile)return;
+    const active=nativeActive();
+    document.body.classList.toggle('tv-in-native-pip',active);
+    trigger.setAttribute('aria-pressed',String(active));
+    trigger.title=active?'Return TV':'Pop out TV';trigger.setAttribute('aria-label',trigger.title);
+    full.disabled=active;full.title=active?'Return TV to use fullscreen':'Fullscreen';
+    if(active){message.textContent='Your video is in the phone’s floating player. Keep this tab open.';placeholder.hidden=false;}
+    else placeholder.hidden=true;
+  }
+  for(const event of ['enterpictureinpicture','leavepictureinpicture','webkitpresentationmodechanged'])video.addEventListener(event,syncNative);
+  async function close(){
+    if(!nativeActive()){restore();return;}
+    try{
+      if(document.pictureInPictureElement===video && document.exitPictureInPicture)await document.exitPictureInPicture();
+      else video.webkitSetPresentationMode('inline');
+      syncNative();
+    }catch{message.textContent='Use the floating player’s return button to bring the video back.';placeholder.hidden=false;}
+  }
+  async function openNative(){
+    if(nativeActive()){await close();return;}
+    if(video.readyState<1)throw Error('Start the TV first, then tap Pop out.');
+    captionUI.closeMenu(false);
+    tv.querySelectorAll('[popover]:popover-open').forEach(p=>p.hidePopover());
+    if(typeof video.webkitSetPresentationMode==='function' && video.webkitSupportsPresentationMode?.('picture-in-picture')){
+      video.webkitSetPresentationMode('picture-in-picture');
+    }else if(document.pictureInPictureEnabled && typeof video.requestPictureInPicture==='function'){
+      await video.requestPictureInPicture();
+    }else throw Error('This browser cannot open a floating video player. Try Safari on iPhone or a supported Android browser.');
+    syncNative();
+  }
   async function open() {
     if (opening) return;
     if (floating && !floating.closed) { floating.focus(); return; }
@@ -59,6 +91,7 @@
     const pinned = !!window.documentPictureInPicture?.requestWindow;
     try {
       if (document.body.classList.contains('player-fullscreen')) throw Error('Leave fullscreen before popping out the TV.');
+      if (mobile) { await openNative(); return; }
       if (pinned) target = await window.documentPictureInPicture.requestWindow({width:640,height:600});
       else target = window.open('about:blank','rabbit-ears-tv','popup=yes,width=640,height=600,resizable=yes,scrollbars=yes');
       if (!target) throw Error('Allow pop-ups for Rabbit Ears, then try again.');
@@ -107,7 +140,8 @@
       placeholder.hidden = false;
     } finally { opening = false; }
   }
-  trigger.onclick = open; back.onclick = () => { if (floating) close(); else placeholder.hidden = true; };
-  window.RETVPopout = {open, close, get active(){return !!floating && !floating.closed;}, get document(){return floating?.document;}};
-  window.addEventListener('pagehide', () => { restoreFocus = false; close(); });
+  trigger.onclick = open; back.onclick = () => { if (floating || nativeActive()) close(); else placeholder.hidden = true; };
+  window.RETVPopout = {open, close, get active(){return nativeActive() || (!!floating && !floating.closed);}, get document(){return floating?.document;}};
+  // Backgrounding a phone must not dismiss its native floating video.
+  window.addEventListener('pagehide', () => { restoreFocus = false; if(floating)restore(); });
 })();
