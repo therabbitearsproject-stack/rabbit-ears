@@ -163,7 +163,13 @@ window.RabbitCaptions = (() => {
     new MutationObserver(resize).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     refreshIndex();
     const refreshTimer=setInterval(refreshIndex,5*60*1000);refreshTimer?.unref?.();
-    return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex };
+    function applyPreferences(values){
+      if(choices.includes(values.re_caption_style))style=values.re_caption_style;
+      else if(typeof values.re_captions==='boolean')style=values.re_captions?(style==='none'?'white':style):'none';
+      if(typeof values.re_caption_backing==='boolean'){backing=values.re_caption_backing;checkbox.checked=backing;}
+      updateAppearance();attach();
+    }
+    return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex, applyPreferences };
   }
   return { create };
 })();

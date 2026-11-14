@@ -29,7 +29,12 @@ test('native caption tracks identify English translations and clear labels when 
    const englishOnly=set({kind:'auto-generated',language:'en',sourceLanguage:'en',sourceLanguages:['en'],translated:true});
    const DisplayNames=Intl.DisplayNames;Intl.DisplayNames=undefined;
    const fallback=set({kind:'auto-generated',language:'en',sourceLanguage:'cs',translated:true});Intl.DisplayNames=DisplayNames;
-   return {translated,mixed,original,reviewed,legacy,englishOnly,fallback};
+   video.currentTime=37;const sameVideo=video;let loads=0,plays=0;video.load=()=>loads++;video.play=()=>plays++;
+   captions.applyPreferences({re_caption_style:'yellow',re_caption_backing:true});
+   const applied={color:screen.querySelector('.caption-layer').dataset.color,backing:screen.querySelector('input[type=checkbox]').checked,mode:video.querySelector('track').track.mode,time:video.currentTime};
+   captions.applyPreferences({re_captions:false});
+   const off={track:!!video.querySelector('track'),sameVideo:video===sameVideo,time:video.currentTime,loads,plays};
+   return {translated,mixed,original,reviewed,legacy,englishOnly,fallback,applied,off};
   });
   assert.deepEqual(results.translated,{srclang:'en',label:'English (auto-translated from Czech)',nativeLanguage:'en',nativeLabel:'English (auto-translated from Czech)',heading:'Auto-translated captions',style:'white'});
   assert.equal(results.mixed.label,'English (auto-translated from Czech and Japanese)');
@@ -39,6 +44,8 @@ test('native caption tracks identify English translations and clear labels when 
   assert.deepEqual(results.legacy,{label:'English',nativeLanguage:'en',heading:'Captions'});
   assert.equal(results.englishOnly.label,'English (auto-translated)');
   assert.equal(results.fallback.label,'English (auto-translated from Czech)');
+  assert.deepEqual(results.applied,{color:'yellow',backing:true,mode:'hidden',time:37});
+  assert.deepEqual(results.off,{track:false,sameVideo:true,time:37,loads:0,plays:0});
  }finally{await browser.close();}
 });
 

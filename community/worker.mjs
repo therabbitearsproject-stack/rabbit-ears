@@ -12,6 +12,20 @@ const cookie = (name, value, age = 604800) => `${name}=${value}; Path=/; HttpOnl
 function cookies(request) { return Object.fromEntries((request.headers.get('Cookie') || '').split(';').map(s => s.trim().split('=')).filter(a => a.length === 2)); }
 class HttpError extends Error { constructor(status, message) { super(message); this.status = status; } }
 const requireValue = (ok, message, status = 400) => { if (!ok) throw new HttpError(status, message); };
+export function validatePreferences(value) {
+  requireValue(value&&typeof value==='object'&&!Array.isArray(value),'Invalid preferences.');
+  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car'],re_caption_style:['none','yellow','white']};
+  const bools=new Set(['re_captions','re_caption_backing','re_tv_muted']);
+  const ranges={re_tv_volume:[0,1],re_vol:[0,1]};
+  const out={};
+  for(const [key,v] of Object.entries(value)){
+    requireValue(Object.hasOwn(enums,key)?enums[key].includes(v):bools.has(key)?typeof v==='boolean':Object.hasOwn(ranges,key)&&typeof v==='number'&&Number.isFinite(v)&&v>=ranges[key][0]&&v<=ranges[key][1],`Invalid preference: ${key.slice(0,40)}.`);
+    out[key]=v;
+  }
+  if(Object.hasOwn(out,'re_caption_style'))out.re_captions=out.re_caption_style!=='none';
+  else if(Object.hasOwn(out,'re_captions'))out.re_caption_style=out.re_captions?'white':'none';
+  return out;
+}
 export function validateEvent(body) {
   requireValue(body && CHANNELS.has(body.channel), 'Unknown broadcast channel.');
   for (const [key, max] of [['mediaId',300],['file',1000],['title',300]]) requireValue(typeof body[key] === 'string' && body[key].length > 0 && body[key].length <= max, `Invalid ${key}.`);
@@ -99,7 +113,7 @@ async function handle(request, env, ctx) {
   const url = new URL(request.url), path = url.pathname;
   if (request.method === 'OPTIONS') {
     requireValue(request.headers.get('Origin') === env.SITE_ORIGIN,'Unrecognized origin.',403);
-    return new Response(null,{ status:204, headers:{ ...headers(request,env), 'Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS', 'Access-Control-Allow-Headers':'Content-Type, X-CSRF-Token' } });
+    return new Response(null,{ status:204, headers:{ ...headers(request,env), 'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Headers':'Content-Type, X-CSRF-Token' } });
   }
   if (path === '/health') {
     const count=env.DB?await env.DB.prepare('SELECT COUNT(*) AS count FROM channels').first():{count:0};
@@ -149,7 +163,24 @@ async function handle(request, env, ctx) {
   }
   if (path === '/api/session' && request.method === 'GET') {
     const user = await session(request,env);
-    return json(request,env,{ user:user?{name:user.display_name,csrf:user.csrf,moderator:moderator(user,env)}:null });
+    return json(request,env,{ user:user?{id:user.user_id,name:user.display_name,csrf:user.csrf,moderator:moderator(user,env)}:null });
+  }
+  if(path==='/api/preferences'&&['GET','PUT'].includes(request.method)){
+    const user=request.method==='PUT'?await writeSession(request,env):await session(request,env);
+    requireValue(user,'Sign in with Discord to sync settings.',401);
+    if(request.method==='PUT'){
+      const raw=await request.text();requireValue(raw.length<=8192,'Preferences request is too large.',413);
+      let body;try{body=JSON.parse(raw);}catch{throw new HttpError(400,'Invalid preferences request.');}
+      requireValue(body&&Object.keys(body).every(k=>['version','changes'].includes(k))&&Number.isSafeInteger(body.version)&&body.version>=0,'Invalid preferences version.');
+      const changes=validatePreferences(body.changes);requireValue(Object.keys(changes).length,'No preference changes.');
+      await env.DB.prepare("INSERT OR IGNORE INTO user_preferences(user_id,version,preferences_json,updated_at) VALUES(?,0,'{}',?)").bind(user.user_id,now()).run();
+      const updated=await env.DB.prepare('UPDATE user_preferences SET preferences_json=json_patch(preferences_json,?),version=version+1,updated_at=? WHERE user_id=? AND version=? RETURNING version,preferences_json,updated_at').bind(JSON.stringify(changes),now(),user.user_id,body.version).first();
+      if(updated)return json(request,env,{schemaVersion:1,userId:user.user_id,version:updated.version,preferences:JSON.parse(updated.preferences_json),updatedAt:updated.updated_at});
+      const current=await env.DB.prepare('SELECT version,preferences_json,updated_at FROM user_preferences WHERE user_id=?').bind(user.user_id).first();
+      return json(request,env,{error:'Settings changed on another device. Merge and retry.',schemaVersion:1,userId:user.user_id,version:current.version,preferences:JSON.parse(current.preferences_json),updatedAt:current.updated_at},409);
+    }
+    const current=await env.DB.prepare('SELECT version,preferences_json,updated_at FROM user_preferences WHERE user_id=?').bind(user.user_id).first();
+    return json(request,env,{schemaVersion:1,userId:user.user_id,version:current?.version||0,preferences:current?JSON.parse(current.preferences_json):{},updatedAt:current?.updated_at||null});
   }
   if (path === '/api/logout' && request.method === 'POST') {
     const user = await writeSession(request,env);

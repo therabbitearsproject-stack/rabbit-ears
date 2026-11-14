@@ -76,6 +76,7 @@ function controls(){
   input.placeholder=!user?'Sign in with Discord to leave a comment':!c?'Comments return when the programme resumes':'What’s on your mind at '+stamp(c.position)+'?';
 }
 function renderAuth(){
+  window.dispatchEvent(new CustomEvent('re:session',{detail:user}));
   for(const target of [auth,reactionAuth]){
     target.replaceChildren();
     if(user){if(target===auth)target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;renderAuth();controls();}catch(e){message(e.message);}},'community-signout'));}
