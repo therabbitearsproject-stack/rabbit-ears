@@ -16,7 +16,7 @@ window.RabbitCaptions = (() => {
       // Existing manual, embedded and reviewed tracks are never replaced by automatic additions.
       if(baseMedia&&captionIndex&&(!baseMedia.sub||isAuto(baseMedia))){
         const record=captionIndex.get(exactKey(baseMedia));
-        if(record?.burned||baseMedia.burnedCaptions||['burned-in','embedded'].includes(baseMedia.captionMetadata?.kind))next={...baseMedia,sub:'',captionMetadata:undefined};
+        if(record?.burned||baseMedia.burnedCaptions||['burned-in','embedded'].includes(baseMedia.captionMetadata?.kind))next={...baseMedia,sub:'',burnedCaptions:true,captionMetadata:undefined};
         else if(record?.captionMetadata?.kind==='auto-generated'&&record.captionMetadata.language!=='en'&&baseMedia.captionMetadata?.language==='en'&&baseMedia.sub){/* Keep an existing English track over a foreign automatic alternative. */}
         else if(record){
           next={...baseMedia,sub:record.sub,captionMetadata:record.captionMetadata};
@@ -81,6 +81,8 @@ window.RabbitCaptions = (() => {
 
     function syncButtons() {
       const available = !!media?.sub;
+      // Read-only availability lets the desktop viewer avoid duplicate recognition.
+      video.dataset.captionAvailability = media?.burnedCaptions || ['burned-in','embedded'].includes(media?.captionMetadata?.kind) ? 'burned-in' : available ? 'provided' : media ? 'none' : 'pending';
       for (const b of [button, ...screen.querySelectorAll('[data-remote="cc"]')]) {
         b.disabled = !available;
         b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}` : 'Captions unavailable');
