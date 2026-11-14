@@ -138,6 +138,8 @@ jobs:
           cp -r assets _site/assets
           cp -r design-history _site/design-history
           cp -r problems _site/problems   # unlisted Problems dashboard
+          cp -r desktop _site/desktop
+          cp -r support _site/support
           cp -r privacy _site/privacy     # privacy policy (linked from the footer and the app stores)
           cp -r music-credits _site/music-credits # attribution for licensed bumper recordings
           cp -r app _site/app             # Android TV / Fire TV install file (unlinked; for sideloading)

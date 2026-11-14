@@ -1,0 +1,1 @@
+(() => {const skins=['pixel','retro','theatre','stadium','modern','cozy','metal','ivory','gutter'];let skin='pixel';try{skin=localStorage.getItem('re_skin')||skin;}catch{}document.body.dataset.skin=skins.includes(skin)?skin:'pixel';})();
