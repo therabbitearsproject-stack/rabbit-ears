@@ -163,3 +163,23 @@ select.audio-presets { display:block;margin:0; }
   body[data-skin] .wrap > header .settings-trigger { grid-column:2; }
   body[data-skin] .wrap > header .online { grid-column:1/-1;grid-row:2;margin-bottom:0; }
 }
+
+/* A single bank of vertical faders, like a hardware graphic equalizer. */
+.audio-eq-bank { display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;align-items:center;margin:18px 0 12px; }
+.audio-eq-scale { display:flex;flex-direction:column;justify-content:space-between;height:190px;color:var(--dim);font:10px var(--osd);text-align:right; }
+.audio-eq-scroll { min-width:0;overflow-x:auto;scrollbar-color:var(--amber) var(--bg);padding-bottom:8px; }
+.audio-bands { position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(10,minmax(36px,1fr));min-width:420px;gap:6px;padding:0 2px; }
+.audio-bands::before { content:'';position:absolute;z-index:-1;left:0;right:0;top:28px;height:190px;border-block:1px solid var(--line);background:linear-gradient(to bottom,transparent calc(50% - .5px),var(--line) calc(50% - .5px),var(--line) calc(50% + .5px),transparent calc(50% + .5px));pointer-events:none; }
+.audio-band { display:grid;grid-template-rows:20px 190px 20px;gap:8px;align-items:center;justify-items:center;font-size:11px;white-space:nowrap; }
+.audio-band input[type=range] { writing-mode:vertical-lr;direction:rtl;appearance:none;-webkit-appearance:none;width:32px;height:190px;min-height:190px;margin:0;background:transparent;cursor:ns-resize;touch-action:none; }
+.audio-band input[type=range]::-webkit-slider-runnable-track { width:5px;height:100%;background:var(--line);border-radius:2px;box-shadow:inset 0 0 2px #0008; }
+.audio-band input[type=range]::-webkit-slider-thumb { appearance:none;-webkit-appearance:none;width:24px;height:10px;margin-left:-9.5px;border:1px solid var(--ink);border-radius:2px;background:var(--amber);box-shadow:0 2px 3px #0007; }
+.audio-band input[type=range]::-moz-range-track { width:5px;height:100%;background:var(--line);border-radius:2px; }
+.audio-band input[type=range]::-moz-range-thumb { width:22px;height:8px;border:1px solid var(--ink);border-radius:2px;background:var(--amber);box-shadow:0 2px 3px #0007; }
+.audio-band input[type=range]:disabled { opacity:.4;cursor:default; }
+.audio-band input[type=range]:focus-visible { outline:2px solid var(--amber);outline-offset:3px; }
+.audio-band output { font-size:11px; }
+.audio-eq-flat { min-height:36px;padding:6px 16px;font-size:12px; }
+@media(max-width:640px) { .audio-eq-bank { gap:6px;grid-template-columns:32px minmax(0,1fr); } }
+
+.audio-eq-scale span { white-space:nowrap; }

@@ -343,3 +343,5 @@ Compact header and Settings — November 14, 2026
 - Validation: 36 responsive header cases keep logo dimensions unchanged; two full-app Settings tests, five real captured-audio runtime tests, three account-preference browser tests, 30 backend tests and 128 general site checks pass. CORS transport failure restores native sound without triggering a channel retune; pausing during the access check never resumes playback.
 
 Header alignment follow-up — November 14, 2026: restored the original changing description in the middle on desktop, along the header rule. Lowered the viewer count and settings gear together and aligned their centers. Logo dimensions and compact header height stay unchanged; narrow screens retain their compact layout.
+
+Graphic equalizer — November 14, 2026: replaced horizontal sliders with one ten-band bank of vertical faders, shared +12/0/−12 dB guide marks, gain/frequency labels, and a Flat reset. Phones scroll the same bank horizontally instead of splitting it into rows. Existing DSP and saved audio profiles are unchanged.
