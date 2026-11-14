@@ -3,10 +3,10 @@
 body[data-radio-look=winamp] #radioView{
   --amp-shell:#424754;--amp-edge:#89929f;--amp-dark:#11161a;--amp-ink:#e1e7ea;
   --amp-green:#c3f879;--amp-dim:#a2b7a2;
-  width:min(1100px,100%);margin-inline:auto;gap:16px;
+  width:min(900px,100%);margin-inline:auto;gap:16px;
 }
-body[data-radio-look=winamp] #radioView:not([hidden]){display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start}
-body[data-radio-look=winamp] .radio-appearance{grid-column:1/-1}
+body[data-radio-look=winamp] #radioView:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr);align-items:start}
+body[data-radio-look=winamp] .radio-appearance{grid-column:1;grid-row:2}
 body[data-radio-look=winamp] #radioView .radio-set,
 body[data-radio-look=winamp] #radioView>.guide{
   border:2px solid #89929f;border-right-color:#141820;border-bottom-color:#141820;
@@ -14,8 +14,8 @@ body[data-radio-look=winamp] #radioView>.guide{
   box-shadow:inset 1px 1px #bbc3ca,inset -1px -1px #202630,5px 6px 0 #080d1355;
   min-width:0;padding:12px;
 }
-body[data-radio-look=winamp] #radioView .radio-set{grid-column:1;display:grid;grid-template-columns:minmax(110px,.36fr) minmax(0,.64fr);gap:10px}
-body[data-radio-look=winamp] #radioView>.guide{grid-column:2;padding-top:10px}
+body[data-radio-look=winamp] #radioView .radio-set{grid-column:1;grid-row:1;display:grid;grid-template-columns:minmax(110px,.36fr) minmax(0,.64fr);gap:10px}
+body[data-radio-look=winamp] #radioView>.guide{grid-column:1;grid-row:3;padding-top:10px}
 body[data-radio-look=winamp] .amp-titlebar{
   display:flex;align-items:center;gap:9px;grid-column:1/-1;padding:5px 4px 9px;
   color:#f0ebd5;font:700 11px/1.4 'Courier New',monospace;letter-spacing:1.5px;
@@ -86,10 +86,6 @@ body[data-radio-look=winamp] #radioView .station .tg{font:10px/1.5 'Courier New'
 body[data-radio-look=winamp] #radioView .station .fav{color:#8ea67e;border-radius:0;font-size:18px;padding:8px;min-height:38px}
 body[data-radio-look=winamp] #radioView .station .fav.on{color:#ffcf78}
 body[data-radio-look=winamp] #radioView :focus-visible{outline:2px solid #dcff9c;outline-offset:3px}
-@media(max-width:900px){
-  body[data-radio-look=winamp] #radioView:not([hidden]){grid-template-columns:minmax(0,1fr);max-width:720px}
-  body[data-radio-look=winamp] #radioView>.guide{grid-column:1}
-}
 @media(max-width:500px){
   body[data-radio-look=winamp] #radioView .radio-set{grid-template-columns:minmax(0,1fr);padding:10px;gap:9px}
   body[data-radio-look=winamp] #radioView .vfd{grid-column:1;grid-row:2;min-height:126px}

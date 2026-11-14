@@ -26,10 +26,10 @@ test('Winamp Deck preserves live audio, real transport/clock/volume and saved ap
   for(const name of ['Vinyl deck','Car stereo','Winamp Deck'])await page.getByRole('button',{name,exact:true}).click();
   assert.deepEqual(await page.evaluate(()=>({same:originalRadio===audio,src:audio.currentSrc===originalRadioSource,paused:audio.paused,loads:radioLoads,plays:radioPlays})),{same:true,src:true,paused:false,loads:0,plays:0});
   await page.evaluate(()=>{const input=document.getElementById('rVol');input.value='.35';input.dispatchEvent(new Event('input',{bubbles:true}));});assert.equal(await page.evaluate(()=>audio.volume),.35);
-  for(const skin of ['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'])for(const width of [320,390,768,1440]){
+  for(const skin of ['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'])for(const width of [320,390,768,1440,1920,2560]){
    await page.evaluate(s=>REUI.applyPreferences({re_skin:s}),skin);await page.setViewportSize({width,height:1000});
-   const metrics=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,main:getComputedStyle(document.querySelector('.amp-titlebar')).display,visible:document.querySelector('.amp-clock-panel').getBoundingClientRect().width>0}));
-   assert.equal(metrics.overflow,false,skin+' '+width);assert.equal(metrics.visible,true);assert.notEqual(metrics.main,'none');
+   const metrics=await page.evaluate(()=>{const box=s=>document.querySelector(s).getBoundingClientRect();return {overflow:document.documentElement.scrollWidth>innerWidth+1,main:getComputedStyle(document.querySelector('.amp-titlebar')).display,visible:box('.amp-clock-panel').width>0,playerFirst:box('#radioView .radio-set').bottom<=box('.radio-appearance').top&&box('.radio-appearance').bottom<=box('#radioView>.guide').top};});
+   assert.equal(metrics.overflow,false,skin+' '+width);assert.equal(metrics.visible,true);assert.notEqual(metrics.main,'none');assert.equal(metrics.playerFirst,true,skin+' '+width+' player above settings and stations');
   }
   await page.locator('#rPlay').click();await page.waitForFunction(()=>audio.paused&&/Play/.test(document.getElementById('rPlay').textContent));
   await page.reload();await page.waitForFunction(()=>!!window.REUI);assert.equal(await page.locator('body').getAttribute('data-radio-look'),'winamp');assert.equal(await page.locator('.radio-appearance [data-radio-look=winamp]').getAttribute('aria-pressed'),'true');
