@@ -11,7 +11,7 @@ function reactionIcon(emoji){const r=reactionMap.get(emoji);if(!r)return documen
 const button = (text, fn, cls='btn') => {const b=el('button',cls,text);b.type='button';b.addEventListener('click',fn);return b;};
 const stamp = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
 const hash = async s => [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join('');
-let user=null, ready=false, room=null, pendingRoom='', generation=0, events=[], markers=[], cursor=null, seen=new Set(), posting=false, pollAt=0, markerAt=0, inflight=false;
+let user=null, authKnown=false, ready=false, room=null, pendingRoom='', generation=0, events=[], markers=[], cursor=null, seen=new Set(), posting=false, pollAt=0, markerAt=0, inflight=false;
 let replays=true; try {replays=localStorage.getItem('re_replays')!=='false';} catch {}
 const panel=el('div','watch-popover comment-popover');panel.id='comment-popover';panel.setAttribute('popover','auto');panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Quick comment');
 const heading=el('div','popover-heading');heading.append(el('h3','','Leave a comment'),button('×',()=>closePopover(panel),'popover-close'));heading.lastChild.setAttribute('aria-label','Close comment');
@@ -66,7 +66,7 @@ async function call(path,options={}){
   try{
     const response=await fetch(api+path,{credentials:'include',...options,headers:{...(options.body?{'Content-Type':'application/json'}:{}),...(user?{'X-CSRF-Token':user.csrf}:{}),...options.headers},signal:controller.signal});
     let data;try{data=await response.json();}catch{throw Error('The watch party is temporarily unavailable.');}
-    if(!response.ok){if(response.status===401){user=null;renderAuth();controls();}throw Error(data.error||'Please try again in a moment.');}return data;
+    if(!response.ok){if(response.status===401){user=null;authKnown=true;renderAuth(true);controls();}throw Error(data.error||'Please try again in a moment.');}return data;
   }finally{clearTimeout(timeout);}
 }
 function controls(){
@@ -84,11 +84,11 @@ function renderPreferenceStatus(){
   if(status.textContent!==text)status.textContent=text;
 }
 window.addEventListener('re:preferences-status',e=>{preferenceState=e.detail?.state||'loading';renderPreferenceStatus();});
-function renderAuth(){
-  window.dispatchEvent(new CustomEvent('re:session',{detail:user}));
+function renderAuth(publishSession=false){
+  if(publishSession&&authKnown)window.dispatchEvent(new CustomEvent('re:session',{detail:user}));
   for(const target of [auth,reactionAuth]){
     target.replaceChildren();
-    if(user){if(target===auth){const settings=el('small','community-preferences-status');settings.setAttribute('role','status');settings.setAttribute('aria-live','polite');target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;renderAuth();controls();}catch(e){message(e.message);}},'community-signout'),settings);}}
+    if(user){if(target===auth){const settings=el('small','community-preferences-status');settings.setAttribute('role','status');settings.setAttribute('aria-live','polite');target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;authKnown=true;renderAuth(true);controls();}catch(e){message(e.message);}},'community-signout'),settings);}}
     else {const login=el('a','btn discord-signin','Sign in & join Discord');login.href=api+'/auth/discord?channel='+(context()?.channel||97);login.addEventListener('click',()=>{login.href=api+'/auth/discord?channel='+(context()?.channel||97);});target.append(login,el('small','community-disclosure','Signing in also joins the Rabbit Ears Discord server.'));}
   }
   renderPreferenceStatus();
@@ -164,7 +164,7 @@ video.addEventListener('timeupdate',()=>{
   cursor=c.position;paintList();
 });
 async function connect(){
-  try{const health=await call('/health');if(!health.configured)throw Error('Not connected yet');const data=await call('/api/session');user=data.user;ready=true;renderAuth();message(user?'You’re watching as '+user.name+'.':'Watching is open to everyone. Sign in to join in.');controls();}
+  try{const health=await call('/health');if(!health.configured)throw Error('Not connected yet');const data=await call('/api/session');user=data.user;authKnown=true;ready=true;renderAuth(true);message(user?'You’re watching as '+user.name+'.':'Watching is open to everyone. Sign in to join in.');controls();}
   catch{ready=false;message('The Discord watch party is being connected. TV, radio and games work as usual.');renderAuth();controls();}
 }
 setInterval(()=>{
