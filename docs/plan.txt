@@ -321,3 +321,6 @@ Changed Winamp Deck to a single vertical stack at every window width: player fir
 
 2026-11-13 — Radio appearance choices beside the navigation
 Moved Vinyl deck / Car stereo / Winamp Deck out of the player/library stack into a shared navigation row, right aligned beside TV Guide / Radio / Games on desktop. On phones they occupy a full-width row directly below the main tabs, above the player. The radio appearance group is visible only in Radio and remains outside the tablist for accessibility. Player remains above stations. All 54 skin/viewport checks pass, including desktop alignment, phone overflow, saved selection and uninterrupted audio.
+
+2026-11-13 — One TV Guide control on channel pages
+Removed the separate back-to-guide button above the TV. The main TV Guide tab now shows a back arrow and accessible Back to TV guide label on channel views, and restores its TV icon on the guide or other sections. Returning to the guide preserves the video node and existing scroll/focus behavior. Real Chrome navigation checks passed at320/1440px, including channel-to-guide and Radio-to-guide transitions.

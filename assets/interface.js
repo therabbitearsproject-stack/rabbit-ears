@@ -66,7 +66,6 @@
     else{copy.append(eyebrow,landingStation,landingTitle,landingNext,watch,archiveSupport);portraitChannel.remove();}
   }
   phonePortrait.addEventListener('change',placeChannelActions);placeChannelActions();
-  const guideBack=button('TV guide',showGuide,'btn guide-back');guideBack.innerHTML=icon('back')+'<span>TV guide</span>';pack.prepend(guideBack);
   const badge=make('div','playing-station');details.prepend(badge);
   const channelSchedule=make('section','channel-schedule');channelSchedule.setAttribute('aria-label','Selected channel schedule');
   const scheduleHeading=make('h3'),scheduleList=make('ol','channel-schedule-list'),scheduleStatus=make('p','schedule-status');
@@ -112,9 +111,14 @@
     rail.querySelectorAll('.rail-channel').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===cur)));
     if(changed){reveal();updateSchedule();}
   }
+  function syncGuideNavigation(){
+    const back=mode==='tv'&&body.dataset.tvPage==='channel',tab=$('tabTv');
+    if(tab.dataset.guideBack!==String(back)){tab.innerHTML=icon(back?'back':'tv')+'<span class="nav-name">TV guide</span>';tab.dataset.guideBack=String(back);}
+    tab.setAttribute('aria-label',back?'Back to TV guide':'TV guide');tab.title=back?'Back to TV guide':'TV guide';
+  }
   function showChannel(){
     if(body.dataset.tvPage==='guide'){guideScroll=window.scrollY;guideFocus=document.activeElement?.closest('.chan');}
-    const entering=body.dataset.tvPage!=='channel';body.dataset.tvPage='channel';if(entering)updateSchedule();
+    const entering=body.dataset.tvPage!=='channel';body.dataset.tvPage='channel';syncGuideNavigation();if(entering)updateSchedule();
   }
   function openChannel(i){
     const was=mode,next=((i%channels().length)+channels().length)%channels().length;
@@ -126,6 +130,7 @@
   function showGuide(){
     if(full)exitFull();body.dataset.tvPage='guide';
     history.replaceState(null,'','#tv');if(mode!=='tv')setMode('tv');
+    syncGuideNavigation();
     requestAnimationFrame(()=>{window.scrollTo(0,guideScroll);guideFocus?.focus({preventScroll:true});});
   }
   $('tabTv').addEventListener('click',e=>{e.preventDefault();showGuide();});
@@ -134,6 +139,7 @@
     body.dataset.mode=mode;if(mode!=='tv'&&full)exitFull();
     if(mode==='tv')body.dataset.tvPage=/^#ch\d+$/.test(location.hash)?'channel':'guide';
     if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();
+    syncGuideNavigation();
   }
   function dialog(label){const d=make('dialog','interface-dialog');d.setAttribute('aria-label',label);const close=button('Close',()=>d.close(),'btn dialog-close');close.innerHTML=icon('close');close.title='Close';close.setAttribute('aria-label','Close');d.append(close);d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});d.addEventListener('close',()=>dialogOpener?.focus());body.append(d);return d;}
   function openDialog(d){dialogOpener=document.activeElement;d.showModal();}
