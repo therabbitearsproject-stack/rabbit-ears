@@ -318,3 +318,6 @@ Added Winamp Deck alongside Vinyl deck and Car stereo. It uses separate beveled 
 
 2026-11-13 — Radio player stays above the library on wide screens
 Changed Winamp Deck to a single vertical stack at every window width: player first, appearance choices second, stations/search/genres below. The 900px-wide centered module stack stays consistent on maximized desktops instead of placing stations beside the player. Real Chrome checks passed in all nine skins at 320, 390, 768, 1440, 1920 and 2560px, preserving stream playback, controls and saved appearance. Updated review screenshots are in design-history/winamp-radio.
+
+2026-11-13 — Radio appearance choices beside the navigation
+Moved Vinyl deck / Car stereo / Winamp Deck out of the player/library stack into a shared navigation row, right aligned beside TV Guide / Radio / Games on desktop. On phones they occupy a full-width row directly below the main tabs, above the player. The radio appearance group is visible only in Radio and remains outside the tablist for accessibility. Player remains above stations. All 54 skin/viewport checks pass, including desktop alignment, phone overflow, saved selection and uninterrupted audio.

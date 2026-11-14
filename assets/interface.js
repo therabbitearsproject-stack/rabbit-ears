@@ -245,7 +245,8 @@
   const platter=make('div','vinyl-platter');platter.setAttribute('aria-hidden','true');platter.innerHTML='<span class="record-label">RE<br><small>33⅓ / LIVE RADIO</small></span><i class="tonearm"></i>';radioSet.prepend(platter);
   const radioAppearance=make('div','radio-appearance');radioAppearance.setAttribute('role','group');radioAppearance.setAttribute('aria-label','Radio appearance');
   for(const [look,label] of [['vinyl','Vinyl deck'],['car','Car stereo'],['winamp','Winamp Deck']]){const b=button(label,()=>{radioLook=look;body.dataset.radioLook=look;store.set('re_radio_look',look);radioAppearance.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));});b.dataset.radioLook=look;b.setAttribute('aria-pressed',String(body.dataset.radioLook===look));radioAppearance.append(b);}
-  $('radioView').prepend(radioAppearance);
+  const navigation=document.querySelector('.tabs'),navigationRow=make('div','navigation-row');
+  navigation.before(navigationRow);navigationRow.append(navigation,radioAppearance);
   const stereoBadge=make('span','stereo-badge','RE AUDIO / FM STEREO');radioSet.append(stereoBadge);
   audio.addEventListener('playing',()=>body.classList.add('radio-playing'));audio.addEventListener('pause',()=>body.classList.remove('radio-playing'));
   document.addEventListener('keydown',e=>{
