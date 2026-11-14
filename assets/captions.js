@@ -81,7 +81,7 @@ window.RabbitCaptions = (() => {
 
     function syncButtons() {
       const available = !!media?.sub;
-      for (const b of [button, ...document.querySelectorAll('[data-remote="cc"]')]) {
+      for (const b of [button, ...screen.querySelectorAll('[data-remote="cc"]')]) {
         b.disabled = !available;
         b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}` : 'Captions unavailable');
         b.title = available ? 'Caption options (C)' : 'No captions for this show';
@@ -138,7 +138,7 @@ window.RabbitCaptions = (() => {
     function toggleMenu() {
       if (!media?.sub) return;
       if (!menu.hidden) { closeMenu(); return; }
-      opener = document.activeElement?.matches('#cc,[data-remote="cc"]') ? document.activeElement : button;
+      opener = menu.ownerDocument.activeElement?.matches('#cc,[data-remote="cc"]') ? menu.ownerDocument.activeElement : button;
       menu.hidden = false; syncButtons(); radios[choices.indexOf(style)].focus({ preventScroll: true });
       screen.dispatchEvent(new Event('captionmenuopen'));
     }
@@ -152,7 +152,7 @@ window.RabbitCaptions = (() => {
       if (next !== undefined) { e.preventDefault(); e.stopPropagation(); setStyle(choices[next]); radios[next].focus(); }
     });
     document.addEventListener('pointerdown', e => { if (!menu.hidden && !menu.contains(e.target) && !e.target.closest('#cc,[data-remote="cc"]')) closeMenu(false); });
-    menu.addEventListener('focusout', () => setTimeout(() => { if (!menu.hidden && !menu.contains(document.activeElement)) closeMenu(false); }));
+    menu.addEventListener('focusout', () => setTimeout(() => { if (!menu.hidden && !menu.contains(menu.ownerDocument.activeElement)) closeMenu(false); }));
     for (const event of ['loadedmetadata', 'resize']) video.addEventListener(event, resize);
     for (const event of ['timeupdate', 'seeked', 'loadeddata']) video.addEventListener(event, render);
     video.addEventListener('seeking', clear); video.addEventListener('emptied', clear);

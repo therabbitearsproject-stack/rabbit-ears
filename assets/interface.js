@@ -128,6 +128,7 @@
     window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
   function showGuide(){
+    window.RETVPopout?.close();
     if(full)exitFull();body.dataset.tvPage='guide';
     history.replaceState(null,'','#tv');if(mode!=='tv')setMode('tv');
     syncGuideNavigation();

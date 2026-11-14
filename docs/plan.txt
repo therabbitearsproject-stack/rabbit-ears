@@ -324,3 +324,11 @@ Moved Vinyl deck / Car stereo / Winamp Deck out of the player/library stack into
 
 2026-11-13 — One TV Guide control on channel pages
 Removed the separate back-to-guide button above the TV. The main TV Guide tab now shows a back arrow and accessible Back to TV guide label on channel views, and restores its TV icon on the guide or other sections. Returning to the guide preserves the video node and existing scroll/focus behavior. Real Chrome navigation checks passed at320/1440px, including channel-to-guide and Radio-to-guide transitions.
+
+
+TV pop-out — November 14, 2026
+- Added Pop out TV to the channel remote. Supported browsers use Document Picture-in-Picture for an always-on-top, movable, resizable TV with the selected theme and actual bezel.
+- Other browsers open a separate TV window; ordinary windows cannot be pinned by the site. Popup blockers show a clear retry instruction. Keep the original Rabbit Ears tab open.
+- Moves the original TV/video and controls, rather than creating another stream or schedule. Restores time and playing state if cross-window adoption resets browser media state. Return TV or closing the window restores the original player. Leaving TV mode also returns it first. Fullscreen becomes available again after returning.
+- Captions, volume, reactions and comment menus use their current window for focus, visibility and placement. Theme changes sync to the floating TV.
+- Validation: six actual Chrome tests cover native Document Picture-in-Picture, fallback, denied access, real playing and paused MP4 continuity, original node/time/volume preservation, controls, copied theme CSS and close/return lifecycle. Caption language/hot-refresh regression checks and all 128 non-browser site tests pass.

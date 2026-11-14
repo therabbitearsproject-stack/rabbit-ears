@@ -1,0 +1,13 @@
+.tv-popout-placeholder {padding:24px;border:1px solid var(--line);background:var(--panel);margin:16px 0;color:var(--ink)}
+.tv-popout-placeholder[hidden] {display:none}
+body.tv-popout-window {margin:0;padding:10px;min-width:240px;min-height:100vh;box-sizing:border-box}
+body.tv-popout-window .popout-toolbar {display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font:12px var(--osd);color:var(--ink)}
+body.tv-popout-window .popout-toolbar .btn {padding:6px 10px;min-height:32px;font-size:12px}
+body.tv-popout-window #tvView {display:block!important;margin:0;padding:0;width:100%;max-width:none}
+body.tv-popout-window #tvView .tv-hero {display:block!important;margin:0;padding:0}
+body.tv-popout-window #tvView .player-pack {display:block!important;width:100%;min-width:0}
+body.tv-popout-window #tvView :is(.landing-copy,.channel-rail,.guide,.portrait-channel-actions,.channel-schedule,.now) {display:none!important}
+body.tv-popout-window #tvView .cabinet {width:100%;box-sizing:border-box;margin:0}
+body.tv-popout-window #tvView .remote {display:flex!important;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:8px;box-sizing:border-box}
+body.tv-popout-window #tvView .remote>.btn {min-width:32px;min-height:32px;padding:6px}
+body.tv-popout-window #popoutTv {display:none}
