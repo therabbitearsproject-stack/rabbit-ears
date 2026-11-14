@@ -153,19 +153,7 @@
     const {state,signedIn}=e.detail||{};settingsAccount.hidden=!!signedIn;
     saveStatus.textContent=!signedIn?'Saved on this browser. Sign in with Discord to sync across devices.':({synced:'Settings synced with your Discord account.',saving:'Saving your settings…',merging:'Syncing your latest settings…',offline:'Saved on this browser. Account sync will retry when connected.'}[state]||'Loading your account settings…');
   });
-  const settingsTabs=make('div','settings-tabs');settingsTabs.setAttribute('role','tablist');settingsTabs.setAttribute('aria-label','Settings sections');
-  const themeSection=make('section','settings-section'),audioSection=make('section','settings-section');
-  const settingSections=[['Theme',themeSection],['Audio',audioSection]];
-  function selectSettingsTab(index){settingSections.forEach(([,section],i)=>{section.hidden=i!==index;const tab=settingsTabs.children[i];tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;});}
-  settingSections.forEach(([name,section],i)=>{
-    const tab=button(name,()=>selectSettingsTab(i));tab.id='settingsTab'+name;tab.setAttribute('role','tab');tab.setAttribute('aria-controls','settingsSection'+name);
-    section.id='settingsSection'+name;section.setAttribute('role','tabpanel');section.setAttribute('aria-labelledby',tab.id);
-    settingsTabs.append(tab);
-    tab.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const index=e.key==='Home'?0:e.key==='End'?1:1-i;selectSettingsTab(index);settingsTabs.children[index].focus();});
-  });
-  skinDialog.append(settingsTabs,themeSection,audioSection);selectSettingsTab(0);
-  themeSection.append(make('p','dialog-intro','Choose your TV and room. Your channel keeps playing.'));
-  const audioSettings=window.RabbitAudioSettings?.create({container:audioSection,store,video:vid,radio:audio});window.reAudio=audioSettings;
+  const themeSection=make('section','settings-section');themeSection.id='settingsSectionTheme';themeSection.append(make('h3','','Theme'),make('p','dialog-intro','Choose your TV and room. Your channel keeps playing.'));skinDialog.append(themeSection);
   const skinGrid=make('div','skin-options');
   for(const [key,name,desc,col] of skins){const b=button('',()=>{
     body.dataset.skin=key;store.set('re_skin',key);syncSkin();skinGrid.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));
@@ -256,7 +244,7 @@
   function refreshSymbols(){for(const [id,[base,label]] of Object.entries(symbols)){
     const b=$(id);if(!b)continue;let name=base, accessible=b.getAttribute('aria-label')||label;
     if(id==='pause'){name=held?'play':'pause';accessible=held?'Play':'Pause';}
-    if(id==='mute'){name=tvMuted()?'mute':'sound';accessible='Volume';}
+    if(id==='mute'){name=vid.muted?'mute':'sound';accessible='Volume';}
     if(id==='share'||id==='gShare'){if(/copied/i.test(b.textContent))accessible='Link copied';}
     const markup=icon(name)+(id==='back'||id==='fwd'?'<small>15</small>':'');
     if(!b.querySelector('svg')||b.dataset.icon!==name){b.innerHTML=markup;b.dataset.icon=name;}
@@ -297,7 +285,6 @@
       radioAppearance.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.radioLook===radioLook)));
     }
     captionUI.applyPreferences?.(prefs);
-    audioSettings?.applyPreferences(prefs);
     if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
     if(typeof prefs.re_tv_muted==='boolean')setMuted(prefs.re_tv_muted);
     if(typeof prefs.re_vol==='number'&&Number.isFinite(prefs.re_vol)){audio.volume=Math.max(0,Math.min(1,prefs.re_vol));$('rVol').value=String(audio.volume);}
