@@ -2,12 +2,22 @@
    The DSP model/graph/worklet are adapted from the MIT-licensed desktop app. */
 window.RabbitAudioSettings = (() => {
   const workletURL=new URL('audio-worklet.js',document.currentScript.src).href;
+  function archiveTransport(value){
+    let url;try{url=new URL(value);}catch{return null;}
+    if(url.protocol!=='https:'||url.hostname!=='archive.org'||url.username||url.password||url.port)return null;
+    const match=/^\/(download|cors)\/([A-Za-z0-9][A-Za-z0-9._-]*)\/(.+)$/.exec(url.pathname);
+    if(!match)return null;
+    try{if(match[3].split('/').some(part=>{const decoded=decodeURIComponent(part);return !decoded||decoded==='.'||decoded==='..'||/[\\/\x00-\x1f]/.test(decoded);}))return null;}catch{return null;}
+    const suffix=match[2]+'/'+match[3]+url.search;
+    return{canonical:'https://archive.org/download/'+suffix,cors:'https://archive.org/cors/'+suffix};
+  }
+  const canonical=value=>archiveTransport(value)?.canonical||value;
   function create({container, store, video, radio}) {
     const model=window.RabbitAudioModel;
     let settings=model.settings(store.get('re_audio',model.defaults()));
     let desiredMuted=video.muted, graph=null, context=null, stream=null, output=null;
     let generation=0, pending=false, ownReload=false, ownCors=false, nativeOnly=false;
-    let failedSource='', workletReady=false, internalMute=false, lastStatus='';
+    let failedSource='', workletReady=false, internalMute=false, lastStatus='', nativeSource='', bridgeAlias=null;
     let reloadErrorHandler=null;
     const originalCors=video.getAttribute('crossorigin'), controls=[], cleanups=[];
     const make=(tag,cls,text)=>Object.assign(document.createElement(tag),{className:cls||'',textContent:text||''});
@@ -31,11 +41,13 @@ window.RabbitAudioSettings = (() => {
     function prepareSource(){
       if(reloadErrorHandler&&video.onerror===reloadErrorHandler.wrapper)video.onerror=reloadErrorHandler.previous;
       reloadErrorHandler=null;
-      generation++;pending=false;ownReload=false;failedSource='';
+      generation++;pending=false;ownReload=false;failedSource='';nativeSource='';bridgeAlias=null;
       stop(model.active(settings)?'Preparing this channel’s audio…':'Original sound');resetCors();
     }
     function source(){return video.currentSrc||video.src||'';}
-    function still(token,url){return token===generation&&url===source()&&model.active(settings)&&!nativeOnly;}
+    function sourceIdentity(value){return bridgeAlias&&value===bridgeAlias.url?bridgeAlias.canonical:canonical(value);}
+    function sourceMatches(expected){return sourceIdentity(source())===sourceIdentity(expected);}
+    function still(token,url){return token===generation&&sourceMatches(url)&&model.active(settings)&&!nativeOnly;}
     function metadata(){return new Promise((resolve,reject)=>{
       let timer;
       function done(error){clearTimeout(timer);video.removeEventListener('loadedmetadata',ready);video.removeEventListener('error',errorEvent);error?reject(error):resolve();}
@@ -43,14 +55,23 @@ window.RabbitAudioSettings = (() => {
       video.addEventListener('loadedmetadata',ready,{once:true});video.addEventListener('error',errorEvent,{once:true});
       timer=setTimeout(()=>done(Error('The channel took too long to reconnect.')),15000);video.load();
     });}
-    async function reloadAt(url,time,paused,cors,token){
+    function seekTo(time){return new Promise((resolve,reject)=>{
+      let timer;
+      const check=()=>{if(!video.seeking&&video.readyState>=2)done();},failed=()=>done(Error('The audio connection could not seek safely.'));
+      function done(error){clearTimeout(timer);video.removeEventListener('seeked',check);video.removeEventListener('loadeddata',check);video.removeEventListener('error',failed);error?reject(error):resolve();}
+      video.addEventListener('seeked',check);video.addEventListener('loadeddata',check);video.addEventListener('error',failed);
+      timer=setTimeout(()=>done(Error('This audio connection is too slow to seek.')),12000);
+      video.currentTime=time;check();
+    });}
+    async function reloadAt(url,time,paused,cors,token,transport=url){
       ownReload=true;
       const suppressed={previous:video.onerror,wrapper:()=>{}};
       reloadErrorHandler=suppressed;video.onerror=suppressed.wrapper;
       if(cors){video.crossOrigin='anonymous';ownCors=originalCors!=='anonymous';}else resetCors();
-      try{await metadata();if(token!==generation||url!==source())return false;
-        if(Number.isFinite(time))video.currentTime=Math.min(time,Number.isFinite(video.duration)?Math.max(0,video.duration-.01):time);
-        if(!paused)await video.play().catch(()=>{});
+      if(source()!==transport)video.src=transport;
+      try{await metadata();if(token!==generation||!sourceMatches(url))return false;
+        if(Number.isFinite(time))await seekTo(Math.min(time,Number.isFinite(video.duration)?Math.max(0,video.duration-.01):time));
+        if(!paused)await Promise.race([video.play(),new Promise((_,reject)=>setTimeout(()=>reject(Error('The channel did not resume.')),5000))]);
         return true;
       }finally{
         if(video.onerror===suppressed.wrapper)video.onerror=suppressed.previous;
@@ -73,21 +94,46 @@ window.RabbitAudioSettings = (() => {
       const capture=video.captureStream||video.mozCaptureStream;
       if(!capture||!window.AudioWorkletNode){report('Original sound — this browser does not support these TV effects.');return;}
       pending=true;const token=generation;let time=video.currentTime,paused=video.paused;
+      const archive=archiveTransport(sourceIdentity(url));let transport=url,nextAlias=null;
       let reloaded=false;
       try{
         const ctx=ensureContext();
         if(!ctx.audioWorklet)throw Error('This browser does not support the audio worklet.');
-        const response=await fetch(url,{method:'HEAD',mode:'cors',credentials:'omit',signal:AbortSignal.timeout(10000)});
+        if(archive){
+          const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(archive.canonical));
+          const key=[...new Uint8Array(bytes)].map(x=>x.toString(16).padStart(2,'0')).join('');
+          const api=(window.RABBIT_COMMUNITY?.api||'https://community.rabbit-ears.stream').replace(/\/$/,'');
+          transport=api+'/media/'+key;nextAlias={url:transport,canonical:archive.canonical};
+          if(!still(token,url))return;
+        }
+        report('Preparing this video’s audio connection…');
+        // A one-byte bridge request tests the actual seekable GET transport.
+        // Archive's HEAD route can time out independently of working media ranges.
+        let response;
+        for(let attempt=0;attempt<(archive?2:1);attempt++){
+          try{response=await fetch(transport,{method:archive?'GET':'HEAD',...(archive?{headers:{Range:'bytes=0-0'}}:{}),mode:'cors',credentials:'omit',signal:AbortSignal.timeout(20000)});}
+          catch(error){if(!archive||attempt>0)throw error;}
+          if(archive)await response?.body?.cancel();
+          if(response&&(!archive||response.status<500||attempt>0))break;
+          if(!still(token,url))return;
+          report('Still preparing audio — original sound continues.');
+          await new Promise(resolve=>setTimeout(resolve,400));
+        }
+        if(archive&&response.status===404)throw Error('Audio effects are not ready for this video yet.');
+        if(archive&&response.status>=500)throw Error('This video’s audio connection is temporarily unavailable.');
         if(!response.ok||response.type==='opaque')throw Error('This channel does not allow audio effects.');
+        if(archive&&(response.status!==206||!/^bytes 0-0\/[1-9]\d*$/.test(response.headers.get('content-range')||'')))throw Error('This video’s audio connection cannot seek safely.');
         if(!still(token,url))return;
         if(video.paused){report('Effects will start when the TV plays.');return;}
-        if(video.crossOrigin!=='anonymous'){
+        if(video.crossOrigin!=='anonymous'||source()!==transport){
           // HEAD can take several seconds. Respect playback/seek/pause changes
           // made during that check instead of restoring its stale starting state.
           time=video.currentTime;paused=video.paused;
           report('Reconnecting the channel for optional audio effects…');
           reloaded=true;
-          if(!await reloadAt(url,time,paused,true,token)||!still(token,url))return;
+          nativeSource=nativeSource||sourceIdentity(url);
+          if(nextAlias)bridgeAlias=nextAlias;
+          if(!await reloadAt(url,time,paused,true,token,transport)||!still(token,url))return;
         }
         if(!workletReady){await ctx.audioWorklet.addModule(workletURL);workletReady=true;}
         if(!still(token,url))return;
@@ -110,10 +156,10 @@ window.RabbitAudioSettings = (() => {
         report('TV audio effects are on. Radio remains original.');
       }catch(error){
         if(token!==generation)return;
-        stop('Original sound — '+(error.message||'Audio effects are unavailable.'));failedSource=url;
+        stop('Original sound — '+(error instanceof TypeError?'This channel’s audio connection could not be prepared.':error.message||'Audio effects are unavailable.'));failedSource=url;
         // A successful HEAD is not a guarantee for the real GET/Range response.
         // Undo our CORS transport and reload native playback before giving up.
-        if(reloaded&&ownCors){try{await reloadAt(url,time,paused,false,token);}catch{report('Original sound restored. Use the player to retry this channel.');}}
+        if(reloaded&&ownCors){try{await reloadAt(url,time,paused,false,token,nativeSource||url);}catch{report('Original sound restored. Use the player to retry this channel.');}}
       }finally{if(token===generation)pending=false;}
     }
     function update(){
@@ -181,7 +227,7 @@ window.RabbitAudioSettings = (() => {
     function destroy(){generation++;stop();clearInterval(meter);cleanups.forEach(fn=>fn());context?.close().catch(()=>{});}
     listen(window,'pagehide',destroy);
     render();report('Original sound');if(model.active(settings))attach();
-    return{applyPreferences,prepareSource,setMuted,isMuted,destroy};
+    return{applyPreferences,prepareSource,setMuted,isMuted,sourceMatches,destroy};
   }
   return{create};
 })();
