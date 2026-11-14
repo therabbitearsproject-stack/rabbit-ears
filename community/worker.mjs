@@ -14,7 +14,7 @@ class HttpError extends Error { constructor(status, message) { super(message); t
 const requireValue = (ok, message, status = 400) => { if (!ok) throw new HttpError(status, message); };
 export function validatePreferences(value) {
   requireValue(value&&typeof value==='object'&&!Array.isArray(value),'Invalid preferences.');
-  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car'],re_caption_style:['none','yellow','white']};
+  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white']};
   const bools=new Set(['re_captions','re_caption_backing','re_tv_muted']);
   const ranges={re_tv_volume:[0,1],re_vol:[0,1]};
   const out={};
