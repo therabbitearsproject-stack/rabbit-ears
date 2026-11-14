@@ -96,7 +96,7 @@
   const guideNote=make('p','guide-instructions','Scroll for every channel · Select a show airing now to watch');guide.querySelector('.guide-head').after(guideNote);
   const nowMarker=make('span','guide-now-label','NOW');$('grid').prepend(nowMarker);
   guide.append(donate());details.append(donate());$('welcome').querySelector('.wcard').append(donate());
-  const footerHistory=make('a','','Original design');footerHistory.href='design-history/2026-11-08-original/';footerHistory.title='Visit the preserved original interface';document.querySelector('.foot').append(footerHistory);
+  const footerHistory=make('a','','Original design');footerHistory.href='design-history/2026-11-08-original/';footerHistory.title='Visit the preserved original interface';document.querySelector('.footer-links').append(footerHistory);
   function decorateGuide(){
     rows.forEach(r=>{const t=r.el.querySelector('.t');const viewer=t.querySelector('.vw'),remove=t.querySelector('.x');t.replaceChildren(station(r.ch,true));if(viewer)t.append(viewer);if(remove)t.append(remove);r.el.setAttribute('aria-label',`Channel ${r.ch.no}: ${r.ch.name}. ${r.ch.desc||''}`);});
     renderRail();

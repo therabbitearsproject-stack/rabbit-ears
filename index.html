@@ -319,7 +319,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </style>
 <link rel="stylesheet" href="assets/interface.css?v=fullscreen-compact-5">
 <link rel="stylesheet" href="assets/pixel-deck.css?v=2">
-<link rel="stylesheet" href="assets/team.css?v=1">
+<link rel="stylesheet" href="assets/team.css?v=footer-compact-2">
 <link rel="stylesheet" href="assets/modular-themes.css?v=1">
 <link rel="stylesheet" href="assets/theme-tvs.css?v=1">
 <link rel="stylesheet" href="assets/theme-previews.css?v=1">
@@ -548,8 +548,12 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <p>The <a href="#radio">Radio</a> tab streams thousands of live radio stations from around the world: oldies, jazz, lo-fi, talk and all-Christmas stations. The <a href="#games">Games</a> tab has hundreds of classic Flash games, such as Line Rider, Bloxorz, QWOP, Papa's Pizzeria and Bloons Tower Defense, played right in your browser without the Flash plugin.</p>
   </details>
   <section class="desktop-promo" aria-labelledby="desktop-heading"><div><h2 id="desktop-heading">Rabbit Ears, on your desktop.</h2><p>A dedicated player with local captions, audio controls and a floating TV. Free for Windows, Mac and Linux.</p></div><a class="desktop-link" href="/desktop/">↓ Download the desktop app</a></section>
-  <footer class="foot"><span id="onFoot"></span><span id="total" aria-live="polite"></span><span>Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></span><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="/privacy/">🔒 Privacy</a><a href="/music-credits/">♫ Music credits</a></footer>
-  <div class="team-tip-row"><a class="team-tip" href="/support/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h11v13H5z M16 10h4v7h-4 M8 11v7 M12 11v7 M4 8V5h3V3h4v2h4V4h3v4z"/></svg><span>Buy the team a beer</span></a></div>
+  <footer class="foot">
+    <div class="footer-stats"><span id="onFoot"></span><span id="total" aria-live="polite"></span></div>
+    <p class="footer-archive">Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></p>
+    <nav class="footer-links" aria-label="Footer"><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="/privacy/">🔒 Privacy</a><a href="/music-credits/">♫ Music credits</a></nav>
+    <div class="footer-support"><a class="team-tip" href="/support/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h11v13H5z M16 10h4v7h-4 M8 11v7 M12 11v7 M4 8V5h3V3h4v2h4V4h3v4z"/></svg><span>Buy the team a beer</span></a></div>
+  </footer>
 </div>
 
 <script src="media-compatibility.js"></script>
@@ -2160,7 +2164,7 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=fullscreen-4"></script>
+<script src="assets/interface.js?v=footer-compact-2"></script>
 <script src="assets/radio-winamp.js?v=2"></script>
 <script src="assets/volume.js?v=native-playback-1"></script>
 <script src="assets/tv-popout.js?v=mobile-native-2"></script>
