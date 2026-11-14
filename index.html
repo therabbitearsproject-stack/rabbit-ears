@@ -325,6 +325,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 <link rel="stylesheet" href="assets/tv-popout.css?v=1">
 <link rel="stylesheet" href="assets/radio-winamp.css?v=3">
 <link rel="stylesheet" href="assets/captions.css?v=caption-size-3">
+<link rel="stylesheet" href="assets/settings.css?v=1">
 </head>
 <body data-skin="pixel" data-tv-page="guide">
 <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
@@ -1443,12 +1444,14 @@ function syncMedia(forceSeek = false) {
       vid.onloadedmetadata = () => { if (token === mediaToken) { vid.currentTime = currentSegment().position % fallback.dur; if (tvOn && !held) vid.play().catch(() => {}); } };
       vid.onended = () => { if (token !== mediaToken || !playing) return; if (currentSegment().index !== segment.index) syncMedia(); else { vid.currentTime = 0; if (tvOn && !held) vid.play().catch(() => {}); } };
       vid.onerror = null;
+      window.reAudio?.prepareSource();
       vid.src = fileUrl(fallback);
     }
   };
   (segment.kind === "program" ? resolveCompatibleMedia(segment.media) : Promise.resolve(segment.media)).then(media => {
     if (token !== mediaToken || my !== tuneId || !playing) return;
     activeSegment.media = media;
+    window.reAudio?.prepareSource();
     vid.src = fileUrl(media);
     applyCaptions(); resetReport();
   });
@@ -1584,7 +1587,8 @@ $("fwd").onclick = () => seek(15);
 $("live").onclick = goLive;
 
 vid.volume = Math.max(0, Math.min(1, Number(store.get("re_tv_volume", .8)) || 0));
-function setMuted(m) { vid.muted = m === true; store.set("re_tv_muted", vid.muted); $("mute").textContent = vid.muted ? "Sound off" : "Sound on"; }
+function tvMuted() { return window.reAudio?.isMuted() ?? vid.muted; }
+function setMuted(m) { const muted=m===true; if(window.reAudio)window.reAudio.setMuted(muted);else vid.muted=muted; store.set("re_tv_muted", muted); $("mute").textContent=muted?"Sound off":"Sound on"; vid.dispatchEvent(new Event("re:tv-mute")); }
 setMuted(store.get("re_tv_muted", true));
 function setTvVolume(value) {
   vid.volume = Math.max(0, Math.min(1, Number(value) || 0));
@@ -1602,7 +1606,7 @@ window.rePlaybackContext = () => {
     airingStart: playing.v0, paused: vid.paused || vid.seeking || vid.readyState < 2 };
 };
 $("power").onclick = () => { $("power").hidden = true; setMuted(false); vid.play().catch(() => {}); };
-$("mute").onclick = () => setMuted(!vid.muted);
+$("mute").onclick = () => setMuted(!tvMuted());
 $("up").onclick = () => tune(cur + 1);
 $("down").onclick = () => tune(cur - 1);
 $("full").onclick = () => { const s = $("screen"); (s.requestFullscreen || s.webkitRequestFullscreen || (() => vid.webkitEnterFullscreen?.())).call(s)?.catch?.(() => {}); };
@@ -2120,7 +2124,7 @@ document.addEventListener("keydown", e => {
   else if (e.key === "ArrowRight") { e.preventDefault(); seek(15); }
   else if (e.key === " " && e.target.tagName !== "BUTTON") { e.preventDefault(); togglePause(); }
   else if (e.key === "r" && !e.ctrlKey && !e.metaKey) surf();
-  else if (e.key === "m") setMuted(!vid.muted);
+  else if (e.key === "m") setMuted(!tvMuted());
   else if (e.key === "c") toggleCaptions();
   else if (/^[0-9]$/.test(e.key)) dial(e.key);
 });
@@ -2153,12 +2157,15 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=popout-1"></script>
+<script src="assets/audio-model.js?v=1"></script>
+<script src="assets/audio-graph.js?v=1"></script>
+<script src="assets/audio-settings.js?v=1"></script>
+<script src="assets/interface.js?v=settings-1"></script>
 <script src="assets/radio-winamp.js?v=2"></script>
-<script src="assets/volume.js?v=popout-1"></script>
+<script src="assets/volume.js?v=audio-settings-1"></script>
 <script src="assets/tv-popout.js?v=1"></script>
 <script src="assets/community-config.js?v=1"></script>
-<script src="assets/preferences.js?v=winamp-1"></script>
+<script src="assets/preferences.js?v=audio-settings-1"></script>
 <script>if (window.RabbitPreferences) window.rabbitPreferences = RabbitPreferences.create({store, apply: prefs => window.REUI.applyPreferences(prefs)});</script>
 <script type="module" src="assets/community.js?v=popout-1"></script>
 <script type="module">

@@ -11,7 +11,7 @@
     ['pixel','Pixel Deck','Snap-together panels, pixel badges and a midnight arcade palette.','#32cec1'],
     ['gutter','Gutter Signal','An ’80s squat-room portable: photocopy grit, acid yellow and hot pink.','#d9fa32'],
   ];
-  const paths={tv:'M4 7h16v13H4z M8 3l4 4 4-4',clock:'M12 8v5l3 2 M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0',radio:'M5 9h14v11H5z M7 9l11-6 M8 13h8 M8 16h2 M14 16h2',game:'M7 7h10l4 5v7h-4l-3-3h-4l-3 3H3v-7z M6 11v4 M4 13h4 M16 11h.1 M18 14h.1',palette:'M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4 2 2 0 0 1 0-4h3a4 4 0 0 0 4-4c0-4-5-6-9-6 M7 8h.1 M6 13h.1 M11 6h.1 M16 8h.1',play:'M8 4l12 8-12 8z',pause:'M8 5v14 M16 5v14',up:'M5 15l7-7 7 7',down:'M5 9l7 7 7-7',full:'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',exit:'M3 8h5V3 M21 8h-5V3 M3 16h5v5 M21 16h-5v5',back:'M11 5l-7 7 7 7 M4 12h16',sound:'M4 9h4l5-4v14l-5-4H4z M17 8q5 4 0 8',mute:'M4 9h4l5-4v14l-5-4H4z M17 9l5 6 M22 9l-5 6',rewind:'M8 4L3 9l5 5 M3 9h10a7 7 0 1 1-7 11',forward:'M16 4l5 5-5 5 M21 9H11a7 7 0 1 0 7 11',share:'M9 7l6 5-6 5 M15 12H3 M14 4h7v16h-7',flag:'M5 21V3l14 3-5 6H5',shuffle:'M3 5h3l12 14h3 M18 16l3 3-3 3 M3 19h3l4-5 M14 9l4-4h3 M18 2l3 3-3 3',cc:'M10 8H6v8h4 M20 8h-4v8h4',close:'M5 5l14 14 M19 5L5 19',heart:'M12 21S2 14 2 7a5 5 0 0 1 10-2A5 5 0 0 1 22 7c0 7-10 14-10 14'};
+  const paths={settings:'M9.5 3h5l.6 2.4 2 .9 2.2-.7 2.5 4.3-1.7 1.7v2.3l1.7 1.7-2.5 4.3-2.2-.7-2 .9-.6 2.4h-5L9 18.1l-2-.9-2.2.7-2.5-4.3L4 11.9V9.6L2.3 7.9l2.5-4.3 2.2.7 2-.9z M15.5 11.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0',tv:'M4 7h16v13H4z M8 3l4 4 4-4',clock:'M12 8v5l3 2 M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0',radio:'M5 9h14v11H5z M7 9l11-6 M8 13h8 M8 16h2 M14 16h2',game:'M7 7h10l4 5v7h-4l-3-3h-4l-3 3H3v-7z M6 11v4 M4 13h4 M16 11h.1 M18 14h.1',palette:'M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4 2 2 0 0 1 0-4h3a4 4 0 0 0 4-4c0-4-5-6-9-6 M7 8h.1 M6 13h.1 M11 6h.1 M16 8h.1',play:'M8 4l12 8-12 8z',pause:'M8 5v14 M16 5v14',up:'M5 15l7-7 7 7',down:'M5 9l7 7 7-7',full:'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',exit:'M3 8h5V3 M21 8h-5V3 M3 16h5v5 M21 16h-5v5',back:'M11 5l-7 7 7 7 M4 12h16',sound:'M4 9h4l5-4v14l-5-4H4z M17 8q5 4 0 8',mute:'M4 9h4l5-4v14l-5-4H4z M17 9l5 6 M22 9l-5 6',rewind:'M8 4L3 9l5 5 M3 9h10a7 7 0 1 1-7 11',forward:'M16 4l5 5-5 5 M21 9H11a7 7 0 1 0 7 11',share:'M9 7l6 5-6 5 M15 12H3 M14 4h7v16h-7',flag:'M5 21V3l14 3-5 6H5',shuffle:'M3 5h3l12 14h3 M18 16l3 3-3 3 M3 19h3l4-5 M14 9l4-4h3 M18 2l3 3-3 3',cc:'M10 8H6v8h4 M20 8h-4v8h4',close:'M5 5l14 14 M19 5L5 19',heart:'M12 21S2 14 2 7a5 5 0 0 1 10-2A5 5 0 0 1 22 7c0 7-10 14-10 14'};
   const icon=n=>`<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${paths[n]||paths.tv}"/></svg>`;
   const make=(tag,cls,text)=>Object.assign(document.createElement(tag),{className:cls||'',textContent:text||''});
   const button=(label,fn,cls='btn')=>{const b=make('button',cls,label);b.type='button';b.onclick=fn;return b;};
@@ -43,8 +43,8 @@
   for(const [id,name,label] of [['tabTv','tv','TV guide'],['tabRadio','radio','Radio'],['tabGames','game','Games']]){
     const a=$(id);a.innerHTML=icon(name)+`<span class="nav-name">${label}</span>`;a.title=label;a.setAttribute('aria-label',label);
   }
-  const skinButton=button('',()=>openDialog(skinDialog),'btn theme-picker');skinButton.id='chooseSkin';skinButton.innerHTML=icon('palette');skinButton.title='Choose theme';skinButton.setAttribute('aria-label','Choose theme');document.querySelector('header').append(skinButton);
-  const currentSkin=make('span','current-skin');skinButton.append(currentSkin);
+  const skinButton=button('',()=>openDialog(skinDialog),'btn settings-trigger');skinButton.id='openSettings';skinButton.innerHTML=icon('settings');skinButton.title='Settings';skinButton.setAttribute('aria-label','Settings');skinButton.setAttribute('aria-haspopup','dialog');skinButton.setAttribute('aria-controls','settingsDialog');document.querySelector('header').append(skinButton);
+  const currentSkin=make('span','current-skin');
   function syncSkin(){currentSkin.textContent=skins.find(s=>s[0]===body.dataset.skin)[1]+(body.dataset.skin==='pixel'?' · Default':'');document.querySelector('meta[name="theme-color"]').content=getComputedStyle(body).getPropertyValue('--bg').trim();refreshLogoColors();}
   syncSkin();
   const pack=make('div','player-pack');const cabinet=tv.querySelector('.cabinet');
@@ -143,14 +143,35 @@
     syncGuideNavigation();
   }
   function dialog(label){const d=make('dialog','interface-dialog');d.setAttribute('aria-label',label);const close=button('Close',()=>d.close(),'btn dialog-close');close.innerHTML=icon('close');close.title='Close';close.setAttribute('aria-label','Close');d.append(close);d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});d.addEventListener('close',()=>dialogOpener?.focus());body.append(d);return d;}
-  function openDialog(d){dialogOpener=document.activeElement;d.showModal();}
-  const skinDialog=dialog('Choose a viewing skin');skinDialog.append(make('p','eyebrow','MAKE YOURSELF AT HOME'),make('h2','','A different place to tune in'),make('p','dialog-intro','Your channel keeps playing. Your choice stays on this device.'));
+  function openDialog(d){dialogOpener=document.activeElement;d.showModal();if(d===skinDialog)skinButton.setAttribute('aria-expanded','true');}
+  const skinDialog=dialog('Settings');skinDialog.id='settingsDialog';skinDialog.classList.add('settings-dialog');skinButton.setAttribute('aria-expanded','false');skinDialog.addEventListener('close',()=>skinButton.setAttribute('aria-expanded','false'));
+  skinDialog.append(make('h2','','Settings'));
+  const saveStatus=make('p','settings-save-status','Saved on this browser. Sign in with Discord to sync across devices.');saveStatus.setAttribute('role','status');skinDialog.append(saveStatus);
+  const settingsAccount=make('div','settings-account'),settingsLogin=make('a','btn','Sign in & join Discord'),settingsDisclosure=make('small','','Signing in also joins the Rabbit Ears Discord server.');
+  settingsLogin.href='https://community.rabbit-ears.stream/auth/discord?channel=97';settingsLogin.addEventListener('click',()=>{settingsLogin.href=(window.RABBIT_COMMUNITY?.api||'https://community.rabbit-ears.stream')+'/auth/discord?channel='+(channels()[cur]?.no||97);});settingsAccount.append(settingsLogin,settingsDisclosure);skinDialog.append(settingsAccount);
+  window.addEventListener('re:preferences-status',e=>{
+    const {state,signedIn}=e.detail||{};settingsAccount.hidden=!!signedIn;
+    saveStatus.textContent=!signedIn?'Saved on this browser. Sign in with Discord to sync across devices.':({synced:'Settings synced with your Discord account.',saving:'Saving your settings…',merging:'Syncing your latest settings…',offline:'Saved on this browser. Account sync will retry when connected.'}[state]||'Loading your account settings…');
+  });
+  const settingsTabs=make('div','settings-tabs');settingsTabs.setAttribute('role','tablist');settingsTabs.setAttribute('aria-label','Settings sections');
+  const themeSection=make('section','settings-section'),audioSection=make('section','settings-section');
+  const settingSections=[['Theme',themeSection],['Audio',audioSection]];
+  function selectSettingsTab(index){settingSections.forEach(([,section],i)=>{section.hidden=i!==index;const tab=settingsTabs.children[i];tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;});}
+  settingSections.forEach(([name,section],i)=>{
+    const tab=button(name,()=>selectSettingsTab(i));tab.id='settingsTab'+name;tab.setAttribute('role','tab');tab.setAttribute('aria-controls','settingsSection'+name);
+    section.id='settingsSection'+name;section.setAttribute('role','tabpanel');section.setAttribute('aria-labelledby',tab.id);
+    settingsTabs.append(tab);
+    tab.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const index=e.key==='Home'?0:e.key==='End'?1:1-i;selectSettingsTab(index);settingsTabs.children[index].focus();});
+  });
+  skinDialog.append(settingsTabs,themeSection,audioSection);selectSettingsTab(0);
+  themeSection.append(make('p','dialog-intro','Choose your TV and room. Your channel keeps playing.'));
+  const audioSettings=window.RabbitAudioSettings?.create({container:audioSection,store,video:vid,radio:audio});window.reAudio=audioSettings;
   const skinGrid=make('div','skin-options');
   for(const [key,name,desc,col] of skins){const b=button('',()=>{
     body.dataset.skin=key;store.set('re_skin',key);syncSkin();skinGrid.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));
   },'skin-option');b.dataset.preview=key;b.style.setProperty('--sample',col);b.setAttribute('aria-pressed',String(body.dataset.skin===key));
   const mini=make('span','skin-mini');mini.setAttribute('aria-hidden','true');mini.innerHTML='<i></i><b></b>';b.append(mini,make('strong','',name+(key==='pixel'?' · Default':'')),make('small','',desc));skinGrid.append(b);}
-  skinDialog.append(skinGrid);
+  themeSection.append(skinGrid);
   const futureDialog=dialog('Upcoming programme');
   const futureTitle=make('h2'),futureInfo=make('p');futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
   function showFuture(ch,block){futureDialog.dataset.channel=ch.no;futureTitle.textContent=block.querySelector('b')?.textContent||'Upcoming programme';futureInfo.textContent=`CH ${ch.no} · ${ch.name} · ${block.title}`;openDialog(futureDialog);}
@@ -235,7 +256,7 @@
   function refreshSymbols(){for(const [id,[base,label]] of Object.entries(symbols)){
     const b=$(id);if(!b)continue;let name=base, accessible=b.getAttribute('aria-label')||label;
     if(id==='pause'){name=held?'play':'pause';accessible=held?'Play':'Pause';}
-    if(id==='mute'){name=vid.muted?'mute':'sound';accessible='Volume';}
+    if(id==='mute'){name=tvMuted()?'mute':'sound';accessible='Volume';}
     if(id==='share'||id==='gShare'){if(/copied/i.test(b.textContent))accessible='Link copied';}
     const markup=icon(name)+(id==='back'||id==='fwd'?'<small>15</small>':'');
     if(!b.querySelector('svg')||b.dataset.icon!==name){b.innerHTML=markup;b.dataset.icon=name;}
@@ -276,6 +297,7 @@
       radioAppearance.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.radioLook===radioLook)));
     }
     captionUI.applyPreferences?.(prefs);
+    audioSettings?.applyPreferences(prefs);
     if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
     if(typeof prefs.re_tv_muted==='boolean')setMuted(prefs.re_tv_muted);
     if(typeof prefs.re_vol==='number'&&Number.isFinite(prefs.re_vol)){audio.volume=Math.max(0,Math.min(1,prefs.re_vol));$('rVol').value=String(audio.volume);}

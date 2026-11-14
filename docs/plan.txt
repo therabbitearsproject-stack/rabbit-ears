@@ -332,3 +332,12 @@ TV pop-out — November 14, 2026
 - Moves the original TV/video and controls, rather than creating another stream or schedule. Restores time and playing state if cross-window adoption resets browser media state. Return TV or closing the window restores the original player. Leaving TV mode also returns it first. Fullscreen becomes available again after returning.
 - Captions, volume, reactions and comment menus use their current window for focus, visibility and placement. Theme changes sync to the floating TV.
 - Validation: six actual Chrome tests cover native Document Picture-in-Picture, fallback, denied access, real playing and paused MP4 continuity, original node/time/volume preservation, controls, copied theme CSS and close/return lifecycle. Caption language/hot-refresh regression checks and all 128 non-browser site tests pass.
+
+
+Compact header and Settings — November 14, 2026
+- Reduced header spacing and removed its tagline/big theme control. Existing logo width and height remain unchanged across all nine themes and phone/desktop sizes. A 44px Settings gear replaces the theme button.
+- Settings contains Theme and Audio, keyboard navigation, save status and Discord sign-in. Current themes and independent radio appearance remain available.
+- Audio adds TV/radio volume, TV mute, six desktop presets, local tape-hiss reduction, RMS loudness leveling, compression with linked/manual makeup gain and pre/post EQ placement, and a ten-band equalizer. Subtitle controls stay in their existing player menu.
+- Browser-local choices persist without sign-in. Discord profiles also sync the validated complete audio configuration, isolated by account, along with existing theme/CC/volume preferences. Worker version e1b67560-2070-4010-8eaf-51cbf269094a adds the schema without a database migration.
+- Advanced effects use reversible captured TV audio, CORS checks and original-sound fallback. Radio streams are never routed into an effects graph. Unsupported browsers retain ordinary playback.
+- Validation: 36 responsive header cases keep logo dimensions unchanged; two full-app Settings tests, five real captured-audio runtime tests, three account-preference browser tests, 30 backend tests and 128 general site checks pass. CORS transport failure restores native sound without triggering a channel retune; pausing during the access check never resumes playback.
