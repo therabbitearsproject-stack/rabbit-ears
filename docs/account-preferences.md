@@ -13,3 +13,5 @@ The community auth module publishes `re:session` events. A background session ch
 Deployment: apply `community/migrations/0002_preferences.sql` to D1, then deploy the community worker. Load community configuration before `assets/preferences.js`, and initialize once after the player and presentation hooks exist. The caption controller exposes `applyPreferences` for style/backing updates without replacing the video.
 
 Verification covers real local D1 authentication, account isolation, CSRF, schema/range rejection, conditional multi-device merges, and real-browser hydration/account-switch races with unchanged video time and zero playback-start calls.
+
+Account defaults are shared across devices. Once an account exists, missing saved fields use the site's account defaults rather than the new device's guest choices. Intentional guest choices seed only a genuinely new account. Offline account caches retain a full resolved snapshot and an account-bound patch of unsaved edits, so a reload neither discards those edits nor uploads another account's settings.
