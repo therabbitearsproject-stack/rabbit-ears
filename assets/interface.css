@@ -133,3 +133,17 @@ body[data-skin=ivory] .hardware-brand{filter:brightness(0)}
 .marker-reaction .reaction-icon{display:block;width:14px;height:14px}
 .community-comment .reaction-icon{width:20px;height:20px}
 body[data-skin=pixel] :is(.watch-popover,.reaction-button){border-radius:0}
+
+/* The same hardware bank follows the fullscreen overlay's idle fade. */
+.player-fullscreen .fullscreen-controls { max-height:100%;overflow:auto;box-sizing:border-box; }
+body[data-skin] #tvView .fullscreen-controls>.tv-transport { width:min(100%,1000px);margin:12px 0 0;box-sizing:border-box; }
+.player-fullscreen .fullscreen-controls .fullscreen-station { display:none; }
+.player-fullscreen .fullscreen-controls .fullscreen-title { font-size:clamp(16px,2.2vw,26px); }
+.player-fullscreen .fullscreen-controls .fullscreen-next { font-size:12px; }
+@media(max-height:500px) {
+ .player-fullscreen .fullscreen-controls { padding-top:20px;padding-bottom:max(12px,env(safe-area-inset-bottom)); }
+ .player-fullscreen .fullscreen-controls .fullscreen-next { display:none; }
+ body[data-skin] #tvView .fullscreen-controls>.tv-transport { padding-top:10px;padding-bottom:14px;margin-top:6px; }
+}
+.player-fullscreen .fullscreen-controls { grid-template-columns:minmax(0,1fr); }
+.player-fullscreen .fullscreen-controls { overflow-x:hidden;overscroll-behavior:contain; }.player-fullscreen .fullscreen-title,.player-fullscreen .fullscreen-next { min-width:0;overflow-wrap:anywhere; }

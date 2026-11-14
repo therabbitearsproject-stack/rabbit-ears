@@ -163,15 +163,17 @@
   const futureDialog=dialog('Upcoming programme');
   const futureTitle=make('h2'),futureInfo=make('p');futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
   function showFuture(ch,block){futureDialog.dataset.channel=ch.no;futureTitle.textContent=block.querySelector('b')?.textContent||'Upcoming programme';futureInfo.textContent=`CH ${ch.no} · ${ch.name} · ${block.title}`;openDialog(futureDialog);}
-  // Fullscreen has its own temporary controls, forwarding to the existing remote actions.
+  // Move the real transport into the fullscreen overlay; keep one set of actions and menus.
+  controls.classList.add('tv-transport');
+  const remoteHome=document.createComment('TV transport home');controls.before(remoteHome);
   const fullControls=make('div','fullscreen-controls');
   const fullStation=make('div','fullscreen-station'),fullTitle=make('h2','fullscreen-title'),fullNext=make('p','fullscreen-next');
-  const fullRemote=make('div','fullscreen-remote');
-  for(const [id,label] of [['down','Previous channel'],['up','Next channel'],['back','Back 15 seconds'],['pause','Pause'],['fwd','Forward 15 seconds'],['mute','Sound'],['cc','Captions']]){
-    const b=button(label,()=>{$(id).click();reveal();});b.dataset.remote=id;b.setAttribute('aria-label',label);fullRemote.append(b);
+  fullControls.append(fullStation,fullTitle,fullNext);screen.append(fullControls);
+  function placeTransport(fullscreen){
+    if(fullscreen)fullControls.append(controls);else remoteHome.after(controls);
+    $('popoutTv')?.toggleAttribute('disabled',fullscreen);
+    refreshSymbols();
   }
-  const exit=button('Exit fullscreen',exitFull);exit.innerHTML=icon('exit');exit.title='Exit fullscreen';exit.setAttribute('aria-label','Exit fullscreen');fullRemote.append(exit);
-  fullControls.append(fullStation,fullTitle,fullNext,fullRemote);screen.append(fullControls);
   captionUI.syncButtons();
   let fullRequest=0,nativeFull=false,inputMode='pointer';
   const nativeElement=()=>document.fullscreenElement||document.webkitFullscreenElement;
@@ -203,7 +205,7 @@
       else if(screen.webkitRequestFullscreen)entering=screen.webkitRequestFullscreen();
       else if(vid.webkitEnterFullscreen)entering=vid.webkitEnterFullscreen();
     }catch{/* Browsers without native fullscreen retain the in-page layout. */}
-    showChannel();body.classList.add('player-fullscreen');reveal();
+    showChannel();body.classList.add('player-fullscreen');placeTransport(true);reveal();
     try{await entering;}catch{/* Native requests can be denied; keep the usable in-page view. */}
     if(requestId!==fullRequest){
       if(!full&&nativeElement()===screen)await leaveNativeFull();
@@ -220,10 +222,11 @@
   }
   async function exitFull(){
     ++fullRequest;full=false;nativeFull=false;clearTimeout(idleTimer);closePlayerMenus();body.classList.remove('player-fullscreen','controls-idle');
+    placeTransport(false);
     await leaveNativeFull();
     showChannel();$('full').focus({preventScroll:true});
   }
-  $('full').onclick=enterFull;
+  $('full').onclick=()=>full?exitFull():enterFull();
   function syncFullscreen(){
     if(nativeElement()===screen){nativeFull=true;if(full)reveal();}
     else if(nativeFull&&full)exitFull();
@@ -245,12 +248,12 @@
     const b=$(id);if(!b)continue;let name=base, accessible=b.getAttribute('aria-label')||label;
     if(id==='pause'){name=held?'play':'pause';accessible=held?'Play':'Pause';}
     if(id==='mute'){name=vid.muted?'mute':'sound';accessible='Volume';}
+    if(id==='full'){name=full?'exit':'full';accessible=full?'Exit fullscreen':'Fullscreen';}
     if(id==='share'||id==='gShare'){if(/copied/i.test(b.textContent))accessible='Link copied';}
     const markup=icon(name)+(id==='back'||id==='fwd'?'<small>15</small>':'');
     if(!b.querySelector('svg')||b.dataset.icon!==name){b.innerHTML=markup;b.dataset.icon=name;}
     b.setAttribute('aria-label',accessible);if(id!=='cc'||!b.disabled)b.title=accessible;
   }
-  for(const b of fullRemote.querySelectorAll('[data-remote]')){const original=$(b.dataset.remote);if(b.innerHTML!==original.innerHTML)b.innerHTML=original.innerHTML;b.disabled=original.disabled;b.setAttribute('aria-label',original.getAttribute('aria-label')||original.title);b.title=b.getAttribute('aria-label');if(original.hasAttribute('aria-pressed'))b.setAttribute('aria-pressed',original.getAttribute('aria-pressed'));}
   }
   function syncTitle(){landingTitle.textContent=$('title').textContent;landingNext.textContent=$('upnext').textContent||'Everyone tuned in sees the same broadcast.';fullTitle.textContent=$('title').textContent;fullNext.textContent=$('upnext').textContent;refreshSymbols();}
   new MutationObserver(syncTitle).observe(details,{subtree:true,childList:true,characterData:true});

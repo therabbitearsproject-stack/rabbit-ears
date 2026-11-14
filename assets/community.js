@@ -55,8 +55,6 @@ function makeDock(cls){
 for(const p of [panel,reactionPopover])p.addEventListener('toggle',()=>{for(const t of triggers)if(t.popover===p)t.button.setAttribute('aria-expanded',String(p.matches(':popover-open')));});
 const pack=document.querySelector('.player-pack'),dock=makeDock('watch-dock');dock.hidden=true;pack.querySelector('.remote').append(dock);
 const layer=el('div','reaction-layer');layer.setAttribute('aria-hidden','true');screen.append(layer);
-const quick=makeDock('fullscreen-community watch-dock');quick.hidden=true;
-screen.querySelector('.fullscreen-remote')?.append(quick);
 const timeline=el('div','community-timeline');timeline.setAttribute('aria-label','Comments and reactions on this episode');document.getElementById('pos').after(timeline);
 function context(){const c=window.rePlaybackContext?.();if(!c)return null;c.position=contentPosition(c.position,c.cuts);if(c.position===null)return null;c.file=editionFile(c.file,c.cuts);return c;}
 function message(text){notice.textContent=text;reactionNotice.textContent=text;}
@@ -168,7 +166,7 @@ async function connect(){
   catch{ready=false;message('The Discord watch party is being connected. TV, radio and games work as usual.');renderAuth();controls();}
 }
 setInterval(()=>{
-  const c=context();dock.hidden=!ready||document.body.dataset.mode!=='tv';quick.hidden=!ready;
+  const c=context();dock.hidden=!ready||document.body.dataset.mode!=='tv';
   if(!c){if(room||pendingRoom){++generation;room=null;pendingRoom='';events=[];markers=[];layer.replaceChildren();paintMarkers(null);paintList();}controls();return;}
   const key=JSON.stringify([c.channel,c.mediaId,c.file]);
   if(key!==(room?.key||pendingRoom))changeRoom(c,key);

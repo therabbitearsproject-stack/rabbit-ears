@@ -1,198 +1,198 @@
 /* Nine hardware families. Only the existing TV transport controls are restyled. */
-body[data-skin] #tvView .player-pack > .remote {
+body[data-skin] #tvView .tv-transport {
   --hardware-material:none;
   display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:stretch;
   gap:10px;padding:20px;min-width:0;
 }
-body[data-skin] #tvView .player-pack > .remote .watch-dock { display:contents!important; }
-body[data-skin] #tvView .player-pack > .remote .watch-dock[hidden] { display:none!important; }
-body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+body[data-skin] #tvView .tv-transport .watch-dock { display:contents!important; }
+body[data-skin] #tvView .tv-transport .watch-dock[hidden] { display:none!important; }
+body[data-skin] #tvView .tv-transport :is(.btn,.watch-dock-button) {
   width:100%;height:72px;min-width:44px;min-height:44px;clip-path:none;
   background-image:var(--hardware-material),linear-gradient(180deg,var(--face-top),var(--face-mid) 38%,var(--face-bottom));
   background-blend-mode:soft-light,normal;
 }
-body[data-skin] #tvView .player-pack > .remote #pause { width:100%; }
-body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-size:8px;letter-spacing:.35px; }
-body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):focus-visible { outline:3px solid var(--amber);outline-offset:4px;z-index:2; }
+body[data-skin] #tvView .tv-transport #pause { width:100%; }
+body[data-skin] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { font-size:8px;letter-spacing:.35px; }
+body[data-skin] #tvView .tv-transport :is(.btn,.watch-dock-button):focus-visible { outline:3px solid var(--amber);outline-offset:4px;z-index:2; }
 
 /* Walnut console: long travel ivory keys, a piano hinge and a separate utility rail. */
-body[data-skin=retro] #tvView .player-pack > .remote {
+body[data-skin=retro] #tvView .tv-transport {
   grid-template-columns:repeat(6,minmax(0,1fr));gap:15px 3px;padding:22px 20px 20px;
   border-inline:12px solid #654322;border-radius:4px;
   background:linear-gradient(#5b4d39 0 7px,#d5c6a8 7px 12px,#a29376 12px calc(50% + 1px),#67573e calc(50% + 1px) calc(50% + 8px),#c0b194 calc(50% + 8px));
   box-shadow:inset 0 0 0 2px #e6d4ad,0 5px 0 #3b2a1a,0 12px 15px #0004;
 }
-body[data-skin=retro] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+body[data-skin=retro] #tvView .tv-transport :is(.btn,.watch-dock-button) {
   height:80px;border-radius:1px 1px 5px 5px;border:1px solid #675c43;border-top:5px solid #e4d7bc;
   box-shadow:inset 0 2px #fff8,inset 0 -11px 10px #8e795450,0 7px 0 #68563b,0 9px 2px #0008;
 }
-body[data-skin=retro] #tvView .player-pack > .remote :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:55px;border-radius:3px; }
-body[data-skin=retro] #tvView .player-pack > .remote #pause { background-image:var(--hardware-material),linear-gradient(#ddd9be,#aaa784 50%,#827d5d);color:#302e21; }
+body[data-skin=retro] #tvView .tv-transport :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:55px;border-radius:3px; }
+body[data-skin=retro] #tvView .tv-transport #pause { background-image:var(--hardware-material),linear-gradient(#ddd9be,#aaa784 50%,#827d5d);color:#302e21; }
 
 /* Projection booth: real circular switch caps above printed panel legends. */
-body[data-skin=theatre] #tvView .player-pack > .remote {
+body[data-skin=theatre] #tvView .tv-transport {
   grid-template-columns:repeat(6,minmax(0,1fr));column-gap:10px;row-gap:12px;
   padding:22px 24px 18px;border:3px solid #705d3b;border-radius:10px;
   background:radial-gradient(circle at 8px 8px,#e6d2a1 0 2px,#302719 3px 4px,transparent 5px),radial-gradient(circle at calc(100% - 8px) calc(100% - 8px),#e6d2a1 0 2px,#302719 3px 4px,transparent 5px),linear-gradient(105deg,#261e20,#493632 45%,#221b20);
 }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button),
-body[data-skin=theatre] #tvView .player-pack > .remote #pause {
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button),
+body[data-skin=theatre] #tvView .tv-transport #pause {
   height:85px;padding:0 0 17px;gap:0;border:0;border-radius:0;background:none;box-shadow:none;color:#ead7a7;text-shadow:0 1px #000;
 }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::before {
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button)::before {
   inset:2px auto auto 50%;width:51px;height:51px;transform:translateX(-50%);border-radius:50%;border:3px solid #ac9462;
   background:radial-gradient(circle at 40% 27%,#9b8e74,#60513c 48%,#302b24 75%);
   box-shadow:0 0 0 2px #17120f,0 0 0 4px #806a44,inset 0 2px 3px #efdbac80,inset 0 -5px 6px #0008,0 5px 5px #000b;
 }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) svg { z-index:1;position:absolute;top:19px;width:22px;height:22px; }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { position:absolute;bottom:0;left:0;right:0;height:13px;color:#e0cda5; }
-body[data-skin=theatre] #tvView .player-pack > .remote #pause::before { background:radial-gradient(circle at 35% 25%,#dc8b76,#a34339 50%,#531d23);border-color:#cdb783; }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(#back,#fwd) small { z-index:1;top:17px;right:calc(50% - 19px); }
-body[data-skin=theatre] #tvView .player-pack > .remote :is([aria-pressed=true],[aria-expanded=true]):not(:disabled)::before { inset:2px auto auto 50%;width:51px;height:51px;border-radius:50%;box-shadow:0 0 0 3px #e8c76a,inset 0 4px 8px #0009; }
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button) svg { z-index:1;position:absolute;top:19px;width:22px;height:22px; }
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { position:absolute;bottom:0;left:0;right:0;height:13px;color:#e0cda5; }
+body[data-skin=theatre] #tvView .tv-transport #pause::before { background:radial-gradient(circle at 35% 25%,#dc8b76,#a34339 50%,#531d23);border-color:#cdb783; }
+body[data-skin=theatre] #tvView .tv-transport :is(#back,#fwd) small { z-index:1;top:17px;right:calc(50% - 19px); }
+body[data-skin=theatre] #tvView .tv-transport :is([aria-pressed=true],[aria-expanded=true]):not(:disabled)::before { inset:2px auto auto 50%;width:51px;height:51px;border-radius:50%;box-shadow:0 0 0 3px #e8c76a,inset 0 4px 8px #0009; }
 
 /* OB broadcast switcher: large two-row transport and a matrix of utility switches. */
-body[data-skin=stadium] #tvView .player-pack > .remote {
+body[data-skin=stadium] #tvView .tv-transport {
   grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(2,58px);gap:8px;padding:20px 18px;
   border:3px solid #182a24;border-top:9px solid #69796b;border-radius:2px 2px 10px 10px;
   background:linear-gradient(100deg,#34463b,#1c2d25 65%,#3a4e40);box-shadow:inset 0 0 0 2px #0c1711,0 7px 0 #0c1912,0 12px 15px #0005;
 }
-body[data-skin=stadium] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:58px;border:3px solid #172d23;border-radius:3px;box-shadow:inset 0 2px #cbd9c466,inset 0 -6px #0004,0 2px 0 #07140c; }
-body[data-skin=stadium] #tvView .player-pack > .remote #pause { grid-column:4/6;grid-row:1/3;height:auto;gap:12px;border:5px solid #17302d;border-radius:5px;background-image:linear-gradient(#b3d1ca,#6d9e9b 30%,#2d625e);color:#102f2b; }
-body[data-skin=stadium] #tvView .player-pack > .remote #pause svg { width:34px;height:34px; }
-body[data-skin=stadium] #tvView .player-pack > .remote #pause::after { font-size:10px;letter-spacing:1px; }
-body[data-skin=stadium] #tvView .player-pack > .remote :is(#back,#fwd) { --face-top:#a8b3a0;--face-mid:#6f806c;--face-bottom:#40513e;color:#101e16; }
+body[data-skin=stadium] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:58px;border:3px solid #172d23;border-radius:3px;box-shadow:inset 0 2px #cbd9c466,inset 0 -6px #0004,0 2px 0 #07140c; }
+body[data-skin=stadium] #tvView .tv-transport #pause { grid-column:4/6;grid-row:1/3;height:auto;gap:12px;border:5px solid #17302d;border-radius:5px;background-image:linear-gradient(#b3d1ca,#6d9e9b 30%,#2d625e);color:#102f2b; }
+body[data-skin=stadium] #tvView .tv-transport #pause svg { width:34px;height:34px; }
+body[data-skin=stadium] #tvView .tv-transport #pause::after { font-size:10px;letter-spacing:1px; }
+body[data-skin=stadium] #tvView .tv-transport :is(#back,#fwd) { --face-top:#a8b3a0;--face-mid:#6f806c;--face-bottom:#40513e;color:#101e16; }
 
 /* Slim studio deck: horizontal rubber rockers in a silver extrusion. */
-body[data-skin=modern] #tvView .player-pack > .remote {
+body[data-skin=modern] #tvView .tv-transport {
   grid-template-columns:repeat(6,minmax(0,1fr));gap:12px 18px;padding:19px 26px 22px;
   border:1px solid #8c959b;border-bottom:7px solid #4b565e;border-radius:18px 18px 8px 8px;
   background:linear-gradient(#fbfcfc,#b9c2c7 9%,#e0e6e8 18%,#a3adb4 85%,#e0e5e8);
 }
-body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button) {
   height:47px;border-radius:50%/46%;border:2px solid #111b22;gap:4px;flex-direction:row;padding:7px 11px;
   background-image:radial-gradient(ellipse at 50% 5%,#75838e,#303b44 46%,#15222b 80%);box-shadow:inset 0 2px 3px #fff5,inset 0 -4px 4px #0009,0 0 0 3px #aab4ba,0 2px 0 4px #5b6871;
 }
-body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::before { left:20%;right:20%;top:4px; }
-body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-size:8px; }
-body[data-skin=modern] #tvView .player-pack > .remote #pause { background-image:radial-gradient(ellipse at 50% 0,#bfd4e3,#6a879c 46%,#3a5265 85%);height:47px; }
-body[data-skin=modern] #tvView .player-pack > .remote :is(#back,#fwd) small { top:8px;right:7px; }
+body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button)::before { left:20%;right:20%;top:4px; }
+body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { font-size:8px; }
+body[data-skin=modern] #tvView .tv-transport #pause { background-image:radial-gradient(ellipse at 50% 0,#bfd4e3,#6a879c 46%,#3a5265 85%);height:47px; }
+body[data-skin=modern] #tvView .tv-transport :is(#back,#fwd) small { top:8px;right:7px; }
 
 /* Domestic compact: offset, oval pebble switches, one broad central play pad. */
-body[data-skin=cozy] #tvView .player-pack > .remote {
+body[data-skin=cozy] #tvView .tv-transport {
   grid-template-columns:repeat(8,minmax(0,1fr));gap:13px 12px;padding:25px 24px 23px;
   border:3px solid #8c6036;border-radius:36px 36px 48px 48px;
   background:radial-gradient(ellipse at 40% -30%,#f9dca6,#c39a68 55%,#9d724a);box-shadow:inset 0 4px 5px #fff5,inset 0 -7px 8px #734b314d,0 6px 0 #715034;
 }
-body[data-skin=cozy] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+body[data-skin=cozy] #tvView .tv-transport :is(.btn,.watch-dock-button) {
   grid-column:span 2;height:58px;border-radius:44% 52% 42% 48%/46% 45% 50% 48%;border:1px solid #8d643a;
   background-image:radial-gradient(ellipse at 37% 10%,#fff1cd,#d5b181 43%,#a77d4c 83%);
   box-shadow:inset 0 3px 4px #fff9,inset 0 -5px 6px #79502966,0 4px 0 #866138,0 6px 4px #0005;gap:4px;
 }
-body[data-skin=cozy] #tvView .player-pack > .remote #pause { grid-column:3/7;grid-row:2;height:58px;background-image:radial-gradient(ellipse at 40% 10%,#ffe7a5,#dbb25d 50%,#af8139 85%);color:#4c3419; }
-body[data-skin=cozy] #tvView .player-pack > .remote :is(#back,#fwd) { border-radius:55% 40% 52% 40%/45% 45% 50% 50%; }
+body[data-skin=cozy] #tvView .tv-transport #pause { grid-column:3/7;grid-row:2;height:58px;background-image:radial-gradient(ellipse at 40% 10%,#ffe7a5,#dbb25d 50%,#af8139 85%);color:#4c3419; }
+body[data-skin=cozy] #tvView .tv-transport :is(#back,#fwd) { border-radius:55% 40% 52% 40%/45% 45% 50% 50%; }
 
 /* Brushed-silver reference machine: six broad machined plates per row. */
-body[data-skin=metal] #tvView .player-pack > .remote {
+body[data-skin=metal] #tvView .tv-transport {
   grid-template-columns:repeat(6,minmax(0,1fr));gap:14px 5px;padding:21px 18px 25px;
   border:4px solid #272c31;border-inline:11px solid #343b41;border-radius:1px;
   background:repeating-linear-gradient(0deg,#b8bdc1 0 1px,#d5d8da 1px 2px,#adb3b8 2px 3px),linear-gradient(#dce0e2,#9ba4ac);
   box-shadow:inset 0 0 0 2px #e2e8ec,inset 0 10px 5px #20293270,0 6px 0 #151b21,0 12px 12px #0005;
 }
-body[data-skin=metal] #tvView .player-pack > .remote :is(.btn,.watch-dock-button),body[data-skin=metal] #tvView .player-pack > .remote #pause {
+body[data-skin=metal] #tvView .tv-transport :is(.btn,.watch-dock-button),body[data-skin=metal] #tvView .tv-transport #pause {
   height:75px;border:1px solid #69747d;border-top:3px solid #f0f4f5;border-radius:0;clip-path:none;color:#18232c;text-shadow:0 1px #fff9;
   background-image:var(--hardware-material),repeating-linear-gradient(0deg,#ffffff18 0 1px,transparent 1px 2px),linear-gradient(#f3f6f7,#b6bfc7 45%,#929da7 84%,#d6dce0);
   box-shadow:inset 0 2px 0 #fff,inset 0 -9px 1px #8a949d,0 6px 0 #4c5964,0 0 0 3px #1e2933,0 9px 3px #0009;
 }
-body[data-skin=metal] #tvView .player-pack > .remote #pause { border-bottom:5px solid #cc583b; }
-body[data-skin=metal] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-weight:700;letter-spacing:1px; }
+body[data-skin=metal] #tvView .tv-transport #pause { border-bottom:5px solid #cc583b; }
+body[data-skin=metal] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { font-weight:700;letter-spacing:1px; }
 
 /* Space-age white console: narrow upright paddles with a fine orange play stripe. */
-body[data-skin=ivory] #tvView .player-pack > .remote {
+body[data-skin=ivory] #tvView .tv-transport {
   grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;padding:18px 22px 23px;border:2px solid #d1c8b4;border-radius:32px 32px 8px 8px;
   background:linear-gradient(#fffbed,#d5ccbb 14%,#eae4d7 90%,#b8ad9b);box-shadow:inset 0 3px #fff,0 7px 0 #a39989,0 12px 12px #5f534033;
 }
-body[data-skin=ivory] #tvView .player-pack > .remote :is(.btn,.watch-dock-button),body[data-skin=ivory] #tvView .player-pack > .remote #pause {
+body[data-skin=ivory] #tvView .tv-transport :is(.btn,.watch-dock-button),body[data-skin=ivory] #tvView .tv-transport #pause {
   height:101px;gap:10px;padding:12px 3px 19px;border-radius:11px 11px 2px 2px;border:1px solid #9c998e;border-bottom:9px solid #b5b0a4;
   color:#682b38;text-shadow:0 1px #fff;background-image:linear-gradient(90deg,#c9c7bc,#fffef3 16%,#e3e0d4 80%,#bab6aa);
   box-shadow:inset 0 3px #fff,0 5px 0 #9b9485,0 7px 4px #0006;
 }
-body[data-skin=ivory] #tvView .player-pack > .remote #pause { border-bottom-color:#d75a30;background-image:linear-gradient(90deg,#d6cdb5,#fff9df 18%,#ede4cc 80%,#b8ad91); }
-body[data-skin=ivory] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:0; }
+body[data-skin=ivory] #tvView .tv-transport #pause { border-bottom-color:#d75a30;background-image:linear-gradient(90deg,#d6cdb5,#fff9df 18%,#ede4cc 80%,#b8ad91); }
+body[data-skin=ivory] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:0; }
 
 /* Early digital deck: a stepped matrix with a double-width teal transport switch. */
-body[data-skin=pixel] #tvView .player-pack > .remote {
+body[data-skin=pixel] #tvView .tv-transport {
   grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;padding:20px 18px 22px;border:4px solid #253d51;border-top:8px solid #6c8293;
   box-shadow:inset 0 0 0 3px #0c1b29,inset 4px 4px #8fa3b66b,0 5px 0 #07111e,0 11px 12px #0006;
 }
-body[data-skin=pixel] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:58px;border:3px outset #6d879e;border-radius:0;box-shadow:0 3px 0 #051524,0 5px 3px #0008; }
-body[data-skin=pixel] #tvView .player-pack > .remote #pause { grid-column:span 2;height:58px;border-color:#62b7ba;background-image:linear-gradient(#8ed6d3,#3ea5a5 45%,#216f77);color:#082330; }
-body[data-skin=pixel] #tvView .player-pack > .remote :is(#full,#popoutTv,.watch-dock-button) { height:47px;border-width:2px; }
+body[data-skin=pixel] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:58px;border:3px outset #6d879e;border-radius:0;box-shadow:0 3px 0 #051524,0 5px 3px #0008; }
+body[data-skin=pixel] #tvView .tv-transport #pause { grid-column:span 2;height:58px;border-color:#62b7ba;background-image:linear-gradient(#8ed6d3,#3ea5a5 45%,#216f77);color:#082330; }
+body[data-skin=pixel] #tvView .tv-transport :is(#full,#popoutTv,.watch-dock-button) { height:47px;border-width:2px; }
 
 /* Cassette portable: long pivoting black ABS levers and mismatched replacement keys. */
-body[data-skin=gutter] #tvView .player-pack > .remote {
+body[data-skin=gutter] #tvView .tv-transport {
   grid-template-columns:repeat(6,minmax(0,1fr));gap:15px 2px;padding:22px 17px 19px;border:3px solid #111510;border-top:10px solid #56594a;
   border-radius:2px 18px 4px 2px;background:repeating-linear-gradient(113deg,#ffffff08 0 1px,transparent 1px 33px),linear-gradient(#3f4437,#20251b 23%,#171d13);
   box-shadow:inset 0 4px 8px #000b,0 7px 0 #080c06,0 12px 12px #0007;
 }
-body[data-skin=gutter] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+body[data-skin=gutter] #tvView .tv-transport :is(.btn,.watch-dock-button) {
   height:87px;justify-content:flex-end;padding-bottom:14px;border-radius:1px 1px 7px 7px;border:1px solid #131c0c;border-top:5px solid #5d6551;
   background-image:linear-gradient(95deg,#192013,#414b32 16%,#26301c 76%,#10190b);box-shadow:inset 0 2px #9aa38877,inset 0 -12px #0005,0 7px 0 #101909,0 9px 4px #000a;
 }
-body[data-skin=gutter] #tvView .player-pack > .remote #pause { background-image:linear-gradient(95deg,#b6c340,#e5ec83 15%,#b9d035 75%,#798b1b);color:#182100;border-top-color:#f7f2a1; }
-body[data-skin=gutter] #tvView .player-pack > .remote #up { background-image:linear-gradient(95deg,#b1ab91,#e6dfc1 15%,#c8c1a4 75%,#8b866d);color:#302e1e;border-top-color:#fff5d4;transform:rotate(-1deg); }
-body[data-skin=gutter] #tvView .player-pack > .remote :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:48px;border-top-width:2px;justify-content:center;padding:5px 2px;gap:3px;border-radius:2px; }
+body[data-skin=gutter] #tvView .tv-transport #pause { background-image:linear-gradient(95deg,#b6c340,#e5ec83 15%,#b9d035 75%,#798b1b);color:#182100;border-top-color:#f7f2a1; }
+body[data-skin=gutter] #tvView .tv-transport #up { background-image:linear-gradient(95deg,#b1ab91,#e6dfc1 15%,#c8c1a4 75%,#8b866d);color:#302e1e;border-top-color:#fff5d4;transform:rotate(-1deg); }
+body[data-skin=gutter] #tvView .tv-transport :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:48px;border-top-width:2px;justify-content:center;padding:5px 2px;gap:3px;border-radius:2px; }
 
 /* Each family keeps its own architecture on a phone rather than becoming one generic grid. */
 @media(max-width:740px) {
-  body[data-skin=retro] #tvView .player-pack > .remote { padding:17px 9px 17px;gap:14px 3px;border-inline-width:7px; }
-  body[data-skin=retro] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:75px; }
-  body[data-skin=retro] #tvView .player-pack > .remote :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:51px; }
-  body[data-skin=theatre] #tvView .player-pack > .remote { grid-template-columns:repeat(4,minmax(0,1fr));padding:19px 12px;gap:11px 5px; }
-  body[data-skin=stadium] #tvView .player-pack > .remote { grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,56px);gap:7px;padding:15px 10px; }
-  body[data-skin=stadium] #tvView .player-pack > .remote #pause { grid-column:4/6;grid-row:1/3; }
-  body[data-skin=stadium] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:56px; }
-  body[data-skin=stadium] #tvView .player-pack > .remote #pause { height:auto; }
-  body[data-skin=modern] #tvView .player-pack > .remote { grid-template-columns:repeat(3,minmax(0,1fr));padding:18px 15px 22px;gap:14px 12px;border-radius:24px; }
-  body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:44px;padding:6px;gap:3px; }
-  body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) svg { width:17px;height:17px; }
-  body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:0; }
-  body[data-skin=cozy] #tvView .player-pack > .remote { padding:21px 13px;gap:13px 8px; }
-  body[data-skin=cozy] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { grid-column:span 2;height:55px; }
-  body[data-skin=cozy] #tvView .player-pack > .remote #pause { grid-column:3/7;grid-row:2;height:55px; }
-  body[data-skin=metal] #tvView .player-pack > .remote { grid-template-columns:repeat(4,minmax(0,1fr));padding:17px 11px 22px;gap:13px 4px;border-inline-width:7px; }
-  body[data-skin=metal] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:66px; }
-  body[data-skin=ivory] #tvView .player-pack > .remote { grid-template-columns:repeat(6,minmax(0,1fr));padding:19px 9px 22px;gap:5px;border-radius:23px 23px 5px 5px; }
-  body[data-skin=ivory] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:92px; }
-  body[data-skin=pixel] #tvView .player-pack > .remote { grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;padding:17px 10px 20px; }
-  body[data-skin=pixel] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:58px; }
-  body[data-skin=pixel] #tvView .player-pack > .remote :is(#full,#popoutTv,.watch-dock-button) { height:47px; }
-  body[data-skin=gutter] #tvView .player-pack > .remote { grid-template-columns:repeat(6,minmax(0,1fr));padding:16px 8px 18px;gap:13px 2px; }
-  body[data-skin=gutter] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { height:84px; }
-  body[data-skin=gutter] #tvView .player-pack > .remote :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:49px; }
+  body[data-skin=retro] #tvView .tv-transport { padding:17px 9px 17px;gap:14px 3px;border-inline-width:7px; }
+  body[data-skin=retro] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:75px; }
+  body[data-skin=retro] #tvView .tv-transport :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:51px; }
+  body[data-skin=theatre] #tvView .tv-transport { grid-template-columns:repeat(4,minmax(0,1fr));padding:19px 12px;gap:11px 5px; }
+  body[data-skin=stadium] #tvView .tv-transport { grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,56px);gap:7px;padding:15px 10px; }
+  body[data-skin=stadium] #tvView .tv-transport #pause { grid-column:4/6;grid-row:1/3; }
+  body[data-skin=stadium] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:56px; }
+  body[data-skin=stadium] #tvView .tv-transport #pause { height:auto; }
+  body[data-skin=modern] #tvView .tv-transport { grid-template-columns:repeat(3,minmax(0,1fr));padding:18px 15px 22px;gap:14px 12px;border-radius:24px; }
+  body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:44px;padding:6px;gap:3px; }
+  body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button) svg { width:17px;height:17px; }
+  body[data-skin=modern] #tvView .tv-transport :is(.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:0; }
+  body[data-skin=cozy] #tvView .tv-transport { padding:21px 13px;gap:13px 8px; }
+  body[data-skin=cozy] #tvView .tv-transport :is(.btn,.watch-dock-button) { grid-column:span 2;height:55px; }
+  body[data-skin=cozy] #tvView .tv-transport #pause { grid-column:3/7;grid-row:2;height:55px; }
+  body[data-skin=metal] #tvView .tv-transport { grid-template-columns:repeat(4,minmax(0,1fr));padding:17px 11px 22px;gap:13px 4px;border-inline-width:7px; }
+  body[data-skin=metal] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:66px; }
+  body[data-skin=ivory] #tvView .tv-transport { grid-template-columns:repeat(6,minmax(0,1fr));padding:19px 9px 22px;gap:5px;border-radius:23px 23px 5px 5px; }
+  body[data-skin=ivory] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:92px; }
+  body[data-skin=pixel] #tvView .tv-transport { grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;padding:17px 10px 20px; }
+  body[data-skin=pixel] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:58px; }
+  body[data-skin=pixel] #tvView .tv-transport :is(#full,#popoutTv,.watch-dock-button) { height:47px; }
+  body[data-skin=gutter] #tvView .tv-transport { grid-template-columns:repeat(6,minmax(0,1fr));padding:16px 8px 18px;gap:13px 2px; }
+  body[data-skin=gutter] #tvView .tv-transport :is(.btn,.watch-dock-button) { height:84px; }
+  body[data-skin=gutter] #tvView .tv-transport :is(#mute,#cc,#full,#popoutTv,.watch-dock-button) { height:49px; }
 }
 @media(max-width:360px) {
-  body[data-skin=retro] #tvView .player-pack > .remote { grid-template-columns:repeat(5,minmax(0,1fr)); }
-  body[data-skin=theatre] #tvView .player-pack > .remote { grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:9px; }
-  body[data-skin=stadium] #tvView .player-pack > .remote { padding-inline:7px;gap:6px; }
-  body[data-skin=cozy] #tvView .player-pack > .remote { grid-template-columns:repeat(6,minmax(0,1fr));padding-inline:11px; }
-  body[data-skin=cozy] #tvView .player-pack > .remote #pause { grid-column:3/7;grid-row:2; }
-  body[data-skin=ivory] #tvView .player-pack > .remote { grid-template-columns:repeat(5,minmax(0,1fr)); }
-  body[data-skin=gutter] #tvView .player-pack > .remote { grid-template-columns:repeat(5,minmax(0,1fr)); }
+  body[data-skin=retro] #tvView .tv-transport { grid-template-columns:repeat(5,minmax(0,1fr)); }
+  body[data-skin=theatre] #tvView .tv-transport { grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:9px; }
+  body[data-skin=stadium] #tvView .tv-transport { padding-inline:7px;gap:6px; }
+  body[data-skin=cozy] #tvView .tv-transport { grid-template-columns:repeat(6,minmax(0,1fr));padding-inline:11px; }
+  body[data-skin=cozy] #tvView .tv-transport #pause { grid-column:3/7;grid-row:2; }
+  body[data-skin=ivory] #tvView .tv-transport { grid-template-columns:repeat(5,minmax(0,1fr)); }
+  body[data-skin=gutter] #tvView .tv-transport { grid-template-columns:repeat(5,minmax(0,1fr)); }
 }
-body[data-skin][data-tv-page=guide] #tvView .player-pack > .remote { display:none; }
-body.tv-popout-window[data-skin] #tvView .player-pack > .remote #popoutTv { display:none; }
+body[data-skin][data-tv-page=guide] #tvView .tv-transport { display:none; }
+body.tv-popout-window[data-skin] #tvView .tv-transport #popoutTv { display:none; }
 /* A booth legend is printed on the panel: only its circular cap moves. */
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) { transform:none;box-shadow:none; }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled)::before { transform:translate(-50%,3px);filter:brightness(.86); }
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) { transform:none;box-shadow:none; }
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled)::before { transform:translate(-50%,3px);filter:brightness(.86); }
 /* The floating-window wrapper has a legacy flex !important; retain each bank's grid. */
-body.tv-popout-window[data-skin] #tvView .player-pack > .remote { display:grid!important; }
+body.tv-popout-window[data-skin] #tvView .tv-transport { display:grid!important; }
 /* Balanced domestic console: five switches, central transport, then two broad utility pads. */
-body[data-skin=cozy] #tvView .player-pack > .remote { grid-template-columns:repeat(10,minmax(0,1fr)); }
-body[data-skin=cozy] #tvView .player-pack > .remote .watch-dock-button { grid-column:span 4; }
-@media(max-width:740px) { body[data-skin=cozy] #tvView .player-pack > .remote { column-gap:6px; } }
-body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) svg { transform:translateY(3px); }
+body[data-skin=cozy] #tvView .tv-transport { grid-template-columns:repeat(10,minmax(0,1fr)); }
+body[data-skin=cozy] #tvView .tv-transport .watch-dock-button { grid-column:span 4; }
+@media(max-width:740px) { body[data-skin=cozy] #tvView .tv-transport { column-gap:6px; } }
+body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) svg { transform:translateY(3px); }
 /* Stadium's twelve controls fill a compact bank; React never spills into a lone row. */
 @media(min-width:741px) {
-  body[data-skin=stadium] #tvView .player-pack>.remote { grid-template-columns:repeat(8,minmax(0,1fr)); }
-  body[data-skin=stadium] #tvView .player-pack>.remote .watch-dock-button[aria-label=React] { grid-column:span 2; }
+  body[data-skin=stadium] #tvView .tv-transport { grid-template-columns:repeat(8,minmax(0,1fr)); }
+  body[data-skin=stadium] #tvView .tv-transport .watch-dock-button[aria-label=React] { grid-column:span 2; }
 }
