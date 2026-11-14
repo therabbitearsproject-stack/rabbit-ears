@@ -1,18 +1,19 @@
 /* A quieter header: the existing wordmark dimensions remain untouched. */
 body[data-skin] .wrap > header {
   display:grid;
-  grid-template-columns:minmax(0,1fr) auto 44px;
-  align-items:center;
-  gap:8px 16px;
+  grid-template-columns:auto minmax(0,1fr) auto 44px;
+  align-items:end;
+  gap:8px 20px;
   min-height:0;
   padding:0 0 10px;
 }
 body[data-skin] .wrap > header .brand { grid-column:1; margin:0; min-width:0; }
 body[data-skin] .wrap > header .brand-home { display:block;width:fit-content; }
-body[data-skin] .wrap > header .tag { display:none; }
+body[data-skin] .wrap > header .tag { display:block;grid-column:2;grid-row:1;max-width:none;margin:0 0 10px;line-height:1.5; }
 body[data-skin] .wrap > header .online {
-  grid-column:2;
-  margin:0;
+  grid-column:3;
+  grid-row:1;
+  margin:0 0 7px;
   padding:4px 9px;
   gap:6px;
   font-size:14px;
@@ -22,7 +23,7 @@ body[data-skin] .wrap > header .online {
 body[data-skin] .wrap > header .online i { width:6px;height:6px;flex-shrink:0; }
 body[data-skin] .wrap > header .settings-trigger {
   position:static;
-  grid-column:3;
+  grid-column:4;
   grid-row:1;
   display:inline-flex;
   align-items:center;
@@ -149,3 +150,16 @@ body .settings-dialog {
 /* The preset control itself is a select; keep it aligned with other audio fields. */
 select.audio-presets { display:block;margin:0; }
 
+
+/* Keep the restored description between the logo and aligned controls. */
+@media(max-width:900px) {
+  body[data-skin] .wrap > header { grid-template-columns:minmax(0,1fr) auto 44px; }
+  body[data-skin] .wrap > header .tag { display:none; }
+  body[data-skin] .wrap > header .online { grid-column:2; }
+  body[data-skin] .wrap > header .settings-trigger { grid-column:3; }
+}
+@media(max-width:440px) {
+  body[data-skin] .wrap > header { grid-template-columns:minmax(0,1fr) 44px; }
+  body[data-skin] .wrap > header .settings-trigger { grid-column:2; }
+  body[data-skin] .wrap > header .online { grid-column:1/-1;grid-row:2;margin-bottom:0; }
+}
