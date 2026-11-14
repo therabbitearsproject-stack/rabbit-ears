@@ -19,6 +19,12 @@ export function validatePreferences(value) {
   const ranges={re_tv_volume:[0,1],re_vol:[0,1]};
   const out={};
   for(const [key,v] of Object.entries(value)){
+    if(key==='re_audio'){
+      const keys=['enabled','denoise','normalize','compression','amount','linked','makeup','position','eq','bands'];
+      const ranges={denoise:[0,100],amount:[0,100],makeup:[-12,18]};
+      requireValue(v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).length===keys.length&&keys.every(k=>Object.hasOwn(v,k))&&['enabled','normalize','compression','linked','eq'].every(k=>typeof v[k]==='boolean')&&Object.entries(ranges).every(([k,[min,max]])=>typeof v[k]==='number'&&Number.isFinite(v[k])&&v[k]>=min&&v[k]<=max)&&['pre','post'].includes(v.position)&&Array.isArray(v.bands)&&v.bands.length===10&&Array.from(v.bands).every(b=>typeof b==='number'&&Number.isFinite(b)&&b>=-12&&b<=12),'Invalid audio settings.');
+      out[key]={...v,bands:[...v.bands]};continue;
+    }
     requireValue(Object.hasOwn(enums,key)?enums[key].includes(v):bools.has(key)?typeof v==='boolean':Object.hasOwn(ranges,key)&&typeof v==='number'&&Number.isFinite(v)&&v>=ranges[key][0]&&v<=ranges[key][1],`Invalid preference: ${key.slice(0,40)}.`);
     out[key]=v;
   }

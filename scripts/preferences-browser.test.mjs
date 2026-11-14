@@ -90,3 +90,23 @@ test('sparse account profiles use account defaults while only new accounts inher
   assert.equal(result.seeded.skin,'gutter');assert.equal(result.seeded.volume,.2);assert.equal(result.seeded.style,'yellow');assert.equal(result.seeded.saved.re_skin,'gutter');assert.equal(result.seeded.saved.re_tv_muted,undefined);
  }finally{await browser.close();}
 });
+
+test('audio settings hydrate and save independent snapshots while invalid or other-account settings are excluded',{skip:!chromium},async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
+ try{
+  const page=await browser.newPage();await page.setContent('<video></video>');await page.addScriptTag({path:fileURLToPath(new URL('../assets/preferences.js',import.meta.url))});
+  const result=await page.evaluate(async()=>{
+   const pause=()=>new Promise(r=>setTimeout(r,5));const audio={enabled:true,denoise:30,normalize:true,compression:true,amount:35,linked:true,makeup:2.1,position:'pre',eq:true,bands:[-9,-6,-3,-1,0,1,2,2,-3,-6]},disk=new Map(),writes=[];let who='A',version=1,saved={re_audio:structuredClone(audio)},applied;
+   const store={get:(k,d)=>disk.has(k)?disk.get(k):d,set:(k,v)=>disk.set(k,v)};
+   const response=body=>({ok:true,status:200,json:async()=>body});
+   const fetcher=async(url,options)=>{if(url.endsWith('/api/session'))return response({user:{id:who,csrf:'fixture'}});if(options.method==='PUT'){const patch=JSON.parse(options.body);writes.push(patch);Object.assign(saved,patch.changes);version++;}return response({schemaVersion:1,userId:who,version,preferences:saved});};
+   const prefs=RabbitPreferences.create({store,api:'https://fixture.test',fetcher,pollMs:0,debounceMs:100000,apply:p=>{applied=structuredClone(p.re_audio);p.re_audio.bands[0]=11;}});await pause();
+   const hydration=structuredClone(disk.get('re_audio')),input=structuredClone(audio);input.bands[0]=-7;store.set('re_audio',input);input.bands[0]=12;
+   disk.get('re_audio').bands[0]=10;await prefs.flush();const cache=structuredClone(disk.get('re_account_preferences'));const snapshot={write:writes[0].changes.re_audio.bands[0],cached:cache.values.re_audio.bands[0],input:input.bands[0]};
+   who='B';version=1;saved={re_audio:{...audio,bands:[99]}};prefs.setSession({id:who,csrf:'fixture'});await pause();const other=structuredClone(disk.get('re_audio'));prefs.stop();
+   return {hydration,snapshot,other,applied,writes:writes.length};
+  });
+  assert.equal(result.hydration.bands[0],-9);assert.deepEqual(result.snapshot,{write:-7,cached:-7,input:12});assert.equal(result.writes,1);
+  assert.deepEqual(result.other,{enabled:true,denoise:0,normalize:false,compression:false,amount:35,linked:true,makeup:2.1,position:'pre',eq:false,bands:Array(10).fill(0)});assert.equal(result.applied.bands[0],0);
+ }finally{await browser.close();}
+});

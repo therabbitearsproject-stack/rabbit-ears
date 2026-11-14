@@ -1,17 +1,25 @@
 /* Optional Discord account settings. Playback and anonymous preferences remain local. */
 window.RabbitPreferences=(()=>{
-  const defaults={re_skin:'pixel',re_radio_look:'vinyl',re_caption_style:'none',re_captions:false,re_caption_backing:false,re_tv_volume:.8,re_tv_muted:true,re_vol:.8};
+  const audioDefaults={enabled:true,denoise:0,normalize:false,compression:false,amount:35,linked:true,makeup:2.1,position:'pre',eq:false,bands:Array(10).fill(0)};
+  const defaults={re_skin:'pixel',re_radio_look:'vinyl',re_caption_style:'none',re_captions:false,re_caption_backing:false,re_tv_volume:.8,re_tv_muted:true,re_vol:.8,re_audio:audioDefaults};
+  const clone=value=>JSON.parse(JSON.stringify(value));
+  function validAudio(value){
+    if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).length!==Object.keys(audioDefaults).length)return false;
+    const ranges={denoise:[0,100],amount:[0,100],makeup:[-12,18]};
+    return Object.keys(audioDefaults).every(k=>Object.hasOwn(value,k))&&['enabled','normalize','compression','linked','eq'].every(k=>typeof value[k]==='boolean')&&Object.entries(ranges).every(([k,[min,max]])=>typeof value[k]==='number'&&Number.isFinite(value[k])&&value[k]>=min&&value[k]<=max)&&['pre','post'].includes(value.position)&&Array.isArray(value.bands)&&value.bands.length===10&&Array.from(value.bands).every(v=>typeof v==='number'&&Number.isFinite(v)&&v>=-12&&v<=12);
+  }
   const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white']};
   function clean(value){
     const out={};if(!value||typeof value!=='object'||Array.isArray(value))return out;
     for(const [key,v]of Object.entries(value)){
       if(!Object.hasOwn(defaults,key))continue;
+      if(key==='re_audio'){if(validAudio(v))out[key]=clone(v);continue;}
       const valid=enums[key]?enums[key].includes(v):typeof defaults[key]==='boolean'?typeof v==='boolean':typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1;
       if(valid)out[key]=v;
     }
     return out;
   }
-  function coherent(value){const out={...value};if(Object.hasOwn(out,'re_caption_style'))out.re_captions=out.re_caption_style!=='none';return out;}
+  function coherent(value){const out=clone(value);if(Object.hasOwn(out,'re_caption_style'))out.re_captions=out.re_caption_style!=='none';return out;}
   function create({store,apply=values=>window.REUI?.applyPreferences?.(values),api=window.RABBIT_COMMUNITY?.api,fetcher=window.fetch.bind(window),debounceMs=650,pollMs=30000}={}){
     if(!store||!api)return null;
     api=api.replace(/\/$/,'');
@@ -21,18 +29,20 @@ window.RabbitPreferences=(()=>{
     if(Object.hasOwn(guest,'re_captions')&&!Object.hasOwn(guest,'re_caption_style'))guest.re_caption_style=guest.re_captions?'white':'none';
     let user=null,epoch=0,version=0,ready=false,applying=false,dirty={},history={},ticks=0,timer=null,saving=false,server={},stopped=false,checking=false;
     const status=state=>window.dispatchEvent(new CustomEvent('re:preferences-status',{detail:{state,signedIn:!!user}}));
-    const persistGuest=()=>original('re_guest_preferences',guest);
-    const remember=()=>{if(user){const pending=Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]));original('re_account_preferences',{schemaVersion:1,userId:user.id,version,values:merged(),pending});}};
+    const persistGuest=()=>original('re_guest_preferences',clone(guest));
+    const remember=()=>{if(user){const pending=Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]));original('re_account_preferences',{schemaVersion:1,userId:user.id,version,values:merged(),pending:clone(pending)});}};
     function applyValues(values){
       applying=true;
-      try{for(const [k,v]of Object.entries(values))original(k,v);apply({...values});}
+      try{for(const [k,v]of Object.entries(values))original(k,clone(v));apply(clone(values));}
       finally{applying=false;}
     }
     const merged=()=>coherent({...defaults,...server,...Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]))});
     function schedule(delay=debounceMs){clearTimeout(timer);if(user&&ready&&!stopped)timer=setTimeout(flush,delay);timer?.unref?.();}
     store.set=function(key,value){
       original(key,value);
-      if(applying||!Object.hasOwn(clean({[key]:value}),key))return;
+      const sanitized=clean({[key]:value});
+      if(applying||!Object.hasOwn(sanitized,key))return;
+      value=sanitized[key];original(key,clone(value));
       const tick=++ticks;history[key]={value,tick};
       if(user){dirty[key]={value,tick};remember();status('saving');schedule();}
       else{guest[key]=value;persistGuest();}

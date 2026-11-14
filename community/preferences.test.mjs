@@ -8,7 +8,7 @@ after(()=>runtime.dispose());
 const DB=await runtime.getD1Database('DB');
 for(const file of ['migrations/0001_community.sql','migrations/0002_preferences.sql'])for(const statement of (await readFile(new URL(file,import.meta.url),'utf8')).split(';').filter(s=>s.trim()))await DB.prepare(statement).run();
 const env={DB,SITE_ORIGIN:'https://rabbit-ears.stream',API_ORIGIN:'https://community.rabbit-ears.stream'};
-for(const id of ['alice','bob','radio'])await DB.prepare('INSERT INTO sessions(token_hash,user_id,display_name,csrf,expires_at) VALUES(?,?,?,?,?)').bind(await digest(id+'-token'),id,id,id+'-csrf',Math.floor(Date.now()/1000)+3600).run();
+for(const id of ['alice','bob','radio','audio'])await DB.prepare('INSERT INTO sessions(token_hash,user_id,display_name,csrf,expires_at) VALUES(?,?,?,?,?)').bind(await digest(id+'-token'),id,id,id+'-csrf',Math.floor(Date.now()/1000)+3600).run();
 const call=(who,method='GET',body,headers={})=>worker.fetch(new Request(env.API_ORIGIN+'/api/preferences',{method,headers:{Origin:env.SITE_ORIGIN,...(who?{Cookie:'__Host_re_session='+who+'-token','X-CSRF-Token':who+'-csrf'}:{}),'Content-Type':'application/json',...headers},...(body===undefined?{}:{body:JSON.stringify(body)})}),env,{waitUntil(){}});
 
 test('preferences are authenticated, CSRF protected and never selectable by another user',async()=>{
@@ -53,4 +53,18 @@ test('preference schema rejects status/social data, invalid ranges and unimpleme
  assert.equal((await call('bob','PUT',{version:0,changes:{}})).status,400);
  assert.equal((await call('bob','PUT',{version:0,changes:{re_skin:'x'.repeat(9000)}})).status,413);
  const options=await worker.fetch(new Request(env.API_ORIGIN+'/api/preferences',{method:'OPTIONS',headers:{Origin:env.SITE_ORIGIN}}),env,{});assert.match(options.headers.get('Access-Control-Allow-Methods'),/PUT/);
+});
+
+test('complete audio settings are bounded, copied and persist through conflict merges without leaking accounts',async()=>{
+ const audio={enabled:true,denoise:30,normalize:true,compression:true,amount:35,linked:true,makeup:2.1,position:'pre',eq:true,bands:[-9,-6,-3,-1,0,1,2,2,-3,-6]};
+ const accepted=validatePreferences({re_audio:audio});assert.deepEqual(accepted.re_audio,audio);audio.bands[0]=-8;assert.equal(accepted.re_audio.bands[0],-9);
+ const saved=await call('audio','PUT',{version:0,changes:{re_audio:audio}});assert.equal(saved.status,200);
+ assert.deepEqual((await(await call('audio')).json()).preferences.re_audio,audio);
+ const conflict=await call('audio','PUT',{version:0,changes:{re_skin:'gutter'}});assert.equal(conflict.status,409);const current=await conflict.json();assert.deepEqual(current.preferences.re_audio,audio);
+ assert.equal((await call('audio','PUT',{version:current.version,changes:{re_skin:'gutter'}})).status,200);
+ const merged=(await(await call('audio')).json()).preferences;assert.deepEqual(merged.re_audio,audio);assert.equal(merged.re_skin,'gutter');assert.equal((await(await call('bob')).json()).preferences.re_audio,undefined);
+ const {bands,...partial}=audio;
+ for(const invalid of [partial,{...audio,extra:true},{...audio,enabled:1},{...audio,denoise:101},{...audio,amount:-1},{...audio,makeup:18.1},{...audio,position:'middle'},{...audio,bands:Array(9).fill(0)},{...audio,bands:[...bands.slice(0,9),NaN]},{...audio,bands:[13,...bands.slice(1)]},{...audio,bands:Array(10)}]){
+  assert.throws(()=>validatePreferences({re_audio:invalid}));assert.equal((await call('audio','PUT',{version:2,changes:{re_audio:invalid}})).status,400);
+ }
 });
