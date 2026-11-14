@@ -1,4 +1,6 @@
 import channels from './channels.json' with { type: 'json' };
+import mediaSources from './media-sources.json' with { type: 'json' };
+import {handleMediaBridge} from './media-bridge.mjs';
 
 import {REACTIONS,LEGACY_REACTIONS} from '../assets/pixel-reactions.mjs';
 // Cached clients keep working; only REACTIONS appear in the current picker.
@@ -117,6 +119,7 @@ function publicEvent(e, user) {
 function moderator(user, env) { return !!user && (env.MODERATOR_IDS || '').split(',').map(s=>s.trim()).includes(user.user_id); }
 async function handle(request, env, ctx) {
   const url = new URL(request.url), path = url.pathname;
+  if(path.startsWith('/media/'))return handleMediaBridge(request,env,mediaSources);
   if (request.method === 'OPTIONS') {
     requireValue(request.headers.get('Origin') === env.SITE_ORIGIN,'Unrecognized origin.',403);
     return new Response(null,{ status:204, headers:{ ...headers(request,env), 'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Headers':'Content-Type, X-CSRF-Token' } });

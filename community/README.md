@@ -55,6 +55,18 @@ After 12 failed attempts, fix the permission/token problem and reset the affecte
 
 Events are public and persist for later airings until removed. Each stores a Discord user ID/display name, text or emoji, episode file identity/title, source playback time, channel, and server-created time. Sessions expire after 7 days and are cleaned by cron. No Discord emails, passwords, or private conversations are stored. D1 and Worker usage should be monitored as audience grows; public playback polling uses the free-plan request allowance.
 
+## Public media transport for optional audio effects
+
+`GET`/`HEAD /media/<sha256>` streams an exact catalog file from the Archive download endpoint with site-restricted CORS and preserved byte ranges. The hash is SHA-256 of the complete canonical download URL. Only static allowlisted records or exact records from the site's fixed `/audio-media/<first-two-hash-characters>.json` shards are accepted. Arbitrary URLs, forwarded account credentials, non-Archive redirects, HTML responses, and ignored or incorrect range responses are rejected. No media is buffered in worker memory or stored in D1.
+
+Normal site assembly publishes 256 small allowlist shards from the final catalog, including protected programming and remote break files. New published files become available without a worker deployment; shard caches expire after 60 seconds. Caption-only deployments retain the published shards and programming unchanged. To generate the site artifacts manually from the repository root:
+
+```sh
+node community/generate-media-sources.mjs --catalog _site/catalog.json --output-dir _site/audio-media
+```
+
+Running the generator without arguments instead refreshes `community/media-sources.json`, the worker's fast-path snapshot. Redeploy the worker after changing that snapshot or the transport implementation. Unsupported or unknown files retain native playback; optional audio processing must never make playback depend on bridge availability.
+
 ## Local verification
 
 ```sh
