@@ -1599,7 +1599,9 @@ window.rePlaybackContext = () => {
   if (mode !== 'tv' || !playing || channels()[cur]?.custom) return null;
   const segment = currentSegment();
   if (segment.kind !== 'program') return null;
-  if (vid.readyState < 1 || !activeSegment?.media || vid.currentSrc !== new URL(fileUrl(activeSegment.media), location.href).href) return null;
+  if (vid.readyState < 1 || !activeSegment?.media) return null;
+  const expectedSource = new URL(fileUrl(activeSegment.media), location.href).href;
+  if (!(window.reAudio?.sourceMatches?.(expectedSource) ?? (vid.currentSrc === expectedSource))) return null;
   return { channel: channels()[cur].no, channelName: channels()[cur].name,
     mediaId: playing.m.id, file: playing.m.file, title: playing.m.title,
     duration: playing.m.dur, position: vid.currentTime, cuts: playing.m.cuts,
@@ -2159,7 +2161,7 @@ $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
 <script src="assets/audio-model.js?v=1"></script>
 <script src="assets/audio-graph.js?v=1"></script>
-<script src="assets/audio-settings.js?v=graphic-eq-2"></script>
+<script src="assets/audio-settings.js?v=archive-audio-4"></script>
 <script src="assets/interface.js?v=settings-1"></script>
 <script src="assets/radio-winamp.js?v=2"></script>
 <script src="assets/volume.js?v=audio-settings-1"></script>

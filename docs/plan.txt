@@ -345,3 +345,13 @@ Compact header and Settings — November 14, 2026
 Header alignment follow-up — November 14, 2026: restored the original changing description in the middle on desktop, along the header rule. Lowered the viewer count and settings gear together and aligned their centers. Logo dimensions and compact header height stay unchanged; narrow screens retain their compact layout.
 
 Graphic equalizer — November 14, 2026: replaced horizontal sliders with one ten-band bank of vertical faders, shared +12/0/−12 dB guide marks, gain/frequency labels, and a Flat reset. Phones scroll the same bank horizontally instead of splitting it into rows. Existing DSP and saved audio profiles are unchanged.
+
+
+Real Archive audio effects repair — November 14, 2026
+- Diagnosed the production failure: Archive video downloads lack CORS audio-access headers; earlier local stream tests allowed access and missed that real-world restriction. Desktop audio worked through privileged Electron header rewriting, which a normal website cannot use.
+- Archive’s /cors transport exposes audio but ignores byte ranges, so it is unsuitable for switching effects on during a long film. Added a public exact-file media bridge to the existing community service instead, preserving proper 206/Content-Range seeking.
+- The bridge accepts only hashes of catalog-approved Archive files; it never accepts arbitrary proxy URLs, viewer tokens or cookies. Redirects remain HTTPS Archive hosts. Responses stream without buffering full movies.
+- Initial allowlist covers 28,899 public program/ad files, including protected programming. Normal builds publish small trusted source manifests for automatic authorization of future catalog additions. Caption-only publishing leaves these files and all programming untouched.
+- Audio runtime keeps exact canonical file identity for comments, reactions and captions, preserves seek/paused state, and falls back to native sound if connection or browser support fails. Friendly preparing/error messages replace raw “Failed to fetch.”
+- Verified against real Archive media in Chrome at 1,535 seconds into Angel’s Egg and 120 seconds into DS9: processed digital audio was nonzero, logical mute produced zero output, bypass returned to native playback, and paused settings changes stayed paused. Real Range requests and source-identity checks were recorded in design-history/audio-verification. Seven browser runtime checks, 39 backend checks, three playback-context checks and all 131 ordinary site checks pass.
+- Deployed community worker f5b113ca-d586-4c21-80bc-6f611e2df8c0. Both real sources returned exact partial byte ranges with the required site access headers. No extra accounts, secrets or paid services were created.

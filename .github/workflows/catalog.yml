@@ -146,6 +146,7 @@ jobs:
           cp -r subs _site/subs
           node scripts/build-pages.mjs _site   # channel and game pages plus sitemap.xml
           node scripts/build-tv-feed.mjs _site # schedule files for the Roku and other TV apps
+          node community/generate-media-sources.mjs --catalog _site/catalog.json --output-dir _site/audio-media # exact public audio transports; caption-only builds reuse these unchanged
           du -sh _site _site/subs
       - name: Add standalone caption availability and immutable assets
         run: node scripts/build-caption-index.mjs _site
