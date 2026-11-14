@@ -10,6 +10,6 @@ Payments go directly to the connected PayPal or Stripe account. Use a dedicated 
 
 Public page supplied by the account owner: https://ko-fi.com/rabbitears. The support page links to it, and both repositories use `ko_fi: rabbitears` in .github/FUNDING.yml. Site/app links go through the project support page; GitHub’s Sponsor button points to the same Ko-fi fund directly.
 
-The owner completed account/payout setup privately. Automated verification of the public Ko-fi page is blocked by Ko-fi’s anti-bot response, so no checkout or payment success is claimed. No test charge was submitted. Confirm the live checkout identifies Rabbit Ears before sharing a fundraising announcement.
+The owner reported finishing the account/payout setup privately. Automated verification of the public Ko-fi page is blocked by Ko-fi’s anti-bot response, so no checkout or payment success is claimed. No test charge was submitted. Confirm the live checkout identifies Rabbit Ears before sharing a fundraising announcement.
 
 The UI changes are independent of programming, captions, scheduling and the audio engine. Support remains optional; watching remains free.
