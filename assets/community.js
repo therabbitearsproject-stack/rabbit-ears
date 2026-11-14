@@ -75,13 +75,23 @@ function controls(){
   input.disabled=!enabled;submit.disabled=!enabled;
   input.placeholder=!user?'Sign in with Discord to leave a comment':!c?'Comments return when the programme resumes':'What’s on your mind at '+stamp(c.position)+'?';
 }
+let preferenceState='loading';
+function renderPreferenceStatus(){
+  const status=auth.querySelector('.community-preferences-status');if(!status)return;
+  const state=window.rabbitPreferences?.getState();
+  const key=state?.userId===user?.id?(state.ready?preferenceState==='offline'?'offline':state.dirty.length?'saving':'synced':preferenceState==='offline'?'offline':'loading'):'loading';
+  const text={synced:'Settings synced',saving:'Saving settings…',offline:'Offline — settings saved on this device',loading:'Loading saved settings…'}[key];
+  if(status.textContent!==text)status.textContent=text;
+}
+window.addEventListener('re:preferences-status',e=>{preferenceState=e.detail?.state||'loading';renderPreferenceStatus();});
 function renderAuth(){
   window.dispatchEvent(new CustomEvent('re:session',{detail:user}));
   for(const target of [auth,reactionAuth]){
     target.replaceChildren();
-    if(user){if(target===auth)target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;renderAuth();controls();}catch(e){message(e.message);}},'community-signout'));}
+    if(user){if(target===auth){const settings=el('small','community-preferences-status');settings.setAttribute('role','status');settings.setAttribute('aria-live','polite');target.append(el('span','community-name',user.name),button('Sign out',async()=>{try{await call('/api/logout',{method:'POST'});user=null;renderAuth();controls();}catch(e){message(e.message);}},'community-signout'),settings);}}
     else {const login=el('a','btn discord-signin','Sign in & join Discord');login.href=api+'/auth/discord?channel='+(context()?.channel||97);login.addEventListener('click',()=>{login.href=api+'/auth/discord?channel='+(context()?.channel||97);});target.append(login,el('small','community-disclosure','Signing in also joins the Rabbit Ears Discord server.'));}
   }
+  renderPreferenceStatus();
 }
 function replayed(e,c){return e.createdAt<c.airingStart;}
 function show(e,c){return replays||!replayed(e,c);}

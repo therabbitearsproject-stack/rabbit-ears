@@ -34,7 +34,7 @@ window.RabbitPreferences=(()=>{
       original(key,value);
       if(applying||!Object.hasOwn(clean({[key]:value}),key))return;
       const tick=++ticks;history[key]={value,tick};
-      if(user){dirty[key]={value,tick};remember();schedule();}
+      if(user){dirty[key]={value,tick};remember();status('saving');schedule();}
       else{guest[key]=value;persistGuest();}
     };
     async function request(path,options={}){
@@ -62,7 +62,8 @@ window.RabbitPreferences=(()=>{
       try{
         const {response,body}=await request('/api/preferences',{method:'PUT',body:JSON.stringify({version,changes})});
         if(generation!==epoch||stopped)return;
-        if(response.status===401||response.status===403){setSession(null);return;}
+        if(response.status===401){setSession(null);return;}
+        if(response.status===403){ready=false;status('offline');checkSession();return;}
         if(!accept(body)||!response.ok&&response.status!==409)throw Error('Settings not saved');
         version=body.version;server=clean(body.preferences);
         if(response.ok)for(const [key,intent]of Object.entries(sent))if(dirty[key]?.tick===intent.tick)delete dirty[key];
