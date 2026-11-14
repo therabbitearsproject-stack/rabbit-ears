@@ -37,17 +37,24 @@ test('account hydration, live updates and cross-account races preserve intent an
    const switched={skin:values.get('re_skin'),volume:values.get('re_tv_volume'),state:sync.getState()};
    hold=false;store.set('re_radio_look','car');profiles.B.version++;profiles.B.preferences.re_caption_backing=true;await sync.flush();await sync.flush();
    const merged=structuredClone(profiles.B.preferences);
-   offline=true;await sync.refresh();store.set('re_skin','metal');await sync.flush();const offlineLocal=values.get('re_skin');
+   offline=true;await sync.refresh();store.set('re_skin','metal');await sync.flush();const offlineLocal=values.get('re_skin'),offlineCache=structuredClone(values.get('re_account_preferences'));
    sync.setSession(null);const guest={skin:values.get('re_skin'),volume:values.get('re_tv_volume')};store.set('re_skin','cozy');await sync.flush();
    const stoppedWrites=writes.length;
-   sync.stop();return {hydration,firstWrite,switchingSkin,switched,merged,guest,stoppedWrites,writes,played,loaded,time:video.currentTime,originalA:profiles.A.preferences,statuses,offlineLocal};
+   sync.stop();const guestWriteSafe=writes.length===stoppedWrites;
+   // Recreate the client from its pre-signout offline disk snapshot, as a page reload would.
+   const disk=new Map(values);disk.set('re_account_preferences',offlineCache);
+   const restoredStore={get:(k,d)=>disk.has(k)?disk.get(k):d,set:(k,v)=>disk.set(k,v)};
+   offline=false;const restored=RabbitPreferences.create({store:restoredStore,apply:()=>{},api:'https://api.test',fetcher,pollMs:0,debounceMs:100000});
+   await sleep(5);const restoredSkin=disk.get('re_skin');await restored.flush();const restoredWrite=writes.at(-1);restored.stop();
+   return {hydration,firstWrite,switchingSkin,switched,merged,guest,guestWriteSafe,writes,played,loaded,time:video.currentTime,originalA:profiles.A.preferences,statuses,offlineLocal,restoredSkin,restoredWrite};
   });
   assert.deepEqual(result.hydration,{skin:'theatre',volume:.9,style:'yellow'});
   assert.deepEqual(result.firstWrite.changes,{re_tv_volume:.9});
   assert.notEqual(result.switchingSkin,'theatre');assert.equal(result.switched.skin,'gutter');assert.equal(result.switched.volume,.6);assert.equal(result.switched.state.userId,'B');
   assert.equal(result.merged.re_radio_look,'car');assert.equal(result.merged.re_caption_backing,true);assert.equal(result.merged.re_tv_volume,.6);
-  assert.equal(result.guest.skin,'pixel');assert.equal(result.guest.volume,.8);assert.equal(result.writes.length,result.stoppedWrites);
+  assert.equal(result.guest.skin,'pixel');assert.equal(result.guest.volume,.8);assert.equal(result.guestWriteSafe,true);
   assert.equal(result.played+result.loaded,0);assert.equal(result.time,42);
   assert.equal(result.offlineLocal,'metal');assert.ok(result.statuses.includes('saving'));assert.ok(result.statuses.includes('synced'));assert.ok(result.statuses.includes('offline'));
+  assert.equal(result.restoredSkin,'metal');assert.equal(result.restoredWrite.account,'B');assert.deepEqual(result.restoredWrite.changes,{re_skin:'metal'});
  }finally{await browser.close();}
 });
