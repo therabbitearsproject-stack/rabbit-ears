@@ -7,7 +7,7 @@
   player.prepend(title);
   const display=document.createElement('div');display.className='amp-clock-panel';
   const label=document.createElement('span');label.className='amp-clock-label';label.textContent='STREAM TIME';
-  const time=document.createElement('output');time.className='amp-time';time.setAttribute('aria-label','Stream time');time.textContent='00:00';
+  const time=document.createElement('output');time.className='amp-time';time.setAttribute('role','timer');time.setAttribute('aria-live','off');time.setAttribute('aria-label','Stream time');time.textContent='00:00';
   const state=document.createElement('span');state.className='amp-stream-state';state.setAttribute('aria-hidden','true');
   display.append(label,time,state);dial.append(display);
   let base=null;
