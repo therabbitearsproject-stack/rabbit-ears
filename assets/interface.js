@@ -1,14 +1,15 @@
 /* Presentation layer. The existing schedule, video, radio and game engines retain ownership. */
 (() => {
   const skins = [
-    ['retro','Retro Cabinet','Walnut, chrome and tactile television dials.','#765038'],
-    ['theatre','Movie Theatre','Velvet curtains and a dark auditorium.','#742739'],
-    ['stadium','Stadium Seat','Field stripes and a broadcast scoreboard.','#31583f'],
-    ['modern','Silver Screen','Brushed aluminium and a quiet modern setting.','#a6afb7'],
-    ['cozy','Cozy Den','Warm wood and soft evening lamplight.','#b48d61'],
-    ['metal','Midnight Metal','Black steel, red stage lights and loud type.','#b51d32'],
-    ['ivory','Ivory Console','Enamel, burgundy and an easy-to-read guide.','#e6d8bf'],
+    ['retro','Retro Cabinet','Walnut component CRT, cream panels and warm analogue dials.','#765038'],
+    ['theatre','Movie Theatre','A gold-trimmed projection monitor in an intimate Art Deco picture house.','#742739'],
+    ['stadium','Stadium Seat','A production monitor, scoreboard modules and match-day green.','#31583f'],
+    ['modern','Silver Screen','A silver studio display with cool, precisely fitted control panels.','#a6afb7'],
+    ['cozy','Cozy Den','An ochre tabletop television, soft corners and lamplight warmth.','#b48d61'],
+    ['metal','Midnight Metal','A touring road-case monitor, steel edges and red stage accents.','#b51d32'],
+    ['ivory','Ivory Console','A space-age cream console with burgundy controls and clean panelwork.','#e6d8bf'],
     ['pixel','Pixel Deck','Snap-together panels, pixel badges and a midnight arcade palette.','#32cec1'],
+    ['gutter','Gutter Signal','An ’80s squat-room portable: photocopy grit, acid yellow and hot pink.','#d9fa32'],
   ];
   const paths={tv:'M4 7h16v13H4z M8 3l4 4 4-4',clock:'M12 8v5l3 2 M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0',radio:'M5 9h14v11H5z M7 9l11-6 M8 13h8 M8 16h2 M14 16h2',game:'M7 7h10l4 5v7h-4l-3-3h-4l-3 3H3v-7z M6 11v4 M4 13h4 M16 11h.1 M18 14h.1',palette:'M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4 2 2 0 0 1 0-4h3a4 4 0 0 0 4-4c0-4-5-6-9-6 M7 8h.1 M6 13h.1 M11 6h.1 M16 8h.1',play:'M8 4l12 8-12 8z',pause:'M8 5v14 M16 5v14',up:'M5 15l7-7 7 7',down:'M5 9l7 7 7-7',full:'M8 3H3v5 M16 3h5v5 M3 16v5h5 M21 16v5h-5',exit:'M3 8h5V3 M21 8h-5V3 M3 16h5v5 M21 16h-5v5',back:'M11 5l-7 7 7 7 M4 12h16',sound:'M4 9h4l5-4v14l-5-4H4z M17 8q5 4 0 8',mute:'M4 9h4l5-4v14l-5-4H4z M17 9l5 6 M22 9l-5 6',rewind:'M8 4L3 9l5 5 M3 9h10a7 7 0 1 1-7 11',forward:'M16 4l5 5-5 5 M21 9H11a7 7 0 1 0 7 11',share:'M9 7l6 5-6 5 M15 12H3 M14 4h7v16h-7',flag:'M5 21V3l14 3-5 6H5',shuffle:'M3 5h3l12 14h3 M18 16l3 3-3 3 M3 19h3l4-5 M14 9l4-4h3 M18 2l3 3-3 3',cc:'M10 8H6v8h4 M20 8h-4v8h4',close:'M5 5l14 14 M19 5L5 19',heart:'M12 21S2 14 2 7a5 5 0 0 1 10-2A5 5 0 0 1 22 7c0 7-10 14-10 14'};
   const icon=n=>`<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${paths[n]||paths.tv}"/></svg>`;
@@ -257,7 +258,22 @@
       e.preventDefault();e.stopImmediatePropagation();const i=rows.findIndex(r=>r.el===document.activeElement);if(e.key==='ArrowUp'||e.key==='ArrowDown'){rows[Math.max(0,Math.min(rows.length-1,(i<0?cur:i)+(e.key==='ArrowDown'?1:-1)))]?.el.focus();}else $('grid').scrollBy({left:e.key==='ArrowRight'?240:-240,behavior:'smooth'});
     }
   },true);
-  window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged};
+  function applyPreferences(prefs){
+    if(skins.some(s=>s[0]===prefs.re_skin)){
+      body.dataset.skin=prefs.re_skin;syncSkin();
+      skinGrid.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.preview===prefs.re_skin)));
+    }
+    if(['vinyl','car'].includes(prefs.re_radio_look)){
+      radioLook=prefs.re_radio_look;body.dataset.radioLook=radioLook;
+      radioAppearance.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(['vinyl','car'][i]===radioLook)));
+    }
+    captionUI.applyPreferences?.(prefs);
+    if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
+    if(typeof prefs.re_tv_muted==='boolean')setMuted(prefs.re_tv_muted);
+    if(typeof prefs.re_vol==='number'&&Number.isFinite(prefs.re_vol)){audio.volume=Math.max(0,Math.min(1,prefs.re_vol));$('rVol').value=String(audio.volume);}
+    refreshSymbols();
+  }
+  window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged,applyPreferences};
   setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
   fetch('assets/channel-logos/manifest.json?v=readable-2').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();

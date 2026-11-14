@@ -1,0 +1,138 @@
+/* Tiny hardware portraits. These use the existing span > i + b markup. */
+.skin-options .skin-option{
+  grid-template-columns:110px minmax(0,1fr);
+  gap:5px 20px;
+  min-height:130px;
+  padding:19px 18px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--ink);
+  position:relative;
+  isolation:isolate;
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.skin-options .skin-option strong{font-size:15px;line-height:1.25;letter-spacing:.01em;min-width:0}
+.skin-options .skin-option small{font-size:12px;line-height:1.5;color:var(--dim);min-width:0}
+.skin-options .skin-option:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 5px 16px #0002}
+.skin-options .skin-option:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skin-options .skin-option[aria-pressed=true]{border-color:var(--amber);outline:2px solid var(--amber);outline-offset:-2px;box-shadow:inset 0 0 0 5px color-mix(in srgb,var(--amber) 12%,transparent)}
+.skin-options .skin-option[aria-pressed=true]:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skin-options .skin-mini{
+  grid-row:span 2;
+  display:block;
+  position:relative;
+  align-self:center;
+  justify-self:center;
+  width:110px;
+  height:80px;
+  box-sizing:border-box;
+  padding:0;
+  overflow:visible;
+  border:3px solid #33281e;
+  border-radius:9px;
+  background:#98633e;
+  box-shadow:0 4px 0 #0002;
+  pointer-events:none;
+}
+.skin-options .skin-mini::before,.skin-options .skin-mini::after,
+.skin-options .skin-mini i::before,.skin-options .skin-mini i::after,
+.skin-options .skin-mini b::before,.skin-options .skin-mini b::after{
+  content:"";position:absolute;box-sizing:border-box;pointer-events:none;
+}
+.skin-options .skin-mini i{
+  position:absolute;display:block;inset:9px 24px 9px 7px;
+  width:auto;height:auto;aspect-ratio:auto;
+  border:3px solid #494d44;border-radius:14% / 19%;
+  background:linear-gradient(145deg,#526253 0,#19251f 43%,#101814 100%);
+  box-shadow:inset 0 0 6px #0008,0 0 0 1px #1a211d;
+}
+.skin-options .skin-mini b{
+  display:block;position:absolute;right:7px;top:13px;
+  width:11px;height:11px;border:2px solid #d1b789;border-radius:50%;
+  background:linear-gradient(115deg,#302c25 43%,#b4a37c 45% 54%,#302c25 57%);
+  box-shadow:0 16px 0 -1px #3c3429,0 16px 0 1px #c1a577;
+}
+
+/* 1960s walnut cabinet: barrel glass, twin dials and a slotted speaker. */
+.skin-option[data-preview=retro] .skin-mini{
+  border-color:#463020;
+  background:repeating-linear-gradient(2deg,#95623d 0 3px,#a77448 4px 6px,#8a5938 7px 9px);
+  box-shadow:inset 0 0 0 2px #c49b68,0 4px 0 #3a30253b;
+}
+.skin-option[data-preview=retro] .skin-mini::before{left:29px;top:-12px;width:40px;height:12px;background:linear-gradient(35deg,transparent 45%,#716d5d 47% 51%,transparent 53%) left/50% 100% no-repeat,linear-gradient(-35deg,transparent 45%,#716d5d 47% 51%,transparent 53%) right/50% 100% no-repeat}
+.skin-option[data-preview=retro] .skin-mini::after{right:6px;bottom:8px;width:13px;height:19px;background:repeating-linear-gradient(#3b3025 0 2px,#bc9963 2px 3px);border:1px solid #5c422a}
+.skin-option[data-preview=retro] .skin-mini i::after{inset:2px;border-radius:inherit;background:linear-gradient(145deg,#dce8bd22,transparent 45%)}
+
+/* A miniature velvet proscenium rather than another television box. */
+.skin-option[data-preview=theatre] .skin-mini{height:78px;border:4px double #e4b963;border-radius:4px;background:#521a2c;box-shadow:0 4px 0 #0003,inset 0 0 0 3px #28131d}
+.skin-option[data-preview=theatre] .skin-mini::before{inset:2px;background:radial-gradient(circle,#fff0bb 0 1px,transparent 1.5px) 0 0/9px 8px;opacity:.9}
+.skin-option[data-preview=theatre] .skin-mini::after{bottom:-5px;left:3px;right:3px;height:6px;border:1px solid #ac8043;background:linear-gradient(#ceaa65,#79542e)}
+.skin-option[data-preview=theatre] .skin-mini i{inset:10px 11px 10px;border:2px solid #d1ac65;border-radius:1px;background:linear-gradient(90deg,#8e203a 0 11%,#ba3852 12% 15%,#451c29 17% 19%,#10171c 20% 80%,#451c29 81% 83%,#ba3852 85% 88%,#8e203a 89%);box-shadow:inset 0 5px #4a1224}
+.skin-option[data-preview=theatre] .skin-mini i::before{left:20%;right:20%;top:6px;bottom:3px;background:linear-gradient(145deg,#c8bfa522,transparent 65%)}
+.skin-option[data-preview=theatre] .skin-mini b{display:none}
+
+/* Field markings, a luminous score rail and stadium floodlights. */
+.skin-option[data-preview=stadium] .skin-mini{height:75px;border:3px solid #ccd7c5;border-radius:3px;background:#152f27;box-shadow:0 0 0 2px #163628,0 4px 0 #0003}
+.skin-option[data-preview=stadium] .skin-mini::before{content:"HOME  07 : 12  AWAY";top:3px;left:3px;right:3px;height:12px;display:grid;place-items:center;color:#e7f8a9;background:#0b1e19;font:700 6px/1 monospace;letter-spacing:.3px;border-bottom:1px solid #56866c}
+.skin-option[data-preview=stadium] .skin-mini::after{top:-11px;left:10px;right:10px;height:6px;background:repeating-linear-gradient(90deg,#e8f1d5 0 6px,#516a58 6px 8px);border:1px solid #5d7864;box-shadow:0 3px 0 -1px #536654}
+.skin-option[data-preview=stadium] .skin-mini i{inset:20px 6px 6px;border:1px solid #c7dda4;border-radius:0;background:repeating-linear-gradient(90deg,#365d3a 0 12px,#426d43 12px 24px);box-shadow:none}
+.skin-option[data-preview=stadium] .skin-mini i::before{top:0;bottom:0;left:50%;border-left:1px solid #d2e7bd}
+.skin-option[data-preview=stadium] .skin-mini i::after{height:22px;width:22px;left:calc(50% - 11px);top:calc(50% - 11px);border:1px solid #d2e7bd;border-radius:50%}
+.skin-option[data-preview=stadium] .skin-mini b{display:none}
+
+/* Thin studio glass and a precisely machined silver control strip. */
+.skin-option[data-preview=modern] .skin-mini{height:72px;border:3px solid #b9c5cc;border-radius:3px;background:#11161b;box-shadow:0 4px 10px #0003}
+.skin-option[data-preview=modern] .skin-mini::before{width:15px;top:0;bottom:0;right:0;border-left:1px solid #879aa4;background:linear-gradient(90deg,#becbd2,#e0e7ea 45%,#acbdc7)}
+.skin-option[data-preview=modern] .skin-mini::after{width:7px;height:17px;bottom:7px;right:4px;background:repeating-linear-gradient(#9dabb2 0 1px,#dbe3e6 1px 3px)}
+.skin-option[data-preview=modern] .skin-mini i{inset:0 16px 0 0;border:0;border-radius:0;background:linear-gradient(135deg,#35516a,#132632 48%,#0c141c);box-shadow:inset 0 0 0 1px #8ca5b92b}
+.skin-option[data-preview=modern] .skin-mini i::after{inset:0;background:linear-gradient(150deg,#d9e8ff1a,transparent 50%)}
+.skin-option[data-preview=modern] .skin-mini b{display:block;width:8px;height:8px;right:3px;top:8px;border:1px solid #7c909b;border-radius:50%;background:linear-gradient(115deg,#eff4f5 44%,#6d8795 46% 54%,#c9d8df 56%);box-shadow:0 12px 0 -1px #e8f0f2,0 12px 0 0 #8da0a9}
+
+/* A friendly rounded portable with its real carry handle and warm glass. */
+.skin-option[data-preview=cozy] .skin-mini{width:101px;height:78px;border:3px solid #76543a;border-radius:16px 16px 12px 12px;background:linear-gradient(135deg,#ddb66a,#b78542);box-shadow:inset 0 0 0 2px #ebcc8e,0 4px 0 #68482d33}
+.skin-option[data-preview=cozy] .skin-mini::before{left:26px;right:26px;top:-12px;height:13px;border:4px solid #896140;border-bottom:0;border-radius:9px 9px 0 0}
+.skin-option[data-preview=cozy] .skin-mini::after{right:7px;top:38px;width:13px;height:19px;border-radius:3px;background:repeating-linear-gradient(90deg,#725033 0 2px,#d9ac65 2px 4px)}
+.skin-option[data-preview=cozy] .skin-mini i{inset:9px 25px 9px 6px;border:3px solid #68513b;border-radius:15px;background:radial-gradient(ellipse at 40% 30%,#b79a55,#574f32 55%,#25392d);box-shadow:inset 0 0 6px #1e352c,0 0 0 1px #e6c68b}
+.skin-option[data-preview=cozy] .skin-mini b{right:8px;top:13px;width:11px;height:11px;border-color:#f3d18c;background:#aa6846;box-shadow:none}
+
+/* Riveted touring flight case with protective corners and a red tally lamp. */
+.skin-option[data-preview=metal] .skin-mini{height:81px;border:3px solid #87918f;border-radius:2px;background:repeating-linear-gradient(0deg,#282c2b 0 2px,#303533 2px 4px);box-shadow:0 0 0 2px #151a18,0 4px 0 #0003}
+.skin-option[data-preview=metal] .skin-mini::before{inset:-4px;border:6px solid transparent;border-image:linear-gradient(135deg,#e3e6d3,#68776f 35%,#c8cebd 55%,#46564e) 1;clip-path:polygon(0 0,20% 0,20% 8%,80% 8%,80% 0,100% 0,100% 22%,92% 22%,92% 78%,100% 78%,100% 100%,80% 100%,80% 92%,20% 92%,20% 100%,0 100%,0 78%,8% 78%,8% 22%,0 22%)}
+.skin-option[data-preview=metal] .skin-mini::after{right:7px;bottom:8px;width:13px;height:21px;border:1px solid #728078;background:repeating-linear-gradient(#101b17 0 2px,#67766e 2px 3px)}
+.skin-option[data-preview=metal] .skin-mini i{inset:10px 25px 10px 8px;border:3px solid #6c796f;border-radius:2px;background:linear-gradient(145deg,#424d44,#121c18 65%);box-shadow:0 0 0 2px #111813,inset 0 0 4px #0008}
+.skin-option[data-preview=metal] .skin-mini b{right:10px;top:13px;width:7px;height:7px;border:1px solid #ffc0a0;background:#df593c;box-shadow:0 0 5px #e5573655}
+
+/* Space-age ivory shell, burgundy brow and a single circular tuning dial. */
+.skin-option[data-preview=ivory] .skin-mini{width:107px;height:76px;border:2px solid #b8a890;border-radius:24px 24px 19px 19px;background:linear-gradient(145deg,#fff7dd,#e6d7b6);box-shadow:inset 0 2px #fff9e9,0 4px 0 #65554533}
+.skin-option[data-preview=ivory] .skin-mini::before{height:4px;left:21px;right:21px;top:4px;border-radius:3px;background:#763b47}
+.skin-option[data-preview=ivory] .skin-mini::after{bottom:-4px;left:20px;right:20px;height:4px;border-radius:0 0 6px 6px;background:#773e48}
+.skin-option[data-preview=ivory] .skin-mini i{inset:12px 27px 10px 7px;border:3px solid #854b52;border-radius:45% / 24%;background:radial-gradient(ellipse at 45% 25%,#525951,#272e30 70%);box-shadow:0 0 0 2px #d8c6a6}
+.skin-option[data-preview=ivory] .skin-mini b{right:6px;top:23px;width:17px;height:17px;border:3px solid #7f4652;background:linear-gradient(70deg,#cdbd9a 45%,#fdf4dc 46% 54%,#cdbd9a 55%);box-shadow:none}
+.skin-option[data-preview=ivory] .skin-mini b::after{width:11px;height:9px;left:0;top:20px;border-radius:50%;background:repeating-linear-gradient(0deg,#773e48 0 1px,#d8c6a6 1px 3px)}
+
+/* A deliberately stepped console shell and chunky teal cartridge-era buttons. */
+.skin-options .skin-option[data-preview=pixel] .skin-mini{width:108px;height:78px;border:0;border-radius:0;background:#53647c;clip-path:polygon(5px 0,calc(100% - 5px) 0,calc(100% - 5px) 5px,100% 5px,100% calc(100% - 5px),calc(100% - 5px) calc(100% - 5px),calc(100% - 5px) 100%,5px 100%,5px calc(100% - 5px),0 calc(100% - 5px),0 5px,5px 5px);box-shadow:none}
+.skin-option[data-preview=pixel] .skin-mini::before{inset:4px;background:#243449;border:3px solid #101725}
+.skin-option[data-preview=pixel] .skin-mini::after{left:11px;bottom:8px;width:56px;height:4px;background:linear-gradient(90deg,#32cec1 0 24%,#172435 24% 30%,#f6c969 30% 45%,#172435 45% 51%,#32cec1 51% 100%)}
+.skin-options .skin-option[data-preview=pixel] .skin-mini i{inset:11px 28px 19px 11px;border:3px solid #101725;border-radius:0;background:linear-gradient(#162f3c 70%,#20636a 70% 78%,#32cec1 78% 84%,#152a3a 84%);box-shadow:0 0 0 2px #71849a}
+.skin-option[data-preview=pixel] .skin-mini i::after{width:8px;height:8px;left:8px;top:7px;background:#f6c969;box-shadow:8px 0 #f6c969,0 8px #f6c969,8px 8px #152a3a}
+.skin-options .skin-option[data-preview=pixel] .skin-mini b{right:11px;top:17px;width:10px;height:10px;border:2px solid #f6c969;border-radius:0;background:#32cec1;box-shadow:0 18px #32cec1,0 18px 0 2px #101725}
+
+/* Scuffed black portable: crooked aerial, acid tape and a hot-pink lightning cut. */
+.skin-option[data-preview=gutter] .skin-mini{height:77px;border:3px solid #1b1b20;border-radius:5px 8px 3px 5px;background:repeating-linear-gradient(165deg,#303134 0 2px,#25262a 2px 9px);transform:rotate(-3deg);box-shadow:inset 0 0 0 1px #747673,3px 4px 0 #11141a44}
+.skin-option[data-preview=gutter] .skin-mini::before{left:67px;top:-17px;width:3px;height:19px;background:#c5c6b0;transform:rotate(24deg);transform-origin:bottom;box-shadow:0 0 0 1px #35373c}
+.skin-option[data-preview=gutter] .skin-mini::after{left:6px;top:-4px;width:31px;height:10px;background:#d9fa32;transform:rotate(-8deg);clip-path:polygon(0 14%,100% 0,91% 30%,100% 60%,94% 100%,0 87%,7% 50%)}
+.skin-option[data-preview=gutter] .skin-mini i{inset:10px 27px 9px 6px;border:3px solid #777b6e;border-radius:13% / 17%;background:repeating-linear-gradient(0deg,#172c28 0 2px,#1b3d33 2px 3px);box-shadow:0 0 0 2px #101517,inset 0 0 9px #060d0b}
+.skin-option[data-preview=gutter] .skin-mini i::after{left:9px;right:8px;top:calc(50% - 1px);height:2px;background:#c8ee5d;box-shadow:0 1px 5px #c8ee5d55}
+.skin-option[data-preview=gutter] .skin-mini b{right:5px;top:14px;width:16px;height:29px;border:0;border-radius:0;background:#ff609a;box-shadow:none;clip-path:polygon(42% 0,100% 0,64% 37%,100% 37%,11% 100%,36% 54%,0 54%);transform:rotate(7deg)}
+.skin-option[data-preview=gutter] .skin-mini b::after{display:none}
+
+@media(max-width:640px){
+  .skin-options .skin-option{grid-template-columns:80px minmax(0,1fr);gap:4px 16px;padding:17px 13px;min-height:110px;border-radius:9px}
+  .skin-options .skin-option strong{font-size:14px}
+  .skin-options .skin-option small{font-size:11px;line-height:1.45}
+  .skin-options .skin-mini{transform:scale(.72);transform-origin:center;justify-self:center;margin-inline:-15px}
+  .skin-option[data-preview=gutter] .skin-mini{transform:scale(.72) rotate(-3deg)}
+}
+@media(prefers-reduced-motion:reduce){.skin-options .skin-option{transition:none}.skin-options .skin-option:hover{transform:none}}

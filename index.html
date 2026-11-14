@@ -319,6 +319,9 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 </style>
 <link rel="stylesheet" href="assets/interface.css?v=readable-reactions-1">
 <link rel="stylesheet" href="assets/pixel-deck.css?v=2">
+<link rel="stylesheet" href="assets/modular-themes.css?v=1">
+<link rel="stylesheet" href="assets/theme-tvs.css?v=1">
+<link rel="stylesheet" href="assets/theme-previews.css?v=1">
 <link rel="stylesheet" href="assets/captions.css?v=caption-size-3">
 </head>
 <body data-skin="pixel" data-tv-page="guide">
@@ -542,7 +545,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script src="media-compatibility.js"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
-<script src="assets/captions.js?v=caption-index-english-1"></script>
+<script src="assets/captions.js?v=account-prefs-1"></script>
 <script>
 // ---------- Problem log ----------
 // Script errors and tapes, stations or games that won't load are logged to the project database
@@ -1579,7 +1582,8 @@ $("fwd").onclick = () => seek(15);
 $("live").onclick = goLive;
 
 vid.volume = Math.max(0, Math.min(1, Number(store.get("re_tv_volume", .8)) || 0));
-function setMuted(m) { vid.muted = m; $("mute").textContent = m ? "Sound off" : "Sound on"; }
+function setMuted(m) { vid.muted = m === true; store.set("re_tv_muted", vid.muted); $("mute").textContent = vid.muted ? "Sound off" : "Sound on"; }
+setMuted(store.get("re_tv_muted", true));
 function setTvVolume(value) {
   vid.volume = Math.max(0, Math.min(1, Number(value) || 0));
   store.set("re_tv_volume", vid.volume);
@@ -2146,10 +2150,12 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=pixel-default-1"></script>
+<script src="assets/interface.js?v=modular-rooms-1"></script>
 <script src="assets/volume.js?v=4"></script>
 <script src="assets/community-config.js?v=1"></script>
-<script type="module" src="assets/community.js?v=pixel-2"></script>
+<script src="assets/preferences.js?v=1"></script>
+<script>if (window.RabbitPreferences) window.rabbitPreferences = RabbitPreferences.create({store, apply: prefs => window.REUI.applyPreferences(prefs)});</script>
+<script type="module" src="assets/community.js?v=account-settings-1"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else

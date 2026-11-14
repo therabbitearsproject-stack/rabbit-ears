@@ -1,0 +1,449 @@
+/* Cabinet components only. Pixel Deck keeps its own native-grid treatment.
+   The picture is never painted over: all texture belongs to the chassis/rail. */
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:64px;
+  --tv-gap:16px;
+  --tv-padding:18px;
+  --tv-dial:44px;
+  --tv-dial-small:38px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) var(--tv-rail);
+  gap:var(--tv-gap);
+  padding:var(--tv-padding);
+  min-width:0;
+  position:relative;
+  isolation:isolate;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  width:100%;
+  height:auto;
+  min-width:0;
+  min-height:0;
+  align-self:center;
+  aspect-ratio:4/3;
+  background:#050607;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tv-hardware {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  align-self:stretch;
+  gap:10px;
+  width:100%;
+  min-width:0;
+  min-height:0;
+  padding:10px 5px;
+  box-sizing:border-box;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .hardware-brand {
+  display:block;
+  width:100%;
+  max-width:42px;
+  height:auto;
+  max-height:47px;
+  object-fit:contain;
+  flex:0 1 auto;
+  margin:0 0 2px;
+  filter:none;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tuning-knob {
+  width:var(--tv-dial);
+  height:var(--tv-dial);
+  min-width:0;
+  min-height:0;
+  padding:0;
+  flex:0 0 auto;
+  touch-action:manipulation;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tuning-knob::after {
+  left:calc(50% - 1px);
+  top:12%;
+  width:2px;
+  height:31%;
+  transform:rotate(22deg);
+  transform-origin:50% 125%;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tuning-knob:nth-of-type(2) {
+  width:var(--tv-dial-small);
+  height:var(--tv-dial-small);
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tuning-knob:focus-visible {
+  outline:2px solid var(--amber);
+  outline-offset:3px;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .speaker-grille {
+  width:100%;
+  min-width:0;
+  min-height:30px;
+  flex:1 1 30px;
+}
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .power-led {
+  flex:0 0 auto;
+  margin-top:1px;
+}
+
+/* RETRO — a walnut component set, smoked chrome and a deeply inset CRT. */
+body[data-skin=retro]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:72px;
+  border:5px solid #39271d;
+  border-top-color:#966b45;
+  border-radius:10px 10px 13px 13px;
+  background:
+    linear-gradient(90deg,#0003,transparent 7%,transparent 92%,#0004),
+    repeating-linear-gradient(2deg,#654329 0 2px,#735034 3px 7px,#573923 8px 9px,#7c5738 10px 16px);
+  box-shadow:inset 0 0 0 2px #c09a69,inset 0 -8px 0 #38261b,0 9px 0 -4px #2c211b,0 17px 28px #0004;
+}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:9px solid #45453e;
+  border-top-color:#64655a;
+  border-bottom-color:#282d2a;
+  border-radius:12% / 11%;
+  box-shadow:0 0 0 2px #b9aa8b,0 0 0 5px #29241e,inset 0 0 12px #000;
+}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .tv-hardware {
+  background:linear-gradient(90deg,#221e19,#3d3529 45%,#26221c);
+  border:1px solid #b39871;
+  border-radius:3px;
+  box-shadow:inset 2px 0 0 #100f0b,inset -2px 0 0 #5a4e3a;
+}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:3px solid #c3b58f;
+  border-bottom-color:#756c54;
+  border-radius:50%;
+  background:repeating-conic-gradient(from 7deg,#242722 0deg 8deg,#626254 9deg 12deg,#30332b 13deg 18deg);
+  box-shadow:0 3px 0 #12140f,0 5px 5px #0005,inset 0 0 0 4px #373b31;
+}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#f0deb0}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:2px solid #171912;
+  border-radius:2px;
+  background:repeating-linear-gradient(0deg,#181d16 0 2px,#8e8160 2px 3px,#3a3b29 3px 6px);
+  box-shadow:inset 0 0 6px #0008;
+}
+body[data-skin=retro]:not(.player-fullscreen) #tvView .power-led {background:#d1df8a;box-shadow:0 0 0 2px #151a10,0 0 6px #c5d97788}
+
+/* THEATRE — restrained Deco geometry, a brass marquee and oxblood enamel. */
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:60px;
+  --tv-padding:22px;
+  border:3px solid #c9a969;
+  border-radius:5px 5px 15px 15px;
+  background:
+    radial-gradient(circle,#f8dca1 0 1px,transparent 2px) 0 5px/18px 5px repeat-x,
+    linear-gradient(90deg,#21151d,#4b2330 40%,#311821 90%);
+  box-shadow:inset 0 0 0 4px #20151b,inset 0 0 0 6px #8d6d3e,0 7px 0 -2px #171117,0 19px 34px #0005;
+}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:8px solid #140f14;
+  border-radius:3px;
+  box-shadow:0 0 0 1px #c6a66b,0 0 0 4px #563d37,0 0 20px #d7b57119;
+}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .tv-hardware {
+  border:1px solid #b18e54;
+  border-block-width:3px;
+  border-radius:2px;
+  background:linear-gradient(90deg,#291820,#44252d,#291820);
+  box-shadow:inset 3px 0 #684a3a,inset -3px 0 #684a3a;
+}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:2px solid #e2c78a;
+  border-radius:5px;
+  background:linear-gradient(135deg,#977447,#3e3027 45%,#644a31);
+  box-shadow:inset 0 0 0 3px #2c2020,0 3px 0 #130f11;
+}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#ffe5a8;transform:rotate(0deg)}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:1px solid #b69356;
+  border-radius:18px 18px 2px 2px;
+  background:repeating-linear-gradient(90deg,#251a20 0 4px,#8e6d41 4px 5px,#38232c 5px 8px);
+}
+body[data-skin=theatre]:not(.player-fullscreen) #tvView .power-led {width:6px;height:6px;background:#f5d58e;box-shadow:0 0 5px #edc67199}
+
+/* STADIUM — a portable production monitor, field-green face and service rail. */
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:66px;
+  --tv-padding:13px;
+  border:4px solid #9da99e;
+  border-top-color:#d5ded4;
+  border-bottom-width:8px;
+  border-radius:5px;
+  background:linear-gradient(135deg,#4b5b4f,#243a2d 45%,#1a2c23);
+  box-shadow:inset 0 0 0 2px #14251d,0 7px 0 #0a1711,0 16px 26px #0004;
+}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:7px solid #0a1712;
+  border-radius:2px;
+  box-shadow:0 0 0 2px #748776,inset 0 0 0 1px #182d20;
+}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .tv-hardware {
+  background:linear-gradient(#11241a,#1a3022);
+  border:1px solid #7d927c;
+  border-top:4px solid #b6d59b;
+  border-radius:2px;
+}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:2px solid #9dbb9a;
+  border-radius:4px;
+  background:linear-gradient(#657c64 0 12%,#314934 13% 83%,#1a2e20 84%);
+  box-shadow:0 3px 0 #07170e,inset 0 0 0 2px #18321f;
+}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .tuning-knob::after {width:4px;height:24%;left:calc(50% - 2px);background:#d9edb8;transform:none}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:1px solid #627862;
+  border-radius:1px;
+  background:radial-gradient(circle,#8ba17d 0 .7px,transparent 1px) 0 0/4px 4px,#12251a;
+}
+body[data-skin=stadium]:not(.player-fullscreen) #tvView .power-led {width:10px;height:5px;border-radius:1px;background:#d7e79c;box-shadow:0 0 0 2px #0b1b12}
+
+/* MODERN — a slim silver studio flat-panel, with a quiet machined control strip. */
+body[data-skin=modern]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:54px;
+  --tv-gap:10px;
+  --tv-padding:10px;
+  border:1px solid #cbd0d1;
+  border-bottom:5px solid #8d989f;
+  border-radius:6px;
+  background:linear-gradient(135deg,#e1e5e5,#9ba5ac 48%,#d3d8da 75%,#88949d);
+  box-shadow:inset 0 1px 0 #fff,0 3px 0 #434d54,0 17px 30px #0004;
+}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:4px solid #111a20;
+  border-radius:2px;
+  box-shadow:0 0 0 1px #5a6973;
+}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .tv-hardware {
+  border:1px solid #84929c;
+  border-radius:3px;
+  background:linear-gradient(90deg,#a4afb6,#dde1e1 35%,#b6c0c5);
+  box-shadow:inset 1px 0 #f2f5f4;
+}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .hardware-brand {filter:brightness(0);opacity:.8}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:1px solid #596a75;
+  border-radius:50%;
+  background:radial-gradient(ellipse at 35% 25%,#f8faf8,#b7c2c8 62%,#778894);
+  box-shadow:0 2px 2px #263b4655,inset 0 0 0 3px #d7dfe1;
+}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#274c5d;height:24%;top:15%}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:0;
+  border-radius:2px;
+  background:repeating-linear-gradient(0deg,#8e9ca5 0 1px,#cad2d5 1px 4px);
+}
+body[data-skin=modern]:not(.player-fullscreen) #tvView .power-led {width:5px;height:5px;background:#347b93;box-shadow:0 0 0 1px #d8eef1,0 0 4px #2d758955}
+
+/* COZY — ochre enamel and rounded smoked glass, a little tabletop companion. */
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:63px;
+  --tv-gap:15px;
+  --tv-padding:18px;
+  border:5px solid #b88346;
+  border-top-color:#d6a76d;
+  border-bottom-color:#79542f;
+  border-radius:30px 30px 25px 25px;
+  background:linear-gradient(145deg,#d5a56b,#bb874e 50%,#a8753d);
+  box-shadow:inset 0 2px 0 #f1cf97,inset 0 -5px 0 #976533,0 8px 0 -3px #493324,0 18px 28px #100b0755;
+}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:8px solid #3c352b;
+  border-top-color:#5b5242;
+  border-radius:17% / 15%;
+  box-shadow:0 0 0 2px #e3bb80,0 0 0 4px #8c633a;
+}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .tv-hardware {
+  background:linear-gradient(100deg,#61482f,#725839 50%,#5c442c);
+  border:1px solid #edc88e;
+  border-radius:17px;
+}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:3px solid #f1d6a6;
+  border-bottom-color:#ba955d;
+  border-radius:50%;
+  background:repeating-conic-gradient(#d1b380 0deg 8deg,#e4c99a 9deg 16deg);
+  box-shadow:0 3px 0 #3f2d1c,inset 0 0 0 4px #e8c99c;
+}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#795335;width:3px;left:calc(50% - 1.5px)}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:1px solid #bda06e;
+  border-radius:18px;
+  background:repeating-linear-gradient(0deg,#3d3928 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,#a18c5b 0 1px,#6f6947 1px 4px);
+  box-shadow:inset 0 0 5px #211d1655;
+}
+body[data-skin=cozy]:not(.player-fullscreen) #tvView .power-led {background:#e7c079;box-shadow:0 0 0 2px #413423,0 0 7px #dca55477}
+
+/* METAL — touring roadcase, corner rivets and a red-edged steel service panel. */
+body[data-skin=metal]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:70px;
+  --tv-gap:14px;
+  --tv-padding:18px;
+  border:6px solid #8f9092;
+  border-top-color:#d4d1cb;
+  border-bottom-color:#4d5055;
+  border-radius:3px;
+  background:
+    radial-gradient(circle at 7px 7px,#e5e0d6 0 2px,#373b40 3px,transparent 4px),
+    radial-gradient(circle at calc(100% - 7px) 7px,#e5e0d6 0 2px,#373b40 3px,transparent 4px),
+    radial-gradient(circle at 7px calc(100% - 7px),#e5e0d6 0 2px,#373b40 3px,transparent 4px),
+    radial-gradient(circle at calc(100% - 7px) calc(100% - 7px),#e5e0d6 0 2px,#373b40 3px,transparent 4px),
+    repeating-linear-gradient(135deg,#202124 0 3px,#292b2e 3px 5px);
+  box-shadow:inset 0 0 0 3px #0c0d10,0 0 0 2px #13151a,0 7px 0 #09090c,0 17px 28px #0006;
+}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:8px solid #0a0b0d;
+  border-radius:2px;
+  box-shadow:0 0 0 2px #b93b41,0 0 0 3px #0b0b0e;
+}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .tv-hardware {
+  border:1px solid #8c9093;
+  border-top:4px solid #c3484d;
+  border-radius:1px;
+  background:linear-gradient(90deg,#15171a,#32343a 47%,#1d2025);
+}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:3px solid #9b9fa3;
+  border-top-color:#e1ddd4;
+  border-radius:50%;
+  background:repeating-conic-gradient(#0b0d10 0deg 12deg,#5c6065 13deg 16deg,#1c1f24 17deg 24deg);
+  box-shadow:0 3px 0 #050609,inset 0 0 0 4px #272b31;
+}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#f37770;width:3px;left:calc(50% - 1.5px)}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:2px solid #63696d;
+  border-radius:1px;
+  background:radial-gradient(circle,#07080b 0 1px,transparent 1.2px) 0 0/4px 4px,#4a4d52;
+  box-shadow:inset 0 0 7px #050609;
+}
+body[data-skin=metal]:not(.player-fullscreen) #tvView .power-led {background:#fa655e;box-shadow:0 0 0 2px #0b0b0e,0 0 7px #fa655e88}
+
+/* IVORY — space-age cream moulding, a wine-coloured gasket and oval acoustics. */
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:73px;
+  --tv-gap:18px;
+  --tv-padding:20px;
+  border:4px solid #bcaa8d;
+  border-top-color:#fff8e7;
+  border-bottom-color:#9c846b;
+  border-radius:34px 22px 26px 22px;
+  background:linear-gradient(130deg,#fff7e4,#e9dbc0 55%,#cbb799);
+  box-shadow:inset 0 0 0 2px #fff9e8,inset 0 -6px 0 #d2bfa2,0 7px 0 -3px #82674f,0 18px 30px #3a263122;
+}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:9px solid #5e333d;
+  border-top-color:#855760;
+  border-radius:15% / 16%;
+  box-shadow:0 0 0 2px #fcf0d7,0 0 0 4px #a78d77;
+}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .tv-hardware {
+  border:1px solid #bba68b;
+  border-radius:28px;
+  background:linear-gradient(90deg,#d8c6a9,#f5e8cc 50%,#dfcdae);
+  box-shadow:inset 1px 0 0 #fff9e6;
+}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .hardware-brand {filter:brightness(0);opacity:.8}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:3px solid #ae8e85;
+  border-top-color:#d9b5a6;
+  border-radius:50%;
+  background:repeating-conic-gradient(#733e4a 0deg 7deg,#472330 8deg 17deg,#87515b 18deg 21deg);
+  box-shadow:0 3px 0 #a58a72,inset 0 0 0 4px #65333f;
+}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#fae8bf}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:2px solid #bba18a;
+  border-radius:50% / 24%;
+  background:repeating-linear-gradient(0deg,#492a36 0 2px,#aa777b 2px 3px,#683b47 3px 6px);
+}
+body[data-skin=ivory]:not(.player-fullscreen) #tvView .power-led {width:7px;height:7px;background:#99424b;box-shadow:0 0 0 2px #fbefd6}
+
+/* GUTTER SIGNAL — scuffed eighties portable, acid trim and cassette-black plastic. */
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .cabinet {
+  --tv-rail:70px;
+  --tv-gap:14px;
+  --tv-padding:16px;
+  border:4px solid #3d4236;
+  border-top-color:#777d67;
+  border-bottom:8px solid #10120f;
+  border-radius:7px 15px 5px 5px;
+  background:
+    linear-gradient(111deg,transparent 0 12px,#b8bd8b33 13px 14px,transparent 15px) 4px 2px/64px 8px no-repeat,
+    linear-gradient(166deg,transparent 0 10px,#f4f0df33 11px 12px,transparent 13px) right 6px bottom 5px/83px 8px no-repeat,
+    linear-gradient(90deg,#ff609a 0 4px,transparent 4px) 7px 70%/8px 35px no-repeat,
+    repeating-linear-gradient(0deg,#1c1f1a 0 4px,#23271f 4px 5px);
+  box-shadow:inset 0 0 0 2px #0a0c09,inset 0 4px 0 #d9fa32,0 6px 0 #080a07,0 17px 25px #0006;
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {
+  border:8px solid #10130f;
+  border-top-color:#41483a;
+  border-radius:8% / 7%;
+  box-shadow:0 0 0 2px #777f5f,0 0 0 3px #0b0d08;
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .cabinet::before {
+  content:'DIY / UHF';position:absolute;top:3px;left:22px;z-index:1;pointer-events:none;
+  padding:1px 7px;background:#d9fa32;color:#171817;font:800 8px/1.2 Arial,sans-serif;
+  letter-spacing:1px;transform:rotate(-3deg);
+  clip-path:polygon(2% 8%,98% 0,100% 85%,3% 100%,0 45%);
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .tv-hardware {
+  border:1px solid #707a53;
+  border-bottom:4px solid #ff609a;
+  border-radius:2px 7px 2px 2px;
+  background:linear-gradient(115deg,#171a13,#2c3025 50%,#171a13);
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .tuning-knob {
+  border:3px solid #8e9d68;
+  border-top-color:#d9fa32;
+  border-radius:50%;
+  background:repeating-conic-gradient(#12160f 0deg 12deg,#667448 13deg 16deg,#222a1b 17deg 22deg);
+  box-shadow:0 3px 0 #080b06,inset 0 0 0 4px #232b19;
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .tuning-knob::after {background:#d9fa32;width:3px;left:calc(50% - 1.5px)}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .tuning-knob:nth-of-type(2) {border-radius:5px;border-top-color:#ff609a;background:linear-gradient(135deg,#363129,#12140f);box-shadow:inset 0 0 0 3px #4d4540,0 3px 0 #080b06}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .tuning-knob:nth-of-type(2)::after {background:#ff8eb5;transform:rotate(-22deg)}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .speaker-grille {
+  border:1px solid #69764a;
+  border-radius:2px;
+  background:repeating-linear-gradient(100deg,#10150d 0 3px,#65783a 3px 4px,#28331e 4px 7px);
+  box-shadow:inset 0 0 6px #040703;
+}
+body[data-skin=gutter]:not(.player-fullscreen) #tvView .power-led {width:8px;height:5px;border-radius:1px;background:#d9fa32;box-shadow:0 0 0 2px #080c04,0 0 6px #bdf02c66}
+
+/* A games cabinet has no hardware rail. Do not reserve an empty TV column. */
+body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]) #gamesView .cabinet {
+  grid-template-columns:minmax(0,1fr);
+}
+
+@media(max-width:900px) {
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .cabinet {
+    --tv-rail:52px;
+    --tv-gap:12px;
+    --tv-padding:14px;
+    --tv-dial:38px;
+    --tv-dial-small:34px;
+  }
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tv-hardware {padding:8px 4px;gap:8px}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .hardware-brand {max-width:34px;max-height:38px}
+}
+@media(max-width:640px) {
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .cabinet {
+    --tv-rail:36px;
+    --tv-gap:8px;
+    --tv-padding:10px;
+    --tv-dial:30px;
+    --tv-dial-small:28px;
+    border-width:3px;
+    box-shadow:inset 0 0 0 1px #ffffff33,0 5px 0 -1px #08090977,0 12px 20px #0003;
+  }
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .screen:not(:fullscreen) {border-width:5px}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tv-hardware {gap:6px;padding:6px 2px;border-width:1px}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .hardware-brand {max-width:27px;max-height:30px;margin-bottom:0}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .tuning-knob {border-width:2px}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .speaker-grille {min-height:16px;flex-basis:16px}
+  body:is([data-skin=retro],[data-skin=theatre],[data-skin=stadium],[data-skin=modern],[data-skin=cozy],[data-skin=metal],[data-skin=ivory],[data-skin=gutter]):not(.player-fullscreen) #tvView .power-led {max-width:7px;max-height:6px}
+  body[data-skin=theatre]:not(.player-fullscreen) #tvView .cabinet {padding-top:14px;padding-bottom:12px}
+  body[data-skin=modern]:not(.player-fullscreen) #tvView .screen:not(:fullscreen) {border-width:3px}
+  body[data-skin=cozy]:not(.player-fullscreen) #tvView .cabinet {border-radius:22px}
+  body[data-skin=ivory]:not(.player-fullscreen) #tvView .cabinet {border-radius:24px 16px 20px 16px}
+  body[data-skin=metal]:not(.player-fullscreen) #tvView .cabinet {border-bottom-width:5px}
+  body[data-skin=gutter]:not(.player-fullscreen) #tvView .cabinet {border-bottom-width:6px}
+}
