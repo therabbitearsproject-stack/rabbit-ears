@@ -1,0 +1,106 @@
+/* Winamp Deck: original desktop-player chrome, using the live radio's real controls. */
+.amp-titlebar,.amp-clock-panel{display:none}
+body[data-radio-look=winamp] #radioView{
+  --amp-shell:#424754;--amp-edge:#89929f;--amp-dark:#11161a;--amp-ink:#e1e7ea;
+  --amp-green:#c3f879;--amp-dim:#a2b7a2;
+  width:min(1100px,100%);margin-inline:auto;gap:16px;
+}
+body[data-radio-look=winamp] #radioView:not([hidden]){display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start}
+body[data-radio-look=winamp] .radio-appearance{grid-column:1/-1}
+body[data-radio-look=winamp] #radioView .radio-set,
+body[data-radio-look=winamp] #radioView>.guide{
+  border:2px solid #89929f;border-right-color:#141820;border-bottom-color:#141820;
+  border-radius:3px;background:linear-gradient(115deg,#4c5260,#303641 70%);color:var(--amp-ink);
+  box-shadow:inset 1px 1px #bbc3ca,inset -1px -1px #202630,5px 6px 0 #080d1355;
+  min-width:0;padding:12px;
+}
+body[data-radio-look=winamp] #radioView .radio-set{grid-column:1;display:grid;grid-template-columns:minmax(110px,.36fr) minmax(0,.64fr);gap:10px}
+body[data-radio-look=winamp] #radioView>.guide{grid-column:2;padding-top:10px}
+body[data-radio-look=winamp] .amp-titlebar{
+  display:flex;align-items:center;gap:9px;grid-column:1/-1;padding:5px 4px 9px;
+  color:#f0ebd5;font:700 11px/1.4 'Courier New',monospace;letter-spacing:1.5px;
+  background:repeating-linear-gradient(0deg,transparent 0 2px,#0d131b66 2px 3px) right center/38% 12px no-repeat;
+}
+.amp-titlebar strong{background:#424854;padding-right:9px;white-space:nowrap}
+.amp-titlebar .amp-mark{font-size:10px;letter-spacing:-1px;background:#d1dfac;color:#1b2517;padding:2px 3px;border:1px solid #fff5}
+.amp-titlebar .amp-window-kind{margin-left:auto;background:#373d49;padding-left:6px;letter-spacing:.5px;font-size:9px}
+body[data-radio-look=winamp] #radioView .vinyl-platter,
+body[data-radio-look=winamp] #radioView .stereo-badge,
+body[data-radio-look=winamp] #radioView .dial>.scale,
+body[data-radio-look=winamp] #radioView .dial>.needle{display:none}
+body[data-radio-look=winamp] #radioView .dial{
+  grid-column:1;grid-row:2;height:auto;min-height:145px;border:2px solid #11151a;border-right-color:#7c8590;border-bottom-color:#7c8590;
+  border-radius:0;background:#0d1714;box-shadow:inset 0 0 12px #0009;overflow:hidden;
+}
+body[data-radio-look=winamp] .amp-clock-panel{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;gap:10px;padding:12px 7px;text-align:center}
+.amp-clock-label{font:9px/1.4 'Courier New',monospace;color:var(--amp-dim);letter-spacing:1.4px}
+.amp-time{font:clamp(18px,calc(150px / var(--amp-time-digits,5)),34px)/1 var(--osd);font-variant-numeric:tabular-nums;letter-spacing:0;color:var(--amp-green);text-shadow:0 0 8px #a0ef501a}
+.amp-stream-state{font:9px/1.5 'Courier New',monospace;color:#d1c291;overflow-wrap:anywhere;max-width:100%}
+body[data-radio-look=winamp] [data-amp-playing=true] .amp-stream-state{color:var(--amp-green)}
+body[data-radio-look=winamp] #radioView .vfd{
+  grid-column:2;grid-row:2;min-width:0;min-height:145px;padding:15px 12px;gap:10px;
+  border:2px solid #11151a;border-right-color:#7c8590;border-bottom-color:#7c8590;border-radius:0;
+  background:linear-gradient(#101d17,#0b1510);color:var(--amp-green);box-shadow:inset 0 0 0 1px #243428;
+}
+body[data-radio-look=winamp] #radioView .vfd-txt{min-width:0;gap:6px}
+body[data-radio-look=winamp] #radioView :is(.vfd-k,#rName){color:var(--amp-green);text-shadow:none}
+body[data-radio-look=winamp] #radioView #rName{font:400 clamp(20px,2.4vw,29px)/1.1 var(--osd);letter-spacing:.5px;overflow-wrap:anywhere;white-space:normal}
+body[data-radio-look=winamp] #radioView .vfd-k{font:10px/1.4 'Courier New',monospace;letter-spacing:1px}
+body[data-radio-look=winamp] #radioView .vfd-sub{font:10px/1.5 'Courier New',monospace;color:var(--amp-dim);overflow-wrap:anywhere}
+body[data-radio-look=winamp] #radioView .rlogo{width:36px;height:36px;border:1px solid #54704b;background:#1c2d20;border-radius:0;flex-shrink:0}
+body[data-radio-look=winamp] #radioView .radio-set>.remote{
+  grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;padding:12px 8px 8px;gap:7px;
+  border:1px solid #77818d;border-bottom-color:#252b34;border-right-color:#252b34;border-radius:0;
+  background:linear-gradient(#535b68,#3f4652);box-shadow:inset 1px 1px #a6afba;
+}
+body[data-radio-look=winamp] #radioView .btn{
+  color:#e3e7e9;background:linear-gradient(#656f7e,#424a58);border:1px solid #9aa5b4;
+  border-right-color:#171d27;border-bottom-color:#171d27;border-radius:1px;
+  box-shadow:inset 1px 1px #bbc4ce,inset -1px -1px #303845,0 2px 0 #1a2029;
+  font:700 11px/1.3 'Courier New',monospace;min-height:44px;padding:9px 12px;
+}
+body[data-radio-look=winamp] #radioView .btn:hover{background:linear-gradient(#778294,#515d6d);transform:none;border-top-color:#d4dbe4}
+body[data-radio-look=winamp] #radioView .btn:active{box-shadow:inset 1px 1px #171d27;transform:translateY(1px)}
+body[data-radio-look=winamp] #radioView #rPlay{color:#202815;background:linear-gradient(#e4e9c0,#abb789);border-top-color:#faffd9;font-size:12px;min-width:92px}
+body[data-radio-look=winamp] #radioView .radio-appearance .btn[aria-pressed=true]{border:1px solid #c3f879;color:#d5faa3;background:#253526;box-shadow:inset 0 0 0 1px #60794b}
+body[data-radio-look=winamp] #radioView .vol{color:#d9e0e6;font:10px/1.4 'Courier New',monospace;width:100%;padding-top:9px;border-top:1px solid #75818a;gap:15px}
+body[data-radio-look=winamp] #radioView #rVol{accent-color:#c3f879;min-width:80px;flex:1;height:28px}
+body[data-radio-look=winamp] #radioView .guide-head{padding:2px 2px 9px;border-bottom:3px double #87929f;margin-bottom:13px;gap:10px;align-items:center}
+body[data-radio-look=winamp] #radioView .guide-head h3{color:#ece8d2;font:700 11px/1.5 'Courier New',monospace;letter-spacing:1.8px}
+body[data-radio-look=winamp] #radioView .guide-head h3::before{content:'02 / ';color:#acb5bc}
+body[data-radio-look=winamp] #radioView .hint{color:#bdc6ce;font:10px/1.6 'Courier New',monospace}
+body[data-radio-look=winamp] #radioView .hint a{color:#d3edae}
+body[data-radio-look=winamp] #radioView .genres{gap:5px;margin-bottom:12px}
+body[data-radio-look=winamp] #radioView .chip{border:1px solid #7c8995;background:#303944;color:#d4e0cc;border-radius:1px;font:10px 'Courier New',monospace;min-height:32px;padding:6px 8px}
+body[data-radio-look=winamp] #radioView .chip.on{background:#c3f879;color:#162113;border-color:#e0ffad}
+body[data-radio-look=winamp] #radioView .rsearch{grid-template-columns:minmax(0,1fr) minmax(80px,.65fr) auto;margin-block:12px;gap:7px}
+body[data-radio-look=winamp] #radioView .rsearch :is(input,select){color:#ccf496;background:#0c1811;border:1px solid #16201b;border-bottom-color:#84918e;border-right-color:#84918e;border-radius:0;padding:9px;font:11px/1.5 'Courier New',monospace;min-height:44px}
+body[data-radio-look=winamp] #radioView .stations{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;background:#0b140f;padding:4px;border:2px solid #151c1a;border-right-color:#87928b;border-bottom-color:#87928b;max-height:490px;overflow:auto;scrollbar-color:#86947b #111a16;counter-reset:amp-stations}
+body[data-radio-look=winamp] #radioView .station{counter-increment:amp-stations;grid-template-columns:24px 30px minmax(0,1fr) 38px;gap:8px;border:1px solid transparent;background:#101c14;color:#c3f879;border-radius:0;padding:6px;min-height:54px;font:12px/1.4 'Courier New',monospace}
+body[data-radio-look=winamp] #radioView .station::before{content:counter(amp-stations,decimal-leading-zero);font-size:10px;color:#839f72;text-align:center}
+body[data-radio-look=winamp] #radioView .station:nth-child(even){background:#142219}
+body[data-radio-look=winamp] #radioView .station.on{border-color:#b7de85;background:#283c22;box-shadow:inset 2px 0 #c3f879}
+body[data-radio-look=winamp] #radioView .station:hover{border-color:#647b59;background:#21351f}
+body[data-radio-look=winamp] #radioView .station :is(img,.ph){width:30px;height:30px;border-radius:0;background:#1f3323;font-size:14px}
+body[data-radio-look=winamp] #radioView .station .tg{font:10px/1.5 'Courier New',monospace;color:#90a987}
+body[data-radio-look=winamp] #radioView .station .fav{color:#8ea67e;border-radius:0;font-size:18px;padding:8px;min-height:38px}
+body[data-radio-look=winamp] #radioView .station .fav.on{color:#ffcf78}
+body[data-radio-look=winamp] #radioView :focus-visible{outline:2px solid #dcff9c;outline-offset:3px}
+@media(max-width:900px){
+  body[data-radio-look=winamp] #radioView:not([hidden]){grid-template-columns:minmax(0,1fr);max-width:720px}
+  body[data-radio-look=winamp] #radioView>.guide{grid-column:1}
+}
+@media(max-width:500px){
+  body[data-radio-look=winamp] #radioView .radio-set{grid-template-columns:minmax(0,1fr);padding:10px;gap:9px}
+  body[data-radio-look=winamp] #radioView .vfd{grid-column:1;grid-row:2;min-height:126px}
+  body[data-radio-look=winamp] #radioView .dial{grid-column:1;grid-row:3;min-height:0;height:auto}
+  body[data-radio-look=winamp] .amp-clock-panel{flex-direction:row;justify-content:space-between;gap:8px;padding:9px}
+  .amp-time{font-size:clamp(18px,calc(145px / var(--amp-time-digits,5)),30px)}.amp-clock-label{max-width:45px;font-size:8px}.amp-stream-state{font-size:8px;max-width:100px}
+  body[data-radio-look=winamp] #radioView .amp-window-kind{font-size:8px}
+  body[data-radio-look=winamp] #radioView>.guide{padding:10px}
+  body[data-radio-look=winamp] #radioView .rsearch{grid-template-columns:minmax(0,1fr) auto}
+  body[data-radio-look=winamp] #radioView .rsearch input{grid-column:1/-1}
+  body[data-radio-look=winamp] #radioView .rsearch select{grid-column:1}
+  body[data-radio-look=winamp] #radioView .station{gap:6px;grid-template-columns:20px 26px minmax(0,1fr) 38px}
+  body[data-radio-look=winamp] #radioView .station :is(img,.ph){width:26px;height:26px}
+}

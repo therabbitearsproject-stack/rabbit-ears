@@ -1,7 +1,7 @@
 /* Optional Discord account settings. Playback and anonymous preferences remain local. */
 window.RabbitPreferences=(()=>{
   const defaults={re_skin:'pixel',re_radio_look:'vinyl',re_caption_style:'none',re_captions:false,re_caption_backing:false,re_tv_volume:.8,re_tv_muted:true,re_vol:.8};
-  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car'],re_caption_style:['none','yellow','white']};
+  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white']};
   function clean(value){
     const out={};if(!value||typeof value!=='object'||Array.isArray(value))return out;
     for(const [key,v]of Object.entries(value)){

@@ -23,7 +23,7 @@
   const skin=store.get('re_skin','pixel');
   body.dataset.skin=skins.some(s=>s[0]===skin)?skin:'pixel';
   body.dataset.tvPage=initialChannel?'channel':'guide';
-  body.dataset.radioLook=radioLook==='car'?'car':'vinyl';
+  body.dataset.radioLook=['vinyl','car','winamp'].includes(radioLook)?radioLook:'vinyl';
   const logoSource=info=>['retro','ivory'].includes(body.dataset.skin)?(info.srcLight||info.src):(info.srcDark||info.src);
   function refreshLogoColors(){document.querySelectorAll('img.channel-logo').forEach(im=>{const info=logos[im.alt];if(info){const src=logoSource(info);if(im.getAttribute('src')!==src)im.src=src;}});}
   function station(ch,compact=false){
@@ -244,7 +244,7 @@
   const radioSet=document.querySelector('.radio-set');
   const platter=make('div','vinyl-platter');platter.setAttribute('aria-hidden','true');platter.innerHTML='<span class="record-label">RE<br><small>33⅓ / LIVE RADIO</small></span><i class="tonearm"></i>';radioSet.prepend(platter);
   const radioAppearance=make('div','radio-appearance');radioAppearance.setAttribute('role','group');radioAppearance.setAttribute('aria-label','Radio appearance');
-  for(const [look,label] of [['vinyl','Vinyl deck'],['car','Car stereo']]){const b=button(label,()=>{body.dataset.radioLook=look;store.set('re_radio_look',look);radioAppearance.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));});b.setAttribute('aria-pressed',String(body.dataset.radioLook===look));radioAppearance.append(b);}
+  for(const [look,label] of [['vinyl','Vinyl deck'],['car','Car stereo'],['winamp','Winamp Deck']]){const b=button(label,()=>{radioLook=look;body.dataset.radioLook=look;store.set('re_radio_look',look);radioAppearance.querySelectorAll('button').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));});b.dataset.radioLook=look;b.setAttribute('aria-pressed',String(body.dataset.radioLook===look));radioAppearance.append(b);}
   $('radioView').prepend(radioAppearance);
   const stereoBadge=make('span','stereo-badge','RE AUDIO / FM STEREO');radioSet.append(stereoBadge);
   audio.addEventListener('playing',()=>body.classList.add('radio-playing'));audio.addEventListener('pause',()=>body.classList.remove('radio-playing'));
@@ -263,9 +263,9 @@
       body.dataset.skin=prefs.re_skin;syncSkin();
       skinGrid.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.preview===prefs.re_skin)));
     }
-    if(['vinyl','car'].includes(prefs.re_radio_look)){
+    if(['vinyl','car','winamp'].includes(prefs.re_radio_look)){
       radioLook=prefs.re_radio_look;body.dataset.radioLook=radioLook;
-      radioAppearance.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(['vinyl','car'][i]===radioLook)));
+      radioAppearance.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.radioLook===radioLook)));
     }
     captionUI.applyPreferences?.(prefs);
     if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
