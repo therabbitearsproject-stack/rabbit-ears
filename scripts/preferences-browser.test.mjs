@@ -58,3 +58,34 @@ test('account hydration, live updates and cross-account races preserve intent an
   assert.equal(result.restoredSkin,'metal');assert.equal(result.restoredWrite.account,'B');assert.deepEqual(result.restoredWrite.changes,{re_skin:'metal'});
  }finally{await browser.close();}
 });
+
+test('sparse account profiles use account defaults while only new accounts inherit intentional guest choices',{skip:!chromium},async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
+ try{
+  const page=await browser.newPage();await page.setContent('<main></main>');
+  await page.addScriptTag({path:fileURLToPath(new URL('../assets/preferences.js',import.meta.url))});
+  const result=await page.evaluate(async()=>{
+   const pause=()=>new Promise(r=>setTimeout(r,5)),guest={re_skin:'gutter',re_tv_volume:.2,re_caption_style:'yellow'};
+   const profiles={existing:{version:1,preferences:{re_tv_muted:true}},fresh:{version:0,preferences:{}}};let account='existing',offlinePrefs=false;const writes=[];
+   const fetcher=async(url,options)=>{
+    const response=body=>({ok:true,status:200,json:async()=>body});
+    if(url.endsWith('/api/session'))return response({user:{id:account,csrf:'fixture'}});
+    if(offlinePrefs)throw Error('Offline profile fixture');
+    if(options.method==='PUT'){const body=JSON.parse(options.body);writes.push(body);Object.assign(profiles[account].preferences,body.changes);profiles[account].version++;}
+    return response({schemaVersion:1,userId:account,...structuredClone(profiles[account])});
+   };
+   const make=extra=>{const disk=new Map(Object.entries({...guest,re_guest_preferences:guest,...extra}));const store={get:(k,d)=>disk.has(k)?disk.get(k):d,set:(k,v)=>disk.set(k,v)};const ui=RabbitPreferences.create({store,apply:()=>{},api:'https://fixture.test',fetcher,pollMs:0,debounceMs:100000});return {disk,store,ui};};
+   const first=make();await pause();const existing={skin:first.disk.get('re_skin'),volume:first.disk.get('re_tv_volume'),style:first.disk.get('re_caption_style'),writes:writes.length};
+   const cache=structuredClone(first.disk.get('re_account_preferences'));first.ui.stop();
+   offlinePrefs=true;const offline=make({re_account_preferences:cache});await pause();offline.store.set('re_tv_volume',.55);
+   const offlineSaved=structuredClone(offline.disk.get('re_account_preferences'));const offlineView={skin:offline.disk.get('re_skin'),volume:offline.disk.get('re_tv_volume')};offline.ui.stop();
+   offlinePrefs=false;account='fresh';const fresh=make({re_account_preferences:cache});await pause();await fresh.ui.flush();
+   const seeded={skin:fresh.disk.get('re_skin'),volume:fresh.disk.get('re_tv_volume'),style:fresh.disk.get('re_caption_style'),saved:structuredClone(profiles.fresh.preferences)};fresh.ui.stop();
+   return {existing,cache,offlineView,offlineSaved,seeded};
+  });
+  assert.deepEqual(result.existing,{skin:'pixel',volume:.8,style:'none',writes:0});
+  assert.equal(result.cache.values.re_skin,'pixel');assert.equal(result.cache.values.re_radio_look,'vinyl');assert.equal(result.cache.values.re_caption_backing,false);
+  assert.deepEqual(result.offlineView,{skin:'pixel',volume:.55});assert.equal(result.offlineSaved.values.re_skin,'pixel');assert.equal(result.offlineSaved.values.re_tv_volume,.55);assert.deepEqual(result.offlineSaved.pending,{re_tv_volume:.55});
+  assert.equal(result.seeded.skin,'gutter');assert.equal(result.seeded.volume,.2);assert.equal(result.seeded.style,'yellow');assert.equal(result.seeded.saved.re_skin,'gutter');assert.equal(result.seeded.saved.re_tv_muted,undefined);
+ }finally{await browser.close();}
+});

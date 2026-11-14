@@ -22,13 +22,13 @@ window.RabbitPreferences=(()=>{
     let user=null,epoch=0,version=0,ready=false,applying=false,dirty={},history={},ticks=0,timer=null,saving=false,server={},stopped=false,checking=false;
     const status=state=>window.dispatchEvent(new CustomEvent('re:preferences-status',{detail:{state,signedIn:!!user}}));
     const persistGuest=()=>original('re_guest_preferences',guest);
-    const remember=()=>{if(user){const pending=Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]));original('re_account_preferences',{schemaVersion:1,userId:user.id,version,values:coherent({...server,...pending}),pending});}};
+    const remember=()=>{if(user){const pending=Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]));original('re_account_preferences',{schemaVersion:1,userId:user.id,version,values:merged(),pending});}};
     function applyValues(values){
       applying=true;
       try{for(const [k,v]of Object.entries(values))original(k,v);apply({...values});}
       finally{applying=false;}
     }
-    const merged=()=>coherent({...defaults,...guest,...server,...Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]))});
+    const merged=()=>coherent({...defaults,...server,...Object.fromEntries(Object.entries(dirty).map(([k,v])=>[k,v.value]))});
     function schedule(delay=debounceMs){clearTimeout(timer);if(user&&ready&&!stopped)timer=setTimeout(flush,delay);timer?.unref?.();}
     store.set=function(key,value){
       original(key,value);
@@ -81,9 +81,10 @@ window.RabbitPreferences=(()=>{
       if(user?.id===id){user=next;if(!ready||!Object.keys(dirty).length)load();return;}
       ++epoch;user=next;ready=false;dirty={};server={};version=0;clearTimeout(timer);
       const local=store.get('re_account_preferences',null),ownCache=local?.userId===id&&Number.isSafeInteger(local.version)&&local.version>=0&&[undefined,1].includes(local.schemaVersion),fallback=ownCache?clean(local.values):{};
+      if(ownCache){server={...fallback};version=local.version;}
       if(ownCache)for(const [key,value]of Object.entries(clean(local.pending)))dirty[key]={value,tick:++ticks};
       const intentional=Object.fromEntries(Object.entries(history).filter(([,v])=>v.tick>startTick).map(([k,v])=>[k,v.value]));
-      applyValues(coherent({...defaults,...guest,...fallback,...intentional}));
+      applyValues(coherent({...defaults,...fallback,...intentional}));
       load(startTick);
     }
     async function checkSession(){
