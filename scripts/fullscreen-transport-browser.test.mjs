@@ -22,7 +22,7 @@ test('fullscreen reuses every themed transport, hides on idle and restores the s
  const f=await fullApp();try{const {page}=f;await page.waitForSelector('.tv-transport .watch-dock',{state:'attached'});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.evaluate(()=>{REUI.openChannel(0);window.qaTransport=document.querySelector('.tv-transport');window.qaVideo=document.getElementById('vid');document.querySelector('.tv-transport .watch-dock').hidden=false;document.getElementById('screen').requestFullscreen=()=>Promise.reject(new Error('Fallback fixture'));});
  const before=await page.evaluate(()=>({...qaMedia}));
- for(const [width,height] of [[1440,1000],[800,600],[390,844],[844,390]]){
+ for(const [width,height] of [[1440,1000],[800,600],[320,700],[390,844],[844,390]]){
   await page.setViewportSize({width,height});
   for(const skin of ['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter']){
    await page.evaluate(s=>document.body.dataset.skin=s,skin);
@@ -33,6 +33,8 @@ test('fullscreen reuses every themed transport, hides on idle and restores the s
    assert.deepEqual(await page.locator('#pause').evaluate(n=>({bg:getComputedStyle(n).backgroundImage,border:getComputedStyle(n).borderRadius})),normal);
    assert.equal(await page.locator('#full').getAttribute('aria-label'),'Exit fullscreen');
    const bank=await page.locator('.tv-transport').boundingBox();assert.ok(bank.x>=0&&bank.x+bank.width<=width+1,skin+' bank fits '+width+' '+JSON.stringify(bank));
+   assert.ok(bank.height<=(width<=640?130:85),skin+' compact bank '+width+' height '+bank.height);
+   const key=await page.locator('#pause').boundingBox();assert.equal(key.height,44);assert.ok(key.width>=44);
    assert.equal(await page.locator('#mute').isVisible(),true);
    await page.locator('#full').click();
    assert.equal(await page.locator('.player-pack>.tv-transport').count(),1);

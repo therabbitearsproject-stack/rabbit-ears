@@ -196,3 +196,31 @@ body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button):is(:a
   body[data-skin=stadium] #tvView .tv-transport { grid-template-columns:repeat(8,minmax(0,1fr)); }
   body[data-skin=stadium] #tvView .tv-transport .watch-dock-button[aria-label=React] { grid-column:span 2; }
 }
+
+/* Fullscreen uses a shallow hardware strip rather than the full cabinet console. */
+body[data-skin] #tvView .fullscreen-controls>.tv-transport {
+ display:flex;flex-wrap:wrap;align-items:stretch;justify-content:flex-start;
+ width:fit-content;max-width:100%;gap:6px;margin:4px 0 0;padding:8px 10px 12px;
+ border-width:2px 3px 3px;grid-template-rows:none;
+}
+body[data-skin] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button) {
+ flex:0 0 52px;width:52px;height:44px;min-width:44px;min-height:44px;
+ grid-column:auto;grid-row:auto;gap:3px;padding:4px 2px;justify-content:center;
+}
+body[data-skin] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button) svg { width:18px;height:18px; }
+body[data-skin] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:0; }
+body[data-skin] #tvView .fullscreen-controls>.tv-transport :is(#back,#fwd) small { top:5px;right:4px;font-size:7px; }
+body[data-skin] #tvView .fullscreen-controls>.tv-transport #popoutTv { display:none; }
+body[data-skin=theatre] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button) { padding-bottom:10px; }
+body[data-skin=theatre] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button)::before {
+ inset:0 auto auto 50%;width:29px;height:29px;border-width:2px;
+}
+body[data-skin=theatre] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button) svg { top:7px;width:16px;height:16px; }
+body[data-skin=theatre] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button)::after { height:8px; }
+body[data-skin=theatre] #tvView .fullscreen-controls>.tv-transport :is(#back,#fwd) small { top:4px;right:9px; }
+@media(max-width:640px) {
+ body[data-skin] #tvView .fullscreen-controls>.tv-transport {
+  display:grid;grid-template-columns:repeat(6,minmax(44px,1fr));width:min(100%,360px);gap:5px 4px;padding:6px 5px 10px;border-inline-width:2px;
+ }
+ body[data-skin] #tvView .fullscreen-controls>.tv-transport :is(#pause,.btn,.watch-dock-button) { width:100%; }
+}

@@ -147,3 +147,13 @@ body[data-skin] #tvView .fullscreen-controls>.tv-transport { width:min(100%,1000
 }
 .player-fullscreen .fullscreen-controls { grid-template-columns:minmax(0,1fr); }
 .player-fullscreen .fullscreen-controls { overflow-x:hidden;overscroll-behavior:contain; }.player-fullscreen .fullscreen-title,.player-fullscreen .fullscreen-next { min-width:0;overflow-wrap:anywhere; }
+
+/* Keep only a narrow title and shallow fade above the compact fullscreen keys. */
+.player-fullscreen .fullscreen-controls {
+ gap:4px;padding:24px max(12px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));
+ background:linear-gradient(transparent,#0009 28px,#000b);
+}
+.player-fullscreen .fullscreen-controls .fullscreen-title { font-size:17px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.player-fullscreen .fullscreen-controls .fullscreen-next { font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+@media(max-width:640px) { .player-fullscreen .fullscreen-controls { padding-inline:max(8px,env(safe-area-inset-left)) max(8px,env(safe-area-inset-right)); } }
+@media(max-height:500px) { .player-fullscreen .fullscreen-controls { padding-top:12px;padding-bottom:max(10px,env(safe-area-inset-bottom)); } }
