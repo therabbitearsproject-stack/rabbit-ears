@@ -191,3 +191,8 @@ body[data-skin=cozy] #tvView .player-pack > .remote { grid-template-columns:repe
 body[data-skin=cozy] #tvView .player-pack > .remote .watch-dock-button { grid-column:span 4; }
 @media(max-width:740px) { body[data-skin=cozy] #tvView .player-pack > .remote { column-gap:6px; } }
 body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) svg { transform:translateY(3px); }
+/* Stadium's twelve controls fill a compact bank; React never spills into a lone row. */
+@media(min-width:741px) {
+  body[data-skin=stadium] #tvView .player-pack>.remote { grid-template-columns:repeat(8,minmax(0,1fr)); }
+  body[data-skin=stadium] #tvView .player-pack>.remote .watch-dock-button[aria-label=React] { grid-column:span 2; }
+}
