@@ -1,0 +1,156 @@
+/* Physical VCR transport keys. Scoped to the TV remote; no playback logic. */
+body[data-skin] #tvView .player-pack > .remote {
+  --deck:#26292c;--deck-edge:#111315;--deck-line:#565b60;
+  --face-top:#60666b;--face-mid:#41464b;--face-bottom:#31363b;--key-edge:#171a1d;
+  --key-ink:#f1eee5;--key-glint:#ffffff70;--key-grain:#ffffff08;--key-shadow:#080a0d;
+  --key-radius:2px;--key-width:62px;--key-height:62px;--key-depth:4px;
+  --play-top:#477578;--play-mid:#295658;--play-bottom:#1c3e40;--play-ink:#f0eee3;--key-led:#89cbbb;
+  position:relative;isolation:isolate;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+  gap:10px 8px;padding:17px 14px 19px;margin-top:16px;border:1px solid var(--deck-edge);border-radius:4px;
+  background:repeating-linear-gradient(0deg,#ffffff03 0 1px,transparent 1px 3px),linear-gradient(165deg,var(--deck-line),var(--deck) 18%,var(--deck) 85%,var(--deck-edge));
+  box-shadow:inset 0 1px #ffffff42,inset 0 -2px #0009,0 3px 0 var(--deck-edge),0 6px 10px #0003;
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) {
+  position:relative;box-sizing:border-box;display:inline-flex;flex:none;flex-direction:column;align-items:center;justify-content:center;
+  width:var(--key-width);min-width:44px;height:var(--key-height);min-height:44px;gap:6px;padding:9px 5px 7px;margin:0;
+  border:1px solid var(--key-edge);border-radius:var(--key-radius);color:var(--key-ink);
+  background:repeating-linear-gradient(0deg,var(--key-grain) 0 1px,transparent 1px 3px),linear-gradient(180deg,var(--face-top),var(--face-mid) 34%,var(--face-mid) 70%,var(--face-bottom));
+  box-shadow:inset 0 1px 0 var(--key-glint),inset 1px 0 0 #ffffff24,inset -1px 0 #0004,inset 0 -3px #0003,0 var(--key-depth) 0 var(--key-edge),0 calc(var(--key-depth) + 1px) 0 #0009,0 calc(var(--key-depth) + 3px) 4px #0006;
+  text-shadow:0 1px #0006;transform:translateY(0);transition:transform 70ms ease,box-shadow 70ms ease,filter 100ms ease;
+  cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::before {
+  content:'';position:absolute;left:4px;right:4px;top:3px;height:1px;background:linear-gradient(90deg,transparent,var(--key-glint),transparent);pointer-events:none;
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after {
+  content:'';display:block;font:600 8px/1.1 Arial,sans-serif;letter-spacing:.8px;text-align:center;white-space:nowrap;
+  color:inherit;opacity:.9;pointer-events:none;
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) svg { width:21px;height:21px;flex:none;filter:drop-shadow(0 1px 0 #0005); }
+body[data-skin] #tvView .player-pack > .remote :is(#back,#fwd) small { position:absolute;right:7px;top:12px;font:600 8px Arial,sans-serif; }
+body[data-skin] #tvView .player-pack > .remote #down::after { content:'CH −'; }
+body[data-skin] #tvView .player-pack > .remote #up::after { content:'CH +'; }
+body[data-skin] #tvView .player-pack > .remote #surf::after { content:'SURF'; }
+body[data-skin] #tvView .player-pack > .remote #back::after { content:'REPLAY'; }
+body[data-skin] #tvView .player-pack > .remote #pause::after { content:'PAUSE'; }
+body[data-skin] #tvView .player-pack > .remote #pause[data-icon=play]::after { content:'PLAY'; }
+body[data-skin] #tvView .player-pack > .remote #fwd::after { content:'SKIP'; }
+body[data-skin] #tvView .player-pack > .remote #mute::after { content:'VOLUME'; }
+body[data-skin] #tvView .player-pack > .remote #cc::after { content:'CAPTIONS'; }
+body[data-skin] #tvView .player-pack > .remote #full::after { content:'SCREEN'; }
+body[data-skin] #tvView .player-pack > .remote #popoutTv::after { content:'POP OUT'; }
+body[data-skin] #tvView .player-pack > .remote .watch-dock-button[aria-label='Leave a comment']::after { content:'COMMENT'; }
+body[data-skin] #tvView .player-pack > .remote .watch-dock-button[aria-label=React]::after { content:'REACT'; }
+body[data-skin] #tvView .player-pack > .remote #pause {
+  width:calc(var(--key-width) + 12px);color:var(--play-ink);
+  background:repeating-linear-gradient(0deg,var(--key-grain) 0 1px,transparent 1px 3px),linear-gradient(180deg,var(--play-top),var(--play-mid) 38%,var(--play-bottom));
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):hover:not(:disabled) { filter:brightness(1.12);transform:translateY(0);border-color:var(--key-edge); }
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):is(:active,[aria-pressed=true],[aria-expanded=true]):not(:disabled) {
+  transform:translateY(3px);box-shadow:inset 0 2px 4px #0005,inset 1px 0 #ffffff25,0 1px 0 var(--key-edge),0 2px 2px #0008;
+}
+body[data-skin] #tvView .player-pack > .remote :is([aria-pressed=true],[aria-expanded=true]):not(:disabled)::before {
+  left:auto;right:5px;top:5px;width:5px;height:3px;border-radius:1px;background:var(--key-led);box-shadow:0 0 4px var(--key-led);
+}
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):focus-visible { outline:2px solid var(--amber);outline-offset:6px; }
+body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):disabled { opacity:.5;filter:saturate(.25);cursor:not-allowed; }
+
+/* 1970s walnut and champagne aluminium, broad ivory piano keys. */
+body[data-skin=retro] #tvView .player-pack > .remote {
+  --deck:#9e8d72;--deck-line:#d8cbb4;--deck-edge:#50412f;--face-top:#f1e9d7;--face-mid:#cfc2a7;--face-bottom:#aa9879;
+  --key-ink:#3f382c;--key-edge:#5a4c38;--key-glint:#fffbed;--key-grain:#553e2010;--key-radius:2px;--key-depth:5px;
+  --play-top:#9da58c;--play-mid:#737d64;--play-bottom:#545e49;--play-ink:#f7f0dc;--key-led:#e1b25c;
+  border-inline:7px solid #5d3e25;background:repeating-linear-gradient(0deg,#fff1 0 1px,transparent 1px 3px),linear-gradient(#d9cdb5,#a59374 18%,#b9a98e 88%,#7b694e);
+}
+body[data-skin=retro] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { text-shadow:0 1px #fff8; }
+body[data-skin=retro] #tvView .player-pack > .remote #pause { text-shadow:0 1px #0007; }
+
+/* Projection-room lacquer and champagne-gold stepped caps. */
+body[data-skin=theatre] #tvView .player-pack > .remote {
+  --deck:#1f1017;--deck-line:#6b4550;--deck-edge:#1c1111;--face-top:#ccbb91;--face-mid:#a4936d;--face-bottom:#6e5c38;
+  --key-edge:#41331c;--key-ink:#241a16;--key-glint:#fff2c7;--key-radius:1px;--key-height:66px;--key-depth:3px;
+  --play-top:#a86470;--play-mid:#6e2939;--play-bottom:#431923;--play-ink:#fff0cd;--key-led:#eedaa4;
+  border:2px solid #8d7547;border-top-width:4px;border-radius:0;padding-inline:19px;
+}
+body[data-skin=theatre] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { border-top:3px solid #e1cca0;border-bottom:3px solid #5f4d30;text-shadow:0 1px #fffc; }
+body[data-skin=theatre] #tvView .player-pack > .remote #pause { text-shadow:0 1px #0008; }
+
+/* A broadcast switcher: slate plastic, blue transport and orange utility keys. */
+body[data-skin=stadium] #tvView .player-pack > .remote {
+  --deck:#26382f;--deck-line:#5d7567;--deck-edge:#0b1611;--face-top:#737e78;--face-mid:#49564f;--face-bottom:#303e36;
+  --key-edge:#13271c;--key-glint:#dcece0aa;--key-radius:1px;--key-height:64px;
+  --play-top:#76a5ad;--play-mid:#3d7884;--play-bottom:#26525d;--play-ink:#f6f2df;--key-led:#e7bb65;
+  border-radius:2px;border-bottom:5px solid #0d2116;
+}
+body[data-skin=stadium] #tvView .player-pack > .remote #surf { --face-top:#d4a86a;--face-mid:#b27b36;--face-bottom:#835521;--key-ink:#2f2415; }
+
+/* Late-'90s silver deck with moulded graphite elastomer keys. */
+body[data-skin=modern] #tvView .player-pack > .remote {
+  --deck:#b6bec3;--deck-line:#f0f2f0;--deck-edge:#5b6368;--face-top:#555e64;--face-mid:#30383e;--face-bottom:#1d252a;
+  --key-edge:#171e23;--key-glint:#bec6cb8f;--key-radius:8px;--key-height:56px;--key-depth:2px;--key-grain:transparent;
+  --play-top:#94adbf;--play-mid:#5f7d94;--play-bottom:#405a70;--play-ink:#f7fbff;--key-led:#cce8f7;
+  background:repeating-linear-gradient(0deg,#fff2 0 1px,transparent 1px 2px),linear-gradient(#eef0ef,#a9b1b6 24%,#c7ccce 75%,#78838a);border-radius:9px;
+}
+body[data-skin=modern] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { box-shadow:inset 0 2px 2px #ffffff36,inset 0 -3px 3px #0008,0 2px 1px #343d44,0 4px 5px #0005; }
+
+/* Warm domestic portable, softly domed caramel ABS keys. */
+body[data-skin=cozy] #tvView .player-pack > .remote {
+  --deck:#9d7548;--deck-line:#d1ac79;--deck-edge:#634528;--face-top:#e9c99b;--face-mid:#c79a62;--face-bottom:#986e3e;
+  --key-edge:#77512b;--key-ink:#3e2c1c;--key-glint:#fff0c9cc;--key-radius:7px 7px 4px 4px;--key-depth:5px;--key-height:64px;
+  --play-top:#edbf6c;--play-mid:#c18a37;--play-bottom:#8b5c1c;--play-ink:#382913;--key-led:#ffe1a1;
+  border-radius:12px;background:linear-gradient(#c5a16f,#a98251 20%,#b08a58 80%,#785530);
+}
+body[data-skin=cozy] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { background-image:radial-gradient(ellipse at 50% -10%,#fff5,transparent 65%),linear-gradient(var(--face-top),var(--face-mid) 45%,var(--face-bottom)); }
+body[data-skin=cozy] #tvView .player-pack > .remote #pause { background-image:radial-gradient(ellipse at 50% -10%,#fff5,transparent 65%),linear-gradient(var(--play-top),var(--play-mid),var(--play-bottom)); }
+
+/* Rack-mounted steel, recessed industrial push blocks and a red transport key. */
+body[data-skin=metal] #tvView .player-pack > .remote {
+  --deck:#252629;--deck-line:#707176;--deck-edge:#08090a;--face-top:#85878b;--face-mid:#4f5156;--face-bottom:#303237;
+  --key-edge:#141518;--key-glint:#e3e3e9aa;--key-radius:0;--key-depth:6px;--key-height:64px;
+  --play-top:#c76971;--play-mid:#8d323e;--play-bottom:#59212c;--play-ink:#fff4e5;--key-led:#f69b9e;
+  border:3px ridge #77797d;border-radius:0;background:repeating-linear-gradient(90deg,#ffffff04 0 1px,transparent 1px 4px),linear-gradient(#4d4f54,#1c1e22 16%,#292b30 85%,#111216);
+}
+body[data-skin=metal] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { clip-path:polygon(4px 0,calc(100% - 4px) 0,100% 4px,100% calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,0 calc(100% - 4px),0 4px); }
+
+/* Space-age ivory console: fine silver striations and coral play key. */
+body[data-skin=ivory] #tvView .player-pack > .remote {
+  --deck:#e0d5bb;--deck-line:#fff9e5;--deck-edge:#96876c;--face-top:#f2ede0;--face-mid:#c9c3b4;--face-bottom:#aaa18d;
+  --key-edge:#8e8169;--key-ink:#632e39;--key-glint:#fffef4;--key-grain:#514b3a13;--key-radius:3px;--key-depth:3px;
+  --play-top:#d3988d;--play-mid:#b76c64;--play-bottom:#8c4946;--play-ink:#fff8e9;--key-led:#a2434e;
+  border-radius:7px;border:2px solid #bbae91;box-shadow:inset 0 2px #fff9,0 4px 0 #b3a487,0 7px 10px #5b46352b;
+}
+body[data-skin=ivory] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { text-shadow:0 1px #fff9;background-image:repeating-linear-gradient(0deg,#534f4218 0 1px,#fff1 1px 2px),linear-gradient(var(--face-top),var(--face-mid),var(--face-bottom)); }
+body[data-skin=ivory] #tvView .player-pack > .remote #pause { text-shadow:0 1px #0005;background-image:repeating-linear-gradient(0deg,#fff1 0 1px,transparent 1px 2px),linear-gradient(var(--play-top),var(--play-mid),var(--play-bottom)); }
+
+/* Pixel Deck becomes a real early digital VCR: hard edges and teal moulded keycaps. */
+body[data-skin=pixel] #tvView .player-pack > .remote {
+  --deck:#1b2b3b;--deck-line:#516579;--deck-edge:#070f19;--face-top:#728495;--face-mid:#3f5367;--face-bottom:#293c50;
+  --key-edge:#102033;--key-glint:#d4e4efa1;--key-radius:0;--key-depth:4px;--key-ink:#fff1d1;
+  --play-top:#77c9c5;--play-mid:#319a97;--play-bottom:#1d6d6b;--play-ink:#071c28;--key-led:#8affdb;
+  border:2px solid #52667c;border-radius:0;
+}
+body[data-skin=pixel] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { border-width:2px;box-shadow:inset 0 2px #a4bacb88,inset 2px 0 #788d9c55,inset -2px -3px #142538aa,0 4px 0 #07111e,0 6px 2px #0008; }
+
+/* Gutter Signal: worn black boombox ABS, acid-yellow key and hot-pink wear stripe. */
+body[data-skin=gutter] #tvView .player-pack > .remote {
+  --deck:#1b1d19;--deck-line:#5d6051;--deck-edge:#080a07;--face-top:#494c42;--face-mid:#2a2e25;--face-bottom:#1a1e16;
+  --key-edge:#0b1008;--key-glint:#a6ab9277;--key-radius:1px;--key-depth:5px;--key-ink:#e5e8d7;
+  --play-top:#effa85;--play-mid:#b6d42d;--play-bottom:#839d14;--play-ink:#182000;--key-led:#dfef58;
+  border-radius:1px;border-bottom:3px solid #090c06;background:repeating-linear-gradient(110deg,#ffffff04 0 1px,transparent 1px 5px),linear-gradient(#414439,#1c2018 13%,#24291e 90%,#0b0f08);
+}
+body[data-skin=gutter] #tvView .player-pack > .remote #surf { border-bottom:3px solid #b94379; }
+body[data-skin=gutter] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-family:monospace;letter-spacing:.3px; }
+
+@media(max-width:640px) {
+  body[data-skin] #tvView .player-pack > .remote { --key-width:46px;--key-height:56px;gap:9px 5px;padding:12px 8px 15px; }
+  body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button)::after { font-size:7px;letter-spacing:.25px; }
+  body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) svg { width:19px;height:19px; }
+  body[data-skin] #tvView .player-pack > .remote :is(#back,#fwd) small { right:4px;top:10px;font-size:7px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-skin] #tvView .player-pack > .remote :is(.btn,.watch-dock-button) { transition:none; }
+}
+
+body[data-skin=metal] #tvView .player-pack > .remote :is(.btn,.watch-dock-button):focus-visible { clip-path:none; }
+body[data-skin][data-tv-page=guide] #tvView .player-pack > .remote { display:none; }
+body.tv-popout-window[data-skin] #tvView .player-pack > .remote #popoutTv { display:none; }

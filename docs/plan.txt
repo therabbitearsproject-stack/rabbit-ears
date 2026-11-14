@@ -362,3 +362,9 @@ Audio experiment retired — November 14, 2026
 - At the owner’s request, removed all active audio processing, the Audio settings section, optional processing scripts/worklet, audio source probes/reloads, and media transport bridge. Native playback, mute/unmute and the volume slider are restored. Theme settings, slim header, Discord sync for existing basic preferences and TV pop-out remain.
 - Archived the complete experiment before removal in GitHub tag archive/audio-processing-2026-11-14, including controls, presets, tests and real-stream verification. Stored account data was not deleted; old processing preferences are ignored.
 - Community backend restored to native-playback baseline, 29 tests pass; bridge disabled in worker 4e0eafd4-703d-40a7-91d3-58023ed50ab8.
+
+
+Physical VCR controls — November 14, 2026
+- Redesigned the TV transport/comment/reaction keys as raised mechanical VCR buttons, with engraved legends, material grain, bevels, cast shadows, physical press travel and latched indicator lights. Each of nine themes has distinct materials, key shapes and matching colours.
+- Native controls and audio remain as before. Changes are CSS only, scoped to the primary TV remote and its pop-out. Radio and fullscreen styles are unchanged.
+- Checked all nine skins at desktop, 390px and 320px, nine native pop-outs, volume/comment actions and guide/channel visibility; no overflow and all targets at least 44px. Review screenshots and material notes saved under design-history/vcr-controls.
