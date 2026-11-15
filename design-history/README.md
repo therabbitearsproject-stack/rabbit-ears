@@ -16,3 +16,5 @@ in another worktree. The archived page is linked from the live site's footer.
 
 The archive is a historical design, not a second maintained application. It uses
 the same public media services; future backend changes may affect its playback.
+
+A visible return arrow has been added outside the archived interface so website and desktop visitors can return to the current TV guide. The exact historical page remains available in the original-design Git tag.
