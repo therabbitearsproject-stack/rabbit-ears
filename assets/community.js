@@ -17,7 +17,7 @@ const panel=el('div','watch-popover comment-popover');panel.id='comment-popover'
 const heading=el('div','popover-heading');heading.append(el('h3','','Leave a comment'),button('×',()=>closePopover(panel),'popover-close'));heading.lastChild.setAttribute('aria-label','Close comment');
 const auth=el('div','community-auth');
 const notice=el('p','community-status','Connecting to the watch party…');notice.setAttribute('role','status');
-const channelLink=el('a','community-discord','Open Rabbit Ears Discord ↗');channelLink.href=config.invite || 'https://discord.gg/Me827VV6';channelLink.target='_blank';channelLink.rel='noopener';
+const channelLink=el('a','community-discord','Open Rabbit Ears Discord ↗');channelLink.href=config.invite || 'https://discord.gg/dkGQSZT82G';channelLink.target='_blank';channelLink.rel='noopener';
 const settings=el('div','community-settings');const replayLabel=el('label');const replayToggle=el('input');replayToggle.type='checkbox';replayToggle.checked=replays;replayLabel.append(replayToggle,document.createTextNode(' Replay comments & reactions'));settings.append(replayLabel,channelLink);
 const reactionPopover=el('div','watch-popover emoji-popover');reactionPopover.id='emoji-popover';reactionPopover.setAttribute('popover','auto');reactionPopover.setAttribute('role','dialog');reactionPopover.setAttribute('aria-label','Quick reactions');
 const reactionHeading=el('div','popover-heading');reactionHeading.append(el('h3','','React'),button('×',()=>closePopover(reactionPopover),'popover-close'));reactionHeading.lastChild.setAttribute('aria-label','Close reactions');

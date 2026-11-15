@@ -551,7 +551,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   <footer class="foot">
     <div class="footer-stats"><span id="onFoot"></span><span id="total" aria-live="polite"></span></div>
     <p class="footer-archive">Every program streams from the Internet Archive. <a href="https://archive.org/donate" target="_blank" rel="noopener">♥ Donate to the Archive</a></p>
-    <nav class="footer-links" aria-label="Footer"><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="/privacy/">🔒 Privacy</a><a href="/music-credits/">♫ Music credits</a></nav>
+    <nav class="footer-links" aria-label="Footer"><a href="#now">📋 Everything on now</a><a href="/channels/">📺 All channels</a><a href="/games/">🎮 All games</a><a href="https://www.tiktok.com/@rabbitears.stream" target="_blank" rel="noopener">🎵 TikTok @rabbitears.stream</a><a href="https://discord.gg/dkGQSZT82G" target="_blank" rel="noopener noreferrer">💬 Discord</a><a href="/privacy/">🔒 Privacy</a><a href="/music-credits/">♫ Music credits</a></nav>
     <div class="footer-support"><a class="team-tip" href="/support/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h11v13H5z M16 10h4v7h-4 M8 11v7 M12 11v7 M4 8V5h3V3h4v2h4V4h3v4z"/></svg><span>Buy the team a beer</span></a></div>
   </footer>
 </div>
@@ -2165,13 +2165,14 @@ $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stop
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
 <script src="assets/interface.js?v=footer-compact-2"></script>
+<script src="assets/team-layout.js?v=1"></script>
 <script src="assets/radio-winamp.js?v=2"></script>
 <script src="assets/volume.js?v=native-playback-1"></script>
 <script src="assets/tv-popout.js?v=mobile-native-2"></script>
-<script src="assets/community-config.js?v=1"></script>
+<script src="assets/community-config.js?v=permanent-invite-1"></script>
 <script src="assets/preferences.js?v=native-playback-1"></script>
 <script>if (window.RabbitPreferences) window.rabbitPreferences = RabbitPreferences.create({store, apply: prefs => window.REUI.applyPreferences(prefs)});</script>
-<script type="module" src="assets/community.js?v=fullscreen-4"></script>
+<script type="module" src="assets/community.js?v=permanent-invite-1"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else
