@@ -317,7 +317,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 .hint code { font-family: var(--osd); font-size: 1.05em; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .screen canvas, .osd, .lower { transition: none; } }
 </style>
-<link rel="stylesheet" href="assets/interface.css?v=fullscreen-compact-5">
+<link rel="stylesheet" href="assets/interface.css?v=playback-recovery-1">
 <link rel="stylesheet" href="assets/pixel-deck.css?v=2">
 <link rel="stylesheet" href="assets/team.css?v=footer-compact-2">
 <link rel="stylesheet" href="assets/modular-themes.css?v=1">
@@ -471,6 +471,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
     <div class="screen" id="screen">
       <video id="vid" playsinline muted preload="auto"></video>
       <canvas id="snow" width="160" height="120"></canvas>
+      <div id="playbackStatus" role="status" hidden><span></span> <button type="button">Retry playback</button></div>
       <div class="osd" id="osd">CH 01</div>
       <div class="lower" id="lower"></div>
       <button class="power" id="power" type="button">
@@ -557,7 +558,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
   </footer>
 </div>
 
-<script src="media-compatibility.js"></script>
+<script src="media-compatibility.js?v=video-recovery-2"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
 <script src="assets/captions.js?v=app-languages-1"></script>
 <script>
@@ -1020,32 +1021,33 @@ async function fetchMeta(id) {
 }
 // Resolve older catalog selections lazily, without thousands of extra guide-time requests.
 const resolvedMedia = new Map(), sourceMetadata = new Map();
-async function resolveCompatibleMedia(media) {
-  if (media.local || media.audioCompatible || /\.ia\.mp4$/i.test(media.file)) return media;
+let playbackCopies;
+async function resolveCompatibleMedia(media, exclude = []) {
+  if (media.local) return exclude.includes(media.file) ? null : media;
   const key = (media.archiveId || media.id) + "|" + media.file;
-  if (resolvedMedia.has(key)) return resolvedMedia.get(key);
-  const cached = store.get("re_audio1_" + hash(key), null);
-  if (cached?.key === key && Date.now() - cached.t < 7 * 864e5) return { ...media, file: cached.file };
-  const promise = (async () => {
-    try {
-      const id = media.archiveId || media.id;
-      if (!sourceMetadata.has(id)) sourceMetadata.set(id, limited(async () => {
-        const response = await fetch("https://archive.org/metadata/" + encodeURIComponent(id), { signal: AbortSignal.timeout(12000) });
-        if (!response.ok) throw new Error("Metadata unavailable");
-        return response.json();
-      }).catch(error => { sourceMetadata.delete(id); throw error; }));
-      if (sourceMetadata.size > 24) sourceMetadata.delete(sourceMetadata.keys().next().value);
-      const data = await sourceMetadata.get(id), selected = data.files?.find(f => f.name === media.file);
-      const chosen = MediaCompatibility.choose(data.files || [], selected);
-      if (!chosen) return media;
-      if (MediaCompatibility.knownCompatible(chosen)) store.set("re_audio1_" + hash(key), { key, t: Date.now(), file: chosen.name });
-      return { ...media, file: chosen.name };
-    } catch { return media; }
-  })();
-  resolvedMedia.set(key, promise);
-  const result = await promise;
-  resolvedMedia.delete(key);
-  return result;
+  // Versioned cache: old audio-only decisions may have selected unsupported video.
+  const cached = store.get("re_video2_" + hash(key), null);
+  if (!exclude.length && cached?.key === key && Date.now() - cached.t < 7 * 864e5) return { ...media, video: media.video || media.file, file: cached.file };
+  try {
+    playbackCopies ||= fetch("assets/playback-copies.json", { cache: "no-cache", signal: AbortSignal.timeout(5000) })
+      .then(r => r.ok ? r.json() : null).catch(() => null);
+    const copy = (await playbackCopies)?.copies?.[key];
+    if (copy && typeof copy.file === "string" && !exclude.includes(copy.file) &&
+        Math.abs(copy.duration - media.dur) <= Math.max(2, media.dur * .005)) return { ...media, video: media.video || media.file, file: copy.file };
+    const id = media.archiveId || media.id;
+    if (exclude.length) sourceMetadata.delete(id); // Don't reuse a failed lookup or an obsolete selection.
+    if (!sourceMetadata.has(id)) sourceMetadata.set(id, limited(async () => {
+      const response = await fetch("https://archive.org/metadata/" + encodeURIComponent(id), { signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("Metadata unavailable");
+      return response.json();
+    }).catch(error => { sourceMetadata.delete(id); throw error; }));
+    if (sourceMetadata.size > 24) sourceMetadata.delete(sourceMetadata.keys().next().value);
+    const data = await sourceMetadata.get(id), selected = data.files?.find(f => f.name === media.file);
+    const chosen = MediaCompatibility.choose(data.files || [], selected, { exclude, preferH264: true });
+    if (!chosen) return exclude.length ? null : media;
+    if (MediaCompatibility.knownCompatible(chosen)) store.set("re_video2_" + hash(key), { key, t: Date.now(), file: chosen.name });
+    return { ...media, video: media.video || media.file, file: chosen.name };
+  } catch { return exclude.length ? null : media; }
 }
 
 const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeURIComponent(m.archiveId || m.id)}/${m.file.split("/").map(encodeURIComponent).join("/")}`;
@@ -1415,6 +1417,14 @@ function currentSegment(p = playing) {
   const elapsed = Math.max(0, showNow() - p.v0);
   return p.timeline ? CommercialTiming.at(p.timeline, elapsed) : { index: 0, kind: "program", media: p.m, start: 0, end: p.end - p.v0, position: elapsed };
 }
+let playbackTimer;
+function playbackMessage(text, retry = false) {
+  const status = $("playbackStatus");
+  status.hidden = !text;
+  status.querySelector("span").textContent = text;
+  status.querySelector("button").hidden = !retry;
+}
+$("playbackStatus").querySelector("button").onclick = () => { activeSegment = null; syncMedia(); };
 function syncMedia(forceSeek = false) {
   if (!playing) return;
   const segment = currentSegment(), key = tuneId + "|" + playing.v0 + "|" + segment.index;
@@ -1422,7 +1432,45 @@ function syncMedia(forceSeek = false) {
     if (forceSeek && vid.readyState) vid.currentTime = Math.min(activeSegment?.fallbackDur ? segment.position % activeSegment.fallbackDur : segment.position, Math.max(0, vid.duration - .05));
     return segment;
   }
+  clearTimeout(playbackTimer);
+  playbackMessage("");
   const token = ++mediaToken, my = tuneId;
+  const attempted = new Set();
+  let recovering = false, exhausted = false;
+  const currentLoad = () => token === mediaToken && my === tuneId && playing && activeSegment?.key === key;
+  const fail = () => {
+    clearTimeout(playbackTimer);
+    if (!currentLoad()) return;
+    exhausted = true;
+    snow.style.opacity = "0";
+    playbackMessage("This video could not be played. No compatible copy is available right now.", true);
+  };
+  const load = media => {
+    if (!currentLoad()) return;
+    if (currentSegment().index !== segment.index) return syncMedia();
+    attempted.add(media.file);
+    activeSegment.media = media;
+    vid.src = fileUrl(media);
+    vid.load();
+    applyCaptions(); resetReport();
+    clearTimeout(playbackTimer);
+    playbackTimer = setTimeout(() => {
+      if (currentLoad() && !document.hidden && tvOn && !held && snow.style.opacity !== "0") { if (segment.kind === "program") recover("startup timeout"); else vid.onerror?.(); }
+    }, 25000);
+  };
+  const recover = async why => {
+    if (!currentLoad() || recovering || exhausted) return;
+    recovering = true;
+    clearTimeout(playbackTimer);
+    const failed = activeSegment.media || segment.media;
+    reError("tape", "Video won't play: " + why + " · " + failed.file.slice(-160), failed.id + " @ " + (channels()[cur]?.name || ""));
+    playbackMessage("Trying a compatible copy…");
+    const media = attempted.size < 3 ? await resolveCompatibleMedia(segment.media, [...attempted]) : null;
+    if (!currentLoad()) return;
+    recovering = false;
+    if (media && !attempted.has(media.file)) load(media);
+    else fail();
+  };
   activeSegment = { ...segment, key };
   vid.pause();
   snow.style.opacity = "1";
@@ -1431,10 +1479,14 @@ function syncMedia(forceSeek = false) {
     const current = currentSegment();
     if (current.index !== segment.index) return syncMedia();
     vid.currentTime = Math.min(current.position, Math.max(0, vid.duration - .05));
-    if (tvOn && !held) vid.play().catch(() => {});
+    if (tvOn && !held) vid.play().catch(error => {
+      if (!currentLoad()) return;
+      if (error.name === "NotAllowedError") { $("power").hidden = false; clearTimeout(playbackTimer); }
+      else if (error.name === "NotSupportedError") recover("format not supported");
+    });
   };
-  vid.onplaying = () => { if (token === mediaToken && my === tuneId) snow.style.opacity = "0"; };
-  vid.onseeked = () => { if (token === mediaToken && my === tuneId) snow.style.opacity = "0"; };
+  vid.onplaying = () => { if (currentLoad()) { clearTimeout(playbackTimer); snow.style.opacity = "0"; playbackMessage(""); } };
+  vid.onseeked = null;
   vid.onended = () => {
     if (token !== mediaToken || my !== tuneId || !playing || held) return;
     if (showNow() >= playing.end) return tune(cur);
@@ -1444,9 +1496,9 @@ function syncMedia(forceSeek = false) {
   vid.onerror = () => {
     if (token !== mediaToken || my !== tuneId) return;
     const why = ["", "aborted", "network error", "can't decode", "format not supported"][vid.error?.code || 0] || "unknown";
-    reError("tape", "Video won't play: " + why, (activeSegment?.media || segment.media)?.id + " @ " + (channels()[cur]?.name || ""));
-    if (segment.kind === "program") { metaCache[segment.media.id] = null; setTimeout(() => tune(cur), 800); }
+    if (segment.kind === "program") { recover(why); }
     else {
+      clearTimeout(playbackTimer);
       // Preserve the shared clock using a bumper from this channel's own library.
       const channel=channels()[cur];
       const fallback = catalog?.channelBumpers?.[channel?.no]?.[0] || CommercialTiming.library(catalog, channel?.breaks?.library).bumpers[0];
@@ -1460,9 +1512,7 @@ function syncMedia(forceSeek = false) {
   };
   (segment.kind === "program" ? resolveCompatibleMedia(segment.media) : Promise.resolve(segment.media)).then(media => {
     if (token !== mediaToken || my !== tuneId || !playing) return;
-    activeSegment.media = media;
-    vid.src = fileUrl(media);
-    applyCaptions(); resetReport();
+    if (media) load(media); else fail();
   });
   return segment;
 }

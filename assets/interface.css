@@ -157,3 +157,9 @@ body[data-skin] #tvView .fullscreen-controls>.tv-transport { width:min(100%,1000
 .player-fullscreen .fullscreen-controls .fullscreen-next { font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
 @media(max-width:640px) { .player-fullscreen .fullscreen-controls { padding-inline:max(8px,env(safe-area-inset-left)) max(8px,env(safe-area-inset-right)); } }
 @media(max-height:500px) { .player-fullscreen .fullscreen-controls { padding-top:12px;padding-bottom:max(10px,env(safe-area-inset-bottom)); } }
+
+/* Media recovery stays inside the TV/PiP bezel, above static and below controls. */
+#playbackStatus{position:absolute;z-index:8;inset:auto 8% 18%;padding:12px;background:var(--bg,#111);color:var(--ink,#fff);border:1px solid var(--line,#777);font:14px/1.4 sans-serif;text-align:center}
+#playbackStatus[hidden]{display:none}
+#playbackStatus button{display:block;margin:8px auto 0;padding:8px 12px;color:inherit;background:var(--panel,#222);border:1px solid currentColor;cursor:pointer}
+#playbackStatus button[hidden]{display:none}

@@ -1,3 +1,11 @@
+## November 15 — compatible-copy playback recovery
+
+Phone format failures now try verified copies of the same episode in place,
+keep the original caption identity and live clock, and stop with Retry instead
+of endlessly retuning/static. Added100 same-origin verified copy aliases and
+regressions for recovery, exhaustion, stale loads, startup and autoplay permission.
+See docs/playback-recovery.md. No programming/catalog rows were edited.
+
 # Rabbit Ears — Developer Log
 
 Newest entries at the top. Each entry: what changed, why, and anything left open.

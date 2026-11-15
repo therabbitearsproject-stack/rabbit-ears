@@ -44,3 +44,12 @@ test("two episodes derived from the same disc image are never interchangeable", 
   const other = file("S01E02.ia.mp4", { original: "Season1.iso", source: "derivative", format: "h.264 IA" });
   assert.equal(media.choose([selected, other], selected), selected);
 });
+
+
+test("recovery prefers H264, excludes failed files and never falls back to AAC-only HEVC", () => {
+  const original = file("Episode.mp4", {audio_codec:"aac",video_codec:"hevc"});
+  const safe = file("Episode.ia.mp4", {source:"derivative",original:original.name,format:"h.264 IA",width:720,height:400});
+  assert.equal(media.knownCompatible(original),false);
+  assert.equal(media.choose([original,safe],original,{preferH264:true}),safe);
+  assert.equal(media.choose([original,safe],original,{exclude:[safe.name,original.name],preferH264:true}),null);
+});
