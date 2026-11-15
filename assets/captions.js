@@ -44,7 +44,8 @@ window.RabbitCaptions = (() => {
         const records=new Map();
         for(const record of data.records){
           if(!record||typeof record.archiveId!=='string'||typeof record.video!=='string'||!Number.isFinite(record.duration)||record.duration<=0)continue;
-          if(!record.burned&&(!/^local:[A-Za-z0-9._-]+\.vtt$/.test(record.sub||'')||record.sub.includes('..')||!['reviewed','auto-generated'].includes(record.captionMetadata?.kind)))continue;
+          const provided=record.captionMetadata?.kind==='provided'&&/^\/subs\/[A-Za-z0-9._-]+\.vtt$/.test(record.sourcePath||'')&&!record.sourcePath.includes('..');
+          if(!record.burned&&!provided&&(!/^local:[A-Za-z0-9._-]+\.vtt$/.test(record.sub||'')||record.sub.includes('..')||!['reviewed','auto-generated'].includes(record.captionMetadata?.kind)))continue;
           const key=exactKey(record),old=records.get(key);
           if(!old||indexRank(record)>indexRank(old))records.set(key,record);
         }
