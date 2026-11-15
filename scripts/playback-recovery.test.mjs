@@ -72,3 +72,13 @@ test('verified manifest matches the current affected episode and has bounded dur
  assert.match(key,/star-trek-enterprise-complete\|/);assert.match(copy.file,/Shuttlepod One Bluray-480p\.ia\.mp4$/);assert.ok(copy.duration>2600&&copy.duration<2700);
  for(const [key,copy]of Object.entries(data.copies)){assert.ok(key.includes('|'));assert.ok(copy.file.endsWith('.ia.mp4'));assert.ok(Number.isFinite(copy.duration)&&copy.duration>5);}
 });
+
+
+test('a commercial and its replacement bumper both fail without leaving endless static',async()=>{
+ const f=fixture(async()=>{throw Error('not needed');});
+ f.ctx.currentSegment=()=>({index:0,kind:'commercial',position:5,media:{id:'ad',file:'assets/ad.mp4',local:true,dur:30}});
+ f.ctx.catalog.channelBumpers={'97':[{id:'bumper',file:'assets/bumper.mp4',dur:12,local:true}]};
+ f.ctx.channels=()=>[{no:97,name:'Test97'}];
+ await f.start();await f.error();assert.deepEqual(f.loads,['assets/ad.mp4','assets/bumper.mp4']);
+ await f.error();assert.equal(f.button.hidden,false);assert.equal(f.ctx.snow.style.opacity,'0');assert.equal(f.timers.size,0);
+});
