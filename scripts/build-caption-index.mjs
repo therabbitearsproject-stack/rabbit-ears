@@ -1,6 +1,6 @@
 // Caption publication is independent of catalog/schedule generation.
 // Read the deployed snapshot; write only the index and caption assets.
-import {readFile,writeFile,lstat,mkdir,rename} from 'node:fs/promises';
+import {readFile,writeFile,lstat,mkdir,rename,readdir,unlink} from 'node:fs/promises';
 import {resolve,join,dirname} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {randomUUID} from 'node:crypto';
@@ -15,7 +15,7 @@ async function json(path,fallback){try{return JSON.parse((await regular(path)).t
 async function directory(path){await mkdir(path,{recursive:true});const s=await lstat(path);if(s.isSymbolicLink()||!s.isDirectory())throw Error('Unsafe caption publication output');}
 async function atomic(path,bytes){try{const s=await lstat(path);if(s.isSymbolicLink()||!s.isFile())throw Error('Unsafe caption output file');}catch(e){if(e.code!=='ENOENT')throw e;}const temp=join(dirname(path),'.caption-'+randomUUID());await writeFile(temp,bytes,{flag:'wx'});await rename(temp,path);}
 
-export async function buildCaptionIndex({repoRoot=repository,siteRoot}={}){
+export async function buildCaptionIndex({repoRoot=repository,siteRoot,externalTranslations=false}={}){
  if(!siteRoot)throw Error('A published-site directory is required');
  repoRoot=resolve(repoRoot);siteRoot=resolve(siteRoot);
  const [catalog,reviewed,generated,reviewA,reviewB]=await Promise.all([
@@ -64,9 +64,28 @@ export async function buildCaptionIndex({repoRoot=repository,siteRoot}={}){
   if(!source||source.burned||source.sha256!==record.sourceSha256||!['en','zh','hi','es','ar','fr','bn','pt','id','ur'].includes(record.language)||!/^translated-[a-f0-9]{64}\.vtt$/.test(record.file||''))continue;
   const bytes=await regular(join(repoRoot,'captions',record.file));
   if(sha256(bytes)!==record.sha256||!bytes.toString('utf8').startsWith('WEBVTT'))throw Error('Invalid translated caption asset');
-  await atomic(join(siteRoot,'captions',record.file),bytes);translated.push(record);
+  if(!externalTranslations)await atomic(join(siteRoot,'captions',record.file),bytes);
+  translated.push(externalTranslations?{...record,deliveryUrl:'https://raw.githubusercontent.com/therabbitearsproject-stack/rabbit-ears/main/captions/'+record.file+'?v='+record.sha256}:record);
  }
  await atomic(join(siteRoot,'caption-translations.json'),JSON.stringify({schemaVersion:1,records:translated})+'\n');
+ if(externalTranslations){
+  // Caption-only builds restore the previous artifact. Remove its old VTTs too,
+  // while every URL continues working through the already-verified edge route.
+  for(const entry of await readdir(join(siteRoot,'captions'),{withFileTypes:true})){
+   if(!/^translated-[a-f0-9]{64}\.vtt$/.test(entry.name))continue;
+   if(!entry.isFile()||entry.isSymbolicLink())throw Error('Unsafe caption artifact cleanup');
+   await unlink(join(siteRoot,'captions',entry.name));
+  }
+  // The restored artifact may reference a cached older caption client. Change
+  // only its script cache key; every programming/catalog byte stays untouched.
+  let page;try{page=await regular(join(siteRoot,'index.html'));}catch(e){if(e.code!=='ENOENT')throw e;}
+  if(page){
+   const client=await regular(join(siteRoot,'assets/captions.js')),text=page.toString('utf8');
+   const pattern=/assets\/captions\.js\?v=[^"'<>\s]+/g;
+   if([...text.matchAll(pattern)].length!==1)throw Error('Expected one caption client in deployed markup');
+   await atomic(join(siteRoot,'index.html'),text.replace(pattern,'assets/captions.js?v='+sha256(client).slice(0,16)));
+  }
+ }
  return {records:index.records.length,assets:assets.size,burned:index.records.filter(r=>r.burned).length};
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){try{console.log(JSON.stringify(await buildCaptionIndex({siteRoot:process.argv[2]})));}catch(e){console.error(e.message);process.exitCode=1;}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){try{console.log(JSON.stringify(await buildCaptionIndex({siteRoot:process.argv[2],externalTranslations:process.argv.includes('--external-translations')})));}catch(e){console.error(e.message);process.exitCode=1;}}

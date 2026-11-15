@@ -48,6 +48,13 @@ jobs:
             echo "catalog=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          # Caption delivery/assembly code can update the exact deployed snapshot
+          # without running a catalog, schedule or TV-feed writer.
+          if [ -n "$changed" ] && ! printf '%s\n' "$changed" | grep -qvE '^(assets/captions\.js$|scripts/(build-caption-index|caption-only-publish|caption-translations|caption-labels-browser)\.(mjs|test\.mjs)$|\.github/workflows/catalog\.yml$)'; then
+            echo "captions_only=yes" >> "$GITHUB_OUTPUT"
+            echo "catalog=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           # Caption and clock publishers do not change Archive search/admission inputs.
           # They still take the full code/site assembly path, but need no pool crawl.
           if printf '%s\n' "$changed" | grep -E '^(scripts/|assets/scifi-breaks/|assets/porchlight-breaks/|assets/midnight-mirage-breaks/|assets/trek-bumpers/facts\.json|\.github/workflows/)' | grep -vE '^scripts/(caption-jobs|skippy-captions|caption-library|stage-programming|tv-feed|build-caption-index)\.mjs$|^scripts/.*\.test\.mjs$|^\.github/workflows/catalog\.yml$' | grep -q .; then
@@ -150,7 +157,9 @@ jobs:
           node scripts/build-tv-feed.mjs _site # schedule files for the Roku and other TV apps
           du -sh _site _site/subs
       - name: Add standalone caption availability and immutable assets
-        run: node scripts/build-caption-index.mjs _site
+        run: |
+          cp assets/captions.js _site/assets/captions.js
+          node scripts/build-caption-index.mjs _site --external-translations
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

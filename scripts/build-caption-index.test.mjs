@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,mkdir,writeFile,readFile,rm} from 'node:fs/promises';
+import {mkdtemp,mkdir,writeFile,readFile,rm,readdir} from 'node:fs/promises';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {buildCaptionIndex} from './build-caption-index.mjs';
@@ -41,6 +41,26 @@ test('corrupt English assets fall back to intact native text without an English 
   await writeFile(join(f.repo,'captions','auto-'+f.newId+'.vtt'),'corrupt');await buildCaptionIndex({repoRoot:f.repo,siteRoot:f.site});
   const index=JSON.parse(await readFile(join(f.site,'caption-index.json'),'utf8')),record=index.records.find(r=>r.archiveId==='foreign-film');
   assert.equal(record.sub,'local:auto-'+f.oldId+'.vtt');assert.equal(record.captionMetadata.language,'cs');assert.equal(record.captionMetadata.translated,false);
+ }finally{await rm(f.root,{recursive:true,force:true});}
+});
+test('external translations remove only translated VTTs and retain original caption delivery and programming',async()=>{
+ const f=await fixture();try{
+  await buildCaptionIndex({repoRoot:f.repo,siteRoot:f.site});
+  const index=await readFile(join(f.site,'caption-index.json'));
+  const before=await Promise.all(f.protectedFiles.map(file=>readFile(join(f.site,file))));
+  await writeFile(join(f.site,'captions/obsolete.vtt'),native);
+  await writeFile(join(f.site,'captions','translated-'+'a'.repeat(64)+'.vtt'),english);
+  await writeFile(join(f.site,'captions/keep.json'),'{}');
+  await mkdir(join(f.site,'assets'),{recursive:true});await writeFile(join(f.site,'assets/captions.js'),'// updated captions');
+  await writeFile(join(f.site,'index.html'),'<script src="assets/captions.js?v=old"></script><div>unchanged</div>');
+  await buildCaptionIndex({repoRoot:f.repo,siteRoot:f.site,externalTranslations:true});
+  assert.deepEqual(await readFile(join(f.site,'caption-index.json')),index);
+  assert.equal((await readdir(join(f.site,'captions'))).some(n=>n.startsWith('translated-')),false);
+  assert.equal(await readFile(join(f.site,'captions','auto-'+f.newId+'.vtt'),'utf8'),english);
+  assert.equal(await readFile(join(f.site,'captions/obsolete.vtt'),'utf8'),native);
+  assert.equal(await readFile(join(f.site,'index.html'),'utf8'),'<script src="assets/captions.js?v='+sha256('// updated captions').slice(0,16)+'"></script><div>unchanged</div>');
+  for(let i=0;i<f.protectedFiles.length;i++)assert.deepEqual(await readFile(join(f.site,f.protectedFiles[i])),before[i]);
+  assert.equal(await readFile(join(f.repo,'captions','auto-'+f.newId+'.vtt'),'utf8'),english);
  }finally{await rm(f.root,{recursive:true,force:true});}
 });
 test('affirmative burned-English evidence blocks generated overlays',async()=>{

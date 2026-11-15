@@ -18,5 +18,11 @@ test('saved translations require the identical source hash and never change prog
   await buildCaptionIndex({repoRoot:repo,siteRoot:site});
   const index=JSON.parse(await readFile(join(site,'caption-translations.json')));assert.equal(index.records.length,1);assert.equal(index.records[0].language,'es');
   assert.equal(await readFile(join(site,'catalog.json'),'utf8'),catalog);assert.equal(await readFile(join(site,'captions',file),'utf8'),translated);
+  await buildCaptionIndex({repoRoot:repo,siteRoot:site,externalTranslations:true});
+  const external=JSON.parse(await readFile(join(site,'caption-translations.json')));
+  assert.equal(external.records[0].deliveryUrl,'https://raw.githubusercontent.com/therabbitearsproject-stack/rabbit-ears/main/captions/'+file+'?v='+sha(translated));
+  assert.equal(external.records[0].sourceSha256,sha(original));
+  assert.equal(await readFile(join(site,'subs/film.vtt'),'utf8'),original);
+  await assert.rejects(readFile(join(site,'captions',file)),{code:'ENOENT'});
  }finally{await rm(root,{recursive:true,force:true});}
 });

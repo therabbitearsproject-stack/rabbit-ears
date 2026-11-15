@@ -7,7 +7,7 @@ window.RabbitCaptions = (() => {
     if (!choices.includes(style)) style = 'none';
     let backing = store.get('re_caption_backing', false) === true;
     let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
-    let captionIndex = null, overlaySource = '', requestNumber = 0;
+    let captionIndex = null, overlaySource = '', requestNumber = 0, captionFetch=null, captionBlob='';
     const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
     let language=window.RabbitLocale?.resolve()||store.get('re_caption_language','en'),translations=[];
     if(!languages.includes(language))language='en';
@@ -140,13 +140,28 @@ window.RabbitCaptions = (() => {
       for (const text of texts) { const block = document.createElement('div'), span = document.createElement('span'); block.className = 'caption-block'; span.className = 'caption-text'; span.textContent = text; block.append(span); layer.append(block); }
       layer.hidden = !texts.length; resize();
     }
-    function detach() { const old = track; track = null; if (old) { old.track.mode = 'disabled'; old.remove(); } clear(); }
+    function detach() { captionFetch?.abort();captionFetch=null;if(captionBlob){URL.revokeObjectURL(captionBlob);captionBlob='';}const old = track; track = null; if (old) { old.track.mode = 'disabled'; old.remove(); } clear(); }
     function attach() {
       if (!media?.sub || style === 'none') { detach(); return; }
       if (track) { track.srclang=trackLanguage(); track.label=trackLabel(); render(); return; }
-      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = trackLanguage(); tr.label = trackLabel(); tr.src = overlaySource||source(media.id);
+      const tr = document.createElement('track'); tr.kind = 'captions'; tr.srclang = trackLanguage(); tr.label = trackLabel();
+      const original=overlaySource||source(media.id),external=/^\/captions\/translated-[a-f0-9]{64}\.vtt\?v=[a-f0-9]{64}$/.test(original);
+      const url=external?'https://raw.githubusercontent.com/therabbitearsproject-stack/rabbit-ears/main'+original:original;
+      tr.dataset.captionSource=url;
+      if(!external)tr.src=url;
       track = tr; video.append(tr); tr.track.mode = nativeOnly ? 'showing' : 'hidden';
       tr.track.addEventListener('cuechange', render); tr.addEventListener('load', render); tr.addEventListener('error', clear);
+      if(external){
+        const controller=new AbortController();captionFetch=controller;
+        fetch(url,{mode:'cors',credentials:'omit',signal:controller.signal}).then(async response=>{
+          if(!response.ok||Number(response.headers?.get?.('Content-Length')||0)>12*1024*1024)throw Error('Caption source unavailable');
+          const bytes=await response.arrayBuffer();if(bytes.byteLength>12*1024*1024)throw Error('Oversized captions');
+          const expected=original.split('?v=')[1],actual=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');
+          if(actual!==expected)throw Error('Caption checksum mismatch');
+          if(track!==tr||controller.signal.aborted)return;
+          captionBlob=URL.createObjectURL(new Blob([bytes],{type:'text/vtt'}));tr.src=captionBlob;
+        }).catch(()=>{if(track===tr&&!controller.signal.aborted)clear();});
+      }
       render();
     }
     function setStyle(value) {

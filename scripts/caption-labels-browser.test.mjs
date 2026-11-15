@@ -19,7 +19,7 @@ test('saved language switching preserves video and clock, supports RTL and rejec
    let loads=0,plays=0;video.load=()=>loads++;video.play=()=>plays++;video.currentTime=42;
    const ui=RabbitCaptions.create({video,screen,button,store:{get:(k,d)=>k==='re_caption_style'?'white':d,set(){}},source:()=>'/subs/film.vtt'});
    ui.setMedia({id:'film',archiveId:'a',file:'film.mp4',dur:120,sub:'English.srt'});await ui.refreshIndex();
-   ui.applyPreferences({re_caption_language:'ar'});const arabic={url:video.querySelector('track').src,language:video.querySelector('track').srclang,dir:screen.querySelector('.caption-layer').dir};
+   ui.applyPreferences({re_caption_language:'ar'});const arabic={url:video.querySelector('track').dataset.captionSource||video.querySelector('track').src,language:video.querySelector('track').srclang,dir:screen.querySelector('.caption-layer').dir};
    ui.applyPreferences({re_caption_language:'fr'});const fallback={url:video.querySelector('track').src,text:screen.querySelector('.caption-translation-status').textContent};
    translations=[{...translations[0],sourceSha256:'d'.repeat(64)}];await ui.refreshIndex();ui.applyPreferences({re_caption_language:'ar'});const stale=video.querySelector('track').src;
    ui.setMedia({id:'burned',burnedCaptions:true});const embedded=button.title;
