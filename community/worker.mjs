@@ -14,7 +14,7 @@ class HttpError extends Error { constructor(status, message) { super(message); t
 const requireValue = (ok, message, status = 400) => { if (!ok) throw new HttpError(status, message); };
 export function validatePreferences(value) {
   requireValue(value&&typeof value==='object'&&!Array.isArray(value),'Invalid preferences.');
-  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white'],re_caption_language:['en','zh','hi','es','ar','fr','bn','pt','id','ur']};
+  const enums={re_language_mode:['auto','manual'],re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white'],re_caption_language:['en','zh','hi','es','ar','fr','bn','pt','id','ur']};
   const bools=new Set(['re_captions','re_caption_backing','re_tv_muted']);
   const ranges={re_tv_volume:[0,1],re_vol:[0,1]};
   const out={};
@@ -118,6 +118,12 @@ async function handle(request, env, ctx) {
   if (path === '/health') {
     const count=env.DB?await env.DB.prepare('SELECT COUNT(*) AS count FROM channels').first():{count:0};
     return json(request,env,{ok:true,channels:count.count,configured:!!(env.DISCORD_CLIENT_ID && env.DISCORD_CLIENT_SECRET && env.DISCORD_BOT_TOKEN && env.DB && count.count===channels.length)});
+  }
+  if(path==='/api/locale'&&request.method==='GET'){
+    const country=String(request.cf?.country||'').toUpperCase();
+    const groups={zh:['CN','TW','HK','MO','SG'],hi:['IN'],es:['ES','MX','AR','BO','CL','CO','CR','CU','DO','EC','GT','HN','NI','PA','PE','PR','PY','SV','UY','VE'],ar:['AE','BH','DZ','EG','IQ','JO','KW','LB','LY','MA','OM','PS','QA','SA','SD','SY','TN','YE'],fr:['FR','BE','BF','BI','BJ','CD','CF','CG','CI','CM','GA','GN','LU','MC','MG','ML','NE','SN','TD','TG'],bn:['BD'],pt:['PT','BR','AO','CV','GW','MZ','ST','TL'],id:['ID'],ur:['PK']};
+    const language=Object.entries(groups).find(([,countries])=>countries.includes(country))?.[0]||'en';
+    return json(request,env,{language});
   }
   if (path === '/auth/discord' && request.method === 'GET') {
     requireValue(env.DISCORD_CLIENT_ID && env.DISCORD_CLIENT_SECRET && env.DISCORD_BOT_TOKEN && /^\d+$/.test(env.DISCORD_GUILD_ID || ''),'Discord sign-in is not available yet.',503);

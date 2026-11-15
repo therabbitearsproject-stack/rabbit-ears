@@ -56,3 +56,11 @@ test('preference schema rejects status/social data, invalid ranges and unimpleme
  assert.equal((await call('bob','PUT',{version:0,changes:{re_skin:'x'.repeat(9000)}})).status,413);
  const options=await worker.fetch(new Request(env.API_ORIGIN+'/api/preferences',{method:'OPTIONS',headers:{Origin:env.SITE_ORIGIN}}),env,{});assert.match(options.headers.get('Access-Control-Allow-Methods'),/PUT/);
 });
+
+test('automatic language mode and coarse regional defaults need no precise location',async()=>{
+ assert.deepEqual(validatePreferences({re_language_mode:'auto'}),{re_language_mode:'auto'});assert.throws(()=>validatePreferences({re_language_mode:'gps'}));
+ for(const [country,language]of [['BR','pt'],['MX','es'],['FR','fr'],['PK','ur'],['JP','en']]){
+  const request=new Request(env.API_ORIGIN+'/api/locale',{headers:{Origin:env.SITE_ORIGIN}});Object.defineProperty(request,'cf',{value:{country}});
+  const response=await worker.fetch(request,env,{});assert.equal(response.status,200);assert.deepEqual(await response.json(),{language});assert.equal(response.headers.get('Cache-Control'),'no-store');
+ }
+});

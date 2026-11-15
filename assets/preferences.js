@@ -1,7 +1,7 @@
 /* Optional Discord account settings. Playback and anonymous preferences remain local. */
 window.RabbitPreferences=(()=>{
-  const defaults={re_caption_language:'en',re_skin:'pixel',re_radio_look:'vinyl',re_caption_style:'none',re_captions:false,re_caption_backing:false,re_tv_volume:.8,re_tv_muted:true,re_vol:.8};
-  const enums={re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white'],re_caption_language:['en','zh','hi','es','ar','fr','bn','pt','id','ur']};
+  const defaults={re_language_mode:'auto',re_caption_language:'en',re_skin:'pixel',re_radio_look:'vinyl',re_caption_style:'none',re_captions:false,re_caption_backing:false,re_tv_volume:.8,re_tv_muted:true,re_vol:.8};
+  const enums={re_language_mode:['auto','manual'],re_skin:['retro','theatre','stadium','modern','cozy','metal','ivory','pixel','gutter'],re_radio_look:['vinyl','car','winamp'],re_caption_style:['none','yellow','white'],re_caption_language:['en','zh','hi','es','ar','fr','bn','pt','id','ur']};
   function clean(value){
     const out={};if(!value||typeof value!=='object'||Array.isArray(value))return out;
     for(const [key,v]of Object.entries(value)){
@@ -9,6 +9,7 @@ window.RabbitPreferences=(()=>{
       const valid=enums[key]?enums[key].includes(v):typeof defaults[key]==='boolean'?typeof v==='boolean':typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1;
       if(valid)out[key]=v;
     }
+    if(Object.hasOwn(out,'re_caption_language')&&!Object.hasOwn(value,'re_language_mode'))out.re_language_mode='manual';
     return out;
   }
   function coherent(value){const out={...value};if(Object.hasOwn(out,'re_caption_style'))out.re_captions=out.re_caption_style!=='none';return out;}

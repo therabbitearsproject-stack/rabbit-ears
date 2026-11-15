@@ -328,8 +328,9 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 <link rel="stylesheet" href="assets/captions.css?v=caption-size-3">
 <link rel="stylesheet" href="assets/settings.css?v=languages-2">
 <link rel="stylesheet" href="assets/vcr-controls.css?v=fullscreen-4">
-<link rel="stylesheet" href="assets/vcr-hardware.css?v=fullscreen-compact-5">
+<link rel="stylesheet" href="assets/vcr-hardware.css?v=app-languages-1">
 <link rel="stylesheet" href="assets/vcr-materials.css?v=fullscreen-4">
+<script src="assets/language-preference.js?v=1"></script>
 </head>
 <body data-skin="pixel" data-tv-page="guide">
 <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="wTitle" hidden>
@@ -558,7 +559,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script src="media-compatibility.js"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
-<script src="assets/captions.js?v=languages-2"></script>
+<script src="assets/captions.js?v=app-languages-1"></script>
 <script>
 // ---------- Problem log ----------
 // Script errors and tapes, stations or games that won't load are logged to the project database
@@ -1216,7 +1217,7 @@ let tvOn = true, mode = "tv";
 // A link like …/#ch62 opens on that channel; otherwise start where this browser left off.
 const chFromHash = () => { const n = location.hash.match(/^#ch(\d+)$/)?.[1]; return n ? channels().findIndex(c => c.no === +n) : -1; };
 let cur = chFromHash() >= 0 ? chFromHash() : Math.max(0, channels().findIndex(c => c.q === store.get("re_chq", null))), tuneId = 0, playing = null, osdTimer;
-const clockFmt = t => new Date(t * 1000).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+const clockFmt = t => new Date(t * 1000).toLocaleTimeString(document.documentElement.lang||[], { hour: "numeric", minute: "2-digit" });
 const num = i => String(channels()[i]?.no ?? i + 1).padStart(2, "0");
 
 function drawSnow() {
@@ -2164,15 +2165,17 @@ $("wGames").onclick = () => { closeWelcome(); location.hash = "games"; };
 $("welcome").addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); closeWelcome(); } });
 $("welcome").onclick = e => { if (e.target === $("welcome")) closeWelcome(); };
 </script>
-<script src="assets/interface.js?v=languages-2"></script>
+<script src="assets/ui-translations.js?v=1"></script>
+<script src="assets/ui-language.js?v=1"></script>
+<script src="assets/interface.js?v=app-languages-1"></script>
 <script src="assets/team-layout.js?v=2"></script>
 <script src="assets/radio-winamp.js?v=2"></script>
 <script src="assets/volume.js?v=native-playback-1"></script>
 <script src="assets/tv-popout.js?v=mobile-native-2"></script>
 <script src="assets/community-config.js?v=permanent-invite-1"></script>
-<script src="assets/preferences.js?v=languages-1"></script>
+<script src="assets/preferences.js?v=app-languages-1"></script>
 <script>if (window.RabbitPreferences) window.rabbitPreferences = RabbitPreferences.create({store, apply: prefs => window.REUI.applyPreferences(prefs)});</script>
-<script type="module" src="assets/community.js?v=permanent-invite-1"></script>
+<script type="module" src="assets/community.js?v=app-languages-1"></script>
 <script type="module">
 // Live viewer counts via Firebase Realtime Database. Each open page writes one marker,
 // presence/<room>/<random id> = true, that Firebase removes when the page closes. Nothing else

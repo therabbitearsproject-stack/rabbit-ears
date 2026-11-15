@@ -99,7 +99,7 @@ function paintList(){
   for(const e of events.filter(e=>e.position<=c.position+.5&&e.position>=c.position-90&&show(e,c)).slice(-30)){
     const item=el('li','community-comment');item.dataset.event=e.id;
     const meta=el('div','comment-meta');meta.append(el('strong','',e.name),el('span','',stamp(e.position)+(replayed(e,c)?' · replay':'')));
-    const text=el('p','',e.kind==='emoji'?'Reacted ':e.body);if(e.kind==='emoji')text.append(reactionIcon(e.body));item.append(meta,text);
+    const text=el('p','',e.kind==='emoji'?'Reacted ':e.body);if(e.kind!=='emoji')text.dataset.userContent='';meta.firstElementChild.dataset.userContent='';if(e.kind==='emoji')text.append(reactionIcon(e.body));item.append(meta,text);
     if(e.canDelete)item.append(button('Remove',async()=>{try{await call('/api/events/'+e.id,{method:'DELETE'});events=events.filter(x=>x.id!==e.id);paintList();markerAt=0;}catch(err){message(err.message);}},'comment-remove'));
     list.append(item);
   }

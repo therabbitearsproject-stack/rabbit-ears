@@ -194,7 +194,7 @@ body[data-skin=theatre] #tvView .tv-transport :is(.btn,.watch-dock-button):is(:a
 /* Stadium's twelve controls fill a compact bank; React never spills into a lone row. */
 @media(min-width:741px) {
   body[data-skin=stadium] #tvView .tv-transport { grid-template-columns:repeat(8,minmax(0,1fr)); }
-  body[data-skin=stadium] #tvView .tv-transport .watch-dock-button[aria-label=React] { grid-column:span 2; }
+  body[data-skin=stadium] #tvView .tv-transport .watch-dock-button[popovertarget=emoji-popover] { grid-column:span 2; }
 }
 
 /* Fullscreen uses a shallow hardware strip rather than the full cabinet console. */

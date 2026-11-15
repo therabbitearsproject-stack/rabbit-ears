@@ -24,14 +24,15 @@
   body.dataset.skin=skins.some(s=>s[0]===skin)?skin:'pixel';
   body.dataset.tvPage=initialChannel?'channel':'guide';
   body.dataset.radioLook=['vinyl','car','winamp'].includes(radioLook)?radioLook:'vinyl';
-  const logoSource=info=>['retro','ivory'].includes(body.dataset.skin)?(info.srcLight||info.src):(info.srcDark||info.src);
-  function refreshLogoColors(){document.querySelectorAll('img.channel-logo').forEach(im=>{const info=logos[im.alt];if(info){const src=logoSource(info);if(im.getAttribute('src')!==src)im.src=src;}});}
+  const logoSource=info=>{const language=window.RabbitI18n?.language||store.get('re_caption_language','en'),localized=info.localized?.[language]||info;return ['retro','ivory'].includes(body.dataset.skin)?(localized.srcLight||localized.src||info.srcLight||info.src):(localized.srcDark||localized.src||info.srcDark||info.src);};
+  function refreshLogoColors(){document.querySelectorAll('img.channel-logo').forEach(im=>{const info=logos[im.dataset.channelName||im.alt];if(info){im.alt=info.localized?.[window.RabbitI18n?.language]?.name||im.dataset.channelName||im.alt;const src=logoSource(info);if(im.getAttribute('src')!==src)im.src=src;}});}
+  window.addEventListener('re:language-changed',()=>{refreshLogoColors();});
   function station(ch,compact=false){
     const el=make('span','channel-identity'+(compact?' compact':''));
     const info=logos[ch.name];
     el.append(make('span','channel-no',String(ch.no).padStart(2,'0')));
     const mat=make('span','logo-mat');
-    if(info){el.style.setProperty('--channel-accent',info.accent);const im=make('img','channel-logo');im.src=logoSource(info);im.alt=ch.name;im.width=180;im.height=100;im.decoding='async';mat.append(im);}
+    if(info){el.style.setProperty('--channel-accent',info.accent);const im=make('img','channel-logo');im.src=logoSource(info);im.alt=ch.name;im.dataset.channelName=ch.name;im.width=180;im.height=100;im.decoding='async';mat.append(im);}
     else mat.append(make('span','channel-name',ch.name));
     el.append(mat);return el;
   }
@@ -160,13 +161,18 @@
   },'skin-option');b.dataset.preview=key;b.style.setProperty('--sample',col);b.setAttribute('aria-pressed',String(body.dataset.skin===key));
   const mini=make('span','skin-mini');mini.setAttribute('aria-hidden','true');mini.innerHTML='<i></i><b></b>';b.append(mini,make('strong','',name+(key==='pixel'?' · Default':'')),make('small','',desc));skinGrid.append(b);}
   themeSection.append(skinGrid);
-  const captionSection=make('section','settings-section');captionSection.id='settingsSectionCaptions';captionSection.append(make('h3','','Captions'));
-  const languageLabel=make('label','','Language '),languageSelect=make('select');languageSelect.id='captionLanguage';
+  const captionSection=make('section','settings-section');captionSection.id='settingsSectionCaptions';captionSection.append(make('h3','','Language'));
+  const languageLabel=make('label','','App language '),languageSelect=make('select');languageSelect.id='captionLanguage';
   for(const [code,name]of [['en','English'],['zh','Mandarin Chinese · 中文'],['hi','Hindi · हिन्दी'],['es','Spanish · Español'],['ar','Arabic · العربية'],['fr','French · Français'],['bn','Bengali · বাংলা'],['pt','Portuguese · Português'],['id','Indonesian · Bahasa Indonesia'],['ur','Urdu · اردو']]){const option=make('option','',name);option.value=code;languageSelect.append(option);}
-  languageSelect.value=store.get('re_caption_language','en');languageSelect.addEventListener('change',()=>{store.set('re_caption_language',languageSelect.value);captionUI.applyPreferences({re_caption_language:languageSelect.value});window.dispatchEvent(new CustomEvent('re:caption-language',{detail:languageSelect.value}));});
-  languageLabel.append(languageSelect);captionSection.append(languageLabel,make('p','dialog-intro','Saved translations appear as they finish. If your language is not ready, the available original captions continue. Translations are machine-generated.'));skinDialog.insertBefore(captionSection,themeSection);
+  const automaticOption=make('option','','Automatic · device / region');automaticOption.value='auto';languageSelect.prepend(automaticOption);
+  const languageMode=()=>store.get('re_language_mode',store.get('re_caption_language',null)?'manual':'auto');
+  languageSelect.value=languageMode()==='auto'?'auto':store.get('re_caption_language','en');
+  function applyLanguage(language){captionUI.applyPreferences({re_caption_language:language});window.dispatchEvent(new CustomEvent('re:caption-language',{detail:language}));}
+  languageSelect.addEventListener('change',()=>{const automatic=languageSelect.value==='auto';store.set('re_language_mode',automatic?'auto':'manual');if(!automatic)store.set('re_caption_language',languageSelect.value);applyLanguage(automatic?(window.RabbitLocale?.resolve()||'en'):languageSelect.value);});
+  window.addEventListener('re:auto-language',()=>{if(languageMode()==='auto')applyLanguage(window.RabbitLocale?.resolve()||'en');});
+  languageLabel.append(languageSelect);captionSection.append(languageLabel,make('p','dialog-intro','Changes buttons, settings and subtitle language. Saved subtitles appear as they finish; the original captions continue while a translation is pending. Translations may be imperfect.'));skinDialog.insertBefore(captionSection,themeSection);
   const futureDialog=dialog('Upcoming programme');
-  const futureTitle=make('h2'),futureInfo=make('p');futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
+  const futureTitle=make('h2'),futureInfo=make('p');futureTitle.dataset.contentTitle='';futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
   function showFuture(ch,block){futureDialog.dataset.channel=ch.no;futureTitle.textContent=block.querySelector('b')?.textContent||'Upcoming programme';futureInfo.textContent=`CH ${ch.no} · ${ch.name} · ${block.title}`;openDialog(futureDialog);}
   // Move the real transport into the fullscreen overlay; keep one set of actions and menus.
   controls.classList.add('tv-transport');
@@ -292,8 +298,10 @@
       radioLook=prefs.re_radio_look;body.dataset.radioLook=radioLook;
       radioAppearance.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.radioLook===radioLook)));
     }
-    if(['en','zh','hi','es','ar','fr','bn','pt','id','ur'].includes(prefs.re_caption_language)){languageSelect.value=prefs.re_caption_language;window.dispatchEvent(new CustomEvent('re:caption-language',{detail:prefs.re_caption_language}));}
-    captionUI.applyPreferences?.(prefs);
+    if(prefs.re_language_mode||Object.hasOwn(prefs,'re_caption_language')){
+      const automatic=(prefs.re_language_mode||languageMode())==='auto',language=automatic?(window.RabbitLocale?.resolve()||'en'):prefs.re_caption_language||store.get('re_caption_language','en');
+      languageSelect.value=automatic?'auto':language;applyLanguage(language);captionUI.applyPreferences?.({...prefs,re_caption_language:language});
+    }else captionUI.applyPreferences?.(prefs);
     if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
     if(typeof prefs.re_tv_muted==='boolean')setMuted(prefs.re_tv_muted);
     if(typeof prefs.re_vol==='number'&&Number.isFinite(prefs.re_vol)){audio.volume=Math.max(0,Math.min(1,prefs.re_vol));$('rVol').value=String(audio.volume);}
@@ -301,6 +309,6 @@
   }
   window.REUI={openChannel,showChannel,showGuide,showFuture,decorateGuide,channelChanged,modeChanged,applyPreferences};
   setInterval(()=>{if(mode==='tv'&&body.dataset.tvPage==='channel')updateSchedule();},60000);
-  fetch('assets/channel-logos/manifest.json?v=readable-2').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
+  fetch('assets/channel-logos/manifest.json?v=localized-1').then(r=>{if(!r.ok)throw Error('Channel logos unavailable');return r.json();}).then(data=>{logos=data;decorateGuide();channelChanged();}).catch(()=>{renderRail();channelChanged();});
   decorateGuide();channelChanged();syncTitle();modeChanged();
 })();

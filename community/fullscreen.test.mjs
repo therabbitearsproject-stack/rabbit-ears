@@ -7,7 +7,7 @@ import vm from 'node:vm';
 const source=readFileSync(new URL('../assets/interface.js',import.meta.url),'utf8');
 const handlers=source.slice(source.indexOf('  let fullRequest='),source.indexOf('  const symbols='));
 function fixture(kind='standard'){
-  const timers=new Map(),log=[],classes=new Set();let clock=0;
+  const timers=new Map(),log=[],transportMoves=[],classes=new Set();let clock=0;
   const target=()=>({listeners:{},addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);},emit(name,event={}){for(const fn of this.listeners[name]||[])fn(event);}});
   const screen=target(),video=target(),controls=target(),document=target();
   const caption={hidden:true};let popover=false;
@@ -25,15 +25,16 @@ function fixture(kind='standard'){
   if(kind==='ios')video.webkitExitFullscreen=()=>{video.webkitDisplayingFullscreen=false;video.emit('webkitendfullscreen');};
   if(kind==='denied')screen.requestFullscreen=()=>Promise.reject(Error('Denied'));
   const context=vm.createContext({document,screen,vid:video,body,fullControls:controls,mode:'tv',full:false,idleTimer:null,
-    captionUI:{closeMenu(){caption.hidden=true;}},$:()=>button,showChannel(){},
+    captionUI:{closeMenu(){caption.hidden=true;}},$:()=>button,showChannel(){},placeTransport(value){transportMoves.push(value);},
     setTimeout(fn){const id=++clock;timers.set(id,fn);return id;},clearTimeout(id){timers.delete(id);}});
   vm.runInContext(handlers+'\nglobalThis.testApi={enterFull,exitFull,reveal};',context);
-  return {screen,video,document,controls,classes,log,focus,caption,timers,api:context.testApi,context,
+  return {screen,video,document,controls,classes,log,transportMoves,focus,caption,timers,api:context.testApi,context,
     tick(){const list=[...timers.values()];timers.clear();list.forEach(fn=>fn());},
     popover(value){popover=value;}};
 }
 test('first entry requests hidden browser chrome before layout, and hides pointer-focused controls',async()=>{
   const f=fixture();await f.api.enterFull();
+  assert.ok(f.transportMoves.includes(true));
   assert.equal(f.log[0].options.navigationUI,'hide');assert.equal(f.log[0].layoutApplied,false);
   f.focus.inside=true;f.document.activeElement=f.focus;f.tick();
   assert.ok(f.classes.has('controls-idle'));assert.equal(f.timers.size,0);

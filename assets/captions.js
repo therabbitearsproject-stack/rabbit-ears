@@ -9,7 +9,7 @@ window.RabbitCaptions = (() => {
     let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
     let captionIndex = null, overlaySource = '', requestNumber = 0;
     const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
-    let language=store.get('re_caption_language','en'),translations=[];
+    let language=window.RabbitLocale?.resolve()||store.get('re_caption_language','en'),translations=[];
     if(!languages.includes(language))language='en';
     const exactKey=m=>m&&Number.isFinite(m.dur??m.duration)?JSON.stringify([m.archiveId||m.id,m.video||m.file,m.dur??m.duration]):'';
     const isAuto=m=>m?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(m?.sub||'');
