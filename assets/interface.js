@@ -160,6 +160,11 @@
   },'skin-option');b.dataset.preview=key;b.style.setProperty('--sample',col);b.setAttribute('aria-pressed',String(body.dataset.skin===key));
   const mini=make('span','skin-mini');mini.setAttribute('aria-hidden','true');mini.innerHTML='<i></i><b></b>';b.append(mini,make('strong','',name+(key==='pixel'?' · Default':'')),make('small','',desc));skinGrid.append(b);}
   themeSection.append(skinGrid);
+  const captionSection=make('section','settings-section');captionSection.id='settingsSectionCaptions';captionSection.append(make('h3','','Captions'));
+  const languageLabel=make('label','','Language '),languageSelect=make('select');languageSelect.id='captionLanguage';
+  for(const [code,name]of [['en','English'],['zh','Mandarin Chinese · 中文'],['hi','Hindi · हिन्दी'],['es','Spanish · Español'],['ar','Arabic · العربية'],['fr','French · Français'],['bn','Bengali · বাংলা'],['pt','Portuguese · Português'],['id','Indonesian · Bahasa Indonesia'],['ur','Urdu · اردو']]){const option=make('option','',name);option.value=code;languageSelect.append(option);}
+  languageSelect.value=store.get('re_caption_language','en');languageSelect.addEventListener('change',()=>{store.set('re_caption_language',languageSelect.value);captionUI.applyPreferences({re_caption_language:languageSelect.value});window.dispatchEvent(new CustomEvent('re:caption-language',{detail:languageSelect.value}));});
+  languageLabel.append(languageSelect);captionSection.append(languageLabel,make('p','dialog-intro','Saved translations appear as they finish. If your language is not ready, the available original captions continue. Translations are machine-generated.'));skinDialog.append(captionSection);
   const futureDialog=dialog('Upcoming programme');
   const futureTitle=make('h2'),futureInfo=make('p');futureDialog.append(make('p','eyebrow','COMING UP NEXT'),futureTitle,futureInfo,make('p','dialog-intro','This programme has not started. Tune in to the current broadcast or return to the guide.'),button('Watch this channel',()=>{futureDialog.close();openChannel(channels().findIndex(c=>c.no===+futureDialog.dataset.channel));}));
   function showFuture(ch,block){futureDialog.dataset.channel=ch.no;futureTitle.textContent=block.querySelector('b')?.textContent||'Upcoming programme';futureInfo.textContent=`CH ${ch.no} · ${ch.name} · ${block.title}`;openDialog(futureDialog);}
@@ -287,6 +292,7 @@
       radioLook=prefs.re_radio_look;body.dataset.radioLook=radioLook;
       radioAppearance.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.radioLook===radioLook)));
     }
+    if(['en','zh','hi','es','ar','fr','bn','pt','id','ur'].includes(prefs.re_caption_language)){languageSelect.value=prefs.re_caption_language;window.dispatchEvent(new CustomEvent('re:caption-language',{detail:prefs.re_caption_language}));}
     captionUI.applyPreferences?.(prefs);
     if(typeof prefs.re_tv_volume==='number'&&Number.isFinite(prefs.re_tv_volume))vid.volume=Math.max(0,Math.min(1,prefs.re_tv_volume));
     if(typeof prefs.re_tv_muted==='boolean')setMuted(prefs.re_tv_muted);

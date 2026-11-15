@@ -8,6 +8,9 @@ window.RabbitCaptions = (() => {
     let backing = store.get('re_caption_backing', false) === true;
     let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
     let captionIndex = null, overlaySource = '', requestNumber = 0;
+    const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
+    let language=store.get('re_caption_language','en'),translations=[];
+    if(!languages.includes(language))language='en';
     const exactKey=m=>m&&Number.isFinite(m.dur??m.duration)?JSON.stringify([m.archiveId||m.id,m.file||m.video,m.dur??m.duration]):'';
     const isAuto=m=>m?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(m?.sub||'');
     const indexRank=r=>r.burned?1000:r.captionMetadata?.kind==='reviewed'?200:r.captionMetadata?.language==='en'?(r.captionMetadata.translated?110:100):10;
@@ -23,6 +26,11 @@ window.RabbitCaptions = (() => {
           url='/captions/'+encodeURIComponent(record.sub.slice(6))+(/^[a-f0-9]{64}$/i.test(record.sha256||'')?'?v='+record.sha256:'');
         }else if(isAuto(baseMedia))next={...baseMedia,sub:'',captionMetadata:undefined};
       }
+      const original=captionIndex?.get(exactKey(baseMedia));
+      const translation=original&&!original.burned&&translations.find(r=>exactKey(r)===exactKey(baseMedia)&&r.sourceSha256===original.sha256&&r.language===language);
+      if(translation){next={...baseMedia,sub:'local:'+translation.file,captionMetadata:{kind:'auto-generated',language,translated:true,sourceLanguage:translation.sourceLanguage}};url='/captions/'+translation.file+'?v='+translation.sha256;}
+      video.dataset.captionLanguage=language;
+      video.dataset.captionTranslation=translation?'saved':language!==(next?.captionMetadata?.language||'en')?'pending':'original';
       if(next?.id!==media?.id||next?.sub!==media?.sub||url!==overlaySource){detach();closeMenu(false);}
       media=next;overlaySource=url;updateAppearance();attach();
     }
@@ -41,6 +49,12 @@ window.RabbitCaptions = (() => {
           if(!old||indexRank(record)>indexRank(old))records.set(key,record);
         }
         captionIndex=records;resolveMedia();
+        try{
+          const translatedResponse=await fetch('/caption-translations.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});
+          if(translatedResponse.ok){const result=await translatedResponse.json();if(request===requestNumber&&result.schemaVersion===1&&Array.isArray(result.records)){
+            translations=result.records.filter(r=>languages.includes(r.language)&&/^translated-[a-f0-9]{64}\.vtt$/.test(r.file||'')&&/^[a-f0-9]{64}$/.test(r.sha256||'')&&/^[a-f0-9]{64}$/.test(r.sourceSha256||''));resolveMedia();
+          }}
+        }catch{/* Keep original captions while a language is unavailable. */}
       }catch{/* A failed refresh preserves the last known caption availability. */}
     }
     const layer = document.createElement('div');
@@ -56,11 +70,11 @@ window.RabbitCaptions = (() => {
       try{const name=new Intl.DisplayNames(['en'],{type:'language'}).of(code);if(name)return name;}catch{}
       return ({en:'English',cs:'Czech',ja:'Japanese',fr:'French',de:'German',es:'Spanish',pl:'Polish',zh:'Chinese',ru:'Russian',ko:'Korean',it:'Italian',pt:'Portuguese',ar:'Arabic',hi:'Hindi'})[code]||code;
     }
-    const trackLanguage=()=>translated()?'en':media?.captionMetadata?.language||'en';
+    const trackLanguage=()=>media?.captionMetadata?.language||'en';
     function trackLabel(){
       const name=languageName(trackLanguage());
       if(!translated())return name+(automatic()?' (auto-generated)':'');
-      const metadata=media.captionMetadata,valid=code=>typeof code==='string'&&/^[a-z]{2,3}(?:-[a-z0-9]{2,8})?$/i.test(code)&&code.split('-')[0].toLowerCase()!=='en';
+      const metadata=media.captionMetadata,valid=code=>typeof code==='string'&&/^[a-z]{2,3}(?:-[a-z0-9]{2,8})?$/i.test(code)&&code.split('-')[0].toLowerCase()!==trackLanguage();
       let codes=Array.isArray(metadata.sourceLanguages)?metadata.sourceLanguages.filter(valid):[];
       if(!codes.length&&valid(metadata.sourceLanguage))codes=[metadata.sourceLanguage];
       const names=[...new Set(codes.map(code=>code.toLowerCase()))].map(languageName);
@@ -81,12 +95,13 @@ window.RabbitCaptions = (() => {
 
     function syncButtons() {
       const available = !!media?.sub;
+      const embedded=media?.burnedCaptions||['burned-in','embedded'].includes(media?.captionMetadata?.kind);
       // Read-only availability lets the desktop viewer avoid duplicate recognition.
-      video.dataset.captionAvailability = media?.burnedCaptions || ['burned-in','embedded'].includes(media?.captionMetadata?.kind) ? 'burned-in' : available ? 'provided' : media ? 'none' : 'pending';
+      video.dataset.captionAvailability = embedded ? 'burned-in' : available ? 'provided' : media ? 'none' : 'pending';
       for (const b of [button, ...screen.querySelectorAll('[data-remote="cc"]')]) {
         b.disabled = !available;
-        b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}` : 'Captions unavailable');
-        b.title = available ? 'Caption options (C)' : 'No captions for this show';
+        b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}` : embedded ? 'Captions are embedded in this show' : 'Captions unavailable');
+        b.title = available ? 'Caption options (C)' : embedded ? 'Captions are embedded in this show' : 'No captions for this show';
         b.setAttribute('aria-pressed', String(available && style !== 'none'));
         b.setAttribute('aria-haspopup', 'dialog'); b.setAttribute('aria-controls', menu.id); b.setAttribute('aria-expanded', String(!menu.hidden));
       }
@@ -95,6 +110,9 @@ window.RabbitCaptions = (() => {
     function updateAppearance() {
       heading.textContent=translated()?'Auto-translated captions':automatic()?'Auto-generated captions':'Captions';
       layer.dataset.color = style; layer.dataset.backing = String(backing);
+      layer.dir=['ar','ur'].includes(trackLanguage())?'rtl':'ltr';
+      layer.lang=trackLanguage();
+      heading.textContent+=(video.dataset.captionTranslation==='pending'?' · '+languageName(language)+' not ready':'');
       video.dataset.captionColor = style; video.dataset.captionBacking = String(backing);
       syncButtons();
     }
@@ -166,10 +184,12 @@ window.RabbitCaptions = (() => {
     refreshIndex();
     const refreshTimer=setInterval(refreshIndex,5*60*1000);refreshTimer?.unref?.();
     function applyPreferences(values){
+      const languageChanged=languages.includes(values.re_caption_language)&&language!==values.re_caption_language;
+      if(languageChanged)language=values.re_caption_language;
       if(choices.includes(values.re_caption_style))style=values.re_caption_style;
       else if(typeof values.re_captions==='boolean')style=values.re_captions?(style==='none'?'white':style):'none';
       if(typeof values.re_caption_backing==='boolean'){backing=values.re_caption_backing;checkbox.checked=backing;}
-      updateAppearance();attach();
+      if(languageChanged)resolveMedia();else{updateAppearance();attach();}
     }
     return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex, applyPreferences };
   }

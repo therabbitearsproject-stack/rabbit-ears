@@ -36,6 +36,14 @@ export async function buildCaptionIndex({repoRoot=repository,siteRoot}={}){
   for(const row of available){
    const identity={archiveId:row[6]||row[0],video:row[1],duration:row[2]},identityKey=key(row);
    if(burned.has(JSON.stringify([identity.archiveId,identity.video]))){records.set(identityKey,{...identity,burned:true});continue;}
+   if(row[5]&&!row[5].startsWith('local:')){
+    const name=row[0].replace(/[^A-Za-z0-9._-]/g,'_')+'.vtt';
+    try{
+     const bytes=await regular(join(siteRoot,'subs',name));
+     if(bytes.toString('utf8').startsWith('WEBVTT')&&bytes.toString('utf8').includes(' --> '))records.set(identityKey,{...identity,sub:row[5],sourcePath:'/subs/'+name,captionMetadata:{kind:'provided',language:row[11]?.language||'en'},sha256:sha256(bytes)});
+    }catch(e){if(e.code!=='ENOENT')throw e;}
+    continue;
+   }
    if(!row[5]?.startsWith('local:'))continue;
    const name=row[5].slice(6);if(!safeName(name))continue;
    const bytes=await regular(join(repoRoot,'captions',name));
@@ -49,6 +57,16 @@ export async function buildCaptionIndex({repoRoot=repository,siteRoot}={}){
  }
  const index={schemaVersion:1,records:[...records.values()].sort((a,b)=>JSON.stringify([a.archiveId,a.video,a.duration]).localeCompare(JSON.stringify([b.archiveId,b.video,b.duration])))};
  await atomic(join(siteRoot,'caption-index.json'),JSON.stringify(index)+'\n');
+ const translations=await json(join(repoRoot,'captions/translation-manifest.json'),{schemaVersion:1,records:[]});
+ const translated=[];
+ for(const record of translations.records||[]){
+  const source=records.get(JSON.stringify([record.archiveId,record.video,record.duration]));
+  if(!source||source.burned||source.sha256!==record.sourceSha256||!['en','zh','hi','es','ar','fr','bn','pt','id','ur'].includes(record.language)||!/^translated-[a-f0-9]{64}\.vtt$/.test(record.file||''))continue;
+  const bytes=await regular(join(repoRoot,'captions',record.file));
+  if(sha256(bytes)!==record.sha256||!bytes.toString('utf8').startsWith('WEBVTT'))throw Error('Invalid translated caption asset');
+  await atomic(join(siteRoot,'captions',record.file),bytes);translated.push(record);
+ }
+ await atomic(join(siteRoot,'caption-translations.json'),JSON.stringify({schemaVersion:1,records:translated})+'\n');
  return {records:index.records.length,assets:assets.size,burned:index.records.filter(r=>r.burned).length};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){try{console.log(JSON.stringify(await buildCaptionIndex({siteRoot:process.argv[2]})));}catch(e){console.error(e.message);process.exitCode=1;}}
