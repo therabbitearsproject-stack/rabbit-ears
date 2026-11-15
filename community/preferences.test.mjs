@@ -45,6 +45,8 @@ test('Winamp Deck persists across devices and survives a stale unrelated setting
 });
 
 test('preference schema rejects status/social data, invalid ranges and unimplemented settings',async()=>{
+ for(const language of ['en','zh','hi','es','ar','fr','bn','pt','id','ur'])assert.deepEqual(validatePreferences({re_caption_language:language}),{re_caption_language:language});
+ assert.throws(()=>validatePreferences({re_caption_language:'unsupported'}));
  for(const changes of [{re_tv_volume:1.1},{re_vol:-.1},{re_tv_muted:'yes'},{re_skin:'admin'},{re_caption_style:'purple'},{re_caption_size:1.2},{playbackPosition:30},{discordToken:'never'},{re_favs:['private']}]){
   assert.throws(()=>validatePreferences(changes));
   assert.equal((await call('bob','PUT',{version:0,changes})).status,400);

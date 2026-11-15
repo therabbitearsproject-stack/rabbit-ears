@@ -40,7 +40,7 @@ export async function buildCaptionIndex({repoRoot=repository,siteRoot}={}){
     const name=row[0].replace(/[^A-Za-z0-9._-]/g,'_')+'.vtt';
     try{
      const bytes=await regular(join(siteRoot,'subs',name));
-     if(bytes.toString('utf8').startsWith('WEBVTT')&&bytes.toString('utf8').includes(' --> '))records.set(identityKey,{...identity,sub:row[5],sourcePath:'/subs/'+name,captionMetadata:{kind:'provided',language:row[11]?.language||'en'},sha256:sha256(bytes)});
+     if(bytes.toString('utf8').startsWith('WEBVTT')&&bytes.toString('utf8').includes(' --> ')&&(!records.has(identityKey)||records.get(identityKey).captionMetadata?.kind==='provided'))records.set(identityKey,{...identity,sub:row[5],sourcePath:'/subs/'+name,captionMetadata:{kind:'provided',language:row[11]?.language||'en'},sha256:sha256(bytes)});
     }catch(e){if(e.code!=='ENOENT')throw e;}
     continue;
    }
