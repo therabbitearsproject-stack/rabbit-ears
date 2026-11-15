@@ -1,6 +1,47 @@
 /* Site-rendered WebVTT captions keep the user's site choices independent of
    browser/OS native-caption styling. The browser still owns cue timing. */
 window.RabbitCaptions = (() => {
+
+// Caption providers sometimes escape SRT formatting before converting to VTT.
+// Decode text only: no HTML parser, innerHTML, or executable markup is involved.
+function decodeCaptionEntities(value) {
+  const names = {amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:'\u00a0',lrm:'\u200e',rlm:'\u200f'};
+  let text = String(value ?? '');
+  for (let pass = 0; pass < 2; pass++) {
+    const next = text.replace(/&(#(?:x[0-9a-f]{1,6}|[0-9]{1,7})|amp|lt|gt|quot|apos|nbsp|lrm|rlm);/gi, (whole, entity) => {
+      if (entity[0] !== '#') return names[entity.toLowerCase()];
+      const point = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2),16) : Number(entity.slice(1));
+      return point > 0 && point <= 0x10ffff && !(point >= 0xd800 && point <= 0xdfff) ? String.fromCodePoint(point) : whole;
+    });
+    if (next === text) break;
+    text = next;
+  }
+  return text;
+}
+
+const FORMAT_TAG = /<\s*\/?\s*(?:i|b|u|s|strike|font|span|ruby|rt|c(?:\.[\w-]+)*|v|lang)(?=[\s/>])[^<>\r\n]{0,512}>/gi;
+const INLINE_TIME = /<(?:\d{2,}:)?\d{2}:\d{2}\.\d{3}>/g;
+function plainText(value) {
+  return decodeCaptionEntities(value).replace(/<\s*br\s*\/?\s*>/gi,'\n')
+    .replace(FORMAT_TAG,'').replace(INLINE_TIME,'').replace(/\r\n?/g,'\n').trim();
+}
+
+function nativeText(value) {
+  const escape = text => text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  // Re-enable only WebVTT's inert formatting tokens. Unknown markup remains text.
+  return decodeCaptionEntities(value).split(/(<[^<>\r\n]{0,512}>)/g).map(part => {
+    if (/^<\s*br\s*\/?\s*>$/i.test(part)) return '\n';
+    const simple = part.match(/^<\s*(\/?)\s*(i|b|u|ruby|rt)(?:\s[^<>]*)?\s*>$/i);
+    if (simple) return '<'+simple[1]+simple[2].toLowerCase()+'>';
+    const classes = part.match(/^<\s*(\/?)\s*c((?:\.[\w-]+)*)\s*>$/i);
+    if (classes) return classes[1] ? '</c>' : '<c'+classes[2]+'>';
+    if (/^<\s*\/?\s*(?:font|span|s|strike|v|lang)(?=[\s/>])[^<>]*>$/i.test(part)) return '';
+    if (/^<(?:\d{2,}:)?\d{2}:\d{2}\.\d{3}>$/.test(part)) return part;
+    return escape(part);
+  }).join('');
+}
+
+
   function create({ video, screen, button, store, source }) {
     const choices = ['none', 'yellow', 'white'];
     let style = store.get('re_caption_style', store.get('re_captions', false) ? 'white' : 'none');
@@ -131,10 +172,18 @@ window.RabbitCaptions = (() => {
       Object.assign(layer.style, { left: (w - pictureW) / 2 + 'px', top: (h - pictureH) / 2 + 'px', width: pictureW + 'px', height: pictureH + 'px', fontSize: Math.max(12, pictureH * .045) + 'px', padding: `0 ${pictureW * .05}px ${bottom}px` });
       video.style.setProperty('--caption-font-size', Math.max(12, pictureH * .045) + 'px');
     }
+    const normalizedCues = new WeakSet();
+    function normalizeCue(cue) {
+      if (!cue || normalizedCues.has(cue)) return cue;
+      normalizedCues.add(cue);
+      if (typeof cue.text === 'string') { const text = nativeText(cue.text); if (text !== cue.text) cue.text = text; }
+      return cue;
+    }
+    function normalizeTrack(tr) { for (const cue of Array.from(tr.track.cues || [])) normalizeCue(cue); }
     function clear() { lastText = ''; layer.replaceChildren(); layer.hidden = true; }
     function render() {
       if (!track || style === 'none' || nativeOnly || video.seeking) { clear(); return; }
-      const texts = Array.from(track.track.activeCues || [], cue => cue.getCueAsHTML ? cue.getCueAsHTML().textContent.trim() : cue.text.trim()).filter(Boolean);
+      const texts = Array.from(track.track.activeCues || [], cue => { normalizeCue(cue); return plainText(cue.getCueAsHTML ? cue.getCueAsHTML().textContent : cue.text); }).filter(Boolean);
       const text = texts.join('\n'); if (text === lastText) return;
       lastText = text; layer.replaceChildren();
       for (const text of texts) { const block = document.createElement('div'), span = document.createElement('span'); block.className = 'caption-block'; span.className = 'caption-text'; span.textContent = text; block.append(span); layer.append(block); }
@@ -150,7 +199,7 @@ window.RabbitCaptions = (() => {
       tr.dataset.captionSource=url;
       if(!external)tr.src=url;
       track = tr; video.append(tr); tr.track.mode = nativeOnly ? 'showing' : 'hidden';
-      tr.track.addEventListener('cuechange', render); tr.addEventListener('load', render); tr.addEventListener('error', clear);
+      tr.track.addEventListener('cuechange', render); tr.addEventListener('load', () => { normalizeTrack(tr); render(); }); tr.addEventListener('error', clear);
       if(external){
         const controller=new AbortController();captionFetch=controller;
         fetch(url,{mode:'cors',credentials:'omit',signal:controller.signal}).then(async response=>{
@@ -211,5 +260,5 @@ window.RabbitCaptions = (() => {
     }
     return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex, applyPreferences };
   }
-  return { create };
+  return { create, plainText, nativeText };
 })();
