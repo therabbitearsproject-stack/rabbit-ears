@@ -6,6 +6,31 @@ const require=createRequire(import.meta.url);
 let chromium;
 try{({chromium}=require(process.env.RABBIT_EARS_PLAYWRIGHT||'playwright'));}catch{}
 
+test('saved language switching preserves video and clock, supports RTL and rejects stale translations',{skip:!chromium},async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
+ try{
+  const page=await browser.newPage();await page.route('http://captions.test/**',route=>route.fulfill({contentType:'text/html',body:'<div id="screen"><video id="video"></video><button id="cc">CC</button><button data-remote="cc"></button></div>'}));await page.goto('http://captions.test/');
+  await page.addScriptTag({path:fileURLToPath(new URL('../assets/captions.js',import.meta.url))});
+  const result=await page.evaluate(async()=>{
+   const identity={archiveId:'a',video:'film.mp4',duration:120},hash='a'.repeat(64),translatedFile='translated-'+'b'.repeat(64)+'.vtt';
+   let translations=[{...identity,language:'ar',sourceLanguage:'en',sourceSha256:hash,sha256:'c'.repeat(64),file:translatedFile}];
+   window.fetch=async url=>({ok:true,json:async()=>({schemaVersion:1,records:url.includes('caption-translations')?translations:[{...identity,sub:'English.srt',sourcePath:'/subs/film.vtt',sha256:hash,captionMetadata:{kind:'provided',language:'en'}}]})});
+   const video=document.getElementById('video'),screen=document.getElementById('screen'),button=document.getElementById('cc'),originalVideo=video;
+   let loads=0,plays=0;video.load=()=>loads++;video.play=()=>plays++;video.currentTime=42;
+   const ui=RabbitCaptions.create({video,screen,button,store:{get:(k,d)=>k==='re_caption_style'?'white':d,set(){}},source:()=>'/subs/film.vtt'});
+   ui.setMedia({id:'film',archiveId:'a',file:'film.mp4',dur:120,sub:'English.srt'});await ui.refreshIndex();
+   ui.applyPreferences({re_caption_language:'ar'});const arabic={url:video.querySelector('track').src,language:video.querySelector('track').srclang,dir:screen.querySelector('.caption-layer').dir};
+   ui.applyPreferences({re_caption_language:'fr'});const fallback={url:video.querySelector('track').src,text:screen.querySelector('.caption-translation-status').textContent};
+   translations=[{...translations[0],sourceSha256:'d'.repeat(64)}];await ui.refreshIndex();ui.applyPreferences({re_caption_language:'ar'});const stale=video.querySelector('track').src;
+   ui.setMedia({id:'burned',burnedCaptions:true});const embedded=button.title;
+   return {arabic,fallback,stale,embedded,sameVideo:video===originalVideo,time:video.currentTime,loads,plays};
+  });
+  assert.ok(result.arabic.url.includes('/captions/translated-'),JSON.stringify(result));assert.equal(result.arabic.language,'ar');assert.equal(result.arabic.dir,'rtl');
+  assert.ok(result.fallback.url.endsWith('/subs/film.vtt'));assert.match(result.fallback.text,/French translation is not ready/);assert.ok(result.stale.endsWith('/subs/film.vtt'));
+  assert.equal(result.embedded,'Captions are embedded in this show');assert.equal(result.sameVideo,true);assert.equal(result.time,42);assert.equal(result.loads+result.plays,0);
+ }finally{await browser.close();}
+});
+
 test('native caption tracks identify English translations and clear labels when media changes',{skip:!chromium},async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
  try{

@@ -11,7 +11,7 @@ window.RabbitCaptions = (() => {
     const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
     let language=store.get('re_caption_language','en'),translations=[];
     if(!languages.includes(language))language='en';
-    const exactKey=m=>m&&Number.isFinite(m.dur??m.duration)?JSON.stringify([m.archiveId||m.id,m.file||m.video,m.dur??m.duration]):'';
+    const exactKey=m=>m&&Number.isFinite(m.dur??m.duration)?JSON.stringify([m.archiveId||m.id,m.video||m.file,m.dur??m.duration]):'';
     const isAuto=m=>m?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(m?.sub||'');
     const indexRank=r=>r.burned?1000:r.captionMetadata?.kind==='reviewed'?200:r.captionMetadata?.language==='en'?(r.captionMetadata.translated?110:100):10;
     function resolveMedia(){
@@ -65,6 +65,7 @@ window.RabbitCaptions = (() => {
     menu.id = 'caption-options'; menu.className = 'caption-options'; menu.hidden = true;
     menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-modal', 'false'); menu.setAttribute('aria-label', 'Caption options');
     const heading = document.createElement('div'); heading.className = 'caption-options-title'; heading.textContent = 'Captions'; menu.append(heading);
+    const translationStatus=document.createElement('p');translationStatus.className='caption-translation-status';menu.append(translationStatus);
     const automatic=()=>media?.captionMetadata?.kind==='auto-generated'||/^local:auto-[a-f0-9]{64}\.vtt$/.test(media?.sub||'');
     const translated=()=>automatic()&&media?.captionMetadata?.translated===true;
     function languageName(code){
@@ -113,7 +114,8 @@ window.RabbitCaptions = (() => {
       layer.dataset.color = style; layer.dataset.backing = String(backing);
       layer.dir=['ar','ur'].includes(trackLanguage())?'rtl':'ltr';
       layer.lang=trackLanguage();
-      heading.textContent+=(video.dataset.captionTranslation==='pending'?' · '+languageName(language)+' not ready':'');
+      translationStatus.hidden=video.dataset.captionTranslation!=='pending';
+      translationStatus.textContent=translationStatus.hidden?'':languageName(language)+' translation is not ready; showing the available original captions.';
       video.dataset.captionColor = style; video.dataset.captionBacking = String(backing);
       syncButtons();
     }
