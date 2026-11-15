@@ -4,7 +4,8 @@
  let regional='en';const read=key=>{try{return JSON.parse(root.localStorage.getItem(key));}catch{return undefined;}};
  const device=api.device(root.navigator.languages?.length?root.navigator.languages:[root.navigator.language]);
  root.RabbitLocale={resolve(){const stored=read('re_caption_language'),mode=read('re_language_mode');return api.supported.includes(stored)&&(mode==='manual'||mode===undefined)?stored:device||regional;}};
- if(!device)root.fetch('https://community.rabbit-ears.stream/api/locale',{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(5000)}).then(response=>response.ok?response.json():null).then(value=>{
+ const explicit=api.supported.includes(read('re_caption_language'))&&(read('re_language_mode')==='manual'||read('re_language_mode')===undefined);
+ if(!device&&!explicit)root.fetch('https://community.rabbit-ears.stream/api/locale',{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(5000)}).then(response=>response.ok?response.json():null).then(value=>{
   if(!api.supported.includes(value?.language))return;regional=value.language;
   if(read('re_language_mode')!=='manual')root.dispatchEvent(new CustomEvent('re:auto-language',{detail:root.RabbitLocale.resolve()}));
  }).catch(()=>{});
