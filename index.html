@@ -1502,12 +1502,14 @@ function syncMedia(forceSeek = false) {
       // Preserve the shared clock using a bumper from this channel's own library.
       const channel=channels()[cur];
       const fallback = catalog?.channelBumpers?.[channel?.no]?.[0] || CommercialTiming.library(catalog, channel?.breaks?.library).bumpers[0];
-      if (!fallback || fallback.id === segment.media.id) return;
+      if (!fallback || fallback.id === segment.media.id) { fail(); return; }
       activeSegment.fallbackDur = fallback.dur;
       vid.onloadedmetadata = () => { if (token === mediaToken) { vid.currentTime = currentSegment().position % fallback.dur; if (tvOn && !held) vid.play().catch(() => {}); } };
       vid.onended = () => { if (token !== mediaToken || !playing) return; if (currentSegment().index !== segment.index) syncMedia(); else { vid.currentTime = 0; if (tvOn && !held) vid.play().catch(() => {}); } };
-      vid.onerror = null;
+      vid.onerror = fail;
       vid.src = fileUrl(fallback);
+      vid.load();
+      playbackTimer = setTimeout(() => { if (!document.hidden && tvOn && !held) fail(); }, 25000);
     }
   };
   (segment.kind === "program" ? resolveCompatibleMedia(segment.media) : Promise.resolve(segment.media)).then(media => {
