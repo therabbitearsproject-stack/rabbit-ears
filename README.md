@@ -27,6 +27,8 @@ The original interface is available from the footer and preserved under `design-
 
 ## Discord watch parties
 
+Join the Rabbit Ears community: https://discord.gg/dkGQSZT82G (permanent invite).
+
 The optional website watch party uses Discord sign-in, episode-timed comments and
 reactions, and matching rooms for the 76 shared broadcast channels. Original posts
 go to Discord; replay reads never post again. TV playback and anonymous viewing do
