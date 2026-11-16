@@ -18,3 +18,7 @@ The archive is a historical design, not a second maintained application. It uses
 the same public media services; future backend changes may affect its playback.
 
 A visible return arrow has been added outside the archived interface so website and desktop visitors can return to the current TV guide. The exact historical page remains available in the original-design Git tag.
+
+The return control explicitly loads `/index.html#tv` instead of relying on a
+root/hash link. It stays clickable outside Electron drag regions and retains a
+normal anchor fallback for keyboard, modified clicks and JavaScript-disabled use.
