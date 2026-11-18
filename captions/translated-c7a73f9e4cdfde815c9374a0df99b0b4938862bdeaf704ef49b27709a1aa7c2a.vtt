@@ -1,0 +1,1829 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:29.001
+[...]
+
+2
+00:00:50.000 --> 00:00:56.001
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+3
+00:00:56.001 --> 00:01:01.001
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+4
+00:01:01.001 --> 00:01:03.001
+de cette évolution continue.
+
+5
+00:01:12.001 --> 00:01:16.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay et c&#x27;est Gary Kildall,
+
+6
+00:01:16.001 --> 00:01:21.001
+Ce que j&#x27;essaie de battre dans un jeu de Pong. Pong est le grand-père de tous les ordinateurs
+
+7
+00:01:21.001 --> 00:01:25.000
+Jeux et c&#x27;est le sujet de notre programme aujourd&#x27;hui, Jeux informatiques. et Gary,
+
+8
+00:01:25.000 --> 00:01:27.001
+Les jeux informatiques étaient en fait importants, ils n&#x27;étaient pas, en obtenant l&#x27;ensemble
+
+9
+00:01:27.001 --> 00:01:31.000
+L’ordinateur personnel se passe. Bien sûr, ils en faisaient partie. L’un des
+
+10
+00:01:31.000 --> 00:01:36.000
+Un aspect unique d&#x27;un ordinateur personnel est qu&#x27;il a souvent des graphismes de couleur bitmap
+
+11
+00:01:36.000 --> 00:01:40.000
+C’est comme Apple II, par exemple. Et de cette façon, vous pouvez faire des choses très dynamiques,
+
+12
+00:01:40.001 --> 00:01:44.001
+jeux que vous ne pouviez pas faire, disons, avec un style télétype ou scrolling vous affiche
+
+13
+00:01:44.001 --> 00:01:48.001
+Il se trouve dans un système informatique plus grand. Ce jeu est évidemment un
+
+14
+00:01:48.001 --> 00:01:52.000
+très ancien vintage et ils ont obtenu beaucoup plus sophistiqué depuis et
+
+15
+00:01:52.000 --> 00:01:55.000
+Nous allons voir quelques-uns de cela aujourd&#x27;hui. En fait, nous avons eu un spectacle très excitant.
+
+16
+00:01:55.001 --> 00:01:58.001
+Nous rencontrerons quelques-uns des super étoiles de programmation de jeux informatiques de
+
+17
+00:01:58.001 --> 00:02:00.001
+Electronic Arts, d’Atari et d’Activision.
+
+18
+00:02:01.000 --> 00:02:05.000
+Et alors que l’idée des ordinateurs dans les jeux peut être nouvelle, l’idee des gens qui jouent
+
+19
+00:02:05.000 --> 00:02:10.000
+Les jeux avec les machines ne sont pas vraiment nouveaux. Maintenant, c’était le premier.
+
+20
+00:02:11.000 --> 00:02:15.001
+Avant que le premier programme soit écrit pour simuler un fond étoilé ou un
+
+21
+00:02:15.001 --> 00:02:20.001
+la course à vitesse, les arcades de Penny offrent des divertissements plus simples, plus mécaniques, mais
+
+22
+00:02:20.001 --> 00:02:26.000
+Avec les mêmes objectifs à l&#x27;esprit, à défier et à s&#x27;amuser. Si les locaux étaient moins
+
+23
+00:02:26.000 --> 00:02:30.000
+exotique et la concurrence moins féroce, au moins une partie du jeu
+
+24
+00:02:30.000 --> 00:02:35.000
+Les interactions étaient similaires. Un joueur a besoin d&#x27;une décision manuelle dans la compétition pour
+
+25
+00:02:35.000 --> 00:02:40.001
+points ou une récompense, plus tangible dans certains cas que dans d’autres. Comme un dispositif pour
+
+26
+00:02:40.001 --> 00:02:44.001
+échapper à la routine quotidienne, les graphiques générées par l&#x27;ordinateur ont apporté un niveau de fantasy
+
+27
+00:02:44.001 --> 00:02:49.000
+Aucun jeu mécanique ne pouvait s’approcher. Au lieu d’échapper à un
+
+28
+00:02:49.000 --> 00:02:53.000
+Une école ou un bureau, un joueur pourrait quitter la Terre ou se déplacer à un autre
+
+29
+00:02:53.000 --> 00:02:58.001
+l’univers . Les jeux informatiques d&#x27;arcade modernes offrent différents types de défis, de
+
+30
+00:02:58.001 --> 00:03:03.001
+Jeux d&#x27;action rapides qui nécessitent des réactions encore plus rapides aux jeux de type maze où les
+
+31
+00:03:03.001 --> 00:03:08.000
+Le joueur tire son chemin autour des obstacles et des jeux de guerre où l&#x27;objet est de
+
+32
+00:03:08.000 --> 00:03:14.000
+détruire ou être détruite. Dans l&#x27;un des derniers jeux d&#x27;aventure, des images animées
+
+33
+00:03:14.000 --> 00:03:18.001
+sont stockés sur des disques laser pour être rappelé séquentiellement suivant le plot de l&#x27;histoire
+
+34
+00:03:18.001 --> 00:03:23.000
+et, selon les réponses du joueur, si le joueur déplace le panneau de contrôle
+
+35
+00:03:23.000 --> 00:03:27.001
+Dans la bonne direction, il est récompensé par une échappée réussie. Mais si le
+
+36
+00:03:27.001 --> 00:03:31.001
+le joueur fait une erreur, le programme découvre une séquence alternative d&#x27;images et
+
+37
+00:03:31.001 --> 00:03:33.001
+Les résultats peuvent être extrêmement désagréables.
+
+38
+00:03:35.000 --> 00:03:39.001
+Que ce soit utilisé pour créer des mondes inconnus ou pour renforcer la réalité de la connaissance
+
+39
+00:03:39.001 --> 00:03:45.001
+mondes, les jeux informatiques réussissent dans un domaine improbable, transformant des points de
+
+40
+00:03:45.001 --> 00:03:49.001
+lumière sur un petit écran dans un domaine crédible, plus grand que la vie
+
+41
+00:03:49.001 --> 00:03:51.000
+Et généralement plus excitant.
+
+42
+00:04:37.000 --> 00:04:40.000
+Lorsque vous pensez au design du jeu, quels sont les éléments du jeu
+
+43
+00:04:40.000 --> 00:04:43.001
+Ce qui fait
+
+44
+00:05:18.001 --> 00:05:34.000
+[...]
+
+45
+00:05:39.001 --> 00:05:40.001
+[...]
+
+46
+00:05:40.001 --> 00:05:40.001
+Quels sont les éléments du jeu ?
+
+47
+00:05:40.001 --> 00:05:41.000
+Quels sont les éléments du jeu ?
+
+48
+00:05:41.000 --> 00:05:41.000
+Quels sont les éléments du jeu ?
+
+49
+00:05:41.000 --> 00:05:41.000
+Quels sont les éléments du jeu ?
+
+50
+00:05:41.000 --> 00:05:41.000
+Quels sont les éléments du jeu ?
+
+51
+00:05:41.000 --> 00:05:41.000
+Quels sont les éléments du jeu ?
+
+52
+00:05:41.001 --> 00:05:42.001
+Quels sont les éléments du jeu ?
+
+53
+00:05:42.001 --> 00:05:43.000
+Quels sont les éléments du jeu ?
+
+54
+00:06:07.001 --> 00:06:11.001
+[...]
+
+55
+00:06:11.001 --> 00:06:11.001
+Quels sont les éléments du jeu ?
+
+56
+00:06:11.001 --> 00:06:12.000
+Quels sont les éléments du jeu ?
+
+57
+00:06:12.000 --> 00:06:13.000
+Quels sont les éléments du jeu ?
+
+58
+00:06:23.000 --> 00:06:24.000
+« Les éléments du jeu ?
+
+59
+00:06:31.001 --> 00:06:33.001
+Quels sont les éléments du jeu ?
+
+60
+00:06:38.000 --> 00:06:38.001
+Quels sont les éléments du jeu ?
+
+61
+00:06:38.001 --> 00:06:38.001
+Quels sont les éléments du jeu ?
+
+62
+00:06:38.001 --> 00:06:38.001
+Quels sont les éléments du jeu ?
+
+63
+00:06:38.001 --> 00:06:38.001
+Quels sont les éléments du jeu ?
+
+64
+00:06:38.001 --> 00:06:39.000
+Quels sont les éléments du jeu ?
+
+65
+00:06:39.000 --> 00:06:41.000
+Quels sont les éléments du jeu ?
+
+66
+00:06:41.000 --> 00:06:42.000
+Quels sont les éléments du jeu ?
+
+67
+00:06:42.001 --> 00:06:43.000
+Quels sont les éléments du jeu ?
+
+68
+00:06:51.001 --> 00:06:54.000
+[...]
+
+69
+00:07:08.000 --> 00:07:08.001
+Quels sont les éléments du jeu ?
+
+70
+00:07:08.001 --> 00:07:08.001
+Quels sont les éléments du jeu ?
+
+71
+00:07:08.001 --> 00:07:09.000
+Quels sont les éléments du jeu ?
+
+72
+00:07:09.000 --> 00:07:09.001
+Quels sont les éléments du jeu ?
+
+73
+00:07:09.001 --> 00:07:10.001
+Quels sont les éléments du jeu ?
+
+74
+00:07:10.001 --> 00:07:13.000
+Quels sont les éléments du jeu ?
+
+75
+00:07:22.000 --> 00:07:23.000
+« Les éléments du jeu ?
+
+76
+00:07:37.000 --> 00:07:38.000
+Quels sont les éléments du jeu ?
+
+77
+00:07:38.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+78
+00:07:40.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+79
+00:07:40.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+80
+00:07:40.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+81
+00:07:40.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+82
+00:07:40.001 --> 00:07:40.001
+Quels sont les éléments du jeu ?
+
+83
+00:07:40.001 --> 00:07:41.000
+Quels sont les éléments du jeu ?
+
+84
+00:07:41.000 --> 00:07:42.000
+Quels sont les éléments du jeu ?
+
+85
+00:07:42.000 --> 00:07:43.000
+Quels sont les éléments du jeu ?
+
+86
+00:07:59.000 --> 00:08:01.001
+[...]
+
+87
+00:08:06.001 --> 00:08:09.001
+Quels sont les éléments du jeu ?
+
+88
+00:08:10.000 --> 00:08:11.000
+Quels sont les éléments du jeu ?
+
+89
+00:08:11.001 --> 00:08:11.001
+Quels sont les éléments du jeu ?
+
+90
+00:08:11.001 --> 00:08:12.000
+Quels sont les éléments du jeu ?
+
+91
+00:08:12.000 --> 00:08:13.000
+Quels sont les éléments du jeu ?
+
+92
+00:08:30.001 --> 00:08:33.000
+[...]
+
+93
+00:08:36.001 --> 00:08:37.000
+Quels sont les éléments du jeu ?
+
+94
+00:08:37.001 --> 00:08:38.001
+Quels sont les éléments du jeu ?
+
+95
+00:08:38.001 --> 00:08:39.000
+Quels sont les éléments du jeu ?
+
+96
+00:08:39.000 --> 00:08:39.000
+Quels sont les éléments du jeu ?
+
+97
+00:08:39.000 --> 00:08:40.001
+Quels sont les éléments du jeu ?
+
+98
+00:08:40.001 --> 00:08:43.000
+Quels sont les éléments du jeu ?
+
+99
+00:09:05.000 --> 00:09:11.001
+« Les éléments du jeu ?
+
+100
+00:09:13.000 --> 00:09:15.001
+Vous obtenez un peu de licence de pilote quand vous passez par cela?
+
+101
+00:09:16.001 --> 00:09:21.000
+Si vous volez avec succès, vous recevez un patch, et si vous voliez comme un astronaute
+
+102
+00:09:21.000 --> 00:09:22.001
+Vous pourriez avoir vos ailes.
+
+103
+00:09:23.000 --> 00:09:25.001
+Nous entrons dans l&#x27;atmosphère de la Terre maintenant, et vous voyez que nous obtenons le
+
+104
+00:09:25.001 --> 00:09:28.001
+Cone d&#x27;ionisation qui apparaît autour du bateau spatial.
+
+105
+00:09:29.000 --> 00:09:30.001
+Si vous avez vu le film The Right Stuff, vous
+
+106
+00:09:30.001 --> 00:09:32.000
+J&#x27;aimerais le voir avec John Glenn.
+
+107
+00:09:32.000 --> 00:09:33.001
+C’est ce que les astronautes voient dans la fenêtre.
+
+108
+00:09:34.000 --> 00:09:36.001
+C&#x27;est un gaz ionisé chaud qui est surchauffé par la
+
+109
+00:09:36.001 --> 00:09:38.000
+La friction du shuttle sur le chemin d’entrée.
+
+110
+00:09:38.001 --> 00:09:41.000
+Nous avons même perdu nos signaux. Nous avons perdu notre altitude et notre vitesse.
+
+111
+00:09:41.000 --> 00:09:42.001
+information, et nous avons perdu nos écrans informatiques.
+
+112
+00:09:42.001 --> 00:09:45.001
+Steve, il semble que le pilotage de la flotte spatiale est très
+
+113
+00:09:45.001 --> 00:09:47.000
+Difficile de le faire, on pense.
+
+114
+00:09:47.001 --> 00:09:51.000
+Est-ce qu’un enfant ou une personne normale peut réellement en sortir ?
+
+115
+00:09:51.001 --> 00:09:54.001
+Eh bien, ce que j&#x27;ai fait quand j&#x27;avais conçu cela, c&#x27;était que je comprenais ce problème.
+
+116
+00:09:55.001 --> 00:09:58.000
+Avoir la moyenne de l&#x27;individu volant la flotte spatiale prendrait des années de travail.
+
+117
+00:09:58.001 --> 00:10:01.001
+Mais j&#x27;ai regardé comment la NASA entraîne ses astronautes, et ils ont commencé, d&#x27;abord
+
+118
+00:10:01.001 --> 00:10:03.001
+Tout cela, en leur donnant beaucoup d&#x27;exercices de livres.
+
+119
+00:10:04.000 --> 00:10:06.001
+Ils leur donnent des séries de films de ce qu&#x27;il est comme de voler la flotte spatiale.
+
+120
+00:10:07.000 --> 00:10:10.000
+C’est le vol numéro un. Vous voyez essentiellement un film.
+
+121
+00:10:10.000 --> 00:10:12.000
+Vous pouvez prendre le joystick et prendre le contrôle
+
+122
+00:10:12.000 --> 00:10:13.001
+Chaque fois que vous voulez, mais vous n’avez pas à le faire.
+
+123
+00:10:14.000 --> 00:10:16.001
+Il y a un deuxième vol appelé un vol d&#x27;entraînement, et ce
+
+124
+00:10:16.001 --> 00:10:18.000
+C’est comme voler dans un simulateur.
+
+125
+00:10:18.000 --> 00:10:20.000
+Vous pouvez faire des erreurs, vous pouvez faire les erreurs et l&#x27;ordinateur
+
+126
+00:10:20.000 --> 00:10:21.001
+Il va vous rembourser, et il vous laissera savoir.
+
+127
+00:10:22.000 --> 00:10:24.001
+Et puis le vol 3 est la vraie chose.
+
+128
+00:10:24.001 --> 00:10:26.001
+Ainsi, vous travaillez votre chemin jusqu&#x27;à voler la mission réelle.
+
+129
+00:10:27.000 --> 00:10:29.000
+Vous pouvez y entrer très facilement et ensuite travailler
+
+130
+00:10:29.000 --> 00:10:31.000
+Votre chemin vers le haut et enfin essayer d&#x27;atteindre vos ailes.
+
+131
+00:10:31.000 --> 00:10:35.000
+La chose intéressante sur ce jeu, je pense, est que c&#x27;est une éducation
+
+132
+00:10:35.000 --> 00:10:40.000
+Une expérience d’apprentissage ainsi qu’une...
+
+133
+00:10:40.000 --> 00:10:43.001
+Vous apprendrez sur l&#x27;un des éléments les plus technologiquement avancés aujourd&#x27;hui.
+
+134
+00:10:43.001 --> 00:10:46.001
+Il y a les double sonic booms qui se produisent. La première était la flotte spatiale.
+
+135
+00:10:46.001 --> 00:10:47.001
+Le deuxième était les avions de chasse.
+
+136
+00:10:48.000 --> 00:10:50.000
+Et nous arrivons maintenant à la base aérienne d&#x27;Edwards.
+
+137
+00:10:51.000 --> 00:10:54.001
+Lorsque vous avez terminé de maîtriser ce jeu, vous avez effectivement appris tout sur
+
+138
+00:10:54.001 --> 00:10:56.000
+Que fait un astronaute lorsqu’il est en orbite ?
+
+139
+00:10:56.000 --> 00:10:59.001
+Ainsi, la prochaine fois que vous voyez un lancement se déclenche, vous allez savoir ce qu&#x27;il a à faire
+
+140
+00:10:59.001 --> 00:11:01.000
+Faites, quand il a à le faire, et ce qu&#x27;il passe.
+
+141
+00:11:01.001 --> 00:11:05.000
+C’est incroyable ! Nous avons besoin d&#x27;un autre moment ou autre avant d&#x27;arriver ici.
+
+142
+00:11:05.001 --> 00:11:10.000
+Alors que nous attendons, Chris, parlons de...
+
+143
+00:11:11.000 --> 00:11:12.001
+Excalibur est un jeu de leadership.
+
+144
+00:11:13.000 --> 00:11:19.000
+Le concept... Je voulais exprimer aux gens les idées derrière Van Kloswitz
+
+145
+00:11:19.000 --> 00:11:22.000
+La guerre est l’extension de la politique à d’autres moyens.
+
+146
+00:11:22.001 --> 00:11:26.000
+C’est-à-dire, j’étais un peu fatigué des jeux de guerre qui glorifient la guerre.
+
+147
+00:11:26.001 --> 00:11:31.001
+Je voulais donc montrer que la guerre est quelque chose qui parfois ne peut être évité, mais
+
+148
+00:11:31.001 --> 00:11:34.001
+Il ne faut jamais entrer de manière cavalière.
+
+149
+00:11:35.001 --> 00:11:38.000
+En réalité, j’essaie d’apprendre des concepts de leadership.
+
+150
+00:11:38.000 --> 00:11:45.000
+Et donc dans le jeu Excalibur, je te fais roi Arthur.
+
+151
+00:11:45.000 --> 00:11:47.001
+Je vous donne la tâche d’unir la Grande-Bretagne.
+
+152
+00:11:48.000 --> 00:11:51.000
+Aujourd’hui, l’unification est complètement différente de la conquête.
+
+153
+00:11:51.001 --> 00:11:54.001
+C’est-à-dire que vous devez convaincre les gens de votre autorité.
+
+154
+00:11:55.000 --> 00:11:57.000
+Vous devez les convaincre de vous suivre.
+
+155
+00:11:57.000 --> 00:11:59.001
+Et cela implique plus qu’une simple force brute.
+
+156
+00:11:59.001 --> 00:12:01.000
+Chris, il nous reste un peu de temps.
+
+157
+00:12:01.000 --> 00:12:04.001
+Pouvez-vous obtenir Excalibur sur l&#x27;écran et nous montrer juste un morceau de cela?
+
+158
+00:12:04.001 --> 00:12:07.000
+C’est le titre de la scène à Excalibur.
+
+159
+00:12:08.000 --> 00:12:14.000
+Et il ne fait rien d&#x27;autre que de donner le titre et d&#x27;établir un ton et
+
+160
+00:12:14.000 --> 00:12:15.001
+Découvrez qui a fait ça.
+
+161
+00:12:16.001 --> 00:12:21.000
+Et cela a été conçu pour courir sur l&#x27;Atari 800 ou...?
+
+162
+00:12:21.000 --> 00:12:25.000
+Oui, le... Je l’ai coupée.
+
+163
+00:12:25.001 --> 00:12:29.000
+Ceci a été conçu pour le 800 avec 48K et un disque.
+
+164
+00:12:29.000 --> 00:12:31.001
+C’est un jeu énorme. En réalité, il ne va pas s&#x27;adapter aux 800.
+
+165
+00:12:31.001 --> 00:12:33.000
+Cela nécessite un échange de disques.
+
+166
+00:12:33.001 --> 00:12:37.000
+Et donc vous apportez dans des pièces entières de jeu à la fois.
+
+167
+00:12:37.001 --> 00:12:41.000
+Il s’agit en fait de 66K de code objet.
+
+168
+00:12:41.001 --> 00:12:44.000
+Très, très grand jeu, tout écrit en langue d&#x27;assemblage.
+
+169
+00:12:45.000 --> 00:12:49.000
+OK ! Eh bien, si vous avez joué Raster Blaster ou Mesteron avec la construction de pinball
+
+170
+00:12:49.000 --> 00:12:51.001
+Vous avez été manipulé par l&#x27;esprit de Bill
+
+171
+00:12:51.001 --> 00:12:53.001
+Budge, l’un des principaux concepteurs de jeux.
+
+172
+00:12:53.001 --> 00:12:56.001
+Nous rencontrerons Bill et le président de Electronic Arts en un instant.
+
+173
+00:12:58.000 --> 00:12:58.000
+[...]
+
+174
+00:13:08.001 --> 00:13:12.001
+Rejoindre nous maintenant est le concepteur de jeux Bill Budge, qui travaille avec Electronic Arts et
+
+175
+00:13:12.001 --> 00:13:14.000
+Le président de l’Electronic Arts, Tripp Hawkins.
+
+176
+00:13:15.000 --> 00:13:18.000
+Bill, il y a un certain nombre de jeux ici sur la table.
+
+177
+00:13:18.001 --> 00:13:21.001
+Qu’est-ce qui rend un jeu efficace ou quel genre de jeu ?
+
+178
+00:13:21.001 --> 00:13:23.000
+Des facteurs vont dans le design d&#x27;un jeu ?
+
+179
+00:13:23.000 --> 00:13:27.001
+Il est vraiment difficile de... Vous ne pouvez pas demander aux gens ce qu&#x27;ils veulent voir
+
+180
+00:13:27.001 --> 00:13:29.000
+l&#x27;ordinateur et le type de programme qu&#x27;ils veulent.
+
+181
+00:13:29.000 --> 00:13:32.000
+Je pense vraiment que la personne qui écrit un programme doit avoir une conviction inter-
+
+182
+00:13:32.000 --> 00:13:35.000
+et écrire un programme qu’ils souhaitent
+
+183
+00:13:35.000 --> 00:13:37.000
+Écrire et un programme qu’ils veulent utiliser.
+
+184
+00:13:37.001 --> 00:13:40.000
+Quand j&#x27;ai commencé à écrire ce programme, c&#x27;était quelque chose que je voulais vraiment faire.
+
+185
+00:13:40.000 --> 00:13:40.001
+Je voulais voir ça fonctionner.
+
+186
+00:13:41.000 --> 00:13:42.001
+Où avez-vous obtenu l’idée pour cela ?
+
+187
+00:13:42.001 --> 00:13:46.000
+J’ai toujours aimé construire des choses. C’était un processus amusant et indirect.
+
+188
+00:13:46.001 --> 00:13:48.000
+Je suis fatiguée d’écrire des jeux vidéo. I
+
+189
+00:13:48.000 --> 00:13:49.001
+C&#x27;était vraiment malade de les jouer à ce moment-là.
+
+190
+00:13:49.001 --> 00:13:52.000
+J&#x27;ai pensé, bien, c&#x27;est amusant de faire une vidéo
+
+191
+00:13:52.000 --> 00:13:53.001
+Les Jeux. J’ai toujours l’impression de les écrire.
+
+192
+00:13:53.001 --> 00:13:55.001
+Et je pari que d&#x27;autres personnes aimeraient vraiment les écrire.
+
+193
+00:13:56.000 --> 00:13:58.000
+Vous parlez du set de construction de pinball.
+
+194
+00:13:59.000 --> 00:14:02.001
+C&#x27;est une sorte de jeu agréable parce qu&#x27;il implique en fait vous et la construction
+
+195
+00:14:02.001 --> 00:14:04.001
+Le jeu lui-même ressemble à un jeu méta.
+
+196
+00:14:04.001 --> 00:14:07.001
+Quel est le succès de cela ? C’est très bien dans le sens que...
+
+197
+00:14:07.001 --> 00:14:10.001
+Y a-t-il un segment spécial que vous vendez jusqu’à ce que le set de construction ?
+
+198
+00:14:10.001 --> 00:14:13.000
+Lorsque vous commencez, vous regardez la
+
+199
+00:14:13.000 --> 00:14:14.001
+Les utilisateurs informatiques avant-garde.
+
+200
+00:14:14.001 --> 00:14:16.000
+Il faut un peu de temps pour que le message sort.
+
+201
+00:14:16.000 --> 00:14:19.001
+Quand tout le monde est encore à la découverte de Pac-Man et un programme vient avec
+
+202
+00:14:19.001 --> 00:14:21.000
+C&#x27;est leur dire qu&#x27;ils peuvent construire des jeux vidéo.
+
+203
+00:14:21.001 --> 00:14:24.001
+Eh bien, il ne s&#x27;enregistre pas au début, mais il y a une croissance lente qui se développe.
+
+204
+00:14:25.000 --> 00:14:27.001
+Et enfin, maintenant, nous obtenons des résultats très bons.
+
+205
+00:14:27.001 --> 00:14:30.000
+Le genre de jeu de folie disparaît. Ces choses ont été retirées.
+
+206
+00:14:30.001 --> 00:14:34.001
+Tripp, du côté des affaires, que cherchez-vous pour un jeu de logiciels réussi?
+
+207
+00:14:35.000 --> 00:14:38.000
+Eh bien, je pense que le set de construction de pinball a beaucoup de choses que vous cherchez.
+
+208
+00:14:38.000 --> 00:14:40.001
+Et c&#x27;est pour cela qu&#x27;il est maintenant l&#x27;un des dix meilleurs vendeurs
+
+209
+00:14:40.001 --> 00:14:42.001
+dans le pays, selon la revue Billboard.
+
+210
+00:14:43.000 --> 00:14:47.000
+Nous avons une philosophie d’avoir des produits qui sont simples, chauds et profonds.
+
+211
+00:14:48.000 --> 00:14:50.001
+C&#x27;est simple pour que vous n&#x27;ayez pas à lire beaucoup d&#x27;instructions.
+
+212
+00:14:50.001 --> 00:14:54.000
+Bien sûr, la plupart des gens ne veulent pas avoir à apprendre à fonctionner l&#x27;ordinateur.
+
+213
+00:14:54.000 --> 00:14:56.000
+Ils veulent juste faire des choses avec elle immédiatement.
+
+214
+00:14:57.001 --> 00:15:00.001
+Et pinball construction set, vous pouvez immédiatement jouer à l&#x27;un des jeux de pinball
+
+215
+00:15:00.001 --> 00:15:02.001
+qui sont inclus, ou vous pouvez rapidement faire
+
+216
+00:15:02.001 --> 00:15:04.000
+Un de vous-même, et c’est très simple de le faire.
+
+217
+00:15:04.000 --> 00:15:05.000
+Je pense que Bill illustre.
+
+218
+00:15:06.000 --> 00:15:10.000
+Nous aimons également avoir des produits qui sont chauds, dans lesquels ils devraient utiliser pleinement le
+
+219
+00:15:10.000 --> 00:15:12.001
+son et graphiques et autres capacités de la machine.
+
+220
+00:15:13.000 --> 00:15:14.001
+Et nous cherchons aussi des programmes qui sont profonds.
+
+221
+00:15:15.000 --> 00:15:19.000
+Dans le cas du set de construction de pinball, vous pouvez faire votre propre jeu de pinbal.
+
+222
+00:15:19.000 --> 00:15:23.001
+Il a donc beaucoup de possibilités créatives et permet aux gens de contrôler ce que
+
+223
+00:15:23.001 --> 00:15:26.000
+Ils vont faire, et interagir avec elle, et le changer.
+
+224
+00:15:26.001 --> 00:15:30.001
+Et c&#x27;est l&#x27;une des choses qui prolonge la durée de vie du produit et les causes
+
+225
+00:15:30.001 --> 00:15:32.000
+Pour que les gens reviennent à ce sujet encore et encore.
+
+226
+00:15:32.001 --> 00:15:32.001
+[...]
+
+227
+00:15:33.000 --> 00:15:33.001
+C’est un peu amusant de regarder ça.
+
+228
+00:15:34.000 --> 00:15:34.001
+Je meurs.
+
+229
+00:15:34.001 --> 00:15:36.000
+Je vais mourir pour dire, avancer, Bill.
+
+230
+00:15:36.000 --> 00:15:40.000
+Ok, bien, c&#x27;est un genre très simple d&#x27;idée du monde réel.
+
+231
+00:15:40.000 --> 00:15:41.000
+C’est un ensemble de construction.
+
+232
+00:15:41.001 --> 00:15:43.000
+Vous avez quelque chose que vous construisez sur ce côté de la
+
+233
+00:15:43.000 --> 00:15:44.001
+L&#x27;écran et un ensemble de pièces ici.
+
+234
+00:15:45.000 --> 00:15:49.000
+Et j&#x27;ai ici une main que je contrôle avec le joystick, et je l&#x27;utilise pour se déplacer
+
+235
+00:15:49.000 --> 00:15:51.000
+Les choses autour, disons, sur le bord, le jeu que je construis.
+
+236
+00:15:51.000 --> 00:15:52.000
+Je peux modifier ce jeu.
+
+237
+00:15:53.000 --> 00:15:55.001
+Et je peux tirer des pièces de la boîte, et je peux juste les ajouter ici.
+
+238
+00:15:55.001 --> 00:15:57.000
+Alors, ils sont un type de bumpers que vous mettez dans votre jeu?
+
+239
+00:15:57.000 --> 00:15:58.000
+Je ne fais que des bouts, oui.
+
+240
+00:15:58.001 --> 00:16:00.001
+C’est un favori des enfants vraiment jeunes.
+
+241
+00:16:01.000 --> 00:16:03.001
+Ils aiment simplement prendre un ensemble complet de bumpers, remplir les
+
+242
+00:16:03.001 --> 00:16:05.000
+On monte avec eux, et on met une balle là-bas.
+
+243
+00:16:05.000 --> 00:16:08.000
+Un amateur de pinball serait gaspillé, mais les petits enfants
+
+244
+00:16:08.000 --> 00:16:09.001
+Ne construisez pas vraiment des machines de pinball.
+
+245
+00:16:09.001 --> 00:16:11.000
+Ils ne construisent que des choses avec cela.
+
+246
+00:16:11.001 --> 00:16:13.000
+Et je peux obtenir une balle et la mettre ici.
+
+247
+00:16:13.001 --> 00:16:17.000
+Ensuite, si je veux essayer le jeu, je peux juste appuyer sur cette sélection de menu
+
+248
+00:16:17.000 --> 00:16:18.001
+C’est là, et le jeu commence à jouer.
+
+249
+00:16:19.000 --> 00:16:20.001
+Et maintenant vous pouvez voir que j&#x27;ai deux ballons, une là-bas.
+
+250
+00:16:21.000 --> 00:16:24.001
+Je peux lancer cette, et je peux sortir et jouer le jeu un peu.
+
+251
+00:16:25.000 --> 00:16:27.000
+Et les ballons tombent finalement au fond.
+
+252
+00:16:28.000 --> 00:16:31.001
+Mais avant que cela ne se produise, je vais juste revenir à la boîte de pièces et commencer
+
+253
+00:16:31.001 --> 00:16:33.000
+Rééditer, se débarrasser de quelques-uns d’entre eux.
+
+254
+00:16:34.001 --> 00:16:39.000
+Bill, ce fut une sorte de nouveau niveau, je suppose, du jeu informatique, où
+
+255
+00:16:39.000 --> 00:16:40.001
+Vous pouvez vraiment concevoir le jeu vous-même.
+
+256
+00:16:41.000 --> 00:16:43.000
+Et si vous pouvez nous dire, à quoi travaillez-vous maintenant ?
+
+257
+00:16:43.000 --> 00:16:44.001
+Quelle sera la prochaine étape dans les jeux informatiques ?
+
+258
+00:16:45.000 --> 00:16:47.000
+Je veux étendre l&#x27;idée d&#x27;un ensemble de construction.
+
+259
+00:16:47.000 --> 00:16:51.001
+Je pense que c&#x27;était difficile à faire quand j&#x27;ai commencé, car il y a beaucoup de
+
+260
+00:16:51.001 --> 00:16:54.000
+des combinaisons et des choses que vous ne pouvez pas vraiment prédire quand vous faites un kit
+
+261
+00:16:54.000 --> 00:16:56.000
+Pour faire un jeu, comme vous l’avez dit.
+
+262
+00:16:56.001 --> 00:16:58.001
+J’aimerais étendre l’idée encore plus loin.
+
+263
+00:16:58.001 --> 00:17:00.001
+Et le problème c&#x27;est ensuite de concevoir une boîte de pièces.
+
+264
+00:17:01.000 --> 00:17:02.001
+Dans le pinball, il s&#x27;agit d&#x27;un petit ensemble de pièces.
+
+265
+00:17:02.001 --> 00:17:05.001
+Vous n’avez pas vraiment à vous inquiéter de penser aux abstractions.
+
+266
+00:17:07.000 --> 00:17:10.001
+Et un ensemble de construction général, il n&#x27;est pas clair ce que les parties devraient être.
+
+267
+00:17:11.000 --> 00:17:13.000
+C&#x27;est presque comme si vous inventiez une nouvelle langue pour représenter
+
+268
+00:17:13.000 --> 00:17:15.001
+spécifications pour les programmes.
+
+269
+00:17:16.000 --> 00:17:19.001
+Il y a des problèmes de science informatique très difficiles.
+
+270
+00:17:20.000 --> 00:17:23.001
+Tripp, au niveau de l&#x27;arcade, nous entendons que peut-être des jeux de type
+
+271
+00:17:23.001 --> 00:17:25.001
+Le peuple et les gens ne sont pas aussi intéressés.
+
+272
+00:17:26.000 --> 00:17:29.000
+Les jeux informatiques sont-ils ici pour rester, ou c&#x27;est un fat ?
+
+273
+00:17:29.000 --> 00:17:32.001
+Je pense que les jeux informatiques sont fondamentalement différents des jeux vidéo, principalement
+
+274
+00:17:32.001 --> 00:17:38.000
+Parce que la technologie informatique dans la maison peut être étendue et devenir beaucoup plus large
+
+275
+00:17:38.000 --> 00:17:39.001
+La base de la technologie.
+
+276
+00:17:40.001 --> 00:17:44.001
+Comme un exemple, tous ces programmes dont nous parlons ici, ils
+
+277
+00:17:44.001 --> 00:17:49.001
+sur des disques floppy, et chacun d&#x27;entre eux détient beaucoup plus de mémoire qu&#x27;il ne peut être
+
+278
+00:17:49.001 --> 00:17:52.000
+Il est gardé dans la mémoire d&#x27;un jeu d&#x27;arcade exploité par la pièce.
+
+279
+00:17:52.001 --> 00:17:58.000
+Et c&#x27;est vraiment, il devient une question de la taille du programme quand vous voulez enfin
+
+280
+00:17:58.000 --> 00:18:02.001
+Pour savoir combien bon un programme je peux avoir et combien je peux faire avec lui, et pendant combien de temps
+
+281
+00:18:02.001 --> 00:18:05.000
+Cela prendra avant que je ne me fatigue, ou que j&#x27;ai épuisé la valeur éducative.
+
+282
+00:18:06.000 --> 00:18:12.000
+Et je peux obtenir, oh, quelque chose comme trois ou quatre fois plus de programme ici que moi
+
+283
+00:18:12.000 --> 00:18:14.001
+Il peut s’adapter à la mémoire d’un jeu monétaire.
+
+284
+00:18:15.000 --> 00:18:17.000
+Ok, vous avez un sur un là. Peut-être que nous pouvons le
+
+285
+00:18:17.000 --> 00:18:18.001
+J&#x27;ai été chargé alors que je pense, Gary, vous avez eu une question.
+
+286
+00:18:18.001 --> 00:18:22.000
+La seule chose que je voulais mentionner, c’est que les jeux semblent avoir disparu.
+
+287
+00:18:22.000 --> 00:18:26.000
+de jeux relativement insofis à quelque chose qui nécessite beaucoup de
+
+288
+00:18:26.000 --> 00:18:30.000
+la sophistication en termes de programmation, et la taille de la mémoire est vraiment un
+
+289
+00:18:30.000 --> 00:18:31.001
+Un aspect important, un aspect important à ce sujet.
+
+290
+00:18:32.000 --> 00:18:33.001
+Je suis désolé de le récupérer en 8K.
+
+291
+00:18:34.001 --> 00:18:38.001
+Est-ce la différence, vraiment, dans les premiers jeux informatiques? Très limité
+
+292
+00:18:38.001 --> 00:18:40.001
+Maintenant, les graphismes incroyables et la vitesse. Il a
+
+293
+00:18:40.001 --> 00:18:42.000
+Est-ce vraiment une fonction de la mémoire disponible ?
+
+294
+00:18:42.000 --> 00:18:47.000
+Je pense que ce n’est qu’un programmeur qui s’améliore. Il n&#x27;y a pas beaucoup de gens qui écrivent
+
+295
+00:18:47.000 --> 00:18:50.000
+Jeux vidéo il y a 5 ans. C’était une petite sélection. Il y a maintenant des milliers de
+
+296
+00:18:50.000 --> 00:18:52.000
+Les gens qui sont capables d&#x27;écrire un bon jeu vidéo.
+
+297
+00:18:52.001 --> 00:18:55.001
+Et quelques personnes ont mis l&#x27;avant, donc il n&#x27;est pas suffisant peut-être d&#x27;écrire une vidéo
+
+298
+00:18:55.001 --> 00:18:58.001
+Le jeu. Vous devez écrire un jeu vidéo plus un éditeur de jeu. Je pense que le plus populaire
+
+299
+00:18:58.001 --> 00:19:01.000
+Les jeux ont vraiment ces caractéristiques supplémentaires construites.
+
+300
+00:19:01.000 --> 00:19:04.001
+Peut-on y trouver un par un ? C&#x27;est une sorte de démonstration passionnante de ce que
+
+301
+00:19:04.001 --> 00:19:08.001
+Vous pouvez le faire. Et je pense, Tripp, vous allez prendre sur l&#x27;un ou l&#x27;autre Dr. J ou Larry
+
+302
+00:19:08.001 --> 00:19:10.001
+Les oiseaux ici comme jamais. Parlez-nous d’un à un.
+
+303
+00:19:10.001 --> 00:19:15.000
+Eh bien, l&#x27;idée de base d&#x27;un à l&#x27;autre était d&#x27;obtenir ces deux garçons, Julie servant comme
+
+304
+00:19:15.000 --> 00:19:20.000
+Larry Bird, qui sont probablement les deux meilleurs joueurs de basket et probablement
+
+305
+00:19:20.000 --> 00:19:23.000
+Les deux meilleurs joueurs qui ont jamais joué le jeu, et
+
+306
+00:19:23.000 --> 00:19:24.001
+capturer leurs personnalités dans le jeu.
+
+307
+00:19:25.000 --> 00:19:29.001
+Et donc nous avons décidé de les embaucher pour nous aider à concevoir le jeu, et nous avons eu une photo
+
+308
+00:19:29.001 --> 00:19:33.000
+des séances où nous avons pris des photos d&#x27;eux en action. En fait, nous avions une caméra
+
+309
+00:19:33.000 --> 00:19:37.000
+Ils ont été montés au milieu de la cour juste à partir de cet angle tout en les photographiant.
+
+310
+00:19:37.000 --> 00:19:40.000
+Et puis nous avons travaillé avec eux sur les prototypes du produit où nous allions nous asseoir
+
+311
+00:19:40.000 --> 00:19:43.000
+et leur parler des mouvements qu&#x27;ils utiliseraient et certaines des stratégies
+
+312
+00:19:43.000 --> 00:19:44.001
+et les pourcentages de tir qu&#x27;ils auraient
+
+313
+00:19:44.001 --> 00:19:46.000
+Ils sont dans différents endroits de la cour.
+
+314
+00:19:47.000 --> 00:19:49.000
+C’était une expérience d’apprentissage fascinante.
+
+315
+00:19:49.001 --> 00:19:52.000
+Vous dites programmé dans la personnalité. Je pense que ces personnages
+
+316
+00:19:52.000 --> 00:19:53.001
+Je joue comme Larry Bird.
+
+317
+00:19:54.000 --> 00:19:56.000
+Très bien comme ça. Pourquoi ne pas avancer et commencer ? En ce moment, ils sont
+
+318
+00:19:56.000 --> 00:19:59.001
+jouer l&#x27;un contre l&#x27;autre dans un jeu de démonstration, mais si je clique sur le bouton
+
+319
+00:19:59.001 --> 00:20:03.001
+mon joystick, il me prendra à un menu, et je peux rapidement faire une sélection.
+
+320
+00:20:03.001 --> 00:20:06.001
+Je veux jouer contre l’ordinateur. Je vais permettre à l&#x27;ordinateur de jouer
+
+321
+00:20:06.001 --> 00:20:10.001
+Larry Bird, et je vais jouer au niveau de Varsité. Il y a différents
+
+322
+00:20:10.001 --> 00:20:13.000
+Le niveau dépend de la qualité d’un joueur.
+
+323
+00:20:14.000 --> 00:20:18.001
+Maintenant, je vais en avant et je commence le jeu. C&#x27;est Larry Bird qui prend un tir extérieur,
+
+324
+00:20:18.001 --> 00:20:21.001
+Et il le frappa. Maintenant, Bird est particulièrement efficace dans les tirs extérieurs.
+
+325
+00:20:22.000 --> 00:20:25.000
+Regardez Juliette maintenant. Je vais pouvoir monter autour de lui, j’espère.
+
+326
+00:20:26.001 --> 00:20:27.001
+Oops, il a volé la balle de moi.
+
+327
+00:20:27.001 --> 00:20:28.001
+Vous êtes Larry Bird maintenant.
+
+328
+00:20:28.001 --> 00:20:31.001
+Je suis le Dr. J, et j&#x27;ai assez de chance pour laisser Bird voler la balle.
+
+329
+00:20:31.001 --> 00:20:32.001
+[...]
+
+330
+00:20:33.001 --> 00:20:37.000
+Il essaye de travailler son chemin dans le basket. Ainsi
+
+331
+00:20:37.000 --> 00:20:38.001
+Il a une tête rapide, quatre-niets sur moi.
+
+332
+00:20:40.000 --> 00:20:42.001
+Oh, et maintenant, je dois avoir l&#x27;indignation de voir une reprise instantanée.
+
+333
+00:20:45.000 --> 00:20:50.000
+C’est génial ! Où pensez-vous que Tripp, les jeux logiciels, vont à la prochaine? I
+
+334
+00:20:50.000 --> 00:20:53.000
+Qu’est-ce que la prochaine génération de ce genre de choses ? Je déteste interrompre
+
+335
+00:20:53.000 --> 00:20:55.000
+Vous ! Je cherche à revenir sur certains.
+
+336
+00:20:55.000 --> 00:20:58.000
+Il fallait qu&#x27;il y ait un clavier là-bas. Désolé !
+
+337
+00:20:59.000 --> 00:21:02.000
+Oui, que se passe-t-il à la suite ? Qu’est-ce que la prochaine étape, la
+
+338
+00:21:02.000 --> 00:21:03.001
+Le prochain niveau des jeux informatiques ?
+
+339
+00:21:03.001 --> 00:21:10.001
+Eh bien, à un niveau vraiment simplifié, il est très facile d’étendre le réalisme
+
+340
+00:21:10.001 --> 00:21:13.000
+et les graphiques qui sont dans les produits actuels.
+
+341
+00:21:14.000 --> 00:21:17.001
+Et je pense que c&#x27;est aussi, vous allez voir de plus en plus créatif
+
+342
+00:21:17.001 --> 00:21:21.000
+Les possibilités pour le joueur, qui est je pense où un
+
+343
+00:21:21.000 --> 00:21:22.001
+La plupart des valeurs éducatives proviennent.
+
+344
+00:21:23.000 --> 00:21:26.001
+Être en mesure de créer votre propre jeu de pinball est un exemple. Nous avons étendu cette
+
+345
+00:21:26.001 --> 00:21:30.001
+Avec la construction musicale fixée à un produit qui est sur la musique.
+
+346
+00:21:31.000 --> 00:21:33.001
+Et bien sûr, il y a beaucoup de gens qui sont vraiment intéressés par la musique et
+
+347
+00:21:33.001 --> 00:21:35.000
+Il est très intéressant d’apprendre à ses enfants sur la musique.
+
+348
+00:21:35.001 --> 00:21:37.000
+Et il utilise beaucoup des idées que Bill
+
+349
+00:21:37.000 --> 00:21:38.001
+Pionnière avec le set de construction de pinball.
+
+350
+00:21:39.001 --> 00:21:44.000
+Et je pense que la zone où les plus grands défis viendront est en train de regarder
+
+351
+00:21:44.000 --> 00:21:47.000
+Pour les idées originales et de nouvelles façons créatives de briser la forme.
+
+352
+00:21:47.000 --> 00:21:50.000
+Beaucoup de gens regardent ce que d&#x27;autres personnes ont fait et essayent
+
+353
+00:21:50.000 --> 00:21:52.000
+Pour faire quelque chose qui est un spin-off de cela.
+
+354
+00:21:52.000 --> 00:21:54.000
+Mais les génies réellement créatifs dans l&#x27;industrie sont
+
+355
+00:21:54.000 --> 00:21:56.000
+Capacité à venir avec quelque chose de tout nouveau.
+
+356
+00:21:56.000 --> 00:22:00.001
+Est-ce qu’ils viennent juste à vous ? Ils diraient, nous avons une idée, et voici un programme
+
+357
+00:22:00.001 --> 00:22:02.001
+Je l&#x27;ai écrit, puis vous tournez et vous le vendrez.
+
+358
+00:22:02.001 --> 00:22:05.000
+Cela se produit de différentes manières. Nous avons l’un de nos
+
+359
+00:22:05.000 --> 00:22:06.001
+Des produits meilleurs. Il s’appelle Hard Hat Mac.
+
+360
+00:22:07.000 --> 00:22:11.000
+Et deux garçons de lycée viennent dans notre bureau un jour, et ils avaient trois feuilles.
+
+361
+00:22:11.000 --> 00:22:13.001
+De l&#x27;école secondaire de papier note-télé qu&#x27;ils avaient élaboré dans leur classe de physique.
+
+362
+00:22:14.000 --> 00:22:15.001
+Nous avons signé un contrat sur cette base.
+
+363
+00:22:15.001 --> 00:22:19.000
+Monsieur le Président, nous sommes hors de temps. Bill, drip, merci beaucoup. Merci de rejoindre
+
+364
+00:22:19.000 --> 00:22:21.000
+dans cette édition des Chroniques informatiques.
+
+365
+00:22:54.000 --> 00:23:00.001
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+366
+00:23:00.001 --> 00:23:05.001
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+367
+00:23:05.001 --> 00:23:07.001
+de cette évolution continue.
+
+368
+00:23:19.001 --> 00:23:20.000
+[...]
+
+369
+00:23:34.001 --> 00:23:38.001
+L&#x27;accès par hasard est rendu possible par une subvention de Popular
+
+370
+00:23:38.001 --> 00:23:41.000
+C’est le magazine McGraw-Hill.
+
+371
+00:23:42.000 --> 00:23:45.001
+Dans le fichier Random Access, Hewlett Packard a fait une autre étape majeure dans la
+
+372
+00:23:45.001 --> 00:23:49.001
+champ informatique personnel avec une nouvelle imprimante portable conçue pour le marché PC.
+
+373
+00:23:50.000 --> 00:23:55.001
+Il s&#x27;agit d&#x27;une imprimante d&#x27;encre non-impact avec fonctionnement de faible bruit, batterie, 150
+
+374
+00:23:55.001 --> 00:23:58.001
+caractères par seconde, et une matrice de caractères 11x12.
+
+375
+00:23:59.000 --> 00:24:02.001
+Le prix est inférieur à 500 $, et il sera disponible le mois prochain.
+
+376
+00:24:02.001 --> 00:24:06.000
+IBM et les nouvelles de nouveau cette semaine, d&#x27;abord, IBM a annoncé une licence
+
+377
+00:24:06.000 --> 00:24:10.001
+l&#x27;accord avec Intel pour permettre à IBM de produire ses propres 8088 chips,
+
+378
+00:24:10.001 --> 00:24:12.000
+microprocesseur utilisé dans le PC.
+
+379
+00:24:12.001 --> 00:24:17.000
+La forte demande de la production des 8088 d&#x27;Intel a empêché IBM de produire
+
+380
+00:24:17.000 --> 00:24:18.001
+Il y a suffisamment de PC pour répondre à sa demande.
+
+381
+00:24:19.000 --> 00:24:22.001
+Peut-être plus important, cependant, est le fait que Intel apparemment a également donné à IBM
+
+382
+00:24:22.001 --> 00:24:27.000
+le droit de faire de ses propres 80286 chips un microprocesseur beaucoup plus avancé, qui
+
+383
+00:24:27.000 --> 00:24:31.001
+Les analystes pensent que IBM utilisera dans son nouveau ordinateur personnel, sous le nom de popcorn.
+
+384
+00:24:31.001 --> 00:24:35.000
+Avec la capacité d&#x27;éteindre les chips, il est pensé que IBM pourrait maintenant être en mesure de
+
+385
+00:24:35.000 --> 00:24:37.000
+Je vous propose le popcorn cet été.
+
+386
+00:24:37.001 --> 00:24:41.000
+L&#x27;utilisation du microprocesseur avancé permettra à Popcorn de faire de la sophistiquité
+
+387
+00:24:41.000 --> 00:24:43.001
+Graphiques et autres fonctions intégrées complexes.
+
+388
+00:24:44.000 --> 00:24:46.001
+Les sons comme Popcorn peuvent prendre sur la foule Macintosh Lisa.
+
+389
+00:24:48.000 --> 00:24:50.001
+Victor Technologies, la société informatique de matériel haut de gamme qui a
+
+390
+00:24:50.001 --> 00:24:53.000
+Cette année, il pourrait être acheté par les Britanniques.
+
+391
+00:24:53.000 --> 00:24:54.001
+Les technologies informatiques appliquées.
+
+392
+00:24:55.000 --> 00:24:59.000
+L&#x27;acheteur aurait indiqué qu&#x27;il pourrait fermer l&#x27;usine de la Silicon Valley et
+
+393
+00:24:59.000 --> 00:25:00.001
+Transfert des opérations en Écosse.
+
+394
+00:25:01.001 --> 00:25:05.001
+En outre, sur la liste d&#x27;ailing, Tandon Corporation, le plus grand fabricant de disques du pays
+
+395
+00:25:05.001 --> 00:25:10.000
+D’ailleurs, il dit qu’il va licencier près d’un millier d’employés et transférer la plupart de ses
+
+396
+00:25:10.000 --> 00:25:12.001
+l’exportation à l’étranger pour réduire les coûts de production.
+
+397
+00:25:13.000 --> 00:25:16.000
+En fait, les pays du monde entier tombent dans la Silicon Valley
+
+398
+00:25:16.000 --> 00:25:18.000
+Essayez d&#x27;obtenir un morceau de l&#x27;action de haute technologie.
+
+399
+00:25:18.000 --> 00:25:21.001
+L’an dernier, 20 pays différents ont envoyé des délégations au Silicon.
+
+400
+00:25:21.001 --> 00:25:24.000
+Il s’agit d’une tentative de détourner son entreprise à l’étranger.
+
+401
+00:25:24.001 --> 00:25:26.000
+Les pays offrent des incitations telles que le gouvernement
+
+402
+00:25:26.000 --> 00:25:28.000
+des subventions et des paquets fiscaux attractifs.
+
+403
+00:25:28.000 --> 00:25:31.000
+Le recruteur le plus réussi depuis longtemps a été l&#x27;Irlande.
+
+404
+00:25:33.000 --> 00:25:36.001
+Un pays étranger très sur l&#x27;esprit des exécutifs de haute technologie est le Japon, avec
+
+405
+00:25:36.001 --> 00:25:40.000
+L’attention particulière est maintenant axée sur le débat au Parlement japonais sur le
+
+406
+00:25:40.000 --> 00:25:44.001
+Nouveau projet de loi sur le logiciel qui limiterait la protection des droits d&#x27;auteur du logiciels pour U
+
+407
+00:25:44.001 --> 00:25:49.000
+et S. Les produits jusqu&#x27;à 15 ans et forcent les entreprises américaines à autoriser les entreprises japonaises
+
+408
+00:25:49.000 --> 00:25:51.000
+Vendre aux États-Unis Le logiciel fait.
+
+409
+00:25:51.000 --> 00:25:54.001
+Le résultat net serait peu de protection pour les fabricants américains, avec
+
+410
+00:25:54.001 --> 00:25:59.000
+Les entreprises japonaises peuvent vendre le même logiciel à un prix plus bas en évitant
+
+411
+00:25:59.000 --> 00:26:00.001
+les coûts élevés de la recherche et du développement.
+
+412
+00:26:01.001 --> 00:26:04.001
+Et parlant du logiciel, vous dites que vous avez un modem mais que vous ne pouvez pas utiliser tous les bulletins
+
+413
+00:26:04.001 --> 00:26:06.001
+et des flèches parce que vous n&#x27;avez pas la bonne communication
+
+414
+00:26:06.001 --> 00:26:08.001
+Le logiciel ? Écoutez Paul Schindler.
+
+415
+00:26:09.001 --> 00:26:12.001
+Ok, tout est fixé. Trois hommes dans une robe de singe.
+
+416
+00:26:14.000 --> 00:26:17.000
+Écoutez, je vais avoir à vous revenir plus tard. Bonjour à moi.
+
+417
+00:26:19.000 --> 00:26:23.000
+les communications . Saviez-vous que l’utilisation d’un de ces appareils, appelé modems,
+
+418
+00:26:23.001 --> 00:26:26.001
+Les ordinateurs peuvent-ils parler au téléphone, comme nous, seulement plus vite ?
+
+419
+00:26:27.000 --> 00:26:31.000
+Mais si vous avez déjà des communications PC, vous pourriez être surpris d&#x27;entendre que
+
+420
+00:26:31.000 --> 00:26:34.001
+Vous êtes dans une minorité. Moins d&#x27;un quart des PC communiquent.
+
+421
+00:26:34.001 --> 00:26:39.001
+Beaucoup d&#x27;entre vous attendent de faire le plunge. Peut-être que les centaines de
+
+422
+00:26:39.001 --> 00:26:42.001
+Les paquets de communication sur le marché vous ont touché.
+
+423
+00:26:42.001 --> 00:26:45.001
+Eh bien, le catalogue et la revue du logiciel de la Terre entière ont sorté
+
+424
+00:26:45.001 --> 00:26:47.000
+communication pour les débutants.
+
+425
+00:26:48.000 --> 00:26:52.000
+Maintenant, si votre ordinateur fonctionne avec le système d&#x27;exploitation CPM, nous vous suggérons
+
+426
+00:26:52.000 --> 00:26:54.000
+MITE ou Modem 7.
+
+427
+00:26:54.001 --> 00:27:00.000
+Pour les utilisateurs du PC IBM, les meilleurs paquets sont SmartCom 2 et Crosstalk 16.
+
+428
+00:27:00.001 --> 00:27:04.001
+PCTalk 3 est plus limité, mais à 35 $, c&#x27;est aussi
+
+429
+00:27:04.001 --> 00:27:06.000
+Le paquet de communication le moins cher.
+
+430
+00:27:07.000 --> 00:27:12.001
+Les utilisateurs d&#x27;ordinateurs Apple peuvent désirer TSC Terminal, s&#x27;ils utilisent des écrans de 40 colonnes, ou
+
+431
+00:27:12.001 --> 00:27:14.000
+Data Capture 2 pour 80 colonnes.
+
+432
+00:27:15.000 --> 00:27:19.001
+Les utilisateurs de Commodore et de Radio Shack trouveront VidTex de CompuServe, le meilleur achat.
+
+433
+00:27:20.001 --> 00:27:24.001
+Maintenant, il n&#x27;y a simplement pas le temps d&#x27;entrer dans toutes les merveilleuses choses que vous pouvez faire une fois
+
+434
+00:27:24.001 --> 00:27:29.001
+Vous avez des communications, mais croyez-moi, un PC sur le téléphone ouvre de nouveaux mondes.
+
+435
+00:27:29.001 --> 00:27:35.000
+Demandez à quelqu&#x27;un qui a déjà un modem, appelez-leur ou appelez leur ordinateur. Pour
+
+436
+00:27:35.000 --> 00:27:37.000
+Accès au hasard, je suis Paul Schindler.
+
+437
+00:27:38.000 --> 00:27:41.001
+La semaine prochaine, Paul regarde le programme de Blackjack professionnel de Ken Euston.
+
+438
+00:27:42.000 --> 00:27:45.001
+Eh bien, le logiciel chaud ce mois-ci, les programmes de préparation fiscale, deux des plus
+
+439
+00:27:45.001 --> 00:27:48.001
+20 paquets fiscaux, ont atteint le top 10 du logiciel cette semaine.
+
+440
+00:27:49.000 --> 00:27:52.001
+Les deux meilleurs vendeurs sont Tax Advantage de Continental Software, il vend pour
+
+441
+00:27:52.001 --> 00:27:56.001
+environ 70 $, et la préparation fiscale de Howardsoft, c&#x27;est un peu plus
+
+442
+00:27:56.001 --> 00:27:58.000
+Complex et vendus pour 250 $.
+
+443
+00:27:58.001 --> 00:28:01.000
+Et comme si vous n&#x27;aviez pas remarqué, il y a encore plus
+
+444
+00:28:01.000 --> 00:28:03.000
+Des magazines informatiques sortant sur le marché.
+
+445
+00:28:03.000 --> 00:28:07.000
+Le dernier chiffre montre plus de 300 périodiques informatiques, le plus rapide en croissance
+
+446
+00:28:07.000 --> 00:28:11.000
+Ceux-ci sont Compte, Computing Personnel, Populaire Computing et InfoWorld.
+
+447
+00:28:12.000 --> 00:28:14.000
+Enfin, le dernier endroit où vous voulez voir un ordinateur, au moins
+
+448
+00:28:14.000 --> 00:28:15.001
+Un robot, il est dans votre bar voisin.
+
+449
+00:28:16.000 --> 00:28:18.001
+Cependant, il semble que la technologie n’a pas de limites.
+
+450
+00:28:19.000 --> 00:28:22.001
+À San Francisco cette semaine, le premier robot barman du monde a été révélé.
+
+451
+00:28:23.000 --> 00:28:27.000
+Le robot peut parler, prendre des commandes parlées et mélanger 200 boissons différentes.
+
+452
+00:28:27.000 --> 00:28:30.001
+Mais au cours du premier essai, quand la gardienne a crié, donne-moi une Bloody Mary
+
+453
+00:28:30.001 --> 00:28:33.001
+Et une bière, le robot a frappé un verre de la bar et sur la
+
+454
+00:28:33.001 --> 00:28:35.000
+Le sol et la bière poussées partout sur le couvercle.
+
+455
+00:28:35.001 --> 00:28:38.000
+Le concepteur du robot a déclaré qu&#x27;il y avait encore quelques bugs à éliminer.
+
+456
+00:28:38.001 --> 00:28:40.000
+Ce qui fait que l’homme se sent bien.
+
+457
+00:28:40.001 --> 00:28:43.001
+C&#x27;est ça pour le fichier d&#x27;accès aléatoire de cette semaine, je suis Stuart Chafee.

@@ -1,0 +1,1857 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.001
+[...]
+
+2
+00:00:30.000 --> 00:00:31.000
+[...]
+
+3
+00:01:02.000 --> 00:01:08.000
+. . . .
+
+4
+00:01:14.001 --> 00:01:18.001
+. . . .
+
+5
+00:01:18.001 --> 00:01:23.000
+As crônicas de computador são tornadas possíveis em parte por McGraw-Hill.
+
+6
+00:01:24.000 --> 00:01:25.000
+Publicações da revista Byte.
+
+7
+00:01:26.000 --> 00:01:28.000
+E VIX, o intercâmbio de informações byte.
+
+8
+00:01:28.000 --> 00:01:33.001
+Em impressão e on-line, Byte e VIX servem profissionais de computador em todo o mundo com
+
+9
+00:01:33.001 --> 00:01:37.001
+informações detalhadas sobre novos hardware, software e tecnologias.
+
+10
+00:01:43.000 --> 00:01:47.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e este é Gary Kildall.
+
+11
+00:01:47.001 --> 00:01:50.001
+Gary, o que eu tenho aqui é uma placa-mãe de um AST 286
+
+12
+00:01:50.001 --> 00:01:52.001
+Computador e um add-on board.
+
+13
+00:01:52.001 --> 00:01:54.000
+Isso faz uso do ônibus padrão.
+
+14
+00:01:54.001 --> 00:01:58.000
+Este é um motherboard de um IBM PS2, um add-on board.
+
+15
+00:01:58.000 --> 00:02:00.000
+Isso usa o ônibus de arquitetura de micro-chanéis.
+
+16
+00:02:00.001 --> 00:02:02.000
+Ambos parecem muito iguais para mim.
+
+17
+00:02:02.001 --> 00:02:05.001
+Quero perguntar-lhe, o que é exatamente um ônibus e por que
+
+18
+00:02:05.001 --> 00:02:07.000
+É importante para mim como usuário final?
+
+19
+00:02:07.000 --> 00:02:08.000
+Qual é o ônibus no meu computador?
+
+20
+00:02:08.001 --> 00:02:09.001
+É uma questão de padrões, obviamente.
+
+21
+00:02:10.000 --> 00:02:11.001
+Assim como no software, o sistema operacional
+
+22
+00:02:11.001 --> 00:02:13.000
+tornando-se a norma para escrever software para.
+
+23
+00:02:13.001 --> 00:02:16.000
+É necessária uma espécie de padrão para comunicar eletricamente entre os
+
+24
+00:02:16.000 --> 00:02:17.001
+Cartões e adesivos e assim por diante.
+
+25
+00:02:18.001 --> 00:02:21.001
+Físicamente, o ônibus é esta definição dos pins que
+
+26
+00:02:21.001 --> 00:02:23.000
+Vamos, você vê no fundo, é claro, o painel.
+
+27
+00:02:24.000 --> 00:02:26.000
+Linhas de endereço, linhas de dados, por exemplo.
+
+28
+00:02:26.000 --> 00:02:29.001
+É um ônibus de 16 bits. É um ônibus de 32 bits.
+
+29
+00:02:29.001 --> 00:02:32.001
+Assim, ele define quantos dados você pode mover entre a memória e
+
+30
+00:02:32.001 --> 00:02:34.000
+Por exemplo, a unidade central de processamento.
+
+31
+00:02:35.001 --> 00:02:38.001
+Bem, claro, o ônibus AT tem estado ao redor por anos e houve muitos
+
+32
+00:02:38.001 --> 00:02:42.000
+e muitos painéis opcionais que vendedores independentes produziram para isso.
+
+33
+00:02:42.000 --> 00:02:45.001
+Cartões de fax, cartões de modem, cartão gráfico, coisas desse tipo.
+
+34
+00:02:46.000 --> 00:02:48.001
+A arquitetura de micro-chanéis, é claro, não foi por tanto tempo.
+
+35
+00:02:48.001 --> 00:02:51.000
+A base instalada deste, o tipo de máquina, não é tão grande.
+
+36
+00:02:51.000 --> 00:02:54.001
+E isso vai crescer ao longo do tempo, mas não há tantas opções.
+
+37
+00:02:55.000 --> 00:02:58.000
+Gary, hoje vamos olhar para o ônibus de arquitetura de micro-chanéis da IBM.
+
+38
+00:02:58.000 --> 00:02:59.001
+Vamos olhar para o ônibus padrão.
+
+39
+00:02:59.001 --> 00:03:02.001
+Vamos tentar descobrir o que este novo ônibus EISA é tudo sobre.
+
+40
+00:03:03.000 --> 00:03:06.000
+E vamos olhar para um computador que afirma que o ônibus pode ser trocado.
+
+41
+00:03:06.000 --> 00:03:10.000
+Agora, quanta confusão está sendo criada no mercado por essas guerras de ônibus?
+
+42
+00:03:10.000 --> 00:03:13.000
+Vamos tentar descobrir agora visitando um varejista de computadores
+
+43
+00:03:13.000 --> 00:03:14.001
+e um cliente Fortune 500.
+
+44
+00:03:16.001 --> 00:03:21.000
+A tarefa difícil de escolher qual computador para comprar foi feito ainda mais
+
+45
+00:03:21.000 --> 00:03:25.001
+dificuldade recentemente, graças à introdução de novas arquiteturas de ônibus.
+
+46
+00:03:26.001 --> 00:03:31.001
+Não surpreendentemente, o novo micro-channel da IBM, os revolucionários fabricantes de clones, e
+
+47
+00:03:31.001 --> 00:03:35.000
+O novo ônibus da Apple Macintosh torna difícil decidir
+
+48
+00:03:35.000 --> 00:03:37.000
+para muitos compradores diferentes.
+
+49
+00:03:37.000 --> 00:03:43.001
+Nesta indústria, quando um produto é introduzido e uma continuação
+
+50
+00:03:43.001 --> 00:03:50.000
+do produto antigo não é disponibilizado, então ele causa alguns problemas porque
+
+51
+00:03:50.000 --> 00:03:54.000
+Não há tempo suficiente para mudar para um produto mais novo.
+
+52
+00:03:55.000 --> 00:04:00.001
+Entre as grandes empresas, a decisão de mudar ou não é baseada em parte
+
+53
+00:04:00.001 --> 00:04:05.000
+sobre o equipamento já em casa e se há um autêntico e imediato
+
+54
+00:04:05.000 --> 00:04:07.000
+É preciso atualizar o hardware.
+
+55
+00:04:07.000 --> 00:04:11.000
+É muito para saltar financeiramente agora mesmo para considerar isso.
+
+56
+00:04:11.000 --> 00:04:13.001
+Ou seja, eu tenho que depreciar algumas dessas coisas.
+
+57
+00:04:14.000 --> 00:04:17.001
+Este equipamento que você vê ao meu redor é tudo menos de dois anos de idade.
+
+58
+00:04:18.001 --> 00:04:24.001
+Então, você sabe, eu não vejo que nos movemos em rápido real.
+
+59
+00:04:25.000 --> 00:04:26.001
+Isso simplesmente não faz sentido financeiro.
+
+60
+00:04:28.000 --> 00:04:32.000
+Enquanto a maioria dos compradores de PC não se opuseria às melhorias oferecidas pelo novo ônibus
+
+61
+00:04:32.000 --> 00:04:37.001
+designs, como tamanho menor e multitasking, alguns usuários têm lingering
+
+62
+00:04:37.001 --> 00:04:40.000
+preocupação com algumas deficiências potenciais.
+
+63
+00:04:41.001 --> 00:04:47.000
+Um dos problemas com a entrada em multitasking e esse tipo de uso é que
+
+64
+00:04:47.000 --> 00:04:49.000
+Isso leva muito tempo de aprendizagem.
+
+65
+00:04:50.000 --> 00:04:51.000
+É um grande investimento.
+
+66
+00:04:52.000 --> 00:04:56.001
+Historicamente, a mais recente concorrência no mercado de PC não é nada novo para os varejistas
+
+67
+00:04:56.001 --> 00:05:01.000
+E pode, de fato, ser configurado por nenhum outro usuário além de computador.
+
+68
+00:05:14.001 --> 00:05:18.000
+Juntando-nos no estúdio agora é Bob Cutnick, diretor de estratégia
+
+69
+00:05:18.000 --> 00:05:19.001
+Projetos em Pesquisa.
+
+70
+00:05:19.001 --> 00:05:22.001
+E ao lado de Bob é Richard Archuleta, pesquisa e desenvolvimento
+
+71
+00:05:22.001 --> 00:05:24.000
+Diretor de secção com Hewlett Packard.
+
+72
+00:05:24.001 --> 00:05:24.001
+O Gary?
+
+73
+00:05:25.000 --> 00:05:27.000
+Stuart, provavelmente vale a pena obter um pouco de fundo aqui
+
+74
+00:05:27.000 --> 00:05:29.000
+Antes de chegar muito longe para isso.
+
+75
+00:05:29.001 --> 00:05:34.001
+O que estamos basicamente lidando com são três diferentes estruturas de ônibus competindo.
+
+76
+00:05:34.001 --> 00:05:38.001
+O ônibus AT padrão, que você encontra no seu PC normal, é claro, e que tem um
+
+77
+00:05:38.001 --> 00:05:40.000
+evolução a esse ponto.
+
+78
+00:05:41.000 --> 00:05:45.001
+A arquitetura do micro canal, o novo ônibus da IBM, e então eu acho que EISA.
+
+79
+00:05:46.000 --> 00:05:49.001
+E Bob, diga-nos o que é EISA. O que é que significa?
+
+80
+00:05:50.000 --> 00:05:54.000
+A EISA representa uma melhor arquitetura padrão da indústria.
+
+81
+00:05:54.000 --> 00:06:00.000
+E o que é é uma evolução natural do ônibus AT para o espaço de 32 bits.
+
+82
+00:06:00.000 --> 00:06:05.001
+Então, por exemplo, passamos de um PC para um AT. Agora nós passamos de um AT para o EISA.
+
+83
+00:06:06.000 --> 00:06:09.000
+E quem apoia esse padrão EISA?
+
+84
+00:06:09.001 --> 00:06:12.000
+Há mais de 100 empresas que aplicaram a especificação.
+
+85
+00:06:12.001 --> 00:06:15.001
+Havia nove empresas originais que a criaram, e algumas dessas empresas
+
+86
+00:06:15.001 --> 00:06:19.001
+São AST, Hewlett Packard, Compaq, Zenith, Tandy, Wise.
+
+87
+00:06:19.001 --> 00:06:24.000
+O que é sobre um ônibus AT que fez você criar um
+
+88
+00:06:24.000 --> 00:06:26.000
+Pins adicionais nas cartas e assim por diante?
+
+89
+00:06:27.000 --> 00:06:30.001
+Bem, os tipos de coisas que você gostaria de adicionar a ele que daria o
+
+90
+00:06:30.001 --> 00:06:34.001
+O benefício estendido do usuário no longo prazo são arbitragem de ônibus, o que lhe permitiria
+
+91
+00:06:34.001 --> 00:06:38.001
+para executar múltiplos processadores, bem como para melhorar as operações DMA,
+
+92
+00:06:39.000 --> 00:06:40.001
+Mais memória no ônibus.
+
+93
+00:06:41.000 --> 00:06:42.001
+A AT foi limitada a 16 megabytes.
+
+94
+00:06:43.000 --> 00:06:47.000
+Bob, dê-nos um exemplo do que um pedaço de software pareceria correr sob
+
+95
+00:06:47.000 --> 00:06:49.000
+O ônibus com seus limites atuais.
+
+96
+00:06:49.000 --> 00:06:52.001
+Bem, este é um ônibus AT existente, e vemos se abrimos uma janela
+
+97
+00:06:52.001 --> 00:06:54.000
+Aqui, estamos executando uma aplicação padrão.
+
+98
+00:06:54.000 --> 00:06:56.000
+Este é o DBase, e vemos o quão rápido ele está escorregando.
+
+99
+00:06:57.000 --> 00:07:01.001
+Se agora abrirmos outra janela, que é o Lotus 123, vemos que esta
+
+100
+00:07:01.001 --> 00:07:04.000
+A aplicação diminuiu drasticamente.
+
+101
+00:07:04.001 --> 00:07:07.001
+Agora está sendo escaneado. A ação é muito mais lenta.
+
+102
+00:07:08.000 --> 00:07:10.001
+E se abrirmos uma terceira aplicação, veremos que se desacelerará ainda mais.
+
+103
+00:07:11.000 --> 00:07:15.001
+O que aconteceria na EISA é se você tivesse vários processadores, cada um deles
+
+104
+00:07:15.001 --> 00:07:18.000
+As tarefas podem ser executadas em um processador independente, e em
+
+105
+00:07:18.000 --> 00:07:20.000
+O efeito, você nem sequer notaria um atraso.
+
+106
+00:07:20.001 --> 00:07:23.000
+Bem, agora, o ônibus MCA não ataca o mesmo problema?
+
+107
+00:07:24.000 --> 00:07:28.000
+O ônibus MCA é muito semelhante, mas acho que podemos ver uma diferença bastante
+
+108
+00:07:28.000 --> 00:07:29.001
+Aqui na parte superior do cartão.
+
+109
+00:07:29.001 --> 00:07:31.000
+Mostre para mim. Nós os temos aqui, não devemos?
+
+110
+00:07:31.000 --> 00:07:35.000
+Nós realmente temos ambas as cartas aqui, e como vemos, este é um cartão AT padrão
+
+111
+00:07:35.000 --> 00:07:39.001
+com um conector extra, e este tipo de simula o que o AT com
+
+112
+00:07:39.001 --> 00:07:41.000
+EISA tipo de conector seria.
+
+113
+00:07:41.000 --> 00:07:43.001
+Em primeiro lugar, percebemos uma enorme diferença de tamanho.
+
+114
+00:07:44.000 --> 00:07:49.001
+Este é um cartão de processador real projetado para se encaixar em um ônibus AT, e como vemos,
+
+115
+00:07:49.001 --> 00:07:51.001
+Este cartão é muito densamente povoado.
+
+116
+00:07:52.000 --> 00:07:57.000
+Para uma pessoa que desenha um cartão, especialmente um empreendedor, é muito complexo para
+
+117
+00:07:57.000 --> 00:08:01.000
+projetar estes porque você tem que projetar ASICS, ou aplicações específicas integradas
+
+118
+00:08:01.000 --> 00:08:04.000
+circuitos, a fim de baixar para este nível de miniaturização.
+
+119
+00:08:04.000 --> 00:08:08.000
+Como vemos, não há ASICS neste cartão, apenas a memória do PAL
+
+120
+00:08:08.000 --> 00:08:09.001
+São os 386 e os 387.
+
+121
+00:08:09.001 --> 00:08:15.000
+Você está transportando qualquer bagagem do ônibus AT para a EISA, algumas das coisas
+
+122
+00:08:15.000 --> 00:08:17.000
+Você não gostaria de ter em um novo padrão?
+
+123
+00:08:18.000 --> 00:08:22.000
+Há algumas bagagens, mas basicamente, o EISA é uma evolução natural.
+
+124
+00:08:22.001 --> 00:08:25.001
+É uma evolução de 32 bits do padrão AT de 16 bits.
+
+125
+00:08:26.000 --> 00:08:29.000
+Rico, do ponto de vista da HP, do punto de vista de Hewlett-Packard, por que você tem
+
+126
+00:08:29.000 --> 00:08:31.000
+Está envolvido na banda de nove no padrão EISA?
+
+127
+00:08:31.000 --> 00:08:35.001
+Bem, fizemos muita investigação sobre o Micro Channel desde a sua introdução,
+
+128
+00:08:35.001 --> 00:08:39.000
+E tivemos muitas conversas com a nossa base de clientes.
+
+129
+00:08:39.000 --> 00:08:43.000
+Uma das coisas que eles nos disseram era que eles tinham um problema.
+
+130
+00:08:43.001 --> 00:08:49.000
+Eles gostaram de todas as extensões que o Micro Channel lhes ofereceu, o melhorado
+
+131
+00:08:49.000 --> 00:08:53.000
+arbitragem, a capacidade de adicionar múltiplos processadores, o
+
+132
+00:08:53.000 --> 00:08:55.001
+Cartões de configuração, as configurações sem interrupção.
+
+133
+00:08:55.001 --> 00:08:58.000
+São todos grandes vantagens. Microchanel sobre o AT.
+
+134
+00:08:59.000 --> 00:09:03.000
+Mas eles tiveram um problema na transição da base atual de máquinas que
+
+135
+00:09:03.000 --> 00:09:06.001
+Eles passaram a fazer uma mudança dramática nos produtos do Micro Channel.
+
+136
+00:09:07.001 --> 00:09:12.001
+E os fornecedores de hardware independentes com que conversamos tinham o problema que Bob
+
+137
+00:09:12.001 --> 00:09:17.000
+simplesmente descrito, que está tentando adaptar toda a lógica ao tamanho de um cartão que
+
+138
+00:09:17.000 --> 00:09:19.001
+Atualmente, o canal é definido para ser.
+
+139
+00:09:20.000 --> 00:09:24.000
+Então o que estamos trabalhando por um tempo, o que todo o consórcio de empresas
+
+140
+00:09:24.000 --> 00:09:28.001
+está fazendo, está tentando ver se podemos encontrar uma maneira de evoluir naturalmente a AT
+
+141
+00:09:28.001 --> 00:09:33.000
+Buscar e recolher todas as características que são vantagens do Micro Channel.
+
+142
+00:09:34.000 --> 00:09:36.000
+E eu acho que fizemos isso com a ISA.
+
+143
+00:09:36.000 --> 00:09:39.000
+Em termos de tempo, quanto tempo vai ser para o mercado
+
+144
+00:09:39.000 --> 00:09:41.000
+Para essas coisas? Quando vamos ver essas coisas?
+
+145
+00:09:41.000 --> 00:09:45.000
+Acredito que, perto do final do ano que vem, veremos os produtos da EISA.
+
+146
+00:09:45.001 --> 00:09:49.001
+Isso é um problema, Bob? Acho que estamos falando ainda sobre este outro padrão, e
+
+147
+00:09:49.001 --> 00:09:51.001
+Ele realmente não existe como algumas das outras coisas que ouvimos.
+
+148
+00:09:51.001 --> 00:09:56.000
+Não penso assim, porque, número um, a EISA é realmente uma declaração de direção.
+
+149
+00:09:56.000 --> 00:10:01.001
+Ele diz que se você tem uma base de máquinas existentes, isto é, O AT, que é agora
+
+150
+00:10:01.001 --> 00:10:03.000
+Expandível para a EISA.
+
+151
+00:10:03.001 --> 00:10:07.001
+Então, o que encontramos é em falar com a nossa base de clientes, eles vêem isso como um seguro.
+
+152
+00:10:07.001 --> 00:10:11.000
+Eles vêem isso como se pudessem comprar máquinas AT hoje e sabem que podem ser
+
+153
+00:10:11.000 --> 00:10:14.001
+extendido amanhã, adicionando a arquitetura e ainda sendo capaz de usar
+
+154
+00:10:14.001 --> 00:10:16.001
+Atualmente existem cartões.
+
+155
+00:10:17.000 --> 00:10:20.000
+Isso é uma batalha tecnológica entre eles.
+
+156
+00:10:20.000 --> 00:10:22.000
+Buses, ou é apenas uma batalha de marketing?
+
+157
+00:10:22.001 --> 00:10:26.000
+Esta é, na verdade, uma evolução natural de uma extensão para o ônibus AT.
+
+158
+00:10:26.000 --> 00:10:29.001
+E novamente, se voltarmos a este cartão, veríamos o PC começando
+
+159
+00:10:29.001 --> 00:10:31.000
+Apenas com esse conector.
+
+160
+00:10:31.000 --> 00:10:36.000
+A AT estendeu para apenas este conector, e agora, adicionando outro conector para
+
+161
+00:10:36.000 --> 00:10:38.000
+O sistema é a evolução natural.
+
+162
+00:10:38.000 --> 00:10:42.000
+Ele o leva de 8 bits a 16 a 32, e com as funcionalidades adicionadas.
+
+163
+00:10:42.000 --> 00:10:45.000
+Com vantagens, você pode usar as antigas placas que foram projetadas.
+
+164
+00:10:45.000 --> 00:10:46.001
+Sim, todos os antigos painéis funcionarão no ônibus.
+
+165
+00:10:47.000 --> 00:10:51.001
+Bob Rich, muito obrigado. A batalha dos ônibus não é apenas entre MCA, AT,
+
+166
+00:10:51.001 --> 00:10:54.000
+e EISA, mas há também algo chamado Novo ônibus
+
+167
+00:10:54.000 --> 00:10:56.000
+que a Apple usa no Mac, também.
+
+168
+00:10:56.000 --> 00:10:58.001
+Wendy Woods olha para a nova arquitetura de ônibus.
+
+169
+00:11:00.000 --> 00:11:05.001
+Quando a Apple Computer foi para comprar um novo ônibus, os engenheiros decidiram ir com um
+
+170
+00:11:05.001 --> 00:11:08.000
+modelo que já tinha alguns quilômetros sobre ele.
+
+171
+00:11:08.001 --> 00:11:13.001
+Eles escolheram New Bus, uma arquitetura inventada por Texas Instruments e já em
+
+172
+00:11:13.001 --> 00:11:16.001
+utilizados por mais de uma dúzia de outras empresas de computador.
+
+173
+00:11:17.001 --> 00:11:22.000
+Novo ônibus, a arquitetura da linha Macintosh II, representa vários
+
+174
+00:11:22.000 --> 00:11:23.001
+Os avanços técnicos.
+
+175
+00:11:23.001 --> 00:11:26.001
+Um novo ônibus, para uma coisa, é um ônimo muito rápido.
+
+176
+00:11:27.000 --> 00:11:32.001
+Ele pode apoiar, devido à sua origem na comunidade de IA no MIT, foi projetado
+
+177
+00:11:32.001 --> 00:11:38.001
+para suportar uma enorme quantidade de movimento de dados entre os cartões individuais ou
+
+178
+00:11:38.001 --> 00:11:41.000
+entre o cartão e o próprio CPU.
+
+179
+00:11:41.001 --> 00:11:45.000
+O outro fator que realmente entrou em jogo foi que ele foi capaz de apoiar um
+
+180
+00:11:45.000 --> 00:11:47.001
+uma ampla variedade de arquiteturas de cartões.
+
+181
+00:11:48.000 --> 00:11:50.001
+Do ponto de vista do desenvolvedor, é uma grande área de conselho.
+
+182
+00:11:50.001 --> 00:11:55.000
+É muito barato para alguém desenvolver cartões para, e o resultado estava indo
+
+183
+00:11:55.000 --> 00:11:59.000
+para que possamos ter um número muito grande e uma ampla gama de
+
+184
+00:11:59.000 --> 00:12:00.001
+Para o Macintosh II.
+
+185
+00:12:01.000 --> 00:12:02.000
+Isso também foi importante.
+
+186
+00:12:02.001 --> 00:12:07.000
+Além disso, ao contrário de algumas estruturas de ônibus, esta não requer uma estrutura específica
+
+187
+00:12:07.000 --> 00:12:08.001
+cartão em um slot específico.
+
+188
+00:12:09.001 --> 00:12:14.000
+Todos os novos cartões de ônibus funcionam com todos os outros novos cartão de ónibus, e todos são
+
+189
+00:12:14.000 --> 00:12:16.001
+Intercâmbio em todos os slots.
+
+190
+00:12:16.001 --> 00:12:21.000
+A Apple acredita que a nova arquitetura de ônibus tem poder.
+
+191
+00:12:21.001 --> 00:12:22.001
+Tem um track record.
+
+192
+00:12:22.001 --> 00:12:27.000
+Na verdade, cerca de 60 empresas são esperadas para adotar um novo ônibus para o seu
+
+193
+00:12:27.000 --> 00:12:29.000
+cartões periféricos e computadores.
+
+194
+00:12:29.001 --> 00:12:32.001
+E os desenvolvedores estão dando-lhe avaliações rave.
+
+195
+00:12:33.001 --> 00:12:35.001
+Para as crônicas de computador, eu sou Wendy Woods.
+
+196
+00:12:47.000 --> 00:12:49.000
+O que está no estúdio agora é Chet Heath.
+
+197
+00:12:49.001 --> 00:12:53.001
+Chet é engenheiro sênior para arquitetura de hardware na IBM, e Gary Chet
+
+198
+00:12:53.001 --> 00:12:56.000
+Ele é geralmente creditado com ser o pai do MCA bus.
+
+199
+00:12:57.000 --> 00:12:57.001
+Isso é correto?
+
+200
+00:12:59.000 --> 00:13:02.000
+Eu acho mais exatamente, eu sou o mais velho vivo
+
+201
+00:13:02.000 --> 00:13:03.001
+sobrevivente da arquitetura de microchanéis.
+
+202
+00:13:04.001 --> 00:13:06.000
+E houve um casting de milhares.
+
+203
+00:13:06.001 --> 00:13:10.000
+Chet, quando você estava projetando uma nova arquitetura, uma nova arquitectura de ônibus, por que
+
+204
+00:13:10.000 --> 00:13:11.001
+Você não estendeu o ônibus existente?
+
+205
+00:13:11.001 --> 00:13:18.000
+Bem, eu acho que o problema vai de volta aos cartões AT, que, a fim de estender o
+
+206
+00:13:18.000 --> 00:13:23.000
+Capacidades para multitasking para apoiar I.O. mais rápido. Para apoiar tudo isso em
+
+207
+00:13:23.000 --> 00:13:26.000
+E, ao mesmo tempo, precisamos ser capazes de obter os cartões
+
+208
+00:13:26.000 --> 00:13:28.000
+Seja menos dependente do processador.
+
+209
+00:13:28.001 --> 00:13:30.001
+Não havia nenhum serviço alternativo no ônibus.
+
+210
+00:13:31.001 --> 00:13:35.000
+Quando olhamos para outros problemas, como partilha de interrupções e automática
+
+211
+00:13:35.000 --> 00:13:39.000
+Configuração, vimos uma preponderância de problemas que nos levam
+
+212
+00:13:39.000 --> 00:13:41.000
+para uma nova solução.
+
+213
+00:13:41.000 --> 00:13:44.000
+Você não tem um exemplo lá de um ônibus que você estava experimentando com
+
+214
+00:13:44.000 --> 00:13:46.000
+Quando você estava tentando expandir o ônibus?
+
+215
+00:13:46.000 --> 00:13:51.000
+Construímos um protótipo inicial, este é um conector de 110 pins, de uma extensão do
+
+216
+00:13:51.000 --> 00:13:53.000
+Em torno de 1984.
+
+217
+00:13:54.001 --> 00:13:59.000
+Tivemos a opção de programa de execução selecionada nisso, tivemos alguns experimentos com EMC em
+
+218
+00:13:59.000 --> 00:14:03.000
+que a máquina, inicialmente tivemos algumas interrupções de nível sensíveis e também tentamos
+
+219
+00:14:03.000 --> 00:14:05.001
+Efe-triggerado interrompe ao mesmo tempo.
+
+220
+00:14:05.001 --> 00:14:10.000
+Tivemos dificuldade em conseguir os cartões AT para correr no mesmo ambiente com
+
+221
+00:14:10.000 --> 00:14:13.001
+cartões avançados que seriam mais dependentes do DMA e menos do processador.
+
+222
+00:14:14.000 --> 00:14:17.001
+Agora, Chet, o MCA é considerado uma arquitetura proprietária?
+
+223
+00:14:17.001 --> 00:14:19.001
+Em outras palavras, outros fabricantes podem usar isso?
+
+224
+00:14:20.000 --> 00:14:22.001
+Eu realmente não entendo o termo proprietário.
+
+225
+00:14:24.000 --> 00:14:26.000
+Para mim, isso significaria que não está disponível.
+
+226
+00:14:26.001 --> 00:14:30.001
+E certamente é provavelmente uma das melhores arquiteturas documentadas ao redor
+
+227
+00:14:30.001 --> 00:14:32.001
+Está disponível para uso por qualquer pessoa.
+
+228
+00:14:33.000 --> 00:14:37.000
+Agora, você tem um exemplo de como você usou isso em uma máquina de teste aqui.
+
+229
+00:14:37.000 --> 00:14:42.000
+Eu acho que agora existem, eu acho, 550 cartas que foram construídas para o
+
+230
+00:14:42.000 --> 00:14:46.001
+microchannel, mas muito poucos deles usam esta função particular aqui, que é a
+
+231
+00:14:46.001 --> 00:14:49.000
+capacidade de suportar mais de um processador em um sistema.
+
+232
+00:14:50.000 --> 00:14:52.000
+O que é a caixa aberta aqui antes de você continuar, Chet?
+
+233
+00:14:52.000 --> 00:14:58.000
+Este é um modelo 60 com uma ferramenta de teste construída por Ernie Mandisi de Boca Raton que foi
+
+234
+00:14:58.000 --> 00:15:02.001
+construído em 1986 para demonstrar à nossa satisfação que o microchannel
+
+235
+00:15:02.001 --> 00:15:04.000
+Poderia suportar vários processadores.
+
+236
+00:15:05.000 --> 00:15:10.000
+Neste cartão, temos um processador de estado de 8 MHz de dois pesos, apenas algo que
+
+237
+00:15:10.000 --> 00:15:13.000
+Hoje vamos falar com dois estados.
+
+238
+00:15:13.001 --> 00:15:16.000
+Mas como ferramenta de teste, foi satisfatório.
+
+239
+00:15:17.000 --> 00:15:21.001
+E estamos operando na tela na linha azul superior aqui, uma pedra seca
+
+240
+00:15:21.001 --> 00:15:26.001
+referência, aritmética de ponto fixo, que opera aproximadamente 2.000
+
+241
+00:15:26.001 --> 00:15:29.000
+Limpeza por segundo no processador de planar.
+
+242
+00:15:30.000 --> 00:15:35.000
+Agora, para simular o que aconteceria em um cenário multitasking, podemos tomar esse
+
+243
+00:15:35.000 --> 00:15:39.000
+secar e executar dois deles ao mesmo tempo, e você obtém aproximadamente um
+
+244
+00:15:39.000 --> 00:15:43.001
+metade, o azul e o verde, metade do número de pedras secas por
+
+245
+00:15:43.001 --> 00:15:45.000
+tarefa, mas agora você tem duas tarefas em andamento.
+
+246
+00:15:45.001 --> 00:15:47.000
+Assim, o número total de pedras secas é o mesmo.
+
+247
+00:15:48.001 --> 00:15:53.000
+Agora, neste cenário seguinte, estamos trazendo-o de volta para provar que se você executar o
+
+248
+00:15:53.000 --> 00:15:57.001
+A pedra seca em um processador todos ao mesmo tempo, é sobre a soma dos dois.
+
+249
+00:15:58.001 --> 00:16:00.000
+Há uma pequena superfície nisso.
+
+250
+00:16:01.001 --> 00:16:06.001
+Agora, vamos tomar a pedra seca, carregá-la no processador de planar, funciona
+
+251
+00:16:06.001 --> 00:16:12.000
+Como antes, e também temos carregado nesta linha rosa no processador concorrente
+
+252
+00:16:12.000 --> 00:16:13.001
+Descer aqui neste grande cartão.
+
+253
+00:16:14.000 --> 00:16:16.000
+Agora, temos aproximadamente o mesmo poder.
+
+254
+00:16:16.000 --> 00:16:17.001
+que antes tivemos, menos uma certa quantidade de poder.
+
+255
+00:16:17.001 --> 00:16:19.001
+Assim, a primeira aplicação está correndo em aproximadamente a mesma velocidade agora.
+
+256
+00:16:20.000 --> 00:16:23.001
+Roughly na mesma, e agora a segunda aplicação está em andamento, e na essência,
+
+257
+00:16:23.001 --> 00:16:25.001
+O poder é adicional a um certo grau de força.
+
+258
+00:16:26.001 --> 00:16:31.001
+A capacidade de executar, este é um dos cerca de 15 processadores concorrentes que podem ser
+
+259
+00:16:31.001 --> 00:16:35.000
+executar o microchannel, embora, como você pode ver, há uma embalagem severa
+
+260
+00:16:35.000 --> 00:16:38.000
+problema, especialmente onde isso foi há dois anos atrás.
+
+261
+00:16:39.000 --> 00:16:41.000
+Você pode criar um terceiro aplicativo lá?
+
+262
+00:16:41.001 --> 00:16:42.001
+Sim, vamos tentar isso.
+
+263
+00:16:45.000 --> 00:16:50.000
+O processador superior agora é dividido em duas tarefas como antes, então estamos recebendo
+
+264
+00:16:50.000 --> 00:16:54.000
+aproximadamente metade do seu desempenho inicial dividido em duas tarefas, e
+
+265
+00:16:54.000 --> 00:16:56.001
+Em seguida, o segundo processador opera uma única tarefa.
+
+266
+00:16:57.000 --> 00:16:59.001
+Isso é para simular que você realmente poderia ter duas operações diferentes
+
+267
+00:16:59.001 --> 00:17:01.000
+Sistemas que funcionam nos diferentes processadores.
+
+268
+00:17:02.000 --> 00:17:05.001
+Quantos processadores você acha que você poderia colocar no canal antes de obter o
+
+269
+00:17:05.001 --> 00:17:08.001
+bloqueio para a memória, onde você obtém acesso à memória?
+
+270
+00:17:09.000 --> 00:17:12.000
+Bem, o problema poderia existir em um único computador de ônibus, mas em um ônus duplo
+
+271
+00:17:12.000 --> 00:17:16.001
+computador, particularmente como cada processador tinha seu próprio armazenamento local, retirando o
+
+272
+00:17:16.001 --> 00:17:19.000
+A maioria das instruções deste processador, I
+
+273
+00:17:19.000 --> 00:17:21.000
+Acredito que conseguimos alcançar os 16.
+
+274
+00:17:21.000 --> 00:17:25.000
+dependerá de quão interativas as tarefas estavam uns com os outros e da
+
+275
+00:17:25.000 --> 00:17:26.001
+O grau em que eles usam I.O.
+
+276
+00:17:27.000 --> 00:17:32.000
+Chet, como o cara que realmente projetou este ônibus MCA, quais são suas reações à
+
+277
+00:17:32.000 --> 00:17:34.001
+EISA e a crítica da MCA?
+
+278
+00:17:36.000 --> 00:17:41.001
+Bem, eu não entendo a crítica da MCA, mas uma coisa que eu não sinto é
+
+279
+00:17:41.001 --> 00:17:47.000
+É realmente necessário assumir e reproduzir um conceito que é fundamentalmente
+
+280
+00:17:47.000 --> 00:17:48.001
+equivalente ao microchannel.
+
+281
+00:17:48.001 --> 00:17:54.000
+Se alguém entende que você realmente não precisa dos antigos cartões, que eles irão
+
+282
+00:17:54.000 --> 00:17:58.001
+impede que você vá para frente, que a maioria das funções foram reproduzidas em
+
+283
+00:17:58.001 --> 00:18:05.000
+um plano dos sistemas PS2 e há talvez 550 cartões que reproduzem todos os
+
+284
+00:18:05.000 --> 00:18:09.000
+as outras funções do cartão que estão disponíveis, que se você pode se livrar daquela
+
+285
+00:18:09.000 --> 00:18:11.001
+A ideia, então você tem uma base sobre a qual as pessoas podem trabalhar.
+
+286
+00:18:12.001 --> 00:18:16.001
+Fora, as pessoas que eu conheci nos últimos dois anos, há uma enorme riqueza
+
+287
+00:18:16.001 --> 00:18:20.001
+criatividade e conhecimento, e para ver que reproduzir uma função que é
+
+288
+00:18:20.001 --> 00:18:25.001
+Já em princípio, acredito que é menos produtivo do que se tivéssemos que trabalhar.
+
+289
+00:18:25.001 --> 00:18:27.001
+em conjunto, construindo sobre a base que temos agora.
+
+290
+00:18:28.001 --> 00:18:32.000
+Eu acredito que algumas possibilidades muito emocionantes estão fora
+
+291
+00:18:32.000 --> 00:18:34.000
+que ainda não foram apagados.
+
+292
+00:18:35.000 --> 00:18:36.000
+Quanto tempo você acha que veremos isso?
+
+293
+00:18:36.000 --> 00:18:37.000
+Esse é um dos outros golpes.
+
+294
+00:18:37.000 --> 00:18:40.000
+Ninguém realmente entende que pode obter o benefício da MCA agora.
+
+295
+00:18:40.001 --> 00:18:43.001
+Bem, o tempo é tal que muitas dessas cartas como concorrentes
+
+296
+00:18:43.001 --> 00:18:45.000
+Os processadores são tão complexos quanto os sistemas.
+
+297
+00:18:45.000 --> 00:18:51.000
+No último convexo, vimos alguns indivíduos que tinham tomado o microchannel e
+
+298
+00:18:51.000 --> 00:18:52.001
+Eles tinham protótipos para mostrar.
+
+299
+00:18:53.000 --> 00:18:57.001
+Eu acho que com este convex, você pode ver que eles reduziram o fator de forma e
+
+300
+00:18:57.001 --> 00:19:00.001
+poder dessas cartas, tal como elas se encaixam no formato microchannel.
+
+301
+00:19:01.001 --> 00:19:06.001
+Já vi algumas evidências disso na imprensa comercial com processadores IO e
+
+302
+00:19:06.001 --> 00:19:10.001
+sistemas de arquivos inteligentes e também o uso de DMA.
+
+303
+00:19:10.001 --> 00:19:17.001
+Temos cinco vezes a capacidade DMA da AT, e é barato
+
+304
+00:19:17.001 --> 00:19:20.001
+Como obter a energia de volta ao processador.
+
+305
+00:19:21.000 --> 00:19:21.001
+Chet, obrigado por se juntar a nós.
+
+306
+00:19:22.000 --> 00:19:25.000
+Ok, se você não está certo que ônibus você quer colocar em seu computador em apenas um
+
+307
+00:19:25.000 --> 00:19:29.000
+minutos, vamos olhar para um computador que é de ônibus alternável, então fique conosco.
+
+308
+00:19:42.000 --> 00:19:44.000
+O que está no estúdio agora é Michael Hoyle.
+
+309
+00:19:44.001 --> 00:19:48.000
+Michael é gerente de produtos com Wells American, fabricantes de um ônibus convertible
+
+310
+00:19:48.000 --> 00:19:51.000
+computador chamado CompuStar, e ao lado de Mike é Wynn Roche,
+
+311
+00:19:51.000 --> 00:19:52.001
+contribuindo editor com a PC Magazine.
+
+312
+00:19:53.001 --> 00:19:58.000
+Wynn, vimos duas arquiteturas competindo aqui, a EISA e a MCA.
+
+313
+00:19:59.000 --> 00:20:02.000
+Qual a sua opinião sobre essa batalha?
+
+314
+00:20:03.001 --> 00:20:06.000
+Bem, é uma batalha difícil para chamar porque você está olhando
+
+315
+00:20:06.000 --> 00:20:07.001
+em duas coisas completamente diferentes.
+
+316
+00:20:07.001 --> 00:20:11.000
+Você está olhando para algo que está em torno por cerca de dois anos, e você está
+
+317
+00:20:11.000 --> 00:20:13.000
+olhando para algo que vai ser um ano e meio, talvez
+
+318
+00:20:13.000 --> 00:20:15.000
+Dois anos antes de ver.
+
+319
+00:20:15.001 --> 00:20:19.000
+Você não pode realmente caracterizar uma batalha com algo que você não sabe o que é.
+
+320
+00:20:21.000 --> 00:20:24.001
+Mas a minha impressão inicial é que temos algo que olha para o futuro,
+
+321
+00:20:24.001 --> 00:20:28.000
+microchannel, que rompe com o passado e compra-lhe algo que vai ser
+
+322
+00:20:28.000 --> 00:20:32.000
+em torno por um tempo, e então você tem EISA, que está te pendurando para o passado.
+
+323
+00:20:32.001 --> 00:20:35.001
+Você está carregando seu sistema com cartões antigos que podem não
+
+324
+00:20:35.001 --> 00:20:37.000
+Seja um bom ator no futuro.
+
+325
+00:20:37.001 --> 00:20:41.000
+[...] Dê um exemplo disso. O que vai te manter em uso, vamos
+
+326
+00:20:41.000 --> 00:20:42.001
+Uma extensão como essa?
+
+327
+00:20:43.000 --> 00:20:47.000
+Bem, qualquer um dos antigos cartões que você tem em um AT não são
+
+328
+00:20:47.000 --> 00:20:48.001
+Será um desempenho de 32 bits.
+
+329
+00:20:49.001 --> 00:20:51.000
+E para obter um desempenho de 32 bits, você tem que adicionar
+
+330
+00:20:51.000 --> 00:20:53.000
+Cartões de 32 bits para o computador.
+
+331
+00:20:53.000 --> 00:20:56.001
+Se você tem que comprar novos cartões de 32 bits, por que não comprar um superior
+
+332
+00:20:56.001 --> 00:20:58.000
+Qual é o padrão de desempenho, como o microchannel?
+
+333
+00:20:58.001 --> 00:21:02.000
+Mike, você tentou vir com uma espécie de compromisso aqui, eu acho, em seu
+
+334
+00:21:02.000 --> 00:21:04.000
+Computar, e explicar o que a teoria é
+
+335
+00:21:04.000 --> 00:21:06.000
+Por trás do tipo de ônibus switchable computador.
+
+336
+00:21:06.001 --> 00:21:09.001
+Bem, o conceito por trás do Compustar é que estamos constantemente em um estado
+
+337
+00:21:09.001 --> 00:21:11.000
+transição na indústria.
+
+338
+00:21:12.001 --> 00:21:16.001
+E é importante notar que a cada três anos parece que mudamos, de
+
+339
+00:21:16.001 --> 00:21:18.000
+81 a 84 a 87.
+
+340
+00:21:18.001 --> 00:21:20.000
+Nós passamos de 8 a 16 a 32 bits.
+
+341
+00:21:21.000 --> 00:21:26.000
+E estamos agora em uma situação em que estamos um ano e meio acima dos 87 marcos,
+
+342
+00:21:26.000 --> 00:21:31.001
+e devemos ver um 84, 86, ou equivalente da Intel no próximo ano, o que significa que
+
+343
+00:21:31.001 --> 00:21:34.001
+Pode mudar de novo em um ano e meio.
+
+344
+00:21:35.000 --> 00:21:37.001
+O conceito Compustar é um que é convertible.
+
+345
+00:21:38.001 --> 00:21:42.000
+Os usuários podem mudar entre processadores e até mesmo mudar entre ônibus
+
+346
+00:21:42.000 --> 00:21:44.000
+arquiteturas como seus joelhos ditam.
+
+347
+00:21:44.000 --> 00:21:45.001
+Bem, esta é a sua torre Compustar aqui em cima.
+
+348
+00:21:46.000 --> 00:21:48.001
+Gary, se eu puder pedir-lhe um tipo de rotação que e começar a levá-lo.
+
+349
+00:21:49.000 --> 00:21:51.001
+Por que você não vem e nos mostra como você faz todas essas coisas?
+
+350
+00:21:51.001 --> 00:21:53.001
+Estou se tornando um desassemblador computar certificado.
+
+351
+00:21:54.001 --> 00:21:55.001
+[...]
+
+352
+00:21:55.001 --> 00:21:57.000
+Vamos começar com este lado de qualquer forma.
+
+353
+00:22:00.000 --> 00:22:01.000
+Ok, Mike, você está em frente.
+
+354
+00:22:01.000 --> 00:22:03.001
+Como você trocaria cartões e tabelas?
+
+355
+00:22:03.001 --> 00:22:05.000
+Bem, agora estamos em duas salas aqui.
+
+356
+00:22:05.000 --> 00:22:08.000
+A primeira é a câmara de condução, e a segunda é a
+
+357
+00:22:08.000 --> 00:22:10.000
+A câmara eletrônica, que está por dentro.
+
+358
+00:22:10.000 --> 00:22:12.000
+Vamos remover isso e deixar você ver os eletrônicos.
+
+359
+00:22:13.000 --> 00:22:16.000
+Agora, este é um módulo de processador, que é intercambiável.
+
+360
+00:22:16.000 --> 00:22:21.001
+Tomaremos esta ferramenta, removeremos esta fenda, assim como assim.
+
+361
+00:22:21.001 --> 00:22:25.000
+E vamos tirar o módulo de processador do sistema.
+
+362
+00:22:25.001 --> 00:22:28.000
+E este é um 8286 módulo de processador.
+
+363
+00:22:28.000 --> 00:22:31.001
+Podemos trocar isso com um 386, um 486, ou o que você tem.
+
+364
+00:22:32.000 --> 00:22:32.000
+[...]
+
+365
+00:22:32.000 --> 00:22:35.000
+Aqui temos um adaptador de módulo de ônibus.
+
+366
+00:22:35.001 --> 00:22:40.001
+Nós vamos usar isso para mudar entre diferentes arquiteturas de ônibus enquanto eles evoluem.
+
+367
+00:22:40.001 --> 00:22:45.001
+À medida que as novas tecnologias evoluem, pretendemos investigar a sua eficácia, e se
+
+368
+00:22:45.001 --> 00:22:48.000
+desejados, implementando-os no processo convertible.
+
+369
+00:22:48.000 --> 00:22:51.001
+Este é um ônibus PS2 convertible.
+
+370
+00:22:52.001 --> 00:22:57.001
+Aqui está o verdadeiro retrato do PS2.
+
+371
+00:22:57.001 --> 00:23:02.000
+Observe que uma estrutura de ônibus inclui conexões mecânicas e elétricas.
+
+372
+00:23:02.001 --> 00:23:05.001
+O que fizemos aqui é que o painel de trás da máquina é realmente
+
+373
+00:23:05.001 --> 00:23:08.001
+Intercâmbio, então você pode ter estruturas de ônibus diferentes.
+
+374
+00:23:09.000 --> 00:23:10.000
+Este é o PS2.
+
+375
+00:23:10.000 --> 00:23:15.001
+Aqui temos uma estrutura de ônibus primária, que é o ônus AT padrão da indústria.
+
+376
+00:23:16.001 --> 00:23:16.001
+[...]
+
+377
+00:23:17.000 --> 00:23:21.001
+Temos mais um painel aqui, que é um padrão I.O. O módulo, que funciona
+
+378
+00:23:21.001 --> 00:23:23.001
+Tudo o normal I.O. Tarefas, incluindo vídeo
+
+379
+00:23:23.001 --> 00:23:25.000
+Isso é encontrado na maioria dos sistemas de computador.
+
+380
+00:23:26.000 --> 00:23:29.000
+E, Gwen, você acha que este tipo de abordagem híbrida é a maneira certa de ir?
+
+381
+00:23:29.001 --> 00:23:33.000
+Parece oferecer uma alternativa melhor do que a EISA poderia, porque não
+
+382
+00:23:33.000 --> 00:23:34.001
+limitar-se a qualquer arquitetura.
+
+383
+00:23:35.001 --> 00:23:38.001
+E se você decidir ir para o microchannel, ele vai levá-lo para o microcanal.
+
+384
+00:23:38.001 --> 00:23:41.001
+Presumivelmente, eles vão deixá-lo ir para a EISA se você quer ir nessa direção.
+
+385
+00:23:42.000 --> 00:23:44.001
+Talvez seja o melhor de todos os mundos possíveis.
+
+386
+00:23:45.000 --> 00:23:48.001
+Gwen, há confusão no mercado agora, e é que um problema neste
+
+387
+00:23:48.001 --> 00:23:50.000
+Todo mundo IBM compatível?
+
+388
+00:23:50.001 --> 00:23:52.000
+As pessoas não sabem o que fazer por causa desta batalha de ônibus?
+
+389
+00:23:52.001 --> 00:23:54.001
+Algumas pessoas até dizem que a batalha de ônibus é para
+
+390
+00:23:54.001 --> 00:23:56.000
+criação de confusão no mercado.
+
+391
+00:23:57.000 --> 00:23:59.001
+Falando com as pessoas, eu não decidi que há qualquer confusão.
+
+392
+00:23:59.001 --> 00:24:03.001
+Eu encontrei escetismo por parte das pessoas em relação à EISA.
+
+393
+00:24:04.000 --> 00:24:05.001
+Algumas pessoas dizem que não acham que seja real.
+
+394
+00:24:06.000 --> 00:24:08.000
+Mas isso acontece sempre quando há uma promessa.
+
+395
+00:24:08.000 --> 00:24:10.000
+E não será entregue por dois anos.
+
+396
+00:24:10.000 --> 00:24:12.000
+Eu não posso chamar até que eu veja.
+
+397
+00:24:12.000 --> 00:24:19.000
+Mas agora, temos um padrão que é aceitável, um padrões de alto desempenho,
+
+398
+00:24:19.000 --> 00:24:22.000
+E parece uma boa aposta se você está olhando para MCA.
+
+399
+00:24:23.000 --> 00:24:28.000
+E parece que ainda há muita vida na vida ordinária.
+
+400
+00:24:28.000 --> 00:24:29.001
+Bus também para outras aplicações.
+
+401
+00:24:30.000 --> 00:24:32.000
+Parece que você pode ter duas direções diferentes para ir.
+
+402
+00:24:32.001 --> 00:24:36.000
+Você tem o ônibus AT para aplicações run-of-the-mill, e se você quiser alto
+
+403
+00:24:36.000 --> 00:24:38.000
+Você tem um microchannel.
+
+404
+00:24:38.001 --> 00:24:41.000
+EISA pode se encaixar no meio, ou pode ir para o alto fim.
+
+405
+00:24:41.000 --> 00:24:43.000
+Não sabemos até ver as máquinas.
+
+406
+00:24:43.001 --> 00:24:44.001
+Mike, Gwen, muito obrigado.
+
+407
+00:24:44.001 --> 00:24:46.000
+Esse é o nosso olhar para as guerras de ônibus.
+
+408
+00:24:46.000 --> 00:24:48.001
+Espero que você esteja conosco novamente na próxima semana em The Computer Chronicles.
+
+409
+00:24:59.001 --> 00:25:04.001
+No arquivo de acesso aleatório desta semana, IBM e Microsoft começaram a enviar OS2
+
+410
+00:25:04.001 --> 00:25:09.001
+Versão 1.1 com o gerente de apresentação, a nova interface gráfica do PS2.
+
+411
+00:25:09.001 --> 00:25:14.001
+Um porta-voz da Microsoft diz que, apesar de algumas má imprensa, o desenvolvimento do OS2 está em movimento
+
+412
+00:25:14.001 --> 00:25:18.001
+mais rápido do que o suporte MS-DOS recebido quando saiu pela primeira vez.
+
+413
+00:25:19.000 --> 00:25:23.000
+A IBM e a Microsoft também anunciaram uma nova promoção em que a IBM será
+
+414
+00:25:23.000 --> 00:25:28.001
+Microsoft trabalha e Microsoft Windows com disco rígido PS2 Model 25s
+
+415
+00:25:28.001 --> 00:25:30.000
+vendidos em universidades ou faculdades.
+
+416
+00:25:30.001 --> 00:25:35.001
+Se você está disposto a dividir para o PS2 Model 50Z ou 70, a IBM também vai lançar em
+
+417
+00:25:35.001 --> 00:25:37.001
+Microsoft Word e Excel.
+
+418
+00:25:38.000 --> 00:25:42.001
+A história da saga de Lotus 1. 2.3 Versão 3.0 continua.
+
+419
+00:25:43.000 --> 00:25:46.001
+Desta vez, é uma ação de um acionista contra a Lotus, afirmando que o Lotus
+
+420
+00:25:46.001 --> 00:25:50.001
+gerenciamento dissemina informações falsas e enganosas sobre a entrega
+
+421
+00:25:50.001 --> 00:25:52.001
+Problemas com a versão 3.0.
+
+422
+00:25:53.000 --> 00:25:55.001
+O sujeito do acionista custa a Lotus com fraude de valores mobiliários.
+
+423
+00:25:56.000 --> 00:26:00.000
+A versão mais recente do 1.2.3 está cerca de um ano atrás do calendário, e o atraso em
+
+424
+00:26:00.000 --> 00:26:02.001
+A entrega tem danificado o valor dos estoques de Lotus.
+
+425
+00:26:04.000 --> 00:26:07.000
+As vendas de software em geral continuam a crescer a um ritmo fenomenal, de acordo com o
+
+426
+00:26:07.000 --> 00:26:08.001
+Associação de Publicações de Software.
+
+427
+00:26:09.000 --> 00:26:13.000
+As vendas de software no primeiro trimestre deste ano aumentaram 48%.
+
+428
+00:26:13.001 --> 00:26:18.000
+E como o DOS Software representava 77% de todas as vendas de software, o Macintosh
+
+429
+00:26:18.000 --> 00:26:22.001
+O software, que classificou o segundo em vendas com 11% do mercado, recebeu o
+
+430
+00:26:22.001 --> 00:26:25.001
+Acompanhe o segmento de desenvolvimento mais rápido do mercado de software.
+
+431
+00:26:26.000 --> 00:26:29.001
+A segunda parte do mercado foi a Apple II e a Commodore 64.
+
+432
+00:26:30.000 --> 00:26:34.000
+Steve Jobs voltou ao mercado da educação na semana passada, quando ele mostrou
+
+433
+00:26:34.000 --> 00:26:37.000
+O próximo computador em uma conferência de informática educacional em Washington.
+
+434
+00:26:37.001 --> 00:26:41.000
+Foi a primeira chance que muitos colegas de faculdade tinham realmente que ver o novo computador.
+
+435
+00:26:41.001 --> 00:26:44.000
+A reação foi misturada. Algumas pessoas acham que era muito caro.
+
+436
+00:26:44.001 --> 00:26:47.001
+Alguns preocuparam-se com a falta de cor, mas a maioria dos espectadores
+
+437
+00:26:47.001 --> 00:26:49.000
+Dizem que gostariam de ter um.
+
+438
+00:26:49.001 --> 00:26:54.000
+Alguns comentários sugeriram que era muito caro para competir com PCs ou Macs e
+
+439
+00:26:54.000 --> 00:26:57.000
+muito limitado para substituir as estações de trabalho do Sol ou Apollo.
+
+440
+00:26:58.000 --> 00:27:01.000
+A publicação de escritório migrou da sala de aula para a sala de aulas.
+
+441
+00:27:01.000 --> 00:27:04.001
+A empresa de aprendizagem saiu com a Escritura e Publicação Infantil
+
+442
+00:27:04.001 --> 00:27:07.001
+Centro, descrito como um editor de desktop de função completa
+
+443
+00:27:07.001 --> 00:27:09.000
+Para crianças de 9 anos e acima.
+
+444
+00:27:09.001 --> 00:27:13.001
+O programa contém um display WYSIWYG, várias letras, imagem automática
+
+445
+00:27:13.001 --> 00:27:17.000
+wraparound, uma biblioteca de gráficos, e um suporte de impressora de cores.
+
+446
+00:27:17.001 --> 00:27:21.000
+O serviço online The Source anunciou uma nova funcionalidade chamada RateGram.
+
+447
+00:27:21.000 --> 00:27:25.000
+Permite aos usuários verificar o certificado de taxas de depósito e fundos de mercado de dinheiro
+
+448
+00:27:25.000 --> 00:27:28.001
+Retorno de mais de 15 mil U. e S. das instituições financeiras.
+
+449
+00:27:28.001 --> 00:27:31.001
+RateGram lista taxas de juros, rendimentos anuais, composição
+
+450
+00:27:31.001 --> 00:27:34.000
+Frequência e investimento mínimo.
+
+451
+00:27:34.001 --> 00:27:37.000
+Com apenas um ano de idade, o HyperCard
+
+452
+00:27:37.000 --> 00:27:38.001
+O mercado add-on está começando a crescer.
+
+453
+00:27:39.000 --> 00:27:42.000
+Macropack International acaba de sair com 101
+
+454
+00:27:42.000 --> 00:27:44.000
+Escritos e botões para HyperCard.
+
+455
+00:27:44.000 --> 00:27:48.001
+Ele contém cinco novos tipos de botões, novas utilidades HyperCard, uma animação
+
+456
+00:27:48.001 --> 00:27:50.001
+Recorde, e outras novas ferramentas HyperCard.
+
+457
+00:27:51.001 --> 00:27:56.001
+Em última análise, a Vaporsoft Inc. retomou seu nerd-perfeito vaporware, apenas em
+
+458
+00:27:56.001 --> 00:27:58.000
+Tempo para a temporada de presentes de Natal.
+
+459
+00:27:58.001 --> 00:28:02.000
+Nerd-perfeito de Vaporsoft vem completo com uma confusão
+
+460
+00:28:02.000 --> 00:28:04.000
+Manual e sem software.
+
+461
+00:28:04.000 --> 00:28:06.001
+O pacote gag é vendido por US$ 9,95.
+
+462
+00:28:07.000 --> 00:28:09.000
+Essa é a história das crônicas desta semana. Vamos te ver a próxima vez.
+
+463
+00:28:26.000 --> 00:28:28.000
+Para hardware, software e tecnologias.
+
+464
+00:28:58.000 --> 00:29:17.001
+Obrigado por assistir.
