@@ -1,0 +1,1781 @@
+WEBVTT
+
+1
+00:00:18.000 --> 00:00:22.000
+Sebuah pesawat jet modern, epitomi kecepatan dan kekuatan.
+
+2
+00:00:22.001 --> 00:00:26.001
+Beberapa orang berpikir komputer yang canggih hari ini juga epitoma kecepatan.
+
+3
+00:00:26.001 --> 00:00:31.000
+dan daya, tetapi komputer pribadi saat ini mungkin lebih mirip dengan DC-3 dibandingkan dengan
+
+4
+00:00:31.000 --> 00:00:34.001
+Jenis mesin baru yang disebut komputer set instruksi yang dikurangi.
+
+5
+00:00:35.000 --> 00:00:36.000
+Apa itu itu?
+
+6
+00:00:36.000 --> 00:00:39.001
+Kami akan mengetahui hari ini di edisi ini dari Computer Chronicles.
+
+7
+00:01:03.000 --> 00:01:08.000
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pembuat IBM
+
+8
+00:01:08.000 --> 00:01:12.000
+Sistem komputer yang kompatibel termasuk Lotus Lookalike spreadsheet, kata
+
+9
+00:01:12.000 --> 00:01:16.000
+pemrosesan dengan koreksi spelling, perangkat lunak komunikasi dan Hayes
+
+10
+00:01:16.000 --> 00:01:18.000
+Modem yang kompatibel dengan 1200 baud.
+
+11
+00:01:18.001 --> 00:01:21.001
+Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+12
+00:01:23.001 --> 00:01:26.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte.
+
+13
+00:01:27.000 --> 00:01:31.000
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak dan bahasa yang baru
+
+14
+00:01:31.000 --> 00:01:33.000
+perkembangan teknologi komputer di seluruh dunia.
+
+15
+00:01:40.000 --> 00:01:41.000
+Selamat Datang ke Komputer Chronicles
+
+16
+00:01:41.001 --> 00:01:43.001
+Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+17
+00:01:44.000 --> 00:01:48.000
+Gary dan saya bermain game ini di sini, R-I-S-K, dan seperti yang Anda ketahui Gary,
+
+18
+00:01:48.000 --> 00:01:51.001
+Ada permainan yang sangat berisiko di sana yang disebut Risk R-I-S-C berdiri untuk dikurangi
+
+19
+00:01:51.001 --> 00:01:53.000
+Instruction set komputer.
+
+20
+00:01:53.001 --> 00:01:56.001
+Beberapa pemain utama dalam game itu, misalnya, IBM dan Hewlett Packard.
+
+21
+00:01:57.000 --> 00:02:00.000
+Beberapa orang mengatakan bahwa teknologi risiko adalah gelombang masa depan, orang lain
+
+22
+00:02:00.000 --> 00:02:02.001
+Mereka mengatakan bahwa risiko sudah menjadi teknologi past.
+
+23
+00:02:03.000 --> 00:02:04.000
+Apa pendapat pakar ini?
+
+24
+00:02:04.001 --> 00:02:09.000
+Nah, Stuart, rangkaian PC IBM saat ini, PC, XT, AT dan sebagainya,
+
+25
+00:02:09.000 --> 00:02:11.000
+Mereka didasarkan pada prosesor yang disebut 8086.
+
+26
+00:02:11.001 --> 00:02:15.001
+8086 benar-benar generasi berikutnya setelah prosesor 8-bit.
+
+27
+00:02:16.000 --> 00:02:17.000
+400 disebut dengan 8080.
+
+28
+00:02:17.001 --> 00:02:19.001
+Jadi, sekarang kita sudah memiliki sebuah...
+
+29
+00:02:19.001 --> 00:02:23.000
+Kami mencoba untuk memperluas ke ruang memori yang lebih besar, pergi dari batasan 640K ke
+
+30
+00:02:23.000 --> 00:02:25.000
+Mari kita katakan 8 megabyte dan hal-hal seperti itu.
+
+31
+00:02:25.000 --> 00:02:26.001
+Sangat, sangat sulit untuk melakukannya.
+
+32
+00:02:26.001 --> 00:02:28.000
+Ini adalah sejenis arsitektur mosaik.
+
+33
+00:02:28.001 --> 00:02:30.001
+Oleh karena itu, risiko memberi kita titik permulaan baru.
+
+34
+00:02:30.001 --> 00:02:34.001
+Kita bisa katakan, okay, di sini adalah set instruksi yang lebih sederhana, lebih cepat, kurang ruang kode.
+
+35
+00:02:35.000 --> 00:02:37.000
+Hal ini membuat penulis kompilator lebih mudah untuk menulis kompilers.
+
+36
+00:02:37.000 --> 00:02:39.001
+Dan untuk penulis perangkat lunak, kita bisa tetap dengan tinggi
+
+37
+00:02:39.001 --> 00:02:41.000
+bahasa dan benar-benar tidak peduli.
+
+38
+00:02:41.001 --> 00:02:45.001
+Nah, kita akan melihat mesin risiko IBM hari ini, RTPC.
+
+39
+00:02:45.001 --> 00:02:49.000
+Kami akan bertemu dengan pria yang menghitung istilah Risiko dan kami akan berbicara dengan beberapa Risiko lain
+
+40
+00:02:49.000 --> 00:02:50.001
+Eksperimen, baik Pro dan Con.
+
+41
+00:02:51.000 --> 00:02:54.000
+Seperti yang saya sebutkan, Hewlett Packard adalah salah satu pemain utama di Risk saat ini.
+
+42
+00:02:54.000 --> 00:02:56.001
+Kami akan memulai dengan pergi ke laboratorium risiko HP.
+
+43
+00:02:58.001 --> 00:03:03.001
+Dalam pencarian komputer yang lebih cepat dan lebih kuat, perangkat keras yang lebih baik sering
+
+44
+00:03:03.001 --> 00:03:07.001
+yang diambil di peringkat tengah sementara perubahan dalam arsitektur terjebak.
+
+45
+00:03:08.001 --> 00:03:13.001
+Desain arsitektur baru yang digunakan dalam Risk atau Reduced Instructions set komputer
+
+46
+00:03:13.001 --> 00:03:18.000
+Menggunakan instruksi yang lebih sederhana yang membutuhkan lebih sedikit siklus mesin.
+
+47
+00:03:19.000 --> 00:03:25.000
+Pada awal 1970-an, IBM mengeksplorasi jenis operasi yang paling umum dijalankan.
+
+48
+00:03:25.000 --> 00:03:31.000
+oleh sebuah instruksi kompleks mengatur mesin dan menemukan bahwa hanya sekitar 20% dari
+
+49
+00:03:31.000 --> 00:03:36.000
+instruksi yang paling sederhana mewakili sekitar 80% dari waktu pemrosesan.
+
+50
+00:03:37.000 --> 00:03:41.001
+Arsitektur risiko bergantung pada unsur-unsur komputasi sederhana ini untuk melakukan sebagian besar
+
+51
+00:03:41.001 --> 00:03:44.000
+Operasinya dalam satu siklus.
+
+52
+00:03:45.000 --> 00:03:49.000
+Meskipun Risk telah membuat sedikit kemasukan di pasar, setidaknya satu perusahaan besar,
+
+53
+00:03:49.001 --> 00:03:54.001
+Hewlett Packard, menunjukkan kepercayaan diri dalam Risiko dengan memperkenalkan garis penuh
+
+54
+00:03:54.001 --> 00:03:58.001
+dari mesin berbasis risiko sebagai generasi berikutnya dari komputer high-end.
+
+55
+00:03:59.001 --> 00:04:04.001
+Semua pengkomputeran kecuali beban dan penyimpanan terjadi di jalur data.
+
+56
+00:04:06.000 --> 00:04:11.000
+Subroutin Inline dapat dipanggil untuk fungsi kompleks dan membantu prosesor
+
+57
+00:04:11.000 --> 00:04:15.000
+Beroperasi ketika diperlukan untuk aritmetik dan grafis titik berenang.
+
+58
+00:04:16.001 --> 00:04:21.000
+Sifat khusus desain Risk membuatnya sesuai dengan teknik dan
+
+59
+00:04:21.000 --> 00:04:25.001
+aplikasi ilmiah di mana instruksi empat byte atau kurang dapat
+
+60
+00:04:25.001 --> 00:04:27.000
+dilakukan dalam satu siklus.
+
+61
+00:04:28.000 --> 00:04:33.000
+Tetapi sementara aplikasi seperti itu menunjukkan kelebihan Risiko, beberapa kritikus
+
+62
+00:04:33.000 --> 00:04:38.001
+menegaskan bahwa kecepatan yang diperoleh oleh instruksi yang dikurangi dapat dihapus oleh
+
+63
+00:04:38.001 --> 00:04:43.000
+jalur data yang lebih panjang dan oleh kebutuhan untuk menyesuaikan fungsi kompleks.
+
+64
+00:04:59.000 --> 00:05:02.001
+Yang bergabung dengan kami sekarang di studio adalah Dr. Joel Birnbaum, Wakil Presiden dan Jenderal
+
+65
+00:05:02.001 --> 00:05:05.000
+Pengurus untuk Grup Teknologi Informasi di Hewlett Packard.
+
+66
+00:05:05.001 --> 00:05:07.001
+Dan di samping Joel adalah Dr. David Patterson, Profesor
+
+67
+00:05:07.001 --> 00:05:09.001
+Ilmu Komputer di UC Berkeley.
+
+68
+00:05:10.001 --> 00:05:13.000
+David, hanya untuk latar belakang, dari mana datangnya risiko?
+
+69
+00:05:13.000 --> 00:05:16.000
+Apa asal dan apa yang benar-benar membuatnya berbeda dari
+
+70
+00:05:16.000 --> 00:05:17.001
+Arsitektur mesin tradisional?
+
+71
+00:05:18.000 --> 00:05:23.000
+Nah, ide itu menuju ke kesederhanaan, kembali ke kebaikan
+
+72
+00:05:23.000 --> 00:05:24.001
+Sebuah filsafat kecil yang indah.
+
+73
+00:05:26.000 --> 00:05:27.001
+Ada banyak asal-usul untuk itu.
+
+74
+00:05:28.000 --> 00:05:31.000
+Salah satu yang utama dilakukan di IBM pada pertengahan 1970-an dan
+
+75
+00:05:31.000 --> 00:05:32.001
+Beberapa kelompok penelitian di sini di California.
+
+76
+00:05:34.000 --> 00:05:36.001
+Filosofi adalah dengan mencoba untuk membuat komputer lebih sederhana untuk
+
+77
+00:05:36.001 --> 00:05:38.000
+membuatnya lebih cepat dan lebih efisien.
+
+78
+00:05:39.000 --> 00:05:43.001
+Sekarang, jika kita membandingkan, mari kita katakan, tradisi, apa yang kita sebut mesin tradisional
+
+79
+00:05:43.001 --> 00:05:49.000
+Seperti 286 IBM PCAT, bagaimana mesin Risiko membandingkan dalam hal kecepatan?
+
+80
+00:05:52.000 --> 00:05:56.001
+Menurut para peneliti di bidang ini, yang menggunakan
+
+81
+00:05:56.001 --> 00:06:00.001
+sumber daya, Anda dapat mendapatkan sesuatu seperti faktor dua hingga empat peningkatan biaya
+
+82
+00:06:00.001 --> 00:06:02.001
+Perbandingan dengan desain tradisional.
+
+83
+00:06:03.000 --> 00:06:07.001
+Jadi mengingat transistor yang sama seperti yang digunakan Intel pada 286, pada AT, kita harus
+
+84
+00:06:07.001 --> 00:06:11.000
+dapat membangun mesin lain dua kali lebih cepat atau empat kali lebih laju.
+
+85
+00:06:11.001 --> 00:06:15.000
+Joel, saya pernah mendengar beberapa yang membuatnya sangat mudah bagi beberapa orang untuk
+
+86
+00:06:15.000 --> 00:06:18.001
+tentang 80 persen dan 20 persen bisnis ini, yang seseorang
+
+87
+00:06:18.001 --> 00:06:20.001
+Anda mungkin kembali ke IBM pada tahun 1970-an atau sebagainya.
+
+88
+00:06:21.000 --> 00:06:21.001
+Bisakah Anda menjelaskan hal itu?
+
+89
+00:06:22.000 --> 00:06:27.000
+Ya, saya pikir gagasan adalah bahwa komputer menghabiskan sebagian besar waktu mereka, 80 persen.
+
+90
+00:06:27.000 --> 00:06:32.001
+dari waktu mereka, angka simbolik, melakukan beberapa hal sederhana dan tidak melakukan
+
+91
+00:06:32.001 --> 00:06:34.000
+perkara-perkara yang rumit sangat sering.
+
+92
+00:06:34.000 --> 00:06:38.001
+Jadi konsepnya adalah bahwa jika Anda mengoptimalkan mesin untuk melakukan hal-hal yang paling sederhana seperti
+
+93
+00:06:38.001 --> 00:06:44.000
+untuk melakukan hal-hal yang kompleks seberapa sering yang mungkin, maka
+
+94
+00:06:44.000 --> 00:06:48.001
+Anda mungkin keluar dengan mesin yang untuk jenis pekerjaan tertentu akan lebih
+
+95
+00:06:48.001 --> 00:06:53.000
+yang lebih efektif dari orang-orang yang membayar hukuman kerumitan di atas segala hal.
+
+96
+00:06:53.000 --> 00:06:55.001
+Setiap waktu yang ia lakukan, setiap waktu yang dia lakukan.
+
+97
+00:06:56.000 --> 00:07:00.001
+Joel, jika Anda berbicara tentang risiko, itu adalah filosofi, cara Anda merancang mesin
+
+98
+00:07:00.001 --> 00:07:03.000
+Arsitektur, atau itu adalah set instruksi tertentu?
+
+99
+00:07:03.000 --> 00:07:07.000
+Ini pasti adalah filsafat atau gaya, dan sebenarnya itu adalah gaya yang berbeda.
+
+100
+00:07:07.000 --> 00:07:09.001
+Tergantung pada apa yang Anda coba lakukan.
+
+101
+00:07:10.000 --> 00:07:16.001
+Jadi ide utama adalah untuk tidak menambahkan kompleksitas apa pun ke mesin kecuali ia membayar untuk
+
+102
+00:07:16.001 --> 00:07:18.001
+Berdasarkan seberapa sering ia menggunakannya.
+
+103
+00:07:19.000 --> 00:07:23.000
+Sebagai contoh, sebuah mesin yang digunakan dalam ilmu pengetahuan yang sangat berat.
+
+104
+00:07:23.000 --> 00:07:27.001
+cara di mana petunjuk titik berenang penting dapat membuat set yang berbeda
+
+105
+00:07:27.001 --> 00:07:30.000
+dari tradeoff daripada mesin lain di mana itu tidak penting.
+
+106
+00:07:31.000 --> 00:07:36.000
+sama seperti yang kompatibilitas dengan mesin lain adalah penting atau dalam
+
+107
+00:07:36.000 --> 00:07:40.000
+Jenis-jenis jaringan tertentu yang penting akan mencakup berbagai fitur,
+
+108
+00:07:40.001 --> 00:07:44.001
+Tetapi dalam setiap kasus harus dilakukan sebagai hasil dari pengukuran relatif
+
+109
+00:07:44.001 --> 00:07:48.001
+frekuensi penggunaan dan denda yang akan Anda bayar untuk inklusi atau
+
+110
+00:07:48.001 --> 00:07:50.001
+Tidak termasuk fitur tertentu.
+
+111
+00:07:50.001 --> 00:07:52.000
+Jadi di mana Anda melihat arsitektur risiko menjadi
+
+112
+00:07:52.000 --> 00:07:54.000
+Apa yang penting untuk dikatakan dalam komputer saat ini?
+
+113
+00:07:54.000 --> 00:07:56.000
+Apakah itu akan, kita akan melihatnya bergerak ke bidang ilmiah?
+
+114
+00:07:56.000 --> 00:07:59.000
+Apakah ini akan menjadi pengganti untuk komputer desktop saat ini?
+
+115
+00:07:59.001 --> 00:08:02.001
+Saya tidak pikir Anda akan menyukai jawaban saya karena saya tidak berpikir ada
+
+116
+00:08:02.001 --> 00:08:04.000
+Seperti halnya arsitektur risiko.
+
+117
+00:08:04.000 --> 00:08:09.000
+Saya pikir apa yang ada adalah desain teknik yang baik dari mesin yang disebut komputer.
+
+118
+00:08:09.001 --> 00:08:15.000
+Dan menurut saya semua mesin seperti itu harus dirancang dengan menganalisis apa yang tepat
+
+119
+00:08:15.000 --> 00:08:19.001
+apa yang mereka lakukan dan apa tujuan orang membangun mesin adalah dan kemudian
+
+120
+00:08:19.001 --> 00:08:23.000
+Membangun analisis tersebut dalam desain spesifik.
+
+121
+00:08:23.001 --> 00:08:27.001
+Ternyata bahwa sejumlah kecil instruksi, yang paling banyak
+
+122
+00:08:27.001 --> 00:08:33.001
+sering digunakan, sebenarnya dapat menangani berbagai aplikasi dan jenis
+
+123
+00:08:33.001 --> 00:08:36.000
+dari aplikasi, ukuran dan jenis.
+
+124
+00:08:36.001 --> 00:08:40.000
+Dan itulah yang datang untuk dipanggil pengurangan instruksi set mesin karena dalam
+
+125
+00:08:40.000 --> 00:08:44.000
+Faktanya, mereka membuat angin menjadi jumlah yang lebih kecil dari instruksi keras.
+
+126
+00:08:44.001 --> 00:08:49.000
+Tetapi untuk membuat produk yang sukses termasuk banyak, banyak hal lain.
+
+127
+00:08:49.001 --> 00:08:54.001
+Di HP misalnya, kita mungkin telah menghabiskan dua pertiga dari waktu kita pada bagian-bagian dari
+
+128
+00:08:54.001 --> 00:08:57.001
+keluarga komputer baru yang tidak ada hubungannya dengan instruksi yang ditetapkan itu sendiri.
+
+129
+00:08:57.001 --> 00:09:01.001
+Jika kita memperkenalkan mesin baru ke dalam masyarakat ada masalah yang jelas dari
+
+130
+00:09:01.001 --> 00:09:03.000
+mencoba untuk mendapatkan aplikasi dari mesin itu.
+
+131
+00:09:03.001 --> 00:09:06.001
+Apa strategi dalam hal mari kita katakan Heald Packard adalah bagaimana Anda akan
+
+132
+00:09:06.001 --> 00:09:09.000
+Bisakah orang-orang berpindah ke arsitektur baru seperti itu?
+
+133
+00:09:09.001 --> 00:09:14.000
+Baik dalam kasus kita kita mencoba untuk mendapatkan pelanggan kita dan jika kita beruntung mungkin beberapa
+
+134
+00:09:14.000 --> 00:09:18.001
+pelanggan orang lain untuk beralih ke mesin baru dari setidaknya tiga
+
+135
+00:09:18.001 --> 00:09:21.000
+Keluarga-keluarga sebelumnya, masing-masing dengan instruksi mereka sendiri
+
+136
+00:09:21.000 --> 00:09:23.000
+set, kompiler keluarga dan sebagainya.
+
+137
+00:09:23.001 --> 00:09:28.000
+Jadi kami harus menyediakan jalur migrasi yang lancar untuk pelanggan terdahulu.
+
+138
+00:09:28.001 --> 00:09:32.001
+Ketika orang-orang telah diprogramkan dalam bahasa tingkat tinggi kita sering dapat menginap
+
+139
+00:09:32.001 --> 00:09:37.000
+yang hanya dengan mengumpulkan yang mendapatkan kita sebagian besar fitur tetapi tidak semua
+
+140
+00:09:37.000 --> 00:09:38.001
+Arsitektur mode asli.
+
+141
+00:09:39.000 --> 00:09:43.001
+Ketika orang tidak memiliki kemampuan itu kita berjalan ke mode kompatibilitas dan kita memiliki
+
+142
+00:09:43.001 --> 00:09:48.001
+berbagai alat dan akselerator terkadang dalam perangkat keras dan terkadang di
+
+143
+00:09:48.001 --> 00:09:53.001
+perangkat lunak yang pada dasarnya mengambil instruksi lama dan menerjemahkannya atau
+
+144
+00:09:53.001 --> 00:09:57.000
+Terjemahkannya ke dalam yang baru dan itu dapat dilakukan dengan berbagai cara.
+
+145
+00:09:57.001 --> 00:09:59.001
+David membantu Anda menciptakan konsep risiko ini.
+
+146
+00:09:59.001 --> 00:10:01.000
+Bagaimana menurut Anda evolusi telah datang?
+
+147
+00:10:01.000 --> 00:10:03.001
+Saya pikir Anda mendengar Joel mengatakan baik itu tidak benar-benar seperti itu
+
+148
+00:10:03.001 --> 00:10:05.000
+Sesuatu yang sederhana seperti mesin risiko.
+
+149
+00:10:06.000 --> 00:10:09.000
+Saya pikir yang menarik adalah seberapa hidupnya filsafat
+
+150
+00:10:09.000 --> 00:10:11.000
+telah berada di berbagai bidang.
+
+151
+00:10:11.000 --> 00:10:15.001
+Pekerjaan asli yang dilakukan diabaikan apa yang disebut komputer simbolik untuk
+
+152
+00:10:15.001 --> 00:10:18.000
+kecerdasan buatan dan penghitungan titik yang mengalir.
+
+153
+00:10:18.000 --> 00:10:22.001
+Eksperimen yang dilakukan beberapa kelompok sejak itu telah menunjukkan risiko ini.
+
+154
+00:10:22.001 --> 00:10:28.000
+filosofi desain berbasis eksperimental bekerja sangat baik untuk simbolik
+
+155
+00:10:28.000 --> 00:10:32.000
+pemrosesan untuk bahasa seperti Common Lisp dan untuk titik berenang
+
+156
+00:10:32.000 --> 00:10:34.001
+penghitungan, jumlah aplikasi crunching.
+
+157
+00:10:35.000 --> 00:10:37.001
+Jadi saya pikir ini adalah pendekatan yang mengejutkan.
+
+158
+00:10:38.000 --> 00:10:39.000
+[...] Sampaikan terima kasih
+
+159
+00:10:39.000 --> 00:10:41.001
+Sekarang kita telah berbicara tentang mesin risiko dalam satu menit kita akan melihat
+
+160
+00:10:41.001 --> 00:10:45.000
+Satu, IBM RTPC dalam hanya satu menit jadi tinggal bersama kami.
+
+161
+00:10:58.001 --> 00:11:03.000
+Yang bergabung dengan kami sekarang di studio adalah Dr. dan W. Frank King, Manajer Jenderal untuk Advanced
+
+162
+00:11:03.000 --> 00:11:07.000
+Sistem Teknik di IBM dan di samping Frank, Anda adalah Martin, Wakil Presiden
+
+163
+00:11:07.000 --> 00:11:09.000
+Pengembangan di Ridge Computers.
+
+164
+00:11:09.000 --> 00:11:09.000
+dengan Gary?
+
+165
+00:11:10.000 --> 00:11:13.001
+Konsep risiko sebenarnya tampaknya adalah unit pemrosesan pusat
+
+166
+00:11:13.001 --> 00:11:15.001
+Pengajaran mengatur filosofi.
+
+167
+00:11:15.001 --> 00:11:21.000
+Sekarang bagaimana dengan konsep yang terkait seperti paralelisme, konsep IO, IO cepat
+
+168
+00:11:21.000 --> 00:11:23.000
+Perawatan, apakah Anda telah bekerja pada hal-hal tersebut sama sekali?
+
+169
+00:11:23.001 --> 00:11:24.000
+Tentu saja
+
+170
+00:11:24.001 --> 00:11:29.000
+Di Ridge apa yang kami lakukan adalah kami fokus terlebih dahulu pada prosesor pusat tetapi
+
+171
+00:11:29.000 --> 00:11:32.001
+seluruh mesin harus dirancang untuk menjadi efisien dan oleh karena itu kami menghabiskan banyak
+
+172
+00:11:32.001 --> 00:11:36.001
+waktu awal pada bagian prosesor IO untuk memastikan bahwa kinerja
+
+173
+00:11:36.001 --> 00:11:41.000
+IO sepadan dengan unit pemrosesan pusat dan sekarang bahwa kita memiliki ini disederhanakan
+
+174
+00:11:41.000 --> 00:11:46.000
+prosesor kita sedang mengeksplorasi arsitektur paralel yang dapat mengambil keuntungan dalam
+
+175
+00:11:46.000 --> 00:11:47.001
+cara yang sama dengan arsitektur yang sederhana ini.
+
+176
+00:11:48.000 --> 00:11:52.001
+Sekarang komputer Vax, 11, 780s dan 750s dan sebagainya banyak digunakan
+
+177
+00:11:52.001 --> 00:11:54.000
+Karena mereka adalah prosesor IO yang baik.
+
+178
+00:11:54.000 --> 00:11:56.001
+Apakah Anda hanya berpikir bahwa arsitektur risiko dengan kata cepat IO
+
+179
+00:11:56.001 --> 00:11:58.000
+Apakah ia akan menjadi pesaing untuk Vax?
+
+180
+00:11:58.001 --> 00:12:02.000
+Saya pikir apakah Anda memiliki risiko atau tidak.
+
+181
+00:12:02.000 --> 00:12:03.001
+Komputer yang Anda butuhkan dengan sistem IO yang cepat.
+
+182
+00:12:04.001 --> 00:12:08.000
+Ketika kami merancang mesin pertama kami memastikan bahwa kami memiliki IO yang sangat cepat
+
+183
+00:12:08.000 --> 00:12:12.001
+sistem untuk pergi bersama dengan komputer cepat ini dan sehingga kita bergerak ke pasar tempat
+
+184
+00:12:12.001 --> 00:12:16.000
+di mana ada banyak pengguna dan cakera yang terhubung ke mesin yang kita
+
+185
+00:12:16.000 --> 00:12:18.000
+Kami juga melakukan hal yang sama dengan Vax.
+
+186
+00:12:18.000 --> 00:12:18.001
+Baik dengan baik.
+
+187
+00:12:19.000 --> 00:12:22.000
+Frank ini adalah contoh nyata dari mesin risiko, itu adalah RT.
+
+188
+00:12:23.001 --> 00:12:28.000
+Ini tampaknya, Anda dapat memberikan perbandingan yang cukup baik pada kecepatan ini
+
+189
+00:12:28.000 --> 00:12:31.000
+Karena tidak ada co-processor yang berjalan di mesin ini yang akan menjalankan
+
+190
+00:12:31.000 --> 00:12:33.001
+Ada 286 aplikasi.
+
+191
+00:12:33.001 --> 00:12:34.000
+Ada juga Gary.
+
+192
+00:12:34.000 --> 00:12:40.000
+Mesin ini menjalankan 1.6 hingga 2.1 juta instruksi per detik dan memiliki
+
+193
+00:12:40.000 --> 00:12:44.000
+Co-processor board dengan 286 di atasnya yang berjalan sekitar sepertiga dari kecepatan itu.
+
+194
+00:12:45.000 --> 00:12:47.000
+Frank, pasar mana yang ditargetkan mesin ini?
+
+195
+00:12:47.000 --> 00:12:49.001
+Anda mendapatkan ini di pasar sekarang selama beberapa bulan sekarang.
+
+196
+00:12:49.001 --> 00:12:51.000
+Siapa yang membeli mesin risiko?
+
+197
+00:12:51.000 --> 00:12:55.000
+Kami membungkus versi tabletop mesin terutama untuk orang-orang yang
+
+198
+00:12:55.000 --> 00:12:59.000
+kebutuhan kecepatan dan kapasitas di atas apa yang IBM komputer pribadi dan
+
+199
+00:12:59.000 --> 00:13:03.000
+Sistem tipe komputer dapat mendukung sehingga benar-benar untuk orang yang membutuhkan
+
+200
+00:13:03.000 --> 00:13:05.000
+Lebih banyak kecepatan dan kapasitas.
+
+201
+00:13:05.000 --> 00:13:05.001
+Jadi siapa mereka?
+
+202
+00:13:06.001 --> 00:13:10.000
+Jurutera adalah contoh yang mudah, arsitek membuat desain bangunan, orang-orang di
+
+203
+00:13:10.000 --> 00:13:15.000
+industri asuransi yang memeriksa tabel actuarial, jenis orang.
+
+204
+00:13:15.000 --> 00:13:17.001
+Jadi, apakah Anda melihat aplikasi bisnis selain sains kejuruteraan?
+
+205
+00:13:17.001 --> 00:13:19.001
+Ya, aplikasi bisnis fungsi tinggi.
+
+206
+00:13:20.000 --> 00:13:22.001
+Frank hanya untuk titik referensi, berapa biaya mesin ini?
+
+207
+00:13:22.001 --> 00:13:25.000
+Mesin ini saat ia duduk di meja ini adalah sekitar $ 10.000.
+
+208
+00:13:25.001 --> 00:13:26.001
+Dan itu datang dengan berapa banyak ingatan?
+
+209
+00:13:27.000 --> 00:13:32.000
+Ini memiliki hingga 4 megabit memori di dalamnya dan file besar 70 megabyte di dalam itu.
+
+210
+00:13:32.000 --> 00:13:34.001
+Frank Anda menyebutkan desain dan Gary Saya akan meletakkan Anda di tempat sekarang.
+
+211
+00:13:34.001 --> 00:13:37.001
+Saya ingin melihat betapa mudahnya menggunakan RTPC ini di sini.
+
+212
+00:13:37.001 --> 00:13:39.001
+Anda akan menjadi operator kami dan Anda akan
+
+213
+00:13:39.001 --> 00:13:41.000
+Saya akan membantu untuk menunjukkan mesin Frank.
+
+214
+00:13:41.001 --> 00:13:42.001
+Apa yang bisa Anda tunjukkan kepada kami di Gary ini?
+
+215
+00:13:43.000 --> 00:13:47.000
+Nah, sekarang saya seorang ahli, saya memiliki total 10 atau 15 detik untuk instruksi.
+
+216
+00:13:48.001 --> 00:13:53.000
+Saya akan masuk ke sini dan mendapatkan ilustrasi teknis dan jadi saya memilih yang dan
+
+217
+00:13:53.000 --> 00:13:57.001
+Klik di atasnya membuka jendela dan di sini adalah dokumen dari beberapa jenis dengan
+
+218
+00:13:57.001 --> 00:13:59.000
+Vektor yang saya percayai.
+
+219
+00:13:59.000 --> 00:14:03.001
+Apa yang akan saya lakukan adalah pergi dan pilih ini dan jika saya menunjuk segmen kecil ini
+
+220
+00:14:03.001 --> 00:14:09.000
+dengan benar, harus memegangnya, di sana ia pergi, ia mulai bercahaya.
+
+221
+00:14:09.001 --> 00:14:11.000
+Dan sekarang saya bisa mendapatkan sedikit menu di sini dan
+
+222
+00:14:11.000 --> 00:14:12.001
+Aku akan mengambil hal ini dan memutarnya.
+
+223
+00:14:13.000 --> 00:14:17.001
+Ketika saya menggerakkan tetikus di sekitar Anda dapat melihat bahwa objek itu sendiri bergerak dan
+
+224
+00:14:17.001 --> 00:14:19.000
+Aku hanya bisa membiarkannya berada di posisi itu.
+
+225
+00:14:19.001 --> 00:14:23.000
+Ini rotasi waktu nyata yang saya ambil sebagai contoh sesuatu yang membutuhkan
+
+226
+00:14:23.000 --> 00:14:24.001
+Banyak proses yang cepat untuk mengatasinya.
+
+227
+00:14:25.000 --> 00:14:25.000
+Itu memang benar.
+
+228
+00:14:25.001 --> 00:14:29.001
+Atau saya dapat mengambil satu keping di sini, misalnya, sehingga Anda mendapatkan tangkapan dari itu.
+
+229
+00:14:30.001 --> 00:14:32.001
+Koordinasi mata tangan saya tidak begitu baik.
+
+230
+00:14:34.000 --> 00:14:36.001
+Okay, baiklah di sana ia pergi lagi.
+
+231
+00:14:36.001 --> 00:14:38.001
+Nah sekarang apa yang akan saya lakukan pada saat ini adalah saya akan mengambil hal itu
+
+232
+00:14:38.001 --> 00:14:40.000
+dan bergerak di sekitarnya.
+
+233
+00:14:40.001 --> 00:14:44.000
+Kami akan mengambilnya dan menyimpannya ke bagian ini dari layar sehingga Anda dapat
+
+234
+00:14:44.000 --> 00:14:47.001
+melihat tindakan di sana cukup bagus dan kemudian hanya meninggalkannya.
+
+235
+00:14:48.000 --> 00:14:51.000
+Frank, salah satu kekhawatiran yang saya dengar tentang mesin risiko adalah masalah
+
+236
+00:14:51.000 --> 00:14:53.001
+Adaptasi perangkat lunak dan sebagainya.
+
+237
+00:14:53.001 --> 00:14:54.001
+Di manakah kamu berdiri di atas itu?
+
+238
+00:14:54.001 --> 00:14:56.001
+Apakah Anda harus menulis perangkat lunak baru hanya untuk ini?
+
+239
+00:14:57.000 --> 00:14:57.001
+Tidak benar.
+
+240
+00:14:57.001 --> 00:15:00.001
+Sebagian besar perangkat lunak yang berjalan pada mesin ini ditulis pada tingkat tinggi
+
+241
+00:15:00.001 --> 00:15:04.001
+bahasa dan oleh karena itu pengkompilator harus ada untuk mendukungnya dan Anda harus
+
+242
+00:15:04.001 --> 00:15:08.001
+memiliki kompilator yang tahu bagaimana bekerja dengan arsitektur risiko tetapi kompiler
+
+243
+00:15:08.001 --> 00:15:12.001
+benar-benar memindahkan perangkat lunak saat ini ke jenis mesin ini.
+
+244
+00:15:12.001 --> 00:15:14.001
+Apakah ini pada dasarnya lingkungan operasi Unix?
+
+245
+00:15:14.001 --> 00:15:17.001
+Ya, ini pada dasarnya adalah lingkungan operasi Unix yang mendukung C dan
+
+246
+00:15:17.001 --> 00:15:19.000
+Fortran dan jenis-jenis bahasa standar.
+
+247
+00:15:19.001 --> 00:15:21.001
+Apa strategi Anda untuk memindahkan aplikasi?
+
+248
+00:15:22.000 --> 00:15:22.000
+Kami berbicara tentang itu.
+
+249
+00:15:22.000 --> 00:15:23.000
+Kami akan membalas kembali tentang hal itu.
+
+250
+00:15:23.000 --> 00:15:28.000
+Nah, pertama-tama, kita menentukan satu set kompilator dan mereka adalah normal
+
+251
+00:15:28.000 --> 00:15:33.000
+kompilator dan kemudian kinerja harga mesin harus membenarkan orang
+
+252
+00:15:33.000 --> 00:15:35.000
+ingin menghabiskan uang untuk memindahkan perangkat lunak mereka ke itu.
+
+253
+00:15:35.001 --> 00:15:38.000
+Anda memiliki sebuah perusahaan kecil, sebuah komputer yang kaya, bukan?
+
+254
+00:15:38.000 --> 00:15:40.001
+Saya pikir Anda telah menjual empat atau lima ratus mesin risiko ini.
+
+255
+00:15:40.001 --> 00:15:42.001
+Siapakah Anda yang menjualnya dan bagaimana Anda mengeluarkan niche
+
+256
+00:15:42.001 --> 00:15:44.001
+antara HP dan IBM.
+
+257
+00:15:44.001 --> 00:15:48.001
+Nah, niche kami adalah prestasi harga terutama di pasar teknis.
+
+258
+00:15:48.001 --> 00:15:53.000
+Contoh utama dari pelanggan yang mungkin Anda kenal jika Anda telah melihat Super
+
+259
+00:15:53.000 --> 00:15:56.001
+Bowl atau Olimpiade, semua animasi yang mendahului program-program tersebut dibuat oleh
+
+260
+00:15:56.001 --> 00:15:58.000
+Sebuah perusahaan lokal, Pacific Data Images.
+
+261
+00:15:58.001 --> 00:16:01.000
+Mereka memiliki 12 rintangan yang tidak melakukan apa-apa kecuali menghancurkan bingkai setelah bingkai.
+
+262
+00:16:01.000 --> 00:16:03.000
+Sekali lagi, grafis berat yang memerlukan
+
+263
+00:16:03.000 --> 00:16:04.001
+kecepatan dan kekuatan yang risiko dapat memberi mereka.
+
+264
+00:16:06.001 --> 00:16:08.000
+Frank, di manakah kamu melihat ke depan?
+
+265
+00:16:08.000 --> 00:16:12.000
+Kami mendengar rumor tentang peningkatan RTPC yang keluar dan beberapa perubahan di dalamnya.
+
+266
+00:16:12.001 --> 00:16:13.000
+Apakah itu benar?
+
+267
+00:16:13.000 --> 00:16:15.000
+Tentu saja, IBM tidak pernah berbicara tentang masa depan.
+
+268
+00:16:15.001 --> 00:16:18.000
+Jadi saya harus mulai dengan mengatakan bahwa kami tidak akan berbicara tentang masa depan kami.
+
+269
+00:16:18.001 --> 00:16:23.001
+Tetapi apa yang kita lihat sedang terjadi di industri ini, industri desktop mikrokomputer, adalah
+
+270
+00:16:23.001 --> 00:16:27.001
+benar-benar menggandakan kecepatan dan kapasitas sekitar setiap 12 hingga 14 bulan.
+
+271
+00:16:28.000 --> 00:16:31.000
+Jadi jelas, jika kita akan berpartisipasi di pasar ini dan kita berniat untuk,
+
+272
+00:16:31.001 --> 00:16:34.000
+Perbaikan seperti itu harus berlanjut dari waktu ke waktu.
+
+273
+00:16:34.001 --> 00:16:37.001
+Dan kita melihat beberapa peningkatan yang cukup signifikan dalam kecepatan
+
+274
+00:16:37.001 --> 00:16:39.000
+di halaman 286 dan 386.
+
+275
+00:16:39.001 --> 00:16:41.001
+Bukankah itu cukup kompetitif dengan arsitektur risiko?
+
+276
+00:16:42.000 --> 00:16:43.000
+Ini adalah 24 megahertz 386.
+
+277
+00:16:44.000 --> 00:16:45.001
+Bukankah itu cukup dekat dengan kecepatan mesin ini?
+
+278
+00:16:45.001 --> 00:16:49.001
+386s yang tersedia hari ini, tentu saja, adalah 16 megahertz.
+
+279
+00:16:50.000 --> 00:16:54.001
+Tetapi karena arsitektur Intel menjadi lebih cepat, sehingga untuk jenis mesin ini
+
+280
+00:16:54.001 --> 00:16:56.000
+Untuk membenarkan harga dan harga
+
+281
+00:16:56.000 --> 00:16:58.000
+prestasi, itu akan harus tetap lebih cepat.
+
+282
+00:16:58.000 --> 00:16:59.000
+Dan itulah niat kita.
+
+283
+00:17:00.000 --> 00:17:01.000
+Teman-teman, terima kasih banyak sekali.
+
+284
+00:17:01.000 --> 00:17:02.001
+Sekarang kita telah melihat sebuah komputer berisiko.
+
+285
+00:17:02.001 --> 00:17:04.000
+Kami sudah berbicara tentang aplikasi.
+
+286
+00:17:04.000 --> 00:17:07.001
+Mari kita lihat bagaimana seorang pelanggan sebenarnya menggunakan mesin risiko.
+
+287
+00:17:08.000 --> 00:17:11.000
+Wendy Woods pergi ke ESL di Sunnyvale, California untuk mencari tahu.
+
+288
+00:17:13.000 --> 00:17:19.001
+ESL di Sunnyvale, California sedang merancang prosesor sistolik tercepat di dunia,
+
+289
+00:17:20.000 --> 00:17:24.000
+Chip yang dapat digunakan dalam teknologi yang begitu beragam seperti pendengaran yang canggih
+
+290
+00:17:24.000 --> 00:17:28.000
+peranti atau dalam pemrosesan gambar gambar dari luar ruang.
+
+291
+00:17:29.000 --> 00:17:34.000
+Tugas ini membutuhkan daya komputasi yang luar biasa yang mana insinyur bergantung pada risiko
+
+292
+00:17:34.000 --> 00:17:36.000
+Komputer mini berbasis teknologi piramid.
+
+293
+00:17:37.000 --> 00:17:39.001
+Ini memungkinkan kita untuk memiliki mesin yang berjalan jauh lebih cepat.
+
+294
+00:17:39.001 --> 00:17:43.000
+Dan itu sangat penting bagi kami karena program kami mengambil masa yang lama.
+
+295
+00:17:44.000 --> 00:17:47.000
+Kami juga memiliki sejumlah pengguna pada mesin ini.
+
+296
+00:17:48.000 --> 00:17:50.001
+Jadi sangat efisien dalam menangani itu.
+
+297
+00:17:51.000 --> 00:17:56.000
+Dan jenis khusus campuran instruksi yang kita dapatkan dari integrasi kita
+
+298
+00:17:56.000 --> 00:18:00.001
+desain sirkuit, yang merupakan instruksi titik tetap atau instruksi integral, seperti:
+
+299
+00:18:00.001 --> 00:18:05.001
+Berlawanan dengan angka titik yang mengalir yang memiliki eksponen, yang menjalankan laporan
+
+300
+00:18:05.001 --> 00:18:07.000
+dengan cepat pada arsitektur risiko ini.
+
+301
+00:18:08.000 --> 00:18:14.000
+Circuit terintegrasi yang dirancang oleh ESL memiliki 62.000 transistor, dan risiko
+
+302
+00:18:14.000 --> 00:18:18.001
+komputer digunakan untuk melakukan simulasi yang menyeluruh dan verifikasi
+
+303
+00:18:18.001 --> 00:18:23.001
+desain sebelum ia berkomitmen untuk silikon untuk memastikan bahwa ia benar-benar bekerja.
+
+304
+00:18:24.001 --> 00:18:28.000
+Anda akan berpikir bahwa setelah dua tahun, orang-orang di sini akan dijual pada risiko
+
+305
+00:18:28.000 --> 00:18:30.000
+teknologi, tapi tidak seperti itu.
+
+306
+00:18:31.000 --> 00:18:33.001
+Pemprosesan paralel, mereka mengatakan, menawarkan kelebihan yang sama.
+
+307
+00:18:34.000 --> 00:18:38.000
+Tapi garis bawah adalah bahwa jenis proyek ini tidak pernah memiliki pemrosesan yang cukup
+
+308
+00:18:38.000 --> 00:18:42.001
+tenaga, dan insinyur tidak siap untuk menikah dengan teknologi apa pun di
+
+309
+00:18:42.001 --> 00:18:44.000
+usaha mereka untuk mendapatkan pekerjaan yang dilakukan.
+
+310
+00:18:45.000 --> 00:18:47.000
+Untuk Computer Chronicles, saya Wendy Woods.
+
+311
+00:18:59.000 --> 00:19:01.001
+Dengan kami sekarang di studio adalah Jan Lewis, Presiden
+
+312
+00:19:01.001 --> 00:19:03.000
+dari Palo Alto Research Group.
+
+313
+00:19:03.000 --> 00:19:05.000
+Dan di samping Jan adalah George Morrow, yang kita semua tahu
+
+314
+00:19:05.000 --> 00:19:06.001
+adalah komentar kami di sini pada Computer Chronicles.
+
+315
+00:19:07.000 --> 00:19:08.001
+Saat ini ia juga menjadi Wakil Presiden untuk
+
+316
+00:19:08.001 --> 00:19:10.000
+Teknik dengan Intelligent Access.
+
+317
+00:19:11.001 --> 00:19:13.001
+Jan, komunitas komputer sudah cukup relaksasi
+
+318
+00:19:13.001 --> 00:19:15.001
+untuk menerima arsitektur baru di masa lalu.
+
+319
+00:19:15.001 --> 00:19:17.000
+Apakah akan ada masalah dengan arsitektur risiko?
+
+320
+00:19:17.001 --> 00:19:20.000
+Saya pikir ini akan menjadi masalah karena beberapa alasan.
+
+321
+00:19:20.001 --> 00:19:23.000
+Pertama adalah konsep untuk menerima arsitektur yang lebih baru.
+
+322
+00:19:23.001 --> 00:19:27.000
+Tapi yang lain adalah bahwa ada banyak tentang risiko
+
+323
+00:19:27.000 --> 00:19:28.001
+Saya sangat skeptis tentang itu.
+
+324
+00:19:28.001 --> 00:19:34.000
+Dan sebenarnya, aplikasi komersial belum benar-benar membuktikan bahwa risiko adalah
+
+325
+00:19:34.000 --> 00:19:36.000
+Ini akan memberi kita peningkatan kinerja yang nyata.
+
+326
+00:19:36.001 --> 00:19:40.000
+Mesin-mesin yang ada di luar sana, baik HP, pengiriman dalam jumlah kecil,
+
+327
+00:19:40.000 --> 00:19:43.001
+Dan RT, benar-benar dikurangi versi risiko.
+
+328
+00:19:43.001 --> 00:19:46.001
+Mereka tidak benar-benar mesin risiko, meskipun mereka menggunakan beberapa prinsip risiko.
+
+329
+00:19:47.001 --> 00:19:51.001
+Dan beberapa peningkatan kinerja yang kita lihat mungkin, sebenarnya, tidak karena
+
+330
+00:19:51.001 --> 00:19:55.000
+risiko, tetapi karena faktor-faktor lain seperti pendaftaran on-chip
+
+331
+00:19:55.000 --> 00:19:57.000
+menjadi lebih banyak dalam kuantitas.
+
+332
+00:19:58.000 --> 00:19:59.001
+George, apa pendapat Anda tentang teknologi risiko?
+
+333
+00:20:00.001 --> 00:20:07.000
+Nah, melihatnya dari sudut pandang silikon, rekaman yang lebih kaya mengatur dan
+
+334
+00:20:07.000 --> 00:20:10.001
+instruksi yang disederhanakan menetapkan menguntungkan penggunaan silikon.
+
+335
+00:20:11.000 --> 00:20:12.000
+Jadi itu adalah hal yang positif.
+
+336
+00:20:13.000 --> 00:20:18.001
+Di sisi negatif, kita tampaknya terus membuat set instruksi baru.
+
+337
+00:20:19.001 --> 00:20:22.001
+Dan itu seperti mencipta tipface baru setiap
+
+338
+00:20:22.001 --> 00:20:24.000
+Waktu Anda ingin mengatakan sesuatu lagi.
+
+339
+00:20:25.001 --> 00:20:27.001
+Jadi ini adalah tindakan keseimbangan yang nyata.
+
+340
+00:20:28.001 --> 00:20:32.001
+Apa yang benar-benar ingin saya lihat terjadi adalah bagi beberapa orang ini untuk mengetahui bagaimana untuk
+
+341
+00:20:32.001 --> 00:20:37.000
+membuat komputer yang akan menjalankan biner siapa pun tanpa mengumpulkan atau
+
+342
+00:20:37.000 --> 00:20:39.000
+Terjemahan dari salah satu hal ini.
+
+343
+00:20:39.000 --> 00:20:40.000
+Itulah yang saya benar-benar inginkan.
+
+344
+00:20:40.000 --> 00:20:43.000
+Jen, Anda mengatakan mesin di pasar dipanaskan dan mereka tidak benar-benar
+
+345
+00:20:43.000 --> 00:20:47.000
+mencerminkan teori tersebut. Apa masalahnya? Apa itu Teknologi
+
+346
+00:20:47.000 --> 00:20:48.001
+Apa masalah yang melarang itu?
+
+347
+00:20:48.001 --> 00:20:53.000
+Nah, ada beberapa hal. Pertama sekali, konsepnya adalah bahwa Anda memiliki sangat sedikit
+
+348
+00:20:53.000 --> 00:20:57.001
+Jumlah instruksi Saya katakan 50 atau kurang. George mengatakan delapan atau kurang.
+
+349
+00:20:58.000 --> 00:21:03.000
+Tetapi Anda memiliki beberapa instruksi, masing-masing menggunakan dasarnya sangat sedikit
+
+350
+00:21:03.000 --> 00:21:07.001
+siklus jam, satu secara teoritis, dan bahwa Anda mendapatkan kinerja maksimum sebagai
+
+351
+00:21:07.001 --> 00:21:12.000
+hasilnya . Tapi sebenarnya, mesin yang ada di sana membutuhkan ekspansi. Mereka melakukan
+
+352
+00:21:12.000 --> 00:21:16.001
+Butuh hal lain. Dan sebenarnya, RT, misalnya, sebenarnya rata-rata sekitar satu
+
+353
+00:21:16.001 --> 00:21:22.001
+Pengajaran per 2.7 siklus berbanding dengan yang teoritis. Jadi mereka tidak
+
+354
+00:21:22.001 --> 00:21:27.001
+dengan risiko murni. Kami telah berkembang dari risiko dalam arti murni ke risiko seperti
+
+355
+00:21:27.001 --> 00:21:32.001
+Arsitektur untuk arsitektur menggunakan prinsip-prinsip risiko untuk hanya menyederhanakan
+
+356
+00:21:32.001 --> 00:21:36.000
+Instructions set dengan on-chip registers. Apa yang pertama
+
+357
+00:21:36.000 --> 00:21:38.000
+Apakah aplikasi akan menjadi untuk arsitektur risiko?
+
+358
+00:21:38.001 --> 00:21:39.001
+Di manakah kita akan melihatnya? Apakah kita akan berada di
+
+359
+00:21:39.001 --> 00:21:41.000
+Komunitas ilmiah CAD CAM?
+
+360
+00:21:41.001 --> 00:21:46.000
+Saya pikir itu akan sebagian besar di komunitas ilmiah. Untuk satu hal, itu tidak
+
+361
+00:21:46.000 --> 00:21:49.001
+membutuhkan jumlah IO yang sama, yang masih menjadi masalah. Dan yang lain
+
+362
+00:21:49.001 --> 00:21:52.001
+Hal ini, dalam hal menerima arsitektur baru, saya pikir jika ada satu
+
+363
+00:21:52.001 --> 00:21:56.001
+masyarakat yang kurang standar sadar, itu mungkin adalah teknik dan
+
+364
+00:21:56.001 --> 00:22:00.000
+masyarakat ilmiah. George dan Jen, Anda berdua mengatakan ada cukup beberapa
+
+365
+00:22:00.000 --> 00:22:03.001
+masalah di sini dengan risiko. Kami telah mendengar frasa bahwa Hewlett-Packard adalah perjudian
+
+366
+00:22:03.001 --> 00:22:08.000
+seluruh divisi komputernya pada teknologi risiko. Maksudnya, itu adalah...
+
+367
+00:22:08.000 --> 00:22:12.001
+Nah, saya tidak berpikir itu cukup adil karena saya pikir bagian dari apa yang dilakukan HP adalah
+
+368
+00:22:12.001 --> 00:22:17.001
+Investasi untuk mengangkut pelanggan dari lingkungan standar mereka ke
+
+369
+00:22:17.001 --> 00:22:20.000
+Hal yang mungkin sedikit lebih fleksibel. Jadi saya tidak berpikir
+
+370
+00:22:20.000 --> 00:22:21.001
+Mereka berjudi seluruh perusahaan di atasnya.
+
+371
+00:22:22.000 --> 00:22:29.000
+Apa yang dikatakan Jen adalah benar. Tapi di sisi positif, penulis kompilasi dengan banyak dan
+
+372
+00:22:29.000 --> 00:22:31.001
+banyak pendaftaran, penulis kompiler akan dapat menulis lebih baik
+
+373
+00:22:31.001 --> 00:22:36.000
+dan kompilator. Dan mungkin kita akhirnya akan sampai pada titik di mana kita benar-benar telah
+
+374
+00:22:36.000 --> 00:22:39.000
+bahasa-bahasa portabel tingkat tinggi dengan jenis latar belakang ini.
+
+375
+00:22:39.000 --> 00:22:42.001
+Ini mungkin harapan terbesar. Tentu saja, masyarakat ilmiah
+
+376
+00:22:42.001 --> 00:22:44.001
+Mereka akan melompat lebih cepat.
+
+377
+00:22:45.000 --> 00:22:48.001
+Ini membuat gambar berputar lebih cepat, hal seperti itu. Bagaimana dengan kompetisi dari
+
+378
+00:22:48.001 --> 00:22:54.000
+Prosesor baru dari Motorola, 60, yang baru 386?
+
+379
+00:22:55.000 --> 00:22:56.001
+Mereka sedang berbicara tentang 24 megahertz sekarang.
+
+380
+00:22:57.000 --> 00:23:01.001
+Apakah itu akan memukul kembali? Nah, saya berada di forum yang disebut shootout 32-bit
+
+381
+00:23:01.001 --> 00:23:06.001
+Di mana Motorola memperkenalkan 68030. Dan mereka sangat, sangat berprestasi tinggi
+
+382
+00:23:06.001 --> 00:23:12.000
+Mesin yang Jadi mungkin pendekatan tradisional akan terus menjadi lebih baik.
+
+383
+00:23:13.000 --> 00:23:17.001
+Tapi akhirnya kita akan turun ke titik di mana silikon penting.
+
+384
+00:23:18.000 --> 00:23:23.000
+Dan mesin risiko mereka menang di silikon lebih baik dari set instruksi yang kompleks.
+
+385
+00:23:23.000 --> 00:23:26.001
+George, Jen, Gary, kita keluar dari waktu. Terima kasih banyak sekali. Dan kami akan kembali ke
+
+386
+00:23:26.001 --> 00:23:28.001
+Hanya satu menit dengan berita komputer minggu ini.
+
+387
+00:23:39.001 --> 00:23:44.000
+Dalam file akses rawak minggu ini, kedua-dua IBM dan Hewlett-Packard baru saja melakukan
+
+388
+00:23:44.000 --> 00:23:48.001
+pengumuman yang mempengaruhi mesin risiko mereka. HP mengatakan masalah perangkat lunak akan menyebabkan
+
+389
+00:23:48.001 --> 00:23:52.001
+Sebuah keterlambatan dalam pengiriman yang direncanakan dari Spectrum Mini-Computer. Pengiriman saat ini
+
+390
+00:23:52.001 --> 00:23:57.001
+Diperkirakan pada pertengahan tahun 1987. Dan IBM telah mengumumkan peningkatan dan penambahbaikan dalam
+
+391
+00:23:57.001 --> 00:24:03.000
+Komputer berisiko desktop, RT-PC RT-Model 15 yang baru akan memiliki fitur yang lebih baik
+
+392
+00:24:03.000 --> 00:24:07.001
+kemampuan jaringan, memori, dan penyimpanan. IBM juga mengatakan akan memotong
+
+393
+00:24:07.001 --> 00:24:09.000
+Harga pada RT-PC
+
+394
+00:24:10.000 --> 00:24:13.001
+IBM juga memperkuat kekuatan penjualan, mengumumkan transfer lebih dari 2
+
+395
+00:24:13.001 --> 00:24:19.000
+1.000 karyawan memasuki penjualan dengan tujuan untuk meningkatkan kekuatan penjualan totalnya dengan 5
+
+396
+00:24:19.000 --> 00:24:23.001
+ribuan orang. Apple telah mengumumkan kesepakatan dengan Northern Telecom yang akan memungkinkan
+
+397
+00:24:23.001 --> 00:24:26.001
+Macintosh untuk jaringan melalui rangkaian telepon biasa.
+
+398
+00:24:26.001 --> 00:24:31.000
+Perangkat lunak dan perangkat lunak baru dapat mempercepat komunikasi Mac dengan faktor 18.
+
+399
+00:24:32.001 --> 00:24:36.000
+Lotus mengumumkan program HAL baru untuk 123 pengguna minggu ini.
+
+400
+00:24:36.000 --> 00:24:37.001
+Info 86 pameran di New York.
+
+401
+00:24:38.000 --> 00:24:43.001
+HAL adalah add-on berbasis AI yang memudahkan interaksi dengan Lotus 123. dan Lotus
+
+402
+00:24:43.001 --> 00:24:49.000
+Ia juga mengumumkan produk CD-ROM pertama yang disebut OneSource. Ini adalah cakera kompak
+
+403
+00:24:49.000 --> 00:24:53.000
+Berdasarkan data keuangan yang bernilai 20 tahun. OneSource CD-ROM dapat
+
+404
+00:24:53.000 --> 00:24:59.000
+Berkomunikasi dengan 123 Konvensi Persatuan Penerbit Software tahunan
+
+405
+00:24:59.000 --> 00:25:03.001
+Washington, juru bicara untuk Pendidikan Sistem Teknologi mengatakan komputer akan
+
+406
+00:25:03.001 --> 00:25:08.000
+Mengembalikan trend ukuran ruang kelas yang lebih kecil. Laporan tersebut mengatakan bahwa komputer akan
+
+407
+00:25:08.000 --> 00:25:12.000
+memungkinkan guru untuk menangani kelas 90 siswa dengan lebih perhatian individu
+
+408
+00:25:12.000 --> 00:25:17.000
+yang mungkin terjadi di kelas-kelas yang lebih kecil. Waktu untuk program minggu ini
+
+409
+00:25:17.000 --> 00:25:18.001
+Dan di sini adalah Paul Schindler.
+
+410
+00:25:20.001 --> 00:25:24.000
+Anda tahu, penulis perangkat lunak komputer terus-menerus di sudut pandang untuk cara-cara
+
+411
+00:25:24.000 --> 00:25:26.000
+Meningkatkan sistem manual.
+
+412
+00:25:26.001 --> 00:25:30.000
+Sekarang jika Anda, seperti saya, menggunakan jenis sistem ini untuk memantau hal-hal di atas Anda
+
+413
+00:25:30.000 --> 00:25:35.000
+Saya pikir Anda akan menyukai Tornado Notes. Tornado Notes adalah memori-resident multi
+
+414
+00:25:35.000 --> 00:25:39.001
+Tuliskan catatan dan catatan. Ini seperti kombinasi stick-on kuning,
+
+415
+00:25:40.000 --> 00:25:42.000
+Kertas, dan sistem manajemen database.
+
+416
+00:25:42.001 --> 00:25:46.000
+Tornado Notes mengambil gagasan umum ini satu langkah lebih jauh dengan
+
+417
+00:25:46.000 --> 00:25:47.001
+Membangun lingkungan yang lebih mirip dengan desk.
+
+418
+00:25:47.001 --> 00:25:52.001
+Tidak hanya dapat mencari seluruh pita catatan Anda untuk referensi tertentu, ia dapat
+
+419
+00:25:52.001 --> 00:25:56.000
+mengatur catatan-catatan seperti yang Anda akan mengatur pita kertas dengan beberapa catatan mudah untuk
+
+420
+00:25:56.000 --> 00:26:01.000
+akses di atas dan beberapa catatan yang dikebumikan di bawah. Tornado Notes dapat memasukkan tanggal
+
+421
+00:26:01.000 --> 00:26:06.000
+dan waktu, mengimport dan mengekspor file, dan menawarkan prosesor kata yang wajar plus
+
+422
+00:26:06.000 --> 00:26:11.000
+bantuan online. Tidak seperti beberapa program memori lama, Tornado Notes tampaknya
+
+423
+00:26:11.000 --> 00:26:15.001
+coexist dengan baik, mungkin tanda bahwa penulis program yang tinggal di memori akhirnya memiliki
+
+424
+00:26:15.001 --> 00:26:20.001
+telah menandatangani beberapa perjanjian damai. Tornado Notes adalah $50 dari Micrologic di Hackensack,
+
+425
+00:26:20.001 --> 00:26:26.000
+dari New Jersey. Untuk Chronicles Computer, saya adalah Paul Schindler. Sebuah perusahaan yang bernama
+
+426
+00:26:26.000 --> 00:26:30.000
+Gamma Link telah datang dengan produk baru yang memungkinkan Anda mengirimkan salinan dari PC
+
+427
+00:26:30.000 --> 00:26:34.000
+langsung ke mesin faks. Tambahan papan biaya sekitar $ 1.000.
+
+428
+00:26:34.001 --> 00:26:38.001
+Sebaliknya, Federal Express mengumumkan minggu ini bahwa ia menghapus sendiri
+
+429
+00:26:38.001 --> 00:26:44.000
+Layanan faks, Zappmail, karena kerugian berat. Organisasi yang disebut Overseas
+
+430
+00:26:44.000 --> 00:26:47.001
+Dewan Penasihat Keamanan Mulai Membentuk Lembaga Buletin di Internasional
+
+431
+00:26:47.001 --> 00:26:52.000
+Terorisme yang Dewan mengatakan ia berharap BBS akan menjadi sumber penting
+
+432
+00:26:52.000 --> 00:26:55.000
+Informasi untuk para pengusaha Amerika yang bepergian di luar negeri.
+
+433
+00:26:56.001 --> 00:27:00.000
+Seorang pengusaha buta di Indiana telah mengembangkan spreadsheet berbicara
+
+434
+00:27:00.000 --> 00:27:01.001
+Program untuk pengguna buta.
+
+435
+00:27:02.000 --> 00:27:05.001
+Ini disebut WrapSheet dan menawarkan enam baris dengan 22 kolom.
+
+436
+00:27:05.001 --> 00:27:07.000
+dan sebagian besar fungsi spreadsheet.
+
+437
+00:27:07.001 --> 00:27:11.001
+Pengembang mengatakan dia akan menyerahkannya secara gratis kepada orang-orang lain yang tidak terlihat.
+
+438
+00:27:12.001 --> 00:27:16.000
+Akhirnya, para peneliti di Carnegie Mellon University di Pittsburgh mengatakan bahwa
+
+439
+00:27:16.000 --> 00:27:20.001
+membuat kemajuan pada sintesis molekul protein yang mungkin suatu hari akan menjadi
+
+440
+00:27:20.001 --> 00:27:23.000
+CPU dari komputer molekul.
+
+441
+00:27:23.000 --> 00:27:28.000
+Seorang peneliti CMU mengatakan bahwa komputer molekul akan memungkinkan penggantian
+
+442
+00:27:28.000 --> 00:27:32.000
+neuron manusia yang cacat di otak dan akan memungkinkan patrol tumor kecil
+
+443
+00:27:32.000 --> 00:27:36.001
+komputer dalam tubuh yang akan mendeteksi pertumbuhan sel abnormal dan secara otomatis
+
+444
+00:27:36.001 --> 00:27:39.000
+memperbaiki sel tersebut. Itulah yang terjadi pada minggu ini
+
+445
+00:28:02.001 --> 00:28:08.000
+dengan kronik. Kita akan berjumpa denganmu lain kali.
