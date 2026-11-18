@@ -1,0 +1,1973 @@
+WEBVTT
+
+1
+00:00:18.000 --> 00:00:23.000
+Digamos que você é George Morrow e você tem uma coleção de mais de 70.000 78 RPM
+
+2
+00:00:23.000 --> 00:00:25.001
+registros e alguém diz-lhe, o que você tem por Hoagy
+
+3
+00:00:25.001 --> 00:00:27.001
+Carmichael do ano de 1930?
+
+4
+00:00:27.001 --> 00:00:32.000
+Bem, ou você precisa de outra sala deste tamanho cheio de cartões 3x5 em cerca de uma semana ou
+
+5
+00:00:32.000 --> 00:00:36.000
+Um computador pessoal, um gerente de banco de dados, e você obtém a resposta em segundos.
+
+6
+00:00:36.001 --> 00:00:38.001
+6 e Stuart. Qual o que você quer?
+
+7
+00:00:39.000 --> 00:00:42.000
+Bem, eu não sei. Hoje vamos olhar para um dos mais poderosos.
+
+8
+00:00:42.000 --> 00:00:45.001
+aplicativos em um computador pessoal, gerenciamento de banco de dados, neste
+
+9
+00:00:45.001 --> 00:00:47.000
+Edição de The Computer Chronicles.
+
+10
+00:01:10.001 --> 00:01:15.000
+As crônicas de computador são feitas possíveis por Leading Edge, fabricantes da IBM
+
+11
+00:01:15.000 --> 00:01:18.001
+-Sistemas de computador compatíveis, incluindo o processamento de palavras com correção de gravação,
+
+12
+00:01:18.001 --> 00:01:23.000
+Software de comunicação, e modemas Haze-compatíveis 1200 e 2400 VOD.
+
+13
+00:01:23.000 --> 00:01:28.000
+Leading Edge com mais de 1.000 centros de serviço em todo o país. O Leading Edge liderou o
+
+14
+00:01:28.000 --> 00:01:31.001
+caminho para a Idade da Informação. O financiamento adicional é fornecido por
+
+15
+00:01:31.001 --> 00:01:33.000
+McGraw-Hill, editora da Byte.
+
+16
+00:01:34.000 --> 00:01:37.001
+Artigos técnicos detalhados da Byte sobre novos hardware, software e idiomas de cobertura
+
+17
+00:01:37.001 --> 00:01:40.000
+desenvolvimentos em tecnologias de computador em todo o mundo.
+
+18
+00:01:45.001 --> 00:01:48.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay.
+
+19
+00:01:48.001 --> 00:01:51.000
+E isso é Gary Kildall. Gary, temos uma espécie de museu de
+
+20
+00:01:51.000 --> 00:01:52.001
+Dispositivos de armazenamento de informações aqui.
+
+21
+00:01:52.001 --> 00:01:55.001
+Você sabe, o bom livro de endereços de moda velha. Você tinha seu nome e número em
+
+22
+00:01:55.001 --> 00:01:58.001
+Lá lá . Se você tinha talvez um pouco mais complicado sistema Rolodex sobre aqui.
+
+23
+00:01:59.001 --> 00:02:02.000
+Arquivos que você manteve em seu desenho de arquivo, seu escritório ou algo assim. Talvez
+
+24
+00:02:02.000 --> 00:02:04.001
+Uma dessas grandes caixas com ABCD vai para baixo lá.
+
+25
+00:02:05.000 --> 00:02:07.001
+Estas são todas formas bastante primitivas de armazenar informações, obviamente. Eles tomam
+
+26
+00:02:07.001 --> 00:02:09.000
+Um monte de espaço. Eles são muito difíceis de atualizar.
+
+27
+00:02:09.001 --> 00:02:12.001
+Você só pode classificá-los ao longo de uma dimensão, geralmente alfabeticamente e assim por diante.
+
+28
+00:02:13.000 --> 00:02:15.000
+É por isso que temos computadores e gerentes de banco de dados, felizmente.
+
+29
+00:02:15.000 --> 00:02:20.001
+Existem duas versões básicas de gerenciadores de dados. Base de dados relacional e plano
+
+30
+00:02:20.001 --> 00:02:22.001
+Gerenciadores de arquivos. Explique a diferença entre eles.
+
+31
+00:02:23.000 --> 00:02:25.001
+Bem, Stuart, os gerentes de arquivos plana basicamente apenas tomam uma sequência de registros,
+
+32
+00:02:26.000 --> 00:02:28.000
+nomes, endereços, qualquer que seja, ordená-los, faça uma lista de correio.
+
+33
+00:02:28.001 --> 00:02:31.000
+Operação muito simples. As relações sociais são baseadas em um
+
+34
+00:02:31.000 --> 00:02:33.000
+Teoria matemática completa.
+
+35
+00:02:33.001 --> 00:02:35.000
+Cada informação é considerada uma
+
+36
+00:02:35.000 --> 00:02:38.000
+A mesa. Cada linha da mesa é chamada de final tuple.
+
+37
+00:02:38.000 --> 00:02:39.001
+Na matemática, isso é chamado de relacionamento e
+
+38
+00:02:39.001 --> 00:02:41.001
+É aí que vem o nome dos sistemas relacionais.
+
+39
+00:02:41.001 --> 00:02:44.000
+Este Rolodex, por exemplo, pode ser considerado um
+
+40
+00:02:44.000 --> 00:02:46.000
+A mesa. Nome, endereço e número de telefone.
+
+41
+00:02:46.001 --> 00:02:49.001
+Pode ter relatórios de vendas sobre aqui, territórios geográficos sobre aqui.
+
+42
+00:02:50.000 --> 00:02:53.001
+Podemos tomar essa mesa, extrair os nomes, tomar essa mesma mesa, colocá-los
+
+43
+00:02:53.001 --> 00:02:57.000
+Juntos e obter uma nova tabela inteira, tomar a tabela de áreas geográficas
+
+44
+00:02:57.000 --> 00:02:59.000
+e criar outra mesa e assim por diante.
+
+45
+00:02:59.000 --> 00:03:01.001
+E, eventualmente, você pode obter uma lista de correio a partir dela.
+
+46
+00:03:02.000 --> 00:03:04.000
+Ok, Gary, vamos olhar para algumas das classificações mais altas
+
+47
+00:03:04.000 --> 00:03:06.000
+Gerenciadores de dados em ambas as categorias.
+
+48
+00:03:06.000 --> 00:03:09.001
+Vamos ver as versões mais recentes de DBase e RBase. Vamos olhar para Q&amp;A
+
+49
+00:03:09.001 --> 00:03:11.000
+e arquivo PFS profissional.
+
+50
+00:03:11.000 --> 00:03:14.001
+Agora, quando você fala sobre gerentes de banco de dados, aplicações de negócios, você tende a
+
+51
+00:03:14.001 --> 00:03:17.000
+Suponha que você está falando do MS-DOS IBM mundo.
+
+52
+00:03:17.000 --> 00:03:19.001
+Muitos fãs de Macintosh lá fora que pensam na melhor maneira de fazer isso
+
+53
+00:03:19.001 --> 00:03:21.001
+O gerenciamento de dados está em um Mac.
+
+54
+00:03:22.000 --> 00:03:24.001
+Vamos começar com um relatório sobre uma empresa bastante grande que usa o
+
+55
+00:03:24.001 --> 00:03:26.001
+Macintosh para sua gestão de banco de dados.
+
+56
+00:03:30.000 --> 00:03:35.000
+Por trás de cada PC de escritório bem-sucedido, há um programa de software que vai acelerar
+
+57
+00:03:35.000 --> 00:03:38.000
+Substituir ou substituir tarefas anteriormente feitas à mão.
+
+58
+00:03:38.000 --> 00:03:43.000
+A empresa de contabilidade de Pete Marwick em San Francisco encontrou uma maneira de fazer ambos
+
+59
+00:03:43.000 --> 00:03:47.000
+e criar um novo link de comunicação ao mesmo tempo.
+
+60
+00:03:47.001 --> 00:03:52.000
+O departamento de artes gráficas de Pete Marwick substituiu folhas de pasta e faturamento
+
+61
+00:03:52.000 --> 00:03:57.000
+com uma rede Macintosh inteira, combinando a base de dados Helix de vários usuários da Odesta com
+
+62
+00:03:57.000 --> 00:04:02.001
+MacDraw e um LaserWriter para ordenar, contabilizar e criar apresentações gráficas em
+
+63
+00:04:02.001 --> 00:04:04.000
+menos de 24 horas.
+
+64
+00:04:05.000 --> 00:04:10.001
+O banco de dados Helix que funciona através de uma rede Apple Talk funciona como um eletrônico
+
+65
+00:04:10.001 --> 00:04:13.001
+linha de assembléia, com a função adicional de mover em qualquer
+
+66
+00:04:13.001 --> 00:04:15.001
+direção ou velocidade necessária.
+
+67
+00:04:16.001 --> 00:04:20.001
+Quando os pedidos de trabalho são recebidos, eles são inseridos na base de dados pelo cliente
+
+68
+00:04:20.001 --> 00:04:23.001
+conta, data de entrada e descrição do assunto.
+
+69
+00:04:24.000 --> 00:04:28.000
+O esquema rígido do cliente é digitalmente reproduzido e armazenado
+
+70
+00:04:28.000 --> 00:04:29.001
+em disco para a impressão posterior.
+
+71
+00:04:29.001 --> 00:04:34.001
+O arquivo passa por diferentes etapas, acumulando cargas automaticamente
+
+72
+00:04:34.001 --> 00:04:37.000
+de acordo com o tempo gasto em cada tarefa.
+
+73
+00:04:37.001 --> 00:04:42.001
+A rede permite a cada usuário autorizado verificar a conclusão de cada passo
+
+74
+00:04:42.001 --> 00:04:44.001
+antes da impressão final.
+
+75
+00:04:46.000 --> 00:04:50.001
+Em Pete Marwick, Macintoshes são quase tão comuns quanto contadores, mas em um
+
+76
+00:04:50.001 --> 00:04:53.001
+departamentos que eles encontraram uma maneira de converter uma base de dados de clientes
+
+77
+00:04:53.001 --> 00:04:55.001
+em uma rede de departamentos.
+
+78
+00:05:07.001 --> 00:05:11.000
+Juntando-nos agora no estúdio é Dennis Travens, gerente de produção de Dennis com
+
+79
+00:05:11.000 --> 00:05:13.001
+Rede de Televisão Instrucional da Universidade de Stanford.
+
+80
+00:05:14.000 --> 00:05:17.001
+Também conosco é Jim Hubbard, um corretor imobiliário com número um Realtors.
+
+81
+00:05:17.001 --> 00:05:17.001
+de Gary.
+
+82
+00:05:18.001 --> 00:05:20.000
+Dennis, você e Jim são ambos usuários de bases de dados
+
+83
+00:05:20.000 --> 00:05:21.001
+Em vez de promover um produto.
+
+84
+00:05:22.000 --> 00:05:25.001
+Como você usa uma base de dados em sua linha de trabalho específica?
+
+85
+00:05:25.001 --> 00:05:29.000
+No Stanford Instructional Television Network, transmitimos um computador ao vivo
+
+86
+00:05:29.000 --> 00:05:33.000
+cursos de ciência e engenharia no Vale do Silício diretamente do nosso
+
+87
+00:05:33.000 --> 00:05:35.000
+sala de aula no campus.
+
+88
+00:05:35.001 --> 00:05:40.001
+Minha tarefa como gerente de produção de vídeo é gerenciar seis estúdios diferentes todos
+
+89
+00:05:40.001 --> 00:05:44.001
+durante o dia com diferentes professores e diferentes funcionários que entram, estudantes
+
+90
+00:05:44.001 --> 00:05:46.000
+Diretores técnicos e diferentes requisitos.
+
+91
+00:05:46.000 --> 00:05:49.000
+Então eu uso uma base de dados para acompanhar tudo o que além de tudo o diferente
+
+92
+00:05:49.000 --> 00:05:52.000
+procedimentos de contabilidade que sejam necessários.
+
+93
+00:05:52.000 --> 00:05:54.001
+OK  ⁇  E Jim, você está no negócio imobiliário, entende?
+
+94
+00:05:55.000 --> 00:05:56.000
+Como você usa o banco de dados?
+
+95
+00:05:57.000 --> 00:06:02.000
+A base de dados é usada para acompanhar os proprietários de propriedades com os quais estou trabalhando.
+
+96
+00:06:02.000 --> 00:06:07.000
+Eu tomo uma área de cinco, seis centenas de pessoas e inserir essa informação no
+
+97
+00:06:07.000 --> 00:06:11.000
+base de dados em relação aos seus endereços e este tipo de coisa junto com o seu telefone
+
+98
+00:06:11.000 --> 00:06:14.001
+Os números para que eu possa acompanhar os contatos que tenho com eles.
+
+99
+00:06:14.001 --> 00:06:18.001
+Além disso, eu uso a base de dados para fazer mensagens.
+
+100
+00:06:18.001 --> 00:06:23.000
+Eu faço uma etiqueta de e-mail e eu também faço correio combinando com seus endereços.
+
+101
+00:06:23.001 --> 00:06:25.000
+Agora, cada um de vocês usa sistemas diferentes.
+
+102
+00:06:25.001 --> 00:06:26.001
+Vamos começar, Dennis, com você.
+
+103
+00:06:26.001 --> 00:06:28.000
+Você usa o arquivo PFS Professional.
+
+104
+00:06:28.001 --> 00:06:28.001
+Isso é correto.
+
+105
+00:06:29.000 --> 00:06:30.000
+E mostre-nos como você usa e depois
+
+106
+00:06:30.000 --> 00:06:32.000
+Finalmente, eu quero que você explique por que você escolheu.
+
+107
+00:06:32.000 --> 00:06:32.001
+OK  ⁇
+
+108
+00:06:33.000 --> 00:06:37.001
+O que eu tenho aqui é uma lista de uma base de dados que eu usei que mantém o rastreamento de
+
+109
+00:06:37.001 --> 00:06:39.001
+Todas as pessoas nos estúdios.
+
+110
+00:06:40.000 --> 00:06:41.000
+Vou pular em alguns dos dados.
+
+111
+00:06:41.000 --> 00:06:45.001
+As primeiras linhas têm a informação específica sobre o que o número de emprego é.
+
+112
+00:06:45.001 --> 00:06:47.000
+Passamos por todas as funções.
+
+113
+00:06:47.000 --> 00:06:52.000
+Eu também tenho uma parte em minha base de dados que mantém rastreamento de folhas de tempo.
+
+114
+00:06:52.001 --> 00:06:55.001
+Os alunos entrarão, entram os seus nomes offline.
+
+115
+00:06:56.000 --> 00:06:59.000
+Em seguida, eles vão colocar todas as suas horas particulares juntos.
+
+116
+00:06:59.000 --> 00:07:00.001
+Eu posso encher-los aqui para cima no fundo.
+
+117
+00:07:01.000 --> 00:07:02.000
+Então podemos continuar.
+
+118
+00:07:02.000 --> 00:07:04.000
+O que eu também criei aqui é um cartão de taxa.
+
+119
+00:07:04.000 --> 00:07:09.000
+Eu vou através e há campos diferentes aqui onde posso inserir um número e
+
+120
+00:07:09.000 --> 00:07:14.000
+Calcular exatamente qual o valor real do dólar desses particulares...
+
+121
+00:07:14.000 --> 00:07:16.001
+Você tem muitos e muitos campos aqui para cada um desses registros.
+
+122
+00:07:16.001 --> 00:07:17.000
+Sim eu faço.
+
+123
+00:07:17.001 --> 00:07:23.001
+Uma das outras coisas que posso fazer aqui é que posso criar relatórios usando o meu
+
+124
+00:07:23.001 --> 00:07:28.000
+Atividades de banco de dados padrão.
+
+125
+00:07:28.001 --> 00:07:30.000
+Vamos passar por aqui mais uma vez.
+
+126
+00:07:32.000 --> 00:07:36.000
+Vou passar por aqui e fazer um relatório.
+
+127
+00:07:36.000 --> 00:07:39.000
+Utilizando um macro.
+
+128
+00:07:39.000 --> 00:07:42.000
+I&#x27;m going here, call up a list of macros que eu criei.
+
+129
+00:07:42.000 --> 00:07:43.001
+Antes do tempo para os meus custos.
+
+130
+00:07:43.001 --> 00:07:45.001
+Vou criar um relatório de crosstab.
+
+131
+00:07:46.001 --> 00:07:49.001
+Você está basicamente recebendo um relatório que irá combinar todas essas informações,
+
+132
+00:07:49.001 --> 00:07:52.000
+Resume-o quanto ao quanto custa fazer alguma produção específica.
+
+133
+00:07:52.001 --> 00:07:53.000
+Sim, isso é exatamente certo.
+
+134
+00:07:54.000 --> 00:07:56.001
+Eu tinha que parar aqui para garantir que estamos
+
+135
+00:07:56.001 --> 00:07:58.000
+Isso vai ser impresso na tela.
+
+136
+00:07:58.000 --> 00:08:03.000
+Nós passamos e isso poderia ir para a tela ou para a impressora.
+
+137
+00:08:03.001 --> 00:08:06.000
+Quantos registros você geralmente teria ativo em qualquer momento?
+
+138
+00:08:06.001 --> 00:08:08.001
+Eu tenho 365.
+
+139
+00:08:09.000 --> 00:08:11.000
+Temos um sistema quadrado, então eu posso ter 300 para
+
+140
+00:08:11.000 --> 00:08:13.000
+400 registros diferentes que funcionam ao mesmo tempo.
+
+141
+00:08:13.001 --> 00:08:17.000
+Uma das razões mais poderosas que eu gosto de arquivos profissionais é porque é parte
+
+142
+00:08:17.000 --> 00:08:18.001
+da família profissional PFS.
+
+143
+00:08:18.001 --> 00:08:22.001
+Isso permite que eu coloque isso em um programa de spreadsheet.
+
+144
+00:08:22.001 --> 00:08:25.000
+Eu uso o spreadsheet como uma conta padrão.
+
+145
+00:08:25.000 --> 00:08:26.001
+Você pode usar isso para fazer sua aula.
+
+146
+00:08:27.000 --> 00:08:27.001
+Isso é correto.
+
+147
+00:08:28.000 --> 00:08:29.001
+Jim, você usa outra coisa.
+
+148
+00:08:30.000 --> 00:08:32.000
+Você decidiu usar Q&amp;A da Symantec.
+
+149
+00:08:32.000 --> 00:08:34.001
+Diga-me por que você usa esse gerente de banco de dados específico.
+
+150
+00:08:35.000 --> 00:08:38.000
+Q&amp;A é um gerenciador de banco de dados muito poderoso.
+
+151
+00:08:38.001 --> 00:08:42.000
+Eu geralmente executo em qualquer lugar de 2.000 a 3.000 propriedades.
+
+152
+00:08:42.001 --> 00:08:47.000
+Nestas propriedades, eu estou seguindo a última vez que eu os enviou e também
+
+153
+00:08:47.000 --> 00:08:49.000
+Informações sobre as propriedades específicas.
+
+154
+00:08:49.000 --> 00:08:51.001
+O tamanho do quarto, esse tipo de coisa.
+
+155
+00:08:52.001 --> 00:08:57.001
+Eu posso acessar a base de dados, recolher informações, e eu posso
+
+156
+00:08:57.001 --> 00:08:59.000
+Uma mensagem, acompanhe as pessoas.
+
+157
+00:09:00.000 --> 00:09:03.000
+Em primeiro lugar, o meu negócio é pessoas, então eu tenho que saber o que está acontecendo.
+
+158
+00:09:04.000 --> 00:09:07.000
+Jim, o produto que você usa, Q&amp;A da Symantec, é anunciado para
+
+159
+00:09:07.000 --> 00:09:08.001
+Tem um componente de inteligência artificial.
+
+160
+00:09:09.000 --> 00:09:10.000
+É uma língua natural.
+
+161
+00:09:10.000 --> 00:09:11.000
+Você pode aprender a língua natural.
+
+162
+00:09:11.000 --> 00:09:14.000
+Você pode nos mostrar como isso é usado em seu trabalho particular?
+
+163
+00:09:14.001 --> 00:09:15.001
+Claro, eu estarei feliz com isso.
+
+164
+00:09:16.000 --> 00:09:20.000
+Eu vou tirar alguns formulários aqui que eu fiz um e-mail no segundo deste mês.
+
+165
+00:09:20.001 --> 00:09:25.001
+Eu posso escrever em inglês normal, mostre-me todos os formulários enviados, diga, 4-2
+
+166
+00:09:25.001 --> 00:09:27.001
+1987 e o retorno.
+
+167
+00:09:29.001 --> 00:09:33.000
+Ele vem em formas, que está questionando o que é.
+
+168
+00:09:34.000 --> 00:09:37.000
+É uma espécie de parcelar essa frase para ver se entende cada palavra.
+
+169
+00:09:37.001 --> 00:09:39.000
+Ele tem uma pergunta sobre o que você significou por forma.
+
+170
+00:09:39.000 --> 00:09:39.001
+Isso é certo.
+
+171
+00:09:40.000 --> 00:09:46.000
+Então, diz-se, é parte do dicionário ou vocabulário do edifício, ou está lá
+
+172
+00:09:46.000 --> 00:09:47.001
+Algumas outras informações que são necessárias?
+
+173
+00:09:48.001 --> 00:09:52.001
+E se eu pedir isso, agora é dizer mail.
+
+174
+00:09:53.000 --> 00:09:56.001
+Não entende a palavra enviada, e provavelmente a razão pela qual não
+
+175
+00:09:56.001 --> 00:10:00.000
+Entender é que no campo, tem data enviada.
+
+176
+00:10:01.000 --> 00:10:07.000
+E então, se eu acredito, se mudar isso e colocar em data mail, isso vai funcionar.
+
+177
+00:10:07.000 --> 00:10:09.001
+A frase em si é um pouco sensível.
+
+178
+00:10:09.001 --> 00:10:11.000
+em que campos de dados você tem.
+
+179
+00:10:11.000 --> 00:10:14.001
+Deve ser parte do campo, da base de dados, certo?
+
+180
+00:10:15.000 --> 00:10:19.000
+E você poderia ensinar o programa a aceitar formulários enviados, por exemplo.
+
+181
+00:10:19.000 --> 00:10:19.001
+Isso é correto.
+
+182
+00:10:22.000 --> 00:10:25.000
+Então, se eu adicionar uma data...
+
+183
+00:10:26.000 --> 00:10:28.000
+Bem, você tem que apoiar lá.
+
+184
+00:10:29.001 --> 00:10:30.001
+Você acha que vai entender isso?
+
+185
+00:10:31.000 --> 00:10:32.001
+Eu acho que deveria. Vamos ver o que está acontecendo agora.
+
+186
+00:10:33.000 --> 00:10:34.001
+Porque isso acontece como um nome de campo, você tem um correio de estado.
+
+187
+00:10:36.001 --> 00:10:39.000
+Então não aprendeu da última vez que você lhe disse o que você significava formas eram.
+
+188
+00:10:40.001 --> 00:10:44.001
+Ok, você tem razão. Ele entendeu naquela época.
+
+189
+00:10:44.001 --> 00:10:48.000
+Então, ele entendeu isso porque fazia parte da base de dados
+
+190
+00:10:48.000 --> 00:10:50.000
+em si mesmo, ou um campo na base de dados.
+
+191
+00:10:50.001 --> 00:10:52.001
+Porque é tudo isso que é compreensão.
+
+192
+00:10:54.000 --> 00:10:56.000
+Então a ideia... Bem, em primeiro lugar, isso está correndo um floppy
+
+193
+00:10:56.000 --> 00:10:57.001
+O disco é um pouco mais lento do que...
+
+194
+00:10:57.001 --> 00:10:59.000
+É um pouco desfavorável neste caso.
+
+195
+00:10:59.001 --> 00:11:04.000
+OK  ⁇  Há os formulários que são todas as propriedades que eu envio
+
+196
+00:11:04.000 --> 00:11:06.000
+No segundo dia deste mês.
+
+197
+00:11:07.001 --> 00:11:10.001
+Ok, e a virtude do Q&amp;A, realmente, e certamente não mostramos o melhor
+
+198
+00:11:10.001 --> 00:11:14.000
+Um exemplo disso aqui, é a sua capacidade de entrar apenas esses tipos de línguas naturais.
+
+199
+00:11:14.000 --> 00:11:16.001
+Pergunte a sua base de dados e obtenha relatórios de volta.
+
+200
+00:11:16.001 --> 00:11:18.000
+uma variedade de campos e dimensões.
+
+201
+00:11:18.001 --> 00:11:19.000
+É certo. absolutamente .
+
+202
+00:11:20.001 --> 00:11:24.000
+E como você usa isso em sua prática de venda de imóveis, eu quero dizer,
+
+203
+00:11:24.000 --> 00:11:25.001
+Você está feliz com o que isso faz por você.
+
+204
+00:11:25.001 --> 00:11:29.000
+Faz um verdadeiro bom trabalho. Ele tem um bom processador de palavras, e, claro, o
+
+205
+00:11:29.000 --> 00:11:33.000
+A inteligência artificial é boa para mudar e adicionar, como estamos fazendo aqui.
+
+206
+00:11:33.001 --> 00:11:37.001
+E também é ótimo para fazer um relatório. Quando eu faço um email, eu gosto de manter
+
+207
+00:11:37.001 --> 00:11:39.001
+Conheça a quem eu envio propriedade.
+
+208
+00:11:39.001 --> 00:11:44.000
+Então eu posso pedir à inteligência artificial para executar um relatório específico ou executar uma
+
+209
+00:11:44.000 --> 00:11:46.000
+Relatório de correio, que vou fazer agora e mostrar-lhe.
+
+210
+00:11:50.001 --> 00:11:54.001
+O bem. Então você está dizendo executar o relatório de correio, o que significa
+
+211
+00:11:54.001 --> 00:11:56.001
+O que? Mostre o que os correio saiu.
+
+212
+00:11:56.001 --> 00:12:00.001
+Isso será tudo o que eu fiz um e-mail. Isso me dará um relatório.
+
+213
+00:12:01.000 --> 00:12:03.000
+O bem. Bem, você enganou o, e ele não conseguiu encontrar esse.
+
+214
+00:12:03.000 --> 00:12:07.000
+O bem. É pedir-me para editar isso para que eu possa pressionar.
+
+215
+00:12:13.000 --> 00:12:17.001
+O bem. Então você mudou a palavra agora. Vamos ver se ele entende isso.
+
+216
+00:12:19.000 --> 00:12:22.000
+E é dizer, vou fazer o seguinte, executar o relatório de correio, dizer sim, e
+
+217
+00:12:22.000 --> 00:12:26.000
+Ele executa o relatório que mostra todas as propriedades que eu tenho enviado,
+
+218
+00:12:27.000 --> 00:12:29.000
+incluindo a data em que eu os enviou.
+
+219
+00:12:29.001 --> 00:12:32.001
+E então a teoria, Gary, eu acho, é que isso deve ser mais simples do que ter
+
+220
+00:12:32.001 --> 00:12:34.000
+Você tem uma estrutura de comando complicada.
+
+221
+00:12:34.000 --> 00:12:36.001
+E, claro, essa é a extensão que as pessoas
+
+222
+00:12:36.001 --> 00:12:38.001
+Tem um. Então é mais fácil tentar e aprender isso.
+
+223
+00:12:38.001 --> 00:12:40.001
+Mas você tem que escrever certo e você tem de usar a palavra certa, etc.
+
+224
+00:12:41.000 --> 00:12:43.001
+Ok, senhores, muito obrigado. Em apenas um minuto, veremos o mais recente
+
+225
+00:12:43.001 --> 00:12:45.001
+Versões de DBase e RBase.
+
+226
+00:12:46.000 --> 00:12:49.000
+Primeiro de tudo, quando você tenta escolher um determinado gerente de banco de dados, às vezes
+
+227
+00:12:49.000 --> 00:12:51.001
+É difícil encontrar um programa que faça tudo o que você quer.
+
+228
+00:12:51.001 --> 00:12:55.001
+Bem, encontramos um optometrista em San Bruno, Califórnia, que usa várias bases de dados
+
+229
+00:12:55.001 --> 00:12:58.000
+gerentes em seu negócio, Wendy Woods, como um relatório.
+
+230
+00:12:59.000 --> 00:13:04.000
+Opinião do Dr. Gordon Epstein precisava de um sistema de computador para lidar com as necessidades de
+
+231
+00:13:04.000 --> 00:13:06.000
+Sua ocupação em San Bruno, Califórnia, prática.
+
+232
+00:13:07.000 --> 00:13:12.000
+Ele tentou, mas não estava satisfeito com qualquer um dos softwares projetados especificamente para
+
+233
+00:13:12.000 --> 00:13:15.000
+da optometria. Assim, ele coloca o seu próprio.
+
+234
+00:13:16.000 --> 00:13:20.000
+Nome personalizado IBase, produto de banco de dados DBase de Ashton Tate
+
+235
+00:13:20.000 --> 00:13:21.001
+É o trabalho do seu escritório.
+
+236
+00:13:21.001 --> 00:13:26.000
+Com ele, o seu pessoal pode rastrear o inventário, as contas do paciente, a sua agenda.
+
+237
+00:13:26.000 --> 00:13:28.000
+Reuniões e muito mais.
+
+238
+00:13:28.000 --> 00:13:34.000
+O computador é um meio no qual eu posso fazer as regras. E se eles não obedecem
+
+239
+00:13:34.000 --> 00:13:35.001
+As regras, então a máquina não conta.
+
+240
+00:13:36.001 --> 00:13:42.000
+E é também um meio de comunicação entre nós porque eles podem me aconselhar sobre
+
+241
+00:13:42.000 --> 00:13:44.001
+Como eles querem que o programa funcione.
+
+242
+00:13:45.001 --> 00:13:49.001
+Tudo isso requer muita pesquisa e o trabalho ainda não está concluído.
+
+243
+00:13:49.001 --> 00:13:55.000
+O médico recentemente adicionou o novo VP info do software de papelback ao seu sistema.
+
+244
+00:13:55.001 --> 00:13:59.001
+Com ele, ele pode comparar o tempo que leva, por exemplo, para receber suprimentos de
+
+245
+00:13:59.001 --> 00:14:04.000
+diferentes fornecedores, ou determinar quais atividades trazem mais dinheiro.
+
+246
+00:14:04.000 --> 00:14:08.001
+Como em muitos negócios, os optometristas estão em uma cruzada. Caçado entre
+
+247
+00:14:08.001 --> 00:14:13.000
+mudando a tecnologia e os limites de vários pacotes de software, há um grande
+
+248
+00:14:13.000 --> 00:14:18.000
+É uma questão de confusão, e é por isso que o Dr. Epstein, como milhares de outros, teve que
+
+249
+00:14:18.000 --> 00:14:21.000
+se tornar tão bom em computadores como ele é em sua profissão.
+
+250
+00:14:22.000 --> 00:14:25.001
+Em San Bruno, Califórnia, para as crônicas de computador, eu sou Wendy Woods.
+
+251
+00:14:36.001 --> 00:14:41.000
+Com nós no estúdio agora é Tom Kozik, Diretor de Aplicações com Ashton Tate.
+
+252
+00:14:41.001 --> 00:14:44.001
+E ao lado de Tom é Lynne Luchenin, o diretor de
+
+253
+00:14:44.001 --> 00:14:46.000
+Produtos de base de dados avançados na MicroRIM.
+
+254
+00:14:46.001 --> 00:14:49.001
+Tom, os dois produtos que eu já vi, PFS Professional File, Q
+
+255
+00:14:49.001 --> 00:14:51.001
+&amp;A, ou ambos os gerenciadores de arquivos plana.
+
+256
+00:14:51.001 --> 00:14:54.001
+Como um sistema relacional difere de um gerenciador de arquivos plano?
+
+257
+00:14:54.001 --> 00:14:58.000
+Bem, um sistema de relações aproveita o fato de que muitos dados são frequentemente
+
+258
+00:14:58.000 --> 00:15:00.001
+que são mantidos em diferentes departamentos ou conjuntos diferentes de informações.
+
+259
+00:15:01.000 --> 00:15:03.000
+Assim, você pode relatar informações de um
+
+260
+00:15:03.000 --> 00:15:04.001
+arquivo, e a informação é comum em outro arquivo.
+
+261
+00:15:05.000 --> 00:15:09.000
+Um exemplo comum que é frequentemente usado é as faturas para pedidos. Há um comum
+
+262
+00:15:09.000 --> 00:15:11.000
+O número, geralmente, mantido entre as duas peças
+
+263
+00:15:11.000 --> 00:15:12.001
+informações que as tornam relacionadas.
+
+264
+00:15:13.000 --> 00:15:16.000
+E assim, um gerente de banco de dados relacional liga os dois arquivos juntos em que
+
+265
+00:15:16.000 --> 00:15:18.000
+um pedaço de informação quando você precisa da informação.
+
+266
+00:15:18.001 --> 00:15:21.001
+OK  ⁇  Bem, agora, DBase 3 Plus é, é claro, um desses, e um dos mais
+
+267
+00:15:21.001 --> 00:15:24.000
+bem conhecido, o tipo de avô dos gerentes de banco de dados.
+
+268
+00:15:24.000 --> 00:15:27.000
+Mostre-nos um pouco desta versão mais recente do DBase 3.
+
+269
+00:15:27.000 --> 00:15:28.001
+Tudo bem . O que estamos olhando agora é o diretor.
+
+270
+00:15:28.001 --> 00:15:30.000
+Assistente de condução dentro do DBase 3 Plus.
+
+271
+00:15:31.000 --> 00:15:35.000
+E o que vou fazer é simplesmente coletar um arquivo chamado arquivo de visualização.
+
+272
+00:15:36.000 --> 00:15:39.000
+Muitas vezes, os usuários usam os mesmos arquivos durante e fora do dia, durante o dia.
+
+273
+00:15:39.001 --> 00:15:42.001
+E vamos configurar ecrãs para isso, definir o tipo
+
+274
+00:15:42.001 --> 00:15:44.000
+ordens, indexando os arquivos em uma determinada ordem.
+
+275
+00:15:44.001 --> 00:15:47.001
+Bem, você pode salvar todas essas configurações em um tipo de arquivo chamado um arquivo de visualização
+
+276
+00:15:47.001 --> 00:15:49.001
+e simplesmente restaurar todas essas configurações em um tiro.
+
+277
+00:15:50.001 --> 00:15:53.000
+Bem, com a maneira como você quer ver um arquivo específico. E exatamente.
+
+278
+00:15:53.000 --> 00:15:56.000
+Agora, passando por cima, posso encontrar um dado registro dentro deste
+
+279
+00:15:56.000 --> 00:15:57.001
+A base de dados tem várias maneiras.
+
+280
+00:15:58.000 --> 00:16:00.001
+Eu posso localizá-lo e explorar as condições que eu quero encontrá-la abaixo.
+
+281
+00:16:01.000 --> 00:16:02.000
+Neste caso, eu posso sair e procurar
+
+282
+00:16:02.000 --> 00:16:03.001
+Isso porque eu sei exatamente o que estou procurando.
+
+283
+00:16:04.000 --> 00:16:07.000
+Neste caso, eu sei que os arquivos são pedidos por um número de cliente.
+
+284
+00:16:07.001 --> 00:16:09.000
+Então eu posso simplesmente digitar no número do cliente.
+
+285
+00:16:13.001 --> 00:16:16.001
+0 0 292 O bem. 1017. Qualquer que seja o seu número.
+
+286
+00:16:17.000 --> 00:16:18.001
+Sim, esse era o número, algo assim.
+
+287
+00:16:19.001 --> 00:16:20.000
+Retorno da imprensa.
+
+288
+00:16:20.000 --> 00:16:22.000
+E agora estou posicionando-me nesse recorde.
+
+289
+00:16:22.000 --> 00:16:24.000
+Eu posso dizer pela linha de status ao longo da parte inferior da tela.
+
+290
+00:16:24.001 --> 00:16:27.000
+Você ainda não vê o registro, mas a linha de status está dizendo que foi encontrado.
+
+291
+00:16:27.000 --> 00:16:28.001
+É certo. A linha de status me diz o que o recorde
+
+292
+00:16:28.001 --> 00:16:30.000
+Eu estou apontando para fora de toda a base de dados.
+
+293
+00:16:31.000 --> 00:16:34.000
+Escolha a função de edição, e eu posso ver que estou em um dos ecrãs pré-creados.
+
+294
+00:16:34.001 --> 00:16:35.001
+Posso olhar para o recorde e posso
+
+295
+00:16:35.001 --> 00:16:37.001
+Página através de múltiplos ecrãs que eu criei.
+
+296
+00:16:38.000 --> 00:16:41.000
+E você pode criar esses ecrãs usando as características do assistente ou com o nosso
+
+297
+00:16:41.000 --> 00:16:43.000
+Gerador de aplicativos, simplesmente pintar o que você quer em
+
+298
+00:16:43.000 --> 00:16:44.001
+a tela e escolha os campos que você deseja colocar lá fora.
+
+299
+00:16:45.000 --> 00:16:46.000
+Vamos sair de lá por um segundo.
+
+300
+00:16:46.000 --> 00:16:49.000
+E você pode encontrar informações ou baixar informações.
+
+301
+00:16:49.000 --> 00:16:50.001
+Obviamente, o DBase é um pacote que significa
+
+302
+00:16:50.001 --> 00:16:52.000
+para lidar com milhões de registros ao mesmo tempo.
+
+303
+00:16:52.001 --> 00:16:54.001
+E é uma espécie de difícil trabalhar com essas muitas peças de informação.
+
+304
+00:16:55.000 --> 00:16:58.000
+Assim, você pode filtrar as informações, criando o que é conhecido como uma consulta.
+
+305
+00:16:59.000 --> 00:17:01.000
+Escolhendo a consulta, e vamos avançar e chamar um cronograma.
+
+306
+00:17:04.000 --> 00:17:04.001
+Retorno da imprensa.
+
+307
+00:17:05.000 --> 00:17:07.001
+E estamos impulsionados com o que chamamos de nosso sistema de consulta avançado.
+
+308
+00:17:07.001 --> 00:17:10.001
+Eu posso escolher um campo e eu posso encontrar informações em um número
+
+309
+00:17:10.001 --> 00:17:12.000
+variedade de informações.
+
+310
+00:17:12.000 --> 00:17:16.001
+Neste caso, escolha o operador, e eu posso encontrar informações que correspondem, não
+
+311
+00:17:16.001 --> 00:17:18.001
+O jogo, talvez, começa com um personagem, termina com um caracter.
+
+312
+00:17:19.000 --> 00:17:20.001
+Nesse caso, eu vou tomar algo simples.
+
+313
+00:17:20.001 --> 00:17:21.000
+Contém uma palavra.
+
+314
+00:17:21.001 --> 00:17:25.000
+Lembro-me de que há uma palavra lá fora que contém a palavra, ou um registro fora.
+
+315
+00:17:25.000 --> 00:17:26.001
+Aqui, contém a palavra grupo.
+
+316
+00:17:27.001 --> 00:17:31.001
+Simplesmente digite em grupo em citações porque é informação de texto.
+
+317
+00:17:32.001 --> 00:17:33.001
+Retorno da imprensa.
+
+318
+00:17:34.000 --> 00:17:37.001
+Agora eu posso passar o cursor para exibir, e DBase vai procurar através do
+
+319
+00:17:37.001 --> 00:17:39.001
+Base de dados e encontrar os registros que satisfazem essa condição.
+
+320
+00:17:40.000 --> 00:17:43.001
+Depois disso, eu poderia então dizer, bem, definir o filtro para este arquivo, e DBase seria
+
+321
+00:17:43.001 --> 00:17:46.001
+Limite a base de dados apenas aos registros que satisfazem esta condição.
+
+322
+00:17:46.001 --> 00:17:48.001
+Assim, é mais fácil trabalhar com um conjunto menor de dados ao mesmo tempo.
+
+323
+00:17:49.001 --> 00:17:51.000
+Vamos adiante e saímos.
+
+324
+00:17:54.000 --> 00:17:57.001
+Durante todo o tempo que passei pelas características do sistema, o DBase construi um
+
+325
+00:17:57.001 --> 00:17:59.000
+linha de comando ao longo da parte inferior da tela.
+
+326
+00:17:59.001 --> 00:18:03.001
+Por exemplo, se eu disse para escolher uma outra visão, ela diz que a visão é definida, e
+
+327
+00:18:03.001 --> 00:18:05.000
+Vamos construir os comandos ao longo da parte inferior da tela.
+
+328
+00:18:05.001 --> 00:18:07.000
+Estes são os mesmos comandos que o usuário deveria inserir em
+
+329
+00:18:07.000 --> 00:18:09.000
+A partir do momento em que eles estavam executando um programa.
+
+330
+00:18:09.000 --> 00:18:10.001
+Então, ele está a levá-lo todo o caminho.
+
+331
+00:18:11.000 --> 00:18:14.000
+Você também pode passar pelos comandos que eu usei desde que eu estava em DBase,
+
+332
+00:18:15.000 --> 00:18:18.000
+e estes são mantidos em um buffer de história, e eu posso até salvar aqueles para outro arquivo
+
+333
+00:18:18.000 --> 00:18:20.000
+e, basicamente, escrever um programa passando por todos os menus.
+
+334
+00:18:21.001 --> 00:18:24.001
+Tom, eu sei que você também tem aspectos de código de segurança do que você pode fazer.
+
+335
+00:18:24.001 --> 00:18:26.000
+Na verdade, não temos tempo para fazer isso.
+
+336
+00:18:26.000 --> 00:18:30.000
+Se você pode sair de DBase 3, e eu quero falar com Lyn um pouco sobre RBase.
+
+337
+00:18:30.001 --> 00:18:33.000
+RBase é a outra biggie, é claro, nas bases de dados relacionais.
+
+338
+00:18:33.000 --> 00:18:35.000
+Como a abordagem do RBase difere do DBase?
+
+339
+00:18:35.001 --> 00:18:40.000
+Bem, eu acho provavelmente a principal maneira de que somos diferentes é que nós fornecemos
+
+340
+00:18:40.000 --> 00:18:44.000
+ferramentas adicionais com a base de dados que permite que os usuários automatizem algumas das
+
+341
+00:18:44.000 --> 00:18:47.001
+funções que eles estão fazendo, como temos o Application Express, que permite
+
+342
+00:18:47.001 --> 00:18:49.000
+Você automatiza suas aplicações.
+
+343
+00:18:49.001 --> 00:18:54.000
+Temos Forms Express, que permite que você crie formulários muito complexos sem
+
+344
+00:18:54.000 --> 00:18:58.000
+Programação, ou Relatórios, relatórios muito complexos sem programação.
+
+345
+00:18:58.000 --> 00:19:00.000
+OK  ⁇  Você tem um problema de sair do DBase 3?
+
+346
+00:19:00.000 --> 00:19:01.000
+Não, eu estou apenas saindo agora.
+
+347
+00:19:01.000 --> 00:19:01.001
+Não é OK.
+
+348
+00:19:03.000 --> 00:19:07.000
+Então, o que eu vou pedir que você faça assim que Tom sai do DBase, é dar
+
+349
+00:19:07.000 --> 00:19:08.001
+Vamos dar um exemplo de alguns desses.
+
+350
+00:19:09.000 --> 00:19:11.001
+Lyn, o que é a grande melhoria no sistema RBase
+
+351
+00:19:11.001 --> 00:19:13.000
+5 sobre o produto original RBase?
+
+352
+00:19:14.000 --> 00:19:16.001
+Bem, houve muitas mudanças diferentes.
+
+353
+00:19:17.000 --> 00:19:20.001
+Os formulários Express e Reports Express e Application Express têm
+
+354
+00:19:20.001 --> 00:19:22.000
+Realmente expandindo o produto.
+
+355
+00:19:23.000 --> 00:19:25.001
+Ou seja, adicionamos a capacidade multi-usuário.
+
+356
+00:19:26.000 --> 00:19:28.001
+Existem todos os tipos de novas funções financeiras que são inerentes a este produto.
+
+357
+00:19:28.001 --> 00:19:31.001
+Então temos RBase para cima e correndo agora.
+
+358
+00:19:31.001 --> 00:19:35.001
+com certeza. O que eu vou escolher é o Application Express, e o que eu já fiz é
+
+359
+00:19:35.001 --> 00:19:39.000
+criou um aplicativo, e eu vou realmente entrar e modificar um
+
+360
+00:19:39.000 --> 00:19:41.001
+Aplicações que já criamos.
+
+361
+00:19:41.001 --> 00:19:42.000
+Isso é chamado de demo.
+
+362
+00:19:43.001 --> 00:19:47.000
+É a leitura no arquivo ASCII no buffer.
+
+363
+00:19:47.000 --> 00:19:50.000
+Vamos mudar as ações do menu para o menu principal.
+
+364
+00:19:53.001 --> 00:19:58.001
+Vamos revisar, não precisamos revisar todas as ações.
+
+365
+00:19:58.001 --> 00:20:01.000
+Vamos apenas fazer uma mudança para uma ação específica.
+
+366
+00:20:02.000 --> 00:20:03.001
+Será a ação número cinco.
+
+367
+00:20:07.001 --> 00:20:09.001
+Ele está tentando baixar os relatórios impressos?
+
+368
+00:20:11.000 --> 00:20:11.001
+Eu vou dizer não.
+
+369
+00:20:20.000 --> 00:20:21.000
+E lá vamos.
+
+370
+00:20:23.000 --> 00:20:26.001
+Assim como quando construímos uma aplicação, vamos realmente
+
+371
+00:20:26.001 --> 00:20:28.000
+Modificar a aplicação da mesma forma.
+
+372
+00:20:28.001 --> 00:20:31.001
+Nós simplesmente enfatizamos a ação que queremos este particular
+
+373
+00:20:31.001 --> 00:20:33.000
+O menu deve ser para relatórios de impressão.
+
+374
+00:20:33.001 --> 00:20:35.001
+Escolhemos a mesa com a qual queremos trabalhar.
+
+375
+00:20:35.001 --> 00:20:38.000
+Podemos usar o relatório que já criamos.
+
+376
+00:20:38.000 --> 00:20:39.001
+Temos a opção de editar isso.
+
+377
+00:20:40.000 --> 00:20:43.000
+Podemos classificar as informações em nível ascendente ou descendente.
+
+378
+00:20:44.000 --> 00:20:50.000
+Podemos sub-selectar ou tomar uma parte da base total de clientes para o nosso relatório,
+
+379
+00:20:50.000 --> 00:20:53.000
+E então podemos concluir nossas ações.
+
+380
+00:20:57.000 --> 00:21:01.001
+Não precisamos fazer nenhuma outra alteração, e vamos salvar nossa aplicação.
+
+381
+00:21:02.000 --> 00:21:03.001
+O que ele realmente faz é escrever.
+
+382
+00:21:04.000 --> 00:21:06.000
+Na verdade, está escrevendo o procedimento neste momento.
+
+383
+00:21:06.001 --> 00:21:11.000
+Em vez de escrever todo esse código, ele é realmente escrever para nós.
+
+384
+00:21:11.000 --> 00:21:13.001
+O benefício para o usuário é que é um código livre de bug.
+
+385
+00:21:13.001 --> 00:21:16.000
+Não precisamos entrar e desmontá-lo.
+
+386
+00:21:16.001 --> 00:21:17.000
+[...]
+
+387
+00:21:19.001 --> 00:21:23.001
+O que vamos fazer agora vem do Application Express, e como escolhemos o RBase de
+
+388
+00:21:23.001 --> 00:21:28.001
+o menu principal, a aplicação que estamos apenas trabalhando e
+
+389
+00:21:28.001 --> 00:21:30.000
+A modificação aparecerá na tela.
+
+390
+00:21:31.000 --> 00:21:34.000
+Eu acho que em ambos os seus casos, você realmente fez esses programas, essas bases de dados
+
+391
+00:21:34.000 --> 00:21:38.000
+gerentes, mais fáceis de usar e não precisam ser bastante sofisticados um programador para
+
+392
+00:21:38.000 --> 00:21:40.001
+Obtenha em qualquer lugar como usuário final desses produtos.
+
+393
+00:21:41.000 --> 00:21:42.001
+Esta é uma pergunta, eu acho, para ambos.
+
+394
+00:21:43.001 --> 00:21:47.000
+[...] foi solicitado uma estratégia de longo prazo que eles irão ter um relacionamento
+
+395
+00:21:47.000 --> 00:21:49.000
+Base de dados e padronização em SQL.
+
+396
+00:21:49.001 --> 00:21:51.000
+Que efeito isso tem sobre suas empresas?
+
+397
+00:21:52.000 --> 00:21:55.000
+Bem, anunciamos que vamos seguir dois caminhos diferentes.
+
+398
+00:21:55.000 --> 00:21:59.000
+Vamos continuar a desenvolver software para o caminho, sendo os 8088 e 8086
+
+399
+00:21:59.000 --> 00:22:02.000
+- máquinas baseadas, e vamos tirar proveito dos novos ambientes também
+
+400
+00:22:02.000 --> 00:22:06.000
+Como segue os novos sistemas operacionais nos ambientes 8082, 8086, 8083 também.
+
+401
+00:22:06.001 --> 00:22:06.001
+[...]
+
+402
+00:22:07.000 --> 00:22:12.000
+Bem, não só a IBM anunciou uma base de dados SQL, mas é realmente o que é
+
+403
+00:22:12.000 --> 00:22:15.000
+anunciado como um banco de dados que é herdado como parte do sistema operacional.
+
+404
+00:22:15.000 --> 00:22:15.000
+É certo. E sim.
+
+405
+00:22:15.001 --> 00:22:16.000
+OK  ⁇
+
+406
+00:22:16.000 --> 00:22:19.001
+E o que o Microrim está fazendo agora, como já mostramos com o Application Express,
+
+407
+00:22:19.001 --> 00:22:22.001
+Estamos realmente desenvolvendo as ferramentas que podem ser colocadas em uma base de dados.
+
+408
+00:22:23.000 --> 00:22:25.000
+Nós escolhemos a nossa base como essa estrutura.
+
+409
+00:22:25.001 --> 00:22:27.001
+Por que ele não pode ser usado para outra base de dados?
+
+410
+00:22:27.001 --> 00:22:29.000
+É certo. Tom Lynn, muito obrigado.
+
+411
+00:22:29.000 --> 00:22:31.000
+Este é o nosso breve olhar para os gerentes de banco de dados.
+
+412
+00:22:31.001 --> 00:22:32.000
+Mantenha-se conosco
+
+413
+00:22:32.000 --> 00:22:34.000
+Nós teremos as notícias do computador desta semana em apenas um momento.
+
+414
+00:22:43.001 --> 00:22:47.000
+No arquivo de acesso aleatório esta semana, se você está esperando em linha para um Toshiba
+
+415
+00:22:47.000 --> 00:22:50.000
+T3100 portátil você pode estar dentro por um longo tempo de espera.
+
+416
+00:22:50.001 --> 00:22:54.000
+A Toshiba anunciou nesta semana que, à luz das novas tarifas sobre laptops japoneses,
+
+417
+00:22:54.001 --> 00:22:59.000
+Ele não exportará mais o T3100 ou o T1100 para os Estados Unidos.
+
+418
+00:22:59.001 --> 00:23:02.001
+A nova taxa de 100% efetivamente previu os japoneses
+
+419
+00:23:02.001 --> 00:23:04.001
+Laptops fora dos EUA. do mercado.
+
+420
+00:23:05.000 --> 00:23:09.000
+A boa notícia é que os dados gerais lançaram um novo laptop, o DG12T.
+
+421
+00:23:09.000 --> 00:23:13.001
+Tem uma tela LCD super girada com uma luz traseira que pode ser ligada ou desligada.
+
+422
+00:23:13.001 --> 00:23:15.000
+e um 10 meg hard drive.
+
+423
+00:23:15.001 --> 00:23:19.001
+Tem um CPU de velocidade dupla, uma unidade floppy, e pesa em 12 quilos.
+
+424
+00:23:20.000 --> 00:23:22.001
+Este é um bom momento para comprar um IBM XT.
+
+425
+00:23:23.000 --> 00:23:27.000
+Com a introdução dos computadores PS2, a IBM baixou os preços no XT.
+
+426
+00:23:27.001 --> 00:23:31.000
+Agora você pode comprar um XT, incluindo um monitor monocromo, por menos de US $ 1.000.
+
+427
+00:23:31.001 --> 00:23:33.000
+É um território clonado.
+
+428
+00:23:33.001 --> 00:23:37.001
+O primeiro grande relatório sobre os novos computadores da IBM PS2 está fora da futura computação,
+
+429
+00:23:38.000 --> 00:23:41.001
+A empresa de pesquisa baseada em Dallas, e IBM obtém bons graus.
+
+430
+00:23:41.001 --> 00:23:46.000
+O relatório de 35 páginas diz que a questão agora não é se, mas quando a IBM vai
+
+431
+00:23:46.000 --> 00:23:49.000
+restabelecer sua liderança no campo do computador pessoal.
+
+432
+00:23:50.000 --> 00:23:53.001
+Enquanto isso, de volta à linha de clonagem, os fabricantes de clones estão trabalhando duro.
+
+433
+00:23:53.001 --> 00:23:56.001
+Tecnologia Phoenix diz que pode ter um PS2 compatível
+
+434
+00:23:56.001 --> 00:23:59.000
+Um chipset ROMBIUS em seis meses.
+
+435
+00:23:59.001 --> 00:24:03.001
+Chips e tecnologias e sistemas de paraíso, outros dois seriam fornecedores de clone
+
+436
+00:24:03.001 --> 00:24:07.001
+O PS2 já tinha aparelhos separados e sob a análise do
+
+437
+00:24:07.001 --> 00:24:09.000
+No dia seguinte, o anúncio da IBM.
+
+438
+00:24:09.001 --> 00:24:13.001
+Além disso, os desenvolvedores do cartão rígido apenas anunciaram um novo 40 megabytes
+
+439
+00:24:13.001 --> 00:24:15.000
+Versão do disco rígido em um navio.
+
+440
+00:24:15.000 --> 00:24:17.001
+Já está disponível e tem preço de US$ 1.195.
+
+441
+00:24:18.001 --> 00:24:21.001
+É hora de olhar para o software na revisão desta semana de Paul Schindler.
+
+442
+00:24:22.001 --> 00:24:25.001
+Você sabe, você também pode tirar seus dados se você armazená-lo em um disco rígido
+
+443
+00:24:25.001 --> 00:24:30.000
+Você nunca retorna, porque tão certo como o grande terremoto na Califórnia ou o próximo
+
+444
+00:24:30.000 --> 00:24:33.000
+Bloqueio de Nova York, um dia seu disco rígido vai para o sul
+
+445
+00:24:33.000 --> 00:24:35.000
+E você ficará segurando a bolsa.
+
+446
+00:24:35.000 --> 00:24:39.001
+Se você quiser um Macintosh Apple com um disco rígido, você precisa de backup HFS.
+
+447
+00:24:40.000 --> 00:24:43.000
+Agora, ele abre com um belo gráfico animado que mostra
+
+448
+00:24:43.000 --> 00:24:44.001
+Claro o que o programa faz.
+
+449
+00:24:44.001 --> 00:24:48.000
+Ele backup todos os tipos de arquivos do disco rígido para floppies.
+
+450
+00:24:48.001 --> 00:24:50.000
+A backup HFS é flexível.
+
+451
+00:24:50.001 --> 00:24:54.000
+Você decide o que salvar, alterar arquivos ou arquivos selecionados.
+
+452
+00:24:54.001 --> 00:24:57.001
+Além disso, você pode imprimir uma lista de arquivos e rastrear muita informação sobre eles
+
+453
+00:24:57.001 --> 00:24:59.000
+O que o Mac normalmente não revela.
+
+454
+00:24:59.000 --> 00:25:03.000
+Claro, a backup HFS diz-lhe quantos discos são necessários antes de iniciar o
+
+455
+00:25:03.000 --> 00:25:05.000
+backup para que você possa formatar o suficiente para terminar.
+
+456
+00:25:06.000 --> 00:25:10.000
+HFS backup para o Apple Macintosh, US$ 50 de Computador Pessoal
+
+457
+00:25:10.000 --> 00:25:12.000
+Peripherals Corporation de Tampa, Flórida.
+
+458
+00:25:12.001 --> 00:25:15.000
+Para as crônicas de computador, eu sou Paul Schindler.
+
+459
+00:25:15.001 --> 00:25:18.001
+Todos os criadores de operações de disco do PageMaker irão publicamente com um
+
+460
+00:25:18.001 --> 00:25:20.001
+Oferta de ações de 32 milhões de dólares.
+
+461
+00:25:21.000 --> 00:25:22.001
+Dois milhões de ações serão colocadas no mercado.
+
+462
+00:25:23.000 --> 00:25:26.001
+Digital Research anuncia sua entrada no campo de publicação de desktop
+
+463
+00:25:26.001 --> 00:25:28.000
+Com o Gem Desktop Publisher.
+
+464
+00:25:28.001 --> 00:25:33.000
+DRI diz que você pode executar Gem DTP depois de ler apenas duas páginas do manual.
+
+465
+00:25:33.001 --> 00:25:38.001
+Ele funciona em qualquer PC 512K e também vai funcionar nos novos computadores IBM PS2.
+
+466
+00:25:39.001 --> 00:25:43.001
+Uma escola secundária em Alabama decidiu usar algum software de publicação de desktop para
+
+467
+00:25:43.001 --> 00:25:45.001
+Crie seus próprios formulários de cartão de relatório branco.
+
+468
+00:25:46.000 --> 00:25:50.000
+O problema é que alguns hackers chegaram aos seus PCs de sala de aula e duplicaram o
+
+469
+00:25:50.000 --> 00:25:52.001
+Cartões de relatório e começou a vender folhas para outros alunos.
+
+470
+00:25:52.001 --> 00:25:56.000
+Os hackers foram expulsos e a escola está projetando novos,
+
+471
+00:25:56.000 --> 00:25:58.000
+Cartões de relatório de falsificação.
+
+472
+00:25:58.001 --> 00:26:01.000
+Na Alemanha, as máquinas de poker de computador são populares.
+
+473
+00:26:01.000 --> 00:26:05.000
+Há 160 mil deles dispersos em todo o país, mas alguns alemães
+
+474
+00:26:05.000 --> 00:26:08.001
+Os hackers quebraram o código das máquinas e puderam prever o
+
+475
+00:26:08.001 --> 00:26:11.000
+sequência de jogo, criando uma série de vencedores.
+
+476
+00:26:11.001 --> 00:26:15.001
+Hackers estão vendendo sua descoberta para jogadores e programadores alemãs
+
+477
+00:26:15.001 --> 00:26:17.001
+Eles estão ansiosos para reprogramar as máquinas.
+
+478
+00:26:18.000 --> 00:26:21.000
+Por fim, o que os executivos fazem com seus PCs de qualquer forma?
+
+479
+00:26:21.000 --> 00:26:26.001
+Bem, um estudo da Epix, uma casa de software para PC, descobriu que 40% dos executivos usam
+
+480
+00:26:26.001 --> 00:26:30.000
+seus PCs de escritório para jogar jogos, uma média de 15 minutos por dia.
+
+481
+00:26:30.001 --> 00:26:33.001
+E o executivo de Epix disse que não está certo que seja uma ideia tão ruim.
+
+482
+00:26:33.001 --> 00:26:36.001
+Ele disse tomar uma pausa necessária e jogar um jogo provavelmente
+
+483
+00:26:36.001 --> 00:26:38.000
+Aumenta a produtividade geral.
+
+484
+00:26:38.001 --> 00:26:41.000
+É isso que acontece com as crônicas desta semana. Vamos te ver a próxima vez.
+
+485
+00:26:43.001 --> 00:26:47.001
+As crônicas de computador são feitas possíveis por Leading Edge, fabricantes da IBM
+
+486
+00:26:47.001 --> 00:26:51.000
+-Sistemas de computador compatíveis, incluindo o processamento de palavras com correção de gravação,
+
+487
+00:26:51.001 --> 00:26:55.001
+Software de comunicação, e modemas Haze-compatíveis 1200 e 2400 VOD.
+
+488
+00:26:56.000 --> 00:26:58.001
+Leading Edge com mais de 1.000 centros de serviço em todo o país.
+
+489
+00:26:59.001 --> 00:27:02.000
+Leading Edge leva o caminho para a Idade da Informação.
+
+490
+00:27:03.000 --> 00:27:05.001
+O financiamento adicional é fornecido pela McGraw-Hill, publica um byte.
+
+491
+00:27:06.000 --> 00:27:08.000
+Os artigos técnicos detalhados de Byte cobrem os mais recentes em
+
+492
+00:27:08.000 --> 00:27:10.000
+Microcomputadores em todo o mundo.
+
+493
+00:27:11.000 --> 00:27:12.001
+Bite, o padrão internacional.

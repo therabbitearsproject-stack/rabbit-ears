@@ -1,0 +1,1981 @@
+WEBVTT
+
+1
+00:00:18.000 --> 00:00:25.000
+Ini benar-benar bagaimana semuanya dimulai, paket alat kecil ini dengan
+
+2
+00:00:25.000 --> 00:00:29.000
+Peter Norton dan kemudian sisi penjual terbaik saat ini oleh Philippe Kahn.
+
+3
+00:00:29.001 --> 00:00:33.001
+Ini adalah contoh utilitas, program-program kecil yang membuat kehidupan seperti itu.
+
+4
+00:00:33.001 --> 00:00:35.000
+Lebih mudah bagi pengguna komputer.
+
+5
+00:00:35.001 --> 00:00:38.000
+Kami akan memeriksa utilitas terbaru pada hari ini.
+
+6
+00:00:38.000 --> 00:00:39.001
+Edisi dari Computer Chronicles
+
+7
+00:01:03.000 --> 00:01:08.000
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+8
+00:01:08.000 --> 00:01:12.000
+Sistem komputer yang kompatibel termasuk Lotus Lookalike, kata
+
+9
+00:01:12.000 --> 00:01:15.001
+pemrosesan dengan koreksi spelling, perangkat lunak komunikasi dan Hayes
+
+10
+00:01:15.001 --> 00:01:17.001
+Kompatibel dengan modem 1200 baud.
+
+11
+00:01:18.000 --> 00:01:21.000
+Leading Edge dengan lebih dari 1000 pusat layanan di seluruh negara.
+
+12
+00:01:22.001 --> 00:01:26.000
+Pembiayaan tambahan disediakan oleh McGraw Hill, penerbit Byte.
+
+13
+00:01:26.001 --> 00:01:30.001
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak dan bahasa yang baru
+
+14
+00:01:30.001 --> 00:01:33.000
+perkembangan teknologi komputer di seluruh dunia.
+
+15
+00:01:38.001 --> 00:01:42.001
+Selamat datang ke Komputer Chronicles, saya Stuart Chafay dan ini adalah Gary Kildall.
+
+16
+00:01:43.000 --> 00:01:45.000
+Gary, apa yang kita berjalan di sini adalah sesuatu yang disebut sideways
+
+17
+00:01:45.000 --> 00:01:47.000
+Banyak orang yang terbiasa dengan utilitas.
+
+18
+00:01:47.000 --> 00:01:50.001
+Apa yang memungkinkan Anda untuk melakukannya adalah mencetak spreadsheet lotus secara horizontal daripada
+
+19
+00:01:50.001 --> 00:01:53.000
+secara vertikal yang tentu saja membuat banyak makna dan itu adalah sesuatu yang Anda tidak bisa
+
+20
+00:01:53.000 --> 00:01:55.001
+Anda bisa menggunakan Lotus 123 ini.
+
+21
+00:01:56.000 --> 00:01:58.001
+Beberapa utilitas seperti ini bekerja dengan aplikasi software,
+
+22
+00:01:58.001 --> 00:02:00.000
+yang lain bekerja dengan sistem operasi.
+
+23
+00:02:00.000 --> 00:02:02.001
+Saya bertanya-tanya bagaimana seorang pria yang merancang sistem operasi itu
+
+24
+00:02:02.001 --> 00:02:04.001
+mengganggu Anda ketika teman-teman lain datang dan menulis
+
+25
+00:02:04.001 --> 00:02:06.000
+utilitas yang tidak pernah Anda pikirkan di tempat pertama?
+
+26
+00:02:06.001 --> 00:02:09.000
+Tidak benar-benar karena ketika Anda merancang sistem operasi itu sangat sulit untuk
+
+27
+00:02:09.000 --> 00:02:11.000
+Katakan apa yang orang benar-benar akan inginkan terutama ketika Anda mencoba untuk tetap
+
+28
+00:02:11.000 --> 00:02:12.001
+Memori saat ini memang sangat kecil.
+
+29
+00:02:12.001 --> 00:02:16.000
+Dalam kasus CPM misalnya, salah satu utilitas pertama yang muncul adalah
+
+30
+00:02:16.000 --> 00:02:19.000
+Unselete program dan itu adalah untuk memulihkan program hanya
+
+31
+00:02:19.000 --> 00:02:20.001
+dihapus dan ketika Anda sedang merancang sistem operasi
+
+32
+00:02:20.001 --> 00:02:22.001
+Mengapa Anda ingin menghapus sesuatu yang baru saja dihapus?
+
+33
+00:02:23.000 --> 00:02:26.001
+Kami akan melihat beberapa utilitas terbaru pada program hari ini dari cakera
+
+34
+00:02:26.001 --> 00:02:29.001
+Optimizer untuk memori ekspansi emulator untuk sesuatu
+
+35
+00:02:29.001 --> 00:02:31.000
+Memanggil prosesor yang intuitif.
+
+36
+00:02:31.001 --> 00:02:34.000
+Pertama-tama kita akan memulai dengan latar belakang melihat beberapa dari masa lalu
+
+37
+00:02:34.000 --> 00:02:36.000
+dan penggunaan utilitas saat ini.
+
+38
+00:02:37.001 --> 00:02:43.000
+Bagi sebagian besar pengguna komputer utilitas adalah aksesori yang nyaman yang melakukan mundane
+
+39
+00:02:43.000 --> 00:02:48.001
+komputer rumah tangga berfungsi seperti menyalin cakera atau memberitahu waktu tetapi sebagai file
+
+40
+00:02:48.001 --> 00:02:53.001
+tumbuh dan aplikasi menjadi lebih kompleks utilitas mengambil kepentingan baru.
+
+41
+00:02:54.001 --> 00:02:58.001
+Toko laser di Palo Alto California menyediakan berbagai macam
+
+42
+00:02:58.001 --> 00:03:02.001
+Layanan penerbitan elektronik dari tiping hingga desain grafis.
+
+43
+00:03:03.001 --> 00:03:07.001
+Laserite tergantung pada sekelompok utilitas khusus untuk mengatur dan
+
+44
+00:03:07.001 --> 00:03:09.001
+memanipulasi file pelanggan mereka.
+
+45
+00:03:10.000 --> 00:03:16.000
+Sebuah utilitas yang disebut TOPS memungkinkan untuk memindahkan file teks IBM melalui
+
+46
+00:03:16.000 --> 00:03:20.001
+AppleTalk jaringan ke Macintosh di mana file dapat diubah suai
+
+47
+00:03:20.001 --> 00:03:22.000
+menggunakan utilitas lain.
+
+48
+00:03:22.001 --> 00:03:27.001
+Untuk mengubah ukuran grafis sambil mempertahankan proporsi laser yang sama
+
+49
+00:03:27.001 --> 00:03:33.001
+staf menggunakan utilitas roda proporsi elektronik dan untuk mendukung elektronik
+
+50
+00:03:33.001 --> 00:03:37.000
+Penerbitan bahasa postcript adalah utilitas template.
+
+51
+00:03:39.000 --> 00:03:44.000
+Seperti banyak pengguna komputer dengan cakera keras, orang-orang dengan laseritis menghadapi penurunan
+
+52
+00:03:44.000 --> 00:03:46.001
+file yang salah atau salah.
+
+53
+00:03:47.001 --> 00:03:53.000
+Sebuah utilitas yang disebut locator dapat memulihkannya menggunakan hanya satu kunci dan jejak
+
+54
+00:03:53.000 --> 00:03:55.001
+file directory dan subdirectory.
+
+55
+00:03:56.000 --> 00:04:01.001
+Terlepas dari reputasi mereka yang tidak menyenangkan sebagai program aksesori paket utilitas
+
+56
+00:04:01.001 --> 00:04:07.000
+telah berkembang dalam popularitas dan fungsi sekurang-kurangnya sesekali melintasi
+
+57
+00:04:07.000 --> 00:04:11.001
+Barrier dari Desktop Organisator ke Mainstream Software.
+
+58
+00:04:23.001 --> 00:04:28.000
+Menyertai kami sekarang di studio adalah Ed Tolson presiden logika lembut Manchester
+
+59
+00:04:28.000 --> 00:04:32.000
+New Hampshire dan di samping Ed, Dale Signer adalah salah satu pendiri eksekutif.
+
+60
+00:04:32.000 --> 00:04:33.001
+Salah satunya adalah Sherman Oaks California.
+
+61
+00:04:34.001 --> 00:04:36.000
+Ed You dan Dale telah membuat bisnis keluar dari penjualan
+
+62
+00:04:36.000 --> 00:04:37.001
+Berapa besar sebuah bisnis itu?
+
+63
+00:04:37.001 --> 00:04:42.000
+Ini adalah bisnis yang cukup besar ada banyak lubang di sistem operasi untuk
+
+64
+00:04:42.000 --> 00:04:44.001
+menggunakan alat-alat seperti ini untuk mengisi
+
+65
+00:04:45.000 --> 00:04:46.000
+Berapa banyak pelanggan yang Anda miliki?
+
+66
+00:04:47.000 --> 00:04:49.000
+Kami telah menjual lebih dari 100.000 salinan X Street.
+
+67
+00:04:50.001 --> 00:04:50.001
+[...]
+
+68
+00:04:51.001 --> 00:04:53.001
+Anda memiliki sebuah program di sini itu adalah disk
+
+69
+00:04:53.001 --> 00:04:55.001
+optimizer dan juga dosis ganda dari persembahan yang benar?
+
+70
+00:04:55.001 --> 00:04:56.000
+Itu memang benar.
+
+71
+00:04:56.001 --> 00:04:58.001
+Mari kita mulai dengan disk optimizer dan beritahu kita apa yang dilakukan.
+
+72
+00:04:59.000 --> 00:05:02.001
+Okay baik disk optimizer dimaksudkan untuk menjaga hard disk Anda bekerja secepat
+
+73
+00:05:02.001 --> 00:05:05.001
+mungkin dan masalah yang timbul adalah fragmensi file.
+
+74
+00:05:06.001 --> 00:05:10.000
+Anda hanya memastikan orang memahami memberitahu kami apa yang Anda maksud dengan fragmentasi file.
+
+75
+00:05:11.001 --> 00:05:16.001
+Fragmensi file adalah proses yang terjadi karena fakta bahwa DOS menyimpan
+
+76
+00:05:16.001 --> 00:05:21.001
+file dalam paket individu yang disebut kluster pada jenis sistem ini yang masing-masing
+
+77
+00:05:21.001 --> 00:05:26.001
+cluster adalah 2k jadi jika Anda memiliki file 100k sebuah program maka itu bisa secara harfiah dalam
+
+78
+00:05:26.001 --> 00:05:28.000
+50 tempat yang berbeda di meja.
+
+79
+00:05:29.000 --> 00:05:31.000
+Apa itu Disk Optimizer?
+
+80
+00:05:31.000 --> 00:05:36.000
+Ini membuat semua potongan-potongan itu bertepatan sehingga drive tidak perlu bergerak
+
+81
+00:05:36.000 --> 00:05:37.000
+di sekitar untuk mencari setiap keping.
+
+82
+00:05:37.001 --> 00:05:38.000
+Dengan demikian, Anda dapat mengisi lebih cepat.
+
+83
+00:05:39.000 --> 00:05:40.000
+Okay, tunjukkan kami bagaimana Anda melakukannya.
+
+84
+00:05:40.000 --> 00:05:46.001
+Baiklah, program analisis yang kita gunakan untuk menentukan jenis bentuk drive kita adalah
+
+85
+00:05:46.001 --> 00:05:53.000
+dalam dan program analisis akan menunjukkan pada layar dalam peratusan yang
+
+86
+00:05:53.000 --> 00:05:57.000
+optimasi untuk masing-masing file di sana sehingga file yang 100%
+
+87
+00:05:57.000 --> 00:06:00.000
+Optimisasi berarti bahwa semua bagiannya bertepatan sisi demi sisi.
+
+88
+00:06:00.001 --> 00:06:02.001
+Sekarang menganalisis hard disk drive.
+
+89
+00:06:03.000 --> 00:06:03.000
+[...]
+
+90
+00:06:04.000 --> 00:06:06.001
+Yang ditampilkan dalam hijau adalah pada 100.
+
+91
+00:06:06.001 --> 00:06:08.001
+Peratus dan file-file tersebut bersifat kontroversial.
+
+92
+00:06:09.000 --> 00:06:13.000
+Kami memiliki beberapa yang ditunjukkan dalam merah di sini dan file-file itu sangat terpecah belah.
+
+93
+00:06:14.000 --> 00:06:16.001
+Jika kita memiliki beberapa yang adalah garis sempadan yang akan menunjukkan dalam kuning.
+
+94
+00:06:16.001 --> 00:06:19.000
+Sekarang ini adalah nol persen apa artinya di samping file merah?
+
+95
+00:06:19.000 --> 00:06:21.001
+Ini berarti bahwa tidak ada satu pun kelompoknya yang bertepatan.
+
+96
+00:06:22.000 --> 00:06:24.000
+Sekarang program Anda dapat membersihkan ini juga.
+
+97
+00:06:24.000 --> 00:06:24.001
+dengan tepat.
+
+98
+00:06:25.000 --> 00:06:25.001
+Dan bagaimana kamu akan melakukannya?
+
+99
+00:06:26.000 --> 00:06:28.001
+Saya tahu kami tidak punya waktu untuk melakukannya tetapi anggap Anda ingin memasukkan semuanya ke dalam
+
+100
+00:06:28.001 --> 00:06:31.001
+100% Kami akan menjalankan program optimisasi.
+
+101
+00:06:31.001 --> 00:06:35.001
+Kami dapat memberitahu optimis untuk bekerja pada setiap drive dan itu akan berjalan melalui
+
+102
+00:06:35.001 --> 00:06:37.001
+dan mengatur kembali informasi.
+
+103
+00:06:37.001 --> 00:06:41.000
+Ia melakukannya dengan cara yang sangat aman, secara redundant mendistribusikan
+
+104
+00:06:41.000 --> 00:06:42.001
+informasi yang bergerak di sekitar.
+
+105
+00:06:43.000 --> 00:06:45.000
+Ini yang kami bekerja pada floppy dalam lima detik.
+
+106
+00:06:45.001 --> 00:06:46.000
+Bagaimana dengan dua kali ganda?
+
+107
+00:06:46.000 --> 00:06:46.001
+Dapatkah Anda menunjukkan kepada kami itu?
+
+108
+00:06:47.000 --> 00:06:47.000
+Tentu saja
+
+109
+00:06:48.001 --> 00:06:51.001
+Double DOS adalah dua tugas multi-tasking sistem yang menyediakan klasik
+
+110
+00:06:51.001 --> 00:06:53.000
+Operasi latar belakang depan.
+
+111
+00:06:56.000 --> 00:06:59.000
+Pada dasarnya kita dapat memulai hampir setiap program.
+
+112
+00:06:59.001 --> 00:07:00.001
+Jadi Anda akan berlari Lotus.
+
+113
+00:07:02.000 --> 00:07:05.001
+Dan kita dapat bekerja dengan itu dan jika kita memutuskan bahwa kita perlu melakukan sesuatu yang lain
+
+114
+00:07:05.001 --> 00:07:08.000
+seolah-olah kita akan mencetak spreadsheet atau sesuatu yang kita hanya bisa pergi
+
+115
+00:07:08.000 --> 00:07:11.001
+Kembali bekerja dengan sesuatu yang lain.
+
+116
+00:07:20.000 --> 00:07:21.001
+Begitulah [...] mulai dari kata-kata kita.
+
+117
+00:07:21.001 --> 00:07:24.000
+[...] dapat memiliki kata mulai berjalan di sini saat kita mencetak keluar
+
+118
+00:07:24.000 --> 00:07:25.001
+Ada sesuatu yang keluar dari Lotus pada saat yang sama.
+
+119
+00:07:26.000 --> 00:07:26.001
+dan naik dan kembali.
+
+120
+00:07:27.000 --> 00:07:29.000
+Hal itu langsung ke belakang dan ke depan antara keduanya.
+
+121
+00:07:29.001 --> 00:07:31.000
+Apakah Anda memiliki masalah dengan konflik file sama sekali?
+
+122
+00:07:32.000 --> 00:07:36.001
+Tidak pada dasarnya selagi Anda tidak mencoba mengedit file yang sama pada saat yang sama.
+
+123
+00:07:37.001 --> 00:07:40.001
+Mari kita beralih ke Anda dan Anda juga memiliki beberapa utilitas.
+
+124
+00:07:41.000 --> 00:07:42.001
+Xtree dan kemudian sesuatu yang baru yang disebut panas.
+
+125
+00:07:43.000 --> 00:07:45.000
+Saya ingin meminta Anda untuk menunjukkan kepada kami apa yang Xtree lakukan terlebih dahulu.
+
+126
+00:07:45.001 --> 00:07:47.000
+Anda hanya mengambil alih AT di sana.
+
+127
+00:07:47.000 --> 00:07:51.001
+[...] baik Xtree adalah program manajemen file dan direktori.
+
+128
+00:07:52.000 --> 00:07:54.000
+Kami percaya bahwa utilitas harus melakukan dua hal.
+
+129
+00:07:54.000 --> 00:07:56.001
+Membuat komputer lebih mudah digunakan dan menghemat waktu.
+
+130
+00:07:57.000 --> 00:08:01.001
+Xtree adalah penjimatan waktu yang besar karena menunjukkan kepada Anda dengan jelas apa direktori Anda
+
+131
+00:08:01.001 --> 00:08:05.000
+struktur terlihat dan membuatnya sangat mudah untuk memindahkan file antara direktori,
+
+132
+00:08:05.000 --> 00:08:07.001
+menyalin, menghapus, menamakan file dalam kelompok atau secara individu.
+
+133
+00:08:08.000 --> 00:08:10.001
+Jadi kebingungan biasa tidak tahu di mana semua hal ini berada di cakera keras Anda.
+
+134
+00:08:11.000 --> 00:08:12.000
+Jadi apa yang menunjukkan kepada kita?
+
+135
+00:08:12.000 --> 00:08:15.000
+Di sini ia menunjukkan direktori dan subdirektori di jendela atas.
+
+136
+00:08:15.000 --> 00:08:18.000
+Di jendela bawah ada file di dalam subdirektori itu.
+
+137
+00:08:18.000 --> 00:08:19.001
+Aku bisa melompat seperti itu.
+
+138
+00:08:20.000 --> 00:08:22.001
+Dan saya juga dapat menunjukkan semua file di semua direktori.
+
+139
+00:08:22.001 --> 00:08:24.001
+Terlepas dari direktori, semua ini adalah file.
+
+140
+00:08:24.001 --> 00:08:26.001
+Dan Anda bisa menyusun file tersebut dengan cara yang benar?
+
+141
+00:08:26.001 --> 00:08:29.000
+Alphabetically, by extension, by size atau by date and time.
+
+142
+00:08:30.000 --> 00:08:31.000
+Berapa lama Anda telah menjual Xtree?
+
+143
+00:08:31.001 --> 00:08:32.001
+sekitar 18 bulan.
+
+144
+00:08:33.000 --> 00:08:33.000
+[...]
+
+145
+00:08:33.001 --> 00:08:35.001
+Berapa biaya produk seperti itu? Jumlahnya 99.95
+
+146
+00:08:36.001 --> 00:08:40.000
+Nah sekarang sesuatu yang baru yang Anda miliki adalah panas, kegunaan lain dan
+
+147
+00:08:40.000 --> 00:08:41.001
+Jika saya bisa meminta Anda untuk menjadi panas.
+
+148
+00:08:41.001 --> 00:08:42.000
+Ok ya.
+
+149
+00:08:42.001 --> 00:08:45.000
+Tunjukkan kepada kami apa yang terjadi.
+
+150
+00:08:48.000 --> 00:08:49.001
+Panas adalah sebuah...
+
+151
+00:08:50.000 --> 00:08:51.000
+Itulah yang saya pikirkan.
+
+152
+00:08:51.001 --> 00:08:54.001
+Kami memiliki masalah bahwa debu ganda tidak memberi saya memori yang cukup untuk berjalan
+
+153
+00:08:54.001 --> 00:08:56.001
+panas di bagian ini.
+
+154
+00:08:57.000 --> 00:08:57.001
+Bisakah Anda membatalkannya?
+
+155
+00:08:59.000 --> 00:09:01.000
+Hot adalah sistem menu yang cerdas.
+
+156
+00:09:02.000 --> 00:09:06.000
+Pertama-tama untuk pengguna pemula itu secara otomatis membangun menu untuk Anda.
+
+157
+00:09:06.000 --> 00:09:07.000
+Anda tidak perlu melakukan apa pun.
+
+158
+00:09:07.001 --> 00:09:10.001
+Ini akan membangun menu pada aplikasi yang sudah Anda miliki di sistem Anda.
+
+159
+00:09:11.000 --> 00:09:15.000
+Untuk pengguna yang lebih berpengalaman dia dapat masuk dan menyesuaikan menu tersebut untuk
+
+160
+00:09:15.000 --> 00:09:17.000
+Apa pun kebutuhan aplikasi Anda.
+
+161
+00:09:17.000 --> 00:09:20.001
+Ini adalah editor menu lengkap untuk menambahkan item dan memindahkan menu di sekitar.
+
+162
+00:09:21.001 --> 00:09:24.000
+Dan juga memiliki beberapa utilitas pop-up dengan itu.
+
+163
+00:09:24.001 --> 00:09:26.000
+Akankah kita bisa mendapatkan ini di sini Anda pikir, Ed?
+
+164
+00:09:27.000 --> 00:09:27.001
+Itu terlalu rumit.
+
+165
+00:09:29.000 --> 00:09:30.000
+tidak Kita semua sudah set.
+
+166
+00:09:32.001 --> 00:09:33.001
+Bagaimana kita melakukannya?
+
+167
+00:09:34.001 --> 00:09:36.000
+Jadi Anda akan menyingkirkan debu ganda.
+
+168
+00:09:36.001 --> 00:09:37.001
+Sekarang mari kita lihat apakah kita bisa mendapatkan...
+
+169
+00:09:37.001 --> 00:09:37.001
+Ini adalah contoh yang baik dari [...]
+
+170
+00:09:38.001 --> 00:09:39.000
+[...]
+
+171
+00:09:39.000 --> 00:09:40.000
+Contoh yang bagus.
+
+172
+00:09:41.000 --> 00:09:41.001
+Okay, di sana kita akan pergi.
+
+173
+00:09:41.001 --> 00:09:42.000
+Kami melakukannya.
+
+174
+00:09:42.001 --> 00:09:43.000
+Di sinilah panas.
+
+175
+00:09:46.000 --> 00:09:52.000
+Beberapa saat yang lalu saya membangun sistem menu ini secara otomatis berdasarkan
+
+176
+00:09:52.000 --> 00:09:53.001
+Aplikasi yang Anda miliki pada hard disk ini.
+
+177
+00:09:53.001 --> 00:09:55.000
+Dan Anda memiliki komunikasi, database,
+
+178
+00:09:56.000 --> 00:09:58.000
+dan sebagainya. Spreadsheet, utilitas, pemrosesan kata.
+
+179
+00:09:58.001 --> 00:09:59.001
+Dan Anda bisa pergi ke salah satu dari ini.
+
+180
+00:09:59.001 --> 00:10:02.001
+Dalam pemrosesan kata Anda memiliki empat pemroses kata di sistem ini.
+
+181
+00:10:02.001 --> 00:10:06.001
+Mudah, kata yang hangat yang datang dengan panas, kata bintang dan kata yang sempurna.
+
+182
+00:10:06.001 --> 00:10:09.000
+Dan sekali lagi dengan berjalan panas ia secara otomatis membangun semua aplikasi ini.
+
+183
+00:10:09.001 --> 00:10:11.000
+Teman-teman, kami sudah keluar dari waktu sekarang.
+
+184
+00:10:11.001 --> 00:10:12.000
+Terima kasih banyak sekali.
+
+185
+00:10:12.000 --> 00:10:14.000
+Dalam sekejap kita akan melihat paket baru.
+
+186
+00:10:14.000 --> 00:10:15.001
+Untuk pengguna yang berbasis D.
+
+187
+00:10:16.000 --> 00:10:19.000
+Kami akan melihat utilitas yang memungkinkan Anda berpura-pura bahwa Anda memiliki papan memori yang diperpanjang.
+
+188
+00:10:19.001 --> 00:10:23.000
+Sekarang ada seorang pria yang menulis utilitas yang sangat baik dan dia memberikannya.
+
+189
+00:10:23.000 --> 00:10:25.000
+Kami akan belajar lebih banyak tentang dia dari Wendy Woods.
+
+190
+00:10:27.001 --> 00:10:33.000
+Vernon Berg adalah produsen utilitas untuk IBM PC dan Compatibles.
+
+191
+00:10:33.000 --> 00:10:35.001
+Dia memiliki sekitar 50 program untuk kreditnya.
+
+192
+00:10:36.000 --> 00:10:40.001
+Program yang file, sort, archive dan bahkan membantu dalam pemrograman itu sendiri.
+
+193
+00:10:41.000 --> 00:10:43.000
+Dia telah menulisnya sejak 1983.
+
+194
+00:10:44.001 --> 00:10:50.001
+Ketika Anda membutuhkan sesuatu yang dilakukan, sebuah program utilitas untuk menukar file atau mencetaknya
+
+195
+00:10:50.001 --> 00:10:52.001
+keluar atau apa pun yang ingin Anda lakukan.
+
+196
+00:10:53.001 --> 00:10:54.001
+Biasanya Anda tidak bisa menemukan mereka.
+
+197
+00:10:55.001 --> 00:10:59.000
+Program komersial tidak melakukan hal-hal seperti itu.
+
+198
+00:10:59.000 --> 00:11:03.001
+Mereka adalah prosesor kata, program database, sesuatu seperti itu.
+
+199
+00:11:04.000 --> 00:11:05.000
+Dan akhirnya kamu menulisnya.
+
+200
+00:11:05.001 --> 00:11:12.000
+Atau memulai dengan BASIC atau apa yang saya suka menulis sekarang adalah Desember karena
+
+201
+00:11:12.000 --> 00:11:14.001
+menghasilkan program yang lebih kecil dan lebih cepat.
+
+202
+00:11:15.000 --> 00:11:20.001
+Vernon terkenal dengan LIST, sebuah utilitas yang memungkinkan Anda untuk melihat dan mencari teks.
+
+203
+00:11:20.001 --> 00:11:23.001
+file dari level DOS tanpa hassle untuk harus
+
+204
+00:11:23.001 --> 00:11:25.001
+Download program pemrosesan kata.
+
+205
+00:11:25.001 --> 00:11:28.001
+Seperti semua perangkat lunaknya, LIST adalah gratis.
+
+206
+00:11:29.000 --> 00:11:32.001
+Orang hanya perlu menulisnya atau memanggil papan surat elektroniknya yang
+
+207
+00:11:32.001 --> 00:11:36.000
+Dia beroperasi 24 jam sehari dari rumahnya di Daly City, California.
+
+208
+00:11:37.000 --> 00:11:41.001
+Mereka bebas karena bagi Vernon Berg, menulis utilitas adalah pekerjaan cinta.
+
+209
+00:11:42.000 --> 00:11:46.001
+Salah satu alasan saya melepaskan program ini adalah bahwa saya
+
+210
+00:11:46.001 --> 00:11:48.000
+Bisa keluar untuk berpartisipasi.
+
+211
+00:11:49.000 --> 00:11:51.000
+Untuk Computer Chronicles, saya Wendy Woods.
+
+212
+00:12:00.000 --> 00:12:06.001
+Yang menyertai kami sekarang di studio adalah Karen Lund, presiden
+
+213
+00:12:06.001 --> 00:12:08.001
+Teleware, Termasuk dari Pittsford, New York.
+
+214
+00:12:08.001 --> 00:12:12.000
+Yang duduk di sebelah Karen adalah Robert Hoffman, yang merupakan manajer pengembangan untuk Ashton.
+
+215
+00:12:12.000 --> 00:12:14.001
+Tate&#x27;s Publishing Group berbasis di Torrance, California.
+
+216
+00:12:15.000 --> 00:12:18.000
+Stuart, Anda tahu, kembali pada akhir 1970-an, jantung mesin ini, 886
+
+217
+00:12:18.000 --> 00:12:22.000
+Prosesor, dirancang dengan sekitar 640K memori utama.
+
+218
+00:12:22.000 --> 00:12:25.000
+Pada saat itu, kami berpikir kita bisa memerintah dunia tanpa banyak ingatan. Tapi itu
+
+219
+00:12:25.000 --> 00:12:28.001
+Ini tampaknya menjadi masalah sekarang. Apa itu 640K byte pembatasan yang membuat kita?
+
+220
+00:12:29.000 --> 00:12:35.000
+Hal ini membuat sangat sulit bagi pengembang untuk menyediakan perangkat lunak yang sesuai untuk
+
+221
+00:12:35.000 --> 00:12:37.000
+Program aplikasi hari ini.
+
+222
+00:12:38.001 --> 00:12:40.001
+Orang selalu mengatakan, kita ingin lebih banyak. Kami ingin lebih banyak lagi. Kami
+
+223
+00:12:40.001 --> 00:12:42.001
+Saya ingin melampaui batas 640K.
+
+224
+00:12:43.000 --> 00:12:46.000
+Dan sekarang ada dua standar utama yang digunakan untuk melakukannya.
+
+225
+00:12:46.001 --> 00:12:52.001
+Salah satunya adalah spesifikasi LIM, yang telah kami gunakan dalam mengembangkan di atas cakera untuk memberi Anda
+
+226
+00:12:52.001 --> 00:12:54.000
+kemampuan memori yang diperluas.
+
+227
+00:12:55.000 --> 00:12:58.000
+Salah satu masalah, tentu saja, adalah spreadsheet raksasa, yang kita akan
+
+228
+00:12:58.000 --> 00:12:59.001
+Bercakap tentang di sini, yang mengambil lebih dari itu.
+
+229
+00:12:59.001 --> 00:13:02.000
+Dan apakah Anda memiliki ukuran spreadsheet yang Anda ada di sana sekarang?
+
+230
+00:13:02.000 --> 00:13:05.001
+Kami memiliki spreadsheet di sini dengan 20.000 sel di dalamnya sekarang. akan
+
+231
+00:13:05.001 --> 00:13:07.000
+Tidak ada beban dalam 640K.
+
+232
+00:13:08.000 --> 00:13:11.001
+Kami membawanya hanya untuk menunjukkan kepada Anda.
+
+233
+00:13:11.001 --> 00:13:16.001
+Kami memiliki beberapa memori yang diperluas di sana yang digunakan.
+
+234
+00:13:18.001 --> 00:13:21.001
+Tidak banyak yang dapat Anda lihat dari atas cakera, tetapi itu memberikan
+
+235
+00:13:21.001 --> 00:13:23.000
+Memori yang diperluas dalam perangkat lunak.
+
+236
+00:13:23.000 --> 00:13:26.001
+Mari kita kembali satu menit. Sekarang, solusi normal sebelum Anda sampai di atas cakera
+
+237
+00:13:26.001 --> 00:13:28.000
+Masalahnya adalah menggunakan papan.
+
+238
+00:13:28.001 --> 00:13:34.000
+Anda keluar, Anda membeli papan EMS dengan memori yang mahal di atasnya, menyambungkannya ke
+
+239
+00:13:34.000 --> 00:13:36.001
+mesin Anda, dan kemudian Anda dapat menjalankan spreadsheet besar Anda.
+
+240
+00:13:36.001 --> 00:13:38.001
+Dan berapa biaya untuk membeli papan itu, misalnya?
+
+241
+00:13:39.000 --> 00:13:41.000
+Tergantung pada apa yang Anda dapatkan dan berapa banyak memori yang Anda dapat
+
+242
+00:13:41.000 --> 00:13:42.001
+Dengan demikian, ia bisa naik ke rentang $600.
+
+243
+00:13:43.001 --> 00:13:45.001
+Okay, dan sekarang beritahu kami lagi apa yang dilakukan di atas cakera
+
+244
+00:13:45.001 --> 00:13:47.000
+untuk menyelesaikan masalah dengan cara lain.
+
+245
+00:13:47.001 --> 00:13:53.001
+Nah, di atas cakera mengimplementasikan standar EMS dalam perangkat lunak.
+
+246
+00:13:54.001 --> 00:14:00.000
+Ini akan mengambil setiap jenis file cakera atau memori diperpanjang AT, gunakan yang sebagai diperpanjang
+
+247
+00:14:00.000 --> 00:14:03.001
+memori, sepenuhnya transparan kepada Anda, pengguna, dan aplikasi Anda.
+
+248
+00:14:03.001 --> 00:14:05.000
+Karen, bagaimana ini mempengaruhi kinerja?
+
+249
+00:14:05.001 --> 00:14:08.001
+Ketika Anda menggunakan, mari kita katakan, menggunakan file cakera bukannya
+
+250
+00:14:08.001 --> 00:14:10.001
+Memori yang diperpanjang, bagaimana itu mempengaruhi kinerja?
+
+251
+00:14:10.001 --> 00:14:15.001
+Sebuah file disk akan menjadi, saya pikir referensi kami menunjukkan bahwa ia berjalan sekitar 60% secepatnya
+
+252
+00:14:15.001 --> 00:14:17.001
+Sebagai lembaga EMS.
+
+253
+00:14:17.001 --> 00:14:21.001
+Memori lanjutan akan berjalan secepat papan EMS.
+
+254
+00:14:22.001 --> 00:14:25.000
+Saya juga akan menekankan bahwa itu akan menjalankan floppies untuk mesin-mesin yang
+
+255
+00:14:25.000 --> 00:14:27.000
+Tidak ada akses ke hard disk.
+
+256
+00:14:27.000 --> 00:14:30.000
+Ini jelas jauh lebih lambat dari floppies, tetapi itu ada. Itu adalah
+
+257
+00:14:30.000 --> 00:14:31.001
+di sana, dan ia mendukung pengguna low-end.
+
+258
+00:14:31.001 --> 00:14:35.001
+Karen, saya ingin bertanya kepada Anda jika Anda dapat menarik cakera Anda dan mengisi cakera Robert.
+
+259
+00:14:36.000 --> 00:14:37.001
+Dan Robert, jika Anda dapat mengambil keyboard untuk satu menit.
+
+260
+00:14:38.000 --> 00:14:40.000
+Sekarang, Anda baru keluar, Ashton Tate baru saja keluar dengan semua ini
+
+261
+00:14:40.000 --> 00:14:42.000
+Paket utilitas untuk pengguna D-BASE.
+
+262
+00:14:42.000 --> 00:14:43.000
+Beritahu saya apa yang ada dalam paket itu.
+
+263
+00:14:43.001 --> 00:14:47.000
+Ini adalah sekelompok utilitas yang telah kami gabungkan untuk membantu D-BASE
+
+264
+00:14:47.000 --> 00:14:51.000
+program, baik dengan pengaturannya dan kegiatan komputer hari-hari.
+
+265
+00:14:51.001 --> 00:14:53.000
+Ini dibagi menjadi tiga kelompok.
+
+266
+00:14:53.000 --> 00:14:56.000
+Yang pertama adalah serangkaian modul bahasa assembly, yang
+
+267
+00:14:56.000 --> 00:14:58.000
+dapat dipanggil dan dapat dimuat dari D-BASE.
+
+268
+00:14:58.000 --> 00:15:03.001
+Grup kedua memiliki program pemulihan database untuk file yang rusak
+
+269
+00:15:03.001 --> 00:15:05.001
+dari kegagalan kuasa dan sebagainya.
+
+270
+00:15:06.000 --> 00:15:11.000
+Ada debugging, struktur, cross-reference, simbol tabel jenis program, dan
+
+271
+00:15:11.000 --> 00:15:14.000
+Kemudian serangkaian utilitas pemeliharaan tingkat DOS.
+
+272
+00:15:14.001 --> 00:15:15.001
+Bisakah kita melihat mereka?
+
+273
+00:15:16.000 --> 00:15:19.001
+Ya, di sini sedikit fluff yang hanya menunjukkan beberapa modul
+
+274
+00:15:19.001 --> 00:15:21.001
+Untuk kontrol layar.
+
+275
+00:15:23.000 --> 00:15:27.001
+Ada juga yang memberi Anda akses langsung ke bagian serial, yang dapat
+
+276
+00:15:27.001 --> 00:15:30.000
+sangat berguna untuk menulis auto-dialer dari D-BASE.
+
+277
+00:15:32.000 --> 00:15:34.000
+Ini juga menyimpan layar, jika Anda suka.
+
+278
+00:15:35.000 --> 00:15:38.001
+Bagaimana dengan D-Repair? Itulah yang terdengar seperti saya mungkin memerlukannya.
+
+279
+00:15:40.000 --> 00:15:47.000
+Berikut adalah database yang kami tawarkan untuk pengorbanan yang kami akan
+
+280
+00:15:47.000 --> 00:15:51.000
+ZAP secara tidak sengaja, yang di D-BASE hanya menjaga segalanya.
+
+281
+00:15:51.001 --> 00:15:56.000
+Hal ini juga dapat membantu jika seseorang melintasi kabel listrik dan Anda...
+
+282
+00:15:56.000 --> 00:16:01.000
+Jadi situasi adalah mereka secara tidak sengaja kehilangan seluruh file di sini. Ok ya.
+
+283
+00:16:02.000 --> 00:16:02.001
+Dan apa yang akan kamu lakukan?
+
+284
+00:16:02.001 --> 00:16:06.001
+Okay, jadi apa yang akan kita lakukan adalah mengangkat program pemulihan,
+
+285
+00:16:07.000 --> 00:16:14.000
+yang akan memeriksa terlebih dahulu apakah kepala
+
+286
+00:16:14.000 --> 00:16:20.000
+benar, dan jika ia dapat menemukan tajuk yang sah dan memungkinkan Anda untuk memperbaikinya, maka
+
+287
+00:16:20.000 --> 00:16:25.000
+akan maju dan mencari semua kluster pada cakera untuk rekaman yang valid,
+
+288
+00:16:25.000 --> 00:16:30.001
+Berhenti setiap kali ada pertanyaan, dan membiarkan Anda tahu bahwa Anda perlu berlari
+
+289
+00:16:30.001 --> 00:16:32.000
+Melalui dan mengisi semuanya.
+
+290
+00:16:32.000 --> 00:16:33.001
+Robert, apa itu utility pack software?
+
+291
+00:16:34.000 --> 00:16:35.000
+Itu adalah $ 89.95.
+
+292
+00:16:36.000 --> 00:16:38.000
+Dan itu terdengar seperti harga yang cukup baik jika Anda merusak cakera Anda sekali.
+
+293
+00:16:38.000 --> 00:16:39.000
+Itu sudah pasti.
+
+294
+00:16:39.001 --> 00:16:40.001
+Satu simpanan itu bernilai.
+
+295
+00:16:41.001 --> 00:16:42.001
+Karen, Robert, terima kasih banyak.
+
+296
+00:16:43.000 --> 00:16:45.001
+Sekarang, hanya dalam satu menit, kita akan melihat pemrosesan intuitif dan
+
+297
+00:16:45.001 --> 00:16:48.001
+Clearvoyance langsung pada PC Anda, jadi tinggal bersama kami.
+
+298
+00:17:02.000 --> 00:17:05.000
+Dengan kami sekarang di studio adalah Jay Eisenlohr, Wakil Presiden
+
+299
+00:17:05.000 --> 00:17:06.001
+Eris, Inc., dari Portland, Oregon.
+
+300
+00:17:06.001 --> 00:17:10.001
+Duduk di sebelah Jay adalah Ezra Shapiro, editor konsultasi dengan Byte Magazine, dan
+
+301
+00:17:10.001 --> 00:17:14.000
+Menurunkan berat badan pada akhir adalah komentar biasa kami, George Morrow.
+
+302
+00:17:14.001 --> 00:17:17.001
+Stewart, seperti yang Anda ketahui, antara muka IBM PC DOS adalah yang agak lama.
+
+303
+00:17:17.001 --> 00:17:21.000
+Ini datang dari CPM, dan antarmuka CPM datang dari sistem perkongsian waktu lama, jadi
+
+304
+00:17:21.000 --> 00:17:23.000
+Ia harus berusia sekitar 20 tahun atau sesuatu seperti itu.
+
+305
+00:17:23.001 --> 00:17:25.001
+Saya akan katakan secara kategoris bahwa tidak ada yang benar-benar menyukainya.
+
+306
+00:17:25.001 --> 00:17:27.000
+Tidak ada yang lebih baik dalam beberapa tahun.
+
+307
+00:17:27.001 --> 00:17:31.000
+Dan pendekatan baru-baru ini untuk menggantikan seluruh antarmuka DOS dengan hal-hal
+
+308
+00:17:31.000 --> 00:17:34.000
+seperti penelitian digital produk Jam atau Microsoft Windows atau apa pun.
+
+309
+00:17:34.000 --> 00:17:37.000
+Tetapi produk Jay benar-benar mencoba untuk meningkatkan antarmuka DOS.
+
+310
+00:17:37.000 --> 00:17:38.001
+Dapatkah Anda menunjukkan kepada kami tentang apa itu?
+
+311
+00:17:38.001 --> 00:17:39.001
+Jujur saja Gary.
+
+312
+00:17:39.001 --> 00:17:44.001
+Apa yang kita lakukan di sini adalah kita benar-benar meningkatkan DOS dengan intuitif
+
+313
+00:17:44.001 --> 00:17:47.000
+Teknologi pemrosesan yang kita sebut RSA.
+
+314
+00:17:48.000 --> 00:17:52.001
+Dan apa yang ia lakukan adalah karakter per karakter, atau elemen per elemen, itu sebenarnya
+
+315
+00:17:52.001 --> 00:17:56.000
+Syntax memeriksa garis perintah DOS.
+
+316
+00:17:56.000 --> 00:18:01.001
+Dan untuk menunjukkan kepada Anda dengan sangat cepat apa yang ia lakukan, saat saya mulai mencetak, saya hanya akan
+
+317
+00:18:01.001 --> 00:18:03.001
+Jenis karakter rahasia pada awalnya.
+
+318
+00:18:04.000 --> 00:18:06.001
+Ini hanya menunjukkan bidang-bidang yang ditekankan yang tidak dipahami.
+
+319
+00:18:07.000 --> 00:18:12.000
+Saya saat ini berada di subdirektori sekarang, dan ketika saya mengetikkan dalam N, itu secara otomatis
+
+320
+00:18:12.000 --> 00:18:14.001
+Menyelesaikan masalah ini karena ada simultan
+
+321
+00:18:14.001 --> 00:18:16.001
+Perkataan-perkataan yang berjalan pada sistem.
+
+322
+00:18:16.001 --> 00:18:18.001
+Apakah itu elemen ketelusan yang Anda bicarakan?
+
+323
+00:18:18.001 --> 00:18:22.001
+Ini adalah elemen kejelasan, dan itu sebenarnya bukan kejelasan sejati.
+
+324
+00:18:22.001 --> 00:18:29.000
+Apa yang ia lakukan adalah ia tahu bahwa tidak ada file lain di sistem yang dipanggil sekarang.
+
+325
+00:18:30.000 --> 00:18:36.000
+Dan apa yang dapat saya lakukan dalam sistem ini adalah saya benar-benar dapat memanggil, sebenarnya pergi dan
+
+326
+00:18:36.000 --> 00:18:38.001
+Ada sebuah memo yang saya sebut memo.
+
+327
+00:18:39.001 --> 00:18:43.000
+Dan seperti yang Anda lihat, jendela pilihan akan segera muncul.
+
+328
+00:18:43.001 --> 00:18:47.001
+Dan tanpa bergerak dari garis perintah, saya dapat bergerak ke atas dan ke bawah jendela ini dan
+
+329
+00:18:47.001 --> 00:18:50.000
+Lihatlah bahwa itu bukan di direktori yang saya ada saat ini.
+
+330
+00:18:50.000 --> 00:18:52.000
+Masalahnya adalah, secepat ia melihat E, kedua
+
+331
+00:18:52.000 --> 00:18:53.001
+karakter, dia tahu ada masalah.
+
+332
+00:18:53.001 --> 00:18:57.000
+Yang terbalik menonjolkannya dan kemudian menunjukkan kepada Anda kemungkinan
+
+333
+00:18:57.000 --> 00:18:58.001
+Pilihan yang benar-benar dimulai dengan M.
+
+334
+00:18:58.001 --> 00:19:01.001
+Itu memang benar. Dan semua fitur ini dapat digunakan.
+
+335
+00:19:01.001 --> 00:19:02.001
+Bagaimana Anda menyelesaikan masalah ini?
+
+336
+00:19:03.000 --> 00:19:08.000
+Saya memanggil perintah lain yang disebut lokasi, dan itu sebenarnya keluar pada sistem
+
+337
+00:19:08.000 --> 00:19:12.000
+dan membawa kembali semua nama jalan yang dimulai dengan Aku.
+
+338
+00:19:12.001 --> 00:19:16.000
+Dan kemudian apa yang dapat saya lakukan sebenarnya adalah memilih yang saya inginkan dan membawa
+
+339
+00:19:16.000 --> 00:19:17.001
+Kembali ke garis kontrol.
+
+340
+00:19:17.001 --> 00:19:20.000
+Dan pada saat itu, hanya melaksanakan program.
+
+341
+00:19:21.001 --> 00:19:24.000
+Jadi, apa saja beberapa masalah yang kemudian Datant menyelesaikan?
+
+342
+00:19:24.001 --> 00:19:29.001
+Nah, Datant secara khusus memecahkan masalah dari garis perintah itu sendiri.
+
+343
+00:19:30.000 --> 00:19:34.001
+Daripada memukul pengembalian dan mendapatkan kembali perintah yang buruk atau nama file pengguna,
+
+344
+00:19:35.000 --> 00:19:39.001
+Anda dijamin oleh waktu Anda sampai ke akhir garis yang Anda akan
+
+345
+00:19:39.001 --> 00:19:41.000
+Memiliki garis perintah yang baik.
+
+346
+00:19:41.000 --> 00:19:44.000
+Anda hanya tidak dapat pergi dengan kesalahan dan itu akan menunjukkan kepada Anda apa kesalahan itu.
+
+347
+00:19:44.001 --> 00:19:45.000
+Itu memang benar.
+
+348
+00:19:45.000 --> 00:19:48.001
+Produk ini adalah program yang memuat ke dalam ingatan, hanya tinggal di sana.
+
+349
+00:19:49.000 --> 00:19:53.000
+Ini adalah program resident memori dan sebenarnya membangun kamus dari semua
+
+350
+00:19:53.000 --> 00:19:55.000
+File pengguna dan nama jalur.
+
+351
+00:19:55.001 --> 00:19:56.000
+Untuk apa ia menjual?
+
+352
+00:19:56.001 --> 00:19:58.001
+Ini dijual untuk $ 75, daftar harga.
+
+353
+00:19:58.001 --> 00:20:00.001
+Ketika Anda mengatakan Anda adalah proses intuitif
+
+354
+00:20:00.001 --> 00:20:02.000
+Teknologi, apa yang sebenarnya dilakukan di sana?
+
+355
+00:20:02.000 --> 00:20:07.001
+Nah, apa yang ia lakukan adalah memeriksa pada mesin 8088 pada 500 microseconds.
+
+356
+00:20:07.001 --> 00:20:11.000
+Ini sebenarnya membuat perbandingan dengan kamus, seperti yang saya sebutkan sebelumnya.
+
+357
+00:20:11.000 --> 00:20:13.000
+Dalam kasus ini, lima kamus.
+
+358
+00:20:13.000 --> 00:20:16.001
+Tetapi itu sebenarnya bisa, teknologi itu sendiri sebenarnya dapat menangani hingga satu megabyte.
+
+359
+00:20:17.001 --> 00:20:18.001
+Zidane, apa pendapat Anda tentang produk ini?
+
+360
+00:20:19.000 --> 00:20:22.000
+Nah, tampaknya akan membuat jaringan keamanan yang cukup baik untuk seseorang yang
+
+361
+00:20:22.000 --> 00:20:25.001
+Tidak kenal dengan DOS atau siapa yang tipis seperti saya.
+
+362
+00:20:26.000 --> 00:20:30.000
+Pertanyaan yang saya miliki, bagaimanapun, adalah bahwa jika Anda seorang tipis yang baik dan Anda
+
+363
+00:20:30.000 --> 00:20:33.000
+kecepatan pada apa yang Anda lakukan di DOS, hal ini mungkin masuk ke jalan Anda.
+
+364
+00:20:34.000 --> 00:20:35.000
+Dengan cara apa?
+
+365
+00:20:35.001 --> 00:20:39.001
+Nah, Anda ingin mencetak sesuatu yang berbeda dari pilihan yang ingin ditawarkan kepada Anda.
+
+366
+00:20:39.001 --> 00:20:41.000
+Anda memiliki layar pilihan yang muncul.
+
+367
+00:20:41.000 --> 00:20:43.000
+Saya tidak benar-benar melihat produk sebelum ini
+
+368
+00:20:43.000 --> 00:20:45.000
+Hari ini, jadi saya tidak tahu apakah itu dapat dikonfigurasi.
+
+369
+00:20:45.001 --> 00:20:50.000
+Tapi impian saya terlihat seolah-olah itu bisa menjadi gangguan bagi seseorang yang
+
+370
+00:20:50.000 --> 00:20:51.001
+Seorang pengikut sejati melakukan apa yang seharusnya dia lakukan.
+
+371
+00:20:51.001 --> 00:20:52.000
+Bagaimana Anda menjawab ini, Jay?
+
+372
+00:20:52.001 --> 00:20:55.000
+Ya, itu bisa dikonfigurasi.
+
+373
+00:20:55.000 --> 00:20:56.000
+Ini benar-benar dapat dikonfigurasi.
+
+374
+00:20:56.001 --> 00:21:00.001
+Dan seluruh ide pemrosesan intuitif adalah untuk dapat
+
+375
+00:21:00.001 --> 00:21:02.001
+menyesuaikan diri sesuai dengan cara yang Anda pilih.
+
+376
+00:21:03.000 --> 00:21:06.001
+Dan dalam hal ini, saya memiliki spell memeriksa.
+
+377
+00:21:07.000 --> 00:21:08.000
+Saya punya pilihan mobil.
+
+378
+00:21:08.001 --> 00:21:09.001
+Saya punya penghindaran yang jelas.
+
+379
+00:21:09.001 --> 00:21:11.001
+Saya memiliki kamus autosave.
+
+380
+00:21:12.000 --> 00:21:15.000
+Kita bisa mengalihkan semua ini ke dan keluar seperti yang kita bisa di dalam diri kita sendiri.
+
+381
+00:21:15.000 --> 00:21:17.000
+Produk pemprosesan kata juga.
+
+382
+00:21:17.001 --> 00:21:20.000
+Dan seluruh gagasan dari teknologi ini adalah untuk dapat
+
+383
+00:21:20.000 --> 00:21:22.000
+menyesuaikannya sesuai dengan cara yang Anda tulis.
+
+384
+00:21:22.001 --> 00:21:25.001
+Pada umumnya, ketika kita berbicara tentang utilitas, kita
+
+385
+00:21:25.001 --> 00:21:27.001
+Bercakap di awal program dengan Gary.
+
+386
+00:21:27.001 --> 00:21:29.001
+Ada utilitas di sekitar benar-benar karena programmer
+
+387
+00:21:29.001 --> 00:21:31.000
+Tidak melakukan pekerjaan yang tepat di tempat pertama?
+
+388
+00:21:32.000 --> 00:21:32.000
+Ya ya.
+
+389
+00:21:33.001 --> 00:21:37.000
+Pertanyaan dari perspektif pengguna adalah apakah Anda ingin mengendalikan
+
+390
+00:21:37.000 --> 00:21:39.000
+Mobil atau apakah Anda ingin menjadi mekanik mobil.
+
+391
+00:21:39.001 --> 00:21:44.001
+Dan banyak hal ini adalah solusi untuk masalah yang benar-benar
+
+392
+00:21:44.001 --> 00:21:46.000
+kesakitan yang dapat diselesaikan ketika Anda menggunakan mesin.
+
+393
+00:21:47.001 --> 00:21:51.000
+Saya tidak ingin perlu belajar bagaimana untuk menjalankan program untuk backup hard disk saya.
+
+394
+00:21:52.000 --> 00:21:54.000
+Saya hanya ingin menekan tombol dan tahu bahwa data saya aman.
+
+395
+00:21:55.000 --> 00:21:56.001
+George, kau tidak menggelengkan kepalanya.
+
+396
+00:21:56.001 --> 00:21:59.001
+Saya tidak setuju karena pada hari-hari awal mobil, jika Anda
+
+397
+00:21:59.001 --> 00:22:01.000
+Ingin memandu satu, Anda harus menjadi mekanik.
+
+398
+00:22:02.000 --> 00:22:03.000
+Anda harus dapat mengubah tayar
+
+399
+00:22:03.000 --> 00:22:05.000
+Dan Anda harus dapat menyesuaikan spark plugs Anda.
+
+400
+00:22:05.000 --> 00:22:06.001
+Dan kami berada di titik yang sama dengan komputer.
+
+401
+00:22:06.001 --> 00:22:09.000
+Tapi idealnya, Anda tidak harus berada di komputer.
+
+402
+00:22:09.000 --> 00:22:11.001
+Ya, saya yakin, tetapi dunia yang ideal dan dunia yang nyata
+
+403
+00:22:11.001 --> 00:22:13.000
+Dunia biasanya dua hal yang berbeda.
+
+404
+00:22:13.001 --> 00:22:17.001
+Saat ini, komputer berada pada tahap yang sama dengan Model T.
+
+405
+00:22:19.000 --> 00:22:23.001
+Dan orang-orang yang membantu kita dengan mengubah tayar, beberapa orang yang keluar dengan
+
+406
+00:22:23.001 --> 00:22:25.000
+Sesuatu yang membantu Anda mengubah tayar Anda
+
+407
+00:22:25.000 --> 00:22:27.000
+Mereka bisa mendapatkan uang pada hari-hari itu.
+
+408
+00:22:27.000 --> 00:22:29.001
+Dan program utilitas adalah seperti itu.
+
+409
+00:22:29.001 --> 00:22:33.000
+Saya telah merusak data dalam file saya dan jika saya tidak memiliki sesuatu seperti Norton
+
+410
+00:22:33.000 --> 00:22:35.001
+Utilitas, saya akan berprogram selama beberapa minggu.
+
+411
+00:22:35.001 --> 00:22:36.001
+Apakah dia telah meyakinkan Anda, Ezra?
+
+412
+00:22:37.001 --> 00:22:40.001
+Oh, dia meyakinkan saya. Ya, saya mengatakan hampir hal yang sama.
+
+413
+00:22:40.001 --> 00:22:47.001
+Apa yang mengganggu saya adalah bahwa kita harus melakukan banyak pemeriksaan dan
+
+414
+00:22:47.001 --> 00:22:51.001
+Melindungi diri kita dengan cara yang tidak terlalu menyenangkan.
+
+415
+00:22:52.000 --> 00:22:56.000
+Dan ya, saya ingin melihat komputer generasi berikutnya cukup pintar untuk menangani
+
+416
+00:22:56.000 --> 00:22:58.001
+Banyak hal yang dapat dilakukan oleh utilitas sendiri.
+
+417
+00:22:59.000 --> 00:23:00.000
+Kami hampir tidak punya waktu, Joe, untuk memberi Anda sepuluh detik.
+
+418
+00:23:00.000 --> 00:23:05.000
+Baiklah, Gary dan saya bertemu kembali cara dan kita dapat melihat hari ini, saya yakin kami berdua
+
+419
+00:23:05.000 --> 00:23:07.000
+Saya setuju, bahwa hal-hal jauh lebih baik dari yang biasanya.
+
+420
+00:23:07.000 --> 00:23:08.000
+Mungkin dalam sepuluh tahun lagi
+
+421
+00:23:08.000 --> 00:23:10.000
+Tahun-tahun mereka akan jauh lebih baik dari hari ini.
+
+422
+00:23:10.000 --> 00:23:11.001
+Dan kita akan lebih dekat dengan dunia Ezra.
+
+423
+00:23:11.001 --> 00:23:14.000
+Dan kita pasti telah melihat beberapa utilitas yang cukup menarik hari ini, sebenarnya.
+
+424
+00:23:14.000 --> 00:23:16.001
+Sayang, terima kasih banyak sekali. Kami akan kembali dalam satu menit dengan minggu ini.
+
+425
+00:23:16.001 --> 00:23:19.000
+berita komputer. ...
+
+426
+00:23:28.000 --> 00:23:32.001
+Dalam File Akses Random minggu ini, IBM dan Intel telah menandatangani kesepakatan untuk
+
+427
+00:23:32.001 --> 00:23:36.001
+mengembangkan chip komputer baru yang disesuaikan berdasarkan teknologi desain baru yang disebut
+
+428
+00:23:36.001 --> 00:23:40.000
+ASIC adalah Circuit Integrated Application-Specific.
+
+429
+00:23:40.001 --> 00:23:44.000
+Kesimpulan dari kesepakatan ini adalah bahwa IBM sekarang dapat bergerak jauh dari standar PC sendiri
+
+430
+00:23:44.000 --> 00:23:45.001
+dalam upaya untuk melawan klon.
+
+431
+00:23:45.001 --> 00:23:50.000
+Perjanjian IBM Intel dapat menetapkan standar baru di sekitar chip tersuai dan sebagainya.
+
+432
+00:23:50.000 --> 00:23:52.001
+membuatnya jauh lebih sulit bagi pembuat klon untuk menyalin IBM.
+
+433
+00:23:53.000 --> 00:23:57.000
+Efek utama lain dari standar baru untuk generasi berikutnya IBM PC akan
+
+434
+00:23:57.000 --> 00:23:59.000
+menjadi bingung di pasar perangkat lunak.
+
+435
+00:24:00.000 --> 00:24:03.001
+IBM juga dalam berita minggu ini dengan prediksi keuntungan yang lebih rendah untuk 1986.
+
+436
+00:24:04.000 --> 00:24:07.001
+Jika hal itu terjadi, ini akan menjadi kali pertama sejak depresi yang dialami IBM.
+
+437
+00:24:07.001 --> 00:24:09.001
+Penurunan keuntungan selama dua tahun berturut-turut.
+
+438
+00:24:09.001 --> 00:24:14.000
+Standar untuk kecepatan komputasi selalu menjadi superkomputer Cray, tetapi ini
+
+439
+00:24:14.000 --> 00:24:19.000
+Minggu lalu, ETA Systems dari Minnesota mengumumkan sebuah superkomputer baru, ETA-10, yang
+
+440
+00:24:19.000 --> 00:24:22.000
+dapat melakukan 10 miliar operasi aritmetik per detik.
+
+441
+00:24:22.001 --> 00:24:26.001
+Ini membuatnya 40 kali lebih cepat daripada Cray 2. ETA-10 yang pertama akan dipasang
+
+442
+00:24:26.001 --> 00:24:29.000
+di Florida State University dalam beberapa bulan.
+
+443
+00:24:29.001 --> 00:24:34.001
+Lotus telah secara resmi memperkenalkan antarmuka HAL yang banyak dicampur untuk 1, 2, 3. Hal ini membiarkan
+
+444
+00:24:34.001 --> 00:24:38.000
+Anda berkomunikasi dengan Lotus dalam bahasa Inggris yang jelas sehingga Anda sekarang dapat memesan Lotus untuk
+
+445
+00:24:38.000 --> 00:24:43.001
+graf kolom 3 sebagai graf pie, bukannya menyentuh gtp ab6.b9 kembali
+
+446
+00:24:43.001 --> 00:24:45.001
+6.9 Kembali ke V
+
+447
+00:24:46.000 --> 00:24:49.001
+HAL juga mencatat semua perintah Lotus sehingga Anda dapat meninjau apa yang Anda lakukan dan
+
+448
+00:24:49.001 --> 00:24:51.000
+menyediakan beberapa utilitas Lotus lainnya.
+
+449
+00:24:52.000 --> 00:24:54.001
+Waktu untuk ulasan perangkat lunak minggu ini dengan Paul Schindler.
+
+450
+00:24:56.000 --> 00:25:00.001
+Tentu saja, saya dapat memperbaiki PC saya sendiri, tetapi setiap kali saya mengambil kulit
+
+451
+00:25:00.001 --> 00:25:02.000
+Dari sudut itu, ia membuatku gugup.
+
+452
+00:25:03.000 --> 00:25:06.000
+Jika Anda seperti saya dan Anda tidak terlalu senang untuk harus meneka apa yang Anda
+
+453
+00:25:06.000 --> 00:25:09.001
+Melakukan di dalam komputer pribadi IBM, periksa ServTech.
+
+454
+00:25:10.001 --> 00:25:15.001
+ServTech tidak dilindungi, yang bagus. Ini dimulai dengan firm tetapi menyeronokkan ad-hai
+
+455
+00:25:15.001 --> 00:25:18.001
+peringatan piracy, yang menurut saya mencerminkan jenis roh yang
+
+456
+00:25:18.001 --> 00:25:20.000
+paling mungkin untuk mengurangi pirasi.
+
+457
+00:25:21.000 --> 00:25:25.001
+ServTech melakukan beberapa hal. Pemilik PC baru mengisi menu pilihan yang menggambarkan
+
+458
+00:25:25.001 --> 00:25:29.001
+dan sistem mereka. ServTech menunjukkan pengaturan switch dan lokasi
+
+459
+00:25:29.001 --> 00:25:31.001
+Pergantian untuk konfigurasi seperti itu.
+
+460
+00:25:32.000 --> 00:25:37.001
+Ini memberikan nasihat yang disesuaikan. ServTech menunjukkan kepada Anda di mana skru terletak dan
+
+461
+00:25:37.001 --> 00:25:40.001
+Ini menunjukkan kepada Anda bagaimana untuk memisahkan PC IBM.
+
+462
+00:25:41.000 --> 00:25:45.001
+Mungkin fitur yang paling berguna dari ServTech adalah penerjemah kesalahan diagnostik.
+
+463
+00:25:45.001 --> 00:25:50.000
+Anda tidak hanya belajar apa arti pesan kesalahan, tetapi Anda mendapatkan langkah demi langkah
+
+464
+00:25:50.000 --> 00:25:52.001
+proses penyelesaian masalah untuk diagnosis dan perbaikan.
+
+465
+00:25:53.000 --> 00:25:59.001
+Jika sebuah chip disyaki, itu memancarkan pada peta komputer. Biaya ServTech adalah $50 dan
+
+466
+00:25:59.001 --> 00:26:02.001
+Ia berasal dari Rylos Technologies di Burke, Virginia.
+
+467
+00:26:03.000 --> 00:26:05.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+468
+00:26:06.000 --> 00:26:10.000
+The Software Publishers Association telah memberikan platinum disknya kepada dua orang.
+
+469
+00:26:10.000 --> 00:26:14.000
+Program yang paling banyak dijual, keduanya telah menjual lebih dari 250.000 salinan.
+
+470
+00:26:14.001 --> 00:26:18.000
+Dan pemenang adalah Print Shop dari Broderbund dan Newsroom dari Springboard.
+
+471
+00:26:19.000 --> 00:26:23.000
+Disk emas juga dianugerahkan untuk program yang menjual lebih dari 100.000 salinan. Keduanya adalah
+
+472
+00:26:23.000 --> 00:26:26.000
+Penerbit software terkemuka adalah Electronic Arts dengan enam pemenang
+
+473
+00:26:26.000 --> 00:26:28.000
+dan Epyx dengan tiga pemenang.
+
+474
+00:26:28.000 --> 00:26:31.001
+Microsoft mengatakan akan mengambil perlindungan salinan dari Excel dan
+
+475
+00:26:31.001 --> 00:26:33.000
+Paket perangkat lunak Macintosh lainnya.
+
+476
+00:26:33.001 --> 00:26:37.000
+Pada awal tahun ini, Microsoft menurunkan perlindungan salinan pada perangkat lunak MS-DOS.
+
+477
+00:26:37.001 --> 00:26:41.001
+Microsoft mengatakan dengan peningkatan penggunaan cakera keras pada Mac, perlindungan salinan tidak
+
+478
+00:26:41.001 --> 00:26:43.001
+lebih lama untuk kepentingan pelanggan.
+
+479
+00:26:44.001 --> 00:26:47.000
+Pada musim panas, pencarian hacker utama adalah untuk Captain Midnight.
+
+480
+00:26:47.001 --> 00:26:51.001
+Sekarang hacker yang paling dicari adalah seorang pria bernama Pink Floyd, seorang disyaki lulusan
+
+481
+00:26:51.001 --> 00:26:54.000
+Pelajar yang telah pecah ke dalam puluhan komputer kampus
+
+482
+00:26:54.000 --> 00:26:56.000
+Sistem dari Stanford ke MIT.
+
+483
+00:26:56.000 --> 00:27:00.000
+Spesialitasnya tampaknya memecah ke dalam sistem Unix, dan beberapa peneliti
+
+484
+00:27:00.000 --> 00:27:04.001
+Dia mencurigai bahwa dia mencoba untuk menunjukkan seberapa rentan sistem Unix terhadap gangguan keamanan.
+
+485
+00:27:05.000 --> 00:27:08.001
+Pink Floyd bahkan memanggil operator sistem untuk memberitahu mereka bahwa dia akan pecah ke dalam
+
+486
+00:27:08.001 --> 00:27:11.001
+Sistem mereka, tetapi setakat ini Pink Floyd berada di padang rumput.
+
+487
+00:27:12.001 --> 00:27:15.001
+Akhirnya, jika Anda masih mencoba untuk mengetahui apa yang harus dilakukan dengan komputer rumah Anda,
+
+488
+00:27:15.001 --> 00:27:19.000
+Ada buku baru dari Dan Gutman yang memiliki koleksi 400 offbeat.
+
+489
+00:27:19.000 --> 00:27:21.001
+Aplikasi yang mungkin tidak pernah Anda pikirkan.
+
+490
+00:27:21.001 --> 00:27:25.001
+Salah satu program perangkat lunak yang kurang dikenal adalah yang ditulis oleh seorang pria Lebanon dari
+
+491
+00:27:25.001 --> 00:27:27.000
+Pengusaha Muslim yang banyak melakukan perjalanan.
+
+492
+00:27:27.001 --> 00:27:31.000
+Program ini secara otomatis menghitung waktu hari untuk doa dan
+
+493
+00:27:31.000 --> 00:27:33.000
+arah Mekah dari mana pun lokasi di dunia.
+
+494
+00:27:33.001 --> 00:27:35.001
+Itulah yang terjadi pada kronik minggu ini. Kita akan berjumpa denganmu lain kali.
+
+495
+00:28:21.001 --> 00:28:41.001
+Terima kasih untuk menonton!
