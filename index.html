@@ -1551,7 +1551,7 @@ if (window.REPlaybackRecovery) {
       (!document.hidden || window.RETVPopout?.active || document.pictureInPictureElement === vid || vid.webkitPresentationMode === "picture-in-picture") &&
       document.getElementById("rabbit-cast")?.getAttribute("aria-pressed") !== "true",
     online: navigator.onLine, playing: !!playing,
-    time: vid.currentTime, paused: vid.paused, ready: vid.readyState
+    time: vid.currentTime, paused: vid.paused, seeking: vid.seeking, ready: vid.readyState
   });
   automaticPlaybackRecovery = window.REPlaybackRecovery.create({
     read: recoverySnapshot,

@@ -52,6 +52,11 @@ test('mid-show stalls and stalled initial tuning recover without page reload',as
   assert.equal(f.calls[0].time,1200);
  }
 });
+test('clock-correction seeks do not disguise a buffering stall as healthy playback',()=>{
+ const f=fixture();f.state.ready=1;f.state.seeking=true;
+ for(let i=0;i<6;i++){f.advance(5000);f.state.time+=20;f.manager.check();}
+ assert.equal(f.timers.size,1);assert.equal(f.manager.state().needed,true);
+});
 test('returning to a paused app reconnects promptly while intentional pause remains excluded',async()=>{
  const f=fixture();f.state.active=false;f.advance(60000);f.manager.check();
  f.state.active=true;f.state.paused=true;f.manager.wake();

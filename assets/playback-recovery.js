@@ -43,7 +43,7 @@ const REPlaybackRecovery = (() => {
       if (s.identity !== identity && !busy) { recovered(); return; }
       if (!s.active) { clear(); progressAt = now(); lastTime = s.time; return; }
       if (s.online === false) { clear(); needed = true; return; }
-      if (s.playing && Number.isFinite(s.time) && Number.isFinite(lastTime) && Math.abs(s.time - lastTime) > .2) {
+      if (s.playing && s.ready >= 3 && !s.paused && !s.seeking && Number.isFinite(s.time) && Number.isFinite(lastTime) && Math.abs(s.time - lastTime) > .2) {
         recovered(); return;
       }
       lastTime = s.time;
