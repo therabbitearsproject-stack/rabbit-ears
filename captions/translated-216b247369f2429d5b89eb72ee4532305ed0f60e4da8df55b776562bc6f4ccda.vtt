@@ -1,0 +1,2677 @@
+WEBVTT
+
+1
+00:00:34.000 --> 00:00:37.000
+Minggu ini di The Computer Chronicles, bagaimana untuk memprogram.
+
+2
+00:00:37.001 --> 00:00:41.001
+Kami akan menunjukkan kepada Anda bagaimana untuk membuat jenis program yang paling sederhana, makro, dan kami akan
+
+3
+00:00:41.001 --> 00:00:44.000
+menunjukkan paket perangkat lunak yang mengajarkan Anda tentang
+
+4
+00:00:44.000 --> 00:00:46.000
+dasar-dasar pemrograman waktu yang besar.
+
+5
+00:00:46.001 --> 00:00:51.000
+Kami akan melihat perangkat lunak menulis untuk internet dengan Flash Macromedia dan
+
+6
+00:00:51.000 --> 00:00:55.001
+Bahasa pemrograman bahkan orang dewasa dapat menguasai, RCX dari Lego Mindstorms.
+
+7
+00:00:55.001 --> 00:01:00.001
+Plus kunjungan ke dunia nyata dari hard duty software code karena kami membawa Anda di dalam
+
+8
+00:01:00.001 --> 00:01:03.000
+Tim pemrograman di Electronic Arts.
+
+9
+00:01:03.000 --> 00:01:07.001
+Dan pilihan saya dari minggu ini, bagian baru yang luar biasa dari perangkat lunak untuk file audio.
+
+10
+00:01:07.001 --> 00:01:10.000
+Semua ini akan muncul di The Computer Chronicles.
+
+11
+00:01:11.001 --> 00:01:16.001
+The Computer Chronicles dibawa ke Anda oleh BigStar.com dengan ribuan video
+
+12
+00:01:16.001 --> 00:01:18.001
+DVD untuk seluruh keluarga.
+
+13
+00:01:24.000 --> 00:01:28.001
+Dukungan tambahan dari Techway untuk berita teknologi hingga menit.
+
+14
+00:01:29.001 --> 00:01:35.000
+Dan melalui TVA, asosiasi televisi, menghubungkan dunia komputer dan video
+
+15
+00:01:35.000 --> 00:01:51.001
+dengan DVD Hi dan selamat datang ke The Computer Chronicles, I&#x27;m Stuart Chafay.
+
+16
+00:01:52.000 --> 00:01:56.001
+Hampir hari-hari komputer pribadi 15 atau 20 tahun yang lalu Anda harus tahu bagaimana untuk
+
+17
+00:01:56.001 --> 00:01:58.001
+Program untuk membuat komputer Anda melakukan apa pun.
+
+18
+00:01:59.000 --> 00:02:03.000
+Ketika Anda membeli PC Anda itu datang dengan hampir tidak ada perangkat lunak, tapi itu mungkin datang
+
+19
+00:02:03.000 --> 00:02:04.001
+dengan bahasa pemrograman dasar.
+
+20
+00:02:05.000 --> 00:02:07.000
+Dan kemudian itu adalah tugas Anda untuk menulis sebuah program seperti itu
+
+21
+00:02:07.000 --> 00:02:08.001
+Anda bisa melakukan sesuatu dengan PC Anda.
+
+22
+00:02:09.001 --> 00:02:12.001
+Untungnya hari-hari itu sudah berakhir dan Anda tidak perlu memprogram
+
+23
+00:02:12.001 --> 00:02:14.000
+Apa pun, tapi Anda mungkin ingin.
+
+24
+00:02:14.001 --> 00:02:16.001
+Ini bisa bermanfaat dan bisa menyenangkan.
+
+25
+00:02:16.001 --> 00:02:21.000
+Bahkan, Anda mungkin tidak tahu, tetapi banyak aplikasi desktop Anda memiliki
+
+26
+00:02:21.000 --> 00:02:23.001
+kemampuan pemrograman yang dibangun di dalamnya.
+
+27
+00:02:23.001 --> 00:02:25.000
+Mereka disebut mesin makro.
+
+28
+00:02:25.001 --> 00:02:28.000
+Jadi kami pikir kami akan memulai pandangan kami tentang bagaimana untuk memprogram dengan yang paling mudah
+
+29
+00:02:28.000 --> 00:02:30.001
+Contohnya, bagaimana cara membuat makro.
+
+30
+00:02:31.000 --> 00:02:35.000
+Dan di Microsoft, kebanyakan orang tidak tahu, Anda memiliki semua jenis pemrograman
+
+31
+00:02:35.000 --> 00:02:38.000
+kemampuan tersembunyi di dalam aplikasi kantor Anda, bukan?
+
+32
+00:02:38.000 --> 00:02:40.001
+Memang benar, itu sebenarnya sebuah rahasia yang kurang disimpan karena ia mengungkapkan jutaan orang.
+
+33
+00:02:40.001 --> 00:02:44.000
+Para pengembang sebenarnya menggunakan makro untuk menulis solusi.
+
+34
+00:02:44.000 --> 00:02:48.001
+Tetapi juga pengguna akhir harus tahu bahwa di balik setiap aplikasi kantor adalah
+
+35
+00:02:48.001 --> 00:02:50.000
+Sebuah lingkungan di mana mereka benar-benar dapat menciptakan.
+
+36
+00:02:50.000 --> 00:02:53.000
+Dan seseorang pernah memberitahu saya bahwa makro adalah pemrograman yang paling umum.
+
+37
+00:02:53.000 --> 00:02:54.001
+Bahasa dalam hal orang sebenarnya melakukan hal-hal.
+
+38
+00:02:55.000 --> 00:02:55.001
+Secara mutlak, secara mutlak
+
+39
+00:02:55.001 --> 00:02:57.001
+Nah, mari kita bahas beberapa contoh di sini.
+
+40
+00:02:58.000 --> 00:03:01.001
+Saya ingin mengautomatikkan beberapa hal, misalnya, dalam spreadsheet.
+
+41
+00:03:02.001 --> 00:03:06.000
+Tunjukkan saya contoh bagaimana saya dapat menulis program menggunakan salah satu makro Anda.
+
+42
+00:03:06.000 --> 00:03:09.001
+Jadi, mari kita mulai dengan Excel 2000, Microsoft Excel 2000 di sini.
+
+43
+00:03:10.000 --> 00:03:12.001
+Dan kita akan berbicara tentang otomatisasi hanya satu berat
+
+44
+00:03:12.001 --> 00:03:14.000
+Tugas untuk mengisi file yang mahal.
+
+45
+00:03:14.000 --> 00:03:17.000
+Junk yang sama berulang-ulang, jadi mengapa tidak menulis program untuk melakukannya?
+
+46
+00:03:17.000 --> 00:03:18.000
+Tentu saja, dan sebenarnya kami akan menunjukkan kepada Anda bagaimana
+
+47
+00:03:18.000 --> 00:03:19.001
+Mudah, Anda bahkan tidak perlu menulis program ini.
+
+48
+00:03:20.000 --> 00:03:22.001
+Kami akan maju dan merekam makro menggunakan rekaman makro.
+
+49
+00:03:23.000 --> 00:03:27.001
+Dan kita pergi ke alat, makro, dan kita akan, saya minta maaf, kita akan pergi ke instrumen,
+
+50
+00:03:28.000 --> 00:03:30.000
+macros, dan kita akan merekam macro baru.
+
+51
+00:03:30.000 --> 00:03:32.001
+Ini berarti menonton saya melakukan hal-hal dan kali berikutnya
+
+52
+00:03:32.001 --> 00:03:34.000
+Saya hanya ingin menekan tombol dan Anda melakukannya.
+
+53
+00:03:34.000 --> 00:03:36.000
+Tentu saja, dan kami akan memanggil bandara ini karena kami akan mulai
+
+54
+00:03:36.000 --> 00:03:38.001
+mengisi laporan biaya kami dan pergi ke bandara.
+
+55
+00:03:39.000 --> 00:03:40.000
+Jadi, Anda selalu pergi ke bandara di sebuah
+
+56
+00:03:40.000 --> 00:03:41.001
+Perjalanan bisnis, jadi mengapa melakukan hal yang sama?
+
+57
+00:03:42.000 --> 00:03:42.001
+secara mutlak.
+
+58
+00:03:42.001 --> 00:03:44.001
+Dan sebenarnya ada berbagai hal yang ingin saya otomatiskan.
+
+59
+00:03:44.001 --> 00:03:46.001
+Jadi saat ini ia sedang merekam semua yang saya lakukan.
+
+60
+00:03:47.000 --> 00:03:51.000
+Jadi saya akan memasukkan nomor ID karyawan saya, nama saya saya bisa ingat.
+
+61
+00:03:52.000 --> 00:03:53.000
+Dan sekarang di sini...
+
+62
+00:03:53.000 --> 00:03:54.001
+Tapi ini adalah hal yang tidak perlu Anda lakukan setiap
+
+63
+00:03:54.001 --> 00:03:56.000
+satu kali Anda mengisi laporan biaya.
+
+64
+00:03:56.000 --> 00:03:58.001
+Terutama karena saya tidak pernah ingat nomor call center saya.
+
+65
+00:03:59.000 --> 00:04:00.001
+Dan kita akan maju dan deskripsi dan kita hanya akan memulai dari
+
+66
+00:04:00.001 --> 00:04:02.000
+dengan perjalanan ke bandara.
+
+67
+00:04:03.000 --> 00:04:05.000
+Dan mil, saya tahu itu 17 mil.
+
+68
+00:04:05.001 --> 00:04:06.000
+Jadi itu hanya satu yang sangat serupa ...
+
+69
+00:04:06.000 --> 00:04:07.001
+Jadi Anda telah memindahkannya, jadi itu akan selalu sama.
+
+70
+00:04:07.001 --> 00:04:08.000
+dengan tepat.
+
+71
+00:04:08.000 --> 00:04:12.000
+Jadi kami memiliki 17 mil dan Excel dapat menghitung berapa banyak saya melompat 500.
+
+72
+00:04:12.000 --> 00:04:13.001
+Semua hal itu adalah apa yang akan Anda lakukan untuk
+
+73
+00:04:13.001 --> 00:04:15.000
+Katakan, hey, beri saya uang untuk perjalanan ke bandara.
+
+74
+00:04:15.001 --> 00:04:16.000
+Itu adalah benar.
+
+75
+00:04:16.000 --> 00:04:18.001
+Jadi sekarang kita bisa benar-benar maju dan hanya menghentikan rekaman kita.
+
+76
+00:04:20.000 --> 00:04:22.000
+Dan kami siap dan sekarang apa yang akan saya lakukan adalah saya akan mengungkapkannya di sini secara rahasia.
+
+77
+00:04:23.000 --> 00:04:24.001
+Dan seolah-olah kita akan datang lagi.
+
+78
+00:04:24.001 --> 00:04:25.000
+Sekarang kita sudah menulis makro.
+
+79
+00:04:25.001 --> 00:04:27.001
+Keesokan harinya kita akan melakukan laporan biaya yang sama, apa yang harus saya lakukan?
+
+80
+00:04:28.000 --> 00:04:31.001
+Nah, kita hanya pergi ke alat, makro, makros, dan ada makro bandara kita.
+
+81
+00:04:31.001 --> 00:04:32.001
+Dan kita akan maju dan berlari seperti itu.
+
+82
+00:04:33.000 --> 00:04:34.001
+Dan hanya dalam sekejap kita mengisi itu keluar.
+
+83
+00:04:36.000 --> 00:04:37.001
+Sekarang aku tidak perlu tahu apa-apa, kan?
+
+84
+00:04:37.001 --> 00:04:39.001
+Saya hanya mengatakan terus mengikuti apa yang saya lakukan dan kemudian melakukannya kali berikutnya.
+
+85
+00:04:40.000 --> 00:04:41.000
+Lebih mudah dari memprogram VCR.
+
+86
+00:04:41.000 --> 00:04:42.001
+Anda harus mengklik tombol rekaman.
+
+87
+00:04:43.000 --> 00:04:44.000
+Anda tidak perlu tahu tentang pemrograman.
+
+88
+00:04:44.000 --> 00:04:44.001
+Tidak dalam kasus ini.
+
+89
+00:04:45.000 --> 00:04:45.001
+Semua yang benar.
+
+90
+00:04:45.001 --> 00:04:50.000
+Contoh berikutnya, saya benar-benar dapat menambahkan fungsi yang Anda teman-teman tidak meletakkan di dalamnya
+
+91
+00:04:50.000 --> 00:04:52.000
+Karena itu sesuai untuk apa yang ingin saya lakukan dengan program ini?
+
+92
+00:04:52.000 --> 00:04:52.001
+secara mutlak.
+
+93
+00:04:52.001 --> 00:04:54.001
+Kita tidak bisa memikirkan segalanya ketika kita membuat sepotong perangkat lunak.
+
+94
+00:04:54.001 --> 00:04:57.001
+Jadi itu benar-benar bagus untuk memberi Anda alat untuk membuat fitur Anda sendiri.
+
+95
+00:04:58.000 --> 00:05:01.000
+Kami akan pergi ke Visual Basic Editor karena Visual Basik untuk aplikasi.
+
+96
+00:05:01.001 --> 00:05:04.000
+Jadi di bawah semua ini adalah Anda benar-benar menulis hal ini dalam Visual Basic.
+
+97
+00:05:04.000 --> 00:05:04.001
+secara mutlak.
+
+98
+00:05:05.000 --> 00:05:07.000
+Oleh karena itu, setiap aplikasi Office memiliki ini di belakangnya.
+
+99
+00:05:07.000 --> 00:05:11.001
+Kami juga lisensi ini kepada pihak ketiga seperti Visio, Corel, Autodesk, semua
+
+100
+00:05:11.001 --> 00:05:13.000
+memiliki lingkungan pemrograman yang sama.
+
+101
+00:05:13.001 --> 00:05:14.000
+Jadi mari kita lihat saja.
+
+102
+00:05:14.000 --> 00:05:15.001
+Inilah makro yang baru saja kita rakam.
+
+103
+00:05:16.000 --> 00:05:20.000
+Jadi itulah kode dasar di Basic yang hanya melakukan apa yang kita lakukan.
+
+104
+00:05:20.000 --> 00:05:20.001
+secara mutlak.
+
+105
+00:05:20.001 --> 00:05:21.001
+Anda bisa melihat apakah saya melakukannya.
+
+106
+00:05:21.001 --> 00:05:23.000
+Dan saya tidak perlu tahu dari semua hal ini.
+
+107
+00:05:23.000 --> 00:05:23.001
+Aku baru saja melakukannya
+
+108
+00:05:24.000 --> 00:05:24.000
+[...]
+
+109
+00:05:24.001 --> 00:05:25.001
+Tapi mari kita katakan Anda inginkan.
+
+110
+00:05:25.001 --> 00:05:28.000
+Tetapi jika saya tahu hal-hal saya saya bisa masuk ke sana dan mengedit itu dan mengubahnya.
+
+111
+00:05:28.000 --> 00:05:28.000
+secara mutlak.
+
+112
+00:05:28.000 --> 00:05:30.001
+Katakanlah Anda bergerak lebih dekat ke bandara dan Anda ingin menjadi 17.
+
+113
+00:05:31.000 --> 00:05:31.001
+Anda baru saja mengubah itu.
+
+114
+00:05:31.001 --> 00:05:31.001
+Semua yang benar.
+
+115
+00:05:31.001 --> 00:05:33.000
+Jadi mari kita pergi ke contoh yang saya minta.
+
+116
+00:05:33.000 --> 00:05:35.001
+Bagaimana saya dapat menambahkan beberapa fitur ke spreadsheet?
+
+117
+00:05:35.001 --> 00:05:36.000
+secara mutlak.
+
+118
+00:05:36.000 --> 00:05:38.000
+Mari kita bicara tentang bagaimana kita bisa mendapatkan sesuatu seperti kalender.
+
+119
+00:05:38.000 --> 00:05:39.000
+Saya tidak pernah ingat tanggal itu.
+
+120
+00:05:39.001 --> 00:05:40.001
+Saya tahu saya bepergian pada hari Senin.
+
+121
+00:05:40.001 --> 00:05:42.000
+Jadi Anda ingin melihat kalender dan mengatakan tanggal apa itu?
+
+122
+00:05:42.000 --> 00:05:42.001
+secara mutlak.
+
+123
+00:05:42.001 --> 00:05:44.001
+Dan saya ingin dapat membangunnya dalam Excel.
+
+124
+00:05:45.000 --> 00:05:45.001
+Jadi kita akan pergi dan melakukan itu
+
+125
+00:05:45.001 --> 00:05:47.000
+Dan saya akan menulis satu baris kode untuk melakukannya.
+
+126
+00:05:47.001 --> 00:05:51.001
+Hal pertama yang kita lakukan adalah hanya menambahkan formulir dan menggunakan salah satu kontrol ActiveX ini.
+
+127
+00:05:51.001 --> 00:05:53.001
+Mereka ada di kantor dan tersedia untuk Anda.
+
+128
+00:05:54.000 --> 00:05:57.000
+Dan Anda dapat membangun kontrol kalender Anda langsung pada formulir.
+
+129
+00:05:57.001 --> 00:05:57.001
+Itu adalah itu.
+
+130
+00:05:58.001 --> 00:06:00.001
+Dan kita siap untuk benar-benar menulis satu baris kode kita.
+
+131
+00:06:00.001 --> 00:06:04.000
+Dan bahwa satu baris kode akan pergi ke sel aktif
+
+132
+00:06:04.000 --> 00:06:06.001
+dalam Excel dan mengubah nilai.
+
+133
+00:06:06.001 --> 00:06:09.001
+Anda dapat melihat IntelliSense dalam VBA membantu saya menulis kode ini.
+
+134
+00:06:09.001 --> 00:06:11.001
+Jadi ini yang harus saya ketahui bagaimana untuk melakukannya, bukan?
+
+135
+00:06:12.000 --> 00:06:12.000
+secara mutlak.
+
+136
+00:06:13.000 --> 00:06:15.000
+Ini bukan hal yang paling sederhana di dunia tetapi sebenarnya orang-orang
+
+137
+00:06:15.000 --> 00:06:16.001
+Jangan gunakan rekaman untuk melakukannya.
+
+138
+00:06:17.000 --> 00:06:17.000
+Jadi apa yang terjadi?
+
+139
+00:06:17.001 --> 00:06:19.000
+Jadi kalendar satu titik nilai.
+
+140
+00:06:19.001 --> 00:06:21.000
+Jadi mari kita pergi langsung ke spreadsheet kita sekarang.
+
+141
+00:06:21.000 --> 00:06:23.001
+Dan sekarang ketika saya dua kali klik pada medan tanggal, Anda akan melihat bahwa
+
+142
+00:06:23.001 --> 00:06:25.000
+Kalender itu sudah tergelincir.
+
+143
+00:06:25.001 --> 00:06:27.000
+Dan saat saya klik di sekitar, saya memilih tanggal.
+
+144
+00:06:27.001 --> 00:06:28.001
+Fitur baru, kami baru saja menambahkan.
+
+145
+00:06:28.001 --> 00:06:29.001
+Dua contoh bayi.
+
+146
+00:06:29.001 --> 00:06:32.000
+Saya tahu ada semua jenis hal lain yang bisa Anda lakukan kita tidak punya waktu untuk.
+
+147
+00:06:32.000 --> 00:06:35.001
+Tapi hey, menjelajahi makro di dalam aplikasi Office Anda, bukan?
+
+148
+00:06:36.000 --> 00:06:37.000
+Terima kasih banyak sekali.
+
+149
+00:06:37.001 --> 00:06:37.001
+Semua yang benar.
+
+150
+00:06:37.001 --> 00:06:41.000
+Nah, jika Anda memiliki beberapa kesenangan membuat beberapa makro dan kemudian Anda ingin mendapatkan
+
+151
+00:06:41.000 --> 00:06:44.001
+benar-benar serius tentang menulis aplikasi Anda sendiri, Anda dapat melakukannya.
+
+152
+00:06:45.000 --> 00:06:47.001
+Ada sebuah program yang sekarang disebut CodeWarrior.
+
+153
+00:06:47.001 --> 00:06:49.000
+Temukan Programming untuk Windows.
+
+154
+00:06:49.000 --> 00:06:51.001
+Dan itu juga dapat mengubah Anda menjadi seorang programmer.
+
+155
+00:06:52.000 --> 00:06:53.000
+Saya pikir ini adalah teori, bukan?
+
+156
+00:06:53.000 --> 00:06:55.000
+Saya maksudkan, Anda dapat belajar untuk melakukan hal yang rumit ini.
+
+157
+00:06:56.000 --> 00:06:58.000
+Pada dasarnya apa yang kita cari untuk Discover
+
+158
+00:06:58.000 --> 00:06:59.001
+Produk pemrograman adalah untuk novel.
+
+159
+00:06:59.001 --> 00:07:02.000
+seorang programmer pemula, seseorang yang belum pernah diprogram sebelumnya, dan
+
+160
+00:07:02.000 --> 00:07:04.000
+Anda benar-benar berjalan melalui cara untuk memprogram.
+
+161
+00:07:04.000 --> 00:07:08.001
+Jadi saya bisa belajar untuk berprogram dalam C, C++, Java atau Pascal pada ini, kan?
+
+162
+00:07:08.001 --> 00:07:09.000
+Ya ya.
+
+163
+00:07:09.000 --> 00:07:10.001
+Yang terdengar seperti benar-benar banyak untuk belajar.
+
+164
+00:07:11.000 --> 00:07:11.000
+dengan benar.
+
+165
+00:07:11.001 --> 00:07:12.000
+Tapi aku bisa melakukannya.
+
+166
+00:07:12.000 --> 00:07:12.001
+Ya, Anda bisa
+
+167
+00:07:13.000 --> 00:07:15.000
+Dan hal yang bagus adalah semuanya berada di lingkungan yang sama.
+
+168
+00:07:15.000 --> 00:07:17.001
+Jadi Anda harus belajar bahasa, tetapi lingkungan
+
+169
+00:07:17.001 --> 00:07:19.000
+Untuk setiap bahasa akan sama.
+
+170
+00:07:19.001 --> 00:07:19.001
+Semua yang benar.
+
+171
+00:07:19.001 --> 00:07:20.000
+Biarlah aku memberi kamu contoh.
+
+172
+00:07:20.001 --> 00:07:21.001
+Saya seperti memulai di sini dan saya berkata,
+
+173
+00:07:21.001 --> 00:07:23.000
+Saya ingin belajar hanya untuk melakukan hal-hal dasar.
+
+174
+00:07:23.001 --> 00:07:26.000
+Saya ingin menulis sedikit permainan, misalnya, Anda tahu, permainan Reversi.
+
+175
+00:07:26.001 --> 00:07:27.000
+Itu tidak terlalu rumit.
+
+176
+00:07:27.001 --> 00:07:30.001
+Bagaimana saya, maksud saya, ini adalah salah satu proyek Anda, karena saya mengerti itu.
+
+177
+00:07:30.001 --> 00:07:33.000
+Saya bisa mengangkatnya dan sebenarnya sejenis melihat apa yang
+
+178
+00:07:33.000 --> 00:07:35.000
+Kode adalah seperti bagian dari proses pembelajaran saya.
+
+179
+00:07:35.000 --> 00:07:35.000
+[...]
+
+180
+00:07:35.001 --> 00:07:36.000
+Bagaimana aku melakukannya?
+
+181
+00:07:36.001 --> 00:07:40.000
+Pada dasarnya, kami memiliki aplikasi Reversi hampir sudah disiapkan.
+
+182
+00:07:40.000 --> 00:07:41.000
+Jadi apa yang ada di jendela itu?
+
+183
+00:07:41.001 --> 00:07:41.001
+tepat di sini.
+
+184
+00:07:42.000 --> 00:07:45.001
+Sekarang ini adalah persekitaran kode yang sebenarnya dengan ini tepat di sini.
+
+185
+00:07:45.001 --> 00:07:48.001
+Jadi ada kode sumber, ada perpustakaan yang Anda akses untuk melakukan hal itu.
+
+186
+00:07:48.001 --> 00:07:51.001
+Ini adalah perpustakaan di sini, kode sumber, dan segala-galanya menarik dan
+
+187
+00:07:51.001 --> 00:07:56.000
+drop jika Anda ingin menarik, Anda tahu, beberapa file di suatu tempat dan hal-hal seperti itu.
+
+188
+00:07:56.000 --> 00:07:57.001
+Dapatkah saya melihat bagaimana kode itu sebenarnya akan terlihat?
+
+189
+00:07:58.001 --> 00:08:01.000
+Sebenarnya, jika Anda benar-benar ingin melihat kode, Anda hanya bisa pergi ke sana.
+
+190
+00:08:01.000 --> 00:08:03.000
+Klik dua kali pada itu.
+
+191
+00:08:03.001 --> 00:08:06.000
+Dan, Anda tahu, kami memiliki pilihan lain jika Anda mencari Anda bisa.
+
+192
+00:08:06.001 --> 00:08:06.001
+Semua yang benar.
+
+193
+00:08:06.001 --> 00:08:10.000
+Dan jika saya ingin menjalankan kode dan melihat apa yang terjadi, jika Anda ingin membuat bug.
+
+194
+00:08:10.000 --> 00:08:10.000
+[...]
+
+195
+00:08:10.000 --> 00:08:15.000
+Anda hanya datang ke sini untuk menjalankan dan debug dan Anda menjalankan kode nyata seperti ini.
+
+196
+00:08:15.001 --> 00:08:16.001
+Dan sekarang ia sebenarnya mengumpulkan.
+
+197
+00:08:17.000 --> 00:08:17.000
+dengan benar.
+
+198
+00:08:18.001 --> 00:08:19.000
+Dan kita sebenarnya akan.
+
+199
+00:08:19.000 --> 00:08:22.000
+Sekarang, seperti yang Anda katakan, saya maksud, akhirnya saya akan harus belajar bahasa itu pada
+
+200
+00:08:22.000 --> 00:08:23.001
+di sebelah kiri dan apa yang diperintahkan.
+
+201
+00:08:23.001 --> 00:08:27.000
+Tetapi ini adalah bagian dari proses, jenis melihat kode orang lain
+
+202
+00:08:27.000 --> 00:08:28.001
+dan mengungkapkan bagaimana mereka melakukan hal-hal ini.
+
+203
+00:08:29.001 --> 00:08:29.001
+dengan tepat.
+
+204
+00:08:30.000 --> 00:08:32.000
+Maksudnya, itu adalah salah satu hal utama.
+
+205
+00:08:32.000 --> 00:08:35.001
+Sekarang, di sini kami baru saja melompat, Anda tahu, jendela debugger baru saja dilompat.
+
+206
+00:08:35.001 --> 00:08:39.000
+Jika Anda benar-benar ingin melihat, Anda tahu, jika Anda ingin melangkah melalui
+
+207
+00:08:39.000 --> 00:08:41.000
+Kode, Anda hanya bisa melangkah melalui seperti ini.
+
+208
+00:08:41.001 --> 00:08:43.000
+Dan itu akan berhenti di sana.
+
+209
+00:08:44.000 --> 00:08:47.000
+Dan jika Anda benar-benar ingin menunjukkan apa yang terbalik dari permainan.
+
+210
+00:08:47.001 --> 00:08:49.000
+Jadi sebenarnya menjalankan program sekarang, hey,
+
+211
+00:08:49.000 --> 00:08:50.001
+Itulah yang akan terjadi jika kita bermain permainan.
+
+212
+00:08:51.000 --> 00:08:51.000
+dengan tepat.
+
+213
+00:08:51.000 --> 00:08:51.001
+Semua yang benar.
+
+214
+00:08:52.000 --> 00:08:55.000
+Sekarang, itu kelihatan sederhana, tetapi ada banyak hal yang rumit di sana.
+
+215
+00:08:55.000 --> 00:08:56.000
+Saya akan belajar C++.
+
+216
+00:08:56.000 --> 00:08:57.000
+Ini akan mengambil beberapa pembelajaran.
+
+217
+00:08:57.001 --> 00:09:01.000
+Bagaimana saya sekarang menggunakan perangkat lunak Anda untuk mengatakan, mengajar saya bagaimana melakukan hal-hal seperti ini?
+
+218
+00:09:01.000 --> 00:09:05.001
+Nah, apa yang kita miliki dengan perangkat lunak CodeWear adalah kita memiliki situs web yang datang
+
+219
+00:09:05.001 --> 00:09:07.000
+dengan perangkat lunak.
+
+220
+00:09:07.001 --> 00:09:11.000
+Dan semua yang harus Anda lakukan adalah ketika Anda mengunggah perangkat lunak, itu adalah
+
+221
+00:09:11.000 --> 00:09:12.001
+di atas CD dokumentasi.
+
+222
+00:09:13.001 --> 00:09:14.001
+Pada dasarnya, ini adalah dokumentasi.
+
+223
+00:09:14.001 --> 00:09:17.001
+Jadi ini adalah semacam tutorial berjalan sendiri dan itu hanya
+
+224
+00:09:17.001 --> 00:09:19.000
+Saya dan komputer dan itu akan mengajar saya ini.
+
+225
+00:09:19.000 --> 00:09:19.000
+dengan tepat.
+
+226
+00:09:19.000 --> 00:09:23.000
+Dan seperti yang Anda lihat, ada sambutan, ada petunjuk untuk menggunakan situs, mendapatkan
+
+227
+00:09:23.000 --> 00:09:25.000
+dimulai, semua jenis yang berbeda dari ...
+
+228
+00:09:25.000 --> 00:09:27.000
+Mari kita berikan contoh dari mana saya memulai, di mana saya berada.
+
+229
+00:09:27.000 --> 00:09:30.000
+Saya ingin mendapatkan ide bagaimana memulai proses pembelajaran ini untuk kode dalam C++.
+
+230
+00:09:30.000 --> 00:09:32.000
+Anda hanya klik dua kali pada bagian yang dimulai.
+
+231
+00:09:32.001 --> 00:09:35.000
+Dan kemudian jika Anda benar-benar ingin melihat CodeWear IDE.
+
+232
+00:09:35.000 --> 00:09:36.001
+Ada tutorial yang dibuat di sana.
+
+233
+00:09:36.001 --> 00:09:37.001
+Jadi mari kita lihat salah satunya.
+
+234
+00:09:37.001 --> 00:09:41.000
+Anda hanya klik pada itu dan itu akan memberi Anda panduan nyata
+
+235
+00:09:41.000 --> 00:09:42.001
+Perjalanan melalui IDE.
+
+236
+00:09:43.000 --> 00:09:43.000
+Semua yang benar.
+
+237
+00:09:43.000 --> 00:09:46.001
+Sekarang, bisakah saya melakukan pekerjaan pada proyek bayi kecil dan itu akan membimbing saya melalui itu?
+
+238
+00:09:46.001 --> 00:09:47.001
+Apakah itu bagaimana aku akan melakukannya?
+
+239
+00:09:48.000 --> 00:09:49.000
+Ya, itu persis cara Anda melakukannya.
+
+240
+00:09:49.000 --> 00:09:54.000
+Anda dapat bekerja pada proyek bayi dan kita sebenarnya memiliki contoh untuk setiap bahasa, C,
+
+241
+00:09:54.000 --> 00:09:56.000
+C++, counter saya maksud seperti hal Reversi yang kita lihat?
+
+242
+00:09:56.000 --> 00:09:56.000
+dengan tepat.
+
+243
+00:09:56.001 --> 00:09:58.000
+Itu benar pada dokumentasi CD.
+
+244
+00:09:58.000 --> 00:10:01.000
+Jadi saya bisa mengisi program itu dan mengatakan, baik, apa yang akan terjadi jika saya mengubahnya
+
+245
+00:10:01.000 --> 00:10:05.001
+di sini dan melakukan ini dan membuatnya hijau bukannya biru atau membuatnya besar papan
+
+246
+00:10:05.001 --> 00:10:07.000
+bukannya itu besar papan dan bercampur-campur dengan itu?
+
+247
+00:10:07.001 --> 00:10:07.001
+dengan tepat.
+
+248
+00:10:08.000 --> 00:10:09.000
+Dan aku tidak bisa meletakkannya, kan?
+
+249
+00:10:09.001 --> 00:10:10.001
+Saya selalu bisa kembali ke tempat Anda memulai.
+
+250
+00:10:10.001 --> 00:10:12.001
+Anda mungkin mengalami beberapa kesalahan di sini dan di sana.
+
+251
+00:10:13.000 --> 00:10:16.000
+Secara praktis, saya maksud, hal ini masih tampak agak rumit.
+
+252
+00:10:16.000 --> 00:10:17.001
+Dengan kata lain, orang yang normal dalam sebuah
+
+253
+00:10:17.001 --> 00:10:19.001
+Smart, tampilan komputer yang jelas, saya ingin belajar pemrograman.
+
+254
+00:10:20.000 --> 00:10:22.001
+Berapa lama ia akan mengambil saya untuk masuk ke sini dan mengetahui bagaimana
+
+255
+00:10:22.001 --> 00:10:24.000
+Untuk melakukan sesuatu seperti permainan Reversi?
+
+256
+00:10:24.001 --> 00:10:25.001
+Nah, saya maksudkan, itu akan mengambil beberapa waktu.
+
+257
+00:10:26.000 --> 00:10:26.001
+Anda harus belajar bahasa.
+
+258
+00:10:27.000 --> 00:10:31.000
+Tapi seperti yang saya katakan sebelumnya, hal yang bagus adalah IDE akan sama
+
+259
+00:10:31.000 --> 00:10:32.001
+Tidak peduli apa yang dimaksud dengan ID.
+
+260
+00:10:32.001 --> 00:10:34.000
+lingkungan pembangunan yang terintegrasi.
+
+261
+00:10:34.000 --> 00:10:34.001
+Semua yang benar.
+
+262
+00:10:34.001 --> 00:10:36.000
+Jadi Anda memiliki satu jenis platform untuk melakukan
+
+263
+00:10:36.000 --> 00:10:37.001
+Tidak peduli dengan bahasa, apakah itu?
+
+264
+00:10:38.000 --> 00:10:38.000
+dengan tepat.
+
+265
+00:10:39.000 --> 00:10:43.000
+IDE akan mirip dengan Word ketika Anda ingin membuat dokumen.
+
+266
+00:10:43.000 --> 00:10:48.001
+IDE akan menjadi kata untuk benar-benar membuat program dan hal-hal seperti itu.
+
+267
+00:10:48.001 --> 00:10:51.000
+Jadi sekali lagi, orang biasa dapat masuk ke sini dan sebenarnya belajar mereka dengan
+
+268
+00:10:51.000 --> 00:10:53.000
+Software dan akhirnya menggambarkan bagaimana untuk menulis sesuatu.
+
+269
+00:10:53.000 --> 00:10:53.001
+Ya ya.
+
+270
+00:10:54.000 --> 00:10:55.000
+Berapa biaya untuk membeli hal ini?
+
+271
+00:10:55.000 --> 00:10:56.000
+Ini adalah $ 79.
+
+272
+00:10:56.001 --> 00:10:57.001
+Oh, itu tidak buruk.
+
+273
+00:10:57.001 --> 00:10:57.001
+Ya ya.
+
+274
+00:10:58.000 --> 00:10:58.001
+Dan semua empat bahasa ada di sana.
+
+275
+00:10:59.000 --> 00:10:59.001
+Keempat bahasa, ya.
+
+276
+00:11:00.000 --> 00:11:01.001
+C, C++, Java dan Pascal.
+
+277
+00:11:01.001 --> 00:11:02.000
+Terima kasih banyak sekali.
+
+278
+00:11:02.000 --> 00:11:02.001
+Sampaikan terima kasih
+
+279
+00:11:03.000 --> 00:11:03.000
+Semua yang benar.
+
+280
+00:11:03.000 --> 00:11:07.000
+Nah, keunggulan untuk pengaturcaraan profesional biasanya adalah permainan komputer.
+
+281
+00:11:07.000 --> 00:11:11.001
+Tidak ada yang seperti permainan untuk mendorong kode perangkat lunak ke batas dalam hal
+
+282
+00:11:11.001 --> 00:11:14.000
+grafis, kecepatan, antara muka, dll
+
+283
+00:11:14.000 --> 00:11:17.001
+Jadi kami berpikir kami akan memberi Anda pandangan ke dalam dunia gila masa besar
+
+284
+00:11:17.001 --> 00:11:20.001
+Program dengan kunjungan ke sanktum dalaman
+
+285
+00:11:20.001 --> 00:11:22.001
+Tim pemrograman Electronic Arts.
+
+286
+00:11:25.001 --> 00:11:30.001
+Sebuah pesawat berbunyi, propeller berputar dan peluru mengalir dari pistol yang dipasang sayap.
+
+287
+00:11:31.001 --> 00:11:35.001
+Aksi dalam James World War II pejuang dari Electronic Arts dapat
+
+288
+00:11:35.001 --> 00:11:37.000
+tampaknya nyata, tapi itu tidak.
+
+289
+00:11:37.000 --> 00:11:41.000
+Ini hanya model matematika yang menanggapi arah
+
+290
+00:11:41.000 --> 00:11:43.000
+disertakan dalam kode program.
+
+291
+00:11:43.001 --> 00:11:47.001
+Tentu saja, kode bukanlah satu-satunya faktor dalam membuat permainan yang sukses.
+
+292
+00:11:48.000 --> 00:11:52.001
+Ketika kita memulai proses, kita sedang memikirkan bagaimana membuatnya sejuk seperti
+
+293
+00:11:52.001 --> 00:11:57.001
+mungkin, untuk membuatnya seperti nyata, untuk menjadikannya visual menakjubkan sebanyak mungkin.
+
+294
+00:11:58.000 --> 00:12:01.000
+Dalam proses implementasi ini, maka kita harus mengetahui bagaimana
+
+295
+00:12:01.000 --> 00:12:02.001
+untuk melakukannya dan apa batas kita.
+
+296
+00:12:03.000 --> 00:12:05.000
+Apa itu target hardware kami?
+
+297
+00:12:05.000 --> 00:12:06.000
+Seberapa cepat bisa berjalan?
+
+298
+00:12:06.000 --> 00:12:08.000
+Berapa banyak polygon yang bisa kita gunakan?
+
+299
+00:12:08.001 --> 00:12:13.000
+Setiap permainan perangkat lunak membutuhkan kerja tim antara programmer dan artis, tetapi
+
+300
+00:12:13.000 --> 00:12:17.001
+programmer memiliki cara untuk menyederhanakan dan mempercepat tindakan, yang penting
+
+301
+00:12:17.001 --> 00:12:19.001
+Keuntungan untuk permainan yang lancar.
+
+302
+00:12:20.000 --> 00:12:22.000
+Kami selalu berusaha untuk mengoptimalkan kode kami agar berjalan
+
+303
+00:12:22.000 --> 00:12:24.000
+lebih cepat pada mesin yang sama.
+
+304
+00:12:25.000 --> 00:12:30.000
+Pada dasarnya, semakin efisien kode kita, semakin baik kadar bingkai
+
+305
+00:12:30.000 --> 00:12:34.000
+Permainan akan, jadi itu akan memperbarui layar lebih banyak kali per detik.
+
+306
+00:12:34.001 --> 00:12:38.000
+Urutan pembukaan game ini menampilkan pertempuran sampel antara Jerman
+
+307
+00:12:38.000 --> 00:12:40.000
+tank dan pesawat tempur bersekutu.
+
+308
+00:12:40.001 --> 00:12:44.000
+Dalam versi awal, pandangan pemain, seperti yang dilihat melalui virtual
+
+309
+00:12:44.000 --> 00:12:46.000
+Kamera ini bersifat statik.
+
+310
+00:12:46.001 --> 00:12:51.000
+Dalam versi kemudian, gerakan kamera ditambahkan untuk menciptakan drama dan suspensi.
+
+311
+00:12:52.000 --> 00:12:53.000
+Inilah cara yang dilakukan.
+
+312
+00:12:53.001 --> 00:13:00.000
+Apa yang Anda lihat adalah pada waktu nol, jalur kamera akan berputar dari 6.09
+
+313
+00:13:00.000 --> 00:13:02.001
+Radian mencapai 6.15 radian dalam 6 detik.
+
+314
+00:13:03.000 --> 00:13:08.000
+Ini akan memberi kita efek pitching ini pada kamera, yang menambahkan lebih banyak
+
+315
+00:13:08.000 --> 00:13:09.001
+Sebuah flare yang dramatis terhadapnya.
+
+316
+00:13:10.000 --> 00:13:15.000
+Beberapa hal besar lain yang terjadi kemudian, saya akan mengubah kamera menjadi
+
+317
+00:13:15.000 --> 00:13:18.001
+Pemandangan luar dari hangar dalam 10 detik.
+
+318
+00:13:19.001 --> 00:13:21.001
+Ini menambahkan banyak lebih dari sebuah film rasa untuk itu.
+
+319
+00:13:22.000 --> 00:13:27.000
+Anda akan mendapatkan tembakan utama dari P-47 yang datang ke peluncuran bom saat ini.
+
+320
+00:13:29.000 --> 00:13:30.001
+Ini adalah bagian favorit saya di sini.
+
+321
+00:13:36.001 --> 00:13:40.001
+Jadi setiap gerakan kamera yang Anda lihat ditulis dalam
+
+322
+00:13:40.001 --> 00:13:42.001
+file yang saya tunjukkan sebelumnya.
+
+323
+00:13:44.000 --> 00:13:49.000
+Untuk mencapai realisme terbesar, desainer permainan mengambil model pesawat nyata dan
+
+324
+00:13:49.000 --> 00:13:54.000
+menyalin setiap detail yang mereka bisa, dari fuselage ke gauges cockpit.
+
+325
+00:13:54.001 --> 00:13:58.000
+Dan untuk memanipulasi begitu banyak bagian berturut-turut, programmer
+
+326
+00:13:58.000 --> 00:14:00.000
+mengumpulkan mereka melalui hierarki.
+
+327
+00:14:00.000 --> 00:14:05.000
+Ketika kita berpikir tentang hierarki bentuk pesawat, dan
+
+328
+00:14:05.000 --> 00:14:06.001
+Mari kita katakan bahwa kita benar di bagian permainan yang
+
+329
+00:14:06.001 --> 00:14:08.001
+yang melibatkan peluru yang menyerang pesawat.
+
+330
+00:14:09.001 --> 00:14:11.000
+Jadi kita perlu mendeteksi tepat di mana peluru sedang menyerang.
+
+331
+00:14:12.000 --> 00:14:14.001
+Kami melakukannya, kami memodelkan tepat di mana di pesawat peluru
+
+332
+00:14:14.001 --> 00:14:16.000
+hit dan kita mempengaruhi model penerbangan dengan cara ini.
+
+333
+00:14:17.000 --> 00:14:21.000
+Jadi dengan memecahkan bentuk ke dalam hierarki, kita dapat mengatakan, ya, peluru ini memukul
+
+334
+00:14:21.000 --> 00:14:24.000
+akar sayap di sini dan oleh karena itu akan mempengaruhi model penerbangan dengan cara ini.
+
+335
+00:14:25.000 --> 00:14:30.001
+James World War II pejuang ditulis dalam C+ +, tetapi programmer mencatat bahwa tidak ada
+
+336
+00:14:30.001 --> 00:14:32.001
+Satu bahasa khusus untuk permainan.
+
+337
+00:14:33.001 --> 00:14:39.000
+Kod menggunakan program berorientasi objek, atau modul yang dapat digunakan kembali, untuk mengurangi
+
+338
+00:14:39.000 --> 00:14:41.000
+Jumlah tugas yang berulang.
+
+339
+00:14:41.001 --> 00:14:47.000
+Katakan bahwa Anda mencoba untuk memodelkan, katakanlah peluru.
+
+340
+00:14:47.000 --> 00:14:51.000
+Jadi Anda menembak senjata dan kami membuat ribuan peluru setiap menit,
+
+341
+00:14:51.000 --> 00:14:53.000
+tergantung pada tingkat kebakaran senjata.
+
+342
+00:14:53.001 --> 00:14:57.001
+Kami tidak ingin mengulangi kode lebih dari seratus kali.
+
+343
+00:14:57.001 --> 00:14:59.000
+Untuk membuat efek bunyi untuk itu.
+
+344
+00:14:59.001 --> 00:15:02.001
+Jadi kita membuat satu modul yang mengatakan membuat suara untuk satu peluru.
+
+345
+00:15:03.000 --> 00:15:07.001
+Dan jika itu bekerja, jika kita membuangnya, dan jika kepingan kode itu stabil, maka
+
+346
+00:15:07.001 --> 00:15:09.000
+Kami tidak akan memiliki masalah memanggilnya seribu kali.
+
+347
+00:15:09.001 --> 00:15:14.000
+Designer game dapat menghabiskan sebagian besar waktu mereka untuk menciptakan kode yang efektif dan realistis.
+
+348
+00:15:14.000 --> 00:15:18.000
+grafis, tetapi mereka masih perlu mengingat satu tujuan utama.
+
+349
+00:15:18.001 --> 00:15:21.000
+Ya, kami yang suci adalah ia harus bersenang-senang.
+
+350
+00:15:21.000 --> 00:15:23.000
+Jika itu tidak menyenangkan, tidak ada yang akan bermain.
+
+351
+00:15:23.001 --> 00:15:25.000
+Dan itu bisa indah.
+
+352
+00:15:25.001 --> 00:15:26.000
+Ini bisa mengagumkan.
+
+353
+00:15:26.001 --> 00:15:30.001
+Tetapi jika tidak menyenangkan untuk bermain, kita tidak akan memiliki orang membeli
+
+354
+00:15:30.001 --> 00:15:32.000
+Membelinya dan memberitahu orang lain untuk membelinya.
+
+355
+00:15:32.001 --> 00:15:36.000
+Jadi kita benar-benar harus memastikan bahwa itu ada.
+
+356
+00:15:36.001 --> 00:15:39.000
+Dan itu adalah hal yang mengecewakan untuk hampir tidak mengejarnya.
+
+357
+00:15:39.001 --> 00:15:42.000
+Untuk komputer kronik, saya adalah Sarah O&#x27;Brien.
+
+358
+00:15:58.000 --> 00:16:03.000
+Hari-hari ini, pemrograman sama banyak tentang situs web dan aplikasi desktop.
+
+359
+00:16:03.001 --> 00:16:07.000
+Tantangan pemrograman di era Internet adalah tentang hal-hal seperti menambah sejuk
+
+360
+00:16:07.000 --> 00:16:10.001
+grafis, animasi, suara, dan aktivitas ke situs web Anda.
+
+361
+00:16:11.000 --> 00:16:14.000
+Hal ini diperlukan untuk bekerja dalam bahasa pemrograman yang berbeda.
+
+362
+00:16:14.000 --> 00:16:17.000
+Salah satu yang paling menarik adalah Macromedia&#x27;s Flash.
+
+363
+00:16:17.001 --> 00:16:20.000
+Dan Kevin, Anda memiliki situs web yang diaktifkan Flash di sana sekarang.
+
+364
+00:16:20.000 --> 00:16:21.000
+Kami melihat ini melakukan segala macam hal.
+
+365
+00:16:21.001 --> 00:16:22.000
+Bukan hanya duduk di sana.
+
+366
+00:16:22.001 --> 00:16:23.000
+Ya, itu memang benar.
+
+367
+00:16:23.000 --> 00:16:25.001
+Ya, desainer dapat membuat konten untuk situs web mereka,
+
+368
+00:16:25.001 --> 00:16:27.000
+Aktivitas dan perubahan grafik.
+
+369
+00:16:27.001 --> 00:16:28.001
+Suara terus berlanjut.
+
+370
+00:16:29.000 --> 00:16:30.001
+Jika Anda klik, apa yang terjadi pada salah satu hal ini?
+
+371
+00:16:30.001 --> 00:16:32.000
+Jika Anda klik, itu akan pergi ke area lain dari situs.
+
+372
+00:16:32.000 --> 00:16:34.000
+Anda dapat melihatnya pergi ke lebih banyak konten Flash.
+
+373
+00:16:34.001 --> 00:16:35.000
+Dan itu berisi beban.
+
+374
+00:16:35.000 --> 00:16:37.001
+Anda dapat melihat tombol yang muncul di sini dan rollovers.
+
+375
+00:16:37.001 --> 00:16:39.000
+Ketika Anda klik, itu mengubah gambar.
+
+376
+00:16:39.001 --> 00:16:39.001
+Semua yang benar.
+
+377
+00:16:40.000 --> 00:16:43.001
+Seberapa rumitnya menggunakan Flash untuk membuat hal seperti itu?
+
+378
+00:16:43.001 --> 00:16:45.000
+Itu tidak rumit sama sekali.
+
+379
+00:16:45.000 --> 00:16:47.000
+Ini benar-benar memungkinkan desainer untuk membuat konten ini lebih
+
+380
+00:16:47.000 --> 00:16:49.000
+Lebih dari seorang jurutera dari masa lalu.
+
+381
+00:16:49.000 --> 00:16:50.001
+Apakah ini jenis alat penulisan?
+
+382
+00:16:51.000 --> 00:16:52.000
+Ya, ini adalah alat penulisan Flash.
+
+383
+00:16:52.000 --> 00:16:52.001
+Di manakah saya memulai?
+
+384
+00:16:53.000 --> 00:16:55.001
+Anda membuat objek di adegan di sini.
+
+385
+00:16:56.000 --> 00:16:58.000
+Dan Anda dapat melakukan hal-hal seperti menarik ikan keluar ke panggung.
+
+386
+00:16:58.001 --> 00:17:00.001
+Hanya jenis timeline editing dengan cara tertentu adalah apa yang kita lakukan?
+
+387
+00:17:00.001 --> 00:17:00.001
+dengan tepat.
+
+388
+00:17:01.000 --> 00:17:03.001
+Cara Anda memprogram dalam Flash adalah ada timeline yang
+
+389
+00:17:03.001 --> 00:17:05.000
+menunjukkan apa yang terjadi dari waktu ke waktu.
+
+390
+00:17:05.001 --> 00:17:06.000
+Anda dapat menyertakan tindakan.
+
+391
+00:17:06.000 --> 00:17:08.000
+Jadi kita mulai dengan ikan di sisi kanan bingkai?
+
+392
+00:17:08.001 --> 00:17:08.001
+dengan tepat.
+
+393
+00:17:09.000 --> 00:17:11.000
+Dan jadi Anda ingin ikan untuk berenang di sisi lain bingkai.
+
+394
+00:17:11.001 --> 00:17:13.001
+Kami hanya dapat membuat bingkai kunci lain di sini.
+
+395
+00:17:13.001 --> 00:17:16.001
+Frame kunci menunjukkan aktivitas atau perubahan dalam timeline.
+
+396
+00:17:16.001 --> 00:17:19.000
+Dan saya dapat menarik ikan ke sisi lain layar.
+
+397
+00:17:19.001 --> 00:17:21.000
+Jadi pada saat itu, apakah Anda ingin ikan berada di sisi lain?
+
+398
+00:17:21.001 --> 00:17:21.001
+dengan tepat.
+
+399
+00:17:22.000 --> 00:17:23.000
+Dan sekarang Anda telah membuat animasi?
+
+400
+00:17:23.001 --> 00:17:24.000
+Itu memang benar.
+
+401
+00:17:24.000 --> 00:17:27.001
+Ya, dan jika saya akan bermain ini, ikan sekarang tetap di satu sisi dan kemudian
+
+402
+00:17:27.001 --> 00:17:29.000
+Ketika ia sampai ke bingkai kunci terakhir, ia melompat.
+
+403
+00:17:29.000 --> 00:17:29.000
+Ok ya.
+
+404
+00:17:29.001 --> 00:17:29.001
+Tidak realistis
+
+405
+00:17:30.001 --> 00:17:31.000
+Bagaimana cara membuatnya nyata?
+
+406
+00:17:31.001 --> 00:17:33.001
+Apa yang kita lakukan untuk menjadikannya nyata adalah sesuatu yang disebut tweening.
+
+407
+00:17:34.000 --> 00:17:38.000
+Dan Anda dapat mengarahkan animasi untuk benar-benar bergerak dari waktu ke waktu.
+
+408
+00:17:38.001 --> 00:17:40.001
+Dengan demikian, mereka secara otomatis membuat
+
+409
+00:17:40.001 --> 00:17:42.001
+Frame yang akan membuat animasi terlihat nyata.
+
+410
+00:17:42.001 --> 00:17:42.001
+Itu memang benar.
+
+411
+00:17:43.000 --> 00:17:44.000
+Itulah yang berasal dari kata tweening.
+
+412
+00:17:44.000 --> 00:17:47.001
+Dan sekarang ketika saya memainkan animasi, Anda dapat melihat ikan.
+
+413
+00:17:49.000 --> 00:17:50.000
+Ini berjalan melalui layar.
+
+414
+00:17:50.000 --> 00:17:52.001
+Jadi gerakan itu adalah sejenis yang secara otomatis dibangun ke dalam objek ikan itu?
+
+415
+00:17:53.000 --> 00:17:54.000
+Anda tidak perlu menyadari semua itu.
+
+416
+00:17:54.000 --> 00:17:54.001
+dengan tepat.
+
+417
+00:17:54.001 --> 00:17:58.000
+Ya, pada dasarnya ia mulai memiliki sedikit animasi dengan objek ikan.
+
+418
+00:17:58.001 --> 00:17:59.001
+Semua benar, jadi apa lagi yang bisa kita lakukan dengan itu?
+
+419
+00:18:00.000 --> 00:18:02.000
+Nah, contoh lain adalah Anda dapat menambahkan tombol.
+
+420
+00:18:02.001 --> 00:18:06.000
+Jadi jika saya ingin meletakkan ikan itu, katakanlah, di situs web yang saya buat di portfolio,
+
+421
+00:18:07.000 --> 00:18:09.000
+Saya bisa melampirkan tombol yang menunjukkan dan menyembunyikan animasi ini.
+
+422
+00:18:09.001 --> 00:18:10.001
+Banyak kali, banyak kali, Anda tahu, ketika
+
+423
+00:18:10.001 --> 00:18:12.000
+Berjalan di atas tombol, hal-hal terjadi.
+
+424
+00:18:12.000 --> 00:18:13.000
+Dapatkah Anda melakukannya di Flash?
+
+425
+00:18:13.000 --> 00:18:13.001
+Oh, secara mutlak
+
+426
+00:18:14.000 --> 00:18:16.000
+Ya, Anda dapat memilih tombol ini dan mengeditnya.
+
+427
+00:18:16.001 --> 00:18:19.001
+Dan Anda dapat mengubah apa yang terjadi di setiap kondisi tombol yang berbeda.
+
+428
+00:18:19.001 --> 00:18:21.000
+Jadi ini adalah cara Anda dapat memprogram tombol secara visual.
+
+429
+00:18:21.001 --> 00:18:23.001
+Okay, jadi cursor Anda berada di atas tombol, sesuatu terjadi.
+
+430
+00:18:23.001 --> 00:18:25.001
+Anda klik di atasnya, ada yang terjadi.
+
+431
+00:18:25.001 --> 00:18:26.000
+dengan tepat.
+
+432
+00:18:26.000 --> 00:18:26.001
+[...]
+
+433
+00:18:27.001 --> 00:18:30.000
+Jadi, misalnya, jika saya ingin sesuatu yang terjadi ketika tetikus saya berakhir
+
+434
+00:18:30.000 --> 00:18:31.001
+Dengan tombol, saya bisa mengubah warna.
+
+435
+00:18:32.000 --> 00:18:35.000
+Jadi, misalnya, bukannya hijau, mungkin saya ingin membuatnya seperti biru.
+
+436
+00:18:35.001 --> 00:18:38.000
+Jadi, kondisi di atas akan menjadi biru sekarang.
+
+437
+00:18:38.000 --> 00:18:39.001
+Ya, dan up adalah hijau dan over adalah biru.
+
+438
+00:18:39.001 --> 00:18:40.000
+Mendapatkannya
+
+439
+00:18:40.000 --> 00:18:44.000
+Dan kita dapat melihat ini dalam pandangan utama di sini jika kita hanya mengatakan, mengaktifkan tombol kami.
+
+440
+00:18:44.001 --> 00:18:47.000
+Dan sekarang kita dapat melihat ketika saya melompat di atas tombol ini, mereka sekarang menonjolkan.
+
+441
+00:18:47.001 --> 00:18:48.001
+Mereka semua juga.
+
+442
+00:18:48.001 --> 00:18:48.001
+dengan tepat.
+
+443
+00:18:49.000 --> 00:18:51.001
+Jadi bahasa yang sama secara otomatis diekspor ke masing-masing tombol tersebut.
+
+444
+00:18:52.000 --> 00:18:52.000
+Ya ya ya ya.
+
+445
+00:18:52.001 --> 00:18:53.000
+Ini seperti membaca kode.
+
+446
+00:18:53.000 --> 00:18:54.001
+Jadi Anda [...] itu cukup untuk menulis kode yang sama berulang-ulang.
+
+447
+00:18:54.001 --> 00:18:55.001
+Sebenarnya, ya, itu sudah dibagi.
+
+448
+00:18:55.001 --> 00:18:58.000
+Semua benar, sekarang anggap kita ingin sesuatu terjadi ketika kita mengatakan klik pada
+
+449
+00:18:58.000 --> 00:19:00.000
+Itu atau kita bergerak di atas tombol.
+
+450
+00:19:00.000 --> 00:19:00.001
+Tentu saja, itu sangat mudah.
+
+451
+00:19:01.000 --> 00:19:03.001
+Anda dapat memprogram tombol ini dengan melampirkan tindakan ke mereka.
+
+452
+00:19:03.001 --> 00:19:06.000
+Sekarang ini adalah cara Anda melakukan pemrograman tombol di dalam Flash.
+
+453
+00:19:06.001 --> 00:19:09.001
+Dan Anda dapat memilih perintah yang berbeda untuk melekat pada tombol seperti pergi ke
+
+454
+00:19:09.001 --> 00:19:11.000
+Sebuah frame, bermain atau menghentikan animasi.
+
+455
+00:19:12.000 --> 00:19:13.000
+Saya akan mengunggah film di sini.
+
+456
+00:19:13.000 --> 00:19:14.001
+Aku akan mengisi ikan itu yang baru saja kita lihat sebelumnya.
+
+457
+00:19:15.000 --> 00:19:16.001
+Semua benar, jadi titik di sini ketika saya menekan pada
+
+458
+00:19:16.001 --> 00:19:18.000
+Button, saya ingin ikan berenang di atas layar.
+
+459
+00:19:18.001 --> 00:19:21.000
+Tentu saja, dan saya juga akan melampirkan kata logo di sini juga.
+
+460
+00:19:24.000 --> 00:19:25.000
+Ini adalah sesuatu yang intuitif, bukan?
+
+461
+00:19:25.000 --> 00:19:27.000
+Saya katakan, ini tidak duduk menulis beberapa perintah arcane.
+
+462
+00:19:27.000 --> 00:19:27.001
+Memang benar, tepatnya
+
+463
+00:19:28.000 --> 00:19:30.001
+Ini memungkinkan Anda memprogram secara visual dengan cara yang dapat dilakukan oleh banyak artis.
+
+464
+00:19:30.001 --> 00:19:33.000
+Saya pikir ada perubahan yang terjadi di mana banyak desain ini dapat
+
+465
+00:19:33.000 --> 00:19:35.000
+dibuat oleh artis dan bukan oleh programmer tradisional.
+
+466
+00:19:35.000 --> 00:19:36.000
+Baiklah, jadi di manakah kita sekarang?
+
+467
+00:19:36.001 --> 00:19:39.001
+Sekarang ketika Anda menjalankan film tes, Anda dapat melihat tombol yang tepat.
+
+468
+00:19:39.001 --> 00:19:39.001
+Ada yang biru.
+
+469
+00:19:40.000 --> 00:19:41.000
+Kami memiliki tekanan atas hal itu.
+
+470
+00:19:41.000 --> 00:19:41.000
+Klik pada itu.
+
+471
+00:19:41.000 --> 00:19:42.001
+Ikan datang mengalir keluar.
+
+472
+00:19:43.000 --> 00:19:44.001
+Dan juga logo memainkan sedikit logo.
+
+473
+00:19:45.001 --> 00:19:46.001
+Jadi itu pada dasarnya program dalam Flash.
+
+474
+00:19:47.000 --> 00:19:49.000
+Ya, jadi saya maksudkan orang biasa tanpa banyak pelatihan atau
+
+475
+00:19:49.000 --> 00:19:51.000
+latar belakang dapat menggunakan Flash untuk melakukan hal-hal seperti ini.
+
+476
+00:19:52.000 --> 00:19:54.000
+Sekarang di mana Anda mendapatkan alat penulisan jika Anda ingin bermain dengan ini?
+
+477
+00:19:54.000 --> 00:19:56.000
+Anda dapat mengunduhnya dari macromedia.com.
+
+478
+00:19:56.001 --> 00:19:56.001
+Ok ya.
+
+479
+00:19:56.001 --> 00:19:58.001
+Dan ini adalah versi percobaan gratis 30 hari.
+
+480
+00:19:59.000 --> 00:19:59.000
+Semua yang benar.
+
+481
+00:19:59.000 --> 00:20:00.000
+Jika Anda suka, maka Anda bisa membelinya.
+
+482
+00:20:00.000 --> 00:20:00.000
+yang hebat.
+
+483
+00:20:00.001 --> 00:20:01.000
+Kevin sangat berterima kasih.
+
+484
+00:20:01.001 --> 00:20:01.001
+Sampaikan terima kasih
+
+485
+00:20:01.001 --> 00:20:04.001
+Baik, pemrograman mungkin sulit bagi beberapa orang, tetapi
+
+486
+00:20:04.001 --> 00:20:06.000
+Ini bisa menyenangkan untuk semua orang.
+
+487
+00:20:06.000 --> 00:20:09.001
+Jadi untuk menunjukkan Anda sisi bermain-main dari pemrograman komputer, kami akan melihat
+
+488
+00:20:09.001 --> 00:20:13.000
+Akhirnya dalam bahasa pemrograman baru yang disebut bahasa kode RCX.
+
+489
+00:20:13.000 --> 00:20:17.000
+Itulah yang Anda gunakan untuk menulis program untuk robot LEGO Mindstorms baru.
+
+490
+00:20:17.001 --> 00:20:19.001
+Anda memiliki pekerjaan yang hebat, Chris, untuk bermain dengan hal-hal ini.
+
+491
+00:20:20.000 --> 00:20:22.000
+Dan mari kita coba menjelaskan apa yang kita bicarakan di sini kepada orang.
+
+492
+00:20:22.000 --> 00:20:24.001
+Pada zaman dahulu, jika saya membangun sebuah LEGO, saya akan meletakkan sebuah motor di dalamnya.
+
+493
+00:20:24.001 --> 00:20:25.001
+Itu hanya berjalan kan?
+
+494
+00:20:25.001 --> 00:20:26.001
+Tidak ada kecerdasan.
+
+495
+00:20:27.000 --> 00:20:27.000
+Itu memang benar.
+
+496
+00:20:27.000 --> 00:20:32.000
+Sangat mudah untuk melakukan tindakan sederhana seperti ini yang telah saya tambahkan di sini.
+
+497
+00:20:32.001 --> 00:20:34.001
+Pergi, tapi kemudian ia akan runtuh.
+
+498
+00:20:34.001 --> 00:20:35.000
+Keluar dari ambang.
+
+499
+00:20:35.001 --> 00:20:36.000
+Ok ya.
+
+500
+00:20:36.001 --> 00:20:36.001
+Semua yang benar.
+
+501
+00:20:36.001 --> 00:20:40.001
+Sekarang, saya ingin menulis sebuah program yang mengatakan hal ini, jika
+
+502
+00:20:40.001 --> 00:20:42.000
+Jika Anda melihat sebuah pinggir datang, berhenti.
+
+503
+00:20:42.001 --> 00:20:42.001
+dengan benar.
+
+504
+00:20:43.000 --> 00:20:44.001
+Bagaimana saya melakukannya menggunakan RCX?
+
+505
+00:20:44.001 --> 00:20:51.000
+Jadi jika saya beralih ke program yang lebih pintar di sini, apa yang telah saya lakukan ditambahkan ...
+
+506
+00:20:51.000 --> 00:20:53.000
+Saya memiliki beberapa sensor yang dibangun di dalam ini.
+
+507
+00:20:53.000 --> 00:20:54.001
+Mari kita jelaskan apa yang Anda bicarakan di sana.
+
+508
+00:20:54.001 --> 00:20:56.000
+Ini adalah salah satu sensor Anda, bukan?
+
+509
+00:20:56.000 --> 00:20:56.000
+[...]
+
+510
+00:20:57.000 --> 00:20:59.001
+Dan itu ditekan, dan ia menghantar pesan.
+
+511
+00:21:00.000 --> 00:21:02.001
+Jika saya ingin mengetuk ini, itu mengirim pesan ke komputer.
+
+512
+00:21:02.001 --> 00:21:03.000
+dengan tepat.
+
+513
+00:21:03.001 --> 00:21:06.000
+Dan tangan-tangan itu, ketika mereka jatuh, tekan tombol itu.
+
+514
+00:21:06.000 --> 00:21:06.001
+Itu memang benar.
+
+515
+00:21:06.001 --> 00:21:07.000
+Ok ya.
+
+516
+00:21:07.000 --> 00:21:11.001
+Jadi apa yang dilakukan program ini adalah menyadari bahwa ia mencapai
+
+517
+00:21:11.001 --> 00:21:13.000
+Langkah-langkah dan melakukan sesuatu tentang itu.
+
+518
+00:21:13.000 --> 00:21:14.001
+Ketika sensor tersentuh, berhenti.
+
+519
+00:21:15.000 --> 00:21:15.000
+dengan benar.
+
+520
+00:21:15.000 --> 00:21:16.000
+Mari kita lihat ia pergi.
+
+521
+00:21:17.000 --> 00:21:17.001
+Hanya dalam kasus.
+
+522
+00:21:18.001 --> 00:21:19.001
+Oh ya, semuanya benar.
+
+523
+00:21:20.000 --> 00:21:22.000
+Sekarang kita berbicara tentang pemrograman.
+
+524
+00:21:22.000 --> 00:21:24.001
+Bagaimana Anda menulis ini dalam bahasa kode RCX?
+
+525
+00:21:25.000 --> 00:21:27.000
+Berikut adalah program di layar.
+
+526
+00:21:27.001 --> 00:21:32.000
+Anda menyadari bahwa lingkungan pemrograman kode RCX sangat berbeda dari Anda.
+
+527
+00:21:32.000 --> 00:21:33.001
+Bahasa pemrograman standar.
+
+528
+00:21:33.001 --> 00:21:37.000
+Jadi masing-masing dari jenis puzzle jigsaw adalah tindakan.
+
+529
+00:21:37.000 --> 00:21:37.001
+Itu memang benar.
+
+530
+00:21:37.001 --> 00:21:40.001
+Ini adalah perintah kecil, dan Anda menyusunnya bersama-sama untuk membentuk program.
+
+531
+00:21:40.001 --> 00:21:41.001
+Yang benar, apa itu program.
+
+532
+00:21:41.001 --> 00:21:42.000
+dengan benar.
+
+533
+00:21:42.000 --> 00:21:47.001
+Jadi program ini di sini mengatakan terlebih dahulu menetapkan kecepatan mesin, kemudian menetapkan
+
+534
+00:21:47.001 --> 00:21:49.001
+mengarah pada motor, dan akhirnya memutarnya.
+
+535
+00:21:50.000 --> 00:21:51.000
+Jadi mulai menggerakkan kendaraan ke depan.
+
+536
+00:21:51.000 --> 00:21:53.001
+Jadi kita ingin mengatakan, ketika sensor keluar, hentikan motor.
+
+537
+00:21:53.001 --> 00:21:54.001
+Itu memang benar.
+
+538
+00:21:55.000 --> 00:21:58.001
+Jadi kemudian saya telah menambahkan dua blok biru ini di sini di mana mereka disebut sensor sentuh
+
+539
+00:21:58.001 --> 00:22:01.001
+Pengawas, satu untuk setiap lengan pada penemuan.
+
+540
+00:22:02.000 --> 00:22:02.000
+Mendapatkannya
+
+541
+00:22:02.001 --> 00:22:03.001
+Jadi Anda memiliki dua sensor di sini.
+
+542
+00:22:03.001 --> 00:22:04.000
+[...]
+
+543
+00:22:04.000 --> 00:22:06.000
+Anda ingin mengatakan jika salah satu sensor itu keluar, berhenti.
+
+544
+00:22:06.001 --> 00:22:07.000
+Itu memang benar.
+
+545
+00:22:07.000 --> 00:22:13.000
+Jadi apa yang saya tambahkan di akhir di sini adalah perintah yang memberitahu mesin untuk mematikan.
+
+546
+00:22:13.001 --> 00:22:17.000
+Jadi jika salah satu sensor sentuh ditekan, saya memiliki motor tertutup.
+
+547
+00:22:17.001 --> 00:22:20.000
+Jadi Anda bisa beralih ke program itu di sana dan mencoba ini?
+
+548
+00:22:21.000 --> 00:22:22.000
+Nah, kami baru saja melakukannya.
+
+549
+00:22:22.000 --> 00:22:22.001
+Jadi itu benar.
+
+550
+00:22:22.001 --> 00:22:23.001
+Kami benar-benar melakukan salah satu itu.
+
+551
+00:22:23.001 --> 00:22:23.001
+Ya ya.
+
+552
+00:22:24.000 --> 00:22:24.000
+[...]
+
+553
+00:22:24.001 --> 00:22:27.000
+Mungkin kita ingin melakukan sesuatu yang lebih menarik, seperti mengembalikannya.
+
+554
+00:22:27.001 --> 00:22:27.001
+dan OK.
+
+555
+00:22:27.001 --> 00:22:30.001
+Jadi sekarang kita ingin menulis ulang program dan katakan, jika Anda melihat ambang,
+
+556
+00:22:30.001 --> 00:22:32.000
+Berhenti, dan kemudian mulai kembali ke belakang.
+
+557
+00:22:32.001 --> 00:22:32.001
+Ya ya.
+
+558
+00:22:33.000 --> 00:22:33.001
+Bagaimana kau menulis itu?
+
+559
+00:22:33.001 --> 00:22:33.001
+dan OK.
+
+560
+00:22:34.000 --> 00:22:39.000
+Jadi di sebelah kiri di sini adalah menu dari semua jenis perintah yang berbeda yang dapat saya gunakan.
+
+561
+00:22:39.001 --> 00:22:40.001
+Ini mempengaruhi motor.
+
+562
+00:22:40.001 --> 00:22:45.001
+Saya memiliki sensor pengawas di sini yang memungkinkan saya mendeteksi cahaya dan sentuhan.
+
+563
+00:22:45.001 --> 00:22:48.001
+Dan kemudian saya memiliki cara untuk mengulangi perintah dan menghubungkan pada yang berbeda.
+
+564
+00:22:48.001 --> 00:22:50.001
+Sekarang Chris, ini kelihatan seperti bayi, tetapi ini adalah
+
+565
+00:22:50.001 --> 00:22:52.001
+Konsep-konsep dasar dari pemrograman, bukan?
+
+566
+00:22:52.001 --> 00:22:53.000
+Itu memang benar.
+
+567
+00:22:53.000 --> 00:22:55.000
+Ini memiliki looping, branching, iterasi, dan kemudian salib.
+
+568
+00:22:55.000 --> 00:22:55.001
+Semua hal yang sama.
+
+569
+00:22:56.000 --> 00:22:58.000
+Itu hanya dalam cara visual sederhana untuk menangani itu.
+
+570
+00:22:58.001 --> 00:22:58.001
+dengan benar.
+
+571
+00:22:58.001 --> 00:22:58.001
+Semua yang benar.
+
+572
+00:22:59.000 --> 00:22:59.001
+Jadi mari kita tulis program itu.
+
+573
+00:23:00.000 --> 00:23:04.001
+Jadi saya meluncur ke bawah di sini ke perintah arah terbalik dan menambahkan itu ke
+
+574
+00:23:04.001 --> 00:23:06.000
+Keduanya memiliki sensor sentuh.
+
+575
+00:23:07.000 --> 00:23:11.001
+Dan kemudian scroll up ke perintah yang akan memutar motor kembali.
+
+576
+00:23:11.001 --> 00:23:11.001
+dan OK.
+
+577
+00:23:12.000 --> 00:23:14.000
+Mengubah arah motor, mengalihkan motor kembali,
+
+578
+00:23:14.000 --> 00:23:16.000
+Jika salah satu sensor menerima pesan.
+
+579
+00:23:16.000 --> 00:23:17.000
+Jadi mari kita lihat apa yang terjadi sekarang.
+
+580
+00:23:17.000 --> 00:23:20.000
+Jadi saya dapat memasukkan program ini dengan mengklik download.
+
+581
+00:23:20.001 --> 00:23:24.000
+Jadi Anda memiliki port IR kecil di sini yang mengirimkan kode baru ke komputer.
+
+582
+00:23:25.000 --> 00:23:25.000
+Itu memang benar.
+
+583
+00:23:26.000 --> 00:23:28.001
+Kami tidak ingin memiliki kabel yang terikat dengan penemuan kami sehingga
+
+584
+00:23:28.001 --> 00:23:30.000
+Sekarang mereka bisa bergerak bebas.
+
+585
+00:23:30.001 --> 00:23:32.000
+Jadi kami mengirimkannya melalui inframerah.
+
+586
+00:23:32.001 --> 00:23:32.001
+[...]
+
+587
+00:23:33.000 --> 00:23:35.000
+Hanya mengambil satu detik di sini untuk program untuk masuk.
+
+588
+00:23:36.001 --> 00:23:37.000
+dan OK.
+
+589
+00:23:38.000 --> 00:23:39.001
+Saya mendengar sedikit bercak, jadi mungkin itu bahagia.
+
+590
+00:23:40.000 --> 00:23:43.001
+Jadi sekarang ia harus melihat ambang, berhenti, dan kembali ke belakang.
+
+591
+00:23:44.000 --> 00:23:44.001
+Mari kita coba.
+
+592
+00:23:45.000 --> 00:23:45.001
+Hentikan
+
+593
+00:23:45.001 --> 00:23:46.000
+Semua yang benar.
+
+594
+00:23:47.000 --> 00:23:47.001
+Kami menulis sebuah program.
+
+595
+00:23:49.000 --> 00:23:51.000
+Terakhir, ada sesuatu yang sedikit lebih rumit di mana Anda memiliki
+
+596
+00:23:51.000 --> 00:23:54.001
+program pencegahan di mana ia mengatakan, jika Anda melihat tepi, hanya mencoba jalan lain.
+
+597
+00:23:54.001 --> 00:23:55.001
+Saya pikir, tidak akan berjalan dengan cara itu, bukan?
+
+598
+00:23:56.000 --> 00:23:56.000
+dengan benar.
+
+599
+00:23:57.001 --> 00:23:58.001
+Biarkan saya hanya mengisi itu dengan cepat.
+
+600
+00:23:59.001 --> 00:24:04.001
+Ini memberi Anda gagasan tentang beberapa yang berpotensi agak canggih
+
+601
+00:24:04.001 --> 00:24:06.000
+Hal-hal yang dapat Anda lakukan dengan kode RCX
+
+602
+00:24:07.000 --> 00:24:11.000
+Dan Anda akan menyadari bahwa pada layar di sini, apa yang Anda lihat adalah stok yang lebih panjang dari
+
+603
+00:24:11.000 --> 00:24:12.001
+Perintah di bawah masing-masing pengawas sensor sentuh ini.
+
+604
+00:24:13.000 --> 00:24:13.000
+[...]
+
+605
+00:24:13.000 --> 00:24:16.001
+Saya tidak ingin masuk ke dalam detail tentang apa yang dilakukan masing-masing stack itu.
+
+606
+00:24:16.001 --> 00:24:19.000
+Tetapi Anda dapat menulis program yang panjang di sini untuk memberitahu kami untuk melakukan banyak.
+
+607
+00:24:19.000 --> 00:24:20.000
+Saya pikir, saya telah melihat beberapa hal ini
+
+608
+00:24:20.000 --> 00:24:22.000
+Mereka adalah menembak keranjang dan berdagang kartu.
+
+609
+00:24:22.000 --> 00:24:22.000
+Itu memang benar.
+
+610
+00:24:22.001 --> 00:24:23.000
+Semua jenis dari mereka.
+
+611
+00:24:23.000 --> 00:24:23.001
+Itu memang benar.
+
+612
+00:24:24.000 --> 00:24:27.001
+Jadi biarkan saya, pergi ke depan dan beralih langsung ke itu bukannya men-download.
+
+613
+00:24:28.000 --> 00:24:28.001
+Tapi itu dalam ingatan di sini.
+
+614
+00:24:29.000 --> 00:24:30.000
+Itulah yang diberitahu untuk dilakukan sekarang.
+
+615
+00:24:30.000 --> 00:24:30.001
+dan OK.
+
+616
+00:24:30.001 --> 00:24:35.000
+Jadi apa yang akan dilakukan program ini adalah, ketika itu mendeteksi tepi, kembali ke atas dan kemudian
+
+617
+00:24:35.000 --> 00:24:36.001
+Perubahan arah dan kemudian maju lagi.
+
+618
+00:24:36.001 --> 00:24:38.001
+Dan cari jalan lain yang mungkin tidak memiliki ambang.
+
+619
+00:24:38.001 --> 00:24:38.001
+Itu memang benar.
+
+620
+00:24:39.000 --> 00:24:39.001
+Jadi mari kita lihat apa yang terjadi.
+
+621
+00:24:41.000 --> 00:24:41.001
+Apakah itu bekerja?
+
+622
+00:24:41.001 --> 00:24:42.001
+[...]
+
+623
+00:24:43.001 --> 00:24:46.001
+Dan kita dapat melihat salah satu jatuh dan yang menempatkan hal itu di atas.
+
+624
+00:24:47.001 --> 00:24:47.001
+[...]
+
+625
+00:24:48.000 --> 00:24:48.001
+Itu yang keren.
+
+626
+00:24:50.001 --> 00:24:54.000
+Dan kita mungkin menunjukkan bahwa Lego terdengar seperti anak-anak, tetapi itu adalah
+
+627
+00:24:54.000 --> 00:24:56.000
+Sebagian besar orang dewasa yang bermain dengan hal ini, bukan?
+
+628
+00:24:56.000 --> 00:24:56.001
+Oh, itu memang benar.
+
+629
+00:24:57.000 --> 00:24:59.001
+Saya kira sekitar 50% pengguna sekarang adalah orang dewasa.
+
+630
+00:25:00.000 --> 00:25:01.000
+Chris sangat berterima kasih.
+
+631
+00:25:01.000 --> 00:25:01.001
+Semua yang benar.
+
+632
+00:25:01.001 --> 00:25:03.000
+Inilah pandangan kita tentang pemrograman komputer.
+
+633
+00:25:03.000 --> 00:25:05.000
+Saya akan kembali dalam beberapa saat dengan pilihan saya minggu ini.
+
+634
+00:25:14.000 --> 00:25:16.000
+Sekarang untuk pilihan saya minggu ini.
+
+635
+00:25:16.001 --> 00:25:20.001
+Komputer semakin banyak digunakan sebagai perangkat playback musik, bahkan
+
+636
+00:25:20.001 --> 00:25:22.000
+Perangkat rekaman audio.
+
+637
+00:25:22.001 --> 00:25:26.000
+Tetapi kebanyakan PC datang dengan sistem kontrol audio yang agak primitif.
+
+638
+00:25:26.001 --> 00:25:30.001
+Sekarang, bagaimanapun, Samsung telah keluar dengan paket yang luar biasa yang disebut JET Audio
+
+639
+00:25:30.001 --> 00:25:35.000
+Plus, yang dapat dengan serta-merta mengubah PC Anda menjadi studio audio yang kuat.
+
+640
+00:25:35.001 --> 00:25:40.000
+JET Audio termasuk rack virtual dari tujuh komponen audio yang kuat.
+
+641
+00:25:40.000 --> 00:25:44.001
+Pertama sekali, analis spektrum 20-band, termasuk efek khusus seperti:
+
+642
+00:25:44.001 --> 00:25:47.001
+reverb, bercampur, penyesuaian lapangan, dan nada ruangan.
+
+643
+00:25:48.000 --> 00:25:51.000
+Ini termasuk mixer suara untuk kedua playback dan rekaman.
+
+644
+00:25:51.001 --> 00:25:54.000
+Ini termasuk pemain MIDI yang diaktifkan karaoke dengan waktu nyata
+
+645
+00:25:54.000 --> 00:25:56.000
+Mengendalikan kunci dan tempo.
+
+646
+00:25:56.000 --> 00:26:01.000
+Ini memiliki pemutar CD yang dapat diprogram sepenuhnya, yang juga mencakup akses otomatis ke
+
+647
+00:26:01.000 --> 00:26:05.001
+database cakera kompak Internet untuk menambahkan informasi alpha ke pemain Anda.
+
+648
+00:26:05.001 --> 00:26:10.001
+Ini juga termasuk speaker audio digital khusus, yang dapat menangani MP3, MPEG
+
+649
+00:26:10.001 --> 00:26:12.001
+Wave, dan file audio nyata.
+
+650
+00:26:13.000 --> 00:26:17.000
+Dan itu datang dengan pemutar video digital yang sangat berkualitas yang mendukung semua
+
+651
+00:26:17.000 --> 00:26:21.001
+format file utama dan berjalan sangat keras pada sekitar 30 bingkai per detik.
+
+652
+00:26:22.000 --> 00:26:22.001
+Tapi ada lebih banyak.
+
+653
+00:26:23.000 --> 00:26:26.000
+JET Audio Plus juga datang dengan JET Radio Module.
+
+654
+00:26:26.001 --> 00:26:31.000
+Ini adalah tuner radio internet yang mudah yang memungkinkan Anda untuk menyentuh salah satu dari lebih dari satu
+
+655
+00:26:31.000 --> 00:26:33.001
+ribuan stasiun radio pada satu klik tombol.
+
+656
+00:26:33.001 --> 00:26:37.000
+Anda juga dapat mengatur stasiun radio Internet Anda dengan format.
+
+657
+00:26:37.001 --> 00:26:42.000
+Dan itu memiliki ini handy pop-up remote control dan remote equalizer yang dapat tetap
+
+658
+00:26:42.000 --> 00:26:45.001
+di desktop Anda bahkan ketika pemain utama dikurangi atau ditutup.
+
+659
+00:26:45.001 --> 00:26:48.000
+Ini adalah satu heck dari pakej kecil, dan saya tidak menyebutkan
+
+660
+00:26:48.000 --> 00:26:50.000
+Separuh dari hal-hal yang bisa Anda lakukan dengan itu.
+
+661
+00:26:50.000 --> 00:26:54.000
+Ini adalah JET Audio Plus dari Samsung, dan biaya hanya $ 49.
+
+662
+00:26:55.000 --> 00:26:57.000
+Itulah yang terjadi pada edisi ini dari The Chronicles.
+
+663
+00:26:57.000 --> 00:26:58.000
+Terima kasih telah bergabung dengan kami.
+
+664
+00:26:58.000 --> 00:27:01.000
+Lebih dari terbaru di perangkat keras, perangkat lunak, dan internet minggu depan.
+
+665
+00:27:01.001 --> 00:27:02.001
+Saya harap kita akan bertemu di sini lain kali.
+
+666
+00:27:05.000 --> 00:27:10.000
+The Computer Chronicles dibawa ke Anda oleh BigStar.com, dengan ribuan
+
+667
+00:27:10.000 --> 00:27:12.000
+Video dan DVD untuk seluruh keluarga.
+
+668
+00:27:18.000 --> 00:27:21.001
+Dukungan tambahan dari Tech Web untuk berita teknologi up-to-the-minute.
+
+669
+00:27:23.001 --> 00:27:24.001
+dan melalui televisi.

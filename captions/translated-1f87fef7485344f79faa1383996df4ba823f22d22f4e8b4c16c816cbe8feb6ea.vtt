@@ -1,0 +1,1741 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:20.000
+[...]
+
+2
+00:00:25.001 --> 00:00:32.000
+Faça parte desta semana sobre as crônicas de computador, tecnologia de computadores nos Jogos Olímpicos.
+
+3
+00:00:33.000 --> 00:00:37.000
+Se você já se perguntou como esses comentaristas da TV sabiam tanto sobre os atletas
+
+4
+00:00:37.000 --> 00:00:41.000
+e os eventos, mostraremos-lhe os sistemas de software que alimentam os dados.
+
+5
+00:00:42.000 --> 00:00:45.001
+A rede nos Jogos Olímpicos foi um dos sistemas mais seguros já construídos.
+
+6
+00:00:46.000 --> 00:00:47.001
+Vamos mostrar-lhe como eles fizeram isso.
+
+7
+00:00:47.001 --> 00:00:50.001
+O backbone da rede em Utah foi executado na Unix.
+
+8
+00:00:51.000 --> 00:00:55.000
+Mostraremos-lhe a massiva instalação de servidores Sun e unidades de armazenamento de dados.
+
+9
+00:00:55.001 --> 00:00:57.001
+Você acha que colocar sua rede em conjunto foi difícil.
+
+10
+00:00:58.000 --> 00:01:00.000
+Como você gostaria de construir um no lado de uma montanha
+
+11
+00:01:00.000 --> 00:01:01.001
+Em temperaturas sub-refrescantes?
+
+12
+00:01:02.000 --> 00:01:03.001
+Vamos dizer-lhe como eles fizeram isso.
+
+13
+00:01:04.000 --> 00:01:07.000
+E o escritório sem papel, não nos Jogos Olímpicos. 50 milhões
+
+14
+00:01:07.000 --> 00:01:09.000
+As páginas foram impressas em 17 dias.
+
+15
+00:01:09.001 --> 00:01:11.001
+Vamos mostrar-lhe como Xerox tirou-o.
+
+16
+00:01:12.000 --> 00:01:13.001
+Tecnologia de computador nos Jogos Olímpicos.
+
+17
+00:01:14.000 --> 00:01:17.001
+Chegamos a seguir nesta edição das crônicas de computador.
+
+18
+00:01:19.001 --> 00:01:23.001
+As crônicas de computador são trazidas para você pela Oracle Small Business Suite.
+
+19
+00:01:23.001 --> 00:01:28.000
+Uma aplicação totalmente integrada que ajuda a tornar mais fácil a execução do seu
+
+20
+00:01:28.000 --> 00:01:33.000
+negócios, incluindo contabilidade, vendas e serviço, sua presença na web e muito mais.
+
+21
+00:01:35.001 --> 00:01:38.001
+O financiamento adicional é fornecido pelo PC para o PC.
+
+22
+00:01:39.000 --> 00:01:42.000
+O serviço de migração on-line do PC Primeiro.
+
+23
+00:01:42.001 --> 00:01:46.001
+Movendo arquivos, aplicativos e preferências do seu antigo
+
+24
+00:01:46.001 --> 00:01:48.000
+computador para o seu novo.
+
+25
+00:01:49.000 --> 00:01:52.001
+Olá e bem-vindo a esta edição especial das Crônicas de Computador.
+
+26
+00:01:52.001 --> 00:01:54.001
+Estamos em Salt Lake City, Utah.
+
+27
+00:01:55.000 --> 00:01:57.000
+Este é o Templo Mórmon que está por trás de mim.
+
+28
+00:01:57.001 --> 00:02:00.000
+Este foi o local dos Jogos Olímpicos de Inverno.
+
+29
+00:02:00.000 --> 00:02:02.001
+Eu sei que muitos de vocês assistiram os jogos na televisão.
+
+30
+00:02:03.000 --> 00:02:07.000
+O que vamos fazer esta semana é levá-lo atrás das cenas e mostrar-lhe o
+
+31
+00:02:07.000 --> 00:02:10.001
+tecnologias informáticas e a infraestrutura da
+
+32
+00:02:10.001 --> 00:02:12.000
+Os Jogos Olímpicos tornaram tudo possível.
+
+33
+00:02:13.000 --> 00:02:17.000
+O integrador geral para sistemas de TI aqui nos Jogos Olímpicos de Inverno foi uma empresa
+
+34
+00:02:17.000 --> 00:02:19.000
+O nome é Schlumberger Sema.
+
+35
+00:02:19.000 --> 00:02:23.001
+Anteriormente conhecido principalmente por fornecer tecnologia para empresas de drenagem de petróleo,
+
+36
+00:02:24.000 --> 00:02:27.001
+Mas agora envolvido no maior e mais único do mundo
+
+37
+00:02:27.001 --> 00:02:29.000
+Contrato de Tecnologia Esportiva.
+
+38
+00:02:30.000 --> 00:02:31.001
+Os Jogos Olímpicos são um sistema enorme.
+
+39
+00:02:32.000 --> 00:02:36.001
+Eu acho que as pessoas certamente não entendem exatamente como grande
+
+40
+00:02:36.001 --> 00:02:38.000
+O sistema é instalado aqui.
+
+41
+00:02:39.000 --> 00:02:42.001
+Quando temos o sistema em cima e correndo durante o tempo de jogos, temos aproximadamente
+
+42
+00:02:42.001 --> 00:02:49.000
+Três e meio mil PCs, 150 servidores UNIX, 225 NT
+
+43
+00:02:49.000 --> 00:02:54.000
+Servidores, 1000 impressoras, 750 dispositivos de rede.
+
+44
+00:02:54.001 --> 00:02:59.000
+Tudo isso é unido em conjunto por uma grande rede de área local e muitos
+
+45
+00:02:59.000 --> 00:03:00.001
+Redes de área local.
+
+46
+00:03:01.000 --> 00:03:04.000
+É único por duas razões.
+
+47
+00:03:04.001 --> 00:03:10.001
+Um é porque este contrato é o maior contrato de suporte de TI no mundo
+
+48
+00:03:10.001 --> 00:03:12.001
+É um desafio em si.
+
+49
+00:03:13.001 --> 00:03:17.001
+Mas, além disso, é porque a tecnologia é realmente complexa, especialmente porque
+
+50
+00:03:17.001 --> 00:03:24.001
+É necessário misturar muitos serviços diferentes para pessoas que esperam grande
+
+51
+00:03:24.001 --> 00:03:29.000
+As coisas durante os Jogos Olímpicos que você não pode ter qualquer falha.
+
+52
+00:03:29.001 --> 00:03:31.000
+Isso é o mais importante.
+
+53
+00:03:31.001 --> 00:03:33.000
+Não há segunda oportunidade.
+
+54
+00:03:33.001 --> 00:03:34.001
+Esse é o grande desafio.
+
+55
+00:03:35.000 --> 00:03:39.000
+Foram cerca de 2.500 atletas aqui nos Jogos Olímpicos de Inverno, mas
+
+56
+00:03:39.000 --> 00:03:40.001
+Havia ainda mais tequias.
+
+57
+00:03:40.001 --> 00:03:45.001
+Cerca de 3.000 deles trabalham longos dias e noites para garantir que o computador
+
+58
+00:03:45.001 --> 00:03:48.001
+e os sistemas de rede nos Jogos Olímpicos eram grátis.
+
+59
+00:03:49.001 --> 00:03:53.001
+E enquanto a missão olímpica era única, não era completamente diferente de
+
+60
+00:03:53.001 --> 00:03:55.001
+outras aplicações críticas de missão.
+
+61
+00:03:56.000 --> 00:03:57.000
+A tecnologia é a mesma.
+
+62
+00:03:58.000 --> 00:04:02.001
+servidor de cliente, a maneira como você configura as coisas, bases de dados, consultas, vários sites,
+
+63
+00:04:03.001 --> 00:04:06.001
+Resiliência, redundância, é tudo o mesmo.
+
+64
+00:04:06.001 --> 00:04:10.000
+Então, a partir de um ponto de vista techies, o que estamos fazendo aqui não é diferente
+
+65
+00:04:10.000 --> 00:04:11.001
+do que fazemos fora.
+
+66
+00:04:12.000 --> 00:04:15.001
+E é o mesmo com nossos sistemas bancários e de telecomunicações.
+
+67
+00:04:16.000 --> 00:04:17.000
+É um grande sistema.
+
+68
+00:04:17.001 --> 00:04:22.000
+O desafio que temos aqui é que as datas não saem. O dia 8 de fevereiro virá
+
+69
+00:04:22.000 --> 00:04:23.001
+E estaremos prontos.
+
+70
+00:04:24.000 --> 00:04:25.000
+Os atletas chegam.
+
+71
+00:04:25.000 --> 00:04:26.000
+A cerimônia de abertura acontecerá.
+
+72
+00:04:26.001 --> 00:04:27.001
+E não há desculpas.
+
+73
+00:04:28.000 --> 00:04:32.000
+Nós gostamos de dizer que este é um tiro de um lado e estaremos lá e estaríamos prontos.
+
+74
+00:04:33.000 --> 00:04:37.001
+Você pode se perguntar por que a Asema de Schlumber teve que reinventar a roda e criar uma
+
+75
+00:04:37.001 --> 00:04:40.000
+Um novo sistema de TI no Utah?
+
+76
+00:04:40.001 --> 00:04:43.001
+Não foi o mesmo tipo de software usado nos últimos Jogos Olímpicos de Inverno
+
+77
+00:04:43.001 --> 00:04:45.001
+Jogos em Nagano, Japão?
+
+78
+00:04:46.000 --> 00:04:50.000
+Bem, em Nagano, tivemos a informação que veio de Nagano.
+
+79
+00:04:50.000 --> 00:04:51.001
+O IUC forneceu essa informação.
+
+80
+00:04:52.001 --> 00:04:57.001
+De fato, os sistemas aqui aceitam absolutamente a parte que fornecemos em
+
+81
+00:04:57.001 --> 00:04:59.000
+Nagano, em princípio acreditações.
+
+82
+00:04:59.001 --> 00:05:00.001
+Era o nosso sistema lá.
+
+83
+00:05:01.000 --> 00:05:03.000
+Aqui, os sistemas são completamente novos.
+
+84
+00:05:05.001 --> 00:05:08.001
+Acredito que reutilizar a experiência em Nagano foi
+
+85
+00:05:08.001 --> 00:05:10.001
+dificuldade em parte para a língua.
+
+86
+00:05:11.000 --> 00:05:14.001
+Todos os documentos foram escritos em japonês e assim por diante.
+
+87
+00:05:15.000 --> 00:05:16.000
+Não foi fácil.
+
+88
+00:05:16.001 --> 00:05:20.001
+Eu acho que foi em inglês foi muito mais fácil reutilizar a experiência.
+
+89
+00:05:21.000 --> 00:05:24.001
+Além da diferença linguística, houve outro pequeno ponto.
+
+90
+00:05:24.001 --> 00:05:29.000
+A IBM possuía a maior parte do software que foi usado em Nagano e eles não tinham
+
+91
+00:05:29.000 --> 00:05:31.000
+para os Jogos de Utah.
+
+92
+00:05:32.000 --> 00:05:37.000
+Para Schlumber&#x27;s Asema, o trabalho de TI aqui em Utah foi construir um massivamente redundante
+
+93
+00:05:37.000 --> 00:05:42.000
+rede no meio da neve coberta montanhas congeladas de gelo, garantindo a sua
+
+94
+00:05:42.000 --> 00:05:46.000
+segurança e fornecer informações sub-secundárias em toda a rede.
+
+95
+00:05:46.001 --> 00:05:48.000
+Esse é o maior desafio que temos.
+
+96
+00:05:49.001 --> 00:05:54.001
+Uma vez que esse esqui ou esse rastreador caia na montanha, as pessoas
+
+97
+00:05:54.001 --> 00:05:56.000
+Quer saber os resultados imediatamente.
+
+98
+00:05:56.000 --> 00:05:58.000
+Eles não querem ter um atraso.
+
+99
+00:05:58.000 --> 00:05:59.001
+Eles querem saber primeiro, segundo, terceiro.
+
+100
+00:06:00.001 --> 00:06:05.001
+Há um grande estresse para obter essa informação aos comentaristas imediatamente assim
+
+101
+00:06:05.001 --> 00:06:09.001
+Os comentaristas podem anunciar porque você não quer que a multidão reage
+
+102
+00:06:09.001 --> 00:06:12.000
+Um ponto antes que o comentarista saiba o que é o resultado.
+
+103
+00:06:12.000 --> 00:06:16.001
+Você quer que todos eles sejam sincronizados e você está falando às vezes meio por segundo.
+
+104
+00:06:17.000 --> 00:06:22.000
+E temos que ser muito cuidadosos sobre como instalamos todos os equipamentos, o
+
+105
+00:06:22.000 --> 00:06:23.001
+sensibilidade da temperatura de todos os nossos equipamentos.
+
+106
+00:06:24.000 --> 00:06:28.001
+Como dissemos, muitos dos nossos cabos correm no exterior, eles correm nos pólos, em
+
+107
+00:06:28.001 --> 00:06:33.000
+o solo e temos que garantir que eles não entram no caminho das chuvas de neve
+
+108
+00:06:33.000 --> 00:06:35.000
+ou gatos de neve ou até tempestades de gelo.
+
+109
+00:06:36.000 --> 00:06:39.001
+Para nos ajudar a superar todos esses problemas que podem acontecer, nós
+
+110
+00:06:39.001 --> 00:06:41.001
+tendem a fazer muita redundância.
+
+111
+00:06:42.000 --> 00:06:44.000
+Nós sempre temos dois tiros em um lugar.
+
+112
+00:06:44.001 --> 00:06:47.000
+Temos dois caminhos em diferentes maneiras.
+
+113
+00:06:47.001 --> 00:06:50.001
+Então, se algo estava indo para baixo, temos uma rota alternativa.
+
+114
+00:06:51.000 --> 00:06:54.001
+Havia três suites de aplicação principais aqui nos Jogos Olímpicos desenvolvidos
+
+115
+00:06:54.001 --> 00:06:56.000
+de Schlumberger Sema.
+
+116
+00:06:56.000 --> 00:06:58.000
+Um deles é o sistema de gerenciamento de jogos.
+
+117
+00:06:59.000 --> 00:07:01.000
+Este é um conjunto de aplicativos, nove deles.
+
+118
+00:07:01.000 --> 00:07:03.001
+Nós apoiamos os sistemas de jogos.
+
+119
+00:07:04.000 --> 00:07:09.001
+Nós fazemos acreditação, alojamento, médico, protocolo e coisas como isso.
+
+120
+00:07:10.000 --> 00:07:12.000
+Ninguém o vê, mas sem estes
+
+121
+00:07:12.000 --> 00:07:14.000
+Aplicações que executam os jogos não acontecerão.
+
+122
+00:07:14.001 --> 00:07:21.000
+Quando a oportunidade veio em 1998 para pedir este contrato, porque a IBM e a
+
+123
+00:07:21.000 --> 00:07:25.001
+O IOC decidiu não continuar a sua relação, Schlumberger Sema propõe contra
+
+124
+00:07:25.001 --> 00:07:30.001
+empresas como a EDS para a oportunidade de participar neste maravilhoso
+
+125
+00:07:30.001 --> 00:07:32.000
+oportunidades de apoio a eventos.
+
+126
+00:07:32.001 --> 00:07:38.000
+A segunda suite de aplicativos foi chamada Info2002, um sistema baseado em kiosk que
+
+127
+00:07:38.000 --> 00:07:42.000
+fornecer informações sobre os jogos, eventos e atletas a todos
+
+128
+00:07:42.000 --> 00:07:47.000
+pessoas oficialmente acreditadas nos sítios olímpicos, incluindo atletas, juízes,
+
+129
+00:07:47.001 --> 00:07:49.000
+Comitê Olímpico e jornalistas.
+
+130
+00:07:50.000 --> 00:07:55.000
+A terceira suite de aplicativos foi chamada CIS, o sistema de informação do comentarista,
+
+131
+00:07:55.001 --> 00:08:00.001
+que forneceu resultados virtualmente instantâneos aos comentaristas da televisão que
+
+132
+00:08:00.001 --> 00:08:05.000
+necessários para ver os dados em sincronização com o que eles estavam vendo ao vivo em seus monitores de TV.
+
+133
+00:08:05.000 --> 00:08:08.001
+Então, a linha de fundo para os desenvolvedores de software aqui foi a velocidade.
+
+134
+00:08:09.000 --> 00:08:15.000
+No mundo da tecnologia de TI de hoje, todos exigem comunicações de TI instantâneas em um
+
+135
+00:08:15.000 --> 00:08:20.001
+Modo sem erros e que vem a um custo e o custo é a integração,
+
+136
+00:08:21.000 --> 00:08:22.001
+instalações de teste como estamos sentados aqui.
+
+137
+00:08:23.001 --> 00:08:26.000
+Isso significa que os nossos desenvolvedores de software devem olhar para aplicações.
+
+138
+00:08:27.000 --> 00:08:32.000
+Às vezes, para a velocidade, temos que desistir de outra coisa e para o nosso comentarista.
+
+139
+00:08:32.000 --> 00:08:36.000
+O sistema de informação que chamamos este tempo de resposta sub-secunda.
+
+140
+00:08:36.001 --> 00:08:40.001
+Desde o momento em que o atleta termina na linha de final diante do transmissor
+
+141
+00:08:40.001 --> 00:08:45.000
+Todas as novas informações devem ser recompiladas no seu ecrã no formato que ele
+
+142
+00:08:45.000 --> 00:08:46.001
+Querem em menos de um segundo.
+
+143
+00:08:47.001 --> 00:08:51.000
+Um dos desafios de desenvolver os sistemas de software para os Jogos Olímpicos foi
+
+144
+00:08:51.000 --> 00:08:55.001
+Cada esporte tem suas próprias regras e seus próprios requisitos de aplicação.
+
+145
+00:08:56.000 --> 00:09:00.001
+Por exemplo, em esqui alpino a descida temos esquiadores que ficam esquiados.
+
+146
+00:09:00.001 --> 00:09:03.001
+Como os sistemas de resultados lidam com isso?
+
+147
+00:09:03.001 --> 00:09:06.000
+Como podemos apresentar o resultado de algo assim?
+
+148
+00:09:07.000 --> 00:09:10.000
+No esquiador de velocidade temos desqualificações em outras anomalias.
+
+149
+00:09:11.000 --> 00:09:13.000
+Cada elemento do software tem seus próprios desafios.
+
+150
+00:09:13.000 --> 00:09:19.001
+Por exemplo, esqui alpino é muito rápido para baixar, flash para bater em menos de um
+
+151
+00:09:19.001 --> 00:09:23.000
+Minuto e que tem um desafio único de timing, timing preciso.
+
+152
+00:09:23.001 --> 00:09:28.000
+Em seguida, você passa para hockey de gelo e curling e eles são impulsionados por estatísticas.
+
+153
+00:09:29.000 --> 00:09:33.000
+Hockey de gelo é bastante rápido, mas curling não é muito rápido
+
+154
+00:09:33.000 --> 00:09:35.000
+Mas você está coletando dados todo o tempo.
+
+155
+00:09:35.001 --> 00:09:37.001
+Portanto, existem diferentes desafios sobre a forma como você coleta os dados.
+
+156
+00:09:38.000 --> 00:09:42.001
+E para tornar ainda mais complicado software desenvolvido para executar eventos da Copa do Mundo
+
+157
+00:09:42.001 --> 00:09:46.000
+Não pode ser usado nos Jogos Olímpicos porque as regras são diferentes.
+
+158
+00:09:46.001 --> 00:09:48.001
+Temos subcontratantes diferentes para cada esporte.
+
+159
+00:09:49.001 --> 00:09:53.000
+O que a comissão de organização escolheu fazer aqui é que eles foram para todos os
+
+160
+00:09:53.000 --> 00:09:58.001
+A Federação preferiu fornecedores de software que apoiam a Federação durante o
+
+161
+00:09:58.001 --> 00:10:03.000
+Copa do Mundo e fora dos Jogos Olímpicos e usamos essas Federações preferidas
+
+162
+00:10:03.000 --> 00:10:06.000
+fornecedores para nos fornecer o nosso software para os Jogos Olímpicos.
+
+163
+00:10:06.001 --> 00:10:11.000
+As regras dos Jogos Olímpicos são diferentes das regras da Copa do Mundo.
+
+164
+00:10:11.001 --> 00:10:15.000
+Temos que fazer algumas mudanças e mudanças, mas o
+
+165
+00:10:15.000 --> 00:10:17.000
+Os fundamentos do software ainda estão lá.
+
+166
+00:10:17.000 --> 00:10:20.000
+Construir esta rede de computadores seria um grande desafio em
+
+167
+00:10:20.000 --> 00:10:24.000
+circunstâncias normais, mas as pessoas IT aqui tiveram de ser totalmente
+
+168
+00:10:24.000 --> 00:10:26.000
+Reunião após 11 de setembro.
+
+169
+00:10:26.001 --> 00:10:33.000
+Algumas áreas que paramos e voltamos em busca de outra solução.
+
+170
+00:10:33.001 --> 00:10:34.001
+Uma delas é a violência.
+
+171
+00:10:35.001 --> 00:10:36.001
+É uma amostra muito clara.
+
+172
+00:10:37.000 --> 00:10:39.001
+Depois de 11 anos, a situação foi novamente analisada.
+
+173
+00:10:40.001 --> 00:10:43.001
+Em alguns casos, reconsideramos algumas áreas.
+
+174
+00:10:43.001 --> 00:10:48.001
+Em outras áreas, cancelamos o processo e em outras, deixamos o
+
+175
+00:10:48.001 --> 00:10:50.001
+O processo como foi porque estava bem.
+
+176
+00:10:51.000 --> 00:10:57.000
+Parcialmente devido à segurança, redundância e aversão de risco de 11 de setembro foram
+
+177
+00:10:57.000 --> 00:11:00.001
+Os principais drivers por trás do design dos sistemas de TI aqui.
+
+178
+00:11:01.000 --> 00:11:05.000
+Um dia Semer é um integrador que quer escolher o caminho conservador para frente.
+
+179
+00:11:05.001 --> 00:11:07.000
+Isso não significa dizer que a velha moda vai para frente, mas
+
+180
+00:11:07.000 --> 00:11:09.001
+Tecnologia testada e comprovada.
+
+181
+00:11:10.001 --> 00:11:13.000
+É como se usarmos a tecnologia do servidor atual, usamos
+
+182
+00:11:13.000 --> 00:11:15.001
+Unix, usamos alguns ambientes do Windows.
+
+183
+00:11:15.001 --> 00:11:20.000
+O que queremos é sistemas que são estáveis e provados.
+
+184
+00:11:20.001 --> 00:11:22.001
+Estamos constantemente bem apertando o software.
+
+185
+00:11:23.000 --> 00:11:26.001
+Não estamos neste momento no jogo fazendo quaisquer mudanças essenciais no sistema.
+
+186
+00:11:27.000 --> 00:11:28.001
+Somos adversários de alto risco.
+
+187
+00:11:29.001 --> 00:11:32.001
+Tudo o que fazemos estamos tentando evitar o risco porque
+
+188
+00:11:32.001 --> 00:11:34.000
+Não se pode permitir ter qualquer tipo de falha.
+
+189
+00:11:35.000 --> 00:11:40.001
+A tarefa básica da IT aqui foi criar uma base de dados massiva, protegê-la e fazê-lo
+
+190
+00:11:40.001 --> 00:11:44.000
+Disponível instantaneamente para milhões de usuários ao mesmo tempo.
+
+191
+00:11:44.000 --> 00:11:49.001
+Tudo isso para funcionar 24-7 a 17 dias sem falhas.
+
+192
+00:11:50.001 --> 00:11:53.000
+Temos várias camadas de redundância com nossos sistemas críticos.
+
+193
+00:11:53.001 --> 00:11:57.001
+Nós não temos apenas sistemas de standby quente A e B para a falha automática, temos o que
+
+194
+00:11:57.001 --> 00:12:03.001
+sistemas C ou sistemas totalmente separados com base em arquitetura separada em
+
+195
+00:12:03.001 --> 00:12:05.001
+O primeiro e o segundo fracassam.
+
+196
+00:12:06.000 --> 00:12:09.001
+A coisa que é única sobre os Jogos Olímpicos e eu tipo de voltar para alguns dos meus
+
+197
+00:12:09.001 --> 00:12:16.000
+“Há uma queda morta quando a NBC e o
+
+198
+00:12:16.000 --> 00:12:19.001
+O poder da televisão diz que o jumper tem que atingir essa marca
+
+199
+00:12:19.001 --> 00:12:22.000
+tempo, você tem que entregar o produto.
+
+200
+00:12:22.001 --> 00:12:26.001
+Não há vazamento, você tem que ser capaz de executar e não há segundo
+
+201
+00:12:26.001 --> 00:12:31.000
+As chances, você obtém a primeira vez, não há segunda oportunidade.
+
+202
+00:12:31.001 --> 00:12:33.001
+Então, essa é a parte emocionante sobre isso.
+
+203
+00:12:34.000 --> 00:12:38.000
+Temos que fazê-lo e entregá-lo em um determinado horário para um certo padrão.
+
+204
+00:12:39.000 --> 00:12:42.001
+Um dos desafios para as pessoas de TI aqui nos Jogos Olímpicos foi o constante
+
+205
+00:12:42.001 --> 00:12:46.001
+atualizações, desvios e mudanças no sistema com base em
+
+206
+00:12:46.001 --> 00:12:48.000
+Testes antecipados e feedback do usuário.
+
+207
+00:12:48.001 --> 00:12:52.001
+E como qualquer programador sabe, quando você faz uma mudança em uma parte de um programa, você
+
+208
+00:12:52.001 --> 00:12:56.000
+Nunca se sabe com certeza o que vai acontecer em outras partes do programa.
+
+209
+00:12:57.000 --> 00:13:00.001
+Eu acho que um dos desafios é o fato de que os sistemas estão constantemente
+
+210
+00:13:00.001 --> 00:13:05.000
+mudando, eles estão sempre fazendo pequenos tweaks e tentando melhorar os sistemas.
+
+211
+00:13:05.000 --> 00:13:08.001
+Assim, um dos desafios é garantir que tudo esteja no mesmo nível e
+
+212
+00:13:08.001 --> 00:13:12.000
+que as mudanças que estão fazendo para melhorar os sistemas são realmente
+
+213
+00:13:12.000 --> 00:13:13.001
+melhorando os sistemas, não há efeitos colaterais.
+
+214
+00:13:14.000 --> 00:13:18.000
+O que eu gosto de dizer às pessoas é que testamos, testamos e retestamos e quando não pensamos
+
+215
+00:13:18.000 --> 00:13:19.001
+Nós fizemos testes suficientes, fazemos um pouco mais de testes.
+
+216
+00:13:20.000 --> 00:13:24.000
+A razão pela qual eles precisavam testar o software tanto foi porque ele não só tinha
+
+217
+00:13:24.000 --> 00:13:27.000
+para trabalhar por conta própria, mas tinha que ser integrado com um anfitrião
+
+218
+00:13:27.000 --> 00:13:28.001
+outras aplicações de software.
+
+219
+00:13:29.000 --> 00:13:32.000
+O desafio de grandes sistemas é, especialmente com grandes sistemas integrados,
+
+220
+00:13:32.001 --> 00:13:36.001
+Há tantas interfaces, tantos protocolos e se esse pouco de código
+
+221
+00:13:36.001 --> 00:13:40.001
+não está certo e não interfere com outros bits de código, você vai obter tudo
+
+222
+00:13:40.001 --> 00:13:44.000
+Tipos de coisas que acontecem dentro do sistema, especialmente aplicações de baixo fluxo.
+
+223
+00:13:44.000 --> 00:13:48.001
+Tomamos a entrega desta aplicação, testamos essa aplicação para garantir que é
+
+224
+00:13:48.001 --> 00:13:51.001
+O que eles dizem é, nós verificamos a documentação, a configuração.
+
+225
+00:13:52.000 --> 00:13:56.001
+Então, quando estamos satisfeitos com a aplicação independente, colocamos-a em nosso
+
+226
+00:13:56.001 --> 00:13:59.000
+laboratório de teste para o que chamamos de integração de fim a fim.
+
+227
+00:14:00.000 --> 00:14:04.000
+Como você já viu aqui, temos muitos sistemas que temos que integrar.
+
+228
+00:14:05.001 --> 00:14:10.001
+De um processo de fluxo, ele começa com Seiko, timing e scoring flows para o nosso
+
+229
+00:14:10.001 --> 00:14:14.001
+resultados on-venue, fluindo para a nossa base de dados central e, em seguida, a partir da nossa base
+
+230
+00:14:14.001 --> 00:14:18.001
+Base de dados, ele flui para o nosso sistema de informação, para os nossos feeds.
+
+231
+00:14:19.000 --> 00:14:21.000
+Há muito a fazer e muito a juntar.
+
+232
+00:14:32.000 --> 00:14:36.000
+Enquanto os atletas aqui nos Jogos Olímpicos de Inverno passam um ano ou dois em treinamento
+
+233
+00:14:36.000 --> 00:14:40.000
+estar preparado para o grande evento, que pode não ser nada em comparação com a quantidade de
+
+234
+00:14:40.000 --> 00:14:42.001
+A preparação os profissionais de TI passam por.
+
+235
+00:14:42.001 --> 00:14:46.001
+Para muitos dos tecidos de computador aqui, eles passaram os últimos três anos ou mais
+
+236
+00:14:46.001 --> 00:14:50.001
+preparando-se para os Jogos Olímpicos, assegurando que os sistemas de informação
+
+237
+00:14:50.001 --> 00:14:52.000
+Exerce, assim como os atletas.
+
+238
+00:14:53.000 --> 00:14:57.000
+O planejamento para o sistema de computador das Olimpíadas começou de volta em 1999.
+
+239
+00:14:58.000 --> 00:15:02.001
+Schlumberger Sema, uma empresa com sede na Europa, recebeu o contrato para o Utah
+
+240
+00:15:02.001 --> 00:15:07.000
+Os Jogos Olímpicos, assim como os próximos Jogos olímpicos na Grécia, Itália e China, substituindo
+
+241
+00:15:07.000 --> 00:15:10.000
+A IBM é o principal integrador tecnológico.
+
+242
+00:15:11.000 --> 00:15:14.001
+Schlumberger Sema tinha sido um subcontratante de software para os Jogos Olímpicos começando
+
+243
+00:15:14.001 --> 00:15:18.000
+Em 1992, nos Jogos de Verão de Barcelona.
+
+244
+00:15:20.000 --> 00:15:24.000
+A equipe que trabalha no sistema de TI dos Jogos Olímpicos foi internacional com pessoas
+
+245
+00:15:24.000 --> 00:15:25.001
+de todas as partes do mundo.
+
+246
+00:15:25.001 --> 00:15:28.001
+Temos pessoas de mais de 23 países diferentes aqui.
+
+247
+00:15:28.001 --> 00:15:29.001
+É muito emocionante.
+
+248
+00:15:30.000 --> 00:15:32.001
+Temos muitas culturas diferentes, muitas origens diferentes.
+
+249
+00:15:33.000 --> 00:15:36.001
+Uma coisa que podemos fazer para este projeto é ir ao longo do
+
+250
+00:15:36.001 --> 00:15:40.000
+mundo e escolher as melhores pessoas para tornar este projeto um sucesso.
+
+251
+00:15:41.000 --> 00:15:45.000
+Durante os Jogos Olímpicos, este foi o Centro de Controle de Missões de TI, realmente chamado de
+
+252
+00:15:45.000 --> 00:15:48.000
+ITC, o Centro de Tecnologia da Informação.
+
+253
+00:15:49.000 --> 00:15:53.001
+Aqui, engenheiros e técnicos mantiveram o rastreamento de todos os sistemas de computador, executando um
+
+254
+00:15:53.001 --> 00:15:57.001
+operações de escritório de problemas e de segurança e gerenciou a rede massiva e
+
+255
+00:15:57.001 --> 00:16:00.001
+Subnetworks que apoiaram o sistema de TI em Utah.
+
+256
+00:16:01.001 --> 00:16:05.001
+Um dos principais desafios para os engenheiros da Schlumberger Sema foi fazer
+
+257
+00:16:05.001 --> 00:16:10.000
+É absolutamente certo que a sua rede foi robusta e segura contra os hackers.
+
+258
+00:16:10.001 --> 00:16:16.000
+E temos uma grande equipe de especialistas de segurança e analistas aqui neste edifício
+
+259
+00:16:16.000 --> 00:16:21.001
+e a equipe está aqui por muitos, muitos meses e eles olham para todas as maneiras
+
+260
+00:16:21.001 --> 00:16:26.000
+Podemos proteger os nossos dados, não apenas de uma fonte interna, mas de uma
+
+261
+00:16:26.000 --> 00:16:31.000
+fonte porque não só temos que nos proteger de hackers externos, nós
+
+262
+00:16:31.000 --> 00:16:35.000
+Temos que nos proteger contra a intenção maliciosa interna.
+
+263
+00:16:36.000 --> 00:16:40.000
+E se você olhar para os vários documentos de TI, você pode ver em uma série de ocasiões
+
+264
+00:16:40.000 --> 00:16:44.000
+grandes corporações que perdem dados, não do exterior, mas de uma
+
+265
+00:16:44.000 --> 00:16:45.001
+Trabalhadores no interior.
+
+266
+00:16:46.000 --> 00:16:48.000
+Portanto, olhamos os dois lados muito a sério.
+
+267
+00:16:48.001 --> 00:16:54.001
+Nós tomamos alguns passos para nos tirar da internet para que
+
+268
+00:16:54.001 --> 00:16:56.000
+Tem acesso muito limitado à internet.
+
+269
+00:16:57.000 --> 00:17:01.000
+Não temos muita presença na nuvem para que as pessoas não possam chegar a nós
+
+270
+00:17:01.000 --> 00:17:03.000
+E estes são alguns dos principais passos.
+
+271
+00:17:03.000 --> 00:17:07.001
+Mesmo as pessoas aqui não têm acesso dial-up à nossa própria rede.
+
+272
+00:17:08.001 --> 00:17:13.000
+É praticamente um sistema fechado agora, na maior parte do que podemos.
+
+273
+00:17:13.000 --> 00:17:17.000
+Obviamente, algumas federações têm requisitos para poder entrar, mas
+
+274
+00:17:17.000 --> 00:17:21.000
+Esses acessos foram severamente limitados durante o período dos jogos.
+
+275
+00:17:22.000 --> 00:17:28.000
+Na nossa última consulta técnica, pouco antes do Natal, dois dos homens do nosso
+
+276
+00:17:28.000 --> 00:17:33.000
+A empresa que não tinha nada a ver com este projeto foi informada pela empresa para
+
+277
+00:17:33.000 --> 00:17:35.000
+Basicamente hack na maneira que eles poderiam.
+
+278
+00:17:35.001 --> 00:17:40.001
+E eles tinham um bom pouquinho de tentativas, eles encontraram alguns buracos, mas eles não conseguiram
+
+279
+00:17:40.001 --> 00:17:42.001
+Na nossa rede de jogos que fomos muito orgulhosos.
+
+280
+00:17:43.001 --> 00:17:46.001
+O backbone da rede para os Jogos Olímpicos de Inverno foi fornecido
+
+281
+00:17:46.001 --> 00:17:48.000
+com o Sun Microsystems.
+
+282
+00:17:48.001 --> 00:17:52.001
+Cerca de 200 servidores Unix e caixas de armazenamento de dados foram usados em
+
+283
+00:17:52.001 --> 00:17:54.000
+Construção da rede usada em Utah.
+
+284
+00:17:55.000 --> 00:17:59.000
+A Sun é usada para lidar com as exigências de confiabilidade de seus clientes corporativos
+
+285
+00:17:59.000 --> 00:18:01.001
+e fornecer a infraestrutura de rede para o
+
+286
+00:18:01.001 --> 00:18:03.000
+Os Jogos Olímpicos de Inverno não foram diferentes.
+
+287
+00:18:04.000 --> 00:18:06.001
+Vivemos em uma cultura em tempo real e este é o evento de tempo real.
+
+288
+00:18:07.000 --> 00:18:10.001
+Os espectadores querem saber em tempo real quem está competindo contra quem está em
+
+289
+00:18:10.001 --> 00:18:12.000
+Os cinco primeiros, os cinco primeiros e os dez primeiros.
+
+290
+00:18:12.000 --> 00:18:16.001
+Mas talvez mais importante do que ter que fornecer informações de eventos ao vivo em real
+
+291
+00:18:16.001 --> 00:18:23.000
+- tempo era a necessidade de ter um sistema de informação que não era 99.99% confiável, mas
+
+292
+00:18:23.000 --> 00:18:24.001
+100% de confiança.
+
+293
+00:18:25.000 --> 00:18:30.001
+O que torna isso tão complicado é que essa informação tem que ser duplicada e
+
+294
+00:18:30.001 --> 00:18:32.000
+enviados para várias fontes.
+
+295
+00:18:33.000 --> 00:18:39.000
+Há um scoreboard, gráficos de TV, intranet, internet, feeds baseados na web.
+
+296
+00:18:39.000 --> 00:18:43.001
+Essa informação não pode ser perdida em nenhuma circunstância devido à concorrência
+
+297
+00:18:43.001 --> 00:18:45.000
+Nunca mais pode correr.
+
+298
+00:18:45.001 --> 00:18:49.001
+Nunca podemos pedir desculpas a um concorrente de snowboard e dizer, nos desculpamos, nós
+
+299
+00:18:49.001 --> 00:18:51.000
+Você só perdeu o seu ponto, você poderia fazer isso
+
+300
+00:18:51.000 --> 00:18:52.001
+Volta e talvez seja o melhor da sua vida.
+
+301
+00:18:53.000 --> 00:18:56.000
+É importante construir a infraestrutura da rede para que
+
+302
+00:18:56.000 --> 00:18:57.001
+Ele é teoricamente confiável.
+
+303
+00:18:58.000 --> 00:19:03.000
+É outra tarefa monitorar a rede e garantir que seja de fato confiável.
+
+304
+00:19:03.001 --> 00:19:06.001
+A empresa com esse trabalho importante foi provavelmente um que você tem
+
+305
+00:19:06.001 --> 00:19:08.000
+Nunca ouvi falar sobre isso, Icon.
+
+306
+00:19:08.001 --> 00:19:13.000
+Esses ecrãs estão realmente nos fornecendo diferentes elementos ou diferentes peças de
+
+307
+00:19:13.000 --> 00:19:15.001
+informações que podemos usar para rastrear a rede.
+
+308
+00:19:16.000 --> 00:19:20.000
+Por exemplo, aqui em cima podemos ver a utilização em cada um dos segmentos
+
+309
+00:19:20.000 --> 00:19:25.001
+que estão lá fora onde o tráfego está passando apenas para ver se há algum tipo de
+
+310
+00:19:25.001 --> 00:19:29.001
+mal, há qualquer tipo de tráfego excessivo onde a rede pareceria lenta.
+
+311
+00:19:30.000 --> 00:19:32.001
+Na verdade, podemos lidar com isso e redirecionar o tráfego.
+
+312
+00:19:33.000 --> 00:19:37.001
+Além disso, no fundo aqui você vê outra tela que realmente nos diz que é
+
+313
+00:19:37.001 --> 00:19:39.000
+O dispositivo está presente ou não.
+
+314
+00:19:39.000 --> 00:19:42.000
+Ele realmente perdeu energia ou perdeu toda a conectividade?
+
+315
+00:19:43.001 --> 00:19:46.000
+Não há caminho para esse dispositivo específico?
+
+316
+00:19:46.000 --> 00:19:49.000
+De fato, podemos rastrear isso e novamente responder imediatamente a isso.
+
+317
+00:19:49.000 --> 00:19:53.000
+Com uma enorme demanda por tráfego de rede de alta velocidade nos Jogos Olímpicos, muitos locais
+
+318
+00:19:53.000 --> 00:19:58.000
+tinha até oito linhas separadas T1 entrando, mas que só ainda não
+
+319
+00:19:58.000 --> 00:20:00.001
+Garantia de disponibilidade 100%.
+
+320
+00:20:01.000 --> 00:20:04.000
+Na verdade, somos capazes de monitorar cada e cada linha T1 individual.
+
+321
+00:20:04.000 --> 00:20:07.001
+Muitas outras ferramentas que temos não são capazes de fazer o que vem diretamente de
+
+322
+00:20:07.001 --> 00:20:11.000
+A caixa que são apenas suas aplicações personalizadas desenvolvidas
+
+323
+00:20:11.000 --> 00:20:12.001
+Porque estamos usando um multi-link.
+
+324
+00:20:13.001 --> 00:20:17.001
+Quando uma linha T1 cai, nós perdemos uma parte da nossa largura de banda, mas
+
+325
+00:20:17.001 --> 00:20:21.001
+Tudo parece ser operacional e seu monitoramento típico
+
+326
+00:20:21.001 --> 00:20:23.000
+As ferramentas não serão capazes de censurar.
+
+327
+00:20:23.001 --> 00:20:27.001
+Nós, na verdade, criamos um aplicativo personalizado que quando uma única linha cai,
+
+328
+00:20:28.000 --> 00:20:31.000
+Embora a concorrência esteja em andamento, embora os dados ainda estejam em movimento, estamos
+
+329
+00:20:31.000 --> 00:20:35.000
+de fato capaz de vê-lo como a praça lá muda para uma cor diferente
+
+330
+00:20:35.000 --> 00:20:36.001
+E somos capazes de responder a isso.
+
+331
+00:20:37.000 --> 00:20:41.000
+Então podemos tomar a decisão, vamos repará-la agora ou vamos esperar até depois.
+
+332
+00:20:41.000 --> 00:20:45.001
+A concorrência termina ou nós realmente movemos a largura de banda, o caminho que você poderia dizer
+
+333
+00:20:45.001 --> 00:20:49.001
+que os dados estão se movendo de um pacote multi-link para outro.
+
+334
+00:20:49.001 --> 00:20:54.000
+Temos essas várias opções que podemos fazer no voo ou esperar até mais tarde.
+
+335
+00:20:54.001 --> 00:20:58.000
+Um dos desafios de construir uma rede confiável aqui foi o próximo físico
+
+336
+00:20:58.000 --> 00:21:02.000
+Tarefa de colocar cabos de rede em uma pista de esqui coberta de neve.
+
+337
+00:21:03.000 --> 00:21:07.000
+Pense em uma pista de esqui, é neve, mas é hora de instalar esta rede.
+
+338
+00:21:08.000 --> 00:21:14.000
+Então sim, nós tivemos engenheiros lá fora com equipamentos em mão que correm através de uma
+
+339
+00:21:14.000 --> 00:21:19.000
+pé e metade de pó para chegar de um local para outro e eles irão encher
+
+340
+00:21:19.000 --> 00:21:22.000
+O equipamento em plástico para mantê-lo protegido e seco dos elementos.
+
+341
+00:21:23.000 --> 00:21:26.001
+E quando você chegar à outra instalação, pode ser um trailer ou até mesmo uma tenda em
+
+342
+00:21:26.001 --> 00:21:28.001
+Três histórias de treino.
+
+343
+00:21:28.001 --> 00:21:32.000
+Então eles realmente têm que correr essas escadas cobertas de gelo para chegar ao topo.
+
+344
+00:21:32.001 --> 00:21:38.001
+Ir dentro desta tenda e passar no canto é uma mesa onde você realmente instalar
+
+345
+00:21:38.001 --> 00:21:42.000
+Este interruptor ou qualquer que seja o dispositivo de rede é e você está saqueando seus cabos
+
+346
+00:21:42.000 --> 00:21:48.001
+e, no entanto, pode haver algum vento que brota através desta tenda, então você é muito
+
+347
+00:21:48.001 --> 00:21:51.000
+preocupa-se com a neve que entra no interior da
+
+348
+00:21:51.000 --> 00:21:53.000
+portos e, na verdade, cortar equipamentos.
+
+349
+00:21:54.001 --> 00:21:57.001
+Há alguns componentes de alto risco de tudo isso que é muito incomum.
+
+350
+00:21:57.001 --> 00:22:01.001
+Esta definitivamente não é um ambiente limpo para construir uma rede
+
+351
+00:22:01.001 --> 00:22:03.000
+Tal como idealmente queremos.
+
+352
+00:22:03.001 --> 00:22:07.001
+Outro desafio para os instaladores foi ter que manipular cabos de fibra
+
+353
+00:22:07.001 --> 00:22:09.000
+sob as temperaturas de congelamento.
+
+354
+00:22:10.000 --> 00:22:15.001
+Eles irão ligá-lo temporariamente para um determinado local, como e colar-o.
+
+355
+00:22:16.000 --> 00:22:20.000
+Imagine coirar a fibra e pendurá-la alto em alguma árvore ao lado de um esqui
+
+356
+00:22:20.000 --> 00:22:25.000
+e, em seguida, na hora certa, quando eles têm acesso às instalações que
+
+357
+00:22:25.000 --> 00:22:30.000
+De fato, você tem que subir a árvore com um secador de golpe, aquecer a fibra para que seja
+
+358
+00:22:30.000 --> 00:22:32.001
+à temperatura certa e eles podem rolá-lo fora do resto do caminho
+
+359
+00:22:32.001 --> 00:22:34.001
+Sem quebrar porque está congelado.
+
+360
+00:22:35.001 --> 00:22:41.001
+É uma espécie de interessante e aqui estamos confiando nisso para executar uma rede que
+
+361
+00:22:41.001 --> 00:22:46.000
+Tem uma audiência de muito mais de três bilhões de pessoas olhando e não pode falhar.
+
+362
+00:22:46.001 --> 00:22:50.001
+Enquanto a manipulação da eletrônica nos Jogos Olímpicos de Inverno foi um desafio, mais cedo ou
+
+363
+00:22:50.001 --> 00:22:53.001
+Mais tarde, as pessoas também queriam ver os resultados no papel.
+
+364
+00:22:54.000 --> 00:22:58.001
+Xerox foi o vendedor oficial de impressão para os Jogos Olímpicos e forneceu cerca de 3000
+
+365
+00:22:58.001 --> 00:23:02.000
+Impressores que foram distribuídos em todos os locais olímpicos.
+
+366
+00:23:03.000 --> 00:23:06.001
+Eles eram as impressoras de escritório regulares que você e eu reconheceríamos, mas eles
+
+367
+00:23:06.001 --> 00:23:11.000
+Foram também sistemas de publicação de alto fim, máquinas de fax, copiadores e plotters.
+
+368
+00:23:12.000 --> 00:23:16.001
+Durante os 17 dias dos Jogos Olímpicos, mais de 50 milhões de páginas foram impressas no
+
+369
+00:23:16.001 --> 00:23:22.001
+As impressoras Xerox incluem 28 mil folhetos que resumem os resultados para cada
+
+370
+00:23:22.001 --> 00:23:24.000
+Os 15 Jogos Olímpicos de Inverno.
+
+371
+00:23:24.001 --> 00:23:29.000
+Para apoiar apenas a operação de impressão em Utah, a Xerox forneceu mais de 100
+
+372
+00:23:29.000 --> 00:23:34.000
+engenheiros e tecnologias de serviço, já que todos sabemos que impressores e copiadores tendem a
+
+373
+00:23:34.000 --> 00:23:36.000
+Desligue-se quando você mais precisa deles.
+
+374
+00:23:36.001 --> 00:23:41.000
+Agora que os jogos terminam, a Xerox está convertendo todos os seus resultados de cópia dura em
+
+375
+00:23:41.000 --> 00:23:47.000
+Mais de 7.000 CD-ROMs como um registro eletrônico permanente desses jogos de inverno.
+
+376
+00:23:48.000 --> 00:23:53.000
+Uma aplicação incomum da tecnologia nos Jogos Olímpicos foi o uso de dois especiais
+
+377
+00:23:53.000 --> 00:23:58.000
+sites criados pela Monster.com, o único patrocinador do dot com nos Jogos Olímpicos de Inverno.
+
+378
+00:23:59.000 --> 00:24:03.001
+Quando você olha para um patrocínio olímpico, primeiro você olhe para a oportunidade, o que
+
+379
+00:24:03.001 --> 00:24:07.001
+Os anéis representam e colocam a marca Monster com aqueles Olímpicos
+
+380
+00:24:07.001 --> 00:24:09.001
+Os anéis são de grande credibilidade.
+
+381
+00:24:10.000 --> 00:24:16.000
+Eu acho que a relação natural entre o monstro e os Jogos Olímpicos está muito além.
+
+382
+00:24:16.000 --> 00:24:18.001
+Esse tipo de marcação superficial.
+
+383
+00:24:18.001 --> 00:24:22.001
+Eu acho que existem algumas possibilidades que Monster pode realmente integrar em tudo.
+
+384
+00:24:22.001 --> 00:24:26.000
+diferentes níveis, primeiro dos voluntários, dos profissionais que
+
+385
+00:24:26.000 --> 00:24:27.001
+Na verdade, eles trabalham nos Jogos Olímpicos.
+
+386
+00:24:28.000 --> 00:24:29.001
+Você olha para os atletas e o fato de que eles são
+
+387
+00:24:29.001 --> 00:24:31.000
+já no topo da sua carreira.
+
+388
+00:24:31.001 --> 00:24:35.000
+O que eles vão fazer depois que eles se tornam com os jogos e como pode Monster
+
+389
+00:24:35.000 --> 00:24:38.001
+Um tipo de abraçar seu desafio e ajudá-los a atravessar
+
+390
+00:24:38.001 --> 00:24:40.000
+O chassis em sua carreira.
+
+391
+00:24:41.000 --> 00:24:44.000
+Entre os 80 mil, algumas pessoas ajudaram a realizar os Jogos Olímpicos de Inverno foram
+
+392
+00:24:44.000 --> 00:24:46.000
+25 mil voluntários.
+
+393
+00:24:46.001 --> 00:24:52.000
+Muitos deles foram recrutados no site especial Team 2002 executado pela Monster.com.
+
+394
+00:24:53.001 --> 00:24:58.001
+Monster também colocou uma seção de trabalho especial em seu site chamado Team USA Net para
+
+395
+00:24:58.001 --> 00:25:01.000
+Os atletas olímpicos que procuram emprego.
+
+396
+00:25:02.000 --> 00:25:06.000
+Quando a oportunidade olímpica chegou ao nosso caminho, foi uma verdadeira natureza para o monstro
+
+397
+00:25:06.000 --> 00:25:13.000
+porque há uma correlação natural real entre atletas reais que competem em
+
+398
+00:25:13.000 --> 00:25:16.001
+Os Jogos Olímpicos e depois de sua carreira olímpica terminar, eles precisarão de emprego.
+
+399
+00:25:18.000 --> 00:25:22.000
+Ao contrário de muitas outras propriedades de chip azul que você poderia patrocinar como
+
+400
+00:25:22.000 --> 00:25:26.000
+futebol profissional ou futebol profissional, onde os atletas, quando o seu
+
+401
+00:25:26.000 --> 00:25:30.001
+As carreiras terminam não necessariamente necessitam dos usos de uma empresa como Monster.com para
+
+402
+00:25:30.001 --> 00:25:33.000
+transição para o mundo do trabalho.
+
+403
+00:25:33.001 --> 00:25:37.001
+Parte do que o Monster fez é criar um programa de mentoring on-line em que
+
+404
+00:25:37.001 --> 00:25:42.001
+Anteriores atletas olímpicos ajudam os atuais olímpicas enquanto eles lidam com a transição
+
+405
+00:25:42.001 --> 00:25:44.001
+Do trabalho de medalha ao trabalho de manutenção.
+
+406
+00:25:45.000 --> 00:25:49.001
+Os atletas realmente têm que passar muito tempo em seus esportes e as pessoas não
+
+407
+00:25:49.001 --> 00:25:54.000
+Sabe-se que ser um atleta mundial é quase como um trabalho.
+
+408
+00:25:54.000 --> 00:25:59.000
+Você tem que dedicar 100% do seu tempo a ele e eles precisam de alguém que está fora
+
+409
+00:25:59.000 --> 00:26:04.000
+O esporte que pode olhar para trás em sua carreira com uma visão de 20-20 e dar-lhes um pouco
+
+410
+00:26:04.000 --> 00:26:07.000
+perspectivas sobre o que está na loja para o seu futuro.
+
+411
+00:26:08.000 --> 00:26:11.001
+Essa é a parte de uma de nossas séries especiais em computadores nos Jogos Olímpicos.
+
+412
+00:26:11.001 --> 00:26:16.001
+Para as crônicas de computador, eu sou Stuart Chiffay nos Jogos Olímpicos de Inverno em Utah.
+
+413
+00:26:18.000 --> 00:26:23.000
+Chronicles de computador é trazido para você pelo Oracle Small Business Suite, um
+
+414
+00:26:23.000 --> 00:26:27.000
+Aplicação totalmente integrada que ajuda a tornar mais fácil a execução do seu negócio
+
+415
+00:26:27.000 --> 00:26:31.001
+incluindo contabilidade, vendas e serviço, sua presença na web e muito mais.
+
+416
+00:26:34.000 --> 00:26:40.001
+O financiamento adicional é fornecido pelo PC2PC, o serviço de migração on-line do PC
+
+417
+00:26:40.001 --> 00:26:45.000
+Primeiro, mover arquivos, aplicativos e preferências do seu
+
+418
+00:26:45.000 --> 00:26:46.001
+O computador velho para o seu novo.
+
+419
+00:26:48.001 --> 00:26:52.000
+Nas próximas semanas, em The Computer Chronicles, parte 2 da nossa série especial sobre
+
+420
+00:26:52.000 --> 00:26:54.000
+Tecnologia de computador nos Jogos Olímpicos.
+
+421
+00:26:54.001 --> 00:26:59.001
+O que você faria se 7.000 PCs apareceram em seu escritório e você teve que configurar
+
+422
+00:26:59.001 --> 00:27:01.001
+Todos eles para centenas de usos diferentes?
+
+423
+00:27:02.000 --> 00:27:03.000
+Vamos mostrar-lhe como foi feito.
+
+424
+00:27:04.000 --> 00:27:06.000
+Você seguiu alguns dos resultados olímpicos na web?
+
+425
+00:27:06.001 --> 00:27:09.000
+Vamos mostrar-lhe os enormes sistemas de informação que alimentam a internet.
+
+426
+00:27:10.000 --> 00:27:14.000
+Quando a sua rede tem que ser 100% confiável, você precisa de muita redundância.
+
+427
+00:27:14.001 --> 00:27:18.000
+Vamos mostrar-lhe como eles provarão os sistemas de TI nos Jogos Olímpicos.
+
+428
+00:27:18.001 --> 00:27:20.000
+Você já assistiu aos jogos de hockey?
+
+429
+00:27:20.000 --> 00:27:23.001
+Vamos mostrar-lhe os sistemas de software complexos que foram usados para documentar
+
+430
+00:27:23.001 --> 00:27:25.001
+cada momento de cada jogo.
+
+431
+00:27:26.000 --> 00:27:29.000
+E os computadores também ajudam os atletas a ir mais rápido.
+
+432
+00:27:29.000 --> 00:27:33.001
+Vamos mostrar-lhe como a Nike usou a tecnologia para ajudar os EUA. Equipe de escape de velocidade.
+
+433
+00:27:33.001 --> 00:27:37.001
+Parte 2 da nossa série em computadores nos Jogos Olímpicos, que vem para o próximo
+
+434
+00:27:37.001 --> 00:27:39.001
+Semana em crônicas de computador.
+
+435
+00:27:41.000 --> 00:27:44.000
+[...]

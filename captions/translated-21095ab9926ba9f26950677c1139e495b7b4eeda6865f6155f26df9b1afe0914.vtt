@@ -1,0 +1,1669 @@
+WEBVTT
+
+1
+00:00:25.001 --> 00:00:29.000
+C’est ce qu’on appelle le mail. Vous prenez un emballage, placez-le dans la boîte aux lettres, et
+
+2
+00:00:29.000 --> 00:00:32.001
+J&#x27;espère qu&#x27;en quelques jours, la personne que vous envoyez le recevra. Mais ceci est
+
+3
+00:00:32.001 --> 00:00:38.001
+par courrier électronique, par e-mail. J&#x27;ai pris quelques clés et le message que j&#x27;ai juste écrit
+
+4
+00:00:38.001 --> 00:00:42.001
+Il est déjà assis dans la boîte mail de la personne à laquelle j&#x27;ai écrit. Maintenant, c’est une sorte de
+
+5
+00:00:42.001 --> 00:00:46.001
+Un exemple de l’âge spatial. Avec cet ordinateur réseau, il peut envoyer et recevoir le courrier par
+
+6
+00:00:46.001 --> 00:00:48.001
+Les ondes radio. Il n&#x27;y a pas de fil comme vous pouvez le voir.
+
+7
+00:00:49.000 --> 00:00:52.001
+Mais même avec n&#x27;importe quel ordinateur personnel dans un modem, vous pouvez également utiliser le courrier électronique.
+
+8
+00:00:53.000 --> 00:00:56.000
+Nous vous montrerons comment sur cette édition des Chroniques informatiques.
+
+9
+00:01:19.001 --> 00:01:23.001
+Les Chroniques informatiques sont rendues possibles par Leading Edge, créateurs d’IBM
+
+10
+00:01:23.001 --> 00:01:27.000
+systèmes informatiques compatibles, y compris le traitement des mots avec la correction d&#x27;écriture,
+
+11
+00:01:27.001 --> 00:01:33.000
+Logiciel de communication et modèles Haze compatibles 1200 et 2400 VOD. Leader Edge
+
+12
+00:01:33.000 --> 00:01:35.000
+Avec plus de 1000 centres de service à travers le pays.
+
+13
+00:01:35.001 --> 00:01:40.000
+Leading Edge conduit le chemin vers l’âge de l’information. Un financement supplémentaire est
+
+14
+00:01:40.000 --> 00:01:44.000
+fourni par McGraw Hill, éditeurs de Byte. Articles techniques détaillés de Byte
+
+15
+00:01:44.000 --> 00:01:47.001
+sur les nouveaux matériels, logiciels et langues couvrant les développements en
+
+16
+00:01:47.001 --> 00:01:49.000
+Technologies informatiques dans le monde entier.
+
+17
+00:01:55.001 --> 00:01:59.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay. Gary Kildall et George
+
+18
+00:01:59.001 --> 00:02:03.000
+Morrow est parti aujourd’hui. Avec moi, c’est Jan Lewis qui, dans sa seconde vie, est président.
+
+19
+00:02:03.000 --> 00:02:06.001
+Le groupe de recherche Palo Alto. Jan nous parlons par e-mail. C’est quelque chose
+
+20
+00:02:06.001 --> 00:02:09.001
+Il s’appelle Inbox. Ce Mac fait partie d&#x27;un réseau Apple Talk en ce moment. Regardez comment
+
+21
+00:02:09.001 --> 00:02:13.000
+Je peux très vite jouer avec le mail. Je clique pour voir ce qui est dans ma boîte d&#x27;entrée. Il y a
+
+22
+00:02:13.000 --> 00:02:16.000
+Toutes les choses là-bas. J&#x27;ai doublé pour voir ce que c&#x27;est le message de Cynthia
+
+23
+00:02:16.000 --> 00:02:19.001
+Le vert . Je peux lire son message là-bas. Supposons que je voudrais répondre à
+
+24
+00:02:19.001 --> 00:02:24.001
+de Cynthia. Tout ce que je fais, c’est aller comme ça. Appuyez sur ma réponse. Dites que je veux l&#x27;envoyer et boom
+
+25
+00:02:24.001 --> 00:02:28.001
+Tout est fait. C’est un courriel rapide. Aujourd&#x27;hui, beaucoup de gens quand les ordinateurs d&#x27;abord
+
+26
+00:02:28.001 --> 00:02:31.001
+Il est entré dans l&#x27;environnement de bureau, il a dit qu&#x27;il y aurait le bureau sans papier. Nous
+
+27
+00:02:31.001 --> 00:02:34.000
+Sachez que cela n’a jamais eu lieu. Beaucoup d&#x27;e-mails disent bien il n&#x27;y aura pas
+
+28
+00:02:34.000 --> 00:02:37.001
+Tout papier dans la boîte d&#x27;entrée. Vous pensez que cela se passera jamais ? Vous connaissez tous les nouveaux
+
+29
+00:02:37.001 --> 00:02:41.001
+L’ordinateur tient à l’avance la promesse de l’office sans papier. Mais le fait est
+
+30
+00:02:41.001 --> 00:02:45.001
+Le bureau sans papier est aussi probable que la salle de bain sans papier. sur le
+
+31
+00:02:45.001 --> 00:02:49.000
+L’e-mail d’une autre main accélère considérablement l’efficacité et la
+
+32
+00:02:49.000 --> 00:02:53.001
+la productivité de la communication. Si vous pensez à ce message que Cynthia Green
+
+33
+00:02:53.001 --> 00:02:57.001
+Envoyé à vous il a probablement fallu lui peut-être 60 secondes pour vous envoyer ce message et
+
+34
+00:02:57.001 --> 00:03:01.000
+20 secondes pour vous répondre. Pensez à combien de temps cela aurait fallu
+
+35
+00:03:01.000 --> 00:03:04.001
+par téléphone régulier. Le courrier électronique ne peut pas sauver du papier. Cela économise certainement du temps.
+
+36
+00:03:05.000 --> 00:03:07.001
+et absolument. Jan, nous allons regarder quelques-uns des derniers développements dans le
+
+37
+00:03:07.001 --> 00:03:10.001
+Le courrier électronique aujourd’hui. Nous allons aussi regarder deux systèmes de voicemail qui
+
+38
+00:03:10.001 --> 00:03:14.001
+En réalité, ils éliminent le papier. Maintenant, supposons que vous avez une grande entreprise. Tous les bureaux
+
+39
+00:03:14.001 --> 00:03:18.000
+sur le pays. Des dizaines de milliers de salariés. Pouvez-vous encore utiliser le courriel ? Nous allons
+
+40
+00:03:18.000 --> 00:03:24.000
+Découvrez dans ce rapport. Les ordinateurs sont accusés de toutes sortes de déshumanisation
+
+41
+00:03:24.000 --> 00:03:29.000
+les effets. Peut-être à cause de leur façon inhumaine de communiquer avec nous. sur le
+
+42
+00:03:29.000 --> 00:03:33.001
+Les ordinateurs d&#x27;autres mains sont souvent les moyens pour améliorer la communication humaine en particulier
+
+43
+00:03:33.001 --> 00:03:38.001
+sur de longues distances. La compagnie McDonald Douglas est mieux connue pour ses avions
+
+44
+00:03:38.001 --> 00:03:43.001
+est également un fournisseur majeur de réseaux de communications nationaux et
+
+45
+00:03:43.001 --> 00:03:48.001
+à l’international. Pour échanger des messages avec ses bureaux lointains, l&#x27;entreprise utilise
+
+46
+00:03:48.001 --> 00:03:54.001
+Un système de messagerie électronique appelé On Time. Il est à la disposition de tout le monde dans le
+
+47
+00:03:54.001 --> 00:03:59.001
+Une entreprise avec accès à un terminal et un mot de passe. Il fournit à chaque bureau un
+
+48
+00:03:59.001 --> 00:04:04.000
+une manière sécurisée de transmettre les données parce que l’expéditeur peut adresser des messages à
+
+49
+00:04:04.000 --> 00:04:11.000
+nombre ou peu d’individus comme indiqué. On Time est un vaste réseau d&#x27;espace conçu
+
+50
+00:04:11.000 --> 00:04:16.000
+Liener les terminaux distants plutôt que les bureaux adjacents. Utilisateurs du monde entier
+
+51
+00:04:16.000 --> 00:04:21.000
+peut atteindre le système de messagerie avec seulement une appel téléphonique locale et envoyer un message à
+
+52
+00:04:21.000 --> 00:04:26.001
+L’Europe prend autant de temps que l’on envoie un dans la rue. Avec les messages
+
+53
+00:04:26.001 --> 00:04:31.001
+et les fichiers On Time est capable de transmettre des graphiques comme ce graphique de Lotus
+
+54
+00:04:31.001 --> 00:04:37.001
+1 à 3 L’appel au courrier électronique international est en croissance. Plus de 500
+
+55
+00:04:37.001 --> 00:04:43.001
+entreprises dans 68 pays utilisent le réseau de communications TimeNet pour transmettre
+
+56
+00:04:43.001 --> 00:04:49.001
+Un million de messages par mois. Et si les fournisseurs et les pays peuvent toujours être d&#x27;accord sur un
+
+57
+00:04:49.001 --> 00:04:53.001
+Protocole standard pour simplifier l&#x27;accès au nombre d&#x27;utilisateurs en ligne
+
+58
+00:04:53.001 --> 00:04:55.001
+Les utilisateurs ne peuvent que augmenter.
+
+59
+00:05:10.000 --> 00:05:14.001
+Il s’agit de Jeff Anderholm, Product Manager pour Lotus Express.
+
+60
+00:05:14.001 --> 00:05:18.000
+avec Lotus Corporation et assis à côté de Jeff est Stuart Davidson, Produit
+
+61
+00:05:18.000 --> 00:05:19.001
+Marketing Manager avec MCI.
+
+62
+00:05:20.000 --> 00:05:20.000
+Jean ?
+
+63
+00:05:20.000 --> 00:05:23.000
+Stuart, que fait le courrier électronique vraiment pour l’utilisateur de l’ordinateur?
+
+64
+00:05:24.000 --> 00:05:29.001
+Il fournit un moyen, Jan, d&#x27;envoyer des messages et d&#x27;expédier des fichiers qui sont beaucoup plus faciles que
+
+65
+00:05:29.001 --> 00:05:32.000
+des méthodes actuellement utilisées. Par exemple,
+
+66
+00:05:32.001 --> 00:05:34.000
+courrier ou bureau postal ou fax.
+
+67
+00:05:34.001 --> 00:05:39.000
+Qu’en est-il du mail MCI en particulier ? Comment cela est utilisé ? Supposons que je suis un ordinateur,
+
+68
+00:05:39.001 --> 00:05:41.000
+Je possède un PC et je dis, Jeez, je voudrais utiliser
+
+69
+00:05:41.000 --> 00:05:42.001
+Le courrier MCI. Que dois-je faire pour le faire ?
+
+70
+00:05:43.000 --> 00:05:47.000
+Bien avec la combinaison de logiciels et de services que nous parlons
+
+71
+00:05:47.000 --> 00:05:52.001
+Aujourd&#x27;hui, Lotus Express, vous pouvez mettre certains logiciels sur votre PC IBM et composer
+
+72
+00:05:52.001 --> 00:05:59.000
+Messages et envoyer des fichiers à n&#x27;importe qui que vous souhaitez atteindre sur le réseau de messagerie MCI.
+
+73
+00:05:59.000 --> 00:06:03.001
+Maintenant, dois-je vous joindre, payer une rémunération mensuelle? que je fais ?
+
+74
+00:06:03.001 --> 00:06:08.000
+Oui, c’est juste ça. En fait, en achetant le logiciel Lotus Express
+
+75
+00:06:08.000 --> 00:06:13.001
+associée à cela est une taxe d&#x27;enregistrement d&#x27;un an qui vous fixera pour un
+
+76
+00:06:13.001 --> 00:06:19.000
+Les comptes. Ensuite, vous payez un simple prix par message pour tout ce que vous
+
+77
+00:06:19.000 --> 00:06:20.001
+Envoyer . Vous ne payez que pour ce que vous envoyez.
+
+78
+00:06:20.001 --> 00:06:22.001
+Il n&#x27;y a pas de charge si je suis assis là
+
+79
+00:06:22.001 --> 00:06:24.000
+En ligne, on dirait, sans envoyer un message.
+
+80
+00:06:24.001 --> 00:06:25.001
+Non, il n’y a pas de charge.
+
+81
+00:06:26.000 --> 00:06:29.000
+Maintenant, vous avez mentionné Lotus Express et c&#x27;est votre territoire, Jeff. Alors on va obtenir
+
+82
+00:06:29.000 --> 00:06:32.001
+dans elle. Qu’est-ce que Lotus Express et comment nous aide-t-il à faire un courrier électronique ?
+
+83
+00:06:33.000 --> 00:06:39.001
+Ok, Lotus Express est un paquet de communications PC qui fonctionne avec le courrier MCI. Il est
+
+84
+00:06:39.001 --> 00:06:45.000
+Il fonctionne sur IBM et PC compatibles. Il permet aux utilisateurs d’envoyer et de recevoir des messages et
+
+85
+00:06:45.000 --> 00:06:50.001
+téléchargez et transférez tout fichier PC facilement et très rapidement. Vous pouvez envoyer
+
+86
+00:06:50.001 --> 00:06:53.001
+Messages et fichiers partout dans le monde.
+
+87
+00:06:54.001 --> 00:06:56.000
+Vous avez Lotus Express là-bas. Comment ça fonctionne ?
+
+88
+00:06:56.001 --> 00:06:58.000
+Eh bien, vous avez, en fait, la feuille de diffusion Lotus là-bas.
+
+89
+00:06:58.000 --> 00:07:01.000
+à droite. Beaucoup de vos spectateurs, je suis sûr, reconnaîtront un, deux, trois.
+
+90
+00:07:01.001 --> 00:07:05.001
+Ici, j&#x27;ai Lotus Express chargé dans le fond pour surveiller mon courrier. pour appeler
+
+91
+00:07:05.001 --> 00:07:10.000
+Je fais simplement Alt Shift R et j&#x27;obtiens la dossier entrant. Il m’a montré le
+
+92
+00:07:10.000 --> 00:07:14.001
+Des messages que j’ai reçus automatiquement. Maintenant, je devais sortir et entrer.
+
+93
+00:07:14.001 --> 00:07:18.001
+Le MCI. Le programme prend soin de cela pour vous. Maintenant, dis-moi, alors que vous étiez dans Lotus
+
+94
+00:07:18.001 --> 00:07:21.001
+travaillant sur la brochure Lotus, pourrait-il avoir été téléchargé un message mail?
+
+95
+00:07:21.001 --> 00:07:24.000
+à droite. Vous n’aurez jamais à dire que vous allez sortir et le télécharger. Il fait
+
+96
+00:07:24.000 --> 00:07:30.001
+automatiquement à des intervalles spécifiés. Donc, pour lire un message, je souligne simplement
+
+97
+00:07:30.001 --> 00:07:35.001
+La pression et la pression entrent. Et voir comment c&#x27;est la saison des vacances et les ventes d&#x27;arbres sont
+
+98
+00:07:35.001 --> 00:07:39.000
+En bas, monsieur Scrooge, je pense que c&#x27;est à cause des matériaux bon marché que Tiny Tim
+
+99
+00:07:39.000 --> 00:07:41.000
+Il insiste sur l’utilisation. J’espère que ce fichier aide.
+
+100
+00:07:41.001 --> 00:07:46.001
+Le fichier est un fichier binaire attaché. Dans ce cas, il s’agit d’un fichier spreadsheet. et
+
+101
+00:07:46.001 --> 00:07:50.001
+Pour travailler avec cela, je retire mon menu et je passe au fichier en commandement.
+
+102
+00:07:51.000 --> 00:07:53.001
+Les Whoops. Choisissez pour le sauver.
+
+103
+00:07:54.001 --> 00:07:59.001
+Je peux le sauvegarder n&#x27;importe où sur mon disque dur. Vous avez
+
+104
+00:07:59.001 --> 00:08:01.000
+Pour le sauvegarder avant de le regarder, Jeff?
+
+105
+00:08:01.000 --> 00:08:03.001
+à droite. Vous devez le sauvegarder parce que vous devez l&#x27;accéder en utilisant le moyen approprié
+
+106
+00:08:03.001 --> 00:08:07.001
+Programme d’application . Vous devez le trouver à l’intérieur de Lotus. à droite. Nous allons donc appeler
+
+107
+00:08:07.001 --> 00:08:09.001
+Ceci, voir, nous allons le nommer bears.w.
+
+108
+00:08:11.000 --> 00:08:16.001
+OK ! Maintenant, c’est le sauvetage. Pour y accéder et travailler correctement
+
+109
+00:08:16.001 --> 00:08:18.000
+Je reviendrai, je reviens à 123.
+
+110
+00:08:21.001 --> 00:08:25.000
+Et maintenant, j&#x27;ai une feuille de diffusion avec les formules et les formats intactes. Et je peux
+
+111
+00:08:25.000 --> 00:08:28.001
+Travaillez avec elle immédiatement sans avoir à le récupérer. OK ! Assurez-vous qu&#x27;il n&#x27;y a pas
+
+112
+00:08:28.001 --> 00:08:33.000
+La confusion. Je m’excuse Ce n’est pas un lotus add-on. Il s’agit d’un 123 add-on. Ceci est
+
+113
+00:08:33.000 --> 00:08:36.001
+On l&#x27;appelait Lotus Express, mais il fonctionnerait sous toute application. Il fonctionnerait
+
+114
+00:08:36.001 --> 00:08:39.001
+avec toute application et vous permet de transférer tout fichier. Tout ce que vous pouvez stocker
+
+115
+00:08:39.001 --> 00:08:44.001
+Sur le disque de votre PC, vous pouvez envoyer via... Donc, je pourrais envoyer un fichier binaire autre que
+
+116
+00:08:44.001 --> 00:08:47.000
+Par exemple, une plate-forme de lotus. Vous pouvez envoyer des fichiers de base D. Vous pouvez envoyer
+
+117
+00:08:47.000 --> 00:08:51.000
+Le WordStar. Et les graphiques ? Puis-je envoyer un graphique Lotus ? Oui, vous pouvez ! Tout tout.
+
+118
+00:08:52.001 --> 00:08:56.000
+Qu’en est-il de Stuart ? La question de la sécurité. Les gens s’inquiètent
+
+119
+00:08:56.000 --> 00:09:00.000
+Parfois sur l&#x27;utilisation des systèmes de courrier électronique et le type d&#x27;envoi de vos messages privés
+
+120
+00:09:00.000 --> 00:09:03.001
+Là dans l’espace. Est-ce que c’est une préoccupation ? Ce ne devrait pas être une préoccupation.
+
+121
+00:09:03.001 --> 00:09:07.000
+Bien entendu, il y a quelques problèmes avec tous les utilisateurs de PC dont ils sont familiers,
+
+122
+00:09:07.000 --> 00:09:11.000
+qui a à voir avec la sécurité de leur propre PC et l&#x27;environnement qu&#x27;ils travaillent
+
+123
+00:09:11.000 --> 00:09:16.001
+dans . Dans les systèmes de messagerie publiques et dans ces types de réseaux, ils sont
+
+124
+00:09:16.001 --> 00:09:21.001
+généralement un système très sûr, non seulement avec la protection de mot de passe, mais aussi dans
+
+125
+00:09:21.001 --> 00:09:25.001
+le format dans lequel les données sont stockées. Une des plaintes que les utilisateurs de courrier électronique
+
+126
+00:09:25.001 --> 00:09:29.000
+avoir, et peut-être Lotus Express et d&#x27;autres choses vont résoudre que, ce n&#x27;est pas très
+
+127
+00:09:29.000 --> 00:09:33.000
+Facile à utiliser. Il y a une douleur dans le cou. Il est compliqué. L’édition en ligne est une
+
+128
+00:09:33.000 --> 00:09:37.000
+Mess et ainsi de suite. Comment avez-vous résolu ce genre de problèmes ? Tu as frappé le ongle
+
+129
+00:09:37.000 --> 00:09:40.000
+Sur les têtes de Stuart. Il y a beaucoup de problèmes d’adoption qui
+
+130
+00:09:40.000 --> 00:09:45.000
+Facilité d’utilisation et aussi fonctionnalité. Ce que fait Lotus Express
+
+131
+00:09:45.000 --> 00:09:49.000
+est-ce qu’il fait, comme Jeff vient de démontrer, très facile d’envoyer un message, à
+
+132
+00:09:49.000 --> 00:09:53.001
+recevoir un message, envoyer un fichier, recevoir le message, recevra un dossier. Il est aussi
+
+133
+00:09:53.001 --> 00:09:57.001
+prendre soin de certains problèmes de commodité tels que comment je sais quand mon mail
+
+134
+00:09:57.001 --> 00:10:01.001
+Il est arrivé, il fait un ton pour vous faire savoir que vous avez reçu quelque chose. Comment
+
+135
+00:10:01.001 --> 00:10:05.000
+Je sais quand vérifier mon mail, il le vérifie pour vous. Il prend soin de certains
+
+136
+00:10:05.000 --> 00:10:09.000
+de ces problèmes. Combien de fois vérifiez-vous le courrier ? Est-ce que c’est en ligne tout le temps ?
+
+137
+00:10:09.001 --> 00:10:12.001
+Est-ce qu’il le vérifie à intervalles ? Il le regarde à intervalles, Jan. Il vérifie à
+
+138
+00:10:12.001 --> 00:10:17.001
+les intermédiaires que l’utilisateur spécifie. Maintenant, MCI Mail a une relation avec
+
+139
+00:10:17.001 --> 00:10:20.001
+CompuServe d’une certaine manière, est-ce juste ? Oui, nous avons une connexion avec
+
+140
+00:10:20.001 --> 00:10:26.000
+de CompuServe. Cela signifie que les gens, les 300 000 quelques abonnés étranges sur
+
+141
+00:10:26.000 --> 00:10:31.001
+CompuServe, peut adresser et échanger des messages avec le 100 000 MCI mail
+
+142
+00:10:31.001 --> 00:10:36.000
+Les abonnés. Donc, en fait, même s&#x27;ils ne sont pas des abonnés CompuServe, même si
+
+143
+00:10:36.000 --> 00:10:40.001
+la personne de courrier MCI n&#x27;est pas un abonnent de CompuServe, que MCI est un abonneur de courriel,
+
+144
+00:10:41.000 --> 00:10:44.001
+Comme vous, par exemple, pourrait envoyer un message à Jan qui pourrait être sur CompuServe.
+
+145
+00:10:45.000 --> 00:10:49.000
+Supposons, je peux envoyer un message en utilisant le courrier MCI à quelqu&#x27;un qui n&#x27;est pas un courrier de MCI
+
+146
+00:10:49.000 --> 00:10:50.001
+Le client ? et absolument. Comment faites-vous cela ?
+
+147
+00:10:51.000 --> 00:10:54.000
+La façon dont vous le feriez est que vous avez quelques options. Ils pourraient être sur une
+
+148
+00:10:54.000 --> 00:10:57.001
+d&#x27;autres services de courrier électronique que j&#x27;ai décrit, par exemple, CompuServe ou
+
+149
+00:10:57.001 --> 00:11:01.000
+Peut-être l’un de ses individus dans leur entreprise. Vous pourriez, si vous
+
+150
+00:11:01.000 --> 00:11:04.001
+Il fallait envoyer une note à votre grand-mère, vous l&#x27;utiliseriez simplement. Elle n’est pas une
+
+151
+00:11:04.001 --> 00:11:10.000
+de CompuServe. Non, mais vous pourriez utiliser cette option postal dont nous avons parlé, et
+
+152
+00:11:10.000 --> 00:11:13.001
+Vous pouvez adresser une lettre postale à lui envoyer soit par courrier ou
+
+153
+00:11:13.001 --> 00:11:15.001
+livraison de première classe.
+
+154
+00:11:15.001 --> 00:11:19.000
+Ou si c&#x27;était l&#x27;étranger de quelqu&#x27;un, vous pourriez communiquer avec 1,8 million
+
+155
+00:11:19.001 --> 00:11:22.000
+Les terminaux de Telix sont là-bas. Merci beaucoup à vous. Nous avons parlé de la
+
+156
+00:11:22.000 --> 00:11:25.001
+Problème d’amitié de l’utilisateur. Oui, il y a un nouveau morceau de logiciel qui, si
+
+157
+00:11:25.001 --> 00:11:27.000
+Vous êtes un abonnent source, il va vous aider avec le courrier électronique
+
+158
+00:11:27.000 --> 00:11:29.000
+Il y a là, et nous allons regarder cela en une minute.
+
+159
+00:11:44.000 --> 00:11:48.000
+Il s’agit de Lloyd Kreitzer, président de Kreitzer Software.
+
+160
+00:11:48.000 --> 00:11:52.000
+Le développeur des ressources. Jean ? Lloyd, nous avons entendu une terrible lot
+
+161
+00:11:52.000 --> 00:11:55.001
+sur les ressources. Pouvez-vous nous dire quels problèmes vous avez réellement essayé de résoudre
+
+162
+00:11:55.001 --> 00:11:59.001
+Avec des ressources ? Les ressources sont un front à la source.
+
+163
+00:12:02.000 --> 00:12:06.001
+C’est un [...] qui utilise la puissance du PC pour rendre les communications en ligne faciles à
+
+164
+00:12:06.001 --> 00:12:11.001
+à l’utilisateur. La source, comme vous le savez, fournit un certain nombre de services électroniques. Il est
+
+165
+00:12:11.001 --> 00:12:15.001
+fournit le courrier électronique, il fournit l&#x27;accès aux horaires de la compagnie aérienne, il
+
+166
+00:12:15.001 --> 00:12:20.000
+accès à de nouveaux services, et il fournit un bulletin de logiciels PC gratuits.
+
+167
+00:12:21.000 --> 00:12:25.000
+Ce que fait un front-end, c’est qu’il rend l’accès à toutes ces choses beaucoup plus facile pour
+
+168
+00:12:25.000 --> 00:12:29.000
+Utilisateurs de PC. Lloyd, nous nous concentrons sur le courrier électronique maintenant, et je veux que vous nous montriez
+
+169
+00:12:29.000 --> 00:12:33.001
+Comment utiliser la ressource pour rendre plus facile, plus user-friendly d&#x27;utiliser l&#x27;e-mail
+
+170
+00:12:33.001 --> 00:12:38.000
+Capacité de la source. Je vais passer par un scénario typique que l&#x27;utilisateur pourrait,
+
+171
+00:12:38.001 --> 00:12:41.001
+Ceux qui utilisent le courrier électronique peuvent passer.
+
+172
+00:12:41.001 --> 00:12:46.000
+Je vais regarder dans ma boîte d&#x27;entrée. Dans ma boîte d&#x27;entrée, j&#x27;ai une lettre que j&#x27;avais reçue plus tôt,
+
+173
+00:12:46.000 --> 00:12:50.001
+Et je vais sélectionner la commande de vue et regarder cette lettre. La lettre dit
+
+174
+00:12:50.001 --> 00:12:54.001
+Nous avons un client qui voudrait savoir sur le prix et la disponibilité de
+
+175
+00:12:54.001 --> 00:12:59.000
+Modèle 100 et modèle 200 widgets. Je vais sélectionner la réponse commandée ici,
+
+176
+00:12:59.000 --> 00:13:05.001
+Et je vais entrer dans le nom du fichier que je vais mettre la réponse.
+
+177
+00:13:06.000 --> 00:13:11.000
+Ce qui crée automatiquement un éditeur d&#x27;écran complet où je peux entrer dans ma réponse,
+
+178
+00:13:11.000 --> 00:13:17.001
+Et je vais vous dire, chère Bill, voici les informations
+
+179
+00:13:17.001 --> 00:13:24.001
+Ce que vous avez demandé. Maintenant, je
+
+180
+00:13:24.001 --> 00:13:28.001
+avoir la liste de prix en fait assis dans un fichier appelé widgets, et donc je vais juste
+
+181
+00:13:28.001 --> 00:13:34.001
+Sélectionnez le fichier widget de cette liste, et cela apporte la liste de prix à droite
+
+182
+00:13:34.001 --> 00:13:41.000
+Ma lettre, et je finirai la lettre en disant, j’espère que cela sera utile.
+
+183
+00:13:41.001 --> 00:13:47.001
+C’est tout ce que je dois vraiment faire. Sélectionnez la commande de sauvegarde et retournez à mon menu,
+
+184
+00:13:48.001 --> 00:13:52.001
+Et maintenant, je sélectionnerai le commandement envoyé, et cela apporte une liste de tous les
+
+185
+00:13:52.001 --> 00:13:56.000
+Messages dans la boîte extérieure, et je sélectionnerai ce message. Le programme sera maintenant
+
+186
+00:13:56.000 --> 00:14:00.001
+Développer automatiquement la source. Il envoie cette lettre à Bill, et alors quand
+
+187
+00:14:00.001 --> 00:14:03.001
+finir en envoyant la lettre, elle va regarder dans la boîte d&#x27;entrée sur la source et voir si je
+
+188
+00:14:03.001 --> 00:14:07.000
+Avoir un mail qui m’attend. Oui, deux choses intéressantes. Tu as fait ça
+
+189
+00:14:07.000 --> 00:14:10.000
+Tout est hors ligne, numéro un, n’est-ce pas vous ? C’est juste ça. Et l’avantage est
+
+190
+00:14:10.000 --> 00:14:13.000
+Il est évident que vous ne dépensez pas les frais en ligne tandis que vous faites tout cela
+
+191
+00:14:13.000 --> 00:14:17.000
+composition, et en fait, vous avez pu faire toute la structure de commande hors ligne
+
+192
+00:14:17.000 --> 00:14:21.001
+En même temps. C’est juste ça. Et maintenant, qu’en est-il de la capacité d’édition ? I
+
+193
+00:14:21.001 --> 00:14:25.000
+vu que vous pourriez éditer un processeur de la parole plutôt que le parfois cumbersome
+
+194
+00:14:25.000 --> 00:14:29.000
+Les éditeurs en ligne. Ce programme dispose d&#x27;un certain nombre de fonctionnalités qui y sont intégrées, et une
+
+195
+00:14:29.000 --> 00:14:33.000
+Ils sont un éditeur pop-up qui est accessible à travers le script de messagerie, et en tant que sujet
+
+196
+00:14:33.000 --> 00:14:36.001
+En fait, il est accessible à n’importe quel point du programme. Une seule clé sera la
+
+197
+00:14:36.001 --> 00:14:40.000
+en haut, et vous pouvez écrire un message dans cela, puis vous pouvez le sauvegarder dans votre boîte extérieure.
+
+198
+00:14:40.000 --> 00:14:43.001
+Vous pouvez écrire des messages tout au long de la journée et les envoyer uniquement à un moment donné.
+
+199
+00:14:44.000 --> 00:14:47.000
+Vous pouvez en fait couper les éléments de l&#x27;écran et les ajouter directement dans le message.
+
+200
+00:14:47.001 --> 00:14:51.000
+Et maintenant, qu’en est-il de savoir si vous avez un mail entrant ? Vous avez mentionné que
+
+201
+00:14:51.000 --> 00:14:54.000
+juste à la fin. Comment faites-vous cela ? Si on regarde l’écran en ce moment,
+
+202
+00:14:54.000 --> 00:14:57.001
+Vous verrez que le message est juste envoyé. Cette fenêtre montre que les lignes
+
+203
+00:14:57.001 --> 00:15:03.001
+sont envoyés maintenant, et dès que l&#x27;envoi est terminé, un écran apparaîtra,
+
+204
+00:15:03.001 --> 00:15:06.000
+Et il montrera s&#x27;il y a ou non des messages. Nous sommes en ligne maintenant. Nous
+
+205
+00:15:06.000 --> 00:15:11.000
+Ils sont maintenant en ligne. Et nous attendons quoi, la fin ? Il y a votre boîte d&#x27;entrée. Nous sommes
+
+206
+00:15:11.000 --> 00:15:14.000
+En attendant la boîte d&#x27;entrée, et nous avons deux messages ici. Une personne qui a droit
+
+207
+00:15:14.000 --> 00:15:20.001
+Les prévisions financières et le jour de la réunion de Chicago ont changé. Ceci est désormais indiqué
+
+208
+00:15:20.001 --> 00:15:25.001
+pour la source. Vous voyez ce même type d&#x27;interface user-friendly
+
+209
+00:15:25.001 --> 00:15:28.000
+être disponible pour d’autres types de services de communication ?
+
+210
+00:15:28.001 --> 00:15:32.000
+Oui oui. Une des choses qui est vraiment unique sur ce produit est que le
+
+211
+00:15:32.000 --> 00:15:35.001
+Les interfaces dans le produit sont basées sur un langage de programmation des scripts. Et ce que
+
+212
+00:15:35.001 --> 00:15:40.000
+Ce qui signifie pour l&#x27;utilisateur est qu&#x27;il sera très facile à développer à l&#x27;avenir
+
+213
+00:15:40.000 --> 00:15:45.000
+Des interfaces supplémentaires. Et le programme vient avec quelques interfaces à
+
+214
+00:15:45.000 --> 00:15:49.000
+Services sur la source. Dans l&#x27;avenir, nous espérons voir des interfaces à d&#x27;autres
+
+215
+00:15:49.000 --> 00:15:52.001
+les services. En fait, la source offrira un intérêt particulier.
+
+216
+00:15:52.001 --> 00:15:57.001
+groupes en ligne où de nouvelles interfaces seront disponibles pour le téléchargement aux utilisateurs de la
+
+217
+00:15:57.001 --> 00:16:02.000
+Le programme. Ok, Lloyd, je vous remercie beaucoup. Les ressources . OK ! Supposons que vous avez
+
+218
+00:16:02.000 --> 00:16:06.000
+une entreprise basée à Palo Alto, et vous voulez envoyer des e-mails à des personnes en Afrique ou
+
+219
+00:16:06.000 --> 00:16:09.001
+les Philippines ou d’autres pays du monde entier. Pouvez-vous encore utiliser le courriel ? Nous
+
+220
+00:16:09.001 --> 00:16:16.001
+Retrouvez la réponse dans ce rapport de Wendy Woods. Pour recevoir une lettre de l&#x27;un des 131
+
+221
+00:16:16.001 --> 00:16:22.000
+des stations de recherche agricole dans des endroits aussi éloignés que Nairobi ou les Philippines,
+
+222
+00:16:22.001 --> 00:16:27.001
+Il ne faut plus qu’un instant. Ils sont tous connectés via un système de courrier électronique sur
+
+223
+00:16:27.001 --> 00:16:33.000
+DialCom, une base de données accessible à l’échelle internationale. Tout ce qu&#x27;il faut pour lire le mail
+
+224
+00:16:33.000 --> 00:16:38.000
+Il s’agit de diffuser la base de données via un modem sur un ordinateur. Cela paraît simple, mais il
+
+225
+00:16:38.000 --> 00:16:42.001
+Il n’était pas. Le réseau a dû relier les systèmes téléphoniques locaux, régionaux et nationaux.
+
+226
+00:16:43.000 --> 00:16:47.001
+Et les problèmes varient de mauvaise qualité de transmission à la réglementation gouvernementale.
+
+227
+00:16:48.000 --> 00:16:53.000
+Les services CGNet de Palo Alto, en Californie ont créé le réseau, un travail qui a pris
+
+228
+00:16:53.000 --> 00:16:58.000
+Trois ans et ce n’est pas encore fait. Certains des endroits que vous pensiez être
+
+229
+00:16:58.000 --> 00:17:01.001
+facile comme Rome, par exemple, il a fallu quelques années parce qu&#x27;ils étaient à l&#x27;intérieur
+
+230
+00:17:01.001 --> 00:17:05.001
+intégré dans une grande organisation, qui nécessite l&#x27;approbation pour l&#x27;achat d&#x27;un modem.
+
+231
+00:17:06.000 --> 00:17:10.000
+Et l&#x27;organisation devait autoriser le modem, puis la compagnie téléphonique avait
+
+232
+00:17:10.000 --> 00:17:13.001
+Pour coordonner toutes les parties pour que cela se produise, il a fallu beaucoup de temps.
+
+233
+00:17:14.000 --> 00:17:18.000
+Mais le principal obstacle n’était pas le matériel ou le logiciel, mais les gens,
+
+234
+00:17:18.001 --> 00:17:23.001
+En particulier, les faire utiliser des ordinateurs et des modèles. Ce travail a pris Lindsay et
+
+235
+00:17:23.001 --> 00:17:29.000
+ses associés pour atteindre tous les sites à distance dans le monde entier. CGNet a fourni tous les
+
+236
+00:17:29.000 --> 00:17:34.000
+l’équipement et la formation nécessaires à son fonctionnement. Ce réseau, à faible coût,
+
+237
+00:17:34.001 --> 00:17:39.000
+La méthode rapide de transfert de grandes quantités d’informations est désormais presque complète.
+
+238
+00:17:39.001 --> 00:17:42.000
+Il est essentiellement incroyablement réussi. Je veux dire, il devient
+
+239
+00:17:42.000 --> 00:17:44.000
+Un autre moyen de communication.
+
+240
+00:17:44.001 --> 00:17:49.001
+Je veux dire, pour moi, c&#x27;est un succès quand il devient juste une chose normale acceptée. et
+
+241
+00:17:49.001 --> 00:17:53.001
+Quand vous pouvez libérer des millions de dollars pour faire des recherches sur ce qu&#x27;ils sont supposés
+
+242
+00:17:53.001 --> 00:17:58.000
+faire, qui augmente plus de nourriture et nourrit plus de gens, alors c&#x27;est
+
+243
+00:17:58.000 --> 00:18:00.000
+Le succès, et c’est ce qui se passe tout le temps.
+
+244
+00:18:00.000 --> 00:18:03.000
+Pour les Chroniques informatiques, je suis Wendy Woods.
+
+245
+00:18:16.000 --> 00:18:19.001
+Nous rejoignons aujourd’hui dans le studio Charles Foskitt, président de Nature.
+
+246
+00:18:19.001 --> 00:18:23.000
+Microsystems, les créateurs de Watson, et aussi avec nous est Carl Bernie, vice-président
+
+247
+00:18:23.000 --> 00:18:28.000
+Président de l&#x27;ingénierie des systèmes à Speech Plus, Carl, j&#x27;aime l&#x27;idée de
+
+248
+00:18:28.000 --> 00:18:31.001
+e-mail, mais supposons que je suis sur la route et que je n&#x27;ai pas mon ordinateur avec
+
+249
+00:18:31.001 --> 00:18:36.000
+et moi. Comment votre produit peut-il m’aider ? C&#x27;est exactement ce que le système CallText 5100 est
+
+250
+00:18:36.000 --> 00:18:41.000
+Tout à propos, Jan. CallText fournit tout appelant de n&#x27;importe quel téléphone dans le monde à
+
+251
+00:18:41.000 --> 00:18:45.000
+appeler un ordinateur contenant des informations dont ils sont intéressés, et avoir
+
+252
+00:18:45.000 --> 00:18:50.000
+les informations qui les lisent directement, les informations stockées sous forme de texte
+
+253
+00:18:50.000 --> 00:18:57.000
+Il a été livré en voix par téléphone. Donc non, c’est
+
+254
+00:18:57.000 --> 00:19:00.001
+C&#x27;est exactement les mêmes informations qu&#x27;il apparaîtrait autrement sur un terminal.
+
+255
+00:19:00.001 --> 00:19:03.000
+Nous arrivons juste à avoir un téléphone juste ici pour vous, et je veux que vous me montriez
+
+256
+00:19:03.000 --> 00:19:07.001
+Comment utiliser cela pour accéder à un message écrit. Je vais appeler un système de courrier.
+
+257
+00:19:11.001 --> 00:19:16.000
+Et vous êtes en dialogue maintenant ? Je parle d&#x27;un système CallText, qui, à son tour, est connecté
+
+258
+00:19:16.000 --> 00:19:20.000
+d’un système de courrier électronique. Ok, alors je veux dire que le message est stocké où? Dans mon
+
+259
+00:19:20.000 --> 00:19:25.001
+Le PC est-il de retour dans mon bureau ? pas non,
+
+260
+00:19:32.000 --> 00:19:32.001
+[...]
+
+261
+00:19:32.001 --> 00:19:38.001
+Bonjour, Carl, vous avez trois messages. Le premier message, Mimi Riley
+
+262
+00:19:38.001 --> 00:19:40.001
+Le 6 décembre.
+
+263
+00:19:41.001 --> 00:19:48.000
+Sujet : Chroniques informatiques. Le message indique que la séance de
+
+264
+00:19:48.000 --> 00:19:52.001
+Les chronicles informatiques commencent à 1 p. M à Aujourd’hui ! Veuillez être rapide.
+
+265
+00:19:53.000 --> 00:19:56.001
+Stuart gère un calendrier de production très efficacement et sera
+
+266
+00:19:56.001 --> 00:19:58.000
+Assurez-vous de commencer à temps.
+
+267
+00:19:59.000 --> 00:20:01.001
+Oh Carl, merci pour ça. Vous pouvez effectivement contrôler le
+
+268
+00:20:01.001 --> 00:20:03.000
+Système à travers le touch-tone.
+
+269
+00:20:03.000 --> 00:20:04.001
+C’est juste ça. Je peux le faire aller plus vite.
+
+270
+00:20:07.000 --> 00:20:09.001
+La session de tapage pour les chronicles informatiques commencera à
+
+271
+00:20:09.001 --> 00:20:11.000
+1 p.m. Aujourd’hui ! Veuillez être rapide.
+
+272
+00:20:11.001 --> 00:20:12.001
+Ou peut-être que je le fasse briser.
+
+273
+00:20:12.001 --> 00:20:13.001
+Aller à l’avant.
+
+274
+00:20:17.000 --> 00:20:20.001
+App pour T-A-T T-A et T-I et T.
+
+275
+00:20:20.001 --> 00:20:23.001
+Donc, si vous voulez trouver un prénom pour un bon nom, c&#x27;est juste.
+
+276
+00:20:24.000 --> 00:20:24.001
+F et R.
+
+277
+00:20:24.001 --> 00:20:27.000
+Carl, je veux revenir à vous une seconde. Charles, vous devez établir votre
+
+278
+00:20:27.000 --> 00:20:29.001
+L’appareil pour faire passer Watson. Si vous pouvez le faire,
+
+279
+00:20:29.001 --> 00:20:31.000
+Merci, Carl, j&#x27;ai une autre question pour vous.
+
+280
+00:20:31.001 --> 00:20:35.000
+Qu’en est-il de l’autre côté de la pièce, de la reconnaissance vocale ? À quel point nous sommes loin
+
+281
+00:20:35.000 --> 00:20:38.001
+de mon être capable de récupérer un appel téléphonique dans un message qui sera ensuite enregistré
+
+282
+00:20:38.001 --> 00:20:40.000
+sur ASCII dans un ordinateur ?
+
+283
+00:20:40.000 --> 00:20:46.001
+La capacité de faire un discours à un texte par téléphone, Stuart, est encore un peu
+
+284
+00:20:46.001 --> 00:20:52.000
+un peu loin, bien que la capacité de reconnaître les chiffres individuels, essentiellement pour
+
+285
+00:20:52.000 --> 00:20:55.001
+Remplacement de touch-tone pad, est proche à la main.
+
+286
+00:20:55.001 --> 00:20:58.000
+Interessant ! Vous savez, la communication vocale à deux voies
+
+287
+00:20:58.000 --> 00:20:59.001
+Et le message vocal m’intrigue vraiment.
+
+288
+00:20:59.001 --> 00:21:01.000
+Et je vois que nous avons deux téléphones ici.
+
+289
+00:21:01.000 --> 00:21:02.000
+Maintenant, j’ai mon propre téléphone, Jan.
+
+290
+00:21:02.001 --> 00:21:04.001
+Stuart, vous pouvez peut-être nous montrer ce que vous pouvez faire avec cela.
+
+291
+00:21:04.001 --> 00:21:06.001
+Eh bien, je ne sais pas ce que je peux faire. Charlie, je veux le jeter. Vous avez Watson
+
+292
+00:21:06.001 --> 00:21:09.000
+C’est ici, qui nous emmène dans le voicemail à deux voies. Expliquez le système.
+
+293
+00:21:09.000 --> 00:21:14.001
+Eh bien, ce que Watson est, Stuart, est un système de numérisation vocale qui collecte la voix,
+
+294
+00:21:15.000 --> 00:21:18.001
+stocker sur le disque de l&#x27;ordinateur pour le transmettre à une autre personne.
+
+295
+00:21:19.000 --> 00:21:22.000
+Cela peut être fait localement ou par téléphone.
+
+296
+00:21:22.001 --> 00:21:26.000
+Ce que nous avons ici sur l&#x27;écran est le motif de la carte Rolodex.
+
+297
+00:21:27.000 --> 00:21:30.000
+Ce fichier de carte Rolodex est utilisé comme moyen de collecter la voix
+
+298
+00:21:30.000 --> 00:21:32.000
+données dans les messages individuels.
+
+299
+00:21:32.001 --> 00:21:36.000
+Je vais vous montrer, en premier lieu, le fichier téléphonique, le livre téléphérique, qui
+
+300
+00:21:36.000 --> 00:21:38.000
+Identifier les utilisateurs individuels.
+
+301
+00:21:38.000 --> 00:21:43.000
+Il y a bien sûr un système de recherche. Et si je fais une recherche,
+
+302
+00:21:43.001 --> 00:21:45.000
+Il y a un téléphone pour vous.
+
+303
+00:21:45.001 --> 00:21:51.000
+Et en même temps, je suis sûr qu&#x27;il y a un pour Jan. Et là nous l’avons.
+
+304
+00:21:51.001 --> 00:21:55.000
+Maintenant, nous avons aussi ce que nous appelons un fichier de message sortant.
+
+305
+00:21:56.001 --> 00:21:59.001
+Et ici vous voyez il y a plusieurs messages dans le fichier de message sortant.
+
+306
+00:21:59.001 --> 00:22:02.000
+Et nous avons un fichier pour entrer
+
+307
+00:22:02.000 --> 00:22:04.000
+Les messages. Ce sont les gens qui appellent et laissent des messages.
+
+308
+00:22:04.000 --> 00:22:07.001
+C&#x27;est un moyen de collecter des informations vocales dans l&#x27;ordinateur
+
+309
+00:22:07.001 --> 00:22:09.000
+C’est ainsi que vous recueillez des informations alpha-américaines.
+
+310
+00:22:09.000 --> 00:22:11.000
+Nous sommes un type de système de courrier électronique.
+
+311
+00:22:11.000 --> 00:22:11.001
+précisément .
+
+312
+00:22:11.001 --> 00:22:13.001
+OK ! Maintenant, montez-moi comment nous l’utiliserions réellement.
+
+313
+00:22:13.001 --> 00:22:14.001
+Pourquoi ne nous montrez-vous pas ?
+
+314
+00:22:14.001 --> 00:22:15.000
+Ok, je fais quoi ?
+
+315
+00:22:15.001 --> 00:22:18.000
+Vous devez appeler le numéro ici, c&#x27;est-à-dire, je pense que vous en avez, 5-7-1.
+
+316
+00:22:18.000 --> 00:22:19.001
+Ok, je vais appeler votre ordinateur.
+
+317
+00:22:19.001 --> 00:22:21.000
+Oui oui. Et puis vous entrez dans...
+
+318
+00:22:22.000 --> 00:22:23.001
+Votre ordinateur fait sonner.
+
+319
+00:22:23.001 --> 00:22:24.001
+L’ordinateur répond.
+
+320
+00:22:29.001 --> 00:22:30.001
+Ok, il a été cliqué.
+
+321
+00:22:31.000 --> 00:22:35.000
+Bonjour, c’est Charlie Foskett. Vous nous êtes arrivés sur Watson.
+
+322
+00:22:35.001 --> 00:22:36.000
+Notre message électronique...
+
+323
+00:22:36.000 --> 00:22:38.001
+C’est un message que vous avez laissé ici. C’est un message générique.
+
+324
+00:22:38.001 --> 00:22:42.001
+Si vous avez un code d’identité personnel, veuillez l’entrer et recevoir vos messages.
+
+325
+00:22:43.000 --> 00:22:47.000
+Je peux donc y aller et recevoir mon message particulier. 8 à 8
+
+326
+00:22:49.000 --> 00:22:51.000
+Stuart, c’est Charlie Foskett.
+
+327
+00:22:52.001 --> 00:22:56.000
+Je suis sur mon chemin à l&#x27;ordinateur Chronicles, et nous y serons bientôt.
+
+328
+00:22:56.000 --> 00:23:01.000
+Je veux savoir que nous apprécions l’occasion de visiter avec vous et vos spectateurs.
+
+329
+00:23:01.001 --> 00:23:03.001
+Puis-je répondre à Watson ?
+
+330
+00:23:03.001 --> 00:23:05.001
+Après le beep, vous laissez votre message pour moi. Il est
+
+331
+00:23:05.001 --> 00:23:07.001
+La confidentialité . Je suis la seule personne qui le fera.
+
+332
+00:23:08.000 --> 00:23:10.001
+Oh Charles, merci beaucoup. Nous sommes ravis que vous puissiez être sur le spectacle.
+
+333
+00:23:11.001 --> 00:23:12.000
+Et que se passe-t-il maintenant ?
+
+334
+00:23:12.000 --> 00:23:13.000
+Maintenant tu te pends.
+
+335
+00:23:13.001 --> 00:23:15.001
+Et Watson a enregistré ce message.
+
+336
+00:23:15.001 --> 00:23:17.001
+Watson a enregistré votre message personnel.
+
+337
+00:23:17.001 --> 00:23:21.001
+Quand je rentre dans le bureau, ou si j&#x27;appelle d&#x27;un téléphone extérieur, je peux regarder
+
+338
+00:23:21.001 --> 00:23:24.001
+le fichier de message entrant, et je vois maintenant que j&#x27;ai un message de Stuart.
+
+339
+00:23:24.001 --> 00:23:31.001
+Donc je sélectionne simplement cette carte et appuyez sur la clé de jeu et écoutez le message.
+
+340
+00:23:35.000 --> 00:23:37.000
+Oh Charles, merci beaucoup. Nous sommes ravis que vous puissiez être sur le spectacle.
+
+341
+00:23:38.000 --> 00:23:40.001
+C’est quelque chose. C’est vraiment un courriel, n’est-ce pas ?
+
+342
+00:23:40.001 --> 00:23:41.000
+Parler par e-mail.
+
+343
+00:23:41.001 --> 00:23:44.001
+C&#x27;est un énorme avantage pour les personnes dans les forces de vente, les personnes qui sont
+
+344
+00:23:44.001 --> 00:23:46.000
+loin de leur bureau, des gens qui voyagent beaucoup.
+
+345
+00:23:46.001 --> 00:23:48.000
+C’est une carte, en principe ?
+
+346
+00:23:48.001 --> 00:23:51.001
+C’est une carte. Il va dans votre ordinateur personnel IBM.
+
+347
+00:23:52.000 --> 00:23:56.001
+Vous connectez un côté dans le téléphone, le téléphone local, et un côté sur la ligne.
+
+348
+00:23:57.000 --> 00:23:58.000
+très bien. Nous sommes hors du temps. Merci beaucoup.
+
+349
+00:23:58.000 --> 00:24:00.000
+Des choses fascinantes. Nous reviendrons dans un
+
+350
+00:24:00.000 --> 00:24:01.001
+C’est le moment de l’information informatique de cette semaine.
+
+351
+00:24:14.000 --> 00:24:16.000
+Je suis Susan Chase pour Stuart Chafee.
+
+352
+00:24:16.001 --> 00:24:20.000
+Dans le fichier d&#x27;accès au hasard cette semaine, il semble que la torture à Commodore
+
+353
+00:24:20.000 --> 00:24:22.000
+L’international continue.
+
+354
+00:24:22.001 --> 00:24:26.001
+Réagissant à la plainte contre elle par l&#x27;ancien président et PDG Thomas J.
+
+355
+00:24:27.000 --> 00:24:31.001
+Radegin, Commodore a déposé une contrainte de 18 millions de dollars la semaine dernière, chargant que
+
+356
+00:24:31.001 --> 00:24:35.001
+Radegin a échoué à mettre en œuvre les décisions du conseil d&#x27;administration, et que son
+
+357
+00:24:35.001 --> 00:24:37.001
+Les actions ont été coûteuses pour l’entreprise.
+
+358
+00:24:38.000 --> 00:24:43.000
+Selon Commodore, la société a dépensé plus de 15 millions de dollars en important le bas
+
+359
+00:24:43.000 --> 00:24:47.000
+- vendre IBM-compatible PC-10, dont la plupart n&#x27;avaient pas été vendus.
+
+360
+00:24:47.001 --> 00:24:52.000
+Bien que le PC-10 de Commodore ne soit peut-être pas un vendeur chaud, le support logiciel pour le
+
+361
+00:24:52.000 --> 00:24:54.000
+La société Amiga continue de croître.
+
+362
+00:24:55.000 --> 00:24:58.001
+WordPerfect Corporation prévoit de livrer une version Amiga de leur meilleur
+
+363
+00:24:58.001 --> 00:25:01.001
+-Vendre WordPerfect Word Processor en juillet.
+
+364
+00:25:02.000 --> 00:25:06.000
+Le programme disposera de toutes les fonctionnalités de la version MS-DOS avec des caractéristiques ajoutées
+
+365
+00:25:06.000 --> 00:25:08.000
+Ce qui profite des qualités d&#x27;Amiga.
+
+366
+00:25:08.001 --> 00:25:11.001
+Versions de WordPerfect pour Macintosh et Atari ST
+
+367
+00:25:11.001 --> 00:25:13.001
+Il sera libéré plus tard cette année.
+
+368
+00:25:14.000 --> 00:25:18.000
+Une proposition récente de la Commission fédérale des communications pourrait mettre fin à la
+
+369
+00:25:18.000 --> 00:25:21.000
+Accès téléphonique gratuit aux systèmes de base de données en ligne.
+
+370
+00:25:21.001 --> 00:25:25.000
+Dans un vote de quatre à rien, la Commission a soutenu un plan pour forcer le pacte
+
+371
+00:25:25.000 --> 00:25:29.001
+-Switch des réseaux tels que Telenet et TimeNet pour payer les sociétés téléphoniques locales
+
+372
+00:25:29.001 --> 00:25:33.001
+pour accéder à leur réseau téléphonique. Les analystes de l&#x27;industrie prétendent que les nouvelles redevances,
+
+373
+00:25:33.001 --> 00:25:37.000
+prévu pour le 1er janvier 1988, il sera
+
+374
+00:25:37.000 --> 00:25:39.000
+Augmenter les coûts de la télécommunication.
+
+375
+00:25:40.000 --> 00:25:44.001
+Dans un communiqué législatif, un comité de la législation de l&#x27;État de Californie a adopté un
+
+376
+00:25:44.001 --> 00:25:48.000
+amendement à la constitution de l&#x27;État qui étendrait les droits de
+
+377
+00:25:48.000 --> 00:25:51.000
+liberté d&#x27;expression et protection de la vie privée à l&#x27;électronique
+
+378
+00:25:51.000 --> 00:25:52.001
+Communications et bases de données.
+
+379
+00:25:53.001 --> 00:25:56.001
+Le projet de loi, qui doit passer par un tour de ratification des voix dans l&#x27;Etat
+
+380
+00:25:56.001 --> 00:26:01.001
+La législation avant d&#x27;être votée par les Californiens en 1988, a gagné beaucoup
+
+381
+00:26:01.001 --> 00:26:06.001
+soutien de l’ACLU et des organisations d’opérateurs de systèmes informatiques.
+
+382
+00:26:07.000 --> 00:26:10.000
+Maintenant, il est temps pour la révision du logiciel de cette semaine. Voilà Paul Schindler.
+
+383
+00:26:11.000 --> 00:26:14.001
+J&#x27;ai déjà posé cette question, mais je vais la poser à nouveau. Compte tenu du fait que aujourd’hui
+
+384
+00:26:14.001 --> 00:26:18.001
+Les ordinateurs portables ne sont pas beaucoup plus grands que les livres de date d&#x27;aujourd&#x27;hui, pourquoi porter les deux?
+
+385
+00:26:19.001 --> 00:26:23.001
+Eh bien, apparemment cette question s&#x27;est également posée aux auteurs de TMPC, un simple
+
+386
+00:26:23.001 --> 00:26:26.000
+Programme de gestion du temps efficace pour les ordinateurs portables.
+
+387
+00:26:26.001 --> 00:26:30.001
+Maintenant, beaucoup de gens se plaignent des interfaces d&#x27;utilisateur luxueuses du logiciel portable.
+
+388
+00:26:31.000 --> 00:26:32.001
+Bon, prenez une charge de ce petit garçon dans la
+
+389
+00:26:32.001 --> 00:26:34.001
+au milieu. Nous allons le suivre autour.
+
+390
+00:26:34.001 --> 00:26:38.001
+Tout d’abord le calendrier. Si la date brille, nous pouvons voir une entrée détaillée sur ce que
+
+391
+00:26:38.001 --> 00:26:42.001
+Il faut faire ce jour-là. Pour chaque jour donné, vous avez des rendez-vous, des mémoires et des
+
+392
+00:26:42.001 --> 00:26:47.000
+Les délais. Vous pouvez entrer une date appropriée et dire à l&#x27;ordinateur d&#x27;entrer automatiquement
+
+393
+00:26:47.000 --> 00:26:52.000
+Le délai remémore tant de jours à l’avant. Il y a aussi, bien sûr, une liste de
+
+394
+00:26:52.000 --> 00:26:55.001
+Vous devez préparer votre horaire de travail pour chaque jour. Vous pouvez même
+
+395
+00:26:55.001 --> 00:27:00.000
+Contrôler la vitesse du petit homme. Votre choix est de courir, de voler ou de marcher.
+
+396
+00:27:01.000 --> 00:27:03.001
+En éliminant la nécessité d&#x27;un livre de rendez-vous, ces gens l&#x27;ont fait
+
+397
+00:27:03.001 --> 00:27:08.001
+Il n’y a qu’un modèle 100 à porter. TMPC est la marchandise la plus précieuse.
+
+398
+00:27:09.000 --> 00:27:13.001
+un programme informatique portable pour les portables Radio Shack pour 50 $ de Acro Attic
+
+399
+00:27:13.001 --> 00:27:17.001
+à Wilmington, au Massachusetts. Pour The Computer Chronicles, je suis Paul Schindler.
+
+400
+00:27:18.001 --> 00:27:22.001
+L&#x27;Associated Press a révélé une nouvelle méthode de transmission numérique des images
+
+401
+00:27:22.001 --> 00:27:27.000
+et des graphiques à ses abonnés par satellite. Le système Graphics Net,
+
+402
+00:27:27.000 --> 00:27:31.001
+prévu pour le début de l&#x27;automne, il fournira des œuvres d&#x27;art prêtes à la caméra directement dans un
+
+403
+00:27:31.001 --> 00:27:36.001
+Les ordinateurs Macintosh. À partir de 1988, les abonnés à la PhotoStream Photo de l&#x27;AP
+
+404
+00:27:36.001 --> 00:27:40.000
+Le système sera en mesure de recevoir une image noire et blanche en une minute.
+
+405
+00:27:40.000 --> 00:27:41.001
+Une photo colorée en 3 minutes.
+
+406
+00:27:42.000 --> 00:27:46.000
+L&#x27;introduction de la transmission numérique permettra aux journaux individuels de
+
+407
+00:27:46.000 --> 00:27:50.001
+La taille, l&#x27;édition et l&#x27;amélioration des photos dans des façons que les systèmes existants ne permettent pas.
+
+408
+00:27:51.001 --> 00:27:55.001
+Enfin, les médecins de la salle d&#x27;urgence, les conducteurs d&#x27;ambulance et le personnel du centre de traumatisme
+
+409
+00:27:55.001 --> 00:28:00.001
+Il sera en mesure d&#x27;obtenir le fond médical complet d&#x27;un patient presque immédiatement dû
+
+410
+00:28:00.001 --> 00:28:04.001
+à un nouveau service basé sur un ordinateur récemment introduit par Medfax Corporation de Los
+
+411
+00:28:04.001 --> 00:28:10.000
+Les Anglais. Pour une rémunération de 35 $ par an, le personnel médical peut appeler un ordinateur Medfax,
+
+412
+00:28:10.001 --> 00:28:14.001
+entrer le numéro d&#x27;identification du patient, et recevoir un message synthétisé vocal détaillant le
+
+413
+00:28:14.001 --> 00:28:18.001
+l&#x27;historique médicale du patient, y compris le nom du médecin, et les noms de
+
+414
+00:28:18.001 --> 00:28:21.000
+Parents à contacter. Et c&#x27;est ça pour cette semaine
+
+415
+00:28:47.001 --> 00:28:49.001
+Chronicles informatiques.
+
+416
+00:28:51.000 --> 00:28:53.000
+[...] le matériel et les langues de la semaine couvrent les développements en
+
+417
+00:28:53.000 --> 00:28:55.000
+Technologies informatiques dans le monde entier.

@@ -1,0 +1,1341 @@
+WEBVTT
+
+1
+00:00:16.000 --> 00:00:21.000
+investor melihat pita pertukaran saham ini untuk mengumpulkan data dan membuat
+
+2
+00:00:21.000 --> 00:00:25.000
+memutuskan apakah untuk membeli atau menjual stok tetapi bagaimana mereka membuat keputusan itu
+
+3
+00:00:25.000 --> 00:00:30.000
+Mereka dan manajer dari semua jenis beralih ke program komputer.
+
+4
+00:00:30.000 --> 00:00:36.000
+untuk menilai alternatif dan menilai risiko dalam proses pengambilan keputusan hari ini
+
+5
+00:00:36.000 --> 00:00:39.001
+Kami akan melihat perangkat lunak dukungan keputusan pada edisi ini
+
+6
+00:00:39.001 --> 00:00:41.000
+dari komputer kronik
+
+7
+00:01:02.001 --> 00:01:07.000
+kronik komputer dimungkinkan sebagian oleh komposerve yang memiliki
+
+8
+00:01:07.000 --> 00:01:12.000
+online referensi perpustakaan wall street laporan di home shopping airline
+
+9
+00:01:12.000 --> 00:01:18.001
+permainan tempahan dan ratusan layanan lain kompuserve membantu orang mendapatkan
+
+10
+00:01:18.001 --> 00:01:25.001
+Sebagian besar dana tambahan dari komputer disediakan oleh penerbit McGraw Hill
+
+11
+00:01:25.001 --> 00:01:30.001
+a bit bit detail artikel teknis tentang perangkat lunak baru dan bahasa
+
+12
+00:01:30.001 --> 00:01:32.001
+Mencakup perkembangan teknologi komputer
+
+13
+00:01:38.000 --> 00:01:42.000
+Selamat datang di seluruh dunia ke komputer Chronicles I&#x27;m Stuart Chiffay dan ini adalah Gary
+
+14
+00:01:42.000 --> 00:01:45.000
+membunuh semua Gary Saya mencoba untuk memutuskan apakah untuk membeli komputer ini atau tidak saya tidak
+
+15
+00:01:45.000 --> 00:01:49.000
+Saya benar-benar membutuhkan itu di sisi lain saya seperti ingin ia membantu saya membuat keputusan saya
+
+16
+00:01:49.000 --> 00:01:51.001
+terjadi untuk memiliki beberapa perangkat lunak dukungan keputusan dengan saya di sini koin atau seperti
+
+17
+00:01:51.001 --> 00:01:58.000
+hardware baik mungkin itu kerja keras bagaimanapun kepala saya beli itu tails saya tidak dan itu adalah
+
+18
+00:01:58.000 --> 00:02:01.001
+Saya baru saja menyelamatkan diri saya lima belas ratus bucks mengerikan ini jelas adalah
+
+19
+00:02:01.001 --> 00:02:04.001
+cara primitif membuat keputusan ini semuanya telah diubah oleh komputer dan
+
+20
+00:02:04.001 --> 00:02:08.001
+keputusan support software pertanyaan pertama yang ingin saya tanyakan adalah apa yang
+
+21
+00:02:08.001 --> 00:02:12.000
+Perbedaan antara perangkat lunak dukungan keputusan dan apa yang kita sebut sistem pakar
+
+22
+00:02:12.000 --> 00:02:15.000
+Software dukungan keputusan Stuart benar-benar telah berada di sekitar untuk waktu yang cukup lama
+
+23
+00:02:15.000 --> 00:02:18.000
+Ada teknik awal yang disebut pemrograman linear, misalnya menggunakan
+
+24
+00:02:18.000 --> 00:02:22.000
+masalah transportasi menggerakkan truk di sekitar kargo apa yang Anda lakukan adalah Anda memberi
+
+25
+00:02:22.000 --> 00:02:25.001
+adalah nilai minimum maksimum dan kemudian analisis berlalu dan memberi Anda
+
+26
+00:02:25.001 --> 00:02:29.000
+Solusi optimal yang harus Anda berikan semua angka sekarang sistem pakar
+
+27
+00:02:29.000 --> 00:02:33.001
+didasarkan pada aturan misalnya di mana Anda mendapatkan koleksi aturan dokter yang
+
+28
+00:02:33.001 --> 00:02:36.001
+dapat membuat diagnosis area tertentu, misalnya, dan mereka akan membuat
+
+29
+00:02:36.001 --> 00:02:40.001
+Model matematika mungkin dan menggunakan beberapa alat dukungan keputusan yang sama
+
+30
+00:02:40.001 --> 00:02:44.000
+Sebagai contoh program linear, sekarang perbedaan adalah
+
+31
+00:02:44.000 --> 00:02:48.000
+Sistem pakar sangat disesuaikan dengan bidang tertentu seperti diagnosis medis
+
+32
+00:02:48.000 --> 00:02:52.000
+Oleh karena itu, perlu banyak usaha untuk mengumpulkan sistem-sistem tersebut dan banyak
+
+33
+00:02:52.000 --> 00:02:55.000
+dari pekerjaan untuk membuat mereka bekerja dengan benar sehingga kita tidak melihat begitu banyak keputusan itu
+
+34
+00:02:55.000 --> 00:02:58.001
+mendukung perangkat lunak yang jenis alat dasar siapa pun dapat memanfaatkan fokus kami dengan baik
+
+35
+00:02:58.001 --> 00:03:02.000
+hari ini adalah tentang perangkat lunak dukungan keputusan dan kita akan melihat beberapa yang berbeda
+
+36
+00:03:02.000 --> 00:03:07.000
+Strategi perangkat lunak termasuk matriks keputusan pokok keputusan dan Monte Carlo
+
+37
+00:03:07.000 --> 00:03:10.001
+Simulasi sekarang untuk mencoba untuk lebih memahami perbedaan itu antara seorang ahli
+
+38
+00:03:10.001 --> 00:03:14.001
+sistem dan perangkat lunak dukungan keputusan yang akan kami mulakan dengan melihat
+
+39
+00:03:14.001 --> 00:03:20.001
+sebuah sistem pakar yang dikembangkan oleh beberapa siswa di Stanford University di
+
+40
+00:03:20.001 --> 00:03:25.001
+Dalam beberapa tahun terakhir, sistem-sistem pakar telah berkembang secara signifikan dari eksperimen di
+
+41
+00:03:25.001 --> 00:03:31.001
+Kecerdasan Buatan untuk Alat Komputer Praktikal di Stanford University
+
+42
+00:03:31.001 --> 00:03:36.001
+Profesor Ray Levitt mengajarkan siswa untuk mengembangkan aplikasi baru menggunakan
+
+43
+00:03:36.001 --> 00:03:42.000
+sistem pakar menembak kita melihat bahasa pemrograman kecerdasan buatan yang
+
+44
+00:03:42.000 --> 00:03:48.000
+dibangun untuk mainframe dan membutuhkan ilmu komputer biasa
+
+45
+00:03:48.000 --> 00:03:52.001
+Intermediar dalam selimut putih untuk beroperasi yang dapat digunakan oleh insinyur dengan
+
+46
+00:03:52.001 --> 00:03:58.000
+hanya latar belakang komputer yang sangat sederhana sehingga kita dapat menyingkirkan salah satu link di
+
+47
+00:03:58.000 --> 00:04:02.001
+rantai pengembangan aplikasi dengan shell yang disebut insight professor
+
+48
+00:04:02.001 --> 00:04:08.000
+Siswa Levitt telah menciptakan sistem pakar seperti penasihat seismik ini yang
+
+49
+00:04:08.000 --> 00:04:12.001
+menyediakan solusi berdasarkan jumlah seleksi yang terbatas jawaban pengguna
+
+50
+00:04:12.001 --> 00:04:17.000
+Pertanyaan tentang atribut fisik bangunan berdasarkan skala
+
+51
+00:04:17.000 --> 00:04:22.000
+kemungkinan dalam respon program akan menentukan kemungkinan dan kemungkinan
+
+52
+00:04:22.000 --> 00:04:28.000
+biaya untuk membuat struktur aman jika pengguna membutuhkan informasi lebih banyak atau tidak
+
+53
+00:04:28.000 --> 00:04:33.000
+memahami pertanyaan yang dia dapat memanggil layar penjelasan yang pengguna berinteraksi
+
+54
+00:04:33.000 --> 00:04:37.001
+dengan sistem berbasis pengetahuan yang berdasarkan respons pengguna akan memanggil orang lain
+
+55
+00:04:37.001 --> 00:04:44.001
+program atau pencarian database atau beberapa program komputasi
+
+56
+00:04:44.001 --> 00:04:49.000
+mungkin beberapa grafik dan kemudian mengembalikan kontrol kembali ke sistem pakar sehingga
+
+57
+00:04:49.000 --> 00:04:53.001
+Kami menemukan bahwa sistem pemrograman pakar menembus seperti yang saya tunjukkan
+
+58
+00:04:53.001 --> 00:04:58.001
+Anda sebelumnya adalah alat yang sangat berguna mereka adalah jenis keempat
+
+59
+00:04:58.001 --> 00:05:00.000
+Bahasa Indonesia jika Anda ingin
+
+60
+00:05:13.000 --> 00:05:17.001
+menyertai kami di studio sekarang adalah Mike Doyle dengan Kepner Trigo terintegrasi dan
+
+61
+00:05:17.001 --> 00:05:21.000
+Di samping Mike adalah Bill Barton dengan Palisade Corporation Gary Mike Anda memiliki
+
+62
+00:05:21.000 --> 00:05:24.001
+produk yang disebut bantuan keputusan yang merupakan paket perangkat lunak dukungan keputusan
+
+63
+00:05:24.001 --> 00:05:28.000
+Apa yang menjadi pelanggan khas untuk paket itu pelanggan khas tidak akan menjadi logam
+
+64
+00:05:28.000 --> 00:05:32.001
+manajer dan R &amp; D dan manufaktur dan itu adalah untuk membantu membuat keputusan tentang bagaimana
+
+65
+00:05:32.001 --> 00:05:35.001
+mereka mendistribusikan sumber daya dan hal-hal yang baik-baik saja dapat Anda tunjukkan kepada kami apa itu
+
+66
+00:05:35.001 --> 00:05:40.001
+“Apa yang telah saya lakukan sudah diangkat ke layar dan apa yang terjadi sudah berjalan.
+
+67
+00:05:40.001 --> 00:05:44.000
+melalui serangkaian langkah-langkah di sini yang akan mengakibatkan datang dengan yang terbaik
+
+68
+00:05:44.000 --> 00:05:47.001
+Pilihan keseimbangan di sini di bawah apa yang akan kita lakukan dan bergerak melalui ini
+
+69
+00:05:47.001 --> 00:05:51.000
+akan menjadi titik khusus untuk menyenaraikan tujuan kami dan memecahkannya menjadi perlu dan
+
+70
+00:05:51.000 --> 00:05:54.001
+ingin salah satu hal kritis atau salah satu perkara kunci adalah dalam menunggu
+
+71
+00:05:54.001 --> 00:05:59.000
+tujuan dan kita dapat melihat bahwa tujuan ini adalah untuk memberikan berat badan
+
+72
+00:05:59.000 --> 00:06:04.001
+dalam nilai untuk tujuan yang diinginkan atau manfaat keputusan kita sebagai sepuluh poin
+
+73
+00:06:04.001 --> 00:06:09.000
+di sini dan dalam perjalanan kita akan menentukan keinginan yang paling penting dan
+
+74
+00:06:09.000 --> 00:06:12.001
+kemudian pergi dan membandingkan yang lain dengan itu turun ini apa yang ini
+
+75
+00:06:12.001 --> 00:06:15.001
+hanya untuk mengatur contoh Rookley mencoba untuk menjawab di sini apa pertanyaan dalam ini
+
+76
+00:06:15.001 --> 00:06:19.001
+Keputusan khusus di sini adalah untuk memilih metode untuk meningkatkan saham pasar untuk
+
+77
+00:06:19.001 --> 00:06:25.000
+a untuk perusahaan kimia foto kami baik-baik saja dan apa yang dilakukan ini adalah untuk memberikan relatif
+
+78
+00:06:25.000 --> 00:06:29.001
+pemisahan di sana sehingga kita tidak memberikan cara yang tidak normal kepada yang lebih kecil
+
+79
+00:06:29.001 --> 00:06:33.000
+tujuan yang kurang penting karena tujuan-tujuan ini sudah dibangun dalam
+
+80
+00:06:33.000 --> 00:06:36.001
+program atau Anda memasukkan mereka seperti Anda tahu Anda akan memasukkan tujuan apa yang
+
+81
+00:06:36.001 --> 00:06:40.000
+Hasil dari keputusan tertentu yang Anda cuba untuk membuat ok sekali
+
+82
+00:06:40.000 --> 00:06:44.001
+Kami telah melakukan bahwa kami akan bergerak melalui daftar alternatif kami dan kemudian yang berikutnya
+
+83
+00:06:44.001 --> 00:06:47.001
+Hal yang akan kita lakukan adalah untuk turun di sini untuk melihat
+
+84
+00:06:47.001 --> 00:06:51.001
+untuk melakukan screening yang harus tujuan dalam screening itu harus pada dasarnya untuk membuat
+
+85
+00:06:51.001 --> 00:06:55.001
+pemisahan antara yang harus dimasukkan dalam alternatif apa pun yang Anda
+
+86
+00:06:55.001 --> 00:07:00.000
+Akhirnya pilih dan yang lain yang berharap untuk mendapatkan gelar khusus seperti itu
+
+87
+00:07:00.000 --> 00:07:03.001
+banyak kali peraturan pemerintah dan hal-hal seperti itu jika misalnya
+
+88
+00:07:03.001 --> 00:07:08.000
+tidak mengukur hingga itu 2.0 di sana sejauh saham pasar maka itu akan menjadi
+
+89
+00:07:08.000 --> 00:07:12.000
+dihapus sebagai alternatif sehingga Anda telah menetapkan beberapa aturan mengatakan bahwa pasar
+
+90
+00:07:12.000 --> 00:07:18.001
+Bahagian harus meningkat dengan setidaknya faktor kanan ok maka apa yang kita lakukan adalah setelah
+
+91
+00:07:18.001 --> 00:07:23.000
+Kami telah menyelesaikan bahwa kami akan kembali di langkah berikutnya akan menjadi untuk bergerak di sini
+
+92
+00:07:23.000 --> 00:07:28.000
+untuk membandingkan keinginan dan apa yang kita lakukan membandingkannya keinginan adalah untuk menetapkan sebuah
+
+93
+00:07:28.000 --> 00:07:33.000
+nilai numerik untuk apa yang kita sudah menetapkan nilai relatif sekarang apa yang
+
+94
+00:07:33.000 --> 00:07:36.001
+Apa yang akan kita lakukan adalah mengambil masing-masing alternatif dan memancarkannya melawan ini.
+
+95
+00:07:36.001 --> 00:07:42.001
+satu tujuan untuk mengetahui seberapa baik ia memenuhi bahwa ok kita selesai dalam
+
+96
+00:07:42.001 --> 00:07:49.001
+Kami akan kembali dan setiap keputusan akan terancam.
+
+97
+00:07:49.001 --> 00:07:55.001
+dengan tegas jika kita tidak menentukan apa yang risiko akan terlibat dalam
+
+98
+00:07:55.001 --> 00:07:59.000
+Proses ini berjalan melalui penilaian apa risiko dan menentukan kapan
+
+99
+00:07:59.000 --> 00:08:04.000
+Tindakan dapat diambil dan kemudian hal terakhir di sini akan menjadi untuk membuat Anda akhir
+
+100
+00:08:04.000 --> 00:08:10.000
+Pilihan yang akan membawa ke layar semua alternatif
+
+101
+00:08:10.000 --> 00:08:15.000
+yang telah Anda pilih di sini menunjukkan yang diberikan kepada Anda yang tertinggi
+
+102
+00:08:15.000 --> 00:08:19.001
+menimbang skor dengan risiko terburuk yang terlibat dalam masing-masing dari mereka dan
+
+103
+00:08:19.001 --> 00:08:23.000
+mengevaluasi masalah sehingga harga yang lebih rendah per unit adalah pilihan yang optimal di sini
+
+104
+00:08:23.000 --> 00:08:26.001
+sedikit sebelum iklan dengan risiko yang dikenal dengan itu dan
+
+105
+00:08:26.001 --> 00:08:29.001
+Mungkin dalam berbagai rekomendasi kita mungkin terlihat seperti gelas-krim pas
+
+106
+00:08:29.001 --> 00:08:33.001
+T-shirt untuk menghitung satu detik dari rekening jika Anda dapat mengambil risiko berapa lama
+
+107
+00:08:33.001 --> 00:08:36.001
+Biasanya akan memakan seseorang untuk berjalan melalui proses itu kita whisk melalui itu
+
+108
+00:08:36.001 --> 00:08:40.001
+hanya sebuah ringkasan kecil yang benar-benar cepat bahwa pengalaman saya bekerja dengan pelanggan adalah
+
+109
+00:08:40.001 --> 00:08:45.000
+Tergantung pada sifat keputusan itu bisa di mana-mana dari mungkin
+
+110
+00:08:45.000 --> 00:08:49.000
+beberapa jam hingga beberapa hari tergantung pada data yang harus dan
+
+111
+00:08:49.000 --> 00:08:53.000
+seberapa canggih pengguna harus bekerja dengan ini dan menetapkan semua
+
+112
+00:08:53.000 --> 00:08:56.000
+Kriteria yang baik salah satu keindahan nyata tentang ini adalah bahwa Anda tidak memiliki
+
+113
+00:08:56.000 --> 00:09:01.000
+untuk menjadi sangat canggih dalam program ini sangat sederhana dan
+
+114
+00:09:01.000 --> 00:09:05.001
+memungkinkan orang untuk sebagian besar berkonsentrasi pada data dan tidak perlu khawatir tentang
+
+115
+00:09:05.001 --> 00:09:08.001
+komplikasi menjalankan program dan apa itu bagian dari perangkat lunak seperti biaya
+
+116
+00:09:08.001 --> 00:09:15.000
+Ini adalah $250 bagaimana Anda membuat rekening Anda hampir di sini dengan risiko ya kecepatan
+
+117
+00:09:15.000 --> 00:09:21.000
+Tiket di sana Anda dapat berbicara dan Tiket ya pasti beritahu kami sedikit tentang risiko pada risiko
+
+118
+00:09:21.000 --> 00:09:27.000
+adalah paket simulasi Monte Carlo yang pada dasarnya bertujuan untuk membuat sebuah
+
+119
+00:09:27.000 --> 00:09:32.001
+jumlah apa-apa skenario ribuan bahkan dan kemudian meringkas hasil tersebut
+
+120
+00:09:32.001 --> 00:09:37.000
+Apa yang dapat Anda lihat di layar ini adalah model keuangan yang sangat sederhana.
+
+121
+00:09:37.000 --> 00:09:41.001
+Itu adalah satu dua tiga spreadsheet benar-benar dan itu adalah yang sangat baik
+
+122
+00:09:41.001 --> 00:09:46.000
+titik untuk membuat karena ini adalah iklan lotus yang benar dan berarti bahwa Anda secara umum
+
+123
+00:09:46.000 --> 00:09:50.000
+bekerja dalam satu dua tiga sebagai normal kemampuan iklan dan ada ketika
+
+124
+00:09:50.000 --> 00:09:55.000
+Anda membutuhkan mereka jika tidak itu satu dua tiga adalah seperti yang diperlukan apa yang Anda dapat melihat di mana
+
+125
+00:09:55.000 --> 00:10:01.000
+kursor yang terletak adalah entri biaya desain dan Anda akan melihat di atas bahwa itu adalah
+
+126
+00:10:01.000 --> 00:10:06.001
+dimasukkan sebagai seragam ini adalah salah satu set khusus pada fungsi ditambahkan
+
+127
+00:10:06.001 --> 00:10:11.001
+dengan risiko satu dua tiga untuk memungkinkan Anda untuk melakukan sesuatu yang sangat istimewa dan itu adalah
+
+128
+00:10:11.001 --> 00:10:18.001
+untuk menambahkan atau memasukkan berbagai nilai yang mungkin ke sel tunggal dan
+
+129
+00:10:18.001 --> 00:10:22.001
+yang pada dasarnya mengatakan bahwa nilai dalam sel itu dapat bervariasi dengan
+
+130
+00:10:22.001 --> 00:10:27.000
+kemungkinan yang sama antara tiga puluh ribu dan tujuh puluh ribuan pada risiko memberi Anda
+
+131
+00:10:27.000 --> 00:10:32.001
+berbagai jenis distribusi yang berbeda dan Anda dapat menambahkan sebanyak yang Anda inginkan.
+
+132
+00:10:32.001 --> 00:10:37.000
+untuk spreadsheet yang diberikan baik-baik saja bagaimana Anda masuk dalam risiko maka baik di sini itu
+
+133
+00:10:37.000 --> 00:10:42.000
+di sini menu khusus datang dengan hotkey ini memungkinkan Anda melakukan semua
+
+134
+00:10:42.000 --> 00:10:46.000
+seting yang Anda butuhkan untuk memulai simulasi apa yang telah saya lakukan adalah seting
+
+135
+00:10:46.000 --> 00:10:50.000
+parameter di sini di depan waktu sampel jenis nomor iterasi jadi pada dan sebagainya
+
+136
+00:10:50.000 --> 00:10:55.001
+ke depan dan mari kita lihat apa yang terjadi nilai-nilai yang dipamerkan secara tidak sengaja untuk setiap
+
+137
+00:10:55.001 --> 00:11:00.001
+sel yang mengandung salah satu dari distribusi ini pada fungsi dan kemudian lembar
+
+138
+00:11:00.001 --> 00:11:06.000
+menghitung kembali apa yang terjadi kemudian adalah bahwa iklan berisiko dan mengumpulkan semua
+
+139
+00:11:06.000 --> 00:11:10.001
+nilai-nilai untuk sel yang Anda pilih untuk output menyimpannya pada cakera dan kemudian melewati
+
+140
+00:11:10.001 --> 00:11:16.001
+Mereka setelah satu dua tiga sementara ditutup untuk rutinitas ini, yang
+
+141
+00:11:16.001 --> 00:11:21.001
+Pada dasarnya adalah rutinitas output kami dari semua [...] Telegrap dengan baik apa yang dilakukan ini
+
+142
+00:11:21.001 --> 00:11:26.001
+mengumpulkan semua ribuan dari apa-apa skenario yang dijalankan oleh
+
+143
+00:11:26.001 --> 00:11:31.001
+komputer dan itu memperkenalkan mereka secara grafis sebagai distribusi kemungkinan dan
+
+144
+00:11:31.001 --> 00:11:35.000
+Ia mengklaim saya menjalankan dua ribu percobaan tidak hanya saat kami menjalankan ini adalah
+
+145
+00:11:35.000 --> 00:11:39.000
+hasil sebelumnya kami hanya menjalankan sampel kecil sebelumnya ini adalah hasil dari sebelumnya
+
+146
+00:11:39.000 --> 00:11:43.001
+dan cara dasar yang membuat keputusan akan menafsirkan hasil ini adalah dengan
+
+147
+00:11:43.001 --> 00:11:48.001
+menyadari bahwa pada x-axis ini bawah axis di sini semua hasil yang mungkin dan
+
+148
+00:11:48.001 --> 00:11:51.001
+ketinggian bar memberi Anda beberapa indikasi tentang kemungkinan relatif
+
+149
+00:11:51.001 --> 00:11:56.001
+yang terjadi sekarang dalam risiko lebih dari hanya memberi Anda grafis yang bagus untuk
+
+150
+00:11:56.001 --> 00:12:00.001
+distribusi itu juga memberi Anda banyak statistik yang mendukung seperti minimum
+
+151
+00:12:00.001 --> 00:12:07.000
+maksimum rata-rata dan momen yang lebih tinggi dan banyak lagi di samping itu Anda juga dapat
+
+152
+00:12:07.000 --> 00:12:11.000
+masuk dan mengubah penampilan spreadsheet Anda apa yang akan saya lakukan di sini adalah
+
+153
+00:12:11.000 --> 00:12:16.000
+meningkatkan jumlah bar ini sebenarnya membiarkan Anda masuk dan mengendalikan
+
+154
+00:12:16.000 --> 00:12:21.000
+tingkat detail yang Anda akan melihat fitur lain yang sangat penting yang pada
+
+155
+00:12:21.000 --> 00:12:26.001
+-Risiko adalah bahwa itu memungkinkan Anda memilih untuk output berbagai sel jika Anda memilih
+
+156
+00:12:26.001 --> 00:12:30.001
+rangkaian sel seperti yang saya lakukan di sini ia masuk dan menghitung distribusi untuk
+
+157
+00:12:30.001 --> 00:12:35.000
+setiap sel dan kemudian memaparkan mereka secara grafis dan sebenarnya menyimpulkan mereka menunjukkan
+
+158
+00:12:35.000 --> 00:12:41.000
+Anda hanya trend dari rata-rata satu deviasi standar dari kedua sisi dan kemudian
+
+159
+00:12:41.000 --> 00:12:45.000
+Peratusan kelima dan sembilan puluh lima yang Anda ketahui hanya sekitar 15 detik yang ditinggalkan bagaimana akan
+
+160
+00:12:45.000 --> 00:12:50.000
+Pengguna yang biasa menggunakan sesuatu seperti berisiko ada berbagai masalah yang
+
+161
+00:12:50.000 --> 00:12:54.001
+akan berlaku untuk itu apa saja yang Anda pada dasarnya melakukan dalam lotus akan menjadi
+
+162
+00:12:54.001 --> 00:12:58.001
+analisis investasi permainan yang adil proyeksi kerugian asuransi jadi pada dan apa yang Anda inginkan
+
+163
+00:12:58.001 --> 00:13:02.000
+untuk berurusan dengan berbagai nilai dan bukannya nilai tertentu dan projeksi satu
+
+164
+00:13:02.000 --> 00:13:06.000
+Setelah selesai, Anda secara otomatis kembali ke 123 di mana Anda pergi.
+
+165
+00:13:06.000 --> 00:13:09.001
+Terima kasih banyak-banyak, di samping sistem dukungan keputusan dan
+
+166
+00:13:09.001 --> 00:13:14.000
+sistem pakar kita kadang-kadang mendengar frasa pengetahuan kejuruteraan baik Wendy
+
+167
+00:13:14.000 --> 00:13:17.001
+hutan memiliki laporan tentang produk kejuruteraan pengetahuan dari sebuah perusahaan yang disebut
+
+168
+00:13:17.001 --> 00:13:23.001
+Teknologi membuat apa yang dianggap sebagai keputusan Rolls-Royce
+
+169
+00:13:23.001 --> 00:13:29.001
+perangkat lunak yang mendukung sistem pakar shell sistem pakar dapat dibuat ke dalam
+
+170
+00:13:29.001 --> 00:13:34.001
+pakar komputer pada hampir setiap topik seperti ini satu saraf kejutan penasihat
+
+171
+00:13:34.001 --> 00:13:40.000
+diciptakan oleh University of British Columbia sebagai alat pengajaran program ini
+
+172
+00:13:40.000 --> 00:13:45.001
+bertanya pertanyaan menganalisis jawaban dan memutuskan apakah klien memiliki alasan untuk
+
+173
+00:13:45.001 --> 00:13:50.001
+Sistem-sistem ahli untuk teknologi gugatan saraf juga telah digunakan untuk
+
+174
+00:13:50.001 --> 00:13:56.001
+berbagai aplikasi seperti analisis gelombang otak dalam tes obat karyawan dan oleh
+
+175
+00:13:56.001 --> 00:14:01.000
+Federal Express untuk memantau sisa-sisa yang diperlukan untuk menjaga armada di
+
+176
+00:14:01.000 --> 00:14:08.000
+Manfaat dari sistem pakar bervariasi dari apa yang kita sebut manusia.
+
+177
+00:14:08.000 --> 00:14:12.001
+peningkatan kualitas orang dilatih lebih mudah yang membuat pekerjaan mereka lebih mudah untuk
+
+178
+00:14:12.001 --> 00:14:18.000
+penjimatan real bottom line misalnya di lantai toko jika Anda dapat mendiagnosis
+
+179
+00:14:18.000 --> 00:14:23.000
+masalah mesin dalam lima menit berbanding lima jam Anda telah membentuk menyelamatkan
+
+180
+00:14:23.000 --> 00:14:30.000
+jumlah yang luar biasa dari waktu istirahat serta mungkin bagian yang Anda tukar
+
+181
+00:14:30.000 --> 00:14:34.000
+bagian yang benar, bukannya secara tidak sengaja memeriksa bagian yang berbeda dan kemudian menemukan
+
+182
+00:14:34.000 --> 00:14:38.001
+Salah satu yang benar akhirnya teknologi telah tumbuh dari startup ke perusahaan membuat
+
+183
+00:14:38.001 --> 00:14:42.001
+Lebih dari dua puluh juta dolar setahun dalam hanya enam tahun yang memberitahu Anda
+
+184
+00:14:42.001 --> 00:14:47.000
+sesuatu tentang pentingnya alat perangkat lunak mereka sebagai seorang pegawai di sini meletakkannya
+
+185
+00:14:47.000 --> 00:14:52.001
+Kami akhirnya pindah dari panggung Buck Rogers ke aplikasi praktis di Palo
+
+186
+00:14:52.001 --> 00:14:55.000
+Alto untuk Komputer Chronicles Saya Wendy Woods
+
+187
+00:15:07.000 --> 00:15:11.000
+menyertai kami di studio sekarang adalah Peter McNamee ia adalah mitra senior dengan
+
+188
+00:15:11.000 --> 00:15:15.001
+Kumpulan Keputusan Strategis berikutnya muncul Jared Taylor West Coast editor PC
+
+189
+00:15:15.001 --> 00:15:19.000
+majalah dan Gary Jared baru saja menulis sebuah artikel fitur di majalah tentang
+
+190
+00:15:19.000 --> 00:15:23.000
+Perangkat lunak dukungan keputusan membuatnya seorang ahli saya pikir begitu baik Jared apa yang ada beberapa
+
+191
+00:15:23.000 --> 00:15:28.001
+dari teknik yang digunakan untuk perangkat lunak dukungan indecision yang baik dalam
+
+192
+00:15:28.001 --> 00:15:33.000
+Artikel yang kami tulis di majalah dan sebenarnya apa yang kita lihat hari ini di sana
+
+193
+00:15:33.000 --> 00:15:38.000
+adalah tiga jenis yang berbeda yang baru-baru ini menjadi populer di mikrokomputer satu
+
+194
+00:15:38.000 --> 00:15:42.001
+adalah matriks keputusan yang pertama yang kita lihat yang lain adalah Monte Carlo
+
+195
+00:15:42.001 --> 00:15:48.000
+analisis dan apa yang akan kita lihat sekarang adalah analisis pokok keputusan dan mereka berlaku
+
+196
+00:15:48.000 --> 00:15:52.001
+untuk berbagai macam masalah dan saya pikir itu relevan untuk mengatakan bahwa
+
+197
+00:15:52.001 --> 00:15:57.000
+program pertama yang kita lihat yang mana adalah matriks keputusan adalah yang paling inherent
+
+198
+00:15:57.000 --> 00:16:02.000
+yang dapat dipahami adalah cara yang canggih untuk memperbaiki kelebihan dan kekurangan dari
+
+199
+00:16:02.000 --> 00:16:05.001
+membuat keputusan dan membuat kesimpulan berdasarkan fakta bahwa dua yang lain adalah lebih
+
+200
+00:16:05.001 --> 00:16:10.000
+mengoptimalkan dan melibatkan sejumlah analisis statistik dan Anda memiliki
+
+201
+00:16:10.000 --> 00:16:13.001
+untuk menjadi seorang ahli statistik untuk dapat menggunakan ini Anda tidak perlu menjadi seorang
+
+202
+00:16:13.001 --> 00:16:19.000
+Anda mungkin harus lebih baik didasarkan pada statistik untuk melakukan yang terbaik.
+
+203
+00:16:19.000 --> 00:16:23.001
+penggunaan yang tepat dari analisis Monte Carlo tetapi dalam kasus keputusan pohon Anda dapat
+
+204
+00:16:23.001 --> 00:16:28.001
+memiliki rasa seperti itu bahwa kemungkinan akan berjalan dengan cara ini atau itu baik-baik saja
+
+205
+00:16:28.001 --> 00:16:33.000
+Peter menunjukkan kepada kami pohon keputusan dalam kasus Anda ia dipanggil super pohon okay saya meletakkan
+
+206
+00:16:33.000 --> 00:16:38.000
+di layar di sini adalah contoh yang sangat sederhana dari pohon keputusan yang kita bisa
+
+207
+00:16:38.000 --> 00:16:42.001
+melihat dalam praktek konsultasi kami itu adalah keputusan penelitian dan pengembangan pada dasarnya
+
+208
+00:16:42.001 --> 00:16:47.001
+di sana Anda sedang melihat keputusan penelitian apakah Anda maju atau tidak jika Anda tidak
+
+209
+00:16:47.001 --> 00:16:51.000
+Jangan khawatir dengan apa-apa jika Anda maju Anda mungkin melihat kesuksesan penelitian atau
+
+210
+00:16:51.000 --> 00:16:56.000
+kegagalan penelitian dengan kesuksesan penelitian Anda mungkin akan maju mengembangkan dan
+
+211
+00:16:56.000 --> 00:17:00.000
+kemudian menutup garis yang Anda punya keputusan yang sebenarnya Anda bawa ke pasar
+
+212
+00:17:00.000 --> 00:17:04.000
+Atau Anda hanya membiarkannya di shell jika Anda membawanya ke pasar kekuatan pasar
+
+213
+00:17:04.000 --> 00:17:10.000
+Tentu saja akan kembali dan memberitahu Anda bahwa itu baik-baik saja atau melupakannya
+
+214
+00:17:10.000 --> 00:17:14.001
+Beberapa angka yang dapat Anda lihat di sini beberapa probabilitas adalah 40% peluang keberhasilan
+
+215
+00:17:14.001 --> 00:17:19.000
+20% peluang pasar yang besar yang pada dasarnya berasal dari pembuat keputusan
+
+216
+00:17:20.000 --> 00:17:24.001
+pengalaman keadaan pengetahuan adalah intuisi yang baik biasanya mereka tidak berdasar
+
+217
+00:17:24.001 --> 00:17:27.001
+Kadang-kadang mereka tetapi biasanya mereka tidak berasal dari statistik biasanya
+
+218
+00:17:27.001 --> 00:17:31.000
+mereka berurusan dengan peristiwa masa depan dan itu benar-benar tingkat usus Anda yang mengontrolnya
+
+219
+00:17:31.000 --> 00:17:35.000
+di sini tampaknya Anda hanya berbilang angka di sini di seluruh cabang-cabang
+
+220
+00:17:35.000 --> 00:17:38.000
+pohon itu harus ada lebih dari itu jelas oh ada banyak lagi untuk itu
+
+221
+00:17:38.000 --> 00:17:41.001
+lebih dari itu tetapi biarkan saya hanya menunjukkan kepada Anda satu hal yang cukup sederhana bagaimana Anda
+
+222
+00:17:41.001 --> 00:17:46.001
+menilai tiga hasil seperti ini plus 30 plus 10 minus 10 yang mungkin Anda bayangkan
+
+223
+00:17:46.001 --> 00:17:50.000
+Ada jutaan dolar untuk sebuah perusahaan besar pada dasarnya apa yang Anda lakukan adalah Anda
+
+224
+00:17:50.000 --> 00:17:54.000
+berkali-kali waktu kebarangkalian hasil dan tambahkan mereka poin 2 kali 30 poin
+
+225
+00:17:54.000 --> 00:17:58.000
+5 kali 10 poin 3 kali minus 10 dan Anda mendapatkan nilai yang diharapkan dari 8 yang
+
+226
+00:17:58.000 --> 00:18:02.000
+seolah-olah Anda memiliki koin flip pada rekening 10 dolar Anda akan mengatakan itu bernilai tentang
+
+227
+00:18:02.000 --> 00:18:07.001
+5 dolar untuk saya delapan terlihat lebih baik dari minus 11 Anda mungkin melihat sehingga Anda akan
+
+228
+00:18:07.001 --> 00:18:13.001
+Pilih cawangan pasar membawa delapan ke depan dan sekali lagi mengalikan poin empat
+
+229
+00:18:13.001 --> 00:18:17.001
+delapan poin enam kali minus satu Anda mendapatkan dua poin enam yang dari
+
+230
+00:18:17.001 --> 00:18:22.001
+Pandangan manajer penelitian adalah nilai yang akan dia hubungkan dengan venture
+
+231
+00:18:22.001 --> 00:18:27.000
+lebih baik dari nol mungkin akan maju mungkin beberapa penyesuaian untuk risiko yang adalah keseluruhan
+
+232
+00:18:27.000 --> 00:18:33.001
+topik yang berbeda ok apa lagi yang dapat Anda tunjukkan kepada kami tentang bagaimana Anda akan masuk ke dalam ini
+
+233
+00:18:33.001 --> 00:18:39.000
+Baiklah, biarlah saya memberitahu Anda sedikit lebih banyak tentang program ini pada dasarnya ia memiliki
+
+234
+00:18:39.000 --> 00:18:45.001
+biasanya lotus seperti menu atau struktur adalah memasukkan informasi
+
+235
+00:18:45.001 --> 00:18:49.000
+mengevaluasi di mana angka-angka di sini pada akhirnya datang dari baik Anda mungkin memiliki
+
+236
+00:18:49.000 --> 00:18:53.001
+sangat mirip dengan penilaian Monte Carlo sebuah spreadsheet lotus ini bukan sebuah
+
+237
+00:18:53.001 --> 00:19:00.000
+drop-in dalam lotus tetapi berjalan lotus atau ifps atau simfoni atau multi-plan atau excel dan
+
+238
+00:19:00.000 --> 00:19:04.000
+kemudian analisis mencoba untuk mencampur semua informasi dari pohon-pohon ini dan dalam
+
+239
+00:19:04.000 --> 00:19:09.000
+banyak pohon yang lebih besar ada banyak informasi biarkan saya hanya menunjukkan Anda satu plot itu adalah
+
+240
+00:19:09.000 --> 00:19:15.000
+dilakukan sangat sederhana di sini dan saya hanya akan merumuskan distribusi probabilitas di
+
+241
+00:19:15.000 --> 00:19:22.000
+bentuk histogram Anda tidak perlu maju baik-baik saja sehingga Anda akan merumuskan yang sama
+
+242
+00:19:22.000 --> 00:19:26.000
+jenis hasil yang kita lihat dalam angka di pohon itu sebelum benar itu adalah
+
+243
+00:19:26.000 --> 00:19:31.001
+apa yang akan saya lakukan ada banyak penyesuaian yang dapat Anda lakukan untuk output di sini tetapi
+
+244
+00:19:31.001 --> 00:19:36.000
+ada pohon yang sama yang kita lihat sebelum ini di sini histogram bentuk yang agak sederhana tetapi
+
+245
+00:19:36.000 --> 00:19:40.001
+Kami menemukan kami selalu mengembalikan hasil kami setelah itu ada 60% kemungkinan
+
+246
+00:19:40.001 --> 00:19:45.001
+Kegagalan penelitian di sini adalah yang terburuk dari semua kemungkinan hasil penelitian sukses
+
+247
+00:19:45.001 --> 00:19:50.000
+Kegagalan pasar dan inilah hasil pasar yang baik dan tentu saja banyak
+
+248
+00:19:50.000 --> 00:19:53.000
+pokok yang lebih kompleks yang harus diisi dan menjadi distribusi probabilitas yang lancar
+
+249
+00:19:53.000 --> 00:19:57.001
+Saya akan kembali ke pertanyaan saya jika saya melihat ada layman untuk melihat
+
+250
+00:19:57.001 --> 00:20:00.001
+grafis ini terlihat seperti multiplier yang melintasi grafis apa lagi yang dilakukan
+
+251
+00:20:00.001 --> 00:20:05.000
+Selain itu untuk Anda baik satu hal yang dapat Anda lakukan adalah bahwa hanya itu lurus dan kita
+
+252
+00:20:05.000 --> 00:20:10.000
+call it rollback multiply di seluruh grafis Anda dapat mengatur ulang nod di
+
+253
+00:20:10.000 --> 00:20:15.000
+pohon dan biarkan saya hanya melakukan ini di sini dan kemudian memberitahu Anda mengapa Anda mungkin ingin melakukannya
+
+254
+00:20:15.000 --> 00:20:20.000
+Supaya saya bisa keluar dan terlibat dalam studi pasar dan mencari tahu apa yang
+
+255
+00:20:20.000 --> 00:20:23.001
+Pasar benar-benar sebelum saya membuat keputusan R &amp; D saya sebelum saya membuang jutaan saya
+
+256
+00:20:23.001 --> 00:20:27.000
+Dolar sangat jelas itu akan bagus jika saya tahu itu akan menjadi pasar yang buruk
+
+257
+00:20:27.000 --> 00:20:31.001
+Anda mungkin tidak akan melakukannya tetapi betapa bagusnya berapa banyak yang akan saya habiskan pada itu apa itu
+
+258
+00:20:31.001 --> 00:20:35.000
+layak untuk melihat apa yang layak untuk Anda dan pada dasarnya itu berarti saya menyelesaikan
+
+259
+00:20:35.000 --> 00:20:39.001
+ketidakpastian sebelum saya membuat keputusan penelitian saya dan Anda dapat melihat di sini
+
+260
+00:20:39.001 --> 00:20:43.001
+nilai yang diharapkan dari pohon ini yang rata-rata angka adalah $ 4 juta sebaliknya
+
+261
+00:20:43.001 --> 00:20:50.000
+dari 2.6 sehingga pada sebagian besar untuk penelitian pasar itu adalah $ 1.6 juta sehingga Anda
+
+262
+00:20:50.000 --> 00:20:54.001
+jenis hanya memutar graf dan itu adalah kekuatan nyata keputusan
+
+263
+00:20:54.001 --> 00:20:58.000
+pokok Anda dapat mulai bertanya pertanyaan seperti itu dan kami menemukan bahwa perusahaan adalah
+
+264
+00:20:58.000 --> 00:21:02.000
+Hampir universal meletakkan uang dalam bin yang salah mereka melakukan penelitian tentang hal-hal
+
+265
+00:21:02.000 --> 00:21:06.001
+mereka benar-benar tidak perlu lagi menyelidiki dan mereka merindukan yang jelas dan sebagainya
+
+266
+00:21:06.001 --> 00:21:10.000
+Ini adalah cara orang dapat benar-benar mengatur usaha penelitian mereka dan memutuskan
+
+267
+00:21:10.000 --> 00:21:16.000
+Ketika Anda harus hidup dengan ketidakpastian dan pergi ke hadapan Jared apa jenis
+
+268
+00:21:16.000 --> 00:21:21.001
+dari klien caveats di sini dan menggunakan perangkat lunak dukungan keputusan saya maksud saya akan mengatakan
+
+269
+00:21:21.001 --> 00:21:25.001
+Caveat standar adalah caveat standard dengan setiap program komputer dan itu adalah
+
+270
+00:21:25.001 --> 00:21:30.000
+membuang sampah jika Anda tidak berpikir dengan hati-hati tentang informasi yang Anda
+
+271
+00:21:30.000 --> 00:21:34.000
+dengan memasukkan program Anda akan mendapatkan sampah sebagai hasilnya tetapi saya pikir salah satu
+
+272
+00:21:34.000 --> 00:21:39.000
+Aspek yang sangat penting dari ketiga program ini adalah fakta bahwa dalam
+
+273
+00:21:39.000 --> 00:21:43.001
+untuk melakukan analisis pokok keputusan yang serius atau matriks atau mengatur Monte Carlo
+
+274
+00:21:43.001 --> 00:21:48.000
+Model yang Anda harus setidaknya berpikir tentang setiap aspek dari keputusan itu
+
+275
+00:21:48.000 --> 00:21:52.000
+membuat Anda berpikir secara logis sehingga tidak membawa Anda keluar dari proses keputusan itu
+
+276
+00:21:52.000 --> 00:21:56.000
+Anda masih perlu menilai kriteria tersebut dalam arti yang disebut
+
+277
+00:21:56.000 --> 00:22:00.001
+keputusan dukungan itu bukan keputusan membuat perangkat lunak baik-baik saja terima kasih banyak
+
+278
+00:22:00.001 --> 00:22:04.000
+Peter dan Jared kami keluar dari waktu yang merupakan program kami pada perangkat lunak dukungan keputusan
+
+279
+00:22:04.000 --> 00:22:05.001
+Terima kasih sudah bersama kami, semoga kita bisa bertemu lagi.
+
+280
+00:22:05.001 --> 00:22:07.001
+Minggu depan pada komputer kronik
+
+281
+00:22:17.001 --> 00:22:23.000
+Dalam file akses rawak minggu ini gelombang baru Hewlett Packard akhirnya keluar baru
+
+282
+00:22:23.000 --> 00:22:27.000
+Wave adalah lingkungan aplikasi berorientasi pada objek yang berjalan di bawah Microsoft.
+
+283
+00:22:27.000 --> 00:22:31.001
+Windows pertama kali diperkenalkan sekitar dua tahun yang lalu dan meskipun pengembang
+
+284
+00:22:31.001 --> 00:22:36.001
+Kit telah tersedia sejak Maret 1988 ini terbaru dirilis untuk pertama kalinya
+
+285
+00:22:36.001 --> 00:22:40.001
+pengguna akan benar-benar dapat menggunakan gelombang baru untuk bekerja dengan MS-DOS dan
+
+286
+00:22:40.001 --> 00:22:47.001
+Aplikasi Windows baru gelombang 1. 0 menjual untuk $195 dan membutuhkan PC dengan jendela
+
+287
+00:22:47.001 --> 00:22:53.001
+dan setidaknya tiga megabyte memori diperluas sekarang Anda dapat menggunakan VGA EGA Apple
+
+288
+00:22:53.001 --> 00:22:58.000
+mono dan multi-scanner monitor pada Mac sebuah perusahaan fledgling yang disebut lapis
+
+289
+00:22:58.000 --> 00:23:02.001
+Teknologi telah mengungkapkan jenis baru papan video untuk Macintosh SE dan Mac
+
+290
+00:23:02.001 --> 00:23:07.000
+2 yang memungkinkan Mac untuk menggunakan pilihan halaman penuh yang berbeda dan video lainnya
+
+291
+00:23:07.000 --> 00:23:11.001
+memaparkan penggunaan monitor ini akan memungkinkan pengguna untuk melihat bagian dari
+
+292
+00:23:11.001 --> 00:23:16.000
+Spreadsheet atau layout halaman biasanya tidak terlihat karena mereka melebihi Mac.
+
+293
+00:23:16.000 --> 00:23:22.001
+kapasitas layar display server sebagai program dipanggil akan biaya $449 untuk SE
+
+294
+00:23:22.001 --> 00:23:29.000
+dan $ 499 untuk versi bus baru ketika dokumen bukan dokumen ketika itu adalah
+
+295
+00:23:29.000 --> 00:23:33.000
+disimpan di komputer di Gedung Putih di Geduk Putih dokumen tidak
+
+296
+00:23:33.000 --> 00:23:37.000
+dipertimbangkan resmi sampai dicetak di atas kertas tetapi beberapa kelompok
+
+297
+00:23:37.000 --> 00:23:40.001
+ke pengadilan untuk mencoba mengubah bahwa mereka khawatir dengan kesulitan yang dihadapi
+
+298
+00:23:40.001 --> 00:23:45.001
+Dalam penyelidikan terhadap Iran, tampaknya banyak komunikasi yang dibagikan oleh
+
+299
+00:23:45.001 --> 00:23:49.001
+Oliver North Robert McFarland dan Admiral John Poindexter ditahan
+
+300
+00:23:49.001 --> 00:23:53.001
+e-mail sementara beberapa komunikasi tersebut mungkin masih ada di elektronik
+
+301
+00:23:53.001 --> 00:23:57.001
+media yang mereka tidak dilepaskan oleh Gedung Putih karena mereka tidak di atas kertas dan
+
+302
+00:23:57.001 --> 00:24:02.001
+Apa yang tidak ada di kertas tidak dianggap resmi karena Apple mendekati pengungkapan
+
+303
+00:24:02.001 --> 00:24:07.001
+pertama portable pada tanggal 20 September, kompetisi ini juga mendorong sebuah tarry
+
+304
+00:24:07.001 --> 00:24:11.001
+Laptop stacy yang akan diluncurkan pada bulan Oktober akan berada di antara pesaing utama
+
+305
+00:24:11.001 --> 00:24:16.001
+st-type stacy diperkirakan dapat menjalankan program Macintosh dengan bantuan
+
+306
+00:24:16.001 --> 00:24:22.001
+dari kartrid khas dari gadget dengan kecil $ 300 spektrum GCR kartridge plugs
+
+307
+00:24:22.001 --> 00:24:27.000
+masuk ke port stacy dan memungkinkan program Macintosh untuk dimuat dan berjalan di
+
+308
+00:24:27.000 --> 00:24:32.000
+mesin stasiun datang dengan satu tiga setengah inci drive dan standar LCD satu
+
+309
+00:24:32.000 --> 00:24:37.000
+Megabyte memori dan delapan megahertz enam puluh delapan ribu mikroprosesor
+
+310
+00:24:37.000 --> 00:24:41.000
+Stacy akan memiliki harga dasar lima belas ratus dolar atau dua ribu dengan
+
+311
+00:24:41.000 --> 00:24:47.000
+optional 20 meg drive menurut surat kabar Jepang IBM Jepang sedang mengembangkan sebuah
+
+312
+00:24:47.000 --> 00:24:51.001
+komputer pribadi berukuran notebook dan prototipe untuk pelanggan terpilih
+
+313
+00:24:51.001 --> 00:24:57.000
+Prototype dilaporkan berat kurang dari enam pound sebagai mikroprosesor 16 bit
+
+314
+00:24:57.000 --> 00:25:02.000
+dan beroperasi selama lebih dari dua jam dengan baterai penuh dari IBM Japan
+
+315
+00:25:02.000 --> 00:25:05.001
+Penjual dikutip mengatakan ukuran laptop PC mereka akan dilepaskan dan
+
+316
+00:25:05.001 --> 00:25:10.000
+Didirikan pada akhir tahun ini, sebuah perusahaan Jepang telah mengembangkan sebuah komputer berbasis
+
+317
+00:25:10.000 --> 00:25:14.001
+prosesor kata yang dapat mengendalikan bahasa Inggris Spanyol Jerman Rusia Perancis dan
+
+318
+00:25:14.001 --> 00:25:19.001
+Bahasa Portugis semua dalam dokumen yang sama menjalankan perusahaan mesin terdiri dari sebuah
+
+319
+00:25:19.001 --> 00:25:25.000
+monochrome CRT disesuaikan layout keyboard dan disk onboard tapi sebagian besar
+
+320
+00:25:25.000 --> 00:25:29.000
+Yang penting, itu termasuk printer yang dapat dicetak baik dalam jenis Roman atau Cyrillic
+
+321
+00:25:29.000 --> 00:25:33.000
+tidak perlu mengubah font sehingga lebih dari satu bahasa dapat dicetak di
+
+322
+00:25:33.000 --> 00:25:37.000
+dokumen yang sama penghantaran awal mesin empat belas ratus dolar akan
+
+323
+00:25:37.000 --> 00:25:42.000
+dimulai pada bulan Juni mendatang dan akhirnya tepat waktu untuk siswa kembali ke sekolah Smith
+
+324
+00:25:42.000 --> 00:25:46.001
+Corona menawarkan prosesor kata pribadi laptop baru yang cocok di suatu tempat
+
+325
+00:25:46.001 --> 00:25:52.001
+antara penulisan dan PC laptop PWP 7000 datang dengan kualitas huruf
+
+326
+00:25:52.001 --> 00:25:57.001
+Daisy wheel printer full-word processing dan optional spreadsheet kemampuan itu
+
+327
+00:25:57.001 --> 00:26:01.001
+Berat sedikit lebih dari enam pound dan dapat berkomunikasi melalui 1200 baud haze
+
+328
+00:26:01.001 --> 00:26:06.000
+modem yang kompatibel unit sembilan ratus dolar tersedia segera dan itu adalah
+
+329
+00:26:06.000 --> 00:26:12.000
+It for this week&#x27;s Computer Chronicles I&#x27;m Kate McGargy akan melihat Anda minggu depan
+
+330
+00:26:12.000 --> 00:26:16.001
+Komputer Chronicles dibuat mungkin sebagian oleh penerbit McGraw-Hill dari gigitan
+
+331
+00:26:16.001 --> 00:26:23.001
+majalah dan Bix pertukaran informasi menggigit dalam percetakan dan online menggigit dan BIX
+
+332
+00:26:23.001 --> 00:26:28.000
+melayani profesional komputer di seluruh dunia dengan informasi rinci tentang perangkat lunak baru
+
+333
+00:26:28.000 --> 00:26:33.001
+Perangkat lunak dan teknologi untuk transcript dari Computer Chronicles minggu ini
+
+334
+00:26:33.001 --> 00:26:40.001
+mengirimkan empat dolar ke PTV publikasi kotak pos 701 Kent Ohio
+
+335
+00:26:40.001 --> 00:26:44.001
+44240 silakan jelaskan tanggal program
