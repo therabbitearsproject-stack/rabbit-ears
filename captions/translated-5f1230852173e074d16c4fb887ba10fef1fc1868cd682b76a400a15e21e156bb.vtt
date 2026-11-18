@@ -1,0 +1,1977 @@
+WEBVTT
+
+1
+00:00:09.001 --> 00:00:13.000
+Ketika Anda berpikir tentang membeli spreadsheet software, tentu saja
+
+2
+00:00:13.000 --> 00:00:14.001
+Hal pertama yang Anda pikirkan adalah
+
+3
+00:00:14.001 --> 00:00:18.001
+Jumlah Lotus 123. Produk yang menetapkan spreadsheet adalah PC utama
+
+4
+00:00:18.001 --> 00:00:23.000
+untuk aplikasi. Tapi saat ini ada generasi baru dari program spreadsheet
+
+5
+00:00:23.000 --> 00:00:27.000
+yang memberikan tingkat fungsi dan kekuatan baru. Hari ini kita lihat ini
+
+6
+00:00:27.000 --> 00:00:32.000
+Generasi baru perangkat lunak spreadsheet untuk IBM PC dan Macintosh
+
+7
+00:00:32.000 --> 00:00:33.001
+Ini adalah edisi dari Computer Chronicles.
+
+8
+00:00:57.000 --> 00:01:01.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+9
+00:01:01.001 --> 00:01:05.000
+Sistem komputer yang kompatibel termasuk pemrosesan kata dengan koreksi spelling,
+
+10
+00:01:05.001 --> 00:01:10.001
+Software komunikasi dan Haze kompatibel modem 1200 dan 2400 VOD. Pemimpin Edge
+
+11
+00:01:10.001 --> 00:01:12.001
+Dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+12
+00:01:13.001 --> 00:01:17.001
+Leading Edge memimpin jalan menuju era informasi. Pembiayaan tambahan adalah
+
+13
+00:01:17.001 --> 00:01:21.001
+disampaikan oleh McGraw Hill, penerbit Byte. Artikel teknis terperinci Byte
+
+14
+00:01:21.001 --> 00:01:25.000
+pada perangkat keras, perangkat lunak dan bahasa baru yang mencakup perkembangan di
+
+15
+00:01:25.000 --> 00:01:26.001
+teknologi komputer di seluruh dunia.
+
+16
+00:01:33.000 --> 00:01:36.001
+Selamat datang ke Komputer Chronicles, saya Stuart Chafay dan ini adalah Gary Kildall.
+
+17
+00:01:37.000 --> 00:01:40.000
+Gary, ketika kita melihat perangkat lunak spreadsheet minggu lalu, kita sedang berbicara tentang
+
+18
+00:01:40.000 --> 00:01:43.001
+MS-DOS dunia IBM seperti Anda cenderung ketika Anda berbicara tentang perangkat lunak bisnis.
+
+19
+00:01:44.000 --> 00:01:48.001
+Ini adalah Macintosh, percayalah atau tidak, Mac baru 2. Kami mendengar suara yang dahsyat.
+
+20
+00:01:48.001 --> 00:01:51.001
+tentang Mac sekarang di pasar bisnis. Ini terlihat dan bertindak sebagai
+
+21
+00:01:51.001 --> 00:01:53.000
+Lebih seperti komputer jenis bisnis.
+
+22
+00:01:53.000 --> 00:01:56.000
+Apa pendapatmu? Apakah Mac akan menjadi pemain yang serius bagi orang-orang yang menggunakan
+
+23
+00:01:56.000 --> 00:01:58.001
+Label dan hal seperti itu? Nah, Stuart, Anda tahu kapan Mac pertama kali
+
+24
+00:01:58.001 --> 00:02:01.000
+diperkenalkan beberapa tahun yang lalu, itu sebenarnya tidak ditargetkan di pasar bisnis
+
+25
+00:02:01.000 --> 00:02:05.000
+diri sendiri . Pada saat-saat itu, aplikasi bisnis yang khas adalah spreadsheet word.
+
+26
+00:02:05.000 --> 00:02:09.000
+prosesor, database jenis kerja dan itu benar-benar mesin grafik dengan kecil
+
+27
+00:02:09.000 --> 00:02:12.001
+Disk yang lambat dan sebagainya. Tetapi dua dunia bisnis dan Mac memiliki jenis datang
+
+28
+00:02:12.001 --> 00:02:15.001
+Bersama dengan Dalam bisnis sekarang, itu sangat penting. Penerbitan desktop adalah sebuah
+
+29
+00:02:15.001 --> 00:02:20.000
+Aspek penting dari itu. Pemrosesan gambar, umum teks yang kaya, hal-hal dari jenis ini.
+
+30
+00:02:20.001 --> 00:02:25.000
+Sekarang Mac sekarang memiliki layar besar, cakera keras besar dan jadi kita bisa benar-benar
+
+31
+00:02:25.000 --> 00:02:27.001
+Lihatlah dua hal itu bekerja sama. Apple juga mengumumkan LAN mereka.
+
+32
+00:02:27.001 --> 00:02:31.001
+Strategi, mendorong ke mesin IBM. Jadi itu bisa menjadi pilihan yang baik untuk bisnis.
+
+33
+00:02:32.000 --> 00:02:35.000
+Gary, kami akan melihat dua program spreadsheet teratas untuk
+
+34
+00:02:35.000 --> 00:02:39.000
+Macintosh, Excel dan Trapeze. Dan kita juga akan melihat dua generasi baru
+
+35
+00:02:39.000 --> 00:02:43.000
+Program spreadsheet untuk IBM, hal-hal yang jauh lebih dari yang tradisional
+
+36
+00:02:43.000 --> 00:02:47.000
+dengan spreadsheet. Sekarang salah satu pengguna spreadsheet alternatif yang memiliki adalah biaya rendah
+
+37
+00:02:47.000 --> 00:02:50.000
+alternatif dan salah satu masalah besar dalam spreadsheets saat ini adalah keseluruhan
+
+38
+00:02:50.000 --> 00:02:56.001
+masalah melihat dan merasakan. Kami akan memulai dengan sebuah laporan tentang hal ini. Ini adalah A
+
+39
+00:02:56.001 --> 00:03:01.000
+layar layar komputer. Ini adalah layar spreadsheet komputer.
+
+40
+00:03:01.001 --> 00:03:06.001
+Dan itulah yang demikian. Jika mereka terlihat serupa, itu adalah bagian dari alasan tiba-tiba
+
+41
+00:03:06.001 --> 00:03:12.000
+Meningkatkan tuntutan antara pengembang perangkat lunak. Lotus, yang paling terkenal untuk 123
+
+42
+00:03:12.000 --> 00:03:17.000
+program, sedang mencari paperback software atas kesamaan VP Planner
+
+43
+00:03:17.000 --> 00:03:23.000
+program dan perangkat lunak Mosaic untuk spreadsheet kembar. Jantung dari Keluhan
+
+44
+00:03:23.000 --> 00:03:30.000
+Apakah Mosaic dan Paperback kedua melanggar keseluruhan kutipan tampilan dan perasaan
+
+45
+00:03:30.000 --> 00:03:36.000
+Salah satunya adalah program Lotus 123. Secara khusus, apa yang mereka katakan adalah bahwa
+
+46
+00:03:36.000 --> 00:03:42.001
+Penuntut telah menggunakan nama program atau nama perintah yang identik atau sangat serupa,
+
+47
+00:03:43.001 --> 00:03:48.001
+struktur menu yang sangat mirip dan struktur sub menu, jenis sintax yang sama dalam
+
+48
+00:03:48.001 --> 00:03:54.000
+bahasa yang mereka gunakan dalam program seperti bahwa pengguna yang melihat
+
+49
+00:03:54.000 --> 00:03:58.000
+program versus yang lain akan mengatakan keseluruhan pandangan dan perasaan adalah pada dasarnya
+
+50
+00:03:58.000 --> 00:04:04.001
+yang sama. Meskipun kode sumber program yang jelas dilindungi oleh hukum, tampilan elusif
+
+51
+00:04:04.001 --> 00:04:09.000
+dan rasa layar adalah aspek yang relatif baru dari perlindungan perangkat lunak
+
+52
+00:04:09.000 --> 00:04:14.001
+dan terbuka kepada ketidaksetujuan yang tajam. Menurutnya, banyak fungsi yang
+
+53
+00:04:14.001 --> 00:04:21.000
+Orang membutuhkan, Anda tidak dapat paten atau hak cipta. Selain itu, banyak pengguna
+
+54
+00:04:21.000 --> 00:04:27.000
+antara kata-kata dan hal-hal harus tersedia untuk banyak orang,
+
+55
+00:04:27.001 --> 00:04:33.001
+Terutama bahwa kata-kata yang sangat umum digunakan dalam banyak kasus. Dapatkan buku yang sederhana, apa pun
+
+56
+00:04:33.001 --> 00:04:37.001
+Buku yang Anda miliki. Nah, itu semua kata-kata yang ada dalam bahasa Inggris
+
+57
+00:04:37.001 --> 00:04:42.000
+Dan dalam hal ini, mereka tidak asli. Apa yang menjadi asli adalah cara
+
+58
+00:04:42.000 --> 00:04:47.001
+di mana pengembang mengumpulkan mereka, cara dia mengatur mereka atau memerintahkan
+
+59
+00:04:47.001 --> 00:04:53.000
+mereka atau mengikuti mereka. Itulah yang dilindungi oleh hukum hak cipta. yang baru-baru ini
+
+60
+00:04:53.000 --> 00:04:57.001
+kasus yang melibatkan perangkat lunak komunikasi dapat memiliki dampak yang signifikan pada masa depan
+
+61
+00:04:57.001 --> 00:05:03.001
+Lihat dan rasakan kasus. DCA, yang memiliki program crosstalk, menuntut klon lembut
+
+62
+00:05:03.001 --> 00:05:09.000
+perusahaan untuk paket komunikasi cermin. Mahkamah memutuskan untuk mendukung
+
+63
+00:05:09.000 --> 00:05:15.000
+Penuntutannya Karena dalam kasus ini, pengadilan mengklaim bahwa pada dasarnya satu layar kunci
+
+64
+00:05:15.000 --> 00:05:21.001
+itu cukup untuk membentuk material yang dapat diselesaikan dan mendapati bahwa tertuduh memiliki
+
+65
+00:05:21.001 --> 00:05:27.001
+melanggar satu layar kunci, yang berarti bahwa kloning user interface
+
+66
+00:05:27.001 --> 00:05:33.001
+Akan sangat mencurigakan di masa depan. Salah satu dari banyak kesulitan
+
+67
+00:05:33.001 --> 00:05:38.001
+yang ditemui oleh pengembang perangkat lunak adalah dominasi yang mengagumkan dari sekelompok
+
+68
+00:05:38.001 --> 00:05:44.000
+program, yang beberapa perusahaan melihat sebagai standar de facto. Dan ketika Anda masuk ke dalam
+
+69
+00:05:44.000 --> 00:05:49.001
+Pasar yang luas Anda menyadari bahwa ada terutama satu pelanggan yang mendominasi
+
+70
+00:05:49.001 --> 00:05:53.001
+pasar dan itulah yang Anda perhatikan. Mereka mungkin memiliki sekitar 60 hingga 80
+
+71
+00:05:53.001 --> 00:06:00.000
+% dari pasar. Dengan demikian, standar de facto yang sudah ada dalam
+
+72
+00:06:00.000 --> 00:06:06.001
+pasar membuatnya benar-benar mustahil bagi siapa pun untuk memasuki pasar itu atau
+
+73
+00:06:06.001 --> 00:06:12.000
+Lakukan sesuatu yang konstruktif. Semua pihak setuju, atas berbagai alasan, bahwa
+
+74
+00:06:12.000 --> 00:06:16.000
+Hasil dari kasus-kasus ini akan memiliki dampak besar pada masa depan asal
+
+75
+00:06:16.000 --> 00:06:21.000
+dengan software. Pertimbangkan apa yang akan terjadi jika dalam skenario terburuk Lotus menang.
+
+76
+00:06:22.000 --> 00:06:26.000
+Ini pasti akan menjadi kekacauan. Saya pikir orang akan mulai melakukan hal-hal
+
+77
+00:06:26.000 --> 00:06:28.001
+Hanya untuk menjadi berbeda.
+
+78
+00:06:28.001 --> 00:06:33.001
+Mereka akan membuatnya berbeda dan akan menjadi sangat sulit bagi siapa pun.
+
+79
+00:06:33.001 --> 00:06:35.001
+pengguna untuk melakukan apa pun dengan salah satu program ini.
+
+80
+00:06:36.000 --> 00:06:41.001
+Salah satu tujuan dari undang-undang hak cipta adalah untuk memberi ganjaran kepada penemuan orang. I
+
+81
+00:06:41.001 --> 00:06:46.001
+Anda tidak tahu apa jenis kreativitas itu yang sedang terjebak dalam hal ini. adalah
+
+82
+00:06:46.001 --> 00:06:52.000
+Apakah kloning menganggap itu kreatif? Saya tidak yakin. Saya pikir mungkin lebih banyak
+
+83
+00:06:52.000 --> 00:06:56.000
+Kreativitas berasal dari fakta bahwa penulis dianugerahkan untuk apa yang telah mereka lakukan.
+
+84
+00:07:07.001 --> 00:07:11.001
+Sekarang bergabung dengan kami di studio adalah Mike Slay, manajer produk Macintosh dengan
+
+85
+00:07:11.001 --> 00:07:15.000
+Microsoft, pembuat Excel. Mike adalah Andrew Wolf, Presiden Data.
+
+86
+00:07:15.000 --> 00:07:17.000
+Taylor, Inc., pembuat Trapeze. dengan Gary?
+
+87
+00:07:17.000 --> 00:07:21.000
+Mike, yang pertama, saya kira nenek dari spreadsheets, VisitCalc adalah
+
+88
+00:07:21.000 --> 00:07:25.000
+karakter-oriented spreadsheet dan ada perubahan besar generasi ketika 123
+
+89
+00:07:25.000 --> 00:07:27.000
+Ia datang dengan grafis dan sebagainya.
+
+90
+00:07:27.000 --> 00:07:29.000
+Sekarang Mac 2 akan menjadi A, itu akan menjadi
+
+91
+00:07:29.000 --> 00:07:30.001
+Apakah perubahan generasi juga akan terjadi dalam spreadsheets?
+
+92
+00:07:31.000 --> 00:07:35.001
+Saya pikir Macintosh secara umum membantu hal itu terjadi. Konsep keseluruhan A
+
+93
+00:07:35.001 --> 00:07:40.000
+grafis user interface dengan menu pull-down dan mouse dan ikon biarkan kami desain
+
+94
+00:07:40.000 --> 00:07:43.001
+Excel yang jauh lebih mirip dengan bekerja dengan potongan kertas pada
+
+95
+00:07:43.001 --> 00:07:46.000
+desktop dan membiarkan Anda membuat hubungan antara kepingan kertas tersebut.
+
+96
+00:07:46.000 --> 00:07:48.001
+Dan ini hanya memperluas bahwa dalam banyak cara yang indah, warna, grafik,
+
+97
+00:07:49.000 --> 00:07:51.001
+kecepatan Andy, apa pendapatmu tentang hal itu?
+
+98
+00:07:52.000 --> 00:07:55.001
+Saya melihat mesin yang memungkinkan orang untuk melakukan hal-hal yang mereka tidak dapat
+
+99
+00:07:55.001 --> 00:07:59.001
+melakukan sebelum, bekerja dengan spreadsheets yang lebih besar, dapat menghitung lebih kompleks
+
+100
+00:07:59.001 --> 00:08:03.001
+model, menampilkan lebih banyak grafis dan itu akan
+
+101
+00:08:03.001 --> 00:08:05.001
+Meningkatkan produktivitas banyak orang.
+
+102
+00:08:05.001 --> 00:08:09.000
+Okay, sekarang Mike Anda memiliki demonstrasi tentang bagaimana Excel dapat memberi kami, bukan?
+
+103
+00:08:09.000 --> 00:08:14.000
+Itu yang benar. Okay, seperti yang dapat Anda lihat di sini di layar, Excel tidak terlihat banyak
+
+104
+00:08:14.000 --> 00:08:17.000
+Seperti sebuah spreadsheet tradisional. Anda tidak memiliki satu tapi beberapa lembar kerja yang berbeda
+
+105
+00:08:17.000 --> 00:08:20.000
+terbuka dan mereka terlihat seperti potongan kertas yang berbeda di meja Anda mungkin.
+
+106
+00:08:20.000 --> 00:08:24.000
+Anda dapat zoom layar dan bekerja dengan satu atau lebih lembar sekaligus dan
+
+107
+00:08:24.000 --> 00:08:27.001
+membuat formulir dengan menunjuk dan mengklik, mengelilingi lembar kerja hanya dengan
+
+108
+00:08:27.001 --> 00:08:30.001
+menggunakan mouse tersebut. Itu sangat sederhana. Ini adalah lembar kerja yang sangat besar. Itu adalah
+
+109
+00:08:30.001 --> 00:08:32.000
+sangat cepat. Sangat mudah untuk bekerja dengan.
+
+110
+00:08:32.000 --> 00:08:36.000
+Sangat mudah, misalnya, untuk membangun hubungan antara lembar kerja hanya dengan
+
+111
+00:08:36.000 --> 00:08:39.001
+menunjuk dan klik. Saya dapat mengambil dua spreadsheet subsidiari ini dan hanya
+
+112
+00:08:39.001 --> 00:08:44.001
+menempelkan nama-nama untuk mereka dan menghubungkannya ke total spreadsheet ini.
+
+113
+00:08:45.001 --> 00:08:49.001
+Dan tanpa perlu melakukan matematika yang kompleks atau apa pun, saya hanya bisa memasuki
+
+114
+00:08:49.001 --> 00:08:54.000
+formula dan itu secara otomatis dibangun sehingga kemudian jika salah satu nilai ini berubah
+
+115
+00:08:54.000 --> 00:09:00.000
+mengatakan dari 71,000 ke angka yang jauh lebih besar seperti 710,000, Anda melihat angka itu adalah
+
+116
+00:09:00.000 --> 00:09:02.000
+Tiba-tiba difikirkan di sini dalam total spreadsheet.
+
+117
+00:09:02.000 --> 00:09:05.001
+Dan produk seperti 123, tidak hanya Anda tidak bisa melakukannya, tetapi Anda bahkan tidak bisa
+
+118
+00:09:05.001 --> 00:09:08.000
+Pertimbangkan untuk melakukannya karena Anda hanya bisa melihat satu spreadsheet sekaligus.
+
+119
+00:09:08.001 --> 00:09:13.000
+Dengan cara yang sama, sangat mudah kemudian mengambil sekelompok angka dan sangat cepat
+
+120
+00:09:13.000 --> 00:09:16.001
+membuka jendela yang memiliki representasi grafis dari angka tersebut dan
+
+121
+00:09:16.001 --> 00:09:19.001
+jendela kemudian dapat dihubungkan dengan angka-angka itu dan saya akan
+
+122
+00:09:19.001 --> 00:09:21.000
+Tunjukkan bagaimana hal itu bekerja dalam satu detik saja.
+
+123
+00:09:21.000 --> 00:09:25.001
+Jadi Anda dapat melihat saya memiliki graf sekarang yang mewakili angka-angka itu dan jika salah satu dari
+
+124
+00:09:25.001 --> 00:09:31.001
+angka-angka ini di atas di sini berubah menjadi angka yang lebih kecil, Anda akan melihat graf adalah
+
+125
+00:09:31.001 --> 00:09:33.000
+Tiba-tiba kembali untuk mencerminkan perubahan itu.
+
+126
+00:09:33.001 --> 00:09:37.000
+Jadi Anda mendapatkan maklum balas visual dan Anda dapat memiliki begitu banyak grafis atau spreadsheets terbuka
+
+127
+00:09:37.000 --> 00:09:40.001
+pada saat yang kamu sukai. Juga sangat mudah untuk mengubah apa tampilan grafis.
+
+128
+00:09:40.001 --> 00:09:44.000
+Ada galeri lukisan terbina dalam, inovasi lain yang Macintosh
+
+129
+00:09:44.000 --> 00:09:47.001
+fasilitas yang memungkinkan Anda memilih antara berbagai jenis grafis dan memiliki
+
+130
+00:09:47.001 --> 00:09:50.001
+grafis menjadi redrawn dalam format apa pun itu adalah bahwa Anda ingin melihatnya di.
+
+131
+00:09:50.001 --> 00:09:54.000
+Dan begitu, bukannya memilih dari beberapa daftar grafis, sangat bagus untuk dapat
+
+132
+00:09:54.000 --> 00:09:55.001
+Lihat gambar yang menggambarkan hal itu.
+
+133
+00:09:56.000 --> 00:10:00.001
+Salah satu kekuatan terbaik dari produk seperti Excel adalah bahwa itu memungkinkan Anda untuk mengautomatikkan
+
+134
+00:10:00.001 --> 00:10:04.001
+hal-hal dan apa yang akan saya lakukan di sini sekarang dekat semua spreadsheets dan
+
+135
+00:10:04.001 --> 00:10:06.001
+Membuka apa yang disebut makro.
+
+136
+00:10:06.001 --> 00:10:10.001
+Dan Excel sebenarnya merekam apa yang Anda lakukan. Ia belajar
+
+137
+00:10:10.001 --> 00:10:12.000
+Apa yang Anda lakukan dan kemudian akan bermain kembali.
+
+138
+00:10:12.000 --> 00:10:15.000
+Dan saya akan menunjukkan kepada Anda contoh sesuatu yang Excel merekam tindakan saya
+
+139
+00:10:15.000 --> 00:10:17.000
+dan mengubahnya menjadi sesuatu yang disebut makro.
+
+140
+00:10:17.000 --> 00:10:22.000
+Dan sekarang ia akan mengautomatikkan proses pengenalan data, yang memperhatikan itu adalah
+
+141
+00:10:22.000 --> 00:10:28.001
+benar-benar mendorong saya dengan kotak dialog kecil ini, dan kemudian meminta saya untuk meletakkan
+
+142
+00:10:28.001 --> 00:10:33.000
+data masuk dan kemudian ia mengambil data, mengubahnya, dan menetapkan jendela grafis
+
+143
+00:10:33.000 --> 00:10:35.000
+Data tanpa saya harus melakukan apa pun.
+
+144
+00:10:35.000 --> 00:10:37.000
+Dan itu benar-benar apa yang komputer semua tentang.
+
+145
+00:10:37.000 --> 00:10:39.001
+Ya, Anda tidak perlu menulis makro. Ia menulis tentang
+
+146
+00:10:39.001 --> 00:10:41.000
+macro mengikuti apa yang Anda lakukan terakhir kali.
+
+147
+00:10:41.000 --> 00:10:45.000
+Sebelum saya hanya melakukan perintah yang sama dan ia menulis baris perintah. Anda bisa
+
+148
+00:10:45.000 --> 00:10:47.001
+menulisnya jika Anda suka, tetapi sangat mudah untuk memiliki Excel menulisnya untuk
+
+149
+00:10:47.001 --> 00:10:49.000
+Kamu yang Dan Anda hanya bisa melewati.
+
+150
+00:10:50.000 --> 00:10:53.001
+Mesin baru akan memberi kita kesempatan untuk membuat Excel berjalan dalam warna dan
+
+151
+00:10:53.001 --> 00:10:55.001
+Banyak hal untuk memperluas kapasitasnya.
+
+152
+00:10:55.001 --> 00:10:59.000
+Tetapi sejak kami memperkenalkan produk, kami baru saja memiliki resepsi yang fantastis untuk itu.
+
+153
+00:10:59.000 --> 00:11:02.000
+Bercakap tentang warna, Mike, jika saya dapat meminta Anda untuk mengunduh Excel dan kami dapat mendapatkan Trapeze
+
+154
+00:11:02.000 --> 00:11:06.000
+di sana. Dan sementara Mike melakukan itu, Andrew, Trapeze berjalan dalam warna.
+
+155
+00:11:06.000 --> 00:11:07.000
+Kita akan melihatnya dalam satu menit saja.
+
+156
+00:11:07.000 --> 00:11:10.001
+Dan salah satu fitur dari Mac, juga, tentu saja, adalah warna. Peranan apa yang
+
+157
+00:11:10.001 --> 00:11:12.001
+Bermain warna dalam spreadsheets? Apakah itu penting sama sekali?
+
+158
+00:11:13.000 --> 00:11:19.000
+Nah, itu dapat membantu orang yang sedang mengembangkan spreadsheet untuk menunjukkan nomornya
+
+159
+00:11:19.000 --> 00:11:22.000
+Dengan cara yang lebih mudah bagi orang lain untuk memahami dan diri sendiri.
+
+160
+00:11:22.000 --> 00:11:27.000
+Dia dapat menunjukkan angka yang berbeda dalam merah untuk menunjukkan bahwa dia kehilangan uang atau highlight
+
+161
+00:11:27.000 --> 00:11:31.000
+label dengan warna sehingga mudah ditemukan di lembar kerja yang sangat besar.
+
+162
+00:11:31.000 --> 00:11:35.001
+Dan tentu saja, Anda dapat membuat graf dalam warna, yang memungkinkan Anda untuk menunjukkan
+
+163
+00:11:35.001 --> 00:11:38.001
+Informasi jauh lebih grafis dari yang hanya hitam dan putih dapat.
+
+164
+00:11:38.001 --> 00:11:41.000
+Mungkin cara terbaik untuk menjawabnya adalah untuk menjalankan Trapeze untuk kami
+
+165
+00:11:41.000 --> 00:11:42.001
+Dan kita akan melihat bagaimana Anda menggunakan warna, Andrew.
+
+166
+00:11:44.001 --> 00:11:46.000
+Dan mengapa Anda tidak memberitahu kami apa yang Anda lakukan saat Anda melakukannya.
+
+167
+00:11:46.001 --> 00:11:48.001
+Saya hanya memilih tiga lembar kerja yang akan saya
+
+168
+00:11:48.001 --> 00:11:50.000
+Menunjukkan dan membuka semuanya.
+
+169
+00:11:54.001 --> 00:11:57.000
+Jadi Anda menyadari bahwa jendela berwarna biru.
+
+170
+00:11:58.000 --> 00:12:02.000
+Perbedaan antara Trapeze dan spreadsheet normal adalah bahwa bukannya memiliki
+
+171
+00:12:02.000 --> 00:12:05.001
+baris dan kolom, itu adalah jenis freform spreadsheet.
+
+172
+00:12:06.000 --> 00:12:10.001
+Unit dasar adalah blok, yang merupakan koleksi angka, yang dapat berturut-turut atau
+
+173
+00:12:10.001 --> 00:12:13.000
+kolom atau tabel atau bahkan hanya nilai individu.
+
+174
+00:12:13.000 --> 00:12:15.000
+Dan ia memiliki nama, yang dapat Anda ubah.
+
+175
+00:12:15.000 --> 00:12:18.000
+Dan Anda menggunakan nama untuk membuat formula.
+
+176
+00:12:18.000 --> 00:12:21.001
+Jadi dalam hal ini, total blok penjualan ini adalah jumlah penjualan.
+
+177
+00:12:22.001 --> 00:12:24.001
+Jadi ia tahu bahwa ada empat nilai di sini.
+
+178
+00:12:24.001 --> 00:12:25.000
+Jadi itu adalah beberapa dari mereka.
+
+179
+00:12:25.001 --> 00:12:28.001
+Formula di atas di sini adalah penjualan dibagi oleh total penjualan.
+
+180
+00:12:29.000 --> 00:12:32.001
+Jadi ia memahami bahwa ada empat nilai dan ada satu nilai.
+
+181
+00:12:32.001 --> 00:12:34.001
+Oleh karena itu, perlu menghasilkan empat nilai.
+
+182
+00:12:35.000 --> 00:12:39.001
+Dan karena semua hubungan dibangun dengan nama, saya dapat mengambil blok dan
+
+183
+00:12:39.001 --> 00:12:41.001
+Pindah ke mana saja, jadikan kembali.
+
+184
+00:12:41.001 --> 00:12:45.001
+Saya bisa mengubah ukuran dan bentuknya.
+
+185
+00:12:46.001 --> 00:12:48.000
+Saya bisa mengubah fontnya.
+
+186
+00:12:50.001 --> 00:12:52.001
+Dan tentu saja, hubungan tidak berubah.
+
+187
+00:12:52.001 --> 00:12:56.001
+Hubungan ini benar-benar independen dari
+
+188
+00:12:56.001 --> 00:12:59.001
+Blok itu terletak.
+
+189
+00:13:00.000 --> 00:13:03.001
+Dan seperti yang Anda lihat, ada juga grafis di halaman yang sama.
+
+190
+00:13:04.000 --> 00:13:07.001
+grafis dibangun dengan cara yang sama dengan formula grafis dan kemudian
+
+191
+00:13:07.001 --> 00:13:09.001
+blok, blok penjualan dan blok wilayah.
+
+192
+00:13:09.001 --> 00:13:15.001
+Jadi saat saya mengubah nomor di sini, Anda dapat melihat graf juga akan berubah
+
+193
+00:13:15.001 --> 00:13:17.001
+Dan semua angka akan dikira kembali.
+
+194
+00:13:17.001 --> 00:13:22.000
+Karena Macintosh begitu baik dalam membuat font dan gaya dan gambar, ada
+
+195
+00:13:22.000 --> 00:13:24.001
+Tidak ada alasan mengapa Anda tidak dapat memasukkan gambar dengan lembar kerja Anda.
+
+196
+00:13:25.000 --> 00:13:29.000
+Ini mungkin contoh trivial, tetapi itu menunjukkan kemampuan untuk mencakup grafik
+
+197
+00:13:29.000 --> 00:13:33.000
+bersama dengan spreadsheet Anda sehingga Anda dapat memiliki formulir entri data atau invois
+
+198
+00:13:33.000 --> 00:13:37.001
+dan memiliki perhitungan di atasnya dicampur dalam berbagai
+
+199
+00:13:37.001 --> 00:13:39.000
+Tulis bersama dengan graf Anda.
+
+200
+00:13:40.001 --> 00:13:45.001
+[...] adalah contoh bagaimana Anda dapat membangun formula yang sangat mudah tanpa memiliki
+
+201
+00:13:45.001 --> 00:13:47.001
+Mengingat cara mengetikkan hal-hal.
+
+202
+00:13:48.000 --> 00:13:51.001
+Di sini adalah jumlah investasi, yang merupakan blok di sini.
+
+203
+00:13:52.000 --> 00:13:55.001
+Sekarang, saya akan membangun ini hanya dengan menarik jumlah
+
+204
+00:13:55.001 --> 00:13:57.001
+Fungsi dari menu scrolling.
+
+205
+00:13:58.000 --> 00:14:01.001
+Dan kemudian di bawah ini adalah daftar semua lembar kerja terbuka.
+
+206
+00:14:01.001 --> 00:14:05.001
+Jadi saya bisa pergi ke mana-mana lembar kerja yang ada dalam ingatan dengan nama.
+
+207
+00:14:05.001 --> 00:14:10.000
+Jadi dalam kasus ini, saya akan mendapatkan Invest di kotak kontrol dan itu menghitung kembali.
+
+208
+00:14:11.000 --> 00:14:15.001
+Jadi Trapeze memungkinkan Anda untuk tidak hanya menghitung, tetapi juga untuk meletakkannya keluar
+
+209
+00:14:15.001 --> 00:14:17.000
+dengan cara yang menarik.
+
+210
+00:14:17.001 --> 00:14:21.000
+Dan banyak orang yang membuat perhitungan perlu memperkenalkan mereka kepada orang.
+
+211
+00:14:21.000 --> 00:14:25.000
+Jadi Trapeze memungkinkan Anda untuk melakukannya tanpa harus pergi ke orang lain
+
+212
+00:14:25.000 --> 00:14:26.001
+program untuk mengumpulkan semua bagian.
+
+213
+00:14:26.001 --> 00:14:31.001
+Andrew, Trapeze ditulis khusus untuk Mac juga, atau apakah itu berjalan pada ...
+
+214
+00:14:31.001 --> 00:14:35.001
+Versi ini adalah versi yang kami kirim pada bulan Januari jauh sebelum Mac 2
+
+215
+00:14:35.001 --> 00:14:37.000
+Terdapat dan itu berjalan dalam warna ketika itu.
+
+216
+00:14:38.000 --> 00:14:42.000
+Kami sedang memproduksi versi khusus untuk Mac 2 untuk memanfaatkan
+
+217
+00:14:42.000 --> 00:14:44.001
+warna tambahan dan beberapa fitur lain yang dapat dilakukan.
+
+218
+00:14:45.000 --> 00:14:45.001
+Bagaimana dengan Excel?
+
+219
+00:14:46.001 --> 00:14:49.000
+Excel ditulis setidaknya dua tahun yang lalu.
+
+220
+00:14:49.001 --> 00:14:53.000
+Dan itu berjalan dengan baik pada Mac 2, tetapi itu berjalan pada seluruh keluarga Macintosh.
+
+221
+00:14:53.000 --> 00:14:56.000
+Dan kami juga sedang bekerja pada versi baru yang akan mengambil lebih banyak
+
+222
+00:14:56.000 --> 00:14:57.001
+Keuntungan khusus dari kapasitas.
+
+223
+00:14:57.001 --> 00:15:00.000
+Gary, saya rasa cukup jelas jawaban untuk pertanyaan Anda saat kami datang
+
+224
+00:15:00.000 --> 00:15:02.000
+jarak jauh dari Lotus 1, 2, 3.
+
+225
+00:15:02.000 --> 00:15:03.000
+Ini adalah lompatan generasi.
+
+226
+00:15:03.001 --> 00:15:04.000
+Sayang, terima kasih banyak sekali.
+
+227
+00:15:04.001 --> 00:15:07.000
+Kami akan kembali dalam satu menit dengan dua program spreadsheet lainnya yang
+
+228
+00:15:07.000 --> 00:15:09.000
+Melakukan lebih banyak dari kerja-kerja spreadsheet tradisional.
+
+229
+00:15:09.001 --> 00:15:11.001
+Salah satunya disebut dengan kata-kata dan angka. Yang lain adalah
+
+230
+00:15:11.001 --> 00:15:13.000
+yang disebut prediksi. Jadi tinggal bersama kami.
+
+231
+00:15:25.000 --> 00:15:27.001
+Dengan kami sekarang di studio adalah Camilo Wilson.
+
+232
+00:15:28.001 --> 00:15:31.001
+Camilo adalah presiden dari Lifetree Software, pencipta kata dan angka.
+
+233
+00:15:32.000 --> 00:15:34.001
+Dan di samping Camilo adalah Richard Roth, direktur Unison Technology.
+
+234
+00:15:35.000 --> 00:15:36.001
+Dan mereka membuat produk yang disebut Predict.
+
+235
+00:15:37.000 --> 00:15:40.001
+Camilo, di segmen terakhir, kami baru saja melihat Mac 2 dengan semua fancy tinggi
+
+236
+00:15:40.001 --> 00:15:42.000
+Resolusi warna grafik dan sebagainya.
+
+237
+00:15:42.000 --> 00:15:46.001
+Apakah Anda merasa seperti orang-orang akan bergerak ke model grafis yang tinggi atau
+
+238
+00:15:46.001 --> 00:15:48.000
+Kita akan tetap dengan model 1, 2, 3 semua orang tahu?
+
+239
+00:15:48.001 --> 00:15:52.000
+Tidak ada keraguan bahwa beberapa orang akan ingin melihat ke dalam dunia
+
+240
+00:15:52.000 --> 00:15:53.001
+masa depan . Orang selalu melakukannya.
+
+241
+00:15:54.000 --> 00:15:57.001
+Namun, fakta bahwa 1, 2, 3 saat ini memiliki basis yang dipasang sekitar 2
+
+242
+00:15:57.001 --> 00:15:59.001
+berjuta salinan dan ini adalah program yang kompatibel.
+
+243
+00:16:00.000 --> 00:16:03.000
+Dan hal terakhir yang orang ingin lakukan adalah untuk mendedahkan apa yang sudah mereka ketahui.
+
+244
+00:16:03.001 --> 00:16:06.000
+Sekarang Richard, kalian berdua memiliki produk yang benar-benar, saya
+
+245
+00:16:06.000 --> 00:16:07.001
+Pertimbangkan, buktikan pada 1, 2, 3 model.
+
+246
+00:16:08.000 --> 00:16:09.001
+Apa saja hal-hal yang telah Anda lakukan untuk...
+
+247
+00:16:09.001 --> 00:16:13.000
+Nah, apa yang telah kita lakukan adalah mengambil apa yang sudah diketahui oleh semua orang dalam hal
+
+248
+00:16:13.000 --> 00:16:17.001
+Model spreadsheet dan tambahkan ke dalam kemampuan yang mereka... dari kelompok kecil
+
+249
+00:16:17.001 --> 00:16:22.000
+orang ingin dapat melakukan untuk mengekspresikan ketidakpastian dalam spreadsheets mereka dan
+
+250
+00:16:22.000 --> 00:16:24.001
+memprediksi dan memodelkan berbagai situasi bisnis.
+
+251
+00:16:25.000 --> 00:16:26.001
+Jadi ini adalah perpanjangan dari model dasar.
+
+252
+00:16:27.001 --> 00:16:29.000
+Camilo, bolehkah kamu tunjukkan kata-kata dan angka-angka?
+
+253
+00:16:29.001 --> 00:16:32.001
+Tentu saja . Perkataan-perkataan dan angka-angka diprediksi atas gagasan bahwa pertama dari semua orang
+
+254
+00:16:32.001 --> 00:16:36.000
+yang ingin memiliki lotus kompatibel yang bernilai yang wajar, yang merupakan
+
+255
+00:16:36.000 --> 00:16:37.001
+Yang pertama adalah kata-kata dan angka.
+
+256
+00:16:37.001 --> 00:16:41.001
+Kemudian di atas yang kami tambahkan ke arah dan angka kata prosesor, yang merupakan
+
+257
+00:16:41.001 --> 00:16:44.001
+Fungsi yang paling umum digunakan yang orang lakukan pada komputer pribadi mereka.
+
+258
+00:16:45.001 --> 00:16:47.001
+Jadi saya akan memulai di sini dengan spreadsheet konvensional.
+
+259
+00:16:47.001 --> 00:16:50.000
+Sebelum Anda sampai ke Camilo itu, saya maksud apa logika itu? Saya menganggap ada beberapa
+
+260
+00:16:50.000 --> 00:16:52.001
+Promises di sini dalam hal membawa kata prosesor ke spreadsheet.
+
+261
+00:16:53.000 --> 00:16:56.000
+Persyaratan adalah bahwa jika Anda memiliki cerita keuangan untuk memberitahu, Anda mungkin juga ingin
+
+262
+00:16:56.000 --> 00:16:58.001
+Beritahu orang-orang cerita yang kualitatif, verbal tentang itu.
+
+263
+00:16:58.001 --> 00:17:01.000
+Anda tahu, Anda ingin bergaul tentang keuntungan Anda atau untuk,
+
+264
+00:17:01.000 --> 00:17:03.000
+Anda tahu, minta maaf atas kerugian Anda.
+
+265
+00:17:03.000 --> 00:17:06.001
+Jadi misalnya di sini kita memiliki spreadsheet biasa dan seperti mana-mana spreadsheets akan
+
+266
+00:17:06.001 --> 00:17:10.000
+Jika Anda mengubah satu angka, total berubah dan semua peratusan berubah.
+
+267
+00:17:10.001 --> 00:17:12.001
+Dan kami juga memiliki kemampuan grafis konvensional
+
+268
+00:17:12.001 --> 00:17:14.001
+yang satu, dua, tiga melepaskan satu setengah.
+
+269
+00:17:15.000 --> 00:17:18.000
+Apa yang baru tentang kata-kata dan angka, selain prestasi yang sangat tinggi
+
+270
+00:17:18.000 --> 00:17:21.001
+Spreadsheet, adalah penambahan prosesor kata yang sederhana untuk digunakan.
+
+271
+00:17:22.000 --> 00:17:25.000
+Jadi Anda bisa mulai dengan mengatakan hasil untuk tahun ini.
+
+272
+00:17:27.001 --> 00:17:30.001
+Jadi Anda menekan satu kunci dan boom Anda berada di prosesor kata.
+
+273
+00:17:30.001 --> 00:17:30.001
+dengan tepat.
+
+274
+00:17:32.000 --> 00:17:34.000
+Dan kata prosesor terasa seperti yang nyata
+
+275
+00:17:34.000 --> 00:17:35.001
+kata prosesor, tidak merasa seperti spreadsheet.
+
+276
+00:17:35.001 --> 00:17:38.000
+Banyak orang menggunakan satu, dua, tiga untuk menulis, tetapi itu sangat
+
+277
+00:17:38.000 --> 00:17:40.000
+Tidak ada cara untuk melakukannya.
+
+278
+00:17:40.001 --> 00:17:44.000
+Jadi di sini kami menulis laporan kami, berbaring ke presiden tentang hasil kami dan sekarang kami
+
+279
+00:17:44.000 --> 00:17:47.000
+mengimpor spreadsheet itu sendiri.
+
+280
+00:17:47.000 --> 00:17:51.000
+Jadi kami katakan membawa saya sepuluh baris pertama dari
+
+281
+00:17:51.000 --> 00:17:52.001
+Jelas dan cukup yakin di sini mereka berada.
+
+282
+00:17:53.001 --> 00:17:56.001
+Sekarang mereka tidak hanya hadir di sini dalam kata prosesor, tetapi mereka juga hidup.
+
+283
+00:17:56.001 --> 00:18:00.001
+Perhatikan bahwa kursor saya sekarang terlihat seperti kursor spreadsheet konvensional.
+
+284
+00:18:01.000 --> 00:18:04.000
+Dan jika sebenarnya saya mengubah angka-angka ini langsung di sini menjadi besar
+
+285
+00:18:04.000 --> 00:18:06.000
+Nombor, semua angka dikira kembali.
+
+286
+00:18:06.001 --> 00:18:07.001
+Jika aku memandang ke arahku
+
+287
+00:18:07.001 --> 00:18:09.001
+Spreadsheet, cukup pasti spreadsheet juga telah dihitung kembali.
+
+288
+00:18:09.001 --> 00:18:12.000
+Jadi Anda dapat beroperasi pada spreadsheet di dalam prosesor kata.
+
+289
+00:18:12.000 --> 00:18:12.001
+dan sebaliknya.
+
+290
+00:18:13.000 --> 00:18:16.000
+Dan setiap perubahan yang dibuat dalam satu secara otomatis tercermin dalam yang lain.
+
+291
+00:18:16.001 --> 00:18:19.000
+Dan kemudian untuk membuatnya lebih menarik, misalnya, Anda
+
+292
+00:18:19.000 --> 00:18:20.001
+Anda dapat membagi layar menjadi dua jendela.
+
+293
+00:18:21.000 --> 00:18:23.001
+Di sini kita memiliki jendela horizontal dan mari kita putar ini
+
+294
+00:18:23.001 --> 00:18:25.000
+satu ke dalam jendela pemrosesan kata.
+
+295
+00:18:25.000 --> 00:18:28.001
+Jadi Anda dapat menyusun teks di sini saat Anda menonton
+
+296
+00:18:28.001 --> 00:18:30.000
+Peta di jendela yang lain.
+
+297
+00:18:30.001 --> 00:18:33.001
+Dan jika Anda mengubah satu angka di sini, cukup pasti ia akan berubah di yang lain.
+
+298
+00:18:34.001 --> 00:18:35.001
+Di sana ia ada.
+
+299
+00:18:36.001 --> 00:18:36.001
+[...]
+
+300
+00:18:37.001 --> 00:18:41.000
+Apakah word processor adalah prosesor kata yang disebut full-powered?
+
+301
+00:18:41.000 --> 00:18:44.000
+Tidak, prosesor kata tidak akan meletakkan paparan langsung keluar dari bisnis.
+
+302
+00:18:44.000 --> 00:18:47.000
+Ini dirancang khusus untuk menjadi kata yang kompatibel
+
+303
+00:18:47.000 --> 00:18:48.001
+prosesor dengan spreadsheet.
+
+304
+00:18:48.001 --> 00:18:51.000
+Misalnya, ada beberapa hal lain yang Anda perhatikan dalam kata prosesor.
+
+305
+00:18:51.001 --> 00:18:54.001
+Ini adalah bahwa ia menggunakan slash normal dan menu bar.
+
+306
+00:18:55.000 --> 00:18:58.001
+Jadi itu terasa sangat seperti spreadsheet, tapi itu melakukan semua hal yang Anda harapkan.
+
+307
+00:18:59.000 --> 00:19:00.000
+Jadi hanya satu lapisan di atas
+
+308
+00:19:00.000 --> 00:19:01.001
+Spreadsheet, lapisan sederhana di atas spreadsheet.
+
+309
+00:19:02.000 --> 00:19:02.001
+[...]
+
+310
+00:19:02.001 --> 00:19:03.000
+dengan kata prosesor.
+
+311
+00:19:03.001 --> 00:19:06.000
+Camilo, jika Anda dapat mengunduh kata-kata dan angka di sana
+
+312
+00:19:06.000 --> 00:19:07.001
+Kita bisa bersiap-siap untuk melihat predikat.
+
+313
+00:19:08.000 --> 00:19:09.001
+Dan Richard, mari kita ikuti pertanyaan Gary terlebih dahulu.
+
+314
+00:19:10.000 --> 00:19:12.001
+Anda berbicara tentang menggunakan ketidakpastian di dalam spreadsheet.
+
+315
+00:19:13.000 --> 00:19:13.001
+Tjelaskan itu sedikit lebih.
+
+316
+00:19:14.000 --> 00:19:18.000
+Nah, pada dasarnya, ketika orang berbicara tentang hal-hal yang tidak pasti, mereka berbicara, mereka
+
+317
+00:19:18.000 --> 00:19:22.000
+membuat pernyataan seperti, penjualan saya akan antara dua angka yang berbeda, dan ini
+
+318
+00:19:22.000 --> 00:19:24.000
+Yang satu akan menjadi lebih mungkin dari yang lain.
+
+319
+00:19:24.000 --> 00:19:26.000
+Mereka tidak benar-benar berurusan dengan angka mutlak yang
+
+320
+00:19:26.000 --> 00:19:28.000
+cara yang mereka lakukan dalam spreadsheet tipikal.
+
+321
+00:19:28.000 --> 00:19:30.000
+Ini memaksa Anda untuk meletakkan nomor tertentu di sana.
+
+322
+00:19:30.001 --> 00:19:30.001
+dengan tepat.
+
+323
+00:19:31.000 --> 00:19:34.000
+Dan jika Anda tidak memiliki kemampuan untuk mewakili ketidakpastian, maka ketika Anda
+
+324
+00:19:34.000 --> 00:19:37.001
+menunjukkan hasil dalam ramalan ini, apa yang Anda lakukan adalah meninggalkan
+
+325
+00:19:37.001 --> 00:19:39.001
+Sebagian besar data yang Anda benar-benar berbicara tentang.
+
+326
+00:19:39.001 --> 00:19:44.000
+Dan apa yang Predict memungkinkan Anda untuk melakukannya adalah untuk menangkap semua kemungkinan untuk
+
+327
+00:19:44.000 --> 00:19:47.000
+variabel tertentu pada spreadsheet Anda dengan semua kemungkinan yang terkait
+
+328
+00:19:47.000 --> 00:19:49.001
+dengan itu dan melakukan perhitungan berdasarkan kemungkinan tersebut.
+
+329
+00:19:50.000 --> 00:19:50.001
+Bisakah Anda menunjukkan kepada kami bagaimana Anda melakukannya?
+
+330
+00:19:51.000 --> 00:19:51.001
+Tentu saja dengan benar.
+
+331
+00:19:52.001 --> 00:19:54.000
+Biarlah aku mengangkat selimut di sini.
+
+332
+00:19:54.001 --> 00:19:57.001
+Cara terbaik untuk menunjukkan itu adalah untuk memberikan perbandingan, jika Anda ingin, antara
+
+333
+00:19:57.001 --> 00:19:59.000
+cara orang menggunakan spreadsheets dan cara Anda akan
+
+334
+00:19:59.000 --> 00:20:00.001
+menggunakan prediksi dalam situasi yang serupa.
+
+335
+00:20:01.001 --> 00:20:05.001
+Saya hanya bisa mengembalikan sedikit lembaran di sini.
+
+336
+00:20:05.001 --> 00:20:07.000
+Ini adalah model bisnis yang paling sederhana yang bisa Anda lakukan.
+
+337
+00:20:07.000 --> 00:20:09.000
+memiliki, penjualan, biaya, dan kemudian keuntungan.
+
+338
+00:20:09.001 --> 00:20:13.000
+Dan apa yang dapat saya lakukan adalah turun di sini dan menunjukkan kepada Anda apa yang mungkin dilakukan pengguna spreadsheet.
+
+339
+00:20:13.000 --> 00:20:18.000
+Misalnya, dia mungkin mengatakan bahwa penjualannya adalah, mari kita katakan, $ 1.000 dan datang
+
+340
+00:20:18.000 --> 00:20:19.001
+Di bawah ini dan katakan bahwa biaya adalah $ 500.
+
+341
+00:20:21.001 --> 00:20:24.001
+Dan kemudian melakukan perhitungan untuk menghitung perbedaan antara
+
+342
+00:20:24.001 --> 00:20:26.000
+Dua untuk menunjukkan apa keuntungan itu.
+
+343
+00:20:26.000 --> 00:20:27.001
+Dalam hal ini, sesuatu seperti ini.
+
+344
+00:20:29.000 --> 00:20:31.001
+Okay, dua penjualan minus biaya Anda akan sama dengan keuntungan Anda di sana.
+
+345
+00:20:33.001 --> 00:20:33.001
+Ok ya.
+
+346
+00:20:34.000 --> 00:20:35.000
+Dan itu memberi saya angka.
+
+347
+00:20:35.001 --> 00:20:37.001
+Sekarang, dalam spreadsheet, itu bekerja sangat baik.
+
+348
+00:20:37.001 --> 00:20:40.000
+Jika aku ingin melakukan apa yang ada, aku harus berjalan dan mengubah mereka.
+
+349
+00:20:40.000 --> 00:20:41.001
+Jumlah dan catatan semua nilai yang berbeda.
+
+350
+00:20:42.000 --> 00:20:44.000
+Namun dengan prediksi, saya bisa melakukan sesuatu yang sedikit berbeda.
+
+351
+00:20:44.001 --> 00:20:47.001
+Saya benar-benar dapat mewakili semua nilai untuk variabel tertentu, dalam hal ini
+
+352
+00:20:47.001 --> 00:20:49.000
+Dalam kasus, penjualan, dalam satu sel.
+
+353
+00:20:49.001 --> 00:20:52.000
+Dan saya melakukannya dengan menciptakan apa yang disebut distribusi.
+
+354
+00:20:52.001 --> 00:20:54.000
+Praktek memiliki delapan dari ini yang telah diprediksi
+
+355
+00:20:54.000 --> 00:20:56.000
+Salah satu yang bisa Anda definisi sendiri.
+
+356
+00:20:56.001 --> 00:21:00.000
+Sekarang, dalam kasus yang baru saya sebutkan, mari kita katakan penjualan saya adalah antara $ 500 dan
+
+357
+00:21:00.000 --> 00:21:02.000
+$1,000, paling mungkin, mari kita katakan, $700.
+
+358
+00:21:02.000 --> 00:21:04.000
+Inilah yang kita sebut distribusi triangular.
+
+359
+00:21:05.000 --> 00:21:09.000
+Saya dapat mengatakan Predict untuk melakukan atau mempertahankan, jika Anda ingin, daftar 100 apa yang jika dan
+
+360
+00:21:09.000 --> 00:21:10.001
+kemudian mengatur nilai-nilai untuk distribusi.
+
+361
+00:21:10.001 --> 00:21:16.000
+Katakanlah $500 sebagai minimum saya, $700 adalah paling mungkin saya dan $1,000 sebagai maksimum saya.
+
+362
+00:21:17.001 --> 00:21:19.000
+Dan saya telah menciptakan distribusi probabilitas.
+
+363
+00:21:19.001 --> 00:21:21.000
+Saya bisa melakukan hal yang sama dengan biaya.
+
+364
+00:21:21.000 --> 00:21:24.000
+Mari kita katakan bahwa saya akan mengatakan biaya saya akan antara $ 300 dan $ 700.
+
+365
+00:21:24.001 --> 00:21:27.001
+Dan itu adalah distribusi yang seragam karena tidak benar-benar memiliki titik pertengahan.
+
+366
+00:21:29.000 --> 00:21:32.001
+Sekali lagi, saya akan mengikuti 100 apa yang jika dan saya dapat mengikuti
+
+367
+00:21:32.001 --> 00:21:34.000
+sampai $ 8.000 jika saya inginkan.
+
+368
+00:21:34.001 --> 00:21:37.000
+Dan mari kita katakan antara $ 300 dan $ 700.
+
+369
+00:21:37.000 --> 00:21:39.000
+Jadi Anda hanya meletakkan min Anda, max Anda di sana.
+
+370
+00:21:39.000 --> 00:21:39.000
+[...]
+
+371
+00:21:41.000 --> 00:21:45.001
+Sekarang, fitur yang bagus, sebenarnya fitur utama, Predict adalah kemampuan untuk melakukan
+
+372
+00:21:45.001 --> 00:21:49.000
+jenis perhitungan yang sama yang Anda inginkan dalam spreadsheet, tetapi untuk mengekalkan semua
+
+373
+00:21:49.000 --> 00:21:51.001
+hasil yang akan Anda lakukan untuk masing-masing dari apa yang jika.
+
+374
+00:21:52.000 --> 00:21:56.001
+Jadi saya dapat membuat daftar nilai dan bukannya daftar awal, yang mungkin
+
+375
+00:21:56.001 --> 00:22:00.000
+data sejarah, saya dapat membuatnya dalam arti output, membuat 100
+
+376
+00:22:00.000 --> 00:22:01.001
+Nilai yang diperoleh dari perhitungan saya.
+
+377
+00:22:02.000 --> 00:22:04.000
+Dalam hal ini, F7 minus F9.
+
+378
+00:22:05.001 --> 00:22:08.001
+Sekarang saya dapat meminta Predict untuk keluar dan melakukan 100 apa yang terjadi secara otomatis,
+
+379
+00:22:09.000 --> 00:22:11.000
+Hanya dengan memberikan itu.
+
+380
+00:22:12.000 --> 00:22:15.001
+Dan seperti yang dapat Anda lihat, sistem ini mengambil nilai dari masing-masing dari dua
+
+381
+00:22:15.001 --> 00:22:19.001
+probabilitas distribusi dan menghitung nilai dalam sel keuntungan.
+
+382
+00:22:20.000 --> 00:22:22.001
+Dan di bagian bawah layar, itu memberitahu saya berapa banyak waktu yang saya tinggalkan
+
+383
+00:22:22.001 --> 00:22:24.000
+sampai perhitungan saya selesai.
+
+384
+00:22:25.000 --> 00:22:27.001
+Pertanyaan yang sebenarnya sekarang adalah bahwa semua nilai-nilai itu akan menjadi
+
+385
+00:22:27.001 --> 00:22:29.001
+yang dihasilkan, apa yang bisa kita lakukan dengan mereka?
+
+386
+00:22:29.001 --> 00:22:33.000
+Predict memiliki sejumlah fitur yang dibangun sebagai fitur spreadsheet untuk menangani
+
+387
+00:22:33.000 --> 00:22:38.000
+probabilitas distribusi dalam hal paparan, dan misalnya, grafik.
+
+388
+00:22:38.000 --> 00:22:40.001
+Jadi telah dilakukan 100 kalkulasi. Bagaimana kamu melihat hal ini sekarang?
+
+389
+00:22:40.001 --> 00:22:42.001
+dengan benar. Nah, salah satu cara, paling komprehensif, untuk melihat
+
+390
+00:22:42.001 --> 00:22:44.000
+Pada banyak data adalah untuk menggambar grafis.
+
+391
+00:22:45.000 --> 00:22:49.001
+Saya dapat melakukannya, mari kita katakan, dengan membawa graf keuntungan saya di sini dan melihat
+
+392
+00:22:49.001 --> 00:22:51.000
+informasi dalam sel F11.
+
+393
+00:22:51.001 --> 00:22:53.000
+Tapi tidak hanya angka yang ada di layar.
+
+394
+00:22:53.000 --> 00:22:55.000
+Saya ingin melihat semua nilai yang telah dihasilkan.
+
+395
+00:22:55.000 --> 00:22:56.001
+Jadi saya meletakkan tanda dolar di sana.
+
+396
+00:22:57.001 --> 00:23:01.000
+Dan sekarang prediksi akan mengambil 100 nilai itu dan menciptakan distribusi kemungkinan.
+
+397
+00:23:01.001 --> 00:23:03.001
+Dan itu akan ditunjukkan dalam graf di sini dalam satu detik.
+
+398
+00:23:06.000 --> 00:23:07.001
+Sekarang, kita dapat melihat beberapa hal di sini.
+
+399
+00:23:07.001 --> 00:23:12.000
+Kita dapat melihat bahwa ada beberapa kemungkinan kerugian ke arah sisi minus.
+
+400
+00:23:12.000 --> 00:23:15.000
+Ada kemungkinan keuntungan yang jauh lebih besar dalam rencana bisnis kecil ini.
+
+401
+00:23:15.000 --> 00:23:17.001
+Dan kita juga dapat melihat apa nilai yang paling mungkin akan berada pada graf.
+
+402
+00:23:18.000 --> 00:23:20.000
+Dapatkah Anda menghitung kemungkinan kerugian?
+
+403
+00:23:20.001 --> 00:23:24.000
+Tentu saja Ada fungsi, misalnya, dengan ini melakukan fungsi pengiraan
+
+404
+00:23:24.000 --> 00:23:28.001
+yang memungkinkan saya untuk melihat, mari kita katakan, kemungkinan bahwa angka menjadi negatif
+
+405
+00:23:28.001 --> 00:23:30.001
+di dalam sel tersebut.
+
+406
+00:23:32.000 --> 00:23:33.001
+Jawabannya adalah 80 persen.
+
+407
+00:23:34.000 --> 00:23:34.000
+Itu memang benar.
+
+408
+00:23:36.001 --> 00:23:40.000
+Apa yang terjadi, kami melihat MAC2 baru sebelum ini.
+
+409
+00:23:40.000 --> 00:23:42.001
+Dan tentu saja kita tahu tentang IBM Personal System 2.
+
+410
+00:23:43.000 --> 00:23:45.000
+Apa konsekuensi dari sistem IBM yang baru ini
+
+411
+00:23:45.000 --> 00:23:46.001
+Bagaimana dengan orang-orang yang sedang mengembangkan software?
+
+412
+00:23:47.001 --> 00:23:51.001
+Nah, dari sudut pandang kita, jelas, orang-orang menuntut teknik seperti
+
+413
+00:23:51.001 --> 00:23:54.001
+Ini, yang melibatkan lebih banyak pengkomputeran dan lebih banyak data yang disimpan.
+
+414
+00:23:54.001 --> 00:23:58.000
+Dan jelas, semakin cepat mesin dan semakin banyak data yang dapat mereka simpan,
+
+415
+00:23:59.000 --> 00:24:02.001
+untuk melampaui, mari kita katakan, batas 640K adalah kebaikan untuk
+
+416
+00:24:02.001 --> 00:24:04.001
+Produk seperti kami, untuk pasti.
+
+417
+00:24:04.001 --> 00:24:05.001
+Bagaimana dengan interface grafis?
+
+418
+00:24:05.001 --> 00:24:08.001
+Apakah kita akan melihat itu sebagai antarmuka aplikasi standar?
+
+419
+00:24:08.001 --> 00:24:10.000
+Ya, aku tidak tahu.
+
+420
+00:24:10.000 --> 00:24:12.000
+Saya maksudkan, fakta adalah bahwa orang sangat
+
+421
+00:24:12.000 --> 00:24:13.001
+Banyak yang sering melihat hal-hal dalam format ini.
+
+422
+00:24:14.000 --> 00:24:16.001
+Dan ada dua, tiga, empat juta pengguna spreadsheet di
+
+423
+00:24:16.001 --> 00:24:18.000
+Dunia yang menggunakannya seperti yang Anda lihat di sana.
+
+424
+00:24:18.000 --> 00:24:20.000
+Apakah mereka ingin belajar sesuatu yang lain untuk mendapatkan pekerjaan
+
+425
+00:24:20.000 --> 00:24:21.001
+Tentu saja, hanya waktu yang akan memberitahu.
+
+426
+00:24:22.000 --> 00:24:23.001
+Tuan-tuan, kami sudah keluar dari waktu. Terima kasih banyak sekali.
+
+427
+00:24:23.001 --> 00:24:25.000
+Ini melengkapi pandangan kita pada spreadsheets.
+
+428
+00:24:25.000 --> 00:24:28.000
+Kami akan kembali minggu depan dengan bagian 4 dari aplikasi bisnis ini
+
+429
+00:24:28.000 --> 00:24:30.000
+Serangkaian melihat manajer database.
+
+430
+00:24:30.000 --> 00:24:31.000
+Jadi pastikan untuk bergabung dengan kami kemudian.
+
+431
+00:24:31.001 --> 00:24:33.001
+Sekarang, tetap bersemangat untuk berita Komputer minggu ini.
+
+432
+00:24:44.001 --> 00:24:47.000
+Saya adalah Susan Chase duduk untuk Stewart Chafee di
+
+433
+00:24:47.000 --> 00:24:48.001
+File akses rahasia minggu ini.
+
+434
+00:24:48.001 --> 00:24:53.001
+Lotus Development Corporation telah menandatangani perjanjian 10 tahun dengan IBM untuk desain
+
+435
+00:24:53.001 --> 00:24:57.001
+perangkat lunak untuk komputer terbesarnya, mulai dengan versi 1.2.3 untuk
+
+436
+00:24:57.001 --> 00:24:59.000
+sistem 370 mainframes.
+
+437
+00:24:59.001 --> 00:25:03.001
+Kesepakatan ini menempatkan Lotus pada langkah lebih lanjut dengan Microsoft, yang baru-baru ini
+
+438
+00:25:03.001 --> 00:25:08.000
+mengalahkan Lotus sebagai produsen perangkat lunak PC terbesar di dunia dan telah lama
+
+439
+00:25:08.000 --> 00:25:10.000
+Dia memiliki hubungan kerja dengan IBM.
+
+440
+00:25:10.001 --> 00:25:15.000
+Efek yang paling menghancurkan akan menjadi pada Ashton Tate, satu-satunya dari Big Three.
+
+441
+00:25:15.000 --> 00:25:17.001
+Pengembang perangkat lunak tanpa hubungan seperti itu.
+
+442
+00:25:17.001 --> 00:25:21.001
+Versi baru dari 1.2. 3 tidak akan tersedia sampai tahun depan.
+
+443
+00:25:22.000 --> 00:25:26.001
+Lotus juga mengumumkan dua versi lain dari 1. 2.3 Dengan dukungan multi-dimensi
+
+444
+00:25:26.001 --> 00:25:31.000
+kemampuan, rangkaian program database multi-user, dan pemrograman yang dipertingkatkan
+
+445
+00:25:31.000 --> 00:25:33.000
+Kapasitas untuk 1.2.3
+
+446
+00:25:34.000 --> 00:25:36.001
+Dan perlumbaan untuk komputer tercepat terus berlanjut.
+
+447
+00:25:37.000 --> 00:25:42.001
+ETA Systems baru-baru ini mengungkapkan ETA-10, superkomputer yang mampu memproses
+
+448
+00:25:42.001 --> 00:25:45.000
+10 miliar pengiraan per detik.
+
+449
+00:25:45.000 --> 00:25:50.000
+ETA, anak perusahaan data kontrol, mengklaim mesin baru memiliki prestasi dua kali lipat
+
+450
+00:25:50.000 --> 00:25:53.000
+Superkomputer yang dibuat oleh pemimpin industri Cray Research.
+
+451
+00:25:53.001 --> 00:25:56.001
+Cray, di sisi lain, percaya Cray-2 mereka adalah tiga kali
+
+452
+00:25:56.001 --> 00:25:58.001
+Lebih cepat dari ETA-10.
+
+453
+00:25:59.000 --> 00:26:03.000
+Dan persaingan lebih lanjut datang dari mesin pemikiran, dengan pengumuman mereka tentang
+
+454
+00:26:03.000 --> 00:26:08.001
+Mesin yang dilaporkan melebihi baik ETA-10 dan Cray-2 pada beberapa tugas.
+
+455
+00:26:09.000 --> 00:26:13.000
+Apple Computer berencana untuk membangun perusahaan perangkat lunak independen untuk mempromosikan
+
+456
+00:26:13.000 --> 00:26:16.001
+Mencipta program untuk komputer mereka oleh pengembang kecil.
+
+457
+00:26:17.000 --> 00:26:20.001
+Perusahaan baru Apple akan menjual program yang ditulis oleh perusahaan lain yang tidak akan
+
+458
+00:26:20.001 --> 00:26:24.000
+Jika tidak, mereka memiliki sumber daya untuk memasarkan dan mendistribusikan produk mereka.
+
+459
+00:26:24.001 --> 00:26:27.000
+Selain itu, ia juga akan menjual program yang sedang diterbitkan.
+
+460
+00:26:27.000 --> 00:26:28.001
+oleh Apple tetapi di bawah labelnya sendiri.
+
+461
+00:26:29.001 --> 00:26:33.001
+Apple melihat produk-produk baru ini sebagai cara untuk merangsang penjualan komputer-komputernya dengan
+
+462
+00:26:33.001 --> 00:26:35.001
+membuat mereka mampu melakukan lebih banyak hal.
+
+463
+00:26:36.000 --> 00:26:39.000
+Sekarang sudah waktunya untuk ulasan perangkat lunak minggu ini, dan inilah Paul Schindler.
+
+464
+00:26:40.001 --> 00:26:42.001
+Mengungkapkan detail yang tidak jelas.
+
+465
+00:26:43.001 --> 00:26:45.001
+Hal yang sama berlaku untuk banyak outliner saat ini di pasar.
+
+466
+00:26:46.000 --> 00:26:48.000
+Mereka cenderung menjadi gelap dan bukannya menerangi.
+
+467
+00:26:48.001 --> 00:26:51.001
+Sekarang itu adalah sebelum Moore, outliner grafis paling dalam database.
+
+468
+00:26:52.001 --> 00:26:56.000
+Pertama sekali, sebagai outliner sederhana, ia menawarkan Anda opsi untuk melihat apa pun
+
+469
+00:26:56.000 --> 00:27:01.000
+outline dalam tiga format grafis yang berbeda, pohon, peluru, atau outline.
+
+470
+00:27:01.001 --> 00:27:04.001
+Anda dapat melompat ke belakang dan ke depan antara berbagai tingkat detail.
+
+471
+00:27:05.000 --> 00:27:09.001
+Selain itu, Anda dapat mengubah font, menambahkan baris, menghapus menu di bagian bawah,
+
+472
+00:27:09.001 --> 00:27:12.001
+Tukar angka ke peluru, dan gunakan Moore untuk membuat slides overhead.
+
+473
+00:27:13.001 --> 00:27:16.000
+Sekarang jika itu semua yang bisa dia lakukan, Moore akan comel.
+
+474
+00:27:16.000 --> 00:27:19.001
+Tetapi Anda juga dapat memiliki enam file yang berbeda terbuka sekaligus pada layar.
+
+475
+00:27:19.001 --> 00:27:22.000
+Dan Moore dapat angka total dalam outline.
+
+476
+00:27:22.001 --> 00:27:24.000
+Sebenarnya, Moore melakukan banyak hal.
+
+477
+00:27:24.000 --> 00:27:25.001
+Ia bisa membuat memo dan surat.
+
+478
+00:27:26.000 --> 00:27:27.001
+Anda dapat menyimpan kalender online.
+
+479
+00:27:27.001 --> 00:27:29.001
+Sekarang anggap Anda ingin menyimpan kalender Anda di Moore.
+
+480
+00:27:29.001 --> 00:27:32.001
+Anda mengangkat kalendar, menarik tikus di atasnya, dan Moore
+
+481
+00:27:32.001 --> 00:27:34.000
+Anda akan membuat outline kalender.
+
+482
+00:27:34.001 --> 00:27:38.001
+Templat lain dapat digunakan untuk biaya, pendaftaran pesanan, atau buku alamat.
+
+483
+00:27:39.001 --> 00:27:43.001
+Moore adalah outliner untuk digunakan pada Apple Macintosh, $ 295 dari Living Video
+
+484
+00:27:43.001 --> 00:27:45.000
+Teks dari Mountain View, California.
+
+485
+00:27:45.001 --> 00:27:48.000
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+486
+00:27:48.000 --> 00:27:50.000
+Dan itu adalah untuk komputer Chronicles minggu ini.
+
+487
+00:27:53.001 --> 00:27:57.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+488
+00:27:57.001 --> 00:28:01.000
+-Sistem komputer yang kompatibel, termasuk pemrosesan kata dengan koreksi spelling,
+
+489
+00:28:01.000 --> 00:28:05.001
+Software komunikasi, dan modem Haze-kompatibel 1200 dan 2400 VOD.
+
+490
+00:28:06.000 --> 00:28:08.001
+Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+491
+00:28:09.000 --> 00:28:12.000
+Leading Edge, memimpin jalan ke era informasi.
+
+492
+00:28:12.001 --> 00:28:15.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte.
+
+493
+00:28:16.001 --> 00:28:20.000
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak, dan bahasa yang baru
+
+494
+00:28:20.000 --> 00:28:43.000
+perkembangan teknologi komputer di seluruh dunia. dan www.mooji.org
