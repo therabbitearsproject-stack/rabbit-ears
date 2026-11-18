@@ -1,0 +1,1461 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:06.001
+Ini adalah plotter 8-pin, jenis perangkat output fantasi yang biasanya merupakan bagian dari
+
+2
+00:00:06.001 --> 00:00:11.000
+Sebuah desain komputer yang mahal atau sistem CAD. Sekarang, sistem CAD profesional
+
+3
+00:00:11.000 --> 00:00:15.001
+dapat biaya $ 20.000 atau lebih, tetapi dengan peningkatan kecepatan dan memori pribadi
+
+4
+00:00:15.001 --> 00:00:20.001
+Komputer, Anda sekarang dapat mendapatkan program CAD pribadi untuk kurang dari $100. Hari ini, kami
+
+5
+00:00:20.001 --> 00:00:25.000
+Lihatlah perangkat lunak CAD pribadi di edisi ini dari Computer Chronicles.
+
+6
+00:00:46.001 --> 00:00:51.001
+Komputer Chronicles dimungkinkan sebagian oleh CompuServe, dengan
+
+7
+00:00:51.001 --> 00:00:56.000
+perpustakaan referensi online, laporan Wall Street, belanja di rumah, maskapai penerbangan
+
+8
+00:00:56.000 --> 00:01:02.001
+reservasi, permainan, dan ratusan layanan lainnya. Membantu, Membantu Orang
+
+9
+00:01:02.001 --> 00:01:09.001
+Dapatkan yang paling banyak dari komputer. Pembiayaan tambahan disediakan oleh McGraw-Hill,
+
+10
+00:01:09.001 --> 00:01:13.001
+Penerbitan dari Byte. Artikel teknis rinci Byte tentang perangkat keras, perangkat lunak baru,
+
+11
+00:01:14.000 --> 00:01:17.001
+dan bahasa mencakup perkembangan teknologi komputer di seluruh dunia.
+
+12
+00:01:21.001 --> 00:01:24.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay, dan duduk minggu ini
+
+13
+00:01:24.001 --> 00:01:28.000
+Gary Kildall adalah Jan Lewis. Jan, kami memiliki program yang sangat kecil di sini. Itu adalah
+
+14
+00:01:28.000 --> 00:01:31.001
+Jenis program CAD untuk anak-anak yang disebut Car Builder. Perhatikan apa yang bisa Anda lakukan. Aku adalah
+
+15
+00:01:31.001 --> 00:01:34.000
+saat ini merancang atau merancang kembali tubuh mobil ini.
+
+16
+00:01:34.000 --> 00:01:37.001
+Anda dapat melihat saya dapat memindahkan kursor itu di sana. Aku bisa menekan sedikit itu.
+
+17
+00:01:37.001 --> 00:01:41.000
+Bump ke dalam lubang jika saya inginkan. Katakan saya senang dengan desain tubuh tertentu itu. Kami
+
+18
+00:01:41.000 --> 00:01:45.001
+Anda dapat masuk dan menguji mobil ini sekarang dan mengendalikannya melalui terowong angin. Kami akan masuk ke dalam
+
+19
+00:01:45.001 --> 00:01:49.001
+Menu utama di sini. Anda akan melihat saya telah memanggil hypercar ini, dengan cara ini, dalam kehormatan
+
+20
+00:01:49.001 --> 00:01:55.000
+dari majalah Anda. Mari kita masuk ke dalam tes mobil. Salah satu pilihan yang saya miliki, seperti yang saya katakan,
+
+21
+00:01:55.000 --> 00:01:59.000
+Apakah saya dapat mengambilnya pada ujian jalan atau saya dapat melakukannya melalui ujian terowong angin. Kami akan
+
+22
+00:01:59.000 --> 00:02:01.001
+Lihat apa yang jurutera memberitahu saya saat saya menjalankan ini melalui ujian terowong angin. Engkau
+
+23
+00:02:01.001 --> 00:02:05.001
+Anda dapat melihat angin yang benar-benar datang melalui mobil. Di sana ia ada. Saya berpikir bahwa itu
+
+24
+00:02:05.001 --> 00:02:10.000
+Mobil tidak akan berjalan dengan baik. Saya lebih suka mobil akan menggunakan sedikit lebih banyak pekerjaan untuk
+
+25
+00:02:10.000 --> 00:02:14.000
+Mengurangi drag tersebut. Tidak ada kidding. Ini adalah contoh yang sangat sederhana dari program CAD.
+
+26
+00:02:14.000 --> 00:02:17.001
+Itu yang indah. Tentu saja, Jen Kami berbicara tentang CAD pribadi dalam hal ini
+
+27
+00:02:17.001 --> 00:02:21.000
+program, dan saya bertanya-tanya bagaimana Anda akan mendefinisikan itu. Bagaimana itu lebih dari sekadar
+
+28
+00:02:21.000 --> 00:02:26.000
+Sebuah program draw, dan mengapa itu kurang dari program CAD-CAM penuh? Jika Anda melihat
+
+29
+00:02:26.000 --> 00:02:29.001
+pada apa program CAD-CAM full-blown melakukan, mari kita katakan jika Anda melihat General
+
+30
+00:02:29.001 --> 00:02:32.001
+Motor atau perusahaan mobil besar, apa yang akan mereka lakukan dengan mobil, mereka memiliki
+
+31
+00:02:32.001 --> 00:02:36.001
+Banyak sekali intrik. Mereka perlu melakukan lebih banyak permutasi dan
+
+32
+00:02:36.001 --> 00:02:41.000
+manipulasi, dan mereka perlu melakukannya sangat, sangat cepat. Apa yang dilakukan oleh CAD
+
+33
+00:02:41.000 --> 00:02:45.000
+melakukan hal-hal yang sama seperti yang mereka lakukan di bidang CAD profesional dan
+
+34
+00:02:45.000 --> 00:02:48.001
+membawanya ke tingkat yang orang bisa melakukannya, tidak dengan begitu banyak
+
+35
+00:02:48.001 --> 00:02:53.001
+dengan intrik. Atau dalam kasus ini, bahkan pada Apple II, bahwa seorang anak dapat duduk
+
+36
+00:02:53.001 --> 00:02:57.001
+Dan sebenarnya melakukan CAD-CAM, pada dasarnya. Dan mengapa itu lebih dari sekedar sebuah program drawing?
+
+37
+00:02:58.001 --> 00:03:02.000
+CAD dirancang untuk objek dan manipulasi
+
+38
+00:03:02.000 --> 00:03:04.000
+objek melalui berbagai kondisi.
+
+39
+00:03:04.000 --> 00:03:09.001
+Program dirancang untuk produksi statik. Begitu juga dengan CAD
+
+40
+00:03:09.001 --> 00:03:13.000
+program, Anda harus memiliki akses ke setiap bit kecil ini, cara
+
+41
+00:03:13.000 --> 00:03:17.000
+Anda melakukannya beberapa menit yang lalu. Dan menggambar program, Anda tidak perlu itu. dengan baik,
+
+42
+00:03:17.001 --> 00:03:20.001
+Jan, kami akan melihat lima CAD pribadi yang paling menarik
+
+43
+00:03:20.001 --> 00:03:24.000
+program dalam dunia MS-DOS. Kami akan melihat CAD generik, CAD cepat, dan
+
+44
+00:03:24.000 --> 00:03:28.001
+dengan AutoCAD. Kami akan melihat dua program untuk Mac II, versi Mac VersaCAD, dan
+
+45
+00:03:28.001 --> 00:03:32.001
+Sebuah program CAD 3D baru yang disebut Dimensions. Kami memulai dengan mengalir di atas satu
+
+46
+00:03:32.001 --> 00:03:36.001
+program CAD yang sangat mahal yang digunakan di perusahaan desain yang sangat besar,
+
+47
+00:03:37.000 --> 00:03:43.000
+Bechtel Corporation, tepat di sini di San Francisco. stasiun ruang angkasa ini,
+
+48
+00:03:44.001 --> 00:03:50.001
+stasiun metro ini, dan perjalanan parkir hiburan ini benar-benar belum ada, kecuali
+
+49
+00:03:50.001 --> 00:03:56.000
+dalam memori komputer ini. Tetapi yang umum untuk semua desain ini adalah tingkat
+
+50
+00:03:56.000 --> 00:04:02.001
+detail dan realisme yang memungkinkan untuk membangun pabrik, pabrik listrik, atau
+
+51
+00:04:02.001 --> 00:04:09.000
+Sistem transit sepenuhnya dalam bentuk digital sebelum berkomitmen untuk konstruksi. dan yang
+
+52
+00:04:09.000 --> 00:04:13.000
+software yang memungkinkan adalah kombinasi paket yang dikembangkan oleh
+
+53
+00:04:13.000 --> 00:04:18.001
+dari Bechtel Group. 3DM adalah sistem pemodelan tiga dimensi yang memungkinkan
+
+54
+00:04:18.001 --> 00:04:23.001
+tim teknik untuk merancang dan melihat proyek dalam lapisan dari luar
+
+55
+00:04:23.001 --> 00:04:29.000
+struktur pada unsur-unsur individu di dalamnya. Karena program ini mengumpulkan data
+
+56
+00:04:29.000 --> 00:04:35.000
+dari desain skematis atau logis asli, itu dengan tepat mewakili setiap
+
+57
+00:04:35.000 --> 00:04:41.000
+Elemen atau sistem dan bagaimana mereka cocok bersama. Program ini juga dapat mengidentifikasi bagaimana
+
+58
+00:04:41.000 --> 00:04:47.000
+Perubahan di salah satu bagian dari satu sistem dapat mempengaruhi yang lain. Data digital yang sama
+
+59
+00:04:47.000 --> 00:04:51.001
+digunakan untuk membuat model statik dapat digunakan untuk membangun model animasi juga,
+
+60
+00:04:52.000 --> 00:04:57.000
+Dengan paket perangkat lunak yang disebut Walkthrough. Walkthrough memungkinkan seorang insinyur untuk
+
+61
+00:04:57.000 --> 00:05:03.000
+mempertimbangkan model yang solid dari proyek untuk menggerakkan bagian individu dan untuk memeriksa
+
+62
+00:05:03.000 --> 00:05:09.001
+ruang dalam waktu nyata seperti model manusia kecil. 3DM dan Walkthrough memiliki semua tetapi
+
+63
+00:05:09.001 --> 00:05:15.001
+menggantikan blueprint di Bechtel. Dan yang paling penting, perangkat lunak ini membuat sebuah
+
+64
+00:05:15.001 --> 00:05:21.001
+database desain umum yang dapat dipercaya dan disumbangkan oleh setiap anggota proyek.
+
+65
+00:05:31.001 --> 00:05:36.000
+Sekarang bergabung dengan kami di studio adalah Bob Fulton, Presiden dan CEO Generic Software
+
+66
+00:05:36.000 --> 00:05:39.001
+dari Redmond, Washington dan di samping Bob adalah Mike Riddle, Presiden Evolution
+
+67
+00:05:39.001 --> 00:05:43.001
+Komputer Tempe di Arizona. dengan Jan? Tampaknya seolah-olah ada satu
+
+68
+00:05:43.001 --> 00:05:47.000
+pengembangan paket CAD yang dilaporkan pada tahun lalu atau sebaliknya, yang
+
+69
+00:05:47.000 --> 00:05:50.000
+Berapa lama waktu yang cepat CAD telah keluar. Mengapa ini?
+
+70
+00:05:50.000 --> 00:05:54.001
+Apakah ini prosesor yang lebih cepat, lebih banyak memori? Apa alasan untuk ini? Keduanya dari
+
+71
+00:05:54.001 --> 00:05:58.000
+Alasan yang demikian. Hardware telah sedikit diperbaiki, biaya telah turun,
+
+72
+00:05:58.001 --> 00:06:03.001
+Lebih banyak orang dapat memberikan prestasi yang diperlukan agar orang-orang dapat
+
+73
+00:06:03.001 --> 00:06:07.001
+Sekarang dapat mencoba melakukan kedua grafik dan pemrosesan kata bersama-sama di komputer.
+
+74
+00:06:08.000 --> 00:06:11.000
+Bob, kami telah mendengar tentang program CAD yang berharga ribuan dolar. Anda memiliki genetik
+
+75
+00:06:11.000 --> 00:06:14.001
+CAD, yang saya pikir dijual untuk sekitar 99 bucks dan namun itu agak sedikit. Kamu bisa
+
+76
+00:06:14.001 --> 00:06:18.000
+Demo Generic CAD untuk kami? Ya, saya yakin bisa. Hal pertama yang akan saya lakukan di sini
+
+77
+00:06:18.000 --> 00:06:25.000
+Saya akan membuat rencana lantai. Saya pikir ini menggunakan dinding ganda dan ini
+
+78
+00:06:25.000 --> 00:06:29.001
+Ini adalah jenis penggunaan CAD yang sangat umum. Jadi kita akan menggunakan CAD di sini untuk benar-benar keluar
+
+79
+00:06:29.001 --> 00:06:34.000
+Sebuah desain rumah sejenis? Itu benar dan sekarang apa yang akan saya lakukan adalah saya
+
+80
+00:06:34.000 --> 00:06:37.000
+akan menggunakan apa yang disebut perintah makro untuk menyelesaikan itu, yang berarti untuk menggambar
+
+81
+00:06:37.000 --> 00:06:43.000
+dinding dalaman dan ini ditetapkan pada dimensi eksternal yang saya masukkan.
+
+82
+00:06:44.001 --> 00:06:48.000
+Sekarang apa yang akan saya lakukan adalah saya akan turun, saya akan kembali ke
+
+83
+00:06:48.000 --> 00:06:51.001
+menu dan apa yang akan saya lakukan adalah saya akan meletakkan di beberapa kamar mandi dan dapur
+
+84
+00:06:51.001 --> 00:06:55.001
+Fitur yang Pertama-tama, mari kita lihat mereka. Hal ini disebut sebagai preview. Sekarang
+
+85
+00:06:55.001 --> 00:06:58.001
+Saya hanya memiliki beberapa di sana. Ini bisa menjadi
+
+86
+00:06:58.001 --> 00:07:00.001
+beratus-ratus atau puluhan buah yang berbeda.
+
+87
+00:07:01.000 --> 00:07:06.000
+Saya akan kembali ke lantai pertama dan apa yang akan kami lakukan terlebih dahulu dari
+
+88
+00:07:06.000 --> 00:07:09.000
+semua, Anda menyadari mereka semua berhadapan, saya akan mengambil mandi terlebih dahulu
+
+89
+00:07:09.000 --> 00:07:10.001
+Dan kamu akan melihatnya dalam bayang-bayang di sana.
+
+90
+00:07:11.000 --> 00:07:15.000
+Aku akan mengangkatnya. Anda mungkin telah membuat fitur-fitur tersebut di CAD
+
+91
+00:07:15.000 --> 00:07:19.000
+Programnya juga Bob. Ya, Anda dapat membuatnya atau Anda dapat membelinya sudah
+
+92
+00:07:19.000 --> 00:07:24.000
+yang dibuat. Sekarang aku akan mengambil toilet dan aku akan membalikkan toilet itu untuk menghadapi
+
+93
+00:07:24.000 --> 00:07:29.000
+dari kiri . Aku akan meletakkannya di sana. Sekarang saya akan memilih kamar mandi sink,
+
+94
+00:07:29.000 --> 00:07:32.001
+yang saya akan berbalik ke kanan dan saya akan meletakkannya di sana dan di sana
+
+95
+00:07:32.001 --> 00:07:36.000
+Aku punya kamar mandi. Bob, bagaimana jika saya ingin bukannya mandi, mari kita katakan saya
+
+96
+00:07:36.000 --> 00:07:39.000
+Aku ingin punya bathtub. Okay, sangat mudah sekali. Apa yang dapat Anda lakukan adalah komponen
+
+97
+00:07:39.000 --> 00:07:46.000
+menggantikan Saya hanya mendaftar di CN. Kamar mandi, kamar mandi adalah AP4 dan
+
+98
+00:07:46.000 --> 00:07:50.001
+Bathtub adalah AP5 dan secara otomatis mengubahnya keluar. Okay, sekarang anggap itu tidak
+
+99
+00:07:50.001 --> 00:07:55.000
+sesuai dengan kamar mandi di ruangan tertentu yang akan Anda peruntukkan untuk kamar mandi. Jika itu
+
+100
+00:07:55.000 --> 00:08:01.000
+tidak sesuai, maka terlebih dahulu, jika Anda tahu itu, mari kita katakan jika Anda sudah memiliki, itu
+
+101
+00:08:01.000 --> 00:08:05.000
+adalah rumah Anda yang ada, Anda tahu bahwa itu tidak akan cocok. Jika itu adalah rumah baru atau
+
+102
+00:08:05.000 --> 00:08:11.000
+Anda memutuskan Anda akan membuat beberapa perubahan, Anda dapat memindahkan dinding. Sekarang, dalam
+
+103
+00:08:11.000 --> 00:08:15.001
+untuk menyelesaikan dapur, saya kembali ke bawah dan saya mengambil rentang oven dan
+
+104
+00:08:15.001 --> 00:08:22.001
+Aku membawanya ke tempatnya. Saya mengambil dapur sink, saya harus memiliki
+
+105
+00:08:22.001 --> 00:08:28.001
+dapur jatuh ke dalam kotak dan memutuskan saya ingin peti sejuk dan saya akan memilih
+
+106
+00:08:28.001 --> 00:08:30.000
+Itu dan memiliki wajah yang tersisa.
+
+107
+00:08:32.000 --> 00:08:35.001
+Dan ada dapur pada saat ini dengan peralatan dasar yang dipasang. Jadi kamu
+
+108
+00:08:35.001 --> 00:08:39.001
+dapat benar-benar jenis gaya spreadsheet apa jika, jika Anda ingin, saya maksudkan eksperimen
+
+109
+00:08:39.001 --> 00:08:42.001
+tanpa benar-benar menggerakkan perabot dan melihat apakah itu cocok dan bagaimana
+
+110
+00:08:42.001 --> 00:08:47.000
+Itu terlihat dan sebagainya. Itu adalah benar. Ini menghemat banyak, mari kita katakan banyak tekanan
+
+111
+00:08:47.000 --> 00:08:51.000
+Punggung dan jari-jari bergetar dengan tidak perlu menggerakkan hal-hal itu.
+
+112
+00:08:51.000 --> 00:08:54.001
+Anda dapat mencobanya terlebih dahulu. Bob, jika saya bisa meminta Anda untuk meluncurkan keyboard
+
+113
+00:08:54.001 --> 00:08:57.001
+untuk Mike sehingga dia dapat FastCAD dimuat di sana di komputer dan saat dia
+
+114
+00:08:57.001 --> 00:09:01.000
+Dengan melakukan itu, siapa yang akan menjadi pengguna tipikal untuk sesuatu seperti CAD generik? Apakah itu
+
+115
+00:09:01.000 --> 00:09:05.000
+hanya pemilik rumah atau apakah itu seorang arsitek atau pereka profesional? Baiklah, di sana
+
+116
+00:09:05.000 --> 00:09:10.000
+Tidak ada pengguna tipikal. Itulah hal yang menarik. Sekitar 24% dari basis pengguna kami adalah
+
+117
+00:09:10.000 --> 00:09:15.001
+Arsitek dan insinyur. Sekitar 36% adalah perusahaan besar Fortune 1000. Tapi
+
+118
+00:09:15.001 --> 00:09:19.001
+40% lainnya adalah bagian yang menarik. Mereka adalah rektum, mereka adalah polisi,
+
+119
+00:09:20.000 --> 00:09:25.000
+Mereka adalah pemadam kebakaran, mereka adalah wanita yang merancang kuil. Mereka hanya tentang apa-apa
+
+120
+00:09:25.000 --> 00:09:30.000
+Penggunaan praktis yang bisa Anda pikirkan. Okay, Mike, Anda memiliki FastCAD di sana sekarang dan
+
+121
+00:09:30.000 --> 00:09:32.000
+menunjukkan kepada kami apa yang Anda lakukan dengan FastCAD dan bagaimana
+
+122
+00:09:32.000 --> 00:09:33.001
+Ini berbeda dari apa yang baru saja kita lihat.
+
+123
+00:09:34.001 --> 00:09:38.001
+Nah, ini adalah rencana lantai rumah yang saya tinggal di dan sebagai contoh dari
+
+124
+00:09:38.001 --> 00:09:43.000
+sesuatu yang sebenarnya kami lakukan, kami mengubah salah satu kamar tidur untuk membuat kantor keluar
+
+125
+00:09:43.000 --> 00:09:47.000
+dari itu. Itu agak sempit sehingga kami memperluasnya dan memindahkan dinding dua kaki.
+
+126
+00:09:47.001 --> 00:09:53.000
+Apa yang kita bisa lakukan adalah kerangka itu, memilih apa yang kita ingin berubah dan pada dasarnya mengatakan
+
+127
+00:09:53.000 --> 00:09:57.000
+Kami ingin memindahkannya sehingga dinding itu keluar di sini. Itu membuat saya ruang yang lebih besar untuk
+
+128
+00:09:57.000 --> 00:10:01.000
+ruang kerja dan jika saya memutuskan saya tidak menyukainya, akan sangat mudah untuk kembali dan
+
+129
+00:10:01.000 --> 00:10:05.001
+membalikkan perubahan itu. Cobalah kedua cara, lihat apa yang kita inginkan. Okay, sedikit lebih
+
+130
+00:10:05.001 --> 00:10:08.000
+detail tentang jenis operasi tersebut.
+
+131
+00:10:11.000 --> 00:10:16.001
+Dan apa yang kita cari di sini? Sebuah lukisan yang hanya memiliki kerangka kecil sederhana
+
+132
+00:10:16.001 --> 00:10:21.000
+wilayah tersebut. Ini bisa menjadi patio atau lawn dan beberapa dimensi di atasnya, sesuatu untuk ditunjukkan
+
+133
+00:10:21.000 --> 00:10:27.001
+dari jarak tersebut. Sekarang apa yang kita lakukan adalah kita membuat jenis perubahan yang sama yang saya panggil
+
+134
+00:10:27.001 --> 00:10:32.000
+dan stretch. Kita memperpanjang bentuk hal-hal, kita memilih apa yang kita ingin memperpanjang,
+
+135
+00:10:32.001 --> 00:10:38.000
+Katakan itu untuk melakukannya dan kemudian kita katakan itu bagaimana kita ingin memindahkannya. Jadi Anda ingin bergerak
+
+136
+00:10:38.000 --> 00:10:42.001
+dari sini ke sana dan kami menemukan bahwa sekarang kami secara otomatis memperbaiki
+
+137
+00:10:42.001 --> 00:10:47.001
+Dimensi dan cross hatching. Ini adalah fitur yang biasanya hanya ditemukan
+
+138
+00:10:47.001 --> 00:10:51.001
+dalam program saya dan jenis program yang lebih mahal. Anda bisa, jika Anda ingin
+
+139
+00:10:51.001 --> 00:10:54.001
+lihat itu dalam mari kita katakan metrik atau sistem pengukuran lain, bisakah Anda melakukannya?
+
+140
+00:10:55.000 --> 00:10:59.000
+Ya, karena program-program ini tahu jarak dunia nyata, itu adalah masalah sederhana untuk
+
+141
+00:10:59.000 --> 00:11:03.000
+Beritahu kami bagaimana kami ingin ia dipaparkan. Jika kita ingin ia dipaparkan dalam metrik atau jika kita ingin
+
+142
+00:11:03.000 --> 00:11:08.000
+ditampilkan dalam kaki dan inci, sangat mudah berubah. Untuk itu, berikanlah sebuah gagasan tentang
+
+143
+00:11:08.000 --> 00:11:14.001
+Jenis-jenis kompleksitas dalam lukisan yang dapat Anda lakukan. Berikut ini adalah rendering dari
+
+144
+00:11:14.001 --> 00:11:21.001
+Sebuah rumah padang gurun yang dibuat oleh artis staf kami. Ia dirancang oleh
+
+145
+00:11:21.001 --> 00:11:25.001
+Arsitek dari Taliesin. Apa yang bisa kita lakukan dengan ini, jika kita ingin melihat pandangan yang berbeda,
+
+146
+00:11:26.000 --> 00:11:31.001
+Kami dapat mengubah jendela pada layar dan mungkin menambahkan rincian.
+
+147
+00:11:33.001 --> 00:11:38.001
+Sekarang akan sebuah lukisan seperti itu dibuat di FastCAD, Mike? Ya, ini adalah dua
+
+148
+00:11:38.001 --> 00:11:43.001
+Menggambar perspektif dimensi. Perspektifnya ditarik oleh lebih atau kurang
+
+149
+00:11:43.001 --> 00:11:49.000
+dengan cara tradisional. bisa
+
+150
+00:11:49.000 --> 00:11:55.000
+Anda melempar itu ke atas
+
+151
+00:11:55.000 --> 00:11:56.001
+Jadi kita ingin melihatnya di seluruh dan layar penuh?
+
+152
+00:11:57.000 --> 00:12:02.001
+Tentu saja Sekali lagi, ini adalah di mana memiliki kecepatan nyata dalam sebuah program membuat perbedaan besar.
+
+153
+00:12:04.000 --> 00:12:08.000
+Okay, sekarang Mike, ini adalah rendering dua dimensi. Bagaimana dengan tiga dimensi
+
+154
+00:12:08.000 --> 00:12:12.000
+Dengan FastCAD? Nah, ini adalah produk dua dimensi kami saat ini. Aku akan memberimu sebuah
+
+155
+00:12:12.000 --> 00:12:17.001
+Lihatlah produk tiga dimensi yang harus dikirimkan setiap hari. dan sebagai
+
+156
+00:12:17.001 --> 00:12:21.000
+Anda melakukannya, saya ingin Anda menunjukkan kepada saya contoh yang menjelaskan mengapa penting bahwa
+
+157
+00:12:21.000 --> 00:12:25.001
+Anda dapat melakukan sesuatu dalam 3D bukannya 2D. Dunia nyata di sekitar kita adalah
+
+158
+00:12:25.001 --> 00:12:28.001
+Sebuah dunia tiga dimensi. Itulah yang kita bekerja dengan. Dan ketika kita mencoba untuk
+
+159
+00:12:28.001 --> 00:12:33.000
+menggambarnya di atas kertas sebagai rendering dua dimensi, kita selalu berlari ke masalah. dan yang
+
+160
+00:12:33.000 --> 00:12:37.001
+Semakin kita memiliki program yang bekerja dengannya, semakin baik kita dapat melihat ini. Untuk
+
+161
+00:12:37.001 --> 00:12:41.001
+Ternyata, di sini kita punya teh ini. Dua pandangan dari tampilan teapot ini
+
+162
+00:12:41.001 --> 00:12:47.001
+sangat serupa. Nah, jika kita katakan itu untuk menghapus permukaan tersembunyi untuk menunjukkan kepada kita
+
+163
+00:12:47.001 --> 00:12:52.001
+sedikit lebih baik melihatnya sebagai objek tiga dimensi, kita dapat melihat bahwa ini satu
+
+164
+00:12:52.001 --> 00:12:57.000
+adalah pandangan dari teapot dari atas, sementara yang lain yang terlihat sangat
+
+165
+00:12:57.000 --> 00:13:03.000
+Hal yang sama tampaknya adalah pandangan dari teapot dari bawah. yang Anda hanya bisa
+
+166
+00:13:03.000 --> 00:13:07.000
+benar-benar melihatnya dengan melihatnya dari sudut pandang tiga dimensi. dengan benar. Tanpa yang
+
+167
+00:13:07.000 --> 00:13:10.000
+Menghilangkan permukaan tersembunyi, Anda tidak akan pernah tahu itu. Mike, salah satu dari semua hal yang
+
+168
+00:13:10.000 --> 00:13:14.001
+FastCAD adalah bahwa itu cepat, jelas. Dan apa manfaat yang sebenarnya dari kecepatan
+
+169
+00:13:14.001 --> 00:13:16.001
+Apakah pengguna lain selain mendapatkan sesuatu yang dilakukan lebih cepat?
+
+170
+00:13:17.000 --> 00:13:20.000
+Nah, banyak orang berpikir itu mendapatkan pekerjaan yang dilakukan dalam enam jam bukannya
+
+171
+00:13:20.000 --> 00:13:24.001
+delapan . Tapi keuntungan yang sebenarnya adalah bahwa bukannya mengambil 20 detik untuk beberapa perubahan,
+
+172
+00:13:25.000 --> 00:13:26.001
+Itu membutuhkan Anda tiga atau empat detik.
+
+173
+00:13:27.000 --> 00:13:30.001
+Ini berarti Anda tidak kehilangan tren pemikiran Anda. Anda akan mencoba hal-hal yang Anda
+
+174
+00:13:30.001 --> 00:13:33.001
+Aku tidak akan mencoba sebaliknya. Anda akan bereksperimen sedikit. Jadi Anda akan melakukan yang lebih baik
+
+175
+00:13:33.001 --> 00:13:37.001
+pekerjaan yang Jadi apakah kecepatan benar-benar mempengaruhi proses kreatif? Tapi bukan waktu yang
+
+176
+00:13:37.001 --> 00:13:40.001
+harus melakukannya. Mike dan Bob, terima kasih banyak. Dalam sekejap, kita akan
+
+177
+00:13:40.001 --> 00:13:44.001
+Untuk melihat dua program CAD untuk Macintosh. Sebelumnya, Wendy Woods
+
+178
+00:13:44.001 --> 00:13:48.001
+memiliki laporan tentang sebuah perusahaan yang mengkhususkan diri dalam program CAD, dan mereka menggunakan salah satu
+
+179
+00:13:48.001 --> 00:13:54.001
+mereka untuk menjalankan bisnis mereka sendiri, dan program itu disebut AutoCAD. Untuk mereka yang
+
+180
+00:13:54.001 --> 00:13:59.000
+hanya masuk ke dalam bisnis komputerisasi desain dan desain mereka, kehidupan
+
+181
+00:13:59.000 --> 00:14:04.000
+bisa sangat membingungkan. Biasanya ada banyak uang yang harus dipertimbangkan dalam
+
+182
+00:14:04.000 --> 00:14:09.001
+Area dari $ 35.000 hingga $ 50.000. Dan ada ratusan kombinasi hardware
+
+183
+00:14:09.001 --> 00:14:15.000
+Dan juga software. Nah, itulah di mana InterCAD masuk. Memanggil nilai tambah
+
+184
+00:14:15.000 --> 00:14:19.001
+distributor, mereka mengumpulkan paket desain khusus perangkat keras dan perangkat lunak untuk
+
+185
+00:14:19.001 --> 00:14:25.001
+memenuhi kebutuhan klien, apakah itu perlu untuk merancang bangunan, widget, atau
+
+186
+00:14:25.001 --> 00:14:27.000
+Selain itu, ada juga papan circuit yang dicetak.
+
+187
+00:14:27.001 --> 00:14:32.001
+Baik, klien kami tidak memiliki atau memiliki eksposur yang sangat terbatas terhadap komputer dan
+
+188
+00:14:32.001 --> 00:14:37.001
+benar-benar jurutera di hati dan ingin melakukan pekerjaan desain dan berfokus pada itu. Dengan demikian
+
+189
+00:14:37.001 --> 00:14:41.000
+Kami menempatkan ini bersama-sama dan memberikan itu supaya dia tidak menjadi pakar dalam semua
+
+190
+00:14:41.000 --> 00:14:46.000
+grafis, plotter, digitizer, dan sebagainya. Penjual juga disebut nilai
+
+191
+00:14:46.000 --> 00:14:51.000
+ditambah karena mereka umumnya menyediakan layanan dan pelatihan, lebih meminimalkan
+
+192
+00:14:51.000 --> 00:14:57.000
+Permasalahan yang dapat dihadapi oleh pembeli CAD pertama kali. Tidak ada indikasi bahwa memilih sebuah
+
+193
+00:14:57.000 --> 00:15:01.001
+Sistem CAD akan menjadi lebih mudah. Dalam lima tahun ke depan, akan ada
+
+194
+00:15:01.001 --> 00:15:06.000
+diperkirakan akan ada sejumlah faktor baru, termasuk prevalensi jaringan,
+
+195
+00:15:06.001 --> 00:15:11.001
+Ciri-ciri kecerdasan buatan pada program, lebih cepat, lebih murah, lebih kuat
+
+196
+00:15:11.001 --> 00:15:16.001
+sistem, bahkan kelas pengguna baru, yang semua berarti bisnis seperti
+
+197
+00:15:16.001 --> 00:15:22.000
+InterCAD akan memiliki banyak hal yang baik untuk dilakukan di masa depan. di Santa Clara, California,
+
+198
+00:15:22.000 --> 00:15:24.001
+Untuk Computer Chronicles, saya Wendy Woods.
+
+199
+00:15:34.000 --> 00:15:38.000
+Dengan kami di studio sekarang adalah Nick Pavlovic. Nick adalah Presiden Visual
+
+200
+00:15:38.000 --> 00:15:42.001
+Informasi Termasuk dan duduk di sebelah Nick adalah John Seguto, pemasaran
+
+201
+00:15:42.001 --> 00:15:46.000
+Direktur dengan Versacad Corporation, yang merupakan bagian dari Prime Computer Family.
+
+202
+00:15:46.000 --> 00:15:50.001
+dengan Jan? John, Anda hanya mengambil paket Versacad yang paling terjual dan pada dasarnya
+
+203
+00:15:50.001 --> 00:15:55.000
+Menulis kembali untuk Macintosh. Dapatkah Anda memberi kami beberapa wawasan tentang mengapa Anda
+
+204
+00:15:55.000 --> 00:15:59.000
+Apakah Anda memutuskan untuk pergi ke arah itu? Oh ya, Macintosh interface mendukung
+
+205
+00:15:59.000 --> 00:16:03.001
+berbagai kesetiaan di antara pengguna dan yang disebabkan oleh kesederhanaan dan
+
+206
+00:16:03.001 --> 00:16:08.000
+Mudah untuk digunakan. Operator dapat mempelajari perangkat lunak lebih cepat dan dengan demikian menggunakannya
+
+207
+00:16:08.000 --> 00:16:12.001
+lebih efektif. Ini membutuhkan pendekatan yang benar-benar berbeda untuk membuat teks
+
+208
+00:16:12.001 --> 00:16:17.001
+- aplikasi berbasis seperti yang telah kita lakukan dalam solusi berbasis Unix dan MS-DOS karena
+
+209
+00:16:17.001 --> 00:16:21.000
+dan grafisnya. Mengapa Anda menulis ulang paket bukannya hanya membawa di atas
+
+210
+00:16:21.000 --> 00:16:25.000
+Paket yang lama? Baiklah, sebuah pelabuhan dalam kasus kita akan mengambil keuntungan terbaik
+
+211
+00:16:25.000 --> 00:16:28.001
+yang mungkin salah satu masalah yang paling menekan dengan paket CAD, yang
+
+212
+00:16:28.001 --> 00:16:33.000
+Untuk memudahkan itu sehingga lebih banyak pengguna dapat benar-benar mengoperasikan program. Kami menemukan ini dengan
+
+213
+00:16:33.000 --> 00:16:37.001
+menggunakan Macintosh interface dan menggunakan perangkat lunak yang sudah mudah digunakan, kami
+
+214
+00:16:37.001 --> 00:16:41.000
+menarik pengikut yang sangat kuat yang benar-benar percaya adalah salah satu yang paling lengkap
+
+215
+00:16:41.000 --> 00:16:44.000
+dan paket CAD yang mudah digunakan di Macintosh. “Tidak apa-apa, Nick, kami akan
+
+216
+00:16:44.000 --> 00:16:47.000
+Berikanlah putaranmu sekarang. Anda memiliki program CAD yang disebut Dimensions, yang
+
+217
+00:16:47.000 --> 00:16:50.001
+cukup kuat. Mengapa Anda tidak menunjukkan ini untuk kami di sini di Mac juga? dengan baik,
+
+218
+00:16:51.000 --> 00:16:55.000
+Desain dan dimensi yang kuat pada dasarnya adalah desain konseptual dan presentasi
+
+219
+00:16:55.000 --> 00:17:01.000
+Sistem yang Dan saya ingin menunjukkan tiga bidang aplikasi dasar.
+
+220
+00:17:01.000 --> 00:17:05.001
+Di sini kita memiliki aplikasi mekanis dari jalur koneksi. Saya ingin menunjukkan satu
+
+221
+00:17:05.001 --> 00:17:10.000
+dari ciri-ciri utama dari perangkat lunak kami, yang merupakan bayangan halus dan tepi yang
+
+222
+00:17:10.000 --> 00:17:17.000
+Anda bisa melihat di sini. Ini diambil sebagai bagian dari piston. Dan aku akan menunjukkan
+
+223
+00:17:17.000 --> 00:17:21.001
+bagian yang meledak dari piston. Dan Anda dapat menggerakkan ini, meletakkannya kembali
+
+224
+00:17:21.001 --> 00:17:28.001
+Bersama dengan Saya ingin menunjukkan tampilan grafis. Berikut ini beberapa surat
+
+225
+00:17:28.001 --> 00:17:34.000
+Kami menghasilkan dengan kemampuan ray tracing kami. dan ray tracing memungkinkan Anda untuk melakukan
+
+226
+00:17:34.000 --> 00:17:39.000
+ini menonjolkan, bayangan, dan juga transparansi dan refleksi berbilang.
+
+227
+00:17:40.000 --> 00:17:46.001
+Dengan menggunakan font ini dan elemen 3D, Anda dapat
+
+228
+00:17:46.001 --> 00:17:53.000
+Membuat presentasi seperti ini. Di sini kita memiliki huruf 3D dan bentuk 3D. Pergi ke
+
+229
+00:17:53.000 --> 00:17:59.000
+di area arsitektur, Anda dapat memaparkan bagian dalam kantor
+
+230
+00:17:59.000 --> 00:18:04.001
+dan di luar kantor.
+
+231
+00:18:10.001 --> 00:18:17.000
+Dan bangunan ini di sini sebenarnya dipaparkan dalam mode wireframe. Aku akan mengambil dan
+
+232
+00:18:17.000 --> 00:18:23.000
+membuat gambar lebih kecil, memindahkannya di sini, fokusnya sehingga Anda masih dapat melihatnya dan
+
+233
+00:18:23.000 --> 00:18:28.001
+Gunakan untuk referensi. Dan saya akan membawa ke perpustakaan
+
+234
+00:18:28.001 --> 00:18:35.001
+dan yang
+
+235
+00:18:35.001 --> 00:18:39.000
+File dasar dari wireframe.
+
+236
+00:18:43.000 --> 00:18:49.001
+Dan apa yang hilang dalam bingkai ini dari yang padat adalah pohon-pohon. Dan aku akan
+
+237
+00:18:49.001 --> 00:18:56.001
+membawa perpustakaan dan saya tidak hanya akan pergi ke layar penuh pada gambar, tetapi saya akan
+
+238
+00:18:56.001 --> 00:19:01.001
+mengambil dan fokus di tengah-tengah di mana pohon-pohon palm dijangka pergi,
+
+239
+00:19:04.000 --> 00:19:10.001
+Letakkan pohon palm. Dan aku dengan sengaja meninggalkan salah satu pohon palma,
+
+240
+00:19:11.000 --> 00:19:17.001
+Ini satu di sini, dan kembali ke perpustakaan, ambil satu pohon palm, letakkan di
+
+241
+00:19:17.001 --> 00:19:22.001
+dengan benar, kembali ke gambar penuh,
+
+242
+00:19:24.000 --> 00:19:27.001
+dan meletakkan pohon palm di tempat parkir.
+
+243
+00:19:30.001 --> 00:19:37.001
+Letakkan satu di sini, satu di sana, dan saya akan membuat satu besar
+
+244
+00:19:37.001 --> 00:19:43.000
+pohon palm untuk menunjukkan kemampuan skala kami dan meletakkannya tepat di tengah. Dan kemudian
+
+245
+00:19:43.000 --> 00:19:49.000
+Kembali ke jendela berbilang dan menunjukkan kepada Anda bukan hanya palm
+
+246
+00:19:49.000 --> 00:19:53.000
+pohon-pohon di tengah, tetapi mereka juga di tempat parkir dengan yang kecil
+
+247
+00:19:53.000 --> 00:19:59.001
+menghancurkan yang besar. Selain itu, kita dapat
+
+248
+00:19:59.001 --> 00:20:06.000
+Membuat animasi yang memungkinkan Anda melihat dari semua sudut
+
+249
+00:20:06.000 --> 00:20:11.000
+yang baru saja dirancang. Dan pada saat ini, Anda dapat mengambil
+
+250
+00:20:11.000 --> 00:20:15.000
+pandangan yang berbeda, memindahkannya langsung melalui antarmuka biner kami ke
+
+251
+00:20:15.000 --> 00:20:19.001
+Paket VersaCad untuk detail akhir dan desain produksi. Nick, jika saya bisa
+
+252
+00:20:19.001 --> 00:20:22.001
+meminta Anda untuk meluncurkan mouse dan keyboard ke John sehingga Anda dapat mendapatkan VersaCad
+
+253
+00:20:22.001 --> 00:20:26.000
+naik dan berlari. Dan saat dia melakukannya, saya perhatikan dalam animasi itu di
+
+254
+00:20:26.000 --> 00:20:28.000
+jendela kanan bawah, ia berhenti ketika Anda menggunakan
+
+255
+00:20:28.000 --> 00:20:29.001
+dengan tikus itu. Apa program yang dilakukan di sana?
+
+256
+00:20:30.001 --> 00:20:35.001
+Kami memiliki banyak kemampuan yang dibangun dalam dimensi untuk memungkinkan desainer untuk bekerja
+
+257
+00:20:35.001 --> 00:20:41.000
+lebih cepat dan efisien. Dan salah satu dari mereka adalah untuk mengganggu animasi.
+
+258
+00:20:41.001 --> 00:20:47.001
+Satu lagi adalah untuk menghentikan pembaruan untuk membiarkan desainer memilih perintah baru. dan
+
+259
+00:20:47.001 --> 00:20:51.001
+Fitur ketiga adalah kemampuan untuk mengalihkan kelompok dan hanya fokus pada mereka.
+
+260
+00:20:51.001 --> 00:20:55.001
+kelompok yang ingin Anda desain. Dan semua ini memungkinkan hal-hal untuk menjawab lebih banyak
+
+261
+00:20:55.001 --> 00:21:00.000
+Cepat untukmu. Ya ya. Okay, John, mari kita lihat sekarang VersaCad Macintosh dan
+
+262
+00:21:00.000 --> 00:21:03.001
+Anda memiliki beberapa hal menarik di sini dengan HyperCard dan sebagainya. Tunjukkan itu kepada kami.
+
+263
+00:21:03.001 --> 00:21:08.000
+Ya, saya membuat layar yang sangat tipikal untuk aplikasi arsitektur.
+
+264
+00:21:08.000 --> 00:21:12.001
+Di sini kita melihat tataletak arsitektur bangunan, dalam hal ini jenis Macintosh
+
+265
+00:21:12.001 --> 00:21:16.000
+Kantor yang Anda akan memperhatikan saat Anda melihat sepanjang lukisan, Anda akan melihat banyak
+
+266
+00:21:16.000 --> 00:21:20.001
+komputer kecil, papan, dan banyak bagian yang lebih kecil dari seluruh bangunan, yang
+
+267
+00:21:20.001 --> 00:21:24.000
+biasanya memperkenalkan seorang arsitek atau desainer dengan masalah tabulating atau
+
+268
+00:21:24.000 --> 00:21:27.001
+Menjaga jejak dari semua ini. Saat kita berjalan di sepanjang lukisan, ada banyak cara untuk
+
+269
+00:21:27.001 --> 00:21:31.001
+bekerja dengan lukisan yang diberikan. Dalam hal ini, saya hanya akan mengambil sebuah pintu dan
+
+270
+00:21:31.001 --> 00:21:35.001
+Lihat apakah dua pintu bertepatan. Jadi ketika saya pergi ke lukisan dan meminta untuk rotate
+
+271
+00:21:35.001 --> 00:21:39.001
+Perintah untuk digunakan, perhatikan bahwa pintu dapat cepat CNC. Dua pintu akan
+
+272
+00:21:39.001 --> 00:21:42.001
+Tembak jika saya meletakkannya di sana. Pada waktu tertentu, aku bisa melarikan diri dari
+
+273
+00:21:42.001 --> 00:21:44.000
+Komando yang Jadi apa pun yang Anda lakukan, Anda bisa undo.
+
+274
+00:21:45.000 --> 00:21:48.001
+Saya pikir penting untuk menyadari bahwa semua simbol ini diikuti dan
+
+275
+00:21:49.000 --> 00:21:52.001
+Hal yang sangat penting dari perangkat lunak adalah bahwa seluruh palet di layar
+
+276
+00:21:52.001 --> 00:21:56.000
+dapat diimplementasikan dan digunakan sama seperti orang akan menggerakkan alat-alat pada
+
+277
+00:21:56.000 --> 00:22:01.000
+dengan desk. Sekarang dalam kasus ini, saya akan beralih ke aplikasi VersaCad pada
+
+278
+00:22:01.000 --> 00:22:04.001
+dengan HyperCard. Kami menyebutnya HyperCad dan kami telah menulis lebih dari setengah puluhan rutin,
+
+279
+00:22:04.001 --> 00:22:08.001
+yang dirancang khusus untuk masuk ke database lukisan VersaCad kami dan
+
+280
+00:22:08.001 --> 00:22:12.001
+mendapatkan informasi, memungkinkan Anda untuk menggali lukisan, memudahkan Anda untuk menambahkan teks
+
+281
+00:22:12.001 --> 00:22:15.001
+dari kata prosesor Anda. Atau dalam hal ini, saya akan menunjukkan rancangan
+
+282
+00:22:15.001 --> 00:22:20.000
+dan materi. Anda menyadari bahwa layar utama adalah semua ikon. HyperCard adalah grafis
+
+283
+00:22:20.000 --> 00:22:25.000
+database program di mana orang dapat menggunakan ikon bukannya mengetik perintah. Dengan demikian dalam
+
+284
+00:22:25.000 --> 00:22:29.000
+Dalam kasus ini, saya akan membuka lukisan. Ini adalah kantor Macintosh. Dan sekali lagi yang
+
+285
+00:22:29.000 --> 00:22:33.000
+lukisan terbuka, HyperCard sekarang akan keluar dan menghitung semua yang sebenarnya
+
+286
+00:22:33.000 --> 00:22:35.000
+Simbol yang digunakan di sini.
+
+287
+00:22:35.001 --> 00:22:37.001
+Anda akan menyadari bahwa saya memiliki angka yang berbeda
+
+288
+00:22:37.001 --> 00:22:39.001
+dan kualitas yang berbeda dari simbol-simbol ini.
+
+289
+00:22:40.000 --> 00:22:45.000
+Setiap dari mereka dapat diedit. Dan seperti saya, karena perangkat lunak ini selesai menambahkan
+
+290
+00:22:45.000 --> 00:22:50.000
+dalam atribut-atribut tertentu, kita akan masuk dan total sampai menyelesaikan beberapa
+
+291
+00:22:50.000 --> 00:22:55.000
+aplikasi dan kami akan menunjukkan Anda laporan itu langsung di sini. Perhatikan bahwa dalam hal ini
+
+292
+00:22:55.000 --> 00:23:00.000
+laporan, itu secara otomatis menjejaki untuk saya total jumlah biaya, seperti yang baik
+
+293
+00:23:00.000 --> 00:23:03.001
+dengan spreadsheet. Sebenarnya, ia secara langsung kompatibel untuk dipotong dan ditempel pada
+
+294
+00:23:03.001 --> 00:23:09.000
+Microsoft Excel jenis aplikasi. Kami telah menulis beberapa program yang mengambil banyak
+
+295
+00:23:09.000 --> 00:23:13.000
+Dengan cara HyperCard ditulis. Jadi hanya untuk menjelaskan apa yang sedang terjadi
+
+296
+00:23:13.000 --> 00:23:16.000
+pada, apa yang Anda lakukan di sana adalah program itu memegang jejak semua simbol-simbol itu,
+
+297
+00:23:16.000 --> 00:23:20.000
+elemen, komponen yang Anda tambahkan ke desain itu dan menunjukkan kepada Anda berapa banyak di sana
+
+298
+00:23:20.000 --> 00:23:23.000
+Apa saja biaya, apa saja biaya dan sebagainya. benar sekali benar. Kami adalah
+
+299
+00:23:23.000 --> 00:23:27.001
+Mampu menyertakan informasi. Kadang-kadang orang suka mengedit, misalnya, jika
+
+300
+00:23:27.001 --> 00:23:32.001
+ingin kembali ke simbol dan mengatakan ukuran sekarang telah berubah atau mungkin unit
+
+301
+00:23:32.001 --> 00:23:37.000
+biaya telah naik, saya bisa pergi dan scroll melalui opsi saya dan kemudian katakan sekarang
+
+302
+00:23:37.000 --> 00:23:40.001
+Pintu itu naik lebih dari 10 dolar. Jadi Anda bisa menambahkannya secara grafis atau
+
+303
+00:23:40.001 --> 00:23:43.001
+Edit dengan angka-angka di sana. dengan tepat. Kami hanya punya sedikit waktu.
+
+304
+00:23:43.001 --> 00:23:47.000
+Lihat lagi reviu untuk Versacad Mac 3D Ya, Versacad telah membuat banyak
+
+305
+00:23:47.000 --> 00:23:51.000
+komitmen untuk 3D dan Macintosh mungkin salah satu dari mereka. Saat aku masuk ke dalam
+
+306
+00:23:51.000 --> 00:23:58.000
+menggambar, Anda akan memperhatikan sekarang bahwa 3D akan muncul dan saya akan dapat membawa keluar
+
+307
+00:23:58.000 --> 00:24:02.000
+Pemandangan kantor yang sama yang saya lihat dari pandangan atas ke bawah. Saya juga akan bisa
+
+308
+00:24:02.000 --> 00:24:06.000
+meminta lukisan untuk sumber cahaya secara otomatis menyala untuk saya sehingga saya dapat mendapatkan banyak
+
+309
+00:24:06.000 --> 00:24:12.000
+pandangan pada saat yang sama. Jadi ketika saya membuka lukisan, kita akan melihat, apa yang mereka sebut
+
+310
+00:24:12.000 --> 00:24:15.000
+pandangan perspektif di mana Anda melihat titik hilang seolah-olah Anda adalah burung yang melihat
+
+311
+00:24:15.000 --> 00:24:21.000
+di atas bangunan dengan tidak ada bumbung dalam hal ini. Ketika mereka bertanya pada komputer berikutnya
+
+312
+00:24:21.000 --> 00:24:25.000
+untuk melakukan multi view, saya akan membagi layar hingga empat jendela terpisah dan kemudian pada
+
+313
+00:24:25.000 --> 00:24:27.001
+Pada saat itu Anda akan melihat warna otomatis yang dibawa ke dalamnya.
+
+314
+00:24:30.001 --> 00:24:36.000
+Ini memungkinkan saya untuk merancang dalam 2D dan juga membawa ke 3D. Tambahan dari keduanya
+
+315
+00:24:36.000 --> 00:24:40.001
+program memberikan operator kesempatan untuk menggunakan pilihan aplikasi mereka. Dengan demikian, dalam
+
+316
+00:24:40.001 --> 00:24:43.000
+sudut tangan kiri bawah adalah pandangan atas dan di sana kita melihat 3D
+
+317
+00:24:43.000 --> 00:24:45.000
+Perspektif di sebelah kiri atas dengan warna.
+
+318
+00:24:45.000 --> 00:24:49.000
+Kami akan mendapatkan rencana, ketinggian dan pandangan samping sepanjang jalan
+
+319
+00:24:49.000 --> 00:24:50.001
+Seluruh lukisan ini secara otomatis.
+
+320
+00:24:50.001 --> 00:24:53.000
+John itu hebat. John, Nick sangat berterima kasih dan itu adalah kami
+
+321
+00:24:53.000 --> 00:24:55.000
+Lihatlah program CAD pribadi.
+
+322
+00:24:55.000 --> 00:24:57.001
+Semoga kita bertemu di sini lagi minggu depan di The Computer Chronicles.
+
+323
+00:25:06.000 --> 00:25:10.000
+Dalam file akses rawak minggu ini, Apple telah mengungkapkan
+
+324
+00:25:10.000 --> 00:25:11.001
+Macintosh yang sudah lama ditunggu-tunggu.
+
+325
+00:25:12.000 --> 00:25:16.000
+Ini dianggap sebagai Mac penuh dengan kompromi tanpa kompromis. Ini datang lengkap dengan
+
+326
+00:25:16.000 --> 00:25:20.001
+Sebuah bola trek untuk menyediakan antarmuka jenis mouse. Ukuran layar 50% lebih besar dari
+
+327
+00:25:20.001 --> 00:25:26.001
+Mac SE layar dengan resolusi 640 by 400 piksel. Mac memiliki asam lead
+
+328
+00:25:26.001 --> 00:25:31.000
+Daripada bateri kadmium nikel yang berarti enam hingga dua belas jam pada satu pengisian.
+
+329
+00:25:31.000 --> 00:25:33.001
+Tambahan pengisian penuh yang dapat diramalkan kapan saja.
+
+330
+00:25:34.000 --> 00:25:38.000
+Ini datang standar dengan drive floppy 1.4 megabyte dan ada opsi
+
+331
+00:25:38.000 --> 00:25:39.001
+40 megabyte hard drive.
+
+332
+00:25:39.001 --> 00:25:45.001
+Dengan hard drive, laptop Mac berat 16 pound. Harga daftar adalah $ 6,499.
+
+333
+00:25:46.001 --> 00:25:51.001
+IBM mengatakan sedang mengembangkan dua laptop baru, versi yang beroperasi baterai dari P70
+
+334
+00:25:51.001 --> 00:25:55.001
+dan laptop berukuran besar. dan Pocket Computers minggu lalu dirilis
+
+335
+00:25:55.001 --> 00:25:57.000
+Laptop kecilnya disebut Pocket.
+
+336
+00:25:57.001 --> 00:26:02.000
+Beratnya 1 pound. Ini adalah MS-DOS yang kompatibel dengan layar penuh dan
+
+337
+00:26:02.000 --> 00:26:03.001
+77 kunci QWERTY keyboard.
+
+338
+00:26:04.000 --> 00:26:07.001
+Pocket menggunakan kartu RAM dan ROM kecil untuk penyimpanan dan aplikasi.
+
+339
+00:26:07.001 --> 00:26:13.000
+Pocket mematikan dua baterai AA hingga 100 jam. Harga adalah $ 1,995.
+
+340
+00:26:14.001 --> 00:26:19.000
+Atari telah mulai mengirimkan laptop mini yang disebut Portfolio. Ia memiliki yang lebih kecil
+
+341
+00:26:19.000 --> 00:26:22.001
+layar di Pocket tapi datang dengan pemrosesan kata terbina dalam dan spreadsheet
+
+342
+00:26:22.001 --> 00:26:28.000
+dengan software. Berat satu pound, berjalan pada tiga baterai AA dan dijual untuk $ 399.
+
+343
+00:26:29.000 --> 00:26:32.001
+Phillips memasuki pasar PC untuk pertama kalinya dengan PC desktop baru
+
+344
+00:26:32.001 --> 00:26:37.001
+yang disebut dengan Explorer. IBM kompatibel menjadi standar dengan Mac seperti ikon
+
+345
+00:26:37.001 --> 00:26:42.000
+antara lain. Peripheral masuk, tidak perlu pernah mengambil penutup. yang lengkap
+
+346
+00:26:42.000 --> 00:26:47.001
+Sistem warna termasuk monitor, mouse dan perangkat lunak terintegrasi adalah $999. Hewlett
+
+347
+00:26:47.001 --> 00:26:52.001
+Packard sedang memperkenalkan printer laser murah baru, LaserJet 2P. Retail
+
+348
+00:26:52.001 --> 00:26:59.000
+Harga hanya $ 1.495, sekitar sepertiga dari harga HP LaserJet penuh. dan
+
+349
+00:26:59.000 --> 00:27:04.000
+Divisi Apollo yang baru dibeli HP baru saja merilis Unix berbasis 68-030
+
+350
+00:27:04.000 --> 00:27:10.000
+stasiun kerja untuk kurang dari $ 4.000. Ia disebut Apollo 2500 dan ia datang dengan konstruksi
+
+351
+00:27:10.000 --> 00:27:15.000
+dalam dukungan jaringan. Teknologi VXM mengatakan akan segera mulai mengirim perangkat lunak
+
+352
+00:27:15.000 --> 00:27:19.001
+paket yang dapat mengubah jaringan area lokal menjadi pemrosesan paralel
+
+353
+00:27:19.001 --> 00:27:25.001
+dengan supercomputer. VXM mengatakan dengan perangkat lunaknya jaringan 25 node dari Mac atau PC dapat
+
+354
+00:27:25.001 --> 00:27:30.001
+memberikan daya pemrosesan dari bingkai utama IBM 3090 dan jaringan 25
+
+355
+00:27:30.001 --> 00:27:33.001
+stasiun kerja berisiko dapat memiliki daya dari superkomputer Cray.
+
+356
+00:27:35.000 --> 00:27:38.001
+Apple dan Microsoft melaporkan akan mengumumkan penerapan halaman mereka sendiri
+
+357
+00:27:38.001 --> 00:27:42.001
+Bahasa deskripsi disebut PMScript. Standar baru akan menggantikan Apple
+
+358
+00:27:42.001 --> 00:27:46.001
+Penggunaan bahasa PostScript dari Adobe. Itulah yang terjadi pada Random minggu ini.
+
+359
+00:27:46.001 --> 00:27:48.000
+Akses yang Saya adalah Kate McGargy.
+
+360
+00:27:56.001 --> 00:28:00.001
+The Computer Chronicles tersedia di halaman web. Dalam cetak dan online,
+
+361
+00:28:01.000 --> 00:28:05.001
+Byte dan VIX melayani profesional komputer di seluruh dunia dengan informasi rinci tentang
+
+362
+00:28:05.001 --> 00:28:11.000
+perangkat keras, perangkat lunak, dan teknologi baru. Untuk transkrip dari minggu ini
+
+363
+00:28:11.000 --> 00:28:18.000
+Komputer Chronicles, kirim $4 ke PTV Publications Post Office Box 701, Kent,
+
+364
+00:28:18.000 --> 00:28:22.001
+Kemenangan 44240 Silakan tunjukkan tanggal program.
+
+365
+00:28:51.001 --> 00:29:05.000
+Sampaikan terima kasih
