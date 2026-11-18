@@ -1,0 +1,1653 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.000
+[...]
+
+2
+00:00:20.000 --> 00:00:26.000
+Paroles
+
+3
+00:00:26.000 --> 00:00:32.000
+Le microfocus,
+
+4
+00:00:33.000 --> 00:00:37.001
+créateurs d&#x27;outils de programmation visuelle pour le développement de logiciels, est heureux de
+
+5
+00:00:37.001 --> 00:00:42.000
+fournir un financement majeur pour les chronicles informatiques, l&#x27;histoire
+
+6
+00:00:42.000 --> 00:00:44.000
+de cette évolution continue.
+
+7
+00:00:51.001 --> 00:00:54.000
+Bienvenue dans les chronicles informatiques.
+
+8
+00:00:54.001 --> 00:00:57.000
+Je suis Stuart Chafay et je tourne le mauvais bouton ici.
+
+9
+00:00:57.001 --> 00:01:02.000
+C&#x27;est Gary Kildall et c&#x27;est Armatron, notre petit robot bruyant ici.
+
+10
+00:01:02.001 --> 00:01:07.000
+Nous utilisons Armatron pour démontrer certaines des choses de base que un robot peut faire
+
+11
+00:01:07.000 --> 00:01:10.000
+Et bien que ce soit un petit jouet, il démontre réellement ces choses.
+
+12
+00:01:10.000 --> 00:01:14.000
+Par exemple, ce robot a un épaule qui peut tourner le long de cet axe.
+
+13
+00:01:14.000 --> 00:01:16.001
+Il peut le lever par son épaule ou descendre.
+
+14
+00:01:17.000 --> 00:01:19.001
+Il y a un égout qu&#x27;il peut battre.
+
+15
+00:01:20.001 --> 00:01:26.000
+Il a un bras qu&#x27;il peut bouger et il a une main qu&#x27;on peut ouvrir.
+
+16
+00:01:26.000 --> 00:01:28.001
+Il peut faire quelque chose que les humains ne peuvent pas faire.
+
+17
+00:01:28.001 --> 00:01:32.000
+Il peut tourner son bras autour de cette jointe particulière.
+
+18
+00:01:33.000 --> 00:01:36.000
+Maintenant, Gary, c’est un petit exemple d’un robot.
+
+19
+00:01:36.000 --> 00:01:37.000
+C’est certainement pas un ordinateur.
+
+20
+00:01:38.000 --> 00:01:40.000
+Comment les ordinateurs et les robots sont-ils liés ?
+
+21
+00:01:40.001 --> 00:01:44.000
+Eh bien, il y a beaucoup de dispositifs qui suivent cette catégorie de robots
+
+22
+00:01:44.000 --> 00:01:47.001
+Et ils vont des simples robots de spectacle tout le chemin jusqu&#x27;à l&#x27;assemblage sophistiquée
+
+23
+00:01:47.001 --> 00:01:49.001
+Le type de robot.
+
+24
+00:01:49.001 --> 00:01:56.000
+Dans un robot de spectacle, par exemple, il y a un opérateur humain qui est
+
+25
+00:01:56.000 --> 00:01:57.001
+communiquer avec cet appareil, en le faisant rouler
+
+26
+00:01:57.001 --> 00:01:59.001
+Je lui donne des brochures et des choses de ce genre.
+
+27
+00:02:00.000 --> 00:02:01.001
+Mais comme nous ajoutons plus d’intelligence à
+
+28
+00:02:01.001 --> 00:02:03.001
+C’est là que l’ordinateur entre dans le jeu.
+
+29
+00:02:03.001 --> 00:02:06.001
+L&#x27;ordinateur contrôle ensuite tous les appareils, fait quelques-uns à bord
+
+30
+00:02:06.001 --> 00:02:08.000
+décisions fondées sur leur propre intelligence.
+
+31
+00:02:09.000 --> 00:02:12.001
+Eh bien, il y a eu une fascination de science-fiction avec les robots tout au long de cette
+
+32
+00:02:12.001 --> 00:02:16.001
+Un siècle, mais les robots fictifs ont peu de ressemblance aux robots réels d&#x27;aujourd&#x27;hui.
+
+33
+00:02:18.000 --> 00:02:22.001
+L&#x27;image d&#x27;un robot a pris de nombreuses formes différentes depuis les musiciens d&#x27;horloge
+
+34
+00:02:22.001 --> 00:02:24.001
+et les poupées du 18ème siècle.
+
+35
+00:02:25.001 --> 00:02:29.001
+Mais au cours de l&#x27;âge mécanique du début du 20ème siècle, le robot est devenu un
+
+36
+00:02:29.001 --> 00:02:33.001
+Symbole effrayant de l’avenir, menacant de transformer le monde en un
+
+37
+00:02:33.001 --> 00:02:36.000
+Société mécanique et déhumanisée.
+
+38
+00:02:37.000 --> 00:02:40.001
+Dans les industries lourdes, le travailleur devient un accessoire à la machine,
+
+39
+00:02:41.000 --> 00:02:45.001
+Répéter la même tâche des centaines ou des milliers de fois de la même manière.
+
+40
+00:02:46.000 --> 00:02:50.001
+Pour ceux qui ne bénéficient pas directement des nouvelles méthodes, la mécanisation du travail et
+
+41
+00:02:50.001 --> 00:02:53.001
+La vie a appelé des images bleues du futur.
+
+42
+00:02:54.001 --> 00:02:58.001
+La métropole de Fritz Lang représentait l&#x27;année 2000, un monde divisé entre
+
+43
+00:02:58.001 --> 00:03:04.000
+barons industriels et ouvriers déchirés, esclaves à une ville de machines souterraines
+
+44
+00:03:04.000 --> 00:03:06.000
+opération jour et nuit.
+
+45
+00:03:06.001 --> 00:03:11.000
+La conduite de l&#x27;efficacité conduit le maître de la ville à consulter un inventeur qui a
+
+46
+00:03:11.000 --> 00:03:14.000
+l&#x27;outil ultime, un remplacement mécanique
+
+47
+00:03:14.000 --> 00:03:16.000
+pour l’être humain imperfect.
+
+48
+00:03:17.000 --> 00:03:20.001
+Ce film remarquable n&#x27;a peut-être pas été complètement précis dans ses prévisions,
+
+49
+00:03:20.001 --> 00:03:25.000
+Mais il prévoyait une idée fictionnelle de robots qui persistait pendant des décennies après
+
+50
+00:03:25.000 --> 00:03:30.000
+C’est un mécanisme créé par l’homme qui se comporte comme son créateur.
+
+51
+00:03:31.000 --> 00:03:35.000
+Plus souvent que pas, la machine a tendu à détruire son créateur aussi, provoquant
+
+52
+00:03:35.000 --> 00:03:40.001
+En 1947, Isaac Asimov décrit les trois premières lois de la robotique.
+
+53
+00:03:49.001 --> 00:03:54.000
+Ces prescriptions prennent soit un grand degré d&#x27;intelligence, soit, interprétées
+
+54
+00:03:54.000 --> 00:03:57.001
+Une autre façon, un comportement programmé, l&#x27;un des critères principaux
+
+55
+00:03:57.001 --> 00:03:59.001
+pour les systèmes robotiques modernes.
+
+56
+00:04:00.001 --> 00:04:05.000
+Bien qu&#x27;il ne soit généralement pas conçu avec des caractéristiques humaines, les robots post-guerre étaient, de
+
+57
+00:04:05.000 --> 00:04:07.001
+Il est capable d’un mouvement programmé.
+
+58
+00:04:08.001 --> 00:04:12.000
+Les servomechanismes, ou les robots contrôlés par le feedback, ont commencé à apparaître
+
+59
+00:04:12.000 --> 00:04:13.001
+à la fin des années 1950.
+
+60
+00:04:14.000 --> 00:04:18.000
+Depuis 1960, les robots sont devenus des additifs utiles pour un certain nombre d&#x27;industries,
+
+61
+00:04:18.001 --> 00:04:21.001
+particulièrement dans les emplois qui étaient inconfortables ou dangereux pour
+
+62
+00:04:21.001 --> 00:04:23.001
+humains, comme le verrouillage et la peinture.
+
+63
+00:04:24.001 --> 00:04:28.000
+Les fonctions répétitives effectuées par les humains comme les machines à Metropolis ont été
+
+64
+00:04:28.000 --> 00:04:32.001
+être pris par des robots avec plus de capacités similaires à l&#x27;homme, y compris la vue,
+
+65
+00:04:33.000 --> 00:04:34.001
+touch, et détection d’erreur.
+
+66
+00:04:35.001 --> 00:04:40.001
+Dans certaines applications les plus récentes, les systèmes CAD-CAM travaillent directement avec un robot
+
+67
+00:04:40.001 --> 00:04:44.000
+Le bras pour transférer le design d&#x27;une partie de l&#x27;écran vidéo
+
+68
+00:04:44.000 --> 00:04:45.001
+pour le produit fini.
+
+69
+00:04:56.001 --> 00:05:01.000
+Pour nous rejoindre, c’est le Dr. David Knitson, directeur du département de la robotique à SRI
+
+70
+00:05:01.000 --> 00:05:03.001
+International, et Matt Guerere, qui est un exécutif avec
+
+71
+00:05:03.001 --> 00:05:05.001
+Autobots ici dans la Silicon Valley.
+
+72
+00:05:07.000 --> 00:05:12.000
+David, je pense que tout le monde a l&#x27;idée qu&#x27;un robot devrait aller autour et vous laver
+
+73
+00:05:12.000 --> 00:05:13.001
+Faites des plats et nettoyez votre maison et ainsi de suite.
+
+74
+00:05:13.001 --> 00:05:16.000
+Mais j’ai l’impression qu’il y a beaucoup plus sur les robots que cela.
+
+75
+00:05:16.000 --> 00:05:17.001
+Pouvez-vous nous donner une idée de ce qui se passe dans l’industrie ?
+
+76
+00:05:19.000 --> 00:05:24.000
+Bien, l&#x27;industrie utilise les robots depuis 15 ans.
+
+77
+00:05:24.001 --> 00:05:30.001
+Ce sont des robots qui sont conçus pour faire des emplois sales dans l&#x27;industrie.
+
+78
+00:05:32.001 --> 00:05:34.000
+Et ils les font.
+
+79
+00:05:34.001 --> 00:05:36.000
+Qu’est-ce que vous voulez dire d’un travail sauvage ?
+
+80
+00:05:36.001 --> 00:05:43.001
+Eh bien, des emplois indésirables, des jobs qui sont difficiles, étroits, dangereux,
+
+81
+00:05:44.001 --> 00:05:47.001
+dangereux et mortels.
+
+82
+00:05:48.001 --> 00:05:51.001
+Qu&#x27;est-ce qu&#x27;un exemple de quelque chose comme un travail sale qui serait un mortel
+
+83
+00:05:51.001 --> 00:05:53.000
+Un travail, quelque chose que vous avez vu se dérouler ?
+
+84
+00:05:54.000 --> 00:05:57.001
+La mort n’est pas encore en service.
+
+85
+00:05:58.000 --> 00:05:59.000
+Ce serait à l’avenir.
+
+86
+00:05:59.000 --> 00:06:05.001
+Je veux dire, par cela je veux dire des emplois dans un environnement chaud, nucléaire
+
+87
+00:06:05.001 --> 00:06:07.001
+Les centrales d’énergie et les autres.
+
+88
+00:06:08.001 --> 00:06:15.000
+Mais des exemples d&#x27;emplois indésirables sont le traitement des tâches
+
+89
+00:06:15.000 --> 00:06:19.000
+dans un environnement chaud.
+
+90
+00:06:19.000 --> 00:06:21.000
+Qu’en est-il du contrôle linguistique de l’assemblée ?
+
+91
+00:06:21.000 --> 00:06:23.001
+Certains ne contrôlent pas, mais font des processus d&#x27;assemblage.
+
+92
+00:06:24.000 --> 00:06:26.000
+Je sais que les Japonais ont été très impliqués dans cela.
+
+93
+00:06:26.000 --> 00:06:28.000
+Qu’est-ce qui se passe dans un usage industriel de la robotique ?
+
+94
+00:06:28.000 --> 00:06:32.001
+Eh bien, c’est l’autre type de travail mortel, les emplois humanisés qui sont
+
+95
+00:06:32.001 --> 00:06:36.001
+dans de nombreuses usines, que les Américains ont démontré
+
+96
+00:06:36.001 --> 00:06:38.001
+Un fort désagrément.
+
+97
+00:06:38.001 --> 00:06:40.001
+Et c&#x27;est la raison pour laquelle beaucoup de notre production va à l&#x27;offshore.
+
+98
+00:06:42.000 --> 00:06:45.000
+Et ce qui se fait maintenant, je pense, dans l&#x27;industrie, c&#x27;est que nous sommes en train de traiter ces
+
+99
+00:06:45.000 --> 00:06:50.001
+Types de tâches d&#x27;assemblée mundane et de prendre les emplois déshumanisants et de les donner
+
+100
+00:06:50.001 --> 00:06:53.000
+des machines pour libérer les êtres humains pour plus
+
+101
+00:06:53.000 --> 00:06:54.001
+Des travaux plus créatifs et plus difficiles.
+
+102
+00:06:54.001 --> 00:07:00.001
+Oui, mais vous voyez, un point très important à propos de l&#x27;assemblée est que ici le
+
+103
+00:07:00.001 --> 00:07:07.000
+La concurrence est très forte parce que faire une assemblée est très
+
+104
+00:07:07.000 --> 00:07:13.001
+une tâche complexe, surtout si elle est faite dans des environnements non structurés,
+
+105
+00:07:13.001 --> 00:07:17.001
+Quand les pièces sont jignées, si elles sont faites comme les gens.
+
+106
+00:07:17.001 --> 00:07:24.000
+D’un autre côté, le peuple réunit
+
+107
+00:07:24.000 --> 00:07:29.000
+Sur la ligne d’assemblée, les personnes qui travaillent sur la ligne de assemblée sont payées très peu.
+
+108
+00:07:31.000 --> 00:07:34.000
+Il y a beaucoup de femmes qui travaillent sur l’assemblée
+
+109
+00:07:34.000 --> 00:07:36.000
+La ligne, et ils sont sous-paiés.
+
+110
+00:07:37.001 --> 00:07:40.001
+C’est un double slam. D’une part, c’est complexe.
+
+111
+00:07:41.000 --> 00:07:43.001
+D’autre part, vous devez compter avec un travail très bon marché.
+
+112
+00:07:44.001 --> 00:07:47.001
+Et le travail devient encore moins cher quand il va à
+
+113
+00:07:47.001 --> 00:07:49.001
+Le Mexique ou elle va en Asie de l&#x27;Est.
+
+114
+00:07:50.000 --> 00:07:52.000
+C’est là que se trouve le défi.
+
+115
+00:07:52.001 --> 00:07:58.001
+D’autre part, avec les emplois indésirables, tels que le traitement de la chaleur ou le casting ou
+
+116
+00:07:58.001 --> 00:08:05.000
+de forge ou de soudage d&#x27;arc, où le coût de la
+
+117
+00:08:05.000 --> 00:08:10.001
+Les travailleurs sont élevés et c&#x27;est un emploi très indésirable, et il est très facile de
+
+118
+00:08:10.001 --> 00:08:13.000
+Oui, c’est plus coûteux.
+
+119
+00:08:14.000 --> 00:08:19.000
+Je suppose l&#x27;un des facteurs distinctifs dans les robots qui sont utilisés, disons,
+
+120
+00:08:19.000 --> 00:08:23.001
+industrielle dans des applications de ce type, que vous pouvez construire un robot très précis
+
+121
+00:08:23.001 --> 00:08:27.001
+qui, dit-on, seraient soudés dans quelques millimètres de l&#x27;endroit où il devrait soudre, ou vous
+
+122
+00:08:27.001 --> 00:08:31.000
+peut utiliser, dit-on, le traitement de la vision pour déterminer où l&#x27;objet est et pour
+
+123
+00:08:31.000 --> 00:08:33.000
+manipuler avec des dispositifs mécaniques très coûts.
+
+124
+00:08:33.001 --> 00:08:38.001
+Ou, comme le souligne David, mettre le robot dans un environnement structuré, comme
+
+125
+00:08:38.001 --> 00:08:42.001
+une cellule de travail intégrée, où le travail est présenté au robot de cette manière
+
+126
+00:08:42.001 --> 00:08:48.000
+ne nécessite pas la précision ou la capacité sensorielle extrêmes que certains
+
+127
+00:08:48.000 --> 00:08:50.000
+Les machines antropomorphes sont actuellement nécessaires.
+
+128
+00:08:51.000 --> 00:08:55.001
+Henry Ford a révolutionné l&#x27;industrie américaine en apportant le travail
+
+129
+00:08:55.001 --> 00:08:57.000
+au travailleur sur la ligne d’assemblée.
+
+130
+00:08:57.001 --> 00:09:02.000
+Et nous voyons une tendance très similaire comme une partie nécessaire de l’évolution de la robotique.
+
+131
+00:09:02.000 --> 00:09:07.000
+dans l&#x27;industrie américaine, où nous structurons le lieu de travail pour s&#x27;adapter au robot et
+
+132
+00:09:07.000 --> 00:09:10.000
+Le robot est plus facile à intégrer dans le schéma global.
+
+133
+00:09:11.000 --> 00:09:15.000
+C’est vraiment la robotique appliquée. Il s’agit d’un ensemble de problèmes différent des
+
+134
+00:09:15.000 --> 00:09:19.001
+les technologies nécessaires à l&#x27;anthropomorphisation des machines, qui est la base
+
+135
+00:09:19.001 --> 00:09:21.000
+Les recherches sont en cours dans la robotique.
+
+136
+00:09:21.001 --> 00:09:24.001
+Et je voudrais faire un point très important, je pense qu&#x27;il s&#x27;agit d&#x27;un point important,
+
+137
+00:09:24.001 --> 00:09:29.000
+C’est pour cela que les gens s’inquiètent du chômage et ainsi de suite.
+
+138
+00:09:29.000 --> 00:09:33.001
+Je voudrais faire une observation, qui, je pense, est importante.
+
+139
+00:09:34.000 --> 00:09:40.000
+Le nombre d&#x27;employés de colonne bleue qui ont été déplacés ou remplacés jusqu&#x27;à présent par
+
+140
+00:09:40.000 --> 00:09:44.000
+Les robots industriels sont très, très petits.
+
+141
+00:09:45.000 --> 00:09:50.001
+Et la projection, si nous extrapolons du passé pour les cinq à dix prochaines
+
+142
+00:09:50.001 --> 00:09:55.000
+Il y a des années, il aura aussi un très petit impact sur la main-d&#x27;œuvre.
+
+143
+00:09:57.000 --> 00:10:03.001
+Je pense que la raison principale de cela est le fait que
+
+144
+00:10:03.001 --> 00:10:06.000
+Les robots de nos jours ne sont pas intelligents.
+
+145
+00:10:07.000 --> 00:10:11.000
+Ils ne peuvent pas concourir efficacement avec les travailleurs humains.
+
+146
+00:10:11.001 --> 00:10:14.001
+Maintenant, c’est ce changement, cependant, avec les applications, disons, artificielles
+
+147
+00:10:14.001 --> 00:10:18.000
+Intelligence et, par exemple, systèmes basés sur la connaissance ? Est-ce un facteur dans ce qui est
+
+148
+00:10:18.000 --> 00:10:25.000
+continuer ?
+
+149
+00:10:25.000 --> 00:10:28.001
+[...] nous avons des dispositifs mécaniques très simples de pick-and-place qui, par exemple,
+
+150
+00:10:28.001 --> 00:10:33.001
+Les Japonais appellent les robots et nous ne le faisons pas, aux applications très esotériques,
+
+151
+00:10:33.001 --> 00:10:37.001
+Ce qui nécessite beaucoup d’intelligence, beaucoup de capacités sensorielles.
+
+152
+00:10:38.000 --> 00:10:41.001
+Mais il y a un large spectre d&#x27;applications quelque part au milieu, où si
+
+153
+00:10:41.001 --> 00:10:46.000
+Si vous choisissez l&#x27;application correctement, alors, en fait, la machine peut être très coûteuse
+
+154
+00:10:46.000 --> 00:10:49.001
+Efficace et très compétitive avec un minimum d’intelligence.
+
+155
+00:10:50.001 --> 00:10:54.001
+Finalement, nous devons aller à des machines intelligentes et distribuées
+
+156
+00:10:54.001 --> 00:10:59.001
+architectures d&#x27;intelligence, où les éléments robotiques dans une entièrement automatisée
+
+157
+00:10:59.001 --> 00:11:04.000
+L&#x27;usine serait en communication à travers plusieurs niveaux de hiérarchie informatique.
+
+158
+00:11:05.001 --> 00:11:08.001
+Matt, vous avez mentionné le japonais, et la perception est que le Japonais
+
+159
+00:11:08.001 --> 00:11:10.000
+Ils sont devant nous dans la robotique.
+
+160
+00:11:10.001 --> 00:11:13.001
+Et vous avez une sorte de pointé une bonne ligne en termes de définir ce qu&#x27;est un robot.
+
+161
+00:11:14.001 --> 00:11:16.001
+Quelle est votre version de ce qui se passe en termes de
+
+162
+00:11:16.001 --> 00:11:18.000
+La recherche au Japon et dans ce pays dans les robots?
+
+163
+00:11:18.000 --> 00:11:20.000
+Je dirais que les Japonais sont à l&#x27;avant
+
+164
+00:11:20.000 --> 00:11:21.001
+pour l’automatisation de leurs usines.
+
+165
+00:11:22.001 --> 00:11:26.001
+Et leur façon d’automatiser les usines est une approche très systématique de
+
+166
+00:11:26.001 --> 00:11:31.000
+regarder une usine comme une unité de production et entrer et résoudre le problème
+
+167
+00:11:31.000 --> 00:11:35.000
+systémiquement du bas au-dessus, à la recherche des applications les plus faciles qui
+
+168
+00:11:35.000 --> 00:11:38.000
+Ils peuvent résoudre, apprendre dans le processus, et ensuite se déplacer à
+
+169
+00:11:38.000 --> 00:11:39.001
+Les applications les plus difficiles.
+
+170
+00:11:40.000 --> 00:11:43.001
+Nous considérons cela comme une manière très logique de
+
+171
+00:11:43.001 --> 00:11:46.000
+Développer l’automatisation dans nos usines.
+
+172
+00:11:46.001 --> 00:11:51.000
+D&#x27;autre part, les Américains sont un chemin à l&#x27;avant, je pense, en ce qui concerne certains
+
+173
+00:11:51.000 --> 00:11:54.001
+technologies associées à la machine anthropomorphiste.
+
+174
+00:11:55.000 --> 00:11:59.000
+Certainement, les systèmes de vision, je pense que nous avons un leadership sur les Japonais et les entreprises
+
+175
+00:11:59.000 --> 00:12:02.000
+d’autres zones sensorielles.
+
+176
+00:12:02.001 --> 00:12:06.000
+Mais il devient une entreprise mondiale, et Fanuk Limited, qui est l&#x27;un des
+
+177
+00:12:06.000 --> 00:12:09.000
+Les principaux fabricants japonais ont tout juste signé l&#x27;accord
+
+178
+00:12:09.000 --> 00:12:10.001
+Accord de licence avec General Motors.
+
+179
+00:12:11.001 --> 00:12:14.001
+C’est à l’heure actuelle qu’il est, si ce n’est pas le cas, le
+
+180
+00:12:14.001 --> 00:12:16.000
+Le principal fournisseur de systèmes d’automatisation.
+
+181
+00:12:16.000 --> 00:12:19.000
+Je dois l&#x27;interrompre parce que nous allons prendre une courte pause.
+
+182
+00:12:19.000 --> 00:12:23.000
+Revenez et rencontrez deux robots personnels, Hero de Heathkit et TeachMover de
+
+183
+00:12:23.000 --> 00:12:25.000
+Le microbot. C’est arrivé en un instant.
+
+184
+00:12:30.001 --> 00:12:36.000
+C’est George Oliver, président de George L. Oliver Company, qui distribue le
+
+185
+00:12:36.000 --> 00:12:37.001
+Hero 1 robot ici dans le nord de la Californie.
+
+186
+00:12:37.001 --> 00:12:41.000
+Et George, peut-être que vous pourriez avoir un héros pour nous donner
+
+187
+00:12:41.000 --> 00:12:42.001
+Une démonstration fondamentale de ce qu’elle fait.
+
+188
+00:13:15.001 --> 00:13:17.001
+Je suis [...]
+
+189
+00:13:25.000 --> 00:13:27.001
+George, combien de poids peut garder ce bras ?
+
+190
+00:13:28.000 --> 00:13:30.000
+Il peut durer environ huit onces étendues et environ un
+
+191
+00:13:30.000 --> 00:13:32.000
+Pound quand il est complètement retiré.
+
+192
+00:13:32.001 --> 00:13:35.001
+Et quel type d&#x27;utilisation fonctionnelle pourrait faire ce bras ?
+
+193
+00:13:36.000 --> 00:13:40.000
+Oh, ce bras pourrait faire des choses comme prendre des objets d&#x27;une seule assemblée
+
+194
+00:13:40.000 --> 00:13:42.000
+Lien et les transférer à un autre.
+
+195
+00:13:44.000 --> 00:13:46.000
+J’ai utilisé mon bras.
+
+196
+00:13:49.000 --> 00:13:50.001
+J’ai utilisé mon bras.
+
+197
+00:14:00.000 --> 00:14:03.001
+Les héros ont-ils les mêmes axes de mouvement normaux que
+
+198
+00:14:03.001 --> 00:14:05.000
+Un robot industriel peut-il y avoir ?
+
+199
+00:14:05.000 --> 00:14:09.001
+Oui, Hero a six axes de mouvement comme un robot industriel de classe trois.
+
+200
+00:14:11.000 --> 00:14:12.000
+Et je suis mobile.
+
+201
+00:14:18.000 --> 00:14:22.000
+Je pense que j&#x27;ai fait un excellent pari. Je quitte le downstream.
+
+202
+00:14:25.000 --> 00:14:25.001
+Est-ce qu’il est fini ?
+
+203
+00:14:26.000 --> 00:14:27.000
+Je suis déjà là.
+
+204
+00:14:28.000 --> 00:14:29.000
+Je l’arrêterai maintenant.
+
+205
+00:14:29.001 --> 00:14:32.001
+George, avant de retirer ses vêtements et de voir ce qui est à l&#x27;intérieur de lui, dites-moi, je vois
+
+206
+00:14:32.001 --> 00:14:36.000
+Il y a un clavier et un écran LED ici. Que faites-vous avec cela ?
+
+207
+00:14:36.000 --> 00:14:41.001
+Oui, cela est utilisé pour l&#x27;entrée de données, Stu, et l&#x27;écran LED est pour vous dire où
+
+208
+00:14:41.001 --> 00:14:44.000
+Vos informations sont stockées dans le processeur.
+
+209
+00:14:44.000 --> 00:14:47.000
+Vous pouvez donc le programmer à travers ce clavier ?
+
+210
+00:14:47.000 --> 00:14:47.000
+Oui oui.
+
+211
+00:14:48.000 --> 00:14:50.001
+Et je vois que tu as une sorte de panier ici. Pour quoi l’utilisez-vous ?
+
+212
+00:14:50.001 --> 00:14:53.001
+Oui, cela peut être utilisé par les étudiants étudiant les circuits d&#x27;interface.
+
+213
+00:14:54.000 --> 00:14:58.001
+Ok, nous allons retirer ses panneaux et voir si nous pouvons regarder à l&#x27;intérieur de l&#x27;Héro et voir ce que
+
+214
+00:14:58.001 --> 00:15:00.000
+Il le fera tomber, si c&#x27;est ce qu&#x27;il fait.
+
+215
+00:15:05.000 --> 00:15:08.000
+Ok, je vais vous aider avec le dos si vous voulez utiliser le front là-bas.
+
+216
+00:15:08.001 --> 00:15:13.001
+Ok, nous allons regarder à l&#x27;avant ici, George, et ce que nous avons ici ?
+
+217
+00:15:14.000 --> 00:15:18.001
+Ok, c&#x27;est votre principal panneau de circuit ici avec votre microprocesseur et tout le
+
+218
+00:15:18.001 --> 00:15:21.000
+les différents ICs qui interagissent avec les autres boîtes.
+
+219
+00:15:21.001 --> 00:15:23.000
+Ok, puis-je les tourner là-bas pendant que nous parlons ?
+
+220
+00:15:24.000 --> 00:15:28.001
+Maintenant, ces différentes plaques ici sont les plaques de capteurs qui fonctionnent
+
+221
+00:15:28.001 --> 00:15:30.000
+Encore une fois les différents capteurs.
+
+222
+00:15:30.001 --> 00:15:34.001
+Il s’agit de la chaîne de contrôle principale. C’est le sonar
+
+223
+00:15:34.001 --> 00:15:36.001
+Réservateur et récepteur.
+
+224
+00:15:37.001 --> 00:15:44.000
+Et autour d&#x27;ici, nous avons le panneau sonaire et le principal panneaux de conduite.
+
+225
+00:15:45.000 --> 00:15:49.000
+Et autour de nous, nous avons le tableau de synthèse vocale et
+
+226
+00:15:49.000 --> 00:15:51.001
+L&#x27;un des autres panneaux de capteurs ici.
+
+227
+00:15:52.000 --> 00:15:56.000
+Ok, vous utilisez principalement Hero comme robot de formation, comme robot d&#x27;éducation, n&#x27;est-ce pas?
+
+228
+00:15:56.000 --> 00:15:58.000
+Il est conçu pour être utilisé par le
+
+229
+00:15:58.000 --> 00:15:59.001
+L&#x27;étudiant et le laboratoire pour étudier la robotique.
+
+230
+00:15:59.001 --> 00:16:02.000
+Ok, bien, George, merci beaucoup, et maintenant nous reviendrons à Gary.
+
+231
+00:16:04.000 --> 00:16:06.001
+Comme Stuart nous rejoint sur le set, je voudrais introduire Dusty Rhodes
+
+232
+00:16:06.001 --> 00:16:08.000
+John Hill de la microbotique.
+
+233
+00:16:09.000 --> 00:16:10.000
+Dusty, vous avez ici un appareil qui
+
+234
+00:16:10.000 --> 00:16:12.000
+Il semble très intéressant. Vous allez nous montrer à ce sujet ?
+
+235
+00:16:12.000 --> 00:16:17.000
+Nous serons sûrs. Ceci est notre TeachMover, qui est un robot de développement utilisé par
+
+236
+00:16:17.000 --> 00:16:18.001
+Ingénieurs industriels pour développer des cellules de travail dans le
+
+237
+00:16:18.001 --> 00:16:20.001
+de l&#x27;usine, y compris pour les ingénieurs de formation.
+
+238
+00:16:21.000 --> 00:16:25.000
+Je vais vous montrer l&#x27;un des petits trucs et jeux qu&#x27;il peut jouer.
+
+239
+00:16:25.000 --> 00:16:26.001
+C’est le jeu de blocs.
+
+240
+00:16:30.001 --> 00:16:34.000
+Et il trouvera le grand bloc et le mettra au milieu.
+
+241
+00:16:35.000 --> 00:16:40.000
+Le robot a un capteur qui peut percevoir la taille de l&#x27;appareil, et ici il est
+
+242
+00:16:40.000 --> 00:16:41.001
+Il dit, j&#x27;ai le grand bloc, je le mettrai au milieu.
+
+243
+00:16:44.001 --> 00:16:47.001
+Maintenant, il sait retourner à l&#x27;emplacement précédent pour le plus petit bloc
+
+244
+00:16:47.001 --> 00:16:51.000
+Et la mettre en haut.
+
+245
+00:16:53.001 --> 00:16:56.001
+Je vais la laisser continuer pour un moment et montrer ce qui se passe si elle ne trouve pas de bloc.
+
+246
+00:16:58.000 --> 00:16:59.001
+Maintenant, souvent, nous passons et mettons les blocs
+
+247
+00:16:59.001 --> 00:17:01.001
+dans différents endroits et essayer de le tromper.
+
+248
+00:17:02.000 --> 00:17:05.001
+Mais comme un travailleur qui est confondu par les instructions, s&#x27;il ne cherche pas
+
+249
+00:17:05.001 --> 00:17:07.000
+Bloc sans travail, il va et s’assit.
+
+250
+00:17:08.000 --> 00:17:12.001
+Pendant la configuration pour cela, vous avez des blocs placés autour dans plusieurs
+
+251
+00:17:12.001 --> 00:17:14.001
+Positions, et il ne pouvait pas les trouver.
+
+252
+00:17:15.001 --> 00:17:19.001
+Je suppose que c&#x27;est parce que le mécanisme de sensation n&#x27;a aucune vision et ainsi de suite
+
+253
+00:17:19.001 --> 00:17:23.000
+à l’avant. Est-ce que cela va être ajouté à ce type d’appareil ?
+
+254
+00:17:23.000 --> 00:17:27.000
+C’est vrai. John pourrait parler d&#x27;ajouter une vision au flux de travail du robot.
+
+255
+00:17:29.000 --> 00:17:34.001
+Eh bien, si un robot avait une interface de caméra à elle telle que la caméra était en train de regarder
+
+256
+00:17:34.001 --> 00:17:41.000
+au-dessus de la zone de travail, l&#x27;ordinateur pourrait traiter l&#x27;image et localiser la
+
+257
+00:17:41.000 --> 00:17:42.001
+bloquer particulièrement et diriger le robot à y aller.
+
+258
+00:17:43.000 --> 00:17:46.000
+Ce serait possible. Dans ces cas, la
+
+259
+00:17:46.000 --> 00:17:47.001
+Le robot ne pouvait qu’enregistrer automatiquement.
+
+260
+00:17:48.000 --> 00:17:49.001
+Je sais que David a travaillé avec la vision
+
+261
+00:17:49.001 --> 00:17:51.000
+Quelques uns. Avez-vous quelque chose à ajouter à cela ?
+
+262
+00:17:51.000 --> 00:17:56.000
+Je suis d&#x27;accord avec John. Vous pouvez améliorer cela en ajoutant non seulement la vision.
+
+263
+00:17:56.000 --> 00:18:00.000
+Vous pouvez avoir une sensation de portée et de toucher et pas seulement un micro-interrupteur comme ce robot
+
+264
+00:18:00.000 --> 00:18:03.000
+Il dispose d’un large éventail de capteurs touchants.
+
+265
+00:18:03.001 --> 00:18:08.000
+En outre, vous pourriez ajouter un peu d&#x27;intelligence à elle, de sorte qu&#x27;elle sache ce qu&#x27;il fait. Et si c&#x27;est
+
+266
+00:18:08.000 --> 00:18:11.000
+S&#x27;il fait une erreur, il frappe le bouclier.
+
+267
+00:18:11.001 --> 00:18:14.001
+David, où sommes-nous en ajoutant des intelligents aux robots?
+
+268
+00:18:16.000 --> 00:18:17.001
+Eh bien, nous nous battons.
+
+269
+00:18:21.000 --> 00:18:26.001
+Les capteurs sont ajoutés aux robots aujourd&#x27;hui et ils sont appliqués progressivement dans
+
+270
+00:18:26.001 --> 00:18:28.001
+dans l’industrie.
+
+271
+00:18:29.000 --> 00:18:33.000
+Il y a d&#x27;autres applications de robots qui devraient avoir des capteurs.
+
+272
+00:18:33.000 --> 00:18:39.000
+Ce sont des environnements non structurés tels que dans l&#x27;armée ou l&#x27;agriculture, dans
+
+273
+00:18:39.000 --> 00:18:45.001
+des établissements médicaux, etc. Utilisation à domicile aussi.
+
+274
+00:18:46.001 --> 00:18:51.000
+C&#x27;est un endroit qui est très difficile parce que les robots sont trop stupides aujourd&#x27;hui pour faire
+
+275
+00:18:51.000 --> 00:18:53.000
+Ce travail qui nécessite beaucoup d’intelligence.
+
+276
+00:18:54.000 --> 00:18:58.000
+Vous voyez le champ des robots personnels grandir comme les ordinateurs personnels ont fait, ou
+
+277
+00:18:58.000 --> 00:19:00.000
+Les robots se déplacent dans la direction des ordinateurs.
+
+278
+00:19:01.001 --> 00:19:07.001
+Je mets mes paris plus sur le plus appliqué orienté
+
+279
+00:19:07.001 --> 00:19:09.000
+Les robots, comme je l’ai mentionné.
+
+280
+00:19:09.001 --> 00:19:14.000
+Le hobby est ok, mais ce n&#x27;est pas là où le grand argent serait autre que
+
+281
+00:19:14.000 --> 00:19:15.001
+sur un niveau de jouet.
+
+282
+00:19:16.000 --> 00:19:21.000
+Mais si vous prenez un parallèle avec un microordinateur, une popularité des microordinateurs
+
+283
+00:19:21.000 --> 00:19:23.001
+Et les ordinateurs personnels, beaucoup de cela était un effort de grassroots.
+
+284
+00:19:25.000 --> 00:19:28.000
+L&#x27;invention de l&#x27;Apple, par exemple, par Steve Wozniak était une
+
+285
+00:19:28.000 --> 00:19:30.000
+Un hobby technique.
+
+286
+00:19:30.000 --> 00:19:33.000
+C&#x27;est très intéressant de voir les robots venir.
+
+287
+00:19:33.000 --> 00:19:35.000
+à travers cette évolution de grassroots.
+
+288
+00:19:35.001 --> 00:19:39.000
+Je suis d&#x27;accord avec vous. Je pense que c’est merveilleux. Je pense qu&#x27;il y a une bonne analogie
+
+289
+00:19:39.000 --> 00:19:40.001
+entre ordinateurs et robots.
+
+290
+00:19:41.000 --> 00:19:44.000
+Tout comme les ordinateurs ont commencé uniquement pour le commerce et la science
+
+291
+00:19:44.000 --> 00:19:46.000
+Applications, maintenant c’est tout notre vie.
+
+292
+00:19:46.001 --> 00:19:48.001
+Il en va de même pour les robots.
+
+293
+00:19:48.001 --> 00:19:52.001
+Je pense que c&#x27;est une bonne idée qu&#x27;il y ait beaucoup d&#x27;hobbys qui sont en train de
+
+294
+00:19:52.001 --> 00:19:58.000
+parce qu&#x27;il y a une nouvelle génération maintenant qui ne craindrait pas les robots,
+
+295
+00:19:58.001 --> 00:20:03.000
+Cela pourrait l’appliquer dans de nombreux domaines de notre vie.
+
+296
+00:20:03.001 --> 00:20:06.001
+David, quelque chose comme cela est relativement simple. Je veux dire, il est
+
+297
+00:20:06.001 --> 00:20:08.000
+Un bras qui peut prendre les choses et ainsi de suite.
+
+298
+00:20:08.000 --> 00:20:12.000
+Vous avez parlé auparavant de ne pas seulement remplacer le travail de blue-collar par des robots, mais
+
+299
+00:20:12.000 --> 00:20:13.001
+Même des travaux blancs. Comment faites-vous cela ?
+
+300
+00:20:13.001 --> 00:20:20.001
+Vous avez vu ce que Dosti faisait. Il a utilisé cette boîte d’enseignement.
+
+301
+00:20:20.001 --> 00:20:23.000
+Il faut dire à un robot ce qu’il faut faire.
+
+302
+00:20:23.001 --> 00:20:29.000
+Et si cette information qu&#x27;il a dans sa tête pouvait être transférée dans un
+
+303
+00:20:29.000 --> 00:20:30.001
+Système automatique, on peut le faire.
+
+304
+00:20:30.001 --> 00:20:36.001
+En particulier, une base de données de conception assistée par ordinateur contient toutes les informations qui
+
+305
+00:20:36.001 --> 00:20:38.000
+Il est nécessaire de faire un certain travail.
+
+306
+00:20:39.000 --> 00:20:45.001
+Maintenant, nous pouvons éliminer l&#x27;entraîneur qui utilise l&#x27;enseignement pendant pour déplacer le robot
+
+307
+00:20:45.001 --> 00:20:52.000
+et lui dire ce qu&#x27;il faut faire en utilisant l&#x27;auto-enseignement et l&#x27;autocalibration, que tout le
+
+308
+00:20:52.000 --> 00:20:58.000
+l&#x27;information serait transférée à un ordinateur et avec les capteurs
+
+309
+00:20:58.000 --> 00:21:03.000
+Le robot où trouver les choses et se calibrer et ensuite faire le travail.
+
+310
+00:21:04.000 --> 00:21:07.000
+Ah oui Gary ! Eh bien, si vous et moi ne sommes pas remplacés par les robots, nous serons ici à nouveau
+
+311
+00:21:07.000 --> 00:21:09.001
+La semaine prochaine pour une nouvelle édition de The Computer Chronicles.
+
+312
+00:21:51.001 --> 00:21:55.001
+[...] Computer Chronicles est heureux de fournir un financement majeur pour The Computer
+
+313
+00:21:55.001 --> 00:21:59.001
+Chronicles, l’histoire de cette évolution continue.
+
+314
+00:22:29.001 --> 00:22:34.001
+[...] Les chronicles sont rendus possibles par une subvention de Byte, les petits systèmes
+
+315
+00:22:34.001 --> 00:22:39.000
+journal, éditeurs d’une revue mensuelle sur la technologie du micro-ordinateur et
+
+316
+00:22:39.000 --> 00:22:41.001
+Des projets innovants dans le monde de l’informatique.
+
+317
+00:22:42.001 --> 00:22:47.000
+Dans le fichier d&#x27;accès aléatoire cette semaine, les nouvelles télévisées peuvent être toutes sur Cabbage
+
+318
+00:22:47.000 --> 00:22:50.001
+Patch poupées, mais le vrai cadeau de Noël chaud cette année est incontestablement
+
+319
+00:22:50.001 --> 00:22:52.000
+Un ordinateur à bas prix.
+
+320
+00:22:52.001 --> 00:22:56.001
+Les analystes disent maintenant que 2,5 millions d&#x27;ordinateurs seront sous l&#x27;arbre de Noël
+
+321
+00:22:56.001 --> 00:22:59.000
+Le week-end, remplaçant le gagnant de l&#x27;année dernière, les jeux vidéo,
+
+322
+00:22:59.001 --> 00:23:01.000
+C’est le cadeau de Noël le plus populaire.
+
+323
+00:23:02.000 --> 00:23:06.000
+Et si les chiffres de l&#x27;industrie sont bons, cela signifie plus d&#x27;un million d&#x27;ordinateurs jetés
+
+324
+00:23:06.000 --> 00:23:09.001
+dans le coffre en quelques semaines, saturant encore plus la croissance
+
+325
+00:23:09.001 --> 00:23:11.000
+fournir des ordinateurs utilisés.
+
+326
+00:23:11.000 --> 00:23:14.000
+Cela conduit à une nouvelle entreprise en croissance rapide, Swap informatique
+
+327
+00:23:14.000 --> 00:23:16.000
+Rencontrez et utilisez des magasins informatiques.
+
+328
+00:23:16.001 --> 00:23:20.001
+Computer Swap America, basée à Palo Alto, s’étend à cinq autres villes
+
+329
+00:23:20.001 --> 00:23:24.000
+l&#x27;année prochaine, et la Banque d&#x27;informatique intergouvernementale, qui a
+
+330
+00:23:24.000 --> 00:23:27.001
+vendre des ordinateurs utilisés par le courrier, a maintenant ouvert un magasin
+
+331
+00:23:27.001 --> 00:23:29.000
+Opération à Mountain View.
+
+332
+00:23:30.000 --> 00:23:33.001
+Atari et Activision espèrent pomper une nouvelle vie dans la vidéo
+
+333
+00:23:33.001 --> 00:23:37.001
+Les deux principaux fournisseurs de jeux vidéo ont annoncé cette semaine un
+
+334
+00:23:37.001 --> 00:23:41.000
+L&#x27;entreprise pour distribuer de nouveaux jeux vidéo via la technologie de radiodiffusion.
+
+335
+00:23:41.001 --> 00:23:45.000
+Ils vont tester le nouveau système au début de l&#x27;année prochaine, et ils disent qu&#x27;ils espèrent se développer
+
+336
+00:23:45.000 --> 00:23:47.001
+leur service pour inclure des logiciels non-joueur.
+
+337
+00:23:49.000 --> 00:23:53.001
+Eh bien, si Noël 83 appartient aux ordinateurs, le nouvel an de 1984 peut
+
+338
+00:23:53.001 --> 00:23:55.000
+On l’appelle l’année du souris.
+
+339
+00:23:55.001 --> 00:23:59.001
+Les analystes disent que le business de la souris pourrait croître à plus de 10 millions de dollars prochain
+
+340
+00:23:59.001 --> 00:24:03.000
+l&#x27;année, et le consensus de l&#x27;opinion semble être que la souris optique
+
+341
+00:24:03.000 --> 00:24:05.000
+Il remplacera la souris mécanique.
+
+342
+00:24:05.001 --> 00:24:09.000
+L&#x27;un des leaders dans le domaine est Mouse Systems Corporation de Santa Clara. Ils sont
+
+343
+00:24:09.000 --> 00:24:15.000
+Il s’attend à plus de quatre fois le chiffre d’affaires l’an prochain. 1984 sera certainement
+
+344
+00:24:15.000 --> 00:24:18.001
+l’année du semiconducteur. Il est prévu que les ventes de l&#x27;industrie du chip
+
+345
+00:24:18.001 --> 00:24:23.001
+augmenter de plus de 30 % l’année prochaine. En réalité, les commandes nationales en novembre ont frappé tout
+
+346
+00:24:23.001 --> 00:24:25.000
+temps de 1 milliard de dollars.
+
+347
+00:24:26.000 --> 00:24:30.000
+En fait, le marché boursier a transformé les sociétés de chips en leurs favoris.
+
+348
+00:24:30.000 --> 00:24:34.000
+La chute après le dumping sur de nombreux autres stocks de haute technologie. A la fin de l’année, nous prenons un
+
+349
+00:24:34.000 --> 00:24:35.001
+Regardez les grands gagnants et perdants de l&#x27;année.
+
+350
+00:24:35.001 --> 00:24:41.000
+Les gagnants étaient Intel, vendant environ 41 après avoir frappé un bas de 17 cette année,
+
+351
+00:24:42.000 --> 00:24:46.000
+Semi national, vendu à près de 16 après avoir plongé en dessous de 7 plus tôt dans le
+
+352
+00:24:46.000 --> 00:24:49.001
+L&#x27;année, d&#x27;autres finalistes forts sont Tandem et Genentech.
+
+353
+00:24:50.000 --> 00:24:55.000
+Sur le côté perdant sont Activision, vendant près de 4 $ après avoir frappé près de 13
+
+354
+00:24:55.000 --> 00:24:59.001
+Plus tôt cette année, et Eagle, baisse en dessous de 9 après avoir frappé près de 25.
+
+355
+00:24:59.001 --> 00:25:04.000
+D&#x27;autres perdants étaient Apple, considérablement en dessous de son haut, et Telavideo,
+
+356
+00:25:04.001 --> 00:25:06.000
+Il est aussi proche de son faible niveau annuel.
+
+357
+00:25:07.000 --> 00:25:10.001
+Si vous êtes sur le marché boursier, ne jettez pas cet ordinateur. La ligne de valeur est
+
+358
+00:25:10.001 --> 00:25:14.000
+Il a annoncé un nouveau service de logiciel mensuel appelé Value Screen.
+
+359
+00:25:14.001 --> 00:25:19.000
+Pour environ 500 $ par an, Value Line vous enverra un nouveau disque chaque mois, mesurant
+
+360
+00:25:19.000 --> 00:25:23.000
+32 facteurs pour chacune des quelque 1 600 stocks communs.
+
+361
+00:25:23.000 --> 00:25:27.001
+Vous pouvez programmer les disques pour rechercher certains critères clés et avoir l&#x27;ordinateur
+
+362
+00:25:27.001 --> 00:25:29.000
+Recommandez les transactions.
+
+363
+00:25:30.000 --> 00:25:33.001
+La société Osborne est de retour, mais sous une forme très différente. Les créanciers d&#x27;Osborne
+
+364
+00:25:33.001 --> 00:25:36.000
+Il s’agit d’une réorganisation d’un nouveau
+
+365
+00:25:36.000 --> 00:25:38.000
+Président et PDG Ronald Brown.
+
+366
+00:25:39.000 --> 00:25:42.001
+Osborne va sortir de la production, probablement hors du marché intérieur, et
+
+367
+00:25:42.001 --> 00:25:46.000
+Il se concentrera sur son nouveau modèle exécutif IBM-compatible.
+
+368
+00:25:47.001 --> 00:25:52.001
+Les rumeurs sont en train de voler au-dessus des mises à jour pendantes dans le PCjr IBM. Luke Warm Press est
+
+369
+00:25:52.001 --> 00:25:55.000
+Il a indiqué que l&#x27;IBM était de retour sur les boîtes de dessin.
+
+370
+00:25:55.001 --> 00:25:59.000
+haut sur la liste est un clavier mis à jour après de nombreuses plaintes sur le
+
+371
+00:25:59.000 --> 00:26:00.000
+Type de clavier junior.
+
+372
+00:26:00.001 --> 00:26:05.000
+Il y a aussi un discours sur l&#x27;adaptation du junior pour qu&#x27;il puisse gérer deux disques.
+
+373
+00:26:06.000 --> 00:26:09.000
+Apple a finalement fait un peu de progrès cette semaine dans sa bataille pour arrêter le
+
+374
+00:26:09.000 --> 00:26:10.001
+Commerce sur les faux ordinateurs Apple.
+
+375
+00:26:10.001 --> 00:26:14.000
+Pour un moment, le problème des faux pommes a été considéré comme limité à
+
+376
+00:26:14.000 --> 00:26:16.000
+L&#x27;Asie du Sud-Est, mais les phony apples ont
+
+377
+00:26:16.000 --> 00:26:17.001
+Il a commencé à se montrer ici en Californie.
+
+378
+00:26:18.001 --> 00:26:22.001
+Cette semaine, les Etats-Unis Les autorités douanières ont capturé près de 400 faux apples de l&#x27;ordinateur
+
+379
+00:26:22.001 --> 00:26:26.000
+Les distributeurs à San Francisco, Santa Ana et Cupertino.
+
+380
+00:26:26.001 --> 00:26:27.001
+Les accusations pénales sont en cours.
+
+381
+00:26:29.000 --> 00:26:31.000
+Nous connaissons tous et utilisons Basic à un moment ou à un autre,
+
+382
+00:26:31.001 --> 00:26:33.000
+Mais savez-vous qui a écrit Basic ?
+
+383
+00:26:33.001 --> 00:26:37.000
+Deux professeurs de Dartmouth, John Kemeny et Thomas Kurtz, et ils ne font guère
+
+384
+00:26:37.000 --> 00:26:39.001
+Penny off l&#x27;une des langues les plus utilisées.
+
+385
+00:26:40.001 --> 00:26:44.001
+Ils vont essayer à nouveau avec une nouvelle langue qu&#x27;ils appellent True Basic, un prétendument
+
+386
+00:26:44.001 --> 00:26:47.001
+Une base universelle qui fonctionnera sur presque toutes les machines.
+
+387
+00:26:48.000 --> 00:26:49.001
+C&#x27;est dû à la fin de l&#x27;année prochaine.
+
+388
+00:26:50.001 --> 00:26:54.000
+Et si vous êtes dans ce genre de chose, vous pourriez être excité de savoir que le
+
+389
+00:26:54.000 --> 00:26:58.000
+Le record mondial a été brisé la semaine dernière pour facturer le plus grand nombre.
+
+390
+00:26:58.001 --> 00:27:04.000
+Un superordinateur Cray-1 à Albuquerque, au Nouveau-Mexique a fait un numéro de 67 chiffres
+
+391
+00:27:04.000 --> 00:27:05.001
+En plus de 13 heures.
+
+392
+00:27:05.001 --> 00:27:10.000
+Le record était un numéro de 50 chiffres. En fait, il y a un aspect pratique de
+
+393
+00:27:10.000 --> 00:27:14.000
+Par conséquent, la plupart des systèmes de sécurité informatique sont basés sur les
+
+394
+00:27:14.000 --> 00:27:17.000
+Impossibilité de facturer les chiffres de cette taille.
+
+395
+00:27:18.000 --> 00:27:20.001
+Bien, nous entendons souvent que l&#x27;une des merveilleuses choses sur les ordinateurs sur le
+
+396
+00:27:20.001 --> 00:27:22.001
+Le travail, c’est qu’ils ne appellent jamais les malades.
+
+397
+00:27:22.001 --> 00:27:26.000
+Bon, un ordinateur a fait cette semaine à Sacramento après avoir été
+
+398
+00:27:26.000 --> 00:27:27.001
+disparus par deux adolescents.
+
+399
+00:27:28.000 --> 00:27:31.001
+L&#x27;ordinateur a gardé des enregistrements d&#x27;adhésion à une école secondaire Sacramento. Je pense
+
+400
+00:27:31.001 --> 00:27:33.000
+Les enfants ont coupé trop de cours.
+
+401
+00:27:34.000 --> 00:27:37.000
+Et un robot a témoigné cette semaine à un Casino Control
+
+402
+00:27:37.000 --> 00:27:39.000
+Réunion de la Commission dans l’Atlantique.
+
+403
+00:27:39.001 --> 00:27:42.000
+Un casino qui veut utiliser le robot sur le terrain de jeu
+
+404
+00:27:42.000 --> 00:27:44.000
+Promouvoir ses spectacles de divertissement.
+
+405
+00:27:44.000 --> 00:27:48.000
+Le robot a dit qu&#x27;il n&#x27;avait qu&#x27;un an. La commission a déclaré que la loi interdisait
+
+406
+00:27:48.000 --> 00:27:50.001
+Les mineurs sont sur le terrain de jeu.
+
+407
+00:27:51.001 --> 00:27:54.001
+Eh bien, cela suffit clairement du fichier d&#x27;accès aléatoire de cette semaine. Nous serons hors
+
+408
+00:27:54.001 --> 00:27:58.000
+la semaine prochaine en raison des vacances, mais nous vous verrons à nouveau l&#x27;année prochaine immédiatement
+
+409
+00:27:58.000 --> 00:27:59.001
+suivant les chronicles informatiques.
+
+410
+00:28:00.000 --> 00:28:01.000
+Je suis Stuart Chafay.
+
+411
+00:28:01.001 --> 00:28:06.001
+L&#x27;accès au hasard est rendu possible par une subvention de Byte, le Small Systems Journal,
+
+412
+00:28:07.000 --> 00:28:11.000
+éditeurs d&#x27;une revue mensuelle sur la technologie microinformatique et l&#x27;innovation
+
+413
+00:28:11.000 --> 00:28:13.001
+Projets dans le monde de l’informatique.
