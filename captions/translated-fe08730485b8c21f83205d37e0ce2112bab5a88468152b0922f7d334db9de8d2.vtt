@@ -1,0 +1,1681 @@
+WEBVTT
+
+1
+00:00:10.001 --> 00:00:15.000
+Bangunan baru yang cerah ini di Silicon Valley akan menjadi rumah bagi beberapa orang.
+
+2
+00:00:15.000 --> 00:00:19.000
+startup berteknologi tinggi baru dengan mimpi menghasilkan jutaan dalam bisnis komputer.
+
+3
+00:00:19.001 --> 00:00:23.001
+Tetapi bangunan ini kosong dan yang satu di sebelahnya tidak selesai dan pada saat ini
+
+4
+00:00:23.001 --> 00:00:29.000
+yang ditinggalkan. Apa yang menyebabkan kecelakaan di komputer dan akan bertahan? Kami akan mendapatkan jawaban
+
+5
+00:00:29.000 --> 00:00:32.001
+pada pertanyaan-pertanyaan ini dan lain-lain hari ini sebagai kita melihat perlambatan dalam
+
+6
+00:00:32.001 --> 00:00:35.001
+Silicon Valley pada edisi ini dari Computer Chronicles.
+
+7
+00:00:56.000 --> 00:01:01.000
+Komputer Chronicles dibuat mungkin sebagian oleh donasi dari AFIP, yang
+
+8
+00:01:01.000 --> 00:01:05.001
+American Federation of Information Processing Societies, sebuah federasi non-profit
+
+9
+00:01:05.001 --> 00:01:10.001
+dari 11 perusahaan nasional untuk profesional komputer. Kepemimpinan, kepemimpinan dan
+
+10
+00:01:10.001 --> 00:01:16.000
+Layanan dalam komputer dan teknologi informasi. Pembiayaan tambahan diberikan oleh
+
+11
+00:01:16.000 --> 00:01:20.001
+McGraw-Hill, penerbit dari Byte. Artikel teknis terperinci Byte tentang yang baru
+
+12
+00:01:20.001 --> 00:01:24.001
+Perangkat lunak, perangkat lunak dan bahasa mencakup teknologi mikro-komputer terbaru
+
+13
+00:01:24.001 --> 00:01:28.000
+di seluruh dunia. BITTE adalah standar internasional.
+
+14
+00:01:32.001 --> 00:01:36.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+15
+00:01:37.000 --> 00:01:40.000
+Gary, dua komputer yang kita miliki di depan kita di sini dikenal sebagai anak yatim di
+
+16
+00:01:40.000 --> 00:01:43.000
+industri, seperti yang Anda ketahui, mesin yang ketika pertama kali keluar sangat
+
+17
+00:01:43.000 --> 00:01:46.000
+memuji teknologi mereka, karakteristik kinerja harga mereka, tetapi
+
+18
+00:01:46.000 --> 00:01:49.001
+Mesin yang pada dasarnya keluar dari bisnis dan tidak lagi dibuat. dan
+
+19
+00:01:49.001 --> 00:01:53.000
+Sebenarnya semua orang tampaknya mendengar tentang industri komputer hari ini adalah bencana
+
+20
+00:01:53.000 --> 00:01:57.000
+dan kegagalan dan layoffs dan penutupan tanaman dan sebagainya. Anda telah melihat ini dari dua
+
+21
+00:01:57.000 --> 00:02:01.000
+Perspektif, telah menemukan penelitian digital beberapa tahun yang lalu dan sekarang sebagai
+
+22
+00:02:01.000 --> 00:02:04.001
+Sebuah perusahaan startup baru dengan venture aktif. Dari sudut pandang Anda, apa yang sebenarnya
+
+23
+00:02:04.001 --> 00:02:08.000
+Apa yang terjadi di industri ini saat ini? Nah, ada banyak komponen untuk ini
+
+24
+00:02:08.000 --> 00:02:12.000
+dari industri. Misalnya, produsen chip seperti Intel sedang terjebak.
+
+25
+00:02:12.000 --> 00:02:17.000
+Sangat sulit dengan harga Jepang dan harga yang lebih rendah. Mari kita katakan hardware komersial
+
+26
+00:02:17.000 --> 00:02:22.000
+Sistem seperti Osborne sekarang berada di pasar yang sebagian besar didominasi oleh IBM.
+
+27
+00:02:22.000 --> 00:02:25.000
+Mengambil pasar rumah, sesuatu seperti Coleco, itu adalah sesuatu yang benar-benar
+
+28
+00:02:25.000 --> 00:02:27.001
+Tidak pernah mencapai target. Setelah pertandingan, apa lagi yang Anda lakukan dengan rumah Anda
+
+29
+00:02:27.001 --> 00:02:31.000
+Sistem komputer ? Dan tentu saja, perangkat lunak diletakkan di atas semua ini dan
+
+30
+00:02:31.000 --> 00:02:34.000
+telah terjadi pertumbuhan dalam industri perangkat lunak, tetapi juga bahwa pertumbuhan termasuk
+
+31
+00:02:34.000 --> 00:02:38.000
+pertumbuhan dalam jumlah pemasok dan tentu saja erosi harga di sana. Tapi saya pikir itu
+
+32
+00:02:38.000 --> 00:02:40.001
+cara kita keluar dari ini adalah jenis cara yang sama kita masuk ke dalamnya, menggunakan
+
+33
+00:02:40.001 --> 00:02:43.001
+inovasi dan teknologi baru yang akan datang dan juga inovasi
+
+34
+00:02:43.001 --> 00:02:48.000
+dengan software. Kami akan memulai pandangan khusus dua bagian hari ini pada perlambatan di
+
+35
+00:02:48.000 --> 00:02:50.001
+Silicon Valley dan pada program hari ini kita akan bertemu dengan sebuah venture
+
+36
+00:02:50.001 --> 00:02:55.000
+seorang kapitalis, seorang analis industri, seorang korresponden bisnis Silicon Valley dan seorang
+
+37
+00:02:55.000 --> 00:02:58.000
+perusahaan ritel komputer terkemuka di negara ini. Kami akan memulai program ini
+
+38
+00:02:58.000 --> 00:03:01.001
+Namun dengan latar belakang melihat bagaimana industri ini sampai di mana ia hari ini.
+
+39
+00:03:02.001 --> 00:03:08.000
+Sejarah singkat tetapi membingungkan Silicon Valley ditandai dengan optimisme tak terbatas dan
+
+40
+00:03:08.000 --> 00:03:13.000
+inovasi yang cemerlang, membawa perusahaan sukses tiba-tiba dan kegagalan yang sering.
+
+41
+00:03:13.001 --> 00:03:17.001
+Tetapi jika pertumbuhan berkelanjutan telah menghancurkan Silicon Valley dari ekonomi Amerika
+
+42
+00:03:17.001 --> 00:03:23.001
+Masalah, berita baru-baru ini tidak begitu baik. Pada tahun 1983, penjualan pribadi di seluruh dunia
+
+43
+00:03:23.001 --> 00:03:29.001
+Komputer meningkat 76 persen, tapi tahun lalu kenaikan hanya 19 persen.
+
+44
+00:03:29.001 --> 00:03:35.000
+Dan tahun ini analis memprediksi bahwa pertumbuhan penjualan akan melambat hingga sekitar 4 persen.
+
+45
+00:03:35.001 --> 00:03:39.001
+Kerugian di antara dua produsen komputer rumah terbesar sampai Juni tahun ini
+
+46
+00:03:39.001 --> 00:03:42.000
+melebihi $ 600 juta.
+
+47
+00:03:42.001 --> 00:03:47.000
+Penurunan di industri yang terkait sama berat. Chip yang dibatalkan
+
+48
+00:03:47.000 --> 00:03:51.001
+pesanan telah menciptakan backlog untuk produsen semikonduktor di mana penjualan memiliki
+
+49
+00:03:51.001 --> 00:03:56.001
+Penurunan sebesar 25 persen tahun lalu. Jumlah produsen komputer Amerika
+
+50
+00:03:56.001 --> 00:04:02.000
+telah menurun dari lebih dari 150 ke sekitar 40 dengan penurunan yang sama di antara perangkat lunak
+
+51
+00:04:02.000 --> 00:04:07.000
+para pengembang. Sementara penjualan yang buruk telah menyebabkan prediksi yang lebih pendek dan oblique
+
+52
+00:04:07.000 --> 00:04:12.000
+Tentu saja, penyebab kebetulan tidak jelas. Kelompok PC yang lebih mahal
+
+53
+00:04:12.000 --> 00:04:17.001
+Pasar bisnis target meningkat 25 persen tahun lalu, sementara penjualan
+
+54
+00:04:17.001 --> 00:04:22.001
+Mesin di bawah seribu dolar tidak menunjukkan kenaikan. Dan yang terburuk, tampaknya bahwa
+
+55
+00:04:22.001 --> 00:04:27.001
+Keraguan diri industri baru didasarkan pada ketidakpastian tentang siapa yang menggunakan produk
+
+56
+00:04:27.001 --> 00:04:32.001
+Dan untuk apa. Tekanan pada produsen PC adalah kelompok yang semakin meningkat dari
+
+57
+00:04:32.001 --> 00:04:37.001
+Pembeli yang canggih yang dapat membiarkan diri menjadi lebih selektif dan lebih sabar.
+
+58
+00:04:49.001 --> 00:04:54.000
+Saat ini ia bergabung dengan Dave Crockett. Dave adalah Presiden dan CEO DataQuest, yang
+
+59
+00:04:54.000 --> 00:04:57.001
+perusahaan penelitian pasar terbesar di industri komputer, dan duduk di samping Dave
+
+60
+00:04:57.001 --> 00:05:02.000
+Salah satunya adalah Sam Kalela. Sam adalah mitra umum dalam mitra venture institusi, IVP,
+
+61
+00:05:02.001 --> 00:05:05.000
+Salah satu perusahaan modal venture terkemuka di Silicon Valley.
+
+62
+00:05:05.000 --> 00:05:09.000
+dengan Gary? Saya ingin memulai dengan pertanyaan untuk Dave. dengan jelas komputer dan
+
+63
+00:05:09.000 --> 00:05:13.001
+Mikroelektronika menjadi semakin penting dalam masyarakat kita. Jika kita adalah
+
+64
+00:05:13.001 --> 00:05:16.001
+Bercakap tentang perlambatan industri, industri apa itu dan sebenarnya di mana mereka berada
+
+65
+00:05:16.001 --> 00:05:22.000
+Apakah perlambatan terjadi? Saya pikir ini mungkin sedikit salah tentang sebuah
+
+66
+00:05:22.000 --> 00:05:27.001
+melambat dibandingkan dengan apa yang telah dicapai industri dalam sepuluh tahun
+
+67
+00:05:27.001 --> 00:05:34.001
+kewujudan Industri komputer pribadi pada tahun 1984 adalah $26.3 miliar dan 84 tumbuh
+
+68
+00:05:34.001 --> 00:05:41.000
+Lebih dari 80 persen. Jadi saya pikir tahun ini adalah sedikit lebih konsolidasi atau
+
+69
+00:05:41.000 --> 00:05:47.000
+istirahat, jika Anda ingin, sebelum ekspansi dan di kedua, bahkan kemudian ada pasti
+
+70
+00:05:47.000 --> 00:05:52.001
+Sektor-sektor yang telah melakukan sangat baik tahun ini. bidang komputer bisnis, yang lebih tinggi
+
+71
+00:05:52.001 --> 00:05:57.001
+Akhir komputer pribadi telah melakukan hal yang luar biasa baik.
+
+72
+00:05:58.000 --> 00:06:02.000
+Oleh karena itu, dalam erti kata lain, itu adalah jenis bangunan di atas tebing gelombang dan kemudian ketika
+
+73
+00:06:02.000 --> 00:06:06.000
+breaks crust dan apa yang Anda lakukan dengan sumber daya tambahan yang Anda miliki di
+
+74
+00:06:06.000 --> 00:06:13.000
+Apakah sensasi? Itu benar dan saya pikir kami telah mengembangkan masalah kapasitas berlebihan. Ada yang
+
+75
+00:06:13.000 --> 00:06:20.001
+lebih dari 375 produsen yang menyebabkan, ketika sekali permintaan ditangkap dengan bekalan dan
+
+76
+00:06:20.001 --> 00:06:26.001
+bekalan melampaui itu, kita melihat beberapa periode penyesuaian yang sedang berjalan
+
+77
+00:06:26.001 --> 00:06:31.001
+di atas. Maafkan saya satu detik. Biarkan aku hanya mengikuti. Maka dari itu, itu adalah suatu hal yang
+
+78
+00:06:31.001 --> 00:06:36.000
+prognosis yang buruk atau manajemen yang buruk di dalam perusahaan-perusahaan ini dan tidak merencanakan ke depan
+
+79
+00:06:36.000 --> 00:06:40.000
+dan menjadi berlebihan dengan inventory dan sebagainya? Tidak, saya tidak berpikir begitu banyak.
+
+80
+00:06:40.001 --> 00:06:45.001
+Itu hanya bahwa kita tidak pernah memiliki industri yang tumbuh di fenomena ini
+
+81
+00:06:45.001 --> 00:06:52.000
+Kadar yang Bahkan, industri tumbuh jauh lebih besar dari ramalan kami sendiri di Data
+
+82
+00:06:52.000 --> 00:06:58.001
+Mencari tetapi karena itu adalah kadar pertumbuhan yang fenomenal yang mengundang banyak
+
+83
+00:06:58.001 --> 00:07:03.001
+Orang-orang masuk ke industri dan rantai bekalan menangkap sepanjang jalan. Sebagai seorang
+
+84
+00:07:03.001 --> 00:07:10.000
+Contohnya, di semikonduktor sekarang ada 40% kapasitas di semiconduktors dan
+
+85
+00:07:10.000 --> 00:07:18.000
+Beberapa semikonduktor telah memiliki penurunan harga sebanyak 85% sejak terakhir
+
+86
+00:07:18.000 --> 00:07:23.001
+Januari yang Ini akhirnya akan mendorong permintaan lebih banyak untuk komputer pribadi sebagai
+
+87
+00:07:23.001 --> 00:07:31.000
+Anda mendapatkan prestasi harga yang lebih baik. Apa yang mempengaruhi dominasi IBM atau menjadi seperti itu
+
+88
+00:07:31.000 --> 00:07:41.000
+penting dalam industri komputer pribadi, apa yang mempengaruhi
+
+89
+00:08:07.001 --> 00:08:10.001
+[...] Saya pikir ini adalah pertanyaan yang baik. Saya pikir itu bagus saya pikir itu baik
+
+90
+00:08:10.001 --> 00:08:11.000
+Pertanyaan yang Saya pikir itu pertanyaan yang baik. Saya pikir itu pertanyaan yang baik.
+
+91
+00:08:11.000 --> 00:08:15.000
+Hari-hari awal, mari kita katakan akhir 1970-an, awal 1980-an di mana modal venture sangat
+
+92
+00:08:15.000 --> 00:08:20.001
+banyak sampai titik sekarang di mana ia benar-benar kering. Apa yang terjadi di sana? Ya, aku
+
+93
+00:08:20.001 --> 00:08:25.001
+Saya pikir ada investasi berlebihan. Saya pikir ini adalah salah satu indikator
+
+94
+00:08:25.001 --> 00:08:31.001
+Mengapa ada 375 perusahaan dalam bisnis ini. Ada harapan yang besar. Itu
+
+95
+00:08:31.001 --> 00:08:37.001
+Ini tampak seperti kesempatan yang sangat besar. Siapa pun yang bisa membuat microcomputer.
+
+96
+00:08:37.001 --> 00:08:44.000
+masuk ke bisnis, seseorang yang memiliki konsep untuk komputer yang lebih baik berikutnya
+
+97
+00:08:44.000 --> 00:08:50.000
+bisa mendapatkan dana. Terlalu banyak tawaran yang dibiayai dan ada kecemasan ke pasar
+
+98
+00:08:50.000 --> 00:08:57.000
+Dan tiba-tiba semua startup berlari kepala ke IBM. Itulah yang dilakukan IBM.
+
+99
+00:08:57.000 --> 00:09:03.001
+Ini memiliki dampak yang signifikan pada perusahaan-perusahaan fledgling. Hari ini, mungkin yang
+
+100
+00:09:03.001 --> 00:09:08.001
+masyarakat modal venture, yang melihat dirinya di hujung depan setiap pasar, sekarang
+
+101
+00:09:08.001 --> 00:09:14.000
+menganggap dirinya sebagai berinvestasi dan tidak terlalu tertarik pada pribadi baru
+
+102
+00:09:14.000 --> 00:09:18.000
+Perjanjian Komputer Jika Anda melihat, mari kita sebutkan area komputer pribadi dan
+
+103
+00:09:18.000 --> 00:09:22.000
+hanya teknologi tinggi secara umum, apa yang Anda cari dalam mengatakan perusahaan kecil
+
+104
+00:09:22.000 --> 00:09:28.000
+Sekarang ini untuk pertumbuhan ini? Nah, apa yang kita cari adalah mungkin hal yang sama yang kita
+
+105
+00:09:28.000 --> 00:09:31.000
+mencari sebelumnya dan itu adalah rencana yang dipikirkan dengan baik, tim manajemen yang
+
+106
+00:09:31.000 --> 00:09:37.001
+memahami pasar mereka dan niche pasar baru yang menarik dan unik.
+
+107
+00:09:38.000 --> 00:09:44.000
+Saya pikir niche adalah kata yang berlebihan tetapi saya benar-benar percaya itu adalah kunci. Kami
+
+108
+00:09:44.000 --> 00:09:51.000
+ingin menemukan pasar baru yang pemain yang ada atau perusahaan besar yang ada
+
+109
+00:09:51.000 --> 00:09:56.000
+tidak memberi perhatian kepada dan di mana kita dapat membangun kepala pantai dan kemudian tumbuh.
+
+110
+00:09:56.001 --> 00:10:00.001
+Jadi secara umum, saya pikir pendekatan sebelumnya terhadap ini mungkin telah menjadi untuk berinvestasi dalam
+
+111
+00:10:00.001 --> 00:10:03.000
+sebuah perusahaan yang sangat luas, mencoba untuk memukul seluruh pasar tetapi sekarang Anda
+
+112
+00:10:03.000 --> 00:10:06.001
+mencari untuk mengatakan pasar vertikal yang bisa menjadi hukum perubatan atau apa pun yang
+
+113
+00:10:06.001 --> 00:10:11.000
+Dengan kata lain, akan sangat menguntungkan. Saya pikir seperti yang berkaitan dengan ini
+
+114
+00:10:11.000 --> 00:10:15.000
+Bisnis, itu adalah dalam aplikasi komputer dan bukannya pribadi
+
+115
+00:10:15.000 --> 00:10:20.001
+komputer itu sendiri dan saya percaya itu adalah pasar yang tidak terjangkau namun karena orang-orang
+
+116
+00:10:20.001 --> 00:10:27.000
+Mencari utilitas yang lebih tinggi dari hardware mereka. Mereka adalah
+
+117
+00:10:27.000 --> 00:10:31.001
+mencari [...] perangkat dan oleh karena itu mereka membutuhkan lebih banyak bantuan intelektual dan itu adalah
+
+118
+00:10:31.001 --> 00:10:36.000
+Di mana saya pikir komunitas modal venture lebih tertarik hari ini. Ide apa pun
+
+119
+00:10:36.000 --> 00:10:37.001
+Secara khusus apa yang akan terjadi?
+
+120
+00:10:37.001 --> 00:10:40.001
+Anda berbicara tentang niche dan pasar baru khusus. Menurutnya, jenis-jenis
+
+121
+00:10:40.001 --> 00:10:45.000
+aplikasi, apa jenis kecerdasan baru? Ya, satu yang saya pikir kita semua adalah
+
+122
+00:10:45.000 --> 00:10:49.001
+yang tertarik dan dibicarakan sebelumnya mungkin adalah aplikasi CD-ROM di
+
+123
+00:10:49.001 --> 00:10:55.001
+Database yang saat ini didistribusikan secara online atau didistribui dalam kertas. Dengan
+
+124
+00:10:55.001 --> 00:11:00.001
+teknologi optik baru yang kita miliki, kita dapat menempatkan database itu, yang besar
+
+125
+00:11:00.001 --> 00:11:06.000
+Database pada cakera, pada 5 1 suku atau cakera 12 inci dan menggunakan PC yang kita sekarang
+
+126
+00:11:06.000 --> 00:11:12.001
+milik untuk manipulasi data, untuk pengendalian database, untuk komputasi atau apa pun. I
+
+127
+00:11:12.001 --> 00:11:17.001
+Pertimbangkan bahwa ini adalah bidang baru yang menarik sebagai satu dalam spesifik. Mari kita lihat pada
+
+128
+00:11:17.001 --> 00:11:21.000
+Pasar rumah berbeda dengan pasar komersial. Apa yang
+
+129
+00:11:21.000 --> 00:11:22.001
+Apa yang terjadi di pasar komputer di rumah?
+
+130
+00:11:23.000 --> 00:11:29.001
+Pasar komputer domestik pada tahun 1984 memiliki sekitar tingkat kenyang atau penetrasi
+
+131
+00:11:29.001 --> 00:11:31.001
+di rumah 9 persen.
+
+132
+00:11:31.001 --> 00:11:37.000
+Tahun ini ia mencapai 13%, jadi ia terus tumbuh. Namun, ada yang lebih dari
+
+133
+00:11:37.000 --> 00:11:43.000
+jenis akhir tinggi dari $ 500 di atas, tidak seperti sistem akhir rendah.
+
+134
+00:11:44.000 --> 00:11:47.001
+Dan untuk memastikan, kebanyakan orang yang memiliki komputer rumah menggunakan mereka untuk
+
+135
+00:11:47.001 --> 00:11:53.001
+pekerjaan bisnis atau profesional yang terkait. Jadi untuk menjadikannya rumah yang benar
+
+136
+00:11:53.001 --> 00:11:58.001
+Pasar akan perlu memiliki lebih dari jenis aplikasi yang Sam
+
+137
+00:11:58.001 --> 00:12:04.001
+yang disebutkan di mana mungkin database terlokalisasi yang dapat memiliki transaksi
+
+138
+00:12:04.001 --> 00:12:11.001
+melalui garis telepon untuk membuat pesanan atau membuat perubahan atau
+
+139
+00:12:11.001 --> 00:12:14.001
+Untuk mendapatkan informasi lebih lanjut di database yang terlokasi. Dengan demikian, Anda merasa bahwa
+
+140
+00:12:14.001 --> 00:12:20.000
+Apakah aplikasi rumah benar-benar belum ditemukan? Itu adalah benar. Apakah ini benar-benar
+
+141
+00:12:20.000 --> 00:12:23.000
+Sehat dalam jangka panjang? Kita telah mendengar lebih awal atau lebih lambat akan ada ini
+
+142
+00:12:23.000 --> 00:12:26.001
+jenis shake sehat turun dan sementara itu mungkin sedikit menyakitkan sekarang, kita adalah
+
+143
+00:12:26.001 --> 00:12:29.001
+akan berakhir dengan perusahaan yang lebih baik dikelola dan pada kenyataannya lebih baik,
+
+144
+00:12:30.000 --> 00:12:32.000
+Lebih baik industri tuning setelah ini?
+
+145
+00:12:32.000 --> 00:12:36.001
+Nah, saya pikir itu benar dan saya pikir Anda akan menemukan itu di sebagian besar, sepanjang
+
+146
+00:12:36.001 --> 00:12:40.001
+industri komputer saya menggunakan 375 untuk komputer pribadi tetapi Anda dapat mengatakan bahwa
+
+147
+00:12:40.001 --> 00:12:44.000
+hal yang sama untuk semua perangkat perifer, pencetak, cakera.
+
+148
+00:12:45.000 --> 00:12:50.001
+Mungkin ada tiga sampai empat pemain yang terlalu banyak hari ini. Dengan perubahan itu,
+
+149
+00:12:52.000 --> 00:12:58.000
+perusahaan yang bertahan hidup akan memiliki biaya produksi yang lebih rendah, akan memiliki
+
+150
+00:12:58.000 --> 00:13:03.000
+Metode distribusi yang Dengan demikian, dalam jangka panjang ia akan menjadi sehat bagi
+
+151
+00:13:03.000 --> 00:13:06.000
+industri dan semua industri telah melalui ini. Anda melihat mobil
+
+152
+00:13:06.000 --> 00:13:09.000
+industri, salah satu dari mereka secara historis telah berlalu.
+
+153
+00:13:09.001 --> 00:13:11.001
+Komputer tidak lagi terimun dari aturan
+
+154
+00:13:11.001 --> 00:13:14.000
+ekonomi yang Kami tinggal setengah menit lagi, Sam.
+
+155
+00:13:14.000 --> 00:13:17.000
+Apa proyeksi Anda tentang kapan hal-hal akan berputar dan dengan cara apa?
+
+156
+00:13:17.000 --> 00:13:23.001
+Saya percaya bahwa pasar sedang meluncur sekarang dan saya pikir kami akan melihat
+
+157
+00:13:23.001 --> 00:13:28.001
+lebih kuat dari 85 setengah terakhir dan hampir lebih kuat 86.
+
+158
+00:13:29.000 --> 00:13:33.000
+Dan saya tidak percaya itu akan menjadi pertumbuhan dramatik 80% yang mungkin kita miliki.
+
+159
+00:13:33.000 --> 00:13:34.001
+menjadi terbiasa dengan itu.
+
+160
+00:13:35.000 --> 00:13:39.000
+Tapi saya pikir kita akan melihat munculnya aplikasi. Saya pikir kami adalah
+
+161
+00:13:39.000 --> 00:13:41.000
+akan melihat munculnya peripheral baru.
+
+162
+00:13:41.000 --> 00:13:45.001
+Saya pikir kita akan melihat munculnya pembuatan perangkat keras ini dan ini
+
+163
+00:13:45.001 --> 00:13:48.000
+Peralatan yang lebih mudah digunakan baik di bisnis maupun di rumah.
+
+164
+00:13:49.000 --> 00:13:51.000
+Jadi saya pikir turnaround dimulai.
+
+165
+00:13:51.001 --> 00:13:53.000
+Baiklah, tuan-tuan, kami keluar dari waktu
+
+166
+00:13:53.000 --> 00:13:54.001
+Untuk bagian ini dari acara. Terima kasih banyak sekali.
+
+167
+00:13:54.001 --> 00:13:57.001
+Dalam sekejap kita akan bertemu dengan seorang wartawan Minggu Bisnis yang mengkhususkan diri dalam
+
+168
+00:13:57.001 --> 00:14:01.000
+dalam menutupi Silicon Valley dan akan bertemu salah satu komputer teratas di negara ini
+
+169
+00:14:01.000 --> 00:14:02.001
+Retail yang Jadi tinggal bersama kami.
+
+170
+00:14:13.001 --> 00:14:17.000
+Untuk bergabung dengan kami sekarang adalah Deborah Wise. Deborah adalah koresponden dengan Business Week
+
+171
+00:14:17.000 --> 00:14:20.000
+Majalah yang mencakup Silicon Valley dan mikrokomputer terutamanya.
+
+172
+00:14:20.001 --> 00:14:24.001
+Next Deborah adalah Dave Norman yang mendirikan DataQuest dan yang sekarang presiden
+
+173
+00:14:24.001 --> 00:14:28.001
+dan CEO Businessland, rantai 61 toko komputer di seluruh negara.
+
+174
+00:14:29.001 --> 00:14:33.000
+Deborah, orang-orang di dalam industri tahu banyak kali bahwa media akan
+
+175
+00:14:33.000 --> 00:14:35.000
+Mengambil beberapa konsep seperti perlambatan industri.
+
+176
+00:14:35.000 --> 00:14:40.000
+Ini benar-benar bekerja sampai mati. Mungkin itu media hype untuk menjual lebih banyak majalah atau
+
+177
+00:14:40.000 --> 00:14:41.001
+Benarkah ada perlambatan yang terjadi?
+
+178
+00:14:42.000 --> 00:14:46.001
+Saya tidak berpikir itu hipi sama sekali. Saya pikir ada perlambatan. Ada banyak
+
+179
+00:14:46.001 --> 00:14:48.001
+Perusahaan yang sedang kehilangan uang saat ini.
+
+180
+00:14:49.001 --> 00:14:54.000
+Apple Computer menutup beberapa pabrik. Ia membuang ribuan orang.
+
+181
+00:14:54.001 --> 00:14:57.001
+Ini pernah menjadi kekacauan dari industri komputer pribadi.
+
+182
+00:14:58.000 --> 00:15:02.000
+IBM tidak mengungkapkan sejumlah mesin dalam inventori. Mereka tidak akan membiarkan kita tahu berapa banyak.
+
+183
+00:15:02.000 --> 00:15:05.000
+Ini adalah perlambatan yang jelas dalam industri. Apa yang kamu lakukan
+
+184
+00:15:05.000 --> 00:15:06.001
+Apakah ini menurut Anda penyebabnya?
+
+185
+00:15:07.000 --> 00:15:13.001
+Nah, saya pikir seperti yang telah kita bicarakan sebelumnya, itu berlebihan. dan orang-orang yang tergelincir
+
+186
+00:15:13.001 --> 00:15:17.000
+Kami berharap akan ada kadar pertumbuhan 80 persen ini.
+
+187
+00:15:17.001 --> 00:15:24.000
+Dan itu harus melambat. Jadi setiap kali Anda mendapatkan waktu yang berlebihan, maka Anda mendapatkan
+
+188
+00:15:24.000 --> 00:15:25.001
+Perusahaan dan perusahaan mulai kehilangan uang.
+
+189
+00:15:25.001 --> 00:15:27.000
+Apakah Anda melihat hal ini terjadi di saluran perbelanjaan?
+
+190
+00:15:27.000 --> 00:15:32.001
+Gary, kadang-kadang saya bertanya-tanya apakah saya berada di bisnis yang sama karena kami, di awal
+
+191
+00:15:32.001 --> 00:15:38.000
+Separuh, meningkat hampir 200% dari setahun yang lalu sampai bulan Juni yang akan datang ini.
+
+192
+00:15:38.001 --> 00:15:43.000
+Dan begitu saya terkejut kadang-kadang dalam hal industri. Tapi saya pikir ada sesuatu yang
+
+193
+00:15:43.000 --> 00:15:45.001
+Sangat jelas. Pertumbuhan industri telah melambat.
+
+194
+00:15:46.000 --> 00:15:50.000
+Namun, sangat penting untuk diingat bahwa di segmen bisnis
+
+195
+00:15:50.000 --> 00:15:54.001
+Pasar komputer pribadi bisnis, masih tumbuh 30% hingga 40% tahun ini.
+
+196
+00:15:54.001 --> 00:16:00.000
+Dan faktor besar adalah bahwa satu perusahaan besar telah memperoleh begitu banyak pasar
+
+197
+00:16:00.000 --> 00:16:01.001
+Membagi dalam waktu yang sangat singkat.
+
+198
+00:16:02.000 --> 00:16:06.001
+Saya menganggarkan bahwa IBM memiliki sekitar 70% dari pasar komputer pribadi untuk
+
+199
+00:16:06.001 --> 00:16:12.001
+Komputer bisnis di segmen itu sekitar $ 1.500 pada segmen atas.
+
+200
+00:16:13.000 --> 00:16:17.000
+Jadi ada perubahan besar dalam saham pasar. Dan itulah yang menyebabkan banyak
+
+201
+00:16:17.000 --> 00:16:18.001
+dislokasi di industri saat ini.
+
+202
+00:16:18.001 --> 00:16:22.001
+Jadi jika kita memiliki pertumbuhan saluran ritel dan tampaknya menjadi perlambatan pada
+
+203
+00:16:22.001 --> 00:16:25.001
+pembekal, apakah Anda menemukan bahwa hanya ada lebih banyak dan
+
+204
+00:16:25.001 --> 00:16:27.001
+Lebih banyak pemasok mencoba untuk mendapatkan ruang shelf?
+
+205
+00:16:28.000 --> 00:16:33.001
+secara mutlak. Hanya ada surplus relatif dengan ruang shelf yang tersedia dan untuk
+
+206
+00:16:33.001 --> 00:16:37.000
+pasar, meskipun pasar berkembang pesat
+
+207
+00:16:37.000 --> 00:16:38.001
+Pasar dengan cara lain.
+
+208
+00:16:38.001 --> 00:16:42.001
+Ketika Anda melihat industri yang tumbuh pada 30% hingga 40%, itu adalah pertumbuhan yang cukup kuat.
+
+209
+00:16:43.000 --> 00:16:46.001
+Tapi itu turun dari 80% plus tahun lalu.
+
+210
+00:16:46.001 --> 00:16:50.000
+Dan begitu ada kelebihan yang luar biasa di perifer dan komputer pribadi
+
+211
+00:16:50.000 --> 00:16:52.000
+dan di seluruh lembaga.
+
+212
+00:16:52.000 --> 00:16:54.001
+Sekarang, bagian lain dari itu mungkin hanya, saya pikir, total dolar
+
+213
+00:16:54.001 --> 00:16:56.000
+nilai yang kami bicarakan.
+
+214
+00:16:56.000 --> 00:16:59.001
+Kami berbicara tentang pertumbuhan dalam hal jumlah komputer yang dijual dan sebagainya. Tetapi adalah
+
+215
+00:16:59.001 --> 00:17:01.000
+Apakah ada erosi harga juga terjadi?
+
+216
+00:17:01.000 --> 00:17:05.001
+Nah, saya benar-benar berbicara tentang pendapatan dolar. Dan secara pribadi saya percaya bahwa mereka adalah
+
+217
+00:17:05.001 --> 00:17:10.000
+30% hingga 40% pertumbuhan dalam dolar pendapatan dalam industri tertentu ini.
+
+218
+00:17:10.001 --> 00:17:13.001
+Dan dari pertumbuhan kita sendiri, kita melihat itu. Tapi saya berbicara tentang segmen bisnis
+
+219
+00:17:13.001 --> 00:17:16.000
+Sekarang, bukan pasar komputer rumah.
+
+220
+00:17:16.001 --> 00:17:19.000
+Tetapi bahkan di segmen bisnis, Dave, ada margin yang menggelegak
+
+221
+00:17:19.000 --> 00:17:20.001
+di banyak toko komputer lainnya.
+
+222
+00:17:21.000 --> 00:17:24.000
+Ada banyak mesin pasar kelabu di luar sana yang telah memaksa
+
+223
+00:17:24.000 --> 00:17:26.000
+Retail benar-benar mengurangi harga.
+
+224
+00:17:26.000 --> 00:17:29.000
+IBM tidak memiliki posisi yang baik di pasar kelabu. Ada yang sangat besar
+
+225
+00:17:29.000 --> 00:17:30.001
+Menggunakan mesin pasar kelabu.
+
+226
+00:17:31.000 --> 00:17:34.001
+Dan banyak ritel yang benar-benar menyakiti sekarang. Anda telah membedakan diri sendiri, ok?
+
+227
+00:17:34.001 --> 00:17:37.000
+Nah, saya pikir ada hampir banyak harga yang kompetitif
+
+228
+00:17:37.000 --> 00:17:39.000
+tekanan di pasar hari ini.
+
+229
+00:17:39.001 --> 00:17:42.001
+Tapi di sisi lain, kita menemukan bahwa margin kita bergerak ke atas.
+
+230
+00:17:43.000 --> 00:17:46.000
+Harga rata-rata kami telah naik dari sedikit lebih dari $ 5.000
+
+231
+00:17:46.000 --> 00:17:48.001
+Untuk sistem rata-rata dua tahun yang lalu.
+
+232
+00:17:48.001 --> 00:17:50.001
+Sekarang ia mendekati $ 6.000.
+
+233
+00:17:50.001 --> 00:17:56.000
+Jadi meskipun harga dan harga semikonduktor turun 20% hingga 25% per
+
+234
+00:17:56.000 --> 00:18:01.000
+tahun, kita menemukan bahwa profesional bisnis membeli lebih banyak tenaga, lebih banyak
+
+235
+00:18:01.000 --> 00:18:02.001
+memori, printer yang lebih cepat, dan sebagainya.
+
+236
+00:18:02.001 --> 00:18:04.000
+Sekarang, dengan jenis harga ini, Anda adalah
+
+237
+00:18:04.000 --> 00:18:06.000
+dengan jelas berbicara tentang pasar komersial.
+
+238
+00:18:06.001 --> 00:18:07.000
+secara mutlak.
+
+239
+00:18:07.000 --> 00:18:10.001
+Bagaimana dengan pasar domestik lagi? Itulah sisi persamaan itu.
+
+240
+00:18:10.001 --> 00:18:11.001
+Apa yang terjadi dengan rumah
+
+241
+00:18:11.001 --> 00:18:13.000
+pasar sejauh yang dapat Anda lihat di saluran ritel?
+
+242
+00:18:13.001 --> 00:18:15.001
+Kami tidak pernah benar-benar berada di rumah
+
+243
+00:18:15.001 --> 00:18:18.000
+Pasar yang Dan aku punya kesulitan untuk mengerti itu.
+
+244
+00:18:18.000 --> 00:18:23.000
+Saya kira jawaban pertama saya adalah saya benar-benar tidak melihat pada titik ini di mana ada nilai
+
+245
+00:18:23.000 --> 00:18:26.001
+Membeli komputer untuk rumah, dengan jujur.
+
+246
+00:18:27.001 --> 00:18:32.000
+Tentu saja, tidak ada gunanya memasukkan menu Anda ke dalam komputer untuk
+
+247
+00:18:32.000 --> 00:18:33.001
+rumah dan membuat anggaran Anda.
+
+248
+00:18:34.000 --> 00:18:35.000
+Saya tidak berpikir bahwa itu masih ada.
+
+249
+00:18:35.000 --> 00:18:36.000
+David, apa pendapatmu?
+
+250
+00:18:36.001 --> 00:18:39.001
+Nah, ya, pasar domestik telah melambat. Saya pikir tidak ada yang
+
+251
+00:18:39.001 --> 00:18:42.000
+digunakan untuk mesin-mesin tersebut.
+
+252
+00:18:42.000 --> 00:18:45.000
+Namun baru-baru ini ada banyak pengumuman baru.
+
+253
+00:18:45.001 --> 00:18:49.001
+Jadi ada persaingan pemanasan baru di antara penjual.
+
+254
+00:18:50.000 --> 00:18:54.000
+Saya mendapatkan Atari, mendapatkan Amiga keluar, mendapatkan Apple di posisi untuk Natal.
+
+255
+00:18:54.001 --> 00:18:58.000
+Anda memiliki IBM masih menyertakannya ke dalam apa yang ia pikirkan tentang pasar rumah.
+
+256
+00:18:58.001 --> 00:19:03.001
+Jadi akan ada banyak hype, untuk meminjam kata dari Anda, Natal ini.
+
+257
+00:19:04.001 --> 00:19:05.001
+Dan akan ada banyak iklan.
+
+258
+00:19:06.000 --> 00:19:08.001
+Jadi saya pikir mereka akan menarik beberapa orang kembali ke toko dan
+
+259
+00:19:08.001 --> 00:19:10.001
+Penjualan akan naik lagi.
+
+260
+00:19:11.000 --> 00:19:14.000
+Sebenarnya apa yang dikatakan Dave, sebenarnya tidak ada aplikasi
+
+261
+00:19:14.000 --> 00:19:16.000
+Untuk komputer rumah sampai sekarang.
+
+262
+00:19:16.000 --> 00:19:20.001
+Ada banyak orang yang hanya membelinya sebagai pengganti penulisan atau untuk
+
+263
+00:19:20.001 --> 00:19:22.000
+bekerja di rumah, hal seperti itu.
+
+264
+00:19:22.001 --> 00:19:24.001
+Sekarang, bagaimana dengan harga dari ...
+
+265
+00:19:24.001 --> 00:19:28.000
+Sekarang, ini adalah satu masalah yang muncul di industri perangkat lunak, jelas, adalah
+
+266
+00:19:28.000 --> 00:19:31.001
+harga erosi, masalah semua orang berbicara tentang produk perangkat lunak $50.
+
+267
+00:19:32.000 --> 00:19:37.000
+Jika kita melewati saluran ritel standar dengan peratusan margin yang kita
+
+268
+00:19:37.000 --> 00:19:39.000
+di tingkat distributor dan ritel, yang
+
+269
+00:19:39.000 --> 00:19:40.001
+Uang tidak ada untuk mengembangkan perangkat lunak.
+
+270
+00:19:41.000 --> 00:19:43.001
+Bukankah ini juga memiliki dampak yang meredakan, katakanlah, seluruh industri?
+
+271
+00:19:44.001 --> 00:19:45.001
+Tentu saja itu akan.
+
+272
+00:19:46.000 --> 00:19:50.001
+Dari sudut pandang kami, meskipun Anda memiliki paket perangkat lunak murah, itu masih
+
+273
+00:19:50.001 --> 00:19:54.001
+mengambil dukungan dan Anda harus melatih orang untuk menjual produk tertentu itu.
+
+274
+00:19:55.000 --> 00:19:58.001
+Jadi, itu, sekali lagi, akan mendorong orang seperti Businessland ke tingkat yang lebih tinggi
+
+275
+00:19:58.001 --> 00:20:00.000
+segmen akhir pasar.
+
+276
+00:20:00.000 --> 00:20:02.000
+Dan itulah yang terjadi hari ini di pasar vertikal.
+
+277
+00:20:02.001 --> 00:20:06.001
+Perangkat lunak desain bernilai komputer yang kami jual adalah $2,500 per paket.
+
+278
+00:20:06.001 --> 00:20:12.001
+Penjual kami benar-benar tidak berfokus pada paket perangkat lunak $ 50 di sana
+
+279
+00:20:12.001 --> 00:20:14.000
+karena dukungan yang diperlukan.
+
+280
+00:20:14.001 --> 00:20:18.000
+Dave, Anda mengatakan Businessland, bisnis sudah selesai dan semuanya baik-baik saja di bisnis
+
+281
+00:20:18.000 --> 00:20:20.001
+pasar, tetapi jika kita bisa berbicara tentang Computerland, saya tidak tahu apakah Anda berpikir tentang
+
+282
+00:20:20.001 --> 00:20:24.000
+mereka sebagai pesaing atau tidak, dan kita membaca di kertas dalam laporan pers bahwa
+
+283
+00:20:24.000 --> 00:20:27.001
+Komputer negara memiliki masalah dan menyingkirkan orang dan kebangkrutan dan sebagainya.
+
+284
+00:20:27.001 --> 00:20:30.000
+Mengapa harus ada masalah seperti itu di tingkat mereka?
+
+285
+00:20:30.000 --> 00:20:34.001
+Nah, saya pikir itu adalah perbedaan antara berada di segmen pasar bisnis,
+
+286
+00:20:35.000 --> 00:20:38.001
+yang masih merupakan pasar pertumbuhan yang kuat, dan berada di pasar domestik, yang
+
+287
+00:20:38.001 --> 00:20:42.001
+Pasar yang sangat lembut, hampir tidak ada saat ini.
+
+288
+00:20:43.000 --> 00:20:47.001
+Dan saya pikir itu kembali kepada perusahaan yang benar-benar melakukan penelitian pasar mereka dan
+
+289
+00:20:47.001 --> 00:20:50.000
+pergi ke sana dan berbicara dengan pelanggan.
+
+290
+00:20:50.001 --> 00:20:52.001
+Ada peluang besar di pasar ini.
+
+291
+00:20:53.000 --> 00:20:56.000
+Akan ada peluang besar untuk data suara terintegrasi
+
+292
+00:20:56.000 --> 00:21:00.000
+stasiun kerja dan untuk benar-benar perangkat lunak yang akan memenuhi kebutuhan
+
+293
+00:21:00.000 --> 00:21:01.001
+bisnis di masa depan.
+
+294
+00:21:02.000 --> 00:21:06.000
+Dan saya pikir banyak dari itu hanya orang-orang yang merancang produk atau bertemu
+
+295
+00:21:06.000 --> 00:21:07.001
+Produk yang benar-benar tidak menambah nilai.
+
+296
+00:21:08.000 --> 00:21:13.001
+Seperti yang disebutkan oleh Dave Crockett, 375 perusahaan komputer, semuanya membangun basis yang sama.
+
+297
+00:21:13.001 --> 00:21:17.001
+IBM AT, tidak akan membuatnya untuk perusahaan yang sukses.
+
+298
+00:21:18.000 --> 00:21:23.000
+Ketika artikel berikutnya muncul tentang bagaimana pertumbuhan industri benar-benar memiliki
+
+299
+00:21:23.000 --> 00:21:26.000
+Terlepas dari itu, apa yang akan menjadi penyebabnya bagaimanapun?
+
+300
+00:21:26.000 --> 00:21:28.000
+Apa yang benar-benar akan mempengaruhi industri ini?
+
+301
+00:21:28.001 --> 00:21:34.000
+Nah, seperti yang saya katakan sebelumnya, saya pikir akan ada infusi baru minat
+
+302
+00:21:34.000 --> 00:21:36.000
+Untuk musim jualan Natal.
+
+303
+00:21:36.000 --> 00:21:38.000
+Selalu akan ada promosi. Selalu akan ada
+
+304
+00:21:38.000 --> 00:21:39.001
+Menjadi produk baru di pasar.
+
+305
+00:21:40.001 --> 00:21:44.000
+Itu akan aplikasi, aplikasi baru yang membuat mesin lebih banyak
+
+306
+00:21:44.000 --> 00:21:45.001
+menarik untuk digunakan.
+
+307
+00:21:46.000 --> 00:21:48.000
+Bagaimana dengan pasar rumah, bagaimanapun, seperti yang disebutkan oleh Dave?
+
+308
+00:21:48.001 --> 00:21:52.001
+Apakah ada pasar yang layak di sana? Anda menyebutkan Amiga baru dan Atari 520ST.
+
+309
+00:21:52.001 --> 00:21:54.000
+Apakah ada yang akan membelinya?
+
+310
+00:21:54.000 --> 00:21:57.000
+Ya ya. Saya pikir akan ada pasar yang cukup untuk itu.
+
+311
+00:21:57.000 --> 00:21:59.001
+Saya tidak berpikir akan ada tingkat pertumbuhan yang besar.
+
+312
+00:21:59.001 --> 00:22:03.000
+Saya maksudkan, Dave Crockett mengatakan tentang tingkat penetrasi, 13% dari
+
+313
+00:22:03.000 --> 00:22:04.001
+Tingkat penetrasi mereka.
+
+314
+00:22:04.001 --> 00:22:08.000
+Itu tidak banyak ketika Anda berpikir tentang apa yang komputer benar-benar bisa lakukan.
+
+315
+00:22:08.000 --> 00:22:12.001
+Tapi, saya maksudkan, Dave mengatakan tidak ada tujuan yang berguna di rumah untuk komputer itu.
+
+316
+00:22:13.000 --> 00:22:13.001
+Untuk komputer itu?
+
+317
+00:22:13.001 --> 00:22:16.000
+Saya kira, Anda memiliki 13%. Mengapa harus 87% yang lain?
+
+318
+00:22:16.000 --> 00:22:19.001
+Apa yang saya dengar adalah mengapa yang lain 87% harus menghabiskan $1,000 pada komputer?
+
+319
+00:22:19.001 --> 00:22:22.001
+Saya katakan akan ada aplikasi baru dalam jangka panjang.
+
+320
+00:22:23.000 --> 00:22:25.000
+Mereka tidak di sini. Mereka sudah berlebihan.
+
+321
+00:22:26.000 --> 00:22:30.000
+Mesin seperti Amiga dan Atari memiliki kinerja harga yang lebih rendah.
+
+322
+00:22:31.000 --> 00:22:32.001
+Maksudnya, mereka adalah harga yang lebih rendah, kinerja yang lebih tinggi.
+
+323
+00:22:33.000 --> 00:22:35.000
+Dan itu berarti Anda akan mendapatkan aplikasi baru.
+
+324
+00:22:35.001 --> 00:22:40.000
+Akan ada lebih banyak animasi grafis dan hal seperti itu dan lebih banyak CD.
+
+325
+00:22:40.000 --> 00:22:40.001
+Hal-hal itu hanya sangat mungkin.
+
+326
+00:22:41.000 --> 00:22:43.000
+Mereka tidak mungkin sebelum ini, seperti yang Anda katakan dengan benar.
+
+327
+00:22:43.001 --> 00:22:45.000
+Di saluran ritel, Anda memiliki masalah
+
+328
+00:22:45.000 --> 00:22:47.000
+dengan siapa yang akan menjual barang-barang ini.
+
+329
+00:22:47.001 --> 00:22:50.000
+Kami berbicara tentang tanah bisnis dan tanah komputer.
+
+330
+00:22:50.000 --> 00:22:54.001
+Komputer tanah memiliki waktu yang sulit untuk menemukan pasar untuk dirinya sendiri.
+
+331
+00:22:55.000 --> 00:22:58.001
+Mereka memiliki masalah margin.
+
+332
+00:22:59.000 --> 00:23:04.000
+Ini memiliki rantai terbesar dengan 800 plus toko di seluruh dunia.
+
+333
+00:23:05.000 --> 00:23:09.001
+Ada banyak ritel yang berada dalam waktu yang sulit saat ini.
+
+334
+00:23:09.001 --> 00:23:12.000
+Kegagalan margin yang kami bicarakan benar-benar menyakiti mereka.
+
+335
+00:23:12.001 --> 00:23:15.001
+Jadi jumlah toko pergi Bab 11, jumlah buyouts.
+
+336
+00:23:15.001 --> 00:23:19.000
+Jadi distribusi akan menjadi masalah besar dalam mendapatkan ini
+
+337
+00:23:19.000 --> 00:23:20.001
+Komputer baru masuk ke pasar.
+
+338
+00:23:21.000 --> 00:23:23.000
+Jadi mungkin ada perlambatan. Mungkin tidak ada,
+
+339
+00:23:23.000 --> 00:23:24.001
+Tergantung pada siapa Anda berbicara dengan jelas.
+
+340
+00:23:25.000 --> 00:23:28.000
+Kami akan melanjutkan diskusi ini minggu depan karena kami akan melihat beberapa
+
+341
+00:23:28.000 --> 00:23:30.001
+pada sektor-sektor tertentu dalam industri komputer, dengan melihat
+
+342
+00:23:30.001 --> 00:23:32.001
+perangkat keras, perangkat lunak dan semikonduktor.
+
+343
+00:23:33.000 --> 00:23:35.001
+Dan saya akan kembali dalam sekejap dengan berita komputer minggu ini.
+
+344
+00:23:45.001 --> 00:23:49.001
+Dalam File Akses Random minggu ini, tampaknya Anda dapat menghitung pada PC-DOS pada
+
+345
+00:23:49.001 --> 00:23:52.000
+IBM PC dan klon untuk beberapa waktu yang akan datang.
+
+346
+00:23:52.001 --> 00:23:56.000
+Perjanjian pengembangan jangka panjang baru antara Microsoft, pengembang PC-DOS dan
+
+347
+00:23:56.000 --> 00:24:01.000
+IBM, berarti bahwa IBM tidak akan bergerak ke arah sistem operasi milik baru.
+
+348
+00:24:01.000 --> 00:24:05.000
+Perspektif itu telah membuat banyak pengembang perangkat lunak dan perangkat keras gugup tentang
+
+349
+00:24:05.000 --> 00:24:06.001
+Investasi mereka dalam PC-DOS standar.
+
+350
+00:24:07.000 --> 00:24:11.000
+Konfirmasi baru arsitektur PC terbuka harus menstabilkan pasar PC
+
+351
+00:24:11.000 --> 00:24:14.000
+dan merangsang produk dukungan baru untuk standar PC.
+
+352
+00:24:14.000 --> 00:24:17.000
+Jika Anda berada di pasar rumah dan mencari hipotek, Anda memiliki
+
+353
+00:24:17.000 --> 00:24:19.000
+baru saja menemukan penggunaan baru untuk komputer Anda.
+
+354
+00:24:19.001 --> 00:24:23.000
+Sekarang ada beberapa layanan database hipotek online yang akan mengutip Anda
+
+355
+00:24:23.000 --> 00:24:27.000
+Harga terbaik di daerah Anda, menghitung pembayaran bulanan Anda dan bahkan menasihati Anda tentang
+
+356
+00:24:27.000 --> 00:24:29.001
+Seberapa besar hipotek Anda dapat menangani pendapatan Anda.
+
+357
+00:24:30.000 --> 00:24:32.000
+Tiga layanan hipotek online terbesar adalah
+
+358
+00:24:32.000 --> 00:24:34.001
+Perbedaan antara CompUFund, Loan Express dan ShelterNet.
+
+359
+00:24:35.000 --> 00:24:38.000
+Baiklah, beberapa majalah komputer mungkin menyakitkan, tetapi usahawan
+
+360
+00:24:38.000 --> 00:24:39.001
+Jiwa sulit untuk menahan diri.
+
+361
+00:24:39.001 --> 00:24:43.001
+Terlepas dari kegagalan saat ini dalam bisnis, 17 majalah komputer baru
+
+362
+00:24:43.001 --> 00:24:45.000
+telah muncul dalam delapan bulan terakhir.
+
+363
+00:24:45.001 --> 00:24:49.000
+Sementara itu, sebagian besar majalah lama yang ditubuhkan memiliki waktu yang sulit.
+
+364
+00:24:49.000 --> 00:24:53.000
+Pendapatan iklan secara drastis turun pada sembilan dari sepuluh mags komputer terkemuka.
+
+365
+00:24:53.001 --> 00:24:57.000
+Perlambatan di Silicon Valley tidak memperlahankan trek yang stabil dari luar negeri
+
+366
+00:24:57.000 --> 00:25:00.000
+Negara-negara yang ingin mengusir industri dari wilayah California Utara.
+
+367
+00:25:00.001 --> 00:25:04.000
+Pengunjung baru-baru ini ke lembah ini termasuk delegasi dari Austria, Jerman,
+
+368
+00:25:04.001 --> 00:25:06.000
+Belanda, Thailand dan Switzerland.
+
+369
+00:25:06.000 --> 00:25:11.000
+Yang paling sukses setakat ini adalah Skotlandia dan Irlandia dengan sekitar 300 Amerika
+
+370
+00:25:11.000 --> 00:25:14.000
+Perusahaan-perusahaan teknologi tinggi sekarang terletak di kedua negara itu.
+
+371
+00:25:14.001 --> 00:25:17.001
+Paul Schindler kembali dengan ulasan perangkat lunak minggu ini.
+
+372
+00:25:19.001 --> 00:25:22.001
+Saya memiliki banyak masalah dengan daftar email saya seperti semua orang lain.
+
+373
+00:25:22.001 --> 00:25:26.000
+Jadi saya terus-menerus berada di sudut pandang untuk program daftar mailing terakhir.
+
+374
+00:25:26.001 --> 00:25:28.001
+Katalis mungkin hanya itu.
+
+375
+00:25:29.000 --> 00:25:31.000
+Sekarang, untuk satu hal, ia menyimpan alamat asing dan
+
+376
+00:25:31.000 --> 00:25:32.001
+Nomor telepon dan itu termasuk Kanada.
+
+377
+00:25:33.000 --> 00:25:35.000
+Ini adalah satu-satunya program yang saya dapati yang melakukannya dengan baik.
+
+378
+00:25:35.000 --> 00:25:37.001
+Satu hal lagi, saya membuat kesalahan.
+
+379
+00:25:38.000 --> 00:25:40.000
+Sebagian besar program hanya membiarkan Anda membuatnya.
+
+380
+00:25:40.001 --> 00:25:43.001
+Catalis cukup pintar untuk memperingatkan Anda tentang semua kesalahan bodoh yang umum
+
+381
+00:25:43.001 --> 00:25:45.001
+Seperti yang Anda lakukan, tidak setelah itu.
+
+382
+00:25:46.001 --> 00:25:47.001
+layar yang berwarna-warni.
+
+383
+00:25:48.000 --> 00:25:52.000
+Program ini terhubung dengan berbagai printer populer pada sentuhan kunci.
+
+384
+00:25:52.001 --> 00:25:56.001
+Sekarang, tidak ada waktu untuk menunjukkan segala sesuatu yang Catalyst lakukan, tetapi menu yang diberikan
+
+385
+00:25:56.001 --> 00:25:59.001
+Ini adalah rasa tentang seberapa luas program ini.
+
+386
+00:25:59.001 --> 00:26:02.001
+Anda dapat mencetak dua jenis kartu Rolex serta label,
+
+387
+00:26:03.000 --> 00:26:05.000
+Pembungkusan atau bulk mail flyers.
+
+388
+00:26:05.001 --> 00:26:08.001
+Catalyst dapat digunakan dengan lebih dari satu puluhan pemrosesan kata populer
+
+389
+00:26:08.001 --> 00:26:10.001
+Paket untuk membuat bentuk huruf.
+
+390
+00:26:11.000 --> 00:26:14.001
+layar inputnya baik komprehensif dan fleksibel, meninggalkan sedikit untuk
+
+391
+00:26:14.001 --> 00:26:16.001
+kesempatan, termasuk berbagai judul.
+
+392
+00:26:17.000 --> 00:26:20.000
+Selain itu, ia memiliki jenis yang paling cepat yang pernah saya lihat.
+
+393
+00:26:21.000 --> 00:26:25.000
+Catalyst, program daftar surat yang benar-benar mengesankan, $250 dari Automation
+
+394
+00:26:25.000 --> 00:26:27.001
+Konsultan Internasional di Encino, California.
+
+395
+00:26:27.001 --> 00:26:30.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+396
+00:26:32.000 --> 00:26:34.000
+Ke mana Anda pergi jika Anda ingin belajar untuk menjadi seorang artis komputer?
+
+397
+00:26:34.001 --> 00:26:39.000
+Nah, jawabannya tidak ada di mana-mana sampai sekarang, tapi datang musim dingin ini, Computer Arts
+
+398
+00:26:39.000 --> 00:26:42.001
+Institut ini akan dibuka di Cortimadera, California dan mengubah semua itu.
+
+399
+00:26:43.000 --> 00:26:47.000
+Kursus termasuk hal-hal seperti transformasi 3D, model wireframe, trik video,
+
+400
+00:26:48.000 --> 00:26:50.001
+lukisan komputer dan pengenalan kepada grafik komputer.
+
+401
+00:26:51.001 --> 00:26:55.001
+The Computer Follop of the Week award pergi ke Mellon Bank di Pittsburgh, sebuah memori
+
+402
+00:26:55.001 --> 00:26:59.001
+cakera di komputer yang menjalankan sistem penghitung otomatis gagal, dan dengan demikian
+
+403
+00:26:59.001 --> 00:27:02.000
+Komputer tidak dapat mengidentifikasi nomor akun.
+
+404
+00:27:02.001 --> 00:27:05.001
+Nah, ketika mesin penghitung otomatis tidak dapat mengenali nomor akun, mereka adalah
+
+405
+00:27:05.001 --> 00:27:08.001
+Program untuk memakan kartu dan tidak mengembalikannya kepada pengguna.
+
+406
+00:27:09.000 --> 00:27:13.000
+Jadi selama satu jam setengah minggu lalu, ATM Mellon di sekitar kota bergelombang
+
+407
+00:27:13.000 --> 00:27:14.001
+sekitar 2.000 kartu bank.
+
+408
+00:27:15.000 --> 00:27:17.001
+Ada banyak pelanggan yang menjerit, tetapi bank mengatakan semuanya
+
+409
+00:27:17.001 --> 00:27:19.000
+Ia bekerja dengan cara yang seharusnya.
+
+410
+00:27:19.001 --> 00:27:23.000
+Petunjuk dari komputer adalah, ketika dalam keraguan, jangan menyerah uang.
+
+411
+00:27:23.000 --> 00:27:27.001
+Akhirnya, di dunia yang indah ini teknologi tinggi dengan analisis komputer
+
+412
+00:27:27.001 --> 00:27:30.000
+ini dan itu, orang-orang di pabrik Intel di Albuquerque, New
+
+413
+00:27:30.000 --> 00:27:31.001
+Meksiko mungkin sedikit malu.
+
+414
+00:27:32.000 --> 00:27:35.001
+Mereka memiliki waktu yang buruk di pabrik wafer modern baru mereka dengan rendah
+
+415
+00:27:35.001 --> 00:27:37.001
+Produksi dan masalah peralatan.
+
+416
+00:27:38.000 --> 00:27:42.000
+Kemudian, terlepas dari upaya terbaik guru berteknologi tinggi mereka, seorang pekerja menempatkan sebuah
+
+417
+00:27:42.000 --> 00:27:46.000
+Hoppy Indian Kocinkadall terkenal untuk membawa kebahagiaan di bagian itu dari negara ini.
+
+418
+00:27:46.001 --> 00:27:49.001
+Memanggilnya apa yang Anda inginkan, Intel mengatakan pabrik Albuquerque
+
+419
+00:27:49.001 --> 00:27:51.000
+Sekarang ini yang paling efisien.
+
+420
+00:27:51.000 --> 00:27:54.000
+Itulah yang dimaksud dengan komputer minggu ini. Kita akan berjumpa denganmu lain kali.
