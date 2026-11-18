@@ -1,0 +1,1977 @@
+WEBVTT
+
+1
+00:00:34.000 --> 00:00:38.001
+Ketika Anda mencari virus biologis, Anda menggunakan mikroskop atau yang lain.
+
+2
+00:00:38.001 --> 00:00:41.001
+peralatan laboratorium untuk mencoba dan mengidentifikasi virus.
+
+3
+00:00:42.000 --> 00:00:45.000
+Tetapi ketika Anda mencari virus komputer, itu lebih sulit
+
+4
+00:00:45.000 --> 00:00:47.000
+Karena kamu tidak bisa melihatnya sama sekali.
+
+5
+00:00:47.000 --> 00:00:50.000
+Ini tersembunyi di bagian tertentu dari perangkat lunak atau mungkin sudah
+
+6
+00:00:50.000 --> 00:00:51.001
+dikuburkan di dalam sistem operasi Anda.
+
+7
+00:00:52.000 --> 00:00:57.000
+Hari ini kita melihat virus komputer, penyembuhan dan pencegahan mereka pada ini
+
+8
+00:00:57.000 --> 00:00:58.001
+edisi dari The Computer Chronicles.
+
+9
+00:01:20.000 --> 00:01:25.000
+The Computer Chronicles dibuat mungkin sebagian oleh McGraw-Hill, penerbit
+
+10
+00:01:25.000 --> 00:01:29.000
+Majalah Byte dan VIX, Pertukaran Informasi Byte.
+
+11
+00:01:29.001 --> 00:01:34.001
+Dalam pencetakan dan online, Byte dan VIX melayani profesional komputer di seluruh dunia dengan
+
+12
+00:01:34.001 --> 00:01:38.001
+Informasi terperinci tentang perangkat keras, perangkat lunak dan teknologi baru.
+
+13
+00:01:42.001 --> 00:01:46.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+14
+00:01:46.001 --> 00:01:49.000
+Gary, kau tahu di zaman kuno ketika beberapa penyakit melewati negara,
+
+15
+00:01:49.000 --> 00:01:51.000
+Seorang dokter pergi dari kota ke kota untuk menjual minyak ularnya.
+
+16
+00:01:51.001 --> 00:01:54.000
+Sekarang virus komputer sedang menyebar di seluruh negara,
+
+17
+00:01:54.000 --> 00:01:55.001
+Rumah-rumah perisian datang dengan minyak ular mereka.
+
+18
+00:01:55.001 --> 00:02:00.000
+Dosa program antivirus seperti vaksin, imun, disk watch,
+
+19
+00:02:00.000 --> 00:02:02.000
+Dokter data, mason, pada dan di atas.
+
+20
+00:02:02.001 --> 00:02:04.001
+Gary, ada sejenis folklore yang berkembang di sekitar
+
+21
+00:02:04.001 --> 00:02:06.000
+Orang-orang yang membuat virus komputer ini.
+
+22
+00:02:06.000 --> 00:02:08.001
+Apakah Anda harus menjadi jenius pemrograman untuk membuat satu?
+
+23
+00:02:08.001 --> 00:02:11.001
+Ya, Stuart, tidak benar-benar Ada benar-benar dua masalah, penciptaan virus
+
+24
+00:02:11.001 --> 00:02:13.000
+program sendiri dan membuatnya terinstal.
+
+25
+00:02:14.000 --> 00:02:17.000
+Kes paling sederhana dari program virus adalah hanya menemukan titik permulaan dari program
+
+26
+00:02:17.000 --> 00:02:20.000
+dan melompat ke kepingan kecil kode yang telah patched di dalamnya.
+
+27
+00:02:20.000 --> 00:02:21.001
+Dan jika itu adalah hari yang tepat, maka itu zeros disk Anda keluar.
+
+28
+00:02:21.001 --> 00:02:24.000
+Jika tidak, ia hanya melewati kontrol kembali ke program.
+
+29
+00:02:25.000 --> 00:02:27.001
+Memecahkan ke dalam papan buletin tidak terlalu sulit karena sebagian besar
+
+30
+00:02:27.001 --> 00:02:29.001
+Bulletin boards didasarkan pada PC dan mereka tidak
+
+31
+00:02:29.001 --> 00:02:31.001
+Dibangun untuk memiliki perlindungan di tempat pertama.
+
+32
+00:02:32.000 --> 00:02:33.000
+Melangkah keluar dan pecah menjadi mini
+
+33
+00:02:33.000 --> 00:02:34.001
+Komputer mainframe lebih sulit, jelas.
+
+34
+00:02:35.000 --> 00:02:38.001
+Tapi akan bagus untuk melihat beberapa upaya ini pergi ke program virus, meletakkan
+
+35
+00:02:38.001 --> 00:02:40.001
+Dalam program yang benar-benar berguna untuk industri sebaliknya.
+
+36
+00:02:41.001 --> 00:02:44.000
+Gary, hari ini kita akan melihat virus komputer. Kami akan
+
+37
+00:02:44.000 --> 00:02:45.001
+Ketahui bagaimana mereka menginfeksi sistem Anda.
+
+38
+00:02:46.000 --> 00:02:48.001
+Kami akan memberi Anda saran tentang bagaimana mencegah mereka dan jika terlalu terlambat bagaimana
+
+39
+00:02:48.001 --> 00:02:50.000
+untuk menemukan dan memusnahkan virus.
+
+40
+00:02:50.000 --> 00:02:54.000
+Kami akan mulai hari ini dengan mengunjungi Pusat Penyelidikan Ames NASA di Moffet
+
+41
+00:02:54.000 --> 00:02:58.000
+Field, California untuk mengetahui bagaimana mereka berurusan dengan virus komputer besar itu
+
+42
+00:02:58.000 --> 00:03:02.000
+yang menyerang lebih dari 6.000 sistem di jaringan ARPANET bulan November lalu.
+
+43
+00:03:04.001 --> 00:03:09.001
+Pusat Penelitian Ames NASA di Mountain View, California adalah yang paling terkenal untuk
+
+44
+00:03:09.001 --> 00:03:14.000
+kontribusi untuk eksplorasi planet dan desain pesawat lanjutan.
+
+45
+00:03:14.000 --> 00:03:20.000
+Tapi baru-baru ini, Ames menjadi korban terbaru dari virus komputer, bagian berbahaya
+
+46
+00:03:20.000 --> 00:03:24.001
+dari kode yang dikeluarkan ke jaringan komputer melalui gateway, di
+
+47
+00:03:24.001 --> 00:03:26.001
+kasus dan email.
+
+48
+00:03:27.001 --> 00:03:32.000
+Penyerang virus ditemukan dan dihapus oleh Ames Computer Network
+
+49
+00:03:32.000 --> 00:03:35.001
+Arsitek dalam kolaborasi dengan Universitas California.
+
+50
+00:03:36.000 --> 00:03:40.000
+Virus ini tidak sulit untuk ditemukan jika Anda tahu di mana untuk melihat.
+
+51
+00:03:40.000 --> 00:03:45.000
+Jika Anda melihat di sini, ini ARCH mencoba, itu adalah mencoba untuk membuka koneksi
+
+52
+00:03:45.000 --> 00:03:49.001
+dan masuk ke mesin jarak jauh. Dalam hal ini, nama mesin adalah Wilbur.
+
+53
+00:03:50.001 --> 00:03:55.001
+Di sini, virus itu juga, salinan lain dari virus itu menyerang mesin di
+
+54
+00:03:55.001 --> 00:03:57.001
+Pantai Timur di Langley Research Center.
+
+55
+00:03:57.001 --> 00:04:04.000
+Dan di sini sebenarnya adalah virus yang melewati pengguna ini UCB Netstat. Dia sedang menatap
+
+56
+00:04:04.000 --> 00:04:09.000
+melalui tabel routing untuk menyerang mesin lain yang ada, yang
+
+57
+00:04:09.000 --> 00:04:12.000
+Mesej dari mesin ini ke mesin lain di jaringan.
+
+58
+00:04:13.000 --> 00:04:18.001
+Meskipun tidak ada file data yang hilang atau file sistem yang rusak, Ames menghabiskan sekitar $ 70
+
+59
+00:04:18.001 --> 00:04:23.000
+Tiga ribu untuk menemukan dan memusnahkan virus yang berulang-ulang.
+
+60
+00:04:23.000 --> 00:04:28.000
+Sejak itu, Pusat Penelitian California utama NASA telah mengambil langkah-langkah
+
+61
+00:04:28.000 --> 00:04:30.000
+Untuk menghindari penceroboh.
+
+62
+00:04:30.000 --> 00:04:37.000
+Kami memasang perlindungan yang kami hadapi sangat awal dalam proses
+
+63
+00:04:37.000 --> 00:04:43.000
+semua sistem kami, menempatkan mereka di bawah tes terhadap salinan yang diketahui virus,
+
+64
+00:04:44.000 --> 00:04:47.001
+dan membiarkan mereka melawan sistem-sistem tersebut selama beberapa waktu untuk
+
+65
+00:04:47.001 --> 00:04:49.001
+Pastikan mereka tidak terinfeksi kembali.
+
+66
+00:04:49.001 --> 00:04:55.001
+Kerentanan jaringan terbuka tidak unik bagi Ames, tetapi masalah
+
+67
+00:04:55.001 --> 00:05:00.001
+memberikan informasi kepada kelompok orang yang luas tanpa mengungkapkan data kepada
+
+68
+00:05:00.001 --> 00:05:03.000
+Gejala virus tidak mudah diselesaikan.
+
+69
+00:05:04.000 --> 00:05:08.000
+Semakin banyak perlindungan yang Anda letakkan pada sistem, semakin kurang user friendly mereka menjadi,
+
+70
+00:05:08.001 --> 00:05:12.001
+dan selalu ada pertikaian antara rasionalitas perlindungan dan
+
+71
+00:05:12.001 --> 00:05:14.000
+bagaimana mereka mempengaruhi Anda.
+
+72
+00:05:26.001 --> 00:05:30.001
+Yang menyertai kami di studio sekarang adalah John Dickinson. John adalah direktur dari PC Labs, dan
+
+73
+00:05:30.001 --> 00:05:34.000
+Divisi PC Magazine, dan di samping John Andrew Seibold, anggota Dewan
+
+74
+00:05:34.000 --> 00:05:37.001
+dari National Land Labs dan penerbit Outlook Unprofessional Computing.
+
+75
+00:05:38.001 --> 00:05:42.000
+Andy, bagaimana virus memanifestasikan diri? Apa yang mereka lakukan?
+
+76
+00:05:42.000 --> 00:05:46.001
+Nah, pertama-tama, mereka menyerang program komputer Anda, dan mereka merusak mereka,
+
+77
+00:05:46.001 --> 00:05:49.001
+Dan mereka dapat merusak mereka dengan banyak cara yang berbeda. Ada beberapa virus yang
+
+78
+00:05:49.001 --> 00:05:52.000
+adalah, quote-unquote, benign, dan mereka masuk dan mereka hanya
+
+79
+00:05:52.000 --> 00:05:53.001
+Tembak pada layar, gocha, hello.
+
+80
+00:05:54.000 --> 00:05:58.000
+Tetapi yang lebih penting, virus yang semua orang khawatir tentang hari ini adalah
+
+81
+00:05:58.000 --> 00:06:01.000
+yang masuk dan mereka memanipulasi data Anda, mereka merusak program Anda, dan
+
+82
+00:06:01.000 --> 00:06:03.001
+Mereka membuat perubahan yang tidak Anda ketahui dan yang tidak
+
+83
+00:06:03.001 --> 00:06:05.000
+Anda tahu dan Anda tidak memiliki kontrol apa pun.
+
+84
+00:06:05.000 --> 00:06:08.001
+Mereka dapat pergi sejauh yang sebenarnya mengubah data dalam file akuntansi, mereka dapat
+
+85
+00:06:08.001 --> 00:06:12.001
+mengubah file pemrosesan kata, dan mereka dapat berulang dari satu
+
+86
+00:06:12.001 --> 00:06:16.001
+Aplikasi untuk aplikasi lain akan segera mengambil alih seluruh cakera keras Anda
+
+87
+00:06:16.001 --> 00:06:18.001
+Jadi tidak ada program Anda akan berjalan atau beroperasi dengan baik.
+
+88
+00:06:19.000 --> 00:06:20.000
+Sebelum Anda bisa mengenal mereka.
+
+89
+00:06:20.000 --> 00:06:21.001
+Itu benar, bahkan sebelum Anda tahu mereka ada di sana.
+
+90
+00:06:21.001 --> 00:06:23.001
+Apa motivasi yang ada di balik orang yang
+
+91
+00:06:23.001 --> 00:06:25.000
+hal ini ? Apakah kamu punya ide, John?
+
+92
+00:06:25.000 --> 00:06:31.000
+Itu mengejekku. Saya maksudkan, ada potensi untuk niat kriminal, tentu saja, ada
+
+93
+00:06:31.000 --> 00:06:34.000
+selalu ada, tapi tampaknya bagi saya bahwa virus yang telah datang seperti itu
+
+94
+00:06:34.000 --> 00:06:36.000
+Tidak ada yang jauh lebih dari kesalahan jahat.
+
+95
+00:06:37.000 --> 00:06:41.000
+Ok ya. Sekarang, ada juga, kami mendengar tentang cacing dan virus dan kuda Trojan dan sebagainya.
+
+96
+00:06:41.000 --> 00:06:43.001
+ke depan. Apa perbedaan antara jenis program ini?
+
+97
+00:06:44.000 --> 00:06:47.001
+Nah, mari kita lihat. Sebuah virus sebenarnya akan merusak program sejauh yang mereka
+
+98
+00:06:47.001 --> 00:06:51.000
+dapat merusak program-program lain. Jadi mereka akan bekerja pada file eksekutif, mereka
+
+99
+00:06:51.000 --> 00:06:53.001
+akan menginstal diri di dalam file yang dapat diimplementasikan, banyak
+
+100
+00:06:53.001 --> 00:06:55.000
+Terutama sebagai virus manusia yang nyata.
+
+101
+00:06:55.000 --> 00:07:00.001
+Ia memasang dirinya di dalam diri Anda dan kemudian Anda dapat, pada gilirannya, menginfeksi saya. Worm adalah
+
+102
+00:07:00.001 --> 00:07:03.000
+biasanya sebuah program yang hanya menggandakan dirinya dan membuat
+
+103
+00:07:03.000 --> 00:07:04.001
+Kopi-kopi dari dirinya di seluruh tempat.
+
+104
+00:07:05.000 --> 00:07:07.001
+Dan kuda Trojan adalah satu yang memiliki program yang merusak
+
+105
+00:07:07.001 --> 00:07:09.001
+Di dalam sebuah program yang tidak bersalah.
+
+106
+00:07:10.000 --> 00:07:13.000
+Sekarang, Anda memiliki contoh di sini dari virus, yang Anda akan menunjukkan kepada kami apa yang
+
+107
+00:07:13.000 --> 00:07:17.000
+Virus melakukan ke hard disk Anda dalam hal ini, dan kemudian program, vaksin
+
+108
+00:07:17.000 --> 00:07:18.001
+program untuk melawan serangan itu.
+
+109
+00:07:18.001 --> 00:07:18.001
+[...]
+
+110
+00:07:19.000 --> 00:07:20.001
+Apakah Anda akan melewati virus pertama, Forrest?
+
+111
+00:07:20.001 --> 00:07:24.001
+Ok ya. Kita juga, hanya untuk pemula, katakan bahwa ini sangat bodoh dan
+
+112
+00:07:24.001 --> 00:07:29.000
+Virus yang tidak bersalah. Ini adalah salah satu yang mungkin tidak akan hadir. Virus Tendakan
+
+113
+00:07:29.000 --> 00:07:31.000
+menjadi sangat tenang dalam operasi mereka. Yang satu ini sangat
+
+114
+00:07:31.000 --> 00:07:33.000
+Suara, jadi nomor satu yang bisa kita tunjukkan.
+
+115
+00:07:33.001 --> 00:07:34.000
+Hanya untuk tujuan demo.
+
+116
+00:07:34.001 --> 00:07:34.001
+Hanya untuk tujuan demo.
+
+117
+00:07:34.001 --> 00:07:35.001
+Ini adalah demo virus.
+
+118
+00:07:35.001 --> 00:07:41.000
+Demo yang buruk. Ini adalah demo virus. Ini adalah direktori bersih pada PC dan semua ini
+
+119
+00:07:41.000 --> 00:07:44.000
+Program ini benar-benar bagus. Jika saya akan menjalankan WordStar, misalnya, dan di sini ia
+
+120
+00:07:44.000 --> 00:07:46.001
+Ya, dan itu baik-baik saja, itu hanya bagus. Tidak ada masalah sama sekali.
+
+121
+00:07:46.001 --> 00:07:52.000
+Jadi saya akan meninggalkan WordStar dan kemudian saya akan menjalankan program virus ini.
+
+122
+00:07:52.000 --> 00:07:53.000
+Jadi Anda akan mengisi virus.
+
+123
+00:07:53.000 --> 00:07:58.000
+Aku akan memanggil virus dan berkata, hello, menjadi virus. Dia mengatakan, semua orang mengumpulkan
+
+124
+00:07:58.000 --> 00:08:02.000
+Disk ini akan terinfeksi, yang tidak akan dilakukan oleh virus yang menghormati diri. Dan kamu
+
+125
+00:08:02.000 --> 00:08:03.001
+Peringatan, ha ha, dan sebagainya.
+
+126
+00:08:03.001 --> 00:08:06.000
+Jadi kita tahu sekarang kita memiliki situasi yang terinfeksi.
+
+127
+00:08:06.000 --> 00:08:09.000
+Kami tahu itu. Dan sebenarnya, jika saya berhati-hati dan saya melihat cakera saya di ini
+
+128
+00:08:09.000 --> 00:08:11.001
+Jika terjadi, saya akan menemukan bahwa program-program ini terinfeksi. Sekali lagi, seorang diri
+
+129
+00:08:11.001 --> 00:08:13.001
+- menghormati virus bahkan tidak akan pergi dan mengubah
+
+130
+00:08:13.001 --> 00:08:15.000
+direktori yang Anda bahkan tidak akan tahu bahwa itu ada di sana.
+
+131
+00:08:15.000 --> 00:08:19.000
+Jadi, misalnya, Anda melihat tanggal yang berbeda dan jika Anda benar-benar berhati-hati, berbeda
+
+132
+00:08:19.000 --> 00:08:20.001
+ukuran file dan beberapa file tersebut.
+
+133
+00:08:20.001 --> 00:08:24.000
+dengan tepat. Sekarang, ukuran file yang berbeda akan sulit untuk dilakukan tanpa, tetapi
+
+134
+00:08:24.000 --> 00:08:25.001
+Ini juga sesuatu yang pengguna tidak memeriksa.
+
+135
+00:08:25.001 --> 00:08:25.001
+Tentu saja
+
+136
+00:08:26.000 --> 00:08:30.000
+Jadi sekarang jika saya menjalankan WordStar, kami akan menemukan bahwa virus kami sebenarnya adalah
+
+137
+00:08:30.000 --> 00:08:34.000
+di sana. Dan dia datang dan berjalan barang-barangnya.
+
+138
+00:08:34.001 --> 00:08:36.000
+Pesan di sana memberitahu kami bahwa itu ada.
+
+139
+00:08:36.000 --> 00:08:41.000
+Itu ada di sana. Dan jika saya kembali dan menjalankan, jika saya meninggalkan sistem, itu akan menjadi
+
+140
+00:08:41.000 --> 00:08:47.001
+di sana. Jika saya pergi ke direktori lain dan menjalankan WordStar, di mana ia telah disalin ke
+
+141
+00:08:47.001 --> 00:08:52.001
+Dalam kondisi yang rusak, ia mengumumkan bahwa ia ada di sana. Dan ketika saya pergi ke sini, itu
+
+142
+00:08:52.001 --> 00:08:54.001
+mengubah semua file tersebut.
+
+143
+00:08:56.000 --> 00:09:00.000
+Jadi dengan kata lain, salinan WordStar sekarang membawa infeksi dengan itu untuk
+
+144
+00:09:00.000 --> 00:09:02.000
+Potensi pengguna berikutnya yang mungkin telah mengambil salinan itu.
+
+145
+00:09:02.000 --> 00:09:05.000
+Jadi jika saya mengambil salinan WordStar ini dan saya memberikannya kepada Anda, Stuart, dan Anda mengambilnya
+
+146
+00:09:05.000 --> 00:09:09.000
+rumah dan meletakkannya di PC Anda, akan mulai menginfeksi file di mana-mana direktori
+
+147
+00:09:09.000 --> 00:09:11.000
+yang Anda beroperasi di PC atau cakera apa pun.
+
+148
+00:09:11.001 --> 00:09:14.000
+Ok ya. Sekarang, Anda memiliki program Flushot Plus sekarang
+
+149
+00:09:14.000 --> 00:09:15.001
+Itu seharusnya untuk mendeteksi beberapa hal ini.
+
+150
+00:09:15.001 --> 00:09:22.001
+dengan benar. Flushot Plus akan mendeteksi program yang bekerja pada perangkat lunak
+
+151
+00:09:22.001 --> 00:09:28.001
+level pada program Anda dan akan dapat mendeteksi virus ini jika saya menjalankan itu.
+
+152
+00:09:30.000 --> 00:09:36.000
+Ok ya. Okay, mari kita letakkan kembali. Dan sekarang jika saya menjalankan WordStar di direktori ini, di mana
+
+153
+00:09:36.000 --> 00:09:38.000
+lagi, versi yang rosak dari WordStar telah dipasang,
+
+154
+00:09:38.000 --> 00:09:39.001
+Di sinilah, kita akan melakukannya.
+
+155
+00:09:41.000 --> 00:09:44.001
+Dan Flushot datang dan berkata, ini adalah program ini. Ia mencoba untuk membingungkan dengan Anda
+
+156
+00:09:44.001 --> 00:09:50.001
+file yang Sekarang, apa yang mengganggu dengan file Anda berarti? Apakah itu bekerja pada tulisan
+
+157
+00:09:50.001 --> 00:09:53.000
+salinan dari file Anda. Ini mengubah file pada cakera Anda.
+
+158
+00:09:53.001 --> 00:09:57.001
+Jadi hal pertama yang dilakukan Flushot adalah menemukan bahwa ada virus di sistem Anda.
+
+159
+00:09:57.001 --> 00:09:59.001
+dengan memberi peringatan kepada Anda. Okay, apa yang terjadi selanjutnya?
+
+160
+00:10:00.000 --> 00:10:03.000
+Sekarang ia mengatakan ia mencoba untuk mengubah semua file ini dan Flushot memberi Anda
+
+161
+00:10:03.000 --> 00:10:07.000
+kemampuan untuk maju dan membiarkan program mengubah file. Alasan mengapa ia memiliki
+
+162
+00:10:07.000 --> 00:10:11.000
+untuk melakukan ini adalah bahwa setiap program permohonan biasa yang menghormati diri untuk
+
+163
+00:10:11.000 --> 00:10:14.001
+melakukan pekerjaan akan keluar bekerja pada file data Anda sepanjang waktu. Jika tidak,
+
+164
+00:10:14.001 --> 00:10:16.000
+Itu tidak melakukan banyak untuk Anda sama sekali.
+
+165
+00:10:16.000 --> 00:10:20.001
+Jadi dalam hal ini, untuk membiarkan program pergi, saya hanya akan membiarkannya pergi dan merusak semua saya
+
+166
+00:10:20.001 --> 00:10:26.000
+file yang Dan ketika saya meninggalkan WordStar, itu akan menjadi semua file yang ada di disk.
+
+167
+00:10:26.000 --> 00:10:30.001
+Ini adalah mendeteksi virus dengan mencegah operasi penulisan pada cakera. Sekarang ini,
+
+168
+00:10:30.001 --> 00:10:33.000
+Ada cara lain di mana virus dapat beroperasi di sana.
+
+169
+00:10:33.000 --> 00:10:33.001
+Itu adalah benar.
+
+170
+00:10:34.000 --> 00:10:34.001
+Itu bisa mengelilingi itu.
+
+171
+00:10:35.000 --> 00:10:39.001
+Itu adalah benar. Anda dapat menulis program yang masuk pada tingkat perangkat keras dan
+
+172
+00:10:39.001 --> 00:10:42.000
+mengontrol perangkat keras Anda dan tidak membiarkan sistem operasi
+
+173
+00:10:42.000 --> 00:10:44.000
+Tahu apa yang sebenarnya terjadi.
+
+174
+00:10:44.000 --> 00:10:49.001
+Flushot dan program seperti itu bergantung pada virus yang, mari kita katakan, berkelakuan baik.
+
+175
+00:10:49.001 --> 00:10:52.001
+Mereka sebenarnya masuk melalui fasilitas perangkat lunak yang tersedia di PC
+
+176
+00:10:52.001 --> 00:10:54.001
+dan mengubah file Anda.
+
+177
+00:10:55.000 --> 00:10:58.001
+Jadi hanya karena Anda memiliki program jenis vaksin seperti Flushot Plus
+
+178
+00:10:58.001 --> 00:11:00.001
+Ini tidak berarti Anda dilindungi dari virus.
+
+179
+00:11:01.000 --> 00:11:02.001
+dengan benar. Ini berarti Anda dilindungi dari relatif,
+
+180
+00:11:03.000 --> 00:11:04.001
+Apa yang saya sebut, virus yang relatif kecil.
+
+181
+00:11:05.000 --> 00:11:07.000
+Dan sebenarnya, beritahu kami tentang Flushot asli.
+
+182
+00:11:07.000 --> 00:11:09.001
+Nah, Flushot asli, sebenarnya, rusak oleh virus.
+
+183
+00:11:09.001 --> 00:11:11.000
+Dan itulah sebabnya ada Flushot Plus.
+
+184
+00:11:11.000 --> 00:11:11.001
+Itu adalah benar.
+
+185
+00:11:12.001 --> 00:11:16.000
+Andy, benar cepat, di mana Anda akan berada dalam bahaya
+
+186
+00:11:16.000 --> 00:11:17.001
+Dapatkan virus di sistem Anda?
+
+187
+00:11:17.001 --> 00:11:21.000
+Nah, jika Anda memiliki sistem standalone dan Anda membeli semua off-the-shelf
+
+188
+00:11:21.000 --> 00:11:25.000
+perangkat lunak dari vendor yang dikenal dan Anda tidak bertukar cakera dengan orang dan Anda
+
+189
+00:11:25.000 --> 00:11:27.001
+Jangan berbicara tentang sistem papan berita melalui modem dan hal-hal seperti
+
+190
+00:11:27.001 --> 00:11:29.001
+Jadi, kemungkinan Anda cukup aman.
+
+191
+00:11:30.000 --> 00:11:34.000
+Tetapi jika seseorang membawa cakera dan Anda menukarnya, jika Anda memanggil buletin
+
+192
+00:11:34.000 --> 00:11:37.001
+Anda mengunduh beberapa program yang tersedia, atau jika seseorang mengatakan,
+
+193
+00:11:37.001 --> 00:11:41.001
+Hey, ambil file WordStar saya bahkan, betul, dan bawa ke sistem dan kerja Anda
+
+194
+00:11:41.001 --> 00:11:43.001
+Di sana, virus dapat ditularkan dengan cara ini.
+
+195
+00:11:43.001 --> 00:11:44.001
+Anda hanya tidak bisa mengatakan.
+
+196
+00:11:44.001 --> 00:11:46.000
+Jadi Anda harus benar-benar berhati-hati.
+
+197
+00:11:46.000 --> 00:11:50.000
+Jika Anda terhubung ke jaringan, itu mempersulit masalah secara dramatis karena
+
+198
+00:11:50.000 --> 00:11:52.001
+Anda tidak tahu di mana di jaringan virus dapat mendapatkan
+
+199
+00:11:52.001 --> 00:11:54.000
+Berinteraksi dan apa yang akan dilakukan di jaringan.
+
+200
+00:11:54.001 --> 00:11:57.000
+Okay, John, Andy, kami akan meminta kalian berdua untuk kembali sedikit kemudian
+
+201
+00:11:57.000 --> 00:12:00.000
+dalam program, dan kita ingin berbicara tentang praktik komputer yang aman.
+
+202
+00:12:00.000 --> 00:12:01.001
+Selain itu, dalam beberapa menit, kita akan melihat beberapa
+
+203
+00:12:01.001 --> 00:12:03.000
+Program vaksinasi untuk Macintosh.
+
+204
+00:12:03.000 --> 00:12:07.001
+Pertama sekali, kunjungan ke bisnis kecil yang terinfeksi oleh virus komputer
+
+205
+00:12:07.001 --> 00:12:09.000
+untuk mengetahui apa yang mereka lakukan tentang itu.
+
+206
+00:12:09.000 --> 00:12:11.001
+Wendy Woods melaporkan dari Santa Clara, California.
+
+207
+00:12:15.000 --> 00:12:17.000
+Ide itu tampaknya cukup tidak berbahaya.
+
+208
+00:12:17.001 --> 00:12:22.000
+Susan akan membawa sebuah cakera data ke rumah untuk melanjutkan pekerjaan di komputer rumahnya.
+
+209
+00:12:23.000 --> 00:12:28.000
+Tidak sedikit yang dia ketahui pada pagi berikutnya bahwa cakera yang sama yang tidak bersalah itu datang.
+
+210
+00:12:28.000 --> 00:12:31.001
+kembali bekerja terinfeksi dengan virus yang membunuh data.
+
+211
+00:12:32.000 --> 00:12:36.000
+Virus itu akan dipanggil dengan nama hari ia menabrak,
+
+212
+00:12:37.000 --> 00:12:38.001
+Hari Jumat yang ke-13.
+
+213
+00:12:39.001 --> 00:12:46.001
+Saya pikir saya mengalami kerusakan cakera keras pada awalnya, tapi setelah saya masuk ke dalamnya
+
+214
+00:12:46.001 --> 00:12:49.001
+sedikit, saya menemukan bahwa cakera itu bagus, mekanisnya itu adalah
+
+215
+00:12:49.001 --> 00:12:51.001
+Baik, tapi tidak ada perangkat lunak di sana.
+
+216
+00:12:51.001 --> 00:12:56.001
+Jalur boot hilang, jalur sistem hilang, tabel pengagihan file
+
+217
+00:12:56.001 --> 00:12:59.000
+Ia pergi, ia hanya tergelincir, ia masih ada.
+
+218
+00:12:59.000 --> 00:13:01.001
+Dan direktori akar hanya benar-benar rusak.
+
+219
+00:13:02.001 --> 00:13:07.000
+Virus, yang berasal dari permainan di komputer rumah Susan, akhirnya memaksa Jim
+
+220
+00:13:07.000 --> 00:13:09.000
+untuk membersihkan cakera kerasnya.
+
+221
+00:13:09.001 --> 00:13:14.000
+Dan sementara dia tidak benar-benar menyingkirkannya, dia memiliki virus di bawah kendali,
+
+222
+00:13:14.001 --> 00:13:19.000
+berkat program yang disebut Tracer, yang memblokir virus dari melakukan kerusakan.
+
+223
+00:13:20.000 --> 00:13:24.001
+Namun, Jim sudah beruntung. Semua data hard disk, rekaman yang dia simpan untuk berharga
+
+224
+00:13:24.001 --> 00:13:27.000
+Laboratorium logam, telah disokong.
+
+225
+00:13:27.000 --> 00:13:33.001
+Saya menganggap diri saya sangat, sangat beruntung bahwa saya memaksa diri saya sendiri, bahkan ketika saya hanya
+
+226
+00:13:33.001 --> 00:13:35.000
+Tidak ingin, untuk mengembalikan segalanya.
+
+227
+00:13:36.000 --> 00:13:41.000
+Karena virus di sini begitu berantakan, hard disk backup tidak lagi
+
+228
+00:13:41.000 --> 00:13:42.001
+Pilihan untuk bisnis kecil ini.
+
+229
+00:13:43.000 --> 00:13:47.001
+Sebenarnya, seperti yang dikatakan Jim Mount, jika dia tidak menyokong file-filenya, virus itu
+
+230
+00:13:47.001 --> 00:13:49.001
+Dia mungkin telah mengusirnya dari bisnis.
+
+231
+00:13:50.001 --> 00:13:54.000
+Di Santa Clara, California, untuk The Computer Chronicles, saya Wendy Woods.
+
+232
+00:14:07.000 --> 00:14:10.000
+Yang menyertai kami di studio sekarang adalah Robert Capon, presiden dari
+
+233
+00:14:10.000 --> 00:14:12.000
+HJC Software, pembuat Vyrex.
+
+234
+00:14:12.001 --> 00:14:15.001
+Setelah Robert adalah Jack McDonald, presiden Magna, pembuat yang akan
+
+235
+00:14:15.001 --> 00:14:17.001
+Perangkat lunak keamanan untuk Macintosh
+
+236
+00:14:18.001 --> 00:14:21.000
+Jack, salah satu hal yang terjadi di industri komputer pribadi kita di
+
+237
+00:14:21.000 --> 00:14:23.001
+Secara umum, sebenarnya tidak ada kontrol akses.
+
+238
+00:14:23.001 --> 00:14:26.001
+Anda memulai sistem komputer Anda dan meletakkan cakera di dalamnya.
+
+239
+00:14:27.000 --> 00:14:30.000
+Dan masalah kedua yang kita bicarakan, penciptaan virus adalah
+
+240
+00:14:30.000 --> 00:14:32.001
+pertama, dan akses ke sistem komputer adalah yang kedua.
+
+241
+00:14:33.000 --> 00:14:34.001
+Beritahu kami sedikit tentang kontrol akses.
+
+242
+00:14:36.000 --> 00:14:39.001
+Nah, seperti yang Anda katakan, benar-benar tidak pernah ada keamanan
+
+243
+00:14:39.001 --> 00:14:41.000
+Terutama pada Macintosh.
+
+244
+00:14:42.000 --> 00:14:45.000
+Tidak ada pelanggaran keamanan, jadi sangat mudah untuk masuk.
+
+245
+00:14:45.001 --> 00:14:49.000
+Oleh karena itu, program jenis virus dapat masuk dan menyerang mana-mana
+
+246
+00:14:49.000 --> 00:14:51.000
+program pada hard disk apapun, floppy apapun.
+
+247
+00:14:51.000 --> 00:14:55.001
+Dan dengan program kontrol akses seperti Empower, Anda dapat membatasi siapa yang dapat membuat
+
+248
+00:14:55.001 --> 00:14:59.001
+perubahan pada program Anda, dan dengan demikian melarang virus dari melampirkan
+
+249
+00:14:59.001 --> 00:15:01.001
+untuk program apa pun.
+
+250
+00:15:02.000 --> 00:15:05.000
+Baiklah, Anda memiliki pendekatan lain, Robert, yang merupakan Vyrex.
+
+251
+00:15:05.001 --> 00:15:07.000
+Dan biarlah saya bertanya kepadamu, itu bukan vaksin
+
+252
+00:15:07.000 --> 00:15:09.000
+Program yang Bagaimana Anda akan menggambarkan Vyrex?
+
+253
+00:15:09.000 --> 00:15:12.001
+Nah, ini adalah pendekatan yang sangat komplementar untuk kesadaran keamanan
+
+254
+00:15:12.001 --> 00:15:14.001
+Produk yang ditawarkan oleh Magna.
+
+255
+00:15:15.001 --> 00:15:20.000
+Ini adalah produk Kelas III, dan itu berarti apa yang ia lakukan dideteksi oleh komputer yang diketahui.
+
+256
+00:15:20.000 --> 00:15:24.001
+virus, dan jika virus hadir, itu memberi Anda kemampuan untuk menghapus
+
+257
+00:15:24.001 --> 00:15:28.000
+Virus dengan menghapus virus dan memulihkan yang terinfeksi
+
+258
+00:15:28.000 --> 00:15:29.001
+mengidentifikasi kondisi mereka yang sudah terinfeksi.
+
+259
+00:15:30.000 --> 00:15:32.000
+Kata kunci yang ada adalah ada virus yang diketahui, bukan?
+
+260
+00:15:32.000 --> 00:15:32.001
+Itu adalah benar.
+
+261
+00:15:32.001 --> 00:15:34.000
+Anda harus pergi ke sana dan mencari pola dan sebagainya yang
+
+262
+00:15:34.000 --> 00:15:36.000
+Virus-virus tersebut akan muncul.
+
+263
+00:15:36.000 --> 00:15:41.001
+Itu memang benar. Kami mencari virus yang diketahui, dan jika dan kapan virus baru terjadi,
+
+264
+00:15:41.001 --> 00:15:44.000
+Kami akan memperbarui produk dengan kemampuan untuk
+
+265
+00:15:44.000 --> 00:15:46.000
+mengidentifikasi dan memerangi virus tersebut.
+
+266
+00:15:46.000 --> 00:15:47.001
+Apa artinya, virus yang dikenal?
+
+267
+00:15:48.001 --> 00:15:52.000
+Seseorang yang telah didiagnosis sebagai virus dengan
+
+268
+00:15:52.000 --> 00:15:54.000
+karakteristik, dan satu yang kita ketahui.
+
+269
+00:15:55.000 --> 00:16:00.001
+Dalam industri ini, ada banyak histeria tentang virus, dan ada laporan
+
+270
+00:16:00.001 --> 00:16:05.001
+setiap hari tentang kemungkinan virus baru, dan kebanyakan dari mereka biasanya tidak
+
+271
+00:16:05.001 --> 00:16:09.000
+dengan virus komputer. Ini hanya fenomena lain, masalah lain yang muncul.
+
+272
+00:16:09.001 --> 00:16:10.001
+Dapatkah Anda memberi kami demonstrasi tentang
+
+273
+00:16:10.001 --> 00:16:12.000
+Vyrex dan tunjukkan kami bagaimana itu akan bekerja di peta?
+
+274
+00:16:14.001 --> 00:16:17.000
+Cukup berikan kita sejenis play-by-play saat Anda pergi ke sini, Robert.
+
+275
+00:16:17.000 --> 00:16:22.000
+Pada dasarnya, kami mengingatkan pengguna, kami memberi mereka kata penting tentang komputer
+
+276
+00:16:22.000 --> 00:16:25.001
+Virus, dan kita mengingatkan mereka bahwa kita melawan hanya virus komputer yang diketahui.
+
+277
+00:16:26.000 --> 00:16:30.001
+Kami juga menekankan pentingnya backup software, karena kami percaya bahwa,
+
+278
+00:16:31.000 --> 00:16:36.000
+Selain menggunakan produk seperti ini, sangat penting untuk memiliki backup yang baik
+
+279
+00:16:36.000 --> 00:16:40.001
+Proses untuk menggunakan perangkat lunak yang dapat diandalkan dan terpercaya.
+
+280
+00:16:42.000 --> 00:16:43.001
+Okay, jadi Anda memiliki Vyrex sekarang di peta.
+
+281
+00:16:43.001 --> 00:16:49.001
+Itu memang benar. Dan ketika itu muncul, itu memiliki layar bantuan yang menyediakan online
+
+282
+00:16:49.001 --> 00:16:54.000
+membantu pengguna, dan memberikan instruksi operasi yang sangat berguna.
+
+283
+00:16:55.000 --> 00:16:59.000
+Dan pada dasarnya, di bagian ini layar, kita memiliki tiga item tindakan, ikon,
+
+284
+00:16:59.000 --> 00:17:04.000
+yang memungkinkan Anda untuk mendiagnosis, memperbaiki, dan mendapatkan bantuan online.
+
+285
+00:17:04.001 --> 00:17:05.001
+Jadi di mana virus itu sekarang?
+
+286
+00:17:05.001 --> 00:17:07.000
+di dalam sistem? Apakah Anda akan menempatkan salah satu di sana?
+
+287
+00:17:07.000 --> 00:17:13.000
+Nah, dalam hal ini, Vyrex menunjukkan kepada Anda disket yang dapat dilihat yang diisi
+
+288
+00:17:13.000 --> 00:17:19.000
+masuk ke sistem, dan kita mengambil ikon di atas dan di luar untuk mengaktifkannya.
+
+289
+00:17:19.001 --> 00:17:23.000
+Disket ini di sini memiliki program di atasnya yang terinfeksi dengan skor virus,
+
+290
+00:17:24.001 --> 00:17:28.001
+Dan kita dapat mendiagnosis disket itu dengan mengklik satu ikon.
+
+291
+00:17:29.000 --> 00:17:33.001
+Sekali lagi, ini dirancang untuk tidak menjadi program yang sangat mudah digunakan, titik
+
+292
+00:17:33.001 --> 00:17:35.000
+- dan klik jenis interaksi.
+
+293
+00:17:35.000 --> 00:17:39.001
+Okay, jadi kami sekarang memberitahu kami bahwa kami memiliki skor virus di drive kedua.
+
+294
+00:17:39.001 --> 00:17:42.001
+Itu yang benar. Ini memberitahu Anda infeksi telah dideteksi, periksa daftar di atas,
+
+295
+00:17:44.001 --> 00:17:48.000
+Dan apa yang ia lakukan adalah ia memberitahu Anda disket, file,
+
+296
+00:17:48.001 --> 00:17:50.001
+dan program yang sebenarnya yang terinfeksi.
+
+297
+00:17:50.001 --> 00:17:52.000
+Okay, Rob, sekarang kau bisa memperbaiki cakera itu?
+
+298
+00:17:52.001 --> 00:17:54.001
+Itu yang benar. Biarlah aku membuktikan itu.
+
+299
+00:17:59.000 --> 00:18:03.000
+Kami memperbaiki cakera dengan mengklik satu ikon.
+
+300
+00:18:03.000 --> 00:18:07.000
+Dan apa yang dia lakukan ketika itu sedang memperbaiki cakera?
+
+301
+00:18:07.000 --> 00:18:14.000
+Saat ini, apa yang sedang dilakukan adalah meninjau ulang cakera untuk
+
+302
+00:18:14.000 --> 00:18:18.001
+infeksi, dan kemudian ia memberi Anda file opsi per file untuk memperbaiki mereka dan untuk
+
+303
+00:18:18.001 --> 00:18:20.000
+membawanya kembali ke negara asal.
+
+304
+00:18:21.001 --> 00:18:23.001
+Sekarang, kita bisa melakukannya karena kita tahu
+
+305
+00:18:23.001 --> 00:18:25.000
+Ciri-ciri yang tepat dari virus ini.
+
+306
+00:18:25.001 --> 00:18:30.000
+Kami tahu dengan tepat bagaimana mereka mengubah program, dan sebagai hasilnya, kami tahu dengan benar bagaimana untuk
+
+307
+00:18:30.000 --> 00:18:36.000
+memperbaiki file dan untuk menghindari kerusakan yang dilakukan oleh infeksi virus.
+
+308
+00:18:37.001 --> 00:18:40.000
+Dan itu selesai sekarang, dan Anda telah menghapus virus
+
+309
+00:18:40.000 --> 00:18:41.001
+dari salah satu disk floppy tersebut.
+
+310
+00:18:41.001 --> 00:18:47.000
+Itu memang benar. Dan jika kita harus meninjau kembali itu, misalnya, kita akan melihat bahwa ...
+
+311
+00:18:47.000 --> 00:18:49.001
+Jadi Anda bisa melakukan diagnosis itu lagi untuk melihat apakah itu bersih?
+
+312
+00:18:49.001 --> 00:18:52.000
+Ya, dan jika Anda melakukannya, Anda akan menemukan bahwa disket bersih.
+
+313
+00:18:53.000 --> 00:18:56.000
+Saya akan bertanya kepada Anda jika Anda dapat melipat keyboard di sana ke Jack dan keluar
+
+314
+00:18:56.000 --> 00:18:59.000
+Dari Virac sehingga kita dapat melihat pendekatan lain ini di sini, Jack.
+
+315
+00:18:59.000 --> 00:19:02.000
+Sementara Robert melakukan itu, beritahu kami tentang ...
+
+316
+00:19:02.000 --> 00:19:05.001
+Anda memiliki program yang disebut Empower, yang berurusan dengan
+
+317
+00:19:05.001 --> 00:19:07.001
+Keselamatan, seperti yang Anda dan Gary berbicara sebelumnya.
+
+318
+00:19:08.000 --> 00:19:09.000
+Apa sebenarnya yang ia lakukan?
+
+319
+00:19:09.001 --> 00:19:13.000
+Empower adalah kontrol akses penuh dan data otomatis
+
+320
+00:19:13.000 --> 00:19:15.000
+Produk enkripsi untuk Macintosh.
+
+321
+00:19:15.001 --> 00:19:22.000
+Kami memiliki kemampuan untuk menggunakan beberapa pengguna dan beberapa kelompok di
+
+322
+00:19:22.000 --> 00:19:27.000
+Macintosh, dan pada saat yang sama melakukan enkripsi data transparan untuk
+
+323
+00:19:27.000 --> 00:19:29.000
+benar-benar memastikan bahwa data dilindungi.
+
+324
+00:19:30.000 --> 00:19:33.001
+Dan dari sudut pandang virus sekarang, ini adalah ... Memiliki jenis keamanan ini
+
+325
+00:19:33.001 --> 00:19:36.000
+Perlindungan terhadap virus?
+
+326
+00:19:36.001 --> 00:19:40.000
+Ya, Anda dapat menggunakan Empower untuk membantu mencegah penyebaran virus.
+
+327
+00:19:40.001 --> 00:19:42.000
+Ini adalah mekanisme pencegahan.
+
+328
+00:19:42.001 --> 00:19:46.001
+Anda bisa mengunci semua... Mari kita masuk ke...
+
+329
+00:19:46.001 --> 00:19:48.001
+Oh, file data yang sangat penting dan sebagainya.
+
+330
+00:19:48.001 --> 00:19:52.000
+File data yang sangat penting. Anda dapat memasukkannya ke dalam folder yang Anda tidak
+
+331
+00:19:52.000 --> 00:19:53.001
+Memberi akses yang benar kepada siapa pun.
+
+332
+00:19:53.001 --> 00:19:55.001
+Jadi Anda masuk ke program dan menunjukkan kepada kami bagaimana ia bekerja.
+
+333
+00:19:56.000 --> 00:19:57.001
+Semua yang benar. Ini adalah Macintosh yang normal.
+
+334
+00:19:57.001 --> 00:19:59.001
+desktop, sama seperti semua orang terbiasa melihat.
+
+335
+00:19:59.001 --> 00:20:03.001
+Hal yang telah kami tambahkan sejak Empower telah ditambahkan ke sistem ini adalah kami
+
+336
+00:20:03.001 --> 00:20:07.001
+dalam latar belakang melindungi siapa yang dapat mengakses keistimewaan apa, hal apa.
+
+337
+00:20:08.000 --> 00:20:12.000
+Jadi, misalnya, saya memiliki folder di sini yang mencakup semua program Apple.
+
+338
+00:20:13.000 --> 00:20:17.000
+Dan Anda akan menyadari bahwa dengan Empower dipasang, ada pena tambahan kecil
+
+339
+00:20:17.000 --> 00:20:20.001
+dengan flash ini melalui, yang berarti bahwa tidak ada yang memiliki akses yang benar ke ini
+
+340
+00:20:20.001 --> 00:20:22.000
+untuk program ini, untuk program tersebut.
+
+341
+00:20:22.000 --> 00:20:24.001
+Jadi tidak ada virus yang bisa keluar dan bergabung dengan itu.
+
+342
+00:20:24.001 --> 00:20:28.000
+Dengan kata lain, jika pengguna lain masuk dan bekerja di Mac saya, mereka
+
+343
+00:20:28.000 --> 00:20:30.000
+Tidak dapat mengakses dan menulis ke file tersebut.
+
+344
+00:20:30.000 --> 00:20:33.000
+Tentu saja, mereka masih bisa menggunakan program, yang mungkin Anda ingin mereka maju.
+
+345
+00:20:33.000 --> 00:20:35.000
+Dan ya, tapi kemudian mereka tidak dapat mengubah program-program itu.
+
+346
+00:20:35.000 --> 00:20:36.001
+Apakah Anda memiliki berbagai lapisan keamanan?
+
+347
+00:20:36.001 --> 00:20:51.001
+Itu adalah benar. Untuk setiap folder, ada tiga hal yang dapat Anda ketahui.
+
+348
+00:20:52.000 --> 00:20:56.000
+Anda hanya dapat menentukan folder C, file C untuk membuat perubahan.
+
+349
+00:20:56.001 --> 00:20:59.000
+Anda juga dapat menentukan kelompok apa yang sedang dilakukan.
+
+350
+00:21:00.000 --> 00:21:02.000
+Mari kita ambil satu yang tidak memiliki keistimewaan.
+
+351
+00:21:02.000 --> 00:21:06.001
+Berikut adalah salah satu. Jadi kita hanya membuat sebuah mendapatkan keistimewaan di sini untuk menetapkan
+
+352
+00:21:06.001 --> 00:21:08.000
+Keistimewaan dalam folder ini.
+
+353
+00:21:08.001 --> 00:21:12.000
+Dan Anda melihat bahwa itu tidak ditandatangani kepada siapa pun saat ini dan bahwa semua orang memiliki
+
+354
+00:21:12.000 --> 00:21:14.001
+Hak akses lengkap ke segala sesuatu dalam folder tersebut.
+
+355
+00:21:14.001 --> 00:21:17.000
+Jadi Anda bisa memiliki keistimewaan yang berbeda yang terkait dengan yang berbeda
+
+356
+00:21:17.000 --> 00:21:18.001
+yang ada di dalam sistem.
+
+357
+00:21:18.001 --> 00:21:20.001
+Itu adalah benar. Setiap folder akan memiliki keistimewaan tersendiri yang ditentukan.
+
+358
+00:21:21.000 --> 00:21:24.001
+Sekarang, Jack, apakah ini mencegah korupsi tingkat perangkat keras desktop?
+
+359
+00:21:24.001 --> 00:21:27.000
+Tidak, ini adalah teknik perangkat lunak murni yang kita gunakan.
+
+360
+00:21:27.000 --> 00:21:30.000
+Jadi ia menganggap bahwa virus itu melewati sistem operasi
+
+361
+00:21:30.000 --> 00:21:31.001
+untuk membuat berbagai panggilan untuk itu?
+
+362
+00:21:31.001 --> 00:21:35.000
+Satu lagi fitur yang benar-benar bagus yang kita miliki untuk virus adalah kemampuan untuk menghentikan
+
+363
+00:21:35.000 --> 00:21:39.001
+Floppy drive, di mana Anda dapat menentukan bahwa floppy disk tidak harus pernah digunakan.
+
+364
+00:21:40.000 --> 00:21:43.000
+Jadi Anda memulai mesin Anda dengan hard disk Anda dan tidak ada yang dapat memasukkan
+
+365
+00:21:43.000 --> 00:21:44.001
+Sebuah disk floppy yang dapat terinfeksi.
+
+366
+00:21:46.000 --> 00:21:49.000
+Jadi, ini akan melindungi Anda dari orang luar. Ini tidak benar-benar melindungi Anda dari
+
+367
+00:21:49.000 --> 00:21:52.000
+Anda sendiri, bagaimanapun, jika Anda membawa ke dalam sepotong perangkat lunak yang rusak.
+
+368
+00:21:52.000 --> 00:21:56.000
+Itu adalah benar. Jika Anda memiliki akses yang benar ke apa pun, maka virus
+
+369
+00:21:56.000 --> 00:21:57.001
+Program ini bisa terhubung dengannya.
+
+370
+00:21:58.000 --> 00:21:58.001
+Sayang, terima kasih banyak sekali.
+
+371
+00:21:58.001 --> 00:22:01.001
+Dalam beberapa menit, kami akan mendapatkan beberapa saran untuk Anda tentang komputer yang aman.
+
+372
+00:22:01.001 --> 00:22:04.000
+Praktik untuk membantu Anda menghindari masalah virus.
+
+373
+00:22:04.001 --> 00:22:07.001
+Tetap Bersama Kami
+
+374
+00:22:18.001 --> 00:22:22.001
+Kembali dengan kami sekarang studio adalah John Dickinson dari PC Labs dan Andy Seibold dari Outlook.
+
+375
+00:22:22.001 --> 00:22:27.000
+Andy, Anda bekerja dengan Land Lab. Anda datang dengan set aturan atau garis panduan untuk
+
+376
+00:22:27.000 --> 00:22:29.001
+Menjaga Kebijakan Komputer yang Aman.
+
+377
+00:22:30.000 --> 00:22:31.001
+Jadi, bisakah Anda memberitahu kami sedikit tentang hal ini?
+
+378
+00:22:31.001 --> 00:22:35.001
+Baiklah, baiklah, National Land Lab adalah organisasi non-profit, terlebih dahulu, dan
+
+379
+00:22:35.001 --> 00:22:39.000
+Ada banyak pedagang di komunitas yang
+
+380
+00:22:39.000 --> 00:22:41.000
+yang terlibat dalam mendukung operasi tersebut.
+
+381
+00:22:41.001 --> 00:22:45.001
+Dan set panduan yang mereka keluarkan untuk kuota-unquote aman komputasi
+
+382
+00:22:45.001 --> 00:22:47.000
+Hal-hal yang membuatnya masuk akal.
+
+383
+00:22:47.001 --> 00:22:49.001
+Anda tahu, Anda tidak meletakkan sepotong perangkat lunak pada Anda.
+
+384
+00:22:49.001 --> 00:22:51.000
+mesin jika Anda tidak tahu asal-usulnya.
+
+385
+00:22:51.000 --> 00:22:55.000
+Anda tidak menukar perangkat lunak dengan orang. Anda tidak ... jika Anda memanggil
+
+386
+00:22:55.000 --> 00:22:56.001
+Sebuah buletin, Anda harus sangat berhati-hati.
+
+387
+00:22:56.001 --> 00:22:58.001
+Anda harus tahu buletin board. Anda harus tahu siapa yang melakukannya.
+
+388
+00:22:59.000 --> 00:23:01.001
+Anda harus sangat berhati-hati dengan jenis program yang Anda download.
+
+389
+00:23:03.000 --> 00:23:05.001
+Pada dasarnya, Anda perlu mengetahui asal-usul setiap
+
+390
+00:23:05.001 --> 00:23:07.000
+program yang masuk ke dalam sistem Anda.
+
+391
+00:23:07.000 --> 00:23:09.001
+Anda perlu mengetahui asal-usul setiap file yang masuk ke sistem Anda.
+
+392
+00:23:09.001 --> 00:23:11.001
+yang memiliki akses ke komputer Anda.
+
+393
+00:23:11.001 --> 00:23:15.001
+Ada masalah keamanan sejauh ketika Anda tidak dekat dengan komputer Anda, yang dapat mendapatkan
+
+394
+00:23:15.001 --> 00:23:19.001
+tentang itu, bagaimana ia terhubung ke jaringan, bagaimana itu terhubungkan ke mainframes dan
+
+395
+00:23:19.001 --> 00:23:21.001
+Komputer lain yang eksternal.
+
+396
+00:23:22.000 --> 00:23:25.001
+Hal baru-baru ini ARBORNET adalah indikasi yang baik tentang apa yang dapat terjadi.
+
+397
+00:23:25.001 --> 00:23:27.001
+Itu berarti, ia hanya keluar seperti api liar.
+
+398
+00:23:28.000 --> 00:23:29.001
+Dan pada dasarnya, itu semua adalah akal sehat.
+
+399
+00:23:29.001 --> 00:23:31.000
+Ada beberapa hal yang sangat, sangat penting.
+
+400
+00:23:31.001 --> 00:23:35.000
+Anda perlu menyimpan file Anda, dan Anda harus menyimpan program Anda dan
+
+401
+00:23:35.000 --> 00:23:38.000
+file sistem, dan Anda harus sangat beragama tentang itu.
+
+402
+00:23:38.000 --> 00:23:43.000
+Anda harus memiliki satu set program yang diketahui, baik karena satu-satunya penyembuhan, jika Anda memiliki
+
+403
+00:23:43.000 --> 00:23:45.001
+Sebuah virus yang menginfeksi sistem Anda, Anda akan harus membuangnya. Kau akan pergi
+
+404
+00:23:45.001 --> 00:23:49.000
+Anda harus kehilangan semua data Anda, dan Anda harus mengembalikannya dan mengubahnya,
+
+405
+00:23:49.000 --> 00:23:51.000
+Dan kemudian Anda akan perlu untuk menginstal ulang program Anda.
+
+406
+00:23:51.000 --> 00:23:54.000
+Dan pada titik reinstall, Anda akan perlu untuk memeriksa yang
+
+407
+00:23:54.000 --> 00:23:57.000
+Anda sedang menginstal ulang untuk memastikan Anda tidak menggandakan masalah lagi.
+
+408
+00:23:57.001 --> 00:24:00.001
+Nah, John, sebenarnya, ini akan menjadi pertanyaan yang baik untuk Anda.
+
+409
+00:24:01.000 --> 00:24:03.001
+Seberapa efektif program antivirus ini?
+
+410
+00:24:04.001 --> 00:24:07.001
+Tidak, penembakan dari serangan flu, tentu saja.
+
+411
+00:24:07.001 --> 00:24:09.000
+Pada tahap tertentu, mereka efektif.
+
+412
+00:24:09.000 --> 00:24:12.000
+Dengan kata lain, sejauh virus berkelakuan baik, mereka adalah
+
+413
+00:24:12.000 --> 00:24:14.000
+yang efektif, setidaknya di lingkungan PC.
+
+414
+00:24:14.000 --> 00:24:21.000
+Adalah benar-benar sah untuk menulis virus yang bekerja di
+
+415
+00:24:21.000 --> 00:24:25.000
+tingkat perangkat lunak dan merusak file dengan cara itu, tetapi juga tidak sulit untuk menulis
+
+416
+00:24:25.000 --> 00:24:28.000
+yang bekerja di bawah tingkat perangkat keras dan berada di bawah level yang virus
+
+417
+00:24:28.000 --> 00:24:30.000
+perlindungan, program vaksin, dapat dideteksi.
+
+418
+00:24:30.000 --> 00:24:32.001
+John, adalah salah satu dari apa yang disebut vaksin perangkat lunak
+
+419
+00:24:32.001 --> 00:24:34.001
+Program yang efektif, tidak berguna?
+
+420
+00:24:35.000 --> 00:24:36.000
+Apakah mereka benar-benar tidak melakukan apa-apa?
+
+421
+00:24:36.001 --> 00:24:39.000
+Nah, tidak berguna adalah sedikit kata yang kuat.
+
+422
+00:24:39.000 --> 00:24:42.000
+Saya pikir ada beberapa langkah perlindungan yang dapat Anda dapatkan, tetapi apa yang saya
+
+423
+00:24:42.000 --> 00:24:43.001
+Khawatir bahwa orang akan mendapatkan rasa palsu tentang
+
+424
+00:24:43.001 --> 00:24:45.001
+keselamatan, dan saya pikir mereka dilindungi dari segala-galanya.
+
+425
+00:24:46.000 --> 00:24:48.001
+Ya, Andy, saya ingin bertanya kepada Anda tentang itu, karena LAN Labs tidak mendukung
+
+426
+00:24:48.001 --> 00:24:50.001
+Tidak ada perangkat lunak vaksin, dan saya bertanya-tanya mengapa.
+
+427
+00:24:50.001 --> 00:24:51.001
+Ya, ada dua alasan.
+
+428
+00:24:51.001 --> 00:24:55.001
+Nombor satu adalah beberapa anggota LAN Lab merasa bahwa ada potensi
+
+429
+00:24:55.001 --> 00:25:01.000
+di sini untuk seseorang untuk mengganggu virus ke dalam komunitas komputer dan kemudian membuat
+
+430
+00:25:01.000 --> 00:25:03.001
+Uang yang sebenarnya keluar dengan vaksin.
+
+431
+00:25:04.001 --> 00:25:05.001
+Oleh karena itu mereka khawatir tentang hal itu.
+
+432
+00:25:06.000 --> 00:25:09.000
+Yang lain adalah bahwa terdapat begitu banyak jenis virus yang berbeda, ada begitu banyak
+
+433
+00:25:09.000 --> 00:25:14.001
+berbagai jenis permainan yang programmer dapat memainkan yang untuk mendukung jenis permainan ini.
+
+434
+00:25:14.001 --> 00:25:17.001
+Namun, tidak ada satu yang melakukan semuanya.
+
+435
+00:25:18.000 --> 00:25:21.000
+Akhirnya, dalam studi PC Labs, Anda datang dengan vaksin tertentu
+
+436
+00:25:21.000 --> 00:25:23.000
+program yang disarankan oleh majalah?
+
+437
+00:25:23.001 --> 00:25:25.000
+Saya harap kita akan melakukan satu lagi dalam waktu dekat. Dapatkan satu pandangan.
+
+438
+00:25:25.001 --> 00:25:26.001
+Wahai teman-teman, terima kasih banyak sekali.
+
+439
+00:25:26.001 --> 00:25:28.000
+Inilah pandangan kita terhadap virus komputer.
+
+440
+00:25:28.000 --> 00:25:30.001
+Kami akan kembali dalam satu menit dengan berita komputer minggu ini.
+
+441
+00:25:41.000 --> 00:25:45.001
+Dalam File Akses Random minggu ini, DigiPro telah mengumumkan bentuk baru yang tidak
+
+442
+00:25:45.001 --> 00:25:47.001
+- penyimpanan volatile, yang ia panggil Flash Disk.
+
+443
+00:25:48.000 --> 00:25:52.000
+Ini pada dasarnya menggunakan teknologi EPROM untuk menghapus secara elektronik dan
+
+444
+00:25:52.000 --> 00:25:53.001
+Mengatur ulang memori pada chip.
+
+445
+00:25:54.000 --> 00:25:58.001
+DigiPro mengatakan bahwa chip Flash Disk dapat diprogram kembali di dalam sistem oleh
+
+446
+00:25:58.001 --> 00:26:02.001
+pengguna akhir, dan Flash Disk datang pada panel add-in dan didasarkan pada Intel
+
+447
+00:26:02.001 --> 00:26:04.001
+Teknologi memori CMOS Flash.
+
+448
+00:26:04.001 --> 00:26:10.001
+DigiPro mengatakan Flash Disk mendukung MS-DOS dan lingkungan VAX dan keduanya 16
+
+449
+00:26:10.001 --> 00:26:12.000
+Arsitektur 32 bit.
+
+450
+00:26:12.001 --> 00:26:16.000
+DigiPro melihat pasar awal sebagai komputer laptop dan sistem CAD.
+
+451
+00:26:16.001 --> 00:26:20.001
+Versi 5 megabyte dikeluarkan pada kuartal pertama tahun dengan 300
+
+452
+00:26:20.001 --> 00:26:23.000
+-Megabyte Flash Disk yang dijanjikan nanti tahun ini.
+
+453
+00:26:23.001 --> 00:26:26.000
+Microsoft telah mengumumkan keterlambatan lain dalam peluncuran
+
+454
+00:26:26.000 --> 00:26:28.000
+Kata 4.0 untuk Macintosh.
+
+455
+00:26:28.001 --> 00:26:32.001
+Perusahaan mengatakan keterlambatan ini disebabkan oleh upaya berkelanjutan untuk mengoptimalkan kecepatan
+
+456
+00:26:32.001 --> 00:26:34.000
+dan kebutuhan memori dari program.
+
+457
+00:26:34.000 --> 00:26:38.000
+Microsoft menyebutkan Word 4. 0 harus keluar pada akhir Februari.
+
+458
+00:26:39.000 --> 00:26:42.000
+Sementara itu, majalah Forbes mengatakan Microsoft berada di antara 10 yang paling
+
+459
+00:26:42.000 --> 00:26:43.001
+perusahaan yang menguntungkan di negara ini.
+
+460
+00:26:44.000 --> 00:26:47.001
+Ini datang di enam dan adalah satu-satunya perusahaan komputer di 10 teratas.
+
+461
+00:26:48.000 --> 00:26:51.001
+Satu-satunya perusahaan komputer lain di top 25 adalah Sun Microsystems.
+
+462
+00:26:52.001 --> 00:26:56.001
+The Software Publishers Association telah memasuki pertempuran Atari Nintendo.
+
+463
+00:26:57.000 --> 00:27:01.001
+SPA mengkritik Nintendo karena mencoba mengendalikan game ini.
+
+464
+00:27:01.001 --> 00:27:04.000
+Pasar kartun untuk konsol game Nintendo.
+
+465
+00:27:04.000 --> 00:27:07.000
+Mesin Nintendo hanya akan membaca sebuah kartun yang mencakup
+
+466
+00:27:07.000 --> 00:27:08.001
+Chip milik Nintendo.
+
+467
+00:27:09.000 --> 00:27:13.000
+Atari menuntut Nintendo untuk pembatasan perdagangan dan mengatakan ia telah menemukan sebuah
+
+468
+00:27:13.000 --> 00:27:14.001
+Cara untuk menggandakan chip Nintendo.
+
+469
+00:27:15.000 --> 00:27:18.000
+SPA mengatakan praktek Nintendo menempatkan bahaya
+
+470
+00:27:18.000 --> 00:27:19.001
+Sebelumnya tentang software komputer.
+
+471
+00:27:21.000 --> 00:27:24.001
+Sony mengatakan ia ingin bagian dari bisnis video dan game komputer yang muncul kembali.
+
+472
+00:27:25.000 --> 00:27:28.000
+Ia telah mengumumkan pembentukan divisi baru untuk menulis dan pemasaran
+
+473
+00:27:28.000 --> 00:27:29.001
+Video dan game software.
+
+474
+00:27:30.000 --> 00:27:33.000
+Perusahaan yang dimiliki sepenuhnya disebut CGS ImageSoft.
+
+475
+00:27:33.000 --> 00:27:36.001
+Sony memperkirakan penjualan tahun pertama sebesar $ 8 juta.
+
+476
+00:27:37.001 --> 00:27:42.000
+Tentera sedang memainkan permainan video mereka sendiri hari ini dengan masa nyata yang besar
+
+477
+00:27:42.000 --> 00:27:46.000
+Simulasi Star Wars atau SDI, Inisiatif Pertahanan Strategis.
+
+478
+00:27:46.001 --> 00:27:51.001
+Permainan Perang Army melibatkan superkomputer Cray XMP yang terhubung ke delapan mini
+
+479
+00:27:51.001 --> 00:27:54.000
+Superkomputer yang terhubung ke 30 mainframes.
+
+480
+00:27:54.001 --> 00:27:59.000
+Tentera mengatakan eksperimen ini akan memungkinkan mereka untuk menyegerakkan seluruh Bumi dan ruang angkasa.
+
+481
+00:27:59.000 --> 00:28:02.000
+Aset SDI berbasis dalam waktu 4 microseconds.
+
+482
+00:28:02.000 --> 00:28:07.001
+Akhirnya, ada jenis baru PC fax board, anti-junk fax PC board.
+
+483
+00:28:08.000 --> 00:28:13.000
+Komputer lengkap mengatakan papan baru C-Fax 9600 memungkinkan pengguna untuk memindai
+
+484
+00:28:13.000 --> 00:28:16.001
+Faks masuk pada layar komputer sebelum dicetak.
+
+485
+00:28:17.000 --> 00:28:21.000
+Jadi jika itu junk fax mail, Anda dapat membuangnya, membersihkan garis dan menyimpannya di kertas.
+
+486
+00:28:21.001 --> 00:28:24.000
+Itulah yang dimaksud dengan random access minggu ini. Saya adalah Cynthia Steele.
+
+487
+00:28:32.000 --> 00:28:34.000
+Bix adalah pertukaran informasi byte.
+
+488
+00:28:35.000 --> 00:28:39.001
+Dalam pencetakan dan online, Byte dan Bix melayani profesional komputer di seluruh dunia dengan
+
+489
+00:28:39.001 --> 00:28:43.001
+Informasi terperinci tentang perangkat keras, perangkat lunak dan teknologi baru.
+
+490
+00:28:45.000 --> 00:28:50.001
+Untuk transkrip dari Komputer Chronicles minggu ini, kirim $4 ke PTV Publications
+
+491
+00:28:50.001 --> 00:28:56.000
+Pejabat Pos 701, Kent, Ohio 44240.
+
+492
+00:28:57.000 --> 00:28:58.001
+Silakan tunjukkan tanggal program.
+
+493
+00:29:06.001 --> 00:29:12.001
+Terima kasih
+
+494
+00:29:12.001 --> 00:29:15.001
+Kamu yang
