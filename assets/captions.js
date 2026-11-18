@@ -49,7 +49,7 @@ function nativeText(value) {
     let backing = store.get('re_caption_backing', false) === true;
     let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
     let captionIndex = null, overlaySource = '', requestNumber = 0, captionFetch=null, captionBlob='';
-    let languageRefresh=null,lastLanguageRefresh=-Infinity;
+    let languageRefresh=null,lastLanguageRefresh=-Infinity,lastLanguageRefreshLanguage=null;
     const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
     let language=window.RabbitLocale?.resolve()||store.get('re_caption_language','en'),translations=[];
     if(!languages.includes(language))language='en';
@@ -80,7 +80,7 @@ function nativeText(value) {
       media=next;overlaySource=url;updateAppearance();attach();
     }
     async function refreshIndex(){
-      const request=++requestNumber;
+      const request=++requestNumber,requestedLanguage=language;
       try{
         const response=await fetch('/caption-index.json',{cache:'no-cache',signal:typeof AbortSignal!=='undefined'&&AbortSignal.timeout?AbortSignal.timeout(15000):undefined});
         if(!response.ok)return;
@@ -96,19 +96,22 @@ function nativeText(value) {
         }
         captionIndex=records;resolveMedia();
         try{
-          const translatedResponse=await fetch('/caption-translations.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});
-          if(translatedResponse.ok){const result=await translatedResponse.json();if(request===requestNumber&&result.schemaVersion===1&&Array.isArray(result.records)){
-            translations=result.records.filter(r=>languages.includes(r.language)&&/^translated-[a-f0-9]{64}\.vtt$/.test(r.file||'')&&/^[a-f0-9]{64}$/.test(r.sha256||'')&&/^[a-f0-9]{64}$/.test(r.sourceSha256||''));resolveMedia();
+          let translatedResponse=await fetch('/caption-translations/'+requestedLanguage+'.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});
+          // Older deployments still expose the complete index. Fall back only
+          // when the partition is absent, never after a slow/failed download.
+          if(translatedResponse.status===404)translatedResponse=await fetch('/caption-translations.json',{cache:'no-cache',signal:AbortSignal.timeout(15000)});
+          if(translatedResponse.ok){const result=await translatedResponse.json();if(request===requestNumber&&requestedLanguage===language&&result.schemaVersion===1&&(!result.language||result.language===requestedLanguage)&&Array.isArray(result.records)){
+            translations=result.records.filter(r=>r.language===requestedLanguage&&languages.includes(r.language)&&/^translated-[a-f0-9]{64}\.vtt$/.test(r.file||'')&&/^[a-f0-9]{64}$/.test(r.sha256||'')&&/^[a-f0-9]{64}$/.test(r.sourceSha256||''));resolveMedia();
           }}
         }catch{/* Keep original captions while a language is unavailable. */}
       }catch{/* A failed refresh preserves the last known caption availability. */}
     }
     function refreshRequestedLanguage(){
-      // Language/menu taps share one bounded refresh; repeated taps must not
-      // redownload the whole translation manifest for every selection.
-      if(languageRefresh)return languageRefresh;
-      if(Date.now()-lastLanguageRefresh<10000)return;
-      lastLanguageRefresh=Date.now();
+      // A changed language bypasses the repeat-tap throttle. If a selection
+      // changes during a request, follow it with exactly one current request.
+      if(languageRefresh)return languageRefresh.then(()=>lastLanguageRefreshLanguage!==language?refreshRequestedLanguage():undefined);
+      if(Date.now()-lastLanguageRefresh<10000&&lastLanguageRefreshLanguage===language)return;
+      lastLanguageRefresh=Date.now();lastLanguageRefreshLanguage=language;
       languageRefresh=refreshIndex().finally(()=>{languageRefresh=null;});
       return languageRefresh;
     }

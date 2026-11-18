@@ -17,3 +17,9 @@ test('caption-only publishing restores an already deployed artifact and bypasses
  }
  const overlay=steps.find(s=>s.includes('name: Add standalone caption availability'));assert.match(overlay,/node scripts\/build-caption-index\.mjs _site/);assert.doesNotMatch(overlay,/stage-programming|build-catalog|build-games|build-tv-feed|git /);
 });
+
+
+test('caption source repair and language delivery stay on the caption-only path',()=>{
+ const classifier=workflow.split('if [ -n "$changed" ] && ! printf')[2].split('then')[0];
+ assert.ok(classifier.includes('caption-jobs'));assert.ok(classifier.includes('build-caption-index'));assert.ok(classifier.includes('caption-labels-browser'));
+});

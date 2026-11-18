@@ -50,7 +50,7 @@ jobs:
           fi
           # Caption delivery/assembly code can update the exact deployed snapshot
           # without running a catalog, schedule or TV-feed writer.
-          if [ -n "$changed" ] && ! printf '%s\n' "$changed" | grep -qvE '^(assets/captions\.js$|scripts/(build-caption-index|caption-only-publish|caption-translations|caption-labels-browser|caption-markup)\.(mjs|test\.mjs)$|\.github/workflows/catalog\.yml$)'; then
+          if [ -n "$changed" ] && ! printf '%s\n' "$changed" | grep -qvE '^(assets/captions\.js$|scripts/(build-caption-index|caption-jobs|caption-only-publish|caption-translations|caption-labels-browser|caption-markup)\.(mjs|test\.mjs)$|\.github/workflows/catalog\.yml$)'; then
             echo "captions_only=yes" >> "$GITHUB_OUTPUT"
             echo "catalog=no" >> "$GITHUB_OUTPUT"
             exit 0

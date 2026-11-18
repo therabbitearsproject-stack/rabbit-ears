@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {captionJobIdentity,archiveCaptionSource,captionLanguage,generateCaptionJobs,importCaptionCompletion,validateGeneratedVtt,applyGeneratedCaptions,burnedCaptionSources,sha256} from './caption-jobs.mjs';
+import {REVIEWED_PROVIDED_CAPTION_REPAIRS,reviewedProvidedCaptionRepair,captionJobIdentity,archiveCaptionSource,captionLanguage,generateCaptionJobs,importCaptionCompletion,validateGeneratedVtt,applyGeneratedCaptions,burnedCaptionSources,sha256} from './caption-jobs.mjs';
 
 const row=(id='film',sub='',video='selected/full movie.mp4',duration=120)=>[id,video,duration,'Feature','1980',sub,'archive-item',640,480];
 const channels=[{q:'midnight',no:42,name:'Midnight Mirage'},{q:'active',no:97,name:'Subspace 97'},{q:'other',no:30,name:'Drive-In'}];
@@ -139,4 +139,32 @@ test('existing English, reviewed and burned tracks are never upgrade targets; id
  for(const protection of [{reviewedManifest:{episodes:{film:{archiveId:'archive-item',video:row()[1],duration:120,status:'passed'}}}},{reviewDocuments:[{id:'archive-item',video:row()[1],burnedEnglish:'yes'}]}])assert.throws(()=>importCaptionCompletion({...f,...protection}),/protected/);
  assert.equal(importCaptionCompletion({...f,generatedManifest:result.manifest}).duplicate,true);
  const changed=vtt.replace('Hello there.','Changed translation.');assert.throws(()=>importCaptionCompletion({...f,generatedManifest:result.manifest,completion:{...f.completion,vtt:changed,vttSha256:sha256(changed)}}),/cannot be overwritten/);
+});
+
+
+function repairFixture(repair){
+ const provided=[repair.archiveId,repair.video,repair.duration,'Reviewed damaged VHS supplied CC','',repair.sub];
+ const catalog={pools:{active:[provided]}},queue=generateCaptionJobs({catalog,channels,targetLanguage:'en'}),job=queue.jobs[0];
+ const completion={...job,detectedLanguage:'en',outputLanguage:'en',sourceLanguage:'en',sourceLanguages:['en'],translated:false,task:'transcribe',translationModel:null,vtt,vttSha256:sha256(vtt),engine:'whisper',model:'large-v3-turbo'};
+ return {catalog,channels,queue,completion,provided,repair};
+}
+test('only four exact reviewed corrupt VHS identities queue fresh English ASR without changing provided sources',()=>{
+ assert.equal(REVIEWED_PROVIDED_CAPTION_REPAIRS.length,4);
+ for(const repair of REVIEWED_PROVIDED_CAPTION_REPAIRS){
+  const f=repairFixture(repair);assert.equal(f.queue.jobs.length,1);assert.equal(f.completion.language,'en');assert.equal(f.completion.targetLanguage,'en');assert.equal(f.provided[5],repair.sub);
+  for(const [index,value]of [[0,repair.archiveId+'-other'],[1,'other.mp4'],[2,repair.duration+.1],[5,'different.srt']]){const modified=[...f.provided];modified[index]=value;assert.equal(reviewedProvidedCaptionRepair(modified),null);assert.equal(generateCaptionJobs({catalog:{pools:{active:[modified]}},channels,targetLanguage:'en'}).jobs.length,0);}
+ }
+});
+test('reviewed corrupt-source ASR import keeps original assets and requires exact current provided VTT hash to apply',async()=>{
+ for(const repair of REVIEWED_PROVIDED_CAPTION_REPAIRS){
+  const f=repairFixture(repair),result=importCaptionCompletion(f),entry=result.manifest.jobs[f.completion.jobId];
+  assert.equal(entry.replacesProvidedSha256,repair.sha256);assert.equal(f.provided[5],repair.sub);
+  const key=JSON.stringify([repair.archiveId,repair.video,repair.duration]),load=async()=>vtt;
+  for(const hashes of [new Map(),new Map([[key,'0'.repeat(64)]])])assert.equal((await applyGeneratedCaptions([f.provided],result.manifest,load,{providedCaptionHashes:hashes}))[0][5],repair.sub);
+  const hashes=new Map([[key,repair.sha256]]),applied=(await applyGeneratedCaptions([f.provided],result.manifest,load,{providedCaptionHashes:hashes}))[0];assert.equal(applied[5],result.links[0].sub);assert.equal(applied[11].kind,'auto-generated');
+  for(const altered of [{sha256:'0'.repeat(64)},{replacesProvidedSha256:'0'.repeat(64)}]){const manifest=structuredClone(result.manifest);Object.assign(manifest.jobs[f.completion.jobId],altered);assert.equal((await applyGeneratedCaptions([f.provided],manifest,load,{providedCaptionHashes:hashes}))[0][5],repair.sub);}
+  assert.equal((await applyGeneratedCaptions([f.provided],result.manifest,async()=>{throw Error('missing');},{providedCaptionHashes:hashes}))[0][5],repair.sub);
+  const reviewed=[...f.provided];reviewed[5]='local:reviewed.vtt';assert.equal((await applyGeneratedCaptions([reviewed],result.manifest,load,{providedCaptionHashes:hashes}))[0][5],reviewed[5]);
+  assert.throws(()=>importCaptionCompletion({...f,completion:{...f.completion,vttSha256:'0'.repeat(64)}}),/checksum/);
+ }
 });

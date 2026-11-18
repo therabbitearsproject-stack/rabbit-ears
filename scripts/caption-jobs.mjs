@@ -25,6 +25,24 @@ const fileIdentity=(archiveId,video)=>JSON.stringify([archiveId,video]);
 const exactIdentity=({archiveId,video,duration})=>JSON.stringify([archiveId,video,duration]);
 const rowIdentity=row=>({archiveId:row[6]||row[0],video:row[1],duration:row[2]});
 const english=language=>language==='en'||language?.startsWith('en-');
+// Reviewed corrupt supplied tracks only. Original assets remain available for audit.
+// Applying a replacement additionally requires the current deployed VTT byte hash.
+export const REVIEWED_PROVIDED_CAPTION_REPAIRS=Object.freeze([
+ ['vintage-vhs-richard-simmons-no-ifs-ands-or-butts','richard_simmons_no_ifs_ands_or_butts_01.mp4',1284.6,'richard_simmons_no_ifs_ands_or_butts_01.CC1.srt','154c18b56c9ecefb8a962f6d9785fc87dd0b743ed0dbbf79b96aa006831a6500'],
+ ['vintage-vhs-richard-simmons-latin-blast-off','richard_simmons_latin_blast_off_01.mp4',2560.6,'richard_simmons_latin_blast_off_01.CC1.srt','5347a456a2f68751f0a0fee19865ad76dd9394fdad1ac5109defc71661c96375'],
+ ['vintage-vhs-the-carol-burnett-show-a-reunion','the_carol_burnett_show_a_reunion_01.mp4',5700.7,'the_carol_burnett_show_a_reunion_01.CC1.srt','c6aac8802e6911fec3a6398218e3a2ae4058f153736c0416fa97606dfef6a9e6'],
+ ['vintage-vhs-johnny-carson-his-favorite-moments-from-the-tonight-show-70s--80s','johnny_carson_his_favorite_moments_70s_80s_01.ia.mp4',3093.2,'johnny_carson_his_favorite_moments_70s_80s_01.CC1.srt','ce0e6548097597db06cdd67091a2692e3e0829ce9ba6fcf9c9eaa4e50bb5d287']
+].map(r=>Object.freeze({archiveId:r[0],video:r[1],duration:r[2],sub:r[3],sha256:r[4]})));
+export function reviewedProvidedCaptionRepair(row){
+ const identity=rowIdentity(row);
+ return REVIEWED_PROVIDED_CAPTION_REPAIRS.find(r=>exactIdentity(r)===exactIdentity(identity)&&r.sub===row[5])||null;
+}
+function repairForItem(item,catalog){
+ const linked=item.aliases.flatMap(({q,id})=>catalog.pools[q].filter(r=>r[0]===id&&r[5]));
+ const repairs=linked.map(reviewedProvidedCaptionRepair);
+ return repairs.length&&repairs.every(Boolean)&&repairs.every(r=>r.sha256===repairs[0].sha256)?repairs[0]:null;
+}
+
 function outputMetadata(value){
  const actual=value.detectedLanguage;
  if(typeof actual!=='string'||captionLanguage(actual)==='auto'||captionLanguage(actual)!==actual)throw Error('Invalid actual source language');
@@ -106,8 +124,9 @@ export function generateCaptionJobs({catalog,channels=[],reviewedManifest,genera
   const cached=verifiedBySource.get(exact)||[];
   if(targetLanguage==='en'&&cached.some(e=>english(outputMetadata(e).language))){summary.linked++;continue;}
   const parent=targetLanguage==='en'?foreignParent(item,catalog,generatedManifest,verifiedGeneratedJobIds,undefined,cached):null;
-  if(item.linked&&!parent){summary.linked++;continue;}if(burned.has(file)){summary.burned++;continue;}if(reviewed.has(exact)){summary.reviewed++;continue;}
-  const language=parent?.language||captionLanguage(languages.get(file)),jobId=captionJobIdentity({...item,language,targetLanguage});
+  const repair=targetLanguage==='en'?repairForItem(item,catalog):null;
+  if(item.linked&&!parent&&!repair){summary.linked++;continue;}if(burned.has(file)){summary.burned++;continue;}if(reviewed.has(exact)){summary.reviewed++;continue;}
+  const language=repair?'en':parent?.language||captionLanguage(languages.get(file)),jobId=captionJobIdentity({...item,language,targetLanguage});
   const priority=item.channels.some(c=>c.no===42)?0:item.channels.some(c=>activeChannels.includes(c.no))?10:50;
   const {linked,...metadata}=item;
   jobs.push({schemaVersion:1,project:CAPTION_PROJECT,...metadata,language,...(targetLanguage?{targetLanguage,supersedesJobId:captionJobIdentity({...item,language})}:{}),jobId,identitySha256:jobId,sourceUrl:archiveCaptionSource(item.archiveId,item.video),priority});
@@ -157,18 +176,20 @@ export function importCaptionCompletion({completion,queue,catalog,channels=[],re
  if(burnedCaptionSources(reviewDocuments).has(fileIdentity(job.archiveId,job.video))||reviewedIdentities(reviewedManifest).has(exactIdentity(job)))throw Error('Existing reviewed or burned captions are protected');
  const name='auto-'+jobId+'.vtt',sub='local:'+name;
  const parent=job.targetLanguage==='en'?foreignParent(item,catalog,generatedManifest,verifiedGeneratedJobIds,sub):null;
- if(item.aliases.some(({q,id})=>catalog.pools[q].some(r=>r[0]===id&&r[5]&&r[5]!==sub))&&(!parent||parent.jobId!==supersedes))throw Error('An existing linked caption is protected');
+ const repair=job.targetLanguage==='en'&&job.language==='en'&&output.language==='en'?repairForItem(item,catalog):null;
+ if(item.aliases.some(({q,id})=>catalog.pools[q].some(r=>r[0]===id&&r[5]&&r[5]!==sub))&&(!parent||parent.jobId!==supersedes)&&!repair)throw Error('An existing linked caption is protected');
  const prior=generatedManifest.jobs?.[jobId];
  if(prior&&(prior.sha256!==completion.vttSha256||prior.detectedLanguage!==completion.detectedLanguage||JSON.stringify(outputMetadata(prior))!==JSON.stringify(output)))throw Error('Existing generated caption cannot be overwritten');
  const entry={jobId,identitySha256:jobId,archiveId:job.archiveId,video:job.video,duration:job.duration,language:job.language,detectedLanguage:completion.detectedLanguage,
   sourceUrl,status:'auto-generated',file:name,sha256:completion.vttSha256,cues:validation.cues,engine:String(completion.engine||'whisper'),model:String(completion.model||'unknown'),generatedAt:completion.generatedAt||null};
+ if(repair)entry.replacesProvidedSha256=repair.sha256;
  if(job.targetLanguage)Object.assign(entry,{targetLanguage:'en',supersedesJobId:supersedes,outputLanguage:'en',sourceLanguage:output.sourceLanguage,sourceLanguages:output.sourceLanguages,translated:output.translated,task:completion.task,translationModel:completion.translationModel});
  const manifest={...generatedManifest,version:1,project:CAPTION_PROJECT,jobs:{...generatedManifest.jobs,[jobId]:prior||entry}};
  return {duplicate:!!prior,asset:{name,text:completion.vtt,sha256:entry.sha256},manifest,links:item.aliases.map(alias=>({...alias,sub,captionMetadata:{kind:'auto-generated',...output,jobId}}))};
 }
 
-// Call AFTER applyReviewedCaptions. Generated captions fill empty slots only.
-export async function applyGeneratedCaptions(rows,manifest,load,{reviewDocuments=[]}={}){
+// Call AFTER applyReviewedCaptions. Only byte-verified reviewed corrupt tracks may be replaced.
+export async function applyGeneratedCaptions(rows,manifest,load,{reviewDocuments=[],providedCaptionHashes=new Map()}={}){
  const burned=burnedCaptionSources(reviewDocuments),entries=new Map(),cache=new Map();
  if(manifest?.project===CAPTION_PROJECT&&manifest.version===1)for(const entry of Object.values(manifest.jobs||{}))if(entry.status==='auto-generated'){
   const key=exactIdentity(entry),list=entries.get(key)||[];list.push(entry);entries.set(key,list);
@@ -179,10 +200,13 @@ export async function applyGeneratedCaptions(rows,manifest,load,{reviewDocuments
   const oldId=/^local:auto-([a-f0-9]{64})\.vtt$/.exec(out[5]||'')?.[1];
   if(oldId&&(out[11]?.kind==='auto-generated'||ownedEntry(manifest,oldId,rowIdentity(out)))){out[5]='';if(out[11]?.kind==='auto-generated')delete out[11];}
   else if(out[11]?.kind==='auto-generated')delete out[11]; // A reviewed replacement must lose its old automatic label.
-  if(out[5]||burned.has(fileIdentity(out[6]||out[0],out[1])))return out;
+  const repair=reviewedProvidedCaptionRepair(out);
+  const approvedRepair=repair&&providedCaptionHashes.get(exactIdentity(repair))===repair.sha256;
+  if(out[5]&&!approvedRepair||burned.has(fileIdentity(out[6]||out[0],out[1])))return out;
   const identity=rowIdentity(out),candidates=entries.get(exactIdentity(identity))||[];
   for(const entry of candidates)try{
    const output=outputMetadata(entry);
+   if(approvedRepair&&(entry.replacesProvidedSha256!==repair.sha256||entry.targetLanguage!=='en'||entry.language!=='en'||output.language!=='en'))continue;
    const jobId=captionJobIdentity(entry),name='auto-'+jobId+'.vtt';
    if(entry.jobId!==jobId||entry.identitySha256!==jobId||entry.file!==name||entry.sourceUrl!==archiveCaptionSource(entry.archiveId,entry.video)||(entry.targetLanguage&&entry.supersedesJobId!==captionJobIdentity({...entry,targetLanguage:undefined})))continue;
    if(!cache.has(jobId))cache.set(jobId,Promise.resolve().then(()=>load(name)).then(text=>{if(sha256(text)!==entry.sha256)throw Error('Changed generated caption');validateGeneratedVtt(text,entry.duration);return true;}).catch(()=>false));

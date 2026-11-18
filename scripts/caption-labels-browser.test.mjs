@@ -19,9 +19,9 @@ test('saved language switching preserves video and clock, supports RTL and rejec
    let loads=0,plays=0;video.load=()=>loads++;video.play=()=>plays++;video.currentTime=42;
    const ui=RabbitCaptions.create({video,screen,button,store:{get:(k,d)=>k==='re_caption_style'?'white':d,set(){}},source:()=>'/subs/film.vtt'});
    ui.setMedia({id:'film',archiveId:'a',file:'film.mp4',dur:120,sub:'English.srt'});await ui.refreshIndex();
-   ui.applyPreferences({re_caption_language:'ar'});const arabic={url:video.querySelector('track').dataset.captionSource||video.querySelector('track').src,language:video.querySelector('track').srclang,dir:screen.querySelector('.caption-layer').dir};
-   ui.applyPreferences({re_caption_language:'fr'});const fallback={url:video.querySelector('track').src,text:screen.querySelector('.caption-translation-status').textContent};
-   translations=[{...translations[0],sourceSha256:'d'.repeat(64)}];await ui.refreshIndex();ui.applyPreferences({re_caption_language:'ar'});const stale=video.querySelector('track').src;
+   await ui.applyPreferences({re_caption_language:'ar'});const arabic={url:video.querySelector('track').dataset.captionSource||video.querySelector('track').src,language:video.querySelector('track').srclang,dir:screen.querySelector('.caption-layer').dir};
+   await ui.applyPreferences({re_caption_language:'fr'});const fallback={url:video.querySelector('track').src,text:screen.querySelector('.caption-translation-status').textContent};
+   translations=[{...translations[0],sourceSha256:'d'.repeat(64)}];await ui.refreshIndex();await ui.applyPreferences({re_caption_language:'ar'});const stale=video.querySelector('track').src;
    ui.setMedia({id:'burned',burnedCaptions:true});const embedded=button.title;
    return {arabic,fallback,stale,embedded,sameVideo:video===originalVideo,time:video.currentTime,loads,plays};
   });
@@ -112,5 +112,41 @@ test('standalone caption index hot-refresh changes tracks only and ignores stale
   assert.ok(result.manual.endsWith('/subs/episode-a.vtt'));assert.equal(result.burnedBlocked,true);assert.equal(result.reviewed,'English');
   assert.equal(result.switchedSafe,true);assert.equal(result.unchangedMedia,true);assert.equal(result.sameVideo,true);assert.equal(result.time,35);
   assert.equal(result.loads+result.plays+result.pauses,0);assert.equal(result.style,'white');
+ }finally{await browser.close();}
+});
+
+
+test('language indexes are bounded to selection, rapid switches win, and legacy fallback requires 404',{skip:!chromium},async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.RABBIT_EARS_BROWSER_EXE?{executablePath:process.env.RABBIT_EARS_BROWSER_EXE}:{})});
+ try{
+  const page=await browser.newPage();await page.route('http://captions.test/**',route=>route.fulfill({contentType:'text/html',body:'<div id="screen"><video id="video"></video><button id="cc">CC</button></div>'}));await page.goto('http://captions.test/');
+  await page.addScriptTag({path:fileURLToPath(new URL('../assets/captions.js',import.meta.url))});
+  const result=await page.evaluate(async()=>{
+   const calls=[],identity={archiveId:'a',video:'film.mp4',duration:120},hash='a'.repeat(64);
+   const original={...identity,sub:'English.srt',sourcePath:'/subs/film.vtt',sha256:hash,captionMetadata:{kind:'provided',language:'en'}};
+   const record=language=>({...identity,language,sourceLanguage:'en',sourceSha256:hash,sha256:'b'.repeat(64),file:'translated-'+'c'.repeat(64)+'.vtt'});
+   let mode='normal',release;
+   window.fetch=async url=>{
+    calls.push(url);
+    if(url==='/caption-index.json')return {ok:true,json:async()=>({schemaVersion:1,records:[original]})};
+    const language=url.match(/\/([a-z]{2})\.json$/)?.[1];
+    if(mode==='defer'&&language==='ar'){await new Promise(resolve=>{release=resolve;});}
+    if(mode==='network')throw Error('offline');
+    if(mode==='legacy'&&language)return {ok:false,status:404};
+    return {ok:true,json:async()=>({schemaVersion:1,...(language?{language}:{}),records:language?[record(language)]:[record('fr')]})};
+   };
+   const video=document.getElementById('video'),ui=RabbitCaptions.create({video,screen:document.getElementById('screen'),button:document.getElementById('cc'),store:{get:(k,d)=>k==='re_caption_style'?'white':d,set(){}},source:()=>'/subs/film.vtt'});
+   let loads=0;video.load=()=>loads++;video.currentTime=33;
+   ui.setMedia({id:'film',archiveId:'a',file:'film.mp4',dur:120,sub:'English.srt'});await ui.refreshIndex();
+   mode='defer';const first=ui.applyPreferences({re_caption_language:'ar'});
+   while(!release)await new Promise(resolve=>setTimeout(resolve,0));
+   const second=ui.applyPreferences({re_caption_language:'fr'});release();await Promise.all([first,second]);
+   const actual=video.querySelector('track').srclang,normalCalls=[...calls];
+   mode='legacy';await ui.refreshIndex();const fallback=calls.filter(x=>x==='/caption-translations.json').length;
+   mode='network';await ui.refreshIndex();const afterFailure=calls.filter(x=>x==='/caption-translations.json').length;
+   return {actual,normalCalls,fallback,afterFailure,loads,time:video.currentTime};
+  });
+  assert.equal(result.actual,'fr');assert.ok(result.normalCalls.includes('/caption-translations/ar.json'));assert.ok(result.normalCalls.includes('/caption-translations/fr.json'));
+  assert.equal(result.normalCalls.includes('/caption-translations.json'),false);assert.equal(result.fallback,1);assert.equal(result.afterFailure,1);assert.equal(result.loads,0);assert.equal(result.time,33);
  }finally{await browser.close();}
 });

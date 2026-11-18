@@ -17,11 +17,15 @@ test('saved translations require the identical source hash and never change prog
   await writeFile(join(repo,'captions/translation-manifest.json'),JSON.stringify({schemaVersion:1,records:[{...identity,language:'es',sourceSha256:sha(original),file,sha256:sha(translated)},{...identity,language:'fr',sourceSha256:'0'.repeat(64),file,sha256:sha(translated)}]}));
   await buildCaptionIndex({repoRoot:repo,siteRoot:site});
   const index=JSON.parse(await readFile(join(site,'caption-translations.json')));assert.equal(index.records.length,1);assert.equal(index.records[0].language,'es');
+  const spanish=JSON.parse(await readFile(join(site,'caption-translations/es.json'))),french=JSON.parse(await readFile(join(site,'caption-translations/fr.json')));
+  assert.equal(spanish.language,'es');assert.deepEqual(spanish.records,index.records);assert.deepEqual(french.records,[]);
+  assert.deepEqual(JSON.parse(await readFile(join(site,'caption-translations/ar.json'))).records,[]);
   assert.equal(await readFile(join(site,'catalog.json'),'utf8'),catalog);assert.equal(await readFile(join(site,'captions',file),'utf8'),translated);
   await buildCaptionIndex({repoRoot:repo,siteRoot:site,externalTranslations:true});
   const external=JSON.parse(await readFile(join(site,'caption-translations.json')));
   assert.equal(external.records[0].deliveryUrl,'https://raw.githubusercontent.com/therabbitearsproject-stack/rabbit-ears/main/captions/'+file+'?v='+sha(translated));
   assert.equal(external.records[0].sourceSha256,sha(original));
+  assert.deepEqual(JSON.parse(await readFile(join(site,'caption-translations/es.json'))).records,external.records);
   assert.equal(await readFile(join(site,'subs/film.vtt'),'utf8'),original);
   await assert.rejects(readFile(join(site,'captions',file)),{code:'ENOENT'});
  }finally{await rm(root,{recursive:true,force:true});}
