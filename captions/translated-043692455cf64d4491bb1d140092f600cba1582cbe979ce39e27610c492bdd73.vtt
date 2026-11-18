@@ -1,0 +1,1489 @@
+WEBVTT
+
+1
+00:00:05.001 --> 00:00:07.001
+[Baca juga: Komet Hall [...]
+
+2
+00:00:12.001 --> 00:00:16.001
+Para astronot profesional memiliki mainan fantasi besar seperti ini untuk dimainkan ketika mereka
+
+3
+00:00:16.001 --> 00:00:20.001
+mencari alam semesta, tetapi jika semua yang Anda miliki adalah sedikit teleskop seperti ini ia dapat
+
+4
+00:00:20.001 --> 00:00:24.000
+Sangat sulit untuk menemukan Komet Halle atau apa pun. Namun ada satu
+
+5
+00:00:24.000 --> 00:00:28.001
+Cara Mudah Menggunakan Komputer Anda Hari ini kami akan membantu Anda menemukan Komet Halle dan banyak
+
+6
+00:00:28.001 --> 00:00:33.000
+dari hal-hal lain yang menarik di langit ketika kita melihat software astronomi pada
+
+7
+00:00:33.000 --> 00:00:34.001
+Ini adalah edisi dari Computer Chronicles.
+
+8
+00:00:53.001 --> 00:01:00.001
+[...] Lagu&quot;] The Computer Chronicles dibuat mungkin sebahagiannya dengan bantuan dari
+
+9
+00:01:00.001 --> 00:01:05.001
+AFIPs, Federasi Masyarakat Pemrosesan Informasi Amerika. dari AFIP,
+
+10
+00:01:06.000 --> 00:01:12.000
+sponsor OAC 86, konferensi terkemuka di negara ini tentang teknologi bisnis. Untuk
+
+11
+00:01:12.000 --> 00:01:18.001
+Informasi konferensi memanggil 800 OAC 1986, mengeksplorasi solusi bisnis saat ini.
+
+12
+00:01:18.001 --> 00:01:24.000
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte. oleh byte
+
+13
+00:01:24.000 --> 00:01:28.001
+artikel teknis terperinci tentang perangkat keras, perangkat lunak dan bahasa baru yang meliputi
+
+14
+00:01:28.001 --> 00:01:33.001
+teknologi mikrokomputer di seluruh dunia. Bite adalah standar internasional.
+
+15
+00:01:39.001 --> 00:01:44.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+16
+00:01:44.000 --> 00:01:48.000
+Gary, ini adalah program yang disebut Comet Halle dari Great Wave Software dan itu membantu
+
+17
+00:01:48.000 --> 00:01:51.000
+Kami menemukan di mana komet berada di langit pada setiap waktu. Anda dapat melihat bahwa ada yang
+
+18
+00:01:51.000 --> 00:01:55.000
+Komet dengan punggungnya sekarang tepat di dekat Sagittarius. Saya benar-benar bisa masuk ke sini
+
+19
+00:01:55.000 --> 00:01:59.000
+dan jenis meletakkannya dalam mode otomatis dan itu hanya akan mengklik melalui dan menunjukkan kepada kami apa yang
+
+20
+00:01:59.000 --> 00:02:02.000
+Fasa bulan adalah setiap hari dan tepat di mana komet berada setiap hari.
+
+21
+00:02:02.000 --> 00:02:05.001
+Kita bisa melihatnya bergerak di langit di sana. Gary, tampaknya ada yang tinggi
+
+22
+00:02:05.001 --> 00:02:09.001
+Korelasi fakta antara astronom amatir dan hobi komputer. Apakah kamu
+
+23
+00:02:09.001 --> 00:02:12.000
+Pernah ke astronomi? Aku hanya kidding. Nah, Stuart, apa yang kelihatan seperti
+
+24
+00:02:12.000 --> 00:02:16.000
+kehidupan sebelumnya saya mengajar dalam navigasi maritim di mana kita menggunakan tabel, logaritma, dan
+
+25
+00:02:16.000 --> 00:02:19.000
+Banyak subtraksi tambahan untuk datang dengan lokasi di Bumi. 20 tahun
+
+26
+00:02:19.000 --> 00:02:21.000
+Sebelumnya . Ya, itu sudah lama.
+
+27
+00:02:21.001 --> 00:02:24.001
+Dan saat ini dengan teknologi mikroprosesor Anda hanya menggunakan sedikit nav kalkulator.
+
+28
+00:02:24.001 --> 00:02:27.000
+Jika Anda benar-benar malas, hanya tekan tombol pada penerima satelit Anda.
+
+29
+00:02:28.000 --> 00:02:31.001
+Hari ini kita akan melihat beberapa perangkat lunak astronomi terbaru. Kami akan
+
+30
+00:02:31.001 --> 00:02:35.000
+memerlukan seorang astronom profesional untuk mengetahui bagaimana dia menggunakan komputer dan kita akan melihat
+
+31
+00:02:35.000 --> 00:02:39.001
+Gambar nyata dari komet Halle. Pertama-tama kita akan pergi ke sebuah observatorium untuk melihat
+
+32
+00:02:39.001 --> 00:02:43.001
+Bagaimana komputer telah secara praktis menggantikan teleskop dalam eksplorasi
+
+33
+00:02:43.001 --> 00:02:50.001
+dari alam semesta. Sejarah Lick Observatory berhampiran San Jose, California dimulai di
+
+34
+00:02:50.001 --> 00:02:55.001
+pada akhir abad ke-19. Gunung-gunung yang indah itu dibangun di sebuah
+
+35
+00:02:55.001 --> 00:03:00.001
+padang gurun dengan bantuan tim vagon dan mesin yang paling sederhana. Namun, sementara yang
+
+36
+00:03:00.001 --> 00:03:05.000
+kubah masih memiliki beberapa peralatan asli, operasi teleskopnya
+
+37
+00:03:05.000 --> 00:03:11.000
+telah berubah secara dramatis. Teleskop reflektor monumental Shane dikendalikan oleh
+
+38
+00:03:11.000 --> 00:03:16.001
+dan memindahkan data ke komputer. Pergerakan-pergerakan yang indah melalui langit malam adalah
+
+39
+00:03:16.001 --> 00:03:21.000
+dikoreksi oleh program yang menentukan di mana untuk menargetkannya dan kemudian mengimbangi
+
+40
+00:03:21.000 --> 00:03:26.000
+untuk pergerakan bumi. Cermin lebar 10 kaki dari teleskop adalah sumber
+
+41
+00:03:26.000 --> 00:03:32.000
+kekuatan pengumpulan cahaya yang mengesankan, tetapi hasil akhir telah berubah. Sebaliknya
+
+42
+00:03:32.000 --> 00:03:40.001
+dari pita mata atau papan foto, mengisi tingkat kecerahan dengan tidak sesuai
+
+43
+00:03:40.001 --> 00:03:46.000
+dengan sensitivitas. Saya baru-baru ini bekerja untuk mengambil gambar CCD pada Hamilton. Mereka yang,
+
+44
+00:03:46.001 --> 00:03:50.001
+Dari bentuk 500 sampai 500, berarti setiap gambar memiliki sesuatu yang serupa.
+
+45
+00:03:50.001 --> 00:03:55.001
+lebih dari dua juta bit informasi yang terpisah dalam satu gambar dan kita mungkin mengambil
+
+46
+00:03:55.001 --> 00:04:02.001
+Perintah 20 atau 30 gambar seperti itu selama satu malam. Komputer memiliki
+
+47
+00:04:02.001 --> 00:04:06.001
+memberi astronom lebih banyak kontrol untuk mengalir melalui matriks cahaya yang padat.
+
+48
+00:04:06.001 --> 00:04:12.000
+menganalisa dan menganalisis objek secara selektif. Dengan warna yang palsu,
+
+49
+00:04:12.001 --> 00:04:17.001
+Objek-objek seperti komet terlihat lebih menonjol. Para astronot memprediksi bahwa
+
+50
+00:04:17.001 --> 00:04:22.001
+Teleskop dari jarak jauh dengan memenuhi posisi chip di jalur CCD untuk absolut
+
+51
+00:04:22.001 --> 00:04:29.000
+koordinasi di langit. CCD dapat merekam objek yang cerah dan lemah dalam hal yang sama
+
+52
+00:04:29.000 --> 00:04:35.001
+gambar, terima kasih kepada penglihatan yang cepat. Cara untuk mengisolasi suatu objek dengan
+
+53
+00:04:35.001 --> 00:04:40.001
+memisahkan dari emisi dan refleksi cahaya di sekitarnya. Sebenarnya, untuk
+
+54
+00:04:40.001 --> 00:04:46.000
+Beberapa peneliti, kepadatan informasi yang tersedia hari ini memperhitungkan kemampuan kita untuk
+
+55
+00:04:46.000 --> 00:04:50.000
+dan menyerapnya. Saya seorang astronom observasi, jadi saya bisa berbicara secara observatif, dan
+
+56
+00:04:50.000 --> 00:04:55.000
+Ini berarti bahwa mengambil data adalah faktor 10 atau 100 kali lebih efisien
+
+57
+00:04:55.000 --> 00:05:15.000
+Hari ini lebih dari 20 tahun yang lalu ketika saya pertama kali memasuki komputer. bergabung dengan kami sekarang
+
+58
+00:05:15.000 --> 00:05:19.000
+Di studio ini adalah Evan Scharf, astronom utama untuk sistem perangkat lunak Scharf.
+
+59
+00:05:19.000 --> 00:05:23.000
+dari Boulder, Colorado. Dan di samping Evan adalah Robin Raskin, menyumbang editor untuk
+
+60
+00:05:23.000 --> 00:05:26.001
+Majalah Komputer Keluarga, yang baru saja menyelesaikan survei menyeluruh tentang
+
+61
+00:05:26.001 --> 00:05:30.001
+Perangkat lunak astronomi dengan Gary? Robin, itu tampak seperti fit alami untuk memiliki pribadi
+
+62
+00:05:30.001 --> 00:05:35.000
+Komputer dan astronomi bersatu. Dalam survei Anda, apa yang benar-benar tersedia
+
+63
+00:05:35.000 --> 00:05:40.000
+sekarang ? Nah, apa yang tersedia sangat menarik, karena saya pertama kali memulai survei
+
+64
+00:05:40.000 --> 00:05:44.001
+Pada tahun 1984. Kami melihat dan kami memutuskan bahwa tidak ada yang benar-benar tersedia untuk
+
+65
+00:05:44.001 --> 00:05:48.001
+yang baru. Itu sebagian besar tabel matematika yang Anda lihat, tidak ada yang mengerti
+
+66
+00:05:48.001 --> 00:05:52.001
+Setelah itu muncul grafis interaktif. Dan hal yang menarik yang Anda miliki sekarang
+
+67
+00:05:52.001 --> 00:05:57.000
+dengan komputer adalah Anda memiliki cara interaktif untuk mengatakan, tunjukkan saya sebuah konstelasi,
+
+68
+00:05:57.001 --> 00:06:02.000
+menunjukkan aku bintang, menunjukkan aku planet, dan melihatnya secara grafis di layar, dan mengambil
+
+69
+00:06:02.000 --> 00:06:06.000
+informasi itu dan kemudian pergi ke dunia nyata dan melihat dengan sedikit lebih
+
+70
+00:06:06.000 --> 00:06:11.001
+dengan pengetahuan. Dan ia menjadi cara yang sangat menarik bagi pemula untuk belajar. Baiklah, dan
+
+71
+00:06:11.001 --> 00:06:15.000
+Anda berbicara tentang pemula, apakah Anda berbincang tentang siswa terutama, atau hanya amatir
+
+72
+00:06:15.000 --> 00:06:19.000
+Para astronom yang menggunakannya? Pelajar untuk satu. Astronot amatir bisa melangkah lebih jauh
+
+73
+00:06:19.000 --> 00:06:24.000
+dan lihat beberapa koordinat informasi dan lakukan jauh lebih sedikit dari
+
+74
+00:06:24.000 --> 00:06:29.001
+Interpolasi matematika Tetapi keluarga yang menggunakan komputer mereka untuk buku cek
+
+75
+00:06:29.001 --> 00:06:34.001
+dan posisi lain hanya bisa duduk di bawah untuk pertama kalinya, terutama dengan komet
+
+76
+00:06:34.001 --> 00:06:39.001
+di sini tahun ini. Ini adalah jenis yang sangat menarik untuk memiliki cara untuk belajar bahwa
+
+77
+00:06:39.001 --> 00:06:45.001
+Interaktif dan keluarga venture. Jadi keluarga kita, untuk satu, telah menjadi amatir
+
+78
+00:06:45.001 --> 00:06:47.001
+astronom karena komputer rumah.
+
+79
+00:06:47.001 --> 00:06:51.001
+Sekarang, Evan, Anda memiliki program yang disebut Telstar. Ya, aku melakukannya Ini adalah sebuah
+
+80
+00:06:51.001 --> 00:06:53.000
+Contoh dari hal ini, jadi mari kita lihat.
+
+81
+00:06:53.001 --> 00:06:58.001
+Telstar adalah program untuk seseorang yang tidak tahu apa-apa tentang astronomi dan ingin
+
+82
+00:06:58.001 --> 00:07:02.001
+untuk keluar dan melihat ke langit dan mengetahui apa yang ada di sana, apa itu, bagaimana bisa
+
+83
+00:07:02.001 --> 00:07:07.001
+Saya belajar tentang itu. Telstar memungkinkan Anda memiliki lokasi yang dapat menjadi standar
+
+84
+00:07:07.001 --> 00:07:12.000
+Lokasi, dalam kasus ini San Francisco. Ini bisa menjadi rumah di mana saja.
+
+85
+00:07:12.000 --> 00:07:17.000
+Dan seseorang dapat memilih tanggal dan waktu antara tahun nol dan tiga ribu. Untuk A
+
+86
+00:07:17.000 --> 00:07:22.000
+Contoh khusus, kami akan memilih waktu standar kami di San Francisco dan saya akan
+
+87
+00:07:22.000 --> 00:07:28.001
+Seperti jam empat di pagi hari, yang merupakan waktu standar. Saya tidak suka 4 o
+
+88
+00:07:28.001 --> 00:07:34.001
+dan jam. Beritahu kami mengapa. Ternyata itu jam 4 pagi di
+
+89
+00:07:34.001 --> 00:07:41.001
+10 Maret 1982 adalah salah satu hari yang akan menjadi
+
+90
+00:07:41.001 --> 00:07:45.000
+akhir dari dunia. Ini adalah gabungan besar dari semua planet. Planet-planet tersebut adalah
+
+91
+00:07:45.000 --> 00:07:49.001
+untuk menyelaraskan, kekuatan gravitasi, kekuatan metafisika dan sebagainya, dan
+
+92
+00:07:49.001 --> 00:07:54.000
+Dunia akan terpisah. Namun, apa yang sangat menarik adalah bahwa ia memberikan
+
+93
+00:07:54.000 --> 00:07:59.000
+Astronot amatir dan orang-orang yang melihat ke langit memiliki kesempatan untuk melihat enam planet
+
+94
+00:07:59.000 --> 00:08:03.001
+Dengan pandangan yang hanya 90 derajat lebar. Apa yang akan kita lakukan adalah mengambil
+
+95
+00:08:03.001 --> 00:08:08.000
+informasi standar yang disajikan di Telstar dan mari kita lihat secara grafis.
+
+96
+00:08:09.000 --> 00:08:13.001
+Sistem akan mengisi, melakukan berbagai pengiraan pada planet, menyesuaikan untuk
+
+97
+00:08:13.001 --> 00:08:17.001
+precesion atau wobble bumi, menghitung planet dalam dan luar
+
+98
+00:08:17.001 --> 00:08:22.001
+hubungan dan menyajikan pandangan kepada kita yang grafis. Pandangan seperti yang akan kita lihat
+
+99
+00:08:22.001 --> 00:08:28.001
+Dalam beberapa detik, lebar 90 derajat. Kami akan mulai melihat ke selatan dan
+
+100
+00:08:28.001 --> 00:08:33.001
+menutupi dari cakrawala langsung ke atas atau zenith. Ada 9 pandangan
+
+101
+00:08:33.001 --> 00:08:37.001
+dengan bintang Intel. Delapan dari mereka adalah delapan titik dari kompas dengan yang kesembilan.
+
+102
+00:08:37.001 --> 00:08:42.000
+menjadi langsung di atas. Dan dari sudut pandang yang kita ada di sini, kita sebenarnya memiliki enam
+
+103
+00:08:42.000 --> 00:08:46.001
+Planet yang tergelincir. Planet-planet ini diwakili oleh lingkaran kecil yang mewakili
+
+104
+00:08:46.001 --> 00:08:53.001
+Planet-planet dengan cincin di sekitar Saturnus serta menunjukkan bintang-bintang, bintang terang dan
+
+105
+00:08:53.001 --> 00:08:57.001
+dari constellations. Sepertinya konstelasi adalah salah satu yang paling menarik.
+
+106
+00:08:57.001 --> 00:09:01.000
+Elemen orang yang membaca tentang mereka ingin melihat mereka dan Anda berdiri di sana
+
+107
+00:09:01.000 --> 00:09:03.001
+dan melihat ke langit dan berakhir dengan tenggorokan yang menyakitkan tetapi tidak
+
+108
+00:09:03.001 --> 00:09:05.000
+Mereka benar-benar menemukan konstelasi. Supaya saya ingin membantu
+
+109
+00:09:05.000 --> 00:09:07.000
+Mengenal salah satu dari mereka, apa yang bisa Anda lakukan?
+
+110
+00:09:07.000 --> 00:09:11.001
+Apa yang akan kita lakukan adalah hanya menekan C untuk konstelasi dan mengatakan bintang akan menggambar
+
+111
+00:09:11.001 --> 00:09:15.000
+garis antara bintang-bintang tepat di depan mata Anda sehingga Anda dapat melihat bentuk-bentuk.
+
+112
+00:09:16.000 --> 00:09:22.001
+Untuk mengidentifikasi objek apa pun di layar, seseorang hanya menekan saya untuk mengidentifikasi dan bergerak
+
+113
+00:09:22.001 --> 00:09:27.000
+Perbedaan antara satu objek dengan objek individu. Dalam kasus ini, kita akan memilih
+
+114
+00:09:27.000 --> 00:09:32.001
+Konstelasi yang adalah sejenis persegi kanan di depan kita dan jika seseorang memiliki
+
+115
+00:09:32.001 --> 00:09:37.001
+yang berpusat di layar, itu akan memberitahu kita bahwa ini khusus satu,
+
+116
+00:09:38.000 --> 00:09:43.001
+Konstellasi dengan Libra. Ini akan memberitahu Anda lokasi astronomi, yang tepat
+
+117
+00:09:43.001 --> 00:09:48.000
+Ascension dan declination tetapi juga azimuth dan elevation, kepemimpinan kompas
+
+118
+00:09:48.000 --> 00:09:52.001
+dan seberapa tinggi, waktu yang ia naik dan arah di mana ia naik dari dan
+
+119
+00:09:52.001 --> 00:09:56.000
+waktu yang ditetapkan. Okay, Evan, anggap saya ingin menemukan sesuatu yang spesifik di depan
+
+120
+00:09:56.000 --> 00:10:00.000
+Waktu dan saya ingin melihat di mana ia berada di langit? Kami akan memasukkan tanggal dan waktu dan
+
+121
+00:10:00.000 --> 00:10:03.000
+dengan cara ini akan mencakup antara tahun nol dan tiga ribu untuk setiap
+
+122
+00:10:03.000 --> 00:10:09.001
+lokasi dan kami akan memasukkan tanggal dan waktu kami dan kami hanya memasukkan L untuk lokasi. dalam
+
+123
+00:10:09.001 --> 00:10:16.001
+Contoh khusus ini, mari kita temukan Saturnus dan itu akan memberi kita yang sama.
+
+124
+00:10:16.001 --> 00:10:20.001
+Informasi tentang Saturnus. Dalam kasus ini, ia memberitahu kita fasa atau
+
+125
+00:10:20.001 --> 00:10:27.000
+Pembahasan setelah memberikan informasi teknis. Saturnus adalah sebuah
+
+126
+00:10:27.000 --> 00:10:31.000
+Bercahaya di tengah-tengah objek. Tidak ada keraguan.
+
+127
+00:10:31.000 --> 00:10:35.001
+Kami tidak mengenalnya dengan cincin, perangkat lunak akan melakukannya. Berapa banyak yang berbeda
+
+128
+00:10:35.001 --> 00:10:39.000
+Apakah Anda sekarang mengkategorikan program ini? Ada tiga tabel bintang yang berbeda.
+
+129
+00:10:39.000 --> 00:10:44.000
+dan setiap tabel memiliki sekitar 250 objek dan mereka mewakili objek yang paling cerah
+
+130
+00:10:44.000 --> 00:10:48.000
+yang seseorang akan melihat ketika Anda berjalan keluar dan melihat keluar dengan mata telanjang. Dan kami
+
+131
+00:10:48.000 --> 00:10:51.001
+Anda bisa menemukan Komet Halley misalnya di sini jika kita ingin menggunakannya untuk itu. Jika
+
+132
+00:10:51.001 --> 00:10:55.000
+Kami mengambil tanggal dan waktu ketika Komet Halley dekat, kami pasti bisa.
+
+133
+00:10:57.000 --> 00:11:01.001
+Secara teratur untuk keluar dan menemukan komet. Robin, apa yang dilakukan oleh perangkat lunak
+
+134
+00:11:01.001 --> 00:11:05.000
+pendekatan astronomi membuat Anda tidak dapat keluar dari buku atau daftar yang biasa
+
+135
+00:11:05.000 --> 00:11:07.001
+Tabel dan angka? Tentu saja, pendekatan Evan adalah
+
+136
+00:11:07.001 --> 00:11:09.001
+menjadi grafis dan interaktif.
+
+137
+00:11:10.000 --> 00:11:14.000
+Tidak semua orang tinggal di dekat planet. Jika Anda melakukannya, Anda mungkin tidak, Anda hidup
+
+138
+00:11:14.000 --> 00:11:17.000
+Di suatu tempat di mana ada begitu banyak cahaya lingkungan Anda tidak dapat melihat bintang-bintang dengan cara apa pun.
+
+139
+00:11:17.000 --> 00:11:20.000
+Evan memberi Anda yang terbaik dari kedua dunia. Anda memiliki planet yang interaktif.
+
+140
+00:11:20.001 --> 00:11:24.001
+Buku-buku itu statik, bintang-bintang itu dinamik. Mereka bergerak Program seperti bintang Evan,
+
+141
+00:11:25.001 --> 00:11:29.000
+Tellstar bergerak. Beberapa perangkat lunak lain yang tersedia yang membuat beberapa menarik
+
+142
+00:11:29.000 --> 00:11:32.001
+Hal-hal yang melengkapi Evan adalah tutorial. Ada satu yang disebut perjalanan ke
+
+143
+00:11:32.001 --> 00:11:37.001
+Bintang yang memiliki tutorial pada gerakan yang terlihat. Kau berdiri di bumi dan kau
+
+144
+00:11:37.001 --> 00:11:41.001
+memahami mengapa bintang-bintang tampaknya bergerak, di mana Anda bergerak, dan
+
+145
+00:11:41.001 --> 00:11:46.000
+Semuanya mulai masuk akal. Mereka adalah lembar buletin untuk pemula yang mengutip
+
+146
+00:11:46.000 --> 00:11:49.001
+untuk spawning. Jadi jika Anda memiliki modem dan Anda berkomunikasi di beberapa jaringan, Anda
+
+147
+00:11:49.001 --> 00:11:53.000
+Di sana, sebuah dunia baru terbuka. Orang yang sangat cemas untuk berbagi
+
+148
+00:11:53.000 --> 00:11:58.001
+informasi pada tingkat apapun. Apa yang ada dalam sistem sekolah? Apakah mereka sedang digunakan
+
+149
+00:11:58.001 --> 00:12:02.001
+secara luas di sekolah sekarang? Ada beberapa yang sekarang menyaring ke sekolah-sekolah.
+
+150
+00:12:02.001 --> 00:12:07.000
+Ada satu paket yang disebut astronomi yang memiliki sepuluh simulasi dan yang memungkinkan
+
+151
+00:12:07.000 --> 00:12:12.000
+Pelajar menciptakan kelahiran planet. Ia membiarkan planet-planet pergi ke orbit mereka dan ia
+
+152
+00:12:12.000 --> 00:12:15.001
+Ini benar-benar memberi Anda perasaan visual tentang apa yang sedang terjadi. Evan, singkatnya, apa yang kamu lakukan
+
+153
+00:12:15.001 --> 00:12:19.000
+untuk menerjemahkan dunia tiga dimensi ke dalam dua dimensi dari
+
+154
+00:12:19.000 --> 00:12:22.000
+dengan layar? Ini bisa menjadi sedikit tantangan. Hal-hal yang dekat dengan
+
+155
+00:12:22.000 --> 00:12:27.000
+cakrawala sampai sekitar 45 derajat ketinggian terlihat normal, tetapi ketika satu
+
+156
+00:12:27.000 --> 00:12:31.001
+pergi ke ketinggian yang lebih tinggi, Anda mendapatkan gangguan. Anda tidak bisa menampilkan tiga
+
+157
+00:12:31.001 --> 00:12:36.000
+-Dimensional sphere dalam dua dimensi planet. Jadi saya punya gambaran yang
+
+158
+00:12:36.000 --> 00:12:41.000
+Jika Anda melihat langsung ke atas dan menunjukkan informasi yang sama.
+
+159
+00:12:41.000 --> 00:12:45.001
+Anda dapat melihat atau mengidentifikasi konstelasi tanpa deformasi yang Anda rasakan.
+
+160
+00:12:45.001 --> 00:12:51.001
+di atas ketinggian tinggi. Sangat perlu untuk memiliki keduanya. Baiklah itu adalah
+
+161
+00:12:51.001 --> 00:12:54.001
+Hal-hal yang agak menarik. Terima kasih banyak untuk keduanya. Dalam sekejap kita akan melihat sebuah
+
+162
+00:12:54.001 --> 00:12:57.001
+penglihatan mata komputer dari Halley&#x27;s Comets jadi tinggal bersama kami.
+
+163
+00:13:12.000 --> 00:13:16.001
+Sampai baru-baru ini, para ilmuwan telah terbatas untuk mengamati bintang-bintang sebagai serangkaian
+
+164
+00:13:16.001 --> 00:13:22.001
+dari snapshot melalui teleskop. Namun, para astronot saat ini melihat ruang sebagai
+
+165
+00:13:22.001 --> 00:13:27.001
+sebuah alam semesta bergerak dinamis, kondensasi waktu jika Anda ingin, melalui komputer
+
+166
+00:13:27.001 --> 00:13:32.000
+dengan model. Di NASA Ames Space Science Research Laboratory di Mountain View,
+
+167
+00:13:33.000 --> 00:13:37.001
+California, astrophysicists sedang mengeksplorasi yang tidak terlihat, menggunakan data yang dikumpulkan
+
+168
+00:13:37.001 --> 00:13:43.000
+dari satelit inframerah dan ujian angkasa. Data dimasukkan ke dalam penyempurnaan
+
+169
+00:13:43.000 --> 00:13:48.000
+stasiun kerja grafis, dimanipulasi dan diatur melalui VACS mini-komputer dan
+
+170
+00:13:48.000 --> 00:13:53.001
+Cray Supercomputer dari NASA. Hasilnya adalah gambar yang menakjubkan ini dari
+
+171
+00:13:53.001 --> 00:13:57.001
+alam semesta bertabrakan, eksperimen yang kuat didasarkan pada fisika.
+
+172
+00:13:58.000 --> 00:14:03.001
+Dan kita kemudian dapat, dari interaksi itu, dari eksperimen itu, mengekstrak
+
+173
+00:14:03.001 --> 00:14:08.001
+Beberapa sifat karakteristik yang akan kita harapkan. Kemudian kita kembali ke
+
+174
+00:14:08.001 --> 00:14:13.000
+mengamati orang-orang dan mengatakan ini adalah apa yang akan kita harapkan dalam sistem interaksi
+
+175
+00:14:13.000 --> 00:14:18.000
+Sebagai contoh, atau dalam pembentukan galaksi individu. Ini adalah contoh lain
+
+176
+00:14:18.000 --> 00:14:22.001
+mungkin dalam pembentukan galaksi individu. Eksperimen numerik ini
+
+177
+00:14:22.001 --> 00:14:27.000
+Beritahu kami bahwa ada kemungkinan bahwa bentuk-bentuk ini jauh lebih kompleks terutama untuk
+
+178
+00:14:27.000 --> 00:14:29.001
+Galaksi elliptik lebih besar dari yang kita pikirkan di masa lalu.
+
+179
+00:14:30.000 --> 00:14:35.000
+Eksperimen pemodelan sampai saat ini telah membuktikan halos materi, tidak terlihat
+
+180
+00:14:35.000 --> 00:14:40.001
+melalui teleskop, ada di seluruh galaksi. Eksperimen yang akan datang akan mencoba untuk
+
+181
+00:14:40.001 --> 00:14:45.001
+menjelaskan pembentukan bintang dan bagaimana planet-planet diciptakan. NASA adalah penyelidik
+
+182
+00:14:45.001 --> 00:14:51.001
+terus memajukan jenis astronomi baru ini, kata Dr. Smith, inilah yang
+
+183
+00:14:51.001 --> 00:14:56.000
+Interaksi antara pengamatan dan teori yang memungkinkan kita untuk membuat kemajuan.
+
+184
+00:14:56.001 --> 00:14:59.000
+Untuk Computer Chronicles, saya Wendy Woods.
+
+185
+00:15:03.001 --> 00:15:07.001
+Kami kembali ke studio sekarang dan bergabung dengan kami adalah Bob Peterson. Bob adalah seorang guru
+
+186
+00:15:07.001 --> 00:15:12.001
+Astronomi di Kolej Marin, juga pendiri Starsoft. Setelah itu, Bob
+
+187
+00:15:12.001 --> 00:15:16.000
+Steve Vogt, ahli astronomi di Lick Observatory, yang berbasis
+
+188
+00:15:16.000 --> 00:15:18.000
+di University of California di Santa Cruz dekat Anda Gary.
+
+189
+00:15:19.001 --> 00:15:23.001
+Steve, kita sering memiliki pandangan ini tentang seorang astronom yang duduk di depan
+
+190
+00:15:23.001 --> 00:15:27.000
+Melalui teleskopnya melalui malam kesepian. Memiliki komputer yang benar
+
+191
+00:15:27.000 --> 00:15:32.000
+Apakah itu berubah sama sekali? Secara mutlak Gary, bidang astronomi telah sepenuhnya
+
+192
+00:15:32.000 --> 00:15:37.000
+Revolusi oleh komputer. Kita jarang melihat melalui teleskop kita.
+
+193
+00:15:37.000 --> 00:15:42.000
+Sekarang lagi. Komputer digunakan untuk mengontrol dan menunjuk ukuran teleskop pribadi
+
+194
+00:15:42.000 --> 00:15:46.001
+dengan komputer. Komputer digunakan untuk mengontrol instruksi elektronik yang
+
+195
+00:15:46.001 --> 00:15:49.001
+Biasanya kita melakukan pengamatan untuk kita. Mereka pada dasarnya televisi yang dipuji
+
+196
+00:15:49.001 --> 00:15:54.001
+kamera dan komputer, komputer yang lebih besar, digunakan untuk mengurangi dan menganalisis
+
+197
+00:15:54.001 --> 00:15:58.000
+data dan simulasi situasi astrofisika untuk memodelkan mereka dan melihat bagaimana
+
+198
+00:15:58.000 --> 00:15:59.001
+Mereka setuju dengan komputer kami. Steve, sebagai seorang profesional
+
+199
+00:15:59.001 --> 00:16:01.001
+Astronom, jenis informasi apa yang Anda cari?
+
+200
+00:16:01.001 --> 00:16:05.001
+Jenis-jenis barang apa yang Anda kumpulkan? Kami mengumpulkan foton, pada dasarnya. Sebagai optik
+
+201
+00:16:05.001 --> 00:16:10.000
+Astronom, aku mengumpulkan cahaya. Kami mengamati foton, kami menghitungnya, kami menyusunnya ke dalam
+
+202
+00:16:10.000 --> 00:16:14.001
+warna atau polarisasi mereka, dan itu pada dasarnya seluruh media kita untuk
+
+203
+00:16:14.001 --> 00:16:20.001
+Memahami apa yang terjadi di luar sana. Bob, kita ingin tahu tentang Halley
+
+204
+00:16:20.001 --> 00:16:22.001
+Komentar, saya pikir, adalah apa yang kita dapatkan. Anda memiliki beberapa
+
+205
+00:16:22.001 --> 00:16:24.000
+Perangkat lunak bernama Halley, beritahu kami tentang itu.
+
+206
+00:16:24.000 --> 00:16:30.000
+Oh ya ya. Pada dasarnya, itu adalah empat program kecil yang dikumpulkan. Sangat grafis dalam
+
+207
+00:16:30.000 --> 00:16:35.001
+orientasi dan itu adalah sekuensi animasi yang memungkinkan Anda untuk melihat halley
+
+208
+00:16:35.001 --> 00:16:41.001
+komentar, jenis pandangan mata Tuhan, gambaran keseluruhan dari pandangan heliocentrik, seperti kita
+
+209
+00:16:41.001 --> 00:16:44.001
+mengacu pada itu sebagai, dan saya akan memasuki
+
+210
+00:16:44.001 --> 00:16:46.000
+Beberapa angka di sini, jika saya bisa, untuk sekejap.
+
+211
+00:16:46.001 --> 00:16:52.001
+Mulai kembali pada bulan Oktober, misalnya, 1985. Kami akan melihat ke bawah pada
+
+212
+00:16:52.001 --> 00:16:58.001
+dan Sun. Kami akan menampilkan selama sekitar 300 hari dan mungkin melihat setiap
+
+213
+00:16:58.001 --> 00:17:02.001
+5 hari atau sebagainya. Kita akan mengatakan bahwa kita ingin melihat ke mungkin orbit
+
+214
+00:17:02.001 --> 00:17:08.001
+dari Mars. Dan di sini adalah pameran. Kita melihat pembentukan tengkorak saat ia mulai
+
+215
+00:17:08.001 --> 00:17:14.000
+mendekati titik perihelion, titik terdekat dengan matahari. Punggung yang cukup lengkap
+
+216
+00:17:14.000 --> 00:17:18.000
+berkembang dan kemudian mulai berkurang. Ini adalah program pertama. Sebenarnya, aku adalah
+
+217
+00:17:18.000 --> 00:17:21.000
+Aku akan mengembalikannya. Hanya untuk menjelaskan apa yang kita lihat di sana, Bob, inilah jalan
+
+218
+00:17:21.000 --> 00:17:25.000
+Komet untuk periode 300 hari mulai dari tanggal Anda memasuki. tanggal 1 Oktober.
+
+219
+00:17:25.000 --> 00:17:27.000
+Itu yang benar. Dan mereka adalah orbit planet-planet
+
+220
+00:17:27.000 --> 00:17:28.001
+Hal itu diidentifikasi di sisi di sana.
+
+221
+00:17:29.000 --> 00:17:36.000
+Yang berikutnya, saya akan benar-benar mulai 1 Januari 1945. Ini adalah tentang waktu
+
+222
+00:17:36.000 --> 00:17:40.001
+Ketika komet jauh dari matahari. Aku akan melakukannya untuk beberapa waktu.
+
+223
+00:17:40.001 --> 00:17:44.001
+dalam waktu 95.000 hari. Ini terdengar seperti waktu yang panjang, tapi
+
+224
+00:17:44.001 --> 00:17:46.001
+Kami hanya akan melihat setiap tahun.
+
+225
+00:17:46.001 --> 00:17:50.001
+Ini adalah astronomi. Apa yang dimaksud dengan 95.000 hari? Jadi, ia keluar dari 95.000 hari.
+
+226
+00:17:50.001 --> 00:17:54.001
+adalah sekitar periode orbit Pluto. Jadi kita dapat melihat orbit lengkap dari
+
+227
+00:17:54.001 --> 00:17:59.001
+Pluto di luar sana. Saya akan memilih ukuran di sini dari 50 unit astronomi. Satu
+
+228
+00:17:59.001 --> 00:18:03.000
+Unit astronomi adalah jarak antara matahari dan bumi.
+
+229
+00:18:04.000 --> 00:18:06.000
+Dan kita akan maju dan menunjukkan itu.
+
+230
+00:18:07.000 --> 00:18:13.000
+Di sini kita dapat melihat komet datang sangat cepat di sekitar Matahari. Proses tersebut adalah
+
+231
+00:18:13.000 --> 00:18:15.001
+pada dasarnya pada saat ini. Dan sekarang kita hanya melihat
+
+232
+00:18:15.001 --> 00:18:17.001
+sebenarnya adalah Pluto. Pluto berada di luar.
+
+233
+00:18:17.001 --> 00:18:21.000
+dengan benar. menyelesaikan orbitnya. dengan benar. OK, kemudian kami akan beralih
+
+234
+00:18:21.000 --> 00:18:23.000
+di atas. Itu adalah heliocentric.
+
+235
+00:18:23.000 --> 00:18:27.000
+Ini adalah pandangan heliocentrik. Sekarang kita akan beralih ke pandangan berbasis Bumi atau geocentric
+
+236
+00:18:27.000 --> 00:18:32.000
+dengan pandangan. Hal ini memungkinkan kita untuk melihat ke atas pada peta bintang, pada dasarnya. Sekali lagi, saya akan memilih
+
+237
+00:18:32.000 --> 00:18:38.001
+tanggal yang sama, tanggal 1 Oktober 1985. Dan kami akan memilih 9 jam di malam hari, 2100
+
+238
+00:18:38.001 --> 00:18:45.000
+jam yang Sekali lagi, 300 hari untuk paparan. Sekali lagi, lima hari sekaligus. Saya pikir
+
+239
+00:18:45.000 --> 00:18:48.001
+Kita mungkin ingin melihat bintang-bintang di luar sehingga kita dapat melihat di mana komet berada di
+
+240
+00:18:48.001 --> 00:18:53.001
+Hubungan dengan bintang. Jadi kita akan masuk ke itu. Bintang-bintang muncul di layar
+
+241
+00:18:53.001 --> 00:18:58.000
+Dan kemudian jalan dari komet ditunjukkan. Dan kita bisa melihat punggung yang agak kuat
+
+242
+00:18:58.000 --> 00:19:04.001
+dibentuk dalam paparan khusus itu. Kami memiliki cara lain untuk menghibur yang
+
+243
+00:19:04.001 --> 00:19:08.000
+program yang memungkinkan kita juga melihat posisi Matahari. Mungkin kita akan berlari dengan cepat
+
+244
+00:19:08.000 --> 00:19:12.001
+melalui itu. Hal ini membantu menunjukkan kepada kita, di sisi lain, bahwa itu cukup rendah pada
+
+245
+00:19:12.001 --> 00:19:17.000
+di atas cakrawala di latitud ini. Itu adalah benar. Kami tidak akan diberkati banyak
+
+246
+00:19:17.000 --> 00:19:22.000
+dengan baik. Akan bagus untuk berada di Selandia Baru untuk kejadian ini, terutama di
+
+247
+00:19:22.000 --> 00:19:23.001
+akhir Maret dan awal April.
+
+248
+00:19:25.000 --> 00:19:27.000
+Biarkan aku cepat. Jadi Anda melakukan hal yang sama sekarang dan Anda juga akan menunjukkan
+
+249
+00:19:27.000 --> 00:19:31.001
+kita posisi matahari di samping itu. Itu adalah benar. Kami akan meletakkan di lima
+
+250
+00:19:31.001 --> 00:19:38.000
+hari yang Dan ya, kita ingin matahari. Dan dalam pandangan khusus ini, kita akan melihat sebenarnya
+
+251
+00:19:38.000 --> 00:19:42.001
+terjadi perihelion di mana komet sangat dekat dengan posisi
+
+252
+00:19:42.001 --> 00:19:48.000
+dengan matahari. Bagaimana perangkat lunak ini akan dijual pada akhir Maret? Baiklah, itu telah
+
+253
+00:19:48.000 --> 00:19:52.000
+dijual sedikit lebih lama dari itu. Steve, sekarang kita telah melihat komputer
+
+254
+00:19:52.000 --> 00:19:56.000
+Halley adalah komet Halley. Sekarang saya hanya tinggal dengan barang-barang besar Anda di Lick
+
+255
+00:19:56.000 --> 00:19:59.000
+dari Observatorium Anda benar-benar mengambil gambar dari komet. Saya pikir kami akan
+
+256
+00:19:59.000 --> 00:20:01.001
+Lakukan hal ini sekarang dan lihatlah. Anda bisa menggambarkan untuk kami
+
+257
+00:20:01.001 --> 00:20:03.000
+Apa itu yang kita lihat? Tentu saja
+
+258
+00:20:04.001 --> 00:20:11.000
+Ini adalah sebuah versi yang dikomputerkan image-intensified
+
+259
+00:20:11.000 --> 00:20:13.001
+Nilai satu malam dari data tentang komet Halley.
+
+260
+00:20:14.000 --> 00:20:18.000
+Ini diperoleh di Lick Observatory menggunakan teleskop 40 inci kami oleh Richard.
+
+261
+00:20:18.000 --> 00:20:23.000
+Stover dan Bert Jones. Setiap bingkai diambil dengan CCD, atau perangkat berpasangan
+
+262
+00:20:23.000 --> 00:20:27.001
+dengan detektor. Dan kemudian informasi itu diproses di komputer dan dikumpulkan
+
+263
+00:20:27.001 --> 00:20:34.000
+Untuk gambar yang berwarna-warni di sini. Gambar-gambar tersebut hanyalah representasi dari
+
+264
+00:20:34.000 --> 00:20:39.000
+intensitas, yang mudah bagi astronom untuk dapat melihat detail dan
+
+265
+00:20:39.000 --> 00:20:43.000
+struktur yang lebih jelas. Ok, kita tidak benar-benar mengatakan ini bukan film optik
+
+266
+00:20:43.000 --> 00:20:46.001
+Gambar yang betul kan? Ini benar-benar gambar televisi dari komet. Ini adalah sejenis A
+
+267
+00:20:46.001 --> 00:20:51.000
+Gambar TV super dengan kamera TV super sensitif. Dan itu adalah
+
+268
+00:20:51.000 --> 00:20:54.001
+Komet Halley di tengah-tengah di sana bergerak di antara medan bintang latar belakang.
+
+269
+00:20:55.000 --> 00:20:57.001
+Okay, sekarang apa yang kita punya di sini? Anda juga mengambil ini dengan sistem Anda. Ya, ini
+
+270
+00:20:57.001 --> 00:21:02.001
+Ini adalah apa yang disebut gambar Doppler dari bintang H. dan R. 1099, yang benar-benar biner
+
+271
+00:21:02.001 --> 00:21:07.001
+Sistem yang Bintang ini berjarak sekitar 700 triliun mil, atau sekitar 116 tahun cahaya.
+
+272
+00:21:08.000 --> 00:21:11.001
+Ia begitu jauh sehingga Anda tidak dapat melihatnya sebagai yang berbeda, secara fisik terpisah
+
+273
+00:21:11.001 --> 00:21:17.001
+Sistem bintang Tampaknya itu hanya titik terang. Dengan menggunakan berbagai macam
+
+274
+00:21:17.001 --> 00:21:21.001
+teknologi komputer, kami telah menentukan kami telah menggambarkan cara untuk membuat Doppler
+
+275
+00:21:21.001 --> 00:21:25.001
+Gambar-gambar dari permukaan bintang sehingga kita dapat melihat daerah gelap besar ini
+
+276
+00:21:25.001 --> 00:21:27.000
+yang tampaknya berada di permukaan bintang.
+
+277
+00:21:27.000 --> 00:21:30.001
+Mereka adalah bintang-bintang, kita memanggil mereka. Dan kami menggunakan informasi dalam spektrum
+
+278
+00:21:30.001 --> 00:21:37.000
+Di bawah ini untuk mendirikan gambar bintang yang Anda lihat di depan Anda. Apa itu grafis
+
+279
+00:21:37.000 --> 00:21:41.000
+Menunjukkan kami di bagian bawah gambar itu, Steve? Ini adalah profil garis spektral,
+
+280
+00:21:41.000 --> 00:21:47.000
+atau cahaya bintang pada panjang gelombang yang sangat dekat dengan resonansi
+
+281
+00:21:47.000 --> 00:21:52.001
+penyerapan satu atom, pada dasarnya. Steve, itu hal yang cukup mengesankan. Kami dengar
+
+282
+00:21:52.001 --> 00:21:56.001
+banyak tentang menggunakan komputer untuk mencari gelombang radio di angkasa dan pencarian untuk
+
+283
+00:21:56.001 --> 00:22:01.001
+hidup dalam hal-hal seperti ini. Apa peran komputer yang dimainkan di sana? Baiklah, satu
+
+284
+00:22:01.001 --> 00:22:06.001
+Salah satu upaya terbesar yang sedang berlangsung sekarang adalah program SETI, di mana mereka
+
+285
+00:22:06.001 --> 00:22:12.000
+menggunakan perangkat keras yang sangat canggih dan komputer, perangkat lunak, untuk memindai radio
+
+286
+00:22:12.000 --> 00:22:15.001
+Spektrum frekuensi untuk sinyal dari kehidupan cerdas di luar angkasa.
+
+287
+00:22:16.000 --> 00:22:21.000
+Mereka dapat memindai jutaan saluran sekaligus sekarang menggunakan komputer berkelajuan tinggi baru
+
+288
+00:22:21.000 --> 00:22:25.001
+Sistem yang Dan jenis-jenis hal apa yang bisa ... Kami sudah berbicara tentang PC cukup begitu
+
+289
+00:22:25.001 --> 00:22:28.000
+jauh dari Apa jenis hal yang Anda butuhkan Cray untuk dilakukan dalam hal
+
+290
+00:22:28.000 --> 00:22:33.000
+Pekerjaan seorang astronom? Nah, masalah seperti gambar Doppler yang saya baru saja menunjukkan kepada Anda adalah
+
+291
+00:22:33.000 --> 00:22:36.001
+jenis kelas tersebut. Anda membutuhkan mesin yang jauh lebih besar seperti Vax. Komputer apa yang
+
+292
+00:22:36.001 --> 00:22:40.000
+Apakah efek yang Anda gunakan? Kami menggunakan Vax 11-780 untuk itu, yang
+
+293
+00:22:40.000 --> 00:22:41.001
+Sangat masuk akal untuk itu.
+
+294
+00:22:41.001 --> 00:22:46.000
+Tapi semakin besar komputer, semakin baik kita bisa melakukan masalah itu. Crays adalah
+
+295
+00:22:46.000 --> 00:22:50.000
+biasanya digunakan untuk simulasi, di mana Anda membuat model dari sesuatu seperti
+
+296
+00:22:50.000 --> 00:22:54.000
+di dalam sebuah bintang atau meledak sebuah supernova, di mana Anda memiliki miliaran dan
+
+297
+00:22:54.000 --> 00:22:58.000
+berbilion kalkulasi yang harus Anda lakukan untuk mendapatkan jawaban.
+
+298
+00:22:58.001 --> 00:23:03.001
+Model jenis yang sangat intensif. Bob, kita punya setengah menit tersisa
+
+299
+00:23:03.001 --> 00:23:07.000
+Sebagai seorang profesor astronomi. Apakah Anda menemukan banyak minat dalam astronomi di sini?
+
+300
+00:23:07.000 --> 00:23:10.000
+Hal-hal seperti ini hari ini, saya pikir? Terutama karena peristiwa yang
+
+301
+00:23:10.000 --> 00:23:13.001
+Komet Halley kembali. Ada banyak hal yang menarik di media, yaitu:
+
+302
+00:23:13.001 --> 00:23:17.001
+di lapangan, dan di masyarakat umum. Jadi kita menemukan sedikit aktivitas di
+
+303
+00:23:17.001 --> 00:23:21.001
+Universitas sebagai hasilnya. Tuan-tuan yang sangat menarik. Kami berada di luar waktu. Terima kasih begitu
+
+304
+00:23:21.001 --> 00:23:24.001
+banyak sekali. Kami akan kembali dalam satu menit dengan berita komputer minggu ini.
+
+305
+00:23:35.001 --> 00:23:39.001
+Dalam file akses rawak minggu ini, Computerland akan masuk ke komputer
+
+306
+00:23:39.001 --> 00:23:43.001
+bisnisnya . Perusahaan mengatakan ia sedang mencari perusahaan di Asia untuk memproduksi sebuah
+
+307
+00:23:43.001 --> 00:23:48.000
+komputer yang akan dijual di bawah nama merek Computerland. Komputer Negara Komputer
+
+308
+00:23:48.000 --> 00:23:52.000
+akan menjadi mesin MS-DOS murah yang dirancang untuk bersaing dengan Tandy 1000 dan
+
+309
+00:23:52.000 --> 00:23:56.001
+Salah satunya adalah model edge D. Mesin-mesin baru mungkin berada di shell sampai Juni. Itu
+
+310
+00:23:56.001 --> 00:23:59.000
+Sepertinya semuanya sudah selesai untuk komputer Osborne.
+
+311
+00:23:59.001 --> 00:24:04.000
+Perusahaan, yang telah disusun kembali setelah kebangkrutan, sekali lagi bangkrut dan
+
+312
+00:24:04.000 --> 00:24:08.000
+Asetnya akan diselesaikan. Pemberi kredit Osborne mengisytiharkan ini secara default
+
+313
+00:24:08.000 --> 00:24:12.000
+Bulan ketika perusahaan tidak dapat melakukan pembayaran atas hutang enam juta dolar.
+
+314
+00:24:12.001 --> 00:24:16.001
+Commodore mengumumkan kerugian sebesar $ 53 juta pada suku terakhir meskipun
+
+315
+00:24:16.001 --> 00:24:21.001
+Penjualan rekor lebih dari $ 300 juta. Komodore Stock telah mengambil satu
+
+316
+00:24:21.001 --> 00:24:24.000
+mengejutkan, tetapi beberapa analis mengatakan peluang sedang melihat
+
+317
+00:24:24.000 --> 00:24:25.001
+baik untuk profitabilitas yang mungkin.
+
+318
+00:24:27.000 --> 00:24:30.001
+Steve Jobs sudah memasuki bisnis baru. Dia baru saja membeli Pixar, a
+
+319
+00:24:30.001 --> 00:24:34.001
+Perusahaan yang membuat komputer grafis berbasis tinggi. Pixar diciptakan oleh
+
+320
+00:24:34.001 --> 00:24:39.000
+Film yang dibuat oleh George Lucas. Harganya berjumlah beberapa juta dolar. Pixar
+
+321
+00:24:39.000 --> 00:24:42.001
+Komputer dirancang untuk membuat grafis 3D untuk film tetapi telah menemukan yang lebih baik
+
+322
+00:24:42.001 --> 00:24:48.001
+pasar di bidang medis dan militer. IBM berada dalam peran yang aneh dari New Kid.
+
+323
+00:24:48.001 --> 00:24:53.001
+Pameran Unix baru-baru ini di Anaheim, California. Dengan IBM PC RT yang baru,
+
+324
+00:24:54.000 --> 00:24:58.001
+IBM akhirnya berada dalam permainan Unix dan penjual Unix lainnya tampaknya bergerak ke arah
+
+325
+00:24:58.001 --> 00:25:03.000
+IBM banyak berbicara tentang kebutuhan Unix untuk mengintegrasikan ke dalam dunia MS-DOS
+
+326
+00:25:03.000 --> 00:25:07.001
+Daripada berdiri sendirian. Waktu untuk ulasan perangkat lunak minggu ini dan di sini Paul
+
+327
+00:25:07.001 --> 00:25:12.001
+dari Schindler. Bayangkan dapat menemukan apa pun bab yang Anda inginkan di salah satu dari ini
+
+328
+00:25:12.001 --> 00:25:17.001
+Buku yang Tugas yang sulit kan? Sekarang bayangkan saya mencoba untuk mengikuti 700 file
+
+329
+00:25:17.001 --> 00:25:22.000
+Dalam 20 katalog pada 30 megabyte hard disk. Perumahan adalah salah satu yang paling
+
+330
+00:25:22.000 --> 00:25:27.001
+pekerjaan yang menjengkelkan. Sekarang akhirnya bayangkan jika Anda bisa betapa bahagia saya harus
+
+331
+00:25:27.001 --> 00:25:32.001
+dimasukkan ke 411, paket yang mengindeks segala sesuatu dalam setiap teks pada hard
+
+332
+00:25:32.001 --> 00:25:38.000
+cakera dalam satu megabyte atau dua ruang. yang luar biasa ? Itulah yang saya katakan. Kemudian aku
+
+333
+00:25:38.000 --> 00:25:42.000
+Saya yakin itu akan terlalu lambat untuk berguna tetapi seperti yang kami katakan di televisi,
+
+334
+00:25:42.001 --> 00:25:47.001
+Menonton adalah beriman. Kami hanya akan memberikan demonstrasi singkat di sini. Berdasarkan 411 a
+
+335
+00:25:47.001 --> 00:25:51.001
+kata yang terkandung dalam beberapa file yang Anda pikirkan berada di cakera dan itu kembali dengan
+
+336
+00:25:51.001 --> 00:25:55.000
+Nama setiap file yang mengandung kata tersebut. Ia bahkan dapat menghubungkan Anda ke kata-kata Anda
+
+337
+00:25:55.000 --> 00:25:57.000
+prosesor sehingga Anda dapat mulai bekerja di atasnya
+
+338
+00:25:57.000 --> 00:25:59.000
+sekarang . Bagaimana dengan semua file yang ada?
+
+339
+00:25:59.000 --> 00:26:03.000
+Anda dapat membungkusnya dan membuangnya ke dalam. Bagaimana dengan indexing saat Anda pergi?
+
+340
+00:26:03.001 --> 00:26:07.001
+Itu hanya apa 411 adalah semua tentang dengan file kecil cepat yang disebut file itu untuk
+
+341
+00:26:07.001 --> 00:26:11.001
+Membantu Anda Sekarang saya tidak berpikir mana-mana pengguna hard disk dapat bertahan hidup tanpa salinan
+
+342
+00:26:11.001 --> 00:26:16.001
+411 yang $149 dari sistem informasi terpilih Kent Field, California.
+
+343
+00:26:17.000 --> 00:26:21.001
+Untuk Komputer Chronicles, saya Paul Schindler. Ada sekitar 14.000 perusahaan.
+
+344
+00:26:21.001 --> 00:26:25.001
+Dalam bisnis perangkat lunak tetapi angka industri baru menunjukkan bahwa 10 perusahaan mengira
+
+345
+00:26:25.001 --> 00:26:27.001
+70 persen dari bisnis.
+
+346
+00:26:27.001 --> 00:26:33.000
+Berikut ini adalah perangkat lunak top 10 dalam urutan pangsa pasar. dari 20 program teratas, dengan
+
+347
+00:26:33.000 --> 00:26:38.000
+Dengan cara ini, menyumbang 80% dari bisnis software. Dalam pembaruan hukum kami
+
+348
+00:26:38.000 --> 00:26:42.000
+dokumen, anggaran yang Presiden Reagan baru saja mengirimkan ke Kongres termasuk sebuah
+
+349
+00:26:42.000 --> 00:26:46.000
+Mengejutkan jumlah uang yang tinggi untuk teknologi tinggi. Terlepas dari pemotongan anggaran
+
+350
+00:26:46.000 --> 00:26:51.000
+Di tempat lain, anggaran Reagan untuk penelitian dasar meningkat 8% dibandingkan tahun lalu.
+
+351
+00:26:51.001 --> 00:26:56.000
+Northwest Airlines baru saja membeli paket perangkat lunak $ 40.000 yang mengatakan
+
+352
+00:26:56.000 --> 00:27:00.000
+Komputer Sperry di Northwest berapa banyak tempat diskon yang harus dijual pada penerbangan.
+
+353
+00:27:01.000 --> 00:27:05.001
+Program ini menganalisis 30 kriteria seperti faktor beban dan persaingan dan kemudian
+
+354
+00:27:05.001 --> 00:27:07.000
+Menentukan jumlah tempat duduk murah.
+
+355
+00:27:07.001 --> 00:27:11.001
+Pegawai-pegawai penerbangan mengatakan peningkatan satu kursi diskon per hari per penerbangan dapat
+
+356
+00:27:11.001 --> 00:27:17.000
+menghasilkan pendapatan tambahan $ 12 juta per tahun. Akhirnya, cerita dari $ 2
+
+357
+00:27:17.000 --> 00:27:21.000
+1 bilion kesalahan komputer. Pekerja di Federal Reserve Bank di San Francisco
+
+358
+00:27:21.000 --> 00:27:25.000
+Menghabiskan tiga hari belajar bagaimana menggunakan sistem komputer baru mereka menggunakan dummy
+
+359
+00:27:25.000 --> 00:27:29.001
+program dan transaksi palsu. Kemudian pada hari Senin, komputer dimulai.
+
+360
+00:27:29.001 --> 00:27:34.000
+Untuk yang nyata. Hanya ada yang lupa untuk menghapus program bodoh. Jadi hal pertama
+
+361
+00:27:34.000 --> 00:27:38.001
+Komputer yang dilakukan pada hari Senin pagi adalah untuk memindahkan dana bernilai $ 2 miliar ke
+
+362
+00:27:38.001 --> 00:27:42.001
+19 bank yang tidak pernah meminta uang. Kesalahan tersebut ditemukan dalam beberapa
+
+363
+00:27:42.001 --> 00:27:47.000
+Namun, dua dari bank-bank menunggu 24 jam sebelum mengumumkan Fed.
+
+364
+00:27:47.000 --> 00:27:50.001
+Komputer yang salah dengan generositas Itulah yang terjadi pada kronik minggu ini.
+
+365
+00:27:50.001 --> 00:27:54.001
+Kita akan berjumpa denganmu lain kali. Komputer Chronicles dibuat mungkin sebagian oleh
+
+366
+00:27:54.001 --> 00:27:59.000
+Penghargaan dari AFIPs, Federasi Masyarakat Pemrosesan Informasi Amerika.
+
+367
+00:28:00.000 --> 00:28:05.000
+AFIP, sponsor OAC 86, konferensi terkemuka di negara ini tentang bisnis
+
+368
+00:28:05.000 --> 00:28:10.000
+dan teknologi. Untuk informasi konferensi, hubungi 800-OAC-1986.
+
+369
+00:28:11.001 --> 00:28:15.001
+Mengeksplorasi solusi bisnis saat ini. Pembiayaan tambahan disediakan oleh McGraw
+
+370
+00:28:15.001 --> 00:28:20.001
+-Hill, penerbit dari Byte. Artikel teknis rinci Byte tentang perangkat lunak baru,
+
+371
+00:28:21.000 --> 00:28:25.001
+Perangkat lunak dan bahasa mencakup teknologi mikrokomputer terbaru di seluruh dunia.
+
+372
+00:28:26.000 --> 00:28:28.000
+Bite adalah standar internasional.

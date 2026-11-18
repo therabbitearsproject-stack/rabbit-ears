@@ -1,0 +1,1417 @@
+WEBVTT
+
+1
+00:00:50.000 --> 00:00:56.000
+Micro Focus, pencipta alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+2
+00:00:56.000 --> 00:01:01.000
+dengan senang hati memberikan dana besar untuk komputer kronik, cerita
+
+3
+00:01:01.000 --> 00:01:03.000
+dari evolusi yang berlanjut ini.
+
+4
+00:01:12.001 --> 00:01:18.001
+Saya tidak berpikir terlalu lama tentang hal itu, bukan? Kami tahu itu akan terjadi.
+
+5
+00:01:19.000 --> 00:01:22.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay, duduk untuk Gary
+
+6
+00:01:22.000 --> 00:01:27.001
+Kildall minggu ini sebagai Herb Lechner dari SRI. Herb, kita menganggap catur sebagai yang terakhir
+
+7
+00:01:27.001 --> 00:01:32.001
+permainan keterampilan, permainan yang membutuhkan agilitas mental, kecerdasan jika Anda ingin, namun
+
+8
+00:01:32.001 --> 00:01:37.000
+di sini saya bermain permainan catur dengan komputer, yang menganalisis papan
+
+9
+00:01:37.000 --> 00:01:40.001
+posisi dan menerapkan sejenis kecerdasan tertentu untuk mengetahui apa yang berikutnya
+
+10
+00:01:40.001 --> 00:01:44.000
+Pergerakan harus ada. Itulah tema program kita hari ini, kecerdasan buatan.
+
+11
+00:01:45.000 --> 00:01:49.001
+Dan dalam pikiran beberapa orang, AI menyarankan mencoba untuk menggandakan cara seorang manusia
+
+12
+00:01:49.001 --> 00:01:52.001
+Otak bekerja. Apakah itu yang sebenarnya adalah AI?
+
+13
+00:01:52.001 --> 00:01:59.000
+Tidak dalam penelitian AI modern, Stuart. Penelitian awal di AI melihat
+
+14
+00:01:59.000 --> 00:02:03.001
+menggandakan proses pemikiran manusia, tetapi penelitian AI saat ini lebih peduli
+
+15
+00:02:03.001 --> 00:02:09.001
+dengan menggandakan hasil akhir kecerdasan. Komputer yang bertindak sebagai
+
+16
+00:02:09.001 --> 00:02:13.001
+pakar dalam sistem dan komputer yang dapat berkomunikasi dengan kami di
+
+17
+00:02:13.001 --> 00:02:18.001
+bahasa, memahami beberapa konteks bahasa itu adalah dua bidang yang
+
+18
+00:02:18.001 --> 00:02:22.000
+Mereka mendapat banyak perhatian dalam penelitian kecerdasan buatan hari ini.
+
+19
+00:02:23.000 --> 00:02:26.000
+Ok ya. Kami akan bertemu dengan dua pakar terkemuka di dunia di bidang buatan
+
+20
+00:02:26.000 --> 00:02:29.001
+kecerdasan, dan kita akan melihat dua contoh yang menarik dari ahli
+
+21
+00:02:29.001 --> 00:02:34.001
+Sistem yang Salah satu ahli terkemuka dalam sistem pakar adalah Dr. Edward Feigenbaum dari
+
+22
+00:02:34.001 --> 00:02:38.000
+Universitas Stanford. Kami bertanya kepada Profesor Feigenbaum tentang
+
+23
+00:02:38.000 --> 00:02:40.000
+perkembangan kecerdasan buatan.
+
+24
+00:02:40.000 --> 00:02:47.000
+Komputer, seperti yang Anda ketahui, adalah perangkat pemrosesan simbol umum yang mampu
+
+25
+00:02:47.000 --> 00:02:52.000
+untuk memanipulasi setiap jenis simbol, yang angka-angka merupakan salah satu yang penting
+
+26
+00:02:52.000 --> 00:02:57.000
+kelas, tetapi komputer jauh lebih umum dari itu. Kami sudah tahu tentang
+
+27
+00:02:57.000 --> 00:03:03.000
+penghitungan umum setidaknya sejak zaman Turing pada tahun 1930-an, dan
+
+28
+00:03:03.000 --> 00:03:08.001
+Sebenarnya saya telah menelusuri kembali ke intuisi bahwa Babbage memiliki yang tercatat
+
+29
+00:03:08.001 --> 00:03:12.001
+Ada Lovelace, diikuti oleh bahasa pemrograman Ada.
+
+30
+00:03:13.000 --> 00:03:19.000
+Pada tahun 1842, Ada Lovelace menulis bahwa mesin analitis Babbage telah membentuk
+
+31
+00:03:19.000 --> 00:03:24.001
+Hubungan antara dunia mekanik dan dunia yang paling abstrak
+
+32
+00:03:24.001 --> 00:03:30.000
+Konsep yang Yang saat ini, dalam terminologi modern, disebut fisik
+
+33
+00:03:30.000 --> 00:03:35.000
+Simbol sistem hipotesis dan merupakan dasar untuk kerja-kerja kecerdasan buatan. dalam
+
+34
+00:03:35.000 --> 00:03:40.001
+kecerdasan buatan, sebagai ilmu pengetahuan, kita berbicara tentang penggunaan komputer untuk
+
+35
+00:03:40.001 --> 00:03:45.001
+proses pengetahuan simbolik menggunakan metode inferensi logis, inferensi simbolik
+
+36
+00:03:45.001 --> 00:03:52.000
+Metode yang Dengan kata lain, kita berbicara tentang inferensi dan bukan kalkulasi.
+
+37
+00:03:52.000 --> 00:03:55.000
+dalam arti tradisional. Kita berbicara tentang pengetahuan dan tidak
+
+38
+00:03:55.000 --> 00:03:57.000
+Jumlah dalam arti tradisional.
+
+39
+00:03:57.000 --> 00:04:02.000
+Sebuah aplikasi saat ini dari teknik pengetahuan inferensial adalah di bidang
+
+40
+00:04:02.000 --> 00:04:07.001
+sistem pakar, program seperti ini penasihat eksplorasi minyak. Dibangun untuk membantu
+
+41
+00:04:07.001 --> 00:04:11.001
+pengeboran rantai di daerah terpencil, program ini berperilaku seperti seorang yang berkelayakan
+
+42
+00:04:11.001 --> 00:04:16.001
+dengan spesialis. Ia mengajukan pertanyaan kepada pengguna dan kemudian memberikan saran tentang bagaimana untuk menghindari
+
+43
+00:04:16.001 --> 00:04:20.000
+atau kecelakaan yang tepat yang begitu umum dalam operasi pengeboran.
+
+44
+00:04:21.000 --> 00:04:24.001
+Jika pada titik tertentu dalam garis pertanyaan pengguna menjadi bingung oleh
+
+45
+00:04:24.001 --> 00:04:30.001
+pertanyaan, dia dapat meminta program untuk menjelaskan diri sendiri hanya dengan memasuki mengapa. dan yang
+
+46
+00:04:30.001 --> 00:04:35.000
+Penasihat menjawab dengan sumber tertentu di balik pertanyaan dan menjelaskan
+
+47
+00:04:35.000 --> 00:04:40.001
+Pertimbangkan sampai titik itu. Pemprosesan simbolik di balik bakat manusia
+
+48
+00:04:40.001 --> 00:04:45.000
+dari program ini telah menemukan aplikasi di berbagai bidang dari kedokteran
+
+49
+00:04:45.000 --> 00:04:50.000
+untuk robot. Mungkin area yang paling sulit untuk AI untuk menguasai telah menjadi alami
+
+50
+00:04:50.000 --> 00:04:54.001
+bahasa, sebuah bakat yang menghasilkan komputer yang sangat ramah tetapi yang membutuhkan
+
+51
+00:04:54.001 --> 00:05:00.000
+kapasitas pemrosesan yang besar. Ketidakpastian sintaks dan konteks
+
+52
+00:05:00.000 --> 00:05:04.001
+terbatas sistem saat ini untuk aplikasi yang sangat terbatasi. Geografi yang sederhana
+
+53
+00:05:04.001 --> 00:05:09.001
+Pertanyaan, tergantung pada frasa, dapat menyebabkan berbagai interpretasi. dan yang
+
+54
+00:05:09.001 --> 00:05:13.001
+Program ini akan menentukan pertanyaan yang paling mungkin bermakna hanya setelah menyeluruh
+
+55
+00:05:13.001 --> 00:05:17.001
+menghancurkan hukuman dan bahkan dapat menolak hukuman yang tidak biasa
+
+56
+00:05:17.001 --> 00:05:19.000
+mengajukan pertanyaan yang sama.
+
+57
+00:05:20.001 --> 00:05:25.001
+Dalam pengembangan paralel, investasi program AI dengan kemampuan bahasa telah memimpin
+
+58
+00:05:25.001 --> 00:05:30.001
+untuk studi interaktif komunikasi grafis. Dalam eksperimen ini, visual
+
+59
+00:05:30.001 --> 00:05:35.001
+Dinamik komunikasi membentuk dasar untuk penasihat ahli linguistik
+
+60
+00:05:35.001 --> 00:05:40.000
+mampu tidak hanya memisahkan pola visual tetapi juga bertindak sebagai sejenis
+
+61
+00:05:40.000 --> 00:05:45.000
+dan tutor Salah satu aplikasi interaktif telah memberikan orang-orang tanpa ucapan normal
+
+62
+00:05:45.000 --> 00:05:50.000
+kemampuan untuk menyesuaikan atau membangun bahasa simbolik alternatif, yang luar biasa
+
+63
+00:05:50.000 --> 00:05:54.000
+Contohnya menggunakan kecerdasan sebuah program komputer untuk membantu
+
+64
+00:05:54.000 --> 00:05:55.001
+menginterpretasikan kecerdasan manusia.
+
+65
+00:06:08.000 --> 00:06:12.001
+Saat ini ia bergabung dengan Jeffrey Perrone. Jeffrey adalah konsultan manajemen yang terlibat dalam
+
+66
+00:06:12.001 --> 00:06:16.001
+Sistem pakar untuk micros dan Niels Nielsen, direktur dari
+
+67
+00:06:16.001 --> 00:06:21.001
+Pusat intelijen di SRI International. Herba yang Niels, kamu bisa membantu kami.
+
+68
+00:06:21.001 --> 00:06:26.000
+Apa itu bidang kecerdasan buatan seperti yang ada hari ini? Aku akan mencoba,
+
+69
+00:06:26.000 --> 00:06:31.000
+Herba yang Ini adalah bidang yang luas. Jika Anda bertanya kepada banyak orang yang berbeda apa yang membentuk
+
+70
+00:06:31.000 --> 00:06:34.001
+Kecerdasan buatan, saya pikir Anda akan mendapatkan banyak jawaban yang berbeda. Untuk saya, saya
+
+71
+00:06:34.001 --> 00:06:39.000
+menganggap hal ini terutama berkaitan dengan memasukkan pengetahuan ke dalam program komputer sehingga
+
+72
+00:06:39.000 --> 00:06:43.001
+program kemudian dapat memecahkan masalah tertentu yang manusia menemukan agak mudah
+
+73
+00:06:43.001 --> 00:06:48.000
+Atau mungkin tantangan intelektual kadang-kadang. Pengetahuan yang ada di dalamnya
+
+74
+00:06:48.000 --> 00:06:53.001
+adalah pengetahuan yang diwakili dengan cara tertentu. Jadi ide ini adalah
+
+75
+00:06:53.001 --> 00:06:57.001
+“Ini bukan program yang lebih pintar yang melakukan pengaturcaraan kecerdasan buatan.
+
+76
+00:06:58.000 --> 00:07:02.000
+Ada beberapa perbedaan dalam teknik yang mereka gunakan relatif dengan apa yang biasa
+
+77
+00:07:02.000 --> 00:07:04.001
+Program yang ada. Ya, ada bagian dari ilmu komputer yang buatan
+
+78
+00:07:04.001 --> 00:07:08.001
+kecerdasan bermasalah dengan yang sebenarnya melibatkan suatu badan tertentu dari
+
+79
+00:07:08.001 --> 00:07:11.001
+teknik yang sedikit berbeda dari apa yang terjadi di tempat lain.
+
+80
+00:07:11.001 --> 00:07:18.000
+Ilmu Komputer Jeffrey, Niels terlibat dalam penelitian dan AI dan Anda
+
+81
+00:07:18.000 --> 00:07:22.000
+terlibat dalam beberapa aplikasi. Saat ini kita berada di titik di mana kita bisa
+
+82
+00:07:22.000 --> 00:07:27.001
+Mengaplikasikan AI? Tentu saja Stuart. Dengan cara apa? Saya rasa itu artistik.
+
+83
+00:07:27.001 --> 00:07:32.000
+kecerdasan dan khususnya sistem pakar atau sistem berbasis pengetahuan sekarang adalah
+
+84
+00:07:32.000 --> 00:07:37.000
+berlaku setiap tempat di mana pengetahuan khusus digunakan secara rutin untuk mencapai
+
+85
+00:07:37.000 --> 00:07:43.001
+keputusan, strategi penyelesaian masalah, diagnosis, bidang-bidang tersebut. Jadi saya berpikir
+
+86
+00:07:43.001 --> 00:07:48.001
+dari itu sebagai sesuatu di mana kita telah mencapai air terjun di mana ia tidak lagi sangat
+
+87
+00:07:48.001 --> 00:07:53.000
+mahal atau sangat sulit bagi individu yang tidak memiliki latar belakang teknis untuk membangun
+
+88
+00:07:53.000 --> 00:07:58.001
+sistem dan menerapkannya dengan baik. Dan Anda mendistribusikan sistem yang merupakan pakar
+
+89
+00:07:58.001 --> 00:08:02.001
+sistem dan juga membantu satu membangun sistem pakar. Apakah itu benar? dengan benar.
+
+90
+00:08:02.001 --> 00:08:06.000
+Nah, sebenarnya ia adalah alat untuk menghasilkan aplikasi sistem pakar tertentu
+
+91
+00:08:06.000 --> 00:08:12.000
+Dalam hampir setiap bidang di mana ada penggunaan rutin pengetahuan khusus. dan
+
+92
+00:08:12.000 --> 00:08:13.001
+Apakah itu terjadi pada mikrokomputer? dengan benar.
+
+93
+00:08:13.001 --> 00:08:18.000
+Ini berjalan pada komputer pribadi IBM dan sejumlah kompatibel lainnya
+
+94
+00:08:18.000 --> 00:08:22.001
+dengan mikrokomputer. Apakah Anda menggunakan teknik yang sama dalam sistem ini yang Niels adalah
+
+95
+00:08:22.001 --> 00:08:27.001
+Apakah mereka digunakan dalam sistem yang bisa berjalan pada peralatan yang lebih besar? Menggunakan beberapa
+
+96
+00:08:27.001 --> 00:08:33.001
+Ide yang sama dan memiliki pendekatan unik sendiri juga. Salah satu yang spesifik
+
+97
+00:08:33.001 --> 00:08:37.001
+Di daerah-daerah di mana ini adalah jenis program yang berbeda adalah bahwa bukannya memerlukan
+
+98
+00:08:37.001 --> 00:08:44.000
+Pernyataan eksplisit tentang aturan untuk membangun sistem, itu hanya membutuhkan contoh-contoh
+
+99
+00:08:44.000 --> 00:08:49.001
+keputusan sebelumnya, tugas sebelumnya, diagnosis sebelumnya untuk membangun sistem. dan
+
+100
+00:08:49.001 --> 00:08:53.000
+yang akan pecah melalui, saya percaya, teknik pengetahuan botleneck
+
+101
+00:08:53.000 --> 00:08:57.001
+yang disebutkan oleh orang-orang seperti Edward Feigenbaum dalam membangun sistem ini. oleh Jeffrey,
+
+102
+00:08:57.001 --> 00:09:02.001
+Anda memiliki ahli memudahkan sistem Anda di sini dan menunjukkan kepada kami demonstrasi. Tentu saja
+
+103
+00:09:03.000 --> 00:09:07.000
+Ok ya. Nah, ini adalah aplikasi khusus yang dihasilkan dengan sistem ini dan
+
+104
+00:09:07.000 --> 00:09:11.001
+Ia dihasilkan oleh seorang anestesiolog, Hillary Donne dan saya sendiri. Dan apa yang ia lakukan
+
+105
+00:09:11.001 --> 00:09:17.000
+Apakah itu membuat diagnosis untuk masalah pernapasan atau udara. Pertanyaan pertama di sini
+
+106
+00:09:17.000 --> 00:09:21.000
+yang ditanya pengguna naif adalah, kapan dimulai dari masalah? Dan aku akan
+
+107
+00:09:21.000 --> 00:09:26.000
+Jawab hari. Kemudian kita akan bertanya apa itu kualitas pertempuran, yang merupakan rasping
+
+108
+00:09:26.000 --> 00:09:30.001
+Suara dibuat ketika seseorang bernafas sejenis suara. Dan mari kita katakan bahwa
+
+109
+00:09:30.001 --> 00:09:34.001
+Kualitas yang sederhana. Siapa yang akan menggunakan sistem ini? Seorang dokter atau? Ini bisa digunakan
+
+110
+00:09:34.001 --> 00:09:40.000
+oleh asisten dokter untuk memeriksa pasien untuk mendapatkan tuning yang lebih baik dengan
+
+111
+00:09:40.000 --> 00:09:45.000
+orang yang lebih berpengalaman. Apakah pasien itu gatal? Mari kita katakan tidak. Ada yang ada
+
+112
+00:09:45.000 --> 00:09:49.001
+faktor predisposing untuk mengembangkan pertempuran peristiwa sebelumnya yang dapat menyebabkan ini
+
+113
+00:09:49.001 --> 00:09:53.001
+Kondisi ini? Mari kita katakan ya. Hal ini dilakukan dengan mempertimbangkan diagnosis
+
+114
+00:09:53.001 --> 00:09:58.000
+stenosis tracheal intrathoracic. Sekarang saya bukan dokter, jadi saya tidak tahu dengan tepat
+
+115
+00:09:58.000 --> 00:10:02.000
+apa artinya, tapi itu memberi Anda gagasan bagaimana itu bisa
+
+116
+00:10:02.000 --> 00:10:04.000
+mengarah pada diagnosis tertentu.
+
+117
+00:10:04.001 --> 00:10:09.001
+Sekarang apa yang ingin saya lakukan adalah saya ingin menunjukkan kepada Anda contoh trivial yang disebut Minggu,
+
+118
+00:10:09.001 --> 00:10:14.000
+yang sebenarnya datang dengan manual untuk program sebagai tutorial, pada dasarnya.
+
+119
+00:10:14.001 --> 00:10:19.001
+Hari Minggu sekarang adalah model untuk memutuskan apa yang harus dilakukan pada hari Minggu sore. Bagaimana kamu
+
+120
+00:10:19.001 --> 00:10:24.001
+Akankah Anda menghabiskan waktu Anda? Dan itu terdiri dari beberapa pertanyaan, beberapa
+
+121
+00:10:24.001 --> 00:10:29.001
+Pilih pertanyaan seperti yang baru saja Anda lihat, dan yang akan dijawab. Sekarang apa yang
+
+122
+00:10:29.001 --> 00:10:33.000
+Saya akan melakukan adalah menjalankan sistem pertanyaan, dan itu bertanya, apakah Anda memiliki keluarga Anda
+
+123
+00:10:33.000 --> 00:10:37.001
+denganmu ? Mari kita katakan ya. Bagaimanakah cuaca itu? Apakah hujan atau matahari? Mari kita
+
+124
+00:10:37.001 --> 00:10:42.001
+Dikatakan Sunny Jadi ia berkata, mengapa Anda tidak membawa keluarga ke pantai? Sekarang jalan
+
+125
+00:10:42.001 --> 00:10:46.001
+yang Anda akan membangun salah satu model ini adalah dengan memulai pada sesuatu yang disebut
+
+126
+00:10:46.001 --> 00:10:52.000
+Menyediakan layar. skrin atribut adalah di mana Anda menggambarkan dimensi
+
+127
+00:10:52.000 --> 00:10:56.000
+masalah atau situasi tertentu. Sekarang di sini atributnya adalah cuaca dan
+
+128
+00:10:56.000 --> 00:11:00.000
+keluarga, dan ada kolom saran, yang akan menjadi hasil dari suatu
+
+129
+00:11:00.000 --> 00:11:05.001
+Keputusan yang Berapakah ukuran matriks yang bisa Anda lakukan di atasnya? Anda bisa benar-benar melakukan apa saja.
+
+130
+00:11:05.001 --> 00:11:11.001
+masalah khusus 31 atribut dan hingga 255 nilai per attribut, dan yang
+
+131
+00:11:11.001 --> 00:11:16.001
+Kemudian dapat dikelompokkan bersama. Jadi Anda dapat membuat model yang sangat besar, hanya terbatas oleh
+
+132
+00:11:16.001 --> 00:11:21.001
+Ukuran penyimpanan disk Anda, pada dasarnya. Nilai-nilai seperti hujan dan matahari
+
+133
+00:11:21.001 --> 00:11:25.001
+dapat dipertimbangkan sebagai jawaban atas pertanyaan yang diwakili oleh atribut. Satu kali
+
+134
+00:11:25.001 --> 00:11:29.001
+Anda telah membuat sketsa awal dari jenis ini, maka Anda pergi ke sesuatu yang dipanggil
+
+135
+00:11:29.001 --> 00:11:35.000
+contoh layar, dan pada contoh layar Anda memasukkan contoh dari sebelumnya
+
+136
+00:11:35.000 --> 00:11:37.001
+Keputusan yang Hal ini dikembangkan oleh Dr.
+
+137
+00:11:37.001 --> 00:11:44.001
+Donald Mickey di Edinburgh berdasarkan gagasan bahwa informasi dikomunikasikan oleh
+
+138
+00:11:44.001 --> 00:11:49.001
+para ahli atau guru kepada para murid mereka dalam bentuk contoh atau kasus. Jadi di sini
+
+139
+00:11:49.001 --> 00:11:54.001
+Anda melihat, berjalan secara horizontal di seluruh layar, menjawab pertanyaan-pertanyaan tersebut.
+
+140
+00:11:54.001 --> 00:11:59.000
+Hujan, ya, kami bersama keluarga, saran akan pergi ke museum, dan
+
+141
+00:11:59.000 --> 00:12:03.000
+Kes berikutnya akan menjadi jika matahari dan saya bersama keluarga, maka saya akan pergi
+
+142
+00:12:03.000 --> 00:12:08.000
+sampai ke pantai. Dan kasus ketiga adalah bahwa saya tidak peduli apakah apa yang
+
+143
+00:12:08.000 --> 00:12:12.001
+Cuaca memang seperti itu. Jika tidak ada keluarga dengan saya, maka saya akan pergi memancing.
+
+144
+00:12:13.001 --> 00:12:17.001
+Jeffrey, Anda menggambarkan ini dengan jelas sebagai contoh trivial, hari Minggu ini satu, tetapi
+
+145
+00:12:17.001 --> 00:12:22.001
+Secara umum, apakah Anda memiliki kemampuan di dalam PC untuk serius mendekati jenis ini?
+
+146
+00:12:22.001 --> 00:12:26.000
+untuk menyelesaikan masalah? Ya, Anda bisa melakukan hal-hal yang cukup penting. Seperti halnya soal
+
+147
+00:12:26.000 --> 00:12:29.001
+Faktanya, baru-baru ini saya telah berbicara dengan orang-orang yang meninjau perangkat lunak Whole Earth
+
+148
+00:12:29.001 --> 00:12:34.001
+tentang melakukan beberapa sistem untuk merekomendasikan perangkat lunak seperti program pemrosesan kata
+
+149
+00:12:34.001 --> 00:12:39.000
+atau komunikasi hardware, modem, hal seperti itu. Neils, aku ingin bertanya kepadamu
+
+150
+00:12:39.000 --> 00:12:43.000
+Apa yang saya harap tidak terdengar seperti pertanyaan bodoh, tetapi jenis apa itu titik? Mengapa
+
+151
+00:12:43.000 --> 00:12:47.001
+Apakah kita mengembangkan sesuatu seperti sistem ini? Apakah itu untuk menggantikan dokter dalam
+
+152
+00:12:47.001 --> 00:12:52.000
+Diagnosis dari situasi? Apa hasil akhir dari hal ini? Nah, saya pikir akan ada
+
+153
+00:12:52.000 --> 00:12:56.001
+Banyak penggunaan sistem seperti ini. Saya pikir orang-orang saat ini sebenarnya memiliki
+
+154
+00:12:56.001 --> 00:13:00.000
+banyak fitur brittle yang mungkin membatasi kegunaannya di
+
+155
+00:13:00.000 --> 00:13:07.000
+akhir tahun atau hal seperti itu. Jenis-jenis sistem yang saya pikirkan
+
+156
+00:13:07.000 --> 00:13:12.000
+akan sangat berguna secara umum dalam berbagai pengaturan. Pertama sekali, yang
+
+157
+00:13:12.000 --> 00:13:16.001
+pengetahuan bahwa sistem-sistem ini mengandung, setidaknya kita berharap untuk meletakkan dalam pengetahuan tentang
+
+158
+00:13:16.001 --> 00:13:21.000
+ahli kelas dunia, orang-orang yang tahu begitu banyak tentang bidang, sehingga mungkin ada
+
+159
+00:13:21.000 --> 00:13:26.000
+Hanya lima atau enam dari mereka di seluruh dunia yang tahu begitu banyak. Sekarang, ada yang bisa
+
+160
+00:13:26.000 --> 00:13:29.001
+menjadi beberapa orang yang cukup baik berlatih yang, bagaimanapun, tidak cukup baik seperti
+
+161
+00:13:29.001 --> 00:13:34.001
+Eksperimen dunia dalam topik tertentu. Hal ini membantu kita menyebarkan pengetahuan tentang
+
+162
+00:13:34.001 --> 00:13:39.001
+seorang ahli di sekitar hal yang baik dengan cara yang dapat disalin cukup mudah. Baiklah, dalam
+
+163
+00:13:39.001 --> 00:13:42.001
+Hanya seketika kita akan bertemu dengan pria yang mencipta istilah buatan
+
+164
+00:13:42.001 --> 00:13:45.000
+kecerdasan dan kita akan melihat demonstrasi pengetahuan
+
+165
+00:13:45.000 --> 00:13:46.001
+Teknik yang akan datang selanjutnya.
+
+166
+00:14:00.000 --> 00:14:04.000
+Saat ini ia bergabung dengan Tom Kaler. Tom adalah direktur aplikasi buatan
+
+167
+00:14:04.000 --> 00:14:06.000
+Informasi tentang IntelliGenetics.
+
+168
+00:14:06.001 --> 00:14:10.001
+Tom, Anda memiliki sistem yang kompleks di sini. Pertama-tama, beritahu saya bagaimana hal ini akan
+
+169
+00:14:10.001 --> 00:14:14.000
+berbeda dari sistem yang kita lihat di bagian pertama program. Ya, satu cara
+
+170
+00:14:14.000 --> 00:14:18.001
+yang berbeda adalah bahwa kita dapat mengembangkan lingkungan grafis yang
+
+171
+00:14:18.001 --> 00:14:23.001
+menghubungkan dengan basis pengetahuan dasar sehingga pengguna benar-benar benar
+
+172
+00:14:23.001 --> 00:14:28.001
+mengelilingi dengan meter dan injap dan objek yang mereka terbiasa. Di sini, untuk
+
+173
+00:14:28.001 --> 00:14:32.001
+Misalnya, jika kita melihat levelometer ini kita hanya bisa menunjukkannya. Sebelum Anda mendapatkan
+
+174
+00:14:32.001 --> 00:14:35.000
+Jadi, apa saja lingkungan yang kita lihat di sini? Oh, ini adalah kunci
+
+175
+00:14:35.000 --> 00:14:39.001
+sistem, lingkungan kejuruteraan pengetahuan dan kita memiliki basis pengetahuan tertutup
+
+176
+00:14:39.001 --> 00:14:44.001
+sampai panel kontrol tepat di sini pada saat ini dan itu hanya sedikit contoh untuk
+
+177
+00:14:44.001 --> 00:14:49.001
+Tunjukkan bagaimana kita bisa mendengar. Panel kontrol dari apa? Ini bisa menjadi panel kontrol.
+
+178
+00:14:49.001 --> 00:14:55.001
+Reaktor nuklir, instrumen atau jenis operasi lainnya.
+
+179
+00:14:55.001 --> 00:14:58.001
+perangkat yang Anda ingin bekerja dengan. Dan di sini, misalnya, kita hanya
+
+180
+00:14:58.001 --> 00:15:03.001
+mengubah nilai meter dan perhatikan bahwa itu menghasilkan graf strip
+
+181
+00:15:03.001 --> 00:15:08.000
+menunjukkan perilaku waktu. Hal lain yang bisa kita lakukan dengan jenis-jenis
+
+182
+00:15:08.000 --> 00:15:13.000
+Panel adalah kita dapat masuk dan melihat valve dan kita dapat mempengaruhi valve, apakah
+
+183
+00:15:13.000 --> 00:15:17.001
+terbuka atau tertutup. Sekarang, apa yang penting tentang ini adalah ini mempengaruhi sebuah
+
+184
+00:15:17.001 --> 00:15:22.000
+dasar pengetahuan yang kemudian akan menerapkan heuristik dan pengambilan keputusan
+
+185
+00:15:22.000 --> 00:15:24.000
+prosedur untuk sistem.
+
+186
+00:15:24.000 --> 00:15:26.001
+Dapatkah Anda menunjukkan kepada kami bahwa, bagaimana Anda dapat pergi ke
+
+187
+00:15:26.001 --> 00:15:28.001
+Sebagian dari? Di sana kau pergi. Kami menyelesaikan masalah.
+
+188
+00:15:29.000 --> 00:15:32.000
+Nah, apa yang kita lihat di bawah ini sekarang adalah basis pengetahuan untuk reaktor nuklir
+
+189
+00:15:32.001 --> 00:15:37.000
+dan kita dapat memiliki representasi komponen reaktor nuklir juga
+
+190
+00:15:37.000 --> 00:15:42.000
+sebagai representasi dari perilaku pengambilan keputusan yang akan dilaksanakan oleh
+
+191
+00:15:42.000 --> 00:15:47.000
+yang ahli. Dan apa yang akan Anda lihat di sini adalah bahwa keduanya mungkin untuk menggunakan aturan
+
+192
+00:15:47.000 --> 00:15:52.000
+Pertimbangan berbasis serta perwakilan pengetahuan dasar. Salah satu dari
+
+193
+00:15:52.000 --> 00:15:55.001
+Hal pertama yang akan kita lakukan di sini adalah hanya melihat bagaimana kita dapat menguji
+
+194
+00:15:55.001 --> 00:16:00.001
+hipotesis dari situasi kecelakaan tertentu. Kami hanya ingin menguji
+
+195
+00:16:00.001 --> 00:16:05.001
+hipotesis dan mengaktifkannya di sini. Dan apa yang kita lihat sistem yang sedang berjalan
+
+196
+00:16:05.001 --> 00:16:09.001
+melalui proses pengambilan keputusan di mana ia mengakses pengetahuan dasar
+
+197
+00:16:09.001 --> 00:16:12.001
+berdasarkan, melihat berbagai kondisi komponen.
+
+198
+00:16:13.000 --> 00:16:16.001
+Dan dengan cara ini, kondisi dari komponen-komponen tertentu ini dapat diakses
+
+199
+00:16:16.001 --> 00:16:21.000
+langsung ke reaktor nuklir. Sekarang Anda dapat benar-benar mempertanyakan sistem
+
+200
+00:16:21.000 --> 00:16:25.000
+dan bertanya kepadanya apa jalur logika yang diikuti. Apakah itu benar? Itu memang benar.
+
+201
+00:16:25.000 --> 00:16:27.001
+Sekarang ia datang dan bertanya kepada operator sebuah pertanyaan.
+
+202
+00:16:27.001 --> 00:16:31.000
+Apakah benar bahwa tingkat generator uap menurun? Oleh karena itu kami
+
+203
+00:16:31.000 --> 00:16:33.000
+Bisa saya katakan, mengapa ini ditanya?
+
+204
+00:16:33.001 --> 00:16:37.000
+Dan itu akan menjelaskan kepada kita bahwa ia melakukannya untuk membuktikan bahwa sampah
+
+205
+00:16:37.000 --> 00:16:40.001
+Inventory generator tidak cukup. Kemudian kami akan memberikan jawaban
+
+206
+00:16:40.001 --> 00:16:42.000
+Dan ia terus mencapai kesimpulan.
+
+207
+00:16:42.001 --> 00:16:46.001
+Okay, Tom, sistem ini berjalan di Lisp. Mengapa Lisp adalah yang benar
+
+208
+00:16:46.001 --> 00:16:48.001
+Bahasa untuk aplikasi AI?
+
+209
+00:16:49.001 --> 00:16:53.000
+Nah, salah satu alasan bahwa Lisp begitu penting adalah bahwa Anda harus memiliki banyak
+
+210
+00:16:53.000 --> 00:16:58.001
+kemampuan manipulasi simbol yang kuat. Pengambilan keputusan adalah terlebih dahulu sebuah
+
+211
+00:16:58.001 --> 00:17:02.001
+Aktivitas yang simbolik. Perwakilan pengetahuan terutama simbolis dan Anda perlu
+
+212
+00:17:02.001 --> 00:17:05.001
+dengan kapasitas seperti itu. Okay ya, terima kasih Herba yang
+
+213
+00:17:06.001 --> 00:17:10.001
+John McCarthy telah bergabung dengan kami. John adalah profesor ilmu komputer di Stanford.
+
+214
+00:17:10.001 --> 00:17:14.001
+Universitas, dan salah satu perintis di bidang kecerdasan buatan.
+
+215
+00:17:15.000 --> 00:17:19.001
+Di antara pencapaian-pencapaian lain, dia menemukan Lisp, bahasa yang Stuart hanya
+
+216
+00:17:19.001 --> 00:17:22.001
+yang disebutkan. John, mengapa Anda mencipta Lisp?
+
+217
+00:17:23.000 --> 00:17:27.001
+Nah, untuk pekerjaan kecerdasan buatan, jenis hal yang mereka lakukan
+
+218
+00:17:27.001 --> 00:17:31.001
+di sini. Apa karakteristiknya yang mungkin berbeda dari yang lain
+
+219
+00:17:31.001 --> 00:17:36.001
+bahasa yang digunakan untuk kecerdasan buatan. Selain itu, yang dilakukan oleh Tom
+
+220
+00:17:36.001 --> 00:17:42.000
+Salah satu ciri pentingnya adalah bahwa program-program tersebut adalah
+
+221
+00:17:42.000 --> 00:17:48.000
+format yang sama dengan data sehingga mudah untuk membuat program yang menghasilkan program
+
+222
+00:17:48.000 --> 00:17:53.000
+Lihatlah program tersebut. Hal ini memungkinkan kita untuk menangani fakta dan logika
+
+223
+00:17:53.000 --> 00:17:55.000
+Lebih dari angka?
+
+224
+00:17:55.000 --> 00:18:00.001
+Itu adalah benar. Saya pikir itu pada pikiran semua orang ketika kita berbicara tentang pintar
+
+225
+00:18:00.001 --> 00:18:05.001
+dengan mesin. Seberapa pintar mesin bisa menjadi? Apa saja batas-batas dari Artificial
+
+226
+00:18:05.001 --> 00:18:12.001
+kecerdasan ? Saya tidak melihat batas kekurangan kecerdasan manusia, dan kemudian
+
+227
+00:18:12.001 --> 00:18:17.001
+Dengan mesin yang lebih cepat, seseorang bisa melakukan setara yang bisa dilakukan manusia dalam waktu singkat.
+
+228
+00:18:17.001 --> 00:18:21.000
+waktu, dalam waktu yang sangat lama. Nils, apa pendapatmu tentang
+
+229
+00:18:21.000 --> 00:18:22.001
+Apakah itu? Seberapa jauh kita bisa pergi dengan ini?
+
+230
+00:18:23.000 --> 00:18:25.001
+Nah, saya akan memisahkan beberapa masalah yang kita hadapi untuk membuat
+
+231
+00:18:25.001 --> 00:18:29.001
+mesin yang lebih cerdas dalam sekitar tiga varietas yang berbeda. Kami telah mendengar banyak
+
+232
+00:18:29.001 --> 00:18:33.000
+tentang betapa pentingnya pengetahuan, dan salah satu hal penting tentang pengetahuan
+
+233
+00:18:33.000 --> 00:18:37.000
+adalah apa pengetahuan yang harus diwakili dalam program. Dan beberapa dari
+
+234
+00:18:37.000 --> 00:18:40.001
+Kesulitan yang kita hadapi dalam membuat program lebih cerdas adalah bahwa kita tidak yakin
+
+235
+00:18:40.001 --> 00:18:44.001
+persis apa itu kita ingin memberitahu program-program tersebut tentang topik tertentu. yang lain
+
+236
+00:18:44.001 --> 00:18:48.000
+kategori adalah ketika kita mengidentifikasi itu, bagaimana kita mewakili pengetahuan dalam
+
+237
+00:18:48.000 --> 00:18:51.001
+Komputer itu sendiri? Dan beberapa jenis pengetahuan yang membuktikan sedikit sulit bagi kita
+
+238
+00:18:51.001 --> 00:18:55.001
+untuk mewakili itu. Kategori ketiga berkaitan dengan bagaimana pengetahuan itu digunakan,
+
+239
+00:18:55.001 --> 00:18:59.001
+Dan mungkin ada berbagai kegiatan di sana yang sudah cukup sukses,
+
+240
+00:19:00.000 --> 00:19:05.001
+Tetapi hal-hal lain yang benar-benar masih perlu dilakukan. Apakah ada tingkat frustrasi dalam
+
+241
+00:19:05.001 --> 00:19:09.000
+di bidang ini di mana ada banyak harapan tentang apa yang dapat Anda lakukan dengan sesuatu seperti
+
+242
+00:19:09.000 --> 00:19:13.000
+AI, tapi bagaimanapun, seperti yang Anda perhatikan, Nils, itu tampaknya lebih sulit, mungkin, daripada yang difikirkan
+
+243
+00:19:13.000 --> 00:19:18.001
+Apakah ini benar-benar menjadi aplikasi yang praktis? dengan John? Baiklah
+
+244
+00:19:19.000 --> 00:19:25.000
+Ada tahap teknologi tertentu dalam kecerdasan buatan hari ini,
+
+245
+00:19:26.000 --> 00:19:31.001
+Dan banyak orang membuat aplikasi berdasarkan teknologi ini.
+
+246
+00:19:33.000 --> 00:19:39.000
+Di sisi lain, [...] Nils mengatakan sebelumnya, dia
+
+247
+00:19:39.000 --> 00:19:45.000
+mengatakan bahwa kita dapat memasukkan pengetahuan seorang ahli kelas dunia, dan itu benar-benar
+
+248
+00:19:45.000 --> 00:19:50.001
+yang benar. Kami dapat meletakkan dalam pengetahuan seorang ahli kelas dunia, asalkan sesuai dengan
+
+249
+00:19:50.001 --> 00:19:56.000
+format yang diizinkan oleh program-program ini, yaitu jenis, jika ini benar,
+
+250
+00:19:57.000 --> 00:20:02.000
+Kemudian lakukan itu. Tetapi lebih umum jenis pengetahuan yang digunakan dalam sejenis
+
+251
+00:20:02.000 --> 00:20:05.000
+Cara yang lebih besar kadang-kadang lebih sulit untuk dimasukkan.
+
+252
+00:20:06.001 --> 00:20:09.001
+Di bidang diagnostik medis pada awal program, kami memiliki
+
+253
+00:20:09.001 --> 00:20:14.000
+Contoh dari diagnosis medis. Ada beberapa sistem yang dikembangkan, dan
+
+254
+00:20:14.000 --> 00:20:18.001
+Namun ada masalah, sebenarnya, dalam menggunakannya. Apa saja masalah tersebut? Baiklah
+
+255
+00:20:18.001 --> 00:20:22.000
+Saya tidak yakin apa masalah sistem-sistem tertentu itu.
+
+256
+00:20:23.000 --> 00:20:27.000
+Namun, untuk mengambil contoh medis, seseorang dapat mengatakan, membuat definisi bahwa
+
+257
+00:20:27.000 --> 00:20:33.001
+Kontainer adalah steril jika semua bakteri di dalamnya mati. Namun, bagian ini dari
+
+258
+00:20:33.001 --> 00:20:39.000
+pengetahuan tidak digunakan dalam cara khusus untuk menentukan apakah sebuah kontena adalah
+
+259
+00:20:39.000 --> 00:20:43.000
+steril dengan memeriksa masing-masing bakteri. digunakan sebagai bagian dari lebih umum
+
+260
+00:20:43.000 --> 00:20:47.001
+fakta, seolah-olah jika Anda memanaskan bekas cukup, maka bakteri akan semua
+
+261
+00:20:47.001 --> 00:20:52.000
+dibunuh, dan fakta bahwa jika bekas tidak steril dan Anda mengosongkannya keluar
+
+262
+00:20:52.000 --> 00:20:56.001
+Pada media budaya, maka Anda akan mendapatkan koloni bakteri. Dan yang masih
+
+263
+00:20:56.001 --> 00:21:02.000
+Fakta lain adalah penting, bahwa jika Anda meninggalkan bakteri di dalam makanan, maka mereka akan
+
+264
+00:21:02.000 --> 00:21:07.000
+dan spoilnya. Neils, di mana Anda melihat masa depan praktis berjalan di AI? Apa itu The
+
+265
+00:21:07.000 --> 00:21:11.000
+pasar potensial terbesar, jika Anda ingin, untuk jenis aplikasi ini? Baiklah, itu
+
+266
+00:21:11.000 --> 00:21:14.000
+Menurut saya, sistem-sistem pakar, seperti yang telah mereka lalui, mungkin
+
+267
+00:21:14.000 --> 00:21:17.001
+adalah pasar yang cukup besar, dan akan terus mengembangkan sistem yang
+
+268
+00:21:17.001 --> 00:21:22.000
+kurang brittle selama lima, sepuluh, lima belas tahun berikutnya. Satu lagi yang sangat penting
+
+269
+00:21:22.000 --> 00:21:26.001
+aplikasi adalah program komputer yang mampu berkomunikasi dengan manusia dalam
+
+270
+00:21:26.001 --> 00:21:31.000
+Bahasa Inggris, bahasa biasa sehari-hari, dan itu akan membuat komputer
+
+271
+00:21:31.000 --> 00:21:35.001
+dapat diakses oleh berbagai orang yang lebih luas. Kami hanya memiliki sekitar satu menit. Saya suka
+
+272
+00:21:35.001 --> 00:21:39.001
+Dengan kata lain, Brittle. Penjelasan lebih lanjut tentang apa yang Anda maksud dengan sistem brittle. Baiklah, itu
+
+273
+00:21:39.001 --> 00:21:44.000
+yang berkaitan dengan kemampuan untuk memahami konteks, saya pikir, di mana
+
+274
+00:21:44.000 --> 00:21:49.001
+diskusi atau percakapan khusus dengan sistem pakar sedang berlangsung. Jika
+
+275
+00:21:49.001 --> 00:21:53.000
+Informasi yang diperlukan untuk mencapai kesimpulan tertentu ada dan ada.
+
+276
+00:21:53.000 --> 00:21:56.001
+Secara eksplisit, maka sistem biasanya dapat datang dengan beberapa yang wajar
+
+277
+00:21:56.001 --> 00:22:00.000
+Jawabannya Jika itu harus memiliki apa yang bisa Anda sebut umum rasa pengetahuan, pengetahuan
+
+278
+00:22:00.000 --> 00:22:04.001
+bahwa kita semua belajar dari waktu kita sepuluh atau lima belas, maka itu ada perjanjian yang baik.
+
+279
+00:22:04.001 --> 00:22:07.001
+lebih sulit, dan dalam hal yang sebenarnya gagal dalam banyak kasus tersebut. Jadi
+
+280
+00:22:07.001 --> 00:22:11.001
+Ironisnya, akal sehat adalah hal yang paling sulit. Hanya sedikit orang yang
+
+281
+00:22:11.001 --> 00:22:15.001
+bersedia membayar untuk memasukkan pengetahuan akal umum ke dalam komputer, sementara
+
+282
+00:22:15.001 --> 00:22:19.001
+adalah menarik dan komersial penting untuk memberikan pengetahuan tentang nuklir
+
+283
+00:22:19.001 --> 00:22:23.000
+Reaktor masuk ke komputer. Sayang, kami sudah keluar dari waktu. Terima kasih banyak untuk
+
+284
+00:22:23.000 --> 00:22:26.000
+berada di sini. Terima kasih telah menyertai kami pada edisi ini dari Computer Chronicles.
+
+285
+00:23:02.001 --> 00:23:09.000
+Micro Focus, pencipta alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+286
+00:23:09.000 --> 00:23:14.000
+dengan senang hati memberikan dana besar untuk komputer kronik, cerita
+
+287
+00:23:14.000 --> 00:23:16.000
+dari evolusi yang berlanjut ini.
+
+288
+00:23:43.001 --> 00:23:47.000
+Akses rawak dimungkinkan dengan bantuan dari Popular
+
+289
+00:23:47.000 --> 00:23:49.001
+Sebuah majalah McGraw Hill.
+
+290
+00:23:50.001 --> 00:23:54.000
+Saya adalah Susan Bimba, duduk untuk Stuart Chafee. Dalam file akses rawak ini
+
+291
+00:23:54.000 --> 00:23:58.000
+Minggu ini, Departemen Perdagangan telah mengambil langkah untuk menghentikan ekspor teknologi untuk
+
+292
+00:23:58.000 --> 00:24:02.000
+Negara-negara yang bersekutu dengan Uni Soviet, menyerang Digital Equipment Corporation
+
+293
+00:24:02.000 --> 00:24:06.000
+dengan pembatasan baru yang ketat terhadap praktek ekspornya. Sekarang DEC harus
+
+294
+00:24:06.000 --> 00:24:10.001
+Lisensi ekspor individu untuk setiap komputer yang canggih. Kapal menuju barat
+
+295
+00:24:10.001 --> 00:24:14.001
+Jerman, Austria atau Norwegia Pemerintah mengatakan di negara-negara ini komputer
+
+296
+00:24:14.001 --> 00:24:17.001
+dapat dengan mudah dialihkan ke negara-negara Blok Timur.
+
+297
+00:24:18.000 --> 00:24:22.000
+Beberapa bulan yang lalu, salah satu komputer DEC ditangkap dan dialihkan ke
+
+298
+00:24:22.000 --> 00:24:26.001
+Uni Soviet, tetapi perusahaan itu ditemukan tidak bersalah dalam insiden itu. Meskipun
+
+299
+00:24:26.001 --> 00:24:30.001
+Lobi yang kuat oleh industri teknologi tinggi, Presiden Reagan telah memberikan Pentagon
+
+300
+00:24:30.001 --> 00:24:35.000
+memungkinkan untuk memberi nasihat kepada Departemen Perdagangan mengenai komputer dan ekspor teknologi tinggi kepada semua
+
+301
+00:24:35.000 --> 00:24:38.001
+negara asing. Pentagon sudah memiliki hak untuk memberi nasihat tentang
+
+302
+00:24:38.001 --> 00:24:43.000
+Permohonan untuk ekspor ke negara-negara komunis. Pentagon merasakan kemampuannya
+
+303
+00:24:43.000 --> 00:24:46.001
+akan membantu mengurangi jumlah komputer yang dialihkan dari non
+
+304
+00:24:46.001 --> 00:24:48.001
+Negara-negara komunis untuk negara komunis.
+
+305
+00:24:49.001 --> 00:24:52.001
+National Semiconductor Corporation dapat dilarang dari
+
+306
+00:24:52.001 --> 00:24:54.001
+membuat chip untuk proyek pemerintah.
+
+307
+00:24:55.000 --> 00:24:58.001
+Pada awal bulan ini, perusahaan mengakui bahwa dalam periode tiga tahun,
+
+308
+00:24:58.001 --> 00:25:02.001
+Chip yang tidak diuji dengan baik yang digunakan dalam banyak proyek militer. Sekarang yang
+
+309
+00:25:02.001 --> 00:25:07.000
+Agen Pertahanan Logistik sedang menyelidiki National Semi, mencoba mencari tahu
+
+310
+00:25:07.000 --> 00:25:11.000
+Siapakah yang bertanggung jawab untuk berbohong kepada pemerintah tentang ujian. Meskipun
+
+311
+00:25:11.000 --> 00:25:17.000
+masalah ini, National Semiconductor melaporkan keuntungan $15.4 juta untuk
+
+312
+00:25:17.000 --> 00:25:22.000
+Pertemuan yang berakhir pada tanggal 4 Maret. IBM melaporkan permintaan besar untuk kecilnya
+
+313
+00:25:22.000 --> 00:25:27.000
+dengan komputer. Perusahaan mengatakan pengiriman PC tahun ini akan menjadi tiga kali lipat.
+
+314
+00:25:27.000 --> 00:25:31.000
+Itu tahun lalu. Diperkirakan bahwa IBM akan mengirim lebih dari dua juta
+
+315
+00:25:31.000 --> 00:25:35.000
+PC, PC junior, dan komputer desktop IBM lainnya digabungkan.
+
+316
+00:25:36.001 --> 00:25:40.001
+Dan sekarang IBM sedang membuat komputer portabelnya sendiri, itu kelihatan seperti Compaq, sebuah
+
+317
+00:25:40.001 --> 00:25:45.000
+Pembuat laptop yang kompatibel dengan IBM, akan menurunkan harga. Sampai saat ini tidak ada tanggal
+
+318
+00:25:45.000 --> 00:25:49.001
+telah diberikan untuk pemotongan harga, tetapi insider industri mengatakan mungkin akan
+
+319
+00:25:49.001 --> 00:25:55.000
+sekitar awal April. Saat ini, Compaq portabel dijual untuk $ 2,995.
+
+320
+00:25:56.000 --> 00:26:01.001
+Ini adalah $ 200 lebih dari laptop IBM. Dengan pemotongan $ 500 yang dirancang, Compaq
+
+321
+00:26:01.001 --> 00:26:07.000
+Ini akan dijual untuk $ 300 kurang dari laptop IBM. Atari Incorporated melakukan pemotongan,
+
+322
+00:26:07.001 --> 00:26:11.000
+Akan ada pemotongan karyawan. Pembuat video game mengatakan ia berencana untuk
+
+323
+00:26:11.000 --> 00:26:12.001
+Dipecat sekitar 300 karyawan.
+
+324
+00:26:13.000 --> 00:26:17.000
+Pada saat yang sama, juru bicara Atari mengatakan ada rencana untuk memperluas penjualan dan
+
+325
+00:26:17.000 --> 00:26:22.000
+Anggota staf teknik sekitar 100 orang. Tahun lalu, perusahaan kehilangan lebih dari $ 500 juta,
+
+326
+00:26:23.000 --> 00:26:27.000
+memecat lebih dari 2.000 karyawan di Bay Area, dan memindahkan bagian dari operasi
+
+327
+00:26:27.000 --> 00:26:32.001
+di Taiwan dan Hong Kong. Nah, minggu lalu kami memberitahu Anda Kementerian Perdagangan Jepang
+
+328
+00:26:32.001 --> 00:26:37.001
+dapat memperkenalkan undang-undang yang akan mengurangi perlindungan AS. perangkat lunak di Jepang. ini
+
+329
+00:26:37.001 --> 00:26:41.000
+Minggu ini, Amerika Serikat Pemerintah Jepang memperingatkan bahwa jika parlemen Jepang meratifikasi
+
+330
+00:26:41.000 --> 00:26:45.001
+Bill dan Amerika Serikat. akan bertolak dalam bentuk. Jika disetujui, undang-undang akan membatasi
+
+331
+00:26:45.001 --> 00:26:50.001
+Perlindungan hak cipta untuk Amerika Serikat membuat perangkat lunak, menjadikannya perlu untuk Amerika Serikat. Software yang
+
+332
+00:26:50.001 --> 00:26:55.001
+Pemilik untuk lisensi program mereka kepada produsen Jepang. Nah, sedikit lebih dekat dengan
+
+333
+00:26:55.001 --> 00:26:59.000
+rumah, revisi perangkat lunak kami Paul Schindler memiliki beberapa informasi untuk blackjack
+
+334
+00:26:59.000 --> 00:27:01.000
+Orang yang tidak punya uang untuk membakar.
+
+335
+00:27:06.000 --> 00:27:11.000
+Jika Anda berjudi di Nevada atau Atlantic City, itu adalah pemandangan yang biasa, shuffling
+
+336
+00:27:11.000 --> 00:27:15.001
+dari kartu blackjack, biasanya disertai dengan penglihatan uang Anda yang dibuang ke dalam
+
+337
+00:27:15.001 --> 00:27:20.000
+oleh dealer di akhir pusingan. Nah, jika Anda lelah kehilangan, ada satu
+
+338
+00:27:20.000 --> 00:27:24.000
+Program komputer untuk Anda. Ini adalah blackjack profesional Ken Houston.
+
+339
+00:27:24.001 --> 00:27:28.001
+Sekarang, itu agak jarang ketika penulis mendapatkan perhitungan atas ketika mereka menamakan sebuah komputer
+
+340
+00:27:28.001 --> 00:27:33.001
+program, tapi Houston layak mendapatkannya. Ia adalah mantan pejabat di Pasar Pasifik.
+
+341
+00:27:33.001 --> 00:27:37.001
+Pertukaran, dan sekarang dia adalah penjudi full-time. Tentu saja, beberapa orang akan mengatakan bahwa
+
+342
+00:27:37.001 --> 00:27:41.001
+Tidak banyak pertukaran, tetapi bagaimanapun, pada perjalanan baru-baru ini ke Las Vegas, Houston adalah
+
+343
+00:27:41.001 --> 00:27:48.000
+keluar dari lima kasino setelah memenangkan lebih dari $ 3.000. Sebagian besar komputer
+
+344
+00:27:48.000 --> 00:27:52.001
+Permainan blackjack hanya akan bermain blackjack dengan Anda, tetapi perangkat lunak seluruh bumi
+
+345
+00:27:52.001 --> 00:27:57.000
+Catatan dan ulasan mengatakan bahwa blackjack profesional Houston akan mengajarkan Anda bagaimana untuk
+
+346
+00:27:57.000 --> 00:28:00.001
+Bermain permainan dan menang menggunakan berbagai metode menghitung poin.
+
+347
+00:28:01.000 --> 00:28:06.001
+Grafik adalah crisp. Jadual itu hijau. Kartu-kartu yang terlihat realistis, dan
+
+348
+00:28:06.001 --> 00:28:11.000
+Suara juga bagus. Anda dapat mendengar kartu memukul meja. Penggunaan lain dari
+
+349
+00:28:11.000 --> 00:28:15.001
+Suara, program ini menyarankan Anda tentang taruhan dan permainan kartu, dan itu bergetar pada Anda ketika
+
+350
+00:28:15.001 --> 00:28:21.001
+Kau sudah goof. Blackjack profesional Ken Houston adalah $ 70 dari Screenplay di Chapel
+
+351
+00:28:21.001 --> 00:28:25.000
+Hill, Karolina Utara Untuk akses rawak, saya adalah Paul Schindler.
+
+352
+00:28:26.000 --> 00:28:29.000
+Minggu depan, Paul meninjau Volkswagen Deluxe, dan itu untuk Random minggu ini
+
+353
+00:28:29.000 --> 00:28:35.001
+Akses yang Saya adalah Susan Bimba. Akses rawak dimungkinkan dengan bantuan dari Popular
+
+354
+00:28:35.001 --> 00:28:38.000
+Sebuah majalah McGraw Hill.

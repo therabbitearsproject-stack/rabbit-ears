@@ -1,0 +1,1417 @@
+WEBVTT
+
+1
+00:00:50.000 --> 00:00:56.000
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+2
+00:00:56.000 --> 00:01:01.000
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+3
+00:01:01.000 --> 00:01:03.000
+de cette évolution continue.
+
+4
+00:01:12.001 --> 00:01:18.001
+Je ne pensais pas trop longtemps à ce sujet, n’est-ce pas ? Nous savions que cela allait se passer.
+
+5
+00:01:19.000 --> 00:01:22.000
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay, assis pour Gary
+
+6
+00:01:22.000 --> 00:01:27.001
+Kildall cette semaine en tant que Herb Lechner de SRI. Je pense que le jeu d&#x27;échec est le dernier.
+
+7
+00:01:27.001 --> 00:01:32.001
+jeu de compétences, un jeu qui nécessite l&#x27;agilité mentale, l&#x27;intelligence si vous voulez, mais
+
+8
+00:01:32.001 --> 00:01:37.000
+Ici, je joue un jeu d&#x27;échecs avec un ordinateur, qui analyse le panneau
+
+9
+00:01:37.000 --> 00:01:40.001
+positions et appliquer un certain type d&#x27;intelligence pour déterminer ce qu&#x27;il suit
+
+10
+00:01:40.001 --> 00:01:44.000
+Le mouvement doit être. C’est le sujet de notre programme d’aujourd’hui, l’intelligence artificielle.
+
+11
+00:01:45.000 --> 00:01:49.001
+Et dans les esprits de certaines personnes, l&#x27;IA suggère d&#x27;essayer de duplicer la voie d&#x27;un humain
+
+12
+00:01:49.001 --> 00:01:52.001
+Le cerveau fonctionne. Est-ce ce que c’est en fait ?
+
+13
+00:01:52.001 --> 00:01:59.000
+Pas dans la plupart des recherches d&#x27;IA modernes, Stuart. Des recherches antérieures dans l&#x27;IA ont vu
+
+14
+00:01:59.000 --> 00:02:03.001
+duplicer les processus de pensée humaine, mais la recherche actuelle de l&#x27;IA est plus préoccupée
+
+15
+00:02:03.001 --> 00:02:09.001
+duplicer le résultat final de l’intelligence. Les ordinateurs qui agissent comme
+
+16
+00:02:09.001 --> 00:02:13.001
+experts en systèmes et ordinateurs experts qui peuvent communiquer avec nous dans notre
+
+17
+00:02:13.001 --> 00:02:18.001
+la langue, la compréhension d’un contexte de cette langue sont deux domaines qui
+
+18
+00:02:18.001 --> 00:02:22.000
+Aujourd’hui, il y a beaucoup d’attention dans la recherche sur l’intelligence artificielle.
+
+19
+00:02:23.000 --> 00:02:26.000
+OK ! Nous allons rencontrer deux des principaux experts du monde en matière artificielle.
+
+20
+00:02:26.000 --> 00:02:29.001
+Intelligence, et nous allons regarder deux exemples fascinants d&#x27;experts
+
+21
+00:02:29.001 --> 00:02:34.001
+des systèmes. L’un des principaux experts sur les systèmes d’experts est le Dr. Edward Feigenbaum de
+
+22
+00:02:34.001 --> 00:02:38.000
+Université de Stanford. Nous avons demandé au professeur Feigenbaum sur le
+
+23
+00:02:38.000 --> 00:02:40.000
+l’évolution de l’intelligence artificielle.
+
+24
+00:02:40.000 --> 00:02:47.000
+Les ordinateurs, comme vous le savez, sont des appareils de traitement du symbole général capables de
+
+25
+00:02:47.000 --> 00:02:52.000
+de manipuler tout type de symboles, dont les nombres constituent une
+
+26
+00:02:52.000 --> 00:02:57.000
+classe, mais les ordinateurs sont beaucoup plus généraux que cela. Nous connaissons le
+
+27
+00:02:57.000 --> 00:03:03.000
+de la comptabilité générale depuis au moins le temps de Turing dans les années 1930, et
+
+28
+00:03:03.000 --> 00:03:08.001
+En fait, je l&#x27;ai suivi en arrière à l&#x27;intuition que Babbage avait qu&#x27;ils étaient informés
+
+29
+00:03:08.001 --> 00:03:12.001
+par Ada Lovelace, après lequel le langage de programmation Ada est nommé.
+
+30
+00:03:13.000 --> 00:03:19.000
+En 1842, Ada Lovelace écrit que le moteur analytique de Babbage a constitué
+
+31
+00:03:19.000 --> 00:03:24.001
+Le lien entre le monde mécanique et le monde du plus abstrait
+
+32
+00:03:24.001 --> 00:03:30.000
+Les concepts. Ce qui est aujourd’hui, dans la terminologie moderne, appelé la physique.
+
+33
+00:03:30.000 --> 00:03:35.000
+Symbole système hypothèse et est la base du travail de l&#x27;intelligence artificielle. dans
+
+34
+00:03:35.000 --> 00:03:40.001
+L&#x27;intelligence artificielle, en tant que science, nous parlons de l&#x27;utilisation des ordinateurs pour
+
+35
+00:03:40.001 --> 00:03:45.001
+Connaissance symbolique du processus en utilisant des méthodes d&#x27;inférence logique, inférence symbole
+
+36
+00:03:45.001 --> 00:03:52.000
+Les méthodes . En d’autres termes, nous parlons d’inférence et non de calcul.
+
+37
+00:03:52.000 --> 00:03:55.000
+dans le sens traditionnel. Nous parlons de connaissances et non
+
+38
+00:03:55.000 --> 00:03:57.000
+numéros dans le sens traditionnel.
+
+39
+00:03:57.000 --> 00:04:02.000
+Une application actuelle de l&#x27;ingénierie des connaissances inférentielles est dans le domaine de
+
+40
+00:04:02.000 --> 00:04:07.001
+systèmes d&#x27;experts, des programmes tels que ce consultant d&#x27;exploration du pétrole. Développé pour aider
+
+41
+00:04:07.001 --> 00:04:11.001
+la grille de grille dans les zones éloignées, le programme se comporte beaucoup comme un qualifié
+
+42
+00:04:11.001 --> 00:04:16.001
+spécialiste . Il pose des questions à son utilisateur et donne ensuite des conseils sur la façon d&#x27;éviter
+
+43
+00:04:16.001 --> 00:04:20.000
+ou des accidents corrects si fréquents dans les opérations de drillage.
+
+44
+00:04:21.000 --> 00:04:24.001
+Si à un moment donné dans la ligne d’interrogation l’utilisateur devient confus par le
+
+45
+00:04:24.001 --> 00:04:30.001
+Question, il peut demander au programme de s’expliquer simplement en entrant pourquoi. et le
+
+46
+00:04:30.001 --> 00:04:35.000
+Le conseiller répond avec une source spécifique derrière la question et explique son
+
+47
+00:04:35.000 --> 00:04:40.001
+Réfléchir à ce point. Le traitement symbolique derrière les talents humains
+
+48
+00:04:40.001 --> 00:04:45.000
+de ce programme ont trouvé des applications dans un large éventail de domaines de la médecine
+
+49
+00:04:45.000 --> 00:04:50.000
+pour les robots. Peut-être que la zone la plus difficile pour AI à maîtriser a été naturelle
+
+50
+00:04:50.000 --> 00:04:54.001
+langue, un talent qui résulte dans des ordinateurs très sympathiques mais qui nécessite
+
+51
+00:04:54.001 --> 00:05:00.000
+Une grande capacité de traitement. Les ambiguités du syntaxe et du contexte sont
+
+52
+00:05:00.000 --> 00:05:04.001
+limitation des systèmes présents à des applications très limitées. Une simple géographie
+
+53
+00:05:04.001 --> 00:05:09.001
+La question, en fonction de la phrase, peut conduire à plusieurs interprétations. et le
+
+54
+00:05:09.001 --> 00:05:13.001
+Le programme déterminera les questions les plus susceptibles de signifier seulement après une exhaustive
+
+55
+00:05:13.001 --> 00:05:17.001
+déconstruction de la sentence et pourrait même rejeter un inhabituel
+
+56
+00:05:17.001 --> 00:05:19.000
+Expression de la même question.
+
+57
+00:05:20.001 --> 00:05:25.001
+Dans un développement parallèle, l&#x27;investissement dans des programmes d&#x27;IA avec des compétences linguistiques a conduit
+
+58
+00:05:25.001 --> 00:05:30.001
+Une étude interactive de la communication graphique. Dans l’expérience, le visuel
+
+59
+00:05:30.001 --> 00:05:35.001
+La dynamique de la communication constitue la base d&#x27;un conseiller linguistique expert
+
+60
+00:05:35.001 --> 00:05:40.000
+capable non seulement de discerner les modèles visuels, mais aussi d&#x27;agir comme une sorte de
+
+61
+00:05:40.000 --> 00:05:45.000
+le tutor. Une application interactive a donné aux personnes sans discours normal le
+
+62
+00:05:45.000 --> 00:05:50.000
+capacité à adapter ou à construire des langues symboliques alternatives, une remarquable
+
+63
+00:05:50.000 --> 00:05:54.000
+l&#x27;utilisation de l&#x27;intelligence d&#x27;un programme informatique pour aider
+
+64
+00:05:54.000 --> 00:05:55.001
+interprétation de l’intelligence humaine.
+
+65
+00:06:08.000 --> 00:06:12.001
+Aujourd’hui, il y a Jeffrey Perrone. Jeffrey est un conseiller de gestion impliqué dans la
+
+66
+00:06:12.001 --> 00:06:16.001
+Systèmes d&#x27;experts pour micros et Niels Nielsen, directeur du système artificiel
+
+67
+00:06:16.001 --> 00:06:21.001
+Centre de renseignements à SRI International. Les herbes. Niels, vous pourriez nous aider
+
+68
+00:06:21.001 --> 00:06:26.000
+Le domaine de l’intelligence artificielle tel qu’il existe aujourd’hui ? Je vais essayer,
+
+69
+00:06:26.000 --> 00:06:31.000
+Les herbes. C’est un champ large. Si vous demandez à beaucoup de personnes différentes ce qui constitue
+
+70
+00:06:31.000 --> 00:06:34.001
+Intelligence artificielle, je pense que vous receviez beaucoup de réponses différentes. Pour moi, je
+
+71
+00:06:34.001 --> 00:06:39.000
+Il s’agit principalement de la mise en place des connaissances dans les programmes informatiques afin que
+
+72
+00:06:39.000 --> 00:06:43.001
+Les programmes peuvent alors résoudre certains problèmes que les humains trouvent un peu faciles
+
+73
+00:06:43.001 --> 00:06:48.000
+Des défis intellectuels parfois. et la connaissance que l’on met en
+
+74
+00:06:48.000 --> 00:06:53.001
+C’est la connaissance qui est représentée d’une manière particulière. L’idée est donc
+
+75
+00:06:53.001 --> 00:06:57.001
+Ce ne sont pas des programmes plus intelligents qui font la programmation de l&#x27;intelligence artificielle.
+
+76
+00:06:58.000 --> 00:07:02.000
+Il y a une certaine différence dans les techniques qu&#x27;ils utilisent par rapport à ce que l&#x27;ordinaire
+
+77
+00:07:02.000 --> 00:07:04.001
+La programmation est. Oui, il y a une partie de la science informatique qui est artificielle
+
+78
+00:07:04.001 --> 00:07:08.001
+L&#x27;intelligence est concernée par ce qui implique en fait un certain corps de
+
+79
+00:07:08.001 --> 00:07:11.001
+techniques qui sont un peu différentes des entreprises que ce qui se passe dans le reste de
+
+80
+00:07:11.001 --> 00:07:18.000
+La science informatique. Jeffrey, Niels est impliqué dans la recherche et de l&#x27;IA et vous êtes
+
+81
+00:07:18.000 --> 00:07:22.000
+impliqués dans certaines applications. Aujourd’hui, nous sommes au point où nous pouvons
+
+82
+00:07:22.000 --> 00:07:27.001
+appliquer à ? En tout cas Stuart. De quelles manières ? J’ai l’impression que c’est artificiel
+
+83
+00:07:27.001 --> 00:07:32.000
+les systèmes d’intelligence et, en particulier, des systèmes expérimentés ou systèmes basés sur les connaissances sont désormais
+
+84
+00:07:32.000 --> 00:07:37.000
+applicable n&#x27;importe quel endroit où les connaissances spécialisées sont utilisées régulièrement pour atteindre
+
+85
+00:07:37.000 --> 00:07:43.001
+des décisions, des stratégies de résolution des troubles, des diagnostics, ces domaines. J’ai une sorte de pensée
+
+86
+00:07:43.001 --> 00:07:48.001
+d&#x27;elle comme quelque chose où nous avons atteint un bassin d&#x27;eau où il n&#x27;est plus très
+
+87
+00:07:48.001 --> 00:07:53.000
+coûteux ou très difficile pour les personnes qui n&#x27;ont pas de fond technique à construire
+
+88
+00:07:53.000 --> 00:07:58.001
+systèmes et les appliquer efficacement. Et vous distribuez un système qui est un expert
+
+89
+00:07:58.001 --> 00:08:02.001
+système et aide également à construire des systèmes d&#x27;experts. Est-ce que cela est correct ? à droite.
+
+90
+00:08:02.001 --> 00:08:06.000
+Eh bien, en fait, il est un outil pour générer des applications de systèmes d&#x27;experts spécifiques
+
+91
+00:08:06.000 --> 00:08:12.000
+Dans presque n&#x27;importe quel domaine où il y a cette utilisation routine de connaissances spéciales. et
+
+92
+00:08:12.000 --> 00:08:13.001
+Il fonctionne sur les micro-ordinateurs ? à droite.
+
+93
+00:08:13.001 --> 00:08:18.000
+Il fonctionne sur l&#x27;ordinateur personnel IBM et un certain nombre d&#x27;autres compatibles
+
+94
+00:08:18.000 --> 00:08:22.001
+Les microcomputés. Vous utilisez les mêmes techniques dans ce système que Niels était
+
+95
+00:08:22.001 --> 00:08:27.001
+Est-ce qu’ils sont utilisés dans des systèmes qui pourraient fonctionner sur des équipements plus grands ? Il utilise certains
+
+96
+00:08:27.001 --> 00:08:33.001
+C’est la même idée et elle a sa propre approche unique aussi. L’un des spécifiques
+
+97
+00:08:33.001 --> 00:08:37.001
+dans les domaines où il s’agit d’un autre type de programme, c’est que, au lieu de
+
+98
+00:08:37.001 --> 00:08:44.000
+une déclaration explicite des règles pour construire un système, il ne nécessite que des exemples de
+
+99
+00:08:44.000 --> 00:08:49.001
+décisions antérieures, tâches antérieuses, diagnostics antérieurs pour construire les systèmes. et
+
+100
+00:08:49.001 --> 00:08:53.000
+Ce qui va passer par, je crois, la bouteille d&#x27;ingénierie de la connaissance
+
+101
+00:08:53.000 --> 00:08:57.001
+mentionnée par des gens comme Edward Feigenbaum dans la construction de ces systèmes. à Jeffrey,
+
+102
+00:08:57.001 --> 00:09:02.001
+Vous avez un expert pour faciliter votre système ici et nous montrer la démonstration. Il est certain.
+
+103
+00:09:03.000 --> 00:09:07.000
+OK ! C&#x27;est une application spécifique générée avec ce système et
+
+104
+00:09:07.000 --> 00:09:11.001
+Elle a été générée par un anesthésiologue, Hillary Donne et moi-même. Et ce qu&#x27;il fait
+
+105
+00:09:11.001 --> 00:09:17.000
+Il fait des diagnostics pour des problèmes respiratoires ou aéronautiques. La première question ici
+
+106
+00:09:17.000 --> 00:09:21.000
+Ce qu’il demande l’utilisateur naïf est, quand était l’origine du problème? Et je vais
+
+107
+00:09:21.000 --> 00:09:26.000
+Les jours de réponse. Ensuite, nous nous demandons quelle est la qualité de la bataille, qui est un rasage
+
+108
+00:09:26.000 --> 00:09:30.001
+Le son est fait lorsque l’on respire une sorte de son. Et on dirait que la
+
+109
+00:09:30.001 --> 00:09:34.001
+La qualité est modérée. Qui utiliserait ce système ? Un médecin ou ? Cela pourrait être utilisé
+
+110
+00:09:34.001 --> 00:09:40.000
+par l&#x27;assistant d&#x27;un médecin pour examiner les patients pour éventuellement une meilleure tuning par
+
+111
+00:09:40.000 --> 00:09:45.000
+Quelqu’un avec plus d’expérience. Est-ce que le patient est sombre ? Nous disons non. Y a-t-il des
+
+112
+00:09:45.000 --> 00:09:49.001
+facteurs prédisposant à développer des événements antérieurs de lutte qui pourraient conduire à cette
+
+113
+00:09:49.001 --> 00:09:53.001
+La condition ? Disons que oui. Il s’agit d’envisager le diagnostic de
+
+114
+00:09:53.001 --> 00:09:58.000
+sténose trachéale intrathoracique. Maintenant, je ne suis pas un médecin, donc je ne sais pas exactement
+
+115
+00:09:58.000 --> 00:10:02.000
+ce que cela signifie, mais cela vous donne une idée de la façon dont il peut
+
+116
+00:10:02.000 --> 00:10:04.000
+conduit à un diagnostic particulier.
+
+117
+00:10:04.001 --> 00:10:09.001
+Maintenant, ce que j’aimerais faire, c’est que je voudrais vous montrer un exemple trivial appelé dimanche,
+
+118
+00:10:09.001 --> 00:10:14.000
+qui vient en fait avec le manuel pour le programme en tant que tutoriel, essentiellement.
+
+119
+00:10:14.001 --> 00:10:19.001
+Aujourd’hui, le dimanche est un modèle pour décider ce qu’il faut faire un dimanche après-midi. Comment êtes vous
+
+120
+00:10:19.001 --> 00:10:24.001
+Vous allez passer votre temps ? Il s’agit d’un couple de questions, plusieurs
+
+121
+00:10:24.001 --> 00:10:29.001
+Choisissez des questions comme vous avez juste vues, et celles-ci seraient répondues. Et maintenant ce que
+
+122
+00:10:29.001 --> 00:10:33.000
+Je vais faire fonctionne le système de requête, et il demande, avez-vous votre famille
+
+123
+00:10:33.000 --> 00:10:37.001
+Avec toi ? Nous disons oui. Quelle est la météo ? Est-ce que c’est pluie ou soleil ? Nous allons
+
+124
+00:10:37.001 --> 00:10:42.001
+Disons le Soleil. Alors il dit, pourquoi ne pas prendre la famille sur la plage? Maintenant le chemin
+
+125
+00:10:42.001 --> 00:10:46.001
+que vous allez construire l&#x27;un de ces modèles est en commençant par quelque chose appelé le
+
+126
+00:10:46.001 --> 00:10:52.000
+attribuer l’écran. L’écran attributif est là où vous dessinez les dimensions de
+
+127
+00:10:52.000 --> 00:10:56.000
+problème ou situation particulière. Les attributs sont le temps et
+
+128
+00:10:56.000 --> 00:11:00.000
+famille, et il y a la colonne de conseil, qui serait le résultat d&#x27;une
+
+129
+00:11:00.000 --> 00:11:05.001
+La décision . Quelle taille de matrice pouvez-vous faire sur cela ? En fait, vous pouvez le faire dans n&#x27;importe quel
+
+130
+00:11:05.001 --> 00:11:11.001
+31 attributs et jusqu&#x27;à 255 valeurs par attribut, et les
+
+131
+00:11:11.001 --> 00:11:16.001
+Ils peuvent ensuite être reliés ensemble. Ainsi, vous pouvez faire des modèles très grands, seulement limité par
+
+132
+00:11:16.001 --> 00:11:21.001
+La taille de votre disque, essentiellement. Les valeurs telles que la pluie et le soleil
+
+133
+00:11:21.001 --> 00:11:25.001
+Il peut être considéré comme des réponses à la question représentée par l&#x27;attribut. Une fois
+
+134
+00:11:25.001 --> 00:11:29.001
+Vous avez fait un sketch préliminaire de ce genre, vous allez ensuite à quelque chose appelé
+
+135
+00:11:29.001 --> 00:11:35.000
+l&#x27;écran de l&#x27;exemple, et sur l&#x27;échantillon de l’exemple que vous entrez dans des exemples de précédent
+
+136
+00:11:35.000 --> 00:11:37.001
+décisions . Ceci a été développé par le Dr.
+
+137
+00:11:37.001 --> 00:11:44.001
+Donald Mickey à Edimbourg, basé sur l&#x27;idée que l&#x27;information est communiquée par
+
+138
+00:11:44.001 --> 00:11:49.001
+experts ou maîtres à leurs apprenants sous la forme d&#x27;exemples ou de cas. Ainsi ici
+
+139
+00:11:49.001 --> 00:11:54.001
+Vous voyez, courant horizontalement à travers l&#x27;écran, les réponses à ces questions.
+
+140
+00:11:54.001 --> 00:11:59.000
+La pluie, oui, nous sommes avec la famille, le conseil serait d&#x27;aller au musée, et
+
+141
+00:11:59.000 --> 00:12:03.000
+Le prochain cas serait si c&#x27;est soleil et j&#x27;étais avec la famille, alors je vais
+
+142
+00:12:03.000 --> 00:12:08.000
+à la plage. Et le troisième cas, c’est que je ne me soucie pas de ce que
+
+143
+00:12:08.000 --> 00:12:12.001
+Le temps est comme ça. S&#x27;il n&#x27;y a pas de famille avec moi, je vais pêcher.
+
+144
+00:12:13.001 --> 00:12:17.001
+Jeffrey, vous avez décrit cela évidemment comme un exemple trivial, ce dimanche un, mais
+
+145
+00:12:17.001 --> 00:12:22.001
+en général, avez-vous la capacité au sein d&#x27;un PC à approcher sérieusement ce genre de
+
+146
+00:12:22.001 --> 00:12:26.000
+Pour résoudre le problème ? Oui, vous pouvez faire des choses très importantes. En tant que question de
+
+147
+00:12:26.000 --> 00:12:29.001
+En fait, j&#x27;ai récemment parlé avec le logiciel de l&#x27;ensemble de la Terre à l&#x27;audit des gens
+
+148
+00:12:29.001 --> 00:12:34.001
+sur la réalisation de certains systèmes pour recommander des logiciels tels que des programmes de traitement de mots
+
+149
+00:12:34.001 --> 00:12:39.000
+ou matériel de communication, modèles, ce genre de chose. Neils, je veux vous demander
+
+150
+00:12:39.000 --> 00:12:43.000
+Ce que j&#x27;espère ne semble pas une question stupide, mais quel est le point ? Pourquoi
+
+151
+00:12:43.000 --> 00:12:47.001
+Est-ce que nous développons quelque chose comme ce type de système ? Il faut remplacer les médecins en
+
+152
+00:12:47.001 --> 00:12:52.000
+La situation de diagnostic ? Quel est le résultat final de cela ? Eh bien, je pense qu&#x27;il y aura
+
+153
+00:12:52.000 --> 00:12:56.001
+Beaucoup d’utilisations de systèmes comme celui-ci. Je pense que les actuels ont en fait un
+
+154
+00:12:56.001 --> 00:13:00.000
+Beaucoup de caractéristiques brittle qui pourraient certainement limiter leur utilité à
+
+155
+00:13:00.000 --> 00:13:07.000
+La fin de l’année ou quelque chose comme ça. Ce type de systèmes que je pense
+
+156
+00:13:07.000 --> 00:13:12.000
+Il sera très généralement utile dans un large éventail de paramètres. Tout d’abord, le
+
+157
+00:13:12.000 --> 00:13:16.001
+connaissance que ces systèmes contiennent, au moins nous espérons mettre dans la connaissance de
+
+158
+00:13:16.001 --> 00:13:21.000
+des experts de classe mondiale, des gens qui savent tellement sur le domaine, qu’il y a
+
+159
+00:13:21.000 --> 00:13:26.000
+Il n&#x27;y a que cinq ou six d&#x27;entre eux dans le monde entier qui savent tellement. Maintenant, il peut
+
+160
+00:13:26.000 --> 00:13:29.001
+être quelques personnes assez bonnes pratiquant qui, cependant, ne sont pas aussi bonnes que
+
+161
+00:13:29.001 --> 00:13:34.001
+des experts du monde sur un sujet particulier. Il nous aide à diffuser les connaissances
+
+162
+00:13:34.001 --> 00:13:39.001
+Un expert autour d&#x27;une bonne affaire d&#x27;un moyen qui peut être copié assez facilement. OK, dans
+
+163
+00:13:39.001 --> 00:13:42.001
+Juste un moment, nous allons rencontrer l&#x27;homme qui a inventé le terme artificiel
+
+164
+00:13:42.001 --> 00:13:45.000
+Intelligence et nous verrons une démonstration de la connaissance
+
+165
+00:13:45.000 --> 00:13:46.001
+L’ingénierie qui vient à venir.
+
+166
+00:14:00.000 --> 00:14:04.000
+Aujourd’hui, il s’agit de Tom Kaler. Tom est directeur d&#x27;application artificielle
+
+167
+00:14:04.000 --> 00:14:06.000
+Intelligence à l’IntelGénétique.
+
+168
+00:14:06.001 --> 00:14:10.001
+Tom, vous avez un système complexe ici. Tout d’abord, dites-moi comment cela serait
+
+169
+00:14:10.001 --> 00:14:14.000
+différent du système que nous avons vu dans la première partie du programme. Eh bien, une façon
+
+170
+00:14:14.000 --> 00:14:18.001
+Ce qui est différent, c’est que nous pouvons développer un environnement graphique qui
+
+171
+00:14:18.001 --> 00:14:23.001
+se connecte aux bases de connaissances de base afin que l&#x27;utilisateur soit vraiment juste
+
+172
+00:14:23.001 --> 00:14:28.001
+Mélanger autour avec des mètres et des valves et des objets auxquels ils sont habitués. Ici, pour
+
+173
+00:14:28.001 --> 00:14:32.001
+Par exemple, si nous regardons ce niveau, nous ne pouvons que le signaler. Avant que vous obteniez
+
+174
+00:14:32.001 --> 00:14:35.000
+Qu’est-ce que l’environnement que nous regardons ? Oh, voilà la clé
+
+175
+00:14:35.000 --> 00:14:39.001
+système, l&#x27;environnement d&#x27;ingénierie de la connaissance et nous avons des bases de connaissances
+
+176
+00:14:39.001 --> 00:14:44.001
+jusqu&#x27;à un panneau de contrôle juste ici en ce moment et c&#x27;est juste un petit exemple de
+
+177
+00:14:44.001 --> 00:14:49.001
+Je vous montre comment nous pouvons entendre. Un panneau de contrôle de quoi ? Cela pourrait être un panneau de contrôle.
+
+178
+00:14:49.001 --> 00:14:55.001
+à un réacteur nucléaire, à un instrument ou à tout autre type d’opération
+
+179
+00:14:55.001 --> 00:14:58.001
+Un appareil avec lequel vous voulez travailler. Et ici, par exemple, nous sommes juste
+
+180
+00:14:58.001 --> 00:15:03.001
+modifier la valeur d&#x27;un mètre et noter qu&#x27;il génère un diagramme de bande
+
+181
+00:15:03.001 --> 00:15:08.000
+démontrer le comportement du cours du temps. Une autre chose que nous pouvons faire avec ce type de
+
+182
+00:15:08.000 --> 00:15:13.000
+Les panneaux sont que nous pouvons entrer et regarder les valves et nous pouvant affecter la valve, ou
+
+183
+00:15:13.000 --> 00:15:17.001
+Il est ouvert ou fermé. Maintenant, ce qui est important à ce sujet, c’est que cela affecte une
+
+184
+00:15:17.001 --> 00:15:22.000
+base de connaissances qui appliquera ensuite l&#x27;hyuristique et la prise de décision
+
+185
+00:15:22.000 --> 00:15:24.000
+les procédures du système.
+
+186
+00:15:24.000 --> 00:15:26.001
+Vous pouvez nous montrer que, comment vous pouvez aller à la
+
+187
+00:15:26.001 --> 00:15:28.001
+partie ? Là vous allez. Nous résolvons un problème.
+
+188
+00:15:29.000 --> 00:15:32.000
+Eh bien, ce que nous voyons ci-dessous maintenant est une base de connaissance pour un réacteur nucléaire
+
+189
+00:15:32.001 --> 00:15:37.000
+et nous pouvons avoir une représentation des composants du réacteur nucléaire aussi
+
+190
+00:15:37.000 --> 00:15:42.000
+comme représentation du comportement de prise de décision qui serait effectué par
+
+191
+00:15:42.000 --> 00:15:47.000
+Le spécialiste . Et ce que vous verrez ici, c&#x27;est qu&#x27;il est possible d&#x27;utiliser les deux règles
+
+192
+00:15:47.000 --> 00:15:52.000
+- raisonnement fondé ainsi que la représentation des connaissances de base. L’un des
+
+193
+00:15:52.000 --> 00:15:55.001
+La première chose que nous allons faire ici est juste de regarder comment nous pouvons tester la
+
+194
+00:15:55.001 --> 00:16:00.001
+hypothèses d’une situation d’accident particulière. Et nous ne faisons que tester
+
+195
+00:16:00.001 --> 00:16:05.001
+Les hypothèses et activez-les ici. Et ce que nous voyons que le système fait va
+
+196
+00:16:05.001 --> 00:16:09.001
+à travers un processus de prise de décision où il est l&#x27;accès aux connaissances fondamentales
+
+197
+00:16:09.001 --> 00:16:12.001
+base, en regardant les différents états des composants.
+
+198
+00:16:13.000 --> 00:16:16.001
+Et par le biais, les états de ces composants particuliers peuvent être accessibles
+
+199
+00:16:16.001 --> 00:16:21.000
+directement dans le réacteur nucléaire. Maintenant, vous pouvez réellement interroger le système
+
+200
+00:16:21.000 --> 00:16:25.000
+Demandez-lui quel cours de logique il suit. Est-ce que cela est correct ? C’est juste ça.
+
+201
+00:16:25.000 --> 00:16:27.001
+Il est arrivé et a posé une question à l&#x27;opérateur.
+
+202
+00:16:27.001 --> 00:16:31.000
+Est-il vrai que le niveau de générateur de vapeur est en baisse? Ainsi nous
+
+203
+00:16:31.000 --> 00:16:33.000
+Je peux vous dire, pourquoi cela est demandé ?
+
+204
+00:16:33.001 --> 00:16:37.000
+Et il nous expliquera qu&#x27;il le fait pour prouver que le vapeur
+
+205
+00:16:37.000 --> 00:16:40.001
+L’inventaire du générateur est insuffisant. Nous allons lui donner une réponse
+
+206
+00:16:40.001 --> 00:16:42.000
+Et il continue d’atteindre une conclusion.
+
+207
+00:16:42.001 --> 00:16:46.001
+Ok, Tom, ce système fonctionne dans Lisp. Pourquoi Lisp a raison
+
+208
+00:16:46.001 --> 00:16:48.001
+Le langage pour une application ?
+
+209
+00:16:49.001 --> 00:16:53.000
+Eh bien, l&#x27;une des raisons pour lesquelles Lisp est si important est que vous devez avoir beaucoup de
+
+210
+00:16:53.000 --> 00:16:58.001
+puissantes capacités de manipulation symbolique. La prise de décision est avant tout une
+
+211
+00:16:58.001 --> 00:17:02.001
+Activité symbolique. La représentation de la connaissance est avant tout symbolique et vous avez besoin
+
+212
+00:17:02.001 --> 00:17:05.001
+Ce genre de capacité. Ok, merci pour ça. Les herbes.
+
+213
+00:17:06.001 --> 00:17:10.001
+John McCarthy nous rejoint. John est professeur de sciences informatiques à Stanford
+
+214
+00:17:10.001 --> 00:17:14.001
+Université, et l&#x27;un des pionniers dans le domaine de l&#x27;intelligence artificielle.
+
+215
+00:17:15.000 --> 00:17:19.001
+Parmi ses autres réalisations, il a inventé Lisp, la langue que Stuart a
+
+216
+00:17:19.001 --> 00:17:22.001
+C’est à dire. John, pourquoi avez-vous inventé Lisp ?
+
+217
+00:17:23.000 --> 00:17:27.001
+Eh bien, pour le travail de l&#x27;intelligence artificielle, le genre de chose qu&#x27;ils font
+
+218
+00:17:27.001 --> 00:17:31.001
+et ici. Quelles sont ses caractéristiques qui peuvent être différentes des autres
+
+219
+00:17:31.001 --> 00:17:36.001
+La langue appliquée à l’intelligence artificielle ? Au-delà de ce que Tom
+
+220
+00:17:36.001 --> 00:17:42.000
+L’une de ses principales caractéristiques est que ses programmes sont
+
+221
+00:17:42.000 --> 00:17:48.000
+le même format que ses données, de sorte qu&#x27;il est facile de créer des programmes qui produisent des
+
+222
+00:17:48.000 --> 00:17:53.000
+Regardez les programmes. Cela nous permet de faire face aux faits et à la logique.
+
+223
+00:17:53.000 --> 00:17:55.000
+Plus que les chiffres ?
+
+224
+00:17:55.000 --> 00:18:00.001
+C’est juste ça. Je pense que c&#x27;est sur l&#x27;esprit de tout le monde quand nous parlons d&#x27;intelligence
+
+225
+00:18:00.001 --> 00:18:05.001
+Les machines. Comment les machines peuvent-elles devenir intelligentes ? Quels sont les limites de l’artiste
+
+226
+00:18:05.001 --> 00:18:12.001
+Intelligence ? Bien, je ne vois pas de limites de courte intelligence humaine, et puis
+
+227
+00:18:12.001 --> 00:18:17.001
+Avec des machines plus rapides, on pourrait faire l&#x27;équivalent qu&#x27;un humain pourrait faire dans un court
+
+228
+00:18:17.001 --> 00:18:21.000
+temps, en très longue période. Nils, qu&#x27;est-ce que tu penses
+
+229
+00:18:21.000 --> 00:18:22.001
+Et ça ? Jusqu’où pouvons-nous aller avec cela ?
+
+230
+00:18:23.000 --> 00:18:25.001
+Eh bien, je vais séparer certains des problèmes que nous sommes confrontés afin de faire
+
+231
+00:18:25.001 --> 00:18:29.001
+Des machines plus intelligentes dans environ trois variétés différentes. Nous avons beaucoup entendu
+
+232
+00:18:29.001 --> 00:18:33.000
+sur l’importance de la connaissance, et l’une des choses importantes sur la connaissances
+
+233
+00:18:33.000 --> 00:18:37.000
+C&#x27;est ce que les connaissances doivent être représentées dans un programme. Et quelques-uns des
+
+234
+00:18:37.000 --> 00:18:40.001
+Les difficultés que nous avons en faisant des programmes plus intelligents sont que nous ne sommes pas sûrs
+
+235
+00:18:40.001 --> 00:18:44.001
+C’est exactement ce que nous voulons dire ces programmes sur certains sujets. Un autre
+
+236
+00:18:44.001 --> 00:18:48.000
+la catégorie est une fois que nous trouvons cela, comment nous représentons la connaissance dans le
+
+237
+00:18:48.000 --> 00:18:51.001
+L’ordinateur lui-même ? Et certains types de connaissances prouvant un peu difficile pour nous
+
+238
+00:18:51.001 --> 00:18:55.001
+pour le représenter. La troisième catégorie est liée à la façon dont ce savoir est utilisé,
+
+239
+00:18:55.001 --> 00:18:59.001
+Et peut-être qu&#x27;il y a plusieurs activités là-bas qui ont été assez réussies,
+
+240
+00:19:00.000 --> 00:19:05.001
+Mais d’autres choses qu’il faut vraiment faire encore. Y a-t-il un niveau de frustration dans
+
+241
+00:19:05.001 --> 00:19:09.000
+Dans ce domaine, il y a beaucoup d&#x27;espoir de ce que vous pouvez faire avec quelque chose comme
+
+242
+00:19:09.000 --> 00:19:13.000
+AI, mais encore, comme vous avez souligné, Nils, il semble plus difficile, peut-être, qu&#x27;on ne le pensait
+
+243
+00:19:13.000 --> 00:19:18.001
+Est-ce qu’il faut vraiment mettre cela dans une application pratique ? Et John ? Eh bien,
+
+244
+00:19:19.000 --> 00:19:25.000
+Il y a un certain niveau de technologie dans l&#x27;intelligence artificielle aujourd&#x27;hui,
+
+245
+00:19:26.000 --> 00:19:31.001
+Et beaucoup de gens font des applications sur la base de cette technologie.
+
+246
+00:19:33.000 --> 00:19:39.000
+D’un côté, [...] Nils a dit plus tôt, il
+
+247
+00:19:39.000 --> 00:19:45.000
+Il a dit que nous pouvons mettre dans la connaissance d&#x27;un expert de classe mondiale, et c&#x27;est vraiment
+
+248
+00:19:45.000 --> 00:19:50.001
+Très vrai ! Nous pouvons mettre dans la connaissance d&#x27;un expert de classe mondiale, à condition qu&#x27;il correspond à
+
+249
+00:19:50.001 --> 00:19:56.000
+le format que les programmes présents permettent, c’est-à-dire du type, si cela est vrai,
+
+250
+00:19:57.000 --> 00:20:02.000
+Et puis faites ça. Mais plus généraux types de connaissances qui sont utilisés dans une sorte de
+
+251
+00:20:02.000 --> 00:20:05.000
+Des façons plus grandes sont parfois plus difficiles à mettre en place.
+
+252
+00:20:06.001 --> 00:20:09.001
+Dans le cadre de l’étude médicale, au début du programme, nous avons
+
+253
+00:20:09.001 --> 00:20:14.000
+Un simple exemple de diagnostic médical. Plusieurs systèmes ont été développés, et
+
+254
+00:20:14.000 --> 00:20:18.001
+Cependant, il y a eu des problèmes, en fait, dans l&#x27;utilisation de cela. Quels étaient ces problèmes ? Eh bien,
+
+255
+00:20:18.001 --> 00:20:22.000
+Je ne suis pas sûr de quels étaient les problèmes de ces systèmes spécifiques.
+
+256
+00:20:23.000 --> 00:20:27.000
+Cependant, pour prendre un exemple médical, on peut dire, faire une définition qu&#x27;un
+
+257
+00:20:27.000 --> 00:20:33.001
+Le conteneur est stérile si toutes les bactéries y sont morte. Cependant, cette pièce de
+
+258
+00:20:33.001 --> 00:20:39.000
+la connaissance n’est pas utilisée d’une manière spécifique pour déterminer si un conteneur est
+
+259
+00:20:39.000 --> 00:20:43.000
+estérile en examinant chacune des bactéries. Il est utilisé dans le cadre d’une plus grande
+
+260
+00:20:43.000 --> 00:20:47.001
+faits, comme si vous réchauffez suffisamment le conteneur, alors les bactéries seront toutes
+
+261
+00:20:47.001 --> 00:20:52.000
+tué, et le fait que si le conteneur n&#x27;est pas stérile et que vous le vide
+
+262
+00:20:52.000 --> 00:20:56.001
+dans un milieu culturel, alors vous obtenez des colonies de bactéries. Et le reste
+
+263
+00:20:56.001 --> 00:21:02.000
+Un autre fait est important, que si vous laissez les bactéries dans les aliments, alors ils vont
+
+264
+00:21:02.000 --> 00:21:07.000
+Je le spoilai. Neils, où voyez-vous l’avenir pratiquement dans l’AI? Qu’est ce que le
+
+265
+00:21:07.000 --> 00:21:11.000
+Le plus grand marché potentiel, si vous le souhaitez, pour ce type d&#x27;applications? Eh bien, il
+
+266
+00:21:11.000 --> 00:21:14.000
+Il me semble que les systèmes d&#x27;experts, comme ils sont en cours, ont probablement
+
+267
+00:21:14.000 --> 00:21:17.001
+représente un marché assez grand, et continuera à développer des systèmes qui sont
+
+268
+00:21:17.001 --> 00:21:22.000
+moins brittle au cours des cinq, dix, quinze prochaines années. Un autre très important
+
+269
+00:21:22.000 --> 00:21:26.001
+L&#x27;application est un logiciel informatique capable de communiquer avec les humains.
+
+270
+00:21:26.001 --> 00:21:31.000
+Anglais, langue ordinaire quotidienne, et cela va faire des ordinateurs
+
+271
+00:21:31.000 --> 00:21:35.001
+accessible à une grande variété de personnes. Nous n’avons qu’une minute. J’aime
+
+272
+00:21:35.001 --> 00:21:39.001
+Votre phrase, Brittle ! Expliquez-en plus ce que vous voulez dire par un système brittle. Eh bien, il
+
+273
+00:21:39.001 --> 00:21:44.000
+Il s&#x27;agit d&#x27;être en mesure de comprendre le contexte, je pense, dans lequel une
+
+274
+00:21:44.000 --> 00:21:49.001
+Des discussions particulières ou des conversations avec le système d’experts sont en cours. Si
+
+275
+00:21:49.001 --> 00:21:53.000
+Les informations nécessaires pour arriver à une certaine conclusion existent et existent.
+
+276
+00:21:53.000 --> 00:21:56.001
+explicitement, alors le système est généralement en mesure d&#x27;arriver avec un peu raisonnable
+
+277
+00:21:56.001 --> 00:22:00.000
+Répondre . Si elle doit avoir ce que vous pourriez appeler connaissance du sens commun, connaissance
+
+278
+00:22:00.000 --> 00:22:04.001
+que nous apprenons tous à partir du moment où nous sommes dix ou quinze, alors il y a une bonne chose
+
+279
+00:22:04.001 --> 00:22:07.001
+plus difficile, et en fait échoue dans de nombreux cas. Ainsi
+
+280
+00:22:07.001 --> 00:22:11.001
+Ironiquement, le sens commun est la chose la plus difficile. Il y a très peu de gens qui
+
+281
+00:22:11.001 --> 00:22:15.001
+sont prêts à payer pour mettre les connaissances du sens commun dans un ordinateur, alors que
+
+282
+00:22:15.001 --> 00:22:19.001
+Il est intéressant et commercialement important d&#x27;apporter des connaissances sur un nucléaire
+
+283
+00:22:19.001 --> 00:22:23.000
+réacteur dans un ordinateur. Ok, mes amis, nous sommes hors de temps. Merci beaucoup pour
+
+284
+00:22:23.000 --> 00:22:26.000
+Être ici . Merci de nous rejoindre dans cette édition des Chronicles informatiques.
+
+285
+00:23:02.001 --> 00:23:09.000
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+286
+00:23:09.000 --> 00:23:14.000
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+287
+00:23:14.000 --> 00:23:16.000
+de cette évolution continue.
+
+288
+00:23:43.001 --> 00:23:47.000
+L&#x27;accès au hasard est rendu possible par une subvention de Popular
+
+289
+00:23:47.000 --> 00:23:49.001
+Computing, une revue McGraw Hill.
+
+290
+00:23:50.001 --> 00:23:54.000
+Je suis Susan Bimba pour Stuart Chafee. Dans le fichier d&#x27;accès aléatoire, ce
+
+291
+00:23:54.000 --> 00:23:58.000
+La semaine dernière, le ministère du Commerce a fait une étape pour arrêter l&#x27;exportation de la technologie à
+
+292
+00:23:58.000 --> 00:24:02.000
+pays alliés à l&#x27;Union soviétique, frappant la Digital Equipment Corporation
+
+293
+00:24:02.000 --> 00:24:06.000
+de nouvelles restrictions sur ses pratiques d’exportation. Il faut que le DEC soit
+
+294
+00:24:06.000 --> 00:24:10.001
+Les licences d&#x27;exportation individuelles pour chaque ordinateur sophistiqué. Il va à l&#x27;ouest
+
+295
+00:24:10.001 --> 00:24:14.001
+Allemagne, Autriche ou Norvège. Les autorités publiques disent que les ordinateurs
+
+296
+00:24:14.001 --> 00:24:17.001
+Ils peuvent être facilement déplacés vers les pays du bloc oriental.
+
+297
+00:24:18.000 --> 00:24:22.000
+Il y a plusieurs mois, l&#x27;un des ordinateurs de DEC a été intercepté et envoyé à la
+
+298
+00:24:22.000 --> 00:24:26.001
+L&#x27;Union soviétique, mais la société a été trouvée innocente dans l&#x27;incident. Malgré
+
+299
+00:24:26.001 --> 00:24:30.001
+Un lobby fort de l&#x27;industrie de la haute technologie, le président Reagan a donné au Pentagone
+
+300
+00:24:30.001 --> 00:24:35.000
+pouvoir de conseiller le Département du Commerce sur l&#x27;informatique et les exportations de haute technologie à tous
+
+301
+00:24:35.000 --> 00:24:38.001
+pays étrangers. Le Pentagone a déjà eu le droit de consulter
+
+302
+00:24:38.001 --> 00:24:43.000
+les demandes d’exportations vers les pays communistes. Le Pentagone ressent son entrée
+
+303
+00:24:43.000 --> 00:24:46.001
+Cela aiderait à réduire le nombre de ordinateurs qui sont déversés de non
+
+304
+00:24:46.001 --> 00:24:48.001
+des pays communistes à ceux communistes.
+
+305
+00:24:49.001 --> 00:24:52.001
+La National Semiconductor Corporation pourrait être interdite de
+
+306
+00:24:52.001 --> 00:24:54.001
+Créer des chips pour les projets publics.
+
+307
+00:24:55.000 --> 00:24:58.001
+Au début de ce mois-ci, l’entreprise a admis que, sur une période de trois ans, la
+
+308
+00:24:58.001 --> 00:25:02.001
+Des chips inadéquatement testés qui ont été utilisés dans de nombreux projets militaires. Maintenant le
+
+309
+00:25:02.001 --> 00:25:07.000
+L&#x27;Agence Logistique de la Défense enquête sur le Semi National, en essayant de déterminer
+
+310
+00:25:07.000 --> 00:25:11.000
+C&#x27;est exactement qui est responsable de mentir au gouvernement sur les tests. Malgré
+
+311
+00:25:11.000 --> 00:25:17.000
+Ces problèmes, National Semiconductor rapporte un bénéfice de 15,4 millions de dollars pour
+
+312
+00:25:17.000 --> 00:25:22.000
+Le quatrième trimestre se termine le 4 mars. IBM annonce une grande demande pour sa petite
+
+313
+00:25:22.000 --> 00:25:27.000
+Les ordinateurs. Selon la société, cette année, ses livraisons du PC seront triplées.
+
+314
+00:25:27.000 --> 00:25:31.000
+C’était l’année dernière. Il est estimé que IBM livrera plus de deux millions de ses
+
+315
+00:25:31.000 --> 00:25:35.000
+PCs, PC juniors, et d&#x27;autres ordinateurs de bureau IBM combinés.
+
+316
+00:25:36.001 --> 00:25:40.001
+Et maintenant que IBM est en train de fabriquer son propre ordinateur portable, il semble que Compaq, un
+
+317
+00:25:40.001 --> 00:25:45.000
+Le fabricant de portables compatibles d&#x27;IBM, va baisser ses prix. Jusqu&#x27;à présent, pas de date
+
+318
+00:25:45.000 --> 00:25:49.001
+Il a été donné pour la réduction des prix, mais les indépendants de l&#x27;industrie disent qu&#x27;il sera probablement
+
+319
+00:25:49.001 --> 00:25:55.000
+autour du début d’avril. Actuellement, le portable Compaq vend pour 2.995 $.
+
+320
+00:25:56.000 --> 00:26:01.001
+C&#x27;est 200 $ plus que le portable IBM. Avec une réduction prévue de 500 $, le Compaq
+
+321
+00:26:01.001 --> 00:26:07.000
+Il va vendre pour 300 $ moins que le portable IBM. Atari Incorporated fait des coupures,
+
+322
+00:26:07.001 --> 00:26:11.000
+Ce sera une réduction des employés. Le producteur de jeux vidéo dit qu&#x27;il a l&#x27;intention de
+
+323
+00:26:11.000 --> 00:26:12.001
+Près de 300 ouvriers ont été licenciés.
+
+324
+00:26:13.000 --> 00:26:17.000
+Dans le même temps, un porte-parole d&#x27;Atari a déclaré qu&#x27;il y avait des plans pour étendre les ventes et
+
+325
+00:26:17.000 --> 00:26:22.000
+Le personnel d’ingénierie est d’environ 100. L&#x27;année dernière, la société a perdu plus de 500 millions de dollars,
+
+326
+00:26:23.000 --> 00:26:27.000
+Il a licencié plus de 2 000 travailleurs de son territoire de la baie et a déplacé une partie de son opération.
+
+327
+00:26:27.000 --> 00:26:32.001
+à Taiwan et à Hong Kong. Eh bien, la semaine dernière, nous vous avons dit le ministère du commerce japonais
+
+328
+00:26:32.001 --> 00:26:37.001
+Un projet de loi qui réduirait la protection des États-Unis. logiciels au Japon. Cette
+
+329
+00:26:37.001 --> 00:26:41.000
+La semaine, les Etats-Unis Le gouvernement a prévenu que si le Parlement japonais a ratifié le
+
+330
+00:26:41.000 --> 00:26:45.001
+Bill, les États-Unis Il se retaliera en forme. S&#x27;il est approuvé, le projet de loi serait limité.
+
+331
+00:26:45.001 --> 00:26:50.001
+Protection des droits d’auteur aux États-Unis logiciels, ce qui le rend nécessaire aux États-Unis. logiciels
+
+332
+00:26:50.001 --> 00:26:55.001
+Les propriétaires pour autoriser leurs programmes aux producteurs japonais. Un peu plus proche de
+
+333
+00:26:55.001 --> 00:26:59.000
+Accueil, notre réviseur logiciel Paul Schindler a quelques informations sur le blackjack
+
+334
+00:26:59.000 --> 00:27:01.000
+Ceux qui n’ont pas d’argent à brûler.
+
+335
+00:27:06.000 --> 00:27:11.000
+Si vous jouez à Nevada ou à Atlantic City, c&#x27;est une vue familière, le shuffling
+
+336
+00:27:11.000 --> 00:27:15.001
+des cartes de blackjack, généralement accompagnées par la vue de votre argent qui est jeté dans
+
+337
+00:27:15.001 --> 00:27:20.000
+par le distributeur à la fin du tour. Si vous êtes fatigué de perdre, il y a un
+
+338
+00:27:20.000 --> 00:27:24.000
+Programme informatique pour vous. C’est le blackjack professionnel de Ken Houston.
+
+339
+00:27:24.001 --> 00:27:28.001
+Maintenant, il est assez rare quand l&#x27;écrivain obtient la facturation supérieure quand ils nomment un ordinateur
+
+340
+00:27:28.001 --> 00:27:33.001
+Le programme, mais Houston le mérite. Il est un ancien officier de la Bourse du Pacifique.
+
+341
+00:27:33.001 --> 00:27:37.001
+Échange, et maintenant il est un joueur à temps plein. Bien sûr, certains diraient que
+
+342
+00:27:37.001 --> 00:27:41.001
+Ce n&#x27;est pas beaucoup d&#x27;un changement, mais en tout cas, sur un voyage récent à Las Vegas, Houston était
+
+343
+00:27:41.001 --> 00:27:48.000
+Il est sorti de cinq casinos après avoir gagné plus de 3 000 $. La plupart des ordinateurs
+
+344
+00:27:48.000 --> 00:27:52.001
+Les jeux de blackjack vont juste jouer au blackjack avec vous, mais le logiciel Whole Earth
+
+345
+00:27:52.001 --> 00:27:57.000
+Catalogue et avis disent que le blackjack professionnel de Houston vous apprendra comment
+
+346
+00:27:57.000 --> 00:28:00.001
+Jouer le jeu et gagner en utilisant différentes méthodes de numérotation de points.
+
+347
+00:28:01.000 --> 00:28:06.001
+Les graphiques sont crisp. La table est verte. Les cartes en vue réaliste, et le
+
+348
+00:28:06.001 --> 00:28:11.000
+Le son est bon aussi. Vous pouvez entendre les cartes frappant la table. Une autre utilisation de
+
+349
+00:28:11.000 --> 00:28:15.001
+son, le programme vous conseille sur les paris et le jeu de cartes, et il vous frappe quand
+
+350
+00:28:15.001 --> 00:28:21.001
+Vous goûtez ! Le blackjack professionnel de Ken Houston est de 70 $ sur Screenplay in Chapel
+
+351
+00:28:21.001 --> 00:28:25.000
+Hill, Caroline du Nord. Pour Random Access, je suis Paul Schindler.
+
+352
+00:28:26.000 --> 00:28:29.000
+La semaine prochaine, Paul révisera Volkswagen Deluxe, et c&#x27;est pour cette semaine Random
+
+353
+00:28:29.000 --> 00:28:35.001
+à l’accès. Je suis Susan Bimba. L&#x27;accès par hasard est rendu possible par une subvention de Popular
+
+354
+00:28:35.001 --> 00:28:38.000
+Computing, une revue McGraw Hill.
