@@ -1,0 +1,2001 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.001
+Karen Brothers adalah [...]
+
+2
+00:00:23.001 --> 00:00:30.000
+di komputer ini tanah ustora di kota foster California ada kepingan baru dari
+
+3
+00:00:30.000 --> 00:00:33.001
+Hardware bersaing untuk ruang paparan, scanner desktop.
+
+4
+00:00:34.000 --> 00:00:38.000
+Masih ada keyboards dan tikus, tetapi semakin banyak orang yang menggunakan optik
+
+5
+00:00:38.000 --> 00:00:41.000
+Scanner untuk memasukkan informasi ke dalam komputer.
+
+6
+00:00:41.001 --> 00:00:45.001
+Hari ini kita akan melihat pada yang terbaru dalam teknologi pemindaian gambar pada
+
+7
+00:00:45.001 --> 00:00:47.001
+edisi ini dari Computer Chronicles.
+
+8
+00:01:10.000 --> 00:01:15.001
+The Computer Chronicles dibuat mungkin sebagian oleh McGraw-Hill, penerbit
+
+9
+00:01:15.001 --> 00:01:19.000
+Majalah Byte dan VIX, Pertukaran Informasi Byte.
+
+10
+00:01:20.000 --> 00:01:24.001
+Dalam pencetakan dan online, Byte dan VIX melayani profesional komputer di seluruh dunia dengan
+
+11
+00:01:24.001 --> 00:01:28.001
+Informasi terperinci tentang perangkat keras, perangkat lunak dan teknologi baru.
+
+12
+00:01:33.001 --> 00:01:35.000
+Selamat Datang ke Komputer Chronicles
+
+13
+00:01:35.000 --> 00:01:37.001
+Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+14
+00:01:37.001 --> 00:01:39.001
+Gary, Anda mungkin telah melihat salinan portabel ini
+
+15
+00:01:39.001 --> 00:01:41.000
+Di beberapa majalah pemegang surat.
+
+16
+00:01:41.000 --> 00:01:44.001
+Ini adalah mesin mini Xerox menggunakan teknologi pemindaian dasar XeroX.
+
+17
+00:01:45.000 --> 00:01:45.001
+Dan perhatikan hal ini.
+
+18
+00:01:45.001 --> 00:01:48.000
+Saya hanya bisa mengambil ini dan jenis melewatkannya melalui halaman ini.
+
+19
+00:01:50.001 --> 00:01:51.000
+Itu cukup baik.
+
+20
+00:01:51.000 --> 00:01:57.000
+Dan saya berakhir dengan, yang tidak terlalu buruk, sebuah salinan Xerox instan di sana.
+
+21
+00:01:57.001 --> 00:02:01.000
+Tiba-tiba ia tampaknya semua orang sedang dalam pemindaian, apakah itu sedikit
+
+22
+00:02:01.000 --> 00:02:03.000
+scanner portabel seperti ini atau scanner desktop,
+
+23
+00:02:03.000 --> 00:02:05.000
+Pembaca karakter optik, digitalisasi.
+
+24
+00:02:05.000 --> 00:02:07.001
+Mengapa kecantikan tiba-tiba dengan teknologi pemindaian?
+
+25
+00:02:07.001 --> 00:02:10.000
+Nah, Stuart, tentu saja, penerbitan desktop adalah gerakan utama di bidang itu.
+
+26
+00:02:10.000 --> 00:02:12.000
+Kami mencoba untuk memasukkan grafik sekarang dengan teks untuk
+
+27
+00:02:12.000 --> 00:02:13.001
+mengumpulkan dokumen-dokumen yang bagus dan hal-hal seperti itu.
+
+28
+00:02:14.000 --> 00:02:16.001
+Salah satunya adalah transmisi wajah, misalnya.
+
+29
+00:02:17.000 --> 00:02:20.000
+Banyak dari kita mengalami bahwa sekarang di bisnis dan di rumah dan jadi ia menjadi sangat
+
+30
+00:02:20.000 --> 00:02:22.000
+orang-orang untuk mewakili informasi dengan cara ini.
+
+31
+00:02:22.001 --> 00:02:26.001
+Pergerakan besar adalah untuk mewakili informasi dalam bentuk elektronik karena
+
+32
+00:02:26.001 --> 00:02:28.001
+yang membuatnya jauh lebih mudah bagi Anda untuk mengumpulkan, meletakkannya
+
+33
+00:02:28.001 --> 00:02:30.001
+Bersama-sama, mengubahnya, mengubah itu, menerbitkannya.
+
+34
+00:02:31.000 --> 00:02:33.001
+Secara umum, ini adalah cara yang lebih fleksibel untuk hanya menangani informasi Anda.
+
+35
+00:02:34.000 --> 00:02:37.000
+Hari ini kita akan melihat yang terbaru dalam menggambar dan digitalisasi
+
+36
+00:02:37.000 --> 00:02:39.001
+teknologi dari sudut pandang hardware dan software.
+
+37
+00:02:40.000 --> 00:02:43.000
+Kami akan melihat yang terbaru di desktop scanner, perangkat lunak gambar,
+
+38
+00:02:43.000 --> 00:02:44.001
+dan database untuk gambar.
+
+39
+00:02:45.000 --> 00:02:48.000
+Sekarang, seperti yang disebutkan oleh Gary, salah satu alasan mengapa perusahaan mulai memindai
+
+40
+00:02:48.000 --> 00:02:51.000
+Teknologi adalah karena dapat menjadi cara yang sangat cepat dan efisien
+
+41
+00:02:51.000 --> 00:02:53.000
+untuk menyampaikan informasi yang kompleks.
+
+42
+00:02:53.001 --> 00:02:56.000
+Kami menemukan satu contoh yang baik di sini di San Francisco di a
+
+43
+00:02:56.000 --> 00:02:57.001
+perusahaan yang disebut Interocean Leasing.
+
+44
+00:02:59.001 --> 00:03:03.001
+Interocean leasing adalah bisnis leasing kontainer laut untuk
+
+45
+00:03:03.001 --> 00:03:05.000
+mengangkut kargo di seluruh dunia.
+
+46
+00:03:05.001 --> 00:03:09.000
+Perusahaan ini memiliki agen di 26 negara dan perlu berkomunikasi
+
+47
+00:03:09.000 --> 00:03:11.000
+dengan orang-orang itu setiap hari.
+
+48
+00:03:11.001 --> 00:03:16.000
+Perusahaan biasanya bergantung pada telex, tetapi baru-baru ini telah berubah menjadi
+
+49
+00:03:16.000 --> 00:03:17.001
+Fasilitas yang berbasis PC.
+
+50
+00:03:17.001 --> 00:03:21.000
+Saya pikir ada dua kelebihan utama dari sistem ini.
+
+51
+00:03:21.001 --> 00:03:25.000
+Satu adalah inherent dalam sistem yang serupa, yaitu kita dapat mengirimkan gambar.
+
+52
+00:03:25.001 --> 00:03:30.001
+Jika kita perlu mengirim sebagai kita sering membuat kontrak atau dokumen hukum lainnya atau
+
+53
+00:03:30.001 --> 00:03:35.000
+gambar, lukisan, spesifikasi untuk peralatan baru,
+
+54
+00:03:35.000 --> 00:03:36.001
+Sangat mudah untuk melakukan itu.
+
+55
+00:03:37.000 --> 00:03:43.000
+Keuntungan utama kedua dari facsimile dan sistem ini adalah efisiensi biaya.
+
+56
+00:03:43.000 --> 00:03:47.001
+Ini adalah sistem yang sangat mahal karena Anda dapat mengambil keuntungan dari ekonomi telepon
+
+57
+00:03:47.001 --> 00:03:51.001
+harga dan mengirim kapan saja yang paling menguntungkan untuk Anda.
+
+58
+00:03:52.001 --> 00:03:57.001
+Hardware yang diperlukan untuk faks berbasis komputer termasuk kartu faks plug-in, a
+
+59
+00:03:57.001 --> 00:04:00.000
+scanner, printer laser dan perangkat lunak.
+
+60
+00:04:00.001 --> 00:04:06.000
+Sistem lengkap dapat mengirim dan menerima teks atau gambar pada waktu preset dan akan
+
+61
+00:04:06.000 --> 00:04:09.000
+menyimpan dokumen ke cakera untuk diperoleh kemudian.
+
+62
+00:04:09.001 --> 00:04:14.001
+Sementara gambar yang ditransmisikan secara elektronik tidak memiliki definisi pada layar, laser
+
+63
+00:04:14.001 --> 00:04:16.001
+Produksi lebih dari dihormati.
+
+64
+00:04:17.000 --> 00:04:21.000
+Kami menemukan bahwa jenis fungsi ini membuatnya jauh lebih versatil, ditambah kami dapat
+
+65
+00:04:21.000 --> 00:04:23.000
+Juga menggunakan PC sebagai PC.
+
+66
+00:04:24.000 --> 00:04:30.001
+Faks berfungsi dalam mode latar belakang sehingga kita dapat menggunakan Lotus atau WordPerfect atau
+
+67
+00:04:30.001 --> 00:04:33.001
+program lain yang kita inginkan pada mesin itu.
+
+68
+00:04:46.001 --> 00:04:50.001
+Sekarang bergabung dengan kami di studio adalah Mike Urquhart, Senior Software Engineer dengan Data
+
+69
+00:04:50.001 --> 00:04:54.001
+Copy Corporation di samping Mike, bosnya, Rolando Estevarina, presiden
+
+70
+00:04:54.001 --> 00:04:58.000
+Data Copy, juga dengan kami, Jerry Burrell, Editor dari MacWorld Magazine.
+
+71
+00:04:58.001 --> 00:05:01.000
+Jerry, tampaknya penerbitan desktop adalah topik yang sangat penting
+
+72
+00:05:01.000 --> 00:05:03.000
+Untuk IBM PC dan Mac.
+
+73
+00:05:03.000 --> 00:05:04.001
+Bagaimana Anda melihat perpecahan itu dan apa yang terjadi di sana?
+
+74
+00:05:05.001 --> 00:05:07.001
+Tentu saja, hal ini berkaitan dengan scanner.
+
+75
+00:05:07.001 --> 00:05:11.000
+Scanner telah menjadi penting di semua vendor yang kami bicarakan,
+
+76
+00:05:11.000 --> 00:05:14.001
+Data Copy, mungkin yang tertua di antara mereka telah bermigrasi dari komunitas PC
+
+77
+00:05:14.001 --> 00:05:18.000
+pada Macintosh karena perkembangan pesat penerbitan desktop.
+
+78
+00:05:19.000 --> 00:05:22.001
+Lebih baru-baru ini hal-hal seperti pemindai 8-bit yang akan kita lihat hari ini adalah
+
+79
+00:05:22.001 --> 00:05:25.001
+benar-benar kunci untuk penerbitan desktop karena pentingnya
+
+80
+00:05:25.001 --> 00:05:27.000
+dalam cetakan setengah ton.
+
+81
+00:05:28.000 --> 00:05:31.000
+Hey Rolando, Anda memiliki produk, produk Data Copy, dapatkah Anda memberitahu kami tentang itu?
+
+82
+00:05:31.001 --> 00:05:35.001
+Ya, sebenarnya kami memiliki garis produk yang mencakup skanner yang dimulai dengan
+
+83
+00:05:35.001 --> 00:05:39.001
+Harga rendah dan meluaskan jalan ke kinerja tinggi, kualitas gambar yang tinggi.
+
+84
+00:05:40.000 --> 00:05:46.000
+Seperti Jerry baru saja menekankan, sebenarnya kita melihat perubahan tertentu atau setidaknya pertumbuhan dalam
+
+85
+00:05:46.000 --> 00:05:48.001
+Pentingnya Macintosh di bidang penerbitan desktop.
+
+86
+00:05:49.000 --> 00:05:52.001
+Perangkat ini yang Anda lihat di sini sebenarnya adalah scanner.
+
+87
+00:05:52.001 --> 00:05:56.001
+Anda dapat memikirkannya sebagai salinan yang bukannya membuat salinan ke dalam
+
+88
+00:05:56.001 --> 00:05:58.001
+kertas, membuat salinan ke dalam memori komputer.
+
+89
+00:05:59.000 --> 00:06:03.001
+Anda mengambil original seperti ini dan Anda meletakkannya di scanner
+
+90
+00:06:03.001 --> 00:06:05.000
+Seperti halnya dengan meletakkannya dalam salinan.
+
+91
+00:06:05.001 --> 00:06:12.000
+Perangkat ini sebenarnya memiliki mekanisme di sini yang akan menciptakan gambar digital, sebuah
+
+92
+00:06:12.000 --> 00:06:15.001
+Reproduksi yang asli dalam memori komputer.
+
+93
+00:06:16.000 --> 00:06:22.000
+Apa yang akan kami tunjukkan dalam satu menit adalah beberapa contoh apa yang dapat Anda lakukan
+
+94
+00:06:22.000 --> 00:06:24.000
+Setelah gambar berada di komputer.
+
+95
+00:06:24.000 --> 00:06:28.000
+Scanner menciptakan gambar, perangkat lunak di komputer menganalisis
+
+96
+00:06:28.000 --> 00:06:29.001
+konten dari gambar tersebut.
+
+97
+00:06:30.000 --> 00:06:35.000
+Analisis dapat merujuk pada salah satu dari tiga hal, analisis gambar seperti yang dapat
+
+98
+00:06:35.000 --> 00:06:38.000
+Berkaitan dengan penerbitan desktop, pemrosesan grayscale.
+
+99
+00:06:39.000 --> 00:06:44.001
+Dua faktor penting dalam transaksi tertentu berkaitan dengan kualitas gambar.
+
+100
+00:06:45.000 --> 00:06:46.000
+Ada yang harus berhubungan dengan detail.
+
+101
+00:06:46.001 --> 00:06:50.000
+Misalnya, di sini saya memiliki contoh dari produk siap seperti yang akan keluar
+
+102
+00:06:50.000 --> 00:06:52.000
+dengan printer laser.
+
+103
+00:06:52.000 --> 00:06:55.000
+Ini sebenarnya adalah pemindaian jam tapi pada pemindai.
+
+104
+00:06:55.001 --> 00:07:01.000
+Detail atau resolusi tergantung pada seberapa kecil elemen
+
+105
+00:07:01.000 --> 00:07:02.001
+Dalam gambar yang bisa saya lihat.
+
+106
+00:07:03.000 --> 00:07:07.000
+Elemen kedua yang berkaitan dengan kualitas memiliki hubungannya dengan grayscale.
+
+107
+00:07:08.000 --> 00:07:13.000
+Seperti yang dinyatakan Jerry sebelumnya dan Macintosh memungkinkan karena
+
+108
+00:07:13.000 --> 00:07:16.000
+menawarkan grafis dan kemampuan untuk memproses grafis.
+
+109
+00:07:16.001 --> 00:07:22.000
+Sekarang kita dapat membuat gambar dengan komputer untuk penerbitan desktop yang sangat
+
+110
+00:07:22.000 --> 00:07:26.000
+secara nominal mencerminkan gambar-gambar yang akan Anda produksi secara foto.
+
+111
+00:07:26.001 --> 00:07:29.001
+Apakah Anda memiliki contoh di sini juga dari gambar skanner ini?
+
+112
+00:07:29.001 --> 00:07:31.000
+Ya, apa yang Anda lihat di sini adalah.
+
+113
+00:07:31.000 --> 00:07:33.000
+Hal ini telah disemak sebelumnya dan diletakkan di [...]
+
+114
+00:07:33.000 --> 00:07:33.001
+Itu adalah benar.
+
+115
+00:07:34.000 --> 00:07:38.000
+Itu mengambil beberapa detik untuk memindai gambar dan apa yang kami lakukan di sini adalah gambar
+
+116
+00:07:38.000 --> 00:07:40.000
+Saya meletakkan di scanner sekarang ditunjukkan di layar.
+
+117
+00:07:41.000 --> 00:07:44.000
+Sekarang Mike jika Anda dapat menunjukkan kepada kami kami akan membuat beberapa perubahan
+
+118
+00:07:44.000 --> 00:07:45.001
+atau beberapa pemrosesan dalam gambar ini.
+
+119
+00:07:46.000 --> 00:07:50.001
+Apa yang Anda lihat di sini sebenarnya adalah layar kontrol dari perangkat lunak.
+
+120
+00:07:50.001 --> 00:07:55.001
+Di sebelah kiri Anda melihat elemen-elemen yang akan mengendalikan scanner itu sendiri,
+
+121
+00:07:55.001 --> 00:07:57.001
+resolusi, grayscale dan sebagainya.
+
+122
+00:07:58.000 --> 00:08:01.001
+Di sebelah kanan Anda melihat unsur-unsur perangkat lunak yang mengendalikan gambar
+
+123
+00:08:01.001 --> 00:08:04.001
+pemrosesan, kecerahan, kontras dan faktor lain.
+
+124
+00:08:05.001 --> 00:08:11.001
+Kami telah membuat beberapa perubahan dan sekarang kami akan membawa gambar kedua dan menunjukkan
+
+125
+00:08:11.001 --> 00:08:18.000
+Anda perbedaan dalam kasus tertentu melakukan fungsi yang disebut
+
+126
+00:08:18.000 --> 00:08:22.000
+Koreksi gamma yang berkaitan dengan perubahan nada dalam gambar.
+
+127
+00:08:22.000 --> 00:08:24.000
+Apakah ini adalah hasil dari perubahan panel kontrol itu?
+
+128
+00:08:24.001 --> 00:08:28.001
+Mengubah pengaturan dan kemudian menerapkannya ke gambar grayscale.
+
+129
+00:08:28.001 --> 00:08:32.001
+Sekarang kami akan menggambarkan ini dengan menunjukkan kepada Anda sisi demi sisi contoh-contoh.
+
+130
+00:08:33.000 --> 00:08:36.001
+Sebelum dan setelah dan berapa banyak memori mengambil gambar seperti itu?
+
+131
+00:08:36.001 --> 00:08:38.000
+Apa yang terjadi pada 300 dpi?
+
+132
+00:08:38.000 --> 00:08:43.000
+Gambar khusus ini dipindai pada titik 300 dpi per inch atau sampel per inch.
+
+133
+00:08:43.000 --> 00:08:44.001
+Berapa banyak penyimpanan yang akan dibutuhkan?
+
+134
+00:08:44.001 --> 00:08:50.001
+Sekitar 1 megabyte untuk gambar 8.5x11, 1 bit.
+
+135
+00:08:50.001 --> 00:08:52.000
+Sekarang jika Anda memiliki grayscale.
+
+136
+00:08:52.000 --> 00:08:55.000
+Jika Anda bekerja dengan penerbitan desktop jelas Anda ingin dapat
+
+137
+00:08:55.000 --> 00:08:57.000
+ukuran dan skala dan sebagainya.
+
+138
+00:08:57.000 --> 00:08:58.000
+Apakah Anda memiliki kemampuan untuk melakukannya juga?
+
+139
+00:08:58.001 --> 00:08:58.001
+yang benar.
+
+140
+00:09:00.000 --> 00:09:05.001
+Mengingat fasilitas yang baru saya jelaskan, kita bisa secara harfiah mengubah bentuk, konten
+
+141
+00:09:05.001 --> 00:09:07.000
+dan ukuran gambar.
+
+142
+00:09:07.001 --> 00:09:11.000
+Jerry, apakah desktop menerbitkan satu-satunya aplikasi untuk menggunakan scanner?
+
+143
+00:09:11.000 --> 00:09:12.001
+Bagaimana orang lain menggunakannya?
+
+144
+00:09:12.001 --> 00:09:15.001
+Ya, sebenarnya itu tidak.
+
+145
+00:09:15.001 --> 00:09:18.001
+Kedua Kurzweil dan Datacopy adalah dua perusahaan asli yang memperkenalkan
+
+146
+00:09:18.001 --> 00:09:22.001
+pemindaian untuk pengenalan karakter optik tetapi kami tidak pernah benar-benar melihat
+
+147
+00:09:22.001 --> 00:09:24.000
+Datanglah ke hasil yang kita harapkan.
+
+148
+00:09:24.001 --> 00:09:28.000
+Dan begitu pemindaian grafis dan perkembangan baru-baru ini dari penerbitan desktop memiliki
+
+149
+00:09:28.000 --> 00:09:30.001
+menjadi pasar terbesar dan paling praktis untuk pemindaian.
+
+150
+00:09:31.000 --> 00:09:32.001
+Pertanyaan terakhir, sekitar 30 detik yang tersisa.
+
+151
+00:09:32.001 --> 00:09:35.000
+Apa yang harus dicari konsumen ketika membeli scanner?
+
+152
+00:09:35.001 --> 00:09:36.001
+Apa faktor-faktor yang relevan?
+
+153
+00:09:38.000 --> 00:09:39.001
+Mungkin beberapa hal.
+
+154
+00:09:39.001 --> 00:09:42.000
+Salah satunya adalah apa yang dimaksud dengan dot branch?
+
+155
+00:09:42.000 --> 00:09:45.000
+Berapa banyak bit yang bisa ditangkap?
+
+156
+00:09:45.000 --> 00:09:48.000
+Apakah itu delapan sehingga ia dapat menangkap 256 kelabu penuh?
+
+157
+00:09:49.000 --> 00:09:51.001
+Mungkin ketiga, apa format file yang disimpan di?
+
+158
+00:09:51.001 --> 00:09:55.000
+Apakah ia menyimpan dalam TIFF dan EPSF sehingga Anda dapat menggunakan produk seperti Image Studio
+
+159
+00:09:55.000 --> 00:09:57.000
+Untuk lebih memanipulasi bitmap?
+
+160
+00:09:58.000 --> 00:10:01.000
+Akhirnya, seberapa baik seorang produsen mendukung Anda ketika Anda pulang?
+
+161
+00:10:01.001 --> 00:10:03.000
+Satu komentar terakhir jika saya bisa.
+
+162
+00:10:03.000 --> 00:10:09.001
+Kami menawarkan perangkat lunak pengenalan karakter orang lain yang akan mengambil gambar
+
+163
+00:10:09.001 --> 00:10:13.000
+Dari scanner seperti ini dan lakukan bacaan yang dikatakan Jerry.
+
+164
+00:10:13.000 --> 00:10:14.000
+Teman-teman, terima kasih banyak sekali.
+
+165
+00:10:14.000 --> 00:10:16.001
+Dalam sekejap saja kita akan melihat beberapa software scanner.
+
+166
+00:10:16.001 --> 00:10:17.001
+Tetap Bersama Kami
+
+167
+00:10:28.001 --> 00:10:31.001
+Dengan kami di studio sekarang adalah Mitch Stein.
+
+168
+00:10:31.001 --> 00:10:34.001
+Mitch adalah presiden dari Spectrum Digital Systems, pengembang Trueform.
+
+169
+00:10:35.001 --> 00:10:39.000
+Next Mitch adalah Mark Zimmer, mitra dalam software Fractal dan desainer
+
+170
+00:10:39.000 --> 00:10:41.000
+dari Image Studio dari Lettreset.
+
+171
+00:10:41.000 --> 00:10:44.001
+Jadi satu hal adalah untuk memindai gambar ke dalam memori tetapi ketika Anda menggunakannya dengan
+
+172
+00:10:44.001 --> 00:10:48.000
+desktop publishing Anda benar-benar melakukan hal-hal seperti mengukur dan menggali dan mengedit
+
+173
+00:10:48.000 --> 00:10:50.000
+perubahan dan hal-hal seperti itu.
+
+174
+00:10:50.001 --> 00:10:52.000
+Mark, apa yang Anda lakukan dengan penerbitan desktop di
+
+175
+00:10:52.000 --> 00:10:53.001
+Kombinasi dengan editing jenis fitur?
+
+176
+00:10:54.000 --> 00:10:59.001
+Baik orang rata-rata mungkin menggunakan gambar dalam program penerbitan desktop seperti
+
+177
+00:10:59.001 --> 00:11:05.000
+Seperti Ready Said Go atau PageMaker dan gambar itu sendiri, di sini adalah contoh dari
+
+178
+00:11:05.000 --> 00:11:09.000
+gambar, akan diletakkan di halaman dengan harapan dengan kecerahan yang tepat dan
+
+179
+00:11:09.000 --> 00:11:14.001
+kontras dan retouched juga sehingga akan terlihat baik seperti yang dapat Anda katakan di
+
+180
+00:11:14.001 --> 00:11:16.001
+Newsletter atau apa pun yang sedang digunakan.
+
+181
+00:11:17.001 --> 00:11:21.000
+Berikan contoh bagaimana Anda dapat memanipulasi gambar itu dan membuat
+
+182
+00:11:21.000 --> 00:11:24.000
+perubahan di dalamnya setelah Anda memindai di Mark.
+
+183
+00:11:24.000 --> 00:11:26.001
+Ini adalah contoh dari wajah seorang wanita.
+
+184
+00:11:27.001 --> 00:11:30.001
+Seperti yang Anda lihat, program ini memungkinkan Anda untuk zoom di sekitar gambar sehingga Anda dapat
+
+185
+00:11:30.001 --> 00:11:32.000
+Perhatikan detail yang sebenarnya.
+
+186
+00:11:32.001 --> 00:11:34.001
+Saat ini saya telah zoom ke dalam pada sarung tangan di matanya
+
+187
+00:11:34.001 --> 00:11:36.000
+Dan saya akan mencoba untuk menyingkirkannya.
+
+188
+00:11:37.000 --> 00:11:42.000
+Saya akan memilih beberapa tekstur yang serupa dari area dekat dalam gambar.
+
+189
+00:11:42.001 --> 00:11:46.000
+Saya akan menggunakan opsi salinan untuk menarik dan memindahkan tekstur ke dan sekarang
+
+190
+00:11:46.000 --> 00:11:47.001
+Saya telah menyingkirkan punggung seperti yang Anda lihat.
+
+191
+00:11:47.001 --> 00:11:48.001
+Pembedahan plastik elektronik.
+
+192
+00:11:49.000 --> 00:11:50.000
+Ini adalah operasi plastik.
+
+193
+00:11:52.000 --> 00:11:56.001
+Contoh lain mungkin termasuk mengubah kontras dan kecerahan gambar.
+
+194
+00:11:56.001 --> 00:11:59.000
+Mari kita dapatkan tembakan yang lebih lengkap di sini.
+
+195
+00:12:00.000 --> 00:12:03.000
+Program ini dapat mengedit kontras dan kecerahan dalam waktu nyata.
+
+196
+00:12:03.000 --> 00:12:06.000
+Dalam hal ini, saya menekan kecerahan dan dalam hal ini saya menambahkan kontras.
+
+197
+00:12:07.000 --> 00:12:09.001
+Saya telah pergi ke kontras tertinggi sehingga sekarang kita dapat melihat
+
+198
+00:12:09.001 --> 00:12:11.000
+Tingkat informasi dalam gambar.
+
+199
+00:12:13.000 --> 00:12:14.000
+Kembali ke normal.
+
+200
+00:12:14.001 --> 00:12:21.001
+Jadi Anda dapat menyesuaikan setiap detail kecerahan dan kontras yang mirip dengan gamma.
+
+201
+00:12:21.001 --> 00:12:24.000
+kemampuan koreksi yang ditunjukkan dalam salinan data.
+
+202
+00:12:24.001 --> 00:12:26.000
+Seberapa baik Anda bisa membuat perubahan ini?
+
+203
+00:12:26.000 --> 00:12:28.000
+Aku menyadari bahwa engkau melihat sedikit goncangan di sudut kiri
+
+204
+00:12:28.000 --> 00:12:30.000
+Mata di sana yang mungkin sedikit lebih sulit.
+
+205
+00:12:31.000 --> 00:12:31.001
+Di atas di sini?
+
+206
+00:12:32.001 --> 00:12:33.000
+[...]
+
+207
+00:12:35.001 --> 00:12:37.001
+Rencana ini sedikit lebih lama di sini.
+
+208
+00:12:38.000 --> 00:12:39.000
+Kerutan hanyalah sesuatu yang tipikal.
+
+209
+00:12:39.000 --> 00:12:43.000
+Anda mungkin ingin menyingkirkan mol, gigi dan jenisnya.
+
+210
+00:12:44.000 --> 00:12:45.000
+Di sini ada sarung tangan.
+
+211
+00:12:46.001 --> 00:12:51.000
+Apa yang ingin saya lakukan adalah saya ingin memilih beberapa area level kelabu dari gambar
+
+212
+00:12:51.000 --> 00:12:52.001
+dan memindahkannya di atasnya.
+
+213
+00:12:53.001 --> 00:12:54.001
+Itu melakukan pekerjaan yang cukup baik.
+
+214
+00:12:54.001 --> 00:12:58.000
+Tapi di sini Anda dapat melihat ada sedikit perbedaan.
+
+215
+00:12:58.000 --> 00:12:59.000
+Anda bisa melihat operasi.
+
+216
+00:12:59.000 --> 00:13:06.000
+Baik, jadi saya akan undo dan pergi dan memilih area
+
+217
+00:13:06.000 --> 00:13:07.001
+Ini lebih mungkin menjadi benar.
+
+218
+00:13:08.000 --> 00:13:09.000
+Aku akan memindahkannya di atasnya.
+
+219
+00:13:09.001 --> 00:13:11.001
+Ini menghasilkan hasil yang jauh lebih baik.
+
+220
+00:13:11.001 --> 00:13:13.001
+Kami telah menyingkirkan sebagian besar kotoran di sana.
+
+221
+00:13:14.000 --> 00:13:15.001
+Anda juga dapat membuat efek lain.
+
+222
+00:13:16.000 --> 00:13:16.001
+Aku hanya akan tunjukkan ini.
+
+223
+00:13:18.000 --> 00:13:21.001
+Misalnya, Anda dapat menggosok hal-hal dengan air terjun.
+
+224
+00:13:21.001 --> 00:13:23.001
+Ini adalah alat di sini untuk meredakan.
+
+225
+00:13:24.000 --> 00:13:27.000
+Informasi akan memilih pensel yang lebih besar untuk menunjukkan efeknya.
+
+226
+00:13:27.000 --> 00:13:29.000
+Lihatlah bagaimana gambar itu sedang disesuaikan.
+
+227
+00:13:29.001 --> 00:13:32.000
+Biasanya Anda tidak ingin melakukan ini pada gambar hanya untuk menyentuhnya.
+
+228
+00:13:32.001 --> 00:13:36.000
+Tapi sangat berguna untuk fotografi tipikal
+
+229
+00:13:36.000 --> 00:13:37.001
+Efek-efek seperti gauzing dan hal-hal seperti itu.
+
+230
+00:13:37.001 --> 00:13:39.001
+Anda dapat melakukan airbrushing elektronik dan sebagainya.
+
+231
+00:13:39.001 --> 00:13:41.000
+Sebenarnya, itulah yang seperti itu.
+
+232
+00:13:41.001 --> 00:13:44.001
+Bagaimana resolusi gambar seperti ini dibandingkan dengan mengatakan foto, 35
+
+233
+00:13:44.001 --> 00:13:46.001
+Foto millibomb, hanya untuk tujuan perbandingan?
+
+234
+00:13:48.001 --> 00:13:50.000
+Kami memungkinkan gambar resolusi apa pun.
+
+235
+00:13:50.000 --> 00:13:52.000
+Ini benar-benar tergantung pada resolusi scanner.
+
+236
+00:13:52.000 --> 00:13:56.001
+Sekali lagi, pada 300 dpi, kita dapat memasukkan 8 bit per piksel, mari kita katakan.
+
+237
+00:13:57.000 --> 00:13:59.001
+Ini akan memberi Anda gambar 8 megabyte pada cakera.
+
+238
+00:14:00.001 --> 00:14:03.000
+Salah satu manfaat dari Image Studio adalah kompresi.
+
+239
+00:14:03.000 --> 00:14:06.000
+Ini mungkin akan menjadi sepertiga atau keempat dari saiznya pada cakera.
+
+240
+00:14:06.001 --> 00:14:10.000
+Akhirnya, keluar dari Image Studio, Mark, jadi saya bisa mendapatkan Mitch untuk muat
+
+241
+00:14:10.000 --> 00:14:11.001
+Anda bisa naik Truform, jika Anda mau.
+
+242
+00:14:12.000 --> 00:14:14.000
+Anda dapat mengambil komputer di sana, Mitch.
+
+243
+00:14:15.001 --> 00:14:16.001
+Apa yang pentingnya?
+
+244
+00:14:16.001 --> 00:14:20.000
+Kami mendengar tentang orang-orang yang bukan seniman dan tidak tahu banyak istilah ini, ketika
+
+245
+00:14:20.000 --> 00:14:23.000
+Kita berbicara tentang skala kelabu dan setengah nada, mengapa itu penting?
+
+246
+00:14:23.000 --> 00:14:25.000
+Apa yang kita benar-benar berurusan dengan itu dalam penerbitan desktop?
+
+247
+00:14:25.001 --> 00:14:31.000
+Ketika Anda mengeluarkan gambar ke perangkat post-script, itu akan menggunakan setengah-toning untuk
+
+248
+00:14:31.000 --> 00:14:33.001
+menunjukkan gambar karena perangkat hanya hitam dan putih.
+
+249
+00:14:34.000 --> 00:14:35.001
+Ia akan perlu menggunakan setengah toning untuk menunjukkan tingkat kelabu.
+
+250
+00:14:36.001 --> 00:14:41.000
+Kami memungkinkan kapasitas output setengah-ton penuh dan kami juga membolehkan beberapa yang berbeda
+
+251
+00:14:41.000 --> 00:14:43.000
+layar untuk berbagai jenis efek visual.
+
+252
+00:14:45.001 --> 00:14:47.000
+Mitch, kau sudah mendapatkannya di sana.
+
+253
+00:14:47.000 --> 00:14:50.000
+Salah satu masalah adalah jumlah memori yang luar biasa yang diambil oleh gambar.
+
+254
+00:14:50.000 --> 00:14:52.001
+Saya pikir bentuk, sebenarnya, adalah masalah tertentu di sana, bukan?
+
+255
+00:14:53.001 --> 00:14:57.001
+Biasanya, dalam banyak aplikasi penerbitan desktop, apa orang benar-benar
+
+256
+00:14:57.001 --> 00:15:02.000
+Hal yang harus dilakukan hanyalah fokus pada area kecil dari halaman.
+
+257
+00:15:02.000 --> 00:15:07.000
+Dalam kasus bentuk, ukuran huruf, atau terutama ukuran hukum, Anda berakhir dengan
+
+258
+00:15:07.000 --> 00:15:08.001
+sejumlah besar data yang dibutuhkan.
+
+259
+00:15:09.000 --> 00:15:15.000
+Misalnya, jika kita mengambil formulir ini, halaman ukuran huruf ini dipindai pada 300 titik per
+
+260
+00:15:15.000 --> 00:15:17.001
+Inch akan mengambil satu megabyte memori.
+
+261
+00:15:18.000 --> 00:15:18.001
+Sama seperti satu halaman.
+
+262
+00:15:18.001 --> 00:15:23.001
+Ketika Anda memasukkan di atas itu perangkat lunak dan sistem operasi yang diperlukan, Anda
+
+263
+00:15:23.001 --> 00:15:28.000
+Macintosh harus memiliki minimal 2 megabyte.
+
+264
+00:15:28.000 --> 00:15:29.001
+Mampu menahan semua hal itu.
+
+265
+00:15:30.000 --> 00:15:31.000
+Bagaimana Trueform menangani masalah ini?
+
+266
+00:15:31.001 --> 00:15:36.000
+Apa yang Trueform lakukan adalah, di pesawat, saat kita memindai, dan dengan cara itu, Trueform
+
+267
+00:15:36.000 --> 00:15:39.001
+sebenarnya mengendalikan proses pemindaian itu sendiri, jadi sebaliknya harus menggunakan
+
+268
+00:15:39.001 --> 00:15:44.000
+perangkat lunak pemindaian orang lain dan kemudian masuk ke produk kami, di pesawat,
+
+269
+00:15:44.001 --> 00:15:48.001
+Trueform mengambil gambar dan mengkompresi dan menulisnya ke cakera.
+
+270
+00:15:49.000 --> 00:15:52.001
+Secara umum, kita dapat menggerakkan 80 sampai 85 persen ruang.
+
+271
+00:15:52.001 --> 00:15:53.001
+Itu baik untuk dilakukan dengan banyak ruang putih, saya pikir.
+
+272
+00:15:54.000 --> 00:15:55.000
+Memang benar, tepatnya
+
+273
+00:15:55.000 --> 00:15:56.001
+Kami kapitalisasikan hal itu.
+
+274
+00:15:57.001 --> 00:16:03.001
+Sekali lagi, salah satu masalah lain dengan memiliki begitu banyak data adalah bahwa kita perlu
+
+275
+00:16:03.001 --> 00:16:07.000
+dapat menampilkan pada layar Macintosh, dan Macintush hanya
+
+276
+00:16:07.000 --> 00:16:09.000
+mampu menampilkan 72 titik per inci.
+
+277
+00:16:09.001 --> 00:16:12.001
+Salah satu hal lain yang terjadi saat kita memindai adalah kita juga
+
+278
+00:16:12.001 --> 00:16:16.001
+Mengurangi resolusi, sehingga kita sebenarnya memiliki dua gambar disimpan.
+
+279
+00:16:17.000 --> 00:16:20.001
+Satu adalah gambar resolusi layar, dan yang lain adalah
+
+280
+00:16:20.001 --> 00:16:22.001
+Gambar resolusi tinggi yang digunakan untuk pencetakan.
+
+281
+00:16:23.001 --> 00:16:26.000
+Ini adalah contoh bagaimana Anda akan menggunakan scanner, bukan di desktop
+
+282
+00:16:26.000 --> 00:16:27.001
+diterbitkan, tetapi dalam aplikasi bisnis rutin.
+
+283
+00:16:28.000 --> 00:16:31.000
+Anda ingin mengembalikan formulir secara elektronik dan tentu saja dapat mengisi formulir,
+
+284
+00:16:31.000 --> 00:16:33.000
+yang merupakan bagian yang sulit dalam kebanyakan kasus.
+
+285
+00:16:33.001 --> 00:16:36.000
+Hal yang bagus tentang itu, ketika ia datang kembali, itu kelihatan seperti kedua skenario.
+
+286
+00:16:36.000 --> 00:16:39.000
+Sebenarnya, apa yang dapat Anda lihat adalah itu, tidak peduli apa gambar layar
+
+287
+00:16:39.000 --> 00:16:41.001
+Tampaknya, ini adalah bagian keras yang asli.
+
+288
+00:16:41.001 --> 00:16:42.000
+Apakah Anda sudah memindai?
+
+289
+00:16:42.001 --> 00:16:43.000
+dengan benar.
+
+290
+00:16:43.000 --> 00:16:47.000
+Dan itu adalah apa yang terlihat setelah kami telah mengatur semua bidang dan
+
+291
+00:16:47.000 --> 00:16:49.001
+mengisi formulir dan laser mencetaknya.
+
+292
+00:16:50.000 --> 00:16:55.001
+Jadi Anda dapat melihat bahwa Anda memiliki kualitas tinggi fotokopi jenis gambar.
+
+293
+00:16:55.001 --> 00:16:56.001
+Mitch Mark, terima kasih banyak.
+
+294
+00:16:57.000 --> 00:17:00.001
+Salah satu aplikasi serius dari gambar komputer adalah di bidang medis di mana
+
+295
+00:17:00.001 --> 00:17:03.000
+Dokter dapat menggunakan gambar untuk diagnosis dan pengobatan.
+
+296
+00:17:03.001 --> 00:17:05.001
+Wendy Woods memiliki laporan tentang aplikasi itu.
+
+297
+00:17:08.001 --> 00:17:11.001
+Bagi banyak dokter, ini adalah mimpi menjadi kenyataan.
+
+298
+00:17:11.001 --> 00:17:15.000
+Sebuah cara untuk melihat di dalam tubuh manusia tanpa operasi.
+
+299
+00:17:15.001 --> 00:17:18.000
+strukturnya, strukturnya dan penyakitnya.
+
+300
+00:17:19.000 --> 00:17:22.000
+Teknologi yang disebut volume imaging telah dikembangkan oleh Pixar.
+
+301
+00:17:23.000 --> 00:17:28.000
+Data dari pemindaian CAT dan sumber lain yang dimasukkan ke dalam komputer menghasilkan berbagai
+
+302
+00:17:28.000 --> 00:17:30.000
+dalam pandangan tubuh manusia.
+
+303
+00:17:31.000 --> 00:17:35.001
+John Hopkins adalah salah satu dari beberapa rumah sakit yang menggunakan Pixar secara teratur dalam diagnosis.
+
+304
+00:17:36.000 --> 00:17:41.000
+Dokter mengatakan bahwa gambar-gambar itu sendiri telah mengubah keputusan mereka tentang operasi atau
+
+305
+00:17:41.000 --> 00:17:44.000
+implan dalam hampir seperempat kasus mereka.
+
+306
+00:17:44.001 --> 00:17:48.001
+Tetapi banyak yang bertanya-tanya mengapa, mengingat kemajuan komputer hari ini, teknologi ini
+
+307
+00:17:48.001 --> 00:17:50.001
+Itu membutuhkan waktu yang lama untuk menghasilkan.
+
+308
+00:17:51.000 --> 00:17:56.001
+Memori tidak cukup besar, yang merupakan cara lain untuk mengatakan itu tidak cukup murah.
+
+309
+00:17:57.000 --> 00:17:58.001
+Saya pikir Anda bisa membeli sejumlah besar dari itu.
+
+310
+00:17:59.000 --> 00:18:03.000
+Dan daya pemrosesan yang diperlukan untuk mengatasi semua itu memori tidak cukup murah.
+
+311
+00:18:03.000 --> 00:18:04.000
+Tetapi hal-hal itu telah berubah.
+
+312
+00:18:05.000 --> 00:18:09.001
+Pixar adalah perusahaan pertama yang mengeksploitasi daya pemrosesan yang lebih murah dan memori yang lebih mahal.
+
+313
+00:18:09.001 --> 00:18:15.000
+Untuk membiarkan kita melihat kepingan memori yang sangat besar secara visual.
+
+314
+00:18:16.000 --> 00:18:21.001
+Meskipun komputer Pixar tidak benar-benar murah pada $ 50.000, Anda harus tetap
+
+315
+00:18:21.001 --> 00:18:25.000
+Hanya dua tahun yang lalu, harga itu hampir tiga kali lipat.
+
+316
+00:18:25.001 --> 00:18:29.001
+Komunitas medis sangat bersemangat dengan teknologi baru ini yang
+
+317
+00:18:29.001 --> 00:18:33.001
+Di sini memprediksi bahwa sebagian besar radiolog akan menggunakannya dalam waktu lima tahun.
+
+318
+00:18:33.001 --> 00:18:37.001
+Sampai saat itu, teknologi ini juga dijangka sesuai dengan mesin desktop.
+
+319
+00:18:37.001 --> 00:18:39.001
+dan menjadi radikal kurang mahal.
+
+320
+00:18:40.000 --> 00:18:43.001
+Di San Rafael, California, untuk Computer Chronicles, saya Wendy Woods.
+
+321
+00:18:55.000 --> 00:18:57.000
+Yang menyertai kami di studio sekarang adalah Jennifer
+
+322
+00:18:57.000 --> 00:18:59.000
+Mohler, Direktur Pemasaran dengan PictureWear.
+
+323
+00:18:59.000 --> 00:19:02.001
+Seterusnya Jennifer adalah Mike Marcus, presiden PictureWear, dan George
+
+324
+00:19:02.001 --> 00:19:04.001
+Morrow, komentar dan ahli penduduk kami.
+
+325
+00:19:04.001 --> 00:19:08.000
+Mike, setakat ini kami telah melihat tiga aplikasi dari scanner flatbed dan desktop
+
+326
+00:19:08.000 --> 00:19:09.001
+di mana kita mendapatkan raster hitam dan putih
+
+327
+00:19:09.001 --> 00:19:11.001
+gambar, layar komputer, dan sebagainya.
+
+328
+00:19:11.001 --> 00:19:13.000
+Sekarang, produk PictureWear Anda, bagaimana itu berbeda?
+
+329
+00:19:14.000 --> 00:19:17.001
+PictureWear memungkinkan Anda untuk mendapatkan gambar dunia nyata melalui kamera video
+
+330
+00:19:17.001 --> 00:19:19.000
+masuk ke database.
+
+331
+00:19:20.000 --> 00:19:23.000
+Dan perlakukan gambar itu seolah-olah itu hanya medan lain di database seperti itu
+
+332
+00:19:23.000 --> 00:19:28.000
+yang sekarang Anda dapat menggabungkan gambar dunia nyata dengan teks dan data dan mendapatkan
+
+333
+00:19:28.000 --> 00:19:31.000
+Gambar-gambar tersebut didasarkan pada apa atribut kami penting bagi Anda.
+
+334
+00:19:31.001 --> 00:19:33.001
+Nah, jenis perangkat lunak komputer apa yang Anda butuhkan untuk melakukannya?
+
+335
+00:19:36.000 --> 00:19:39.001
+Nah, seperti yang ditunjukkan oleh Mike, kami memiliki kamera video di sini yang ditarik ke
+
+336
+00:19:39.001 --> 00:19:43.001
+papan di dalam komputer yang akan menangkap gambar analog, mengubahnya digital
+
+337
+00:19:43.001 --> 00:19:47.000
+untuk tujuan penyimpanan di komputer, dan kemudian mengubah gambar untuk
+
+338
+00:19:47.000 --> 00:19:49.000
+analog untuk tujuan paparan pada monitor.
+
+339
+00:19:49.001 --> 00:19:52.001
+Jadi kami memiliki komputer yang kompatibel dengan IBM ditambah kamera video dan monitor.
+
+340
+00:19:52.001 --> 00:19:55.000
+Okay, Mike, tunjukkan kami jenis database apa yang Anda miliki
+
+341
+00:19:55.000 --> 00:19:56.001
+Sekarang menggunakan gambar digital ini.
+
+342
+00:19:57.000 --> 00:20:00.000
+Sebagai contoh dari jenis aplikasi yang dapat kita pikirkan, kita dapat berpikir
+
+343
+00:20:00.000 --> 00:20:01.001
+tentang pemasaran dan penjualan aplikasi.
+
+344
+00:20:02.000 --> 00:20:03.001
+Real Estate datang ke pikiran dengan segera.
+
+345
+00:20:06.001 --> 00:20:08.001
+Perhiasan datang ke pikiran di mana ia adalah salah satu jenis.
+
+346
+00:20:09.000 --> 00:20:13.000
+Kemudian ada kelas aplikasi yang kita sebut aplikasi identifikasi,
+
+347
+00:20:13.001 --> 00:20:19.000
+verifikasi tandatangan, misalnya, atau sistem kontrol akses keamanan di mana Anda
+
+348
+00:20:19.000 --> 00:20:22.000
+ingin gambar seseorang dan teks apa pun yang sesuai.
+
+349
+00:20:23.000 --> 00:20:24.001
+Dan mereka adalah inventory dalam bagian-bagian.
+
+350
+00:20:24.001 --> 00:20:25.001
+[...] dalam beberapa bagian.
+
+351
+00:20:25.001 --> 00:20:26.001
+Ya, bagian dari inventory.
+
+352
+00:20:27.000 --> 00:20:29.001
+Jadi Anda benar-benar menangani masalah bagaimana Anda mengelola semua gambar ini
+
+353
+00:20:29.001 --> 00:20:32.001
+Setelah Anda mendapatkan mereka di dalam komputer Anda atau pada saat yang sama.
+
+354
+00:20:32.001 --> 00:20:33.001
+Bagaimana cara menggunakannya dengan database?
+
+355
+00:20:34.000 --> 00:20:37.001
+Dengan demikian, apa yang kita lakukan adalah mengambil keuntungan dari fakta bahwa
+
+356
+00:20:37.001 --> 00:20:42.000
+PC komputer sekarang dapat menangani gambar dunia nyata dan kita dapat mengintegrasikan ini
+
+357
+00:20:42.000 --> 00:20:43.001
+Gambar dalam aplikasi dunia nyata.
+
+358
+00:20:44.000 --> 00:20:46.000
+Dan daya gambar kemudian bekerja dengan standar
+
+359
+00:20:46.000 --> 00:20:47.001
+Database, apakah itu yang kami katakan?
+
+360
+00:20:47.001 --> 00:20:52.000
+Image power memiliki DBMS internalnya sendiri dan juga memiliki data internalnya.
+
+361
+00:20:52.000 --> 00:20:54.000
+Modul komunikasi sehingga Anda dapat berkomunikasi gambar.
+
+362
+00:20:55.000 --> 00:20:57.001
+Kuasa gambar juga mampu beroperasi dengan
+
+363
+00:20:57.001 --> 00:20:59.001
+Sistem manajemen database lainnya.
+
+364
+00:21:00.000 --> 00:21:02.000
+Okay, Anda berada dalam kekuatan gambar itu sendiri sekarang, Jennifer, bukan?
+
+365
+00:21:02.000 --> 00:21:03.000
+Ya, sekarang kita berada dalam kekuatan gambar.
+
+366
+00:21:03.000 --> 00:21:05.000
+Kami memiliki daftar database dalam sistem saat ini.
+
+367
+00:21:05.001 --> 00:21:08.001
+Kami dapat mengumpulkan satu, misalnya, database properti dan kami dapat melayari
+
+368
+00:21:08.001 --> 00:21:10.001
+melalui rekaman satu per satu secara berturut-turut.
+
+369
+00:21:11.000 --> 00:21:14.000
+Dalam hal ini, kami memiliki satu gambar dengan medan teks yang terkait di bagian bawah.
+
+370
+00:21:14.001 --> 00:21:18.000
+Anda dapat mengumpulkan database kedua, database seni, misalnya.
+
+371
+00:21:19.001 --> 00:21:23.000
+Dalam kasus ini, kami memiliki tiga gambar, semua ukuran yang berbeda.
+
+372
+00:21:23.001 --> 00:21:27.001
+Sistem ini memberi Anda kemampuan untuk menyesuaikan database Anda sehingga Anda dapat
+
+373
+00:21:27.001 --> 00:21:30.001
+Jumlah gambar dalam setiap ukuran di database Anda.
+
+374
+00:21:30.001 --> 00:21:32.001
+Dan Anda juga bisa mengedit gambar-gambar ini, tampaknya, juga?
+
+375
+00:21:33.000 --> 00:21:34.000
+Ya, Anda dapat mencatatnya, dan sebagainya.
+
+376
+00:21:35.001 --> 00:21:37.001
+Kami dapat mengumpulkan database orang sekarang.
+
+377
+00:21:40.000 --> 00:21:43.001
+Dalam hal ini, sekali lagi, kita memiliki satu medan gambar, jumlah teks
+
+378
+00:21:43.001 --> 00:21:45.000
+Lapangan di sepanjang sisi.
+
+379
+00:21:46.001 --> 00:21:47.001
+Pergi melalui rekaman.
+
+380
+00:21:49.000 --> 00:21:52.000
+Dan daya gambar memberi Anda kemampuan untuk bertanya pada kriteria yang dipilih.
+
+381
+00:21:52.001 --> 00:21:54.000
+Dalam hal ini, kita diindeks pada nama pertama.
+
+382
+00:21:54.001 --> 00:21:58.000
+Jadi kita akan memasukkan nama Mike dan muncul gambarnya.
+
+383
+00:21:58.001 --> 00:21:59.000
+Di manakah salah satunya?
+
+384
+00:22:00.001 --> 00:22:03.000
+Selain itu, kita dapat menambahkan gambar ke database.
+
+385
+00:22:03.001 --> 00:22:05.000
+Misalnya, kita akan menambahkan gambar Stewart.
+
+386
+00:22:05.000 --> 00:22:07.000
+Kami akan menambahkan itu ke bidang gambar ini di sini.
+
+387
+00:22:07.001 --> 00:22:11.000
+Pergi ke direktori gambar kami di mana kami sebelumnya menangkap gambar Stewart.
+
+388
+00:22:13.000 --> 00:22:14.001
+Kami akan mengambilnya.
+
+389
+00:22:15.001 --> 00:22:16.001
+Ini adalah wajah saya sendiri.
+
+390
+00:22:17.001 --> 00:22:20.001
+Dan ini hanya bagian lain dari informasi, bukan?
+
+391
+00:22:20.001 --> 00:22:21.000
+Itu memang benar.
+
+392
+00:22:21.000 --> 00:22:22.001
+yang akan kita masukkan ke dalam database.
+
+393
+00:22:25.000 --> 00:22:26.001
+Dan daya gambar akan secara otomatis melukis Anda
+
+394
+00:22:26.001 --> 00:22:28.001
+Gambar dalam beberapa detik ke database.
+
+395
+00:22:29.001 --> 00:22:31.000
+George, apa pendapatmu tentang semua hal ini, semua
+
+396
+00:22:31.000 --> 00:22:32.001
+Scan ini dan mengatur gambar?
+
+397
+00:22:33.000 --> 00:22:37.001
+Nah, Stewart, sebagian besar informasi dalam masyarakat adalah pada film atau pada delapan.
+
+398
+00:22:37.001 --> 00:22:41.000
+dan setengah keping kertas, delapan pada 11.
+
+399
+00:22:41.001 --> 00:22:46.000
+Di sini, teknologi ini, baik perangkat keras dan perangkat lunak, memungkinkan Anda untuk membawa
+
+400
+00:22:46.000 --> 00:22:50.000
+masuk dan memperlakukannya sebagai informasi yang sama seperti Anda ingin nama atau alamat.
+
+401
+00:22:51.000 --> 00:22:56.000
+Sekarang, sekali Anda melakukannya, Anda akan memiliki manfaat jauh melampaui apa, baiklah, lihat
+
+402
+00:22:56.000 --> 00:23:01.001
+pada rantai-rantai yang telah mengambil barcode membaca dan mengubahnya menjadi
+
+403
+00:23:01.001 --> 00:23:04.001
+Alat pemasaran tentang seberapa baik roti menjual dengan tujuh kaki
+
+404
+00:23:04.001 --> 00:23:06.000
+dari ruang shelf atau tiga kaki.
+
+405
+00:23:07.000 --> 00:23:11.000
+Ketika Anda mendapatkan banyak informasi yang Anda dapat memanipulasi, ada banyak lagi di sana.
+
+406
+00:23:11.000 --> 00:23:13.001
+yang menemui mata hanya pada massa itu, mengajukan pertanyaan
+
+407
+00:23:13.001 --> 00:23:15.000
+tentang hal itu, menganalisisnya.
+
+408
+00:23:15.000 --> 00:23:19.001
+Dan memiliki kemampuan untuk melakukan itu dengan hampir segala sesuatu di sekeliling sekarang berarti
+
+409
+00:23:19.001 --> 00:23:22.000
+Memahami apa yang terjadi di lapangan.
+
+410
+00:23:22.000 --> 00:23:25.001
+Dan mengelola gambar dan gambar di samping kata-kata dan teks.
+
+411
+00:23:25.001 --> 00:23:29.001
+Nah, apa yang dilakukan ini memungkinkan kita mengakses sejumlah besar informasi
+
+412
+00:23:29.001 --> 00:23:34.001
+yang belum di digitalisasi atau tidak dalam bentuk database informasi.
+
+413
+00:23:35.000 --> 00:23:37.000
+Dan sekarang semua hal ini melakukan itu.
+
+414
+00:23:37.001 --> 00:23:39.000
+Tremendous langkah ke depan.
+
+415
+00:23:39.000 --> 00:23:40.000
+Mike, Jennifer, terima kasih banyak.
+
+416
+00:23:40.001 --> 00:23:43.000
+Itulah yang kita lihat pada gambar PC dan digitalisasi.
+
+417
+00:23:43.000 --> 00:23:45.001
+Semoga kita bertemu lagi minggu depan di sini di Computer Chronicles.
+
+418
+00:23:55.000 --> 00:23:59.001
+Dalam file akses rawak minggu ini, itu terlihat seperti 1989 akan
+
+419
+00:23:59.001 --> 00:24:01.000
+menjadi tahun klon HyperCard.
+
+420
+00:24:01.001 --> 00:24:03.000
+OWL International sudah keluar dengan panduan.
+
+421
+00:24:03.001 --> 00:24:06.001
+Sebuah program HyperText untuk Macintosh dan Panduan 2.
+
+422
+00:24:07.000 --> 00:24:09.001
+Program HyperText untuk 286 dan 386 PC.
+
+423
+00:24:10.001 --> 00:24:14.001
+Perangkat lunak Silicon Beach ditetapkan untuk melepaskan SuperCard, yang ia menggambarkan sebagai
+
+424
+00:24:14.001 --> 00:24:17.001
+Sistem pengesahan yang dapat membuat aplikasi terisolasi
+
+425
+00:24:17.001 --> 00:24:19.000
+di luar lingkungan HyperText.
+
+426
+00:24:19.001 --> 00:24:23.001
+Format Software akan mengumumkan Plus, sebuah program warna HyperText untuk Mac.
+
+427
+00:24:24.000 --> 00:24:28.000
+Xanadu adalah HyperGrid yang menjanjikan, ditulis oleh pencipta HyperText Ted Nelson.
+
+428
+00:24:28.001 --> 00:24:32.000
+Bright Bill Roberts akan merilis HyperPad, yang berjalan di bawah MS-DOS.
+
+429
+00:24:32.001 --> 00:24:35.000
+IBM telah mengumumkan Linkway untuk PC.
+
+430
+00:24:35.001 --> 00:24:40.000
+Dan Apple sendiri menjanjikan peluncuran baru HyperCard suatu hari nanti tahun depan.
+
+431
+00:24:40.000 --> 00:24:44.000
+Ada layanan online baru yang akan debut pada bulan Januari, yang akan
+
+432
+00:24:44.000 --> 00:24:45.001
+Menggunakan multitasking online.
+
+433
+00:24:46.000 --> 00:24:50.000
+Layanan ini disebut Summit, dan program terminalnya memungkinkan Anda membuat hingga empat
+
+434
+00:24:50.000 --> 00:24:54.000
+Windows dan menjalankan berbagai layanan online secara bersamaan di setiap jendela.
+
+435
+00:24:54.001 --> 00:24:58.000
+Ada kadar jam standar tidak peduli berapa banyak aplikasi yang berjalan
+
+436
+00:24:58.000 --> 00:25:00.001
+Tidak peduli dengan kecepatan modem Anda.
+
+437
+00:25:01.001 --> 00:25:05.000
+Informasi umum adalah pengenalan sistem manajemen telepon yang disebut Hotline.
+
+438
+00:25:05.001 --> 00:25:08.001
+Ini datang dengan database dari 10.000 alamat bisnis dan nomor telepon.
+
+439
+00:25:08.001 --> 00:25:12.000
+Anda dapat menambahkan perpustakaan cakera floppy dari daftar khusus industri.
+
+440
+00:25:12.001 --> 00:25:15.000
+Hotline juga mempertahankan log telepon otomatis.
+
+441
+00:25:16.001 --> 00:25:20.001
+SAMBA Corporation saat ini mengirimkan prosesor kata yang banyak disebut AMI.
+
+442
+00:25:20.001 --> 00:25:24.001
+Ini membawa pemrosesan kata WYSIWYG penuh ke dunia IBM PC.
+
+443
+00:25:25.000 --> 00:25:29.000
+Ini berjalan di bawah Microsoft Windows dan mencakup versi runtime Windows.
+
+444
+00:25:29.001 --> 00:25:32.000
+Command Corporation telah memperkenalkan ucapan baru
+
+445
+00:25:32.000 --> 00:25:34.000
+Sistem pengenalan yang disebut Bug.
+
+446
+00:25:34.001 --> 00:25:39.000
+Ia dapat mengenali lebih dari 50 kata aktif dari kamus 200.
+
+447
+00:25:39.001 --> 00:25:42.001
+Setiap kata yang diidentifikasi dapat digunakan untuk perintah individu atau untuk
+
+448
+00:25:42.001 --> 00:25:44.000
+Sesuai dengan makro pre-program.
+
+449
+00:25:44.001 --> 00:25:49.000
+Sistem dasar dijual untuk $ 799, yang mencakup papan plug-in,
+
+450
+00:25:49.000 --> 00:25:50.001
+perangkat lunak, dan headset mikrofon.
+
+451
+00:25:51.001 --> 00:25:53.000
+Sekarang waktunya untuk software review.
+
+452
+00:25:53.000 --> 00:25:54.000
+Ini adalah Paul Schindler.
+
+453
+00:25:54.000 --> 00:25:55.001
+Anda mungkin adalah Mr. dari Schindler.
+
+454
+00:25:56.000 --> 00:25:56.001
+Terima kasih banyak sekali.
+
+455
+00:25:57.001 --> 00:25:59.000
+Dalam film, mereka menyebut orang itu gopher.
+
+456
+00:25:59.001 --> 00:26:01.000
+Apa pun yang Anda butuhkan, mereka berlari dan mendapatkannya.
+
+457
+00:26:01.000 --> 00:26:04.000
+Sekarang, ada analog komputer yang berjalan, menarik
+
+458
+00:26:04.000 --> 00:26:05.001
+cukup, dengan nama Gopher.
+
+459
+00:26:06.000 --> 00:26:10.000
+Dalam dunia cakera 40 megabyte ini, semakin sulit untuk
+
+460
+00:26:10.000 --> 00:26:13.000
+Temukan sesuatu yang telah Anda tulis beberapa bulan, minggu, atau bahkan beberapa hari yang lalu.
+
+461
+00:26:13.001 --> 00:26:16.000
+Ada banyak program indexing di pasar, tetapi mereka cenderung untuk
+
+462
+00:26:16.000 --> 00:26:17.001
+Berhati-hatilah dan konsumsi ruang.
+
+463
+00:26:18.000 --> 00:26:19.000
+Sekarang ada gopher.
+
+464
+00:26:19.001 --> 00:26:22.001
+Program ini memori-resident dapat pop-up dan mencari teks.
+
+465
+00:26:23.000 --> 00:26:28.001
+Ia melakukan pencarian Boolean untuk dua istilah yang berkaitan dengan dan, atau, dekat, dan tidak.
+
+466
+00:26:28.001 --> 00:26:31.001
+Ia dapat mengabaikan bagian atas atau bagian bawah atau mempertimbangkannya.
+
+467
+00:26:32.000 --> 00:26:35.000
+Ia dapat mencari kata seperti yang terlihat atau sesuatu seperti itu.
+
+468
+00:26:35.000 --> 00:26:37.001
+Ia dapat mencari satu direktori atau seluruh cakera.
+
+469
+00:26:38.000 --> 00:26:40.001
+Anda dapat diajarkan untuk mengabaikan file yang bukan file teks.
+
+470
+00:26:41.000 --> 00:26:44.000
+Jika Anda tidak yakin di mana untuk memiliki tampilan gopher, dia akan menunjukkan peta cakera Anda.
+
+471
+00:26:44.001 --> 00:26:48.000
+Ini mungkin jauh lebih mudah untuk digunakan daripada metode apa pun yang Anda gunakan sekarang untuk mengikuti
+
+472
+00:26:48.000 --> 00:26:49.001
+dari file teks lama Anda.
+
+473
+00:26:50.000 --> 00:26:53.001
+Gopher adalah $ 60 dari Microlytics di East Rochester, New York.
+
+474
+00:26:53.001 --> 00:26:55.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+475
+00:26:55.001 --> 00:27:00.000
+Pentagon mengatakan telah mengatur tim anti-virus SWAT untuk memerangi komputer
+
+476
+00:27:00.000 --> 00:27:02.001
+Virus yang mengancam komputer Departemen Pertahanan.
+
+477
+00:27:03.000 --> 00:27:06.000
+Grup ini disebut CERT untuk Computer Emergency Response Team.
+
+478
+00:27:06.000 --> 00:27:09.001
+Ini terdiri dari 100 ahli komputer terkemuka dan peneliti.
+
+479
+00:27:10.000 --> 00:27:13.000
+Ibu pejabat CERT akan berada di Carnegie Mellon University di Pittsburgh.
+
+480
+00:27:14.000 --> 00:27:17.000
+Pencipta game perangkat lunak mengatakan bahwa mereka melarikan diri dari cara membuat komputer
+
+481
+00:27:17.000 --> 00:27:20.001
+permainan lebih menarik karena keterbatasan teknologi saat ini.
+
+482
+00:27:21.000 --> 00:27:25.000
+Pada konferensi PC Outlook di San Francisco, beberapa penerbit game mengatakan bahwa
+
+483
+00:27:25.000 --> 00:27:29.000
+berharap bahwa pertumbuhan teknologi CD-ROM akan memberikan sesuatu yang baru dan lebih
+
+484
+00:27:29.000 --> 00:27:32.001
+platform yang kuat untuk pengembangan game yang canggih.
+
+485
+00:27:33.001 --> 00:27:37.001
+Akhirnya, Game King Nintendo mengatakan ia bekerja dengan AT&amp;T untuk mengembangkan dua jalur.
+
+486
+00:27:37.001 --> 00:27:42.001
+layanan video game yang menghubungkan perpustakaan perangkat lunak game dengan pengguna dan menyediakan
+
+487
+00:27:42.001 --> 00:27:45.001
+Kemampuan untuk dua pemain di lokasi yang berbeda untuk bermain
+
+488
+00:27:45.001 --> 00:27:47.000
+saling bertentangan melalui telepon.
+
+489
+00:27:47.000 --> 00:27:51.000
+Nintendo mengatakan akan menawarkan adaptor ke konsol game video yang ada yang
+
+490
+00:27:51.000 --> 00:27:53.000
+Anda akan dapat mengakses layanan baru.
+
+491
+00:27:53.000 --> 00:27:54.001
+Itulah yang dimaksud dengan kronik minggu ini.
+
+492
+00:27:55.000 --> 00:27:56.001
+Aku akan melihatmu lagi kali berikutnya.
+
+493
+00:27:57.001 --> 00:28:02.001
+The Computer Chronicles dibuat mungkin sebagian oleh McGraw-Hill, penerbit
+
+494
+00:28:02.001 --> 00:28:06.000
+Majalah Byte dan VIX, Pertukaran Informasi Byte.
+
+495
+00:28:07.000 --> 00:28:11.001
+Dalam pencetakan dan online, Byte dan VIX melayani profesional komputer di seluruh dunia dengan
+
+496
+00:28:11.001 --> 00:28:15.001
+Informasi terperinci tentang perangkat keras, perangkat lunak dan teknologi baru.
+
+497
+00:28:16.001 --> 00:28:22.001
+Untuk transkripsi dari Komputer Chronicles minggu ini, kirim $4 ke PTV Publications
+
+498
+00:28:22.001 --> 00:28:28.000
+Pejabat Pos 701, Kent, Ohio 44240.
+
+499
+00:28:28.001 --> 00:28:30.001
+Silakan jelaskan tanggal program.
+
+500
+00:28:45.001 --> 00:28:52.001
+Sampaikan terima kasih

@@ -1,0 +1,2677 @@
+WEBVTT
+
+1
+00:00:34.000 --> 00:00:37.000
+Esta semana en The Computer Chronicles, cómo programar.
+
+2
+00:00:37.001 --> 00:00:41.001
+Te mostraremos cómo crear el tipo más sencillo de programa, un macro, y vamos a
+
+3
+00:00:41.001 --> 00:00:44.000
+te muestra un paquete de software que te enseña el
+
+4
+00:00:44.000 --> 00:00:46.000
+fundamentales de la programación del tiempo.
+
+5
+00:00:46.001 --> 00:00:51.000
+Vamos a ver el software de escritura para Internet con el Flash de Macromedia y un
+
+6
+00:00:51.000 --> 00:00:55.001
+El lenguaje de programación incluso los adultos pueden aprender, RCX de Lego Mindstorms.
+
+7
+00:00:55.001 --> 00:01:00.001
+Plus una visita al mundo real del código de software de carga pesada como te llevamos dentro
+
+8
+00:01:00.001 --> 00:01:03.000
+El equipo de programación de Electronic Arts.
+
+9
+00:01:03.000 --> 00:01:07.001
+Y mi selección de la semana, una increíble nueva pieza de software para archivos de audio.
+
+10
+00:01:07.001 --> 00:01:10.000
+Todo está llegando a continuación en The Computer Chronicles.
+
+11
+00:01:11.001 --> 00:01:16.001
+The Computer Chronicles se le trae por BigStar.com con miles de videos
+
+12
+00:01:16.001 --> 00:01:18.001
+DVD para toda la familia.
+
+13
+00:01:24.000 --> 00:01:28.001
+Suporte adicional por Techway para hasta el minuto de noticias tecnológicas.
+
+14
+00:01:29.001 --> 00:01:35.000
+Y por la TVA, los asociados de la televisión, conectando los mundos de ordenadores y vídeo
+
+15
+00:01:35.000 --> 00:01:51.001
+con DVD Hi y bienvenido a The Computer Chronicles, I&#x27;m Stuart Chafay.
+
+16
+00:01:52.000 --> 00:01:56.001
+Casi días de ordenadores personales hace 15 o 20 años tuve que saber cómo
+
+17
+00:01:56.001 --> 00:01:58.001
+Programas para hacer que su ordenador haga cualquier cosa.
+
+18
+00:01:59.000 --> 00:02:03.000
+Cuando compraste tu PC llegó con casi ningún software, pero probablemente llegó
+
+19
+00:02:03.000 --> 00:02:04.001
+El lenguaje de programación básico.
+
+20
+00:02:05.000 --> 00:02:07.000
+Entonces era tuyo escribir un programa así.
+
+21
+00:02:07.000 --> 00:02:08.001
+Puedes hacer algo con tu PC.
+
+22
+00:02:09.001 --> 00:02:12.001
+Afortunadamente, esos días están terminados y no tienes que programar
+
+23
+00:02:12.001 --> 00:02:14.000
+Cualquier cosa, pero puede que quieras.
+
+24
+00:02:14.001 --> 00:02:16.001
+Puede ser útil y puede ser divertido.
+
+25
+00:02:16.001 --> 00:02:21.000
+De hecho, probablemente no lo sabes, pero muchas de tus aplicaciones de escritorio tienen
+
+26
+00:02:21.000 --> 00:02:23.001
+Capacidades de programación construidas en ellas.
+
+27
+00:02:23.001 --> 00:02:25.000
+Se llaman macro motores.
+
+28
+00:02:25.001 --> 00:02:28.000
+Así que pensamos que comenzaríamos nuestra mirada a cómo programar con lo más fácil
+
+29
+00:02:28.000 --> 00:02:30.001
+Por ejemplo, cómo crear un macro.
+
+30
+00:02:31.000 --> 00:02:35.000
+Y en Microsoft, la mayoría de las personas no lo saben, tienes todo tipo de programación
+
+31
+00:02:35.000 --> 00:02:38.000
+Capacidad oculta dentro de sus aplicaciones de oficina, ¿verdad?
+
+32
+00:02:38.000 --> 00:02:40.001
+De hecho, es un secreto mal guardado porque se revela a millones de personas.
+
+33
+00:02:40.001 --> 00:02:44.000
+Los desarrolladores realmente utilizan los macros para escribir soluciones.
+
+34
+00:02:44.000 --> 00:02:48.001
+Pero también los usuarios finales deben saber que detrás de cada aplicación de oficina es
+
+35
+00:02:48.001 --> 00:02:50.000
+Un entorno en el que realmente se puede crear.
+
+36
+00:02:50.000 --> 00:02:53.000
+Y alguien me dijo una vez que los macros son la programación más común.
+
+37
+00:02:53.000 --> 00:02:54.001
+El lenguaje en términos de la gente realmente hace cosas.
+
+38
+00:02:55.000 --> 00:02:55.001
+absolutamente y absolutamente.
+
+39
+00:02:55.001 --> 00:02:57.001
+Pues bien, vamos a hablar de algunos ejemplos aquí.
+
+40
+00:02:58.000 --> 00:03:01.001
+Quiero automatizar algunas cosas, por ejemplo, en una hoja de referencia.
+
+41
+00:03:02.001 --> 00:03:06.000
+Dime un ejemplo de cómo puedo escribir un programa utilizando uno de tus macros.
+
+42
+00:03:06.000 --> 00:03:09.001
+Comenzamos con Excel 2000, Microsoft Excel 2000 aquí.
+
+43
+00:03:10.000 --> 00:03:12.001
+Y hablaremos de automatizar sólo un duro
+
+44
+00:03:12.001 --> 00:03:14.000
+La tarea es llenar un archivo caro.
+
+45
+00:03:14.000 --> 00:03:17.000
+El mismo junk de vez en cuando y de vez, así que por qué no escribir un programa para hacerlo?
+
+46
+00:03:17.000 --> 00:03:18.000
+Definitivamente, y de hecho, vamos a mostrarle cómo
+
+47
+00:03:18.000 --> 00:03:19.001
+Es fácil, ni siquiera tienes que escribir el programa.
+
+48
+00:03:20.000 --> 00:03:22.001
+Vamos a seguir adelante y grabar un macro utilizando la grabación macro.
+
+49
+00:03:23.000 --> 00:03:27.001
+Y vamos a las herramientas, los macros, y vamos, me disculpo, vamos a los herramientas.
+
+50
+00:03:28.000 --> 00:03:30.000
+Macros, y vamos a registrar un nuevo macro.
+
+51
+00:03:30.000 --> 00:03:32.001
+Esto significa que veo las cosas y la próxima vez
+
+52
+00:03:32.001 --> 00:03:34.000
+Sólo quiero presionar un botón y usted lo hace.
+
+53
+00:03:34.000 --> 00:03:36.000
+Absolutamente, y vamos a llamar este aeropuerto porque vamos a comenzar
+
+54
+00:03:36.000 --> 00:03:38.001
+rellenar nuestro informe de gastos y ir al aeropuerto.
+
+55
+00:03:39.000 --> 00:03:40.000
+Siempre va al aeropuerto en una
+
+56
+00:03:40.000 --> 00:03:41.001
+Viaje de negocios, ¿por qué hacer lo mismo?
+
+57
+00:03:42.000 --> 00:03:42.001
+por absoluto.
+
+58
+00:03:42.001 --> 00:03:44.001
+Y en realidad hay una variedad de cosas que quería automatizar.
+
+59
+00:03:44.001 --> 00:03:46.001
+Ahora está registrando todo lo que estoy haciendo.
+
+60
+00:03:47.000 --> 00:03:51.000
+Así que pondré en mi número de ID de empleado, mi nombre puedo recordar.
+
+61
+00:03:52.000 --> 00:03:53.000
+Y ahora aquí...
+
+62
+00:03:53.000 --> 00:03:54.001
+Pero esto es algo que no debe necesariamente hacer todo
+
+63
+00:03:54.001 --> 00:03:56.000
+solo una vez que rellenas un informe de gastos.
+
+64
+00:03:56.000 --> 00:03:58.001
+Especialmente porque nunca puedo recordar mi número de call center.
+
+65
+00:03:59.000 --> 00:04:00.001
+Y vamos a avanzar y la descripción y sólo vamos a comenzar
+
+66
+00:04:00.001 --> 00:04:02.000
+con el viaje al aeropuerto.
+
+67
+00:04:03.000 --> 00:04:05.000
+Y milas, yo sé que es 17 milas.
+
+68
+00:04:05.001 --> 00:04:06.000
+Y eso es algo muy parecido...
+
+69
+00:04:06.000 --> 00:04:07.001
+Así que tienes que moverse, así que siempre va a ser lo mismo.
+
+70
+00:04:07.001 --> 00:04:08.000
+y exactamente.
+
+71
+00:04:08.000 --> 00:04:12.000
+Así que tenemos 17 millas y Excel puede calcular cuánto estoy echando 500.
+
+72
+00:04:12.000 --> 00:04:13.001
+Todo eso es lo que harías para
+
+73
+00:04:13.001 --> 00:04:15.000
+Dime, oh, déme el dinero para el viaje al aeropuerto.
+
+74
+00:04:15.001 --> 00:04:16.000
+Eso es correcto.
+
+75
+00:04:16.000 --> 00:04:18.001
+Así que ahora realmente podemos avanzar y simplemente detener nuestra grabación.
+
+76
+00:04:20.000 --> 00:04:22.000
+Y estamos listos y ahora lo que haré es que lo haré aquí en secreto.
+
+77
+00:04:23.000 --> 00:04:24.001
+Y como si estuviera llegando de nuevo.
+
+78
+00:04:24.001 --> 00:04:25.000
+Ahora hemos escrito el macro.
+
+79
+00:04:25.001 --> 00:04:27.001
+La próxima vez que vamos a hacer el mismo informe de gastos, ¿qué hago?
+
+80
+00:04:28.000 --> 00:04:31.001
+Bueno, simplemente vamos a las herramientas, macro, macros, y hay nuestro aeropuerto macro.
+
+81
+00:04:31.001 --> 00:04:32.001
+Y vamos a avanzar y correr eso.
+
+82
+00:04:33.000 --> 00:04:34.001
+Y sólo en un momento lo llenamos.
+
+83
+00:04:36.000 --> 00:04:37.001
+Ahora no tenía que saber nada, ¿verdad?
+
+84
+00:04:37.001 --> 00:04:39.001
+Sólo dije seguir seguido de lo que estoy haciendo y luego hacerlo la próxima vez.
+
+85
+00:04:40.000 --> 00:04:41.000
+Es más fácil que programar un VCR.
+
+86
+00:04:41.000 --> 00:04:42.001
+Tuvieron que hacer clic en el botón de registro.
+
+87
+00:04:43.000 --> 00:04:44.000
+No tienes que saber nada sobre la programación.
+
+88
+00:04:44.000 --> 00:04:44.001
+No en este caso.
+
+89
+00:04:45.000 --> 00:04:45.001
+Todo lo justo.
+
+90
+00:04:45.001 --> 00:04:50.000
+El siguiente ejemplo, en realidad puedo agregar funcionalidad que los chicos no lo pusieron en
+
+91
+00:04:50.000 --> 00:04:52.000
+¿Porque es adecuado para lo que quiero hacer con el programa?
+
+92
+00:04:52.000 --> 00:04:52.001
+por absoluto.
+
+93
+00:04:52.001 --> 00:04:54.001
+No podemos pensar en todo cuando creamos un piezo de software.
+
+94
+00:04:54.001 --> 00:04:57.001
+Así que es realmente bueno darle las herramientas para crear sus propias características.
+
+95
+00:04:58.000 --> 00:05:01.000
+Vamos a entrar en el editor de Visual Basic porque Visual Basics para aplicaciones.
+
+96
+00:05:01.001 --> 00:05:04.000
+Así que en el fondo de todo esto es que realmente estás escribiendo esta cosa en Visual Basic.
+
+97
+00:05:04.000 --> 00:05:04.001
+por absoluto.
+
+98
+00:05:05.000 --> 00:05:07.000
+Y así cada una de las aplicaciones de Office tiene esto detrás de ella.
+
+99
+00:05:07.000 --> 00:05:11.001
+También estamos licenciando esto a terceros como Visio, Corel, Autodesk, todos
+
+100
+00:05:11.001 --> 00:05:13.000
+Tiene el mismo entorno de programación.
+
+101
+00:05:13.001 --> 00:05:14.000
+Así que vamos a dar un vistazo.
+
+102
+00:05:14.000 --> 00:05:15.001
+Este es el macro que acaba de registrar.
+
+103
+00:05:16.000 --> 00:05:20.000
+Así que ese es el código básico en Basic que estaba haciendo lo que hacemos.
+
+104
+00:05:20.000 --> 00:05:20.001
+por absoluto.
+
+105
+00:05:20.001 --> 00:05:21.001
+Puedes ver si lo hice.
+
+106
+00:05:21.001 --> 00:05:23.000
+Y no tenía que saber de todo esto.
+
+107
+00:05:23.000 --> 00:05:23.001
+Sólo lo hice.
+
+108
+00:05:24.000 --> 00:05:24.000
+[...]
+
+109
+00:05:24.001 --> 00:05:25.001
+Pero vamos a decir que quisiera.
+
+110
+00:05:25.001 --> 00:05:28.000
+Pero si yo sabía mis cosas podría ir allí y editarlo y modificarlo.
+
+111
+00:05:28.000 --> 00:05:28.000
+por absoluto.
+
+112
+00:05:28.000 --> 00:05:30.001
+Vamos a decir que te mudaste más cerca del aeropuerto y quisiste convertirte en 17.
+
+113
+00:05:31.000 --> 00:05:31.001
+Sólo has cambiado eso.
+
+114
+00:05:31.001 --> 00:05:31.001
+Todo lo justo.
+
+115
+00:05:31.001 --> 00:05:33.000
+Así que vamos al ejemplo que te he preguntado.
+
+116
+00:05:33.000 --> 00:05:35.001
+¿Cómo puedo añadir alguna característica a la placa?
+
+117
+00:05:35.001 --> 00:05:36.000
+por absoluto.
+
+118
+00:05:36.000 --> 00:05:38.000
+Vamos a hablar de cómo podríamos obtener algo como un calendario.
+
+119
+00:05:38.000 --> 00:05:39.000
+Nunca puedo recordar la fecha.
+
+120
+00:05:39.001 --> 00:05:40.001
+Sabía que viajaba el lunes.
+
+121
+00:05:40.001 --> 00:05:42.000
+¿Quieres mirar un calendario y decir qué fecha fue?
+
+122
+00:05:42.000 --> 00:05:42.001
+por absoluto.
+
+123
+00:05:42.001 --> 00:05:44.001
+Y quiero ser capaz de construir esto en Excel.
+
+124
+00:05:45.000 --> 00:05:45.001
+Así que vamos a ir y haremos eso
+
+125
+00:05:45.001 --> 00:05:47.000
+Y voy a escribir una línea de código para hacerlo.
+
+126
+00:05:47.001 --> 00:05:51.001
+La primera cosa que hacemos es simplemente agregar un formulario y utilizar uno de estos controles ActiveX.
+
+127
+00:05:51.001 --> 00:05:53.001
+Están en la oficina y están disponibles para usted.
+
+128
+00:05:54.000 --> 00:05:57.000
+Y puedes construir tu control de calendario justo en el formulario.
+
+129
+00:05:57.001 --> 00:05:57.001
+Eso es eso.
+
+130
+00:05:58.001 --> 00:06:00.001
+Y estamos listos para escribir nuestra única línea de código.
+
+131
+00:06:00.001 --> 00:06:04.000
+Y que una línea de código va a la célula activa
+
+132
+00:06:04.000 --> 00:06:06.001
+en Excel y cambiar el valor.
+
+133
+00:06:06.001 --> 00:06:09.001
+Puedes ver que IntelliSense en VBA me ayuda a escribir este código.
+
+134
+00:06:09.001 --> 00:06:11.001
+Así que yo tendría que saber cómo hacer esto, ¿no?
+
+135
+00:06:12.000 --> 00:06:12.000
+por absoluto.
+
+136
+00:06:13.000 --> 00:06:15.000
+Esta no es la cosa más sencilla del mundo, pero en realidad la gente
+
+137
+00:06:15.000 --> 00:06:16.001
+No use una grabación para hacerlo.
+
+138
+00:06:17.000 --> 00:06:17.000
+¿Y qué sucede?
+
+139
+00:06:17.001 --> 00:06:19.000
+Por lo tanto, un calendario de un punto de valor.
+
+140
+00:06:19.001 --> 00:06:21.000
+Por lo tanto, vamos a ir directamente a nuestra carta de divulgación ahora.
+
+141
+00:06:21.000 --> 00:06:23.001
+Y ahora que haga doble clic en el campo de fecha, verás que
+
+142
+00:06:23.001 --> 00:06:25.000
+El calendario se ha levantado.
+
+143
+00:06:25.001 --> 00:06:27.000
+Y al clicar en torno, estoy seleccionando fechas.
+
+144
+00:06:27.001 --> 00:06:28.001
+Nuevas características, sólo añadimos.
+
+145
+00:06:28.001 --> 00:06:29.001
+Dos ejemplos para bebés.
+
+146
+00:06:29.001 --> 00:06:32.000
+Yo sé que hay todo tipo de cosas que puedes hacer, no tenemos tiempo.
+
+147
+00:06:32.000 --> 00:06:35.001
+Pero hey, explora los macros dentro de sus aplicaciones de Office, ¿no?
+
+148
+00:06:36.000 --> 00:06:37.000
+Muchas gracias mucho.
+
+149
+00:06:37.001 --> 00:06:37.001
+Todo lo justo.
+
+150
+00:06:37.001 --> 00:06:41.000
+Bueno, si usted ha tenido un poco de diversión creando unos pocos macros y entonces usted quiere obtener
+
+151
+00:06:41.000 --> 00:06:44.001
+Realmente serio sobre escribir sus propias aplicaciones, usted puede hacerlo.
+
+152
+00:06:45.000 --> 00:06:47.001
+Existe un programa de software ahora llamado CodeWarrior
+
+153
+00:06:47.001 --> 00:06:49.000
+Descubre la programación para Windows.
+
+154
+00:06:49.000 --> 00:06:51.001
+Y puede convertirte incluso en un programador.
+
+155
+00:06:52.000 --> 00:06:53.000
+Creo que es una teoría, ¿no?
+
+156
+00:06:53.000 --> 00:06:55.000
+Me parece que puedes aprender a hacer estas cosas complicadas.
+
+157
+00:06:56.000 --> 00:06:58.000
+Basicamente lo que estamos buscando por el descubrimiento
+
+158
+00:06:58.000 --> 00:06:59.001
+El producto de programación es para una novela.
+
+159
+00:06:59.001 --> 00:07:02.000
+un programador novato, alguien que nunca ha sido programado antes, y
+
+160
+00:07:02.000 --> 00:07:04.000
+De hecho, te pasa a través de cómo programar.
+
+161
+00:07:04.000 --> 00:07:08.001
+Así que puedo aprender a programar en C, C++, Java o Pascal en esto, ¿verdad?
+
+162
+00:07:08.001 --> 00:07:09.000
+Sí sí.
+
+163
+00:07:09.000 --> 00:07:10.001
+Lo que suena como mucho que aprender.
+
+164
+00:07:11.000 --> 00:07:11.000
+Y justo.
+
+165
+00:07:11.001 --> 00:07:12.000
+Pero lo puedo hacer.
+
+166
+00:07:12.000 --> 00:07:12.001
+Sí, usted puede
+
+167
+00:07:13.000 --> 00:07:15.000
+Y lo bueno es que todo está en el mismo entorno.
+
+168
+00:07:15.000 --> 00:07:17.001
+Así que deberías aprender las lenguas, pero el medio ambiente
+
+169
+00:07:17.001 --> 00:07:19.000
+Para cada lenguaje sería la misma.
+
+170
+00:07:19.001 --> 00:07:19.001
+Todo lo justo.
+
+171
+00:07:19.001 --> 00:07:20.000
+Te voy a dar un ejemplo.
+
+172
+00:07:20.001 --> 00:07:21.001
+Estoy como comenzar aquí y digo,
+
+173
+00:07:21.001 --> 00:07:23.000
+Quiero aprender sólo para hacer las cosas básicas.
+
+174
+00:07:23.001 --> 00:07:26.000
+Quiero escribir un poco de juego, por ejemplo, usted sabe, el juego de Reversi.
+
+175
+00:07:26.001 --> 00:07:27.000
+Eso no es demasiado complicado.
+
+176
+00:07:27.001 --> 00:07:30.001
+¿Cómo me gustaría, en mi opinión, que es uno de sus proyectos, como lo entiendo.
+
+177
+00:07:30.001 --> 00:07:33.000
+Puedo sacarlo y, de hecho, mirar lo que
+
+178
+00:07:33.000 --> 00:07:35.000
+El código era como parte de mi proceso de aprendizaje.
+
+179
+00:07:35.000 --> 00:07:35.000
+[...]
+
+180
+00:07:35.001 --> 00:07:36.000
+¿Cómo hago eso?
+
+181
+00:07:36.001 --> 00:07:40.000
+Basicamente tenemos la aplicación Reversi casi ya establecida.
+
+182
+00:07:40.000 --> 00:07:41.000
+¿Qué hay en esa ventana?
+
+183
+00:07:41.001 --> 00:07:41.001
+Justo aquí.
+
+184
+00:07:42.000 --> 00:07:45.001
+Ahora este es el entorno real de codificación con estos juicios aquí.
+
+185
+00:07:45.001 --> 00:07:48.001
+Así que hay el código de fuente, hay bibliotecas que está acercando para hacer esa cosa.
+
+186
+00:07:48.001 --> 00:07:51.001
+Estas son las bibliotecas aquí, el código de fuente, y todo se atrae y
+
+187
+00:07:51.001 --> 00:07:56.000
+Descargar si quieres sacar, sabes, ciertos archivos en algún lugar y cosas como eso.
+
+188
+00:07:56.000 --> 00:07:57.001
+¿Puedo ver cuál sería realmente el código?
+
+189
+00:07:58.001 --> 00:08:01.000
+De hecho, si realmente quisiera mirar el código, sólo puede bajar allí
+
+190
+00:08:01.000 --> 00:08:03.000
+y doble clic en eso.
+
+191
+00:08:03.001 --> 00:08:06.000
+Y, usted sabe, tenemos otras opciones si está buscando usted puede.
+
+192
+00:08:06.001 --> 00:08:06.001
+Todo lo justo.
+
+193
+00:08:06.001 --> 00:08:10.000
+Y si quería ejecutar el código y ver lo que está sucediendo, si quieres bug.
+
+194
+00:08:10.000 --> 00:08:10.000
+[...]
+
+195
+00:08:10.000 --> 00:08:15.000
+Usted acaba de llegar aquí al run y debug y usted corre el código real como este.
+
+196
+00:08:15.001 --> 00:08:16.001
+Y ahora está realmente compilando.
+
+197
+00:08:17.000 --> 00:08:17.000
+Y justo.
+
+198
+00:08:18.001 --> 00:08:19.000
+Y en realidad vamos.
+
+199
+00:08:19.000 --> 00:08:22.000
+Ahora, como ustedes dicen, quiero decir, finalmente tendré que aprender ese lenguaje en
+
+200
+00:08:22.000 --> 00:08:23.001
+de la izquierda y lo que son los mandamientos.
+
+201
+00:08:23.001 --> 00:08:27.000
+Pero esto es parte del proceso, una especie de mirar el código de alguien más
+
+202
+00:08:27.000 --> 00:08:28.001
+Descubrir cómo han hecho estas cosas.
+
+203
+00:08:29.001 --> 00:08:29.001
+y exactamente.
+
+204
+00:08:30.000 --> 00:08:32.000
+Yo creo que es una de las cosas más importantes.
+
+205
+00:08:32.000 --> 00:08:35.001
+Ahora, aquí acabamos de popping, usted sabe, la ventana de debugger acaba de popped.
+
+206
+00:08:35.001 --> 00:08:39.000
+Si realmente quieres mirar, sabes, si quieres pasar por tu
+
+207
+00:08:39.000 --> 00:08:41.000
+Código, sólo puedes pasar por este tipo.
+
+208
+00:08:41.001 --> 00:08:43.000
+Y se detendrá allí.
+
+209
+00:08:44.000 --> 00:08:47.000
+Y si realmente quieres mostrar qué es el reverso del juego.
+
+210
+00:08:47.001 --> 00:08:49.000
+Así que, en realidad, el programa se lleva a cabo ahora, hey,
+
+211
+00:08:49.000 --> 00:08:50.001
+Eso es lo que habría pasado si estuviera jugando el partido.
+
+212
+00:08:51.000 --> 00:08:51.000
+y exactamente.
+
+213
+00:08:51.000 --> 00:08:51.001
+Todo lo justo.
+
+214
+00:08:52.000 --> 00:08:55.000
+Ahora, parece una especie de simple, pero hay muchas cosas complicadas allí.
+
+215
+00:08:55.000 --> 00:08:56.000
+Voy a aprender C++.
+
+216
+00:08:56.000 --> 00:08:57.000
+Vamos a tomar algo de aprendizaje.
+
+217
+00:08:57.001 --> 00:09:01.000
+¿Cómo uso ahora tu software para decir, enseñarme cómo hacer este tipo de cosas?
+
+218
+00:09:01.000 --> 00:09:05.001
+Bueno, lo que tenemos con el software CodeWear es que tenemos un sitio web que viene
+
+219
+00:09:05.001 --> 00:09:07.000
+con el software.
+
+220
+00:09:07.001 --> 00:09:11.000
+Y todo lo que tienes que hacer es cuando cargas el software, es
+
+221
+00:09:11.000 --> 00:09:12.001
+En el CD de la documentación.
+
+222
+00:09:13.001 --> 00:09:14.001
+En realidad, esta es la documentación.
+
+223
+00:09:14.001 --> 00:09:17.001
+Así que este es un tipo de tutorial de auto-driving y es sólo
+
+224
+00:09:17.001 --> 00:09:19.000
+yo y el ordenador y me enseñará esto.
+
+225
+00:09:19.000 --> 00:09:19.000
+y exactamente.
+
+226
+00:09:19.000 --> 00:09:23.000
+Y como puede ver, hay un bienvenido, hay indicios para usar el sitio, obtener
+
+227
+00:09:23.000 --> 00:09:25.000
+Comenzó, todos los diferentes tipos de...
+
+228
+00:09:25.000 --> 00:09:27.000
+Vamos a dar un ejemplo de dónde empecé, de donde estoy.
+
+229
+00:09:27.000 --> 00:09:30.000
+Quiero obtener una idea de cómo comenzar este proceso de aprendizaje para codificar en C++.
+
+230
+00:09:30.000 --> 00:09:32.000
+Sólo haga doble clic en la parte que empieza.
+
+231
+00:09:32.001 --> 00:09:35.000
+Y entonces si realmente quieres ver el CodeWear IDE.
+
+232
+00:09:35.000 --> 00:09:36.001
+Hay un tutorial establecido allí.
+
+233
+00:09:36.001 --> 00:09:37.001
+Así que vamos a dar un vistazo a esa.
+
+234
+00:09:37.001 --> 00:09:41.000
+Sólo haga clic en esto y le dará una guía real
+
+235
+00:09:41.000 --> 00:09:42.001
+Viaje a través de la IDE.
+
+236
+00:09:43.000 --> 00:09:43.000
+Todo lo justo.
+
+237
+00:09:43.000 --> 00:09:46.001
+Ahora, ¿puedo trabajar en pequeños proyectos para bebés y me guiará a través de esto?
+
+238
+00:09:46.001 --> 00:09:47.001
+¿Es así como yo haría esto?
+
+239
+00:09:48.000 --> 00:09:49.000
+Sí, eso es exactamente cómo lo haces.
+
+240
+00:09:49.000 --> 00:09:54.000
+Puedes trabajar en proyectos para bebés y en realidad tenemos ejemplos para cada lengua, C,
+
+241
+00:09:54.000 --> 00:09:56.000
+C++, cuánto quiero decir como la cosa Reversi que miramos?
+
+242
+00:09:56.000 --> 00:09:56.000
+y exactamente.
+
+243
+00:09:56.001 --> 00:09:58.000
+Esto es correcto en la documentación CD.
+
+244
+00:09:58.000 --> 00:10:01.000
+Así que pude cargar ese programa y decir, bien, qué sucedería si lo cambiara
+
+245
+00:10:01.000 --> 00:10:05.001
+aquí y hizo esto y lo hizo verde en lugar de azul o lo hizo gran una mesa
+
+246
+00:10:05.001 --> 00:10:07.000
+¿En lugar de eso una gran mesa y mezclar con eso?
+
+247
+00:10:07.001 --> 00:10:07.001
+y exactamente.
+
+248
+00:10:08.000 --> 00:10:09.000
+Y yo no puedo derramarlo, ¿puedo?
+
+249
+00:10:09.001 --> 00:10:10.001
+Siempre puedo volver a donde comenzaste.
+
+250
+00:10:10.001 --> 00:10:12.001
+Puede haber cometido algunos errores aquí y allí.
+
+251
+00:10:13.000 --> 00:10:16.000
+Como asunto práctico, creo que todavía parece una especie de complicado.
+
+252
+00:10:16.000 --> 00:10:17.001
+Es decir, un hombre normal en una
+
+253
+00:10:17.001 --> 00:10:19.001
+inteligente, un ordenador que se ve bien, quiero aprender programación.
+
+254
+00:10:20.000 --> 00:10:22.001
+¿Cuánto tiempo me llevaría para entrar aquí y descubrir cómo
+
+255
+00:10:22.001 --> 00:10:24.000
+¿Hay algo que ver con el juego Reversi?
+
+256
+00:10:24.001 --> 00:10:25.001
+Bueno, creo que tardará un tiempo.
+
+257
+00:10:26.000 --> 00:10:26.001
+Tienes que aprender las lenguas.
+
+258
+00:10:27.000 --> 00:10:31.000
+Pero como he dicho antes, lo bueno es que el IDE será el mismo
+
+259
+00:10:31.000 --> 00:10:32.001
+No importa a qué se refiere el ID.
+
+260
+00:10:32.001 --> 00:10:34.000
+Un entorno de desarrollo integrado.
+
+261
+00:10:34.000 --> 00:10:34.001
+Todo lo justo.
+
+262
+00:10:34.001 --> 00:10:36.000
+Tiene una plataforma para hacer
+
+263
+00:10:36.000 --> 00:10:37.001
+Todo esto, independientemente de la lengua, ¿es eso?
+
+264
+00:10:38.000 --> 00:10:38.000
+y exactamente.
+
+265
+00:10:39.000 --> 00:10:43.000
+Un IDE sería similar al de Word cuando desea crear un documento.
+
+266
+00:10:43.000 --> 00:10:48.001
+El IDE sería la palabra para realmente crear un programa y cosas así.
+
+267
+00:10:48.001 --> 00:10:51.000
+Así que una vez más, una persona normal podría entrar aquí y realmente aprenderlos con el
+
+268
+00:10:51.000 --> 00:10:53.000
+El software y al final, descubriendo cómo escribir algo.
+
+269
+00:10:53.000 --> 00:10:53.001
+Sí sí.
+
+270
+00:10:54.000 --> 00:10:55.000
+¿Cuánto cuesta comprar esto?
+
+271
+00:10:55.000 --> 00:10:56.000
+Esto es $79.
+
+272
+00:10:56.001 --> 00:10:57.001
+Oh, eso no es malo.
+
+273
+00:10:57.001 --> 00:10:57.001
+Sí sí.
+
+274
+00:10:58.000 --> 00:10:58.001
+Y todos los cuatro idiomas están ahí.
+
+275
+00:10:59.000 --> 00:10:59.001
+Todos los cuatro idiomas, sí.
+
+276
+00:11:00.000 --> 00:11:01.001
+C++, Java y Pascal.
+
+277
+00:11:01.001 --> 00:11:02.000
+Muchas gracias mucho.
+
+278
+00:11:02.000 --> 00:11:02.001
+Gracias a ustedes.
+
+279
+00:11:03.000 --> 00:11:03.000
+Todo lo justo.
+
+280
+00:11:03.000 --> 00:11:07.000
+Bueno, el punto de partida para los programadores profesionales es generalmente los juegos de ordenador.
+
+281
+00:11:07.000 --> 00:11:11.001
+No hay nada como un juego para presionar el código del software hasta el límite en términos de
+
+282
+00:11:11.001 --> 00:11:14.000
+gráficos, velocidad, interfaz, etc.
+
+283
+00:11:14.000 --> 00:11:17.001
+Así que pensamos que te daríamos una mirada en el mundo loco del gran tiempo
+
+284
+00:11:17.001 --> 00:11:20.001
+Programación con una visita al santo interior de la
+
+285
+00:11:20.001 --> 00:11:22.001
+Equipo de programación de Electronic Arts.
+
+286
+00:11:25.001 --> 00:11:30.001
+Un avión sonaba, los propelleros giraban y las balas salían de las armas montadas de las alas.
+
+287
+00:11:31.001 --> 00:11:35.001
+La acción en James World War II combatentes de Electronic Arts puede
+
+288
+00:11:35.001 --> 00:11:37.000
+Parece real, pero no lo es.
+
+289
+00:11:37.000 --> 00:11:41.000
+Es sólo un modelo matemático que responde a las direcciones
+
+290
+00:11:41.000 --> 00:11:43.000
+incluido en el código del programa.
+
+291
+00:11:43.001 --> 00:11:47.001
+Por supuesto, el código no es el único factor en hacer un juego exitoso.
+
+292
+00:11:48.000 --> 00:11:52.001
+Cuando empecemos el proceso, estamos pensando en cómo hacerlo tan frío como
+
+293
+00:11:52.001 --> 00:11:57.001
+posible, para hacer que sea real, para que sea visualmente impresionante como sea posible.
+
+294
+00:11:58.000 --> 00:12:01.000
+En el proceso de implementación de esto, entonces tenemos que descubrir cómo
+
+295
+00:12:01.000 --> 00:12:02.001
+para hacer eso y cuáles son nuestros límites.
+
+296
+00:12:03.000 --> 00:12:05.000
+¿Qué es nuestro hardware objetivo?
+
+297
+00:12:05.000 --> 00:12:06.000
+¿Cuánto rápido puede ir?
+
+298
+00:12:06.000 --> 00:12:08.000
+¿Cuántos poligonos podemos usar?
+
+299
+00:12:08.001 --> 00:12:13.000
+Cualquier juego de software requiere trabajo de equipo entre el programador y el artista, pero
+
+300
+00:12:13.000 --> 00:12:17.001
+Los programadores tienen formas de simplificar y acelerar la acción, un importante
+
+301
+00:12:17.001 --> 00:12:19.001
+Beneficios para un juego suave.
+
+302
+00:12:20.000 --> 00:12:22.000
+Siempre estamos tratando de optimizar nuestro código para que funcione
+
+303
+00:12:22.000 --> 00:12:24.000
+más rápido en la misma máquina existente.
+
+304
+00:12:25.000 --> 00:12:30.000
+Basicamente, cuanto más eficiente es nuestro código, mejor es la tasa de marco de la
+
+305
+00:12:30.000 --> 00:12:34.000
+El juego será, por lo que actualizará la pantalla más veces por segundo.
+
+306
+00:12:34.001 --> 00:12:38.000
+La secuencia de apertura del juego incluye una muestra de batalla entre los alemanes
+
+307
+00:12:38.000 --> 00:12:40.000
+Los tanques y los aviones de guerra aliados.
+
+308
+00:12:40.001 --> 00:12:44.000
+En una versión temprana, el punto de vista del jugador, como se ve a través de un virtual
+
+309
+00:12:44.000 --> 00:12:46.000
+La cámara es estática.
+
+310
+00:12:46.001 --> 00:12:51.000
+En la versión posterior, se añadieron movimientos de la cámara para crear drama y suspense.
+
+311
+00:12:52.000 --> 00:12:53.000
+Aquí es cómo se hizo.
+
+312
+00:12:53.001 --> 00:13:00.000
+Lo que ves es en el momento cero, la pista de la cámara será girada desde 6.09
+
+313
+00:13:00.000 --> 00:13:02.001
+radios a 6.15 radios en seis segundos.
+
+314
+00:13:03.000 --> 00:13:08.000
+Esto nos dará este efecto picante en la cámara, que añade más
+
+315
+00:13:08.000 --> 00:13:09.001
+de un drama dramático para ello.
+
+316
+00:13:10.000 --> 00:13:15.000
+Algunas otras cosas grandes que suceden más tarde, cambiaré la cámara a una
+
+317
+00:13:15.000 --> 00:13:18.001
+Vista exterior del hangar en 10 segundos.
+
+318
+00:13:19.001 --> 00:13:21.001
+Esto añade mucho más de una película siente a ella.
+
+319
+00:13:22.000 --> 00:13:27.000
+Obtendrá un primer tiro de los P-47 que entran en el bombardeo en curso ahora mismo.
+
+320
+00:13:29.000 --> 00:13:30.001
+Esta es mi parte favorita aquí.
+
+321
+00:13:36.001 --> 00:13:40.001
+Por lo tanto, cada movimiento de la cámara que ves se escribe en
+
+322
+00:13:40.001 --> 00:13:42.001
+El archivo que te he mostrado antes.
+
+323
+00:13:44.000 --> 00:13:49.000
+Para lograr el mayor realismo, los diseñadores de juegos tomaron modelos de aviones reales y
+
+324
+00:13:49.000 --> 00:13:54.000
+Copió todos los detalles que pudieron, desde el fuselage hasta los gauges de la cabina.
+
+325
+00:13:54.001 --> 00:13:58.000
+Y para manipular tantas partes en secuencia, los programadores
+
+326
+00:13:58.000 --> 00:14:00.000
+que se reúnen por hierarquía.
+
+327
+00:14:00.000 --> 00:14:05.000
+Cuando estamos pensando en la jerarquía de la forma del avión, y
+
+328
+00:14:05.000 --> 00:14:06.001
+Hay que decir que tenemos razón en la parte del juego que
+
+329
+00:14:06.001 --> 00:14:08.001
+que involucran las balas que golpean el avión.
+
+330
+00:14:09.001 --> 00:14:11.000
+Así que necesitamos detectar exactamente dónde están golpeando las balas.
+
+331
+00:14:12.000 --> 00:14:14.001
+Lo hacemos, modelamos exactamente dónde en el avión las balas
+
+332
+00:14:14.001 --> 00:14:16.000
+Hicimos y afectamos el modelo de vuelo de esa manera.
+
+333
+00:14:17.000 --> 00:14:21.000
+Por lo tanto, rompiendo la forma en una jerarquía, podemos decir, bien, esta bala golpeó la
+
+334
+00:14:21.000 --> 00:14:24.000
+raíz de la alas aquí y por lo tanto afectará al modelo de vuelo de esta manera.
+
+335
+00:14:25.000 --> 00:14:30.001
+Los combatientes de James de la Segunda Guerra Mundial fueron escritos en C++, pero los programadores señalan que no
+
+336
+00:14:30.001 --> 00:14:32.001
+Una lengua es específica para los juegos.
+
+337
+00:14:33.001 --> 00:14:39.000
+El código utiliza la programación orientada a objetos, o módulos reutilizables, para reducir la
+
+338
+00:14:39.000 --> 00:14:41.000
+número de tareas repetitivas.
+
+339
+00:14:41.001 --> 00:14:47.000
+Vamos a decir que usted está tratando de modelar, vamos a decir las balas.
+
+340
+00:14:47.000 --> 00:14:51.000
+Así que usted está disparando una arma y estamos creando miles de balas cada minuto,
+
+341
+00:14:51.000 --> 00:14:53.000
+dependiendo de la velocidad del fuego del arma.
+
+342
+00:14:53.001 --> 00:14:57.001
+No queremos repetir el código más y más de cien veces
+
+343
+00:14:57.001 --> 00:14:59.000
+para crear un efecto sonoro para ello.
+
+344
+00:14:59.001 --> 00:15:02.001
+Así que creamos un módulo que dice crear un sonido para una bala.
+
+345
+00:15:03.000 --> 00:15:07.001
+Y si funciona, si lo despejamos, y si esa pieza de código es estable, entonces
+
+346
+00:15:07.001 --> 00:15:09.000
+No tendremos ningún problema llamándolo mil veces.
+
+347
+00:15:09.001 --> 00:15:14.000
+Los diseñadores de juegos pueden pasar la mayor parte de su tiempo creando código eficiente y realista
+
+348
+00:15:14.000 --> 00:15:18.000
+gráficos, pero todavía tienen que tener en cuenta un objetivo primario.
+
+349
+00:15:18.001 --> 00:15:21.000
+Bueno, nuestro santo grilo es que tiene que ser divertido.
+
+350
+00:15:21.000 --> 00:15:23.000
+Si no es divertido, nadie lo jugará.
+
+351
+00:15:23.001 --> 00:15:25.000
+Y puede ser maravilloso.
+
+352
+00:15:25.001 --> 00:15:26.000
+Puede ser increíble.
+
+353
+00:15:26.001 --> 00:15:30.001
+Pero si no es divertido jugar, no vamos a tener gente comprando
+
+354
+00:15:30.001 --> 00:15:32.000
+que lo compran y que le dicen a otras personas que lo comprarán.
+
+355
+00:15:32.001 --> 00:15:36.000
+Así que realmente tenemos que asegurarnos de que eso esté ahí.
+
+356
+00:15:36.001 --> 00:15:39.000
+Y eso es una cosa elusiva para difícilmente perseguirlo.
+
+357
+00:15:39.001 --> 00:15:42.000
+Para las crónicas informáticas, yo soy Sarah O&#x27;Brien.
+
+358
+00:15:58.000 --> 00:16:03.000
+Hoy en día, la programación se trata tanto de sitios web como de aplicaciones de escritorio.
+
+359
+00:16:03.001 --> 00:16:07.000
+Los desafíos de la programación en la era de Internet son acerca de cosas como agregar frío
+
+360
+00:16:07.000 --> 00:16:10.001
+gráficos, animaciones, sonidos y actividad para su sitio web.
+
+361
+00:16:11.000 --> 00:16:14.000
+Esto requiere trabajar en un lenguaje de programación diferente.
+
+362
+00:16:14.000 --> 00:16:17.000
+Uno de los más interesantes es el Flash de Macromedia.
+
+363
+00:16:17.001 --> 00:16:20.000
+Y Kevin, usted tiene un sitio web activado en Flash allí ahora mismo.
+
+364
+00:16:20.000 --> 00:16:21.000
+Estamos viendo que esto está haciendo todo tipo de cosas.
+
+365
+00:16:21.001 --> 00:16:22.000
+No es sólo sentarse allí.
+
+366
+00:16:22.001 --> 00:16:23.000
+Sí, eso es correcto.
+
+367
+00:16:23.000 --> 00:16:25.001
+Sí, los diseñadores pueden crear contenido para sus sitios web, su
+
+368
+00:16:25.001 --> 00:16:27.000
+Actividad y cambio de gráficos.
+
+369
+00:16:27.001 --> 00:16:28.001
+Los sonidos continúan.
+
+370
+00:16:29.000 --> 00:16:30.001
+Si clicas, ¿qué sucede en una de estas cosas?
+
+371
+00:16:30.001 --> 00:16:32.000
+Si clicas, va a otra zona del sitio.
+
+372
+00:16:32.000 --> 00:16:34.000
+Puedes ver que va a más contenido Flash.
+
+373
+00:16:34.001 --> 00:16:35.000
+Y lo carga en.
+
+374
+00:16:35.000 --> 00:16:37.001
+Puedes ver los botones que aparecen aquí y los rollovers.
+
+375
+00:16:37.001 --> 00:16:39.000
+Cuando clicas, cambia la imagen.
+
+376
+00:16:39.001 --> 00:16:39.001
+Todo está justo.
+
+377
+00:16:40.000 --> 00:16:43.001
+¿Cuánto complicado es el uso de Flash para crear cosas así?
+
+378
+00:16:43.001 --> 00:16:45.000
+No es complicado en absoluto.
+
+379
+00:16:45.000 --> 00:16:47.000
+De hecho, permite a los diseñadores crear este contenido en lugar de
+
+380
+00:16:47.000 --> 00:16:49.000
+como los ingenieros del pasado.
+
+381
+00:16:49.000 --> 00:16:50.001
+¿Es este tipo de herramienta de escritura?
+
+382
+00:16:51.000 --> 00:16:52.000
+Sí, esta es la herramienta de autorización de Flash.
+
+383
+00:16:52.000 --> 00:16:52.001
+¿Dónde empiezo?
+
+384
+00:16:53.000 --> 00:16:55.001
+Crea objetos en la escena aquí.
+
+385
+00:16:56.000 --> 00:16:58.000
+Y puedes hacer cosas como sacar un pescado al escenario.
+
+386
+00:16:58.001 --> 00:17:00.001
+¿Sólo un tipo de edición de timeline de una manera es lo que estamos haciendo?
+
+387
+00:17:00.001 --> 00:17:00.001
+y exactamente.
+
+388
+00:17:01.000 --> 00:17:03.001
+La forma en que se programa en Flash es que hay una línea de tiempo que
+
+389
+00:17:03.001 --> 00:17:05.000
+Indica lo que sucede con el tiempo.
+
+390
+00:17:05.001 --> 00:17:06.000
+Puedes añadir acciones.
+
+391
+00:17:06.000 --> 00:17:08.000
+¿Entonces empezamos con el pescado en el lado derecho del marco?
+
+392
+00:17:08.001 --> 00:17:08.001
+y exactamente.
+
+393
+00:17:09.000 --> 00:17:11.000
+Y así que usted quiere que el pescado nade en el otro lado del marco.
+
+394
+00:17:11.001 --> 00:17:13.001
+Sólo podemos crear otro marco clave aquí.
+
+395
+00:17:13.001 --> 00:17:16.001
+Los cuadros clave indican la actividad o el cambio en el horario.
+
+396
+00:17:16.001 --> 00:17:19.000
+Y puedo atraer el pescado hacia el otro lado de la pantalla.
+
+397
+00:17:19.001 --> 00:17:21.000
+¿Quieres que el pescado esté del otro lado?
+
+398
+00:17:21.001 --> 00:17:21.001
+y exactamente.
+
+399
+00:17:22.000 --> 00:17:23.000
+¿Has creado una animación?
+
+400
+00:17:23.001 --> 00:17:24.000
+Eso es justo.
+
+401
+00:17:24.000 --> 00:17:27.001
+Sí, y si yo iba a jugar esto, el pescado ahora está en un lado y luego
+
+402
+00:17:27.001 --> 00:17:29.000
+Cuando llega al último marco clave, salta.
+
+403
+00:17:29.000 --> 00:17:29.000
+Bueno .
+
+404
+00:17:29.001 --> 00:17:29.001
+No es realista.
+
+405
+00:17:30.001 --> 00:17:31.000
+¿Cómo lo hacemos real?
+
+406
+00:17:31.001 --> 00:17:33.001
+Lo que hacemos para hacer que sea real es algo llamado tweening.
+
+407
+00:17:34.000 --> 00:17:38.000
+Y puedes instruir a la animación a moverse realmente a través del tiempo.
+
+408
+00:17:38.001 --> 00:17:40.001
+Crean automáticamente entre los
+
+409
+00:17:40.001 --> 00:17:42.001
+Frames que harán que la animación se vea real.
+
+410
+00:17:42.001 --> 00:17:42.001
+Eso es justo.
+
+411
+00:17:43.000 --> 00:17:44.000
+Es de ahí que viene la palabra tweening.
+
+412
+00:17:44.000 --> 00:17:47.001
+Y ahora que estoy jugando la animación, puedes ver el pescado.
+
+413
+00:17:49.000 --> 00:17:50.000
+Se va a través de la pantalla.
+
+414
+00:17:50.000 --> 00:17:52.001
+Así que ese movimiento era una especie de automáticamente construido en ese objeto de pescado?
+
+415
+00:17:53.000 --> 00:17:54.000
+No tenías que descubrir todo esto.
+
+416
+00:17:54.000 --> 00:17:54.001
+y exactamente.
+
+417
+00:17:54.001 --> 00:17:58.000
+Sí, comenzó basicamente a tener pequeñas animaciones con el objeto de los peces.
+
+418
+00:17:58.001 --> 00:17:59.001
+Todo está bien, ¿qué más podríamos hacer con eso?
+
+419
+00:18:00.000 --> 00:18:02.000
+Otro ejemplo es que puedes añadir botones.
+
+420
+00:18:02.001 --> 00:18:06.000
+Por lo tanto, si yo quería poner ese pescado, digamos, en un sitio web que estaba creando en un portfolio,
+
+421
+00:18:07.000 --> 00:18:09.000
+Podría añadir botones que muestran y ocultan estas animaciones.
+
+422
+00:18:09.001 --> 00:18:10.001
+Todo está bien, ahora muchas veces, sabes, cuando
+
+423
+00:18:10.001 --> 00:18:12.000
+Después de un botón, las cosas suceden.
+
+424
+00:18:12.000 --> 00:18:13.000
+¿Puedes hacerlo en Flash?
+
+425
+00:18:13.000 --> 00:18:13.001
+¡Oh absolutamente!
+
+426
+00:18:14.000 --> 00:18:16.000
+Sí, puedes seleccionar estos botones y editarlos.
+
+427
+00:18:16.001 --> 00:18:19.001
+Y puede cambiar lo que sucede en cada estado diferente de un botón.
+
+428
+00:18:19.001 --> 00:18:21.000
+Así que esta es una manera de programar un botón visualmente.
+
+429
+00:18:21.001 --> 00:18:23.001
+Bueno, así que su cursor está por encima del botón, algo sucede.
+
+430
+00:18:23.001 --> 00:18:25.001
+Haz clic en ella, algo sucede.
+
+431
+00:18:25.001 --> 00:18:26.000
+y exactamente.
+
+432
+00:18:26.000 --> 00:18:26.001
+[...]
+
+433
+00:18:27.001 --> 00:18:30.000
+Así que, por ejemplo, si me gustaría que algo suceda cuando mi ratón está terminado
+
+434
+00:18:30.000 --> 00:18:31.001
+El botón, yo podría cambiar su color.
+
+435
+00:18:32.000 --> 00:18:35.000
+Por ejemplo, en lugar de verde, tal vez me gustaría hacerlo como un azul.
+
+436
+00:18:35.001 --> 00:18:38.000
+Bueno, así que la sobrenatura sería azul ahora.
+
+437
+00:18:38.000 --> 00:18:39.001
+Sí, y arriba es verde y arriba azul.
+
+438
+00:18:39.001 --> 00:18:40.000
+Obtén lo.
+
+439
+00:18:40.000 --> 00:18:44.000
+Y podemos ver esto en la vista principal aquí si simplemente damos cuenta, activamos nuestros botones.
+
+440
+00:18:44.001 --> 00:18:47.000
+Y ahora podemos ver cuando roto sobre estos botones, ahora están destacando.
+
+441
+00:18:47.001 --> 00:18:48.001
+Todos ellos también.
+
+442
+00:18:48.001 --> 00:18:48.001
+y exactamente.
+
+443
+00:18:49.000 --> 00:18:51.001
+Así que ese mismo lenguaje se exportó automáticamente a cada uno de esos botones.
+
+444
+00:18:52.000 --> 00:18:52.000
+Sí sí sí.
+
+445
+00:18:52.001 --> 00:18:53.000
+Es como el código lea.
+
+446
+00:18:53.000 --> 00:18:54.001
+Así que [...] lo suficiente para escribir el mismo código de vez en cuando.
+
+447
+00:18:54.001 --> 00:18:55.001
+Exactamente, sí, es compartido.
+
+448
+00:18:55.001 --> 00:18:58.000
+Todo está bien, ahora supongo que queríamos que algo suceda cuando damos clic en
+
+449
+00:18:58.000 --> 00:19:00.000
+que o que se movió a través de un botón.
+
+450
+00:19:00.000 --> 00:19:00.001
+Claro, eso es muy fácil.
+
+451
+00:19:01.000 --> 00:19:03.001
+Puedes programar estos botones al añadir acciones a ellos.
+
+452
+00:19:03.001 --> 00:19:06.000
+Ahora es así como hace la programación de los botones dentro de Flash.
+
+453
+00:19:06.001 --> 00:19:09.001
+Y puede elegir diferentes comandos para unir a un botón como ir a
+
+454
+00:19:09.001 --> 00:19:11.000
+un marco, jugar o detener una animación.
+
+455
+00:19:12.000 --> 00:19:13.000
+Yo pondré una película aquí.
+
+456
+00:19:13.000 --> 00:19:14.001
+Vamos a cargar ese pescado que acabamos de ver antes.
+
+457
+00:19:15.000 --> 00:19:16.001
+Todo está bien, así que el punto está aquí cuando presionamos sobre el
+
+458
+00:19:16.001 --> 00:19:18.000
+El botón, quiero que el pescado nade a través de la pantalla.
+
+459
+00:19:18.001 --> 00:19:21.000
+Exactamente, y también añadiré decir un logotipo aquí también.
+
+460
+00:19:24.000 --> 00:19:25.000
+Esta es una especie de intuición, ¿no?
+
+461
+00:19:25.000 --> 00:19:27.000
+Yo creo que esto no está sentado escribiendo algunos órdenes arcaneos.
+
+462
+00:19:27.000 --> 00:19:27.001
+Justo y exactamente.
+
+463
+00:19:28.000 --> 00:19:30.001
+Te permite programar visualmente de una manera que muchos artistas pueden hacer.
+
+464
+00:19:30.001 --> 00:19:33.000
+Creo que hay un cambio ocurre donde muchos de estos diseños pueden ser
+
+465
+00:19:33.000 --> 00:19:35.000
+creados por artistas en lugar de programadores tradicionales.
+
+466
+00:19:35.000 --> 00:19:36.000
+Todo está bien, ¿dónde estamos ahora?
+
+467
+00:19:36.001 --> 00:19:39.001
+Ahora que se lleva a cabo una película de prueba, puede ver los botones que son exactos.
+
+468
+00:19:39.001 --> 00:19:39.001
+Hay el azul.
+
+469
+00:19:40.000 --> 00:19:41.000
+Tenemos presión sobre ello.
+
+470
+00:19:41.000 --> 00:19:41.000
+¡Clique en ella!
+
+471
+00:19:41.000 --> 00:19:42.001
+El pescado sale girando.
+
+472
+00:19:43.000 --> 00:19:44.001
+Y también un logo juega un poco de logotipo.
+
+473
+00:19:45.001 --> 00:19:46.001
+Por lo tanto, es esencialmente la programación en Flash.
+
+474
+00:19:47.000 --> 00:19:49.000
+Sí, así que me refiero a una persona normal sin mucho entrenamiento o
+
+475
+00:19:49.000 --> 00:19:51.000
+El fondo puede usar Flash para hacer este tipo de cosas.
+
+476
+00:19:52.000 --> 00:19:54.000
+Ahora, ¿dónde obtendrás la herramienta de autorización si quieres jugar con esto?
+
+477
+00:19:54.000 --> 00:19:56.000
+Puedes descargarlo desde macromedia.com.
+
+478
+00:19:56.001 --> 00:19:56.001
+Bueno .
+
+479
+00:19:56.001 --> 00:19:58.001
+Y es una versión de prueba gratuita de 30 días.
+
+480
+00:19:59.000 --> 00:19:59.000
+Todo lo justo.
+
+481
+00:19:59.000 --> 00:20:00.000
+Si te gusta, entonces puedes comprarlo.
+
+482
+00:20:00.000 --> 00:20:00.000
+Muy bueno .
+
+483
+00:20:00.001 --> 00:20:01.000
+Kevin, muchas gracias.
+
+484
+00:20:01.001 --> 00:20:01.001
+Gracias a ustedes.
+
+485
+00:20:01.001 --> 00:20:04.001
+La programación puede ser difícil para algunas personas, pero
+
+486
+00:20:04.001 --> 00:20:06.000
+Puede ser divertido para todos.
+
+487
+00:20:06.000 --> 00:20:09.001
+Así que para mostrarle el lado jugador de la programación informática, vamos a ver
+
+488
+00:20:09.001 --> 00:20:13.000
+En definitiva, en un nuevo lenguaje de programación llamado RCX Code Language.
+
+489
+00:20:13.000 --> 00:20:17.000
+Es lo que usas para escribir programas para los nuevos robots LEGO Mindstorms.
+
+490
+00:20:17.001 --> 00:20:19.001
+Tienes el gran trabajo, Chris, de jugar con estas cosas.
+
+491
+00:20:20.000 --> 00:20:22.000
+Y vamos a tratar de explicar lo que estamos hablando aquí a la gente.
+
+492
+00:20:22.000 --> 00:20:24.001
+En los tiempos antiguos, si yo construiera un LEGO, yo pondría un motor en él.
+
+493
+00:20:24.001 --> 00:20:25.001
+Sólo corre, ¿verdad?
+
+494
+00:20:25.001 --> 00:20:26.001
+No hay inteligencia.
+
+495
+00:20:27.000 --> 00:20:27.000
+Eso es justo.
+
+496
+00:20:27.000 --> 00:20:32.000
+Fue fácil hacer acciones muy simples como esta que he añadido aquí.
+
+497
+00:20:32.001 --> 00:20:34.001
+Vaya, pero entonces caería.
+
+498
+00:20:34.001 --> 00:20:35.000
+Salga del borde.
+
+499
+00:20:35.001 --> 00:20:36.000
+Bueno .
+
+500
+00:20:36.001 --> 00:20:36.001
+Todo lo justo.
+
+501
+00:20:36.001 --> 00:20:40.001
+Ahora, quiero escribir un programa que diga a esta cosa, si
+
+502
+00:20:40.001 --> 00:20:42.000
+Si ves un borde que viene, paro.
+
+503
+00:20:42.001 --> 00:20:42.001
+Y justo.
+
+504
+00:20:43.000 --> 00:20:44.001
+¿Cómo puedo hacerlo con RCX?
+
+505
+00:20:44.001 --> 00:20:51.000
+Por lo tanto, si voy a cambiar a un programa más inteligente aquí, lo que he hecho se añade...
+
+506
+00:20:51.000 --> 00:20:53.000
+Tengo algunos sensores construidos en esto.
+
+507
+00:20:53.000 --> 00:20:54.001
+Vamos a explicar lo que estás hablando de allí.
+
+508
+00:20:54.001 --> 00:20:56.000
+Este es uno de sus sensores, ¿verdad?
+
+509
+00:20:56.000 --> 00:20:56.000
+[...]
+
+510
+00:20:57.000 --> 00:20:59.001
+Y eso se presiona, y envía un mensaje.
+
+511
+00:21:00.000 --> 00:21:02.001
+Si lo hubiese hecho, enviará un mensaje a la computadora.
+
+512
+00:21:02.001 --> 00:21:03.000
+y exactamente.
+
+513
+00:21:03.001 --> 00:21:06.000
+Y esos brazos, cuando caen, presionan ese botón.
+
+514
+00:21:06.000 --> 00:21:06.001
+Eso es justo.
+
+515
+00:21:06.001 --> 00:21:07.000
+Bueno .
+
+516
+00:21:07.000 --> 00:21:11.001
+Así que lo que este programa hace es notar que alcanza
+
+517
+00:21:11.001 --> 00:21:13.000
+El límite y hace algo sobre él.
+
+518
+00:21:13.000 --> 00:21:14.001
+Cuando el sensor se mueve, detenga.
+
+519
+00:21:15.000 --> 00:21:15.000
+Y justo.
+
+520
+00:21:15.000 --> 00:21:16.000
+Vamos a ver que va.
+
+521
+00:21:17.000 --> 00:21:17.001
+Solo en el caso.
+
+522
+00:21:18.001 --> 00:21:19.001
+Hola, todo está bien.
+
+523
+00:21:20.000 --> 00:21:22.000
+Ahora estamos hablando de programación.
+
+524
+00:21:22.000 --> 00:21:24.001
+¿Cómo escribiste esto en el lenguaje de código RCX?
+
+525
+00:21:25.000 --> 00:21:27.000
+Aquí está el programa en la pantalla.
+
+526
+00:21:27.001 --> 00:21:32.000
+Usted notará que el entorno de programación de código RCX es muy diferente de su
+
+527
+00:21:32.000 --> 00:21:33.001
+El lenguaje de programación textual.
+
+528
+00:21:33.001 --> 00:21:37.000
+Así que cada uno de estos tipos de piezas de puzzle jigsaw es una acción.
+
+529
+00:21:37.000 --> 00:21:37.001
+Eso es justo.
+
+530
+00:21:37.001 --> 00:21:40.001
+Estos son pequeños comandos, y los conectas juntos para formar un programa.
+
+531
+00:21:40.001 --> 00:21:41.001
+Es cierto, que es lo que es un programa.
+
+532
+00:21:41.001 --> 00:21:42.000
+Y justo.
+
+533
+00:21:42.000 --> 00:21:47.001
+Así que este programa aquí dice que primero fija la velocidad de los motores, luego fija el
+
+534
+00:21:47.001 --> 00:21:49.001
+dirigir los motores, y finalmente girarlos.
+
+535
+00:21:50.000 --> 00:21:51.000
+Así que empieza a moverse el vehículo hacia adelante.
+
+536
+00:21:51.000 --> 00:21:53.001
+Así que queremos decir, cuando el sensor se apaga, detiene el motor.
+
+537
+00:21:53.001 --> 00:21:54.001
+Eso es justo.
+
+538
+00:21:55.000 --> 00:21:58.001
+Así que luego he añadido estos dos bloques azules aquí donde se llaman sensores de toque
+
+539
+00:21:58.001 --> 00:22:01.001
+vigilantes, uno por cada brazo en la invención.
+
+540
+00:22:02.000 --> 00:22:02.000
+Obtén lo.
+
+541
+00:22:02.001 --> 00:22:03.001
+Aquí tienes dos sensores.
+
+542
+00:22:03.001 --> 00:22:04.000
+[...]
+
+543
+00:22:04.000 --> 00:22:06.000
+¿Quieres decir que si alguno de esos sensores se apaga, detiene.
+
+544
+00:22:06.001 --> 00:22:07.000
+Eso es justo.
+
+545
+00:22:07.000 --> 00:22:13.000
+Así que lo que añadió al final aquí fue un comando que le dijo a los motores que se desactivaran.
+
+546
+00:22:13.001 --> 00:22:17.000
+Por lo tanto, si alguno de los sensores de toque está presionado, tengo los motores desactivados.
+
+547
+00:22:17.001 --> 00:22:20.000
+¿Puedes cambiar a ese programa allí y probarlo?
+
+548
+00:22:21.000 --> 00:22:22.000
+Bueno, sólo lo corrió.
+
+549
+00:22:22.000 --> 00:22:22.001
+Así que eso es correcto.
+
+550
+00:22:22.001 --> 00:22:23.001
+De hecho lo hicimos uno.
+
+551
+00:22:23.001 --> 00:22:23.001
+Sí sí.
+
+552
+00:22:24.000 --> 00:22:24.000
+[...]
+
+553
+00:22:24.001 --> 00:22:27.000
+Tal vez queremos hacer algo más interesante, como tenerlo de vuelta.
+
+554
+00:22:27.001 --> 00:22:27.001
+y OK.
+
+555
+00:22:27.001 --> 00:22:30.001
+Así que ahora queremos reescribir el programa y decir, si ves un borde,
+
+556
+00:22:30.001 --> 00:22:32.000
+Parar, y luego empezar a ir hacia atrás.
+
+557
+00:22:32.001 --> 00:22:32.001
+Sí sí.
+
+558
+00:22:33.000 --> 00:22:33.001
+¿Cómo escribes esto?
+
+559
+00:22:33.001 --> 00:22:33.001
+y OK.
+
+560
+00:22:34.000 --> 00:22:39.000
+Así que en la izquierda aquí hay un menú de todos los tipos de diferentes comandos que puedo usar.
+
+561
+00:22:39.001 --> 00:22:40.001
+Esto afecta a los motores.
+
+562
+00:22:40.001 --> 00:22:45.001
+Tengo monitores de sensores aquí que me permiten detectar luz y toque.
+
+563
+00:22:45.001 --> 00:22:48.001
+Y entonces tengo maneras de repetir las órdenes y rellenar en diferentes.
+
+564
+00:22:48.001 --> 00:22:50.001
+Ahora, Chris, esto parece un tipo de bebé, pero estos son los
+
+565
+00:22:50.001 --> 00:22:52.001
+Conceptos fundamentales de programación, ¿no?
+
+566
+00:22:52.001 --> 00:22:53.000
+Eso es justo.
+
+567
+00:22:53.000 --> 00:22:55.000
+Tiene looping, branching, iteración y luego cruce.
+
+568
+00:22:55.000 --> 00:22:55.001
+Todas las mismas cosas.
+
+569
+00:22:56.000 --> 00:22:58.000
+Es sólo de una manera visual simple para tratarlo.
+
+570
+00:22:58.001 --> 00:22:58.001
+Y justo.
+
+571
+00:22:58.001 --> 00:22:58.001
+Todo lo justo.
+
+572
+00:22:59.000 --> 00:22:59.001
+Así que vamos a escribir ese programa.
+
+573
+00:23:00.000 --> 00:23:04.001
+Por lo tanto, salto aquí hacia el comando de dirección reversa y añade que
+
+574
+00:23:04.001 --> 00:23:06.000
+Ambos son los sensores de contacto.
+
+575
+00:23:07.000 --> 00:23:11.001
+Y luego escanear hasta el comando que va a girar los motores de nuevo.
+
+576
+00:23:11.001 --> 00:23:11.001
+y OK.
+
+577
+00:23:12.000 --> 00:23:14.000
+Cambiar la dirección del motor, girar el motor hacia atrás,
+
+578
+00:23:14.000 --> 00:23:16.000
+Si uno de los sensores recibe un mensaje.
+
+579
+00:23:16.000 --> 00:23:17.000
+Así que vamos a ver lo que está sucediendo ahora.
+
+580
+00:23:17.000 --> 00:23:20.000
+Así que puedo introducir este programa haciendo clic en la descarga.
+
+581
+00:23:20.001 --> 00:23:24.000
+Así que tienes un poco de puerto IR aquí que envía el nuevo código al ordenador.
+
+582
+00:23:25.000 --> 00:23:25.000
+Eso es justo.
+
+583
+00:23:26.000 --> 00:23:28.001
+Nosotros no queríamos tener cables ligados a nuestra invención así
+
+584
+00:23:28.001 --> 00:23:30.000
+Ahora pueden circular libremente.
+
+585
+00:23:30.001 --> 00:23:32.000
+Así que lo enviamos por infrarrojo.
+
+586
+00:23:32.001 --> 00:23:32.001
+[...]
+
+587
+00:23:33.000 --> 00:23:35.000
+Sólo tome un segundo aquí para que el programa entre.
+
+588
+00:23:36.001 --> 00:23:37.000
+y OK.
+
+589
+00:23:38.000 --> 00:23:39.001
+He oído un poco de buceo, así que quizá sea feliz.
+
+590
+00:23:40.000 --> 00:23:43.001
+Así que ahora debe ver el borde, detenerse y volver hacia atrás.
+
+591
+00:23:44.000 --> 00:23:44.001
+Vamos a probarlo.
+
+592
+00:23:45.000 --> 00:23:45.001
+Dejó de parar.
+
+593
+00:23:45.001 --> 00:23:46.000
+Todo lo justo.
+
+594
+00:23:47.000 --> 00:23:47.001
+Escribimos un programa.
+
+595
+00:23:49.000 --> 00:23:51.000
+Por último, hay algo un poco más complicado en el que usted tiene un
+
+596
+00:23:51.000 --> 00:23:54.001
+programa de evitación en el que dice, si ves un borde, simplemente intenta otro camino.
+
+597
+00:23:54.001 --> 00:23:55.001
+Yo creo que no va de esa manera, ¿no?
+
+598
+00:23:56.000 --> 00:23:56.000
+Y justo.
+
+599
+00:23:57.001 --> 00:23:58.001
+Dejo que lo cargue en real rápido.
+
+600
+00:23:59.001 --> 00:24:04.001
+Esto le da una idea de algunos de los potencialmente bastante sofisticados
+
+601
+00:24:04.001 --> 00:24:06.000
+Las cosas que puedes hacer con el código RCX.
+
+602
+00:24:07.000 --> 00:24:11.000
+Y notarás que en la pantalla aquí, lo que ves es un escudo más largo de
+
+603
+00:24:11.000 --> 00:24:12.001
+comandos bajo cada uno de estos observadores de sensores de toque.
+
+604
+00:24:13.000 --> 00:24:13.000
+[...]
+
+605
+00:24:13.000 --> 00:24:16.001
+No quiero ir en detalle sobre lo que cada uno de esos estancos hizo.
+
+606
+00:24:16.001 --> 00:24:19.000
+Pero puedes escribir un largo programa aquí para decirnos que hacer mucho.
+
+607
+00:24:19.000 --> 00:24:20.000
+Yo creo que he visto algunas de estas cosas
+
+608
+00:24:20.000 --> 00:24:22.000
+Se trata de tirar bolsas y dar tarjetas.
+
+609
+00:24:22.000 --> 00:24:22.000
+Eso es justo.
+
+610
+00:24:22.001 --> 00:24:23.000
+Todos los tipos de ellos.
+
+611
+00:24:23.000 --> 00:24:23.001
+Eso es justo.
+
+612
+00:24:24.000 --> 00:24:27.001
+Así que déjame avanzar y cambiar directamente a eso en lugar de descargar.
+
+613
+00:24:28.000 --> 00:24:28.001
+Pero está en la memoria aquí.
+
+614
+00:24:29.000 --> 00:24:30.000
+Es lo que se le ha dicho hacer ahora.
+
+615
+00:24:30.000 --> 00:24:30.001
+y OK.
+
+616
+00:24:30.001 --> 00:24:35.000
+Así que lo que este programa va a hacer es, cuando detecta un borde, hacia arriba y luego
+
+617
+00:24:35.000 --> 00:24:36.001
+Cambiar la dirección y luego volver a avanzar.
+
+618
+00:24:36.001 --> 00:24:38.001
+Y busque otro camino que quizá no tenga un borde.
+
+619
+00:24:38.001 --> 00:24:38.001
+Eso es justo.
+
+620
+00:24:39.000 --> 00:24:39.001
+Así que vamos a ver lo que sucede.
+
+621
+00:24:41.000 --> 00:24:41.001
+¿Tiene ese trabajo?
+
+622
+00:24:41.001 --> 00:24:42.001
+[...]
+
+623
+00:24:43.001 --> 00:24:46.001
+Y podemos ver si uno cae y eso pone esa cosa.
+
+624
+00:24:47.001 --> 00:24:47.001
+[...]
+
+625
+00:24:48.000 --> 00:24:48.001
+Eso es cool.
+
+626
+00:24:50.001 --> 00:24:54.000
+Y podríamos señalar que Lego suena como los niños, pero es
+
+627
+00:24:54.000 --> 00:24:56.000
+La mayoría de los adultos que están jugando con esto, ¿verdad?
+
+628
+00:24:56.000 --> 00:24:56.001
+Oh, eso es correcto.
+
+629
+00:24:57.000 --> 00:24:59.001
+Supongo que alrededor del 50% de los usuarios ahora son adultos.
+
+630
+00:25:00.000 --> 00:25:01.000
+Chris, muchas gracias.
+
+631
+00:25:01.000 --> 00:25:01.001
+Todo lo justo.
+
+632
+00:25:01.001 --> 00:25:03.000
+Esa es nuestra mirada a la programación informática.
+
+633
+00:25:03.000 --> 00:25:05.000
+Voy a volver en un instante con mi selección de la semana.
+
+634
+00:25:14.000 --> 00:25:16.000
+Ahora por mi elección de la semana.
+
+635
+00:25:16.001 --> 00:25:20.001
+Los ordenadores se utilizan cada vez más como dispositivos de reproducción de música, incluso
+
+636
+00:25:20.001 --> 00:25:22.000
+Dispositivos de grabación de audio.
+
+637
+00:25:22.001 --> 00:25:26.000
+Pero la mayoría de los PCs vienen con sistemas de control de audio bastante primitivos.
+
+638
+00:25:26.001 --> 00:25:30.001
+Ahora, sin embargo, Samsung ha llegado con un increíble paquete llamado JET Audio
+
+639
+00:25:30.001 --> 00:25:35.000
+Además, que puede convertir instantáneamente su PC en un potente estudio de sonido.
+
+640
+00:25:35.001 --> 00:25:40.000
+JET Audio incluye una racha virtual de siete componentes de audio robustos.
+
+641
+00:25:40.000 --> 00:25:44.001
+En primer lugar, un analizador de espectro de 20 bandas, incluyendo efectos especiales como:
+
+642
+00:25:44.001 --> 00:25:47.001
+reverb, mezcla, ajuste de plazas y tonalidad de la habitación.
+
+643
+00:25:48.000 --> 00:25:51.000
+Incluye un mixer de sonido para reproducción y grabación.
+
+644
+00:25:51.001 --> 00:25:54.000
+Incluye un reproductor MIDI con karaoke en tiempo real
+
+645
+00:25:54.000 --> 00:25:56.000
+Control sobre la clave y el ritmo.
+
+646
+00:25:56.000 --> 00:26:01.000
+Dispone de un reproductor de CD totalmente programable, que también incluye acceso automático a
+
+647
+00:26:01.000 --> 00:26:05.001
+la base de datos de disco compacto de Internet para agregar información alfa a su jugador.
+
+648
+00:26:05.001 --> 00:26:10.001
+También incluye un reproductor de audio digital especializado, que puede manejar MP3, MPEG
+
+649
+00:26:10.001 --> 00:26:12.001
+Vuelos, y archivos de audio reales.
+
+650
+00:26:13.000 --> 00:26:17.000
+Y viene con un reproductor digital de alta calidad que apoya a todos
+
+651
+00:26:17.000 --> 00:26:21.001
+grandes formatos de archivo y funciona muy crisamente en cerca de 30 cadros por segundo.
+
+652
+00:26:22.000 --> 00:26:22.001
+Pero hay más.
+
+653
+00:26:23.000 --> 00:26:26.000
+JET Audio Plus también viene con el JET Radio Module.
+
+654
+00:26:26.001 --> 00:26:31.000
+Es un tuner de radio de Internet que le permite conectarse a cualquiera de más de un
+
+655
+00:26:31.000 --> 00:26:33.001
+mil estaciones de radio al clic de un botón.
+
+656
+00:26:33.001 --> 00:26:37.000
+También puede organizar sus estaciones de radio de Internet por formato.
+
+657
+00:26:37.001 --> 00:26:42.000
+Y tiene este conveniente control remoto pop-up y un equalizador remoto que puede permanecer
+
+658
+00:26:42.000 --> 00:26:45.001
+en su escritorio incluso cuando el jugador principal es minimizado o cerrado.
+
+659
+00:26:45.001 --> 00:26:48.000
+Este es un cuchillo de un pequeño paquete, y no he mencionado
+
+660
+00:26:48.000 --> 00:26:50.000
+La mitad de las cosas que puedes hacer con ella.
+
+661
+00:26:50.000 --> 00:26:54.000
+Es JET Audio Plus de Samsung, y sólo cuesta $ 49.
+
+662
+00:26:55.000 --> 00:26:57.000
+Esto es para esta edición de The Chronicles.
+
+663
+00:26:57.000 --> 00:26:58.000
+Gracias por unirse a nosotros.
+
+664
+00:26:58.000 --> 00:27:01.000
+Más de los últimos en hardware, software y Internet la próxima semana.
+
+665
+00:27:01.001 --> 00:27:02.001
+Espero que te veamos aquí la próxima vez.
+
+666
+00:27:05.000 --> 00:27:10.000
+Las crónicas de la computadora se llevan a usted por BigStar.com, con miles de
+
+667
+00:27:10.000 --> 00:27:12.000
+Video y DVD para toda la familia.
+
+668
+00:27:18.000 --> 00:27:21.001
+Suporte adicional por Tech Web para noticias tecnológicas de hasta el minuto.
+
+669
+00:27:23.001 --> 00:27:24.001
+Y por la televisión.
