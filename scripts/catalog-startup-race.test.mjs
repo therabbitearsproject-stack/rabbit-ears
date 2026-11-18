@@ -21,6 +21,14 @@ function player(fetch){
  return {...context,saved,writes,api:context.api};
 }
 
+test('a persisted empty metadata result is retried after a temporary source outage',async()=>{
+ let requests=0;
+ const p=player(async()=>{requests++;return response({metadata:{title:'Restored episode'},files:[{name:'restored.mp4',length:1800,format:'h.264'}]});});
+ p.saved.set('re_m_audio1_missing',null);
+ const restored=await p.api.getMeta('missing');
+ assert.equal(requests,1);assert.equal(restored.file,'restored.mp4');
+});
+
 test('first catalog clears warmed list, metadata and scheduling caches',async()=>{
  const p=player(async()=>response(published()));
  for(const name of ['listCache','metaCache','continuousCache','schedCache','effCache','planCache'])p[name].wild='live fallback';

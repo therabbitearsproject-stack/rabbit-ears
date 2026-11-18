@@ -7,7 +7,7 @@ import path from 'node:path';
 import {siteCode} from './tv-feed.mjs';
 const require=createRequire(import.meta.url);let chromium;try{({chromium}=require(process.env.RABBIT_EARS_PLAYWRIGHT||'playwright'));}catch{}
 
-test('real mobile page recovers an unsupported file in place and stops after alternate failure',{skip:!chromium},async()=>{
+test('real mobile page bounds alternate-copy attempts and schedules automatic outage recovery',{skip:!chromium},async()=>{
  const root=path.resolve('.'),html=await readFile('index.html','utf8'),catalog=JSON.parse(await readFile('catalog.json','utf8'));
  const site=siteCode({html,catalog,commercialTiming:await readFile('commercial-timing.js','utf8'),mediaCompatibility:await readFile('media-compatibility.js','utf8')});
  const ch=site.BUILT_IN.find(c=>c.no===97),[slot]=await site.lineup(ch,Date.now()/1000,1),fixed=(slot.v0+60)*1000;
@@ -26,6 +26,12 @@ test('real mobile page recovers an unsupported file in place and stops after alt
    return url.startsWith(origin)?r.continue():r.abort();
   });
   await page.addInitScript(({fixed,dur})=>{
+   // This test owns copy-exhaustion events. Delay the separate reconnect loop;
+   // its real timer and stream recovery are exercised by the outage browser test.
+   let recovery;
+   Object.defineProperty(window,'REPlaybackRecovery',{configurable:true,get:()=>recovery,set:value=>{
+    recovery={...value,create:options=>value.create({...options,later:(fn,delay)=>setTimeout(fn,delay+60000)})};
+   }});
    Date.now=()=>fixed;localStorage.setItem('re_welcomed','true');window.qaLoads=[];
    // This fixture supplies media events explicitly. Setting the native src can
    // otherwise start a real request despite mocked load(), racing the synthetic
@@ -49,6 +55,7 @@ test('real mobile page recovers an unsupported file in place and stops after alt
   assert.equal(recovered.media.video,source);assert.equal(recovered.media.id,slot.m.id);assert.equal(recovered.program,slot.m.id);assert.equal(Math.round(recovered.position),60);
   await page.evaluate(()=>document.getElementById('vid').dispatchEvent(new Event('error')));
   await page.waitForFunction(()=>!document.querySelector('#playbackStatus button').hidden);
-  assert.equal(await page.evaluate(()=>qaLoads.length),2);assert.match(await page.locator('#playbackStatus').innerText(),/No compatible copy/);
+  assert.equal(await page.evaluate(()=>qaLoads.length),2);assert.match(await page.locator('#playbackStatus').innerText(),/Reconnecting automatically/);
+  assert.equal(await page.evaluate(()=>automaticPlaybackRecovery.state().scheduled),true);
  }finally{await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));}
 });

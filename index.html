@@ -560,6 +560,7 @@ select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); 
 
 <script src="media-compatibility.js?v=video-recovery-2"></script>
 <script src="commercial-timing.js?v=porchlight-lighter-breaks-6"></script>
+<script src="assets/playback-recovery.js?v=1"></script>
 <script src="assets/captions.js?v=app-languages-1"></script>
 <script>
 // ---------- Problem log ----------
@@ -1015,12 +1016,12 @@ function getMeta(id) {
   const published = catalogMeta(id);
   if (published) return Promise.resolve(metaCache[id] = published);
   const saved = store.get("re_m_audio1_" + id, undefined);
-  if (saved !== undefined) return Promise.resolve(metaCache[id] = tidy(saved));
+  if (saved) return Promise.resolve(metaCache[id] = tidy(saved)); // retry failed/empty metadata after outages
   return pendingMeta[id] || (pendingMeta[id] = fetchMeta(id).finally(() => delete pendingMeta[id]));
 }
 async function fetchMeta(id) {
   try {
-    const d = await limited(async () => (await fetch("https://archive.org/metadata/" + encodeURIComponent(id))).json());
+    const d = await limited(async () => (await fetch("https://archive.org/metadata/" + encodeURIComponent(id), { signal: AbortSignal.timeout(15000) })).json());
     const published = catalogMeta(id);
     if (published) return (metaCache[id] = published);
     const files = (d.files || []).filter(f => /\.mp4$/i.test(f.name) && parseLen(f.length) > 5);
@@ -1200,6 +1201,8 @@ async function continuousLineup(ch, t, count) {
     return distinctPrograms(programs.filter(Boolean)).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
   })().catch(error => { delete continuousCache[ch.q]; throw error; });
   const templates = await continuousCache[ch.q];
+  // A brief metadata outage must not leave an empty lineup cached forever.
+  if (!templates.length) delete continuousCache[ch.q];
   const staged = catalog?.programming?.channels?.[ch.no];
   const anchor = staged?.until || EPOCH;
   if (staged?.items?.length && t >= staged.items[0].start && t < staged.until) {
@@ -1436,13 +1439,14 @@ function currentSegment(p = playing) {
   return p.timeline ? CommercialTiming.at(p.timeline, elapsed) : { index: 0, kind: "program", media: p.m, start: 0, end: p.end - p.v0, position: elapsed };
 }
 let playbackTimer;
+let automaticPlaybackRecovery = null, playbackAutoplayBlocked = false;
 function playbackMessage(text, retry = false) {
   const status = $("playbackStatus");
   status.hidden = !text;
   status.querySelector("span").textContent = text;
   status.querySelector("button").hidden = !retry;
 }
-$("playbackStatus").querySelector("button").onclick = () => { activeSegment = null; syncMedia(); };
+$("playbackStatus").querySelector("button").onclick = () => { automaticPlaybackRecovery?.recovered(); activeSegment = null; if (playing) syncMedia(); else automaticPlaybackRecovery?.wake(); };
 function syncMedia(forceSeek = false) {
   if (!playing) return;
   const segment = currentSegment(), key = tuneId + "|" + playing.v0 + "|" + segment.index;
@@ -1462,6 +1466,7 @@ function syncMedia(forceSeek = false) {
     exhausted = true;
     snow.style.opacity = "0";
     playbackMessage("This video could not be played. No compatible copy is available right now.", true);
+    automaticPlaybackRecovery?.failed();
   };
   const load = media => {
     if (!currentLoad()) return;
@@ -1500,11 +1505,11 @@ function syncMedia(forceSeek = false) {
     vid.currentTime = Math.min(current.position, Math.max(0, vid.duration - .05));
     if (tvOn && !held) vid.play().catch(error => {
       if (!currentLoad()) return;
-      if (error.name === "NotAllowedError") { $("power").hidden = false; clearTimeout(playbackTimer); }
+      if (error.name === "NotAllowedError") { playbackAutoplayBlocked = true; $("power").hidden = false; clearTimeout(playbackTimer); }
       else if (error.name === "NotSupportedError") recover("format not supported");
     });
   };
-  vid.onplaying = () => { if (currentLoad()) { clearTimeout(playbackTimer); snow.style.opacity = "0"; playbackMessage(""); } };
+  vid.onplaying = () => { if (currentLoad()) { playbackAutoplayBlocked = false; automaticPlaybackRecovery?.recovered(); clearTimeout(playbackTimer); snow.style.opacity = "0"; playbackMessage(""); } };
   vid.onseeked = null;
   vid.onended = () => {
     if (token !== mediaToken || my !== tuneId || !playing || held) return;
@@ -1536,6 +1541,44 @@ function syncMedia(forceSeek = false) {
     if (media) load(media); else fail();
   });
   return segment;
+}
+
+if (window.REPlaybackRecovery) {
+  const recoverySnapshot = () => ({
+    identity: mode + "|" + cur + "|" + tuneId,
+    token: tuneId, channel: cur,
+    active: mode === "tv" && tvOn && !held && !playbackAutoplayBlocked &&
+      (!document.hidden || window.RETVPopout?.active || document.pictureInPictureElement === vid || vid.webkitPresentationMode === "picture-in-picture") &&
+      document.getElementById("rabbit-cast")?.getAttribute("aria-pressed") !== "true",
+    online: navigator.onLine, playing: !!playing,
+    time: vid.currentTime, paused: vid.paused, ready: vid.readyState
+  });
+  automaticPlaybackRecovery = window.REPlaybackRecovery.create({
+    read: recoverySnapshot,
+    waiting: delay => playbackMessage(`Connection interrupted. Reconnecting automatically${delay ? " in " + Math.ceil(delay / 1000) + "s" : ""}…`, true),
+    retry: async expected => {
+      if (!playing) await loadCatalog(12000);
+      const current = recoverySnapshot();
+      if (!current.active || !current.online || current.token !== expected.token || current.channel !== expected.channel) return false;
+      // Retry the current slot at its current clock position; never restart a show.
+      sourceMetadata.clear(); resolvedMedia.clear(); playbackCopies = undefined;
+      if (!playing || showNow() >= playing.end) {
+        delete listCache[channels()[cur].q];
+        delete continuousCache[channels()[cur].q];
+        for (const id of Object.keys(metaCache)) if (!metaCache[id]) delete metaCache[id];
+        // Tuning has its own generation fence. Do not keep the recovery loop
+        // busy behind slow guide work; its watchdog can try the restored catalog.
+        tune(cur).catch(() => automaticPlaybackRecovery.failed());
+      } else {
+        activeSegment = null;
+        syncMedia();
+      }
+      return true;
+    }
+  });
+  window.addEventListener("online", () => automaticPlaybackRecovery.wake());
+  window.addEventListener("pageshow", () => { if (tuneId) automaticPlaybackRecovery.wake(); });
+  document.addEventListener("visibilitychange", () => automaticPlaybackRecovery.wake());
 }
 
 // Lock screen, Control Center and headphone controls: the show that's on, the channel, the tape's
@@ -1598,6 +1641,7 @@ async function tune(i) {
     playing = null; activeSegment = null; ++mediaToken; vid.pause(); vid.removeAttribute("src"); vid.load(); paintPos(); applyCaptions();
     $("title").textContent = "Nothing but static on " + ch.name;
     $("meta").textContent = "The Internet Archive didn't answer, or this search has no videos. Try another channel.";
+    automaticPlaybackRecovery?.failed();
   }
 }
 
@@ -1684,7 +1728,7 @@ window.rePlaybackContext = () => {
     duration: playing.m.dur, position: vid.currentTime, cuts: playing.m.cuts,
     airingStart: playing.v0, paused: vid.paused || vid.seeking || vid.readyState < 2 };
 };
-$("power").onclick = () => { $("power").hidden = true; setMuted(false); vid.play().catch(() => {}); };
+$("power").onclick = () => { playbackAutoplayBlocked = false; $("power").hidden = true; setMuted(false); if (!playing) automaticPlaybackRecovery?.wake(); vid.play().catch(() => {}); };
 $("mute").onclick = () => setMuted(!vid.muted);
 $("up").onclick = () => tune(cur + 1);
 $("down").onclick = () => tune(cur - 1);

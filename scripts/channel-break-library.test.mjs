@@ -8,8 +8,13 @@ const trekPolicy = new Function("return (" + html.match(/name: "Subspace 97"[^\n
 
 test("SCI FI breaks are complete, checksum verified and isolated from the reserved library", async () => {
   const library = await loadChannelBreakLibrary("sci-fi-channel");
-  assert.equal(library.commercials.length, 34);
-  assert.equal(library.commercials.filter(m => m.role === "star-trek-commercial").length, 10);
+  assert.equal(library.commercials.length, 48);
+  assert.equal(library.commercials.filter(m => m.role === "star-trek-commercial").length, 12);
+  assert.equal(library.commercials.filter(m => m.role === "subspace-scifi-commercial").length, 12);
+  const expansion = library.commercials.filter(m => m.source?.batch === "subspace-expansion-2026-11-17");
+  assert.equal(expansion.length, 14);
+  assert.ok(expansion.every(m => m.source.yearEvidence && m.source.sha256 && m.source.start === 0 &&
+    Math.abs(m.dur - m.source.end) < .2), "all new spots are complete, dated and source-checksummed");
   const addedVintage = library.commercials.filter(m => m.role === "subspace-vintage-spot");
   assert.equal(addedVintage.length, 6);
   assert.ok(addedVintage.every(m => m.source.yearEvidence && m.source.sha256), "new spots retain date evidence and original checksums");
@@ -52,7 +57,7 @@ test("Subspace uses fewer, shorter breaks with at most three unique complete ads
       assert.equal(segments[0].kind, "bumper");
       assert.equal(segments.at(-1).kind, "bumper");
       assert.deepEqual(segments.filter(s => s.kind === "bumper").map(s => s.media.role).sort(), ["custom-bumper", "network-id"]);
-      const vintage = segments.filter(s => s.kind === "commercial" && s.media.role !== "star-trek-commercial");
+      const vintage = segments.filter(s => s.kind === "commercial" && !["star-trek-commercial", "subspace-scifi-commercial"].includes(s.media.role));
       assert.equal(vintage.length, i % 3 === 2 ? 1 : 0);
       const duration = segments.reduce((n, s) => n + s.end - s.start, 0);
       assert.ok(duration > 0 && duration <= policy.target + .001, "two-minute limit includes both bumpers");

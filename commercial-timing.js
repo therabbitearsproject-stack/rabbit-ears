@@ -15,6 +15,38 @@ const CommercialTiming = (() => {
     }
     return result;
   }
+  // Subspace keeps one shuffled rolling deck per show instead of reranking the
+  // same short list for every break. Move played spots to the back and prefer
+  // spots absent from the preceding two breaks; tiny pools may repeat only when
+  // no other complete spot fits. No browser history or random clock is involved.
+  function rollingDeck(items, seed) {
+    const ids = new Set(), files = new Set();
+    const order = items.map(media => ({ media, rank: hash(seed + media.id) }))
+      .sort((a, b) => a.rank - b.rank || a.media.id.localeCompare(b.media.id))
+      .map(a => a.media).filter(media => {
+        if (ids.has(media.id) || media.file && files.has(media.file)) return false;
+        ids.add(media.id); if (media.file) files.add(media.file);
+        return true;
+      });
+    return (target, maxSpots, recent = [], excluded = [], firstRole = null) => {
+      const chosen = [], usedIds = new Set(excluded.map(m => m.id));
+      const usedFiles = new Set(excluded.map(m => m.file).filter(Boolean));
+      const recentIds = new Set(recent.map(m => m.id));
+      const recentFiles = new Set(recent.map(m => m.file).filter(Boolean));
+      let remaining = target;
+      while (chosen.length < maxSpots && remaining >= 8) {
+        const fits = media => media.dur <= remaining + .001 && !usedIds.has(media.id) && (!media.file || !usedFiles.has(media.file));
+        const priority = chosen.length === 0 && firstRole && order.some(media => fits(media) && media.role === firstRole);
+        const eligible = media => fits(media) && (!priority || media.role === firstRole);
+        const next = order.find(media => eligible(media) && !recentIds.has(media.id) && (!media.file || !recentFiles.has(media.file))) || order.find(eligible);
+        if (!next) break;
+        chosen.push(next); remaining -= next.dur;
+        usedIds.add(next.id); if (next.file) usedFiles.add(next.file);
+        order.push(...order.splice(order.indexOf(next), 1));
+      }
+      return chosen;
+    };
+  }
   function build(program, policy, ads, bumpers, seed) {
     // Midnight Mirage's fixed-era movie spots are a BETWEEN-FILMS pod, never
     // scene interruptions. The film's release year does not limit these spots.
@@ -35,6 +67,10 @@ const CommercialTiming = (() => {
       bumpers = bumpers.filter(m => !m.series || program.title.startsWith(m.series + " · "));
     }
     const duration = program.dur, segments = []; let content = 0, t = 0, breakNo = 0;
+    const subspacePrimary = media => media.role === "star-trek-commercial" || media.role === "subspace-scifi-commercial";
+    const trekDeck = policy?.mix === "trek-first" ? rollingDeck(ads.filter(subspacePrimary), seed + ":trek-deck") : null;
+    const vintageDeck = policy?.mix === "trek-first" ? rollingDeck(ads.filter(m => !subspacePrimary(m)), seed + ":vintage-deck") : null;
+    const recentBreaks = [];
     const append = (kind, media, length, offset = 0) => { segments.push({ kind, media, start: t, end: t + length, offset, index: segments.length }); t += length; };
     const interval = policy?.interval || duration;
     while (content < duration) {
@@ -49,13 +85,13 @@ const CommercialTiming = (() => {
         const bookends = [custom, network].filter(Boolean);
         if (hash(key + ":position") % 2) bookends.reverse();
         let budget = policy.target - bookends.reduce((n, m) => n + m.dur, 0);
-        const trek = ads.filter(m => m.role === "star-trek-commercial");
         // One general vintage spot every third break; never use vintage ads to fill gaps.
         const vintage = number % (policy.vintageEvery || 3) === (policy.vintageEvery || 3) - 1
-          ? choose(ads.filter(m => m.role !== "star-trek-commercial" && m.dur <= budget), ":vintage") : null;
+          ? vintageDeck(budget, 1, recentBreaks.flat())[0] : null;
         if (vintage) budget -= vintage.dur;
-        const spots = pack(trek, budget, key, { unique: true, maxSpots: (policy.maxAds || 3) - (vintage ? 1 : 0) });
+        const spots = trekDeck(budget, (policy.maxAds || 3) - (vintage ? 1 : 0), recentBreaks.flat(), vintage ? [vintage] : [], "star-trek-commercial");
         if (vintage) spots.splice(hash(key + ":insert") % (spots.length + 1), 0, vintage);
+        recentBreaks.push(spots); if (recentBreaks.length > 2) recentBreaks.shift();
         if (bookends[0]) append("bumper", bookends[0], bookends[0].dur);
         for (const ad of spots) append("commercial", ad, ad.dur);
         if (bookends[1]) append("bumper", bookends[1], bookends[1].dur);
