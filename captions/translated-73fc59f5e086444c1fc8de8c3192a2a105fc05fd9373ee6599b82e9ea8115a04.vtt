@@ -1,0 +1,1529 @@
+WEBVTT
+
+1
+00:00:14.000 --> 00:00:19.000
+Esta câmera de vídeo faz parte de um sistema de visão computadorizado que tenta funcionar como
+
+2
+00:00:19.000 --> 00:00:21.001
+O cérebro humano. Isso significa processar milhões de peças
+
+3
+00:00:21.001 --> 00:00:23.000
+Informação em milésimos de segundos.
+
+4
+00:00:24.000 --> 00:00:27.001
+Computadores sequenciais podem lidar com esse tipo de velocidade, então cientistas de computador aqui
+
+5
+00:00:27.001 --> 00:00:32.000
+Eles estão desenvolvendo computadores que funcionam mais como o cérebro em paralelo. Hoje vamos tomar
+
+6
+00:00:32.000 --> 00:00:36.000
+Um olhar para o topo da busca para o processamento paralelo de velocidade do computador
+
+7
+00:00:36.000 --> 00:00:38.001
+nesta edição das crônicas de computador.
+
+8
+00:01:00.000 --> 00:01:05.001
+As crônicas de computador são feitas possíveis em parte por uma concessão de AFIPs, o
+
+9
+00:01:05.001 --> 00:01:11.000
+Federação Americana de Sociedades de Processamento de Informação. Pessoas, patrocinadores da OAC
+
+10
+00:01:11.000 --> 00:01:16.000
+86, a conferência líder da nação sobre tecnologia de negócios. Para a conferência
+
+11
+00:01:16.000 --> 00:01:22.001
+Informação chamada 800-OAC-1986, explorando as soluções de negócios de hoje.
+
+12
+00:01:23.001 --> 00:01:28.000
+O financiamento adicional é fornecido por McGraw-Hill, editores da Byte. de byte
+
+13
+00:01:28.000 --> 00:01:32.001
+artigos técnicos detalhados sobre novos hardware, software e idiomas cobrem o
+
+14
+00:01:32.001 --> 00:01:37.001
+mais recente em microcomputadores em todo o mundo. Bite, o padrão internacional.
+
+15
+00:01:43.000 --> 00:01:47.000
+Bem-vindo às crônicas de computador, eu sou Stuart Chafay e este é Gary Kildall.
+
+16
+00:01:47.000 --> 00:01:50.001
+Gary, o que eu estou fazendo no meu trem de brinquedos aqui está tentando entender o paralelo
+
+17
+00:01:50.001 --> 00:01:54.001
+de processamento . Você me diz se eu tenho razão. Em um computador seqüencial, basicamente
+
+18
+00:01:54.001 --> 00:01:58.000
+Você tem uma pista, um motor, vamos dizer, trazendo um pedaço de informação ou
+
+19
+00:01:58.000 --> 00:02:01.001
+uma instrução. Em um sistema paralelo, podemos ter dois ou mais traços, dois ou
+
+20
+00:02:01.001 --> 00:02:05.001
+mais motores, cada um deles carregando algumas dessas informações abaixo da linha e
+
+21
+00:02:05.001 --> 00:02:08.001
+Por isso, podemos conseguir o trabalho feito em meia hora e o problema é claro.
+
+22
+00:02:08.001 --> 00:02:12.000
+Para que este trem saiba o que esse trem está fazendo. Agora estou na direita
+
+23
+00:02:12.000 --> 00:02:18.000
+A trilha? Eu diria que é um bom modelo. A idéia básica de Stuart é tomar uma
+
+24
+00:02:18.000 --> 00:02:21.001
+tarefas complicadas e quebrá-las em pequenas tarefas independentes que podem ser executadas
+
+25
+00:02:21.001 --> 00:02:25.001
+Saindo ao mesmo tempo. Por exemplo, se tivéssemos mil pessoas que querem se mover
+
+26
+00:02:25.001 --> 00:02:29.001
+Dentro deste único caminho de trem podíamos tomar vários trens e movê-los para o
+
+27
+00:02:29.001 --> 00:02:33.000
+destinatário ou podemos tomar dez trilhas diferentes com dez trens diferentes e
+
+28
+00:02:33.000 --> 00:02:36.000
+Leve-os todos lá quase ao mesmo tempo. O problema é a coordenação de
+
+29
+00:02:36.000 --> 00:02:40.000
+curso para esse fim. Agora, por exemplo, seu computador pessoal que você tem razão
+
+30
+00:02:40.000 --> 00:02:44.000
+Muitos processos paralelos já estão acontecendo nele. Por exemplo, você tem uma
+
+31
+00:02:44.000 --> 00:02:47.001
+microprocessador na tecla que está observando as teclas, microprocesador em
+
+32
+00:02:47.001 --> 00:02:51.000
+A impressora que está observando os movimentos de placa e o buffer e a impressão
+
+33
+00:02:51.000 --> 00:02:53.000
+dados e, em seguida, uma unidade de processamento central que é
+
+34
+00:02:53.000 --> 00:02:54.001
+Coordenar todas essas atividades de forma independente.
+
+35
+00:02:55.001 --> 00:02:58.001
+Bem, hoje vamos tentar saber mais sobre o processamento paralelo e tentar
+
+36
+00:02:58.001 --> 00:03:01.001
+para compreender isso. É certamente uma área muito importante da pesquisa de computador direito
+
+37
+00:03:01.001 --> 00:03:05.000
+E agora. Encontraremos alguns dos principais pesquisadores e cientistas no campo em
+
+38
+00:03:05.000 --> 00:03:08.001
+o país e vamos realmente mostrar-lhe um computador de processamento paralelo para que você possa
+
+39
+00:03:08.001 --> 00:03:12.000
+Veja para si mesmo o quão rápido é. Vamos começar com um fundo
+
+40
+00:03:12.000 --> 00:03:16.000
+olhar para a arquitetura paralela e vamos ajudar a tentar ajudá-lo a entender por que nós
+
+41
+00:03:16.000 --> 00:03:22.001
+É realmente necessário. Os micros, minis e mainframes são
+
+42
+00:03:22.001 --> 00:03:28.000
+Os super computadores. Máquinas que podem corresponder a uma impressão de dedo entre milhões, simulações
+
+43
+00:03:28.000 --> 00:03:31.001
+As formas de vida e o desenho das armas de Doom.
+
+44
+00:03:32.000 --> 00:03:36.001
+Este tipo de potência de computação combina velocidade enorme com capacidade de processamento
+
+45
+00:03:36.001 --> 00:03:41.001
+Foi a província exclusiva de máquinas que custam dezenas de milhões de dólares.
+
+46
+00:03:41.001 --> 00:03:47.000
+Mas um interesse generalizado em arquitetura paralela pode mudar isso. paralelo
+
+47
+00:03:47.000 --> 00:03:51.001
+processamento ou a divisão de computações entre os processadores que trabalham em
+
+48
+00:03:51.001 --> 00:03:57.000
+A união pode ser realizada de várias maneiras. O ônibus de dados é o mais comum
+
+49
+00:03:57.000 --> 00:04:01.000
+método, mas é eficaz apenas para um número limitado de processadores.
+
+50
+00:04:01.001 --> 00:04:06.001
+O crossbar distribuído é outra maneira de distribuir o processamento, embora o
+
+51
+00:04:06.001 --> 00:04:12.001
+A necessidade de conectar cada processador coloca um limite prático para este sistema também. O que
+
+52
+00:04:12.001 --> 00:04:17.000
+engenhoso rede de interrupção de butterfly é uma maneira de expandir a permissão de crossbar
+
+53
+00:04:17.000 --> 00:04:24.000
+Até 256 processadores em todo, mas independentemente do método utilizado o multi-processador
+
+54
+00:04:24.000 --> 00:04:30.001
+Os super minis estão dando novos números de potência para usuários especializados. em San
+
+55
+00:04:30.001 --> 00:04:35.000
+Francisco da Universidade da Califórnia recentemente instalou um processamento paralelo
+
+56
+00:04:35.000 --> 00:04:41.000
+Máquina para estudos de modelagem molecular. A máquina de 64 bits do ponto flutuante
+
+57
+00:04:41.000 --> 00:04:47.001
+Os sistemas são capazes de 38 milhões de operações de pontos flotantes por segundo. O novo
+
+58
+00:04:47.001 --> 00:04:52.001
+A máquina pode reduzir o valor de cálculos de uma noite a algumas horas. Com o
+
+59
+00:04:52.001 --> 00:04:56.001
+com a ajuda de seu novo computador o departamento produz alguns dos mais notáveis
+
+60
+00:04:56.001 --> 00:04:59.000
+gráficos já vistos em uma tela de computador.
+
+61
+00:05:12.000 --> 00:05:15.001
+Agora que estamos no estúdio, o Dr. Howard Resnickoff está em visita
+
+62
+00:05:15.001 --> 00:05:20.000
+Cientistas no Centro de Processamento de Informações Biológicas do MIT e Dr. Resíduos
+
+63
+00:05:20.000 --> 00:05:24.000
+Também foi co-fundador da Thinking Machines Corporation. Também com o Dr. Eugênio
+
+64
+00:05:24.000 --> 00:05:27.001
+Brooks é um físico que estava envolvido em pesquisa de processamento paralelo em Caltech
+
+65
+00:05:27.001 --> 00:05:32.000
+e que agora está envolvido na mesma área no Lawrence Livermore Labs. O Gary? de Howard
+
+66
+00:05:32.000 --> 00:05:35.000
+O que a informação biológica tem a ver com o processamento paralelo?
+
+67
+00:05:36.000 --> 00:05:41.000
+É uma boa pergunta, Gary. A informação mais adequada em paralelo
+
+68
+00:05:41.000 --> 00:05:45.001
+Os processadores são organismos biológicos. Vamos dar-lhe um exemplo típico. Se o
+
+69
+00:05:45.001 --> 00:05:49.001
+Você está dirigindo seu carro ao longo da rua e uma criança corre à frente dentro de uma
+
+70
+00:05:49.001 --> 00:05:54.000
+Dez de um segundo você responde e tem o seu pé direcionado para o freio. O que foi
+
+71
+00:05:54.000 --> 00:05:58.001
+Nesse curto período? Bem, a luz atingiu o olho que viajou para o nervo óptico.
+
+72
+00:05:59.000 --> 00:06:03.001
+Seu cérebro criou um plano comparando a informação com alguns conhecimentos armazenados e
+
+73
+00:06:03.001 --> 00:06:09.000
+Envie sinais para o sistema motor para mover seus músculos. Os neurônios em seu
+
+74
+00:06:09.000 --> 00:06:14.000
+O cérebro muda em um milisegundos você tinha apenas uma décima de um segundo em todo.
+
+75
+00:06:14.000 --> 00:06:18.001
+O programa que faz isso é apenas 100 passos profundos. Deve haver uma enorme
+
+76
+00:06:18.001 --> 00:06:22.000
+quantidade de processamento paralelo. absolutamente . Agora em Lawrence Livermore Labs lá
+
+77
+00:06:22.000 --> 00:06:27.000
+Os problemas diários estão sendo resolvidos. Como é aplicado o paralelismo em
+
+78
+00:06:27.000 --> 00:06:31.001
+Solução para problemas? Bem, aplicamos paralelismo em Livermore Labs para fazer dois
+
+79
+00:06:31.001 --> 00:06:37.001
+as coisas. Um é reduzir o custo de um problema, reduzir os custos de um
+
+80
+00:06:37.001 --> 00:06:42.001
+Simulação em vez disso. A ideia é aplicar vários computadores mais baratos para um único
+
+81
+00:06:42.001 --> 00:06:46.001
+Simulação do que aplicar um computador mais caro. O outro é reduzir
+
+82
+00:06:46.001 --> 00:06:52.000
+O tempo em que uma simulação física leva. Para fazer progresso na utilização
+
+83
+00:06:52.000 --> 00:06:55.001
+Simulações físicas você tem que obter suas respostas de volta rapidamente o suficiente para que você
+
+84
+00:06:55.001 --> 00:06:59.000
+Não se esqueça o que foi o problema. O que seria um problema físico típico que
+
+85
+00:06:59.000 --> 00:07:03.001
+Você pode resolver? Há muitos problemas que você pode resolver. Há tempo
+
+86
+00:07:03.001 --> 00:07:09.000
+A simulação. Existem simulações da deformação dos metais. Há uma
+
+87
+00:07:09.000 --> 00:07:12.001
+A variedade. Vamos, por exemplo, a simulação do tempo. O que é inerentemente paralelo
+
+88
+00:07:12.001 --> 00:07:16.001
+E algo assim? Bem, em uma simulação do tempo você divide o espaço,
+
+89
+00:07:17.000 --> 00:07:21.000
+O espaço físico que você está simulando em um grande número de zonas. E o
+
+90
+00:07:21.000 --> 00:07:26.000
+A atualização das características físicas de cada zona pode continuar em assunto paralelo
+
+91
+00:07:26.000 --> 00:07:30.000
+Algumas informações dos vizinhos. Você pode calcular cada uma dessas áreas
+
+92
+00:07:30.000 --> 00:07:33.001
+separadamente e em sequência, mas desta forma usando o seu paralelismo você pode apenas fazer
+
+93
+00:07:33.001 --> 00:07:36.001
+Todos eles juntos. Eugene o que é o fator de velocidade que estamos falando em
+
+94
+00:07:36.001 --> 00:07:39.000
+Fazer uma simulação do tempo com um cray ou
+
+95
+00:07:39.000 --> 00:07:41.000
+Fazer isso com uma abordagem paralela?
+
+96
+00:07:41.001 --> 00:07:47.001
+Bem, o fator de velocidade que você obtém quando você usa o processamento paralelo para aplicar,
+
+97
+00:07:48.000 --> 00:07:51.000
+Quando você usa o processamento paralelo para resolver um problema, é muito em questão
+
+98
+00:07:51.000 --> 00:07:56.000
+basicamente porque você pode ver uma grande quantidade de paralelismo em um tempo
+
+99
+00:07:56.000 --> 00:07:59.000
+simulação, muitos milhares ou milhões de pontos que poderiam ser atualizados em
+
+100
+00:07:59.000 --> 00:08:04.000
+paralelo, mas o custo de organizar a computação tende a interferir com
+
+101
+00:08:04.000 --> 00:08:09.001
+Utilizar efetivamente esses muitos processadores paralelos sobre o problema. Então há alguns
+
+102
+00:08:09.001 --> 00:08:14.000
+A gama de paralelismo que você tem que explorar para utilizar o processador
+
+103
+00:08:14.000 --> 00:08:18.001
+com eficiência. Howard se olhamos para o problema de dizer simulação biológica
+
+104
+00:08:18.001 --> 00:08:21.001
+Assim, vamos ver o processamento paralelo aplicado a realmente artificial
+
+105
+00:08:21.001 --> 00:08:26.001
+Inteligência por exemplo? Acho que já começamos a ver isso. O exemplo
+
+106
+00:08:26.001 --> 00:08:32.000
+que eu dei da visão biológica é, obviamente, muito semelhante aos exemplos de
+
+107
+00:08:32.000 --> 00:08:35.001
+visão de máquina, mas você tem que perceber que a quantidade de recursos computacionais
+
+108
+00:08:35.001 --> 00:08:40.000
+O que é necessário é muito maior do que qualquer máquina de série pode fornecer hoje. Em que o
+
+109
+00:08:40.000 --> 00:08:46.000
+Exemplo biológico do olho humano tem mais de 2500 megabits por segundo
+
+110
+00:08:46.000 --> 00:08:51.000
+Dados que caem no olho. Nenhuma máquina disponível hoje é capaz de lidar com isso.
+
+111
+00:08:51.001 --> 00:08:54.001
+Eugene quando você estava em Caltech você trabalhou em uma versão de um paralelo
+
+112
+00:08:54.001 --> 00:08:57.001
+A máquina de processamento é chamada de Hypercube. Agora diga-nos o que a abordagem do Hypercube
+
+113
+00:08:57.001 --> 00:09:02.000
+é . Bem, a abordagem do Hypercube foi uma arquitetura de mensagem que passa onde você
+
+114
+00:09:02.000 --> 00:09:07.000
+Use muitos CPUs que foram conectados uns aos outros e efetivamente enviar computador
+
+115
+00:09:07.000 --> 00:09:11.000
+e-mail uns aos outros para que o trabalho seja feito. Os dados do algoritmo foram
+
+116
+00:09:11.000 --> 00:09:14.000
+distribuído entre todos os CPUs pelo programador.
+
+117
+00:09:15.000 --> 00:09:20.000
+Você e eu estamos falando de biologia. Quão bom é o cérebro como uma analogia para olhar
+
+118
+00:09:20.000 --> 00:09:25.001
+Como exemplo biológico de como desenvolver uma máquina paralela? Isso é um muito
+
+119
+00:09:25.001 --> 00:09:30.000
+Uma pergunta complicada. Nós sabemos muito pouco sobre como o cérebro funciona. Alguns
+
+120
+00:09:30.000 --> 00:09:33.000
+As pessoas pensam que pode haver até 10 a 12 neurônios.
+
+121
+00:09:33.001 --> 00:09:36.000
+Isso é um número muito grande. A eletrônica não é
+
+122
+00:09:36.000 --> 00:09:37.001
+Vamos construir máquinas que são complexas.
+
+123
+00:09:37.001 --> 00:09:42.000
+Por outro lado, são unidades muito lentas. Eles são extremamente não confiáveis. Lá lá
+
+124
+00:09:42.000 --> 00:09:46.000
+Deve haver muita redundância. A questão mais fundamental de como
+
+125
+00:09:46.000 --> 00:09:50.000
+A estrutura dos programas, os algoritmos, parece-me ser o lugar onde a maioria
+
+126
+00:09:50.000 --> 00:09:54.001
+O progresso será feito e eu acho que devem haver princípios gerais que submetam
+
+127
+00:09:54.001 --> 00:09:58.000
+Informações eletrônicas e biológicas. Bem, senhores, vamos continuar em
+
+128
+00:09:58.000 --> 00:10:00.000
+um momento. Em primeiro lugar, vamos olhar para a
+
+129
+00:10:00.000 --> 00:10:02.000
+computador de processamento paralelo.
+
+130
+00:10:02.000 --> 00:10:05.000
+Vamos olhar para o Alexi e Wendy Woods tem essa história de San Jose.
+
+131
+00:10:07.001 --> 00:10:12.001
+Todos os computadores serão processadores paralelos até o ano 2000. Essa é a previsão
+
+132
+00:10:12.001 --> 00:10:18.000
+O presidente de Alexi, cuja empresa faz o Alexi 6400. Capacidade de operar até
+
+133
+00:10:18.000 --> 00:10:24.001
+12 CPUs simultâneos, o 6400 é brilhante rápido, processando em uma fração do
+
+134
+00:10:24.001 --> 00:10:29.001
+velocidade de computadores de série convencionais, o que é por isso que já foi vendido para
+
+135
+00:10:29.001 --> 00:10:35.001
+60 principais clientes. Por exemplo, a General Motors está usando o processamento paralelo para
+
+136
+00:10:35.001 --> 00:10:39.001
+desenho de carros corpos e para projetar suas partes para seus veículos e fazer estrutural
+
+137
+00:10:39.001 --> 00:10:44.000
+Análise dos veículos. A indústria de semicondutores está usando processamento paralelo
+
+138
+00:10:44.000 --> 00:10:49.001
+Desenho de chips para novos computadores. Eles podem obter o mesmo cálculo para provavelmente
+
+139
+00:10:49.001 --> 00:10:53.001
+Um quarto do preço que eles podem usar um único processador. Processadores Paralelos
+
+140
+00:10:53.001 --> 00:10:59.001
+Não venha barato. O topo da linha 6400 custa quase três milhões de dólares,
+
+141
+00:10:59.001 --> 00:11:05.000
+Mas Alexi vê esta tecnologia caindo em preço e tamanho como a indústria
+
+142
+00:11:05.000 --> 00:11:09.000
+perceber o seu potencial. Os computadores pessoais que são usados nos negócios hoje serão
+
+143
+00:11:09.000 --> 00:11:12.000
+Ser paralelo com computadores pessoais em 10-15 anos
+
+144
+00:11:12.000 --> 00:11:14.000
+O tempo. É o passo natural a tomar.
+
+145
+00:11:15.000 --> 00:11:20.000
+Uma vez que você aceita que estamos a correr fora do desempenho em processos de série, então
+
+146
+00:11:20.000 --> 00:11:24.001
+O processo será realizado em processos paralelos. Alexi vendeu 22 milhões de dólares
+
+147
+00:11:24.001 --> 00:11:29.000
+Dólares de hardware no ano passado. Não é ruim para uma empresa pioneira uma nova
+
+148
+00:11:29.000 --> 00:11:33.001
+da tecnologia. E este ano, a empresa não só espera quebrar ainda, mas também
+
+149
+00:11:33.001 --> 00:11:38.000
+fazer um lucro sobre o seu investimento inicial, após o qual o céu parece ser o
+
+150
+00:11:38.000 --> 00:11:41.000
+O limite. Para as crônicas de computador, eu sou Wendy Woods.
+
+151
+00:11:53.001 --> 00:11:57.000
+Entre nós agora no estúdio é David Rogers, Vice-Presidente de Engenharia
+
+152
+00:11:57.000 --> 00:12:01.000
+Sistemas de Computação Sequin em Portland, Oregon. e de volta conosco,
+
+153
+00:12:01.000 --> 00:12:02.001
+O Dr. Howard Resnickoff do MIT.
+
+154
+00:12:03.000 --> 00:12:06.000
+E se você ouve um enorme barulho no fundo, esse é o Sequin Computer de David.
+
+155
+00:12:06.000 --> 00:12:09.001
+sobre isso, que vamos chegar em um instante. O Gary? Howard, em sua
+
+156
+00:12:09.001 --> 00:12:13.001
+No início, tivemos 10 trens que colidiram na estação de trem. Aqui está um exemplo de
+
+157
+00:12:13.001 --> 00:12:17.000
+O Paralelismo Quão bem isso realmente faz o modelo paralelismo? Bem, Gary, como você
+
+158
+00:12:17.000 --> 00:12:22.000
+Dizem que é um bom modelo, mas não é perfeito. Por exemplo, para uma base de dados
+
+159
+00:12:22.000 --> 00:12:26.001
+Busca onde alguém está procurando alguma linha específica, que funciona bem. Mas para
+
+160
+00:12:26.001 --> 00:12:30.000
+problemas do tipo que Eugene mencionava, os processadores têm de
+
+161
+00:12:30.000 --> 00:12:33.001
+Comunicar um pouco. Nesse caso, a topologia da rede torna-se
+
+162
+00:12:33.001 --> 00:12:36.001
+importante . É certo. Ok, David, há algumas coisas incríveis que estão acontecendo no
+
+163
+00:12:36.001 --> 00:12:39.001
+tela no seu computador agora. Diga-me sobre esta manifestação que você vai
+
+164
+00:12:39.001 --> 00:12:44.001
+Mostre-nos na sequência. Hoje eu trago comigo um exemplo de uma computação que
+
+165
+00:12:44.001 --> 00:12:48.001
+Podem ser divididos em segmentos paralelos. O cálculo
+
+166
+00:12:48.001 --> 00:12:50.000
+É conhecido como o Mandelbrot Set.
+
+167
+00:12:50.001 --> 00:12:55.001
+É um conjunto de números no plano complexo. É um bom exemplo de um problema
+
+168
+00:12:55.001 --> 00:13:00.000
+que é adequado para processamento paralelo porque pode ser dividido e executado
+
+169
+00:13:00.000 --> 00:13:01.001
+em vários computadores ao mesmo tempo.
+
+170
+00:13:02.001 --> 00:13:07.001
+O computador, de fato, dividirá, como está mostrado aqui na tela, o
+
+171
+00:13:07.001 --> 00:13:12.000
+Problemas em muitos segmentos pequenos. O sistema que eu trouxe comigo hoje tem um
+
+172
+00:13:12.000 --> 00:13:15.001
+total de 12 computadores. E assim, os segmentos serão processados 12 em a
+
+173
+00:13:15.001 --> 00:13:17.000
+tempo até que o resultado seja concluído.
+
+174
+00:13:17.001 --> 00:13:19.001
+Ok, então, como eu entendo, vamos olhar e resolver este problema com
+
+175
+00:13:19.001 --> 00:13:23.001
+um processador e, em seguida, dois, e em seguida 12 ao mesmo tempo. Isso é correto. Aqui você vê
+
+176
+00:13:23.001 --> 00:13:27.001
+um processador que gera um segmento da imagem que irá preencher todo o
+
+177
+00:13:27.001 --> 00:13:34.001
+O rectangulo. Então, em um momento, vamos adicionar uma segunda aparência rectangular é
+
+178
+00:13:34.001 --> 00:13:39.000
+duplicado . E então, finalmente, vamos adicionar todos os 12 processadores, e você verá
+
+179
+00:13:39.000 --> 00:13:42.001
+que os rectangulos estão a subir. Bem, então, no momento, estamos vendo um
+
+180
+00:13:42.001 --> 00:13:46.000
+visualizar realmente a taxa em que um processador está resolvendo este problema.
+
+181
+00:13:46.001 --> 00:13:48.001
+Na verdade, é um segundo. É certo. Agora estamos até dois. Nós somos
+
+182
+00:13:48.001 --> 00:13:50.000
+Atualmente, até dois processadores ao mesmo tempo.
+
+183
+00:13:51.000 --> 00:13:54.000
+E agora todos os 12 estarão no trabalho. E agora todos os 12 estão correndo. E você vê que o
+
+184
+00:13:54.000 --> 00:13:58.001
+A taxa de execução aumentou linearmente, que é uma das vantagens de
+
+185
+00:13:58.001 --> 00:14:03.000
+Processamento em paralelo. Em geral, um deseja alcançar um dos dois resultados com
+
+186
+00:14:03.000 --> 00:14:07.001
+processamento paralelo, ou uma diminuição no tempo em curso para obter resultados mais
+
+187
+00:14:07.001 --> 00:14:13.001
+rapidamente, ou uma melhoria na passagem. Um é medido em resultados por unidade
+
+188
+00:14:13.001 --> 00:14:17.000
+tempo, e o outro é medido no tempo para alcançar um único resultado.
+
+189
+00:14:17.001 --> 00:14:21.000
+David, falamos sobre o hypercube como uma arquitetura há alguns minutos. e
+
+190
+00:14:21.000 --> 00:14:24.000
+Qual é a arquitetura que você tem? Dê-nos um pouco
+
+191
+00:14:24.000 --> 00:14:26.000
+Explique o que essas arquiteturas fazem.
+
+192
+00:14:26.000 --> 00:14:32.000
+E sim. O hipercubo é um exemplo de uma máquina de conexão, uma rede de computadores
+
+193
+00:14:33.000 --> 00:14:38.001
+Falar uns com os outros, não compartilhar a mesma memória. A máquina que eu trouxe
+
+194
+00:14:38.001 --> 00:14:43.000
+Comigo, o Balance8000, é um exemplo de um multiprocessador estreitamente ligado. Todos os
+
+195
+00:14:43.000 --> 00:14:47.001
+Os processadores compartilham acesso aos mesmos dados em todos os momentos em tempo. Uma
+
+196
+00:14:47.001 --> 00:14:52.000
+usar uma máquina de conexão para problemas em que a taxa de comunicação entre
+
+197
+00:14:52.000 --> 00:14:57.000
+Os processadores são menores e a distribuição dos dados é maior. e
+
+198
+00:14:57.000 --> 00:15:01.001
+inversamente, com máquinas estreitamente ligadas, um trabalha sobre problemas onde o interior
+
+199
+00:15:01.001 --> 00:15:05.001
+A comunicação é mais frequente e o volume de dados é maior.
+
+200
+00:15:06.001 --> 00:15:10.000
+Se aplicarmos isto, vamos dizer, à indústria de computadores pessoais, em certa medida, é
+
+201
+00:15:10.000 --> 00:15:12.001
+Há qualquer aplicação, vamos dizer, de
+
+202
+00:15:12.001 --> 00:15:14.001
+Paralelismo na computação pessoal você pode pensar?
+
+203
+00:15:15.000 --> 00:15:21.000
+O PCRT recentemente anunciado, na verdade, permite a computação paralela. O risco
+
+204
+00:15:21.000 --> 00:15:25.001
+máquina de tecnologia pode fazer engenharia e computações científicas, e o
+
+205
+00:15:25.001 --> 00:15:31.001
+Motor compatível com PC pode fazer mais aplicações orientadas para o comércio como
+
+206
+00:15:31.001 --> 00:15:35.001
+O spreadsheet. E quanto às aplicações, vamos dizer, em gráficos? Bem, como você
+
+207
+00:15:35.001 --> 00:15:40.001
+Talvez você saiba, muitos computadores que pensamos como computadores únicos hoje em dia realmente
+
+208
+00:15:40.001 --> 00:15:44.001
+Consiste em vários microprocessadores, cada um dedicado a uma função específica. Essa
+
+209
+00:15:44.001 --> 00:15:50.000
+Uma espécie de distribuição funcional tem sido empregada há muito tempo. Howard, nós
+
+210
+00:15:50.000 --> 00:15:53.001
+Só vi 12 processadores no trabalho e a máquina de rastreamento de David. Agora, você foi
+
+211
+00:15:53.001 --> 00:15:56.001
+às vezes envolvidos com máquinas de pensamento, e eles têm uma abordagem massiva,
+
+212
+00:15:56.001 --> 00:16:00.000
+Não são eles? Diga-nos sobre isso. Sim, a máquina de conexão da máquina de pensar
+
+213
+00:16:00.000 --> 00:16:06.001
+tem 64.000 processadores, cada um dos quais é um relativamente simples, no entanto, e
+
+214
+00:16:06.001 --> 00:16:11.001
+Mais uma vez, uma rede de interligação hypercube. E assim, para uma máquina como essa, que
+
+215
+00:16:11.001 --> 00:16:17.001
+opera em um modo de controle SIMD, o que significa que há um condutor de orquestra
+
+216
+00:16:17.001 --> 00:16:23.000
+dar a mesma instrução a todos os processadores, problemas gráficos, problemas
+
+217
+00:16:23.000 --> 00:16:27.000
+que estão relacionados ao processamento de imagem, e uma ampla variedade de outros também, podem
+
+218
+00:16:27.000 --> 00:16:30.000
+ser tratado de uma maneira que é semelhante ao que você vê aqui, mas em muito mais
+
+219
+00:16:30.000 --> 00:16:34.000
+uma grande escala. David, quais são as aplicações em que a sua máquina de seguimento é
+
+220
+00:16:34.000 --> 00:16:40.001
+sendo usado? Ficamos em várias categorias, algumas que são orientadas ao tempo de trabalho e
+
+221
+00:16:40.001 --> 00:16:44.001
+Alguns que são orientados. Os trabalhadores orientados são, como o
+
+222
+00:16:44.001 --> 00:16:48.000
+exemplo que trazi comigo, aplicações gráficas, simulação da física
+
+223
+00:16:48.000 --> 00:16:54.000
+O sistema, como Eugene Brooks falou. As pessoas orientadas tendem a ser
+
+224
+00:16:54.000 --> 00:16:58.000
+orientação de transação. As coisas que um grande número de pessoas querem ter
+
+225
+00:16:58.000 --> 00:17:02.000
+acesso ao mesmo banco de dados. Ok, senhores, muito obrigado. Isso é um
+
+226
+00:17:02.000 --> 00:17:05.001
+Uma demonstração impressionante. Agora, um dos principais centros de pesquisa no país
+
+227
+00:17:05.001 --> 00:17:09.001
+Para o processamento paralelo é a Carnegie Mellon University em Pittsburgh. Em apenas um
+
+228
+00:17:09.001 --> 00:17:12.000
+No momento, vamos à CMU e vamos olhar para a Warp
+
+229
+00:17:12.000 --> 00:17:13.001
+Projeto, então fique conosco.
+
+230
+00:17:21.001 --> 00:17:26.000
+Quando o Capitão Kirk diz a Scotty para definir os motores à velocidade de bateria, você sabe o que ele faz.
+
+231
+00:17:26.000 --> 00:17:30.000
+Isso significa. Ele quer que a empresa vá rápido. Então, quando os cientistas de computador aqui
+
+232
+00:17:30.000 --> 00:17:34.000
+Carnegie Mellon University iniciou o Projeto Warp, você sabe o que eles tinham em
+
+233
+00:17:34.000 --> 00:17:38.000
+mente, eles queriam computadores que iria rápido, e isso significava paralelo
+
+234
+00:17:38.000 --> 00:17:43.000
+de processamento . Os cientistas informáticos aqui na CMU estão tentando construir um paralelo
+
+235
+00:17:43.000 --> 00:17:46.001
+máquina que pode fornecer a potência de computador necessária para o processamento de visão,
+
+236
+00:17:47.000 --> 00:17:51.001
+essencial para o futuro da robótica. Porque o processamento de visão é facilmente dividido
+
+237
+00:17:51.001 --> 00:17:56.000
+em computações separadas, parecia ideal para o processamento paralelo e o
+
+238
+00:17:56.000 --> 00:18:00.001
+A abordagem de memória localizada da máquina de warp. Processamento de visão requer
+
+239
+00:18:00.001 --> 00:18:04.001
+velocidade enorme apenas para fazer a filtragem necessária para eliminar imagens erradas
+
+240
+00:18:04.001 --> 00:18:09.001
+Por exemplo, sombras ou escuras. Um processador de visão deve realizar 20 cálculos por
+
+241
+00:18:09.001 --> 00:18:14.001
+Pixel por segundo. com uma matriz típica de um quarto de milhão de pixels, que significa
+
+242
+00:18:14.001 --> 00:18:19.000
+5 milhões de cálculos por segundo, muito além da velocidade da sequência de hoje
+
+243
+00:18:19.000 --> 00:18:24.001
+Os computadores . O Dr. O T. Kung lidera o projeto de computador de arquitetura paralela da CMU,
+
+244
+00:18:24.001 --> 00:18:29.001
+E ele diz que construir a máquina é a parte fácil. A coisa difícil é geralmente
+
+245
+00:18:29.001 --> 00:18:35.001
+em processamento paralelo, é que depois que o hardware é construído, não sabemos como
+
+246
+00:18:35.001 --> 00:18:41.001
+Use isso. Esse é o problema fixado. Queremos ter certeza de que qualquer parte da
+
+247
+00:18:41.001 --> 00:18:46.001
+hardware que construímos, temos uma maneira de usá-lo. Assim o Dr. A abordagem de Kung é construir uma
+
+248
+00:18:46.001 --> 00:18:52.000
+máquinas paralelas com uma arquitetura muito simples. Queremos que as pessoas possam
+
+249
+00:18:52.000 --> 00:18:59.000
+Use uma máquina de warp de uma maneira programável para que eles possam mudar suas
+
+250
+00:18:59.000 --> 00:19:04.001
+Algoritmos, eles podem mudar seus modelos de computação a qualquer momento e devemos ser
+
+251
+00:19:04.001 --> 00:19:06.001
+capaz de apoiá-lo.
+
+252
+00:19:06.001 --> 00:19:12.001
+Ok, então o que temos é um tipo de máquina muito simples no nível de hardware, mas nós
+
+253
+00:19:12.001 --> 00:19:17.000
+Construa um monte de software no topo dele. Para ser útil no processamento de visão, o
+
+254
+00:19:17.000 --> 00:19:21.001
+A máquina de guerra não só tem que reconhecer o que vê, tem que primeiro traduzir
+
+255
+00:19:21.001 --> 00:19:26.001
+as imagens distorcidas da sua lente na relação linear normal, e que
+
+256
+00:19:26.001 --> 00:19:30.001
+computação requer uma velocidade enorme, uma vez que a imagem está constantemente mudando como
+
+257
+00:19:30.001 --> 00:19:35.001
+O computador escaneia o seu ambiente. O método habitual de alcançar a velocidade do computador
+
+258
+00:19:35.001 --> 00:19:39.001
+É a abordagem de supercomputador usada por Cray, mas o Dr. Qing diz o paralelo
+
+259
+00:19:39.001 --> 00:19:46.001
+A abordagem é superior. Esta será a principal diferença entre o
+
+260
+00:19:46.001 --> 00:19:53.001
+As coisas são muito rápidas, mas você sabe, um tipo muito grande de hardware físico
+
+261
+00:19:53.001 --> 00:19:58.000
+e fazer as coisas muito rápido em um pequeno pedaço de hardware. Se você pudesse fazer
+
+262
+00:19:58.000 --> 00:20:02.000
+Faça as coisas rapidamente em um pequeno pedaço de hardware, você será capaz de encontrar um monte de
+
+263
+00:20:02.000 --> 00:20:07.001
+novos usos dele. Você será capaz de transportar o seu processamento para o lugar onde
+
+264
+00:20:07.001 --> 00:20:12.000
+necessidades . Um dos próximos grandes passos para o projeto Warp será o uso de muito
+
+265
+00:20:12.000 --> 00:20:16.001
+integração em grande escala, o que irá reduzir o tamanho desses painéis de processador para
+
+266
+00:20:16.001 --> 00:20:20.001
+Apenas 2 polegadas por 4 polegadas. Com esse nível de integração, o Dr. O Kung diz
+
+267
+00:20:20.001 --> 00:20:25.000
+É apenas uma questão de tempo antes de você encontrar o processamento paralelo em seu
+
+268
+00:20:25.000 --> 00:20:32.000
+O microcomputador. Você provavelmente terá um processador de visão muito poderoso ligado
+
+269
+00:20:32.000 --> 00:20:38.001
+para o seu sistema de microprocessores. Você pode fazer muitas coisas mais interessantes do que
+
+270
+00:20:38.001 --> 00:20:44.001
+Você pode fazer isso agora porque você será capaz de ver as coisas agora. Sim, eu acredito nisso.
+
+271
+00:20:45.000 --> 00:20:50.000
+Essa é uma das grandes coisas que o paralelismo vai comprar-nos é que podemos fazer as coisas
+
+272
+00:20:50.000 --> 00:20:54.001
+Muito rápido, de uma forma muito mais barata. Sim, Stuart, são aplicativos como imagem
+
+273
+00:20:54.001 --> 00:20:58.001
+processamento que pode ajudar a trazer o processamento paralelo à frente. Gary, deixe-me
+
+274
+00:20:58.001 --> 00:21:00.001
+Conheça os dois novos senhores que nos juntaram aqui.
+
+275
+00:21:00.001 --> 00:21:04.000
+Primeiro de tudo, Craig Monday, que é um vice-presidente e co-fundador da Alliant
+
+276
+00:21:04.000 --> 00:21:08.000
+Sistemas de computador em Massachusetts e também conosco é Jeffrey Kanan, Senior
+
+277
+00:21:08.000 --> 00:21:11.000
+analista com a empresa de investimento Hambrick e Quist aqui em San Francisco.
+
+278
+00:21:11.001 --> 00:21:14.001
+Craig, falamos sobre o hypercube e o sucessivo. O que é a sua empresa
+
+279
+00:21:14.001 --> 00:21:18.000
+Uma abordagem para o processamento paralelo? A nossa abordagem para o processamento paralelo é diferente
+
+280
+00:21:18.000 --> 00:21:22.000
+um pouco da sequência ou do hipercubo em que quisemos produzir um
+
+281
+00:21:22.000 --> 00:21:25.001
+uma série de produtos que seriam utilizados na engenharia de computação aproximadamente do
+
+282
+00:21:25.001 --> 00:21:28.000
+Entre US$ 100.000 e US$ 1 milhão de preços.
+
+283
+00:21:28.001 --> 00:21:32.001
+E, mais importante, o nosso objetivo era proporcionar uma forma de paralelo transparente.
+
+284
+00:21:32.001 --> 00:21:37.000
+processamento através do qual pessoas com aplicativos existentes tipicamente codificados em FORTRAN
+
+285
+00:21:37.000 --> 00:21:41.001
+Seria capaz de levá-los das máquinas de processador Uni existentes e fazê-los funcionar
+
+286
+00:21:41.001 --> 00:21:45.000
+em nossa máquina de processador paralelo sem ter que redefinir a aplicação.
+
+287
+00:21:45.000 --> 00:21:48.000
+Não é esse tipo de problema difícil tomar um programa FORTRAN, por exemplo,
+
+288
+00:21:48.000 --> 00:21:52.000
+não é realmente construído para dizer que não foi construído com o modelo do paralelo
+
+289
+00:21:52.000 --> 00:21:56.001
+Processamento da minha? Isso é verdade. É bastante difícil. Precisa de um estado de
+
+290
+00:21:56.001 --> 00:22:00.000
+Desenvolvimento mais avançado, tanto na tecnologia do compilador quanto na máquina de baixo nível.
+
+291
+00:22:00.000 --> 00:22:05.000
+Arquitetura para produzir mecanismo de programação e sincronização baseado em hardware
+
+292
+00:22:05.000 --> 00:22:09.001
+que permite que a granularidade do processamento paralelo seja tão pequena que podemos
+
+293
+00:22:09.001 --> 00:22:13.000
+Na verdade, encontramos um monte de paralelismo mesmo em um programa FORTRAN. Se você tomar
+
+294
+00:22:13.000 --> 00:22:16.001
+Um exemplo, o que seria um cliente de amostra para uma máquina como esta?
+
+295
+00:22:17.001 --> 00:22:23.000
+Os clientes que compraram máquinas e estão a usá-las incluem muitos
+
+296
+00:22:23.000 --> 00:22:28.000
+Fortune 500 tipo empresas que têm laboratórios de pesquisa e desenvolvimento, empresas na telefonia
+
+297
+00:22:28.000 --> 00:22:31.001
+indústria, a indústria aeronáutica, e eles o usam para uma variedade de aplicações
+
+298
+00:22:31.001 --> 00:22:37.000
+da modelagem de elementos finitos à síntese e análise do discurso, rastreamento de raios
+
+299
+00:22:37.000 --> 00:22:41.000
+Problemas como por exemplo. Jeffrey, ouvimos falar de processamento paralelo por um longo tempo
+
+300
+00:22:41.000 --> 00:22:44.001
+tempo agora. Estamos no ponto em que é realmente um produto comercial, eu quero dizer que temos
+
+301
+00:22:44.001 --> 00:22:47.001
+Um mercado agora e muitas pessoas realmente vendem máquinas que fazem isso. Bem, eu
+
+302
+00:22:47.001 --> 00:22:52.001
+O quadro de tempo de 1985-1986 é quando vamos primeiro ver alguns
+
+303
+00:22:52.001 --> 00:22:54.000
+sucesso comercial neste mercado.
+
+304
+00:22:54.001 --> 00:22:58.000
+Há muito tempo em promessas e muitos vendedores tentam
+
+305
+00:22:58.000 --> 00:22:59.001
+para entrar neste ponto.
+
+306
+00:23:00.000 --> 00:23:03.000
+Craig, Gary mencionado no início do show, na verdade, até mesmo um pessoal
+
+307
+00:23:03.000 --> 00:23:08.000
+O computador, em certa medida, tem algum paralelismo lá. Em relação a esse nível e
+
+308
+00:23:08.000 --> 00:23:11.000
+pessoas que assistem ao nosso programa, por exemplo, quais são as consequências para a
+
+309
+00:23:11.000 --> 00:23:16.000
+usuário de computador da tecnologia de processamento paralelo que está acontecendo agora? I
+
+310
+00:23:16.000 --> 00:23:19.001
+A verdade é que uma das consequências é a computação técnica.
+
+311
+00:23:19.001 --> 00:23:25.000
+Em particular, está se tornando bimodalmente distribuída. Os problemas técnicos tendem a ser
+
+312
+00:23:25.000 --> 00:23:30.001
+resolvido onde o problema é formulado e quase a entrada e a saída são feitas
+
+313
+00:23:30.001 --> 00:23:34.000
+no ambiente do computador pessoal ou da estação de trabalho. Por meio do uso de
+
+314
+00:23:34.000 --> 00:23:39.000
+máquinas paralelas de rede com muito maior desempenho são usadas em um
+
+315
+00:23:39.000 --> 00:23:43.000
+O papel do servidor para fornecer uma computação de alto desempenho que é muito rigorosa
+
+316
+00:23:43.000 --> 00:23:47.000
+integrado no ambiente do usuário de computador pessoal ou da estação de trabalho
+
+317
+00:23:47.000 --> 00:23:49.001
+do usuário. Vamos ter que mudar nossa maneira de pensar sobre a forma como programamos
+
+318
+00:23:49.001 --> 00:23:55.000
+Utilizar as máquinas de forma eficaz. Depende de qual classe de
+
+319
+00:23:55.000 --> 00:23:56.001
+máquina que você vai tentar e usar.
+
+320
+00:23:56.001 --> 00:24:00.001
+Para usar um hypercube, por exemplo, eu acho que vai precisar de um novo
+
+321
+00:24:00.001 --> 00:24:04.001
+linguagens de programação ou, pelo menos, novas técnicas de programações. Como eu disse antes,
+
+322
+00:24:04.001 --> 00:24:09.001
+O objetivo que eu tinha era ser capaz de obter eficiência razoável como você adicionou números
+
+323
+00:24:09.001 --> 00:24:15.001
+de processadores, mesmo para línguas como Fortran, que tradicionalmente eram usadas apenas
+
+324
+00:24:15.001 --> 00:24:19.000
+Processamento em escalar. Eu acho que os dois acontecerão.
+
+325
+00:24:19.001 --> 00:24:23.000
+Jeffrey, falando da competição, ouvimos muito sobre o trabalho japonês em
+
+326
+00:24:23.000 --> 00:24:25.000
+Processamento em paralelo. Como é que o esforço americano
+
+327
+00:24:25.000 --> 00:24:27.000
+As empresas comparam com o que está acontecendo no Japão?
+
+328
+00:24:27.001 --> 00:24:31.000
+Bem, neste mercado específico, o mercado, Craig refere-se ao carregador de lacunas.
+
+329
+00:24:31.001 --> 00:24:35.000
+Na verdade, são as empresas americanas que tomam a liderança. A multidão do Japão
+
+330
+00:24:35.000 --> 00:24:39.001
+O esforço está realmente no topo da área atualmente servida pela pesquisa de Craig
+
+331
+00:24:39.001 --> 00:24:44.001
+e dados controlados. Agora, é esta outra área que eu tenho a sensação de onde o
+
+332
+00:24:44.001 --> 00:24:47.001
+hardware está um pouco acima do software e realmente o trabalho que tem que ser
+
+333
+00:24:47.001 --> 00:24:52.001
+O objetivo é encontrar mais maneiras de utilizar a tecnologia. Acredito que o significativo
+
+334
+00:24:52.001 --> 00:24:56.001
+O progresso foi feito recentemente em ambas as áreas, tanto no desenvolvimento de novas
+
+335
+00:24:56.001 --> 00:25:00.001
+linguagem e também no desenvolvimento de tecnologia de compilação melhorada que será
+
+336
+00:25:00.001 --> 00:25:06.000
+permite que o paralelismo seja encontrado em um baixo nível e mapeado em máquinas que têm
+
+337
+00:25:06.000 --> 00:25:10.000
+Foi muito cuidadosamente projetado para apoiar isso. Além disso, parece que o foco
+
+338
+00:25:10.000 --> 00:25:15.000
+Na verdade, está no mundo científico em certa medida. É verdade ou vemos o negócio?
+
+339
+00:25:15.000 --> 00:25:18.001
+Aplicações para processamento paralelo? Acredito que haverá negócios
+
+340
+00:25:18.001 --> 00:25:22.001
+aplicativos pessoalmente, eu acredito, especialmente na arena de gerenciamento de dados.
+
+341
+00:25:22.001 --> 00:25:27.000
+Há uma grande quantidade de paralelismo potencial a existir lá. Eu acho que o
+
+342
+00:25:27.000 --> 00:25:30.001
+empresas, por exemplo, como a nossa e a Sequin e outras empresas startup têm
+
+343
+00:25:30.001 --> 00:25:34.001
+conduzido para a engenharia de alto desempenho e a computação científica
+
+344
+00:25:34.001 --> 00:25:38.000
+mercado, em parte apenas devido às condições de mercado na presença dos principais jogadores
+
+345
+00:25:38.000 --> 00:25:45.000
+na arena de processamento de dados e em parte porque a tecnologia é muito aplicável
+
+346
+00:25:45.000 --> 00:25:50.000
+ou mais facilmente aplicável a uma ampla gama de problemas de engenharia. Os senhores,
+
+347
+00:25:50.000 --> 00:25:54.001
+Estamos fora do tempo. Precisamos de televisão paralela. em Gary. Ok, muito obrigado
+
+348
+00:25:54.001 --> 00:26:11.000
+por estar conosco. Estou de volta em apenas um no arquivo de acesso aleatório esta semana, U
+
+349
+00:26:11.000 --> 00:26:15.000
+e S. Cientistas soviéticos chegaram a um acordo tentativo sobre um novo computador
+
+350
+00:26:15.000 --> 00:26:19.000
+rede que vai ligar o Instituto Soviético de Sistemas Automáticos em Moscou com
+
+351
+00:26:19.000 --> 00:26:22.001
+O Instituto de Tecnologia de Nova Jersey. A nova rede de computadores permitirá
+
+352
+00:26:22.001 --> 00:26:26.001
+Cientistas soviéticos e americanos partilham bases de dados e trabalham juntos em uma variedade de
+
+353
+00:26:26.001 --> 00:26:31.001
+de projetos de investigação. IBM anuncia recentes reduções de preços e um mercado suave para
+
+354
+00:26:31.001 --> 00:26:35.000
+Os gastos de capital pressionarão os lucros da IBM no primeiro trimestre do ano
+
+355
+00:26:35.000 --> 00:26:39.001
+Em 1986. O relatório da IBM sugere que o currículo de computador muito esperado é
+
+356
+00:26:39.001 --> 00:26:43.001
+Não muito aqui ainda. Eles ainda estão comemorando seu zenith após o IRS
+
+357
+00:26:43.001 --> 00:26:49.001
+Decisão de comprar US$ 28 milhões do Zenith Z171 lap portátil e do IRS
+
+358
+00:26:49.001 --> 00:26:53.000
+A decisão está causando alguns choques. Analistas dizem que a decisão deve ser tomada com cinco
+
+359
+00:26:53.000 --> 00:26:57.001
+e uma máquina de disco de quatro polegadas ajudará o formato maior a permanecer à frente de
+
+360
+00:26:57.001 --> 00:26:59.000
+As microflópias de três e meio polegadas.
+
+361
+00:26:59.000 --> 00:27:03.001
+Além do acordo de hardware zenith, o IRS também selecionou pacotes de software
+
+362
+00:27:03.001 --> 00:27:07.001
+para acompanhar as máquinas. As janelas eram poli como acessório de escritório, a
+
+363
+00:27:07.001 --> 00:27:12.001
+Navel como o pacote integrado, e a nossa base 5000 como a base de dados. Em nosso
+
+364
+00:27:12.001 --> 00:27:16.000
+atualização legislativa, o Comitê de Assuntos do Governo do Senado divulgou uma
+
+365
+00:27:16.000 --> 00:27:19.000
+Notícias que criticam os EUA práticas de segurança informática do governo.
+
+366
+00:27:19.001 --> 00:27:23.001
+O relatório diz que há uma verificação inadequada do pessoal de computador e falta de
+
+367
+00:27:23.001 --> 00:27:28.001
+Planejamento no âmbito da análise de riscos de segurança informática. Um relatório nacional da
+
+368
+00:27:28.001 --> 00:27:32.000
+Conselho Nacional de Ciência diz que pesquisa de alta tecnologia americana é basicamente em bom
+
+369
+00:27:32.000 --> 00:27:36.001
+A forma. O relatório, apesar de alertar sobre um papel militar crescente na investigação e
+
+370
+00:27:36.001 --> 00:27:40.001
+diminuição no papel geral do governo federal como fundador de R&amp;D. O que
+
+371
+00:27:40.001 --> 00:27:44.000
+Segundo o relatório, a maior fraqueza atualmente é a matemática e a ciência na
+
+372
+00:27:44.000 --> 00:27:48.000
+nível do ensino médio. Em Michigan, a influência da automação no automóvel
+
+373
+00:27:48.000 --> 00:27:52.000
+A indústria está mudando o currículo do ensino médio. Uma escola em Grand Rapids é
+
+374
+00:27:52.000 --> 00:27:56.000
+Agora ensinando os quatro R de leitura, escrita, aritmética e robótica. Oriente
+
+375
+00:27:56.000 --> 00:27:59.001
+A Kentwood High comprou seis robôs industriais para iniciar o seu novo programa.
+
+376
+00:28:00.001 --> 00:28:05.000
+Finalmente, um programador em Iowa vem com algo chamado BABL123. É um
+
+377
+00:28:05.000 --> 00:28:09.000
+programa de síntese de fala que é projetado para falar de uma maneira calmante e amorosa para
+
+378
+00:28:09.000 --> 00:28:14.000
+Os Hogs. Pesquisadores de porcos dizem que os porcos comem mais e ganham gordura mais rápido quando são
+
+379
+00:28:14.000 --> 00:28:18.000
+feliz, e a pesquisa sugere que falar gentilmente os faz felizes.
+
+380
+00:28:18.001 --> 00:28:22.001
+O BABL123 está sendo testado este mês em Fairfield, Iowa. É por isso que é
+
+381
+00:28:22.001 --> 00:28:24.000
+Crônicas da Semana. Vamos te ver a próxima vez.
+
+382
+00:29:20.000 --> 00:29:22.000
+[...]

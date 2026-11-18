@@ -1,0 +1,2029 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:22.001
+[...]
+
+2
+00:00:32.000 --> 00:00:36.000
+Estes são os escritórios da Frame Technology em San Jose, Califórnia.
+
+3
+00:00:36.001 --> 00:00:41.000
+Eles têm computadores Macintosh aqui, estações de trabalho Sun, PC compatíveis, mas o
+
+4
+00:00:41.000 --> 00:00:44.000
+O fio comum que liga todos os seus sistemas em conjunto é Unix.
+
+5
+00:00:44.001 --> 00:00:46.000
+De repente, o Unix está quente.
+
+6
+00:00:46.001 --> 00:00:50.000
+O sistema operacional antigo que costumava ser considerado demasiado difícil para a maioria dos
+
+7
+00:00:50.000 --> 00:00:54.001
+pessoas a usar é lentamente emergindo como um sistema operacional de escolha como usuários
+
+8
+00:00:54.001 --> 00:00:57.001
+Descubra seu poder e como os vendedores começam a pedalá-lo
+
+9
+00:00:57.001 --> 00:00:59.000
+em uma interface de usuário mais amigável.
+
+10
+00:00:59.001 --> 00:01:02.000
+Hoje vamos dar uma olhada no renascimento da Unix sobre isso
+
+11
+00:01:02.000 --> 00:01:04.000
+Edição das crônicas de computador.
+
+12
+00:01:25.001 --> 00:01:30.001
+As crônicas de computador são tornadas possíveis em parte por McGraw-Hill, editores de
+
+13
+00:01:30.001 --> 00:01:34.001
+Byte Magazine e VIX, o intercâmbio de informações Byte.
+
+14
+00:01:35.001 --> 00:01:40.000
+Em impressão e on-line, Byte e VIX servem profissionais de computador em todo o mundo com
+
+15
+00:01:40.000 --> 00:01:44.000
+informações detalhadas sobre novos hardware, software e tecnologias.
+
+16
+00:01:48.001 --> 00:01:50.000
+Bem-vindo às crônicas de computador.
+
+17
+00:01:50.000 --> 00:01:52.000
+Eu sou Stuart Chafay e este é Gary Kildall.
+
+18
+00:01:52.001 --> 00:01:55.000
+Gary, este é Rick Davis da Frame Technology Corporation.
+
+19
+00:01:55.000 --> 00:01:58.001
+Rick está usando o que é, sem dúvida, o mais falado sobre o novo computador do
+
+20
+00:01:58.001 --> 00:02:00.000
+O próximo computador de Steve Jobs.
+
+21
+00:02:00.001 --> 00:02:03.001
+Muitas características interessantes que podemos destacar sobre o próximo, mas eu quero
+
+22
+00:02:03.001 --> 00:02:05.000
+O foco é o fato de que ele funciona sob a Unix.
+
+23
+00:02:05.000 --> 00:02:08.001
+Unix tem sido cerca de 18 anos ou mais, mas principalmente na comunidade universitária,
+
+24
+00:02:09.000 --> 00:02:12.000
+A comunidade tecnológica, de repente todos estão interessados em Unix.
+
+25
+00:02:12.000 --> 00:02:12.001
+Por que ?
+
+26
+00:02:12.001 --> 00:02:16.000
+Bem, Stuart, como você sabe, o problema tradicional com Unix e PC é que Unix
+
+27
+00:02:16.000 --> 00:02:17.001
+Realmente requer muito poder de computação.
+
+28
+00:02:17.001 --> 00:02:20.000
+Muita memória central, muita backup
+
+29
+00:02:20.000 --> 00:02:22.000
+armazenamento, muito processamento de alto desempenho.
+
+30
+00:02:22.001 --> 00:02:23.001
+Nós não temos isso em PCs.
+
+31
+00:02:24.000 --> 00:02:27.001
+Agora, começamos a ver as estações de trabalho entrando no mercado de PC de alto nível e o
+
+32
+00:02:27.001 --> 00:02:30.000
+A demanda por sistemas multitasking e multi-usuaria.
+
+33
+00:02:30.001 --> 00:02:34.001
+Unix é escrito em C, nos dá portabilidade, relatividade através de muitos
+
+34
+00:02:34.001 --> 00:02:37.000
+diferentes plataformas como o próximo, o sol, Apollo e assim por diante.
+
+35
+00:02:37.001 --> 00:02:41.000
+E também estamos vendo padrões evoluindo como os formatos de arquivo de objeto, gráficos
+
+36
+00:02:41.000 --> 00:02:42.001
+padrões, padrões de janela e assim por diante.
+
+37
+00:02:43.000 --> 00:02:46.000
+Isso torna a Unix muito viável no mercado de PC de alto nível.
+
+38
+00:02:46.001 --> 00:02:48.001
+Vamos olhar para o poder da Unix em
+
+39
+00:02:48.001 --> 00:02:50.000
+seu ambiente de trabalho tradicional.
+
+40
+00:02:50.000 --> 00:02:54.000
+Vamos ver algumas dessas novas interfaces gráficas de usuário e vamos olhar para o
+
+41
+00:02:54.000 --> 00:02:56.000
+Implementação de uma versão do Unix no Macintosh.
+
+42
+00:02:56.001 --> 00:03:00.001
+Vamos começar com um olhar de fundo sobre a evolução da Unix e para esse relatório vamos
+
+43
+00:03:00.001 --> 00:03:02.001
+Visite a Universidade da Califórnia em Berkeley.
+
+44
+00:03:05.000 --> 00:03:11.000
+Começou sua vida em Bell Labs no início dos anos 70, ganhou a aprovação da AT&amp;T
+
+45
+00:03:11.000 --> 00:03:15.001
+e foi adotada por universidades em todo o país que apreciaram a
+
+46
+00:03:15.001 --> 00:03:18.001
+A portabilidade e seus talentos multitasking.
+
+47
+00:03:19.001 --> 00:03:24.000
+É Unix, um sistema operacional com tantas variantes que você precisa de uma família
+
+48
+00:03:24.000 --> 00:03:25.001
+árvore para rastrear suas origens.
+
+49
+00:03:26.001 --> 00:03:31.000
+Um dos primeiros centros de desenvolvimento da Unix é a Universidade da Califórnia
+
+50
+00:03:31.000 --> 00:03:37.000
+em Berkeley, responsável por uma das principais ramas da Unix chamada BSD para
+
+51
+00:03:37.000 --> 00:03:38.001
+Distribuição de Software Berkeley.
+
+52
+00:03:39.000 --> 00:03:43.001
+Berkeley recebeu uma versão bastante precoce da Unix de Bell Labs e começou a escrever
+
+53
+00:03:43.001 --> 00:03:46.000
+Programas adicionais para isso, começou a adicionar coisas.
+
+54
+00:03:46.001 --> 00:03:51.000
+Quando uma versão maior de muitos computadores saiu, Berkeley adicionou uma série de novos
+
+55
+00:03:51.000 --> 00:03:53.000
+característica do sistema que aproveitou o novo computador.
+
+56
+00:03:54.000 --> 00:03:57.001
+Nós fizemos o software da maneira que as pessoas queriam o software aqui.
+
+57
+00:03:58.000 --> 00:04:01.000
+Como resultado, houve uma série de outras universidades e pesquisas
+
+58
+00:04:01.000 --> 00:04:02.001
+laboratórios que estavam interessados na mesma coisa.
+
+59
+00:04:03.000 --> 00:04:07.000
+O sistema operacional Unix tem um apelo especial para os programadores devido a
+
+60
+00:04:07.000 --> 00:04:08.001
+Muitas ferramentas de programação.
+
+61
+00:04:09.001 --> 00:04:14.001
+O Unix também é multitasking para que várias aplicações possam ser executadas simultaneamente.
+
+62
+00:04:15.001 --> 00:04:20.000
+É particularmente adequado para ambientes de múltiplos usuários e oferece estruturado
+
+63
+00:04:20.000 --> 00:04:24.000
+Programação, uma maneira de dividir problemas em parcelas menores.
+
+64
+00:04:25.001 --> 00:04:30.000
+Por outro lado, a consequência desses diversos fluxos de desenvolvimento tem
+
+65
+00:04:30.000 --> 00:04:31.001
+Falta de padrões.
+
+66
+00:04:32.001 --> 00:04:35.001
+Para combinar os melhores elementos dessas várias praias é o
+
+67
+00:04:35.001 --> 00:04:37.001
+O último desafio da Unix.
+
+68
+00:04:38.000 --> 00:04:40.001
+Em geral, os padrões estão sendo selecionados e escolhidos entre os
+
+69
+00:04:40.001 --> 00:04:42.000
+diferentes características de diferentes versões.
+
+70
+00:04:43.000 --> 00:04:46.001
+E, como resultado, as versões padrão não serão como qualquer versão existente,
+
+71
+00:04:46.001 --> 00:04:48.000
+Eles vão ser um lugar no meio.
+
+72
+00:04:48.001 --> 00:04:53.001
+Por exemplo, vários programas têm opções e os padrões especificam uma
+
+73
+00:04:53.001 --> 00:04:57.001
+Um número menor de opções do que essas serão todas iguais em cada versão.
+
+74
+00:05:09.001 --> 00:05:12.001
+Junte-se a nós no estúdio agora é Karen Losardi, o produto de Karen
+
+75
+00:05:12.001 --> 00:05:14.000
+Diretor com Sun Microsystems.
+
+76
+00:05:14.000 --> 00:05:14.001
+O Gary?
+
+77
+00:05:15.000 --> 00:05:19.001
+Karen, Unix teve uma espécie de má reputação no passado por uma série de itens
+
+78
+00:05:19.001 --> 00:05:23.000
+como confiabilidade e falta de uma boa interface de usuário e assim por diante.
+
+79
+00:05:23.001 --> 00:05:25.001
+Como isso mudou com a Unix nos últimos anos?
+
+80
+00:05:25.001 --> 00:05:29.000
+Bem, a Unix ganhou um grande impulso nos últimos dias.
+
+81
+00:05:29.000 --> 00:05:30.001
+anos e há razões para isso.
+
+82
+00:05:31.000 --> 00:05:35.000
+Como você sabe, é um sistema operacional muito poderoso e suporta multitasking assim
+
+83
+00:05:35.000 --> 00:05:37.000
+Você pode fazer mais de uma função ao mesmo tempo.
+
+84
+00:05:38.000 --> 00:05:42.000
+Ele também funciona em uma variedade de plataformas de hardware e muitos fornecedores no
+
+85
+00:05:42.000 --> 00:05:43.001
+A indústria apoia a Unix hoje.
+
+86
+00:05:44.001 --> 00:05:48.001
+Uma das coisas mais importantes sobre a Unix é que suporta um monte de hardware que
+
+87
+00:05:48.001 --> 00:05:51.000
+em redes, em redes muito, muito grandes.
+
+88
+00:05:51.000 --> 00:05:53.000
+E as questões de confiabilidade?
+
+89
+00:05:53.000 --> 00:05:54.001
+Será que isso é um problema com a Unix?
+
+90
+00:05:55.000 --> 00:05:56.001
+Não é isso que estamos a encontrar neste momento.
+
+91
+00:05:57.000 --> 00:05:58.001
+E o problema da interface que Karen mencionou também?
+
+92
+00:05:59.000 --> 00:06:00.000
+Sim, isso já foi um problema.
+
+93
+00:06:00.000 --> 00:06:05.000
+Como você sabe nas universidades hoje muitos desenvolvedores aprendem Unix, eles escrevem C
+
+94
+00:06:05.000 --> 00:06:07.000
+aplicativos e assim por diante e eles se movem
+
+95
+00:06:07.000 --> 00:06:08.001
+entrar na indústria e escrever aplicativos.
+
+96
+00:06:09.000 --> 00:06:14.000
+Então há muito apoio dos desenvolvedores e usuários que acham que é hostil e
+
+97
+00:06:14.000 --> 00:06:16.000
+Muitos deles têm muito, muito medo disso.
+
+98
+00:06:16.000 --> 00:06:18.000
+E esta é uma das coisas que você abordou com o olhar aberto.
+
+99
+00:06:18.000 --> 00:06:18.001
+Correto e Correto.
+
+100
+00:06:18.001 --> 00:06:20.001
+Agora, Karen, antes de entrar na demo você poderia descrever
+
+101
+00:06:20.001 --> 00:06:22.001
+Basicamente, que tipo de hardware estamos lidando com aqui?
+
+102
+00:06:22.001 --> 00:06:28.000
+Sim, este é um 386i, Sun 386 i e fornece-lhe a capacidade de executar ambos DOS
+
+103
+00:06:28.000 --> 00:06:30.000
+Unix no mesmo ecrã.
+
+104
+00:06:30.001 --> 00:06:32.001
+Então você pode abrir uma janela e executar uma aplicação DOS
+
+105
+00:06:32.001 --> 00:06:34.000
+em outra janela e executar uma aplicação Unix.
+
+106
+00:06:34.000 --> 00:06:36.001
+E qual seria o custo aproximado de um pedaço de hardware como esse custo?
+
+107
+00:06:37.000 --> 00:06:38.000
+Menos de 5 mil dólares.
+
+108
+00:06:38.001 --> 00:06:41.000
+Ok, vamos ver o que você tem aqui.
+
+109
+00:06:41.000 --> 00:06:42.001
+Esta é uma interface de olhar bastante familiar.
+
+110
+00:06:43.000 --> 00:06:44.000
+De fato, diga-nos sobre o OpenLook.
+
+111
+00:06:44.000 --> 00:06:47.001
+OK, o OpenLook é uma interface de usuário gráfica que foi projetada pela Sun e
+
+112
+00:06:47.001 --> 00:06:49.000
+AT&amp;T em um esforço de desenvolvimento conjunto.
+
+113
+00:06:49.000 --> 00:06:51.001
+Nós também licenciamos tecnologia da Xerox Corporation.
+
+114
+00:06:52.001 --> 00:06:55.001
+O que eu fiz hoje é trazer quatro aplicações que realmente têm
+
+115
+00:06:55.001 --> 00:06:57.001
+Implementou a especificação OpenLook.
+
+116
+00:06:58.000 --> 00:06:59.001
+O OpenLook não é um produto de software.
+
+117
+00:07:00.001 --> 00:07:02.000
+Na verdade, ele é composto por dois livros.
+
+118
+00:07:02.001 --> 00:07:05.001
+É um guia de estilo para o desenvolvedor sobre como projetar uma aplicação e
+
+119
+00:07:05.001 --> 00:07:08.001
+especificações para o designer de ferramentas.
+
+120
+00:07:09.000 --> 00:07:10.001
+Bem, mostre-nos na tela como você realmente usaria.
+
+121
+00:07:10.001 --> 00:07:12.000
+São quatro aplicações.
+
+122
+00:07:12.000 --> 00:07:16.001
+Temos aqui SunWrite, que é o que você vê como o que obtém editor, SunPaint,
+
+123
+00:07:17.000 --> 00:07:21.001
+que é uma aplicação de pintura ou o que chamamos de aplicação raster.
+
+124
+00:07:22.001 --> 00:07:26.000
+E este é o SunDRAW, que é um editor de objetos ou um aplicativo de desenho.
+
+125
+00:07:26.001 --> 00:07:27.000
+Este é um gerente de arquivos.
+
+126
+00:07:27.000 --> 00:07:28.000
+Isso é crítico.
+
+127
+00:07:28.001 --> 00:07:34.001
+Isso permite que você veja gráficamente o sistema de arquivos Unix diretamente na máquina.
+
+128
+00:07:35.000 --> 00:07:40.000
+Como você sabe, a maioria dos usuários que trabalharam com a Unix e os usuários hoje, comando cru
+
+129
+00:07:40.000 --> 00:07:41.001
+em uma linha de comando para chegar aos seus arquivos.
+
+130
+00:07:41.001 --> 00:07:42.001
+Tudo foi por memória.
+
+131
+00:07:43.000 --> 00:07:45.000
+Esta é uma das partes mais integrais do OpenLook.
+
+132
+00:07:45.001 --> 00:07:47.001
+Mostre-nos como você poderia usá-lo agora e entrar em uma dessas aplicações.
+
+133
+00:07:47.001 --> 00:07:52.001
+O que vamos fazer é, em primeiro lugar, o que eu gostaria de mostrar-lhe é como você vê neste
+
+134
+00:07:52.001 --> 00:07:54.001
+A área em direção é uma área de controle.
+
+135
+00:07:54.001 --> 00:07:56.000
+Cada uma dessas janelas tem uma.
+
+136
+00:07:56.000 --> 00:07:58.000
+Tenha em mente que há botões.
+
+137
+00:07:58.001 --> 00:08:00.001
+Todos esses botões têm rótulos comuns.
+
+138
+00:08:01.000 --> 00:08:03.001
+Como você pode ver, cada um tem arquivo, visualização, edição.
+
+139
+00:08:04.000 --> 00:08:07.000
+O que é notável sobre isso é cada aplicação que você vai
+
+140
+00:08:07.000 --> 00:08:09.000
+Para entrar, a curva de aprendizagem vai para baixo.
+
+141
+00:08:10.000 --> 00:08:16.000
+Então, por exemplo, se eu queria fechar esta janela, eu simplesmente clique na janela
+
+142
+00:08:16.000 --> 00:08:18.001
+Marque e torna-se um ícone no desktop.
+
+143
+00:08:19.001 --> 00:08:20.001
+Mais uma vez a mesma coisa aqui.
+
+144
+00:08:21.001 --> 00:08:23.001
+E você pode colocá-los fora em seu desktop e
+
+145
+00:08:23.001 --> 00:08:25.001
+Reorganize-os de novo, de qualquer forma que você quiser.
+
+146
+00:08:25.001 --> 00:08:29.000
+Você pode abrir a caixa de pintura, por exemplo, ou fazer algumas coisas?
+
+147
+00:08:29.000 --> 00:08:32.000
+Este é o tipo de interface que a maioria dos usuários estão familiarizados com até agora.
+
+148
+00:08:32.001 --> 00:08:33.000
+Não há nada novo aqui.
+
+149
+00:08:33.000 --> 00:08:35.000
+Você está tentando torná-lo confortável com as coisas que existem.
+
+150
+00:08:35.000 --> 00:08:37.001
+Algumas coisas, no entanto, que são muito boas sobre OpenLook,
+
+151
+00:08:38.000 --> 00:08:39.001
+Eu posso prever as minhas operações.
+
+152
+00:08:39.001 --> 00:08:42.000
+Por exemplo, no arquivo, ele diz abrir ou salvar.
+
+153
+00:08:42.000 --> 00:08:45.001
+Na visão, pode ser uma canva que traz a janela apropriada.
+
+154
+00:08:47.001 --> 00:08:51.001
+Na edit, você pode realmente pin-up um menu.
+
+155
+00:08:52.001 --> 00:08:55.001
+E você pode mover isso para qualquer local que você deseja.
+
+156
+00:08:56.000 --> 00:09:00.000
+O que é benéfico para o usuário é que eu não tenho que voltar para o
+
+157
+00:09:00.000 --> 00:09:02.000
+área de controle para acessar os botões todo o tempo.
+
+158
+00:09:02.001 --> 00:09:05.001
+É o movimento mínimo do mouse, que você não tem em outras interfaces de usuário.
+
+159
+00:09:06.001 --> 00:09:09.000
+Depois de tirar o pin, ele vai embora.
+
+160
+00:09:09.001 --> 00:09:11.000
+A mesma coisa para cada janela aqui.
+
+161
+00:09:11.001 --> 00:09:12.001
+Pule o pin, ele desaparece.
+
+162
+00:09:13.000 --> 00:09:20.000
+Agora, se quisermos realmente usar esta aplicação, posso trazer
+
+163
+00:09:20.000 --> 00:09:22.001
+Para isso, selecione com quem eu quero trabalhar.
+
+164
+00:09:23.000 --> 00:09:26.001
+Eu posso facilmente movê-lo fora do meu caminho porque eu poderia querer fazer um outro
+
+165
+00:09:26.001 --> 00:09:28.001
+As coisas, e trazer diretamente para a janela.
+
+166
+00:09:29.001 --> 00:09:35.001
+A qualquer momento, eu também posso alterar o padrão de borracha, selecione qualquer um destes.
+
+167
+00:09:36.000 --> 00:09:39.000
+Mais uma vez, diga-lhe ir embora e mudá-lo.
+
+168
+00:09:39.001 --> 00:09:41.001
+Então tudo é muito intuitivo, muito, muito amigável.
+
+169
+00:09:42.001 --> 00:09:46.000
+Agora, uma das coisas mais importantes, no entanto, que eu encontrei trabalhando com o
+
+170
+00:09:46.000 --> 00:09:51.001
+interface é que outras interfaces não utilizam, é com o arquivo gerente, você
+
+171
+00:09:51.001 --> 00:09:53.001
+Você pode realmente usar algo chamado drag e drop.
+
+172
+00:09:54.001 --> 00:09:58.001
+Se você quiser realmente carregar um arquivo na janela, tudo que tenho que fazer é capturar
+
+173
+00:09:58.001 --> 00:10:03.000
+o ícone, colocá-lo acima da janela, e na verdade carrega esse arquivo
+
+174
+00:10:03.000 --> 00:10:05.001
+Entrar na janela automaticamente.
+
+175
+00:10:07.001 --> 00:10:12.001
+Agora, se o arquivo inteiro não está exibindo na tela, e vamos apenas colocar este
+
+176
+00:10:12.001 --> 00:10:18.000
+para a parte de trás, eu realmente posso usar as barras de rolamento a qualquer momento para manipular o
+
+177
+00:10:18.000 --> 00:10:19.001
+janela para ver o resto do arquivo.
+
+178
+00:10:20.001 --> 00:10:25.000
+Se eu estender a janela com o que chamamos de ângulos de resisão, em qualquer um dos
+
+179
+00:10:25.000 --> 00:10:30.000
+quatro cantos, em seguida, as barreiras de rolamento reais, se não forem necessárias, vão desaparecer.
+
+180
+00:10:30.001 --> 00:10:34.000
+Neste caso, nem todo o arquivo está ainda na tela, então eles são residentes.
+
+181
+00:10:35.000 --> 00:10:37.001
+Há muitas aplicações que estão sendo escritas agora para OpenLook?
+
+182
+00:10:37.001 --> 00:10:41.000
+E sim. Na verdade, temos mais de 1.500 aplicações que estão sendo
+
+183
+00:10:41.000 --> 00:10:43.000
+Convertido para o suporte OpenLook.
+
+184
+00:10:43.000 --> 00:10:47.000
+O que é realmente emocionante é que as aplicações que você vê aqui hoje são de transporte.
+
+185
+00:10:47.001 --> 00:10:49.000
+Este não é vaporware, eles estão disponíveis.
+
+186
+00:10:50.000 --> 00:10:54.001
+Nós também tínhamos os kites de desenvolvedores precoce que nossos desenvolvedor estão tomando, então
+
+187
+00:10:54.001 --> 00:10:56.001
+Eles estão realmente trabalhando e projetando aplicações hoje.
+
+188
+00:10:56.001 --> 00:11:01.000
+Apenas voltando muito rapidamente, estou muito surpreso com a marca de preço de US $ 5.000.
+
+189
+00:11:01.001 --> 00:11:06.000
+Bem, temos uma vasta gama de estações de trabalho que Sun oferece, e você pode começar com
+
+190
+00:11:06.000 --> 00:11:07.001
+Um final muito baixo e vai muito caro.
+
+191
+00:11:07.001 --> 00:11:09.001
+Isso não seria necessariamente o US$ 5 mil.
+
+192
+00:11:09.001 --> 00:11:10.001
+Muitos e-mails podem ser bons.
+
+193
+00:11:10.001 --> 00:11:10.001
+[...]
+
+194
+00:11:11.000 --> 00:11:13.000
+Karen, muito obrigada por se juntar a nós.
+
+195
+00:11:13.000 --> 00:11:16.001
+Estamos familiarizados com a Unix, é claro, sob muitos nomes e sob muitas versões.
+
+196
+00:11:16.001 --> 00:11:20.001
+Uma das versões populares da Unix é chamada de SEO-Zenix, desenvolvida por um
+
+197
+00:11:20.001 --> 00:11:22.000
+A operação foi chamada Operação Santa Cruz.
+
+198
+00:11:22.001 --> 00:11:24.000
+Temos um relatório de Wendy Woods.
+
+199
+00:11:26.001 --> 00:11:31.001
+O Open Desktop é a última tentativa de vender Unix para a principal empresa América.
+
+200
+00:11:32.000 --> 00:11:37.001
+O Open Desktop combina Zenix, a forma de Operações de Santa Cruz de Unix, que
+
+201
+00:11:37.001 --> 00:11:42.001
+PCs, com outras ferramentas padrão da indústria, e um usuário gráfico
+
+202
+00:11:42.001 --> 00:11:44.000
+A interface é chamada Motif.
+
+203
+00:11:45.000 --> 00:11:49.001
+Todos eles são projetados para oferecer uma forma palatável de Unix para consumo geral.
+
+204
+00:11:50.000 --> 00:11:54.001
+Essas ofertas de sistema aberto nunca foram disponíveis antes neste tipo de
+
+205
+00:11:54.001 --> 00:11:58.001
+plataforma, este amplamente disponível, pré-integrado, pronto para ir.
+
+206
+00:11:59.000 --> 00:12:01.001
+E isso é realmente o valor acrescentado do Open Desktop.
+
+207
+00:12:02.000 --> 00:12:06.001
+Não é uma nova peça de produto em si, mas é a coleção e
+
+208
+00:12:06.001 --> 00:12:10.001
+A normalização de todos os padrões de sistema aberto disponíveis hoje.
+
+209
+00:12:11.001 --> 00:12:16.001
+Com o Open Desktop, o Windows exibe várias aplicações que funcionam ou em um
+
+210
+00:12:16.001 --> 00:12:18.001
+PC ou em um mainframe.
+
+211
+00:12:19.001 --> 00:12:22.000
+Os arquivos são compartilhados sem fio entre plataformas de hardware.
+
+212
+00:12:22.001 --> 00:12:25.001
+A potência do 8.0386 é tapada.
+
+213
+00:12:26.000 --> 00:12:31.001
+O ambiente Open Desktop espera ser concluído em setembro, e o SEO
+
+214
+00:12:31.001 --> 00:12:36.000
+O recorde de sucesso atraiu alguns grandes jogadores para participar da
+
+215
+00:12:36.000 --> 00:12:38.001
+O projeto, entre eles, DEC e Tandy.
+
+216
+00:12:39.000 --> 00:12:44.000
+A Operação Santa Cruz duplicou suas vendas em cada um dos últimos 10 anos e tem
+
+217
+00:12:44.000 --> 00:12:47.001
+Apenas alguns, até agora, têm mais de 800 funcionários.
+
+218
+00:12:48.001 --> 00:12:52.000
+Mas talvez a maior medida de seu sucesso vem da gigante Microsoft
+
+219
+00:12:52.000 --> 00:12:56.001
+A empresa, que acabou de adquirir cerca de 20% da empresa.
+
+220
+00:12:57.001 --> 00:13:01.000
+Em Santa Cruz, Califórnia, para as crônicas de computador, eu sou Wendy Woods.
+
+221
+00:13:12.000 --> 00:13:14.001
+Hoje em dia, o estúdio está com Janet Dobbs.
+
+222
+00:13:14.001 --> 00:13:16.001
+Janet é um gerente de produtos com Hewlett Packard.
+
+223
+00:13:17.000 --> 00:13:20.000
+Janet, antes de entrarmos no motivo aqui, alguns Hewlett
+
+224
+00:13:20.000 --> 00:13:22.000
+Packard, eu sei que está na tela aqui.
+
+225
+00:13:22.000 --> 00:13:24.000
+O caminho no fundo é um pouco de Unix lá.
+
+226
+00:13:24.000 --> 00:13:25.000
+É como um diretório.
+
+227
+00:13:25.000 --> 00:13:29.000
+E, portanto, todos sabemos que a Unix está subjacente a toda esta interface de usuário, que
+
+228
+00:13:29.000 --> 00:13:30.001
+É diferente da Unix.
+
+229
+00:13:30.001 --> 00:13:32.001
+É apenas uma peça diferente de software.
+
+230
+00:13:33.001 --> 00:13:36.001
+Por que a Unix fornece uma boa base para o seu produto?
+
+231
+00:13:37.000 --> 00:13:41.001
+Unix é um sistema operacional poderoso em que permite grandes quantidades de memória
+
+232
+00:13:41.001 --> 00:13:47.001
+e grandes programas que são usados em ambientes técnicos, pisos de fábrica,
+
+233
+00:13:47.001 --> 00:13:53.000
+grandes bases de dados, é poderoso, é rápido, é desconfortável.
+
+234
+00:13:53.001 --> 00:13:57.000
+Assim, foi muito bem sucedido em ambientes mais técnicos.
+
+235
+00:13:57.000 --> 00:13:59.000
+É por isso que a interface do usuário está à frente dela.
+
+236
+00:14:00.000 --> 00:14:02.001
+Bem, agora você pode nos dizer, como tivemos no último segmento, o que
+
+237
+00:14:02.001 --> 00:14:04.000
+Estamos trabalhando aqui em termos de hardware?
+
+238
+00:14:04.000 --> 00:14:06.000
+Claro que há alguns equipamentos no chão aqui.
+
+239
+00:14:06.001 --> 00:14:07.001
+Este é um HP 360.
+
+240
+00:14:08.001 --> 00:14:12.000
+Ele possui um processador 68030 Motorola.
+
+241
+00:14:12.000 --> 00:14:14.000
+Ele funciona em torno de 33 megahertz.
+
+242
+00:14:14.001 --> 00:14:15.001
+Qual o custo desta configuração?
+
+243
+00:14:16.001 --> 00:14:22.001
+A série de 300 estações de trabalho varia de cerca de 5000 a 60 a 70.000.
+
+244
+00:14:22.001 --> 00:14:26.000
+E uma configuração como esta vai de 10 a 15 mil.
+
+245
+00:14:26.000 --> 00:14:28.000
+Diga-nos sobre o Motif agora e a interface.
+
+246
+00:14:28.001 --> 00:14:30.001
+Em particular, como a sua abordagem é diferente do que
+
+247
+00:14:30.001 --> 00:14:32.000
+Já vimos no OpenLook?
+
+248
+00:14:32.001 --> 00:14:37.001
+OSF Motif é uma combinação de tecnologias de DEC e HP.
+
+249
+00:14:38.001 --> 00:14:43.000
+Se você notar na tela, as fronteiras 3D ao redor das janelas.
+
+250
+00:14:43.001 --> 00:14:48.000
+É uma visão melhorada da interface de usuário gráfica comum no PC
+
+251
+00:14:48.000 --> 00:14:52.000
+ambiente da Microsoft, tanto o Microsoft Windows e o Presentation Manager.
+
+252
+00:14:52.001 --> 00:14:59.000
+Portanto, aproveita a grande base instalada no PC
+
+253
+00:14:59.000 --> 00:15:03.000
+mercado e todos os trabalhos que foram feitos nas interfaces gráficas do usuário lá.
+
+254
+00:15:03.001 --> 00:15:05.001
+Essa é a principal diferença, a aparência gráfica?
+
+255
+00:15:06.000 --> 00:15:07.000
+Ou seja, vemos que parece muito diferente.
+
+256
+00:15:07.000 --> 00:15:09.000
+Ou funcionalmente, é realmente a mesma ideia básica?
+
+257
+00:15:09.000 --> 00:15:12.000
+O comportamento é baseado no que é encontrado no mercado de PC.
+
+258
+00:15:12.001 --> 00:15:16.001
+Assim, um usuário que já está familiarizado com o trabalho com PCs pode ir até um Unix
+
+259
+00:15:16.001 --> 00:15:21.000
+Estação de trabalho e não se preocupe se é OS2 ou Unix ou qualquer coisa.
+
+260
+00:15:21.001 --> 00:15:23.001
+O que eles vêem na tela é o que eles estão acostumados a ver.
+
+261
+00:15:23.001 --> 00:15:28.000
+E eles sabem como abrir aplicativos, mover-se neles.
+
+262
+00:15:28.000 --> 00:15:30.000
+Você poderia fazer isso por nós e nos mostrar como você realmente usa Motif?
+
+263
+00:15:30.001 --> 00:15:30.001
+E sim.
+
+264
+00:15:32.000 --> 00:15:37.000
+Por exemplo, se eu quiser mover uma janela e eu digo ao meu usuário do PC, eu sei que eu
+
+265
+00:15:37.000 --> 00:15:42.000
+coloque o indicador do mouse na barra de título, clique nele com o botão esquerdo e
+
+266
+00:15:42.000 --> 00:15:44.000
+Você pode mover essa janela em torno da tela.
+
+267
+00:15:45.000 --> 00:15:50.001
+Eu sei que posso ir para o canto superior esquerdo, segurar o botão do mouse esquerdo para baixo,
+
+268
+00:15:50.001 --> 00:15:54.001
+e eu tenho um menu de sistema, que para cada janela contém coisas
+
+269
+00:15:54.001 --> 00:15:56.000
+Como restaurar, mover, tamanho.
+
+270
+00:15:58.001 --> 00:16:03.000
+Se eu quiser iconificar uma janela, clique no ...
+
+271
+00:16:03.000 --> 00:16:07.000
+Há um botão de minimizar e maximizar que é encontrado no gerenciador de apresentação.
+
+272
+00:16:07.001 --> 00:16:13.000
+E no lado esquerdo, é minimizado, e eu posso clicar e iconify essa janela e
+
+273
+00:16:13.000 --> 00:16:14.001
+Ele se move em um ícone.
+
+274
+00:16:20.000 --> 00:16:23.001
+Eu posso trazer uma janela para o front-end clicando nessa janela.
+
+275
+00:16:24.000 --> 00:16:28.001
+A fonte de luz se move para a fronteira, e assim eu posso dizer que janela ou que
+
+276
+00:16:28.001 --> 00:16:30.001
+A aplicação está ativa neste momento.
+
+277
+00:16:31.001 --> 00:16:36.000
+Ao clicar no canto superior direito, posso permitir que uma aplicação
+
+278
+00:16:36.000 --> 00:16:37.001
+maximizar ou assumir o display.
+
+279
+00:16:38.001 --> 00:16:40.000
+Você pode acessar isso?
+
+280
+00:16:40.000 --> 00:16:43.000
+Esse tipo de janela Unix cruda lá e realmente funciona dentro dela e
+
+281
+00:16:43.000 --> 00:16:44.001
+Vamos atrás do motivo?
+
+282
+00:16:45.000 --> 00:16:49.001
+Eu tenho uma janela terminal aqui que eu clique e faça essa janela ativa.
+
+283
+00:16:50.000 --> 00:16:52.001
+E nesse ponto, eu posso escrever em qualquer um dos
+
+284
+00:16:52.001 --> 00:16:54.001
+comando no sistema operacional Unix.
+
+285
+00:16:55.000 --> 00:16:56.001
+Qual é o status do motivo?
+
+286
+00:16:57.000 --> 00:16:58.000
+Então, onde está isso como produto?
+
+287
+00:16:58.001 --> 00:17:00.001
+O Motif estará disponível da OSF este verão.
+
+288
+00:17:02.000 --> 00:17:06.000
+HP e Corvallis Organ estão sob contrato com OSF para fusão
+
+289
+00:17:06.000 --> 00:17:07.001
+O disco e as ferramentas do HP.
+
+290
+00:17:07.001 --> 00:17:10.001
+E vamos conversar isso para a OSF em julho.
+
+291
+00:17:10.001 --> 00:17:14.000
+Você está falando sobre OSF e isso é um acrônimo para a Open Systems Foundation?
+
+292
+00:17:14.001 --> 00:17:16.000
+A Fundação de Sistemas Abertos.
+
+293
+00:17:16.000 --> 00:17:17.000
+Fundação de Software Aberto.
+
+294
+00:17:18.000 --> 00:17:19.001
+Você pode nos dizer um pouco sobre esse grupo?
+
+295
+00:17:20.001 --> 00:17:25.001
+O grupo foi formado há cerca de um ano para garantir que o desenvolvimento de software
+
+296
+00:17:25.001 --> 00:17:31.000
+ambientes foram abertos, disponíveis para entrada de diferentes fornecedores de estações de trabalho,
+
+297
+00:17:31.001 --> 00:17:35.000
+para garantir que existam normas que existissem para ajudar os usuários finais e
+
+298
+00:17:35.000 --> 00:17:37.000
+desenvolvedores de software na criação de programas.
+
+299
+00:17:37.001 --> 00:17:40.000
+Em particular, a Unix e a EIX.
+
+300
+00:17:41.001 --> 00:17:43.001
+E existem outras aplicações, você falou principalmente de Unix
+
+301
+00:17:43.001 --> 00:17:45.000
+É claro que estamos nesse ambiente técnico.
+
+302
+00:17:45.001 --> 00:17:48.001
+HP está trabalhando em novas, aplicações mais amplas que vão funcionar
+
+303
+00:17:48.001 --> 00:17:50.000
+Com a Unix e aproveite isso?
+
+304
+00:17:50.000 --> 00:17:53.000
+Trabalhamos com aplicativos e outros terceiros
+
+305
+00:17:53.000 --> 00:17:55.000
+Os desenvolvedores estão trabalhando em aplicações.
+
+306
+00:17:55.001 --> 00:17:59.000
+Com uma interface de usuário como esta, mais usuários terão acesso
+
+307
+00:17:59.000 --> 00:18:00.001
+para o poder da estação de trabalho Unix.
+
+308
+00:18:01.000 --> 00:18:03.001
+E, portanto, acho que vamos encontrar estações de trabalho em mais
+
+309
+00:18:03.001 --> 00:18:05.001
+ambientes, como talvez ambientes de escritório.
+
+310
+00:18:06.001 --> 00:18:07.001
+Janet, muito obrigado.
+
+311
+00:18:08.000 --> 00:18:11.000
+Em apenas um minuto vamos olhar para o novo Macintosh II CX e ver o
+
+312
+00:18:11.000 --> 00:18:13.000
+Implementação do Macintosh da Unix.
+
+313
+00:18:13.000 --> 00:18:14.001
+AUX, fique conosco.
+
+314
+00:18:27.000 --> 00:18:29.000
+Com nós no estúdio agora é Bill Jacobs.
+
+315
+00:18:29.000 --> 00:18:31.000
+Bill é gerente de linha de produtos com a Apple.
+
+316
+00:18:31.000 --> 00:18:33.001
+Após Bill, Carrie Christian, autor e associado de pesquisa
+
+317
+00:18:33.001 --> 00:18:35.000
+Universidade Rockefeller em Nova Iorque.
+
+318
+00:18:35.000 --> 00:18:38.000
+Carrie, um dos problemas com Unix no passado tem sido todos estes diferentes
+
+319
+00:18:38.000 --> 00:18:40.000
+versões, versões homegrown e assim por diante.
+
+320
+00:18:40.001 --> 00:18:44.000
+E então surgem problemas com coisas como as bibliotecas e assim por diante,
+
+321
+00:18:44.000 --> 00:18:46.000
+É possível transferir um programa para outro sistema Unix.
+
+322
+00:18:47.000 --> 00:18:50.000
+Existe alguma normalização que está acontecendo recentemente?
+
+323
+00:18:51.000 --> 00:18:52.001
+Mas há um pouco de normalização.
+
+324
+00:18:52.001 --> 00:18:54.001
+Na verdade, há muito por causa do
+
+325
+00:18:54.001 --> 00:18:56.001
+O sistema é dividido em dois campos separados.
+
+326
+00:18:56.001 --> 00:19:02.000
+E temos, por um lado, uma aliança entre AT&amp;T, que é o fundador da Unix.
+
+327
+00:19:02.000 --> 00:19:06.000
+com a Sun, que é um dos principais inovadores técnicos nesta área.
+
+328
+00:19:06.001 --> 00:19:08.001
+O que foi a versão do Open Look que vimos no início do show.
+
+329
+00:19:08.001 --> 00:19:09.000
+Isso é certo.
+
+330
+00:19:09.001 --> 00:19:15.001
+E, por outro lado, há um grupo bastante grande de empresas que não
+
+331
+00:19:15.001 --> 00:19:18.001
+satisfeitos com isso, eles têm medo do poder que vai a essas duas empresas para
+
+332
+00:19:18.001 --> 00:19:22.001
+por causa dos seus danos e formaram outra aliança chamada Open
+
+333
+00:19:22.001 --> 00:19:24.001
+Fundação de Software, OSF.
+
+334
+00:19:25.000 --> 00:19:27.001
+E nesse grupo você tem IBM mais um número de
+
+335
+00:19:27.001 --> 00:19:29.000
+Outros grandes jogadores neste negócio.
+
+336
+00:19:29.000 --> 00:19:32.000
+E esse foi o motivo que acabamos de ver na máquina HP.
+
+337
+00:19:32.000 --> 00:19:34.000
+E o próximo passo na próxima máquina?
+
+338
+00:19:34.000 --> 00:19:35.000
+Esta é uma terceira versão, não é?
+
+339
+00:19:35.001 --> 00:19:39.000
+Bem, ele usa um produto chamado Mach, que é uma variante da Unix.
+
+340
+00:19:39.001 --> 00:19:42.001
+É bastante diferente da Unix que você provavelmente classificaria como
+
+341
+00:19:42.001 --> 00:19:44.000
+em uma categoria um pouco diferente.
+
+342
+00:19:45.000 --> 00:19:46.001
+Bill, você tem um...
+
+343
+00:19:46.001 --> 00:19:49.000
+Esta é a primeira máquina que realmente vemos na mesa.
+
+344
+00:19:49.001 --> 00:19:52.000
+Bem, é um Mach 2X e nós realmente não vimos isso no show ainda.
+
+345
+00:19:52.000 --> 00:19:56.000
+[...] talvez apenas nos dê um olhar dentro da caixa lá antes de fazer as unidades.
+
+346
+00:19:56.000 --> 00:19:59.000
+Bem, o produto que temos aqui é o novo Macintosh 2CX.
+
+347
+00:19:59.001 --> 00:20:00.001
+É fundamentalmente...
+
+348
+00:20:00.001 --> 00:20:02.000
+Obviamente, muito menor do que os dois.
+
+349
+00:20:03.000 --> 00:20:07.000
+essencialmente, o mesmo produto elétrico em termos de capacidades como o
+
+350
+00:20:07.000 --> 00:20:13.000
+Macintosh 2X, exceto que, ao reduzir o número de slots temos reduzido significativamente
+
+351
+00:20:13.000 --> 00:20:14.001
+O custo e, portanto, o preço da máquina.
+
+352
+00:20:15.000 --> 00:20:19.001
+É um design interno muito mais limpo, muito mais fácil de instalar coisas como
+
+353
+00:20:19.001 --> 00:20:22.000
+discos rígidos que simplesmente apertam no local e o cabo se conecta.
+
+354
+00:20:22.001 --> 00:20:24.001
+Mesmo o abastecimento de energia, não há cravas que o mantêm.
+
+355
+00:20:24.001 --> 00:20:26.001
+Ela é mantida por bosses de plástico.
+
+356
+00:20:27.000 --> 00:20:32.000
+Então, o que fizemos não é apenas reduzir o preço do sistema através da fixação de alguns
+
+357
+00:20:32.000 --> 00:20:35.000
+dos problemas da RAM que toda a indústria sofreu, mas também pela construção
+
+358
+00:20:35.000 --> 00:20:37.001
+A máquina é mais simples, reduz o seu preço.
+
+359
+00:20:38.000 --> 00:20:40.001
+Será que esse sacrifício faz alguma coisa em termos de desempenho?
+
+360
+00:20:40.001 --> 00:20:41.000
+E não.
+
+361
+00:20:42.000 --> 00:20:45.000
+Em termos de desempenho, é exatamente o mesmo que o Macintosh 2CX.
+
+362
+00:20:46.000 --> 00:20:47.001
+2X você quer dizer, este é o 2CX?
+
+363
+00:20:47.001 --> 00:20:49.000
+Este é o 2CX, eu me arrependo.
+
+364
+00:20:50.000 --> 00:20:53.001
+O mesmo desempenho que o Macintosh 2X, que é de 10 a 20
+
+365
+00:20:53.001 --> 00:20:55.000
+Por cento maior do que o Macintosh 2 foi.
+
+366
+00:20:55.000 --> 00:20:58.000
+Agora você está correndo, o que é, O que você chama?
+
+367
+00:20:58.000 --> 00:21:00.001
+Sim, o produto Unix da Apple é AUX.
+
+368
+00:21:01.001 --> 00:21:02.001
+Você pode nos dar uma demo?
+
+369
+00:21:03.000 --> 00:21:03.000
+É certo.
+
+370
+00:21:03.001 --> 00:21:06.000
+O que vamos a demo aqui é algo que você já viu variantes de
+
+371
+00:21:06.000 --> 00:21:08.000
+Hoje, portanto, não vou discutir o ponto.
+
+372
+00:21:08.000 --> 00:21:11.000
+Este é um aplicativo particular chamado Magic.
+
+373
+00:21:11.000 --> 00:21:16.000
+É um produto de ensino superior para a concepção de circuitos integrados e representa
+
+374
+00:21:16.000 --> 00:21:19.001
+fundamentalmente um dos usos-chave da Unix hoje, e que é para a técnica
+
+375
+00:21:19.001 --> 00:21:22.001
+profissionais para fazer os tipos de trabalho em que estão envolvidos.
+
+376
+00:21:23.001 --> 00:21:26.000
+Isso é baseado em uma implementação X11.3.
+
+377
+00:21:26.000 --> 00:21:30.000
+Você mencionou X Windows é o padrão subjacente em que OpenLook e
+
+378
+00:21:30.000 --> 00:21:31.001
+Os dois motivos são baseados.
+
+379
+00:21:33.000 --> 00:21:34.001
+É um produto atualmente disponível.
+
+380
+00:21:34.001 --> 00:21:37.000
+Nós acabamos de introduzi-lo e começamos a enviá-lo há algumas semanas.
+
+381
+00:21:38.000 --> 00:21:40.000
+Full X11.3 e funciona em múltiplos ecrãs.
+
+382
+00:21:41.000 --> 00:21:42.000
+Qual a relação aqui agora?
+
+383
+00:21:42.000 --> 00:21:45.001
+Você está executando Unix, A-U-X, mas como é a relação
+
+384
+00:21:45.001 --> 00:21:47.001
+Entre o sistema operacional Mac e Unix?
+
+385
+00:21:47.001 --> 00:21:48.000
+O que está acontecendo dentro?
+
+386
+00:21:48.001 --> 00:21:54.001
+OK  ⁇  Para mostrar-lhe que, o que eu vou fazer aqui é sair da implementação X11 e
+
+387
+00:21:54.001 --> 00:21:58.001
+Vamos mostrar-lhe o outro lado da barreira para nós aqui, saindo.
+
+388
+00:21:59.001 --> 00:22:02.000
+Eu acho que você tem que colocar o mouse na caixa antes que isso funcione.
+
+389
+00:22:04.000 --> 00:22:08.000
+A implementação X11 corre na máquina e para sair e depois começar
+
+390
+00:22:08.000 --> 00:22:11.000
+A execução de aplicativos do Macintosh é, como você vê, cerca de 10 segundos.
+
+391
+00:22:11.001 --> 00:22:14.001
+Estamos agora em uma janela de shell terminal Unix, como a maioria
+
+392
+00:22:14.001 --> 00:22:16.000
+Os usuários da Unix são bastante confortáveis.
+
+393
+00:22:16.001 --> 00:22:18.000
+Eu carreguei um conjunto de aplicativos aqui.
+
+394
+00:22:19.000 --> 00:22:21.000
+O ponto importante sobre o que vou mostrar a vocês são estes
+
+395
+00:22:21.000 --> 00:22:22.001
+Os aplicativos não são aplicativos da Unix.
+
+396
+00:22:23.001 --> 00:22:27.000
+A primeira coisa que eu provavelmente deveria mostrar é o MacDraw 2.
+
+397
+00:22:27.000 --> 00:22:28.000
+Este é um produto Claris.
+
+398
+00:22:28.001 --> 00:22:29.001
+Então você tem que usar a tela lá.
+
+399
+00:22:30.000 --> 00:22:30.000
+Sim, eu me arrependo.
+
+400
+00:22:30.001 --> 00:22:35.001
+Para executar Claris MacDraw 2 em um sistema A-U-X, você simplesmente vai para baixo para
+
+401
+00:22:35.001 --> 00:22:39.000
+Egghead Software e você compra a versão do MacDraw 2 que você compra para o seu
+
+402
+00:22:39.000 --> 00:22:40.001
+Macintosh Plus ou o seu Macintush SC.
+
+403
+00:22:41.000 --> 00:22:45.000
+Daí, você mova os arquivos para o produto do floppy para o Unix
+
+404
+00:22:45.000 --> 00:22:46.001
+disco rígido e, em seguida, executá-los lá.
+
+405
+00:22:47.000 --> 00:22:47.001
+Aqui está um exemplo.
+
+406
+00:22:49.001 --> 00:22:52.000
+Enquanto você está fazendo isso, qual é a vantagem de fazer isso, executando-o sob
+
+407
+00:22:52.000 --> 00:22:54.000
+Unix em vez de apenas no Macintosh?
+
+408
+00:22:54.001 --> 00:22:57.001
+A vantagem crucial é que o usuário final consegue executar ambas as aplicações que
+
+409
+00:22:57.001 --> 00:23:00.000
+Ele conhece e ama do mundo Unix e do pessoal.
+
+410
+00:23:00.000 --> 00:23:01.001
+Software de produtividade do Macintosh.
+
+411
+00:23:02.001 --> 00:23:06.000
+Estudamos muito cuidadosamente o mundo técnico do usuário e o que ele faz dia a dia.
+
+412
+00:23:06.000 --> 00:23:11.000
+Ele passa cerca de 70 a 80 por cento do seu tempo escrevendo, desenhando, apresentando.
+
+413
+00:23:11.000 --> 00:23:13.001
+Então, mesmo que ele seja um Unix techie, ele tem todas essas outras coisas a fazer.
+
+414
+00:23:14.000 --> 00:23:19.000
+Então, agora estamos basicamente em um aplicativo Macintosh e temos todo o usuário
+
+415
+00:23:19.000 --> 00:23:20.001
+interface do Macintosh em nossos dedos.
+
+416
+00:23:21.001 --> 00:23:24.000
+Vamos abrir apenas um arquivo aqui.
+
+417
+00:23:24.001 --> 00:23:25.001
+E isso está no MacDraw?
+
+418
+00:23:26.000 --> 00:23:27.001
+Estes são os arquivos MacDraw 2.
+
+419
+00:23:27.001 --> 00:23:30.000
+Esta é uma arte que foi criada por um artista para algum propósito e
+
+420
+00:23:30.000 --> 00:23:32.000
+Veja o que você pode fazer no MacDraw.
+
+421
+00:23:32.000 --> 00:23:37.000
+O ponto chave é que você agora pode fazê-lo em um sistema Unix a partir de uma aplicação de $ 300
+
+422
+00:23:37.000 --> 00:23:38.001
+Em vez de um pedido de US $ 2.000.
+
+423
+00:23:38.001 --> 00:23:39.001
+Só temos cerca de meia hora
+
+424
+00:23:39.001 --> 00:23:41.000
+Leia mais, Kerry, e eu quero pedir-lhe um tipo de resumo.
+
+425
+00:23:41.000 --> 00:23:44.000
+Do ponto de vista do usuário, vimos apenas nesta meia hora,
+
+426
+00:23:44.000 --> 00:23:45.001
+Quatro maneiras diferentes de usar Unix.
+
+427
+00:23:45.001 --> 00:23:47.000
+O que um usuário deve fazer aqui em termos de
+
+428
+00:23:47.000 --> 00:23:49.000
+Você está tentando se envolver nos benefícios da Unix?
+
+429
+00:23:49.001 --> 00:23:50.001
+Bem, há algumas coisas.
+
+430
+00:23:51.000 --> 00:23:53.001
+A maior parte dos sistemas da Unix não são utilizados em
+
+431
+00:23:53.001 --> 00:23:55.001
+ambiente onde já não existem computadores.
+
+432
+00:23:56.000 --> 00:23:57.000
+Então você tem que pensar no que você tem.
+
+433
+00:23:57.000 --> 00:24:00.001
+Se você tem uma loja que está usando produtos da Apple, as pessoas estão familiarizadas com
+
+434
+00:24:00.001 --> 00:24:02.001
+O Mac, o AUX é um natural.
+
+435
+00:24:03.000 --> 00:24:05.001
+Por outro lado, se você tem uma empresa onde vem da técnica
+
+436
+00:24:05.001 --> 00:24:09.000
+Por outro lado, eles podem estar familiarizados com muitos desenhos técnicos
+
+437
+00:24:09.000 --> 00:24:11.000
+aplicações como você teria em um sistema solar.
+
+438
+00:24:12.000 --> 00:24:14.001
+Sun ou HP ou empresas como isso também são um natural.
+
+439
+00:24:15.000 --> 00:24:19.000
+Se as pessoas têm um envolvimento pesado em PCs, eles têm usado software PC.
+
+440
+00:24:19.001 --> 00:24:24.000
+As coisas como Zenix e VPIX são capazes de executar o software do PC da maneira que
+
+441
+00:24:24.000 --> 00:24:26.000
+AUX pode executar o software Mac.
+
+442
+00:24:26.000 --> 00:24:29.001
+Então eu acho que para a maioria dos usuários, você precisa ir com as alianças que você já está
+
+443
+00:24:29.001 --> 00:24:31.000
+Conheça, vá com alguns desses vendedores.
+
+444
+00:24:32.000 --> 00:24:36.001
+A outra coisa é acompanhar os números o melhor que você pode, porque neste
+
+445
+00:24:36.001 --> 00:24:43.001
+A guerra da OSF, AT&amp;T, será determinada pelos fornecedores de software que
+
+446
+00:24:43.001 --> 00:24:46.000
+A maioria das aplicações no seu produto.
+
+447
+00:24:47.000 --> 00:24:52.000
+Então, se você olhar para os números seis meses a partir de agora, um ano a partir daqui, você
+
+448
+00:24:52.000 --> 00:24:54.000
+É preciso saber qual desses dois produtos é.
+
+449
+00:24:54.000 --> 00:24:58.000
+Sim, quem é realmente vencedor no mercado, e isso vai determinar.
+
+450
+00:24:58.000 --> 00:25:00.000
+Senhores, muito obrigado a vocês. Esse é o nosso olhar para a Unix.
+
+451
+00:25:00.000 --> 00:25:03.000
+Vamos voltar com as notícias do computador desta semana em apenas um momento.
+
+452
+00:25:14.000 --> 00:25:18.001
+No arquivo de acesso aleatório esta semana, muitos novos anúncios de produto ligados ao
+
+453
+00:25:18.001 --> 00:25:20.001
+Acabou o show Spring Comdex em Chicago.
+
+454
+00:25:20.001 --> 00:25:25.000
+Intel rouba maior parte dos títulos com o novo chip 80486
+
+455
+00:25:25.000 --> 00:25:27.000
+Contém mais de um milhão de transistores.
+
+456
+00:25:27.001 --> 00:25:33.000
+O Intel 486 agora vai de cabeça para cabeça com o novo chip Motorola 68040 para o
+
+457
+00:25:33.000 --> 00:25:34.001
+A próxima geração de computadores.
+
+458
+00:25:35.000 --> 00:25:39.000
+No entanto, analistas dizem que provavelmente será vários anos antes que o software seja escrito
+
+459
+00:25:39.000 --> 00:25:41.001
+Aproveite os novos e mais rápidos chips.
+
+460
+00:25:42.000 --> 00:25:46.001
+Vários fornecedores, incluindo Tandy, Grid e Dell, introduziram novos PCs baseados no
+
+461
+00:25:46.001 --> 00:25:52.000
+O chip Intel 386SX, que é um chip de 32 bits usando uma rota de dados de 16 bits.
+
+462
+00:25:52.001 --> 00:25:57.001
+Compaq, Olivetti e Acer apresentaram novos 33 megahertz 386 máquinas.
+
+463
+00:25:58.001 --> 00:26:02.000
+Sharp tornou-se o primeiro a realmente demonstrar um laptop LCD colorido.
+
+464
+00:26:02.001 --> 00:26:07.001
+O PC8000 é uma máquina de 386 com uma tela de cor de 14 polegadas que suporta VGA.
+
+465
+00:26:08.001 --> 00:26:12.000
+Sharp disse que sua tecnologia era diferente dos LCDs Active Matrix
+
+466
+00:26:12.000 --> 00:26:13.001
+Usados em miniaturas de televisão.
+
+467
+00:26:13.001 --> 00:26:17.000
+Sharp diz que o laptop de cores estará disponível até o final do ano
+
+468
+00:26:17.000 --> 00:26:18.001
+por menos de 10 mil dólares.
+
+469
+00:26:19.000 --> 00:26:22.001
+A Toshiba apresentou seus novos chips DRAM de 4 megabit.
+
+470
+00:26:23.000 --> 00:26:27.000
+Os novos chips permitem colocar até 14 megas dentro de um Toshiba
+
+471
+00:26:27.000 --> 00:26:28.001
+Apresentação do T5200.
+
+472
+00:26:29.001 --> 00:26:32.001
+E o software de viagem anunciou uma atualização do seu programa LAPLINK.
+
+473
+00:26:33.000 --> 00:26:37.000
+A nova versão é chamada LAPLINK 3, e clonará-se para outra.
+
+474
+00:26:37.000 --> 00:26:41.001
+computador para que, se você tem dois diferentes formatos de disco e apenas uma cópia de
+
+475
+00:26:41.001 --> 00:26:45.000
+LAPLINK, você ainda pode transferir arquivos pela primeira vez clonando o LAPlINK
+
+476
+00:26:45.000 --> 00:26:47.000
+Software para outra máquina.
+
+477
+00:26:47.001 --> 00:26:51.001
+Em outras notícias desta semana, a Motorola anunciou uma versão de 50 megahertz da sua
+
+478
+00:26:51.001 --> 00:26:53.000
+68030 Cápsulas.
+
+479
+00:26:53.001 --> 00:26:55.001
+Esta é a velocidade de relógio mais rápida da indústria.
+
+480
+00:26:56.000 --> 00:27:00.000
+A Commodore lançou um novo chip gráfico Angus para a Amiga que resolve o problema.
+
+481
+00:27:00.000 --> 00:27:03.000
+Problemas de limitação da memória com o chip gráfico atual.
+
+482
+00:27:03.001 --> 00:27:07.001
+O novo chip Angus permite que você use até um megabyte de memória apenas para gráficos.
+
+483
+00:27:08.000 --> 00:27:12.000
+Uma empresa chamada MacMotion usou o HyperCard para programar um novo
+
+484
+00:27:12.000 --> 00:27:13.001
+Sistema de robô 9axis.
+
+485
+00:27:14.000 --> 00:27:17.001
+A empresa diz que a HyperCard permitiu que os custos de programação fossem reduzidos
+
+486
+00:27:17.001 --> 00:27:22.000
+dramaticamente que o custo do sistema robótico pode ser reduzido por um fator de 10.
+
+487
+00:27:22.001 --> 00:27:26.000
+National Semiconductor diz que está construindo chips para a segurança nacional
+
+488
+00:27:26.000 --> 00:27:28.000
+agência que se destrói.
+
+489
+00:27:28.001 --> 00:27:32.000
+Projetado presumivelmente para uso por espiões, os chips vêm separados se
+
+490
+00:27:32.000 --> 00:27:33.001
+Alguém tenta abrir a máquina.
+
+491
+00:27:34.000 --> 00:27:37.000
+Finalmente, a Universidade de Stanford está conduzindo a primeira vez
+
+492
+00:27:37.000 --> 00:27:39.000
+Eleições totalmente informáticas.
+
+493
+00:27:39.001 --> 00:27:42.001
+A eleição é apenas para o governo estudantil, mas para o estado e o condado
+
+494
+00:27:42.001 --> 00:27:44.000
+Os funcionários estão observando os resultados.
+
+495
+00:27:44.001 --> 00:27:49.000
+O sistema de Stanford usa 70 computadores Macintosh como estações de votação com
+
+496
+00:27:49.000 --> 00:27:51.000
+Software especial escrito por um Stanford sophomore.
+
+497
+00:27:51.001 --> 00:27:55.001
+Os designers dizem que os benefícios não são apenas resultados instantâneos, mas menos desperdiçados
+
+498
+00:27:55.001 --> 00:27:59.001
+votações, pois o software é inteligente o suficiente para não permitir que o eleitor faça algo
+
+499
+00:27:59.001 --> 00:28:01.000
+que negariam a votação.
+
+500
+00:28:01.000 --> 00:28:05.000
+Há um sistema de backup de papel e pincel para o computador total
+
+501
+00:28:05.000 --> 00:28:07.000
+Fobo que nunca tocou um rato.
+
+502
+00:28:07.001 --> 00:28:09.001
+Isso é para o acesso aleatório desta semana. Eu sou Maria
+
+503
+00:28:09.001 --> 00:28:11.001
+Gabriel para as crônicas de computador.
+
+504
+00:28:32.000 --> 00:28:38.001
+Para uma transcrição das crônicas de computador desta semana, envie $4 para PTV Publications
+
+505
+00:28:38.001 --> 00:28:44.000
+Post Office Box 701, Kent, Ohio 44240.
+
+506
+00:28:44.001 --> 00:28:46.001
+Por favor, indique a data do programa.
+
+507
+00:29:01.000 --> 00:29:16.000
+Obrigado por você.

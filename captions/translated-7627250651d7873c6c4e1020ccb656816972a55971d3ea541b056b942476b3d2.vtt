@@ -1,0 +1,1501 @@
+WEBVTT
+
+1
+00:00:23.000 --> 00:00:27.001
+Si vous avez des chips informatiques sous le coffre de votre voiture la façon de ce 89 Corvette
+
+2
+00:00:27.001 --> 00:00:32.000
+Oui, tout ce que vous avez à faire est de l&#x27;incorporer dans l&#x27;une de ces machines de diagnostic et vous
+
+3
+00:00:32.000 --> 00:00:36.001
+On peut voir exactement ce qui se passe à l&#x27;intérieur du moteur. Il faut que ce soit vrai alors
+
+4
+00:00:36.001 --> 00:00:40.001
+de votre PC parce qu’en fin de compte il n’y a rien d’autre que des chips informatiques sous le
+
+5
+00:00:40.001 --> 00:00:45.001
+C’est ça C&#x27;est vrai si vous avez les bons outils de diagnostic. Aujourd’hui, nous allons prendre une
+
+6
+00:00:45.001 --> 00:00:50.000
+Regardez le logiciel de diagnostic sur cette édition des Chroniques informatiques.
+
+7
+00:01:04.000 --> 00:01:08.000
+Les chronicles informatiques ont été rendus possibles en partie par PC Connection et
+
+8
+00:01:08.000 --> 00:01:12.001
+La MacConnection. Logiciels de commande de courrier et périphériques matériels pour le PC et le
+
+9
+00:01:12.001 --> 00:01:17.001
+Macintosh et l’Association des éditeurs de logiciels. Les fournisseurs d’éducation
+
+10
+00:01:17.001 --> 00:01:21.001
+Pour aider à gérer le logiciel. Ne copiez pas ce floppy.
+
+11
+00:01:26.000 --> 00:01:30.001
+Bienvenue dans les Chroniques informatiques I&#x27;m Stuart Chafay. Dans les premiers jours de
+
+12
+00:01:30.001 --> 00:01:34.001
+les ordinateurs personnels si vous voulez découvrir ce qui se passait à l&#x27;intérieur de votre PC nous
+
+13
+00:01:34.001 --> 00:01:38.001
+Il y avait des outils limités disponibles. Par exemple, vous pouvez utiliser un commandement DOS comme vérifier
+
+14
+00:01:38.001 --> 00:01:42.001
+disque et obtenir un peu d&#x27;informations ici sur ce qui est sur notre disque dur et
+
+15
+00:01:42.001 --> 00:01:46.000
+Là où notre mémoire est assis au moment. Peter Norton est venu avec
+
+16
+00:01:46.000 --> 00:01:49.000
+Les outils Norton et nous pouvions faire un peu plus avec le commandement Norton
+
+17
+00:01:49.000 --> 00:01:54.000
+Comme le Sysinfo. Nous recevons plus d’informations. Voici un résumé de base du système et nous
+
+18
+00:01:54.000 --> 00:01:58.000
+Nous pouvons aller plus loin sur notre vidéo. Le matériel interrompt, le logiciel
+
+19
+00:01:58.000 --> 00:02:02.001
+interruptions, quelque chose sur les valeurs CMOS, plus d&#x27;informations sur la façon dont nous
+
+20
+00:02:02.001 --> 00:02:06.001
+le disque est configuré, les tables de partition même, un résumé de mémoire et ainsi de suite. Mais comme
+
+21
+00:02:06.001 --> 00:02:11.000
+Les ordinateurs d&#x27;aujourd&#x27;hui deviennent encore plus puissants et plus compliqués et comme logiciels
+
+22
+00:02:11.000 --> 00:02:15.001
+Commence à exiger de plus en plus de nos ordinateurs nous avons besoin d&#x27;outils encore plus puissants
+
+23
+00:02:15.001 --> 00:02:19.001
+Regarder à l&#x27;intérieur du PC pour savoir ce qui se passe, surtout s&#x27;il y a un problème.
+
+24
+00:02:20.000 --> 00:02:23.001
+Maintenant, vous pouvez faire beaucoup pour vous-même ces jours-ci avec le logiciel de diagnostic que nous allons être
+
+25
+00:02:23.001 --> 00:02:28.001
+regarder mais même si vous ne pouvez pas le réparer vous-même le logiciel de diagnostic peut vous aider
+
+26
+00:02:28.001 --> 00:02:34.001
+expliquer à la boutique de réparation ce qui est mal et cela peut vous économiser de l&#x27;argent. Lorsque vous
+
+27
+00:02:34.001 --> 00:02:38.001
+Avoir un problème avec votre ordinateur que vous voulez le régler immédiatement. Ici à l’avancement
+
+28
+00:02:38.001 --> 00:02:43.001
+Réparation informatique à San Francisco le coût du travail seul pour la réparation de l&#x27;ordinateur est de $71
+
+29
+00:02:43.001 --> 00:02:48.001
+Une heure ! À ce prix vous voulez qu&#x27;ils réparent l&#x27;ordinateur ne pas passer beaucoup de temps
+
+30
+00:02:48.001 --> 00:02:53.000
+Découvrir ce qui est mal. Une façon de le faire est d&#x27;utiliser le logiciel de diagnostic sur
+
+31
+00:02:53.000 --> 00:02:56.000
+votre ordinateur avant de le prendre dans la boutique de réparation.
+
+32
+00:02:56.001 --> 00:03:00.000
+Le logiciel de diagnostic peut aider l&#x27;utilisateur à déterminer ce que les problèmes sont réellement
+
+33
+00:03:00.000 --> 00:03:05.001
+Ils sont. Une des tâches que nous devons faire est d’être des lecteurs de l’esprit et de découvrir
+
+34
+00:03:05.001 --> 00:03:09.001
+Qu’est-ce qui s’est vraiment trompé ? Si vous allez au médecin et que vous ne pouvez pas décrire ce que
+
+35
+00:03:09.001 --> 00:03:15.001
+Les symptômes sont qu&#x27;il ne sera pas en mesure de savoir quel problème vous avez. En faisant ainsi
+
+36
+00:03:15.001 --> 00:03:20.000
+Vous faciliterez notre travail parce que nous savons ce que nous recherchons. Même si vous ne pouvez pas
+
+37
+00:03:20.000 --> 00:03:24.000
+diagnostiquer le problème vous-même vous pouvez toujours économiser de l&#x27;argent en utilisant le diagnostic
+
+38
+00:03:24.000 --> 00:03:28.001
+utilités pour faire votre propre disque dur de sauvegarde avant de prendre votre ordinateur dans la
+
+39
+00:03:28.001 --> 00:03:35.000
+La boutique. Les utilisateurs peuvent utiliser des logiciels de diagnostic pour trouver des points mauvais sur leur disque dur. A
+
+40
+00:03:35.000 --> 00:03:39.001
+Beaucoup de fois leurs frais de réparation seront beaucoup plus élevés si nous devons faire des données
+
+41
+00:03:39.001 --> 00:03:45.001
+récupérer sur un disque dur plutôt que de les avoir des sauvegardes à l&#x27;avance parce que
+
+42
+00:03:45.001 --> 00:03:50.000
+Ils savaient que leur disque dur était en train de sortir. Une différence dans le coût
+
+43
+00:03:50.000 --> 00:03:55.001
+Cela pourrait être de 2 500 $. Le logiciel de diagnostic ne réduit pas seulement le coût de
+
+44
+00:03:55.001 --> 00:04:00.000
+Les ordinateurs réparent, mais dans de nombreux cas, ils les éliminent tous ensemble. Je dirais
+
+45
+00:04:00.000 --> 00:04:04.001
+20% des problèmes que nous voyons sont des problèmes auxquels les utilisateurs pourraient avoir
+
+46
+00:04:04.001 --> 00:04:10.000
+résolu ou éliminé par l&#x27;exécution de certains logiciels de diagnostic périodiquement avant
+
+47
+00:04:10.000 --> 00:04:16.000
+Venez à nous. Ces derniers temps, beaucoup de virus causent des problèmes tels que les imprimantes ne font pas l&#x27;impression,
+
+48
+00:04:17.000 --> 00:04:20.001
+Les floppy disques ne fonctionnent pas et ce sont les types de problèmes qu&#x27;ils peuvent résoudre
+
+49
+00:04:20.001 --> 00:04:23.000
+Ils sont eux-mêmes sans avoir à nous appeler. Pour l’ordinateur
+
+50
+00:04:23.000 --> 00:04:25.000
+Je suis Janelle Stelson.
+
+51
+00:04:36.000 --> 00:04:43.000
+La plupart des logiciels de diagnostic ont été développés pour la plate-forme PC et c&#x27;est
+
+52
+00:04:43.000 --> 00:04:46.001
+où nous allons commencer aujourd&#x27;hui avec des produits de diagnostic qui aident à résoudre les mystères de
+
+53
+00:04:46.001 --> 00:04:51.000
+Windows et le trou noir de la mémoire supérieure. C’est là qu’il y a Frank Westall.
+
+54
+00:04:51.000 --> 00:04:55.000
+Dariana et Gary Saxer de Quarterdeck. Gary, laisse-moi commencer avec toi. J’ai été
+
+55
+00:04:55.000 --> 00:04:58.000
+tourner sur les ordinateurs pendant longtemps et est toujours en cours de vérifications de mémoire et
+
+56
+00:04:58.000 --> 00:05:01.000
+Vérifier cela et c’est toujours bien. Je veux dire qui doit
+
+57
+00:05:01.000 --> 00:05:02.001
+S&#x27;inquiéter de ce type de logiciel.
+
+58
+00:05:02.001 --> 00:05:04.001
+Je pense que l&#x27;utilisateur moyen n&#x27;est que pour un hacker
+
+59
+00:05:04.001 --> 00:05:06.000
+Jouer avec ? Ce n’est pas pour tout le monde.
+
+60
+00:05:07.000 --> 00:05:10.000
+Il n&#x27;y a que deux types d&#x27;utilisateurs informatiques dans le monde, les nouveautés
+
+61
+00:05:10.000 --> 00:05:11.001
+et des experts. Pas de classe moyenne.
+
+62
+00:05:12.000 --> 00:05:16.000
+Je ne pense pas vraiment ainsi. Vous utilisez simplement la machine ou vous commencez à
+
+63
+00:05:16.000 --> 00:05:20.000
+Vous y entrerez et vous découvrirez tout et donc vous devez savoir sur cela incroyablement
+
+64
+00:05:20.000 --> 00:05:22.000
+Des choses importantes qui se déroulent à l’intérieur de la machine. Certes, quand il s’agit de
+
+65
+00:05:22.000 --> 00:05:24.001
+La mémoire est sûre. Nous reviendrons chez vous en quelques minutes. Et maintenant Windows
+
+66
+00:05:24.001 --> 00:05:28.000
+Une sorte de sort soulève l&#x27;avant encore plus Frank parce que les gens courent sous
+
+67
+00:05:28.000 --> 00:05:29.001
+Windows maintenant et qui sait ce qui se passe dans le monde
+
+68
+00:05:29.001 --> 00:05:31.000
+Lorsque vous téléchargez votre programme Windows.
+
+69
+00:05:31.000 --> 00:05:35.000
+Vous avez Winsloot qui nous aide à comprendre ce qui se passe là-bas. Découvrez comment
+
+70
+00:05:35.000 --> 00:05:38.001
+Vous utilisez Winsloot. En fait, vous avez encore des problèmes à l&#x27;intérieur.
+
+71
+00:05:38.001 --> 00:05:42.001
+l&#x27;environnement Windows parce que ce que vous devez faire est que l&#x27;utilisateur ne veut pas seulement
+
+72
+00:05:42.001 --> 00:05:46.000
+Apprendre sur ce qui se passe à l&#x27;intérieur de Windows mais ils veulent aussi apprendre sur
+
+73
+00:05:46.000 --> 00:05:50.000
+Que se passe-t-il dans son matériel ? Une représentation du système apparaît
+
+74
+00:05:50.000 --> 00:05:54.000
+Et vous pouvez prendre le cursor et vous pouvez le montrer comme un exemple vers le dur
+
+75
+00:05:54.000 --> 00:05:58.001
+La conduite. Les informations sur le disque dur apparaissent sur le système et nous avons plus de 52 boutons
+
+76
+00:05:58.001 --> 00:06:02.001
+Expliquer ce que nous avons ou avons baissé les menus. En tant que exemple, nous pouvons
+
+77
+00:06:02.001 --> 00:06:06.001
+Téléchargez et effectuez des tests sur le système. Nous pouvons faire quelque chose à travers le
+
+78
+00:06:06.001 --> 00:06:09.000
+les lignes de test de vos ports parallèles et sériels.
+
+79
+00:06:09.001 --> 00:06:14.000
+Les autres domaines que vous pouvez entrer sont des domaines tels que la mémoire. Vous pouvez
+
+80
+00:06:14.000 --> 00:06:19.000
+Regardez la mémoire conventionnelle et puis vous pouvez la rompre. Entrez-le dans un
+
+81
+00:06:19.000 --> 00:06:21.000
+Petite fenêtre et continuez.
+
+82
+00:06:21.000 --> 00:06:25.000
+Vous pouvez regarder dans l&#x27;environnement Windows sur des problèmes tels que les listes de tâches. intérieur
+
+83
+00:06:25.000 --> 00:06:30.000
+la liste de tâches ce qui se passe, ce sont les domaines qui sont ouverts les applications qui sont
+
+84
+00:06:30.000 --> 00:06:36.000
+ouvert ! En tant que exemple, je vais vous donner quelque chose ici. Je peux le mettre en dessous
+
+85
+00:06:36.000 --> 00:06:37.001
+ouvrir quelque chose comme le calculateur.
+
+86
+00:06:39.000 --> 00:06:46.000
+Je vais le minimiser et vous verrez tous les cinq secondes cette liste de tâches mises à jour
+
+87
+00:06:46.000 --> 00:06:50.001
+C&#x27;est lui-même et la raison de ce type d&#x27;application est de surveiller ce qui se passe.
+
+88
+00:06:50.001 --> 00:06:54.000
+Exactement beaucoup d&#x27;utilisateurs se tourneront et ils ouvront cinq dix-cinq
+
+89
+00:06:54.000 --> 00:06:58.001
+les applications. N’oubliez pas de les fermer. Deux semaines plus tard, ils continuent à utiliser le même
+
+90
+00:06:58.001 --> 00:07:02.001
+type de procédure. Ils sortent de la mémoire qui se décline par deux mégabytes supplémentaires de
+
+91
+00:07:02.001 --> 00:07:05.001
+La mémoire et ils sont dans beaucoup de problèmes là-bas. Cela vous dit pourquoi c&#x27;est
+
+92
+00:07:05.001 --> 00:07:09.001
+Il se passe. précisément . Les autres domaines que vous pouvez regarder
+
+93
+00:07:09.001 --> 00:07:11.001
+dans l’environnement du système d’exploitation.
+
+94
+00:07:12.001 --> 00:07:16.000
+Windows n’est pas l’environnement parfait. Les utilisateurs utilisent les applications DOS et
+
+95
+00:07:16.000 --> 00:07:20.000
+et Windows. Ils veulent regarder des problèmes tels que les chauffeurs d&#x27;appareils. Si vous avez des vidéos
+
+96
+00:07:20.000 --> 00:07:23.001
+cartes qu&#x27;ils ont les conducteurs de l&#x27;appareil sur les cartes vidéo ainsi que sur les types de Windows
+
+97
+00:07:23.001 --> 00:07:29.000
+et des cartes. Dans cette zone comme exemple sur les cartes vidéo si ils veulent faire
+
+98
+00:07:29.000 --> 00:07:33.000
+C’est comme installer une nouvelle boîte. Oui, on peut y aller en utilisant quelque chose
+
+99
+00:07:33.000 --> 00:07:38.001
+Comme l’assistant d’installation. La plupart des utilisateurs ne savent pas ce qu&#x27;un IRQ est ce que un port IO
+
+100
+00:07:38.001 --> 00:07:42.001
+Il est. Tout ce qu&#x27;ils font, c&#x27;est qu&#x27;elles lisent le manuel qu&#x27;il dit que vous devez utiliser un certain IRQ
+
+101
+00:07:42.001 --> 00:07:46.000
+L&#x27;emplacement ou une certaine localisation du port. On sait ce qu&#x27;ils ont déjà 5
+
+102
+00:07:46.000 --> 00:07:51.000
+cartes à l’intérieur. La seule chose qu’ils peuvent faire est d’appeler le fournisseur ou de prendre
+
+103
+00:07:51.000 --> 00:07:54.000
+Toutes les boîtes une à la fois. Lorsqu’ils appellent le vendeur, le vendant va
+
+104
+00:07:54.000 --> 00:07:57.001
+Ils veulent savoir ce qu’ils ont dans le système. Avec cet assistant d’installation
+
+105
+00:07:57.001 --> 00:08:03.001
+les zones vertes disponibles. Les zones bleues dans les zones
+
+106
+00:08:03.001 --> 00:08:07.001
+Le matériel interrompt qu&#x27;ils ont accès. Maintenant, ce qu’il va faire, c’est donner
+
+107
+00:08:07.001 --> 00:08:12.001
+Vous avez une légère explication et vous pouvez passer pour aider sur l&#x27;affichage des données et
+
+108
+00:08:12.001 --> 00:08:16.000
+Vous pouvez découvrir ce que le ROM traite et c&#x27;est un problème éducatif pour vous comme
+
+109
+00:08:16.000 --> 00:08:20.001
+et bien. C’est donc très bénéfique pour l’utilisateur à partir d’un
+
+110
+00:08:20.001 --> 00:08:25.000
+du point de vue du diagnostic ainsi que du point d’œil de l’éducation. Et vous pouvez
+
+111
+00:08:25.000 --> 00:08:29.000
+type d&#x27;utilisation de Winsloot pour finaliser votre installation de Windows pour le maximiser?
+
+112
+00:08:30.000 --> 00:08:34.000
+Tune up est une fonction que les utilisateurs ont tendance à penser que cela vient du DOS
+
+113
+00:08:34.000 --> 00:08:38.001
+Environnement maintenant avec 3.1 sortant il y a des millions de nouveaux utilisateurs entrent dans le
+
+114
+00:08:38.001 --> 00:08:43.001
+à Fold. Les utilisateurs pensent qu&#x27;ils peuvent charger le programme tout comme ils peuvent DOS. Bon encore
+
+115
+00:08:43.001 --> 00:08:47.001
+Ce n’est pas un monde parfait. Ce qui se passera dans un cas comme celui-ci, c&#x27;est si vous courrez une tune
+
+116
+00:08:47.001 --> 00:08:51.001
+Après, vous pouvez tourner et il fait des recommandations sur ce qui est
+
+117
+00:08:51.001 --> 00:08:56.000
+erreur de votre système. Vous pouvez prendre ces recommandations et tourner autour et
+
+118
+00:08:56.000 --> 00:08:59.000
+Réconfigurez le système correctement et il vous dit ce qu&#x27;il faut faire.
+
+119
+00:08:59.000 --> 00:09:03.000
+C’est génial ! Okay Gary, revenons à vous et la mémoire est l&#x27;un des grands cauchemars
+
+120
+00:09:03.000 --> 00:09:07.000
+En essayant de découvrir ce qui se passe à l&#x27;intérieur de votre ordinateur et au Quarter Deck
+
+121
+00:09:07.000 --> 00:09:09.001
+C&#x27;est ce que vous vous spécialisez et dites-moi comment vous pouvez m&#x27;aider à découvrir
+
+122
+00:09:09.001 --> 00:09:13.000
+Ce qui se passe. Eh bien, nous utilisons notre produit manifeste ici pour nous aider à regarder
+
+123
+00:09:13.000 --> 00:09:18.000
+Nos applications classiques basées sur DOS et cela aide également les applications Windows
+
+124
+00:09:18.000 --> 00:09:21.000
+Et aussi. Prenez un coup d’œil sur l’écran manifeste ici, par exemple, vous voyez là où
+
+125
+00:09:21.000 --> 00:09:24.000
+La mémoire conventionnelle se termine à 640k juste au milieu juste au-dessus.
+
+126
+00:09:24.000 --> 00:09:29.001
+Il s’agit de 533k. C’est la quantité de mémoire que j’ai. Nous avons tous pensé que nous avions 640k.
+
+127
+00:09:29.001 --> 00:09:35.000
+Mais vous n’avez pas 5.0. Tous ces petits programmes sont chargés là-bas. I
+
+128
+00:09:35.000 --> 00:09:39.000
+En fait, il y a un chauffeur de réseau ici, un mouse driver, quelques autres choses spéciales.
+
+129
+00:09:39.000 --> 00:09:43.001
+En fait, il y a aussi un cache disque et un pilote ANSI Sys et des choses comme ça.
+
+130
+00:09:43.001 --> 00:09:45.001
+Donc, vous essayez de charger ce logiciel qui n&#x27;est pas assez de mémoire et vous dites ce que vous faites
+
+131
+00:09:45.001 --> 00:09:47.001
+Vous n’avez pas assez de mémoire ? Qu&#x27;est-ce que vous voulez dire que j&#x27;ai tous les types de cela mais vous avez besoin
+
+132
+00:09:47.001 --> 00:09:51.001
+Il est en dessous de 640k et il y a beaucoup d&#x27;autres choses là-bas. Ce que nous pouvons aussi faire
+
+133
+00:09:51.001 --> 00:09:55.001
+Mais il y a des zones entre 640k et 1024k.
+
+134
+00:09:55.001 --> 00:10:00.001
+Il s’agit d’une image particulière de ces zones. La lettre H&#x27;s sont des zones supérieures à 640k
+
+135
+00:10:00.001 --> 00:10:03.001
+Ils ne sont pas utilisés par rien et nous pouvions mettre certains programmes là-bas et
+
+136
+00:10:03.001 --> 00:10:06.001
+les zones avec la lettre R en particulier là-bas sur le fond où le
+
+137
+00:10:06.001 --> 00:10:09.001
+Le système ROM est ceux qui sont des zones que vous ne pouvez simplement pas utiliser.
+
+138
+00:10:10.000 --> 00:10:15.000
+Maintenant, le problème est que ce que nous voulons être en mesure de faire est de rassembler ce que l&#x27;on est
+
+139
+00:10:15.000 --> 00:10:20.000
+Charger entre 640k et 1024k tout droit et faire fonctionner correctement. Maintenant ce que je suis
+
+140
+00:10:20.000 --> 00:10:24.000
+à faire est redémarrer la machine ici et j&#x27;exécute ce programme appelé
+
+141
+00:10:24.000 --> 00:10:27.001
+Optimiser et ce que Optimize fait est qu&#x27;il prend tous vos programmes les conducteurs du réseau
+
+142
+00:10:27.001 --> 00:10:31.001
+les mouse drivers et chacune de ces autres programmes et il trouve chacune des zones
+
+143
+00:10:31.001 --> 00:10:38.000
+Entre 640k et 1024k et Optimiser les chiffres où entre 640K et 10 24k chacune
+
+144
+00:10:38.000 --> 00:10:41.001
+Ces programmes devraient s’effectuer. Vous n&#x27;avez donc pas à faire ce que vous savez
+
+145
+00:10:41.001 --> 00:10:45.001
+DOS5 dit simplement que vous donnez un essai de télécharger ce matelas là-bas et voir si
+
+146
+00:10:45.001 --> 00:10:49.001
+Les travaux. C&#x27;est stupide comme vous allez voir ici en un seul instant parce que Optimize
+
+147
+00:10:49.001 --> 00:10:54.001
+Il a figuré 500 000 comme c&#x27;est le nombre dans le coin de la main droite
+
+148
+00:10:54.001 --> 00:10:56.001
+Différentes combinaisons pour mettre en place des programmes.
+
+149
+00:10:56.001 --> 00:11:02.000
+C&#x27;est intéressant, il y a d&#x27;autres choses que vous pourriez faire pour faire cela.
+
+150
+00:11:02.000 --> 00:11:07.000
+Les choses fonctionnent encore mieux. Ce que je vais utiliser est une fonctionnalité appelée Stealth. Maintenant
+
+151
+00:11:07.000 --> 00:11:11.000
+Stealth nous donne la capacité d&#x27;être en mesure d&#x27;utiliser réellement ces programmes
+
+152
+00:11:11.000 --> 00:11:16.000
+Prenez les zones que nous avons appelés ROMs droit et prenez les domaines ROM et se débarrasser
+
+153
+00:11:16.000 --> 00:11:20.001
+d&#x27;entre eux et au lieu d&#x27;avoir seulement quelques petites zones entre
+
+154
+00:11:20.001 --> 00:11:25.001
+640k et 1024k dans lesquels pour mettre ces programmes résidentiels nous avons de vastes zones comme un
+
+155
+00:11:25.001 --> 00:11:31.000
+En fait, les ROMs sont complètement disparus lorsque vous utilisez la fonction Stealth. et le
+
+156
+00:11:31.000 --> 00:11:34.001
+Le résultat net de ceci est tous ces petits programmes que vous avez en dessous de 640k vous maintenant
+
+157
+00:11:34.001 --> 00:11:39.000
+avoir la capacité d&#x27;obtenir tous ceux-ci au-dessus de 640k et de récupérer tout ce
+
+158
+00:11:39.000 --> 00:11:45.000
+Mémoire inférieure à 640k. En fait, comme nous sommes l&#x27;un de ces conducteurs prend 96k de mémoire
+
+159
+00:11:45.000 --> 00:11:48.001
+Nous pouvons voir ici sur ce petit écran ici ci-dessous là au fond de l&#x27;oeil
+
+160
+00:11:48.001 --> 00:11:53.000
+Le programme prend 96k de mémoire mais il ne prend que 6k quand il est résident il a besoin d&#x27;un
+
+161
+00:11:53.000 --> 00:11:56.001
+Une grande quantité de mémoire entre 640k et 1024k. Vous avez donc perdu cette mémoire.
+
+162
+00:11:57.000 --> 00:11:58.001
+Eh bien, vous ne le gaspillez pas.
+
+163
+00:11:59.000 --> 00:12:00.001
+C&#x27;est l&#x27;une des choses à voir cette analyse
+
+164
+00:12:00.001 --> 00:12:02.001
+Il vous montre ici que vous ne le gaspillez pas.
+
+165
+00:12:02.001 --> 00:12:06.001
+Je vais rebooter pour la dernière fois ici. Qu&#x27;est-ce que vous ne gaspillez pas ce que
+
+166
+00:12:06.001 --> 00:12:11.000
+Vous faites c&#x27;est que vous devez utiliser tellement et puis il s&#x27;écroule quand il est terminé
+
+167
+00:12:11.000 --> 00:12:14.001
+vous voyez sans un outil d&#x27;analyse vous ne savez pas que cela se passe et
+
+168
+00:12:14.001 --> 00:12:19.001
+C&#x27;est pourquoi les gens disent que j&#x27;ai tellement de mémoire pourquoi je ne peux pas l&#x27;utiliser parce qu&#x27;il est utilisé
+
+169
+00:12:19.001 --> 00:12:23.001
+la mémoire que vous ne comprenez pas et puis l&#x27;utiliser ou se débarrasser après
+
+170
+00:12:23.001 --> 00:12:28.000
+Tout fait ! Maintenant, l&#x27;optimisation est tout fait maintenant et comme nous pouvons voir ici regarder la même chose
+
+171
+00:12:28.000 --> 00:12:32.001
+L&#x27;écran que nous avons vu à l&#x27;origine nous avons 621k de mémoire. Nous avons seulement gagné
+
+172
+00:12:32.001 --> 00:12:34.000
+90k ou plus de ce processus.
+
+173
+00:12:35.000 --> 00:12:40.000
+Et tous les ROMs ont disparu, vous pouvez voir qu&#x27;il n&#x27;y a plus de lettre R si manifeste
+
+174
+00:12:40.000 --> 00:12:44.001
+montre ce qui se passe et optimise ce qui est une caractéristique du QEMM 386 et de notre
+
+175
+00:12:44.001 --> 00:12:48.001
+produit appelé Cram a effectivement aidé à le faire afin que vous puissiez utiliser ces zones comme
+
+176
+00:12:48.001 --> 00:12:51.001
+Le meilleur possible. Tous les bons gentils deux grands outils de diagnostic merci beaucoup
+
+177
+00:12:51.001 --> 00:12:55.001
+Beaucoup de Frank et Gary. Maintenant qu&#x27;un fournisseur de matériel vous donne son support technique gratuit
+
+178
+00:12:55.001 --> 00:13:00.000
+Je voudrais un peu d’aide de votre utilisateur. Pour que cela arrive, beaucoup d’ordinateurs
+
+179
+00:13:00.000 --> 00:13:05.001
+Les fabricants combinent maintenant des logiciels de diagnostic avec leurs PC. Les ordinateurs Acer
+
+180
+00:13:05.001 --> 00:13:11.000
+Il produit un ordinateur tous les 15 secondes, ce qui représente environ 10 000 unités par semaine.
+
+181
+00:13:11.000 --> 00:13:15.001
+Beaucoup d&#x27;utilisateurs d&#x27;Acer sont là-bas qui pourraient vouloir appeler la ligne d&#x27;assistance technologique de Acer.
+
+182
+00:13:16.000 --> 00:13:20.000
+L&#x27;entreprise veut fournir aux utilisateurs un soutien mais dans une ère de marges étroites
+
+183
+00:13:20.000 --> 00:13:24.001
+Pour les fabricants de PC, il ne peut pas payer le coût élevé du service personnel pour chaque utilisateur.
+
+184
+00:13:25.000 --> 00:13:30.001
+La réponse d&#x27;Acer était de combiner le logiciel de diagnostic gratuitement avec chaque PC. dans
+
+185
+00:13:30.001 --> 00:13:35.001
+le cas d&#x27;inclure un disque de diagnostic ou un logiciel plus sophistiqué dans le
+
+186
+00:13:35.001 --> 00:13:41.001
+Un logiciel qui peut augmenter le coût de l&#x27;ordinateur de deux à cinq dollars.
+
+187
+00:13:42.000 --> 00:13:48.000
+Cependant, lorsque vous facturez les coûts de support d&#x27;un ordinateur au-dessus d&#x27;une ou deux
+
+188
+00:13:48.000 --> 00:13:52.001
+Jusqu’à une période de cinq ans, je pense conservatrice le temps et les dépenses impliquées
+
+189
+00:13:52.001 --> 00:13:57.001
+de prendre une appel de service peut être sur l&#x27;ordre de vingt dollars ainsi que le résultat
+
+190
+00:13:57.001 --> 00:14:02.001
+Il est dans l&#x27;intérêt du fabricant à long terme de fournir ce niveau de
+
+191
+00:14:02.001 --> 00:14:07.000
+investissement pour soutenir le client. Le logiciel Acer a été écrit en-house et
+
+192
+00:14:07.000 --> 00:14:11.000
+Aide l&#x27;utilisateur à tester différents composants à l&#x27;intérieur de l&#x27;ordinateur. Le diagnostic
+
+193
+00:14:11.000 --> 00:14:15.001
+Le logiciel permet aux techniciens Acer de résoudre votre problème et de
+
+194
+00:14:15.001 --> 00:14:18.001
+Dans de nombreux cas, il peut vous sauver d’avoir à faire l’appel du tout.
+
+195
+00:14:19.000 --> 00:14:23.001
+En ce qui concerne le nombre de demandes téléphoniques que nous avons reçues lorsque nous avons commencé
+
+196
+00:14:23.001 --> 00:14:29.000
+dans le diagnostic disque avec les ordinateurs que nous avons vu une réduction de
+
+197
+00:14:29.000 --> 00:14:33.000
+d&#x27;un tiers à un demi sur le nombre de requêtes de service.
+
+198
+00:14:33.001 --> 00:14:38.001
+En outre, nous trouvons que pour ceux que nous recevons, ils sont beaucoup plus élevés
+
+199
+00:14:38.001 --> 00:14:43.000
+le niveau d&#x27;enquêtes qualifiées afin de réduire le temps et l&#x27;effort
+
+200
+00:14:43.000 --> 00:14:47.001
+que notre personnel de service a besoin de travailler et de soutenir ce type d&#x27;enquête. Pour le
+
+201
+00:14:47.001 --> 00:14:50.000
+Je suis Janelle Stelson.
+
+202
+00:15:04.000 --> 00:15:07.001
+Les diagnostics de Macintosh étaient assez simples, mais avec toutes les nouveautés construites
+
+203
+00:15:07.001 --> 00:15:11.001
+Dans les Macs plus nouveaux et plus puissants, il y a un marché croissant pour la peinture
+
+204
+00:15:11.001 --> 00:15:16.001
+Dans votre Macintosh aussi. Voici pour nous montrer deux programmes de diagnostic Mac sont Jeff
+
+205
+00:15:16.001 --> 00:15:21.000
+Bodine de Micro-Mat et aussi avec nous Brent Luckman président de MacSA. Brent vous
+
+206
+00:15:21.000 --> 00:15:25.001
+Les garçons qui se spécialisent dans les outils de diagnostic PC et maintenant vous venez avec
+
+207
+00:15:25.001 --> 00:15:29.001
+Votre premier logiciel de diagnostic Mac. Que se passe-t-il ici ? Est-ce qu’il devient juste comme
+
+208
+00:15:29.001 --> 00:15:32.000
+Difficile de déterminer ce qui se passe à l&#x27;intérieur d&#x27;un Mac comme il est dans un DOS
+
+209
+00:15:32.000 --> 00:15:36.001
+La machine ? Absolument et absolument. Nous l&#x27;avons regardé et il y a environ six mois
+
+210
+00:15:36.001 --> 00:15:40.000
+Après avoir eu une demande pendant deux ans, il a déterminé que avec la FX, les Quadras et
+
+211
+00:15:40.000 --> 00:15:45.000
+les PowerBooks il y avait une nécessité définitive basée sur les cartes d&#x27;accélérateur, étendue
+
+212
+00:15:45.000 --> 00:15:48.000
+La vidéo. Nous avons vraiment besoin d&#x27;un outil qui aiderait les utilisateurs et
+
+213
+00:15:48.000 --> 00:15:52.000
+Les entreprises tirent pleinement parti de ce qui se passe dans ces machines pour
+
+214
+00:15:52.000 --> 00:15:54.001
+Identifier et isoler rapidement les problèmes. C’est pourquoi le PC obtient Windows
+
+215
+00:15:54.001 --> 00:15:56.000
+Le Mac devient plus compliqué. et absolument.
+
+216
+00:15:57.000 --> 00:16:01.001
+En ce moment, vous avez un produit appelé Mac EKG. Correcte ! Jeff et ce qu&#x27;il fait
+
+217
+00:16:01.001 --> 00:16:06.001
+Puis-je savoir ce qui se passe à l’intérieur de mon Mac ? Mac EKG est un CDev qui est
+
+218
+00:16:06.001 --> 00:16:10.001
+beaucoup comme un init ou une extension TSR dans le monde IBM et ce qu&#x27;il fait est
+
+219
+00:16:10.001 --> 00:16:15.000
+Il apprend essentiellement la façon dont la machine de l&#x27;utilisateur se comporte normalement. C’est ainsi qu’il faut
+
+220
+00:16:15.000 --> 00:16:20.000
+quelque chose d’étrange se produit, quelque chose qui ralentit le système, le programme
+
+221
+00:16:20.000 --> 00:16:24.000
+Il se lèvera et vous dira. Avant de faire un diagnostic système. Il passe à travers une
+
+222
+00:16:24.000 --> 00:16:28.000
+Une série de tests logiques. C&#x27;est ce qu&#x27;il fait en ce moment et tout en faisant cela
+
+223
+00:16:28.000 --> 00:16:31.000
+Il vous montre un peu d&#x27;informations sur votre machine. Vous êtes chargé dans
+
+224
+00:16:31.000 --> 00:16:32.001
+L&#x27;ECG après tout le reste est en place.
+
+225
+00:16:33.000 --> 00:16:34.001
+Après tout le reste marche. L’ECG est entré et regarde
+
+226
+00:16:34.001 --> 00:16:36.000
+et de déterminer ce qui se passe. Correcte !
+
+227
+00:16:36.001 --> 00:16:40.000
+Qu’est-ce que ça me dit ? En ce moment, il est à l&#x27;heure des fonctions logiques et ici
+
+228
+00:16:40.000 --> 00:16:44.001
+Je vais le pauser. Il teste le paramètre RAM qui est la zone de stockage
+
+229
+00:16:44.001 --> 00:16:49.000
+Ce qui stocke les informations après que la machine s&#x27;éteint. Il s’agit d’un test particulier
+
+230
+00:16:49.000 --> 00:16:50.001
+Chip et, bien sûr, affiche cette information.
+
+231
+00:16:51.001 --> 00:16:58.000
+Après avoir testé le paramètre RAM, il passe par un test de RAM de toute la mémoire.
+
+232
+00:16:58.000 --> 00:17:03.000
+Et puis il teste le chip VIA qui est l&#x27;adaptateur de l&#x27;interface Versal. Il permet
+
+233
+00:17:03.000 --> 00:17:08.000
+il doit communiquer avec le clavier et ensuite il doit tester le SCC qui est
+
+234
+00:17:08.000 --> 00:17:09.001
+Chip de contrôleur de communication série.
+
+235
+00:17:10.000 --> 00:17:13.001
+C&#x27;était le modem, le travail d&#x27;imprimante et ensuite le chip SCSI réel qui
+
+236
+00:17:13.001 --> 00:17:15.000
+Interfaces pour les disques SCSI.
+
+237
+00:17:16.000 --> 00:17:20.000
+La prochaine étape du test, c’est de tester les médias réels qui se sont éteints jusqu’au
+
+238
+00:17:20.000 --> 00:17:24.001
+La conduite. Il testera chaque conduite sur le bus, vous montrera beaucoup d&#x27;informations à ce sujet
+
+239
+00:17:24.001 --> 00:17:29.001
+et apprendre la façon dont une conduite particulière doit se comporter. Tous les systèmes sont nominaux. Quand
+
+240
+00:17:29.001 --> 00:17:33.000
+Il est complet il vous donne un histogramme et si nous avions trouvé des problèmes il serait
+
+241
+00:17:33.000 --> 00:17:36.001
+Ils nous ont dit juste ici. Il y a un problème ici, regardez-y.
+
+242
+00:17:37.001 --> 00:17:40.001
+Ok, maintenant, que pouvons-nous faire d’autre avec cela alors ? Je pense que je n&#x27;utilise que ça
+
+243
+00:17:40.001 --> 00:17:46.000
+Regularement vérifier mon ordinateur chaque jour ou résoudre un problème? En tant que puissance
+
+244
+00:17:46.000 --> 00:17:51.000
+l&#x27;utilisateur qui serait le moyen d&#x27;utiliser c&#x27;est de le faire une fois par jour, peut-être plusieurs fois
+
+245
+00:17:51.000 --> 00:17:54.000
+Un jour ou même une fois par semaine. Nous avons plusieurs réglages pour cela. Pour le
+
+246
+00:17:54.000 --> 00:17:58.001
+technicien de service il leur permet de tester les chips précédemment uniquement testable par un
+
+247
+00:17:58.001 --> 00:18:04.000
+une pièce de logiciel d&#x27;Apple appelé test MAC qui n&#x27;était pas disponible pour le
+
+248
+00:18:04.000 --> 00:18:07.000
+Le public vient d&#x27;autoriser les distributeurs Apple. Cela vous donne un moyen de tester
+
+249
+00:18:07.000 --> 00:18:09.000
+Les faibles chiffres sur la logique.
+
+250
+00:18:09.000 --> 00:18:13.000
+Ok maintenant si je ne suis qu&#x27;un utilisateur moyen je pratique l&#x27;ECG une fois par jour ou une fois dans la semaine ou
+
+251
+00:18:13.000 --> 00:18:16.001
+Quelque chose et je vois qu&#x27;il y a un problème que je fais alors? La meilleure chose à
+
+252
+00:18:16.001 --> 00:18:19.001
+C&#x27;est vrai que c&#x27;est probablement à venir et vous dire qu&#x27;il y a un problème.
+
+253
+00:18:19.001 --> 00:18:24.000
+Le plus grand coupable que nous trouvons d&#x27;avoir un magasin de services qui réparent Macintosh est que
+
+254
+00:18:24.000 --> 00:18:27.000
+Les gens sont souvent coupables de leur propre machine. Ils ont mis quelque chose dans le
+
+255
+00:18:27.000 --> 00:18:30.000
+Un fichier qui provoque des problèmes. Ils le déchirent eux-mêmes. La prochaine fois, ils
+
+256
+00:18:30.000 --> 00:18:34.000
+redémarrer si l&#x27;ECG voit un échec ou une baisse de performance
+
+257
+00:18:34.000 --> 00:18:35.001
+Il se lèvera et vous dira. Tu me tromperas, ça te dira.
+
+258
+00:18:35.001 --> 00:18:40.000
+précisément . Il vous dira qu&#x27;il y a quelque chose de mal et de le regarder et juste
+
+259
+00:18:40.000 --> 00:18:43.001
+Par déduction, vous saurez bien que je l&#x27;ai fait hier, certainement c&#x27;est pourquoi. Tout droit
+
+260
+00:18:43.001 --> 00:18:47.001
+Brent vous avez un outil de diagnostic matériel et logiciel pour le MAC. Expliquez ce
+
+261
+00:18:47.001 --> 00:18:52.001
+à moi. Oui c’est juste. Ce que nous avons fait, c’est que nous sommes fournis aux utilisateurs un
+
+262
+00:18:52.001 --> 00:18:57.001
+carte de diagnostic qui aidera les utilisateurs à trouver le problème même si un triste MAC
+
+263
+00:18:57.001 --> 00:19:02.000
+Il apparaît sur l’écran. Comme vous êtes conscient que les diagnostics logiciels font une terrible
+
+264
+00:19:02.000 --> 00:19:05.000
+beaucoup d&#x27;hypothèses qui montrent, vidéo, disques, RAM
+
+265
+00:19:05.000 --> 00:19:06.001
+Et tout doit fonctionner parfaitement.
+
+266
+00:19:07.001 --> 00:19:11.000
+Ainsi, ce que nous avons fait, c’est que nous créions cette boîte pour de nouvelles machines de bus pour introduire quelques
+
+267
+00:19:11.000 --> 00:19:14.001
+standardisation puisque les autres MAC précédents avaient toutes sortes de différentes
+
+268
+00:19:14.001 --> 00:19:18.000
+Les systèmes d’expansion des slots. Et ce comité a vraiment sa propre réadouts droit
+
+269
+00:19:18.000 --> 00:19:21.000
+sur elle. Absolument et il est très facile à utiliser. Qu’est-ce qui vous dit ? Ainsi
+
+270
+00:19:21.000 --> 00:19:25.000
+Ce qu&#x27;il va dire à l&#x27;utilisateur est le numéro un est leur tension d&#x27;approvisionnement en énergie est
+
+271
+00:19:25.000 --> 00:19:30.000
+Aller à chaque ligne. Il indique l&#x27;horloge toute activité de bus et cherche ADB comme
+
+272
+00:19:30.000 --> 00:19:34.000
+et bien. Et cela va vraiment dire à l&#x27;utilisateur hey j&#x27;ai un problème c&#x27;est plus
+
+273
+00:19:34.000 --> 00:19:38.000
+sérieux que je peux gérer j&#x27;ai besoin d&#x27;un nouvel approvisionnement j&#x27;en ai un problème de bus pour le ramener
+
+274
+00:19:38.000 --> 00:19:41.000
+à mon distributeur pour le ramener à la boutique ou à l&#x27;un des distributeurs qui sont maintenant
+
+275
+00:19:41.000 --> 00:19:44.001
+La ligne de produits d’Apple. Tout est bien et je vois que vous avez un Terminator Plug
+
+276
+00:19:44.001 --> 00:19:48.000
+De quelque sorte, qu’est-ce que tu fais avec ça ? Oui avec notre programme que nous fournissons
+
+277
+00:19:48.000 --> 00:19:53.001
+Terminator plugs pour les ports de série et de modem et c&#x27;est pour garantir
+
+278
+00:19:53.001 --> 00:19:57.000
+l’intégrité et que ces ports fonctionnent correctement. Nous avons installé un ici
+
+279
+00:19:57.000 --> 00:20:01.001
+sur le dos de notre machine ici pour montrer qu&#x27;il échoue et peut échouer. Et ceci est
+
+280
+00:20:01.001 --> 00:20:06.001
+très important, nous avons vraiment testé le matériel sur des tests d&#x27;unités individuelles, ainsi que
+
+281
+00:20:06.001 --> 00:20:08.001
+Tests automatiques. Et nous avons vraiment
+
+282
+00:20:08.001 --> 00:20:10.000
+Nous avons brisé notre programme et nous devrions peut-être le regarder.
+
+283
+00:20:10.000 --> 00:20:12.000
+Voyons la partie logicielle de ce logiciel. Ok bien bien !
+
+284
+00:20:13.000 --> 00:20:14.001
+Vous allez donc brûler Snooper.
+
+285
+00:20:16.001 --> 00:20:22.000
+SNOOPER démarre avec un écran automatisé qui est connu dans le monde DOS comme un go
+
+286
+00:20:22.000 --> 00:20:26.001
+non go menu et ce qu&#x27;il fait il teste automatiquement les domaines clés de la fonctionnalité
+
+287
+00:20:26.001 --> 00:20:28.000
+où un échec pourrait se produire.
+
+288
+00:20:28.000 --> 00:20:31.001
+Et cela est vraiment bon parce que lorsque nous avons enquêté les utilisateurs nous avons trouvé qu&#x27;ils n&#x27;ont pas
+
+289
+00:20:31.001 --> 00:20:36.001
+Je voudrais vraiment s&#x27;asseoir et jouer avec les menus. Mais pour faire ce que nous
+
+290
+00:20:36.001 --> 00:20:40.000
+Nous avons également fourni quelques tests exhaustifs que nous verrons en une minute. Quelle
+
+291
+00:20:40.000 --> 00:20:44.001
+Nous avons une boîte de dialogue au fond qui leur dit l&#x27;état et nous aussi
+
+292
+00:20:44.001 --> 00:20:48.000
+enregistre le contrôle de passage ou plusieurs fois un appareil peut avoir échoué.
+
+293
+00:20:48.001 --> 00:20:54.000
+Si quelque chose échoue ici, il leur donnera de dire mal, il se remplira dans la boîte et
+
+294
+00:20:54.000 --> 00:20:57.000
+Il va être enregistré, il va ensuite aller au manuel il dira à l&#x27;utilisateur ce qu&#x27;il a besoin
+
+295
+00:20:57.000 --> 00:21:00.000
+à faire. C&#x27;est ainsi que je me montre séquentiellement juste en cours à travers chacun de ces tests un
+
+296
+00:21:00.000 --> 00:21:04.000
+à un moment. Exactement comme vous pouvez voir le port de modem échoué et nous avons le loop en arrière
+
+297
+00:21:04.000 --> 00:21:08.001
+Le terminateur est désormais supprimé. Cela peut se poursuivre pendant un certain temps, alors pourquoi
+
+298
+00:21:08.001 --> 00:21:12.001
+Je ne regarde pas. Nous avons divisé le programme en des informations de système de test
+
+299
+00:21:12.001 --> 00:21:18.000
+qui est défini comme aider un utilisateur ou un technicien à déterminer ce qui est installé dans
+
+300
+00:21:18.000 --> 00:21:23.000
+la machine où elle est située et nous regardons la CPU, l&#x27;information ADB, la nouvelle information bus, SCSI
+
+301
+00:21:23.000 --> 00:21:24.001
+Informations de bus et informations complètes.
+
+302
+00:21:25.000 --> 00:21:30.000
+Ce qui est installé dans la machine et où il est essentiellement situé et avec ce que nous
+
+303
+00:21:30.000 --> 00:21:34.001
+maintenant avoir un rapport qui peut être généré pour les sociétés pour conserver un inventaire de
+
+304
+00:21:34.001 --> 00:21:38.000
+tous les équipements et où les objets sont situés. Exactement ce qui est à l’intérieur de la
+
+305
+00:21:38.000 --> 00:21:42.000
+La machine. Exactement et cela a été très précieux pour certaines des grandes entreprises
+
+306
+00:21:42.000 --> 00:21:46.000
+Nous avons fait des affaires avec. Ensuite, nous regardons le benchmarking et en benchmark, nous sommes
+
+307
+00:21:46.000 --> 00:21:50.000
+regarder maintenant nous comparons essentiellement pour un utilisateur pour déterminer le prix
+
+308
+00:21:50.000 --> 00:21:55.000
+Ratio de performance de la raison pour laquelle il acheterait une machine avec un accélérateur avec un
+
+309
+00:21:55.000 --> 00:21:58.000
+Carte vidéo particulière. C’est une décision d’achat pour les entreprises.
+
+310
+00:21:58.000 --> 00:22:00.000
+et les utilisateurs finaux. Montrer par exemple.
+
+311
+00:22:00.000 --> 00:22:04.000
+Je vais regarder ici sur un test vidéo juste pour vous donner une idée et nous
+
+312
+00:22:04.000 --> 00:22:10.000
+comparer ici la vitesse vidéo du CI contre un quadra 900 et comme vous pouvez le voir
+
+313
+00:22:10.000 --> 00:22:13.001
+Je pense que mes designers ont été un peu fou sur cette. Ils sont en train de faire une belle
+
+314
+00:22:13.001 --> 00:22:17.001
+Un test vidéo compliqué ici. Oui, c&#x27;est génial et donc la machine mesure le
+
+315
+00:22:17.001 --> 00:22:20.000
+l&#x27;efficacité de ma machine en la comparant à ce qu&#x27;il serait si j&#x27;avais une
+
+316
+00:22:20.000 --> 00:22:23.000
+Le Quadrant. C’est vrai, c’est 41%. OK
+
+317
+00:22:23.000 --> 00:22:25.001
+Je vais vous donner une idée de ce que nous faisons.
+
+318
+00:22:25.001 --> 00:22:31.000
+Qu’est-ce que nous pouvons faire autrement ? Donc nous avons testé le disque, nous choisissons le dispositif, nous
+
+319
+00:22:31.000 --> 00:22:35.001
+Faites ce qu’on appelle un test rapide, nous faisons des tests exhaustifs, cherchons la segmentation. Un grand
+
+320
+00:22:35.001 --> 00:22:39.001
+La plainte de beaucoup d’utilisateurs est la termination. Qu’est-ce qu’il y a là sur le bus SCSI,
+
+321
+00:22:39.001 --> 00:22:41.000
+Ce qui se passe est libre et clair.
+
+322
+00:22:41.000 --> 00:22:46.000
+Nous faisons des tests de mémoire, nous faisons les tests de modèles de base et c&#x27;est un moyen de
+
+323
+00:22:46.000 --> 00:22:51.000
+Déterminer quel module SIM est défectueux. Nous donnons un exemple, nous ferons un
+
+324
+00:22:51.000 --> 00:22:54.001
+Les marcheurs testent et nous indiquerons ici et montrerons clairement une adresse qui est mauvaise
+
+325
+00:22:54.001 --> 00:22:58.001
+Ou s’il est défectueux. L&#x27;utilisateur va à son manuel, regarde le type de CPU et
+
+326
+00:22:58.001 --> 00:23:01.001
+La machine qu&#x27;il a et sait quel module SIM il doit être remplacé.
+
+327
+00:23:03.000 --> 00:23:08.000
+Nous faisons encore plus de tests vidéo pour l&#x27;écran. Nous faisons des choses comme Pin Cushion
+
+328
+00:23:08.000 --> 00:23:11.000
+test, regarder n’importe quel coin ou quelque chose qui pourrait être sur la
+
+329
+00:23:11.000 --> 00:23:12.001
+Test de convergence, Test de Convergence.
+
+330
+00:23:15.001 --> 00:23:19.001
+Okay et toute une séquence nous faisons tous les types de vous connaître la couleur de lit, les roues de couleur.
+
+331
+00:23:20.001 --> 00:23:23.001
+Il suffit de donner à l&#x27;utilisateur l&#x27;idée que tout fonctionne fonctionnellement et jusqu&#x27;à
+
+332
+00:23:23.001 --> 00:23:29.001
+et snuff. Et puis ici sur test nous faisons des tests de batterie, le PRAM, nous faisions individuellement
+
+333
+00:23:29.001 --> 00:23:31.001
+Test de port, nous testons l&#x27;horloge en temps réel.
+
+334
+00:23:31.001 --> 00:23:38.001
+Nous faisons aussi des tests audio ici. OK ! L’audio fonctionne correctement. I
+
+335
+00:23:38.001 --> 00:23:40.000
+Je suppose comme ça. J’ai dû l’avoir.
+
+336
+00:23:40.000 --> 00:23:46.000
+Ensuite, nous fournissons également à l’utilisateur des informations de test complètes. Un véritable résumé
+
+337
+00:23:46.000 --> 00:23:50.000
+ou un histogramme, comme Jeff l&#x27;a mentionné plus tôt, de tout ce qui s&#x27;est passé pour
+
+338
+00:23:50.000 --> 00:23:54.001
+le technicien ou la société en tant que rapport d&#x27;état. C’est génial, vous pouvez
+
+339
+00:23:54.001 --> 00:23:59.001
+Regardez vraiment, vous pouvez snoop à l&#x27;intérieur de votre ordinateur. Ou prendre son EKG, quelle que soit votre
+
+340
+00:23:59.001 --> 00:24:02.001
+Il veut faire. Vous avez raison, les gars, ils étaient très bons. Merci beaucoup à vous. C’est notre regard
+
+341
+00:24:02.001 --> 00:24:05.001
+Le logiciel de diagnostic. Restez à l&#x27;aise pour cette semaine
+
+342
+00:24:05.001 --> 00:24:07.000
+Informations sur Random Access.
+
+343
+00:24:20.001 --> 00:24:24.000
+Dans le fichier d&#x27;accès au hasard cette semaine, ceci est une édition d&#x27;été spéciale
+
+344
+00:24:24.000 --> 00:24:25.001
+avec un accent sur le logiciel.
+
+345
+00:24:25.001 --> 00:24:28.001
+Voici les titres de logiciels les plus vendus de la semaine dernière
+
+346
+00:24:28.001 --> 00:24:30.000
+PC selon la connexion PC.
+
+347
+00:24:31.000 --> 00:24:36.000
+La mise à jour MS-DOS 5.0 de Microsoft occupe la position numéro un.
+
+348
+00:24:36.000 --> 00:24:39.001
+Top 10 ou Stacker 2. 0 sur Stack Electronics et Berkeley
+
+349
+00:24:39.001 --> 00:24:41.000
+Systèmes après les ténèbres pour Windows.
+
+350
+00:24:42.000 --> 00:24:47.001
+Suivez Paul Schindler et notre revue de logiciels d&#x27;été. Tu sais que je ne peux jamais
+
+351
+00:24:47.001 --> 00:24:51.001
+mon papier a planifié exactement la façon dont je le voulais et en ce qui concerne ma liste de trois chiffres à faire,
+
+352
+00:24:52.000 --> 00:24:56.000
+oublier ça. Mais avec Datebook, vous avez une chance de se battre pour être organisé. Maintenant
+
+353
+00:24:56.000 --> 00:25:00.000
+Chaque jour, vous pouvez regarder soit votre liste à faire, les articles poursuivent si vous ne
+
+354
+00:25:00.000 --> 00:25:04.001
+complètes, ou vos événements pour la journée. Voir les événements de la journée en tant que texte, un Gantt
+
+355
+00:25:04.001 --> 00:25:09.000
+Un tableau ou une barre de temps. La vue de la semaine ressemble beaucoup à des calendriers de papier et en fait
+
+356
+00:25:09.000 --> 00:25:13.001
+Vous pouvez l&#x27;imprimer pour s&#x27;adapter aux horaires populaires de la journée ou aux formats Filofax. Un unique
+
+357
+00:25:13.001 --> 00:25:17.001
+La caractéristique de ce Datebook est l’indicateur de busyness. Divisez votre journée de travail en
+
+358
+00:25:17.001 --> 00:25:21.000
+Trois périodes que vous choisissez et le calendrier vous montre à un oeil avec vert,
+
+359
+00:25:21.000 --> 00:25:26.000
+bars jaunes ou rouges que vous soyez libre, légèrement occupé, ou totalement crunched. Pour
+
+360
+00:25:26.000 --> 00:25:28.000
+La plupart d&#x27;entre nous commencent la semaine le lundi et Datebook
+
+361
+00:25:28.000 --> 00:25:30.000
+La semaine commence quand vous dites que vous le faites.
+
+362
+00:25:30.001 --> 00:25:34.000
+Vous pouvez utiliser une bannière pour indiquer des événements de plusieurs jours. Datebook vient avec une variété
+
+363
+00:25:34.000 --> 00:25:38.001
+des icônes que vous pouvez utiliser pour marquer certains types d&#x27;événements. Datebook est de 125 $
+
+364
+00:25:38.001 --> 00:25:43.000
+Après Hours Software à Van Nuys, en Californie. Pour les chroniques informatiques
+
+365
+00:25:43.000 --> 00:25:47.001
+Je suis Paul Schindler. C&#x27;est ça pour les chronicles informatiques de cette semaine. Je suis Janelle
+
+366
+00:25:47.001 --> 00:25:54.000
+à Stelson. Les chronicles informatiques ont été rendus possibles en partie par PC Connection et
+
+367
+00:25:54.000 --> 00:25:58.001
+La MacConnection. Logiciels de commande de courrier et périphériques matériels pour le PC et le
+
+368
+00:25:58.001 --> 00:26:03.001
+Macintosh et l’Association des éditeurs de logiciels. Les fournisseurs d’éducation
+
+369
+00:26:03.001 --> 00:26:10.000
+les matériaux pour aider à gérer le logiciel. Ne copiez pas ce floppy. Vidéo cassette copie
+
+370
+00:26:10.000 --> 00:26:12.000
+Ce programme est disponible.
+
+371
+00:26:12.000 --> 00:26:16.000
+Computer Chronicles publie également un bulletin de compagnie contenant des détails sur
+
+372
+00:26:16.000 --> 00:26:20.001
+des produits démontrés plus des informations de fond sur les sujets du programme. Pour commander A
+
+373
+00:26:20.001 --> 00:26:27.001
+cassette vidéo ou une souscription à la newsletter appel 1-800-366-9484 ou écrire
+
+374
+00:26:27.001 --> 00:26:32.001
+Chronicles informatiques. Veuillez spécifier le sujet du programme pour les tapis. Toutes les commandes incluent
+
+375
+00:26:32.001 --> 00:26:35.001
+Un logiciel gratuit pour l’utilisation de logiciels d’audit.
