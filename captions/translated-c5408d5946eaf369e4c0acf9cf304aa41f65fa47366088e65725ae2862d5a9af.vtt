@@ -1,0 +1,1937 @@
+WEBVTT
+
+1
+00:00:16.001 --> 00:00:19.001
+Vamos ver, eu sei que essa parte está aqui em algum lugar.
+
+2
+00:00:21.000 --> 00:00:25.001
+Se você tem placas cheias de caixas com itens diferentes em cada caixa, você
+
+3
+00:00:25.001 --> 00:00:28.000
+Melhor ter um sistema para encontrar o item que você está procurando.
+
+4
+00:00:28.000 --> 00:00:32.001
+E se você tiver um disco rígido com 40 megabytes ou mais de informação sobre ele,
+
+5
+00:00:32.001 --> 00:00:35.001
+É melhor ter um sistema para encontrar o arquivo que você está procurando.
+
+6
+00:00:36.000 --> 00:00:41.000
+Hoje vamos olhar para o gerenciamento de disco rígido, problemas, prevenções e remédios
+
+7
+00:00:41.000 --> 00:00:43.001
+nesta edição das crônicas de computador.
+
+8
+00:01:04.001 --> 00:01:10.000
+As crônicas de computador são tornadas possíveis em parte por McGraw-Hill, editores de
+
+9
+00:01:10.000 --> 00:01:14.000
+Revista Byte, e Bix, o intercâmbio de informações Byte.
+
+10
+00:01:14.001 --> 00:01:19.001
+Em impressão e on-line, Byte e Bix servem profissionais de computador em todo o mundo com
+
+11
+00:01:19.001 --> 00:01:23.000
+informações detalhadas sobre novos hardware, software e tecnologias.
+
+12
+00:01:30.001 --> 00:01:34.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e este é Gary Kildall.
+
+13
+00:01:34.001 --> 00:01:37.001
+Gary, quando você olha para um disco rígido, e temos um disco duro sobre
+
+14
+00:01:37.001 --> 00:01:39.001
+Aqui, se eu tirar o topo, você pode ver.
+
+15
+00:01:40.000 --> 00:01:43.000
+Eu quero dizer que é isso. Você não pode realmente dizer muito sobre o que está acontecendo dentro.
+
+16
+00:01:43.000 --> 00:01:46.000
+Há programas como este que mapa um disco rígido para você. Você pode ver
+
+17
+00:01:46.000 --> 00:01:48.000
+Onde estão os arquivos. Ainda não lhe diz muito.
+
+18
+00:01:48.000 --> 00:01:52.000
+A pergunta que eu tenho para você é, como usuário, por que eu preciso de um optimizador, um
+
+19
+00:01:52.000 --> 00:01:54.001
+Diretor ou gerente? Tenho um disco em funcionamento
+
+20
+00:01:54.001 --> 00:01:56.000
+do sistema. Por que não faz tudo isso por mim?
+
+21
+00:01:56.000 --> 00:02:00.000
+Bem, Stuart, não há nenhuma desculpa por não ter um bom conjunto de utilidade como arquivar
+
+22
+00:02:00.000 --> 00:02:02.000
+e ferramentas de backup para discos muito grandes como este.
+
+23
+00:02:02.001 --> 00:02:06.000
+Mas há muitas ferramentas que realmente fazem coisas como revelar os dados
+
+24
+00:02:06.000 --> 00:02:11.000
+estruturas que a sua concorrência pode olhar e usar de alguma forma, ou revelar
+
+25
+00:02:11.000 --> 00:02:13.000
+estruturas de dados para um usuário, e eles se acostumam a isso.
+
+26
+00:02:13.000 --> 00:02:14.001
+E se você quiser alterá-los com as versões do
+
+27
+00:02:14.001 --> 00:02:16.000
+sistema operacional, você não pode fazer isso mais.
+
+28
+00:02:17.000 --> 00:02:19.001
+Outras coisas que são problemas, se você não selecionar arquivos e você não é
+
+29
+00:02:19.001 --> 00:02:24.000
+conhecimento sobre a forma como essas operações não selecionadas funcionam, e você também pode
+
+30
+00:02:24.000 --> 00:02:25.001
+Obter os dados errados de volta.
+
+31
+00:02:26.001 --> 00:02:29.001
+As ferramentas permitirão que você realmente alterar as tabelas de alocação de arquivos. Bem, isso poderia
+
+32
+00:02:29.001 --> 00:02:32.001
+Corrupte seu disco. Assim, nas mãos de um usuário médio, alguém que não
+
+33
+00:02:32.001 --> 00:02:35.001
+treinado para usar essas utilidades, poderia causar um real
+
+34
+00:02:35.001 --> 00:02:37.000
+problema se você fornecer com o sistema operacional.
+
+35
+00:02:37.000 --> 00:02:38.001
+Se alguém o vende, não é um
+
+36
+00:02:38.001 --> 00:02:40.000
+O problema. Você não saiu e comprou? Bem, é o seu problema.
+
+37
+00:02:40.001 --> 00:02:43.001
+Bem, Gary, hoje vamos olhar para uma variedade de utilidades que podem
+
+38
+00:02:43.001 --> 00:02:46.000
+Ajuda você a resolver seus problemas de disco rígido. Vamos olhar para um disco
+
+39
+00:02:46.000 --> 00:02:47.001
+Otimizador, um organizador de disco.
+
+40
+00:02:48.000 --> 00:02:51.000
+Vamos olhar para os sistemas de backup. Vamos ver o novo médico do disco de Peter Norton,
+
+41
+00:02:51.000 --> 00:02:54.001
+E vamos mostrar-lhe como proteger o seu disco rígido de um vírus.
+
+42
+00:02:54.001 --> 00:02:58.000
+Agora, novamente, se o sistema operacional básico fosse mais poderoso, mais amigável,
+
+43
+00:02:58.000 --> 00:03:02.000
+Talvez você não precise de todas essas ferramentas. Microsoft anuncia nova versão do MS
+
+44
+00:03:02.000 --> 00:03:03.001
+DOS é um sistema operacional mais poderoso.
+
+45
+00:03:04.000 --> 00:03:07.000
+Vamos começar com uma olhada no DOS 4. 0 e 0
+
+46
+00:03:09.000 --> 00:03:14.000
+A cadeia de lojas de computadores da Businessland está em negócios há muito tempo o suficiente para
+
+47
+00:03:14.000 --> 00:03:19.001
+testemunho de toda a evolução do IBM PC e do seu sistema operacional, a partir do
+
+48
+00:03:19.001 --> 00:03:22.000
+Primeiro Um rápido para o mais recente DOS shell.
+
+49
+00:03:22.000 --> 00:03:27.000
+Na sede da empresa em San Jose, Califórnia, há laboratórios de teste
+
+50
+00:03:27.000 --> 00:03:31.001
+preenchido com amostras de novo hardware e software. Um dos novos
+
+51
+00:03:31.001 --> 00:03:33.000
+Os itens são DOS 4.0.
+
+52
+00:03:33.001 --> 00:03:40.000
+Bem, há três principais melhorias no DOS 4.0 acima do DOS 3.3. O primeiro é
+
+53
+00:03:40.000 --> 00:03:46.000
+a pausa no suporte para partições maiores em um disco rígido. Antes do DOS 4.0, nós
+
+54
+00:03:46.000 --> 00:03:47.001
+Tem 32 megabytes como limite.
+
+55
+00:03:48.000 --> 00:03:53.001
+Agora é essencialmente ilimitado. Além disso, há suporte EMS construído em DOS 4.0. O que
+
+56
+00:03:53.001 --> 00:03:57.000
+Na verdade, provavelmente a coisa mais aparente em DOS 4.0 é a adição de um shell,
+
+57
+00:03:57.001 --> 00:04:01.000
+O DOS shell, que é uma interface amigável envolta em torno
+
+58
+00:04:01.000 --> 00:04:03.000
+DOS para torná-lo muito mais fácil de usar.
+
+59
+00:04:03.000 --> 00:04:06.000
+E isso está se tornando importante porque as pessoas começam a ter mais
+
+60
+00:04:06.000 --> 00:04:07.001
+e mais arquivos em seus drives rígidos.
+
+61
+00:04:08.000 --> 00:04:14.000
+O novo shell DOS, com suas barras de menu e janelas, parece adaptado para um mouse,
+
+62
+00:04:14.000 --> 00:04:19.000
+Mas também tem que trabalhar com um teclado. A tela colorida e
+
+63
+00:04:19.000 --> 00:04:24.000
+Menus extensos também podem lembrar usuários de algumas outras interfaces gráficas.
+
+64
+00:04:25.000 --> 00:04:30.000
+Mas o DOS 4.0 não é um ambiente de aplicação, mesmo que pareça um.
+
+65
+00:04:30.000 --> 00:04:34.001
+O shell DOS é realmente apenas o começo para melhorar o ambiente DOS. I
+
+66
+00:04:34.001 --> 00:04:38.001
+a longo prazo, no entanto, a estratégia para a maioria das empresas e para as pessoas como
+
+67
+00:04:38.001 --> 00:04:42.000
+A Microsoft e a IBM irão gravitar essas pessoas para mais alto
+
+68
+00:04:42.000 --> 00:04:44.001
+Funcionalidade, Gestor de apresentação do OS2.
+
+69
+00:04:45.000 --> 00:04:49.001
+DOS 4.0 ainda tem que se provar como um padrão aceitável entre
+
+70
+00:04:49.001 --> 00:04:51.000
+Diretores de disco rígido competindo.
+
+71
+00:04:51.000 --> 00:04:56.001
+Mas, por outro lado, a mudança dramática de um ecrã branco para um cheio de
+
+72
+00:04:56.001 --> 00:05:02.000
+informações sobre arquivos, diretórios e os comandos dos arcanos DOS devem
+
+73
+00:05:02.000 --> 00:05:05.000
+A vida é mais fácil para o usuário diário do PC.
+
+74
+00:05:08.000 --> 00:05:14.001
+[...] Você precisa de
+
+75
+00:05:14.001 --> 00:05:16.000
+É preciso garantir que [...]
+
+76
+00:05:16.000 --> 00:05:21.001
+Agora que nos acompanha no estúdio é Phil.
+
+77
+00:05:21.001 --> 00:05:23.001
+Empresa da Quinta Geração de Sistemas Inc.
+
+78
+00:05:23.001 --> 00:05:26.001
+E ao lado de Phil é Patrick O&#x27;Connor de EverX. O Gary?
+
+79
+00:05:27.000 --> 00:05:30.000
+[...] estavam apenas falando sobre discos rígidos, e um dos problemas reais com hard
+
+80
+00:05:30.000 --> 00:05:33.001
+Hoje em dia, os discos são muito grandes, em muitos casos 140 megabytes ou mais.
+
+81
+00:05:34.000 --> 00:05:36.001
+E um dos problemas que temos é apoiar toda a informação.
+
+82
+00:05:37.001 --> 00:05:41.000
+Portanto, como resultado disso, o que fazemos muitas vezes é que simplesmente não recolhemos os materiais,
+
+83
+00:05:41.001 --> 00:05:44.000
+E se alguma vez cair, eles são um verdadeiro grande problema.
+
+84
+00:05:45.000 --> 00:05:48.000
+Fil, você tem um produto chamado Fastback, é isso certo? Diga
+
+85
+00:05:48.000 --> 00:05:49.001
+Vamos um pouco sobre isso. Como você arquivo seus discos?
+
+86
+00:05:49.001 --> 00:05:54.001
+O Fastback usa os drives existentes no sistema para backup, o que é um baixo custo
+
+87
+00:05:54.001 --> 00:06:00.001
+abordagem para trazer backup de dados e segurança no quadro de vida do usuário lá.
+
+88
+00:06:00.001 --> 00:06:02.001
+Então, apoiando-se do disco rígido para um floppy?
+
+89
+00:06:03.000 --> 00:06:03.000
+E sim.
+
+90
+00:06:04.000 --> 00:06:07.001
+Que tipo de compressão você faz? Você faz a compressão de dados nos 1s e 0s,
+
+91
+00:06:07.001 --> 00:06:09.000
+E que tipo de relação você faz?
+
+92
+00:06:09.000 --> 00:06:12.000
+Três a um em geral é o que olhamos, é claro, quando usamos arquivos bitmap
+
+93
+00:06:12.000 --> 00:06:14.000
+e imagens gráficas assim.
+
+94
+00:06:14.000 --> 00:06:17.001
+Você não recebe tanta compressão, mas em seus arquivos de processamento de madeira e seu
+
+95
+00:06:17.001 --> 00:06:20.000
+Os arquivos da folha de folha, você obterá uma relação de compressão máxima.
+
+96
+00:06:20.000 --> 00:06:21.001
+Agora você usa formatos de arquivo padrão, ou
+
+97
+00:06:21.001 --> 00:06:23.000
+Você realmente está apenas jogando essa coisa para floppy?
+
+98
+00:06:23.001 --> 00:06:26.001
+Não, estamos usando o formato de arquivo padrão agora. Voltamos para isso com Fastback.
+
+99
+00:06:26.001 --> 00:06:29.000
+Além disso, para que você possa ver os arquivos quando você
+
+100
+00:06:29.000 --> 00:06:30.001
+Entre para ver os seus discos de backup.
+
+101
+00:06:31.000 --> 00:06:36.000
+Eu estava indo para perguntar, apenas em termos de backup up, vamos dizer que você está apoiando up 100
+
+102
+00:06:36.000 --> 00:06:39.000
+Megabytes, que tempo vai levar para você?
+
+103
+00:06:39.000 --> 00:06:43.000
+Cerca de meia hora. Isso dependerá da quantidade de compressão de dados que você coloca em
+
+104
+00:06:43.000 --> 00:06:46.000
+o sistema e a quantidade de verificação de erros.
+
+105
+00:06:46.001 --> 00:06:48.000
+O que você esperaria em termos do número de floppies que resultaria?
+
+106
+00:06:49.000 --> 00:06:51.000
+Isso é difícil de dizer. Eu diria aproximadamente...
+
+107
+00:06:51.000 --> 00:06:51.001
+Muito muito.
+
+108
+00:06:52.000 --> 00:06:53.001
+São 100 megabytes?
+
+109
+00:06:55.001 --> 00:06:56.001
+Mostre-nos como funciona aqui.
+
+110
+00:06:56.001 --> 00:07:00.000
+Ok, este é o novo Fastback Plus, e temos uma nova interface de usuário aqui.
+
+111
+00:07:00.001 --> 00:07:04.001
+Além disso, adicionamos uma capacidade de ajuda. Você pode estar em qualquer lugar dentro do programa e
+
+112
+00:07:04.001 --> 00:07:07.001
+Clique em sua chave F1 e obtenha informações sobre essa função específica.
+
+113
+00:07:08.000 --> 00:07:11.000
+O que você faz é, quando você primeiro obter Fastback Plus, nós encorajamos você a
+
+114
+00:07:11.000 --> 00:07:12.001
+Faça uma backup completa no seu sistema.
+
+115
+00:07:13.001 --> 00:07:16.001
+Após esse ponto em tempo, você pode fazer o que é chamado de um incremental ou um
+
+116
+00:07:16.001 --> 00:07:19.001
+backup diferencial, que está apenas adicionando à backup original.
+
+117
+00:07:20.000 --> 00:07:22.000
+Qual a diferença entre diferencial e incremental?
+
+118
+00:07:22.001 --> 00:07:27.000
+Incremental é a diferença entre o último backup que você fez. A diferença é
+
+119
+00:07:27.000 --> 00:07:28.001
+entre o backup original que você fez.
+
+120
+00:07:30.001 --> 00:07:33.000
+Basicamente aqui, vamos entrar e vamos dizer que queremos
+
+121
+00:07:33.000 --> 00:07:35.001
+Comece com a unidade C para apoiá-la.
+
+122
+00:07:35.001 --> 00:07:39.001
+Temos alguns fatores de seleção aqui onde podemos entrar e fazê-los incluir arquivos.
+
+123
+00:07:39.001 --> 00:07:41.001
+Podemos dizer certos arquivos que só queremos incluir.
+
+124
+00:07:42.001 --> 00:07:46.000
+Também podemos excluir. Vamos dizer que eu quero muitos arquivos, mas exclui alguns.
+
+125
+00:07:47.001 --> 00:07:49.000
+Podemos fazer arquivos por data.
+
+126
+00:07:49.001 --> 00:07:52.001
+Nós simplesmente dizemos onde queremos que ele vá, neste caso, para o floppy drive.
+
+127
+00:07:53.000 --> 00:07:55.000
+E podemos dizer-lhe que tipo de backup queremos.
+
+128
+00:07:55.000 --> 00:07:57.001
+Aqui temos um backup completo, um incremental, um diferencial,
+
+129
+00:07:58.000 --> 00:07:59.001
+separado de cópia de backup completa.
+
+130
+00:08:00.000 --> 00:08:02.001
+Estes são principalmente para fazer rapidamente depósitos de dados sem
+
+131
+00:08:02.001 --> 00:08:04.001
+Recuperar o arquivo para backup.
+
+132
+00:08:08.001 --> 00:08:11.000
+Podemos até estimar quanto tempo a backup
+
+133
+00:08:11.000 --> 00:08:13.000
+Vamos fazer isso uma vez que entramos no sistema.
+
+134
+00:08:13.001 --> 00:08:15.001
+Neste caso, temos uma unidade dura aqui de cerca de 80
+
+135
+00:08:15.001 --> 00:08:17.000
+Obrigado, mas não há muita informação aqui.
+
+136
+00:08:17.000 --> 00:08:19.000
+Vamos pedir que faça uma estimativa aqui.
+
+137
+00:08:20.001 --> 00:08:23.000
+Neste caso, levará um minuto e oito segundos para fazer backup.
+
+138
+00:08:23.000 --> 00:08:24.001
+Os dados que estão lá fora na unidade.
+
+139
+00:08:25.000 --> 00:08:26.001
+Sabemos por quanto tempo estaremos lá.
+
+140
+00:08:26.001 --> 00:08:28.000
+Nós também sabemos quantos discos ele vai levar à frente.
+
+141
+00:08:29.000 --> 00:08:33.001
+E também temos um fator de tempo aqui, que funciona enquanto você está fazendo sua backup.
+
+142
+00:08:33.001 --> 00:08:35.001
+Portanto, obviamente, este não é um disco completo, por qualquer meio.
+
+143
+00:08:36.000 --> 00:08:36.001
+Não não.
+
+144
+00:08:38.000 --> 00:08:40.000
+O que seria uma boa prática para um usuário típico
+
+145
+00:08:40.000 --> 00:08:41.001
+Então, é em termos de como usar FastBank?
+
+146
+00:08:42.000 --> 00:08:43.000
+Recomendamos uma vez por dia.
+
+147
+00:08:43.001 --> 00:08:48.001
+Se você é um usuário casual com o processamento de arquivos de folheto, você sabe, você pode
+
+148
+00:08:48.001 --> 00:08:50.000
+Faça isso uma vez por semana.
+
+149
+00:08:50.001 --> 00:08:55.000
+Mas se você está em um ambiente de negócios ou está fazendo qualquer tipo de contabilidade
+
+150
+00:08:55.000 --> 00:08:58.000
+Tipo firme de coisa, pensamos que uma vez por dia é mais do que apropriado.
+
+151
+00:08:58.001 --> 00:09:00.001
+Fil, quero pedir-lhe que deslize o teclado para Patrick, se você quiser.
+
+152
+00:09:00.001 --> 00:09:03.001
+Patrick, se você quiser estar pronto para nos mostrar o seu sistema EverX.
+
+153
+00:09:04.000 --> 00:09:06.001
+Qual seria o custo do FastBank, Phil? de 189.
+
+154
+00:09:08.001 --> 00:09:12.001
+E voltando para a pergunta de Gary, talvez não o disco rígido de 100 megabytes
+
+155
+00:09:12.001 --> 00:09:16.001
+situação, mas, você sabe, quantos discos você estaria envolvido em um típico?
+
+156
+00:09:16.001 --> 00:09:19.000
+Você compra o produto e você quer fazer a sua primeira backup.
+
+157
+00:09:19.001 --> 00:09:23.001
+Para um 20 meg, se você estiver usando o novo 1. 2 megabytes floppy, uma caixa de discos vai
+
+158
+00:09:23.001 --> 00:09:25.001
+Faça você por 20mAh.
+
+159
+00:09:26.001 --> 00:09:30.000
+OK  ⁇  E a compressão que você faz, como isso tem a ver com a velocidade?
+
+160
+00:09:30.000 --> 00:09:33.001
+Eu quero dizer, o ponto inteiro do FastBank, suponho, é acelerar este processo
+
+161
+00:09:33.001 --> 00:09:35.000
+Em vez de simplesmente fazer cópias dessas coisas.
+
+162
+00:09:35.000 --> 00:09:38.001
+O tempo de backup diminui se você colocar na compressão de dados.
+
+163
+00:09:38.001 --> 00:09:40.001
+O que está fazendo é que você está pedindo para fazer um processo extra lá,
+
+164
+00:09:40.001 --> 00:09:42.000
+O que é desligar esses arquivos para baixo.
+
+165
+00:09:42.001 --> 00:09:44.000
+E você também está pedindo que você faça isso na restauração.
+
+166
+00:09:45.000 --> 00:09:46.001
+Então, basicamente, vai levar um pouco
+
+167
+00:09:46.001 --> 00:09:48.001
+mais longe. É difícil estimar exatamente.
+
+168
+00:09:49.000 --> 00:09:52.000
+Ok, Patrick, você tem outra abordagem mais pesada aqui.
+
+169
+00:09:52.000 --> 00:09:53.000
+Diga-nos sobre o seu sistema.
+
+170
+00:09:53.001 --> 00:09:56.001
+O que temos aqui é uma unidade de tape externa de 125 megabytes.
+
+171
+00:09:56.001 --> 00:10:00.000
+Então, o que você está realmente recebendo, é uma unidade externa junto com a
+
+172
+00:10:00.000 --> 00:10:02.000
+Condução montada internamente lá.
+
+173
+00:10:02.000 --> 00:10:04.000
+Ele vem com software e um controlador adicional
+
+174
+00:10:04.000 --> 00:10:06.000
+cartão, que é montado dentro do seu PC.
+
+175
+00:10:06.001 --> 00:10:07.001
+Sobre que custo é isso?
+
+176
+00:10:08.000 --> 00:10:10.000
+Um varejo seria de 1.800 dólares.
+
+177
+00:10:11.000 --> 00:10:13.000
+E quem é o tipo de usuário que quer usar o seu
+
+178
+00:10:13.000 --> 00:10:14.001
+O sistema de streaming de tape em oposição ao FastBank?
+
+179
+00:10:14.001 --> 00:10:18.000
+Você veria mais em um ambiente corporativo ou universitário, poder pesado real
+
+180
+00:10:18.000 --> 00:10:21.001
+usuários, pessoas que fazem quantidades massivas de utilização de disco
+
+181
+00:10:21.001 --> 00:10:23.000
+Também precisam de grandes backups.
+
+182
+00:10:23.001 --> 00:10:24.001
+Você pode nos mostrar como você faria isso?
+
+183
+00:10:24.001 --> 00:10:28.001
+É certo. O que eu posso fazer, deixe-me mostrar-lhe uma backup rápida de arquivo por arquivo.
+
+184
+00:10:29.000 --> 00:10:31.001
+O que você pode fazer é simplesmente tapar em torno do menu principal.
+
+185
+00:10:32.000 --> 00:10:37.001
+Você vai estar trazendo o que EverX, o menu de usuário fácil lá, que você
+
+186
+00:10:37.001 --> 00:10:39.001
+Você também pode fazer isso se você é mais de um tipo de engenheiro.
+
+187
+00:10:39.001 --> 00:10:42.001
+Há um tipo mais avançado de menu para aqueles que entram nos bits e bytes.
+
+188
+00:10:43.000 --> 00:10:45.001
+Voltando ao original, o que você pode fazer, basicamente que seria
+
+189
+00:10:45.001 --> 00:10:47.001
+inserir todos os diferentes nomes de arquivo.
+
+190
+00:10:48.000 --> 00:10:50.000
+A próxima pergunta seria, gostaria de
+
+191
+00:10:50.000 --> 00:10:52.000
+Incluindo subdirectorías ou pender overwrite?
+
+192
+00:10:52.000 --> 00:10:54.001
+Eu vou escrever demais. F8 é executado.
+
+193
+00:10:55.000 --> 00:10:58.001
+O que você também vê no lado onde está debaixo da faixa de linha, é destacando
+
+194
+00:10:58.001 --> 00:11:00.001
+exatamente o processo que está a passar agora.
+
+195
+00:11:00.001 --> 00:11:02.001
+Atualmente, está a reavaliá-lo, preparando a condução.
+
+196
+00:11:03.001 --> 00:11:07.001
+E então o que você verá é, novamente, você vai ver um gráfico de bar no fundo
+
+197
+00:11:07.001 --> 00:11:10.001
+basicamente dizendo-lhe o quão rápido sua unidade está correndo e exatamente
+
+198
+00:11:10.001 --> 00:11:12.000
+onde você está no processo de backup.
+
+199
+00:11:12.001 --> 00:11:15.000
+Vamos fazer algumas perguntas semelhantes. Vamos dizer 100 megabytes.
+
+200
+00:11:15.000 --> 00:11:16.001
+O que isso levaria em termos de tempo?
+
+201
+00:11:16.001 --> 00:11:19.001
+É 5 megabytes por minuto de backup, então isso seria cerca de 20 minutos.
+
+202
+00:11:21.000 --> 00:11:24.001
+E nesse caso, 100 megabytes se encaixaria completamente naquele cartório.
+
+203
+00:11:26.000 --> 00:11:29.000
+Eu vou dizer, você também tem o mesmo tipo de função, então você pode
+
+204
+00:11:29.000 --> 00:11:30.001
+Arquivo apenas os arquivos que foram alterados.
+
+205
+00:11:31.000 --> 00:11:34.001
+É certo. Você pode selecionar qualquer forma que você quiser, se for determinados arquivos, o
+
+206
+00:11:34.001 --> 00:11:37.000
+todo o disco, o que foi modificado, você nomeou-o.
+
+207
+00:11:37.000 --> 00:11:39.001
+Como isso se compara com outros sistemas de backup? I
+
+208
+00:11:39.001 --> 00:11:41.001
+Ou seja, você sabe, as caixas de Bernoulli e assim por diante.
+
+209
+00:11:41.001 --> 00:11:44.000
+É certo. Bem, o que você vai realmente encontrar a chave é
+
+210
+00:11:44.000 --> 00:11:45.001
+Será o software que está lá fora.
+
+211
+00:11:46.000 --> 00:11:49.001
+Bernoulli é uma mídia removível, que é mais de uma base de disco.
+
+212
+00:11:49.001 --> 00:11:51.001
+É um verdadeiro sistema baseado em cartridges, por isso
+
+213
+00:11:51.001 --> 00:11:53.000
+Na verdade, funciona um pouco diferente.
+
+214
+00:11:54.000 --> 00:11:56.001
+Bernoulli usou muito, dizem, na indústria bancária onde querem
+
+215
+00:11:56.001 --> 00:11:58.001
+De fato, tome isso e arquivá-lo.
+
+216
+00:11:59.000 --> 00:12:02.000
+Isso é diferente. É realmente destinado para, digo, um monte de ambientes de rede
+
+217
+00:12:02.000 --> 00:12:04.001
+Onde você quer apenas levar o seu cartucho e, em seguida, colocá-lo diretamente para dentro.
+
+218
+00:12:05.000 --> 00:12:07.001
+E quanto aos padrões? Existem padrões que são estabelecidos para
+
+219
+00:12:07.001 --> 00:12:09.000
+O formato da mesa?
+
+220
+00:12:09.001 --> 00:12:13.001
+Sim e exatamente. Existe, na verdade, um par de padrões da indústria, principalmente relacionados com
+
+221
+00:12:13.001 --> 00:12:16.001
+o cartão de controle e, em seguida, como a informação é colocada,
+
+222
+00:12:16.001 --> 00:12:18.001
+Título: Quick24, Quick36, Quick02.
+
+223
+00:12:18.001 --> 00:12:20.001
+Assim, esses, muitos deles, basicamente todos os dez fabricantes
+
+224
+00:12:20.001 --> 00:12:22.001
+E os pedaços seguem todos eles.
+
+225
+00:12:22.001 --> 00:12:26.000
+Os dispositivos de armazenamento óptico irão fazer os streaming de tape velhos?
+
+226
+00:12:26.001 --> 00:12:29.000
+Não penso assim, para ser muito honesto. Acho que o que você vai ver é o
+
+227
+00:12:29.000 --> 00:12:30.001
+A tecnologia vai descer.
+
+228
+00:12:31.000 --> 00:12:33.001
+Um streamer será então usado em uma casa, e eu acho que um óptico é
+
+229
+00:12:33.001 --> 00:12:35.000
+Ainda vai ser alta em um par de anos.
+
+230
+00:12:36.000 --> 00:12:37.001
+Ok, senhores, muito obrigado.
+
+231
+00:12:38.000 --> 00:12:41.000
+Agora, o backup do seu disco rígido e a preocupação com os acidentes de disco é um
+
+232
+00:12:41.000 --> 00:12:42.001
+Você pode se preocupar com o seu disco duro.
+
+233
+00:12:43.000 --> 00:12:46.000
+Outra preocupação nestes dias é que um vírus entra em seu disco rígido.
+
+234
+00:12:46.000 --> 00:12:50.000
+Wendy Woods tem um relatório sobre como evitar esses vírus invasivos.
+
+235
+00:12:52.000 --> 00:12:58.000
+Este é o pior medo de um proprietário de Macintosh, um acidente de disco rígido, o sistema operacional
+
+236
+00:12:58.000 --> 00:13:00.001
+O vírus desaparece e o culpado é um víruse.
+
+237
+00:13:01.001 --> 00:13:05.001
+A Symantec projetou um vírus para nos mostrar o quão rápido ele pode funcionar.
+
+238
+00:13:06.000 --> 00:13:10.001
+Em segundos, este cavalo de Troia excluiu o diretório de dados do disco.
+
+239
+00:13:11.000 --> 00:13:15.001
+Felizmente, a Symantec cria um produto que pode alertar um proprietário de computador que um
+
+240
+00:13:15.001 --> 00:13:17.000
+O ataque viral é iminente.
+
+241
+00:13:17.001 --> 00:13:23.000
+Parte dos utilitários da Symantec, o Guardian, quando instalado antes de um ataque de vírus,
+
+242
+00:13:23.000 --> 00:13:25.001
+Ele vai parar o bug em suas pistas.
+
+243
+00:13:26.000 --> 00:13:32.001
+O próprio Guardião irá basicamente incentivar o usuário se o vírus começar
+
+244
+00:13:32.001 --> 00:13:34.001
+Escreva a informação do diretório de disco.
+
+245
+00:13:34.001 --> 00:13:40.000
+O Guardian irá incentivar o usuário de que há uma tentativa de operação ilegal, e
+
+246
+00:13:40.000 --> 00:13:43.001
+No momento em que o usuário está ciente de que há um vírus no sistema, e que ele
+
+247
+00:13:43.001 --> 00:13:46.000
+Deveria tentar se livrar daquele momento.
+
+248
+00:13:47.000 --> 00:13:52.000
+As utilidades também apresentam uma boa chance de restaurar um disco rígido após um
+
+249
+00:13:52.000 --> 00:13:56.000
+crash, mesmo que eles não tenham sido anteriormente instalados no sistema.
+
+250
+00:13:56.000 --> 00:14:01.000
+Existem dois tipos de usuários de Macintosh, pessoas que já quebraram seus
+
+251
+00:14:01.000 --> 00:14:04.000
+disco rígido, e as pessoas que vão quebrar seu disco duro.
+
+252
+00:14:05.000 --> 00:14:09.001
+Então, com o Guardian, basicamente você vai resolver esse problema.
+
+253
+00:14:10.000 --> 00:14:14.000
+Com vírus muito na notícia estes dias, não é surpreendente que estes
+
+254
+00:14:14.000 --> 00:14:15.001
+Os serviços são bem vendidos.
+
+255
+00:14:16.000 --> 00:14:20.001
+De fato, a Symantec diz que é o programa mais popular do seu tipo, com cerca de 10
+
+256
+00:14:20.001 --> 00:14:22.001
+Mil unidades são enviadas todos os meses.
+
+257
+00:14:22.001 --> 00:14:27.000
+Em Cupertino, Califórnia, para as crônicas de computador, eu sou Wendy Woods.
+
+258
+00:14:40.000 --> 00:14:43.000
+Com nós no estúdio agora é Steve Koshman, Marketing
+
+259
+00:14:43.000 --> 00:14:44.001
+Diretor: Peter Norton Computing.
+
+260
+00:14:45.000 --> 00:14:49.000
+O próximo a Steve é Ted Knox, gerente de marketing técnico com Golden Bow Systems.
+
+261
+00:14:49.000 --> 00:14:53.001
+E ao lado de Ted Frank Tantalo, presidente da Westlake Data Corporation. O Gary?
+
+262
+00:14:54.000 --> 00:14:56.000
+Temos uma esquerda aqui do último segmento.
+
+263
+00:14:56.001 --> 00:14:57.001
+Bem, eu queria ver isso.
+
+264
+00:14:57.001 --> 00:15:01.001
+Este é o cartridge real que foi usado naquele disco de tape de streaming. 125
+
+265
+00:15:01.001 --> 00:15:03.000
+Megabytes e 40 dólares.
+
+266
+00:15:03.001 --> 00:15:05.001
+Não uma peça ruim de equipamento. Muitos deles muito.
+
+267
+00:15:07.001 --> 00:15:11.000
+Frank, você tem um produto chamado Pathfinder. Temos três demonstrações aqui para fazer.
+
+268
+00:15:11.001 --> 00:15:12.001
+Você pode nos mostrar um pouco sobre
+
+269
+00:15:12.001 --> 00:15:14.001
+O Pathfinder? Diga-nos um pouco sobre isso e mostre-nos essa demo.
+
+270
+00:15:14.001 --> 00:15:19.000
+Claro que Gary. Para gerenciar todos esses dados sobre esses grandes discos rígidos que estão se tornando
+
+271
+00:15:19.000 --> 00:15:23.000
+muito prolífico no mundo do computador, uma pessoa precisa de um shell para tirar proveito do
+
+272
+00:15:23.000 --> 00:15:26.000
+A estrutura da árvore DOS que a Microsoft e a IBM nos forneceram.
+
+273
+00:15:26.001 --> 00:15:30.000
+Pathfinder, como você pode ver, tem muitas áreas funcionais. É o gerente de arquivos,
+
+274
+00:15:30.000 --> 00:15:32.000
+Diretor de diretório, editor integrado.
+
+275
+00:15:32.001 --> 00:15:35.000
+Tem muitas outras opções. Gestor de Aplicações.
+
+276
+00:15:36.000 --> 00:15:38.001
+Uma das coisas mais fáceis de fazer é criar uma
+
+277
+00:15:38.001 --> 00:15:41.000
+Direção . Vamos fazer um diretório.
+
+278
+00:15:42.000 --> 00:15:48.000
+Vamos chamá-lo de Teste 2 para diferenciar do Teste 1.
+
+279
+00:15:48.001 --> 00:15:54.000
+Como podemos ver, o teste 2 está agora criado. Vamos copiar um arquivo, este arquivo particular.
+
+280
+00:15:54.000 --> 00:15:58.000
+Ficheiro, cópia e subdirectoria. Vamos marcar isso.
+
+281
+00:16:00.001 --> 00:16:04.001
+confirme isso. É uma cópia. Estamos abaixo para o teste 2 e aí está.
+
+282
+00:16:05.000 --> 00:16:10.001
+Também podemos agora mover este arquivo muito facilmente usando o mesmo procedimento de marcação.
+
+283
+00:16:11.001 --> 00:16:15.000
+Arquivos, movimentos, qual deles? Esse um? Onde queremos movê-lo?
+
+284
+00:16:16.000 --> 00:16:17.001
+Vamos movê-lo até dois.
+
+285
+00:16:24.001 --> 00:16:28.000
+Basicamente, Frank, você está dizendo que você usaria isso em vez de seu padrão DOS
+
+286
+00:16:28.000 --> 00:16:30.000
+Comando para realizar suas tarefas típicas de gerenciamento de arquivos.
+
+287
+00:16:30.000 --> 00:16:33.000
+As interfaces entre você e a máquina, não há impressão
+
+288
+00:16:33.000 --> 00:16:34.001
+erro de erro. Não há erros de sintaxe.
+
+289
+00:16:34.001 --> 00:16:37.001
+Você diz o procedimento para fazê-lo e o programa faz a tradução.
+
+290
+00:16:38.000 --> 00:16:41.000
+Parece ter um pouco de aparência de um lotus. Isso é intencional?
+
+291
+00:16:41.001 --> 00:16:44.000
+Bem, nós sentimos um menu de barra de luz em estilo de lotus em movimento é
+
+292
+00:16:44.000 --> 00:16:46.000
+Provavelmente a coisa mais fácil de usar.
+
+293
+00:16:46.000 --> 00:16:49.001
+O comando que é destacado na linha superior é sempre explicado na segunda linha.
+
+294
+00:16:49.001 --> 00:16:51.000
+A linha, abaixo ao nível de execução.
+
+295
+00:16:52.000 --> 00:16:54.000
+Quando você carrega isso na máquina, então, esta é a interface.
+
+296
+00:16:54.001 --> 00:16:56.000
+Você entra em sua máquina e você chega ao Pathfinder
+
+297
+00:16:56.000 --> 00:16:57.001
+E então você navega por lá?
+
+298
+00:16:57.001 --> 00:17:02.000
+Ok, bem, quero pedir-lhe que volte essa tecla agora para Ted.
+
+299
+00:17:02.000 --> 00:17:04.000
+Vamos olhar para o próximo problema de disco rígido
+
+300
+00:17:04.000 --> 00:17:06.000
+Isso e isso é a otimização do disco.
+
+301
+00:17:06.001 --> 00:17:09.000
+Você pode falar e pressionar as chaves ao mesmo tempo?
+
+302
+00:17:09.000 --> 00:17:09.001
+com certeza.
+
+303
+00:17:10.000 --> 00:17:12.000
+Conte-nos sobre o Vopt. O que isso faz?
+
+304
+00:17:12.000 --> 00:17:18.000
+Bem, o que Vopt faz é que desfragmenta seu disco com uso normal. 2 Faça arquivos
+
+305
+00:17:18.000 --> 00:17:20.000
+E ele os fragmenta no disco.
+
+306
+00:17:20.000 --> 00:17:24.001
+O que isso significa é quando você copiar, excluir arquivos, quando você atualizar arquivos existentes,
+
+307
+00:17:24.001 --> 00:17:26.001
+Você tende a se fragmentar no seu disco.
+
+308
+00:17:26.001 --> 00:17:28.001
+[...]
+
+309
+00:17:28.001 --> 00:17:31.001
+Por que isso é um problema para o usuário? O usuário médio?
+
+310
+00:17:31.001 --> 00:17:36.001
+Bem, o que isso faz é que porque os arquivos estão em locais separados em seu
+
+311
+00:17:36.001 --> 00:17:42.001
+disco rígido, causa excesso de desperdício e lágrimas no hardware e custa tempo.
+
+312
+00:17:43.000 --> 00:17:46.001
+Então, uma vez que os arquivos são contiguos, eles são mais rápidos. As suas aplicações serão
+
+313
+00:17:46.001 --> 00:17:48.000
+Seja mais rápido.
+
+314
+00:17:48.001 --> 00:17:49.000
+Você pode executá-lo por favor?
+
+315
+00:17:49.001 --> 00:17:49.001
+É certo.
+
+316
+00:17:50.001 --> 00:17:52.000
+Então, qual é a primeira coisa que vamos ver, Ted?
+
+317
+00:17:52.000 --> 00:17:57.000
+Este é um mapa do disco rígido. Ele mostra o azul
+
+318
+00:17:57.000 --> 00:18:02.000
+Os quadros são, na verdade, clusters contíguos.
+
+319
+00:18:02.000 --> 00:18:03.000
+Isso é realmente coisas boas.
+
+320
+00:18:03.001 --> 00:18:04.000
+É certo.
+
+321
+00:18:04.000 --> 00:18:04.000
+[...]
+
+322
+00:18:04.001 --> 00:18:08.000
+E o que estamos preocupados com são os patches amarelos que
+
+323
+00:18:08.000 --> 00:18:09.001
+É uma fragmentação no seu disco.
+
+324
+00:18:10.001 --> 00:18:17.000
+E vamos avançar e mostrar-lhe como eles são limpos com o programa Vopt.
+
+325
+00:18:17.000 --> 00:18:19.000
+Bem, então você executa Vopt e o que seria
+
+326
+00:18:19.000 --> 00:18:21.000
+acontecem ? Dê-nos uma espécie de play-by-play aqui.
+
+327
+00:18:21.000 --> 00:18:24.000
+com certeza. O que estamos fazendo aqui, o que a primeira coisa que fazemos é que estamos correndo um
+
+328
+00:18:24.000 --> 00:18:26.000
+Verifique o disco para garantir que tudo esteja em ordem.
+
+329
+00:18:26.000 --> 00:18:30.000
+E então vamos adiante e vamos olhar. E a primeira coisa, o que acabou de fazer
+
+330
+00:18:30.000 --> 00:18:33.001
+tomou toda a sua fragmentação e copiou-a até o fim do
+
+331
+00:18:33.001 --> 00:18:35.001
+Um arquivo ao mesmo tempo.
+
+332
+00:18:36.000 --> 00:18:41.000
+Agora o que estamos fazendo é tomar e reestruturar o arquivo para que vamos mover o
+
+333
+00:18:41.000 --> 00:18:44.000
+Faça o arquivo de volta para a frente do disco. Vamos deixá-lo correr um pouco mais rápido.
+
+334
+00:18:44.000 --> 00:18:49.001
+O que você está vendo na tela à esquerda é quantos arquivos estão sendo movidos.
+
+335
+00:18:50.000 --> 00:18:55.000
+Então você tem uma boa ideia do que aconteceu uma vez que o op foi concluído.
+
+336
+00:18:55.001 --> 00:19:01.000
+Nós também nos contaremos uma vez que foi feito quanto tempo demorou e outras informações sobre
+
+337
+00:19:01.000 --> 00:19:04.000
+suas diretrizes, informações do setor, e assim por diante.
+
+338
+00:19:04.001 --> 00:19:06.001
+Qualquer maneira de quantificar o que o desempenho melhorado
+
+339
+00:19:06.001 --> 00:19:08.000
+Talvez seja uma vez que você atravesse esse processo?
+
+340
+00:19:08.000 --> 00:19:15.000
+com certeza. A melhor maneira de fazer isso é executar as aplicações que
+
+341
+00:19:15.000 --> 00:19:20.001
+Tome o mais longo. Se você está classificando um arquivo de base d ou trabalhando com um
+
+342
+00:19:20.001 --> 00:19:23.000
+O tempo e o tempo antes e depois de você correr.
+
+343
+00:19:23.000 --> 00:19:24.000
+Ou seja, você pode notar uma diferença.
+
+344
+00:19:25.000 --> 00:19:30.000
+com certeza. Você deve ser capaz de perceber uma diferença. Além disso, recomendamos que você corra
+
+345
+00:19:30.000 --> 00:19:33.001
+É como um arquivo de batch todos os dias para que você execute muito rapidamente. E isso estava em um disco
+
+346
+00:19:33.001 --> 00:19:35.000
+Isso não foi desfragmentado.
+
+347
+00:19:35.001 --> 00:19:39.000
+Ted, quero pedir-lhe que deslize o teclado para Steve agora. E Steve, você é
+
+348
+00:19:39.000 --> 00:19:42.000
+Vamos mostrar-nos a nova versão de Norton Utilities e todos os seus truques de fantasia.
+
+349
+00:19:42.000 --> 00:19:43.001
+E a primeira coisa que você vai fazer é, na verdade, o que?
+
+350
+00:19:44.000 --> 00:19:48.001
+Na verdade, vou replicar um erro muito comum. Você entra na manhã,
+
+351
+00:19:48.001 --> 00:19:51.000
+Você está ativando seu computador e nada acontece.
+
+352
+00:19:51.000 --> 00:19:56.001
+O que eu vou fazer é, na verdade, eu vou...
+
+353
+00:19:58.000 --> 00:19:59.001
+Você está lançando um floppy para o ...
+
+354
+00:19:59.001 --> 00:20:01.001
+Eu vou executar as Utilidades Norton.
+
+355
+00:20:07.001 --> 00:20:11.001
+Dê-nos uma pequena descrição do que você está fazendo lá.
+
+356
+00:20:11.001 --> 00:20:18.001
+O que estou fazendo aqui é que vou executar Norton Utilities. E como eu disse, eu sou
+
+357
+00:20:18.001 --> 00:20:23.001
+Replicar um erro muito comum. Quando o disco se desmorona, nos dias antigos,
+
+358
+00:20:23.001 --> 00:20:28.001
+literalmente foi um colapso da cabeça no meio magnético ou na placa.
+
+359
+00:20:29.000 --> 00:20:34.000
+Isso geralmente não é mais verdade. O que acontece é normal quando você...
+
+360
+00:20:34.000 --> 00:20:37.001
+Eu vou explorar o disco aqui, eu vou escolher um item, e eu vou
+
+361
+00:20:37.001 --> 00:20:39.000
+Vamos entrar no setor absoluto.
+
+362
+00:20:39.000 --> 00:20:46.000
+Uma das coisas... Eu vou editar esta informação, e isso é o que é
+
+363
+00:20:46.000 --> 00:20:50.001
+Chamou-se o Master Boot Record. E o que vou fazer aqui é que vou à mesa hex,
+
+364
+00:20:51.000 --> 00:20:55.001
+e vou literalmente replicar o que aconteceu se, por exemplo, você estava trabalhando
+
+365
+00:20:55.001 --> 00:20:59.000
+Em um...
+
+366
+00:20:59.000 --> 00:21:03.000
+Salvar um arquivo para o disco ou qualquer coisa, e você teve uma pesquisa de energia ou qualquer outra coisa, você
+
+367
+00:21:03.000 --> 00:21:07.000
+teria um hiccup, e esses bytes seriam realmente supervisionados por zeros.
+
+368
+00:21:08.000 --> 00:21:13.000
+Eu vou entrar isso, e eu vou escrever para o disco. Sim, eu vou para
+
+369
+00:21:13.000 --> 00:21:16.001
+fazer grandes mudanças, e eu vou quebrar essa coisa muito duro, e só fiz.
+
+370
+00:21:17.000 --> 00:21:21.001
+Agora, se eu vou sair deste programa, e o que eu vou fazer é que eu
+
+371
+00:21:21.001 --> 00:21:25.001
+Vamos desligar a máquina, como você vem pela manhã.
+
+372
+00:21:27.000 --> 00:21:29.001
+Ok, então você vai ter que mudar para baixo aqui. Lá você vai.
+
+373
+00:21:30.001 --> 00:21:34.000
+Agora, entramos pela manhã, você envia sua máquina, envia o computador
+
+374
+00:21:34.000 --> 00:21:36.000
+Agora, e você espera que ele se lance.
+
+375
+00:21:38.000 --> 00:21:39.001
+Ok, o que devemos ver então?
+
+376
+00:21:40.000 --> 00:21:43.000
+Bem, você vai para... É verificar para a RAM, a quantidade de RAM agora,
+
+377
+00:21:43.001 --> 00:21:48.001
+E esta máquina tem cerca de 1,6 megas. Há uma memória estendida lá.
+
+378
+00:21:49.001 --> 00:21:52.001
+E isso é muito típico. Parece muito normal.
+
+379
+00:21:53.000 --> 00:21:54.001
+Parece bom até agora.
+
+380
+00:21:55.001 --> 00:22:01.000
+Agora é verificar a RAM, verificá-la. E agora começa a ler para o
+
+381
+00:22:01.000 --> 00:22:05.001
+Comando com de Dois, e foi para a A Drive. Não há nada lá.
+
+382
+00:22:05.001 --> 00:22:09.000
+Agora vai para a unidade C, e nada
+
+383
+00:22:09.000 --> 00:22:11.000
+está lá. Você acha que é básico.
+
+384
+00:22:11.001 --> 00:22:16.001
+Bem, agora sendo um usuário de PC relativamente sofisticado, você sabe que há mais de um
+
+385
+00:22:16.001 --> 00:22:21.001
+Como iniciar um computador, então você vai obter o seu disco MS-DOS e colocá-lo.
+
+386
+00:22:22.000 --> 00:22:26.001
+E você tenta fazer isso. E você sabe, você espera que você possa obter um A rapidamente.
+
+387
+00:22:27.000 --> 00:22:30.000
+Então, deixe-me fazer o Alt-Control-Delete, e vamos reiniciar o sistema.
+
+388
+00:22:33.000 --> 00:22:35.000
+E o que esperamos que aconteça agora?
+
+389
+00:22:35.000 --> 00:22:38.000
+Bem, o que esperamos que aconteça agora é que vamos obter nosso padrão DOS rápido, o
+
+390
+00:22:38.000 --> 00:22:40.001
+A data, o tempo e, espero, a coluna A.
+
+391
+00:22:41.000 --> 00:22:44.001
+Porque agora, uma vez que estamos no DOS, podemos ver o que está errado com esta unidade C se
+
+392
+00:22:44.001 --> 00:22:47.001
+Tudo está lá. E sim, a luz do disco ainda está em, então está lendo.
+
+393
+00:22:48.000 --> 00:22:51.000
+E sim, nós somos. Estamos em dois. Eu só vou dizer Enter.
+
+394
+00:22:51.000 --> 00:22:52.000
+É a sua prompt?
+
+395
+00:22:52.000 --> 00:22:57.001
+Agora, metade da batalha está terminada. Vamos encontrar os dados na unidade C,
+
+396
+00:22:58.000 --> 00:22:59.001
+E vamos ver como parece.
+
+397
+00:23:00.001 --> 00:23:05.001
+O pior pesadelo do usuário do PC. Condução Invalida. Ele foi embora. e
+
+398
+00:23:05.001 --> 00:23:07.000
+Se você é como a maioria das pessoas, tente novamente.
+
+399
+00:23:08.001 --> 00:23:10.000
+Quando foi a última backup?
+
+400
+00:23:10.000 --> 00:23:14.001
+Quando foi a última backup? Isso é exatamente certo. E esse é o problema. E este
+
+401
+00:23:14.001 --> 00:23:17.001
+É o que a Norton Advanced Utilities agora irá corrigir.
+
+402
+00:23:17.001 --> 00:23:24.000
+Vamos ver isso. Vamos ver que está fixado. O bem. O que eu preciso fazer agora é obter o disco um
+
+403
+00:23:24.000 --> 00:23:27.000
+A partir das Utilidades Avançadas, que tem o que é chamado o Norton Disk Doctor,
+
+404
+00:23:27.001 --> 00:23:29.000
+para ele e instalá-lo.
+
+405
+00:23:29.001 --> 00:23:34.001
+E nós vamos executá-lo agora a partir de uma unidade bootável, que é A. E eu vou escrever NDD, ou
+
+406
+00:23:34.001 --> 00:23:38.000
+Norton Disk Doctor, e o que ele vai começar automaticamente a fazer agora.
+
+407
+00:23:38.001 --> 00:23:42.000
+Diagnose e diga-nos o que está errado com o disco rígido.
+
+408
+00:23:43.001 --> 00:23:49.001
+Antes disso, a única coisa que você poderia fazer era levá-lo para uma loja de reparação de tecnologia, e
+
+409
+00:23:49.001 --> 00:23:53.001
+muito, muito sofisticado assembler e hex programação para tentar reconstruí-lo.
+
+410
+00:23:53.001 --> 00:23:54.000
+Então, o que é que nos diz?
+
+411
+00:23:54.001 --> 00:23:57.001
+Primeiro de tudo, à direita, não há mesa de partição, o que significa que não há
+
+412
+00:23:57.001 --> 00:24:01.001
+Recorde do Master Boot. É por isso que tínhamos a especificação de condução inválida.
+
+413
+00:24:01.001 --> 00:24:03.000
+Então, como você vai continuar com esse?
+
+414
+00:24:03.000 --> 00:24:07.001
+Tudo que fazemos é dizer sim. É isso que o médico do disco faz. Agora, esta é uma grande,
+
+415
+00:24:07.001 --> 00:24:10.000
+Este é um disco rígido de 90 megas, então veremos se temos mais partições DOS.
+
+416
+00:24:10.000 --> 00:24:15.001
+Sim, ele encontrou outro. O que ele está fazendo agora, estamos revivendo as diversas
+
+417
+00:24:15.001 --> 00:24:17.001
+Partições . Oh, há um outro.
+
+418
+00:24:18.001 --> 00:24:20.001
+O bem. E estamos à procura. Nós encontramos todos eles.
+
+419
+00:24:21.001 --> 00:24:26.000
+Tudo bem . A busca terminou. Nós dizemos OK. Agora, para que isso aconteça, nós
+
+420
+00:24:26.000 --> 00:24:29.000
+É preciso mudar o efeito. Precisamos de reboot.
+
+421
+00:24:29.001 --> 00:24:34.001
+E eu vou dizer sim, reboot. Estamos a tirar o floppy agora. E devemos ir
+
+422
+00:24:34.001 --> 00:24:36.001
+direita à nossa unidade C, e veremos se os dados são restaurados.
+
+423
+00:24:36.001 --> 00:24:40.000
+O bem. Então você não apenas recuperou um arquivo perdido, você
+
+424
+00:24:40.000 --> 00:24:41.001
+Recupera o disco perdido em geral.
+
+425
+00:24:42.000 --> 00:24:48.000
+É certo. E aí está. Portanto, a partir de nenhuma especificação de unidade C prompt, invalida, você faz
+
+426
+00:24:48.000 --> 00:24:50.000
+Faça o C rapidamente. Vamos ver se os dados estão lá.
+
+427
+00:24:51.000 --> 00:24:56.000
+E certo o suficiente, e aí está. E, na verdade, o médico do disco de Dorton diagnostica muitos
+
+428
+00:24:56.000 --> 00:24:59.001
+Problemas comuns, além da tabela de partição ou do registro de boot principal
+
+429
+00:24:59.001 --> 00:25:02.000
+que estão feridos ou danificados.
+
+430
+00:25:02.000 --> 00:25:07.001
+Muitos erros da tabela de alocação de arquivos, como clusters perdidos, como relatados pelo disco de verificação ou
+
+431
+00:25:07.001 --> 00:25:12.000
+Arquivos de link cruzados. O médico de disco novamente automaticamente diagnostica aqueles, relatórios
+
+432
+00:25:12.000 --> 00:25:15.000
+Eles estão no ecrã, e pergunta se você quer fixá-los sim ou não.
+
+433
+00:25:15.001 --> 00:25:19.000
+Diga sim, ele automaticamente os corrigirá e gerará um relatório no final para você.
+
+434
+00:25:19.000 --> 00:25:22.000
+Muito bom senhores. Obrigado muito. Este é o nosso olhar para os problemas de disco rígido e
+
+435
+00:25:22.000 --> 00:25:23.001
+Gestão de disco rígido. Vamos te ver aqui em seguida
+
+436
+00:25:23.001 --> 00:25:25.001
+Mais uma vez em The Computer Chronicles.
+
+437
+00:25:37.001 --> 00:25:42.000
+No arquivo de acesso aleatório desta semana, a Compaq apresentou o que diz que é o
+
+438
+00:25:42.000 --> 00:25:47.000
+O computador desktop mais poderoso do mundo. É um novo 33 megahertz desktop pro
+
+439
+00:25:47.000 --> 00:25:53.001
+São 386. Compaq diz que o 386 33 é 35% mais rápido do que seu 25 megahertz 386
+
+440
+00:25:53.001 --> 00:25:58.001
+e pode lidar com 1,3 gigabytes de armazenamento interno mais do que qualquer outro PC de desktop.
+
+441
+00:25:58.001 --> 00:26:03.000
+Ele possui gráficos VGA integrados, interfaces padrão e oito extensões.
+
+442
+00:26:03.000 --> 00:26:08.000
+e as slots. O modelo básico com um disco rígido de 84 megas será vendido por cerca de US $ 10.000.
+
+443
+00:26:09.000 --> 00:26:12.000
+Agora que você finalmente converteu tudo de floppies de cinco e um quarto de polegadas
+
+444
+00:26:12.000 --> 00:26:15.001
+Para os discos de três e meio polegadas, junto vem Zenith e anuncia que vai ser usado
+
+445
+00:26:15.001 --> 00:26:19.000
+as floppies de dois polegadas ainda mais recentes em suas novas gerações de laptops.
+
+446
+00:26:19.000 --> 00:26:24.000
+As floppies de dois polegadas têm uma capacidade de 720K. Como o porta-voz Zenith previu, o
+
+447
+00:26:24.000 --> 00:26:26.001
+Os flopes de dois polegadas finalmente se tornam o padrão.
+
+448
+00:26:27.001 --> 00:26:31.000
+GridSystems lançou um novo modem especificamente projetado para uso com celular
+
+449
+00:26:31.000 --> 00:26:35.001
+e os telefones. Oferece detecção de erros sofisticada para lidar com a transmissão celular
+
+450
+00:26:35.001 --> 00:26:39.001
+problemas, vem com uma utilidade de senha de segurança, e funciona em 4800
+
+451
+00:26:39.001 --> 00:26:41.001
+em bauda. Vende por 695 dólares.
+
+452
+00:26:43.000 --> 00:26:47.000
+O Macintosh laptop não é devido por pelo menos outros três meses, mas um
+
+453
+00:26:47.000 --> 00:26:51.001
+A empresa está agora oferecendo um Mac laptop kit. O kit inclui tudo o que você precisa
+
+454
+00:26:51.001 --> 00:26:56.000
+Construa um Mac laptop, exceto o Mac motherboard, disco, teclado e rato.
+
+455
+00:26:56.001 --> 00:27:00.001
+O kit de viagem do Mac é oferecido pela Nexus. O preço é de US$ 17,95.
+
+456
+00:27:01.000 --> 00:27:05.000
+Apple vai lançar novos produtos de rede para o Macintosh, incluindo novos
+
+457
+00:27:05.000 --> 00:27:09.000
+hardware e software que permitirá que um Mac se incline para um anel de token IBM
+
+458
+00:27:09.000 --> 00:27:13.001
+rede e outro produto que permitirá que os Macs troquem arquivos com DEC-Vaxes.
+
+459
+00:27:14.000 --> 00:27:17.001
+Bem, o problema com o novo software inovador é que é muitas vezes difícil explicar
+
+460
+00:27:17.001 --> 00:27:20.001
+O que o programa faz. Talvez seja o caso com um dos mais interessantes.
+
+461
+00:27:20.001 --> 00:27:22.000
+novos produtos de software para sair.
+
+462
+00:27:22.000 --> 00:27:26.000
+É chamado Idea Fisher, e é um programa projetado para ajudar a sua criatividade.
+
+463
+00:27:27.000 --> 00:27:31.000
+É basicamente um gigantesco banco de dados de referência cruzada de palavras, frases, imagens e
+
+464
+00:27:31.000 --> 00:27:35.001
+Os conceitos . Comece com uma palavra ou ideia, e o programa irá ligá-lo para
+
+465
+00:27:35.001 --> 00:27:37.001
+todas as possíveis associações com esse conceito.
+
+466
+00:27:38.000 --> 00:27:42.001
+O programa contém 25 megabytes de dados. Ele é projetado como uma ferramenta criativa para
+
+467
+00:27:42.001 --> 00:27:46.000
+Escritores, pessoas de marketing ou publicidade ou qualquer pessoa envolvida em brainstorming.
+
+468
+00:27:46.001 --> 00:27:49.001
+É vendido pela Fisher Idea Systems, em Irvine, Califórnia.
+
+469
+00:27:49.001 --> 00:27:54.001
+Finalmente, o caso do fax backfire. O governador de Connecticut, William O&#x27;Neill
+
+470
+00:27:54.001 --> 00:27:59.001
+No seu escritório havia uma proposta legislativa para proibir mensagens de fax não solicitadas.
+
+471
+00:28:00.000 --> 00:28:04.000
+Os opositores do projeto de lei lobaram o governador para veto-lo, inundando-o com faks.
+
+472
+00:28:04.001 --> 00:28:07.001
+Com todos esses fatos não solicitados, ele assinou o projeto de lei.
+
+473
+00:28:08.000 --> 00:28:11.000
+Com o início de outubro, o Connecticut será o primeiro estado a fazer o envio de
+
+474
+00:28:11.000 --> 00:28:13.001
+O anúncio de fax não solicitado é ilegal.
+
+475
+00:28:14.000 --> 00:28:16.000
+Essa é a história das crônicas desta semana. Vamos te ver a próxima vez.
+
+476
+00:28:17.000 --> 00:28:22.000
+As crônicas de computador são tornadas possíveis em parte por McGraw-Hill, editores de
+
+477
+00:28:22.000 --> 00:28:26.000
+Byte Magazine e VIX, o intercâmbio de informações Byte.
+
+478
+00:28:27.000 --> 00:28:31.001
+Em impressão e on-line, Byte e VIX servem profissionais de computador em todo o mundo com
+
+479
+00:28:31.001 --> 00:28:35.001
+informações detalhadas sobre novos hardware, software e tecnologias.
+
+480
+00:28:36.001 --> 00:28:42.001
+Para uma transcrição das crônicas de computador desta semana, envie $4 para PTV Publications
+
+481
+00:28:42.001 --> 00:28:48.000
+Post Office Box 701, Kent, Ohio 44240.
+
+482
+00:28:48.001 --> 00:28:50.000
+Por favor, indique a data do programa.
+
+483
+00:29:05.001 --> 00:29:11.000
+Obrigado
+
+484
+00:29:11.000 --> 00:29:15.001
+Você é.

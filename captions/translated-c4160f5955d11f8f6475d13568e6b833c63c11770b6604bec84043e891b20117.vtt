@@ -1,0 +1,1513 @@
+WEBVTT
+
+1
+00:00:10.000 --> 00:00:14.001
+Pada hari raya Silicon Valley, mereka bahkan menamakan jalan-jalan setelah ini
+
+2
+00:00:14.001 --> 00:00:19.000
+Bisnis, seperti Semiconductor Drive di sini di Sunnyvale. Tentu saja, hari raya
+
+3
+00:00:19.000 --> 00:00:23.000
+Semakin sedikit orang membeli komputer dan semakin sedikit perusahaan komputer membeli komputer.
+
+4
+00:00:23.000 --> 00:00:25.000
+Chip, perlambatan menyebar.
+
+5
+00:00:25.000 --> 00:00:29.001
+Bagaimana masa depan bisnis high-tech? Kita akan tahu hari ini saat kita melanjutkan
+
+6
+00:00:29.001 --> 00:00:33.000
+Kami melihat perlambatan di Silicon Valley, di sini
+
+7
+00:00:33.000 --> 00:00:34.001
+edisi dari The Computer Chronicles.
+
+8
+00:00:53.001 --> 00:00:58.001
+Komputer Chronicles dibuat mungkin sebagian oleh donasi dari AFIP, yang
+
+9
+00:00:58.001 --> 00:01:03.001
+American Federation of Information Processing Societies, sebuah federasi non-profit
+
+10
+00:01:03.001 --> 00:01:08.000
+dari 11 perusahaan nasional untuk profesional komputer, AFIP, kepemimpinan dan
+
+11
+00:01:08.000 --> 00:01:10.001
+Layanan dalam komputer dan teknologi informasi.
+
+12
+00:01:12.000 --> 00:01:16.000
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte. oleh byte
+
+13
+00:01:16.000 --> 00:01:20.001
+artikel teknis terperinci tentang perangkat keras, perangkat lunak dan bahasa baru yang meliputi
+
+14
+00:01:20.001 --> 00:01:25.000
+terkini dalam teknologi mikro komputer di seluruh dunia. BITTE adalah standar internasional.
+
+15
+00:01:32.000 --> 00:01:36.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+16
+00:01:36.001 --> 00:01:40.001
+Gary, kami memiliki dua komputer baru, mesin yang sangat panas, Atari 520ST,
+
+17
+00:01:40.001 --> 00:01:44.001
+Commodore Amiga, mesin yang semua orang memuji untuk teknologi mereka yang baik,
+
+18
+00:01:45.000 --> 00:01:48.001
+harga rendah dan sebagainya, namun analis mengatakan tidak ada mesin ini dapat
+
+19
+00:01:48.001 --> 00:01:52.001
+Membuatnya di pasar komputer hari ini. Betapa buruknya itu? betapa sulitnya untuk
+
+20
+00:01:52.001 --> 00:01:56.000
+Memperkenalkan produk baru sekarang di lingkungan ini? Nah, saya pikir masalah utama adalah
+
+21
+00:01:56.000 --> 00:02:02.000
+Hanya yang Anda sebutkan, itu harga. Amiga adalah $ 1.500, dan 520ST adalah $ 800.
+
+22
+00:02:02.001 --> 00:02:07.001
+Mereka berdua memiliki prosesor Motorola 68K, memori setengah mega, jadi itu sangat mampu
+
+23
+00:02:07.001 --> 00:02:12.000
+Jenis mesin yang Bahkan, itu setidaknya sama kuatnya dengan komputer IBM awal
+
+24
+00:02:12.000 --> 00:02:15.001
+Itu yang keluar. Sekarang persoalan adalah bagaimana mereka bisa pecah ke pasar? Itu adalah A
+
+25
+00:02:15.001 --> 00:02:18.001
+pasar dan pasar domestik. Pasar komersial berarti kata
+
+26
+00:02:18.001 --> 00:02:22.001
+pemrosesan perangkat lunak, spreadsheets, grafik, semua hal yang akan
+
+27
+00:02:22.001 --> 00:02:26.001
+Mereka melakukannya melalui kekuatan IBM. Pasar domestik, itu adalah target yang lebih sulit.
+
+28
+00:02:26.001 --> 00:02:29.001
+Mereka harus datang dengan perangkat lunak yang orang benar-benar ingin menggunakan di rumah.
+
+29
+00:02:30.000 --> 00:02:33.001
+Mereka sudah berlalu bahwa teknologi menjual beberapa tahun yang lalu, sekarang itu membuat
+
+30
+00:02:33.001 --> 00:02:36.001
+Mesin yang bekerja. Tapi pada dasarnya, jika dua orang ini tidak bisa melakukannya pada harga
+
+31
+00:02:36.001 --> 00:02:38.000
+Mereka sedang berbicara, kita juga bisa menggantungnya.
+
+32
+00:02:38.001 --> 00:02:42.000
+Benarkah ? Nah, hari ini kita akan melihat bagian dua dari tampilan dua bagian khusus kita
+
+33
+00:02:42.000 --> 00:02:45.000
+Peristiwa ini terjadi di Silicon Valley. Dan hari ini kita akan fokus pada
+
+34
+00:02:45.000 --> 00:02:49.000
+segmen industri, melihat sisi perangkat lunak, sisi perangkat keras, dan
+
+35
+00:02:49.000 --> 00:02:51.001
+bisnis semikonduktor. Dan kita akan pergi dalam beberapa detik.
+
+36
+00:03:03.001 --> 00:03:07.000
+Saat ini kami bergabung dengan Tripp Hawkins. Tripp dulu bersama Apple, tapi sekarang...
+
+37
+00:03:07.000 --> 00:03:10.001
+Kursus, Presiden Electronic Arts, perusahaan perangkat lunak. dan duduk di sebelah
+
+38
+00:03:10.001 --> 00:03:14.001
+Tripp adalah John Merson, wakil presiden untuk pemasaran dengan Ashton Tate. dengan Gary? dari Tripp,
+
+39
+00:03:14.001 --> 00:03:18.000
+Ada banyak perbincangan tentang perlambatan komputer, tetapi ada
+
+40
+00:03:18.000 --> 00:03:21.000
+Artikel baru-baru ini yang keluar mengatakan penjualan perangkat lunak meningkat 60%. Mengapa yang
+
+41
+00:03:21.000 --> 00:03:24.001
+Apakah kontradiksi? “Sebenarnya, saya pikir industri ini telah melalui
+
+42
+00:03:24.001 --> 00:03:29.001
+konsolidasi, dan secara keseluruhan tahun ini telah menjadi tahun pertumbuhan yang lebih lambat daripada
+
+43
+00:03:29.001 --> 00:03:34.000
+yang diharapkan oleh beberapa orang. Saya pikir ada tiga alasan utama untuk itu. I
+
+44
+00:03:34.000 --> 00:03:39.000
+berfikir, nomor satu, bahwa konsumen sangat bingung, dan itu sebagian besar adalah
+
+45
+00:03:39.000 --> 00:03:43.001
+semua janji-janji yang bertentangan yang telah dibuat kepada mereka dan semua
+
+46
+00:03:43.001 --> 00:03:46.000
+berita buruk yang mereka dengar tentang dalam beberapa tahun terakhir, jadi itu tidak
+
+47
+00:03:46.000 --> 00:03:52.000
+yang mengejutkan. Bahkan, pada tahun 1948, ketika CBS memperkenalkan format LP untuk rekaman untuk
+
+48
+00:03:52.000 --> 00:03:57.000
+pertama kali, RCA mengikuti dengan 45 untuk bersaing dengannya, dan rekod
+
+49
+00:03:57.000 --> 00:04:00.000
+Industri ini masuk ke dalam kebetulan empat tahun. Dan itu membawa saya ke titik kedua.
+
+50
+00:04:00.000 --> 00:04:03.000
+Setiap orang jenis menunggu untuk melihat apa hasilnya akan berurusan dengan ini
+
+51
+00:04:03.000 --> 00:04:06.000
+waktu yang Ya, dan hal kedua yang akan saya lakukan adalah bahwa ada
+
+52
+00:04:06.000 --> 00:04:10.000
+Perang teknologi sedang berlangsung, dan setiap tahun kita mendapatkan beberapa model baru yang
+
+53
+00:04:10.000 --> 00:04:14.000
+tidak kompatibel Anda harus bertanya-tanya apakah Anda akan membeli TV baru dan dipertingkatkan
+
+54
+00:04:14.000 --> 00:04:17.001
+set, jika itu tidak memungkinkan Anda untuk menonton salah satu program televisi saat ini, itu
+
+55
+00:04:17.001 --> 00:04:22.000
+menghasilkan kekeliruan tambahan dan tidak semestinya dalam kepentingan konsumen
+
+56
+00:04:22.000 --> 00:04:26.000
+Kecuali itu adalah kemajuan teknologi yang mendasar. Dan analogi ini pada dasarnya
+
+57
+00:04:26.000 --> 00:04:30.001
+adalah antara hal-hal seperti Amiga dan 520 yang benar-benar tidak memiliki perangkat lunak yang
+
+58
+00:04:30.001 --> 00:04:33.000
+Kompatibel dengan mesin rumah lama. Ya, itu benar sekali.
+
+59
+00:04:33.001 --> 00:04:37.000
+Dan akhirnya, ada kekacauan nyata di saluran distribusi untuk
+
+60
+00:04:37.000 --> 00:04:41.000
+komputer dan perangkat lunak, dan itu telah melalui banyak perubahan. John, ketika
+
+61
+00:04:41.000 --> 00:04:44.001
+Tripp menyebutkan industri, apakah kita benar-benar berbicara tentang dua yang berbeda
+
+62
+00:04:44.001 --> 00:04:48.000
+situasinya ? Apakah industri perangkat lunak tidak berada dalam situasi yang sama seperti hardware?
+
+63
+00:04:48.000 --> 00:04:53.000
+dalam industri? Saya pikir industri perangkat lunak menghadapi banyak faktor yang sama seperti
+
+64
+00:04:53.000 --> 00:04:57.000
+industri perkakasan. Ada terlalu banyak pemain yang mencoba untuk membawa terlalu banyak produk ke
+
+65
+00:04:57.000 --> 00:05:01.000
+pasar, dan pasar, baik saluran distribusi dan pelanggan,
+
+66
+00:05:01.000 --> 00:05:06.001
+Tidak bisa benar-benar menyerap semuanya. Pada saat yang sama, orang cenderung membeli perangkat lunak
+
+67
+00:05:06.001 --> 00:05:10.000
+sepanjang hidup sebuah sistem yang mereka miliki. Ketika mereka menjadi lebih berkomunikasi
+
+68
+00:05:10.000 --> 00:05:15.000
+Dengan itu, mereka cenderung ingin melakukan lebih dan lebih dengan itu. Jadi 84 adalah fantastis
+
+69
+00:05:15.000 --> 00:05:19.000
+tahun untuk hardware, dan saya pikir seperti orang-orang itu matang dalam pemahaman mereka dan
+
+70
+00:05:19.000 --> 00:05:23.001
+menggunakan mesin mereka, mereka akan menginginkan lebih banyak dan lebih banyak perangkat lunak. John, apa yang
+
+71
+00:05:23.001 --> 00:05:29.000
+tentang masalah erosi harga yang kita lihat di perangkat lunak? Sekurang-kurangnya masalah yang
+
+72
+00:05:29.000 --> 00:05:32.001
+apa yang telah saya lihat, Anda tahu, dalam pengalaman pribadi saya sendiri melalui banyak
+
+73
+00:05:32.001 --> 00:05:37.000
+-distribusi saluran di mana persentase yang diambil pada masing-masing tingkat cukup tinggi, dan
+
+74
+00:05:37.000 --> 00:05:41.000
+kemudian kita melihat bahwa harga di tingkat ritel turun dan turun, dan
+
+75
+00:05:41.000 --> 00:05:44.000
+Anda akhirnya sampai pada titik di mana Anda mengatakan, ya, mengapa Anda harus bahkan berada di
+
+76
+00:05:44.000 --> 00:05:50.001
+bisnisnya ? Anda menyebutnya harga erosensi sebagai pembeli. Lihat, saya suka hal itu. Baiklah, yang
+
+77
+00:05:50.001 --> 00:05:55.001
+Ironisnya, dalam banyak cara, harga perangkat lunak telah meningkat dan membingungkan.
+
+78
+00:05:55.001 --> 00:06:01.001
+dari gravitas. Kami memiliki harga perangkat lunak di pasar massal saat ini untuk $600 dan $700.
+
+79
+00:06:02.000 --> 00:06:04.001
+Itu akan menjadi tidak terdengar dari hanya beberapa tahun yang lalu.
+
+80
+00:06:05.001 --> 00:06:08.000
+Hal lain yang menarik adalah - Jangan katakan, bagaimanapun, di pasar massal, apa yang Anda lakukan
+
+81
+00:06:08.000 --> 00:06:13.000
+Maksudnya dengan itu? Apakah Anda bermaksud pasar komersial besar? Baik, sepanjang bisnis
+
+82
+00:06:13.000 --> 00:06:20.000
+Pasar perangkat lunak, yang mencakup 4.000 toko di seluruh Amerika Serikat, kami memiliki software
+
+83
+00:06:20.000 --> 00:06:26.000
+Produk yang dijual pada titik harga $ 600 dan $ 700 dalam jumlah yang sangat besar. Ashton
+
+84
+00:06:26.000 --> 00:06:32.001
+Tate menjual lebih dari 70.000 salinan framework tahun lalu. Ada yang berpikir pasangan
+
+85
+00:06:32.001 --> 00:06:38.001
+Bertahun-tahun yang lalu yang akan diminta untuk membuat prediksi untuk produk $ 695 akan
+
+86
+00:06:38.001 --> 00:06:42.001
+Mereka berpikir bahwa angka itu bergelombang langit. Tapi, Tripp, sekarang jika Anda berlari
+
+87
+00:06:42.001 --> 00:06:48.000
+software, katakan, untuk sesuatu seperti Amiga, $ 1.500 untuk perangkat keras dasar, tidak
+
+88
+00:06:48.000 --> 00:06:51.001
+akan sulit untuk menjual paket perangkat lunak $ 600 atau $ 700 kepada mereka yang
+
+89
+00:06:51.001 --> 00:06:56.001
+Orang yang ? Ya, itu akan menjadi. Sebenarnya, hanya untuk memperbaiki Anda, itu adalah $ 1,295 untuk dasar
+
+90
+00:06:56.001 --> 00:07:00.001
+dengan hardware. Sebenarnya, saya pikir itu konfigurasi yang banyak orang akan membeli
+
+91
+00:07:00.001 --> 00:07:04.000
+pada awalnya. Tidak ada monitor. Tidak ada monitor. Karena dapat digunakan dengan a
+
+92
+00:07:04.000 --> 00:07:09.001
+Televisyen set atau monitor video komposit. Anda tidak perlu membeli RGB
+
+93
+00:07:09.001 --> 00:07:13.000
+monitor yang mereka tawarkan, meskipun itu monitor yang sangat bagus. Namun sebagian besar dari
+
+94
+00:07:13.000 --> 00:07:18.001
+Software untuk Amiga, saya pikir, akan dibayarkan di bawah $50. Jadi bagaimana kamu
+
+95
+00:07:18.001 --> 00:07:22.001
+Apakah Anda akan mendapatkan uang di $ 50? Penjualan langsung? Telemarketing ? Tentu saja, itu harus
+
+96
+00:07:22.001 --> 00:07:26.001
+dilakukan pada volume. Saya pikir harga yang turun jelas berada di konsumen.
+
+97
+00:07:26.001 --> 00:07:33.000
+menguntungkan bahwa hal ini memungkinkan produsen perangkat lunak dan
+
+98
+00:07:33.000 --> 00:07:37.000
+orang-orang kreatif yang mengembangkan perangkat lunak untuk menghasilkan uang yang cukup untuk melanjutkan
+
+99
+00:07:37.000 --> 00:07:40.000
+menjadi tertarik untuk berada di bisnis itu. Sekarang, jika Anda akan berhasil dan
+
+100
+00:07:40.000 --> 00:07:44.000
+Orang-orang ini yang menjual mesin murah akan berhasil, apa yang
+
+101
+00:07:44.000 --> 00:07:49.000
+yang akan menjadi pangkalan yang dipasang, mari kita katakan, pertengahan 1986
+
+102
+00:07:49.000 --> 00:07:51.000
+Atau sampai akhir tahun 1986?
+
+103
+00:07:51.000 --> 00:07:55.000
+Mari kita sebut Natal tahun 1986. Nah, cukup aneh, sebagian besar perangkat lunak yang kita
+
+104
+00:07:55.000 --> 00:07:58.000
+Penjualan untuk pembeli baru. Dan banyak orang membeli banyak perangkat lunak mereka ketika mereka
+
+105
+00:07:58.000 --> 00:08:02.001
+Membeli mesin pertama mereka. Dan sekarang, karena distribusi perangkat lunak
+
+106
+00:08:02.001 --> 00:08:09.000
+situasi yang membingungkan, kita jauh lebih bergantung pada apa ritel
+
+107
+00:08:09.000 --> 00:08:12.000
+memutuskan untuk membawa apa yang kita berada di pangkalan yang dipasang. Jadi kita bahkan tidak memikirkannya
+
+108
+00:08:12.000 --> 00:08:16.000
+dalam kondisi dasar yang terinstal. Ok ya. Sekarang, biarlah saya bertanya satu pertanyaan lagi di sini. Dan sekarang,
+
+109
+00:08:16.001 --> 00:08:19.001
+Ini adalah satu, kita sedikit di konferensi, itu mungkin datang, tetapi jika kita harus,
+
+110
+00:08:19.001 --> 00:08:23.000
+Katakanlah bahwa basis yang dipasang sangat besar dan Trip sangat sukses
+
+111
+00:08:23.000 --> 00:08:28.001
+Menjual perangkat lunak $ 50, kita akan melihat $ 49. 95 versi dari DBase 3? Ya, saya pikir
+
+112
+00:08:28.001 --> 00:08:34.000
+Kami mungkin akan melihat versi $ 49 dari beberapa perangkat lunak bisnis. Sebenarnya, kita sudah
+
+113
+00:08:34.000 --> 00:08:39.000
+melihat itu. Perusahaan seperti Borland telah memperkenalkan perangkat lunak aksesori desktop, yang
+
+114
+00:08:39.000 --> 00:08:44.000
+dalam kategori bisnis, untuk pemasaran secara langsung dan juga melalui
+
+115
+00:08:44.000 --> 00:08:50.001
+Retail di bawah $50 poin harga. Jadi itu bisa terjadi. Saya pikir pelanggan melihat
+
+116
+00:08:50.001 --> 00:08:56.001
+di bisnis perangkat lunak namun, tidak hanya apa yang saya dapatkan hari ini dan apa yang dapat saya lakukan
+
+117
+00:08:56.001 --> 00:09:02.001
+dengan itu, tetapi saya membuat investasi besar dari waktu dan energi saya dalam belajar ini
+
+118
+00:09:02.001 --> 00:09:08.000
+produk dan dalam meletakkan informasi saya di dalamnya. Hal ini jauh melebihi biaya dari
+
+119
+00:09:08.000 --> 00:09:13.000
+Paket perangkat lunak itu sendiri. Dan orang ingin memastikan bahwa perusahaan yang dibuat
+
+120
+00:09:13.000 --> 00:09:16.001
+Perangkat lunak akan berada di sekitar untuk waktu yang lama untuk mendukung mereka. Jadi ada
+
+121
+00:09:16.001 --> 00:09:21.000
+Lebih banyak kesadaran merek, merek berarti betapa kuatnya perusahaan
+
+122
+00:09:21.000 --> 00:09:22.001
+di belakang paket tersebut.
+
+123
+00:09:23.000 --> 00:09:25.001
+Bercakap tentang betapa kuatnya perusahaan, Anda sudah terlibat dalam
+
+124
+00:09:25.001 --> 00:09:29.000
+pembelian dan pembelian multi-made dan sebagainya. Apakah itu trend yang akan
+
+125
+00:09:29.000 --> 00:09:32.001
+Tinggalkan akhir industri ini hidup? Apakah Anda melihat lebih dari itu terjadi, penggabungan
+
+126
+00:09:32.001 --> 00:09:36.000
+dari semua perusahaan perangkat lunak di luar sana? Ya, saya pikir begitu.
+
+127
+00:09:36.000 --> 00:09:41.000
+Kami berada dalam periode konsolidasi. Ada banyak perusahaan perangkat lunak untuk
+
+128
+00:09:41.000 --> 00:09:45.001
+Ukuran pasar dan pertumbuhan yang dirancang. Dan kita mungkin telah melewati
+
+129
+00:09:45.001 --> 00:09:49.001
+di mana satu perusahaan produk, bahkan sebuah perusahaan dengan satu produk yang sangat baik dapat
+
+130
+00:09:49.001 --> 00:09:54.001
+Jadilah hidup sendiri. Dan saat perusahaan-perusahaan ini berkumpul dan berbagi kekuatan penjualan,
+
+131
+00:09:55.000 --> 00:10:00.001
+berbagi distribusi, berbagi beberapa jenis pengetahuan pemasaran, mereka akan
+
+132
+00:10:00.001 --> 00:10:04.000
+lebih kuat. Jadi ada insentif besar bagi semua orang untuk melakukannya. Ada juga sebuah
+
+133
+00:10:04.000 --> 00:10:08.001
+rasa integrasi produk juga yang baik untuk pelanggan. Baiklah yang
+
+134
+00:10:08.001 --> 00:10:12.000
+Pelanggan ingin produk berbicara satu sama lain. Apa yang baik adalah kata yang paling besar
+
+135
+00:10:12.000 --> 00:10:16.000
+prosesor di dunia jika saya tidak dapat bertukar data dengan database terbesar di
+
+136
+00:10:16.000 --> 00:10:21.001
+Dunia yang ? Pelanggan sekarang jauh lebih bersikeras tentang kompatibilitas perangkat lunak di seluruh
+
+137
+00:10:21.001 --> 00:10:26.001
+berbagai produk yang luas. Sekarang persoalan yang kita bicarakan sebelumnya adalah apa yang
+
+138
+00:10:26.001 --> 00:10:31.000
+Apakah itu akan membuat pasar domestik itu? Jenis produk apa yang akan dibuat?
+
+139
+00:10:31.000 --> 00:10:35.000
+Ini mungkin tidak akan menjadi program database, bukan? Saya punya teori
+
+140
+00:10:35.000 --> 00:10:41.001
+tentang itu. Saya pikir tiga aplikasi yang paling penting di rumah adalah kerja, kerja
+
+141
+00:10:41.001 --> 00:10:45.001
+di rumah dan kerja rumah. Pekerjaan yang Anda bawa pulang dari kantor Anda
+
+142
+00:10:45.001 --> 00:10:51.000
+briefcase, bisnis yang Anda jalankan di sisi atau sebagai satu-satunya bisnis Anda di luar
+
+143
+00:10:51.000 --> 00:10:55.000
+rumah, dan pekerjaan rumah yang dilakukan anak-anak di sekolah. Mereka yang
+
+144
+00:10:55.000 --> 00:10:57.000
+Mereka adalah pasar yang sangat berorientasi kerja.
+
+145
+00:10:57.000 --> 00:11:03.000
+Dan saya pikir ketika kita memiliki basis komputer pribadi yang besar yang dipasang di
+
+146
+00:11:03.000 --> 00:11:08.001
+rumah, kita mungkin akan melihat perangkat lunak berorientasi kerja sebagai salah satu yang terkemuka
+
+147
+00:11:08.001 --> 00:11:14.000
+kategori dan Tripp sangat dekat dengannya. Tripp, satu pertanyaan terakhir. Kami keluar dari
+
+148
+00:11:14.000 --> 00:11:17.000
+waktu yang Ketika Anda menyebutkan $50 perangkat lunak yang Electronic Arts akan keluar
+
+149
+00:11:17.000 --> 00:11:19.001
+Untuk Amiga, Anda berbicara tentang perangkat lunak bisnis, bukan hanya permainan?
+
+150
+00:11:20.000 --> 00:11:21.001
+Saya berbicara tentang semua jenis perangkat lunak untuk
+
+151
+00:11:21.001 --> 00:11:24.000
+Kreativitas, produktivitas dan hiburan.
+
+152
+00:11:24.000 --> 00:11:28.001
+Meskipun saya pikir pasar domestik akan didorong secara historis setiap
+
+153
+00:11:28.001 --> 00:11:33.000
+Jenis produk elektronik konsumen yang telah dibeli oleh rumah telah menjadi
+
+154
+00:11:33.000 --> 00:11:36.000
+yang dibeli oleh manusia sama seperti komputer pribadi telah terutamanya untuk
+
+155
+00:11:36.000 --> 00:11:39.000
+dan hiburan. Dan itu hanya masalah nilai. Ketika mereka menyadari bahwa
+
+156
+00:11:39.000 --> 00:11:43.001
+pengalaman hiburan sangat berbeda dan mendalam dan mereka benar-benar
+
+157
+00:11:43.001 --> 00:11:46.000
+Jika ingin, maka mereka akan bersedia untuk menghabiskan uang untuk itu. Teman yang baik,
+
+158
+00:11:46.000 --> 00:11:49.000
+Terima kasih, kami keluar dari waktu untuk segmen acara ini. Sekarang salah satu dari
+
+159
+00:11:49.000 --> 00:11:52.000
+Perusahaan-perusahaan yang Anda dengar banyak tentang perlambatan ini di Silicon Valley
+
+160
+00:11:52.000 --> 00:11:55.001
+adalah komputer Apple dengan tercatat layoffs dan penutupan pabrik, shuffles di
+
+161
+00:11:55.001 --> 00:11:59.001
+Suit eksekutif dan sebagainya. Reporter kami Wendy Woods berbicara dengan beberapa mantan
+
+162
+00:11:59.001 --> 00:12:04.000
+Pekerja Apple untuk melihat bagaimana perlambatan telah mempengaruhi mereka. Mungkin tidak ada yang lain
+
+163
+00:12:04.000 --> 00:12:09.000
+Perusahaan melambangkan impian membuatnya besar di komputer seperti yang dilakukan Apple.
+
+164
+00:12:09.000 --> 00:12:14.000
+Mengapa dunia terkejut ketika Apple mengundurkan 20% dari stafnya musim panas lalu. Mimpi yang
+
+165
+00:12:14.000 --> 00:12:18.001
+Tampaknya telah mati atau setidaknya telah dipotong. Tapi mimpi itu tidak mati dengan
+
+166
+00:12:18.001 --> 00:12:23.000
+Mereka adalah mantan manajer Apple. Dave Larson dan Bill Cleary belajar banyak pelajaran
+
+167
+00:12:23.000 --> 00:12:27.001
+dari Apple yang mereka telah menerapkan ke perusahaan baru mereka. Kami jauh lebih frugal
+
+168
+00:12:27.001 --> 00:12:31.000
+Sekarang seperti yang kita miliki. Dave dan saya ingat ketika kami meluncurkan Apple 2C yang bekerja di
+
+169
+00:12:31.000 --> 00:12:34.000
+Kami bersama-sama menghabiskan lebih dari dua juta dolar dalam satu hari. Sekarang kami
+
+170
+00:12:34.000 --> 00:12:38.001
+Kami tidak bisa melakukannya dalam sepuluh tahun sekarang tetapi kami telah menjadi jauh lebih frugal. Bill dan
+
+171
+00:12:38.001 --> 00:12:43.000
+Perusahaan baru Dave, International Solutions, merilis perangkat lunak unik Apple dan
+
+172
+00:12:43.000 --> 00:12:48.000
+perkakasan dari luar negeri dan kapal produk inovatif Amerika di luar negeri. dan mereka
+
+173
+00:12:48.000 --> 00:12:52.001
+produk memanfaatkan teknologi mouse yang memungkinkan Apple 2 untuk meniru
+
+174
+00:12:52.001 --> 00:12:57.000
+dari Macintosh. Permintaan untuk produk mereka telah kuat dan mereka membuat baik
+
+175
+00:12:57.000 --> 00:13:01.001
+Investasi untuk startup tanpa modal venture. Para pengusaha melihat masalah dalam
+
+176
+00:13:01.001 --> 00:13:06.001
+industri sebagai peluang bagi mereka. Apa yang saya ketahui sekarang adalah bahwa banyak dari
+
+177
+00:13:06.001 --> 00:13:09.001
+teman-teman yang ada di sana dan banyak orang yang saya temui sepanjang masa di
+
+178
+00:13:09.001 --> 00:13:13.001
+industri ada saya pikir sebuah kebangkitan nyata dari pengusaha di lembah. A
+
+179
+00:13:13.001 --> 00:13:17.000
+Banyak orang sekarang keluar bekerja pada berbagai hal dan banyak dari mereka pergi
+
+180
+00:13:17.000 --> 00:13:20.000
+untuk menghasilkan buah dan akan ada banyak produk baru dan banyak produk yang baru
+
+181
+00:13:20.000 --> 00:13:25.001
+Konsep dan bisnis yang keluar dari lembah dalam generasi baru. Jadi
+
+182
+00:13:25.001 --> 00:13:28.000
+Kami benar-benar positif dan kami cenderung menjadi bullish. Kami tidak akan berada dalam bisnis ini
+
+183
+00:13:28.000 --> 00:13:31.001
+bekerja 16 jam sehari jika kita berpikir bisnis sudah selesai. Kami pikir itu hanya
+
+184
+00:13:31.001 --> 00:13:35.000
+berjalan melalui periode doldrum dan itu adalah periode transisi dan Anda tahu
+
+185
+00:13:35.000 --> 00:13:39.001
+Bisnis ini sangat berkelanjutan. Untuk komputer Chronicles saya Wendy Woods.
+
+186
+00:13:51.001 --> 00:13:56.000
+Saat ini saya bergabung dengan Ben Anikster. Ben adalah Wakil Presiden Corporate Marketing
+
+187
+00:13:56.000 --> 00:14:00.001
+dengan Advanced Micro Devices AMD. Yang duduk di sebelah Ben adalah Richard O&#x27;Brien yang
+
+188
+00:14:00.001 --> 00:14:02.001
+Penelitian ini dilakukan oleh Hewlett-Packard.
+
+189
+00:14:02.001 --> 00:14:07.000
+dan Gary. Ben kami baru saja mendengar tentang industri perangkat lunak tidak berada di yang buruk
+
+190
+00:14:07.000 --> 00:14:10.001
+Bentuknya Bagaimana dengan industri semikonduktor? Apakah ada kebetulan yang terjadi di sana?
+
+191
+00:14:11.000 --> 00:14:15.000
+“Sudah terjadi kecelakaan besar di industri semikonduktor yang dimulai dari
+
+192
+00:14:15.000 --> 00:14:20.001
+September yang lalu. Ada penurunan yang sangat cepat dalam pesanan dan pengiriman yang saya
+
+193
+00:14:20.001 --> 00:14:25.001
+Pertimbangan telah stabil pada saat ini tetapi kita turun sekitar 25 hingga 30 persen.
+
+194
+00:14:25.001 --> 00:14:29.001
+dibandingkan kali ini tahun lalu. Apakah itu pengaruh Jepang yang menyebabkan itu?
+
+195
+00:14:30.000 --> 00:14:36.000
+Nah, itu adalah salah satu kekhawatiran umum tetapi itu bukan satu-satunya. Ada yang
+
+196
+00:14:36.000 --> 00:14:41.001
+Itu adalah akumulasi inventori yang sangat besar yang harus dihapus. Lebih
+
+197
+00:14:41.001 --> 00:14:44.001
+Ada banyak prediksi yang terlalu optimis yang menghasilkan banyak
+
+198
+00:14:44.001 --> 00:14:50.000
+perusahaan membeli barang-barang yang mereka tidak perlu terutama di industri PC tetapi di
+
+199
+00:14:50.000 --> 00:14:54.001
+Banyak industri lain juga. Richard di HP kita telah berbicara sebelumnya dalam hal ini
+
+200
+00:14:54.001 --> 00:14:57.001
+acara dan di acara yang kami lakukan minggu lalu tentang pasar rumah, pasar bisnis
+
+201
+00:14:57.001 --> 00:15:02.000
+HP terlibat dalam hal ini. Banyak pasar ilmiah dan teknis yang memilikinya. banyak
+
+202
+00:15:02.000 --> 00:15:06.000
+masalah di HP dengan orang-orang yang mengambil empat tempat tinggal dan jenis potongan-potongan itu.
+
+203
+00:15:07.001 --> 00:15:12.000
+Bagaimana semua ini mempengaruhi Hewlett-Packard, perlambatan ini? Saya pikir perlambatan
+
+204
+00:15:12.000 --> 00:15:15.001
+Ini mungkin berlaku sekitar sembilan bulan sekarang.
+
+205
+00:15:17.001 --> 00:15:22.001
+Saya pikir salah satu hal yang harus Anda perhatikan adalah bahwa 1984 adalah
+
+206
+00:15:22.001 --> 00:15:27.001
+tahun fenomenal dan jika Anda melihat di mana kita hari ini dibandingkan dengan tahun 1983
+
+207
+00:15:27.001 --> 00:15:34.000
+Pertumbuhan dalam periode dua tahun ini sudah cukup baik. Anda memiliki kasus di mana
+
+208
+00:15:34.000 --> 00:15:40.000
+Perspektif orang untuk 1985 adalah lebih dari satu kesinambungan dari 1984. Saya pikir
+
+209
+00:15:40.000 --> 00:15:44.001
+Sebenarnya 84 adalah lebih dari anomali daripada di mana kita berada hari ini. Dalam bisnis Anda Anda
+
+210
+00:15:44.001 --> 00:15:50.001
+mencakup komputer ilmiah dan komersial dan pribadi dan sebagainya. Di manakah kamu
+
+211
+00:15:50.001 --> 00:15:57.001
+Apakah Anda melihat penurunan besar? Kami memecahkannya ke sekitar empat area. Kamu punya yang
+
+212
+00:15:57.001 --> 00:16:02.000
+sektor instrumen, sektor komputer, komunikasi dan semikonduktor
+
+213
+00:16:02.000 --> 00:16:08.000
+wilayah tersebut. Area yang paling lemah dari jauh adalah area semikonduktor. Sistem komputer, yang
+
+214
+00:16:08.000 --> 00:16:14.000
+Kawasan ini mungkin berada di sekitar flat. Kedua-dua instrumen dan sektor komunikasi
+
+215
+00:16:14.000 --> 00:16:28.001
+Mereka terus menunjukkan pertumbuhan yang wajar. Bagaimanakah Anda akan mengambil di atas a
+
+216
+00:16:28.001 --> 00:16:34.001
+Perlambatan yang benar dari semua industri barang modal? Industri kita di masa lalu
+
+217
+00:16:34.001 --> 00:16:38.001
+telah mengikuti industri komoditas modal. Kami mengikuti lebih atau kurang
+
+218
+00:16:38.001 --> 00:16:40.000
+Perkembangan dalam industri barang modal.
+
+219
+00:16:41.000 --> 00:16:46.000
+Ketika pelanggan-pelanggan itu mulai sedikit lebih sehat Anda akan melihat pemulihan di
+
+220
+00:16:46.000 --> 00:16:52.001
+bagian komputer dari pasar. Ben, Anda bersama AMD dan salah satu cerita
+
+221
+00:16:52.001 --> 00:16:59.000
+yang telah kita baca di industri komputer terbang dan $ 100.000 Natal
+
+222
+00:16:59.000 --> 00:17:06.000
+Pihak-pihak dan semua hal-hal yang rumit yang selalu terjadi dalam bisnis ini. telah
+
+223
+00:17:06.000 --> 00:17:10.001
+orang melebih-lebihkan dan benar-benar menjadi terlalu agresif dan terlalu fanatik dalam industri ini?
+
+224
+00:17:11.000 --> 00:17:17.000
+Tidak, aku tidak berpikir begitu. Saya pikir pesta Natal $ 100.000, itu sebenarnya adalah sebuah
+
+225
+00:17:17.000 --> 00:17:21.001
+banyak lebih dari itu tetapi saya pikir itu adalah bagian dari berbagi kekayaan dan kita merasa bahwa
+
+226
+00:17:21.001 --> 00:17:26.001
+Kami memiliki basis karyawan yang sangat setia dan kami ingin memberi ganjaran kepada mereka ketika waktu
+
+227
+00:17:26.001 --> 00:17:31.000
+baik dan mereka berdiri di belakang kita ketika waktu buruk. Seperti yang Anda ketahui, kami memiliki
+
+228
+00:17:31.000 --> 00:17:35.001
+Tidak ada kebijakan layoff di AMD dan itu akan menjadi sangat penting untuk output
+
+229
+00:17:35.001 --> 00:17:39.000
+Karena kemudian Anda tidak perlu melatih orang baru, Anda memiliki orang yang memahami
+
+230
+00:17:39.000 --> 00:17:43.000
+pekerjaan mereka dan dapat menarik kita keluar dari kekosongan ini. Tentu saja tidak ada Layoff tapi saya
+
+231
+00:17:43.000 --> 00:17:46.000
+Ini berarti Anda melakukan furlough orang ketika bisnis jatuh. Mereka tidak bekerja untuk sebuah
+
+232
+00:17:46.000 --> 00:17:49.000
+sementara dan tidak dibayar. Ya, kami memiliki waktu yang singkat, kami punya waktu kerja yang singka, tetapi
+
+233
+00:17:49.000 --> 00:17:53.000
+Itulah cara yang kita semua berbagi di masa-masa buruk dan juga yang baik. Salah satu dari
+
+234
+00:17:53.000 --> 00:17:59.000
+hal-hal yang terjadi dari orang luar yang melihat industri chip yang sekali
+
+235
+00:17:59.000 --> 00:18:03.001
+Bahagian tertentu mari kita katakan bahwa chip memori ternyata menjadi sesuatu yang bisa dilakukan oleh siapa saja.
+
+236
+00:18:03.001 --> 00:18:07.001
+dibangun kemudian ia melewati laut dan dibangun di Jepang misalnya
+
+237
+00:18:07.001 --> 00:18:12.000
+dengan biaya yang sangat rendah dan satu cara yang kita dapatkan saya meneka keuntungan kita adalah kita berinovasi
+
+238
+00:18:12.000 --> 00:18:15.001
+dan kita datang dengan ide-ide baru dan sebagainya untuk chip baru dan proses baru hal-hal
+
+239
+00:18:15.001 --> 00:18:19.001
+dari jenis tersebut. Apa yang AMD cari dalam hal inovasi? Jenis area apa
+
+240
+00:18:19.001 --> 00:18:25.001
+Apakah kamu masuk? Ya, saya pikir Gary bahwa seluruh bagian dari garis produk
+
+241
+00:18:25.001 --> 00:18:30.001
+itu penting. Anda tidak dapat membangun komputer dengan hanya chip memori. Anda harus memiliki
+
+242
+00:18:30.001 --> 00:18:34.001
+produk inovatif lainnya yang membuat kenangan bekerja dan sebenarnya memori
+
+243
+00:18:34.001 --> 00:18:39.001
+bisnis hanya sekitar 20% dari total bisnis semikonduktor dan hal yang
+
+244
+00:18:39.001 --> 00:18:44.000
+memisahkan perusahaan yang pelanggan ingin berurusan dengan adalah mereka yang dapat
+
+245
+00:18:44.000 --> 00:18:49.001
+membuat produk yang inovatif dan dengan demikian mereka adalah chip jaringan, paparan grafis
+
+246
+00:18:49.001 --> 00:18:55.001
+chip, mikroprosesor, chip perifer yang benar-benar membuat bagian memori bernyanyi.
+
+247
+00:18:56.000 --> 00:19:00.000
+Okay kita mendengar banyak di industri tentang jaringan lokal menjadi sangat
+
+248
+00:19:00.000 --> 00:19:03.001
+penting dan grafis menjadi bagian penting dari sistem komputer. Sekarang dari A
+
+249
+00:19:03.001 --> 00:19:07.000
+Chip pointpoint Anda mungkin melihat permintaan itu. Apakah Anda melihat permintaan yang semakin meningkat?
+
+250
+00:19:07.000 --> 00:19:10.000
+cepat atau lebih banyak spekulasi bahwa jaringan grafis akan menjadi
+
+251
+00:19:10.000 --> 00:19:15.001
+yang penting? Bukan itu spekulasi. Ternyata dalam revolusi atau
+
+252
+00:19:15.001 --> 00:19:18.001
+evolusi besar seperti hal ini membutuhkan waktu yang lama untuk mendapatkan hal ini berjalan
+
+253
+00:19:18.001 --> 00:19:23.000
+Dan kami berbicara dengan pelanggan yang sedang merancang hal-hal ini sekarang yang sedang berjalan
+
+254
+00:19:23.000 --> 00:19:26.001
+untuk menjadi realitas produksi setahun di bawah jalan kadang-kadang enam bulan di bawah
+
+255
+00:19:26.001 --> 00:19:29.001
+Kadang-kadang jalan dua atau tiga tahun ke bawah jalan. akan menjadi hal seperti ini
+
+256
+00:19:29.001 --> 00:19:33.001
+Mari kita katakan rangkaian daerah lokal misalnya di mana kita akan melihat beberapa
+
+257
+00:19:33.001 --> 00:19:36.001
+Apakah hal-hal ini akan menggantikan penurunan ini sekarang?
+
+258
+00:19:36.001 --> 00:19:42.001
+Ada dua hal tentang penurunan. Pertama-tama, tidak ada yang suka lebih rendah
+
+259
+00:19:42.001 --> 00:19:49.001
+tingkat bisnis tetapi dalam hal ini khususnya penurunan dan dalam banyak penurunan harga pergi
+
+260
+00:19:49.001 --> 00:19:54.001
+ke bawah sangat cepat dan dalam bisnis kami kita memiliki bisnis di mana harga ini rendah
+
+261
+00:19:54.001 --> 00:19:59.000
+merangsang permintaan untuk aplikasi baru untuk produk ini dan itulah yang
+
+262
+00:19:59.000 --> 00:20:04.000
+Anda akan melihat kali berikutnya di sekitar dan produk-produk inovatif seperti
+
+263
+00:20:04.000 --> 00:20:07.000
+hal-hal yang sedang dilakukan di AMD kami memiliki dorongan yang sangat kuat pada inovasi
+
+264
+00:20:07.000 --> 00:20:11.001
+produk yang Itulah yang membuat aplikasi baru. Richard, kau lihat
+
+265
+00:20:11.001 --> 00:20:15.001
+perubahan permanen yang terjadi di industri komputer karena
+
+266
+00:20:15.001 --> 00:20:19.000
+Perlambatan yang semua orang lalui sekarang. Cara yang dilakukan oleh perusahaan
+
+267
+00:20:19.000 --> 00:20:23.000
+Apakah orang akan lebih konservatif kurang bersedia mengambil risiko dan sebagainya? Aku tidak
+
+268
+00:20:23.000 --> 00:20:27.000
+akan terjadi sampai orang-orang menjadi kurang konservatif di
+
+269
+00:20:27.000 --> 00:20:32.001
+yang panjang. Horizon perencanaan orang-orang yang dilaporkan untuk tahun ini mungkin sedikit
+
+270
+00:20:32.001 --> 00:20:35.001
+sedikit lebih konservatif karena kita adalah jenis apa yang akan kita katakan berjalan di sepanjang
+
+271
+00:20:35.001 --> 00:20:40.001
+dari bawah. Hal-hal tidak memburuk tetapi hal-hal belum mulai berputar
+
+272
+00:20:40.001 --> 00:20:46.000
+Namun . Indikasi adalah sejauh indikator utama kita pergi hal-hal yang akan
+
+273
+00:20:46.000 --> 00:20:49.000
+Tapi saya pikir orang akan cukup konservatif untuk mengatakan tahun depan.
+
+274
+00:20:49.000 --> 00:20:52.000
+Mereka akan benar-benar ingin melihat beberapa bukti bahwa hal-hal telah berputar tetapi
+
+275
+00:20:52.000 --> 00:20:56.001
+Saya pikir itu tidak berarti perubahan permanen jangka panjang. Kami hanya memiliki sekitar A
+
+276
+00:20:56.001 --> 00:21:00.001
+Minit yang tersisa. Ben, Gary Saya pikir saya menyebutkan secara singkat situasi Jepang dan banyak
+
+277
+00:21:00.001 --> 00:21:03.001
+Dari masa-masa di media, perbandingan telah dibuat dan industri-industri lain
+
+278
+00:21:03.001 --> 00:21:07.001
+yang telah berpindah offshore, berpindah ke Jepang, pindah ke Asia dan sebagainya. Apakah ada a
+
+279
+00:21:07.001 --> 00:21:12.000
+masalah serius jangka panjang di sini dalam bisnis ini dalam hal kehilangan kontrol kami
+
+280
+00:21:12.000 --> 00:21:16.001
+industri ini? Saya pikir ketika Anda menyadari bahwa inovasi adalah hal yang
+
+281
+00:21:16.001 --> 00:21:21.001
+yang mendorong industri ini Anda dapat bersaing jika Anda dapat mengintegrasikan, jika Anda bisa
+
+282
+00:21:21.001 --> 00:21:28.000
+dan inovasi. Produksi atau pemasangan offshore hanyalah cara untuk mengekalkan
+
+283
+00:21:28.000 --> 00:21:33.000
+kompetitif di pasar internasional. Inovasi dan
+
+284
+00:21:33.000 --> 00:21:37.000
+Kuasa otak yang membuat chip baru ini adalah hal-hal yang akan menjaga Amerika
+
+285
+00:21:37.000 --> 00:21:43.000
+dan sisi kita dalam bentuk yang baik. Sayang, kami keluar dari waktu, terima kasih banyak.
+
+286
+00:21:43.001 --> 00:21:46.001
+Sekarang apa yang akan terjadi di masa depan dan apa pelajaran yang telah kita pelajari dari
+
+287
+00:21:46.001 --> 00:21:49.001
+masa lalu ? Kami memiliki beberapa pendapat dari komentar kami Paul Schindler.
+
+288
+00:21:51.001 --> 00:21:56.000
+Terima kasih tuan. Ingin sebuah pensil? Dengarkan sekarang hal-hal tidak benar-benar mendapatkan ini buruk di
+
+289
+00:21:56.000 --> 00:21:59.001
+Silicon Valley setidaknya tidak untuk saya secara pribadi setidangnya belum tetapi beberapa orang
+
+290
+00:21:59.001 --> 00:22:03.001
+Katakan itu hanya masalah waktu. Tugas saya adalah menjadi lawan, jadi saya akan
+
+291
+00:22:03.001 --> 00:22:07.001
+untuk memberitahu Anda bahwa hal-hal akan menjadi lebih baik. Tidak ada yang bertahan selamanya. yang baik
+
+292
+00:22:07.001 --> 00:22:12.001
+Waktu 84 adalah aberrasi tetapi demikianlah waktu buruk dari 85. Real jangka panjang
+
+293
+00:22:12.001 --> 00:22:16.000
+Potensi pertumbuhan komputer dan elektronik khususnya terletak di suatu tempat di
+
+294
+00:22:16.000 --> 00:22:20.000
+di antara ekstrim ini. Banyak orang mengarahkan saya menyesal untuk mengatakan oleh beberapa dari saya
+
+295
+00:22:20.000 --> 00:22:22.001
+kolega di media ingin Anda berpikir ada sesuatu yang mendasar
+
+296
+00:22:22.001 --> 00:22:26.000
+Berbeda dengan resesi ini. Hal ini menandakan restrukturisasi yang lengkap dari
+
+297
+00:22:26.000 --> 00:22:29.001
+Bisnis komputer dan elektronik. Maaf, aku tidak berpikir seperti itu. Sebenarnya aku
+
+298
+00:22:29.001 --> 00:22:33.000
+Tidak ada yang bisa jauh lebih jauh dari kebenaran. Analog kegemaran setiap orang adalah
+
+299
+00:22:33.000 --> 00:22:36.001
+industri mobil. Anda tahu pernah ada 50 perusahaan mobil AS sekarang hanya ada empat
+
+300
+00:22:36.001 --> 00:22:40.000
+Dan mereka mengatakan hal yang sama akan terjadi di komputer. Aku tidak percaya itu.
+
+301
+00:22:40.001 --> 00:22:42.001
+Mobil bukan komputer dan sebaliknya.
+
+302
+00:22:42.001 --> 00:22:46.000
+Sebuah mobil hanya membantu Anda berkeliling. Sebuah komputer berpikir. Berkeliling adalah hal yang biasa.
+
+303
+00:22:46.001 --> 00:22:50.000
+Berfikir adalah unik sampai kita semua berpikir sama kita akan memiliki banyak
+
+304
+00:22:50.000 --> 00:22:53.000
+Pembeli industri komputer. Itu pendapat saya. Saya adalah Paul Schindler.
+
+305
+00:23:01.001 --> 00:23:05.001
+Dalam file akses rahasia minggu ini ia kelihatan lebih dan lebih seperti Steve Jobs akan
+
+306
+00:23:05.001 --> 00:23:10.000
+Memulai sebuah perusahaan komputer baru. Setelah penjualan bernilai 14 juta dolar
+
+307
+00:23:10.000 --> 00:23:13.000
+Saham Apple bulan lalu, Jobs minggu ini mengumumkan akan menjual
+
+308
+00:23:13.000 --> 00:23:14.001
+Lebih dari $ 7 juta lagi.
+
+309
+00:23:15.000 --> 00:23:17.001
+Beberapa analis memprediksi Jobs akan segera menjual seluruh Apple.
+
+310
+00:23:17.001 --> 00:23:19.001
+dan kemudian meluncurkan startup baru.
+
+311
+00:23:19.001 --> 00:23:23.000
+Ada berita buruk untuk Apple minggu ini dalam sebuah studi pasar yang dilakukan oleh Connecticut
+
+312
+00:23:23.000 --> 00:23:27.000
+perusahaan penelitian. Berikut adalah angka. Mereka menunjukkan penurunan dramatis dalam rencana bisnis
+
+313
+00:23:27.000 --> 00:23:31.000
+untuk membeli komputer Apple termasuk Macintosh dan melompat besar dalam rencana untuk membeli
+
+314
+00:23:31.000 --> 00:23:35.000
+dengan IBM. Kalah besar lainnya tampaknya adalah Radio Shack, Commodore dan Hewlett.
+
+315
+00:23:35.000 --> 00:23:40.000
+Pakar yang IBM terus menahan tekanan minggu ini mengumumkan penurunan harga sebesar 11 persen
+
+316
+00:23:40.000 --> 00:23:44.001
+versi floppy dari XT. Satu drive floppy XT sekarang akan dijual untuk kurang dari dua
+
+317
+00:23:44.001 --> 00:23:49.000
+ribuan dolar. Baru-baru ini IBM Microsoft berkomitmen untuk mengembangkan sistem lebih lanjut
+
+318
+00:23:49.000 --> 00:23:53.000
+Perangkat lunak berdasarkan standar PC DOS tampaknya menjadi pukulan besar untuk Unix dan AT
+
+319
+00:23:53.000 --> 00:23:58.000
+dan t. Salah seorang analis informasi tubuh mengatakan perjanjian IBM Microsoft meletakkan kuku lain di
+
+320
+00:23:58.000 --> 00:24:03.000
+Coffin dari Unix di dunia desktop satu pengguna. Sementara itu, ada tanda-tanda bahwa
+
+321
+00:24:03.000 --> 00:24:07.001
+Bahkan AT&amp;T mungkin akan meninggalkan Unix. Sebuah perusahaan yang disebut Alloy Computer Products
+
+322
+00:24:07.001 --> 00:24:12.001
+Massachusetts mengumumkan bahwa AT&amp;T sedang membeli kartu baru yang memungkinkan Unix PC
+
+323
+00:24:12.001 --> 00:24:17.001
+Untuk menjalankan PC DOS software. AT&amp;T akan meletakkan kartu di Unix PC untuk membuat
+
+324
+00:24:17.001 --> 00:24:22.001
+Ini adalah hibrid dalam upaya untuk meningkatkan penjualan. Siapakah pengguna komputer terbesar dari semua?
+
+325
+00:24:22.001 --> 00:24:26.000
+Pemerintah Amerika Serikat. Ini sebagian besar mainframe di masa lalu tetapi sekarang
+
+326
+00:24:26.000 --> 00:24:30.001
+Bahkan Tante Sam pun masuk ke dalam micros. Penjualan PC ke Fed naik 400
+
+327
+00:24:30.001 --> 00:24:35.000
+Peratusan tahun lalu menurut laporan GSA yang baru diterbitkan. Pemerintah AS
+
+328
+00:24:35.000 --> 00:24:40.000
+Membeli hampir 38.000 PC, penjual PC yang paling sukses kepada pemerintah IBM.
+
+329
+00:24:41.000 --> 00:24:46.001
+Paul Schindler kembali sekarang dengan ulasan perangkat lunak minggu ini. Seperti aku, kamu bisa
+
+330
+00:24:46.001 --> 00:24:48.000
+Saya pikir ini adalah yang terakhir di trivia.
+
+331
+00:24:48.001 --> 00:24:52.000
+Saya di sini untuk memberitahu Anda bahwa itu tidak. Sesetengah dari kalian mungkin telah mencoba
+
+332
+00:24:52.000 --> 00:24:57.000
+permainan trivia komputer hanya untuk dihapus oleh baik mereka triviality. I
+
+333
+00:24:57.000 --> 00:25:01.000
+bermakna mari kita berhadapan dengan itu berapa banyak cara yang berbeda yang dapat Anda mainkan dan skor permainan yang
+
+334
+00:25:01.000 --> 00:25:05.001
+Benarkah tidak ada yang lebih penting daripada mengingat fakta-fakta rahasia? Aku tidak bisa menjawab
+
+335
+00:25:05.001 --> 00:25:08.001
+Pertanyaan ini, tapi saya dapat memberitahu Anda tentang Ultimate Trivia,
+
+336
+00:25:08.001 --> 00:25:10.000
+Sebuah permainan yang menangkap hati saya.
+
+337
+00:25:10.000 --> 00:25:15.001
+Saya bermain selama 15 atau 20 menit setiap hari dan seperti yang mereka katakan adalah trivia yang mengejar
+
+338
+00:25:15.001 --> 00:25:19.001
+Kamu yang Anda tidak dapat menjauh dari grafis warna dalam permainan ini, beberapa dari mereka adalah
+
+339
+00:25:19.001 --> 00:25:24.000
+benar-benar agak manis. Ini dimulai cukup tidak bersalah dengan rangkaian informasi. Seperti yang Anda Jawab
+
+340
+00:25:24.000 --> 00:25:28.001
+Pertanyaan yang Anda sampaikan grafis ultimat. Anda mendapatkan empat pilihan tetapi hanya tiga.
+
+341
+00:25:28.001 --> 00:25:32.000
+peluang dalam setiap kategori sehingga kadang-kadang Anda tidak dapat melihat seluruh grafis.
+
+342
+00:25:32.001 --> 00:25:34.001
+Kemudian ada pusingan lain yang mana dari empat hal ini
+
+343
+00:25:34.001 --> 00:25:36.000
+Bersama-sama dan grafis lain.
+
+344
+00:25:36.000 --> 00:25:38.001
+Menjaringkan lebih dari seribu dan tiga putaran biasa
+
+345
+00:25:38.001 --> 00:25:40.000
+Dan Anda akan masuk ke bonus round.
+
+346
+00:25:40.001 --> 00:25:44.001
+Seorang pembunuh sejati. Sekarang mari kita katakan bahwa saya sampai ke permulaan pusingan bonus
+
+347
+00:25:44.001 --> 00:25:49.000
+setiap hari tetapi tidak banyak lagi dan seolah-olah Ultimate Trivia tidak cukup ada
+
+348
+00:25:49.000 --> 00:25:51.000
+Sekarang versi Ultimate Trivia juga.
+
+349
+00:25:51.000 --> 00:25:55.001
+Keduanya hanya $ 50 dari sistem pembelajaran mentor di Santa Clara, California.
+
+350
+00:25:56.000 --> 00:26:01.000
+Keduanya bisa membuatmu gila. Untuk komputer Chronicles saya adalah Paul Schindler. dan yang
+
+351
+00:26:01.000 --> 00:26:04.001
+Universitas Illinois di Urbana akan melakukan eksperimen dalam penggunaan
+
+352
+00:26:04.001 --> 00:26:09.001
+komputer di kampus. Dalam kesepakatan khusus dengan IBM, universitas akan menginstal 125
+
+353
+00:26:09.001 --> 00:26:14.001
+IBM PC di salah satu kamar tidurnya. Ini akan menjadi satu komputer, monitor, dan printer di
+
+354
+00:26:14.001 --> 00:26:18.001
+Setiap kamar bernilai sekitar tujuh ratus ribu dolar. Universitas akan
+
+355
+00:26:18.001 --> 00:26:21.001
+kemudian mempelajari siswa untuk melihat bagaimana komputer mengubah akademik mereka
+
+356
+00:26:21.001 --> 00:26:23.001
+dan kehidupan pribadi mereka.
+
+357
+00:26:24.001 --> 00:26:28.000
+UC Berkeley baru saja menyelesaikan studi tentang betapa hebatnya perasaan siswa sekolah tentang
+
+358
+00:26:28.000 --> 00:26:31.001
+Komputer dan hasilnya agak mengejutkan. 61% dari siswa
+
+359
+00:26:31.001 --> 00:26:33.000
+Mereka mengatakan mereka tidak menyukai komputer.
+
+360
+00:26:33.001 --> 00:26:37.000
+Sebagian besar mengatakan bahwa anak-anak yang menyukai komputer tidak populer. Studi yang
+
+361
+00:26:37.000 --> 00:26:41.001
+menyimpulkan bahwa stereotip komputer nerd hidup dan baik di Amerika
+
+362
+00:26:41.001 --> 00:26:45.001
+kelas sekolah. Jika Anda memiliki keraguan tentang pentingnya
+
+363
+00:26:45.001 --> 00:26:49.000
+kemampuan audio dan grafis yang menakjubkan dari Commodore Amiga dan
+
+364
+00:26:49.000 --> 00:26:53.001
+Atari ST mendengarkan hal ini. Teknologi baru telah memungkinkan versi baru dari beberapa
+
+365
+00:26:53.001 --> 00:26:58.000
+Permainan klasik untuk keluar. Dalam konstruksi baru deluxe pinball set Anda dapat
+
+366
+00:26:58.000 --> 00:27:01.001
+Mendengar bunyi bola yang mengalir keluar dari komputer yang dihasilkan bumpers di
+
+367
+00:27:01.001 --> 00:27:06.001
+Stereo dan dalam yang baru satu-ke-satu tidak hanya melakukan Dr. J dan Larry Bird bergerak lebih jauh
+
+368
+00:27:06.001 --> 00:27:10.001
+lebih lancar dari sebelumnya tetapi ketika Julius membuat pergerakan cepat pada burung Anda dapat mendengar
+
+369
+00:27:10.001 --> 00:27:15.000
+Kaki-kaki itu tergelincir di lantai gym. Sekarang orang-orang itu adalah teknologi tinggi.
+
+370
+00:27:15.001 --> 00:27:17.000
+Dan itu adalah untuk edisi komputer minggu ini
+
+371
+00:27:17.000 --> 00:27:18.001
+dengan kronik. Kita akan berjumpa denganmu lain kali.
+
+372
+00:27:18.001 --> 00:27:23.001
+Komputer Chronicles dibuat mungkin sebagian oleh donasi dari AFIP, yang
+
+373
+00:27:23.001 --> 00:27:28.000
+American Federation of Information Processing Societies, sebuah federasi non-profit
+
+374
+00:27:28.000 --> 00:27:33.000
+dari 11 perusahaan nasional untuk profesional komputer. Kepemimpinan, kepemimpinan dan
+
+375
+00:27:33.000 --> 00:27:38.000
+Layanan dalam komputer dan teknologi informasi. Pembiayaan tambahan diberikan oleh
+
+376
+00:27:38.000 --> 00:27:42.001
+McGraw-Hill, penerbit dari Byte. Artikel teknis terperinci Byte tentang yang baru
+
+377
+00:27:42.001 --> 00:27:46.001
+Perangkat lunak, perangkat lunak dan bahasa mencakup teknologi mikrokomputer terbaru
+
+378
+00:27:46.001 --> 00:27:49.001
+di seluruh dunia. Bite adalah standar internasional.

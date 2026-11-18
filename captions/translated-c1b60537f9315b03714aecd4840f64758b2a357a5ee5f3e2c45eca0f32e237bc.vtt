@@ -1,0 +1,1401 @@
+WEBVTT
+
+1
+00:00:20.001 --> 00:00:25.000
+Presidente
+
+2
+00:00:25.000 --> 00:00:28.000
+Oscilando agora
+
+3
+00:00:45.001 --> 00:00:51.001
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+4
+00:00:51.001 --> 00:00:55.001
+Gostaria de fornecer um financiamento importante para o cronograma de computador.
+
+5
+00:00:56.000 --> 00:00:59.000
+A história desta evolução contínua.
+
+6
+00:01:07.000 --> 00:01:08.001
+Bem-vindo às crônicas de computador.
+
+7
+00:01:08.001 --> 00:01:12.001
+Eu sou Stuart Chafay e assento para Gary Kildall esta semana é Herb Lechner.
+
+8
+00:01:13.000 --> 00:01:16.001
+No programa de hoje, estaremos indo para o misterioso chip de computador.
+
+9
+00:01:16.001 --> 00:01:19.000
+por si mesmo, aquele pequeno pedaço de silicone que parece ser capaz de
+
+10
+00:01:19.000 --> 00:01:20.001
+para manter tantos circuitos.
+
+11
+00:01:20.001 --> 00:01:25.000
+Herb, mudamos de 8 bits para 16 bits, mesmo 32 bits
+
+12
+00:01:25.000 --> 00:01:27.000
+Processadores de 16K chips.
+
+13
+00:01:27.000 --> 00:01:31.000
+Até aqui estamos falando agora de 256K, chips de memória de 4 megabit.
+
+14
+00:01:31.001 --> 00:01:34.001
+Até que ponto podemos ir em jamming coisas dentro desses chips de computador?
+
+15
+00:01:35.000 --> 00:01:38.000
+Tenho vergonha de admitir Stuart que há cerca de 10 anos, quando me foi perguntado que
+
+16
+00:01:38.000 --> 00:01:42.001
+pergunta eu respondi que eu pensei que estamos aproximando-se do limite porque eu
+
+17
+00:01:42.001 --> 00:01:47.000
+supondo que os componentes da computação continuaria a ser alguns polegadas ou um
+
+18
+00:01:47.000 --> 00:01:52.000
+O pé separado e a luz viajam apenas um pé em um nanosegundo.
+
+19
+00:01:53.000 --> 00:01:56.000
+Mas, obviamente, as distâncias micron me provaram errado hoje.
+
+20
+00:01:56.001 --> 00:01:58.000
+Então, quem sabe até onde podemos ir?
+
+21
+00:01:58.000 --> 00:01:58.001
+Quem sabe até onde podemos ir?
+
+22
+00:01:58.001 --> 00:02:02.000
+Antes de entrarmos na arquitetura do chip em si, vamos olhar para o silício, o
+
+23
+00:02:02.000 --> 00:02:05.001
+material natural que é a base de toda a tecnologia semicondutora.
+
+24
+00:02:07.001 --> 00:02:12.000
+circuitos integrados, computadores em um chip, micro miniaturização.
+
+25
+00:02:13.000 --> 00:02:17.001
+O semicondutor que torna esses dispositivos revolucionários possíveis é derivado de
+
+26
+00:02:17.001 --> 00:02:20.001
+Um dos materiais mais comuns na crosta da Terra, o silicato.
+
+27
+00:02:21.001 --> 00:02:26.001
+O extracto purificado, silício, é aquecido até que se torne molhado e uma semente
+
+28
+00:02:26.001 --> 00:02:29.001
+O cristal é derramado no molde e lentamente retirado.
+
+29
+00:02:30.000 --> 00:02:35.000
+À medida que o cristal de semente é retirado, o silício molhado cristaliza formando uma
+
+30
+00:02:35.000 --> 00:02:36.001
+Cristal ou Ingot.
+
+31
+00:02:37.001 --> 00:02:39.001
+O ingoto é esvaziado em pedaços fina.
+
+32
+00:02:40.000 --> 00:02:44.000
+Uma vez polido e microscópico limpo, esses discos brilhantes são os
+
+33
+00:02:44.000 --> 00:02:45.001
+Fundamentos para circuitos integrados.
+
+34
+00:02:46.001 --> 00:02:51.000
+O processo de transformação começa com o computador assistido design, um método que
+
+35
+00:02:51.000 --> 00:02:54.000
+Apaga módulos de design de circuito da memória do computador.
+
+36
+00:02:54.001 --> 00:02:58.000
+Um novo design pode ser criado e editado com um stroke de
+
+37
+00:02:58.000 --> 00:02:59.001
+Uma caneta e uma tela de vídeo.
+
+38
+00:03:00.000 --> 00:03:03.000
+Mas a impressão da cópia editada do computador é rotineiramente verificada
+
+39
+00:03:03.000 --> 00:03:04.001
+contra o design desenhado.
+
+40
+00:03:04.001 --> 00:03:07.001
+Ainda, no momento, o documento final.
+
+41
+00:03:08.001 --> 00:03:12.001
+Se eles correspondem, os dados são convertidos em uma máscara fotográfica e através
+
+42
+00:03:12.001 --> 00:03:16.000
+fotolithografia, o design é transferido para o wafer.
+
+43
+00:03:16.001 --> 00:03:21.001
+Uma lavagem química desenvolve o padrão dissolvendo ou esfregando secções
+
+44
+00:03:21.001 --> 00:03:23.000
+expostas através da máscara.
+
+45
+00:03:24.000 --> 00:03:26.000
+Como cada camada de circuito é aplicada, é
+
+46
+00:03:26.000 --> 00:03:28.000
+Verificado para alinhamento com os outros.
+
+47
+00:03:28.000 --> 00:03:32.001
+Este passo torna-se crítico como a integração em grande escala é substituída por uma integração muito grande.
+
+48
+00:03:32.001 --> 00:03:35.000
+e em breve uma integração em grande escala.
+
+49
+00:03:36.000 --> 00:03:40.001
+Um salto de 10.000 a 100.000 transistores em um único chip.
+
+50
+00:03:49.000 --> 00:03:53.000
+Nosso hóspede em hoje Computer Chronicles é Phil Downing.
+
+51
+00:03:53.000 --> 00:03:56.001
+É vice-presidente de tecnologia corporativa na Advanced Micro
+
+52
+00:03:56.001 --> 00:03:58.001
+dispositivos, às vezes conhecidos como AMD.
+
+53
+00:03:59.000 --> 00:03:59.000
+A Herba?
+
+54
+00:03:59.001 --> 00:04:04.000
+Fil, houve tanto desenvolvimento e chegamos a um longo caminho de
+
+55
+00:04:04.000 --> 00:04:06.000
+tubos de vácuo para os circuitos integrados de hoje.
+
+56
+00:04:06.001 --> 00:04:10.001
+Você pode começar dando-nos apenas uma espécie de visão rápida de onde estamos hoje?
+
+57
+00:04:11.001 --> 00:04:16.001
+Bem, como você sabe, Herb, hoje somos capazes de colocar milhares de transistores em um
+
+58
+00:04:16.001 --> 00:04:20.001
+um único chip e praticamente tomar um computador inteiro e colocá-lo.
+
+59
+00:04:21.000 --> 00:04:28.000
+E fazemos isso com o tipo de processamento fotolithográfico que nos permite
+
+60
+00:04:28.000 --> 00:04:31.001
+Imagens de padrão para baixo no tamanho de um micron.
+
+61
+00:04:33.000 --> 00:04:38.000
+Isso não só nos permite construir chips de microcomputador, mas também memórias que têm
+
+62
+00:04:38.000 --> 00:04:43.000
+densidades de milhares de bits, 64 mil bits e 256.000 bits de memórias.
+
+63
+00:04:43.001 --> 00:04:45.000
+Será que estamos esgotando a tecnologia?
+
+64
+00:04:45.000 --> 00:04:48.000
+Estamos chegando o mais longe que podemos ou há mais para ir?
+
+65
+00:04:48.001 --> 00:04:53.000
+Não, vemos as tendências da última década em que os tamanhos da função que usamos
+
+66
+00:04:53.000 --> 00:04:57.000
+Para fazer com que esses chips diminuam em cerca de 10% por ano
+
+67
+00:04:57.000 --> 00:04:59.000
+continuam durante a próxima década.
+
+68
+00:04:59.000 --> 00:05:02.001
+Nós ainda poderemos reduzir os tamanhos da função abaixo de um micron.
+
+69
+00:05:03.001 --> 00:05:08.000
+Que tecnologia leva para que você faça as coisas tão pequenas?
+
+70
+00:05:08.001 --> 00:05:12.000
+Como você pode reduzi-los para o tamanho de um micron?
+
+71
+00:05:13.001 --> 00:05:16.000
+Era uma simples impressão de contato.
+
+72
+00:05:16.001 --> 00:05:20.000
+Imagens fotográficas foram colocadas em uma placa que é colocada em contato com o
+
+73
+00:05:20.000 --> 00:05:25.001
+material processado e simples transferência de imagem de impressão de contato.
+
+74
+00:05:26.001 --> 00:05:30.001
+O que aconteceu nos últimos 10 anos é que estamos mudando para uma imagem de projeção
+
+75
+00:05:30.001 --> 00:05:35.001
+capacidade que nos permite não só obter tamanhos muito, muito finos, mas
+
+76
+00:05:35.001 --> 00:05:38.001
+Porque não trazemos a máscara em contato com o vapor, não danificamos
+
+77
+00:05:38.001 --> 00:05:40.001
+material durante o processamento.
+
+78
+00:05:41.000 --> 00:05:46.000
+Isso nos dá muito poucos defeitos no processo de fabricação e com muito poucos
+
+79
+00:05:46.000 --> 00:05:49.001
+Defeitos, podemos agora fazer esses circuitos muito complexos economicamente.
+
+80
+00:05:51.000 --> 00:05:54.000
+Você está correndo em problemas de controle de qualidade como você tem
+
+81
+00:05:54.000 --> 00:05:56.000
+Maior e maior escala de integração?
+
+82
+00:05:56.000 --> 00:05:58.001
+Você acaba com menos chips aceitáveis?
+
+83
+00:06:00.000 --> 00:06:05.000
+Bem, como os tamanhos da função diminuem, o número de defeitos que você pode capturar
+
+84
+00:06:05.000 --> 00:06:11.000
+durante o processo aumenta e, portanto, temos que manter mais e mais limpo
+
+85
+00:06:11.000 --> 00:06:13.000
+condições no nosso processo de produção.
+
+86
+00:06:16.000 --> 00:06:22.001
+Isso traduz-se em mais dificuldade no processo, mas nós desenvolvemos nossa qualidade
+
+87
+00:06:22.001 --> 00:06:26.001
+medidas de controle enquanto desenvolvemos a tecnologia para que possamos fazê-lo economicamente.
+
+88
+00:06:26.001 --> 00:06:31.001
+Também existem meios de construir um circuito extra em alguns desses chips para que
+
+89
+00:06:31.001 --> 00:06:38.001
+Você pode programar fora durante o teste de porções erradas do chip e final
+
+90
+00:06:38.001 --> 00:06:41.000
+Com bons chips reconstruídos.
+
+91
+00:06:41.001 --> 00:06:48.000
+Isso é chamado de redundância e isso também ajuda a manter a qualidade e também
+
+92
+00:06:48.000 --> 00:06:50.000
+A economia da construção desses chips.
+
+93
+00:06:50.001 --> 00:06:52.001
+Quão difícil é projetar um chip?
+
+94
+00:06:52.001 --> 00:06:58.000
+Eu sei que você executa dezenas de milhões de chips uma vez que eles são projetados, mas eu também
+
+95
+00:06:58.000 --> 00:07:00.000
+Saiba que há uma série de chips no mercado.
+
+96
+00:07:00.001 --> 00:07:03.000
+Como você vai para projetar um chip ou modificar um?
+
+97
+00:07:03.001 --> 00:07:08.001
+O design é provavelmente uma das tarefas mais complexas que ele enfrenta hoje.
+
+98
+00:07:08.001 --> 00:07:15.000
+Estamos falando sobre a evolução da tecnologia microeletrônica, mas muitas pessoas em
+
+99
+00:07:15.000 --> 00:07:18.001
+Nossa indústria declarou que a tecnologia está se movendo mais rápido do que a nossa capacidade
+
+100
+00:07:18.001 --> 00:07:20.000
+para projetar esses chips complexos.
+
+101
+00:07:22.000 --> 00:07:25.001
+Então, o que temos que fazer é mudar a maneira como projetamos os chips.
+
+102
+00:07:26.001 --> 00:07:31.000
+Era que com uma coleção de 100 ou mais centenas de componentes no
+
+103
+00:07:31.000 --> 00:07:36.001
+chip que você poderia definir um pequeno sistema, um conjunto de AND portas, OR portas
+
+104
+00:07:36.001 --> 00:07:42.000
+ou algo assim e você poderia desenhar isso em um pedaço de papel em um
+
+105
+00:07:42.000 --> 00:07:45.001
+gráfico de precisão e então isso pode ser traduzido em um conjunto
+
+106
+00:07:45.001 --> 00:07:47.000
+Plateiras fotográficas para processamento.
+
+107
+00:07:48.001 --> 00:07:53.001
+Hoje em dia, quando você está falando de ter 100.000 transistores em um chip
+
+108
+00:07:53.001 --> 00:07:56.000
+A tarefa não pode mais ser tratada por desenho individual
+
+109
+00:07:56.000 --> 00:07:57.001
+Componentes em um pedaço de papel.
+
+110
+00:07:58.000 --> 00:08:02.001
+Portanto, temos que usar computadores para manter esses arquivos enormes de várias geometria
+
+111
+00:08:02.001 --> 00:08:06.000
+que, em última análise, se traduz no processo de chip
+
+112
+00:08:06.000 --> 00:08:07.001
+E isso é chamado de design computador-ajudado.
+
+113
+00:08:08.001 --> 00:08:14.000
+Esta é uma área que requer muito desenvolvimento na próxima década.
+
+114
+00:08:14.000 --> 00:08:17.000
+para nós capitalizar sobre o que a tecnologia será capaz de fazer.
+
+115
+00:08:17.001 --> 00:08:23.001
+Quais são os trade-offs quando você vai para um movimento mais rápido e mais rápido de elétrons
+
+116
+00:08:23.001 --> 00:08:26.001
+através do chip em termos de geração de calor?
+
+117
+00:08:27.000 --> 00:08:29.000
+Você está chegando a um ponto onde você começa a criar um problema?
+
+118
+00:08:30.000 --> 00:08:36.000
+Absolutamente e de fato uma das mais recentes tecnologias que as pessoas falam sobre
+
+119
+00:08:36.000 --> 00:08:40.001
+Hoje, a tecnologia complementar MOS, algumas pessoas, muitas pessoas chamam de CMOS
+
+120
+00:08:40.001 --> 00:08:47.001
+tecnologia, resolve esse problema muito e que é que cada elemento ou cada
+
+121
+00:08:47.001 --> 00:08:51.001
+O elemento lógico no chip consome uma certa quantidade de energia e diferentes
+
+122
+00:08:51.001 --> 00:08:54.001
+Tecnologias de circuito e dispositivo consomem diferentes
+
+123
+00:08:54.001 --> 00:08:56.001
+quantidades de energia para cada elemento.
+
+124
+00:08:57.000 --> 00:09:00.001
+Tecnologias bipolares são uma grande quantidade de energia consumida para cada
+
+125
+00:09:00.001 --> 00:09:02.000
+elementos para obter um desempenho muito elevado.
+
+126
+00:09:03.000 --> 00:09:09.000
+Em tecnologias NMOS ainda existe uma quantidade moderada de energia consumida e para
+
+127
+00:09:09.000 --> 00:09:11.001
+Os níveis de complexidade que enfrentamos hoje
+
+128
+00:09:11.001 --> 00:09:13.000
+O consumo de energia é manejável.
+
+129
+00:09:14.000 --> 00:09:18.000
+Mas enquanto construímos a complexidade para centenas de milhares de componentes em um chip
+
+130
+00:09:18.000 --> 00:09:23.001
+O consumo de energia por cada elemento é inaceitável, mesmo na tecnologia NMOS.
+
+131
+00:09:24.000 --> 00:09:28.001
+E então você tem que usar uma tecnologia como o MOS complementar que não queima
+
+132
+00:09:28.001 --> 00:09:31.001
+qualquer força durante a sua operação estática.
+
+133
+00:09:31.001 --> 00:09:33.001
+Apenas quando interrompe, consome energia.
+
+134
+00:09:34.000 --> 00:09:36.001
+E isso é muito importante para nós na construção de chips mais complexos.
+
+135
+00:09:37.000 --> 00:09:42.000
+As duas tecnologias podem ser usadas no mesmo computador?
+
+136
+00:09:42.001 --> 00:09:43.000
+Oh, é absolutamente
+
+137
+00:09:43.000 --> 00:09:50.000
+Na verdade, muitas empresas como nós oferecem múltiplas tecnologias na
+
+138
+00:09:50.000 --> 00:09:51.001
+produtos que eles fornecem.
+
+139
+00:09:52.001 --> 00:09:58.001
+E nós coletamos conjuntos de produtos que são feitos para trabalhar juntos que utiliza
+
+140
+00:09:58.001 --> 00:10:05.000
+tecnologia bipolar, tecnologia NMOS, e como a tecnologia CMOS entra em sua própria
+
+141
+00:10:05.000 --> 00:10:08.001
+Nesta década, todas as três tecnologias serão usadas juntos.
+
+142
+00:10:09.000 --> 00:10:13.001
+Fil, você mencionou que a tecnologia do chip pode estar acima da sua capacidade de
+
+143
+00:10:13.001 --> 00:10:15.000
+design para essa tecnologia.
+
+144
+00:10:15.000 --> 00:10:18.001
+Eu também ouvi que a sua tecnologia de chip é uma espécie acima da nossa capacidade de
+
+145
+00:10:18.001 --> 00:10:24.000
+Realmente aplicá-lo e use a quantidade de integração que você pode obter em um chip.
+
+146
+00:10:24.000 --> 00:10:24.001
+Isso é verdade?
+
+147
+00:10:25.001 --> 00:10:28.000
+Bem, agora você está entrando na área de sistemas e
+
+148
+00:10:28.000 --> 00:10:30.000
+Essa não é a minha área de experiência.
+
+149
+00:10:30.001 --> 00:10:36.000
+Mas, sendo um usuário de computadores e de computador-assistido design, certamente vemos uma ampla
+
+150
+00:10:36.000 --> 00:10:39.001
+Aplicação de hardware para resolver o problema de software.
+
+151
+00:10:39.001 --> 00:10:44.000
+Nós substituímos uma grande quantidade de capacidade computacional para
+
+152
+00:10:44.000 --> 00:10:45.001
+Design de software inteligente.
+
+153
+00:10:46.001 --> 00:10:52.000
+E encontramos que altos e altos níveis de integração e capacidade de software
+
+154
+00:10:52.000 --> 00:10:54.001
+Eles são cruciais para nós em nossa tarefa de design.
+
+155
+00:10:55.000 --> 00:10:58.001
+Estações de trabalho de engenharia que dão o poder de um milhão de instruções por segundo
+
+156
+00:10:58.001 --> 00:11:01.000
+computador nas mãos de cada engenheiro individual é
+
+157
+00:11:01.000 --> 00:11:03.000
+É algo que podemos usar definitivamente.
+
+158
+00:11:03.001 --> 00:11:07.001
+Nós ouvimos sobre a possibilidade de quatro megabytes chips.
+
+159
+00:11:07.001 --> 00:11:10.000
+Ou seja, é um projeto conceitável?
+
+160
+00:11:12.000 --> 00:11:15.000
+Eu acho que as pessoas ficariam muito felizes se pudéssemos
+
+161
+00:11:15.000 --> 00:11:16.001
+Conheça um chip de 4 megabit.
+
+162
+00:11:16.001 --> 00:11:17.000
+O Megabito.
+
+163
+00:11:18.001 --> 00:11:24.001
+Se você olhar para o estado atual da arte, a IBM anunciou recentemente um protótipo
+
+164
+00:11:24.001 --> 00:11:27.001
+Uma versão de 512 bits de memória dinâmica.
+
+165
+00:11:28.001 --> 00:11:34.000
+E há um projeto que está sendo proposto para a pesquisa semicondutora
+
+166
+00:11:34.000 --> 00:11:39.000
+A empresa realmente desenvolver uma memória dinâmica de quatro megabit.
+
+167
+00:11:40.000 --> 00:11:42.001
+E certamente acreditamos que é possível
+
+168
+00:11:42.001 --> 00:11:44.000
+Isso será feito nos próximos quatro ou cinco anos.
+
+169
+00:11:45.000 --> 00:11:48.000
+Pergunte sobre o material em si.
+
+170
+00:11:48.000 --> 00:11:50.000
+Estamos falando sobre silício principalmente em chips.
+
+171
+00:11:50.000 --> 00:11:55.001
+Será que o material do futuro é para sempre para chips, ou há outro elemento
+
+172
+00:11:55.001 --> 00:11:58.001
+Isso pode resolver alguns de seus problemas?
+
+173
+00:11:59.001 --> 00:12:05.001
+É um tema muito aplicativo-sensível, e isso é para os tipos de microondas de
+
+174
+00:12:05.001 --> 00:12:10.001
+circuitos e para diodos de emissão de luz ou chips de tipo óptico
+
+175
+00:12:10.001 --> 00:12:12.001
+Onde você está procurando por interfaces ópticas.
+
+176
+00:12:13.000 --> 00:12:15.000
+Outros materiais em silicone são adequados para isso.
+
+177
+00:12:16.000 --> 00:12:19.001
+Fósfido de Índico, Arsenido de Gallium, Arsênio de Gallio provavelmente
+
+178
+00:12:19.001 --> 00:12:21.000
+ser o mais popular deles.
+
+179
+00:12:22.000 --> 00:12:27.001
+No entanto, se você está falando de VLSI, circuitos integrados de grande escala, nós
+
+180
+00:12:27.001 --> 00:12:30.001
+Ver realmente o silício como o material que vai dominar
+
+181
+00:12:30.001 --> 00:12:32.001
+no futuro previsível.
+
+182
+00:12:33.000 --> 00:12:35.000
+Em apenas um minuto, vamos levar você para um
+
+183
+00:12:35.000 --> 00:12:36.001
+Visita guiada de um chip de computador.
+
+184
+00:12:37.000 --> 00:12:38.000
+Isso está chegando para a próxima.
+
+185
+00:12:48.001 --> 00:12:51.001
+Ok, Phil, você está segurando dois chips, eu acho, nesse caso.
+
+186
+00:12:51.001 --> 00:12:52.001
+Diga-me o que você tem lá.
+
+187
+00:12:53.000 --> 00:12:55.001
+Bem, eu tenho um chip que foi projetado em 1975.
+
+188
+00:12:56.000 --> 00:13:00.000
+Este é um 2901 chip, que é um microprocessador de quatro bits.
+
+189
+00:13:01.000 --> 00:13:04.001
+E ao lado disso você vê um chip muito maior, que é um microprocessador de 16 bits,
+
+190
+00:13:05.000 --> 00:13:07.000
+É conhecido como o AM29116.
+
+191
+00:13:08.001 --> 00:13:13.000
+Este chip, sendo um microprocessador de 16 bits, é aproximadamente cinco vezes o
+
+192
+00:13:13.000 --> 00:13:15.000
+A complexidade deste componente aqui.
+
+193
+00:13:16.000 --> 00:13:20.001
+E eu tenho uma foto, um micrografo de foto deste chip menor.
+
+194
+00:13:20.001 --> 00:13:23.001
+Isso é cerca de um oitavo de um polegado no lado aqui, e assim você pode ver que este
+
+195
+00:13:23.001 --> 00:13:25.001
+É uma grande explosão.
+
+196
+00:13:26.000 --> 00:13:28.000
+Agora, na verdade, é a quarta geração.
+
+197
+00:13:28.000 --> 00:13:30.000
+De um chip particular, não é?
+
+198
+00:13:30.000 --> 00:13:30.001
+Isso é certo.
+
+199
+00:13:30.001 --> 00:13:37.001
+O 2901C, vamos 2901, e então o 2901A foi introduzido B
+
+200
+00:13:37.001 --> 00:13:39.000
+E C, portanto, torna-se o quarto.
+
+201
+00:13:39.000 --> 00:13:40.001
+Bem, e que tipo de chip é isso?
+
+202
+00:13:40.001 --> 00:13:44.000
+É um microprocessador de quatro bits.
+
+203
+00:13:45.000 --> 00:13:47.001
+Ok, e você pode levar-nos através de um tour de todos os componentes
+
+204
+00:13:47.001 --> 00:13:49.000
+Isso está cheio dentro daquela pequena coisa?
+
+205
+00:13:50.000 --> 00:13:55.000
+Bem, um microprocessador de quatro bits é basicamente um ALU com um arquivo de registro
+
+206
+00:13:55.000 --> 00:14:01.000
+e um conjunto de decodificadores de instruções e, claro, uma seção de entrada-output.
+
+207
+00:14:01.001 --> 00:14:05.000
+Agora o que você vê no centro aqui é um arquivo de registro.
+
+208
+00:14:05.000 --> 00:14:09.001
+Esta é uma RAM de dois portos para que possa ler e escrever de forma diferente.
+
+209
+00:14:09.001 --> 00:14:11.000
+bits da memória ao mesmo tempo.
+
+210
+00:14:12.000 --> 00:14:17.000
+Ele toma os dados, os quatro bits de dados a partir deste arquivo de registo e pompa-o
+
+211
+00:14:17.000 --> 00:14:21.000
+através desta seção aqui, que é a ALU, que está controlada pela
+
+212
+00:14:21.000 --> 00:14:23.001
+Decoração de instruções, que você verá nesta seção aqui
+
+213
+00:14:23.001 --> 00:14:25.001
+E alguns deles nesta seção acima aqui.
+
+214
+00:14:26.001 --> 00:14:30.001
+Então a lógica aleatória que você vê que é muito irregular é o que
+
+215
+00:14:30.001 --> 00:14:32.000
+Faça a instrução de decodificação.
+
+216
+00:14:32.001 --> 00:14:36.001
+ALU é uma estrutura bastante regular, como o arquivo de registo aqui.
+
+217
+00:14:37.000 --> 00:14:41.001
+Você pode ver as saídas ao longo da seção aqui e um conjunto de entradas ao longo do lado
+
+218
+00:14:41.001 --> 00:14:43.001
+do chip aqui para controle e entrada de dados.
+
+219
+00:14:45.000 --> 00:14:46.001
+Ok, e ALU para as pessoas que não entendem.
+
+220
+00:14:47.000 --> 00:14:48.000
+unidade de lógica aritmética.
+
+221
+00:14:48.000 --> 00:14:48.001
+OK  ⁇
+
+222
+00:14:48.001 --> 00:14:50.000
+Essa é a parte que faz o trabalho.
+
+223
+00:14:51.001 --> 00:14:54.000
+Agora, explique-me, você disse que foi melhorado agora três
+
+224
+00:14:54.000 --> 00:14:55.001
+tempos diferentes para chegar a uma quarta geração.
+
+225
+00:14:56.000 --> 00:14:59.001
+O que significa melhorar este chip a cada vez que você redesenha?
+
+226
+00:14:59.001 --> 00:15:02.001
+Na verdade, três coisas foram feitas com este chip para melhorá-lo.
+
+227
+00:15:02.001 --> 00:15:05.001
+Uma delas é simplesmente capitalizar sobre as mudanças em nosso
+
+228
+00:15:05.001 --> 00:15:07.000
+Processamento fotolithográfico.
+
+229
+00:15:07.001 --> 00:15:12.000
+As linhas ficam mais estreitas porque a capacidade de fabricação melhora, e queremos
+
+230
+00:15:12.000 --> 00:15:13.001
+para que isso seja feito para que seja menor.
+
+231
+00:15:14.001 --> 00:15:17.000
+Fazendo-o menor faz duas coisas por si só.
+
+232
+00:15:17.001 --> 00:15:21.001
+Ele torna mais econômico para construir, e também melhora o desempenho da
+
+233
+00:15:21.001 --> 00:15:25.001
+chip porque como os dispositivos individuais ficam menores, o desempenho melhora.
+
+234
+00:15:27.001 --> 00:15:29.000
+Outras duas coisas foram feitas.
+
+235
+00:15:29.000 --> 00:15:34.000
+Um, mudamos a tecnologia bipolar com a qual o chip é feito para
+
+236
+00:15:34.000 --> 00:15:35.001
+Melhorar suas características de desempenho.
+
+237
+00:15:36.001 --> 00:15:39.000
+Isso teve um benefício óbvio.
+
+238
+00:15:39.001 --> 00:15:41.001
+Também mudamos a tecnologia do circuito.
+
+239
+00:15:42.000 --> 00:15:46.000
+Este chip foi originalmente projetado em uma tecnologia de circuito TTL.
+
+240
+00:15:47.000 --> 00:15:51.000
+Nós mudamos o que é chamado de uma ECL, ou tecnologia de lógica emissora-couple.
+
+241
+00:15:51.000 --> 00:15:53.001
+É uma abordagem de design de circuito bipolar diferente.
+
+242
+00:15:54.000 --> 00:15:56.001
+Isso mudou a velocidade operacional.
+
+243
+00:15:56.001 --> 00:15:58.000
+do circuito por um fator de dois.
+
+244
+00:15:58.001 --> 00:16:02.001
+Em geral, acumulamos cerca de um desempenho de melhoria de 4x
+
+245
+00:16:02.001 --> 00:16:04.001
+Redesenhe o chip quatro vezes.
+
+246
+00:16:06.000 --> 00:16:11.000
+Fil, é dito por alguns que os japoneses estão a tirar diante de nós na
+
+247
+00:16:11.000 --> 00:16:15.001
+Design e fabricação de microchips avançados.
+
+248
+00:16:16.000 --> 00:16:17.000
+Você concorda com isso?
+
+249
+00:16:17.001 --> 00:16:19.001
+Se sim, qual é a nossa resposta a isso?
+
+250
+00:16:20.000 --> 00:16:24.000
+Os japoneses provavelmente seguiram um longo caminho na última década.
+
+251
+00:16:25.000 --> 00:16:28.000
+Há dez anos, eles não eram um fator significativo no circuito integrado
+
+252
+00:16:28.000 --> 00:16:30.001
+negócios, e hoje podemos considerá-los muito dignos
+
+253
+00:16:30.001 --> 00:16:32.001
+competidores, especialmente na área da memória.
+
+254
+00:16:34.000 --> 00:16:37.001
+Os japoneses, eu acho que é bem conhecido que eles têm excelente fabricação
+
+255
+00:16:37.001 --> 00:16:41.001
+capacidades, e eles também têm excelente formação de capital, o que lhes dá uma
+
+256
+00:16:41.001 --> 00:16:46.000
+competitividade significativa sobre a nossa indústria nos Estados Unidos.
+
+257
+00:16:46.000 --> 00:16:51.001
+A resposta, pelo menos de dispositivos micro avançados, e eu acredito na sua
+
+258
+00:16:51.001 --> 00:16:56.000
+característica da indústria, é ser muito inovador nos produtos que nós
+
+259
+00:16:56.000 --> 00:17:01.001
+construímos, de modo que esperamos que os novos produtos que introduzimos nos permitam
+
+260
+00:17:01.001 --> 00:17:04.000
+Manter a rentabilidade em nossa indústria.
+
+261
+00:17:05.000 --> 00:17:08.000
+E quanto ao projeto de quinta geração que ouvimos sobre o Japão?
+
+262
+00:17:08.001 --> 00:17:11.000
+Quão dependente é o computador de quinta geração
+
+263
+00:17:11.000 --> 00:17:13.000
+Aumento do nível de integração?
+
+264
+00:17:13.001 --> 00:17:18.000
+Bem, novamente, você está ficando fora da minha área de experiência, mas talvez o chip
+
+265
+00:17:18.000 --> 00:17:23.001
+A tecnologia é considerada muito importante devido à enorme computação.
+
+266
+00:17:23.001 --> 00:17:25.001
+exigências desse tipo de sistema.
+
+267
+00:17:27.000 --> 00:17:33.000
+É, eu acho, bastante amplamente considerado que você precisa muito sofisticado distribuído
+
+268
+00:17:33.000 --> 00:17:37.001
+processamento para implementar este tipo de sistema, a quinta geração
+
+269
+00:17:37.001 --> 00:17:42.001
+Computadores e microprocessadores baratos
+
+270
+00:17:42.001 --> 00:17:44.000
+Será a chave para fazer isso acontecer.
+
+271
+00:17:45.000 --> 00:17:50.000
+Eu acredito que os japoneses têm falado sobre ter até 100.000 switches em um
+
+272
+00:17:50.000 --> 00:17:51.001
+É um chip.
+
+273
+00:17:52.000 --> 00:17:53.001
+É uma boa lembrança?
+
+274
+00:17:54.001 --> 00:17:55.001
+Bem, isso é verdade.
+
+275
+00:17:55.001 --> 00:17:59.000
+Isso, de fato, está abaixo do estado da arte da indústria de hoje.
+
+276
+00:17:59.000 --> 00:17:59.001
+Bem que é.
+
+277
+00:17:59.001 --> 00:18:00.000
+E sim.
+
+278
+00:18:01.000 --> 00:18:06.001
+Western Electric e IBM e até mesmo nós construímos chips com vários
+
+279
+00:18:06.001 --> 00:18:08.000
+Centenas de mil peças em um chip.
+
+280
+00:18:08.000 --> 00:18:14.001
+Se você olhar para este outro chip aqui, temos um 256K EPROM
+
+281
+00:18:14.001 --> 00:18:21.000
+Aqui, que tem um transistor para cada pedaço de memória, obviamente.
+
+282
+00:18:21.001 --> 00:18:23.000
+E isso significa que tem mais de um quarto
+
+283
+00:18:23.000 --> 00:18:24.001
+Um milhão de componentes em um chip.
+
+284
+00:18:27.000 --> 00:18:30.000
+E há microprocessadores que foram construídos na indústria hoje que
+
+285
+00:18:30.000 --> 00:18:33.000
+Tem meio milhão de componentes em um chip.
+
+286
+00:18:34.000 --> 00:18:37.000
+Os padrões são um problema no final deste negócio?
+
+287
+00:18:37.001 --> 00:18:40.000
+Parece ser um problema em todos os aspectos deste negócio de computador.
+
+288
+00:18:40.001 --> 00:18:43.001
+AMD, você tem seus chips e Intel tem seu e Zilog e assim por diante.
+
+289
+00:18:44.000 --> 00:18:48.000
+Isso complica este campo de qualquer maneira ou em termos de olhar, diga,
+
+290
+00:18:48.000 --> 00:18:51.001
+padrões de rede e Ethernet e assim por diante?
+
+291
+00:18:52.000 --> 00:18:53.001
+Os padrões são um problema em sua indústria?
+
+292
+00:18:54.001 --> 00:18:55.000
+A maioria definitivamente.
+
+293
+00:18:55.000 --> 00:19:00.000
+Estamos fortemente envolvidos na definição de padrões de rede, especialmente no que diz respeito à
+
+294
+00:19:00.000 --> 00:19:02.001
+Níveis mais baixos de protocolos de rede.
+
+295
+00:19:02.001 --> 00:19:09.001
+A camada física e a camada de ligação na estrutura do protocolo é algo que
+
+296
+00:19:09.001 --> 00:19:12.001
+Se não temos uma boa definição padrão, é muito difícil
+
+297
+00:19:12.001 --> 00:19:14.001
+para que uma boa parte seja definida.
+
+298
+00:19:15.000 --> 00:19:19.000
+E desde que investimos anos de atividade de design em muitos desses complexos
+
+299
+00:19:19.000 --> 00:19:21.001
+Partes, não podemos nos permitir estar errados.
+
+300
+00:19:22.000 --> 00:19:24.001
+Portanto, os padrões são um elemento muito importante do nosso negócio.
+
+301
+00:19:25.000 --> 00:19:28.001
+Como você lidar com o problema de padrão enquanto nós entramos cada vez mais no
+
+302
+00:19:28.001 --> 00:19:31.000
+Fabricação de chips especializados ou personalizados?
+
+303
+00:19:32.000 --> 00:19:34.001
+Na verdade, de duas maneiras.
+
+304
+00:19:35.000 --> 00:19:38.001
+Um é que devemos ser muito capazes em termos de
+
+305
+00:19:38.001 --> 00:19:40.000
+definição de produtos complexos, obviamente.
+
+306
+00:19:41.000 --> 00:19:45.000
+E embora existam muitos que acreditem que não é possível continuar
+
+307
+00:19:45.000 --> 00:19:48.001
+para fazer isso com um nível crescente de complexidade, que
+
+308
+00:19:48.001 --> 00:19:50.001
+A declaração foi feita nos últimos 20 anos.
+
+309
+00:19:51.000 --> 00:19:55.001
+E acreditamos que há um grande mercado para componentes padrão, grande,
+
+310
+00:19:56.000 --> 00:19:57.001
+Tipo de peças de volume elevado.
+
+311
+00:19:58.000 --> 00:19:58.001
+E vamos continuar isso hoje.
+
+312
+00:19:58.001 --> 00:19:59.001
+E isso continuará.
+
+313
+00:20:00.000 --> 00:20:05.000
+No entanto, também vemos que haverá um mercado crescente para o meio
+
+314
+00:20:05.000 --> 00:20:06.001
+Partes de tipo personalizado e personalizado.
+
+315
+00:20:07.001 --> 00:20:12.001
+E isso vai acontecer principalmente porque o problema de design que enfrentamos hoje em dia
+
+316
+00:20:12.001 --> 00:20:16.000
+Componentes padrão de construção forçam-nos a automatizar o processo de design
+
+317
+00:20:16.000 --> 00:20:18.001
+apenas para os nossos propósitos.
+
+318
+00:20:18.001 --> 00:20:22.000
+Hoje, custa milhões de dólares para projetar um microprocessador.
+
+319
+00:20:23.000 --> 00:20:25.000
+Temos que resolver esse problema para nós mesmos.
+
+320
+00:20:25.001 --> 00:20:29.001
+E ao resolvê-lo por nós mesmos, desenvolveremos ferramentas que nos permitam projetar
+
+321
+00:20:29.001 --> 00:20:32.001
+Semi-custom e chips personalizados de forma eficiente.
+
+322
+00:20:33.001 --> 00:20:38.001
+E, de fato, hoje em dia, muitos fabricantes de sistemas projetam seus próprios chips com
+
+323
+00:20:38.001 --> 00:20:40.001
+Algumas das ferramentas sofisticadas que estão disponíveis hoje.
+
+324
+00:20:41.001 --> 00:20:45.000
+A IBM está construindo muitos dos seus sistemas com componentes de array de portas, que são semi
+
+325
+00:20:45.000 --> 00:20:47.000
+- Produtos de circuito integrado personalizados.
+
+326
+00:20:48.000 --> 00:20:52.000
+Assim, veremos um aumento da quota de mercado tomada por
+
+327
+00:20:52.000 --> 00:20:54.000
+Tipos personalizados e semi-custom chips.
+
+328
+00:20:54.000 --> 00:20:56.000
+Então, temos apenas um minuto para ficar.
+
+329
+00:20:56.001 --> 00:20:58.000
+Vamos olhar cinco anos abaixo da linha.
+
+330
+00:20:59.000 --> 00:21:02.000
+O que estamos olhando como o próximo grande avanço ou o próximo maior
+
+331
+00:21:02.000 --> 00:21:03.001
+Melhoria da tecnologia do chip?
+
+332
+00:21:05.000 --> 00:21:10.001
+Bem, como eu disse, a tecnologia que você verá emergindo nos próximos anos
+
+333
+00:21:10.001 --> 00:21:15.001
+é uma tecnologia dominante, é CMOS, devido ao fato de que pode construir chips de
+
+334
+00:21:15.001 --> 00:21:18.000
+muito alta complexidade sem um problema de consumo de energia.
+
+335
+00:21:19.000 --> 00:21:23.000
+E, além disso, eu acho que você vai ver uma continuação e
+
+336
+00:21:23.000 --> 00:21:27.000
+A evolução da tecnologia da memória que nos levará aos quatro megabit
+
+337
+00:21:27.000 --> 00:21:29.000
+nível de memória e além disso.
+
+338
+00:21:29.000 --> 00:21:32.000
+Então, eu acho que vamos ver a tecnologia continuar
+
+339
+00:21:32.000 --> 00:21:34.000
+Reduzir o custo por função.
+
+340
+00:21:34.001 --> 00:21:37.001
+Hoje, estamos olhando para alguns trabalhos em um milênio
+
+341
+00:21:37.001 --> 00:21:39.000
+preços por bit de memória.
+
+342
+00:21:40.000 --> 00:21:42.000
+E vamos ver um milhão e meio de
+
+343
+00:21:42.000 --> 00:21:43.001
+Um quinto de mil milhões por bit no futuro.
+
+344
+00:21:44.000 --> 00:21:45.000
+OK, estamos todos fora do tempo.
+
+345
+00:21:45.000 --> 00:21:46.000
+Phil Downing da AMD.
+
+346
+00:21:46.000 --> 00:21:47.001
+Muito obrigado por se juntar a nós.
+
+347
+00:21:47.001 --> 00:21:49.001
+E nos veremos novamente na próxima semana em Cronicles de Computador.
+
+348
+00:22:31.000 --> 00:22:37.001
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+349
+00:22:37.001 --> 00:22:42.001
+prazer em fornecer fundos importantes para as crônicas de computador, a história
+
+350
+00:22:42.001 --> 00:22:44.001
+desta evolução contínua.
