@@ -1,0 +1,2349 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:18.001
+[...]
+
+2
+00:00:22.000 --> 00:00:22.001
+...
+
+3
+00:00:34.000 --> 00:00:38.001
+Se você quer a experiência de voar um avião, você geralmente tem que vir para um pequeno
+
+4
+00:00:38.001 --> 00:00:42.001
+aeroporto, gastar muito tempo e dinheiro, e então talvez finalmente tomar
+
+5
+00:00:42.001 --> 00:00:44.000
+Em uma pequena Cessna ou Piper.
+
+6
+00:00:44.001 --> 00:00:49.000
+Se você tem um computador, você pode voar um F-16 jet fighter, ou mesmo um 747
+
+7
+00:00:49.000 --> 00:00:51.000
+O software de simulador de vôo.
+
+8
+00:00:51.000 --> 00:00:54.000
+Estes simuladores de vôo foram a categoria mais vendida de
+
+9
+00:00:54.000 --> 00:00:56.000
+Software de entretenimento por muitos anos.
+
+10
+00:00:56.001 --> 00:01:00.001
+Hoje, vamos colocar em um programa de ar computadorizado enquanto olhamos para o melhor do voo
+
+11
+00:01:00.001 --> 00:01:03.001
+Simuladores nesta edição de The Computer Chronicles.
+
+12
+00:01:06.000 --> 00:01:06.001
+[...]
+
+13
+00:01:17.001 --> 00:01:22.000
+As crônicas de computador são feitas possíveis em parte pelos Software Publishers
+
+14
+00:01:22.000 --> 00:01:26.001
+A Associação, que lembra que a pirataria de software é um delito federal.
+
+15
+00:01:27.000 --> 00:01:29.001
+Quando algumas pessoas roubam software, todo mundo perde.
+
+16
+00:01:30.001 --> 00:01:34.001
+O financiamento adicional é fornecido pela CompuServe, pela PC Connection e pela Mac.
+
+17
+00:01:34.001 --> 00:01:40.001
+Conexão, por Byte Magazine e VIX, o Byte Information Exchange, e por Intel
+
+18
+00:01:40.001 --> 00:01:42.001
+Empresa, Desenvolvimento de Computadores Pessoais.
+
+19
+00:01:47.000 --> 00:01:48.001
+Bem-vindo às crônicas de computador.
+
+20
+00:01:49.000 --> 00:01:51.001
+Eu sou Stuart Chafay, e comigo esta semana é Jan Lewis.
+
+21
+00:01:52.000 --> 00:01:54.000
+Jan, estamos olhando para o simulador de vôo da Microsoft.
+
+22
+00:01:54.000 --> 00:01:55.001
+Na verdade, a versão mais recente, versão 4
+
+23
+00:01:55.001 --> 00:01:58.000
+0, que adiciona todos os tipos de coisas interessantes.
+
+24
+00:01:58.000 --> 00:02:00.001
+Como você pode ver, você pode se comunicar com o controle do tráfego aéreo.
+
+25
+00:02:00.001 --> 00:02:03.000
+Você pode voar um glider nesta versão específica do programa.
+
+26
+00:02:03.000 --> 00:02:06.001
+Você pode ter um gerador de tempo aleatório, e você pode realmente projetar seu
+
+27
+00:02:06.001 --> 00:02:08.001
+O seu avião e, em seguida, ver se vai voar.
+
+28
+00:02:09.000 --> 00:02:12.001
+O simulador de vôo original da Sublogic saiu há 10 anos para a Apple
+
+29
+00:02:12.001 --> 00:02:14.000
+II e o TRS-80 Modelo 1.
+
+30
+00:02:14.000 --> 00:02:15.000
+É um mundo diferente agora.
+
+31
+00:02:15.000 --> 00:02:18.001
+Temos 386 chips, 33 megahertz velocidade, gráficos VGA.
+
+32
+00:02:18.001 --> 00:02:20.000
+O que isso significa para um software como este?
+
+33
+00:02:20.001 --> 00:02:21.001
+Nós realmente chegamos um longo caminho.
+
+34
+00:02:21.001 --> 00:02:22.000
+Isso significa muito.
+
+35
+00:02:22.000 --> 00:02:25.000
+Os tipos de coisas que podemos fazer agora com este, gráficos muito realistas na
+
+36
+00:02:25.000 --> 00:02:29.000
+3D e a conversa com a torre e os padrões meteorológicos, a cena e as coisas
+
+37
+00:02:29.000 --> 00:02:32.001
+Como isso, você simplesmente não poderia fazer com nada menos do que um 386 ou sem
+
+38
+00:02:32.001 --> 00:02:34.000
+Os tipos de gráficos que podemos obter hoje.
+
+39
+00:02:34.001 --> 00:02:37.001
+Na verdade, se você estava a dar uma olhada, vamos dizer, este programa e executá-lo,
+
+40
+00:02:37.001 --> 00:02:41.000
+Vamos dizer, as antigas máquinas baseadas em 808, esta coisa atualizaria o
+
+41
+00:02:41.000 --> 00:02:42.001
+Uma vez a cada cinco segundos.
+
+42
+00:02:43.000 --> 00:02:45.000
+Bem, visualize tentando dirigir um carro se você puder apenas
+
+43
+00:02:45.000 --> 00:02:46.001
+Veja o caminho enquanto é a cada cinco segundos.
+
+44
+00:02:46.001 --> 00:02:49.000
+Eu iria cair como eu uso um simulador de vôo.
+
+45
+00:02:49.001 --> 00:02:52.000
+Hoje, vamos dar uma olhada em alguns dos mais recentes e mais quentes simuladores de vôo
+
+46
+00:02:52.000 --> 00:02:55.001
+programas, incluindo um novo que lhe permite voar um 747.
+
+47
+00:02:56.000 --> 00:02:59.001
+Agora, o negócio de simuladores de vôo se tornou uma indústria inteira com livros sobre como
+
+48
+00:02:59.001 --> 00:03:04.000
+para voar, discos de cenário, controle de iogos como dispositivos de entrada, e, na verdade, há um
+
+49
+00:03:04.000 --> 00:03:08.000
+loja de software aqui em San Mateo, Califórnia que está realmente colocando em um ar
+
+50
+00:03:08.000 --> 00:03:10.000
+Apresentação para os entusiastas do simulador de vôo.
+
+51
+00:03:10.001 --> 00:03:12.000
+Vamos começar com um relatório desse show.
+
+52
+00:03:15.001 --> 00:03:19.000
+O site do computador show era uma loja de software egghead
+
+53
+00:03:19.000 --> 00:03:20.001
+em San Mateo, Califórnia.
+
+54
+00:03:21.000 --> 00:03:23.000
+Volte para o pescoço, vá para o ombro, siga-o para baixo.
+
+55
+00:03:24.000 --> 00:03:24.001
+Um bom trabalho.
+
+56
+00:03:24.001 --> 00:03:29.001
+Houve uma competição de cabeça para cabeça quando os jovens pilotos de computador dispararam contra o inimigo
+
+57
+00:03:29.001 --> 00:03:34.000
+Objetivos, voando Falcons, F-15s, e combatentes da Segunda Guerra Mundial.
+
+58
+00:03:34.001 --> 00:03:36.000
+E eles estão atirando em você.
+
+59
+00:03:38.000 --> 00:03:39.001
+Ela não tirou esse designer.
+
+60
+00:03:40.000 --> 00:03:44.000
+Lawrence Holland, o designer do programa Batalha da Grã-Bretanha, estava na mão de
+
+61
+00:03:44.000 --> 00:03:47.001
+Demo este novo simulador de vôo de estilo arcade de Lucas Films.
+
+62
+00:03:48.000 --> 00:03:51.000
+A Batalha da Grã-Bretanha é um dos programas mais recentes de simuladores de vôo,
+
+63
+00:03:51.000 --> 00:03:53.000
+E já é um grande sucesso.
+
+64
+00:03:53.000 --> 00:03:57.001
+Ao contrário de muitos simuladores de vôo, que está a lançar um míssil, tomando o cara
+
+65
+00:03:57.001 --> 00:04:01.001
+A partir de 20 quilômetros, a Batalha da Grã-Bretanha é a Segunda Guerra Mundial, Britânica e
+
+66
+00:04:01.001 --> 00:04:03.001
+Alemão, e é para baixo e cão sujo lutando.
+
+67
+00:04:04.000 --> 00:04:08.000
+É só que você tem que se aproximar muito do seu oponente, e é tudo armas de máquina.
+
+68
+00:04:08.001 --> 00:04:12.001
+Uma das características agradáveis da Batalha da Grã-Bretanha é o seu modo de reprodução instantâneo que
+
+69
+00:04:12.001 --> 00:04:16.001
+permite que você reproduza uma batalha, zoom dentro ou fora da ação, e até mesmo
+
+70
+00:04:16.001 --> 00:04:18.001
+Use slow-mo e parar a ação.
+
+71
+00:04:19.000 --> 00:04:22.001
+Outro destaque do show aéreo de computador foi a seleção do simulador de vôo
+
+72
+00:04:22.001 --> 00:04:27.000
+periféricos, dispositivos de entrada que tornam a simulação de voo mais realista.
+
+73
+00:04:27.001 --> 00:04:32.001
+Há um produto chamado Yoke, que este produto simula, realmente voando
+
+74
+00:04:32.001 --> 00:04:37.000
+um avião, onde você tira de volta e pressiona para o avião para subir ou mergulhar de volta
+
+75
+00:04:37.000 --> 00:04:39.000
+E por aí, tem um controle de garganta.
+
+76
+00:04:39.001 --> 00:04:44.001
+Isso seria principalmente mais com um simulador de vôo em vez de um jet fighter ou
+
+77
+00:04:44.001 --> 00:04:46.000
+Uma simulação de batalha.
+
+78
+00:04:47.000 --> 00:04:50.000
+E então, agora, é algo que é novo e que não é mesmo
+
+79
+00:04:50.000 --> 00:04:53.001
+disponível em todas as lojas ainda, este produto está aqui, que é do
+
+80
+00:04:53.001 --> 00:04:58.001
+A mesma empresa que faz o Yoke, é uma pedal de rodas para simular, pressionando em
+
+81
+00:04:58.001 --> 00:05:01.000
+O direito de montar para uma rota de aterragem.
+
+82
+00:05:01.001 --> 00:05:05.001
+O show de computador era uma boa oportunidade para que os pilotos pudessem provar o
+
+83
+00:05:05.001 --> 00:05:10.001
+vários simuladores de voo, e depois gastar alguns pacotes armazenando-se no voo
+
+84
+00:05:10.001 --> 00:05:15.001
+Títulos de simulador como A-10 Tank Killer, F-15 Strike Eagle, Falcon
+
+85
+00:05:15.001 --> 00:05:17.000
+AT e Jet Fighter.
+
+86
+00:05:17.000 --> 00:05:20.001
+Para as crônicas de computador, eu sou Maria Gabriel.
+
+87
+00:05:33.001 --> 00:05:38.000
+Junte-se a nós agora é Gilman Louis, CEO da Spectrum Holobyte, e ao lado de Gilman,
+
+88
+00:05:38.000 --> 00:05:41.001
+Wild Bill Steely, presidente e co-fundador da Microprose.
+
+89
+00:05:41.001 --> 00:05:41.001
+O João?
+
+90
+00:05:42.001 --> 00:05:45.000
+Gilman, há muitos simuladores de vôo diferentes hoje em dia.
+
+91
+00:05:45.000 --> 00:05:48.001
+Agora, você tem um chamado Falcon AT. Diga-nos o que é especial sobre isso.
+
+92
+00:05:48.001 --> 00:05:53.001
+Bem, o Falcon é uma simulação de um avião de combate F-16, e o que é especial
+
+93
+00:05:53.001 --> 00:05:57.000
+Sobre este programa particular é que usamos telas de cabeçalho realistas,
+
+94
+00:05:58.000 --> 00:05:59.001
+radares realistas e modelos de voo.
+
+95
+00:05:59.001 --> 00:06:04.000
+De fato, o F-16 Falcon é o primeiro programa que está realmente sendo usado
+
+96
+00:06:04.000 --> 00:06:05.001
+da Força Aérea para treinar pilotos.
+
+97
+00:06:06.000 --> 00:06:07.000
+O display Heads-up significa o que?
+
+98
+00:06:07.001 --> 00:06:10.001
+A tela de cabeçalho é um pedaço de vidro que está diante do piloto que lhe diz
+
+99
+00:06:10.001 --> 00:06:13.001
+Todas as informações que ele precisa saber ao olhar para fora do avião.
+
+100
+00:06:14.000 --> 00:06:17.000
+Gilman, eu acho que outra coisa única sobre o Falcon AT é o fato de que você pode
+
+101
+00:06:17.000 --> 00:06:19.001
+Existem dois jogadores diferentes em dois computadores diferentes.
+
+102
+00:06:19.001 --> 00:06:21.000
+Tenho uma luta de cães uns com os outros, certo?
+
+103
+00:06:21.001 --> 00:06:24.001
+E sim. Na verdade, indo de cabeça para cabeça com uma pessoa real, encontramos muito mais
+
+104
+00:06:24.001 --> 00:06:26.000
+Mais do que simplesmente ir contra o computador [...]
+
+105
+00:06:26.000 --> 00:06:29.000
+Você pode nos mostrar como faríamos isso? Eu posso recrutar Jan aqui.
+
+106
+00:06:29.000 --> 00:06:30.000
+Quer ir para a Força Aérea?
+
+107
+00:06:30.001 --> 00:06:30.001
+com certeza.
+
+108
+00:06:30.001 --> 00:06:31.001
+Estamos prontos para ir.
+
+109
+00:06:32.000 --> 00:06:36.001
+Estamos no avião agora, e Jan está me passando fechado no seu radar.
+
+110
+00:06:36.001 --> 00:06:37.001
+fechado em cima. Aqui vamos.
+
+111
+00:06:37.001 --> 00:06:40.001
+Então, o meu trabalho é tentar sair do caminho o mais rápido possível.
+
+112
+00:06:41.000 --> 00:06:43.000
+e ooh. É bom tomar isso.
+
+113
+00:06:44.000 --> 00:06:45.000
+Você está a dirtbag você.
+
+114
+00:06:45.001 --> 00:06:48.000
+Diga-nos o que está acontecendo. Porque nós novidades aqui.
+
+115
+00:06:48.000 --> 00:06:53.000
+No momento, ela me tem em um bloqueio de radar completo, e ela acaba de disparar um míssil que
+
+116
+00:06:53.000 --> 00:06:56.001
+Atinge-me na parte traseira do meu avião, e estou em chamas, e eu estou indo para baixo.
+
+117
+00:06:57.001 --> 00:06:58.000
+Lá você vai.
+
+118
+00:06:58.001 --> 00:06:59.001
+E eu fui tirado do céu.
+
+119
+00:07:00.000 --> 00:07:02.000
+OK  ⁇  Eu considero que você era gentil e gentil.
+
+120
+00:07:02.001 --> 00:07:04.000
+Você poderia realmente derrubá-la se quisesse.
+
+121
+00:07:04.000 --> 00:07:04.001
+Acho que foi Gil.
+
+122
+00:07:04.001 --> 00:07:05.001
+Ela não é a de um piloto.
+
+123
+00:07:06.001 --> 00:07:09.000
+Tudo bem, Gilman, quero pedir-lhe que rebote lá e entre em seu single
+
+124
+00:07:09.000 --> 00:07:11.000
+-Modo de jogador para que você possa dar-nos outra demonstração em apenas um momento.
+
+125
+00:07:11.000 --> 00:07:13.000
+Enquanto você está fazendo isso, Gil, eu quero falar com você.
+
+126
+00:07:13.001 --> 00:07:16.000
+Como podemos dizer pelo seu uniforme, você é a coisa real aqui.
+
+127
+00:07:16.001 --> 00:07:18.000
+Eu quero dizer, você é a Academia da Força Aérea e voo
+
+128
+00:07:18.000 --> 00:07:20.000
+instrutor e piloto de combate a jet e assim por diante.
+
+129
+00:07:20.001 --> 00:07:22.001
+Quão boa é essa simulação?
+
+130
+00:07:22.001 --> 00:07:25.000
+Quanto da experiência de voar realmente posso dar-lhe?
+
+131
+00:07:25.001 --> 00:07:29.000
+Bem, acho que foi interessante que Gilman disse que ele era o primeiro a
+
+132
+00:07:29.000 --> 00:07:30.001
+Treinando pilotos da Força Aérea.
+
+133
+00:07:30.001 --> 00:07:32.000
+Ele é o primeiro a ser pago por isso.
+
+134
+00:07:33.000 --> 00:07:37.001
+Em meados dos anos 70, comecei a voar para a Guardia Nacional da Pensilvânia.
+
+135
+00:07:37.001 --> 00:07:42.000
+Em 1982, quando construímos o nosso primeiro produto, na verdade, a microprose foi a primeira.
+
+136
+00:07:42.000 --> 00:07:43.001
+para fazer simulação de voo de combate real.
+
+137
+00:07:44.000 --> 00:07:46.000
+Apenas o produto da Microsoft estava fora antes do nosso.
+
+138
+00:07:46.000 --> 00:07:47.001
+Nós fizemos um produto chamado Hellcat Ace.
+
+139
+00:07:48.001 --> 00:07:50.001
+E Hellcat Ace foi usado pela minha Air National
+
+140
+00:07:50.001 --> 00:07:52.000
+Unidade de guarda para ensinar os homens como punir.
+
+141
+00:07:52.001 --> 00:07:53.001
+E isso foi de volta em 1982.
+
+142
+00:07:55.000 --> 00:07:57.000
+Mas o que é, ensinamos a conscientização da situação.
+
+143
+00:07:57.000 --> 00:08:00.000
+Você tem que entender todos os fatores que vão ao lado de voar um avião.
+
+144
+00:08:00.000 --> 00:08:02.001
+Como tomar decisões com informações limitadas
+
+145
+00:08:02.001 --> 00:08:04.001
+Saiba quando correr e quando esconder.
+
+146
+00:08:05.000 --> 00:08:06.000
+Os simuladores podem fazer isso.
+
+147
+00:08:06.000 --> 00:08:09.001
+Ok, vamos voltar para você, Gilman, e mostrar-nos como você vai
+
+148
+00:08:09.001 --> 00:08:11.000
+Na verdade, use isso no modo single-player.
+
+149
+00:08:12.000 --> 00:08:13.000
+Bem, eu vou começar na corrida.
+
+150
+00:08:14.000 --> 00:08:16.000
+Meu avião está em campo e pronto para ir.
+
+151
+00:08:17.001 --> 00:08:24.000
+I&#x27;m going to turn on my motors, light my postburners, take off my brakes,
+
+152
+00:08:24.001 --> 00:08:26.001
+E eu vou começar a impedir a corrida.
+
+153
+00:08:28.000 --> 00:08:31.000
+O meu trabalho hoje é encontrar Migs e tirá-los para baixo.
+
+154
+00:08:35.000 --> 00:08:39.001
+Eu estou de pé, e eu vou direto para o cockpit.
+
+155
+00:08:47.000 --> 00:08:48.001
+E apenas diga-nos o que você está vendo lá.
+
+156
+00:08:48.001 --> 00:08:50.000
+No momento, eu simplesmente caí na corrida.
+
+157
+00:08:51.000 --> 00:08:52.001
+[...] para sair.
+
+158
+00:08:53.001 --> 00:08:57.000
+É por isso que temos um verdadeiro piloto aqui, Gilman, se você me perdoar.
+
+159
+00:08:58.000 --> 00:09:00.000
+Acho que são simulações, não é mesmo?
+
+160
+00:09:01.000 --> 00:09:03.000
+É isso que é. São simulações.
+
+161
+00:09:03.000 --> 00:09:04.001
+E se você faz a coisa errada, você pode...
+
+162
+00:09:04.001 --> 00:09:05.001
+A coisa errada acontece.
+
+163
+00:09:06.001 --> 00:09:08.001
+Eu quero perguntar se você pode sair disso por um momento, porque eu quero Bill para
+
+164
+00:09:08.001 --> 00:09:11.000
+Dê-nos a oportunidade de mostrar o F-15 Strike Eagle.
+
+165
+00:09:11.001 --> 00:09:13.000
+O que é especial sobre isso? Como fazer
+
+166
+00:09:13.000 --> 00:09:14.001
+Você posicionou isso como um dos simuladores de vôo?
+
+167
+00:09:14.001 --> 00:09:16.001
+Bem, foi o simulador de vôo de combate original.
+
+168
+00:09:16.001 --> 00:09:19.000
+A versão original que vendeu um milhão de cópias em todo o mundo.
+
+169
+00:09:19.001 --> 00:09:21.001
+Ele deu uma oportunidade para muitas pessoas para vender simuladores de vôo.
+
+170
+00:09:22.000 --> 00:09:24.001
+Tomamos uma abordagem um pouco diferente. Tomamos a abordagem dos jogadores.
+
+171
+00:09:24.001 --> 00:09:28.000
+Estamos mais interessados em 250 milhões de quilômetros quadrados de terreno.
+
+172
+00:09:28.000 --> 00:09:30.000
+Estamos mais interessados no Golfo Pérsico, na Europa Central.
+
+173
+00:09:30.001 --> 00:09:34.000
+Então, onde Gilman concentra-se no cockpit, nós nos concentramos na situação.
+
+174
+00:09:34.000 --> 00:09:36.001
+onde estava, o que ele também faz, mas nós somos
+
+175
+00:09:36.001 --> 00:09:38.000
+mais interessados em gráficos 3D no chão.
+
+176
+00:09:38.000 --> 00:09:38.001
+Esse é um tipo de...
+
+177
+00:09:39.001 --> 00:09:42.000
+Ok, como veterano piloto de combate, eu vou para o Golfo Pérsico.
+
+178
+00:09:42.001 --> 00:09:44.001
+E você vai perceber que eu posso fazer o Vietnã se eu quiser.
+
+179
+00:09:45.000 --> 00:09:48.000
+E vamos de uma base aérea para uma sede do exército para um barco de mísseis.
+
+180
+00:09:48.000 --> 00:09:49.000
+Ok, estou pronto para ir.
+
+181
+00:09:50.001 --> 00:09:51.001
+E aqui vamos nos sentar no...
+
+182
+00:09:52.000 --> 00:09:54.000
+[...] Para onde eles foram?
+
+183
+00:09:54.000 --> 00:09:55.001
+Vamos queimar o motor, começar a rolar para baixo.
+
+184
+00:09:55.001 --> 00:09:59.001
+E note na esquerda, temos um mapa de cima para baixo, toda a área do Golfo Pérsico.
+
+185
+00:09:59.001 --> 00:10:04.000
+No centro, temos um mapa que diz
+
+186
+00:10:04.000 --> 00:10:05.001
+Nós, se os maus homens vão nos disparar.
+
+187
+00:10:06.000 --> 00:10:07.001
+E temos um objetivo em frente a nós.
+
+188
+00:10:07.001 --> 00:10:09.001
+Está fechado na direita. É um F-5 Tiger.
+
+189
+00:10:10.000 --> 00:10:11.001
+Temos mísseis longe. Os mísseis estão longe.
+
+190
+00:10:12.000 --> 00:10:14.000
+Vamos treinar...
+
+191
+00:10:14.000 --> 00:10:15.001
+Siga esse míssil e encontre lá e veja o que temos.
+
+192
+00:10:15.001 --> 00:10:16.001
+Tivemos um hit. Muito bom hit.
+
+193
+00:10:17.000 --> 00:10:18.001
+E temos um barco de mísseis lá fora diante de nós.
+
+194
+00:10:18.001 --> 00:10:20.001
+Mas o que eu gostaria de fazer é voltar para cima.
+
+195
+00:10:21.000 --> 00:10:22.001
+E você vai notar que a minha linha de pitch está lá.
+
+196
+00:10:22.001 --> 00:10:25.001
+E eu tenho o caminho que acabamos de tirar daqui para baixo.
+
+197
+00:10:25.001 --> 00:10:26.001
+Então eu vou voar pela
+
+198
+00:10:26.001 --> 00:10:28.000
+No caminho, só para que possamos ter um bom olhar para o caminho.
+
+199
+00:10:28.001 --> 00:10:30.000
+E estamos indo para baixo a corrida.
+
+200
+00:10:30.001 --> 00:10:32.001
+E você vai notar que temos corridas e todos esses tipos de coisas boas lá fora.
+
+201
+00:10:33.000 --> 00:10:35.000
+E lá, eu estou voando para baixo a corrida.
+
+202
+00:10:35.001 --> 00:10:37.000
+E há o caminho com ele.
+
+203
+00:10:37.000 --> 00:10:38.001
+E você vê os hangers e os outros aviões lá.
+
+204
+00:10:39.000 --> 00:10:42.000
+E acima do topo e rolar, rolar vitória.
+
+205
+00:10:42.000 --> 00:10:44.000
+Gosto de uma pequena vitória, de vez em quando.
+
+206
+00:10:44.001 --> 00:10:45.001
+Pulse o nariz para baixo e para trás.
+
+207
+00:10:46.000 --> 00:10:47.001
+Um pouco de divisão. O radar foi baixado lá.
+
+208
+00:10:47.001 --> 00:10:49.000
+Temos algumas coisas a fazer de volta à frente.
+
+209
+00:10:49.001 --> 00:10:52.001
+E algumas coisas que podemos fazer aqui é colocá-lo no autopiloto.
+
+210
+00:10:52.001 --> 00:10:54.000
+Eu sou como um piloto louco.
+
+211
+00:10:54.000 --> 00:10:56.000
+Nada de emocionante sobre voar diretamente.
+
+212
+00:10:56.000 --> 00:10:58.000
+Então eu posso colocá-lo em um modo acelerado.
+
+213
+00:10:58.001 --> 00:10:59.001
+E eu posso procurar um alvo.
+
+214
+00:11:00.000 --> 00:11:03.000
+E você percebe que o indicador-alvo no tipo central me dá uma ideia.
+
+215
+00:11:03.000 --> 00:11:04.001
+E eu vou mudar a faixa de radar sobre isso.
+
+216
+00:11:05.000 --> 00:11:07.000
+E aí está o meu objetivo. Eu tenho um barco de mísseis lá fora.
+
+217
+00:11:07.000 --> 00:11:09.000
+São cerca de 83 cliques.
+
+218
+00:11:09.000 --> 00:11:11.000
+Você pode ver a tela da mão direita. E é um portador 034.
+
+219
+00:11:11.001 --> 00:11:13.000
+De fato, eu posso ir olhar para esse barco de mísseis.
+
+220
+00:11:13.000 --> 00:11:15.000
+E ali ele está sentado sob as nuvens. Lá e lá.
+
+221
+00:11:15.001 --> 00:11:16.001
+E eu tenho a aceleração.
+
+222
+00:11:16.001 --> 00:11:19.001
+E assim que eu recebo um círculo redondo, eu tenho um bloqueio de mísseis.
+
+223
+00:11:20.000 --> 00:11:21.000
+Eu vou zoom em meu mapa de cima para baixo.
+
+224
+00:11:21.001 --> 00:11:22.001
+E há onde eu estou.
+
+225
+00:11:23.001 --> 00:11:25.000
+E vamos lançar um míssil em breve.
+
+226
+00:11:25.001 --> 00:11:28.001
+Estamos 46 cliques de distância. Temos que chegar a cerca de 30 cliques para lançar o míssil.
+
+227
+00:11:29.000 --> 00:11:31.001
+Agora, temos algumas chaves lentas. Temos algo que está dentro da esquerda.
+
+228
+00:11:32.000 --> 00:11:33.000
+Temos que ser cuidadosos. Temos um chefe.
+
+229
+00:11:33.000 --> 00:11:34.001
+Temos um avião à esquerda. Vamos bombardear esse homem.
+
+230
+00:11:35.000 --> 00:11:37.000
+Temos um bloqueio de mísseis. Vamos fazer um relógio rápido.
+
+231
+00:11:38.000 --> 00:11:40.001
+E eu acho que o míssil vai embora, vamos colocar o autopiloto de volta.
+
+232
+00:11:40.001 --> 00:11:42.001
+Vamos dar uma olhada. E temos que bater.
+
+233
+00:11:43.000 --> 00:11:44.000
+Temos que bater. Temos que bater.
+
+234
+00:11:44.001 --> 00:11:45.000
+Temos que bater. Voltar para o topo.
+
+235
+00:11:45.000 --> 00:11:48.000
+Nós temos [...] atingido ao mesmo tempo. Vamos voltar ao nosso lado vencedor.
+
+236
+00:11:48.001 --> 00:11:50.000
+E temos um míssil entrando em nós lá.
+
+237
+00:11:50.001 --> 00:11:52.000
+E temos um alvo lá fora também.
+
+238
+00:11:52.001 --> 00:11:55.000
+Saia deste modo de acelerador. Eu tenho um tempo difícil de voar um acelerador.
+
+239
+00:11:56.000 --> 00:11:58.001
+E temos alguns dos meus 74 cliques longe, mas temos
+
+240
+00:11:58.001 --> 00:12:00.000
+Alguém à esquerda e acima de nós.
+
+241
+00:12:01.000 --> 00:12:03.000
+Lá ele está. Estamos voltando e tirando-o.
+
+242
+00:12:03.000 --> 00:12:05.001
+Nós estamos usando o indicador no centro lá para olhar para esse cara.
+
+243
+00:12:06.000 --> 00:12:08.001
+Nós temos alguns dos meus mísseis de entrada. Temos que usar o nosso flare.
+
+244
+00:12:09.000 --> 00:12:11.000
+E aí ele está. Eu o vi na esquerda.
+
+245
+00:12:11.001 --> 00:12:14.000
+Lá ele está. Tenho um fechamento sobre ele. Tenho um fechamento sobre ele.
+
+246
+00:12:14.000 --> 00:12:16.001
+Ele está 12 cliques longe. caminho de mísseis. caminho de mísseis.
+
+247
+00:12:19.001 --> 00:12:21.001
+Nós o recebemos. O seu paraíso vai para fora, se você notar.
+
+248
+00:12:22.000 --> 00:12:22.000
+[...]
+
+249
+00:12:23.001 --> 00:12:26.000
+Acho que temos apenas 30 segundos a ficar.
+
+250
+00:12:26.000 --> 00:12:27.001
+Mostre-me no final da missão que você tem um tipo
+
+251
+00:12:27.001 --> 00:12:29.000
+de debriefing coisa que você pode passar por, não é mesmo?
+
+252
+00:12:29.000 --> 00:12:31.000
+Nós temos uma coisa debriefing, e há apenas uma maneira de chegar a isso.
+
+253
+00:12:31.000 --> 00:12:34.000
+E vamos ver se podemos fazer isso. Vamos saltar no avião.
+
+254
+00:12:34.000 --> 00:12:37.000
+E nós simplesmente saímos do avião, e lá vai para cima e para baixo.
+
+255
+00:12:37.001 --> 00:12:39.000
+OK  ⁇  Você tem que cair e morrer.
+
+256
+00:12:39.001 --> 00:12:41.001
+Você tem que ter terra ou cair e morrer.
+
+257
+00:12:41.001 --> 00:12:44.001
+E logo saí do avião eu mesmo.
+
+258
+00:12:45.001 --> 00:12:48.000
+Caso contrário, você tem que voar para trás e terra, e você ensina práticas de aterragem.
+
+259
+00:12:49.001 --> 00:12:53.000
+Para os pilotos iniciantes, é claro, temos um modo onde ele vai aterrar para você.
+
+260
+00:12:53.001 --> 00:12:56.001
+Apenas para deixar que os pilotos iniciantes não se preocupe demais com isso.
+
+261
+00:12:56.001 --> 00:12:57.001
+OK  ⁇  E o que estamos vendo aqui, então?
+
+262
+00:12:58.000 --> 00:12:59.001
+Bem, este é o que você está indo para baixo em seu paraíso.
+
+263
+00:13:00.000 --> 00:13:01.001
+Eu quero dizer, o paraíso está acima de você, e seus pés têm um toque
+
+264
+00:13:01.001 --> 00:13:03.000
+de água antes que eles possam vir levá-lo para o helicóptero.
+
+265
+00:13:03.001 --> 00:13:04.000
+E eu vejo. OK  ⁇  OK  ⁇
+
+266
+00:13:04.000 --> 00:13:05.000
+Podemos obter o debriefing aqui?
+
+267
+00:13:05.000 --> 00:13:05.001
+E sim. OK  ⁇
+
+268
+00:13:06.000 --> 00:13:07.001
+É o Golfo Pérsico.
+
+269
+00:13:07.001 --> 00:13:10.001
+E nós saímos da base aérea lá, e depois voamos.
+
+270
+00:13:10.001 --> 00:13:12.000
+Em seguida, tirou um F-5 Tiger.
+
+271
+00:13:12.001 --> 00:13:14.001
+E depois fomos atingidos por um míssil CCAT.
+
+272
+00:13:14.001 --> 00:13:15.001
+Então você só tem que correr pela história
+
+273
+00:13:15.001 --> 00:13:17.000
+do que ocorreu durante esse voo.
+
+274
+00:13:17.001 --> 00:13:20.001
+Sim é. E então ele nos envia e nos dá uma medalha e diz, bom trabalho, Bill.
+
+275
+00:13:21.000 --> 00:13:22.001
+Bem, Bill, Gilman, muito obrigado.
+
+276
+00:13:22.001 --> 00:13:25.001
+Agora, esses simuladores de voo do PC têm recebido bastante bom, mas eles não são bastante
+
+277
+00:13:25.001 --> 00:13:29.001
+A mesma coisa que os simuladores de movimento da visão real usados para treinar pilotos reais.
+
+278
+00:13:30.000 --> 00:13:32.000
+Vamos ver um par desses no Aeroporto de San Carlos
+
+279
+00:13:32.000 --> 00:13:34.000
+aqui no norte da Califórnia.
+
+280
+00:13:35.000 --> 00:13:38.000
+As luzes de iluminação estão em curso. O transponder.
+
+281
+00:13:38.001 --> 00:13:39.000
+O transponder está em andamento.
+
+282
+00:13:39.000 --> 00:13:43.001
+Para aqueles usuários de computadores que se consideram pilotos de desktop experientes, a
+
+283
+00:13:43.001 --> 00:13:45.001
+Um breve olhar para o mundo real dos simuladores de vôo
+
+284
+00:13:45.001 --> 00:13:47.001
+Eles serão levados rapidamente para a Terra.
+
+285
+00:13:48.000 --> 00:13:52.001
+No Aeroporto de San Carlos na Baía de San Francisco, a companhia de simulação de vôos
+
+286
+00:13:52.001 --> 00:13:56.000
+Ele traga pilotos em tudo, de Cessnas a Boeing 707.
+
+287
+00:13:57.000 --> 00:14:01.001
+O hardware utiliza câmeras remotamente controladas, imagens simuladas por computador, e
+
+288
+00:14:01.001 --> 00:14:05.001
+movimentos físicos para criar um ambiente que se aproxima perfeitamente da realidade.
+
+289
+00:14:06.001 --> 00:14:11.000
+Com um dispositivo de treinamento de terreno de simulador, você é capaz de controlar o ambiente
+
+290
+00:14:11.000 --> 00:14:14.000
+onde, se você estiver em um avião, você está sujeito a qualquer Mãe
+
+291
+00:14:14.000 --> 00:14:15.001
+A natureza está em seu armazém naquele dia.
+
+292
+00:14:16.000 --> 00:14:19.001
+Os ventos são controlados quando o simulador. Turbulência, o tempo
+
+293
+00:14:19.001 --> 00:14:21.000
+condições em relação às camadas de nuvem.
+
+294
+00:14:21.001 --> 00:14:25.000
+O simulador é uma maneira muito mais econômica de ensinar algo,
+
+295
+00:14:25.000 --> 00:14:27.000
+É um ambiente de aula muito melhor.
+
+296
+00:14:27.000 --> 00:14:31.001
+Um avião foi projetado desde o lançamento como um meio de transporte, não como
+
+297
+00:14:31.001 --> 00:14:34.000
+É um meio de ensinar a alguém como fazer algo.
+
+298
+00:14:35.001 --> 00:14:39.000
+Pilotos destinados a voar aeronaves comerciais são treinados em um simulador que
+
+299
+00:14:39.000 --> 00:14:41.001
+duplicar os sons e movimentos do avião
+
+300
+00:14:41.001 --> 00:14:43.001
+Todos os detalhes do cockpit.
+
+301
+00:14:44.001 --> 00:14:49.000
+Cada gauge, elevador e interruptor é idêntico ao item real, e emergências podem
+
+302
+00:14:49.000 --> 00:14:51.000
+ser criado ao lado do instrutor.
+
+303
+00:14:52.000 --> 00:14:54.001
+Fogo do motor, número um, motor. Número 1 – Coloque, Coloca e Coloça.
+
+304
+00:14:55.000 --> 00:14:59.000
+Recentemente, o PC tem assumido cada vez mais das funções do simulador.
+
+305
+00:15:00.000 --> 00:15:05.000
+As unidades mais novas precisam apenas de um PC para controle e simulação, mas o resultado final é
+
+306
+00:15:05.000 --> 00:15:08.000
+ainda muito diferente dos simuladores de vôo como o jogo familiar
+
+307
+00:15:08.000 --> 00:15:09.001
+para a maioria dos usuários de computadores.
+
+308
+00:15:10.001 --> 00:15:14.001
+Não é realista do ponto de vista de que quando você chega a um avião ou um verdadeiro
+
+309
+00:15:14.001 --> 00:15:18.000
+Equipamento de treinamento de terra, o sentimento dele é muito diferente.
+
+310
+00:15:18.000 --> 00:15:21.000
+Mas você sabe o que vai acontecer quando você começar uma volta de mão esquerda.
+
+311
+00:15:21.000 --> 00:15:24.001
+O grau de que a mão esquerda gira e como as coisas vão acontecer rapidamente é
+
+312
+00:15:24.001 --> 00:15:27.001
+O que você então precisa aprender através de um simulador de vôo ou um avião.
+
+313
+00:15:29.000 --> 00:15:31.000
+Para as crônicas de computador, eu sou Maria Gabriel.
+
+314
+00:15:47.001 --> 00:15:50.000
+Music Velocity Development Corporation junto a Moisés.
+
+315
+00:15:50.000 --> 00:15:53.000
+Damon Sly, Vice-Presidente de R&amp;D e Dinâmica.
+
+316
+00:15:53.001 --> 00:15:56.001
+E também conosco, Mike Woodley, Diretor de Desenvolvimento de Database com Sublogic.
+
+317
+00:15:57.000 --> 00:15:57.000
+O João?
+
+318
+00:15:57.000 --> 00:16:00.001
+Moisés, no último segmento, apenas vimos um par de simuladores de voo de combate.
+
+319
+00:16:01.000 --> 00:16:03.001
+Hoje, você vai mostrar-nos, Jeff Fighter, seu simulador de vôo.
+
+320
+00:16:04.000 --> 00:16:04.001
+O que é diferente sobre isso?
+
+321
+00:16:05.000 --> 00:16:08.000
+Bem, em primeiro lugar, gostaria de dizer que Gillman e Bill construíram o melhor
+
+322
+00:16:08.000 --> 00:16:12.001
+Simuladores em 1987 e 88, mas somos os únicos nomeados para o melhor voo
+
+323
+00:16:12.001 --> 00:16:14.001
+Simulador e melhor produto de entretenimento de 1989.
+
+324
+00:16:15.000 --> 00:16:16.000
+Isso é o comércio?
+
+325
+00:16:16.001 --> 00:16:18.000
+De qualquer forma, aqui vamos.
+
+326
+00:16:19.000 --> 00:16:22.001
+Podemos descansar e o que vamos fazer é ir imediatamente para uma sequência.
+
+327
+00:16:23.000 --> 00:16:25.000
+Estamos voando em torno de São Francisco.
+
+328
+00:16:25.001 --> 00:16:26.000
+Que avião estamos voando, Moisés?
+
+329
+00:16:26.000 --> 00:16:30.001
+Estamos voando um F-14 Tomcat, que é o mesmo avião que foi usado no Top Gun.
+
+330
+00:16:30.001 --> 00:16:32.000
+E há Trans-America, o Banco da América?
+
+331
+00:16:32.000 --> 00:16:34.000
+É certo, então podemos apenas disparar um míssil sobre eles.
+
+332
+00:16:34.000 --> 00:16:34.001
+OK  ⁇
+
+333
+00:16:36.000 --> 00:16:36.001
+Aqui está o ponte.
+
+334
+00:16:40.001 --> 00:16:41.000
+De qualquer forma...
+
+335
+00:16:41.000 --> 00:16:43.000
+Você também pode aterrar em um porta-aviões.
+
+336
+00:16:43.000 --> 00:16:44.001
+Sim, eu posso te mostrar isso agora.
+
+337
+00:16:47.000 --> 00:16:50.000
+Então podemos pop-up o menu e, em seguida, ir e selecionar
+
+338
+00:16:50.000 --> 00:16:52.001
+Qualquer tipo de avião que queremos.
+
+339
+00:16:52.001 --> 00:16:54.000
+Nós vamos escolher um F-14 porque ele também ...
+
+340
+00:16:54.000 --> 00:16:57.000
+Bem, vamos escolher o F-18 que suporta aterragens de transportadores.
+
+341
+00:16:57.000 --> 00:17:00.000
+Vamos aterrar na constelação USS.
+
+342
+00:17:01.000 --> 00:17:03.001
+Ok, então vamos entrar aqui e estamos prontos para ir.
+
+343
+00:17:04.000 --> 00:17:04.001
+É isso que parece.
+
+344
+00:17:04.001 --> 00:17:06.000
+E aí está o portador. Podemos ver isso.
+
+345
+00:17:06.000 --> 00:17:12.000
+Sim, então o dispositivo está abaixo e está pronto para capturar os cabos do detentor.
+
+346
+00:17:12.000 --> 00:17:15.001
+Por outro lado, é muito perigoso fazer desembarques de transportadores.
+
+347
+00:17:16.000 --> 00:17:16.001
+Eu posso imaginar.
+
+348
+00:17:16.001 --> 00:17:18.001
+Na verdade, a Marinha nos deixa experimentar um transportador.
+
+349
+00:17:18.001 --> 00:17:20.001
+No momento em que fizemos a pesquisa para este projeto.
+
+350
+00:17:20.001 --> 00:17:23.000
+E foi a coisa mais assustadora que eu já experimentei.
+
+351
+00:17:24.000 --> 00:17:25.001
+Então você está chegando agora mesmo?
+
+352
+00:17:26.000 --> 00:17:28.001
+Sim, estamos chegando agora mesmo. Eu vou matar o poder em apenas um segundo.
+
+353
+00:17:29.000 --> 00:17:30.001
+Na verdade, é suposto que...
+
+354
+00:17:30.001 --> 00:17:31.000
+Você fez isso?
+
+355
+00:17:32.000 --> 00:17:33.000
+Muito bom desembarque.
+
+356
+00:17:33.001 --> 00:17:33.001
+Muito bom trabalho.
+
+357
+00:17:34.000 --> 00:17:35.001
+Desembarque de transporte aéreo bem sucedido.
+
+358
+00:17:35.001 --> 00:17:38.001
+Não muito fácil. Ok, Moisés, eu quero pedir-lhe para desligar o teclado
+
+359
+00:17:38.001 --> 00:17:40.000
+Para Damon e o joystick.
+
+360
+00:17:40.000 --> 00:17:43.000
+E eu acho que tudo o que você precisa, Damon, para sair do seu programa para que você possa
+
+361
+00:17:43.000 --> 00:17:45.000
+Um assassino de tanques A-10.
+
+362
+00:17:45.001 --> 00:17:48.000
+Enquanto ele está fazendo isso, Moisés, quais são algumas das outras características que são
+
+363
+00:17:48.000 --> 00:17:50.000
+Unicamente para o Jetfighter que devemos saber sobre?
+
+364
+00:17:50.000 --> 00:17:53.000
+Uma característica que pensamos ser muito importante é que este é o primeiro produto para
+
+365
+00:17:53.000 --> 00:17:55.001
+Contém proteção de vírus incorporada.
+
+366
+00:17:56.000 --> 00:17:59.000
+Acreditamos que os fabricantes de software devem produzir
+
+367
+00:17:59.000 --> 00:18:01.000
+software que é imune aos sistemas virais.
+
+368
+00:18:01.001 --> 00:18:02.001
+E eles só devem cuidar disso por si mesmos.
+
+369
+00:18:03.000 --> 00:18:05.001
+Assim, fazemos coisas como a verificação de integridade de arquivos.
+
+370
+00:18:06.000 --> 00:18:09.000
+E se alguém tentar injetar um vírus, eles realmente detectarão isso.
+
+371
+00:18:09.000 --> 00:18:12.001
+Tudo bem, Damon, vejo que você tem um assassino de tanques A-10 no computador aqui.
+
+372
+00:18:12.001 --> 00:18:14.001
+E parece que você tem gráficos digitalizados nisso?
+
+373
+00:18:15.000 --> 00:18:16.000
+Sim, estes são gráficos digitalizados.
+
+374
+00:18:17.000 --> 00:18:20.001
+Eles são feitos possíveis pelo cartão VGA com 256 cores.
+
+375
+00:18:20.001 --> 00:18:24.001
+E estes são verdadeiros atores em trajes todo o pouco.
+
+376
+00:18:24.001 --> 00:18:27.000
+Então nós quisemos uma sensação realista e autêntica para o nosso produto.
+
+377
+00:18:27.001 --> 00:18:28.001
+Que avião estamos voando em um assassino de tanques?
+
+378
+00:18:29.000 --> 00:18:33.000
+Estamos voando o A-10 Thunderbolt, que é um avião de apoio aéreo próximo.
+
+379
+00:18:33.000 --> 00:18:36.000
+É muito diferente desses outros aviões que você já viu antes.
+
+380
+00:18:37.000 --> 00:18:42.001
+É uma espécie de loucura e voa realmente lento, mas voa baixo e
+
+381
+00:18:42.001 --> 00:18:45.000
+Destruir tanques é o que é especialidade.
+
+382
+00:18:45.000 --> 00:18:46.000
+Por que você o escolheu?
+
+383
+00:18:46.001 --> 00:18:48.000
+É apenas um avião realmente apertado.
+
+384
+00:18:48.001 --> 00:18:51.000
+E acho que é realmente divertido para as pessoas jogar porque há muito
+
+385
+00:18:51.000 --> 00:18:52.001
+decisões táticas que devem ser tomadas.
+
+386
+00:18:52.001 --> 00:18:53.000
+Oh, certo, você gostaria de?
+
+387
+00:18:53.000 --> 00:18:55.001
+Bem, essa é a sua reportagem aqui.
+
+388
+00:18:56.000 --> 00:18:57.000
+Esse é o seu comandante aqui.
+
+389
+00:18:57.000 --> 00:18:59.001
+E ele lhe dá as suas ordens para a missão.
+
+390
+00:19:00.000 --> 00:19:01.000
+Este é o seu ecrã de carga de armas.
+
+391
+00:19:01.000 --> 00:19:03.001
+E isso é uma imagem digitalizada do avião, né?
+
+392
+00:19:03.001 --> 00:19:07.000
+As configurações reais de arma que pode ser carregada
+
+393
+00:19:07.000 --> 00:19:09.000
+em Mavericks, bombas, todo o pouco.
+
+394
+00:19:10.000 --> 00:19:11.001
+Estamos tomando gráficos para o próximo passo sobre isso.
+
+395
+00:19:12.000 --> 00:19:14.000
+Sim, o cartão VGA. Nós realmente pressionamos muito.
+
+396
+00:19:14.001 --> 00:19:17.000
+Vamos voar aqui. Eu quero ver um tanque assassino aqui.
+
+397
+00:19:17.000 --> 00:19:18.000
+Vamos tirar um tanque.
+
+398
+00:19:20.001 --> 00:19:22.000
+E estamos apenas esperando para carregá-lo.
+
+399
+00:19:22.001 --> 00:19:23.000
+Sim, aqui vamos nós.
+
+400
+00:19:24.001 --> 00:19:25.000
+Aqui estamos no caminho.
+
+401
+00:19:26.000 --> 00:19:28.000
+E os painéis de controle, parece uma fotografia.
+
+402
+00:19:28.000 --> 00:19:29.000
+Isso também é digitalizado.
+
+403
+00:19:29.001 --> 00:19:31.001
+É exatamente isso que o cockpit A-10 parece.
+
+404
+00:19:31.001 --> 00:19:32.000
+[...]
+
+405
+00:19:34.000 --> 00:19:35.001
+Ok, estamos voando por aqui.
+
+406
+00:19:37.000 --> 00:19:38.000
+Estes são alguns dos meus tanques.
+
+407
+00:19:38.000 --> 00:19:40.001
+Estes são os homens que eu estou tentando proteger nesta missão.
+
+408
+00:19:41.000 --> 00:19:44.001
+E eles estão apenas a piorar em algum tanque
+
+409
+00:19:44.001 --> 00:19:46.000
+destruidores, e é aí que eu entro.
+
+410
+00:19:46.001 --> 00:19:48.001
+Tenho que salvar esses homens dos destruidores de tanques.
+
+411
+00:19:48.001 --> 00:19:50.000
+Você pode ver o chat de rádio.
+
+412
+00:19:50.000 --> 00:19:52.000
+É isso que realmente nos concentramos no produto.
+
+413
+00:19:52.001 --> 00:19:53.001
+Queríamos conseguir isso.
+
+414
+00:19:54.000 --> 00:19:56.000
+Apenas aparece em texto na tela.
+
+415
+00:19:56.001 --> 00:19:59.000
+Sim, eventualmente teremos tipos de sistemas CD-ROM.
+
+416
+00:19:59.000 --> 00:19:59.001
+[...] é preciso escrever uma voz.
+
+417
+00:20:00.000 --> 00:20:00.001
+Nós teremos uma voz digital real.
+
+418
+00:20:00.001 --> 00:20:03.000
+Existem esses destroços de tanques.
+
+419
+00:20:03.000 --> 00:20:06.000
+Vou entrar aqui e fazê-lo da maneira fácil.
+
+420
+00:20:06.000 --> 00:20:07.000
+Eu vou disparar um Maverick sobre esses homens.
+
+421
+00:20:07.001 --> 00:20:10.000
+Esse míssil aéreo-terrâneo chegará em baixo.
+
+422
+00:20:11.000 --> 00:20:12.000
+Aqui estamos chegando.
+
+423
+00:20:13.001 --> 00:20:14.001
+Esse é o canhão de Avengers.
+
+424
+00:20:15.000 --> 00:20:16.000
+Aqui vamos.
+
+425
+00:20:16.001 --> 00:20:17.000
+Eu vou atravessar.
+
+426
+00:20:17.001 --> 00:20:20.001
+Temos grandes explosões Maverick digitalizadas.
+
+427
+00:20:22.000 --> 00:20:25.001
+Você pode ver as visões externas que temos.
+
+428
+00:20:27.000 --> 00:20:28.000
+O gradiento enche a skyline.
+
+429
+00:20:29.000 --> 00:20:31.001
+Tudo bem, Damon, tenho que pedir-lhe que saia disso para que possamos ter uma chance de
+
+430
+00:20:31.001 --> 00:20:36.000
+Veja ATP de alguma lógica aqui e deslize o teclado e os controles para Mike
+
+431
+00:20:36.000 --> 00:20:37.001
+Além disso, se você puder.
+
+432
+00:20:39.000 --> 00:20:43.000
+Mike, enquanto você está se preparando, você mencionou CD-ROM e o que
+
+433
+00:20:43.000 --> 00:20:44.001
+Você gostaria de ser capaz de fazer o próximo.
+
+434
+00:20:44.001 --> 00:20:46.001
+O que você vê como o próximo passo com simuladores de vôo
+
+435
+00:20:46.001 --> 00:20:48.000
+Com dispositivos de armazenamento óptico?
+
+436
+00:20:48.000 --> 00:20:51.000
+Uma coisa que você poderia fazer é que o A-10 tinha todo esse chat de rádio.
+
+437
+00:20:51.000 --> 00:20:54.001
+Isso poderia realmente ser vozes digitalizadas, discursos digitalizados que acontecem para
+
+438
+00:20:54.001 --> 00:20:56.000
+Realmente trazer a experiência para a vida
+
+439
+00:20:56.000 --> 00:20:57.001
+Então você sente que você está lá, você está no cockpit.
+
+440
+00:20:58.001 --> 00:21:00.001
+Mike, você tem ATP e está correndo agora.
+
+441
+00:21:00.001 --> 00:21:01.001
+O que é ATP?
+
+442
+00:21:02.000 --> 00:21:03.000
+piloto de transporte aéreo.
+
+443
+00:21:03.001 --> 00:21:05.000
+Que tipo de avião podemos voar sobre isso?
+
+444
+00:21:05.001 --> 00:21:12.000
+Isso é uma escolha de Boeing 737, 747, 767, Airbus A300 série e um Shorts
+
+445
+00:21:12.000 --> 00:21:14.000
+360, que é uma pequena turbo.
+
+446
+00:21:14.000 --> 00:21:14.001
+Todos eles são civis.
+
+447
+00:21:15.000 --> 00:21:17.001
+Nenhuma batalha de jet, nenhum lado vence mísseis.
+
+448
+00:21:17.001 --> 00:21:19.000
+Não há ventos de lado ou espinhas.
+
+449
+00:21:19.000 --> 00:21:20.000
+aviões de passageiros voadores.
+
+450
+00:21:20.000 --> 00:21:21.000
+Você tem isso.
+
+451
+00:21:21.000 --> 00:21:22.000
+Tudo bem, você está no meio do voo.
+
+452
+00:21:22.000 --> 00:21:23.000
+Nós já nos tiramos.
+
+453
+00:21:23.000 --> 00:21:23.001
+Isso é certo.
+
+454
+00:21:24.000 --> 00:21:24.001
+É uma espécie de corrida que nos passa por isso.
+
+455
+00:21:24.001 --> 00:21:30.001
+Eu saí de Chicago, O&#x27;Hare, e estamos voando para o centro e nós
+
+456
+00:21:30.001 --> 00:21:34.001
+Temos 40 edifícios na área central, como fazemos em 26 cidades.
+
+457
+00:21:36.000 --> 00:21:39.000
+Uma das coisas que podemos fazer para as pessoas com máquinas mais lentas, temos muito
+
+458
+00:21:39.000 --> 00:21:42.000
+de detalhes passando por aqui, você pode ajustar a complexidade
+
+459
+00:21:42.000 --> 00:21:43.001
+E eu posso desligar os edifícios lá, como você vê no distrito.
+
+460
+00:21:43.001 --> 00:21:46.001
+Assim, você pode reduzir a complexidade gráfica para acelerar
+
+461
+00:21:46.001 --> 00:21:48.000
+O programa para uma máquina lenta.
+
+462
+00:21:48.001 --> 00:21:52.001
+Você também pode mudar as condições meteorológicas e fazer voos noturnos e coisas como isso.
+
+463
+00:21:52.001 --> 00:21:53.000
+Isso é certo.
+
+464
+00:21:53.001 --> 00:21:55.000
+Você pode voar de noite agora?
+
+465
+00:21:55.001 --> 00:21:57.000
+Bem, vou mudar a hora do dia aqui.
+
+466
+00:21:57.001 --> 00:21:59.001
+Há um relógio em tempo real, não é mesmo?
+
+467
+00:21:59.001 --> 00:22:00.000
+Isso é certo.
+
+468
+00:22:00.000 --> 00:22:03.001
+Ele realmente lê o seu relógio do sistema e carrega isso para que isso seja
+
+469
+00:22:03.001 --> 00:22:05.001
+O tempo em que ele está voando.
+
+470
+00:22:05.001 --> 00:22:08.000
+Então, se você voltou para casa do trabalho e foi tarde, seria tarde.
+
+471
+00:22:08.001 --> 00:22:10.000
+Com o que eu tenho que pretender é a noite.
+
+472
+00:22:10.001 --> 00:22:11.000
+OK  ⁇
+
+473
+00:22:13.001 --> 00:22:14.001
+Basta nos dizer o que você está fazendo.
+
+474
+00:22:15.000 --> 00:22:18.000
+Reduzir a hora, economizar o tempo até cedo da manhã.
+
+475
+00:22:19.001 --> 00:22:20.001
+Oh, isso é maravilhoso.
+
+476
+00:22:20.001 --> 00:22:24.001
+E então, como você pode ver, há as ruas da cidade em Chicago têm
+
+477
+00:22:24.001 --> 00:22:26.001
+Poucas luzes lâmpadas.
+
+478
+00:22:26.001 --> 00:22:28.000
+Então é o centro de Chicago que estamos voando para?
+
+479
+00:22:28.000 --> 00:22:28.001
+Isso é certo.
+
+480
+00:22:28.001 --> 00:22:29.001
+Parece muito assim.
+
+481
+00:22:30.000 --> 00:22:31.001
+Parece muito assim.
+
+482
+00:22:33.000 --> 00:22:35.000
+Então a sua cena aqui é baseada em dados reais?
+
+483
+00:22:35.000 --> 00:22:35.001
+Isso é certo.
+
+484
+00:22:36.000 --> 00:22:39.001
+Eu uso bases de dados do governo para a colocação dos edifícios e suas alturas,
+
+485
+00:22:40.000 --> 00:22:44.001
+os auxílios de navegação, os aeroportos, e qualquer outra coisa que eu possa pensar.
+
+486
+00:22:44.001 --> 00:22:47.000
+E como é realista a modelagem em termos de desempenho
+
+487
+00:22:47.000 --> 00:22:48.001
+Por exemplo, o 737?
+
+488
+00:22:49.000 --> 00:22:52.001
+Todos eles serão executados de forma muito precisa.
+
+489
+00:22:53.000 --> 00:22:57.000
+Usamos pilotos da companhia aérea como consultores para nos ajudar a modelar.
+
+490
+00:22:57.000 --> 00:22:59.001
+E esta é uma experiência verdadeiramente diferente de voar um Cessna.
+
+491
+00:22:59.001 --> 00:23:00.000
+Isso é certo.
+
+492
+00:23:00.001 --> 00:23:02.000
+Por exemplo, eles precisam de grandes movimentos.
+
+493
+00:23:02.001 --> 00:23:03.001
+E você tem muito poder.
+
+494
+00:23:04.000 --> 00:23:05.000
+Você pode subir muito rápido.
+
+495
+00:23:06.000 --> 00:23:09.001
+Mas haverá um conjunto de equações de voo para aqueles que são um pouco menos
+
+496
+00:23:09.001 --> 00:23:11.001
+Muito bom em voar.
+
+497
+00:23:11.001 --> 00:23:13.000
+E você pode aterrar em diferentes aeroportos, diferentes cidades.
+
+498
+00:23:13.001 --> 00:23:14.001
+Quantas cidades?
+
+499
+00:23:14.001 --> 00:23:18.001
+Há 353 aeroportos. 26 cidades têm edifícios nele.
+
+500
+00:23:18.001 --> 00:23:21.000
+E eles escolherão os 40 edifícios mais altos para essas 26 cidades.
+
+501
+00:23:21.000 --> 00:23:21.001
+Tudo bem.
+
+502
+00:23:21.001 --> 00:23:22.000
+Muito bom.
+
+503
+00:23:22.000 --> 00:23:23.000
+Senhores, estamos fora do tempo.
+
+504
+00:23:23.000 --> 00:23:24.001
+Esse é o nosso olhar para os simuladores de vôo.
+
+505
+00:23:24.001 --> 00:23:27.000
+Nós estaremos de volta em apenas um minuto com as notícias do computador desta semana.
+
+506
+00:23:30.001 --> 00:23:31.000
+[...]
+
+507
+00:23:39.001 --> 00:23:42.001
+No arquivo de acesso aleatório desta semana, o primeiro foi o
+
+508
+00:23:42.001 --> 00:23:44.000
+O checker, e depois o tesouro.
+
+509
+00:23:44.000 --> 00:23:48.000
+E agora você pode ter um dicionário completo de 116.000 palavras
+
+510
+00:23:48.000 --> 00:23:49.001
+dentro do seu processador de palavras.
+
+511
+00:23:50.000 --> 00:23:53.001
+Houghton Mifflin Software acaba de lançar o Electronic American Heritage
+
+512
+00:23:53.001 --> 00:23:55.000
+Dicionário para PCs.
+
+513
+00:23:55.000 --> 00:23:59.000
+É um dicionário completo que usa uma função de texto de pesquisa que não permite que você
+
+514
+00:23:59.000 --> 00:24:02.000
+olha uma palavra, mas olha outra palavra que
+
+515
+00:24:02.000 --> 00:24:03.001
+contém a sua palavra na sua definição.
+
+516
+00:24:04.000 --> 00:24:08.000
+O Dicionário Eletrônico não requer um CD-ROM, mas ele recebe
+
+517
+00:24:08.000 --> 00:24:10.000
+3 megabytes em seu disco rígido.
+
+518
+00:24:10.000 --> 00:24:13.001
+O American Heritage Electronic Dictionary, vendido por US$ 89.
+
+519
+00:24:14.001 --> 00:24:17.000
+A NEC vem com uma versão atualizada da sua
+
+520
+00:24:17.000 --> 00:24:18.001
+Computador de laptop ultra-luz.
+
+521
+00:24:19.000 --> 00:24:23.000
+O novo Ultralight tem um chip de 12 megahertz 286 e apresenta gráficos VGA
+
+522
+00:24:23.000 --> 00:24:25.000
+e um disco rígido de 20 megabytes.
+
+523
+00:24:25.000 --> 00:24:27.001
+O novo Ultralight pesa um pouco mais de 6 quilos.
+
+524
+00:24:28.000 --> 00:24:31.000
+A Toshiba já baixou o preço do seu laptop 1200XE.
+
+525
+00:24:31.001 --> 00:24:36.001
+Por 800 dólares, o 1200XE é um laptop de 286 com uma unidade de 20 megabytes.
+
+526
+00:24:36.001 --> 00:24:39.001
+A Toshiba também reduziu os preços em três outros modelos de laptop.
+
+527
+00:24:40.001 --> 00:24:44.000
+Nós ouvimos muito sobre groupware no ano passado, mas não muitos produtos foram seguidos.
+
+528
+00:24:44.000 --> 00:24:48.001
+Bem, esta semana, o Group Technologies anunciou um novo programa chamado Aspects, que
+
+529
+00:24:48.001 --> 00:24:52.001
+Isso permitirá que até 16 usuários do Macintosh trabalhem simultaneamente
+
+530
+00:24:52.001 --> 00:24:54.000
+O mesmo texto ou arquivo gráfico.
+
+531
+00:24:54.001 --> 00:24:56.001
+Os Macs podem ser conectados através de rede ou modem.
+
+532
+00:24:57.001 --> 00:25:00.000
+Vamos dar uma olhada no software mais vendido desta semana para o Macintosh.
+
+533
+00:25:00.001 --> 00:25:04.001
+De acordo com a MacConnection, o programa antivírus SAM ainda leva o pacote,
+
+534
+00:25:04.001 --> 00:25:08.000
+seguido por gramática correta, piro, palavra e reunião de tipo.
+
+535
+00:25:09.000 --> 00:25:12.001
+Quicken slips para o número 6, seguido por Adobe Type Manager e Excel.
+
+536
+00:25:13.000 --> 00:25:16.001
+PageMaker chega ao top 10 pela primeira vez, e a quinta geração
+
+537
+00:25:16.001 --> 00:25:18.000
+As bolsas saem da lista.
+
+538
+00:25:19.000 --> 00:25:22.000
+Ventura Software anuncia versão do Mac da Ventura Publisher
+
+539
+00:25:22.000 --> 00:25:23.001
+Vamos finalmente embarcar neste ano.
+
+540
+00:25:23.001 --> 00:25:27.000
+Ventura Mac será capaz de importar arquivos DOS e funcionará
+
+541
+00:25:27.000 --> 00:25:28.001
+com a maioria dos processadores de palavras do Mac.
+
+542
+00:25:29.000 --> 00:25:31.001
+Na revisão do software desta semana, Paul Schindler
+
+543
+00:25:31.001 --> 00:25:33.000
+Um olhar para um novo jogo de computador.
+
+544
+00:25:34.000 --> 00:25:35.000
+Saudações e terra.
+
+545
+00:25:35.001 --> 00:25:40.000
+Arkanoid 2, a vingança de fazer, segue-se a um jogo muito popular chamado Arkanoide.
+
+546
+00:25:41.000 --> 00:25:43.001
+Arkanoid 2 assemelha-se ao clássico jogo Breakout.
+
+547
+00:25:44.000 --> 00:25:47.000
+Goodies voam em torno, e você responde juntamente com os efeitos sonoros gritando.
+
+548
+00:25:47.001 --> 00:25:49.000
+Olhe e ouça por um momento.
+
+549
+00:25:51.000 --> 00:25:54.001
+Arkanoid também inclui um conjunto de construção, para que você possa criar uma versão personalizada
+
+550
+00:25:54.001 --> 00:25:57.000
+que atende às suas próprias necessidades e mantém o jogo fresco.
+
+551
+00:25:57.000 --> 00:25:59.000
+O kit de ferramentas funciona como programas de pintura.
+
+552
+00:25:59.000 --> 00:26:00.000
+Você pode mudar objetos.
+
+553
+00:26:00.001 --> 00:26:01.001
+Você pode mudar o fundo.
+
+554
+00:26:01.001 --> 00:26:04.000
+O jogo está cheio de histeria.
+
+555
+00:26:04.001 --> 00:26:09.000
+Se você gosta de uma tela ocupada cheia de pequenos objetos em movimento rápido, você vai gostar disso.
+
+556
+00:26:09.000 --> 00:26:13.000
+É importante lembrar o que é a chave da música, caso contrário, o
+
+557
+00:26:13.000 --> 00:26:14.001
+A música repetitiva fará você louco.
+
+558
+00:26:15.000 --> 00:26:18.000
+Muitas configurações de Arkanoid tornam-no interessante e mantêm-o interessante.
+
+559
+00:26:19.000 --> 00:26:24.001
+Arkanoid 2 é de US $ 35 de Taito Software de Bothell, Washington, e Vancouver, B.C.
+
+560
+00:26:24.001 --> 00:26:26.001
+A invasão canadense continua.
+
+561
+00:26:27.001 --> 00:26:30.000
+Para as crônicas de computador, eu sou Paul Schindler.
+
+562
+00:26:31.000 --> 00:26:34.001
+Se você ainda não pode decidir se você prefere trabalhar em um PC compatível ou um
+
+563
+00:26:34.001 --> 00:26:37.001
+Macintosh, agora você pode fazer os dois na mesma máquina.
+
+564
+00:26:38.000 --> 00:26:42.000
+Orange Micro introduziu um novo co-processador de ônibus que essencialmente coloca um PC
+
+565
+00:26:42.000 --> 00:26:43.001
+em uma placa dentro do seu Mac.
+
+566
+00:26:44.000 --> 00:26:47.000
+A tabela vem em 286 ou 386 versões.
+
+567
+00:26:48.000 --> 00:26:52.000
+Com que todos recebem faks nos dias de hoje, há um mercado crescente para a óptica
+
+568
+00:26:52.000 --> 00:26:55.001
+leitores de caracteres que podem converter um fax em um arquivo ASCII.
+
+569
+00:26:56.000 --> 00:26:59.000
+A Care Corporation respondeu com um novo produto chamado o Care Typist.
+
+570
+00:26:59.000 --> 00:27:02.000
+É um scanner manual com software OCR.
+
+571
+00:27:02.000 --> 00:27:06.000
+A versão do Mac já está disponível. A versão do PC será lançada em outubro.
+
+572
+00:27:07.001 --> 00:27:12.000
+Finalmente, Articulate Systems apresentou o Voice Navigator, uma entrada de fala
+
+573
+00:27:12.000 --> 00:27:14.001
+dispositivo para o Macintosh que permite que você execute qualquer Mac padrão
+
+574
+00:27:14.001 --> 00:27:16.001
+Aplicação com comandos de voz.
+
+575
+00:27:17.000 --> 00:27:20.001
+Alguns gerentes aparentemente estão horrorizados na perspectiva de um escritório cheio de
+
+576
+00:27:20.001 --> 00:27:23.000
+Todos os usuários de computadores falam com seus Macs.
+
+577
+00:27:23.001 --> 00:27:25.001
+Isso é para as crônicas desta semana. Vamos te ver a próxima vez.
+
+578
+00:27:26.001 --> 00:27:31.000
+As crônicas de computador são feitas possíveis em parte por CompuServe, que oferece
+
+579
+00:27:31.000 --> 00:27:33.001
+Informações on-line relacionadas ao tema de hoje.
+
+580
+00:27:34.001 --> 00:27:38.000
+Membro do tipo Go Chronicles. Os não-membros pedem mais informações.
+
+581
+00:27:38.001 --> 00:27:42.001
+O financiamento adicional é fornecido pela Software Publishers Association, por PC
+
+582
+00:27:42.001 --> 00:27:47.000
+Connection e Mac Connection, por Byte Magazine e VIX, a Informação Byte
+
+583
+00:27:47.000 --> 00:27:51.000
+Exchange, e pela Intel Corporation, Personal Computer Enhancement.
+
+584
+00:27:51.000 --> 00:27:57.000
+Para uma transcrição das crônicas de computador desta semana, envie $4 para PTV Publicações,
+
+585
+00:27:57.001 --> 00:28:01.000
+Post Office Box 701, Kent, Ohio, 44240.
+
+586
+00:28:02.000 --> 00:28:03.000
+Por favor, indique a data do programa.
+
+587
+00:28:21.000 --> 00:28:46.000
+[...]
