@@ -595,7 +595,7 @@ const BUILT_IN = [
   { name: "Ad Break",           desc: "Vintage TV commercials",            q: "(" + "collection:classic_tv_commercials" + ")" + SAFE },
   { name: "Saturday Toons",     desc: "Public domain cartoons",            q: `(collection:classic_cartoons OR (collection:animationandcartoons AND subject:(fleischer OR terrytoons OR "famous studios" OR "van beuren" OR iwerks OR popeye OR "betty boop" OR casper OR "felix the cat" OR "public domain cartoon" OR "public domain cartoons" OR "saturday morning cartoons")))` + SAFE },
   { name: "Creature Feature",   desc: "Sci-fi and horror B movies",        q: "(" + "collection:SciFi_Horror" + ")" + SAFE },
-  { name: "Midnight Mirage", desc: "Cult films, uninterrupted · '80s & '90s movie spots between features", library: "midnight-mirage-v1", breaks: { library: "midnight-mirage", mix: "between-films", target: 120, maxAds: 3 }, q: "reviewed:midnight-mirage-v1" },
+  { name: "Midnight Mirage", desc: "Cult films, uninterrupted · '80s & '90s movie spots between features", library: "midnight-mirage-v1", breaks: { library: "midnight-mirage", mix: "between-films", rotationVersion: 2, target: 120, maxAds: 3 }, q: "reviewed:midnight-mirage-v1" },
   { name: "After Dark",         desc: "Film noir",                         q: "(" + 'subject:"film noir"' + ")" + SAFE },
   { name: "Computer Chronicles",desc: "The 80s–90s PC show",               q: "(collection:computerchronicles)" + SAFE },
   { name: "Rerun Alley",        desc: "Old TV episodes",                   q: "(" + "collection:classic_tv" + ")" + SAFE },
@@ -615,7 +615,7 @@ const BUILT_IN = [
   { name: "PBS",               desc: "NOVA, Frontline, Bob Ross and more", q: "(" + '(subject:pbs OR title:pbs) AND title:(nova OR frontline OR "american experience" OR "great performances" OR masterpiece OR "ken burns" OR "this old house" OR "antiques roadshow" OR "bob ross" OR "joy of painting" OR cosmos OR "power of myth" OR "mister rogers" OR "reading rainbow" OR nature OR "austin city limits") AND NOT collection:tvnews' + ")" + SAFE },
   { name: "Brit TV",            desc: "British comedy and drama",          q: "(" + 'subject:("british television" OR "british tv" OR "british comedy" OR "british sitcom" OR "fawlty towers" OR "monty python" OR "only fools and horses" OR "are you being served" OR "keeping up appearances" OR "red dwarf" OR "blackadder" OR "the prisoner" OR "benny hill") AND NOT collection:tvnews AND NOT title:("funny or die" OR bbcnews)' + ")" + SAFE },
   // Only reviewed episode windows; never promos, interviews, fan edits or the rest of a mixed tape.
-  { name: "Porchlight", desc: "Small-town stories, family & relationship dramas", library: "porchlight-v1", breaks: { library: "porchlight", mix: "era", eraWindow: 2, uniqueAds: true, maxAds: 3, interval: 900, target: 120, minTail: 120 }, q: "reviewed:porchlight-v1" },
+  { name: "Porchlight", desc: "Small-town stories, family & relationship dramas", library: "porchlight-v1", breaks: { library: "porchlight", mix: "era", eraWindow: 2, themedAds: true, rotationVersion: 2, uniqueAds: true, maxAds: 3, interval: 900, target: 120, minTail: 120 }, q: "reviewed:porchlight-v1" },
   { name: "Christmas Movies",   desc: "Holiday films and TV specials",     q: "(" + '(((subject:christmas OR title:christmas) AND (collection:feature_films OR collection:classic_tv OR collection:classic_cartoons)) OR subject:"christmas movie" OR subject:"christmas movies" OR subject:"christmas film") AND NOT title:(podcast OR "stock footage" OR "new movies to watch")' + ")" + SAFE },
   { name: "Video Jukebox",      desc: "MTV-era music video shows",         q: `(title:("music videos" OR "video hits" OR "120 minutes" OR "headbangers ball" OR "yo! mtv raps" OR "friday night videos" OR "night tracks" OR "video jukebox" OR "mtv hits" OR "video countdown" OR "top 20 countdown" OR "pop-up video" OR "pop up video" OR "total request live" OR muchmusic OR "video soul") AND date:[1975-01-01 TO 2008-12-31] AND NOT title:(amv OR "music videos of 2"))` + SAFE },
   { name: "Kung Fu Theater",    desc: "Martial arts movies",               q: `(subject:("kung fu" OR "shaw brothers" OR "bruce lee" OR "martial arts film" OR "martial arts movie" OR "kung fu theater") AND NOT title:(hypnotic OR countrockula* OR longplay OR gamevideoarchive OR championship OR commercials OR "god hand"))` + SAFE },
@@ -1075,23 +1075,23 @@ const fileUrl = m => m.local ? m.file : `https://archive.org/download/${encodeUR
 // Only legacy custom search channels retain the older block planner.
 // Same inputs give the same lineup on every device.
 const rowMedia = ([id, file, dur, title, year, sub, archiveId, width, height, compatibility, cuts, captionMetadata]) => ({ id, file, dur, title, identityTitle: title, year, sub, archiveId, width, height, cuts, captionMetadata });
-function makeSlot(m, ch, start, seed) {
+function makeSlot(m, ch, start, seed, adRotation = null) {
   const program = { ...m, dur: ch.custom ? Math.min(m.dur, BLOCK) : m.dur };
   let timeline;
   if (ch.breaks) {
-    const library = CommercialTiming.library(catalog, ch.breaks.library);
+    const library = CommercialTiming.library(catalog, ch.breaks.library, ch.breaks.themedAds ? catalog?.channelAds?.[ch.no] || [] : []);
     const ads = library.commercials;
     if (!ads.length && ch.breaks.mix !== "between-films") throw new Error("Vintage commercial catalog is unavailable");
-    timeline = CommercialTiming.build(program, ch.breaks, ads, library.bumpers, seed || ch.q + "|" + m.id + "|" + start);
+    timeline = CommercialTiming.build(program, ch.breaks, ads, library.bumpers, seed || ch.q + "|" + m.id + "|" + start, adRotation);
   }
   if (m.cuts?.length) timeline = timeline ? CommercialTiming.edit(timeline, program) : CommercialTiming.program(program);
   // New subject-matched archival spots go BETWEEN full programs, not through scenes.
   // Existing reviewed Trek/Porchlight break policies remain separate.
   if(!ch.breaks){
     const year=Number(m.year),key=(seed||ch.q+'|'+m.id)+'|archive-ads';
-    const eligible=(catalog?.channelAds?.[ch.no]||[]).filter(ad=>year>=1970&&year<=2008&&Math.abs(Number(ad.year)-year)<=5);
+    const eligible=(catalog?.channelAds?.[ch.no]||[]).filter(ad=>year>=1940&&year<=2008&&Math.abs(Number(ad.year)-year)<=5);
     if(eligible.length&&(program.dur>=900||hash(key)%4===0)){
-      const ads=CommercialTiming.pack(eligible,60,key,{unique:true,maxSpots:2});
+      const ads=adRotation?adRotation(eligible,60,2):CommercialTiming.pack(eligible,60,key,{unique:true,maxSpots:2});
       if(ads.length){
         timeline ||= {duration:program.dur,segments:[{kind:'program',media:program,start:0,end:program.dur,offset:0,index:0}]};
         timeline={...timeline,segments:[...timeline.segments]};
@@ -1198,7 +1198,15 @@ async function continuousLineup(ch, t, count) {
     let ordered=[...new Set([...leading,...ids.filter(id=>!leading.includes(id))])];
     const first=ordered.indexOf(stage?.rotationStartId);if(first>0)ordered=[...ordered.slice(first),...ordered.slice(0,first)];
     const programs = await Promise.all(ordered.map(getMeta));
-    return distinctPrograms(programs.filter(Boolean)).map(m => makeSlot(m, ch, 0, ch.q + "|" + m.id + "|continuous-v1"));
+    const adPool = ch.breaks ? CommercialTiming.library(catalog, ch.breaks.library, ch.breaks.themedAds ? catalog?.channelAds?.[ch.no] || [] : []).commercials : catalog?.channelAds?.[ch.no] || [];
+    const adRotation = CommercialTiming.rotation?.(adPool, ch.q + "|channel-ad-rotation-v1");
+    const unique = distinctPrograms(programs.filter(Boolean));
+    // Small programme pools must not bake the same two ads into every repeat.
+    // Repeat complete programme passes (bounded to 64), advancing the ad deck
+    // while keeping programme order and every source second intact.
+    const passes = adRotation && ch.breaks?.mix !== "trek-first" ? Math.min(64, Math.max(1, Math.ceil(adPool.length / Math.max(1, unique.length)))) : 1;
+    return Array.from({ length: passes }, (_, pass) => unique.map(m => makeSlot(m, ch, 0,
+      ch.q + "|" + m.id + "|continuous-v1" + (pass ? "|ad-cycle:" + pass : ""), adRotation))).flat();
   })().catch(error => { delete continuousCache[ch.q]; throw error; });
   const templates = await continuousCache[ch.q];
   // A brief metadata outage must not leave an empty lineup cached forever.

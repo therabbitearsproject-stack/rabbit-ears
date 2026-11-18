@@ -57,6 +57,11 @@ jobs:
           fi
           # Caption and clock publishers do not change Archive search/admission inputs.
           # They still take the full code/site assembly path, but need no pool crawl.
+          if node scripts/ad-only-publish.mjs "${{ github.event.before }}" "${{ github.sha }}"; then
+            echo "ad_refresh=yes" >> "$GITHUB_OUTPUT"
+            echo "catalog=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           if printf '%s\n' "$changed" | grep -E '^(scripts/|assets/scifi-breaks/|assets/porchlight-breaks/|assets/midnight-mirage-breaks/|assets/trek-bumpers/facts\.json|\.github/workflows/)' | grep -vE '^scripts/(caption-jobs|skippy-captions|caption-library|stage-programming|tv-feed|build-caption-index)\.mjs$|^scripts/.*\.test\.mjs$|^\.github/workflows/catalog\.yml$' | grep -q .; then
             echo "catalog=yes" >> "$GITHUB_OUTPUT"
           # A channel's search is its catalog key, so a changed search (or SAFE) needs a fresh pool.
@@ -98,6 +103,9 @@ jobs:
       - name: Build catalog.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-catalog.mjs
+      - name: Refresh verified ad libraries without discovering programmes
+        if: steps.need.outputs.ad_refresh == 'yes'
+        run: node scripts/refresh-ad-catalog.mjs
       - name: Build games.json
         if: steps.need.outputs.catalog == 'yes'
         run: node scripts/build-games.mjs

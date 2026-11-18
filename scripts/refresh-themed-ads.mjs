@@ -1,5 +1,6 @@
 // Find dated, individual archived commercials by subject. Never accepts long ad compilations.
 import {readFile,writeFile} from 'node:fs/promises';import {topicsFor} from './themed-ad-library.mjs';
+import {retainReviewedAds} from './curated-ad-retention.mjs';
 const themes={games:'nintendo OR sega OR atari OR playstation',computers:'commodore OR amiga OR ibm OR macintosh OR windows OR tandy',cars:'toyota OR ford OR chevrolet OR honda OR pontiac',kitchen:'kitchen OR blender OR cereal OR food OR cooker',music:'records OR album OR guitar OR stereo OR cassette',sports:'nike OR adidas OR gatorade OR reebok',toys:'lego OR barbie OR transformers OR toys',holiday:'christmas OR santa',outdoors:'kodak OR polaroid OR camera OR camping',home:'sears OR furniture OR target'};
 const UA={'User-Agent':'RabbitEarsArchiveAds/1.0 (+https://rabbit-ears.stream)'};
 async function json(url){const r=await fetch(url,{headers:UA,signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
@@ -17,6 +18,7 @@ const found=[];let next=0;const queue=[...ids];await Promise.all(Array.from({len
  found.push(m);
  }catch{const old=previous.find(m=>m.id===id);if(old)found.push(old);}
 }}));
-found.sort((a,b)=>a.id.localeCompare(b.id));if(!found.length)throw Error('No dated individual ads found');
-await writeFile(new URL('./themed-ads.json',import.meta.url),JSON.stringify({generated:new Date().toISOString(),note:'Dated individual Archive spots; historical artifacts, not current sponsorships. Topic labels are metadata-derived.',commercials:found},null,2)+'\n');
-console.log(`${found.length} dated, topic-tagged individual commercials admitted from ${queue.length} candidates.`);
+if(!found.length)throw Error('No dated discovery results; preserving the existing ad library');
+const result=retainReviewedAds(found,previous);
+await writeFile(new URL('./themed-ads.json',import.meta.url),JSON.stringify({generated:new Date().toISOString(),note:'Dated individual Archive spots; historical artifacts, not current sponsorships. Reviewed curated entries retain their verification and topic evidence across limited discovery refreshes.',commercials:result},null,2)+'\n');
+console.log(`${result.length} dated, topic-tagged individual commercials retained/admitted from ${queue.length} discovery candidates.`);

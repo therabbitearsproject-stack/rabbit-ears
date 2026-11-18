@@ -17,9 +17,9 @@ export const fingerprint = ({html,catalog,commercialTiming,mediaCompatibility,pr
  breakLibraries:Object.fromEntries(Object.entries(catalog.breakLibraries||{}).map(([id,lib])=>[id,clockLibrary(lib)])),channelBumpers:Object.fromEntries(Object.entries(catalog.channelBumpers||{}).map(([id,rows])=>[id,rows.map(mediaClock)])),channelAds:Object.fromEntries(Object.entries(catalog.channelAds||{}).map(([id,rows])=>[id,rows.map(mediaClock)]))})).digest('hex');
 function channelSignature(snapshot,ch,site){
  const catalog=snapshot.catalog,rows=(catalog.pools[ch.q]||[]).filter(r=>!site.blocked(r[0],ch)&&!site.blocked(r[6]||r[0],ch));
- return createHash('sha256').update(JSON.stringify({plannerVersion:2,channel:{no:ch.no,q:ch.q,library:ch.library,breaks:ch.breaks},pool:poolClock(rows),
+ return createHash('sha256').update(JSON.stringify({plannerVersion:3,channel:{no:ch.no,q:ch.q,library:ch.library,breaks:ch.breaks},pool:poolClock(rows),
   breaks:ch.breaks?clockLibrary(ch.breaks.library?catalog.breakLibraries?.[ch.breaks.library]:catalog):null,
-  bumpers:(catalog.channelBumpers?.[ch.no]||[]).map(mediaClock),ads:ch.breaks?[]:(catalog.channelAds?.[ch.no]||[]).map(mediaClock)})).digest('hex');
+  bumpers:(catalog.channelBumpers?.[ch.no]||[]).map(mediaClock),ads:ch.breaks&&!ch.breaks.themedAds?[]:(catalog.channelAds?.[ch.no]||[]).map(mediaClock)})).digest('hex');
 }
 
 export async function stageProgramming({previous,next,now=Date.now()/1000,leadSeconds=2*3600+15*60,overrides={version:1,requests:[]}}) {

@@ -1,16 +1,17 @@
 // Pure shared-clock planning: commercials belong to a show's slot, never the TV guide.
 const CommercialTiming = (() => {
   const hash = value => { let n = 2166136261; for (const c of String(value)) { n ^= c.charCodeAt(0); n = Math.imul(n, 16777619); } return n >>> 0; };
+  const fileKey = media => media.file ? (media.archiveId && !media.local ? media.archiveId + "|" : "") + media.file : "";
   function pack(ads, target, seed, { unique = false, maxSpots = 30 } = {}) {
     const order = ads.map(media => ({ media, rank: hash(seed + media.id) }))
       .sort((a, b) => a.rank - b.rank || a.media.id.localeCompare(b.media.id)).map(a => a.media);
     const result = [], usedIds = new Set(), usedFiles = new Set(); let remaining = target;
     for (let cycle = 0; cycle < 30 && result.length < maxSpots && remaining >= 8; cycle++) {
       const next = order.find(a => a.dur <= remaining + .001 && (result.length === 0 || a.id !== result.at(-1).id) &&
-        (!unique || (!usedIds.has(a.id) && (!a.file || !usedFiles.has(a.file)))));
+        (!unique || (!usedIds.has(a.id) && (!fileKey(a) || !usedFiles.has(fileKey(a))))));
       if (!next) break;
       result.push(next); remaining -= next.dur;
-      usedIds.add(next.id); if (next.file) usedFiles.add(next.file);
+      usedIds.add(next.id); if (fileKey(next)) usedFiles.add(fileKey(next));
       order.push(...order.splice(order.indexOf(next), 1));
     }
     return result;
@@ -24,30 +25,42 @@ const CommercialTiming = (() => {
     const order = items.map(media => ({ media, rank: hash(seed + media.id) }))
       .sort((a, b) => a.rank - b.rank || a.media.id.localeCompare(b.media.id))
       .map(a => a.media).filter(media => {
-        if (ids.has(media.id) || media.file && files.has(media.file)) return false;
-        ids.add(media.id); if (media.file) files.add(media.file);
+        if (ids.has(media.id) || fileKey(media) && files.has(fileKey(media))) return false;
+        ids.add(media.id); if (fileKey(media)) files.add(fileKey(media));
         return true;
       });
-    return (target, maxSpots, recent = [], excluded = [], firstRole = null) => {
+    return (target, maxSpots, recent = [], excluded = [], firstRole = null, allowed = () => true) => {
       const chosen = [], usedIds = new Set(excluded.map(m => m.id));
-      const usedFiles = new Set(excluded.map(m => m.file).filter(Boolean));
+      const usedFiles = new Set(excluded.map(fileKey).filter(Boolean));
       const recentIds = new Set(recent.map(m => m.id));
-      const recentFiles = new Set(recent.map(m => m.file).filter(Boolean));
+      const recentFiles = new Set(recent.map(fileKey).filter(Boolean));
       let remaining = target;
       while (chosen.length < maxSpots && remaining >= 8) {
-        const fits = media => media.dur <= remaining + .001 && !usedIds.has(media.id) && (!media.file || !usedFiles.has(media.file));
+        const fits = media => allowed(media) && media.dur <= remaining + .001 && !usedIds.has(media.id) && (!fileKey(media) || !usedFiles.has(fileKey(media)));
         const priority = chosen.length === 0 && firstRole && order.some(media => fits(media) && media.role === firstRole);
         const eligible = media => fits(media) && (!priority || media.role === firstRole);
-        const next = order.find(media => eligible(media) && !recentIds.has(media.id) && (!media.file || !recentFiles.has(media.file))) || order.find(eligible);
+        const next = order.find(media => eligible(media) && !recentIds.has(media.id) && (!fileKey(media) || !recentFiles.has(fileKey(media)))) || order.find(eligible);
         if (!next) break;
         chosen.push(next); remaining -= next.dur;
-        usedIds.add(next.id); if (next.file) usedFiles.add(next.file);
+        usedIds.add(next.id); if (fileKey(next)) usedFiles.add(fileKey(next));
         order.push(...order.splice(order.indexOf(next), 1));
       }
       return chosen;
     };
   }
-  function build(program, policy, ads, bumpers, seed) {
+  // A fresh, deterministic deck for each channel's whole programme rotation.
+  // Eligible years/topics can vary per show without resetting recent-ad history.
+  function rotation(ads, seed) {
+    const deck = rollingDeck(ads, seed), recent = [];
+    return (eligible, target, maxSpots = 2) => {
+      const keys = new Set(eligible.map(media => media.id + "|" + fileKey(media)));
+      const chosen = deck(target, maxSpots, recent.flat(), [], null,
+        media => keys.has(media.id + "|" + fileKey(media)));
+      recent.push(chosen); if (recent.length > 2) recent.shift();
+      return chosen;
+    };
+  }
+  function build(program, policy, ads, bumpers, seed, adRotation = null) {
     // Midnight Mirage's fixed-era movie spots are a BETWEEN-FILMS pod, never
     // scene interruptions. The film's release year does not limit these spots.
     if (policy?.mix === "between-films") {
@@ -55,7 +68,7 @@ const CommercialTiming = (() => {
       let duration = program.dur;
       const eligible = ads.filter(m => m.role === "movie-tv-spot" && Number.isInteger(Number(m.year)) &&
         Number(m.year) >= 1980 && Number(m.year) <= 1999 && Number.isFinite(m.dur) && m.dur >= 8 && m.dur <= 90);
-      for (const media of pack(eligible, policy.target || 120, seed + ":after-film", { unique: true, maxSpots: policy.maxAds || 3 })) {
+      for (const media of adRotation ? adRotation(eligible, policy.target || 120, policy.maxAds || 3) : pack(eligible, policy.target || 120, seed + ":after-film", { unique: true, maxSpots: policy.maxAds || 3 })) {
         segments.push({ kind: "commercial", media, start: duration, end: duration + media.dur, offset: 0, index: segments.length });
         duration += media.dur;
       }
@@ -100,7 +113,8 @@ const CommercialTiming = (() => {
       const bumper = bumpers.length ? bumpers[hash(key) % bumpers.length] : null;
       const before = hash(key + ":position") % 2 === 0;
       if (bumper && before) append("bumper", bumper, bumper.dur);
-      for (const ad of pack(ads, policy.target - (bumper?.dur || 0), key, { unique: !!policy.uniqueAds, maxSpots: policy.maxAds || 30 })) append("commercial", ad, ad.dur);
+      const spots = adRotation ? adRotation(ads, policy.target - (bumper?.dur || 0), policy.maxAds || 30) : pack(ads, policy.target - (bumper?.dur || 0), key, { unique: !!policy.uniqueAds, maxSpots: policy.maxAds || 30 });
+      for (const ad of spots) append("commercial", ad, ad.dur);
       if (bumper && !before) append("bumper", bumper, bumper.dur);
     }
     return { segments, duration: t };
@@ -124,13 +138,23 @@ const CommercialTiming = (() => {
     return result;
   }
   // A named channel library must never silently use another channel's breaks.
-  function library(catalog, id) {
+  function library(catalog, id, themedAds = []) {
     const source = id ? catalog?.breakLibraries?.[id] : catalog;
     const [first, last] = source?.yearRange || [1970, 1999];
     const commercials = (source?.commercials || []).map(r => Array.isArray(r)
       ? { id: r[0], file: r[1], dur: r[2], title: r[3], year: r[4], archiveId: r[6] } : r)
       .filter(m => Number(m.year) >= first && Number(m.year) <= last);
-    return { commercials, bumpers: source?.bumpers || [] };
+    if (!themedAds.length) return { commercials, bumpers: source?.bumpers || [] };
+    const ids = new Set(), files = new Set();
+    const combined = [...commercials, ...themedAds.filter(media =>
+      Number.isInteger(Number(media.year)) && Number(media.year) >= 1940 && Number(media.year) <= 2008 &&
+      Number.isFinite(media.dur) && media.dur >= 8 && media.dur <= 90)].filter(media => {
+      if (ids.has(media.id) || fileKey(media) && files.has(fileKey(media))) return false;
+      ids.add(media.id); if (fileKey(media)) files.add(fileKey(media));
+      return true;
+    });
+    // Added consumer spots still pass the programme's existing eraWindow in build().
+    return { commercials: combined, bumpers: source?.bumpers || [] };
   }
   function program(media) {
     let duration = 0;
@@ -155,5 +179,5 @@ const CommercialTiming = (() => {
     segments.forEach((s,i) => s.index = i);
     return { ...timeline, segments };
   }
-  return { build, at, pack, cycle, library, program, edit };
+  return { build, at, pack, rotation, cycle, library, program, edit };
 })();

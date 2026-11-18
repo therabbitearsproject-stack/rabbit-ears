@@ -79,3 +79,21 @@ test('the break-library loader permits separate station IDs but enforces exact d
   commercials[0].role='movie-tv-spot';commercials[0].sha256='changed';await writeFile(file,JSON.stringify(manifest));await assert.rejects(loadChannelBreakLibrary('midnight-mirage',url),/checksum/);
  }finally{await rm(folder,{recursive:true,force:true});}
 });
+
+test('the expanded real Mirage library retains whole, source-verified theatrical television spots',async()=>{
+ const library=await loadChannelBreakLibrary('midnight-mirage');
+ const added=library.commercials.filter(m=>m.validation?.reviewBatch==='midnight-mirage-expansion-2026-11-18');
+ assert.equal(library.commercials.length,20);
+ assert.equal(added.length,6);
+ assert.ok(added.every(m=>m.role==='movie-tv-spot'&&m.year>=1980&&m.year<=1999&&m.dur>=15&&m.dur<=35));
+ for(const media of added){
+  assert.equal(media.source.start,0,'whole original spot begins at the original first frame');
+  assert.ok(Math.abs(media.source.end-media.dur)<.2,'no neighboring footage or edited advertisement boundaries');
+  assert.match(media.source.sha256,/^[a-f0-9]{64}$/);
+  assert.ok(media.source.yearEvidence);
+  assert.equal(media.validation.fullVideoAudioDecode,'passed');
+  assert.equal(media.validation.sourceType,'theatrical-film-tv-spot');
+ }
+ assert.equal(new Set(library.commercials.map(m=>m.sha256)).size,library.commercials.length,'duplicate assets cannot inflate variety');
+ assert.ok(library.commercials.every(m=>!library.reviewExclusions?.some(x=>x.archiveId===m.source.archiveId)));
+});

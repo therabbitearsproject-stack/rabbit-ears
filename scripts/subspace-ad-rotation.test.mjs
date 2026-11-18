@@ -79,7 +79,12 @@ test('publishing a larger Subspace pool preserves its next two hours and other c
     commercialTiming: code,
     mediaCompatibility: readFileSync(new URL('../media-compatibility.js', import.meta.url), 'utf8')
   };
-  const next = structuredClone(previous), now = Date.UTC(2026, 10, 17, 12) / 1000;
+  const now = Date.UTC(2026, 10, 17, 12) / 1000;
+  // First establish this planner version's baseline. A repository catalog may
+  // still contain anchors from an older general-ad planner; that migration is
+  // distinct from the isolated Subspace-pool change exercised below.
+  previous.catalog.programming = await stageProgramming({ previous: structuredClone(previous), next: previous, now });
+  const next = structuredClone(previous);
   next.catalog.breakLibraries['sci-fi-channel'].commercials.push({
     id: 'new-review-fixture', file: 'fixture-only.mp4', title: 'Expanded primary rotation', dur: 30,
     year: 1996, local: true, role: 'subspace-scifi-commercial'

@@ -49,6 +49,7 @@ function nativeText(value) {
     let backing = store.get('re_caption_backing', false) === true;
     let media = null, baseMedia = null, track = null, opener = null, lastText = '', nativeOnly = false;
     let captionIndex = null, overlaySource = '', requestNumber = 0, captionFetch=null, captionBlob='';
+    let languageRefresh=null,lastLanguageRefresh=-Infinity;
     const languages=['en','zh','hi','es','ar','fr','bn','pt','id','ur'];
     let language=window.RabbitLocale?.resolve()||store.get('re_caption_language','en'),translations=[];
     if(!languages.includes(language))language='en';
@@ -64,14 +65,17 @@ function nativeText(value) {
         else if(record?.captionMetadata?.kind==='auto-generated'&&record.captionMetadata.language!=='en'&&baseMedia.captionMetadata?.language==='en'&&baseMedia.sub){/* Keep an existing English track over a foreign automatic alternative. */}
         else if(record){
           next={...baseMedia,sub:record.sub,captionMetadata:record.captionMetadata};
-          url='/captions/'+encodeURIComponent(record.sub.slice(6))+(/^[a-f0-9]{64}$/i.test(record.sha256||'')?'?v='+record.sha256:'');
+          url=(record.captionMetadata?.kind==='provided'?record.sourcePath:'/captions/'+encodeURIComponent(record.sub.slice(6)))+(/^[a-f0-9]{64}$/i.test(record.sha256||'')?'?v='+record.sha256:'');
         }else if(isAuto(baseMedia))next={...baseMedia,sub:'',captionMetadata:undefined};
       }
       const original=captionIndex?.get(exactKey(baseMedia));
       const translation=original&&!original.burned&&translations.find(r=>exactKey(r)===exactKey(baseMedia)&&r.sourceSha256===original.sha256&&r.language===language);
       if(translation){next={...baseMedia,sub:'local:'+translation.file,captionMetadata:{kind:'auto-generated',language,translated:true,sourceLanguage:translation.sourceLanguage}};url='/captions/'+translation.file+'?v='+translation.sha256;}
       video.dataset.captionLanguage=language;
-      video.dataset.captionTranslation=translation?'saved':language!==(next?.captionMetadata?.language||'en')?'pending':'original';
+      video.dataset.captionRequestedLanguage=language;
+      const embedded=next?.burnedCaptions||['burned-in','embedded'].includes(next?.captionMetadata?.kind);
+      video.dataset.captionActualLanguage=next?.sub?(next.captionMetadata?.language||'en'):'';
+      video.dataset.captionTranslation=embedded?'embedded':translation?'saved':language!==(next?.captionMetadata?.language||'en')?'pending':'original';
       if(next?.id!==media?.id||next?.sub!==media?.sub||url!==overlaySource){detach();closeMenu(false);}
       media=next;overlaySource=url;updateAppearance();attach();
     }
@@ -99,6 +103,15 @@ function nativeText(value) {
         }catch{/* Keep original captions while a language is unavailable. */}
       }catch{/* A failed refresh preserves the last known caption availability. */}
     }
+    function refreshRequestedLanguage(){
+      // Language/menu taps share one bounded refresh; repeated taps must not
+      // redownload the whole translation manifest for every selection.
+      if(languageRefresh)return languageRefresh;
+      if(Date.now()-lastLanguageRefresh<10000)return;
+      lastLanguageRefresh=Date.now();
+      languageRefresh=refreshIndex().finally(()=>{languageRefresh=null;});
+      return languageRefresh;
+    }
     const layer = document.createElement('div');
     layer.className = 'caption-layer'; layer.hidden = true;
     layer.setAttribute('role', 'region'); layer.setAttribute('aria-label', 'Captions'); layer.setAttribute('aria-live', 'off');
@@ -114,6 +127,10 @@ function nativeText(value) {
       return ({en:'English',cs:'Czech',ja:'Japanese',fr:'French',de:'German',es:'Spanish',pl:'Polish',zh:'Chinese',ru:'Russian',ko:'Korean',it:'Italian',pt:'Portuguese',ar:'Arabic',hi:'Hindi'})[code]||code;
     }
     const trackLanguage=()=>media?.captionMetadata?.language||'en';
+    function fallbackNotice(){
+      if(!media?.sub||video.dataset.captionTranslation!=='pending')return '';
+      return languageName(language)+' translation is not ready; '+(style==='none'?languageName(trackLanguage())+' captions available.':'showing '+languageName(trackLanguage())+' captions.');
+    }
     function trackLabel(){
       const name=languageName(trackLanguage());
       if(!translated())return name+(automatic()?' (auto-generated)':'');
@@ -139,12 +156,13 @@ function nativeText(value) {
     function syncButtons() {
       const available = !!media?.sub;
       const embedded=media?.burnedCaptions||['burned-in','embedded'].includes(media?.captionMetadata?.kind);
+      const fallback=fallbackNotice();
       // Read-only availability lets the desktop viewer avoid duplicate recognition.
       video.dataset.captionAvailability = embedded ? 'burned-in' : available ? 'provided' : media ? 'none' : 'pending';
       for (const b of [button, ...screen.querySelectorAll('[data-remote="cc"]')]) {
         b.disabled = !available;
-        b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}` : embedded ? 'Captions are embedded in this show' : 'Captions unavailable');
-        b.title = available ? 'Caption options (C)' : embedded ? 'Captions are embedded in this show' : 'No captions for this show';
+        b.setAttribute('aria-label', available ? `Caption options: ${style === 'none' ? 'off' : style}${fallback ? '. '+fallback : ''}` : embedded ? 'Captions are embedded in this show' : 'Captions unavailable');
+        b.title = available ? (fallback ? fallback+' ' : '')+'Caption options (C)' : embedded ? 'Captions are embedded in this show' : 'No captions for this show';
         b.setAttribute('aria-pressed', String(available && style !== 'none'));
         b.setAttribute('aria-haspopup', 'dialog'); b.setAttribute('aria-controls', menu.id); b.setAttribute('aria-expanded', String(!menu.hidden));
       }
@@ -155,8 +173,9 @@ function nativeText(value) {
       layer.dataset.color = style; layer.dataset.backing = String(backing);
       layer.dir=['ar','ur'].includes(trackLanguage())?'rtl':'ltr';
       layer.lang=trackLanguage();
-      translationStatus.hidden=video.dataset.captionTranslation!=='pending';
-      translationStatus.textContent=translationStatus.hidden?'':languageName(language)+' translation is not ready; showing the available original captions.';
+      const fallback=fallbackNotice();
+      translationStatus.hidden=!fallback;
+      translationStatus.textContent=fallback;
       video.dataset.captionColor = style; video.dataset.captionBacking = String(backing);
       syncButtons();
     }
@@ -225,6 +244,7 @@ function nativeText(value) {
     function toggleMenu() {
       if (!media?.sub) return;
       if (!menu.hidden) { closeMenu(); return; }
+      if(video.dataset.captionTranslation==='pending')refreshRequestedLanguage();
       opener = menu.ownerDocument.activeElement?.matches('#cc,[data-remote="cc"]') ? menu.ownerDocument.activeElement : button;
       menu.hidden = false; syncButtons(); radios[choices.indexOf(style)].focus({ preventScroll: true });
       screen.dispatchEvent(new Event('captionmenuopen'));
@@ -256,7 +276,7 @@ function nativeText(value) {
       if(choices.includes(values.re_caption_style))style=values.re_caption_style;
       else if(typeof values.re_captions==='boolean')style=values.re_captions?(style==='none'?'white':style):'none';
       if(typeof values.re_caption_backing==='boolean'){backing=values.re_caption_backing;checkbox.checked=backing;}
-      if(languageChanged)resolveMedia();else{updateAppearance();attach();}
+      if(languageChanged){resolveMedia();return refreshRequestedLanguage();}else{updateAppearance();attach();}
     }
     return { setMedia, toggleMenu, syncButtons, closeMenu, refreshIndex, applyPreferences };
   }
