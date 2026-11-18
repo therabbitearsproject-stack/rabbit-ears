@@ -1,0 +1,2057 @@
+WEBVTT
+
+1
+00:00:13.001 --> 00:00:16.001
+Il s’agit de trois gros sacs de déchets.
+
+2
+00:00:17.000 --> 00:00:21.001
+C&#x27;est un compacteur de déchets et c&#x27;est ce qu&#x27;il ressemble après
+
+3
+00:00:21.001 --> 00:00:23.000
+Elle a été déchirée par cette chose.
+
+4
+00:00:24.000 --> 00:00:28.001
+Maintenant, nous avons trois disques remplis de fichiers graphiques, un compresseur de fichier et ici
+
+5
+00:00:28.001 --> 00:00:31.001
+Ce que tout semble après qu&#x27;il a été déchiré par le logiciel.
+
+6
+00:00:31.001 --> 00:00:33.000
+La même idée, le même problème.
+
+7
+00:00:33.000 --> 00:00:36.001
+Pas assez de déchets pour tous nos déchetteries, jamais assez dur
+
+8
+00:00:36.001 --> 00:00:38.000
+espace de disque pour tous nos fichiers.
+
+9
+00:00:38.001 --> 00:00:42.001
+Donc, aujourd&#x27;hui, nous allons jeter les déchets, mais nous verrons les derniers dans le fichier
+
+10
+00:00:42.001 --> 00:00:46.001
+La technologie de compression sur cette édition des Chroniques informatiques.
+
+11
+00:01:01.000 --> 00:01:05.000
+Les chronicles informatiques sont rendus possibles en partie par les éditeurs de logiciels
+
+12
+00:01:05.000 --> 00:01:10.001
+Association qui vous rappelle qu&#x27;il s&#x27;agit d&#x27;une défense fédérale pour copier le logiciel et par PC
+
+13
+00:01:10.001 --> 00:01:14.001
+Connection et connexion Mac et par Byte Magazine et
+
+14
+00:01:14.001 --> 00:01:16.001
+Bix, l’échange d’informations Byte.
+
+15
+00:01:20.000 --> 00:01:22.000
+Bienvenue dans les chronicles informatiques.
+
+16
+00:01:22.000 --> 00:01:24.001
+Je suis Stuart Chafay et je suis avec Jan Lewis cette semaine.
+
+17
+00:01:25.000 --> 00:01:28.001
+Jan sur notre ordinateur ici nous avons un fichier ici vous pouvez voir appelé demo doc et
+
+18
+00:01:28.001 --> 00:01:31.000
+Il occupe actuellement environ 60K d’espace.
+
+19
+00:01:31.001 --> 00:01:35.000
+J&#x27;ai aussi ici un programme de compression de fichiers appelé LHA.
+
+20
+00:01:35.000 --> 00:01:38.000
+C&#x27;est un programme de domaine public que vous pouvez obtenir sur les bulletins et nous sommes dans le
+
+21
+00:01:38.000 --> 00:01:42.000
+Le processus de compression de ce fichier 60K est maintenant et il est presque terminé.
+
+22
+00:01:42.000 --> 00:01:44.000
+Il va nous raconter combien nous avons pu
+
+23
+00:01:44.000 --> 00:01:45.001
+Comprimer ce fichier et il est terminé.
+
+24
+00:01:46.000 --> 00:01:48.000
+Il est réduit à 28% de sa taille initiale.
+
+25
+00:01:48.001 --> 00:01:51.001
+Il y a la version comprimée du fichier, il prend 17K maintenant.
+
+26
+00:01:52.000 --> 00:01:55.000
+Nous savons qu&#x27;il n&#x27;y a pas de déjeuner gratuit, il n&#x27;est pas de machine de mouvement perpétuelle.
+
+27
+00:01:55.000 --> 00:01:56.001
+Où est passé le 40K ?
+
+28
+00:01:56.001 --> 00:01:57.000
+Comment faisons-nous cela ?
+
+29
+00:01:57.000 --> 00:02:01.001
+La manière générale que ces algorithmes fonctionnent est qu&#x27;ils recherchent des répétitions
+
+30
+00:02:01.001 --> 00:02:05.000
+Les modèles de bits et ils les raccourcissent ou les compressent.
+
+31
+00:02:05.001 --> 00:02:09.000
+Maintenant, il est clair qu&#x27;ils vont être des trade-offs, mais généralement l&#x27;utilisateur a quelques
+
+32
+00:02:09.000 --> 00:02:10.001
+Contrôler ce que les trade-offs sont.
+
+33
+00:02:10.001 --> 00:02:13.000
+Combien de compression voulez-vous ?
+
+34
+00:02:13.000 --> 00:02:16.001
+Avez-vous besoin de le compresser par un facteur de 40 ou par un Facteur de 2 par exemple?
+
+35
+00:02:17.001 --> 00:02:20.001
+La deuxième chose est à quel type de vitesse vous avez besoin de décomprimer?
+
+36
+00:02:20.001 --> 00:02:24.001
+Par exemple, pour faire une vidéo de mouvement complet, vous avez besoin de 30 cadres par seconde et de
+
+37
+00:02:24.001 --> 00:02:27.000
+La décompression doit être extrêmement rapide dans ce cas.
+
+38
+00:02:27.001 --> 00:02:31.001
+Alors la troisième chose est quel type de perte et de résolution pouvez-vous tolérer?
+
+39
+00:02:31.001 --> 00:02:33.001
+Un bon exemple serait les fichiers sonores.
+
+40
+00:02:34.000 --> 00:02:37.000
+Habituellement, vous pouvez perdre certaines fréquences et encore sortir avec un bon son.
+
+41
+00:02:37.000 --> 00:02:39.000
+Vous pouvez y gagner quelque chose.
+
+42
+00:02:39.001 --> 00:02:43.000
+Eh bien Jan aujourd&#x27;hui nous verrons plusieurs approches différentes pour la compression des fichiers,
+
+43
+00:02:43.000 --> 00:02:47.001
+utilités logicielles et add-ons matériels et nous allons déchirer beaucoup de fichiers sur un Mac
+
+44
+00:02:47.001 --> 00:02:49.000
+Il y a 486 PC.
+
+45
+00:02:50.000 --> 00:02:54.000
+Maintenant que vous êtes en train de traiter des images vidéo comme Jan a dit le problème de la taille du fichier et
+
+46
+00:02:54.000 --> 00:02:56.001
+La vitesse de décompression des fichiers devient vraiment critique.
+
+47
+00:02:57.000 --> 00:03:00.001
+Nous allons commencer par une visite à SuperMac Technology à Sunnyvale, en Californie
+
+48
+00:03:00.001 --> 00:03:05.000
+Pour en savoir plus sur deux produits de compression appelés Realtime et le Video Spicket.
+
+49
+00:03:06.001 --> 00:03:13.000
+Le plus grand problème pour stocker la vidéo sur l&#x27;ordinateur serait de se compresser
+
+50
+00:03:13.000 --> 00:03:17.001
+la vidéo afin qu&#x27;elle s&#x27;adapte au disque informatique numéro un.
+
+51
+00:03:18.000 --> 00:03:22.001
+Il y a eu des solutions analogiques dans le passé où vous n&#x27;avez qu&#x27;une vidéo analogique dans un
+
+52
+00:03:22.001 --> 00:03:27.001
+fenêtres qui étaient utiles si vous aviez des vidéos de disque laser mais
+
+53
+00:03:27.001 --> 00:03:31.000
+Le point de l&#x27;affaire est que vous ne pouviez vraiment rien faire avec la vidéo.
+
+54
+00:03:31.001 --> 00:03:35.001
+Vous ne pouvez pas manipuler la vidéo et vous ne pouvez même pas stocker la vidéo sur un disque.
+
+55
+00:03:35.001 --> 00:03:37.000
+Importer dans d’autres programmes.
+
+56
+00:03:38.000 --> 00:03:41.000
+C&#x27;est pourquoi SuperMac a développé le Video Spicket en temps réel.
+
+57
+00:03:42.001 --> 00:03:47.001
+En temps réel, il a été renommé Premier et licencié à Adobe Systems.
+
+58
+00:03:48.000 --> 00:03:52.001
+C&#x27;est un éditeur vidéo numérique qui vous permet de sélectionner des clips vidéo et audio, apporter
+
+59
+00:03:52.001 --> 00:03:55.001
+Ils sont installés sur votre Mac, puis ajouter des effets spéciaux.
+
+60
+00:03:56.000 --> 00:03:59.000
+Il y a des avantages évidents pour combiner la vidéo avec les ordinateurs.
+
+61
+00:03:59.001 --> 00:04:05.000
+La vidéo sur l&#x27;ordinateur au niveau du consommateur vous permettrait, par exemple, de tirer
+
+62
+00:04:05.000 --> 00:04:09.000
+Quelques films à la maison et digitalisez vos films à domicile et travaillez avec ceux sur le
+
+63
+00:04:09.000 --> 00:04:14.001
+l&#x27;ordinateur, prendre les fichiers individuels sélectionnés de ces films et les stocker
+
+64
+00:04:14.001 --> 00:04:16.000
+et les sauver de différentes manières.
+
+65
+00:04:16.000 --> 00:04:20.001
+Premier est en fait un film de construction qui travaille avec QuickTime d&#x27;Apple.
+
+66
+00:04:21.000 --> 00:04:25.001
+Le Video Spicket de SuperMac est un capteur de cadre numérique qui vous permet de capturer
+
+67
+00:04:25.001 --> 00:04:29.001
+et compressez les images vidéo sans utiliser l&#x27;ensemble de votre disque dur.
+
+68
+00:04:30.000 --> 00:04:34.001
+Alors que la vidéo numérique offre quelques avantages évidents à la bande vidéo analogique, la
+
+69
+00:04:34.001 --> 00:04:39.001
+Les gens de SuperMac disent que ce sera un moment avant que nous utilisions tous les camcorders numériques.
+
+70
+00:04:40.000 --> 00:04:45.001
+La vidéo numérique basée sur un ordinateur ne peut remplacer la bande vidéo que lorsque la compression
+
+71
+00:04:45.001 --> 00:04:49.001
+Il est assez bon et la qualité de l&#x27;image est assez bonne
+
+72
+00:04:49.001 --> 00:04:51.000
+Pour faire de cela une réalité.
+
+73
+00:04:51.000 --> 00:04:54.001
+Je ne pense pas que c&#x27;est quelque chose qui se passera dans l&#x27;année prochaine ou deux.
+
+74
+00:04:54.001 --> 00:04:57.000
+Pour les Chroniques informatiques, je suis Maria Gabriel.
+
+75
+00:05:09.001 --> 00:05:13.000
+Nous allons maintenant regarder deux approches différentes pour enregistrer la compression sur
+
+76
+00:05:13.000 --> 00:05:16.000
+Votre PC ici pour nous montrer la solution logicielle appelée PK-Zip.
+
+77
+00:05:17.000 --> 00:05:19.001
+Il est Mr. Phil Katz, président de PK-Wear.
+
+78
+00:05:20.000 --> 00:05:24.000
+Avec nous pour nous montrer une solution matérielle est Gary Clow de Stack Electronics.
+
+79
+00:05:24.001 --> 00:05:24.001
+Jean ?
+
+80
+00:05:25.000 --> 00:05:29.001
+Gary, en regardant certains de ces produits de compression, nous voyons des solutions matérielles
+
+81
+00:05:29.001 --> 00:05:31.000
+Et nous voyons des solutions logicielles.
+
+82
+00:05:31.001 --> 00:05:34.000
+Vous pouvez expliquer quelle est la différence et quels sont les avantages et
+
+83
+00:05:34.000 --> 00:05:35.001
+Des avantages pour les deux ?
+
+84
+00:05:35.001 --> 00:05:39.001
+Eh bien, il y a en fait des moments où vous voulez utiliser le logiciel dans le cas où
+
+85
+00:05:39.001 --> 00:05:42.001
+Vous n’avez pas le moyen d’entrer le matériel dans votre système, par exemple, sur un ordinateur portable
+
+86
+00:05:42.001 --> 00:05:45.000
+ou une machine note-tête où il n&#x27;y a pas de moyen d&#x27;entrer dans le matériel.
+
+87
+00:05:45.001 --> 00:05:47.001
+Ou il y a des moments où vous voulez le matériel pour la vitesse,
+
+88
+00:05:48.000 --> 00:05:49.001
+Mais en principe, il baisse à la vitesse.
+
+89
+00:05:50.000 --> 00:05:51.001
+Le matériel vous donne la vitesse maximale.
+
+90
+00:05:52.000 --> 00:05:54.000
+Et nous verrons cela en seulement une minute quand vous nous montrerez votre produit stack.
+
+91
+00:05:54.001 --> 00:05:58.001
+Alright Phil, nous allons nous tourner vers vous et vous avez le célèbre PK-Zip et montrer
+
+92
+00:05:58.001 --> 00:06:00.000
+Comment vous l&#x27;utilisez et ce qu&#x27;il fait réellement.
+
+93
+00:06:00.001 --> 00:06:03.000
+PK-Zip est une utilité d’archivage à but général.
+
+94
+00:06:03.000 --> 00:06:06.000
+Il est utilisé sur de nombreux systèmes en ligne tels que CompuServe.
+
+95
+00:06:06.000 --> 00:06:09.001
+Il est également utilisé pour la distribution de nombreux logiciels commerciaux.
+
+96
+00:06:10.000 --> 00:06:13.000
+Ici sur l&#x27;écran j&#x27;ai plusieurs types de fichiers différents.
+
+97
+00:06:13.000 --> 00:06:17.000
+J&#x27;ai un fichier Windows Bitmap, j&#x27;ai une base de données et un simple fichier texte.
+
+98
+00:06:17.001 --> 00:06:24.001
+Ce que je vais faire maintenant est de mettre cette fenêtre
+
+99
+00:06:24.001 --> 00:06:29.000
+et exécute PK-Zip pour comprimer les fichiers que je viens de montrer.
+
+100
+00:06:31.000 --> 00:06:35.000
+Et PK-Zip montrera le pourcentage des fichiers comprimés et ensuite le total
+
+101
+00:06:35.000 --> 00:06:36.001
+Quantité d’épargne lorsqu’elle est faite.
+
+102
+00:06:40.000 --> 00:06:41.000
+Et que nous avons alors ?
+
+103
+00:06:41.001 --> 00:06:45.001
+Et il s&#x27;agit d&#x27;un fichier compressé, un fichier zip créé par PK-Zip.
+
+104
+00:06:46.001 --> 00:06:51.000
+Le fichier Bitmap que nous avons récemment comprimé, par exemple, était utilisé pour être 150K et il est maintenant
+
+105
+00:06:51.000 --> 00:06:55.000
+Comprimé à 18K, 89% d&#x27;épargne.
+
+106
+00:06:55.001 --> 00:06:59.001
+En général, le fichier zip contient de nombreux différents types de fichiers, fichières exécutables,
+
+107
+00:06:59.001 --> 00:07:05.001
+fichiers de base de données, un fichier graphique et ce qui a été utilisé pour prendre un peu plus d&#x27;un megabyte de
+
+108
+00:07:05.001 --> 00:07:10.000
+L&#x27;espace est maintenant comprimé à environ 1. 2 megabytes ou 1 tiers de la taille originale.
+
+109
+00:07:10.000 --> 00:07:12.000
+En réalité, 11 megabytes à 1.2.
+
+110
+00:07:12.001 --> 00:07:13.000
+C’est juste ça.
+
+111
+00:07:15.001 --> 00:07:21.000
+Nous avons également une utilité appelée PK-SFX qui permet à quelqu&#x27;un de prendre un comprimé
+
+112
+00:07:21.000 --> 00:07:23.001
+fichier zip et le convertir en un fichier exécutable standard.
+
+113
+00:07:24.000 --> 00:07:28.000
+Ainsi, les informations comprimées peuvent être transférées à quelqu&#x27;un qui ne
+
+114
+00:07:28.000 --> 00:07:32.000
+Il est nécessaire d&#x27;avoir les utilités PK-Wear mais veut sauver
+
+115
+00:07:32.000 --> 00:07:33.001
+L’espace disque ou le temps de transfert.
+
+116
+00:07:35.000 --> 00:07:40.000
+Et c&#x27;est un standard MS-DOS exécutable que j&#x27;exécute maintenant qui est en fait
+
+117
+00:07:40.000 --> 00:07:42.000
+extraire les données comprimées de l’intérieur.
+
+118
+00:07:43.001 --> 00:07:45.001
+Ok, qu&#x27;est-ce que nous pouvons faire avec cela ?
+
+119
+00:07:46.000 --> 00:07:51.000
+Nous avons également une utilité appelée PK-Lite qui peut prendre n&#x27;importe quel standard DOS exécutable
+
+120
+00:07:51.000 --> 00:07:58.000
+programme, toute application et compresses qui sont exécutables à un autre compressé
+
+121
+00:07:58.000 --> 00:08:00.000
+l&#x27;exécutif que lorsque vous le déployez, il est automatiquement
+
+122
+00:08:00.000 --> 00:08:02.000
+Il s&#x27;extrait dans la mémoire et fonctionne normalement.
+
+123
+00:08:02.000 --> 00:08:05.001
+Il vous permet de sauvegarder tous vos programmes exécutables dans un format comprimé.
+
+124
+00:08:05.001 --> 00:08:07.000
+Ainsi, vous pouvez le faire à partir de la version comprimée.
+
+125
+00:08:07.000 --> 00:08:12.000
+Oui, et c&#x27;est très utile sur les ordinateurs portables et les machines où l&#x27;espace disque est limité
+
+126
+00:08:12.000 --> 00:08:14.000
+Et les exécuteurs fonctionnent comme l&#x27;original.
+
+127
+00:08:14.001 --> 00:08:14.001
+Ah Ah Ah !
+
+128
+00:08:15.001 --> 00:08:16.000
+Et qu’est-ce qu’il fait d’autre ?
+
+129
+00:08:16.001 --> 00:08:17.001
+Il y a encore quelques trucs, je pense.
+
+130
+00:08:18.000 --> 00:08:21.000
+Eh bien, nous avons plusieurs produits liés à la compression de données.
+
+131
+00:08:22.000 --> 00:08:25.001
+Un de nos nouveaux produits est une bibliothèque de compression de données qui permet à tout
+
+132
+00:08:25.001 --> 00:08:29.000
+Programme d&#x27;applications pour intégrer notre technologie de compression
+
+133
+00:08:29.000 --> 00:08:30.001
+dans leur programme d’application.
+
+134
+00:08:31.000 --> 00:08:34.001
+Nous avons également des versions menus de notre logiciel et
+
+135
+00:08:34.001 --> 00:08:36.000
+d’autres utilités liées à la compression.
+
+136
+00:08:36.001 --> 00:08:37.000
+[...]
+
+137
+00:08:37.000 --> 00:08:39.000
+Phil, si je peux vous demander de vous débarrasser de Windows ici
+
+138
+00:08:39.000 --> 00:08:40.001
+Nous pouvons maintenant nous tourner vers Gary et faire un coup d’œil.
+
+139
+00:08:41.000 --> 00:08:43.000
+Maintenant, vous utilisez vraiment le matériel et le logiciel dans ce que vous
+
+140
+00:08:43.000 --> 00:08:44.001
+Vous faites avec votre produit stack, n’est-ce pas ?
+
+141
+00:08:44.001 --> 00:08:45.000
+C’est juste ça.
+
+142
+00:08:45.000 --> 00:08:48.000
+Nous avons une version qui est un logiciel uniquement pour les ordinateurs portables et les notebooks et alors nous
+
+143
+00:08:48.000 --> 00:08:52.000
+avoir une gamme de produits qui ont le co-processeur avec nos données
+
+144
+00:08:52.000 --> 00:08:54.000
+Compression du circuit intégré sur elle.
+
+145
+00:08:54.000 --> 00:08:58.000
+Il s&#x27;agit en fait d&#x27;un fichier de compression de données que nous avons conçu nous-mêmes
+
+146
+00:08:58.000 --> 00:09:01.001
+et nous avons un pour les systèmes 8 bits et XT bus, AT bus
+
+147
+00:09:01.001 --> 00:09:03.000
+Systèmes et micro-canaux.
+
+148
+00:09:03.001 --> 00:09:06.000
+Bon, je pense que nous avons le, nous sommes de retour à l&#x27;ancien C-prompter et si vous pouvez
+
+149
+00:09:06.000 --> 00:09:07.001
+Rendez-vous et montez-nous ce qu’il fait.
+
+150
+00:09:08.000 --> 00:09:10.001
+Bon, ce que je vais faire, c&#x27;est d&#x27;entrer dans notre assistant de commande.
+
+151
+00:09:10.001 --> 00:09:14.000
+Cela vient avec le stack et vous permet d&#x27;accéder à l&#x27;ensemble du stack
+
+152
+00:09:14.000 --> 00:09:15.001
+Les commandes d’utilité qui viennent.
+
+153
+00:09:16.000 --> 00:09:18.000
+Ce que nous allons faire est de faire une installation ici.
+
+154
+00:09:18.001 --> 00:09:21.001
+Maintenant, les gens achètent notre produit parce qu&#x27;ils veulent vraiment installer
+
+155
+00:09:21.001 --> 00:09:23.000
+Un autre disque dur sur leur système.
+
+156
+00:09:23.001 --> 00:09:27.000
+Ils n&#x27;ont vraiment pas besoin de connaître la compression ou de comprendre la compresse des données.
+
+157
+00:09:27.001 --> 00:09:30.001
+Ils veulent vraiment juste ajouter de la capacité à leur système.
+
+158
+00:09:31.000 --> 00:09:36.001
+Donc j&#x27;ai choisi l&#x27;option ici pour installer le stacker sur un disque stacker vide ou
+
+159
+00:09:36.001 --> 00:09:38.000
+Construire un stacker vide.
+
+160
+00:09:38.000 --> 00:09:41.001
+Maintenant, si vous avez déjà des données sur votre disque dur, vous pouvez choisir l&#x27;autre option
+
+161
+00:09:41.001 --> 00:09:46.000
+Et nous allons y aller et en fait prendre les données que vous avez existantes, le déplacer
+
+162
+00:09:46.000 --> 00:09:50.000
+pour le stacker drive et construire progressivement le stack drive en
+
+163
+00:09:50.000 --> 00:09:51.001
+Le vieux espace lorsque les fichiers sont supprimés.
+
+164
+00:09:51.001 --> 00:09:53.000
+Donc, vous n’avez pas besoin d’un mouvement vide pour le faire ?
+
+165
+00:09:53.000 --> 00:09:54.000
+Vous n’avez pas à.
+
+166
+00:09:54.000 --> 00:09:58.001
+Dans ce cas, nous avons un disque de 600 megabyte avec 256 megabytes gratuits.
+
+167
+00:09:58.001 --> 00:10:01.000
+Je vais juste faire ce qu&#x27;un utilisateur typique peut faire.
+
+168
+00:10:01.000 --> 00:10:03.001
+Prenez un segment de 20 megabytes du moteur.
+
+169
+00:10:03.001 --> 00:10:05.001
+Nous avions donc une capacité de 20 megabytes.
+
+170
+00:10:05.001 --> 00:10:06.000
+C’est juste ça.
+
+171
+00:10:06.001 --> 00:10:07.001
+Et nous allons le transformer en 40.
+
+172
+00:10:07.001 --> 00:10:08.000
+[...]
+
+173
+00:10:08.001 --> 00:10:11.000
+Je vais donc montrer à tout le monde à quel point vous pouvez installer rapidement et facilement un
+
+174
+00:10:11.000 --> 00:10:12.001
+40 megabytes sur votre système.
+
+175
+00:10:13.000 --> 00:10:14.001
+J’ai juste fait l’installation créée.
+
+176
+00:10:15.000 --> 00:10:17.001
+Maintenant, ce que vous voyez venir ici est le disque de vitesse Norton.
+
+177
+00:10:18.000 --> 00:10:22.000
+Ceci est lié à notre produit et il sort et optimise votre
+
+178
+00:10:22.000 --> 00:10:26.001
+disque existant pour s&#x27;assurer que lorsque le disque stacker est créé, il est tout en
+
+179
+00:10:26.001 --> 00:10:28.000
+Une zone contagieuse sur le disque.
+
+180
+00:10:28.000 --> 00:10:30.000
+Vous obtenez le maximum de performance de cette façon.
+
+181
+00:10:30.000 --> 00:10:32.001
+Il a nettoyé le moteur existant avec un 20 megabytes.
+
+182
+00:10:32.001 --> 00:10:36.000
+J&#x27;ai fait cela maintenant et ce qui a réellement créé ou réellement nettoyé
+
+183
+00:10:36.000 --> 00:10:37.001
+sur les 600 megabytes.
+
+184
+00:10:38.000 --> 00:10:38.000
+OK !
+
+185
+00:10:38.001 --> 00:10:40.000
+Vous devez réinitialiser le système et
+
+186
+00:10:40.000 --> 00:10:42.000
+Il le fait automatiquement pour vous.
+
+187
+00:10:42.000 --> 00:10:44.001
+Et la raison est que nous opérons en tant que chauffeur d&#x27;appareils.
+
+188
+00:10:44.001 --> 00:10:46.000
+Nous sommes un conducteur de deux appareils.
+
+189
+00:10:46.001 --> 00:10:48.001
+Et ce qui signifie que la compression se produit
+
+190
+00:10:48.001 --> 00:10:50.000
+automatique et transparente.
+
+191
+00:10:50.001 --> 00:10:53.001
+Il vous donne un nouveau moteur à utiliser tout comme vous voulez un moteur DOS.
+
+192
+00:10:54.000 --> 00:10:57.000
+Ainsi, il n&#x27;y a pas de commandes pour exécuter des fichiers de compression ou de décompression.
+
+193
+00:10:57.001 --> 00:10:59.001
+Tous les fichiers sont conservés compressés sur le disque.
+
+194
+00:10:59.001 --> 00:11:02.001
+Et l&#x27;effet, bien sûr, est doublé de la capacité sur votre disque.
+
+195
+00:11:02.001 --> 00:11:02.001
+[...]
+
+196
+00:11:02.001 --> 00:11:04.001
+Nous sommes ici pour redémarrer maintenant et voir ce qui s&#x27;est passé ici.
+
+197
+00:11:05.000 --> 00:11:08.001
+En principe, alors vous allez émettre des commandes qui sont DOS commandes fondamentalement et
+
+198
+00:11:08.001 --> 00:11:11.000
+Il fera la compression de manière transparente.
+
+199
+00:11:11.000 --> 00:11:12.000
+C’est exactement juste.
+
+200
+00:11:12.001 --> 00:11:14.000
+Et vous avez juste vu combien il est difficile d&#x27;installer
+
+201
+00:11:14.000 --> 00:11:15.001
+40 megabytes sur votre système.
+
+202
+00:11:15.001 --> 00:11:16.000
+Bon, va bien en avant.
+
+203
+00:11:16.000 --> 00:11:16.000
+Nous allons le prouver.
+
+204
+00:11:16.000 --> 00:11:19.000
+Maintenant, nous avons un D drive et c&#x27;est notre nouveau drive.
+
+205
+00:11:19.000 --> 00:11:20.001
+Je vais vous montrer le disque de contrôle DOS.
+
+206
+00:11:21.000 --> 00:11:23.000
+Vous pouvez voir ce qui dit juste là. 40 megabytes de vitesse.
+
+207
+00:11:23.001 --> 00:11:27.001
+Je vais copier un ensemble de fichiers à partir du disque C et du stack
+
+208
+00:11:27.001 --> 00:11:29.001
+Envoyez le directeur à ce D drive.
+
+209
+00:11:30.000 --> 00:11:32.000
+Maintenant, vous ne pouvez pas comprendre ce qui se passe, mais vous voyez
+
+210
+00:11:32.000 --> 00:11:33.001
+Les noms de fichiers en cliquant là-bas.
+
+211
+00:11:34.000 --> 00:11:36.000
+En fait, c’était un megabytes de fichiers.
+
+212
+00:11:36.001 --> 00:11:38.000
+Et chaque fois qu&#x27;il a écrit un de ces fichiers.
+
+213
+00:11:38.000 --> 00:11:39.001
+Il faisait toute la compression là-bas.
+
+214
+00:11:39.001 --> 00:11:41.000
+C’est la compression de l’ensemble du fichier.
+
+215
+00:11:41.000 --> 00:11:42.001
+Vous pouvez voir à quel point il est rapide.
+
+216
+00:11:42.001 --> 00:11:44.000
+Il y avait un megabytes de fichiers.
+
+217
+00:11:44.001 --> 00:11:46.000
+Maintenant ce que nous avons, je vous ai montré deux là.
+
+218
+00:11:46.001 --> 00:11:50.001
+Si vous mettez juste un S devant lui et faites DIR, vous verrez dans la colonne la plus droite
+
+219
+00:11:50.001 --> 00:11:53.000
+C’est le rapport de compression pour chaque fichier.
+
+220
+00:11:53.001 --> 00:11:56.000
+Au fond de l&#x27;écran, vous verrez le réel
+
+221
+00:11:56.000 --> 00:11:57.001
+Ratio de compression pour l’ensemble du catalogue.
+
+222
+00:11:58.000 --> 00:12:00.001
+Maintenant, les gens disent que cela doit être trop bon pour être vrai.
+
+223
+00:12:01.000 --> 00:12:02.000
+Je ne vois aucune différence ici.
+
+224
+00:12:02.000 --> 00:12:03.001
+Je n’ai que plus de capacité.
+
+225
+00:12:03.001 --> 00:12:07.000
+Je vais vous montrer exactement comment cela fonctionne et le fait que
+
+226
+00:12:07.000 --> 00:12:08.001
+C’est exactement comme un disque.
+
+227
+00:12:08.001 --> 00:12:10.001
+Je vais entrer et éditer l&#x27;un de ces fichiers.
+
+228
+00:12:11.000 --> 00:12:15.000
+J&#x27;ai une lettre point texte en bas et il y a un petit programme appelé
+
+229
+00:12:15.000 --> 00:12:17.000
+Ce qui vient avec Stacker.
+
+230
+00:12:18.000 --> 00:12:19.000
+Je vais l’appeler.
+
+231
+00:12:19.000 --> 00:12:21.001
+Maintenant, je voudrais que vous mesuriez combien de temps il faut pour lire ceci
+
+232
+00:12:21.001 --> 00:12:23.001
+C’est parce qu’il est sous forme comprimée.
+
+233
+00:12:23.001 --> 00:12:24.001
+En fait, nous allons le décomprimer.
+
+234
+00:12:24.001 --> 00:12:27.001
+Je vais télécharger le programme et décomprimer ce fichier.
+
+235
+00:12:27.001 --> 00:12:31.000
+Lorsque vous le voyez jeté sur l&#x27;écran, tout le fichier a été décomprimé.
+
+236
+00:12:32.000 --> 00:12:32.000
+Démarrer !
+
+237
+00:12:32.001 --> 00:12:33.001
+Arrêtez votre montre.
+
+238
+00:12:34.001 --> 00:12:36.000
+C’est à quel point il est rapide.
+
+239
+00:12:37.000 --> 00:12:41.000
+Pour prouver que nous avons réellement fait quelque chose ici, je vais vous montrer comment
+
+240
+00:12:41.000 --> 00:12:45.000
+Rapide il comprime en fait les données parce que nous allons le modifier.
+
+241
+00:12:45.000 --> 00:12:51.000
+Je vais y aller et je vais changer cela à Stacker 2.0.
+
+242
+00:12:51.000 --> 00:12:54.001
+Bon, maintenant je vais enregistrer ce fichier et quand il va avoir à
+
+243
+00:12:54.001 --> 00:12:56.000
+récupérer l’ensemble du fichier.
+
+244
+00:12:56.001 --> 00:12:58.000
+C&#x27;est là qu&#x27;il va et il est de retour au DOS prompt.
+
+245
+00:12:58.001 --> 00:13:00.000
+Gary, vous avez utilisé SEdit qui est votre programme.
+
+246
+00:13:00.001 --> 00:13:04.000
+Si vous avez utilisé une application indépendante, dire WordPerfect sur ce fichier
+
+247
+00:13:04.000 --> 00:13:08.000
+et WordPerfect avait aussi été comprimé, aurait-il fait aussi ?
+
+248
+00:13:08.001 --> 00:13:09.000
+Est-ce que ça serait rapide ?
+
+249
+00:13:09.000 --> 00:13:12.000
+Parfois, ils chargent plus vite en fait parce que c&#x27;est
+
+250
+00:13:12.000 --> 00:13:14.000
+Moins de révolutions sur le disque.
+
+251
+00:13:14.000 --> 00:13:17.001
+Il prend la moitié de l&#x27;espace sur le disque et étant donné que vous le faites en temps réel,
+
+252
+00:13:17.001 --> 00:13:21.000
+Il n&#x27;y a pas de latence ajoutée, en particulier sur les opérations de lecture.
+
+253
+00:13:21.000 --> 00:13:23.000
+Voyons si vous avez réellement sauvé ce nouveau fichier.
+
+254
+00:13:23.000 --> 00:13:26.001
+Ok, maintenant quelque part ici j&#x27;ai le Stacker en bas.
+
+255
+00:13:26.001 --> 00:13:27.001
+C’est un fichier différent.
+
+256
+00:13:27.001 --> 00:13:31.000
+Donc je vais vraiment aller là-bas et supprimer cela, la mettre de retour où il était.
+
+257
+00:13:31.000 --> 00:13:32.001
+En réalité, je le réécrite à nouveau.
+
+258
+00:13:33.000 --> 00:13:35.000
+Donc, si j&#x27;exécute le catalogue, vous verrez le fichier là-bas.
+
+259
+00:13:35.001 --> 00:13:37.001
+Maintenant, je vais vous montrer à quel point nous sommes compatibles avec DOS.
+
+260
+00:13:38.000 --> 00:13:40.000
+En fait, je vais supprimer le même fichier.
+
+261
+00:13:43.000 --> 00:13:44.001
+Ok, je vais courir Esther à nouveau.
+
+262
+00:13:44.001 --> 00:13:45.001
+Vous voyez qu’il n’est pas là.
+
+263
+00:13:45.001 --> 00:13:47.001
+Maintenant, je vais appeler Norton Unerase.
+
+264
+00:13:48.001 --> 00:13:49.001
+Bien sûr, il a trouvé ça.
+
+265
+00:13:50.000 --> 00:13:52.001
+Je vais donc courir ici, dis Unerase.
+
+266
+00:13:52.001 --> 00:13:53.001
+Il faut la première lettre.
+
+267
+00:13:54.000 --> 00:13:54.001
+Je le fournit.
+
+268
+00:13:54.001 --> 00:13:55.000
+Il est récupéré.
+
+269
+00:13:56.000 --> 00:13:58.000
+Nous sortirons et je ferai une Esther à nouveau.
+
+270
+00:14:00.001 --> 00:14:02.001
+Comme vous le savez, il n’y a pas de miroir.
+
+271
+00:14:03.000 --> 00:14:03.001
+Il y en a.
+
+272
+00:14:03.001 --> 00:14:04.001
+Gary, Phil, merci beaucoup.
+
+273
+00:14:05.000 --> 00:14:05.001
+Les deux sont très impressionnants.
+
+274
+00:14:06.000 --> 00:14:10.000
+Eh bien, le problème avec de merveilleuses images graphiques colorées est qu&#x27;elles prennent beaucoup de
+
+275
+00:14:10.000 --> 00:14:11.001
+espace de disque et beaucoup de temps d&#x27;accès.
+
+276
+00:14:11.001 --> 00:14:16.000
+Lors de la conférence Seabold Desktop Publishing, qui a récemment eu lieu à San Jose, nous avons
+
+277
+00:14:16.000 --> 00:14:18.001
+Un aperçu de plusieurs nouveaux produits de compression conçus
+
+278
+00:14:18.001 --> 00:14:20.000
+Surtout pour les fichiers graphiques.
+
+279
+00:14:22.000 --> 00:14:26.000
+Les utilisateurs d&#x27;ordinateurs veulent des outils de compression de fichiers afin qu&#x27;ils puissent économiser le stockage
+
+280
+00:14:26.000 --> 00:14:27.001
+L’espace et le temps de transfert.
+
+281
+00:14:28.000 --> 00:14:33.000
+Ici, lors de la conférence de Seabold, les 25 000 participants ont vu un large éventail de
+
+282
+00:14:33.000 --> 00:14:34.001
+Les produits qui ne font que ça.
+
+283
+00:14:35.000 --> 00:14:38.001
+Le temps de transfert est le problème lorsque vous devez transmettre une image à travers un
+
+284
+00:14:38.001 --> 00:14:40.001
+réseau ou dans le monde entier.
+
+285
+00:14:40.001 --> 00:14:44.001
+La technologie Storm a montré une solution à ce problème.
+
+286
+00:14:45.000 --> 00:14:46.000
+Les journaux travaillent avec des délais.
+
+287
+00:14:46.001 --> 00:14:49.000
+Ils veulent obtenir leurs informations là aussi rapidement que possible.
+
+288
+00:14:49.001 --> 00:14:54.000
+Ainsi, à Korbachev, le coup d&#x27;Etat a été à Moscou où les gens sont déjà là pour avoir
+
+289
+00:14:54.000 --> 00:14:58.001
+les photos, les compressez, les envoyez afin que nous ayons cette information comme
+
+290
+00:14:58.001 --> 00:15:02.000
+Il est disponible dès que possible dans la prochaine édition du journal.
+
+291
+00:15:02.001 --> 00:15:06.001
+Mais pour de nombreuses applications informatiques, la qualité est aussi importante que le temps.
+
+292
+00:15:06.001 --> 00:15:10.001
+Sur la boîte de logiciels à main, ils disaient que vous pourriez obtenir les deux.
+
+293
+00:15:11.000 --> 00:15:15.001
+Par exemple, un fichier normal de 640 à 480 que vous avez scanné dans
+
+294
+00:15:15.001 --> 00:15:17.001
+Il s’agirait d’un megabyte en taille.
+
+295
+00:15:18.000 --> 00:15:22.000
+Bien, comprimer le fichier en utilisant la compression JPEG réduit la taille du fichier à
+
+296
+00:15:22.000 --> 00:15:26.000
+entre 120 et 125e de la taille.
+
+297
+00:15:26.000 --> 00:15:28.001
+Donc maintenant vous parlez d&#x27;avoir un fichier qui est peut-être 40K.
+
+298
+00:15:29.000 --> 00:15:31.000
+Envoyer un fichier 40K sur un modem est évident
+
+299
+00:15:31.000 --> 00:15:33.000
+Il est préférable d&#x27;envoyer un fichier de 1 megabyte.
+
+300
+00:15:33.001 --> 00:15:36.001
+Il doit y avoir un commerce pour ce degré de compression de fichiers.
+
+301
+00:15:37.000 --> 00:15:41.001
+Mais Daniel Kemp de Radius dit que la qualité que vous perdez est virtuellement inaperçue
+
+302
+00:15:41.001 --> 00:15:43.001
+Si vous utilisez les bons produits.
+
+303
+00:15:44.000 --> 00:15:49.001
+Bien les inconvénients sont évidents que vous perdez les données lorsque vous compressez, mais le
+
+304
+00:15:49.001 --> 00:15:55.001
+L&#x27;avantage de cela est que vous pouvez obtenir presque exactement la même qualité.
+
+305
+00:15:56.000 --> 00:15:59.000
+Vous allez perdre, bien sûr, l&#x27;utilisateur choisit entre la qualité de l&#x27;image et
+
+306
+00:15:59.000 --> 00:16:04.000
+Ratio de compression, mais vous pouvez obtenir presque la même qualité à un
+
+307
+00:16:04.000 --> 00:16:05.001
+fraction de la taille de l’image.
+
+308
+00:16:06.001 --> 00:16:10.001
+La dernière génération de produits de compression de fichiers ciblés sur le marché graphique
+
+309
+00:16:10.001 --> 00:16:15.001
+s&#x27;efforce de résoudre le problème du temps versus la qualité en donnant à l&#x27;utilisateur le contrôle
+
+310
+00:16:15.001 --> 00:16:18.000
+Quelles sont les parties d&#x27;un fichier d&#x27;image graphique à comprimer.
+
+311
+00:16:19.000 --> 00:16:23.000
+Une autre caractéristique très importante est qu&#x27;elle vous permet vraiment de choisir différentes
+
+312
+00:16:23.000 --> 00:16:26.001
+les zones dans les images afin que vous, en tant qu&#x27;utilisateur, puissiez décider
+
+313
+00:16:26.001 --> 00:16:28.001
+Quelle zone vous voulez avoir la plus haute qualité ?
+
+314
+00:16:29.000 --> 00:16:33.000
+Ceci est très important si, par exemple, vous avez des textes et des logos dans des images où
+
+315
+00:16:33.000 --> 00:16:36.001
+Vous voulez vraiment avoir la meilleure qualité et comme un
+
+316
+00:16:36.001 --> 00:16:38.000
+Utilisateur que vous voulez vraiment choisir.
+
+317
+00:16:38.001 --> 00:16:43.000
+Les produits de compression des fichiers ici à la conférence Siebold varient de logiciels
+
+318
+00:16:43.000 --> 00:16:45.000
+Résoudre les add-ons matériels.
+
+319
+00:16:45.001 --> 00:16:49.000
+L&#x27;approche logicielle est moins chère, l&#x27;approches matérielles est plus rapide.
+
+320
+00:16:49.001 --> 00:16:52.001
+Pour les Chroniques informatiques, je suis Maria Gabriel.
+
+321
+00:17:06.001 --> 00:17:11.000
+Pour les utilisateurs de Macintosh, il y a plusieurs bons produits de compression de fichiers et ici pour
+
+322
+00:17:11.000 --> 00:17:15.000
+Découvrez-nous les choses au deluxe est David Shargel d&#x27;Aladdin Systems et aussi avec nous
+
+323
+00:17:15.000 --> 00:17:18.001
+Marshall Goldberg de Sigma Designs qui va démontrer doublement.
+
+324
+00:17:20.000 --> 00:17:21.001
+Marshall, plus tôt nous avons vu une compression PC
+
+325
+00:17:21.001 --> 00:17:23.001
+Les produits et nous verrons les Mac.
+
+326
+00:17:24.000 --> 00:17:27.000
+Maintenant, il y a quelque chose sur le Macintosh ou le nouveau bus qui le rend plus difficile,
+
+327
+00:17:27.000 --> 00:17:29.001
+plus facile, différent ou il y a des choses que vous devez
+
+328
+00:17:29.001 --> 00:17:31.001
+Considérez-vous lors de la mise en œuvre d’un produit ?
+
+329
+00:17:32.001 --> 00:17:34.000
+En principe, ils sont les mêmes.
+
+330
+00:17:34.000 --> 00:17:38.000
+Bien sûr, vous avez besoin de logiciels Macintosh et de bons ingénieurs Macintush que nous avons
+
+331
+00:17:38.000 --> 00:17:41.001
+Mais c&#x27;est très similaire à la façon dont les deux travaillent ensemble.
+
+332
+00:17:42.000 --> 00:17:43.000
+Dans le nouveau bus ?
+
+333
+00:17:43.000 --> 00:17:45.000
+Mmm-hmm, dans un nouveau bus ou dans un autre Macintosh.
+
+334
+00:17:45.001 --> 00:17:49.000
+Revenons aux choses au deluxe puis David et beaucoup d&#x27;entre nous sont familiers avec les choses
+
+335
+00:17:49.000 --> 00:17:51.001
+C’est à partir des premiers jours de partage.
+
+336
+00:17:52.000 --> 00:17:53.001
+Découvrez le nouveau produit et ce qu’il peut faire.
+
+337
+00:17:54.000 --> 00:17:56.001
+Ce que je vais illustrer est l’une des principales différences entre les
+
+338
+00:17:56.001 --> 00:17:58.000
+la version précédente et la version actuelle qui
+
+339
+00:17:58.000 --> 00:18:00.000
+C’est le menu magique qui trouve une extension.
+
+340
+00:18:01.000 --> 00:18:04.001
+Ce que nous vous permettons de faire est d&#x27;être dans la recherche Macintosh et de sélectionner tout fichier ou
+
+341
+00:18:04.001 --> 00:18:06.000
+un fichier ou une combinaison de ceux-ci.
+
+342
+00:18:06.000 --> 00:18:10.000
+Dans ce cas, je vais choisir un dossier qui a un certain nombre de documents graphiques
+
+343
+00:18:10.000 --> 00:18:12.001
+et nous traitons les documents et je vais aller à la
+
+344
+00:18:12.001 --> 00:18:14.000
+Menu magique et sélectionnez le commandement des objets.
+
+345
+00:18:15.000 --> 00:18:18.000
+Ce qui va se passer maintenant, c’est que les choses au deluxe vont automatiquement
+
+346
+00:18:18.000 --> 00:18:21.001
+apparaît et commence à compresser tous ces fichiers, en gardant les directories ou
+
+347
+00:18:21.001 --> 00:18:24.000
+Comprimez-le dans un seul fichier.
+
+348
+00:18:24.001 --> 00:18:28.000
+Ce que nous pouvons alors faire est d&#x27;aller dans cet archive si nous le choisissons.
+
+349
+00:18:28.001 --> 00:18:32.000
+Nous pouvons l&#x27;envoyer directement à quelqu&#x27;un ou dans le cas où je vais le faire maintenant, voici
+
+350
+00:18:32.000 --> 00:18:34.001
+notre nouveau fichier en double cliquant sur ce que nous allons entrer
+
+351
+00:18:34.001 --> 00:18:36.000
+L’appareil est à l’application Deluxe.
+
+352
+00:18:37.000 --> 00:18:39.001
+Je vais illustrer que nous pouvons manipuler ces archives.
+
+353
+00:18:40.000 --> 00:18:43.001
+Voici la fenêtre qui apparaît avec notre dossier de documents et
+
+354
+00:18:43.001 --> 00:18:45.001
+A l’intérieur, voici les autres éléments qui apparaissent.
+
+355
+00:18:46.001 --> 00:18:49.000
+Un des mécanismes de manipulation d&#x27;un archive
+
+356
+00:18:49.000 --> 00:18:51.000
+Je peux créer plusieurs archives.
+
+357
+00:18:51.000 --> 00:18:53.000
+Dans ce cas, je vais créer un fichier que je vais
+
+358
+00:18:53.000 --> 00:18:54.001
+Envoyez à un service de sortie.
+
+359
+00:18:57.000 --> 00:19:00.001
+Je peux simplement prendre les documents graphiques que j&#x27;ai besoin d&#x27;envoyer
+
+360
+00:19:00.001 --> 00:19:02.000
+et les jeter dans l’autre dossier.
+
+361
+00:19:02.001 --> 00:19:06.001
+Nous sommes également en mesure de renommer, de copier, de déplacer les choses dans les archives.
+
+362
+00:19:07.000 --> 00:19:09.001
+Si votre bureau de service n&#x27;a pas de choses à faire, vous pouvez les faire
+
+363
+00:19:09.001 --> 00:19:11.000
+Extrater soi-même comme vous faites la copie?
+
+364
+00:19:11.000 --> 00:19:12.000
+Oui tu peux.
+
+365
+00:19:12.000 --> 00:19:15.001
+Il ajoute un peu de surface au fichier mais la plupart des bureaux de service qui sont
+
+366
+00:19:15.001 --> 00:19:19.000
+en utilisant Macintosh ont de l&#x27;écraser ou l&#x27;échapper ce qui est un produit freeware de notre.
+
+367
+00:19:20.000 --> 00:19:23.001
+Nous fournissons également des optimisateurs de compression qui améliorent la compression
+
+368
+00:19:23.001 --> 00:19:25.000
+Formats de fichiers spécifiques.
+
+369
+00:19:26.000 --> 00:19:27.000
+En fonction du type de fichier que vous êtes
+
+370
+00:19:27.000 --> 00:19:28.001
+Travailler avec vous utilise une approche différente.
+
+371
+00:19:30.000 --> 00:19:33.001
+Par exemple, les fichiers audio ou Photoshop qui peuvent devenir assez grands.
+
+372
+00:19:34.000 --> 00:19:37.001
+Nous incluons également un module jpeg pour la compression graphique 24 bits.
+
+373
+00:19:38.001 --> 00:19:42.001
+David pour les utilisateurs qui pourraient trouver cela un peu compliqué, il y a un en ligne
+
+374
+00:19:42.001 --> 00:19:44.000
+Est-ce que ce genre de guide vous aide à travers ce processus ?
+
+375
+00:19:44.001 --> 00:19:46.001
+Nous avons quelque chose que l’on appelle la documentation en ligne.
+
+376
+00:19:46.001 --> 00:19:50.001
+Nous fournissons essentiellement presque tout le manuel en ligne qui est facilement accessible
+
+377
+00:19:50.001 --> 00:19:52.001
+Dans le menu magique ou dans l’application elle-même.
+
+378
+00:19:53.001 --> 00:19:53.001
+C’est bien grand.
+
+379
+00:19:53.001 --> 00:19:56.001
+Je vais vous demander de sortir des choses si vous pouvez et couper la souris sur
+
+380
+00:19:56.001 --> 00:19:59.000
+Marshall pour que nous puissions regarder doublement.
+
+381
+00:19:59.000 --> 00:20:01.000
+Alors qu&#x27;il fait que Marshall vous avez un bureau là-bas.
+
+382
+00:20:01.000 --> 00:20:04.000
+Encore une fois, nous passons d’une solution de logiciel pur à un matériel logicielle.
+
+383
+00:20:04.000 --> 00:20:06.000
+La solution et décrivez ce qui est sur la carte.
+
+384
+00:20:06.001 --> 00:20:10.000
+Bien double up est une nouvelle carte de bus qui fonctionnera sur n&#x27;importe quel ordinateur de la série Mac 2.
+
+385
+00:20:10.001 --> 00:20:14.000
+Il utilise le chip de compression de stack pour une compression très rapide.
+
+386
+00:20:14.001 --> 00:20:18.000
+Nous sommes mariés à un programme vraiment agréable appelé le double disque qui fait
+
+387
+00:20:18.000 --> 00:20:19.001
+Compression très facile sur le Macintosh.
+
+388
+00:20:20.000 --> 00:20:22.001
+Entre la facilité d’utilisation et la vitesse que vous
+
+389
+00:20:22.001 --> 00:20:24.000
+Vous pouvez compresser tout sur la conduite.
+
+390
+00:20:24.000 --> 00:20:25.000
+Vous pouvez doubler la capacité.
+
+391
+00:20:25.000 --> 00:20:27.001
+Et une sorte de revenir à la question de Jan c&#x27;est vraiment le même stack chip que nous
+
+392
+00:20:27.001 --> 00:20:29.000
+Je l&#x27;ai vu quand j&#x27;étais en train d&#x27;afficher le PC avant.
+
+393
+00:20:29.001 --> 00:20:30.000
+Oui exactement !
+
+394
+00:20:30.000 --> 00:20:32.000
+Bon, montre-nous doubler et ce que vous pouvez faire avec elle.
+
+395
+00:20:32.001 --> 00:20:32.001
+et sûre.
+
+396
+00:20:33.001 --> 00:20:36.001
+Voici un dossier rempli de fichiers que j&#x27;ai créés avec Microsoft Word.
+
+397
+00:20:37.001 --> 00:20:42.000
+Je peux sélectionner l&#x27;un de ces fichiers ou même l&#x27;ensemble du dossier plein de fichières et sélectionner
+
+398
+00:20:42.000 --> 00:20:43.001
+Compression du menu du disque doublé.
+
+399
+00:20:44.000 --> 00:20:46.000
+Lorsque j&#x27;utilise le disque doublé, j&#x27;utiliserai rapidement la boîte
+
+400
+00:20:46.000 --> 00:20:48.000
+Comprimer tout dans le dossier.
+
+401
+00:20:49.000 --> 00:20:52.001
+Maintenant qu&#x27;ils sont comprimés, les fichiers ressemblent exactement comme ils l&#x27;ont fait avant, sauf que
+
+402
+00:20:52.001 --> 00:20:55.000
+le DD apparaît dans l&#x27;icône afin que vous puissiez
+
+403
+00:20:55.000 --> 00:20:56.001
+Dites-lui qu’il est comprimé avec le programme.
+
+404
+00:20:57.000 --> 00:21:01.000
+Maintenant, en plus, je peux sélectionner un dossier entier dans ce cas le Microsoft Word
+
+405
+00:21:01.000 --> 00:21:04.001
+le programme de traitement et je peux comprimer tout ce qui est dans le dossier.
+
+406
+00:21:07.000 --> 00:21:08.001
+Maintenant, ce qui peut arriver, c’est ça.
+
+407
+00:21:08.001 --> 00:21:11.001
+Je peux prendre l&#x27;un des fichiers que j&#x27;ai comprimé comme celui-ci.
+
+408
+00:21:12.000 --> 00:21:17.000
+Lorsque je double-clique sur elle pour démarrer le programme disque doubler vient en expande le
+
+409
+00:21:17.000 --> 00:21:21.000
+Le fichier expande Microsoft Word et démarre le programme pour moi automatiquement.
+
+410
+00:21:21.001 --> 00:21:24.001
+C&#x27;est si facile et si rapide que je peux compresser
+
+411
+00:21:24.001 --> 00:21:26.001
+Tout ce qui me permet d’avoir plus de capacités.
+
+412
+00:21:27.000 --> 00:21:31.000
+Maintenant si je sélectionne ouvrir du menu de fichiers qui est un moyen standard que les utilisateurs de Mac
+
+413
+00:21:31.000 --> 00:21:34.001
+Ouverture des fichiers tous les fichières comprimés apparaissent comme normal.
+
+414
+00:21:34.001 --> 00:21:39.000
+Donc je peux choisir l&#x27;un de ces par exemple ce grand fichier et il est automatiquement
+
+415
+00:21:39.000 --> 00:21:40.001
+Elle s’étend et s’ouvre pour moi.
+
+416
+00:21:41.001 --> 00:21:44.000
+Ainsi, une fois de plus, du point de vue de l’utilisateur, il peut être totalement transparent.
+
+417
+00:21:44.001 --> 00:21:45.001
+Oui beaucoup comme ça.
+
+418
+00:21:46.000 --> 00:21:50.000
+Maintenant que je quitte le programme à nouveau, tout sera automatiquement récomprimé.
+
+419
+00:21:54.001 --> 00:21:55.001
+Ok mais quoi d’autre ?
+
+420
+00:21:56.000 --> 00:22:00.001
+Eh bien, en plus d&#x27;être très simple à utiliser il y a une petite boîte de paramètres et je
+
+421
+00:22:00.001 --> 00:22:03.000
+Vous pouvez l&#x27;ouvrir à travers le menu DD et sélectionner les paramètres.
+
+422
+00:22:04.000 --> 00:22:08.001
+Cela peut me permettre d’utiliser une méthode logicielle qui est construite dans un double disque ou
+
+423
+00:22:08.001 --> 00:22:13.000
+La méthode la plus petite qui essaie toutes les trois méthodes pour me donner le plus petit
+
+424
+00:22:13.000 --> 00:22:14.001
+Le résultat qui est généralement le conseil.
+
+425
+00:22:15.001 --> 00:22:19.001
+En outre, je peux sélectionner la fonctionnalité de vérification du fichier qui reprend
+
+426
+00:22:19.001 --> 00:22:22.000
+tout ce qui a été envoyé sur le disque pour être absolument sûr que
+
+427
+00:22:22.000 --> 00:22:23.001
+Chaque byte de données est sécurisée.
+
+428
+00:22:24.001 --> 00:22:29.000
+Nous vous recommandons ceci pour les moteurs de recherche latérale par exemple et en tant que produit de compagnie
+
+429
+00:22:29.000 --> 00:22:32.001
+Nous incluons le disque checker qui est un programme que vous pouvez exécuter pour tester votre hard
+
+430
+00:22:32.001 --> 00:22:34.000
+les disques pour s’assurer qu’ils fonctionnent correctement.
+
+431
+00:22:35.000 --> 00:22:38.001
+David Marshall ne parlait que de trois approches différentes dans son programme.
+
+432
+00:22:38.001 --> 00:22:41.000
+Vous avez eu un optimiste où vous parlez de différentes approches.
+
+433
+00:22:42.000 --> 00:22:44.001
+Jan au début du programme explique le principe fondamental
+
+434
+00:22:44.001 --> 00:22:46.001
+d’un algorithme qui comprime les fichiers.
+
+435
+00:22:46.001 --> 00:22:49.001
+Pourquoi avons-nous besoin de trois ou sept façons différentes de le faire ?
+
+436
+00:22:49.001 --> 00:22:54.000
+Habituellement, il y a un commerce direct dans la quantité de vitesse versus la compression et
+
+437
+00:22:54.000 --> 00:22:57.000
+Il existe plusieurs algorithmes qui sont disponibles.
+
+438
+00:22:57.000 --> 00:22:59.000
+proposer de tels compromis.
+
+439
+00:22:59.001 --> 00:23:02.001
+Habituellement, lorsque vous faites des télécommunications, vous voulez avoir le plus compact
+
+440
+00:23:02.001 --> 00:23:05.000
+fichiers pendant que vous faites quelque chose comme le disque de sauvegarde
+
+441
+00:23:05.000 --> 00:23:06.001
+La vitesse de l’espace est très importante.
+
+442
+00:23:07.001 --> 00:23:10.000
+C&#x27;est maintenant Marshall en train de parler des défauts commerciaux
+
+443
+00:23:10.000 --> 00:23:12.000
+Il semble que ce soit toutes les bonnes nouvelles que nous avons entendu.
+
+444
+00:23:12.000 --> 00:23:15.000
+Je veux dire que vous convertirez magiquement 20 megdrive en 40 megdrives.
+
+445
+00:23:15.000 --> 00:23:17.000
+Il faut qu’il y ait des défauts, certains
+
+446
+00:23:17.000 --> 00:23:19.001
+Le risque, il n’y a-t-il pas quelque chose de négatif ?
+
+447
+00:23:19.001 --> 00:23:20.000
+Oh non du tout.
+
+448
+00:23:20.001 --> 00:23:23.000
+En fait, la chose la plus importante pour développer le produit est
+
+449
+00:23:23.000 --> 00:23:24.001
+pour s’assurer qu’il est fiable et sûr.
+
+450
+00:23:25.000 --> 00:23:28.001
+L&#x27;algorithme que nous utilisons Lempel&#x27;s j&#x27;ai été autour depuis le début des années 70 le même
+
+451
+00:23:28.001 --> 00:23:32.001
+ceux que vous avez vu sur les produits PC et nous testons rigoureusement le produit en utilisant
+
+452
+00:23:32.001 --> 00:23:37.000
+des tests tels que le checksum et les fichiers temporaires afin que, même si la puissance est perturbée,
+
+453
+00:23:37.000 --> 00:23:41.000
+l&#x27;ordinateur pendant qu&#x27;il est de compresser ou d&#x27;étendre les fichiers sont complètement sécurisés dans
+
+454
+00:23:41.000 --> 00:23:43.000
+en plus du programme de vérification du disque que nous incluons
+
+455
+00:23:43.000 --> 00:23:44.001
+Médias de vérification de la sécurité.
+
+456
+00:23:45.000 --> 00:23:47.000
+Merci beaucoup les deux très impressionnants.
+
+457
+00:23:47.000 --> 00:23:48.001
+C&#x27;est notre regard sur la compression des fichiers.
+
+458
+00:23:49.000 --> 00:23:52.001
+Restez à l&#x27;heure actuelle pour les nouvelles informatiques de cette semaine sur Random Access.
+
+459
+00:24:01.000 --> 00:24:06.001
+Dans le fichier Random Access cette semaine, IBM a introduit un nouveau clone killer
+
+460
+00:24:06.001 --> 00:24:09.000
+La version 386SX du PS1.
+
+461
+00:24:09.001 --> 00:24:15.001
+Le nouveau système est doté d&#x27;un processeur de 16 megahertz 386, moniteur de couleur VGA, 40
+
+462
+00:24:15.001 --> 00:24:21.000
+Disque dur de megabyte, 2 megabytes de RAM, modem interne de 2400 baus, Microsoft
+
+463
+00:24:21.000 --> 00:24:26.000
+Les travaux et le prix de détail d&#x27;une souscription prodigy est de 1699 dollars.
+
+464
+00:24:26.001 --> 00:24:29.000
+IBM va aussi après la compétition pour les ordinateurs portables.
+
+465
+00:24:29.001 --> 00:24:35.000
+Big Blue a abaissé le prix de son ordinateur portable PS2 L40 d&#x27;environ 25%.
+
+466
+00:24:35.000 --> 00:24:39.000
+Le prix est maintenant 3995 dollars en dessous de 5245.
+
+467
+00:24:40.000 --> 00:24:44.001
+IBM baisse également les prix des accessoires pour ordinateurs portables et des mises à jour de la mémoire.
+
+468
+00:24:45.000 --> 00:24:49.000
+IBM et Apple sont revenus de l&#x27;autel la semaine dernière.
+
+469
+00:24:49.000 --> 00:24:50.001
+Les détails de leur nouvelle romance.
+
+470
+00:24:50.001 --> 00:24:54.000
+Les deux entreprises ont annoncé cinq domaines majeurs dans lesquels elles seront
+
+471
+00:24:54.000 --> 00:24:55.001
+Développer ensemble de nouvelles technologies.
+
+472
+00:24:56.000 --> 00:25:01.000
+Le top de la liste est les ordinateurs multimédia, le logiciel orienté vers l&#x27;objet, le nouveau réseau
+
+473
+00:25:01.000 --> 00:25:06.001
+utilités pour faciliter la connexion des Mac et IBM compatibles et une nouvelle fonctionnalité
+
+474
+00:25:06.001 --> 00:25:10.000
+plateforme qui fonctionnera sur les deux systèmes en utilisant le matériel RISC.
+
+475
+00:25:10.001 --> 00:25:14.001
+Dans un grand bouleversement pour Motorola, Apple et IBM ont déclaré qu&#x27;ils développeraient conjointement une nouvelle
+
+476
+00:25:14.001 --> 00:25:20.001
+microprocesseur basé sur le moteur Motorola Power PC, un seul moteur RISC CPU.
+
+477
+00:25:21.000 --> 00:25:24.001
+Apple et IBM ont annoncé qu&#x27;ils prévoyaient d&#x27;utiliser le chip dans leur futur personnel.
+
+478
+00:25:24.001 --> 00:25:26.000
+Les ordinateurs et les stations de travail.
+
+479
+00:25:27.000 --> 00:25:29.001
+Avec des plafonds qui tombent juste autour du coin, il y a beaucoup
+
+480
+00:25:29.001 --> 00:25:31.000
+de nouveaux produits annoncés.
+
+481
+00:25:31.001 --> 00:25:35.001
+Compaq est à la tête de la liste avec un nouvel ordinateur portable de couleurs appelé le 486C.
+
+482
+00:25:36.000 --> 00:25:41.001
+En plus d&#x27;un processeur 486 et de la capacité de 256 couleurs, le nouveau Compaq vient
+
+483
+00:25:41.001 --> 00:25:46.000
+Avec un disque dur de 120 megabytes et une RAM standard de 4 megas.
+
+484
+00:25:46.001 --> 00:25:50.000
+Le portable Compaq 486C ne fonctionne que sur AC.
+
+485
+00:25:50.000 --> 00:25:53.000
+L&#x27;entreprise dit que l&#x27;ordinateur est ciblé sur le marché technique.
+
+486
+00:25:53.001 --> 00:25:55.001
+Le prix de la liste est inférieur à 10 000 $.
+
+487
+00:25:56.001 --> 00:26:00.001
+Slate Systems a pris le prochain pas vers le livre électronique en introduisant
+
+488
+00:26:00.001 --> 00:26:05.000
+Penbook, un nouveau système d&#x27;édition électronique conçu pour les ordinateurs à base de pen.
+
+489
+00:26:05.001 --> 00:26:10.001
+Le système fonctionnera sur un IBM ou un Macintosh et comprend l&#x27;auteur et la penne
+
+490
+00:26:10.001 --> 00:26:15.000
+Utilisations de lecteur qui peuvent convertir tout fichier PostScript à être lisible sur
+
+491
+00:26:15.000 --> 00:26:16.001
+Un écran informatique à base de pin.
+
+492
+00:26:17.000 --> 00:26:21.000
+Slate dit qu&#x27;il sera aussi facile de lire un document de penbook sur l&#x27;écran de Slate que
+
+493
+00:26:21.000 --> 00:26:23.000
+Il faut le lire sur papier dans un livre.
+
+494
+00:26:23.001 --> 00:26:28.000
+Grid Systems vient d&#x27;annoncer le premier 9600 baud interne
+
+495
+00:26:28.000 --> 00:26:29.001
+Modem pour ordinateurs portables.
+
+496
+00:26:30.000 --> 00:26:33.000
+Le nouveau modem Grid est un modem de données et de fax.
+
+497
+00:26:33.000 --> 00:26:35.001
+Il fonctionnera également dans le nouveau ordinateur Grid Pen.
+
+498
+00:26:35.001 --> 00:26:37.000
+Le prix est d’environ 1 000 $.
+
+499
+00:26:37.001 --> 00:26:39.001
+C&#x27;est à cause du navire peu de temps après com décks.
+
+500
+00:26:40.000 --> 00:26:44.000
+Regardez les 10 meilleurs titres de logiciels de cette semaine pour Mac, MacConnection
+
+501
+00:26:44.000 --> 00:26:48.000
+rapporte que Norton Utilities pour Mac est dans la position n°1 avec
+
+502
+00:26:48.000 --> 00:26:50.001
+Quicken 3.0 pour Mac en seconde.
+
+503
+00:26:51.000 --> 00:26:55.000
+Le troisième est après les ténèbres et plus après le Bundle sombre suivi par Microsoft Flight
+
+504
+00:26:55.000 --> 00:26:58.000
+Simulateur et After Dark 2.0 U.
+
+505
+00:26:59.000 --> 00:27:03.001
+Les 10 meilleurs titres de Mac sont SAM, Kidpix, Distubler, More After Dark
+
+506
+00:27:03.001 --> 00:27:05.001
+et dans It Picker de Microseeds.
+
+507
+00:27:05.001 --> 00:27:10.000
+En fin de compte, avec Ashton Tate à prendre par Borland, la rose effrayée
+
+508
+00:27:10.000 --> 00:27:11.001
+Il a fait les rondeurs la semaine dernière.
+
+509
+00:27:12.000 --> 00:27:15.000
+Ashton Tate a annoncé un déploiement d’environ 8% des
+
+510
+00:27:15.000 --> 00:27:16.001
+Le personnel, environ 100 employés.
+
+511
+00:27:17.000 --> 00:27:20.001
+Toutes les étapes étaient dans le siège d&#x27;Ashton Tate à Torrance, en Californie.
+
+512
+00:27:21.000 --> 00:27:22.001
+C&#x27;est ça pour les chronicles informatiques de cette semaine.
+
+513
+00:27:23.000 --> 00:27:24.000
+Je suis Marie Gabriel.
+
+514
+00:27:35.001 --> 00:27:56.001
+Merci de regarder.

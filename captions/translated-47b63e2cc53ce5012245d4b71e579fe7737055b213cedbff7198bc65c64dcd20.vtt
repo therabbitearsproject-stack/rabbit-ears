@@ -1,0 +1,1737 @@
+WEBVTT
+
+1
+00:00:22.000 --> 00:00:26.000
+Se você quiser chegar rapidamente de uma cidade para outra, você toma um ônibus express.
+
+2
+00:00:26.000 --> 00:00:28.001
+Se você quiser ter certeza que o ônibus vai parar em seu pequeno
+
+3
+00:00:28.001 --> 00:00:30.001
+Rua, você toma um ônibus local.
+
+4
+00:00:31.000 --> 00:00:34.001
+Com computadores, é o mesmo, mas o contrário. Se você quiser mover uma
+
+5
+00:00:34.001 --> 00:00:39.000
+Um pouco de dados, diga da tecla para o CPU, você usa um ônibus de hospedagem. Se você
+
+6
+00:00:39.000 --> 00:00:43.000
+Quer mover muitos dados, velocidade ao longo de gráficos ou vídeo para o seu monitor, você
+
+7
+00:00:43.000 --> 00:00:45.001
+Precisa de um ônibus local. Sobre o que estou falando?
+
+8
+00:00:46.000 --> 00:00:50.000
+Você vai descobrir hoje como explicamos a tecnologia do ônibus local sobre isso
+
+9
+00:00:50.000 --> 00:00:52.000
+Edição das crônicas de computador.
+
+10
+00:01:07.000 --> 00:01:12.000
+As crônicas de computador são trazidas para você em parte pela Intel Microprocessor Technology
+
+11
+00:01:12.000 --> 00:01:17.001
+O software de hoje e de amanhã. Introduza o computador dentro. adicional
+
+12
+00:01:17.001 --> 00:01:22.000
+O financiamento é concedido pela Associação de Software Publishers. Os fornecedores de
+
+13
+00:01:22.000 --> 00:01:27.001
+materiais educacionais para ajudar a gerenciar o software. Não copie esse floppy. E por
+
+14
+00:01:27.001 --> 00:01:30.000
+Hewlett Packard, Divisão de Computadores Pessoais.
+
+15
+00:01:35.001 --> 00:01:39.001
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e comigo hoje é Bruce
+
+16
+00:01:39.001 --> 00:01:43.001
+Gray da Megahertz Corporation. Bruce, estamos falando de slots de expansão,
+
+17
+00:01:44.000 --> 00:01:47.000
+Cartões de expansão hoje. É isso que pensamos sobre as grandes cartas que irão em um
+
+18
+00:01:47.000 --> 00:01:51.000
+ISA slot dentro daqueles grandes espaços em um escritório. Um dos novos padrões para
+
+19
+00:01:51.000 --> 00:01:55.000
+A expansão é PCMCIA e é isso que você faz no Megahertz. Fora-nos através do
+
+20
+00:01:55.000 --> 00:01:59.000
+avançado em tecnologia em cartões PCMCIA. com certeza. Vamos mostrar-lhe onde começamos.
+
+21
+00:01:59.001 --> 00:02:03.001
+No início da indústria, não conseguimos obter todo o circuito necessário para
+
+22
+00:02:03.001 --> 00:02:07.001
+um modem no cartão do PC e tivemos que ter essa coisa que chamamos de
+
+23
+00:02:07.001 --> 00:02:12.001
+O módulo. Agora que a tecnologia avançou, conseguimos tomar este circuito e obter
+
+24
+00:02:12.001 --> 00:02:16.001
+Tudo no cartão. Ainda temos que lutar com esse cabo. E isso é muito
+
+25
+00:02:16.001 --> 00:02:20.000
+importante para o usuário do laptop porque é apenas um pedaço adicional que eles têm que
+
+26
+00:02:20.000 --> 00:02:23.001
+e carregar. Estamos muito orgulhosos desta inovação introduzida no ano passado. É chamado de X
+
+27
+00:02:23.001 --> 00:02:25.001
+-Jack e é retracível telefone jack.
+
+28
+00:02:25.001 --> 00:02:28.000
+Tudo está lá, Jack e tudo. Você pode se separar daquela
+
+29
+00:02:28.000 --> 00:02:30.001
+e o cabo. Mostre-nos como isso funciona. Vamos mostrar um pouco sobre como uma pessoa
+
+30
+00:02:30.001 --> 00:02:37.001
+Eu instalaria isso. Você lança o cartão do PC no drive bay. Você fechou
+
+31
+00:02:37.001 --> 00:02:41.000
+A porta do motor Bay. Você é o X-Jack. Aqui estamos nós. Basta ligar o telefone.
+
+32
+00:02:41.001 --> 00:02:44.000
+Insira o seu cabo e você está pronto para ir. Mostre que isso realmente funciona, Bruce.
+
+33
+00:02:44.001 --> 00:02:48.000
+com certeza. Então você vai desenvolver algum serviço on-line agora através deste
+
+34
+00:02:48.000 --> 00:02:51.000
+Pequeno cartão modem. E o som que você ouve, é o modem que fala o telefone
+
+35
+00:02:51.000 --> 00:02:54.001
+E então você vai ouvir esse som escorregante e que é o modem em seu laptop
+
+36
+00:02:54.001 --> 00:02:58.001
+conectando-se ao modem que você está ligando no outro fim. O nosso ecrã deve
+
+37
+00:02:58.001 --> 00:03:01.001
+Chegando até aqui apenas... E assim estamos on-line com esse mapa do tempo agora.
+
+38
+00:03:01.001 --> 00:03:06.001
+Estamos ligados a um serviço meteorológico. Por que essa função é tão importante para o
+
+39
+00:03:06.001 --> 00:03:10.001
+usuário de laptop é se você está pronto para voltar na estrada, você desligar o cabo,
+
+40
+00:03:11.000 --> 00:03:15.000
+Você fecha o seu topo, coloca-o, retira o seu jack e está pronto para ir
+
+41
+00:03:15.000 --> 00:03:18.000
+O caminho . Qual é o próximo passo que você tem por lá, Bruce? Esta é uma
+
+42
+00:03:18.000 --> 00:03:21.001
+O produto que acabamos de introduzir. É um modem de ligação celular. Isso permite
+
+43
+00:03:21.001 --> 00:03:26.000
+Você deve usar uma linha telefônica tradicional ou, em muitos casos, que a linha telefónica não é
+
+44
+00:03:26.000 --> 00:03:29.001
+disponível . Ele permite que você se conecte diretamente ao seu celular. Assim a célula
+
+45
+00:03:29.001 --> 00:03:32.001
+Telefone diretamente para o seu pequeno modem PCMCIA. Isso é correto. E não somos apenas
+
+46
+00:03:32.001 --> 00:03:35.000
+Falar sobre cartões de modem, não é mesmo? Você pode fazer todos os tipos de coisas em PCMCIA.
+
+47
+00:03:35.001 --> 00:03:38.001
+absolutamente . Você pode obter cartões LAN, você pode receber cartões de armazenamento, você poderá obter memória
+
+48
+00:03:38.001 --> 00:03:44.001
+Todos os cartões no PCMCIA. Tudo no formato PCMCIA. Hoje vamos olhar para
+
+49
+00:03:44.001 --> 00:03:48.000
+diferentes maneiras de melhorar o seu computador usando slots de expansão, sejam eles
+
+50
+00:03:48.000 --> 00:03:52.001
+PCMCIA, slots AT padrão ou a nova tecnologia de ônibus local.
+
+51
+00:03:53.000 --> 00:03:56.000
+Um dos termos que você ouve jogado em torno destes dias em discussões de ônibus locais
+
+52
+00:03:56.000 --> 00:04:00.000
+A tecnologia está ligando e jogando. Vamos começar com uma visita à Intel
+
+53
+00:04:00.000 --> 00:04:03.001
+Sede em Santa Clara, Califórnia para saber sobre os benefícios do plug
+
+54
+00:04:03.001 --> 00:04:06.001
+e jogar e o novo padrão de ônibus local PCI.
+
+55
+00:04:07.001 --> 00:04:11.000
+Se você já teve isso com tentar descobrir como configurar os switches DIP no seu
+
+56
+00:04:11.000 --> 00:04:14.000
+cartões de expansão, em seguida, plug e jogo pode ser para você.
+
+57
+00:04:14.000 --> 00:04:19.000
+Esta última inovação para os PCs baseados na arquitetura da Intel combina o cartão baseado
+
+58
+00:04:19.000 --> 00:04:23.001
+logica de software e hardware com novo software de configuração baseado no sistema. Você
+
+59
+00:04:23.001 --> 00:04:28.000
+Basta lançar o cartão na máquina e está pronto para uso. A captura é que você vai
+
+60
+00:04:28.000 --> 00:04:32.000
+Precisa de um dos novos plug-ins e jogando computadores ativados. E o que eles têm nele,
+
+61
+00:04:32.000 --> 00:04:38.000
+é essencialmente um software atualizado, que faz com que o algoritmo para configurar
+
+62
+00:04:38.000 --> 00:04:41.001
+Os cartões são automaticamente. E o que é, há algumas extensões no baixo
+
+63
+00:04:41.001 --> 00:04:45.001
+Nível de BIOS. Há algumas extensões para o sistema operacional.
+
+64
+00:04:46.000 --> 00:04:50.000
+Na verdade, há um terceiro nível, que é como uma aplicação. Plug e Play
+
+65
+00:04:50.000 --> 00:04:55.000
+Os computadores combinarão a expansão de ônibus padrão da ISA com o novo ôn bus local do PCI.
+
+66
+00:04:55.001 --> 00:05:00.000
+Você terá ambos o novo ônibus local PCI, que tem um desempenho muito maior, mas
+
+67
+00:05:00.000 --> 00:05:05.000
+Você também terá um ônibus ISA. Isso permite que você se aproveite de todos os grandes
+
+68
+00:05:05.000 --> 00:05:09.001
+base instalada de cartões ISA, alguns dos quais você pode já possuir e estar usando em
+
+69
+00:05:09.001 --> 00:05:12.001
+O seu PC mais velho. Eles continuarão a funcionar no seu novo computador pessoal.
+
+70
+00:05:13.000 --> 00:05:18.000
+O software de configuração da ISA da Intel permitirá programá-lo nessas cartas ISA antigas
+
+71
+00:05:18.000 --> 00:05:22.000
+Juntamente com o seu novo plug e jogar ISA ou PCI cartões de ônibus locais.
+
+72
+00:05:22.001 --> 00:05:26.000
+Aqui está um exemplo de três tipos de cartões de som executando programas em
+
+73
+00:05:26.000 --> 00:05:27.001
+O mesmo sistema de plug e play.
+
+74
+00:05:43.001 --> 00:05:49.000
+Para o usuário final, ele alivia a frustração na adição de seu cartão de som, por exemplo,
+
+75
+00:05:49.001 --> 00:05:54.000
+e ter que passar todo o domingo à tarde determinando o que um IRQ é, o que a
+
+76
+00:05:54.000 --> 00:05:56.001
+O canal DMA é, e o que esta coisa jumper é, de qualquer forma.
+
+77
+00:05:57.000 --> 00:05:59.001
+Assim, isso será eliminado com plug e play.
+
+78
+00:05:59.001 --> 00:06:04.001
+Os sistemas de plug-in e de jogo serão disponíveis em placas de concessionários no verão de 94. Para
+
+79
+00:06:04.001 --> 00:06:07.000
+As crônicas do computador, eu sou Janelle Patterson.
+
+80
+00:06:19.001 --> 00:06:25.001
+Há dois padrões lá fora para a tecnologia de ônibus locais, PCI e VISA ou o
+
+81
+00:06:25.001 --> 00:06:29.001
+O ônibus. Aqui para nos mostrar os benefícios de ambos são Robert Gunn de MyChronix e
+
+82
+00:06:29.001 --> 00:06:32.000
+Jeff Orr, de Diamond Computer Systems.
+
+83
+00:06:32.000 --> 00:06:35.001
+Robert, vamos começar com você e, antes de tudo, um pouco de história básica sobre
+
+84
+00:06:35.001 --> 00:06:39.001
+Tecnologia de expansão. Dê-nos a história que começa com o caminho do ônibus ISA
+
+85
+00:06:39.001 --> 00:06:42.000
+de volta no IBM AT dias todo o caminho até o PCI.
+
+86
+00:06:42.001 --> 00:06:49.000
+com certeza. Como você pode lembrar, o ônibus ISA foi desenvolvido para a AT. O AT
+
+87
+00:06:49.000 --> 00:06:55.000
+O computador é composto por 286 microprocessadores. O microprocessador 286 foi de 16 bits.
+
+88
+00:06:55.000 --> 00:06:57.000
+Microprocessador que funciona em 8 MHz.
+
+89
+00:06:57.000 --> 00:07:04.000
+Consequentemente, o ônibus ISA era um 16 bits ou é um ônimo de 16 bitos que opera em
+
+90
+00:07:04.000 --> 00:07:10.001
+São 8 MHz. com a introdução dos microprocessadores 386 e 486, que
+
+91
+00:07:10.001 --> 00:07:15.001
+São microprocessadores de 32 bits que operam a 33 MHz, o ônibus se tornou o botão
+
+92
+00:07:15.001 --> 00:07:19.000
+para obter dados da placa do sistema para o sistema externo.
+
+93
+00:07:19.000 --> 00:07:24.001
+Portanto, o MyChronix foi instrumental no desenvolvimento do ônibus local VISA. O que o
+
+94
+00:07:24.001 --> 00:07:31.001
+O ônibus local VISA é um ônimo de 32 bits que opera em 33 MHz. Por isso, a CPU e o
+
+95
+00:07:31.001 --> 00:07:33.001
+O ônibus pode se comunicar à mesma velocidade.
+
+96
+00:07:34.001 --> 00:07:38.000
+Tudo bem, então você resolveu o problema do botão de garrafas realmente lento, expansão de ônibus sobre
+
+97
+00:07:38.000 --> 00:07:42.001
+Aqui em comparação com o processador rápido, recebendo o ônibus VL lá. Vamos correr a
+
+98
+00:07:42.001 --> 00:07:47.000
+comparação agora. Você tem um cartão gráfico ISA de moda antigo lá em que
+
+99
+00:07:47.000 --> 00:07:51.001
+máquina e você tem seu cartão de gráfico VISA ou VL aqui. Em primeiro lugar,
+
+100
+00:07:51.001 --> 00:07:53.001
+descreva o que está dentro da máquina sobre lá em termos de
+
+101
+00:07:53.001 --> 00:07:55.001
+Cartão de expansão nas slots, Robert.
+
+102
+00:07:55.001 --> 00:07:59.000
+Isso é correto. Temos duas máquinas idênticas aqui. Estes são os dois DX-266
+
+103
+00:07:59.000 --> 00:08:04.000
+das máquinas. Esta máquina acima aqui é equipada com um acelerador gráfico ISA
+
+104
+00:08:04.000 --> 00:08:06.000
+que ocupa o slot da ISA.
+
+105
+00:08:06.000 --> 00:08:12.000
+Você pode ver aqui as duas slots VL e a interface do controlador de disco rígido VL. O que
+
+106
+00:08:12.000 --> 00:08:17.001
+Eu gostaria de fazer agora é começar esta demonstração, lançando a máquina ISA e permitindo
+
+107
+00:08:17.001 --> 00:08:21.001
+para carregar dados do disco rígido para a memória principal.
+
+108
+00:08:21.001 --> 00:08:24.001
+Tudo bem, vamos passar aqui se podemos obter nossas tiras da segunda máquina e
+
+109
+00:08:24.001 --> 00:08:27.000
+Você me diz o que está acontecendo aqui e eu vou apontar e descrever isso, Robert.
+
+110
+00:08:27.000 --> 00:08:31.001
+Mais uma vez, esta é uma máquina DX-266 idêntica. Também tem um acelerador gráfico em
+
+111
+00:08:31.001 --> 00:08:35.001
+Isso, mas você pode ver aqui o acelerador gráfico ocupa ambos os slots da ISA em
+
+112
+00:08:35.001 --> 00:08:37.000
+Além dos slots VISA.
+
+113
+00:08:38.000 --> 00:08:39.000
+Vá adiante e comece essa máquina.
+
+114
+00:08:39.001 --> 00:08:41.001
+Tudo bem, então eu vou começar este homem por aqui. Agora, você estava bastante confiante em
+
+115
+00:08:41.001 --> 00:08:45.000
+E isso. Você começou sua máquina há cerca de 30 segundos. Eu só
+
+116
+00:08:45.000 --> 00:08:46.001
+Começou com o cartão VISA nele.
+
+117
+00:08:47.000 --> 00:08:49.000
+E mais uma vez, diga-me o que estamos carregando aqui. O que estamos realmente fazendo?
+
+118
+00:08:49.000 --> 00:08:53.000
+O que estamos fazendo é do DOS prompt, nós avançamos e estamos carregando dados
+
+119
+00:08:53.000 --> 00:08:56.000
+do disco rígido para a memória principal e depois
+
+120
+00:08:56.000 --> 00:08:57.001
+Nós vamos executar isso em CorelDRAW.
+
+121
+00:08:58.000 --> 00:09:01.001
+E então o que estamos fazendo é demonstrar os benefícios do VISA ambos a partir de um
+
+122
+00:09:01.001 --> 00:09:04.001
+Apresentação da interface de disco rígido e também a aceleração gráfica.
+
+123
+00:09:05.000 --> 00:09:09.000
+Tudo bem, então estamos a iniciar o Windows, estamos a começar o CorelDRAW e estamos a
+
+124
+00:09:09.000 --> 00:09:11.001
+carregando um gráfico dentro do Corel em cada uma dessas duas máquinas.
+
+125
+00:09:11.001 --> 00:09:12.000
+Isso é correto.
+
+126
+00:09:12.000 --> 00:09:15.001
+E mesmo que eu comecei isso cerca de meia hora depois que você começou o seu
+
+127
+00:09:15.001 --> 00:09:17.000
+computador por aí, este homem é quase feito.
+
+128
+00:09:18.000 --> 00:09:21.001
+E, de fato, há o nosso gráfico de moto e o outro garoto ainda
+
+129
+00:09:21.001 --> 00:09:26.000
+Cranking away, crawling through the traffic jam in that slow ISA bus, huh?
+
+130
+00:09:26.000 --> 00:09:26.001
+Isso é correto.
+
+131
+00:09:28.000 --> 00:09:31.001
+Tudo bem, você explicou o que os problemas são, a garrafa com a ISA
+
+132
+00:09:31.001 --> 00:09:34.001
+Bus, mas ainda vemos esses ônibus em cada novo computador que compramos hoje. Por que ?
+
+133
+00:09:35.000 --> 00:09:39.000
+Devido ao fato de que ainda existem algumas aplicações que não exigem o
+
+134
+00:09:39.000 --> 00:09:40.001
+A velocidade que o VISA oferece.
+
+135
+00:09:40.001 --> 00:09:44.000
+Além disso, há uma grande base instalada de ISA
+
+136
+00:09:44.000 --> 00:09:45.001
+Os periféricos ainda estão no mercado hoje.
+
+137
+00:09:46.000 --> 00:09:47.000
+Tudo bem, Robert, muito obrigado.
+
+138
+00:09:47.001 --> 00:09:48.000
+Vamos passar por aqui e juntar-se.
+
+139
+00:09:48.001 --> 00:09:50.000
+Jeff, como você faz isso?
+
+140
+00:09:50.001 --> 00:09:50.001
+O bom.
+
+141
+00:09:51.000 --> 00:09:54.001
+Tudo bem, vocês no Diamond, vocês têm cartões de acelerador e vocês vão
+
+142
+00:09:54.001 --> 00:09:57.001
+Mostre-nos um cartão PCI que vai para um slot PCI.
+
+143
+00:09:58.000 --> 00:10:01.001
+Primeiro de tudo, explique a diferença entre o PCI e o que acabamos de ver lá
+
+144
+00:10:01.001 --> 00:10:03.000
+com Robert e o VISA ou VL ônibus.
+
+145
+00:10:03.001 --> 00:10:03.001
+com certeza.
+
+146
+00:10:04.000 --> 00:10:07.000
+A maior diferença que você vai encontrar no ônibus local PCI em comparação com
+
+147
+00:10:07.000 --> 00:10:09.000
+O ônibus local VISA é a independência do processador.
+
+148
+00:10:09.001 --> 00:10:14.000
+Independência do processador significa que, à medida que a tecnologia de processador aumenta, o PCI
+
+149
+00:10:14.000 --> 00:10:17.000
+Continue a melhorar o seu desempenho onde o VL pode flater.
+
+150
+00:10:17.000 --> 00:10:20.001
+Então você diz que a tecnologia VL sobre lá era dependente dessa
+
+151
+00:10:20.001 --> 00:10:22.000
+486 chip com o qual estava trabalhando?
+
+152
+00:10:22.000 --> 00:10:22.001
+Sim e talvez.
+
+153
+00:10:22.001 --> 00:10:25.000
+PCI, não importa com que processador ele está trabalhando?
+
+154
+00:10:25.000 --> 00:10:28.000
+Ele não é apenas feito para a tecnologia de processadores existente de 486s
+
+155
+00:10:28.000 --> 00:10:29.001
+Pentium, mas qualquer coisa que possa vir depois.
+
+156
+00:10:30.000 --> 00:10:33.000
+Tudo bem, vá para dentro da caixa e mostre-nos o cartão e as slots e assim por diante.
+
+157
+00:10:33.000 --> 00:10:37.000
+O primeiro slot que você vê aqui no final é o slot de ônibus AT padrão.
+
+158
+00:10:37.000 --> 00:10:39.000
+Tem as porções de 8 e 16 bits.
+
+159
+00:10:40.000 --> 00:10:43.000
+As três slots brancas adjacentes a isso são as slots PCI.
+
+160
+00:10:43.001 --> 00:10:48.000
+O terceiro tem o acelerador gráfico STEL32 PCI que Diamond faz.
+
+161
+00:10:48.001 --> 00:10:52.001
+Tudo bem, Jeff, você pode mostrar-me alguns exemplos práticos de por que eu estou preocupado com isso
+
+162
+00:10:52.001 --> 00:10:55.001
+velocidade se eu não estou fazendo coisas fantásticas como gráficos de alto nível e assim por diante?
+
+163
+00:10:56.000 --> 00:10:59.000
+Temos alguns exemplos apenas no ambiente padrão do Windows em si.
+
+164
+00:10:59.001 --> 00:11:00.001
+O primeiro será o processamento de palavras.
+
+165
+00:11:00.001 --> 00:11:05.000
+A capacidade de manipular o texto, seja ele enfatizando, escorregando, e
+
+166
+00:11:05.000 --> 00:11:07.001
+editando texto, você pode ver que é muito eficiente
+
+167
+00:11:07.001 --> 00:11:09.000
+Se isso for feito com o acelerador gráfico.
+
+168
+00:11:10.000 --> 00:11:11.001
+O texto pode ser destacado e você pode
+
+169
+00:11:11.001 --> 00:11:13.000
+Comece até o fim do documento com muito facilidade.
+
+170
+00:11:13.000 --> 00:11:16.001
+Então, mesmo em um aplicativo de rotina como o processamento de palavras, eu ainda profito
+
+171
+00:11:16.001 --> 00:11:18.000
+Com a velocidade que eu posso trabalhar mais rápido.
+
+172
+00:11:19.000 --> 00:11:22.001
+Outras áreas que você pode ver dentro de Windows, apenas o genérico
+
+173
+00:11:22.001 --> 00:11:24.000
+A aplicação é solitária.
+
+174
+00:11:24.001 --> 00:11:28.000
+Por exemplo, há um jogo de solitário.
+
+175
+00:11:28.000 --> 00:11:31.000
+Se tomarmos um cartão e o tirarmos e deixarmos sair, você pode ver como rapidamente
+
+176
+00:11:31.000 --> 00:11:33.000
+E fluidamente ele se move por lá.
+
+177
+00:11:33.000 --> 00:11:36.000
+Não é jargão e leva muito pouco tempo.
+
+178
+00:11:37.001 --> 00:11:41.000
+O terceiro exemplo é apenas o funcionamento diário do Windows, capturando uma janela e
+
+179
+00:11:41.000 --> 00:11:44.000
+Movê-lo de lugar para lugar e veja o quão rapidamente ele é atualizado.
+
+180
+00:11:44.001 --> 00:11:48.000
+Sem um acelerador gráfico em seu sistema, você encontrará que o Windows
+
+181
+00:11:48.000 --> 00:11:50.000
+Na verdade, pode-se ver a descida.
+
+182
+00:11:50.001 --> 00:11:52.000
+E isso não funciona no mundo real.
+
+183
+00:11:52.000 --> 00:11:54.000
+Você pode ver neste caso que eles estão tendo tempo real.
+
+184
+00:11:54.001 --> 00:11:57.000
+A máquina que nós estava apenas correndo, ou você está correndo lá em direção
+
+185
+00:11:57.000 --> 00:11:58.001
+Agora, na verdade, tem um processador Pentium.
+
+186
+00:11:59.000 --> 00:12:03.000
+Mas apesar disso, você ainda pode acelerar as coisas, ainda pode passar esse ônibus
+
+187
+00:12:03.000 --> 00:12:06.000
+bloquear o caminho usando algo como o seu cartão de acelerador.
+
+188
+00:12:06.000 --> 00:12:10.000
+absolutamente . Não tem realmente muito efeito se for um 486 ou um Pentium ou
+
+189
+00:12:10.000 --> 00:12:12.000
+Outra tecnologia que vem além disso.
+
+190
+00:12:12.000 --> 00:12:14.000
+A aceleração ainda está lá. Será apenas exponencial.
+
+191
+00:12:14.001 --> 00:12:17.001
+Jeff, qual é o seu conselho para o usuário lá fora, para o nosso espectador que quer sair
+
+192
+00:12:17.001 --> 00:12:19.001
+e comprar um novo computador, e é um pouco confuso
+
+193
+00:12:19.001 --> 00:12:21.000
+sobre o que esses padrões de ônibus devem ser.
+
+194
+00:12:21.000 --> 00:12:23.001
+Eles devem ficar fora para PCI, mesmo que você não possa comprar
+
+195
+00:12:23.001 --> 00:12:25.000
+Muito cartões PCI agora?
+
+196
+00:12:25.001 --> 00:12:28.000
+O visto é o que você deve ir? São os
+
+197
+00:12:28.000 --> 00:12:29.001
+O que é que Robert falou bem o suficiente?
+
+198
+00:12:30.000 --> 00:12:31.001
+Ajude os nossos espectadores.
+
+199
+00:12:32.000 --> 00:12:34.000
+Neste ponto, vai realmente depender do que
+
+200
+00:12:34.000 --> 00:12:35.001
+O objetivo desse sistema será.
+
+201
+00:12:36.000 --> 00:12:39.001
+Se é um sistema pela primeira vez, ou se eles querem ir para um full blown Pentium
+
+202
+00:12:39.001 --> 00:12:41.001
+sistema, ou os sistemas entre eles.
+
+203
+00:12:42.000 --> 00:12:44.000
+Isso tem realmente a ver com as necessidades do usuário. Infelizmente, não há
+
+204
+00:12:44.000 --> 00:12:46.000
+necessariamente uma resposta clara que eu posso lhe fornecer.
+
+205
+00:12:46.000 --> 00:12:47.001
+Será que vamos ter dois padrões que vão ao longo do
+
+206
+00:12:47.001 --> 00:12:49.001
+Ou será que um deles vai derrubar o outro?
+
+207
+00:12:49.001 --> 00:12:52.001
+Você verá os padrões que continuarão a evoluir todos ao mesmo tempo.
+
+208
+00:12:53.000 --> 00:12:54.000
+Bem, confusão como sempre.
+
+209
+00:12:55.000 --> 00:12:59.001
+Enquanto a maioria de nós usa slots de expansão para tarefas bastante comuns, como gráficos
+
+210
+00:12:59.001 --> 00:13:02.001
+Aceleração ou comunicação, algumas empresas preferem
+
+211
+00:13:02.001 --> 00:13:04.000
+coisas exóticas com esses pequenos ônibus.
+
+212
+00:13:04.001 --> 00:13:08.000
+Um exemplo é a navegação Trimble em Sunnyvale, Califórnia.
+
+213
+00:13:09.000 --> 00:13:13.001
+Trimble Navigation especializa-se em produtos GPS móveis que incorporam localização
+
+214
+00:13:13.001 --> 00:13:15.000
+em uma variedade de aplicações.
+
+215
+00:13:15.000 --> 00:13:20.000
+Aqui, sinais da Global Positioning System Satellite Network rastream um carro
+
+216
+00:13:20.000 --> 00:13:22.000
+Progresso em um display de mapa digital.
+
+217
+00:13:22.001 --> 00:13:26.001
+O receptor GPS é montado em um cartão PCMCIA, que é
+
+218
+00:13:26.001 --> 00:13:28.001
+inserido em um computador laptop.
+
+219
+00:13:29.000 --> 00:13:32.000
+Trimble escolheu o PCMCIA por causa de sua crescente aceitação
+
+220
+00:13:32.000 --> 00:13:34.000
+no mercado de computadores móveis.
+
+221
+00:13:34.000 --> 00:13:40.000
+Muitos fabricantes de computadores parecem estar adotando isso como um meio de
+
+222
+00:13:40.000 --> 00:13:45.001
+Conecte qualquer variedade de diferentes acessórios e periféricos às suas máquinas.
+
+223
+00:13:47.001 --> 00:13:54.000
+Todas as máquinas DOS, a Apple, está adotando o PCMCIA, então ele realmente faz
+
+224
+00:13:54.000 --> 00:13:59.001
+Desfrute de uma aceitação tão ampla por parte dos vários fabricantes de computadores
+
+225
+00:13:59.001 --> 00:14:01.000
+Como já vimos até agora.
+
+226
+00:14:01.000 --> 00:14:05.001
+Antes da chegada do PCMCIA, a maioria dos receptores GPS do Trimble
+
+227
+00:14:05.001 --> 00:14:07.001
+Era um dispositivo de série direta.
+
+228
+00:14:07.001 --> 00:14:13.001
+Uma vantagem do PCMCIA é que você obtém energia do slot PCMCia, então não há
+
+229
+00:14:13.001 --> 00:14:15.000
+necessidade de um fornecimento de energia separado.
+
+230
+00:14:15.001 --> 00:14:18.000
+Isso é uma grande vantagem para aplicações de campo portáteis.
+
+231
+00:14:18.001 --> 00:14:23.001
+Uma aplicação interessante, aplicação de vida real do GPS estava no furacão
+
+232
+00:14:23.001 --> 00:14:29.000
+Andrew programa de limpeza onde trabalhamos com a IBM, a Universidade da Flórida, e
+
+233
+00:14:29.000 --> 00:14:35.000
+Mais uma vez, Penn Stuff, para colocar no computador tablet baseado no IBM 710T,
+
+234
+00:14:35.000 --> 00:14:41.000
+uma aplicação que permitiu que a catástrofe aliviasse as pessoas para sair e muito
+
+235
+00:14:41.000 --> 00:14:46.000
+rapidamente localizar os atributos de gravação danificados e, na verdade, tirar fotos digitais, apenas
+
+236
+00:14:46.000 --> 00:14:50.001
+Como você pode data e tempo impressão imagens, você pode posicionar impressão fotos.
+
+237
+00:14:51.000 --> 00:14:53.000
+Para as crônicas de computador, eu sou Janelle Patterson.
+
+238
+00:15:05.001 --> 00:15:10.000
+Nestes dias da computação multimídia, o uso mais comum de um slot de expansão
+
+239
+00:15:10.000 --> 00:15:13.000
+É para adicionar uma placa de som, e a aplicação mais exigente
+
+240
+00:15:13.000 --> 00:15:15.000
+É para mover o vídeo de movimento completo.
+
+241
+00:15:15.001 --> 00:15:19.000
+Aqui para nos mostrar bolsas que fazem ambos são Kim Federico de Laboratórios Criativos
+
+242
+00:15:19.000 --> 00:15:21.000
+E também Greg Millar de Radius.
+
+243
+00:15:21.001 --> 00:15:25.000
+Kim, vamos começar com você, e estamos falando de coisas novas fantásticas como o PCI
+
+244
+00:15:25.000 --> 00:15:29.000
+e VISA e PCMCIA, mas o seu slot ISIS ainda é bom para muitos
+
+245
+00:15:29.000 --> 00:15:31.000
+As coisas, e uma delas é a sonora.
+
+246
+00:15:31.001 --> 00:15:34.000
+As placas sonoras de seus garotos se encaixam diretamente nesse slot do ISIS sem nenhum problema, certo?
+
+247
+00:15:34.000 --> 00:15:38.000
+É certo. Mesmo com os aplicativos de som mais exigentes hoje e com os mais estados
+
+248
+00:15:38.000 --> 00:15:41.001
+-A tecnologia sonora de última geração, o slot ISIS de 16 bits ainda é suficiente.
+
+249
+00:15:42.000 --> 00:15:44.000
+Tudo bem, passe pelo seu painel aqui e mostre-nos o que está nisso.
+
+250
+00:15:44.000 --> 00:15:49.000
+Bem, bem, este é o Sound Blaster 16 SCSI 2, e a coisa muito boa sobre
+
+251
+00:15:49.000 --> 00:15:54.000
+Este cartão é que não só fornece o CD de 16 bits de qualidade de áudio e música,
+
+252
+00:15:54.000 --> 00:15:59.000
+Mas também tem uma interface SCSI 2 que permitirá que um usuário conecte, digamos, um CD.
+
+253
+00:15:59.000 --> 00:16:02.000
+-Drive ROM ou um disco rígido diretamente para este cartão sem
+
+254
+00:16:02.000 --> 00:16:03.001
+requerer a utilização de outro slot.
+
+255
+00:16:04.000 --> 00:16:05.000
+Tudo bem, vamos falar sobre o
+
+256
+00:16:05.000 --> 00:16:07.000
+vantagens do som, e você tem alguns demos aqui.
+
+257
+00:16:07.000 --> 00:16:09.001
+Eu quero dizer, sabemos que o som é uma espécie de diversão e agradável, mas mostre-nos alguns exemplos
+
+258
+00:16:09.001 --> 00:16:11.001
+onde o som realmente faz uma diferença no seu PC.
+
+259
+00:16:11.001 --> 00:16:13.001
+É certo. É muito sofisticado nos dias de hoje.
+
+260
+00:16:19.000 --> 00:16:26.000
+Este é o controle TAC-COM. A limpeza é concedida. É isso você, criança?
+
+261
+00:16:26.001 --> 00:16:28.000
+O Hack! É bom ouvir você.
+
+262
+00:16:28.000 --> 00:16:30.001
+Então você está fazendo um teste hoje. Eu gostaria que eu pudesse estar com você.
+
+263
+00:16:30.001 --> 00:16:33.001
+Você não deve ter nenhum problema. O Canyon de Beggar não é metade tão duro quanto corre
+
+264
+00:16:33.001 --> 00:16:35.000
+Nós costumávamos fazer. Boa sorte .
+
+265
+00:16:35.001 --> 00:16:36.000
+Obrigado .
+
+266
+00:16:39.001 --> 00:16:45.000
+Tudo bem, então temos discurso, temos efeitos sonoros, temos música, e sem
+
+267
+00:16:45.000 --> 00:16:46.001
+Isso, é claro, este jogo não seria o mesmo jogo, certo?
+
+268
+00:16:46.001 --> 00:16:51.001
+É certo. Este jogo, que foi Rebel Assault por LucasArts, usa som para o mais completo
+
+269
+00:16:51.001 --> 00:16:55.000
+extensão, e você provavelmente pode imaginar que seria como assistir a um filme silencioso
+
+270
+00:16:55.000 --> 00:16:57.000
+Se você não tiver as capacidades sonoras.
+
+271
+00:16:57.001 --> 00:17:00.001
+Tudo bem, como sobre alguns outros exemplos, talvez exemplos mais práticos, de onde
+
+272
+00:17:00.001 --> 00:17:02.001
+Eu posso aproveitar o som dentro de mim...
+
+273
+00:17:02.001 --> 00:17:06.000
+Bem, vamos para o Windows aqui, e eu vou dar-lhe um exemplo de como o som pode
+
+274
+00:17:06.000 --> 00:17:08.000
+Ser usado de uma forma mais orientada para o negócio.
+
+275
+00:17:08.001 --> 00:17:13.001
+Temos uma série de utilidades que permitirá que você crie seus próprios sons.
+
+276
+00:17:14.001 --> 00:17:19.001
+Algo como um sequenciador MIDI realmente permitirá que um usuário compone música em
+
+277
+00:17:19.001 --> 00:17:23.000
+seu PC, e eu vou dar-lhe uma pequena amostra do que parece.
+
+278
+00:17:25.000 --> 00:17:28.000
+Então você pode usar o som não só para jogar de volta, mas realmente
+
+279
+00:17:28.000 --> 00:17:29.001
+Para criar sons usando o seu PC.
+
+280
+00:17:29.001 --> 00:17:30.000
+Isso é verdade.
+
+281
+00:17:30.000 --> 00:17:31.000
+Tudo bem, e as outras coisas?
+
+282
+00:17:31.000 --> 00:17:38.000
+Também temos coisas como editores de onda, que permitem que você manipule a onda
+
+283
+00:17:38.000 --> 00:17:40.000
+arquivos, e Wave é o formato de som para Windows.
+
+284
+00:17:45.000 --> 00:17:49.001
+Então você pode apenas criar seus próprios efeitos sonoros, ou você pode até mesmo criar seu próprio
+
+285
+00:17:49.001 --> 00:17:52.001
+Fala a voz para uma apresentação de negócios.
+
+286
+00:17:52.001 --> 00:17:53.001
+Sim, dá-me um exemplo disso.
+
+287
+00:17:53.001 --> 00:17:56.000
+Eu quero dizer, uma das coisas que ouvimos sobre é colocar um arquivo de som e apertá-lo
+
+288
+00:17:56.000 --> 00:17:59.000
+para processar documentos, assim como você pode escrever notas em um documento.
+
+289
+00:17:59.000 --> 00:18:02.000
+Bem, isso é um uso muito popular para o som em negócios
+
+290
+00:18:02.000 --> 00:18:04.000
+Hoje em dia. Isso é chamado de anotação de voz.
+
+291
+00:18:05.000 --> 00:18:08.000
+E o que você pode fazer é gravar qualquer voz, qualquer comprimento de palavra.
+
+292
+00:18:08.000 --> 00:18:11.001
+Então este é um documento do Microsoft Word, e você adicionou arquivos de som para
+
+293
+00:18:11.001 --> 00:18:14.000
+Por isso, além de ler isso...
+
+294
+00:18:14.000 --> 00:18:17.001
+Posso anotar um documento em qualquer aplicação que apoie OLE
+
+295
+00:18:17.001 --> 00:18:19.001
+Usando o som OLE.
+
+296
+00:18:20.000 --> 00:18:22.000
+Há muitas razões para usar um desses
+
+297
+00:18:22.000 --> 00:18:23.001
+O ISIS faz muito para colocar o som em sua máquina.
+
+298
+00:18:24.001 --> 00:18:25.000
+Tudo bem, muito obrigado Kim.
+
+299
+00:18:25.001 --> 00:18:29.000
+Vamos olhar para o verdadeiro desafio... Desculpe, o verdadeiro desafio
+
+300
+00:18:29.000 --> 00:18:31.001
+O processo aqui, que está movendo vídeo de movimento completo.
+
+301
+00:18:32.000 --> 00:18:33.001
+Bem, você tem alguns exemplos aqui, em primeiro lugar.
+
+302
+00:18:34.000 --> 00:18:36.001
+Pergunte a você a primeira coisa, Greg. Estamos olhando para um Mac Quadra
+
+303
+00:18:36.001 --> 00:18:38.000
+E aqui. Estamos olhando para os PCs até agora.
+
+304
+00:18:38.001 --> 00:18:42.000
+Qual é a diferença em toda esta tecnologia de expansão quando estamos lidando com
+
+305
+00:18:42.000 --> 00:18:43.001
+O mundo do Mac, ao contrário do mundo do PC?
+
+306
+00:18:44.000 --> 00:18:46.001
+Bem, desde o Mac 2, a Apple tem usado um 32-bit
+
+307
+00:18:46.001 --> 00:18:48.000
+O ônibus. Este é o novo ônibus no Macintosh.
+
+308
+00:18:49.000 --> 00:18:52.000
+Assim, todas as cartas que são construídas para essas máquinas da classe Mac 2 foram novos ônibus.
+
+309
+00:18:52.000 --> 00:18:54.001
+Slots, que é um ônibus bastante rápido em si e em si.
+
+310
+00:18:54.001 --> 00:18:57.000
+E foi em torno de quase 10 anos agora.
+
+311
+00:18:57.000 --> 00:18:59.000
+Tudo bem, agora, apesar disso, vocês têm cartões
+
+312
+00:18:59.000 --> 00:19:00.001
+Isso faz com que as coisas se movam ainda mais rápido.
+
+313
+00:19:01.000 --> 00:19:02.001
+E mostre-me o que essas duas cartas fazem.
+
+314
+00:19:02.001 --> 00:19:07.000
+É um cartão gráfico. E no Macintosh, o gráfico de 24 bits é o que mais
+
+315
+00:19:07.000 --> 00:19:09.000
+As pessoas gostam de usar para fazer aplicações de imagem.
+
+316
+00:19:09.001 --> 00:19:12.001
+OK, e que benefício de desempenho você obtém deste cartão?
+
+317
+00:19:13.000 --> 00:19:15.001
+Com este cartão, você pode mover suas imagens em torno da tela cerca de 30 vezes.
+
+318
+00:19:15.001 --> 00:19:18.000
+mais rápido. 30 vezes mais rápido, adicionando esse tipo de
+
+319
+00:19:18.000 --> 00:19:19.001
+de cartão. Bem, e o que acontece com esse cara aqui?
+
+320
+00:19:19.001 --> 00:19:23.000
+É um cartão muito mais sofisticado. Isso é para fazer vídeo ao vivo.
+
+321
+00:19:23.000 --> 00:19:26.001
+Este é o vídeo em, fora, compressão, decompressão.
+
+322
+00:19:27.000 --> 00:19:28.001
+E qual é essa caixa que você tem na frente aqui?
+
+323
+00:19:28.001 --> 00:19:32.000
+É isso que se liga a este cartão. Isso permite que você faça todo o seu áudio e
+
+324
+00:19:32.000 --> 00:19:34.000
+vídeo dentro e fora da sua máquina.
+
+325
+00:19:34.000 --> 00:19:37.000
+É certo. Tudo bem, dê alguns exemplos. Você tem duas aplicações aqui que
+
+326
+00:19:37.000 --> 00:19:39.001
+Mostrar-nos-á a vantagem da velocidade que lhe beneficia
+
+327
+00:19:39.001 --> 00:19:41.000
+Faça isso colocando essas cartas.
+
+328
+00:19:41.000 --> 00:19:42.000
+O que é o primeiro?
+
+329
+00:19:42.000 --> 00:19:44.001
+Este é um Adobe Photoshop, o pacote de retouching de imagem.
+
+330
+00:19:44.001 --> 00:19:47.001
+E você pode ver que temos um arquivo de 6 megabytes aqui no ecrã.
+
+331
+00:19:48.001 --> 00:19:50.001
+E com este cartão, você pode girar muito suavemente.
+
+332
+00:19:51.000 --> 00:19:52.001
+que não é uma coisa fácil de fazer. Você
+
+333
+00:19:52.001 --> 00:19:54.001
+Pode mostrar-nos como seria sem o seu conselho.
+
+334
+00:19:54.001 --> 00:19:55.000
+Sem ele?
+
+335
+00:19:55.001 --> 00:19:57.001
+Bem, é isso que estamos acostumados, sim.
+
+336
+00:19:57.001 --> 00:19:59.001
+E isso é sobre um ônibus de 32 bits. Até mesmo
+
+337
+00:19:59.001 --> 00:20:01.000
+Com o ônibus de 32 bits, isso é muito exigente.
+
+338
+00:20:01.001 --> 00:20:04.000
+Então, esse fator de 30x você obtém colocando seu cartão.
+
+339
+00:20:04.000 --> 00:20:06.000
+Faz uma grande diferença. Eu realmente posso fazer algum trabalho.
+
+340
+00:20:06.001 --> 00:20:08.001
+Tudo bem, é um caso fácil. Agora vamos para a
+
+341
+00:20:08.001 --> 00:20:10.000
+Um duro, que é um vídeo de movimento completo.
+
+342
+00:20:10.000 --> 00:20:12.000
+O vídeo de movimento completo é assim, exceto 30 vezes por segundo.
+
+343
+00:20:12.001 --> 00:20:16.000
+Muito mais dura. Vamos mostrar o Adobe Premiere aqui.
+
+344
+00:20:17.000 --> 00:20:21.000
+Isso, como o Adobe Photoshop, edita imagens. Esta edição de filmes.
+
+345
+00:20:22.001 --> 00:20:25.001
+Então, você vai carregar a premiação. E esta é a versão mais recente do Premiere,
+
+346
+00:20:25.001 --> 00:20:29.000
+O que, como você diz, é realmente um editor de filme não linear, certo?
+
+347
+00:20:29.000 --> 00:20:32.001
+E exatamente. Agora que você pode digitalizar seus filmes, você
+
+348
+00:20:32.001 --> 00:20:34.000
+Acesso aleatório através deles.
+
+349
+00:20:35.000 --> 00:20:37.000
+Então você vai me mostrar como você pode realmente editar uma
+
+350
+00:20:37.000 --> 00:20:39.000
+filme, mas não temos nenhum vídeo aqui.
+
+351
+00:20:39.000 --> 00:20:40.000
+Estamos fazendo tudo isso fora do disco rígido.
+
+352
+00:20:40.000 --> 00:20:41.000
+Tudo isso está fora da máquina.
+
+353
+00:20:41.000 --> 00:20:42.000
+Tudo bem, Jimmy, como você faz isso?
+
+354
+00:20:42.000 --> 00:20:45.000
+Bem, na tela aqui você pode ver vários clipes de vídeo aqui.
+
+355
+00:20:45.000 --> 00:20:49.001
+Aqui está uma das praias de roller do ponto de vista do escritor e aqui de
+
+356
+00:20:49.001 --> 00:20:51.000
+O ponto de vista do espectador.
+
+357
+00:20:52.000 --> 00:20:53.001
+Ok, vamos apenas ver como isso parece.
+
+358
+00:20:54.000 --> 00:20:55.001
+Como nós fazemos, há três efeitos sobre isso.
+
+359
+00:20:56.000 --> 00:20:59.001
+Apelação, direta passou, e uma fade.
+
+360
+00:21:02.001 --> 00:21:05.001
+Vamos apenas colocar isso aqui, e essa é a versão concluída disso.
+
+361
+00:21:06.001 --> 00:21:09.000
+E, na verdade, você pode ver o acesso aleatório. Aqui está uma parte do filme.
+
+362
+00:21:09.000 --> 00:21:12.000
+Então você pode saltar para qualquer quadro nesse filme sem ter que
+
+363
+00:21:12.000 --> 00:21:14.000
+literalmente passar por isso, como você gostaria com o original.
+
+364
+00:21:14.000 --> 00:21:16.001
+E exatamente. Agora vamos exportá-lo para parecer como um vídeo real.
+
+365
+00:21:17.001 --> 00:21:19.000
+Isso vai ser feito através do conselho.
+
+366
+00:21:21.000 --> 00:21:22.001
+Estes são os exemplos de...
+
+367
+00:21:22.001 --> 00:21:23.000
+Aqui está o apelo.
+
+368
+00:21:23.000 --> 00:21:24.001
+Há um movimento peel que você coloca lá.
+
+369
+00:21:24.001 --> 00:21:25.000
+E um fado de volta.
+
+370
+00:21:25.001 --> 00:21:26.000
+E um fado.
+
+371
+00:21:26.001 --> 00:21:30.000
+Então é tão simples quanto fazer edição de imagem, você pode fazer a edição de filme lá.
+
+372
+00:21:30.001 --> 00:21:32.001
+Tudo bem, houve uma espécie de pequenos exemplos de bebê, se você quiser, Gray.
+
+373
+00:21:32.001 --> 00:21:36.000
+Você pode realmente fazer coisas poderosas e de alto nível ao usar este cartão, não é mesmo?
+
+374
+00:21:36.000 --> 00:21:39.001
+Os tipos de coisas que você vê na televisão e no esporte
+
+375
+00:21:39.001 --> 00:21:42.000
+Eventos, você agora pode fazer em sua máquina de desktop.
+
+376
+00:21:42.000 --> 00:21:45.001
+Deixe-me mostrar-lhe uma peça que alguém usou um Macintosh, este
+
+377
+00:21:45.001 --> 00:21:49.000
+Cartão, na verdade, há apenas algumas semanas.
+
+378
+00:21:49.001 --> 00:21:52.000
+Bem, então o Mac, o cartão e o Adobe Premiere?
+
+379
+00:21:52.000 --> 00:21:52.001
+A premiação.
+
+380
+00:21:53.000 --> 00:21:55.000
+E você está jogando este pedaço de vídeo...
+
+381
+00:21:55.000 --> 00:21:55.001
+Está a rolar agora?
+
+382
+00:21:55.001 --> 00:21:57.001
+Bem, fora do disco rígido, mas um pedaço de vídeo, como era.
+
+383
+00:21:57.001 --> 00:21:59.001
+Desligue o hard drive. Estamos lendo um arquivo de 500 megabytes.
+
+384
+00:22:03.000 --> 00:22:06.000
+Todas as ferramentas no Macintosh estão fazendo texto, por exemplo, para
+
+385
+00:22:06.000 --> 00:22:08.000
+usada no seu vídeo também.
+
+386
+00:22:08.000 --> 00:22:09.000
+Vamos apenas olhar isso por um segundo.
+
+387
+00:22:27.001 --> 00:22:31.001
+Estes são gráficos criados, dizem, em Photoshop, todos os efeitos, todos as movimentos
+
+388
+00:22:31.001 --> 00:22:33.001
+Tudo feito no interior, tudo feito no computador.
+
+389
+00:22:34.000 --> 00:22:35.000
+Tudo feito em computador, tudo digital.
+
+390
+00:22:35.000 --> 00:22:38.001
+Tudo bem, você diz o que é um arquivo de 500 megabytes para esses dois
+
+391
+00:22:38.001 --> 00:22:40.000
+Clipe de 4 minutos, clipe de 1 minuto.
+
+392
+00:22:42.001 --> 00:22:45.001
+Isso é muito difícil de fazer na tradição. Isso é certo.
+
+393
+00:22:56.000 --> 00:22:59.000
+Compare para mim a velocidade e a capacidade de fazer esse tipo de coisa sobre este tipo de
+
+394
+00:22:59.000 --> 00:23:01.000
+A plataforma Mac nos PCs que vimos antes.
+
+395
+00:23:01.000 --> 00:23:05.001
+Por exemplo, fazer gráficos de 24 bits. A maioria dos PCs são gráficos de 8 bits.
+
+396
+00:23:06.000 --> 00:23:09.001
+Isso é cerca de oito vezes mais rápido que a maioria dos cartões gráficos do PC.
+
+397
+00:23:10.001 --> 00:23:13.000
+De acordo com isso, você realmente não pode fazer isso inteiro
+
+398
+00:23:13.000 --> 00:23:14.001
+- Vídeo de animação em um PC ainda. Isso vai vir.
+
+399
+00:23:15.000 --> 00:23:17.001
+Ok, muito obrigado muito. Esse é o nosso olhar para slots e ônibus.
+
+400
+00:23:18.000 --> 00:23:21.000
+Fique atento agora para as notícias de computador desta semana sobre acentos aleatórios.
+
+401
+00:23:34.001 --> 00:23:38.001
+No arquivo de acesso aleatório desta semana, Claris anunciou planos para lançar cinco
+
+402
+00:23:38.001 --> 00:23:41.001
+de suas principais aplicações em formato nativo PowerPC.
+
+403
+00:23:42.000 --> 00:23:48.001
+Claris Impact, Claris Works 2.1 e MacRite Pro 1. 5, FileMaker Pro e Claris Draw
+
+404
+00:23:48.001 --> 00:23:52.000
+será recompilado para o PowerPC chip para aproveitar a sua
+
+405
+00:23:52.000 --> 00:23:53.001
+velocidade e potência de processamento.
+
+406
+00:23:53.001 --> 00:23:59.001
+A IBM diz que já enviou mais de 250 mil chips PowerPC 601
+
+407
+00:23:59.001 --> 00:24:01.000
+para os fabricantes de computadores.
+
+408
+00:24:01.001 --> 00:24:05.001
+A Apple é o maior destinatário enquanto se prepara para a introdução do
+
+409
+00:24:05.001 --> 00:24:08.000
+O novo Macintosh PowerPC será lançado no próximo mês.
+
+410
+00:24:09.000 --> 00:24:11.001
+A Ambre, subsidiária de marketing direto da IBM, tem
+
+411
+00:24:11.001 --> 00:24:13.001
+Foram apresentados dois novos sistemas de alta performance.
+
+412
+00:24:14.000 --> 00:24:19.000
+O Lightning 100 é o primeiro a apresentar o processador Blue Lightning da IBM 100 MHz.
+
+413
+00:24:19.000 --> 00:24:24.000
+Triplicou a velocidade do relógio interno para superar os processadores DX266
+
+414
+00:24:24.000 --> 00:24:25.001
+com mais de 10 por cento.
+
+415
+00:24:26.000 --> 00:24:30.001
+E o novo 466 IVL oferece um caminho de atualização do Visa para o PCI
+
+416
+00:24:30.001 --> 00:24:32.001
+O Pentium está pronto.
+
+417
+00:24:33.000 --> 00:24:37.000
+LightSource Computer Images começou a enviar uma versão do Windows do seu Ophoto
+
+418
+00:24:37.000 --> 00:24:40.000
+Software de impressão e escaneamento de cores, anteriormente disponível
+
+419
+00:24:40.000 --> 00:24:41.001
+na plataforma Macintosh.
+
+420
+00:24:41.001 --> 00:24:47.000
+Ophoto versão 2 para Windows vai funcionar na cor de desktop mais popular
+
+421
+00:24:47.000 --> 00:24:52.000
+Os scanners, e ele virá ligado com o novo Canon IX 4015 scanner de cores.
+
+422
+00:24:53.000 --> 00:24:58.000
+A GalactiCom lançou a versão 6. 2 dos principais BBS, que oferece um gráfico
+
+423
+00:24:58.000 --> 00:25:00.001
+Interface de usuário para aplicações de boletim.
+
+424
+00:25:01.001 --> 00:25:05.000
+GalactiCom diz que este lançamento torna mais fácil para empresas e organizações
+
+425
+00:25:05.000 --> 00:25:08.000
+lançar seus próprios serviços on-line diretamente fora da caixa.
+
+426
+00:25:08.000 --> 00:25:13.000
+E se você tem dificuldade em encontrar alguém on-line, você pode estar interessado em um
+
+427
+00:25:13.000 --> 00:25:14.001
+Novo lançamento do IDG Books.
+
+428
+00:25:15.000 --> 00:25:19.000
+1994 Internet White Pages é o primeiro diretório impresso de
+
+429
+00:25:19.000 --> 00:25:21.000
+Usuários da Internet e seus endereços.
+
+430
+00:25:21.001 --> 00:25:25.001
+Ele inclui uma seção Hot Pages com endereços de Internet para VIPs corporativos e
+
+431
+00:25:25.001 --> 00:25:29.000
+jornalistas, e uma lista de provedores de serviços de internet em todo o mundo.
+
+432
+00:25:30.000 --> 00:25:34.000
+A Internet White Pages está disponível em livrarias de computadores por US$ 29,95.
+
+433
+00:25:34.001 --> 00:25:37.001
+É isso que é para as crônicas de computador desta semana. Eu sou Janelle Stelson.
+
+434
+00:25:38.000 --> 00:25:38.000
+Obrigado por você.

@@ -1,0 +1,1977 @@
+WEBVTT
+
+1
+00:00:34.000 --> 00:00:38.001
+Lorsque vous cherchez un virus biologique, vous utilisez un microscope ou un autre
+
+2
+00:00:38.001 --> 00:00:41.001
+un dispositif de laboratoire pour tester et identifier le virus.
+
+3
+00:00:42.000 --> 00:00:45.000
+Mais quand vous cherchez un virus informatique, il est encore plus difficile
+
+4
+00:00:45.000 --> 00:00:47.000
+Parce que vous ne le voyez pas du tout.
+
+5
+00:00:47.000 --> 00:00:50.000
+Il est caché dans un morceau de logiciel ou peut-être déjà
+
+6
+00:00:50.000 --> 00:00:51.001
+enterré dans votre système d’exploitation.
+
+7
+00:00:52.000 --> 00:00:57.000
+Aujourd’hui, nous examinons les virus informatiques, leur guérison et leur prévention.
+
+8
+00:00:57.000 --> 00:00:58.001
+Édition de The Computer Chronicles.
+
+9
+00:01:20.000 --> 00:01:25.000
+Les Chroniques informatiques sont rendues possibles en partie par McGraw-Hill, éditeurs de
+
+10
+00:01:25.000 --> 00:01:29.000
+Byte magazine et VIX, l’échange d’informations Byte.
+
+11
+00:01:29.001 --> 00:01:34.001
+En imprimant et en ligne, Byte et VIX servent des professionnels informatiques dans le monde entier avec
+
+12
+00:01:34.001 --> 00:01:38.001
+Informations détaillées sur les nouveaux matériels, logiciels et technologies.
+
+13
+00:01:42.001 --> 00:01:46.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay et c&#x27;est Gary Kildall.
+
+14
+00:01:46.001 --> 00:01:49.000
+Gary, vous savez, dans les anciens jours, quand une maladie a traversé le pays, le
+
+15
+00:01:49.000 --> 00:01:51.000
+Un médecin s’est rendu de la ville à la ville pour vendre son huile de serpent.
+
+16
+00:01:51.001 --> 00:01:54.000
+Aujourd’hui que les virus informatiques se répandent dans tout le pays, les
+
+17
+00:01:54.000 --> 00:01:55.001
+Les logiciels viennent avec leur huile de serpent.
+
+18
+00:01:55.001 --> 00:02:00.000
+Des dizaines de programmes antiviraux tels que la vaccination, immunisés, moniteur de disques,
+
+19
+00:02:00.000 --> 00:02:02.000
+médecin de données, mason, sur et sur.
+
+20
+00:02:02.001 --> 00:02:04.001
+Gary, il y a un genre de folklore qui se développe autour du
+
+21
+00:02:04.001 --> 00:02:06.000
+Ceux qui créent ces virus informatiques.
+
+22
+00:02:06.000 --> 00:02:08.001
+Vous devez être un génie de programmation pour créer un ?
+
+23
+00:02:08.001 --> 00:02:11.001
+Eh bien, Stuart, pas vraiment. Il y a vraiment deux problèmes, la création du virus
+
+24
+00:02:11.001 --> 00:02:13.000
+Le programme lui-même et l’installer.
+
+25
+00:02:14.000 --> 00:02:17.000
+Le cas le plus simple du programme virus est de trouver un point de départ d&#x27;un programme
+
+26
+00:02:17.000 --> 00:02:20.000
+et jeter sur un petit morceau de code qui a été patché.
+
+27
+00:02:20.000 --> 00:02:21.001
+Et si c&#x27;est le bon jour, alors il ferme votre disque.
+
+28
+00:02:21.001 --> 00:02:24.000
+Dans le cas contraire, il ne passe que le contrôle de retour au programme.
+
+29
+00:02:25.000 --> 00:02:27.001
+La rupture dans un bureau de bulletin n&#x27;est pas très difficile parce que la plupart des
+
+30
+00:02:27.001 --> 00:02:29.001
+Les bulletins sont basés sur les PC et ils n&#x27;étaient pas
+
+31
+00:02:29.001 --> 00:02:31.001
+Il est construit pour avoir la protection en premier lieu.
+
+32
+00:02:32.000 --> 00:02:33.000
+Sortir et tomber dans un mini
+
+33
+00:02:33.000 --> 00:02:34.001
+Le mainframe informatique est plus difficile, évidemment.
+
+34
+00:02:35.000 --> 00:02:38.001
+Mais il serait agréable de voir quelques-uns de ces efforts entrer dans des programmes viraux,
+
+35
+00:02:38.001 --> 00:02:40.001
+des programmes qui sont vraiment utiles pour l&#x27;industrie au lieu.
+
+36
+00:02:41.001 --> 00:02:44.000
+Gary, aujourd’hui, nous allons regarder les virus informatiques. Nous allons
+
+37
+00:02:44.000 --> 00:02:45.001
+Découvrez comment ils infectent votre système.
+
+38
+00:02:46.000 --> 00:02:48.001
+Nous vous donnerons des conseils sur la façon de les prévenir et si c&#x27;est trop tard comment
+
+39
+00:02:48.001 --> 00:02:50.000
+Découvrir et détruire les virus.
+
+40
+00:02:50.000 --> 00:02:54.000
+Nous allons commencer aujourd&#x27;hui en visitant le centre de recherche Ames de la NASA à Moffet
+
+41
+00:02:54.000 --> 00:02:58.000
+Field, Californie pour découvrir comment ils ont traité ce massif virus informatique
+
+42
+00:02:58.000 --> 00:03:02.000
+Il a attaqué plus de 6 000 systèmes sur le réseau ARPANET en novembre dernier.
+
+43
+00:03:04.001 --> 00:03:09.001
+Le centre de recherche Ames de la NASA à Mountain View, en Californie, est le plus connu pour son
+
+44
+00:03:09.001 --> 00:03:14.000
+contributions à l&#x27;exploration planétaire et à la conception avancée d&#x27;avions.
+
+45
+00:03:14.000 --> 00:03:20.000
+Mais récemment, Ames est devenue la dernière victime d&#x27;un virus informatique, une pièce nuisible
+
+46
+00:03:20.000 --> 00:03:24.001
+de code libéré dans son réseau informatique à travers un portail, dans ce
+
+47
+00:03:24.001 --> 00:03:26.001
+Le cas, le courrier électronique
+
+48
+00:03:27.001 --> 00:03:32.000
+L&#x27;intruder viral a été découvert et retiré par le réseau informatique Ames
+
+49
+00:03:32.000 --> 00:03:35.001
+Architecte en collaboration avec l’Université de Californie.
+
+50
+00:03:36.000 --> 00:03:40.000
+Le virus n&#x27;est pas difficile à trouver si vous savez où regarder.
+
+51
+00:03:40.000 --> 00:03:45.000
+Si vous regardez ici, cette tentative ARCH, c&#x27;est essayer d&#x27;ouvrir une connexion
+
+52
+00:03:45.000 --> 00:03:49.001
+Partir dans une machine à distance. Dans ce cas, le nom de la machine est Wilbur.
+
+53
+00:03:50.001 --> 00:03:55.001
+Ici, le virus est aussi, une autre copie du virus attaque une machine sur le
+
+54
+00:03:55.001 --> 00:03:57.001
+La côte est au Langley Research Center.
+
+55
+00:03:57.001 --> 00:04:04.000
+Et voici, en fait, le virus passe par cet utilisateur UCB Netstat. Il regarde
+
+56
+00:04:04.000 --> 00:04:09.000
+à travers la table de rotation pour attaquer d&#x27;autres machines qui sont, ce
+
+57
+00:04:09.000 --> 00:04:12.000
+Messages de cette machine à d&#x27;autres machines sur le réseau.
+
+58
+00:04:13.000 --> 00:04:18.001
+Même si aucun fichier de données n&#x27;a été perdu ni les fichiers système ont été endommagés, Ames a dépensé environ 70 dollars.
+
+59
+00:04:18.001 --> 00:04:23.000
+Des milliers pour trouver et détruire le virus auto-replicateur.
+
+60
+00:04:23.000 --> 00:04:28.000
+Depuis lors, le principal centre de recherche de la NASA en Californie a pris des mesures
+
+61
+00:04:28.000 --> 00:04:30.000
+Pour éviter l’intruder.
+
+62
+00:04:30.000 --> 00:04:37.000
+Nous avons installé les protections que nous avions prévues très tôt dans le processus de
+
+63
+00:04:37.000 --> 00:04:43.000
+tous nos systèmes, les mettre sous test contre une copie connue du virus,
+
+64
+00:04:44.000 --> 00:04:47.001
+et laissez-le se battre contre ces systèmes pendant une période de temps pour
+
+65
+00:04:47.001 --> 00:04:49.001
+Assurez-vous qu’ils ne sont pas réinfectés.
+
+66
+00:04:49.001 --> 00:04:55.001
+La vulnérabilité d&#x27;un réseau ouvert n&#x27;est pas unique à Ames, mais le problème de
+
+67
+00:04:55.001 --> 00:05:00.001
+fournir des informations à un large groupe de personnes sans exposer les données à
+
+68
+00:05:00.001 --> 00:05:03.000
+Les panneaux viraux ne sont pas facilement résolus.
+
+69
+00:05:04.000 --> 00:05:08.000
+Plus les protections que vous mettez sur le système, moins elles deviennent user-friendly,
+
+70
+00:05:08.001 --> 00:05:12.001
+et il y a toujours une différence entre la raisonnabilité des protections et
+
+71
+00:05:12.001 --> 00:05:14.000
+Comment ils vous affectent.
+
+72
+00:05:26.001 --> 00:05:30.001
+L’un de nos membres est maintenant John Dickinson. John est directeur de PC Labs, un
+
+73
+00:05:30.001 --> 00:05:34.000
+Division de la PC Magazine, et à côté de John Andrew Seibold, membre du conseil d&#x27;administration
+
+74
+00:05:34.000 --> 00:05:37.001
+de la National Land Labs et éditeur de Outlook Unprofessionnel Computing.
+
+75
+00:05:38.001 --> 00:05:42.000
+Comment les virus se manifestent-ils ? Qu’est ce qu’ils font ?
+
+76
+00:05:42.000 --> 00:05:46.001
+Eh bien, avant tout, ils attaquent vos programmes informatiques, et ils les corrompent,
+
+77
+00:05:46.001 --> 00:05:49.001
+Et ils peuvent les corrompre de nombreuses manières différentes. Il y a des virus qui
+
+78
+00:05:49.001 --> 00:05:52.000
+sont, quotes-unquote, bénins, et ils entrent et ils
+
+79
+00:05:52.000 --> 00:05:53.001
+Il y a un flash sur l&#x27;écran, gotcha, hello.
+
+80
+00:05:54.000 --> 00:05:58.000
+Mais plus important encore, les virus dont tout le monde est préoccupé aujourd&#x27;hui sont les
+
+81
+00:05:58.000 --> 00:06:01.000
+ceux qui entrent et qui manipulent vos données, qui corrompent vos programmes, et
+
+82
+00:06:01.000 --> 00:06:03.001
+Ils font des changements que vous ne connaissez pas et que vous n’avez pas
+
+83
+00:06:03.001 --> 00:06:05.000
+Vous le savez et vous n’avez aucun contrôle.
+
+84
+00:06:05.000 --> 00:06:08.001
+Ils peuvent aller jusqu&#x27;à ce qu&#x27;ils modifient réellement les données dans un fichier comptable, ils peuvent
+
+85
+00:06:08.001 --> 00:06:12.001
+modifier un fichier de traitement de mots, et ils peuvent se multiplier d&#x27;un
+
+86
+00:06:12.001 --> 00:06:16.001
+L&#x27;application à une autre application prépare bientôt l&#x27;ensemble de votre disque dur
+
+87
+00:06:16.001 --> 00:06:18.001
+Aucun de vos programmes ne fonctionne ou ne fonctionnera correctement.
+
+88
+00:06:19.000 --> 00:06:20.000
+Avant même de les connaître.
+
+89
+00:06:20.000 --> 00:06:21.001
+C&#x27;est vrai, avant même de savoir qu&#x27;ils sont là.
+
+90
+00:06:21.001 --> 00:06:23.001
+Quelle est la motivation derrière les gens qui font
+
+91
+00:06:23.001 --> 00:06:25.000
+Ces choses ? Vous avez une idée, John ?
+
+92
+00:06:25.000 --> 00:06:31.000
+Ça me baisse. Je veux dire, il y a un potentiel d’intention criminelle, bien sûr, il
+
+93
+00:06:31.000 --> 00:06:34.000
+Il y a toujours eu, mais il me semble que les virus qui sont venus sur
+
+94
+00:06:34.000 --> 00:06:36.000
+Il n’y a rien de plus que de mauvaises erreurs.
+
+95
+00:06:37.000 --> 00:06:41.000
+OK ! Maintenant, il y a aussi, nous avons entendu parler des worms et des virus et du cheval de Troie et ainsi de suite
+
+96
+00:06:41.000 --> 00:06:43.001
+à l’avant. Quelles sont les différences entre ces types de programmes ?
+
+97
+00:06:44.000 --> 00:06:47.001
+Eh bien, on va voir. Un virus corrompt les programmes dans la mesure où ils
+
+98
+00:06:47.001 --> 00:06:51.000
+Peut-être qu’il est possible de détruire d’autres programmes. Ils travailleront donc sur des fichiers exécutables, ils
+
+99
+00:06:51.000 --> 00:06:53.001
+Il s&#x27;installe à l&#x27;intérieur du fichier exécutable, beaucoup
+
+100
+00:06:53.001 --> 00:06:55.000
+Un véritable virus humain en particulier.
+
+101
+00:06:55.000 --> 00:07:00.001
+Il s&#x27;installe à l&#x27;intérieur de vous et alors vous pouvez à votre tour m&#x27;infecter. Un serpent est
+
+102
+00:07:00.001 --> 00:07:03.000
+généralement un programme qui se duplique et se fait
+
+103
+00:07:03.000 --> 00:07:04.001
+Des copies de soi partout.
+
+104
+00:07:05.000 --> 00:07:07.001
+Et un cheval de Troie est celui qui a un programme qui est nuisible
+
+105
+00:07:07.001 --> 00:07:09.001
+dans un autre programme innocent.
+
+106
+00:07:10.000 --> 00:07:13.000
+Maintenant, vous avez un exemple ici d&#x27;un virus, que vous allez nous montrer ce qu&#x27;un
+
+107
+00:07:13.000 --> 00:07:17.000
+virus fait à votre disque dur dans ce cas, et puis un programme, un vaccin
+
+108
+00:07:17.000 --> 00:07:18.001
+Programme pour le contre-attaquer.
+
+109
+00:07:18.001 --> 00:07:18.001
+[...]
+
+110
+00:07:19.000 --> 00:07:20.001
+Vous allez courir par le virus d&#x27;abord, Forrest?
+
+111
+00:07:20.001 --> 00:07:24.001
+OK ! Et aussi, pour les débutants, disons que c&#x27;est un très stupide et
+
+112
+00:07:24.001 --> 00:07:29.000
+Un virus innocent. C&#x27;est un qui ne se présenterait probablement pas. Les virus tendent
+
+113
+00:07:29.000 --> 00:07:31.000
+Il est très calme dans son opération. C’est un très
+
+114
+00:07:31.000 --> 00:07:33.000
+Le bruit, donc ce numéro un que nous pouvons démontrer.
+
+115
+00:07:33.001 --> 00:07:34.000
+Pour des fins de démonstration.
+
+116
+00:07:34.001 --> 00:07:34.001
+Pour des fins de démonstration.
+
+117
+00:07:34.001 --> 00:07:35.001
+Un virus démo.
+
+118
+00:07:35.001 --> 00:07:41.000
+Le démo. Un virus démo. C&#x27;est un catalogue propre sur un PC et tout cela
+
+119
+00:07:41.000 --> 00:07:44.000
+Les programmes sont parfaitement bons. Si je voulais exécuter WordStar, par exemple, et ici il est
+
+120
+00:07:44.000 --> 00:07:46.001
+C’est, et c’est bien, c’était super. Pas de problème en tout cas.
+
+121
+00:07:46.001 --> 00:07:52.000
+Donc, je vais quitter WordStar et puis je vais exécuter ce programme virus.
+
+122
+00:07:52.000 --> 00:07:53.000
+Vous allez donc charger le virus.
+
+123
+00:07:53.000 --> 00:07:58.000
+Je vais appeler le virus et dire, hello, être un virus. Et il dit, tous compilent sur
+
+124
+00:07:58.000 --> 00:08:02.000
+Ce disque sera infecté, ce que aucun virus auto-respect ne ferait. Et vous
+
+125
+00:08:02.000 --> 00:08:03.001
+Ils sont avertis, ha ha et ainsi de suite.
+
+126
+00:08:03.001 --> 00:08:06.000
+Nous savons donc que nous avons une situation infectée.
+
+127
+00:08:06.000 --> 00:08:09.000
+Nous le savons. Et en fait, si j&#x27;étais prudent et que je regardais mon disque dans ce
+
+128
+00:08:09.000 --> 00:08:11.001
+Dans ce cas, je constaterai que ces programmes sont infectés. Encore une fois, un soi
+
+129
+00:08:11.001 --> 00:08:13.001
+- Respecter le virus ne serait même pas aller et changer le
+
+130
+00:08:13.001 --> 00:08:15.000
+Directeur . Vous ne saurez même pas qu&#x27;il était là.
+
+131
+00:08:15.000 --> 00:08:19.000
+Ainsi, par exemple, vous voyez des dates différentes et si vous êtes vraiment prudent, différentes
+
+132
+00:08:19.000 --> 00:08:20.001
+Les fichiers et quelques-uns de ces dossiers.
+
+133
+00:08:20.001 --> 00:08:24.000
+précisément . Maintenant, différentes tailles de fichiers serait difficile à faire sans, mais
+
+134
+00:08:24.000 --> 00:08:25.001
+C&#x27;est aussi quelque chose que l&#x27;utilisateur ne vérifie pas.
+
+135
+00:08:25.001 --> 00:08:25.001
+Il est certain.
+
+136
+00:08:26.000 --> 00:08:30.000
+Donc maintenant, si j&#x27;exécute WordStar, nous allons découvrir que notre virus est en fait
+
+137
+00:08:30.000 --> 00:08:34.000
+Il y a. Et il est venu et a couru sa chose.
+
+138
+00:08:34.001 --> 00:08:36.000
+Le message nous a dit qu’il était là.
+
+139
+00:08:36.000 --> 00:08:41.000
+Il était là. Et si je retourne et exécute, si je quitte le système, il sera
+
+140
+00:08:41.000 --> 00:08:47.001
+Il y a. Si je vais dans un autre directory et que WordStar est exécuté, où il a été copié à
+
+141
+00:08:47.001 --> 00:08:52.001
+Dans son état endommagé, il annonce qu’il est là. Et quand j’y vais, c’est
+
+142
+00:08:52.001 --> 00:08:54.001
+modifier tous ces fichiers.
+
+143
+00:08:56.000 --> 00:09:00.000
+Ainsi, en d&#x27;autres termes, la copie de WordStar porte maintenant l&#x27;infection avec elle à
+
+144
+00:09:00.000 --> 00:09:02.000
+Le prochain utilisateur qui pourrait avoir pris cette copie.
+
+145
+00:09:02.000 --> 00:09:05.000
+Donc, si je prends cette copie de WordStar et que je vous la donne, Stuart, et que vous la prenez
+
+146
+00:09:05.000 --> 00:09:09.000
+Home et mettre sur votre PC, il va commencer à infecter les fichiers dans n&#x27;importe quel catalogue
+
+147
+00:09:09.000 --> 00:09:11.000
+que vous avez opéré sur votre PC ou un disque quelconque.
+
+148
+00:09:11.001 --> 00:09:14.000
+OK ! Maintenant, vous avez un programme Flushot Plus
+
+149
+00:09:14.000 --> 00:09:15.001
+Cela doit détecter certaines de ces choses.
+
+150
+00:09:15.001 --> 00:09:22.001
+à droite. Flushot Plus détecte les programmes qui fonctionnent sur le logiciel
+
+151
+00:09:22.001 --> 00:09:28.001
+niveau sur vos programmes et vous serez en mesure de détecter ce virus si je l&#x27;exécute.
+
+152
+00:09:30.000 --> 00:09:36.000
+OK ! Ok, nous allons le ramener. Et maintenant, si j&#x27;exécute WordStar dans ce directory, où
+
+153
+00:09:36.000 --> 00:09:38.000
+Encore une fois, la version corrompue de WordStar a été installée,
+
+154
+00:09:38.000 --> 00:09:39.001
+C’est là, nous allons le faire.
+
+155
+00:09:41.000 --> 00:09:44.001
+Et Flushot se lève et dit, voici ce programme. Il s’efforce de confondre avec votre
+
+156
+00:09:44.001 --> 00:09:50.001
+Les fichiers. Maintenant, que signifie la confusion avec vos fichiers? Est-ce qu’il travaille sur l’écriture
+
+157
+00:09:50.001 --> 00:09:53.000
+Copies de vos fichiers. Il modifie les fichiers sur votre disque.
+
+158
+00:09:53.001 --> 00:09:57.001
+Donc, la première chose que Flushot a fait, c&#x27;est de constater qu&#x27;il y a un virus dans votre système.
+
+159
+00:09:57.001 --> 00:09:59.001
+En vous averti. OK, que se passe-t-il ensuite ?
+
+160
+00:10:00.000 --> 00:10:03.000
+Maintenant, il dit qu&#x27;il essaie de modifier tous ces fichiers et Flushot vous donne le
+
+161
+00:10:03.000 --> 00:10:07.000
+Capacité à avancer et à laisser le programme modifier les fichiers. Et la raison pour laquelle il a
+
+162
+00:10:07.000 --> 00:10:11.000
+pour le faire, c&#x27;est que tout programme d&#x27;application ordinaire d&#x27;auto-respect afin de
+
+163
+00:10:11.000 --> 00:10:14.001
+Faites son travail sera hors de travail sur vos fichiers de données tout le temps. Autrement dit,
+
+164
+00:10:14.001 --> 00:10:16.000
+Il ne fait pas grand-chose pour vous en tout cas.
+
+165
+00:10:16.000 --> 00:10:20.001
+Donc, dans ce cas, pour laisser le programme aller, je vais juste le laisser aller et ruiner tout mon
+
+166
+00:10:20.001 --> 00:10:26.000
+Les fichiers. Et quand je quitte WordStar, ce sera tous les fichiers sont sur le disque.
+
+167
+00:10:26.000 --> 00:10:30.001
+C’est la détection du virus en empêchant une opération d’écriture sur le disque. Maintenant ,
+
+168
+00:10:30.001 --> 00:10:33.000
+Il y a d&#x27;autres façons dont le virus pourrait fonctionner là-bas.
+
+169
+00:10:33.000 --> 00:10:33.001
+C’est juste ça.
+
+170
+00:10:34.000 --> 00:10:34.001
+Cela pourrait entrer autour de ça.
+
+171
+00:10:35.000 --> 00:10:39.001
+C’est juste ça. Vous pouvez écrire un programme qui entre au niveau du matériel et
+
+172
+00:10:39.001 --> 00:10:42.000
+contrôle votre matériel et ne laisse pas le système d&#x27;exploitation
+
+173
+00:10:42.000 --> 00:10:44.000
+Sachez ce qui se passe réellement.
+
+174
+00:10:44.000 --> 00:10:49.001
+Flushot et des programmes tels qu&#x27;il dépendent des virus qui sont, disons, bien entretenus.
+
+175
+00:10:49.001 --> 00:10:52.001
+Ils entrent en fait à travers les installations logicielles qui sont disponibles sur le PC
+
+176
+00:10:52.001 --> 00:10:54.001
+Modifiez vos fichiers.
+
+177
+00:10:55.000 --> 00:10:58.001
+Donc juste parce que vous avez un programme de type vaccin comme un Flushot Plus
+
+178
+00:10:58.001 --> 00:11:00.001
+Cela ne signifie pas que vous êtes protégé contre les virus.
+
+179
+00:11:01.000 --> 00:11:02.001
+à droite. Cela signifie que vous êtes relativement protégé,
+
+180
+00:11:03.000 --> 00:11:04.001
+C’est ce que j’appelle des virus relativement mineurs.
+
+181
+00:11:05.000 --> 00:11:07.000
+Et en fait, racontez-nous le flushot original.
+
+182
+00:11:07.000 --> 00:11:09.001
+Eh bien, le Flushot original était, en fait, corrompu par un virus.
+
+183
+00:11:09.001 --> 00:11:11.000
+Et c&#x27;est pour cela qu&#x27;il y a un Flushot Plus.
+
+184
+00:11:11.000 --> 00:11:11.001
+C’est juste ça.
+
+185
+00:11:12.001 --> 00:11:16.000
+Andy, réel vite, où vous seriez en danger de
+
+186
+00:11:16.000 --> 00:11:17.001
+Avoir le virus dans votre système ?
+
+187
+00:11:17.001 --> 00:11:21.000
+Eh bien, si vous avez un système indépendant et que vous achetez tous off-the-shelf
+
+188
+00:11:21.000 --> 00:11:25.000
+logiciels des fournisseurs connus et vous n&#x27;échangez pas de disques avec les gens et vous
+
+189
+00:11:25.000 --> 00:11:27.001
+Ne parlez pas sur les systèmes de bulletin à travers les modèles et les choses comme
+
+190
+00:11:27.001 --> 00:11:29.001
+Il y a des chances que vous soyez assez en sécurité.
+
+191
+00:11:30.000 --> 00:11:34.000
+Mais si quelqu&#x27;un porte un disque et que vous l&#x27;échangez, si vous appelez un bulletin
+
+192
+00:11:34.000 --> 00:11:37.001
+et vous téléchargez certains programmes qui sont disponibles, ou si quelqu&#x27;un dit,
+
+193
+00:11:37.001 --> 00:11:41.001
+Hey, prenez mon fichier WordStar même, juste, et apportez-le sur votre système et le travail
+
+194
+00:11:41.001 --> 00:11:43.001
+Les virus peuvent être transmis de cette manière.
+
+195
+00:11:43.001 --> 00:11:44.001
+Vous ne pouvez tout simplement pas dire.
+
+196
+00:11:44.001 --> 00:11:46.000
+Vous devez donc être réellement prudent.
+
+197
+00:11:46.000 --> 00:11:50.000
+Si vous êtes connecté à un réseau, cela complique le problème dramatiquement parce que
+
+198
+00:11:50.000 --> 00:11:52.001
+Vous ne savez pas où sur le réseau un virus peut arriver
+
+199
+00:11:52.001 --> 00:11:54.000
+interjeté et ce qu&#x27;il va faire sur un réseau.
+
+200
+00:11:54.001 --> 00:11:57.000
+Ok, John, Andy, nous allons vous demander tous les deux de revenir un peu plus tard
+
+201
+00:11:57.000 --> 00:12:00.000
+Dans le programme, et nous voulons parler des pratiques informatiques sûres.
+
+202
+00:12:00.000 --> 00:12:01.001
+En quelques minutes, nous allons regarder quelques
+
+203
+00:12:01.001 --> 00:12:03.000
+Programme de vaccination pour Macintosh.
+
+204
+00:12:03.000 --> 00:12:07.001
+Premièrement, une visite à une petite entreprise qui a été infectée par un virus informatique
+
+205
+00:12:07.001 --> 00:12:09.000
+Pour savoir ce qu’ils ont fait à ce sujet.
+
+206
+00:12:09.000 --> 00:12:11.001
+Wendy Woods vient de Santa Clara en Californie.
+
+207
+00:12:15.000 --> 00:12:17.000
+L’idée semblait assez inoffensif.
+
+208
+00:12:17.001 --> 00:12:22.000
+Susan prendrait chez elle un disque de données pour poursuivre son travail sur son ordinateur de maison.
+
+209
+00:12:23.000 --> 00:12:28.000
+Le lendemain matin, elle ne savait que le même disque innocent était venu.
+
+210
+00:12:28.000 --> 00:12:31.001
+Retour au travail infecté par un virus tuant des données.
+
+211
+00:12:32.000 --> 00:12:36.000
+Le virus serait appelé par le nom du jour qu&#x27;il a frappé,
+
+212
+00:12:37.000 --> 00:12:38.001
+Vendredi le 13e.
+
+213
+00:12:39.001 --> 00:12:46.001
+J&#x27;ai pensé que j&#x27;avais une chute du disque dur au début, mais après j&#x27;y ai entré une
+
+214
+00:12:46.001 --> 00:12:49.001
+Un peu, j&#x27;ai trouvé que le disque était bon, mécaniquement il était
+
+215
+00:12:49.001 --> 00:12:51.001
+Bon, mais il n&#x27;y avait pas de logiciel.
+
+216
+00:12:51.001 --> 00:12:56.001
+Les traces de démarrage ont disparu, les traces du système ont disparus, la table d&#x27;allocation des fichiers
+
+217
+00:12:56.001 --> 00:12:59.000
+Il était parti, il était juste écrasé, il restait encore là.
+
+218
+00:12:59.000 --> 00:13:01.001
+Et le directeur racine était tout simplement totalement détruit.
+
+219
+00:13:02.001 --> 00:13:07.000
+Le virus, qui vient d&#x27;un jeu sur l&#x27;ordinateur de Susan, a finalement forcé Jim
+
+220
+00:13:07.000 --> 00:13:09.000
+Pour nettoyer son disque dur.
+
+221
+00:13:09.001 --> 00:13:14.000
+Et bien qu&#x27;il ne soit pas complètement débarqué, il a le virus sous contrôle,
+
+222
+00:13:14.001 --> 00:13:19.000
+Grâce à un programme appelé Tracer, qui bloque le virus de faire des dommages.
+
+223
+00:13:20.000 --> 00:13:24.001
+Jim a eu de la chance. Toutes les données sur le disque dur, les enregistrements qu&#x27;il conserve pour son précieux
+
+224
+00:13:24.001 --> 00:13:27.000
+Le laboratoire de métaux, avait été soutenu.
+
+225
+00:13:27.000 --> 00:13:33.001
+Je me considère très, très fort heureux que je me forcerais, même quand je
+
+226
+00:13:33.001 --> 00:13:35.000
+Il ne voulait pas, tout rembourser.
+
+227
+00:13:36.000 --> 00:13:41.000
+Parce que le virus ici est si insidieux, la sauvegarde du disque dur n&#x27;est plus
+
+228
+00:13:41.000 --> 00:13:42.001
+optionnel pour cette petite entreprise.
+
+229
+00:13:43.000 --> 00:13:47.001
+En fait, comme Jim Mount a dit, s&#x27;il n&#x27;avait pas sauvé ses fichiers, ce virus
+
+230
+00:13:47.001 --> 00:13:49.001
+Peut-être qu’on l’a fait sortir de l’entreprise.
+
+231
+00:13:50.001 --> 00:13:54.000
+À Santa Clara, en Californie, pour The Computer Chronicles, je suis Wendy Woods.
+
+232
+00:14:07.000 --> 00:14:10.000
+Il s’agit de Robert Capon, président de la
+
+233
+00:14:10.000 --> 00:14:12.000
+HJC Software, les créateurs de Vyrex.
+
+234
+00:14:12.001 --> 00:14:15.001
+Robert vient de Jack McDonald, le président de Magna, les créateurs qui
+
+235
+00:14:15.001 --> 00:14:17.001
+Un logiciel de sécurité pour Macintosh.
+
+236
+00:14:18.001 --> 00:14:21.000
+Jack, l’une des choses qui se sont passées dans notre industrie informatique personnelle
+
+237
+00:14:21.000 --> 00:14:23.001
+En réalité, il n’y a pas eu de contrôle d’accès.
+
+238
+00:14:23.001 --> 00:14:26.001
+Vous démarrez votre système informatique et mettez des disques en lui.
+
+239
+00:14:27.000 --> 00:14:30.000
+Et le deuxième sujet sur lequel nous parlons, la création du virus est
+
+240
+00:14:30.000 --> 00:14:32.001
+La première, et l&#x27;accès au système informatique est la seconde.
+
+241
+00:14:33.000 --> 00:14:34.001
+Parlez-nous un peu sur le contrôle de l’accès.
+
+242
+00:14:36.000 --> 00:14:39.001
+Comme vous l’avez dit, il n’y a jamais eu de sécurité.
+
+243
+00:14:39.001 --> 00:14:41.000
+Pour Macintosh, en particulier.
+
+244
+00:14:42.000 --> 00:14:45.000
+Il n&#x27;y a pas de violation de la sécurité, donc il est vraiment facile d&#x27;entrer.
+
+245
+00:14:45.001 --> 00:14:49.000
+Par conséquent, un programme de type virus peut entrer et attaquer tout
+
+246
+00:14:49.000 --> 00:14:51.000
+Programme sur n&#x27;importe quel disque dur, floppy.
+
+247
+00:14:51.000 --> 00:14:55.001
+Et avec un programme de contrôle d&#x27;accès comme Empower, vous pouvez limiter qui peut
+
+248
+00:14:55.001 --> 00:14:59.001
+modifications à vos programmes, et donc interdire les virus de lier
+
+249
+00:14:59.001 --> 00:15:01.001
+pour tous les programmes.
+
+250
+00:15:02.000 --> 00:15:05.000
+Tout est bien, vous avez une autre approche, Robert, qui est Vyrex.
+
+251
+00:15:05.001 --> 00:15:07.000
+Et je vous demande, ce n’est pas un vaccin.
+
+252
+00:15:07.000 --> 00:15:09.000
+Le programme. Comment décrivez-vous Vyrex ?
+
+253
+00:15:09.000 --> 00:15:12.001
+Bon, c&#x27;est une approche très complémentaire à la conscience de la sécurité
+
+254
+00:15:12.001 --> 00:15:14.001
+Les produits que Magna commercialise.
+
+255
+00:15:15.001 --> 00:15:20.000
+C&#x27;est un produit de classe III, et cela signifie que ce qu&#x27;il fait est détecté par un ordinateur connu
+
+256
+00:15:20.000 --> 00:15:24.001
+virus, et si un virus est présent, il vous donne la possibilité d&#x27;éliminer les
+
+257
+00:15:24.001 --> 00:15:28.000
+virus en supprimant le virus et en rétablissant les infectés
+
+258
+00:15:28.000 --> 00:15:29.001
+les données à l’état préinfecté.
+
+259
+00:15:30.000 --> 00:15:32.000
+Le mot clé est qu’il y a des virus connus, n’est-ce pas ?
+
+260
+00:15:32.000 --> 00:15:32.001
+C’est juste ça.
+
+261
+00:15:32.001 --> 00:15:34.000
+Vous devez y aller et chercher des modèles et ainsi de suite
+
+262
+00:15:34.000 --> 00:15:36.000
+Ce sont des virus qui créent.
+
+263
+00:15:36.000 --> 00:15:41.001
+C’est juste ça. Nous recherchons des virus connus, et si et quand de nouveaux virus surviennent,
+
+264
+00:15:41.001 --> 00:15:44.000
+Nous allons mettre à jour le produit avec la capacité de
+
+265
+00:15:44.000 --> 00:15:46.000
+détecter et lutter contre ces virus.
+
+266
+00:15:46.000 --> 00:15:47.001
+Qu’est-ce que cela signifie, un virus connu ?
+
+267
+00:15:48.001 --> 00:15:52.000
+Une personne qui a été diagnostiquée comme un virus connu
+
+268
+00:15:52.000 --> 00:15:54.000
+caractéristiques et une que nous connaissons.
+
+269
+00:15:55.000 --> 00:16:00.001
+Dans cette industrie, il ya beaucoup d&#x27;hystérie sur les virus, et il y a des rapports
+
+270
+00:16:00.001 --> 00:16:05.001
+tous les jours sur les nouveaux virus possibles, et la plupart d&#x27;entre eux ne sont généralement pas
+
+271
+00:16:05.001 --> 00:16:09.000
+Les virus informatiques. Ce ne sont que des phénomènes, d’autres problèmes qui surviennent.
+
+272
+00:16:09.001 --> 00:16:10.001
+Vous pourriez nous faire une démonstration de
+
+273
+00:16:10.001 --> 00:16:12.000
+Vyrex et nous montrer comment cela fonctionnerait sur la carte?
+
+274
+00:16:14.001 --> 00:16:17.000
+Donnez-nous une sorte de play-by-play quand vous allez ici, Robert.
+
+275
+00:16:17.000 --> 00:16:22.000
+Fondamentalement, nous rappelons aux utilisateurs, nous leur donnons un mot important sur l&#x27;ordinateur
+
+276
+00:16:22.000 --> 00:16:25.001
+virus, et nous leur rappelons que nous ne combattons que les virus informatiques connus.
+
+277
+00:16:26.000 --> 00:16:30.001
+Nous soulignons également l&#x27;importance du backup de logiciels, car nous pensons que,
+
+278
+00:16:31.000 --> 00:16:36.000
+En plus d&#x27;utiliser un produit comme celui-ci, il est très important d&#x27;avoir un bon backup
+
+279
+00:16:36.000 --> 00:16:40.001
+les procédures d’utilisation de logiciels fiables et réputés.
+
+280
+00:16:42.000 --> 00:16:43.001
+Ok, alors vous avez Vyrex maintenant sur la carte.
+
+281
+00:16:43.001 --> 00:16:49.001
+C’est juste ça. Et quand il arrive, il a un écran d&#x27;aide qui fournit en ligne
+
+282
+00:16:49.001 --> 00:16:54.000
+Aider l’utilisateur, et fournir des instructions d’exploitation très utiles.
+
+283
+00:16:55.000 --> 00:16:59.000
+Et essentiellement, dans cette partie de l&#x27;écran, nous avons trois éléments d&#x27;action, icônes,
+
+284
+00:16:59.000 --> 00:17:04.000
+Ce qui vous permet de diagnostiquer, de réparer et d’obtenir de l’aide en ligne.
+
+285
+00:17:04.001 --> 00:17:05.001
+Où est le virus en ce moment ?
+
+286
+00:17:05.001 --> 00:17:07.000
+dans le système ? Est-ce que vous allez mettre un là-bas ?
+
+287
+00:17:07.000 --> 00:17:13.000
+Eh bien, dans ce cas, Vyrex vous montre les discettes qu&#x27;il peut voir qu&#x27;ils sont chargés
+
+288
+00:17:13.000 --> 00:17:19.000
+dans le système, et nous tirons des icônes sur et hors pour les activer.
+
+289
+00:17:19.001 --> 00:17:23.000
+Ce disque ici a des programmes sur elle qui sont infectés par le score virus,
+
+290
+00:17:24.001 --> 00:17:28.001
+Et nous pouvons diagnostiquer ce diskette en cliquant sur une icône.
+
+291
+00:17:29.000 --> 00:17:33.001
+Encore une fois, ceci est conçu pour ne pas être un programme extrêmement facile à utiliser, point
+
+292
+00:17:33.001 --> 00:17:35.000
+- et type d’interface de clic.
+
+293
+00:17:35.000 --> 00:17:39.001
+Ok, alors nous nous disons maintenant que nous avons le score virus dans le deuxième disque.
+
+294
+00:17:39.001 --> 00:17:42.001
+C’est juste ça. Il vous dit que les infections ont été détectées, consultez la liste ci-dessus,
+
+295
+00:17:44.001 --> 00:17:48.000
+Et ce qu&#x27;il fait, c&#x27;est qu&#x27;elle vous dit le disque, le fichier,
+
+296
+00:17:48.001 --> 00:17:50.001
+et le programme réel qui est infecté.
+
+297
+00:17:50.001 --> 00:17:52.000
+Ok, Rob, tu peux maintenant réparer ce disque ?
+
+298
+00:17:52.001 --> 00:17:54.001
+C’est juste ça. Laissez-moi le démontrer.
+
+299
+00:17:59.000 --> 00:18:03.000
+Nous réparons le disque en cliquant sur une icône.
+
+300
+00:18:03.000 --> 00:18:07.000
+Et qu&#x27;est-ce qu&#x27;il fait alors quand il est en train de réparer le disque?
+
+301
+00:18:07.000 --> 00:18:14.000
+Ce qu&#x27;il fait maintenant, c&#x27;est de réexaminer le disque pour
+
+302
+00:18:14.000 --> 00:18:18.001
+infections, puis il vous donne le fichier option par fichier pour les réparer et
+
+303
+00:18:18.001 --> 00:18:20.000
+Retourner à l’état d’origine.
+
+304
+00:18:21.001 --> 00:18:23.001
+Nous pouvons le faire parce que nous connaissons
+
+305
+00:18:23.001 --> 00:18:25.000
+caractéristiques exactes de ces virus.
+
+306
+00:18:25.001 --> 00:18:30.000
+Nous savons exactement comment ils modifient les programmes, et en conséquence, nous savons précisément comment
+
+307
+00:18:30.000 --> 00:18:36.000
+réparer les fichiers et éviter les dommages causés par l&#x27;infection virale.
+
+308
+00:18:37.001 --> 00:18:40.000
+Et donc il est terminé maintenant, et vous avez supprimé le virus
+
+309
+00:18:40.000 --> 00:18:41.001
+de ce disque floppy.
+
+310
+00:18:41.001 --> 00:18:47.000
+C’est juste ça. Et si nous voulions réexaminer cela, par exemple, nous verrons que...
+
+311
+00:18:47.000 --> 00:18:49.001
+Donc, vous pouvez faire ce diagnostic à nouveau pour voir s&#x27;il est propre?
+
+312
+00:18:49.001 --> 00:18:52.000
+Oui, et si vous l&#x27;avez fait, vous trouverez que le disque était propre.
+
+313
+00:18:53.000 --> 00:18:56.000
+Je vais vous demander si vous pouvez couper le clavier là-bas à Jack et sortir
+
+314
+00:18:56.000 --> 00:18:59.000
+de Virac afin que nous puissions regarder cette autre approche ici, Jack.
+
+315
+00:18:59.000 --> 00:19:02.000
+Alors que Robert est en train de le faire, racontez-nous...
+
+316
+00:19:02.000 --> 00:19:05.001
+Vous avez un programme appelé Empower, qui traite avec
+
+317
+00:19:05.001 --> 00:19:07.001
+La sécurité, comme vous et Gary aviez parlé auparavant.
+
+318
+00:19:08.000 --> 00:19:09.000
+Qu’est-ce qu’elle fait exactement ?
+
+319
+00:19:09.001 --> 00:19:13.000
+Empower est un contrôle d&#x27;accès complet et des données automatiques
+
+320
+00:19:13.000 --> 00:19:15.000
+Produit de chiffrement pour Macintosh.
+
+321
+00:19:15.001 --> 00:19:22.000
+Nous avons la possibilité d&#x27;utiliser plusieurs utilisateurs et plusieurs groupes sur
+
+322
+00:19:22.000 --> 00:19:27.000
+le Macintosh, et en même temps faire la cryptage des données transparente pour
+
+323
+00:19:27.000 --> 00:19:29.000
+Assurez-vous que les données sont protégées.
+
+324
+00:19:30.000 --> 00:19:33.001
+Et d’un point de vue viral maintenant, c’est ce... Avoir ce type de sécurité
+
+325
+00:19:33.001 --> 00:19:36.000
+La protection contre un virus ?
+
+326
+00:19:36.001 --> 00:19:40.000
+Oui, vous pouvez utiliser Empower pour aider à prévenir la propagation des virus.
+
+327
+00:19:40.001 --> 00:19:42.000
+C’est un mécanisme de prévention.
+
+328
+00:19:42.001 --> 00:19:46.001
+Vous pouvez clôturer tous vos... Nous allons entrer...
+
+329
+00:19:46.001 --> 00:19:48.001
+Oh, des fichiers de données vraiment importants et ainsi de suite.
+
+330
+00:19:48.001 --> 00:19:52.000
+Des fichiers de données vraiment importants. Vous pouvez les mettre dans des dossiers que vous ne pouvez pas
+
+331
+00:19:52.000 --> 00:19:53.001
+Donner à tout le monde un accès approprié.
+
+332
+00:19:53.001 --> 00:19:55.001
+Donc, vous êtes dans le programme et nous montrer comment il fonctionne.
+
+333
+00:19:56.000 --> 00:19:57.001
+Tout est juste. Ce n&#x27;est qu&#x27;un Macintosh normal
+
+334
+00:19:57.001 --> 00:19:59.001
+Descriptif, comme tout le monde est habitué à voir.
+
+335
+00:19:59.001 --> 00:20:03.001
+Ce que nous avons ajouté depuis que Empower a été ajouté à ce système est que nous sommes
+
+336
+00:20:03.001 --> 00:20:07.001
+Dans le contexte de la protection qui peut accéder à quels privilèges, quelles choses.
+
+337
+00:20:08.000 --> 00:20:12.000
+Ainsi, par exemple, j&#x27;ai un dossier ici qui contient tous les programmes d&#x27;Apple.
+
+338
+00:20:13.000 --> 00:20:17.000
+Et vous remarquerez que avec l&#x27;Empower installé, il y a une petite pince supplémentaire
+
+339
+00:20:17.000 --> 00:20:20.001
+avec ce flash à travers, ce qui signifie que personne n&#x27;a droit à cet accès
+
+340
+00:20:20.001 --> 00:20:22.000
+Les fichiers, pour ces programmes.
+
+341
+00:20:22.000 --> 00:20:24.001
+Ainsi, aucun virus ne peut sortir et se connecter à cela.
+
+342
+00:20:24.001 --> 00:20:28.000
+En d&#x27;autres termes, si un autre utilisateur est entré et a travaillé sur mon Mac, ils
+
+343
+00:20:28.000 --> 00:20:30.000
+Je ne pouvais pas accéder et écrire à ces fichiers.
+
+344
+00:20:30.000 --> 00:20:33.000
+Bien sûr, ils pourraient toujours utiliser les programmes, que vous pourriez vouloir qu&#x27;ils poursuivent
+
+345
+00:20:33.000 --> 00:20:35.000
+Et oui, mais alors ils ne pouvaient pas modifier ces programmes.
+
+346
+00:20:35.000 --> 00:20:36.001
+Vous avez plusieurs couches de sécurité ?
+
+347
+00:20:36.001 --> 00:20:51.001
+C’est juste ça. Pour chaque dossier, il y a trois choses que vous pouvez spécifier.
+
+348
+00:20:52.000 --> 00:20:56.000
+Vous pouvez spécifier uniquement les dossiers C, les fichiers C pour faire des modifications.
+
+349
+00:20:56.001 --> 00:20:59.000
+Vous pouvez également spécifier quels groupes font.
+
+350
+00:21:00.000 --> 00:21:02.000
+Il y a quelqu’un qui n’a pas de privilèges.
+
+351
+00:21:02.000 --> 00:21:06.001
+Voici une. Donc, nous faisons juste un gain de privilèges ici afin de définir
+
+352
+00:21:06.001 --> 00:21:08.000
+privilèges dans ce dossier.
+
+353
+00:21:08.001 --> 00:21:12.000
+Et vous voyez qu&#x27;il n&#x27;est pas signé à personne en ce moment et que tout le monde a
+
+354
+00:21:12.000 --> 00:21:14.001
+droits d’accès complets à tout ce qui se trouve dans ce dossier.
+
+355
+00:21:14.001 --> 00:21:17.000
+Ainsi, vous pourriez avoir différents privilèges attachés à différents
+
+356
+00:21:17.000 --> 00:21:18.001
+des dossiers à l’intérieur du système.
+
+357
+00:21:18.001 --> 00:21:20.001
+C’est juste ça. Chaque dossier aurait ses propres privilèges spécifiés.
+
+358
+00:21:21.000 --> 00:21:24.001
+Maintenant, Jack, cela empêche-t-il la corruption du niveau matériel du bureau ?
+
+359
+00:21:24.001 --> 00:21:27.000
+Non, c’est une pure technique logicielle que nous utilisons.
+
+360
+00:21:27.000 --> 00:21:30.000
+Donc, il est supposé que le virus passe par le système d&#x27;exploitation
+
+361
+00:21:30.000 --> 00:21:31.001
+Pour faire les différents appels à cela ?
+
+362
+00:21:31.001 --> 00:21:35.000
+Une autre vraie belle caractéristique que nous avons pour les virus est la capacité de désactiver la
+
+363
+00:21:35.000 --> 00:21:39.001
+Disques floppy, où vous pouvez spécifier que le disque floppie ne devrait jamais être utilisé.
+
+364
+00:21:40.000 --> 00:21:43.000
+Ainsi, vous démarrez votre machine avec votre disque dur et personne ne peut insérer
+
+365
+00:21:43.000 --> 00:21:44.001
+Un disque floppy qui peut être contaminé.
+
+366
+00:21:46.000 --> 00:21:49.000
+Cela vous protège contre les extraterrestres. Il ne vous protège pas vraiment
+
+367
+00:21:49.000 --> 00:21:52.000
+vous-même, cependant, si vous apportez dans un morceau de logiciel corrompu.
+
+368
+00:21:52.000 --> 00:21:56.000
+C’est juste ça. Si vous avez le bon accès à quelque chose, alors le virus
+
+369
+00:21:56.000 --> 00:21:57.001
+Le programme pourrait s’y joindre.
+
+370
+00:21:58.000 --> 00:21:58.001
+Monsieur le Président, merci beaucoup.
+
+371
+00:21:58.001 --> 00:22:01.001
+En quelques minutes, nous allons vous donner quelques conseils sur l&#x27;informatique sécurisée.
+
+372
+00:22:01.001 --> 00:22:04.000
+Pratiques pour vous aider à éviter le problème des virus.
+
+373
+00:22:04.001 --> 00:22:07.001
+Restez avec nous.
+
+374
+00:22:18.001 --> 00:22:22.001
+Retour avec nous maintenant studio est John Dickinson de PC Labs et Andy Seibold de Outlook.
+
+375
+00:22:22.001 --> 00:22:27.000
+Vous travaillez avec le Land Lab. Vous trouverez un ensemble de règles ou de directives pour
+
+376
+00:22:27.000 --> 00:22:29.001
+Il s’agit d’une pratique informatique sûre.
+
+377
+00:22:30.000 --> 00:22:31.001
+Pouvez-vous nous en dire un peu ?
+
+378
+00:22:31.001 --> 00:22:35.001
+Ok, bien, le National Land Lab est une organisation à but non lucratif, avant tout, et
+
+379
+00:22:35.001 --> 00:22:39.000
+Il y a un certain nombre de vendeurs dans la communauté qui sont
+
+380
+00:22:39.000 --> 00:22:41.000
+impliqués dans le soutien de l’opération.
+
+381
+00:22:41.001 --> 00:22:45.001
+Et l&#x27;ensemble des lignes directrices qu&#x27;ils ont apportées pour la comptabilité sûre sans quota
+
+382
+00:22:45.001 --> 00:22:47.000
+Ce sont des choses qui font du sens.
+
+383
+00:22:47.001 --> 00:22:49.001
+Vous savez, vous ne mettez pas un morceau de logiciel sur votre
+
+384
+00:22:49.001 --> 00:22:51.000
+machine si vous ne connaissez pas l&#x27;origine.
+
+385
+00:22:51.000 --> 00:22:55.000
+Vous n’échangerez pas de logiciel avec des gens. Vous n’êtes pas... si vous appelez
+
+386
+00:22:55.000 --> 00:22:56.001
+Un bulletin, vous devez être très prudent.
+
+387
+00:22:56.001 --> 00:22:58.001
+Vous devez connaître le bulletin. Vous devez savoir qui le fait.
+
+388
+00:22:59.000 --> 00:23:01.001
+Vous devez être très attentif aux types de programmes que vous téléchargez.
+
+389
+00:23:03.000 --> 00:23:05.001
+Vous devez connaître l’origine de chaque
+
+390
+00:23:05.001 --> 00:23:07.000
+Programme qui entre dans votre système.
+
+391
+00:23:07.000 --> 00:23:09.001
+Vous devez connaître l&#x27;origine de chaque fichier qui entre dans votre système
+
+392
+00:23:09.001 --> 00:23:11.001
+qui a accès à votre ordinateur.
+
+393
+00:23:11.001 --> 00:23:15.001
+Il y a des problèmes de sécurité dans la mesure où vous n&#x27;êtes pas près de votre ordinateur, qui peut obtenir
+
+394
+00:23:15.001 --> 00:23:19.001
+sur elle, comment elle est connectée à un réseau, comment il est connecté aux mainframes et
+
+395
+00:23:19.001 --> 00:23:21.001
+d’autres ordinateurs qui sont externes.
+
+396
+00:23:22.000 --> 00:23:25.001
+La récente chose ARBORNET est une bonne indication de ce qui peut arriver.
+
+397
+00:23:25.001 --> 00:23:27.001
+C’est comme si c’était le feu sauvage.
+
+398
+00:23:28.000 --> 00:23:29.001
+Et en principe, c’est tout un sens commun.
+
+399
+00:23:29.001 --> 00:23:31.000
+Il y a des choses très, très importantes.
+
+400
+00:23:31.001 --> 00:23:35.000
+Vous avez besoin de sauvegarder vos fichiers, et vous devez sauvegarder vos programmes et vos
+
+401
+00:23:35.000 --> 00:23:38.000
+fichiers système, et vous devez être très religieux à ce sujet.
+
+402
+00:23:38.000 --> 00:23:43.000
+Vous devez avoir un ensemble de bons programmes connus parce que le seul remède, si vous avez
+
+403
+00:23:43.000 --> 00:23:45.001
+Un virus qui infecte votre système, vous aurez à le débarrasser. Tu vas aller
+
+404
+00:23:45.001 --> 00:23:49.000
+avoir à perdre tous vos données, et vous devez les récupérer et les réformer,
+
+405
+00:23:49.000 --> 00:23:51.000
+Vous devrez ensuite réinstaller vos programmes.
+
+406
+00:23:51.000 --> 00:23:54.000
+Et au moment de la réinstallation, vous devrez vérifier les
+
+407
+00:23:54.000 --> 00:23:57.000
+Vous réinstallez pour vous assurer que vous ne dupliquez pas le problème à nouveau.
+
+408
+00:23:57.001 --> 00:24:00.001
+Eh bien, John, en fait, ce serait une bonne question pour vous.
+
+409
+00:24:01.000 --> 00:24:03.001
+Combien de programmes antivirus sont-ils efficaces ?
+
+410
+00:24:04.001 --> 00:24:07.001
+Non, les coups de feu de la grippe, bien sûr.
+
+411
+00:24:07.001 --> 00:24:09.000
+À un certain niveau, ils sont efficaces.
+
+412
+00:24:09.000 --> 00:24:12.000
+Dans la mesure où les virus sont bien traités, ils sont
+
+413
+00:24:12.000 --> 00:24:14.000
+Efficace, au moins dans l’environnement PC.
+
+414
+00:24:14.000 --> 00:24:21.000
+Il est parfaitement légitime d&#x27;écrire un virus qui fonctionne sur un
+
+415
+00:24:21.000 --> 00:24:25.000
+le niveau du logiciel et corrompt les fichiers de cette manière, mais il n&#x27;est pas non plus difficile d&#x27;écrire
+
+416
+00:24:25.000 --> 00:24:28.000
+qui fonctionne au niveau du matériel et est inférieur au niveau qu&#x27;un virus
+
+417
+00:24:28.000 --> 00:24:30.000
+La protection, un programme de vaccination, peut être détecté.
+
+418
+00:24:30.000 --> 00:24:32.001
+John, est l&#x27;un de ces soi-disant logiciels de vaccination
+
+419
+00:24:32.001 --> 00:24:34.001
+Les programmes sont-ils efficaces et inutiles ?
+
+420
+00:24:35.000 --> 00:24:36.000
+Est-ce qu’ils ne font vraiment rien ?
+
+421
+00:24:36.001 --> 00:24:39.000
+Bon, inutile est un peu un mot fort.
+
+422
+00:24:39.000 --> 00:24:42.000
+Je pense qu&#x27;il y a une certaine mesure de protection que vous pouvez obtenir, mais ce que je suis
+
+423
+00:24:42.000 --> 00:24:43.001
+Il est préoccupé que les gens aient un mauvais sens de
+
+424
+00:24:43.001 --> 00:24:45.001
+sécurité, et je pense qu&#x27;ils sont protégés contre tout.
+
+425
+00:24:46.000 --> 00:24:48.001
+Oui, Andy, je voulais vous demander cela, parce que les Labs LAN n&#x27;ont pas soutenu
+
+426
+00:24:48.001 --> 00:24:50.001
+Il n&#x27;y a pas de logiciel de vaccination, et je me demande pourquoi.
+
+427
+00:24:50.001 --> 00:24:51.001
+Oui, il y avait deux raisons.
+
+428
+00:24:51.001 --> 00:24:55.001
+Le numéro un est que certains membres du LAN Lab pensent qu&#x27;il y avait un potentiel
+
+429
+00:24:55.001 --> 00:25:01.000
+ici pour que quelqu&#x27;un intervienne un virus dans la communauté informatique et puis
+
+430
+00:25:01.000 --> 00:25:03.001
+L&#x27;argent en sortant avec une vaccination.
+
+431
+00:25:04.001 --> 00:25:05.001
+Ils étaient donc préoccupés par cela.
+
+432
+00:25:06.000 --> 00:25:09.000
+L&#x27;autre est qu&#x27;il y a tellement de différents types de virus, il y a tant de
+
+433
+00:25:09.000 --> 00:25:14.001
+différents types de jeux que les programmateurs peuvent jouer pour soutenir ce type de
+
+434
+00:25:14.001 --> 00:25:17.001
+C’est vrai, il n’y a pas un qui fait tout.
+
+435
+00:25:18.000 --> 00:25:21.000
+Enfin, dans l’étude PC Labs, vous avez trouvé une vaccination particulière
+
+436
+00:25:21.000 --> 00:25:23.000
+Des programmes que la revue recommande.
+
+437
+00:25:23.001 --> 00:25:25.000
+J&#x27;espère que nous allons faire un autre assez bientôt. Prenez un oeil.
+
+438
+00:25:25.001 --> 00:25:26.001
+Ok, gentils, merci beaucoup.
+
+439
+00:25:26.001 --> 00:25:28.000
+C’est notre regard sur les virus informatiques.
+
+440
+00:25:28.000 --> 00:25:30.001
+Nous reviendrons en quelques minutes avec les nouvelles informatiques de cette semaine.
+
+441
+00:25:41.000 --> 00:25:45.001
+Dans le fichier d&#x27;accès au hasard cette semaine, DigiPro a annoncé une nouvelle forme de non-access
+
+442
+00:25:45.001 --> 00:25:47.001
+- stockage volatile, ce qu’il appelle le disque Flash.
+
+443
+00:25:48.000 --> 00:25:52.000
+Il utilise essentiellement la technologie EPROM pour éliminer électroniquement et
+
+444
+00:25:52.000 --> 00:25:53.001
+Réprogrammer la mémoire sur un chip.
+
+445
+00:25:54.000 --> 00:25:58.001
+DigiPro dit que les chips Flash Disk peuvent être réprogrammés dans le système par
+
+446
+00:25:58.001 --> 00:26:02.001
+un utilisateur final, et Flash Disk vient sur un panneau add-in et est basé sur Intel
+
+447
+00:26:02.001 --> 00:26:04.001
+La technologie de mémoire CMOS Flash.
+
+448
+00:26:04.001 --> 00:26:10.001
+DigiPro dit que le disque Flash prend en charge MS-DOS et l&#x27;environnement VAX et les deux 16
+
+449
+00:26:10.001 --> 00:26:12.000
+Une architecture 32 bits.
+
+450
+00:26:12.001 --> 00:26:16.000
+DigiPro voit le marché initial comme des ordinateurs portables et des systèmes CAD.
+
+451
+00:26:16.001 --> 00:26:20.001
+Une version de 5 megabytes est due au premier trimestre de l&#x27;année avec un 300
+
+452
+00:26:20.001 --> 00:26:23.000
+-Megabyte de disque flash promis plus tard dans l&#x27;année.
+
+453
+00:26:23.001 --> 00:26:26.000
+Microsoft a annoncé un autre retard dans le lancement de
+
+454
+00:26:26.000 --> 00:26:28.000
+Word 4.0 pour Macintosh.
+
+455
+00:26:28.001 --> 00:26:32.001
+L&#x27;entreprise dit que le retard est dû à des efforts continus pour optimiser la vitesse
+
+456
+00:26:32.001 --> 00:26:34.000
+et les exigences de mémoire du programme.
+
+457
+00:26:34.000 --> 00:26:38.000
+Microsoft parle de Word 4. 0 devrait sortir d&#x27;ici la fin du mois de février.
+
+458
+00:26:39.000 --> 00:26:42.000
+Selon la revue Forbes, Microsoft est parmi les 10 plus populaires.
+
+459
+00:26:42.000 --> 00:26:43.001
+sociétés rentables dans le pays.
+
+460
+00:26:44.000 --> 00:26:47.001
+Il est arrivé en six et était la seule société informatique dans le top 10.
+
+461
+00:26:48.000 --> 00:26:51.001
+La seule autre société informatique dans le top 25 était Sun Microsystems.
+
+462
+00:26:52.001 --> 00:26:56.001
+L&#x27;Association des éditeurs de logiciels est entrée dans la bataille Atari Nintendo.
+
+463
+00:26:57.000 --> 00:27:01.001
+Le SPA a publiquement critiqué Nintendo pour avoir tenté de contrôler le jeu
+
+464
+00:27:01.001 --> 00:27:04.000
+Le marché des cartouches pour les consoles de jeux Nintendo.
+
+465
+00:27:04.000 --> 00:27:07.000
+Les machines Nintendo ne lisent qu&#x27;un cartridge qui comprend
+
+466
+00:27:07.000 --> 00:27:08.001
+C’est un chip Nintendo.
+
+467
+00:27:09.000 --> 00:27:13.000
+Atari demande à Nintendo de restreindre le commerce et dit qu&#x27;il a trouvé un
+
+468
+00:27:13.000 --> 00:27:14.001
+Comment duplicer le chipset Nintendo ?
+
+469
+00:27:15.000 --> 00:27:18.000
+Le SPA dit que la pratique de Nintendo met en péril
+
+470
+00:27:18.000 --> 00:27:19.001
+précédent du logiciel informatique.
+
+471
+00:27:21.000 --> 00:27:24.001
+Sony a déclaré qu&#x27;elle voulait une pièce de l&#x27;activité de jeux vidéo et informatiques récupérée.
+
+472
+00:27:25.000 --> 00:27:28.000
+Il a annoncé la formation d&#x27;une nouvelle division pour écrire et commercialiser
+
+473
+00:27:28.000 --> 00:27:29.001
+Vidéo et logiciel de jeu.
+
+474
+00:27:30.000 --> 00:27:33.000
+La filiale entièrement propriété est appelée CGS ImageSoft.
+
+475
+00:27:33.000 --> 00:27:36.001
+Sony prévoit des ventes de 8 millions de dollars pour la première année.
+
+476
+00:27:37.001 --> 00:27:42.000
+L&#x27;armée joue ses propres jeux vidéo ces jours-ci avec un massif en temps réel
+
+477
+00:27:42.000 --> 00:27:46.000
+Simulation de Star Wars ou SDI, l’initiative de défense stratégique.
+
+478
+00:27:46.001 --> 00:27:51.001
+Le jeu de guerre de l&#x27;armée implique un superordinateur Cray XMP connecté à huit mini
+
+479
+00:27:51.001 --> 00:27:54.000
+Supercomputers connectés à 30 mainframes.
+
+480
+00:27:54.001 --> 00:27:59.000
+L&#x27;armée dit que l&#x27;expérience leur permettra de synchroniser toute la Terre et l&#x27;espace
+
+481
+00:27:59.000 --> 00:28:02.000
+- les actifs SDI basés dans quatre microsecondes.
+
+482
+00:28:02.000 --> 00:28:07.001
+Enfin, il y a un nouveau type de panneau de fax PC, la panneaux de fax anti-junk.
+
+483
+00:28:08.000 --> 00:28:13.000
+Le PC complet dit que sa nouvelle boîte C-Fax 9600 permet à l&#x27;utilisateur d&#x27;afficher un
+
+484
+00:28:13.000 --> 00:28:16.001
+fax entrant sur l&#x27;écran informatique avant qu&#x27;il ne soit imprimé.
+
+485
+00:28:17.000 --> 00:28:21.000
+Donc, si c&#x27;est un courrier fax junk, vous pouvez le déposer, nettoyer la ligne et enregistrer sur le papier.
+
+486
+00:28:21.001 --> 00:28:24.000
+C&#x27;est ce que nous avons fait pour l&#x27;accès aléatoire de cette semaine. Je suis Cynthia Steele.
+
+487
+00:28:32.000 --> 00:28:34.000
+[...] Bix, l’échange d’informations Byte.
+
+488
+00:28:35.000 --> 00:28:39.001
+En imprimant et en ligne, Byte et Bix servent des professionnels informatiques dans le monde entier avec
+
+489
+00:28:39.001 --> 00:28:43.001
+Informations détaillées sur les nouveaux matériels, logiciels et technologies.
+
+490
+00:28:45.000 --> 00:28:50.001
+Pour une transcription des Chroniques informatiques de cette semaine, envoyez 4 $ à PTV Publications
+
+491
+00:28:50.001 --> 00:28:56.000
+Post Office Box 701, Kent, Ohio 44240.
+
+492
+00:28:57.000 --> 00:28:58.001
+Veuillez indiquer la date du programme.
+
+493
+00:29:06.001 --> 00:29:12.001
+Merci
+
+494
+00:29:12.001 --> 00:29:15.001
+Vous !
