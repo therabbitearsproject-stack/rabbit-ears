@@ -14,7 +14,7 @@ const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve
 function player(fetch){
  const saved=new Map(),writes=[];
  const context={fetch,BUILT_IN:[channel],listCache:{},metaCache:{},continuousCache:{},schedCache:{},effCache:{},planCache:{},
-  setTimeout:()=>{},AbortSignal,Date,tidy:x=>x,cleanTitle:x=>x,blocked:()=>false,hash:()=>1,parseLen:Number,
+  setTimeout:()=>{},clearTimeout:()=>{},AbortController,AbortSignal,Date,navigator:{onLine:true},reError:()=>{},tidy:x=>x,cleanTitle:x=>x,blocked:()=>false,hash:()=>1,parseLen:Number,
   MediaCompatibility:{version:'browser-audio-v1',choose:(_all,f)=>f,knownCompatible:()=>true},
   store:{get:(k,fallback)=>saved.has(k)?saved.get(k):fallback,set:(k,v)=>{saved.set(k,v);writes.push(k);}}};
  vm.createContext(context);vm.runInContext(code+';this.api={loadCatalog,getList,getMeta};',context);
