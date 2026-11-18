@@ -1,0 +1,2637 @@
+WEBVTT
+
+1
+00:00:22.000 --> 00:00:28.000
+Minggu ini di The Computer Chronicles, masalah Y2K.
+
+2
+00:00:28.000 --> 00:00:31.001
+Kami akan menunjukkan Anda bagaimana untuk memeriksa CMOS dan BIOS komputer Anda untuk
+
+3
+00:00:31.001 --> 00:00:33.001
+Peluang tahun 2000 lalat.
+
+4
+00:00:34.000 --> 00:00:37.001
+Kami akan melihat beberapa perangkat lunak yang memeriksa aplikasi dan file Anda untuk membuat
+
+5
+00:00:37.001 --> 00:00:39.000
+Tentu saja mereka sesuai dengan Y2K.
+
+6
+00:00:40.000 --> 00:00:44.000
+Kami akan berbicara dengan Microsoft tentang beberapa masalah Y2K yang dilaporkan dengan Windows, dan kami akan
+
+7
+00:00:44.000 --> 00:00:48.000
+mencari web untuk informasi baik dan buruk tentang apa yang harus Anda lakukan
+
+8
+00:00:48.000 --> 00:00:49.001
+Berurusan dengan Y2K.
+
+9
+00:00:50.000 --> 00:00:52.000
+Selain itu, kita akan melihat sisi mainframe masalah.
+
+10
+00:00:52.001 --> 00:00:56.001
+Dapatkah Anda mempercayai energi, air, uang dan penerbangan yang aman pada 1 Januari?
+
+11
+00:00:56.001 --> 00:01:01.000
+Juga, pilihan saya dari minggu, cara baru untuk mendengarkan buku-buku di tape tanpa tape.
+
+12
+00:01:01.001 --> 00:01:03.001
+Semua ini akan muncul di The Computer Chronicles.
+
+13
+00:01:05.000 --> 00:01:10.000
+The Computer Chronicles sebagian dimungkinkan oleh PeopleSoft, penyedia global
+
+14
+00:01:10.000 --> 00:01:13.001
+Perangkat lunak aplikasi perusahaan untuk bisnis, pendidikan dan pemerintah.
+
+15
+00:01:14.000 --> 00:01:16.001
+PeopleSoft, kami bekerja di dunia Anda.
+
+16
+00:01:18.000 --> 00:01:20.001
+Melalui TechWeb untuk berita teknologi hingga menit.
+
+17
+00:01:22.000 --> 00:01:27.001
+Dan melalui TVA, televisi bersekutu menghubungkan dunia komputer dan video dengan
+
+18
+00:01:27.001 --> 00:01:30.001
+DVD dan MPEG coding.
+
+19
+00:01:37.001 --> 00:01:40.000
+Salam dan selamat datang ke The Computer Chronicles.
+
+20
+00:01:40.000 --> 00:01:41.000
+Saya adalah Stuart Chafay.
+
+21
+00:01:42.000 --> 00:01:46.000
+Y2K, kami telah mendengar tentang masalah komputer ini untuk waktu yang lama sekarang.
+
+22
+00:01:46.000 --> 00:01:50.001
+Pertanyaannya adalah seberapa serius itu dan apa yang, jika apa-apa, bisa Anda lakukan tentang itu?
+
+23
+00:01:50.001 --> 00:01:55.000
+Jika Anda tidak berpikir ini adalah masalah serius, biarlah saya menunjukkan kepada Anda menunjukkan A. Ada yang
+
+24
+00:01:55.000 --> 00:01:58.000
+Sebuah perusahaan global yang cukup besar yang disebut Shell Oil.
+
+25
+00:01:58.001 --> 00:02:01.000
+Dan Anda akan berpikir bahwa mereka memiliki sumber daya komputer untuk
+
+26
+00:02:01.000 --> 00:02:02.001
+Mengatasi masalah Y2K.
+
+27
+00:02:03.000 --> 00:02:07.000
+Aku akan menunjukkan kepadamu kartu kredit yang Shell Oil baru-baru ini mengirimkan kepadaku.
+
+28
+00:02:07.000 --> 00:02:10.001
+Ini mengatakan tepat di sini, seperti yang Anda lihat, sah sampai tahun 1000.
+
+29
+00:02:11.000 --> 00:02:11.001
+dan Whoops.
+
+30
+00:02:12.000 --> 00:02:16.000
+Nah, jika Shell Oil tidak dapat mengetahui bagaimana menyelesaikan masalah ini, anggapan saya adalah
+
+31
+00:02:16.000 --> 00:02:20.001
+Mereka ada masalah serius lainnya yang muncul di sana datang 1 Januari 2000.
+
+32
+00:02:21.000 --> 00:02:24.000
+Pada program ini, kita akan fokus terutama pada bagaimana Y2K
+
+33
+00:02:24.000 --> 00:02:26.000
+Masalah dapat mempengaruhi komputer pribadi Anda.
+
+34
+00:02:26.001 --> 00:02:28.000
+Dan ada beberapa tingkat dari masalah ini.
+
+35
+00:02:28.001 --> 00:02:29.001
+Kami akan berurusan dengan mereka semua.
+
+36
+00:02:30.001 --> 00:02:34.000
+Masalah perangkat keras dalam bentuk chip CMOS dan bias di komputer Anda
+
+37
+00:02:34.000 --> 00:02:39.000
+motherboard, sistem operasi Anda, aplikasi perangkat lunak Anda, dan file Anda.
+
+38
+00:02:39.000 --> 00:02:41.000
+Dan kita akan mulai dengan masalah hardware.
+
+39
+00:02:41.001 --> 00:02:43.001
+Dan Mike, saya pikir ini adalah wilayah Anda di sini.
+
+40
+00:02:44.000 --> 00:02:46.001
+Anda telah menarik motherboard dari PC di sini.
+
+41
+00:02:47.000 --> 00:02:50.001
+Dan mengapa Anda tidak menjelaskan kepada kami apa sisi hardware masalah itu?
+
+42
+00:02:51.000 --> 00:02:55.000
+Nah, pada dasarnya tanggal Anda berasal dari chip CMOS Anda di dalam motherboard Anda.
+
+43
+00:02:55.000 --> 00:02:56.001
+Jadi, itu adalah chip CMOS.
+
+44
+00:02:57.000 --> 00:02:58.001
+Dan itu sedang dijalankan oleh baterai ini.
+
+45
+00:02:58.001 --> 00:03:00.001
+Dan itu selalu mengingat apa tanggal itu.
+
+46
+00:03:01.000 --> 00:03:01.000
+Ya ya.
+
+47
+00:03:01.001 --> 00:03:04.000
+Dan itulah di mana 19 Anda tertanam sehingga Anda telah mendengar begitu banyak
+
+48
+00:03:04.000 --> 00:03:05.001
+Hal ini disebabkan oleh Y2K.
+
+49
+00:03:05.001 --> 00:03:06.000
+Dapatkan itu.
+
+50
+00:03:06.000 --> 00:03:07.000
+Lalu bagaimana dengan BIOS?
+
+51
+00:03:07.001 --> 00:03:11.001
+BIOS pada waktu boot up memanggil CMOS untuk tanggal dan waktu.
+
+52
+00:03:11.001 --> 00:03:13.000
+Jadi, BIOS chip sudah selesai di sini.
+
+53
+00:03:13.000 --> 00:03:15.000
+Dia berkata, hey, apa itu tanggal?
+
+54
+00:03:16.000 --> 00:03:17.000
+Dan jika orang ini memberikan yang salah
+
+55
+00:03:17.000 --> 00:03:19.001
+Informasi, semuanya pergi ke neraka setelah itu.
+
+56
+00:03:20.000 --> 00:03:20.000
+yang benar.
+
+57
+00:03:20.001 --> 00:03:22.000
+Mengalihkannya langsung ke sistem operasi.
+
+58
+00:03:22.000 --> 00:03:25.001
+Oleh karena itu, Anda akan memiliki tanggal yang tidak sah ketika Anda memulai ulang 1st Januari.
+
+59
+00:03:25.001 --> 00:03:27.001
+Sekarang karena ini adalah masalah hardware, kita masih bisa
+
+60
+00:03:27.001 --> 00:03:29.000
+memperbaikinya dan mengatasinya dalam perangkat lunak?
+
+61
+00:03:30.000 --> 00:03:30.000
+Ya ya.
+
+62
+00:03:30.001 --> 00:03:35.001
+Apa yang kita lakukan sebenarnya dengan PC fix 2000, kita mengganggu pertukaran tanggal itu
+
+63
+00:03:35.001 --> 00:03:40.001
+antara CMOS dan BIOS, memperbaiki dan menyesuaikan setiap tanggal yang perlu
+
+64
+00:03:40.001 --> 00:03:43.000
+di sana, menulisnya kembali ke chip dan memotongnya ke tangan yang lain.
+
+65
+00:03:43.000 --> 00:03:47.000
+Jadi saya dapat memuat beberapa perangkat lunak di komputer saya yang akan memeriksa dan mengatakan, hey, CMOS, jika
+
+66
+00:03:47.000 --> 00:03:48.001
+Anda salah, saya akan memperbaikinya sebelum Anda
+
+67
+00:03:48.001 --> 00:03:50.000
+menyebarkan tanggal itu ke bagian lain dari komputer saya.
+
+68
+00:03:51.000 --> 00:03:52.000
+Bagaimana saya tahu jika saya memiliki masalah?
+
+69
+00:03:52.001 --> 00:03:54.000
+Dapatkah saya menggunakan perangkat lunak Anda untuk menguji dan melihat
+
+70
+00:03:54.000 --> 00:03:55.001
+Jika CMOS saya memberikan tanggal yang salah?
+
+71
+00:03:55.001 --> 00:03:59.000
+Ya, kami memiliki paket yang disebut EasyCheck 2000 yang sebenarnya akan memeriksa
+
+72
+00:03:59.000 --> 00:04:01.000
+Semua jenis tanggal.
+
+73
+00:04:01.001 --> 00:04:02.000
+Benarkah kita bisa melakukannya?
+
+74
+00:04:02.001 --> 00:04:06.000
+Saya maksud, saya kira apa yang kita akan lakukan adalah simulasi Tahun Baru 1999 dan 2000.
+
+75
+00:04:06.000 --> 00:04:06.001
+dengan benar.
+
+76
+00:04:06.001 --> 00:04:10.000
+Apa yang akan kami lakukan adalah simulasi proses boot di PC Anda.
+
+77
+00:04:10.000 --> 00:04:13.001
+Dan apa yang akan kita lakukan adalah melihat jam CMOS dan jam BIOS
+
+78
+00:04:13.001 --> 00:04:15.001
+Dan apa itu membaca saat kita berbicara.
+
+79
+00:04:16.000 --> 00:04:19.000
+Dan kita akan simulasi boot dengan mengaturnya ke 1231
+
+80
+00:04:19.000 --> 00:04:20.001
+99, hanya beberapa detik sebelum tengah malam.
+
+81
+00:04:20.001 --> 00:04:23.000
+Jadi ini adalah Hari Tahun Baru, 31 Desember.
+
+82
+00:04:23.000 --> 00:04:24.001
+Bola itu akan turun di Times Square.
+
+83
+00:04:25.000 --> 00:04:26.000
+Dan apa yang akan dilakukan komputer Anda?
+
+84
+00:04:26.001 --> 00:04:27.000
+Jadi di sini kita pergi.
+
+85
+00:04:27.001 --> 00:04:28.001
+Beberapa detik untuk pergi.
+
+86
+00:04:28.001 --> 00:04:29.001
+Dua dan satu.
+
+87
+00:04:31.000 --> 00:04:31.000
+dan Whoops.
+
+88
+00:04:31.001 --> 00:04:33.001
+Dan jam CMOS kami pergi ke 1900.
+
+89
+00:04:34.000 --> 00:04:36.000
+Sekarang BIOS sebetulnya masih set 2000.
+
+90
+00:04:36.001 --> 00:04:36.001
+yang benar.
+
+91
+00:04:36.001 --> 00:04:43.000
+Pada sebagian besar post-96 mesin, BIOS memperbaiki untuk 1900 di CMOS.
+
+92
+00:04:43.000 --> 00:04:45.001
+Tapi kita masih bisa memiliki masalah jika aplikasi langsung
+
+93
+00:04:45.001 --> 00:04:47.000
+Menggunakan chip CMOS.
+
+94
+00:04:47.000 --> 00:04:49.001
+Ada aplikasi yang melakukannya dan ada Windows NT
+
+95
+00:04:49.001 --> 00:04:51.001
+Sistem operasi juga melakukannya.
+
+96
+00:04:52.000 --> 00:04:55.000
+Jadi komputer saya atau banyak aplikasi di komputer saya sekarang akan berpikir itu adalah
+
+97
+00:04:55.000 --> 00:04:56.001
+Tahun 1900, yang salah.
+
+98
+00:04:57.000 --> 00:04:57.001
+Dengan demikian, hal-hal akan tergelincir.
+
+99
+00:04:58.000 --> 00:04:59.000
+Bagaimana cara memperbaikinya dengan perangkat lunak?
+
+100
+00:05:00.000 --> 00:05:05.001
+Sebenarnya pada setiap boot up, kami akan menjalankan PC fix pada boot up time, menerapkan kami
+
+101
+00:05:05.001 --> 00:05:07.001
+Algorithm untuk mendapatkan tanggal.
+
+102
+00:05:08.000 --> 00:05:09.001
+Dan sekarang CMOS adalah 2000.
+
+103
+00:05:10.000 --> 00:05:10.001
+dan yang benar.
+
+104
+00:05:10.001 --> 00:05:13.000
+Jadi Anda memiliki sejenis memori resident bagian dari perangkat lunak yang
+
+105
+00:05:13.000 --> 00:05:14.001
+Apakah mereka terus-menerus memperbaiki masalah ini?
+
+106
+00:05:14.001 --> 00:05:16.000
+Tidak, itu tidak tetap dalam ingatan.
+
+107
+00:05:16.000 --> 00:05:19.000
+Ini tidak mengambil sumber daya apa pun, tidak bertentangan dengan perangkat lunak apa pun.
+
+108
+00:05:20.001 --> 00:05:23.000
+Tetapi bagaimana cara itu hanya secara permanen memecahkan masalah itu?
+
+109
+00:05:23.001 --> 00:05:25.001
+Ia melakukan tugasnya pada waktu boot up dan kemudian pergi.
+
+110
+00:05:27.000 --> 00:05:28.000
+Biarlah aku bertanya sekarang.
+
+111
+00:05:28.000 --> 00:05:30.001
+Mengapa saya harus khawatir bahwa jam CMOS saya salah?
+
+112
+00:05:30.001 --> 00:05:34.000
+Apakah itu benar-benar akan memiliki konsekuensi untuk saya saat saya melakukan pekerjaan saya di PC saya
+
+113
+00:05:34.000 --> 00:05:36.000
+Tidak lain dari fakta bahwa komputer berpikir itu adalah tanggal yang salah?
+
+114
+00:05:36.000 --> 00:05:40.001
+Jika Anda menggunakan perangkat lunak kalender, tanggal dan waktu sensitif, Anda
+
+115
+00:05:40.001 --> 00:05:43.001
+dapat memulai dengan sangat baik 1st Januari, 2000 dan setiap janji
+
+116
+00:05:43.001 --> 00:05:45.000
+Kau pernah bisa aku?
+
+117
+00:05:45.000 --> 00:05:47.001
+Anda 100 tahun terlambat untuk janji itu, itu akan memberitahu saya.
+
+118
+00:05:48.000 --> 00:05:51.000
+Dan itu dapat menyebabkan paket perangkat lunak akuntansi.
+
+119
+00:05:51.001 --> 00:05:55.001
+Sekarang jika saya memiliki komputer yang cukup baru, saya membelinya dalam tahun yang lalu atau
+
+120
+00:05:55.001 --> 00:05:57.000
+Dua, apakah masih bisa memiliki masalah CMOS?
+
+121
+00:05:57.001 --> 00:05:58.000
+Itu bisa sangat baik.
+
+122
+00:05:58.001 --> 00:06:02.001
+Teknologi CMOS yang masih dalam papan induk hari ini menggunakan Motorola lama
+
+123
+00:06:02.001 --> 00:06:05.000
+Teknologi yang memiliki 19 terintegrasi [...]
+
+124
+00:06:05.000 --> 00:06:05.001
+Bisa jadi masih ada chip dan mereka
+
+125
+00:06:05.001 --> 00:06:07.001
+Mungkin masih ada masalah dengan menggunakan PC baru ini.
+
+126
+00:06:07.001 --> 00:06:10.000
+PC ini sudah berusia 6 bulan.
+
+127
+00:06:10.001 --> 00:06:11.000
+Wow, masih ada yang salah.
+
+128
+00:06:11.001 --> 00:06:13.001
+Pertanyaan terakhir, Anda memiliki sesuatu di situs web Anda, gratis
+
+129
+00:06:13.001 --> 00:06:15.001
+Download yang akan memeriksa masalah CMOS.
+
+130
+00:06:15.001 --> 00:06:18.000
+Ya, itulah produk EasyCheck 2000 dan itu
+
+131
+00:06:18.000 --> 00:06:19.001
+Anda akan memeriksa semua tanggal hardware Anda.
+
+132
+00:06:19.001 --> 00:06:19.001
+Dapatkan itu.
+
+133
+00:06:19.001 --> 00:06:20.001
+Mike, terima kasih banyak sekali.
+
+134
+00:06:21.000 --> 00:06:24.001
+Nah, mari kita pindah ke bagian lain dari masalah Y2K, perangkat lunak Anda
+
+135
+00:06:24.001 --> 00:06:26.000
+Aplikasi dan file Anda.
+
+136
+00:06:26.000 --> 00:06:29.001
+Apa yang dapat Anda lakukan untuk memastikan bahwa mereka mematuhi Y2K?
+
+137
+00:06:30.000 --> 00:06:32.000
+Dan saya pikir jawaban Anda adalah dari Norton 2000, bukan?
+
+138
+00:06:32.000 --> 00:06:32.001
+Itu yang benar.
+
+139
+00:06:33.000 --> 00:06:34.001
+Apa yang sebenarnya dilakukan oleh Norton 2000?
+
+140
+00:06:34.001 --> 00:06:36.001
+Bagaimana saya menangani aplikasi dan file?
+
+141
+00:06:37.000 --> 00:06:40.000
+Kami menjalankan pemindaian pada sistem Anda dan kami melihat semua komersial dari shelf
+
+142
+00:06:40.000 --> 00:06:43.000
+aplikasi dan kemudian kita benar-benar melihat data yang ada di dalam
+
+143
+00:06:43.000 --> 00:06:45.000
+file Anda, seperti spreadsheets Anda.
+
+144
+00:06:45.000 --> 00:06:46.001
+Semua benar, jadi mari kita lihat layar di sini.
+
+145
+00:06:46.001 --> 00:06:49.001
+Sekali lagi, saya dapat menjalankan scan besar dan menjalankan aplikasi saya, menjalankan file saya.
+
+146
+00:06:50.000 --> 00:06:51.001
+Dan mari kita pergi ke aplikasi terlebih dahulu.
+
+147
+00:06:51.001 --> 00:06:52.001
+Jenis laporan apa yang saya dapatkan?
+
+148
+00:06:53.000 --> 00:06:57.000
+Ya, ini adalah laporan pertama yang Anda lihat dan dibagi menjadi tiga kategori.
+
+149
+00:06:57.000 --> 00:07:00.000
+Masalah yang benar-benar buruk, mungkin masalah, tampaknya baik-baik saja.
+
+150
+00:07:00.001 --> 00:07:00.001
+dengan tepat.
+
+151
+00:07:01.000 --> 00:07:03.001
+Dan kemudian Anda dapat menggosok pada masing-masing dari mereka.
+
+152
+00:07:03.001 --> 00:07:06.001
+Jadi jika saya katakan, itu mengatakan masalah yang serius dan ...
+
+153
+00:07:07.001 --> 00:07:09.001
+Sebagian 5s dan sebagian 3s di sini.
+
+154
+00:07:09.001 --> 00:07:12.001
+Lima berarti ia tidak akan dapat menangani tanggal di luar 9.
+
+155
+00:07:12.001 --> 00:07:14.000
+Ini adalah yang terburuk, gravitas 5.
+
+156
+00:07:14.001 --> 00:07:16.000
+Sebagian 3 mungkin akan sedikit tergelincir.
+
+157
+00:07:16.001 --> 00:07:17.001
+Serangkaian 3 kadang-kadang memiliki kerja-kerja.
+
+158
+00:07:18.000 --> 00:07:22.000
+Nah, ini seperti big deal, CC mail, Excel plus jendela PowerPoint, betul?
+
+159
+00:07:22.001 --> 00:07:23.001
+Jadi saya punya beberapa masalah di sini.
+
+160
+00:07:23.001 --> 00:07:25.001
+Apa yang akan saya lakukan sekarang setelah saya tahu saya memiliki masalah ini?
+
+161
+00:07:26.000 --> 00:07:28.001
+Nah, jika Anda menggosok lebih jauh, kami akan menjelaskan masalah ini.
+
+162
+00:07:29.001 --> 00:07:32.001
+Menyediakan link langsung ke situs web penjual karena kadang-kadang mereka akan memiliki
+
+163
+00:07:32.001 --> 00:07:34.000
+patch atau upgrade, sesuatu seperti itu.
+
+164
+00:07:35.000 --> 00:07:36.001
+Dan kemudian juga kadang-kadang ada pekerja
+
+165
+00:07:36.001 --> 00:07:38.000
+Dan jika demikian, kami akan memberikan saran itu.
+
+166
+00:07:38.001 --> 00:07:40.000
+Semua benar, jadi Anda tidak akan memperbaiki ini untuk saya, tetapi Anda
+
+167
+00:07:40.000 --> 00:07:41.001
+Dia akan memberitahu saya ke mana untuk pergi untuk mendapatkan itu tetap.
+
+168
+00:07:41.001 --> 00:07:45.001
+Pergi ke situs web Microsoft, download patch ini dan itu akan menyelesaikan masalah.
+
+169
+00:07:45.001 --> 00:07:45.001
+dengan tepat.
+
+170
+00:07:46.001 --> 00:07:48.001
+Nah, apa yang harus saya lakukan pada file tertentu?
+
+171
+00:07:49.000 --> 00:07:51.000
+Saya tidak tahu apa yang baik dari Excel, tapi itu
+
+172
+00:07:51.000 --> 00:07:52.001
+Apakah itu berarti semua spreadsheet saya tergelincir?
+
+173
+00:07:52.001 --> 00:07:53.001
+Tidak, tidak semestinya
+
+174
+00:07:54.001 --> 00:07:57.001
+Sekali lagi, itu tergantung pada kesesuaian aplikasi itu sendiri.
+
+175
+00:07:57.001 --> 00:07:58.001
+Sekarang saya memasukkan informasi tanggal.
+
+176
+00:07:58.001 --> 00:07:59.001
+Dan bagaimana Anda memasuki tanggal.
+
+177
+00:08:00.000 --> 00:08:00.001
+Semua benar, jadi apa itu?
+
+178
+00:08:01.000 --> 00:08:03.000
+Jadi di sini adalah pemindaian yang kami telah berjalan pada data.
+
+179
+00:08:03.001 --> 00:08:05.000
+Sekali lagi, Anda melihat keterlaluan itu.
+
+180
+00:08:05.001 --> 00:08:07.000
+Semua benar, jadi Anda memeriksa file yang sebenarnya
+
+181
+00:08:07.000 --> 00:08:09.000
+Sekarang, bukan lagi aplikasi.
+
+182
+00:08:09.000 --> 00:08:13.000
+Dan Anda memberitahu saya, hey, saya memiliki dua gravitas lima spreadsheets, Excel
+
+183
+00:08:13.000 --> 00:08:15.001
+Peta yang baru saja tidak akan berfungsi lagi.
+
+184
+00:08:15.001 --> 00:08:15.001
+Sebenarnya ya ya.
+
+185
+00:08:15.001 --> 00:08:17.000
+Dan jika ini adalah sesuatu yang Anda lakukan secara finansial
+
+186
+00:08:17.000 --> 00:08:19.000
+Rencana untuk masa depan Anda, Anda tahu, Anda ingin hal-hal itu benar.
+
+187
+00:08:19.000 --> 00:08:19.001
+Jadi apa yang saya lakukan?
+
+188
+00:08:19.001 --> 00:08:20.000
+Apakah aku hanya terperangkap?
+
+189
+00:08:20.001 --> 00:08:20.001
+tidak .
+
+190
+00:08:22.000 --> 00:08:25.001
+Norton 2000 akan memberikan informasi yang tepat tentang apa masalahnya.
+
+191
+00:08:25.001 --> 00:08:27.000
+Ini akan memberitahu Anda sel apa yang Anda berada di dalam.
+
+192
+00:08:27.000 --> 00:08:30.001
+Jadi ia mengatakan ada sel-sel tertentu yang memiliki tanggal
+
+193
+00:08:30.001 --> 00:08:32.001
+informasi yang menyebabkan masalah tersebut.
+
+194
+00:08:33.001 --> 00:08:34.001
+Baiklah, sekarang apa yang saya lakukan?
+
+195
+00:08:34.001 --> 00:08:36.000
+Nah, Anda akan masuk ke sana.
+
+196
+00:08:37.000 --> 00:08:40.000
+Dan juga untuk Excel spreadsheets, kami menyediakan visual yang bagus
+
+197
+00:08:40.000 --> 00:08:42.000
+cara untuk melihat di mana masalahnya berada.
+
+198
+00:08:42.001 --> 00:08:44.000
+Jadi saya akan menunjukkan kepada Anda contoh dari itu.
+
+199
+00:08:44.000 --> 00:08:44.000
+Di sinilah kita pergi.
+
+200
+00:08:44.001 --> 00:08:47.001
+Nah, jadi Anda warna kode sel-sel yang buruk.
+
+201
+00:08:48.000 --> 00:08:48.001
+dengan benar dan mencatat.
+
+202
+00:08:49.000 --> 00:08:52.000
+“Sesungguhnya tiga ekor unta dan empat ekor kambing dan lima ekor merah.
+
+203
+00:08:52.000 --> 00:08:54.001
+Maka dari itu, merah adalah kelima yang berat, et cetera, dan cetera.
+
+204
+00:08:54.001 --> 00:08:56.001
+Sekarang saya memiliki banyak sel buruk.
+
+205
+00:08:56.001 --> 00:08:58.001
+Tentu saja, mereka semua adalah barang-barang.
+
+206
+00:08:58.001 --> 00:08:58.001
+Kau memang benar.
+
+207
+00:08:59.000 --> 00:09:01.001
+Sekarang mengapa beberapa tanggal akan merah dan beberapa akan kuning?
+
+208
+00:09:02.000 --> 00:09:02.001
+Mereka semua adalah tanggal.
+
+209
+00:09:02.001 --> 00:09:06.001
+Nah, karena yang satu ini, seperti yang Anda lihat, disenaraikan sebagai tahun dua digit, tetapi dalam
+
+210
+00:09:06.001 --> 00:09:08.001
+Dalam kasus ini, sebenarnya telah dibaca dengan benar.
+
+211
+00:09:08.001 --> 00:09:10.000
+Ia sedang dibaca sejak 1988.
+
+212
+00:09:10.000 --> 00:09:12.001
+Tapi itu bisa dimasukkan ke dalam formula di tempat lain.
+
+213
+00:09:13.001 --> 00:09:16.001
+Jadi ini salah, dan kemudian ini yang dalam merah berhubungan
+
+214
+00:09:16.001 --> 00:09:18.000
+Kembali ke sel itu di sana.
+
+215
+00:09:19.000 --> 00:09:20.000
+Sekarang apa yang saya lakukan sekarang?
+
+216
+00:09:20.001 --> 00:09:22.001
+Saya maksudkan, saya hanya terperangkap untuk mengatakan jangan gunakan
+
+217
+00:09:22.001 --> 00:09:24.000
+Apakah saya bisa masuk dan memperbaiki masalah ini?
+
+218
+00:09:24.000 --> 00:09:26.000
+Anda dapat masuk dan mengubahnya menjadi tanggal empat digit,
+
+219
+00:09:26.000 --> 00:09:27.001
+Selesaikan formula jika ada formula.
+
+220
+00:09:27.001 --> 00:09:29.000
+Jadi, mungkin masalahnya adalah milikku.
+
+221
+00:09:29.000 --> 00:09:32.000
+Saya tidak peduli seperti orang lain dan saya menghabiskan dua digit tahun, hanya
+
+222
+00:09:32.000 --> 00:09:33.001
+membuatnya empat digit tahun dan itu bisa menyelesaikan masalah.
+
+223
+00:09:33.001 --> 00:09:35.001
+Kami semua telah diprogram untuk memasuki empat tahun digit.
+
+224
+00:09:37.000 --> 00:09:41.000
+Dalam pekerjaan yang Anda lakukan dengan Norton 2000, jelas ada beberapa aplikasi yang
+
+225
+00:09:41.000 --> 00:09:43.001
+Apakah ada yang mencurigakan yang harus saya cari?
+
+226
+00:09:44.001 --> 00:09:48.000
+Secara umum, apa pun yang bergantung pada tanggal, kalender
+
+227
+00:09:48.000 --> 00:09:50.000
+program, aplikasi keuangan apa pun.
+
+228
+00:09:50.000 --> 00:09:52.000
+Semua yang membuat kesimpulan berdasarkan tanggal.
+
+229
+00:09:52.000 --> 00:09:55.001
+Tidak dokumen pemrosesan kata, jelas.
+
+230
+00:09:56.001 --> 00:09:57.001
+Perbedaan dengan Norton 2000.
+
+231
+00:09:58.000 --> 00:09:58.001
+Sampaikan terima kasih
+
+232
+00:09:59.000 --> 00:10:03.000
+Nah, sementara kita fokus pada sisi PC dari masalah Y2K, ketakutan besar yang
+
+233
+00:10:03.000 --> 00:10:07.000
+Kebanyakan orang memiliki bukan tentang komputer pribadi mereka, tetapi tentang massa
+
+234
+00:10:07.000 --> 00:10:10.001
+sistem mainframe yang mengendalikan perusahaan listrik, bank,
+
+235
+00:10:10.001 --> 00:10:12.001
+Perusahaan penerbangan, sebagian besar layanan dasar kami.
+
+236
+00:10:13.000 --> 00:10:17.000
+Berikut ini adalah gambaran tentang apa yang harus dikatakan oleh beberapa ahli mengenai apa yang akan terjadi dengan mereka.
+
+237
+00:10:17.000 --> 00:10:18.001
+Datang 1 Januari.
+
+238
+00:10:20.001 --> 00:10:25.000
+Pada hari musim semi yang cerah di San Francisco, Millennium Bug mungkin tidak
+
+239
+00:10:25.000 --> 00:10:30.001
+terutama dalam pikiran orang, tetapi tersembunyi di dalam sebagian besar layanan dasar, dari air
+
+240
+00:10:30.001 --> 00:10:36.000
+dan daya, untuk lampu jalan dan bus, tertanam chip dan perangkat lunak yang dapat
+
+241
+00:10:36.000 --> 00:10:38.001
+tergantung pada tanggal dan waktu untuk beroperasi.
+
+242
+00:10:39.000 --> 00:10:44.000
+Inilah yang mengkhawatirkan kota-kota seperti San Francisco, yang memulai Y2K
+
+243
+00:10:44.000 --> 00:10:45.001
+Pemeriksaan 4 tahun yang lalu.
+
+244
+00:10:45.001 --> 00:10:48.000
+Apa saja sistem tertanam, kita melihat truk kebakaran.
+
+245
+00:10:49.000 --> 00:10:53.000
+Ini adalah pandangan yang sama sekali berbeda tentang dunia dan injap pada sistem air.
+
+246
+00:10:53.001 --> 00:10:59.001
+Jika ada sistem tertanam dalam injap dan gagal, apa yang mungkin akan terjadi?
+
+247
+00:11:00.000 --> 00:11:01.001
+Jika injap terbuka, kemungkinan besar akan tetap terbuka.
+
+248
+00:11:01.001 --> 00:11:03.000
+Jika ditutup, mungkin akan tetap tertutup.
+
+249
+00:11:04.000 --> 00:11:05.000
+Apakah itu kegagalan yang buruk?
+
+250
+00:11:05.001 --> 00:11:06.001
+Apakah itu sesuatu yang bisa kita perbaiki dari waktu ke waktu?
+
+251
+00:11:07.000 --> 00:11:10.001
+Bahkan hampir semua injap memiliki overrides manual, tetapi
+
+252
+00:11:10.001 --> 00:11:12.000
+Ada yang menggunakannya selama 20 tahun terakhir?
+
+253
+00:11:13.000 --> 00:11:16.000
+Chip sensitif dapat muncul di tempat yang tidak mungkin.
+
+254
+00:11:16.001 --> 00:11:22.000
+Misalnya, sistem mobil kabel kota, lebih dari 100 tahun, berjalan dari listrik
+
+255
+00:11:22.000 --> 00:11:25.000
+Generator yang dikendalikan oleh komputer.
+
+256
+00:11:26.000 --> 00:11:31.000
+Kereta api ringan hampir sepenuhnya otomatis, dan bahkan bus dan api
+
+257
+00:11:31.000 --> 00:11:34.000
+Mobil ini memiliki microprocessor.
+
+258
+00:11:37.000 --> 00:11:40.000
+Kami menemukan bahwa dengan peralatan berat, ada
+
+259
+00:11:40.000 --> 00:11:42.000
+masalah lainnya dengan siklus penyelenggaraan.
+
+260
+00:11:42.000 --> 00:11:47.000
+Dan ada siklus pemeliharaan pra-dibangun untuk hal-hal, misalnya, seperti air
+
+261
+00:11:47.000 --> 00:11:51.001
+Pump dan pengisi yang naik dan mesin.
+
+262
+00:11:52.000 --> 00:11:55.000
+Dan beberapa sistem di beberapa truk kebakaran, jika
+
+263
+00:11:55.000 --> 00:11:57.000
+Mereka tidak dilayani, tidak bekerja.
+
+264
+00:11:57.001 --> 00:12:02.001
+Wells Fargo Bank mendekati Y2K dengan cara yang berbeda dengan membangun paralel
+
+265
+00:12:02.001 --> 00:12:05.001
+sistem perbankan dan kemudian memajukan tanggal.
+
+266
+00:12:06.000 --> 00:12:11.000
+Jadi pelanggan fiktif dapat membuat deposit atau transfer dana pada tanggal 30 Desember.
+
+267
+00:12:11.001 --> 00:12:17.000
+1999, dan penjual fiktif bisa melihat dana tersebut muncul pada 3 Januari.
+
+268
+00:12:17.001 --> 00:12:19.001
+Kami telah membuat sebuah bank miniatur milik kami sendiri.
+
+269
+00:12:20.001 --> 00:12:24.001
+Sebenarnya jika itu, Anda bisa mengambil lingkungan ini dan mungkin menjualnya untuk
+
+270
+00:12:24.001 --> 00:12:28.000
+beberapa institusi perbankan lain karena mengendalikan beberapa ratus ribu
+
+271
+00:12:28.000 --> 00:12:30.000
+akuntansi pelanggan.
+
+272
+00:12:30.000 --> 00:12:33.000
+Ini bukan akun nyata, ini adalah akun tes yang kita punya di sana.
+
+273
+00:12:33.001 --> 00:12:38.000
+Dan kami memproses kegiatan sepanjang hari, mulai dari mencetak pernyataan
+
+274
+00:12:38.000 --> 00:12:39.001
+untuk mengatur cek.
+
+275
+00:12:40.000 --> 00:12:45.001
+Bank Wells Fargo di dalam sebuah bank memiliki segalanya dari PC banking untuk menerima
+
+276
+00:12:45.001 --> 00:12:47.001
+Printer untuk ATM.
+
+277
+00:12:48.001 --> 00:12:51.000
+Apa yang terjadi di tengah malam tanggal 31 Desember?
+
+278
+00:12:52.000 --> 00:12:53.001
+Sampai saat ini, sangat baik.
+
+279
+00:12:54.000 --> 00:12:56.001
+Tes itu sendiri berada dalam kontak dengan mereka, mereka bekerja cukup baik.
+
+280
+00:12:56.001 --> 00:13:01.001
+Kita harus sampai Juni tahun ini untuk menyelesaikan segalanya, jadi sekarang kita mendapat
+
+281
+00:13:01.001 --> 00:13:03.001
+di tempat sekarang sedang dibangun.
+
+282
+00:13:04.000 --> 00:13:06.001
+Dan sebagai industri secara keseluruhan, saya pikir kami berada dalam bentuk yang sangat baik.
+
+283
+00:13:07.001 --> 00:13:10.000
+Orang-orang mengambil kami sangat serius, terutama di bidang keuangan.
+
+284
+00:13:10.000 --> 00:13:11.001
+industri layanan.
+
+285
+00:13:12.001 --> 00:13:14.000
+Dan pekerjaan itu dijaga.
+
+286
+00:13:15.000 --> 00:13:16.000
+Saya sangat nyaman.
+
+287
+00:13:17.000 --> 00:13:22.000
+Menganggap Anda dapat menarik uang dari ATM Anda pada bulan Januari, Anda akan dapat
+
+288
+00:13:22.000 --> 00:13:24.000
+Menghabiskan uang, simpan untuk tiket pesawat?
+
+289
+00:13:25.000 --> 00:13:29.000
+Bandara menghadapi masalah yang diketahui dari menemukan dan memperbaiki kontrol tertanam
+
+290
+00:13:29.000 --> 00:13:31.000
+dengan komplikasi tambahan.
+
+291
+00:13:31.001 --> 00:13:35.000
+Mereka akan menghitung di setiap bandara lain untuk melakukan hal yang sama.
+
+292
+00:13:36.000 --> 00:13:40.000
+Ini adalah masalah nyata karena kami bukan satu-satunya bandara di negara ini.
+
+293
+00:13:41.001 --> 00:13:48.001
+Banyak produk yang diproduksi di bandara ditandai dengan
+
+294
+00:13:48.001 --> 00:13:53.000
+fasilitas lain, tidak semestinya bandara tetapi fasilitas manufaktur lainnya, atau
+
+295
+00:13:53.000 --> 00:13:56.000
+transportasi umum dan hal-hal seperti itu.
+
+296
+00:13:56.001 --> 00:14:03.000
+Hampir tidak dapat dipercaya jumlah inventori yang kita lalui dari
+
+297
+00:14:03.000 --> 00:14:07.001
+Beberapa komponen utama yang membentuk fasilitas untuk beberapa yang sangat kecil
+
+298
+00:14:07.001 --> 00:14:13.000
+Hal-hal yang Anda tidak akan pernah berpikir jika Anda tidak melalui latihan
+
+299
+00:14:13.000 --> 00:14:15.000
+Seperti sebuah inventori.
+
+300
+00:14:15.001 --> 00:14:20.001
+Tugasnya adalah untuk menemukan setiap chip dan program yang mungkin memiliki tanggal
+
+301
+00:14:20.001 --> 00:14:23.001
+Fungsi dan menulis kembali atau menggantikannya.
+
+302
+00:14:23.001 --> 00:14:26.000
+Tetapi beberapa area mendapat perhatian segera.
+
+303
+00:14:26.001 --> 00:14:30.000
+Kita harus melihat segala sesuatu yang dapat dibayangkan, saya pikir, tetapi Anda memiliki
+
+304
+00:14:30.000 --> 00:14:32.000
+untuk menetapkan prioritas.
+
+305
+00:14:33.000 --> 00:14:36.001
+Dan prioritasnya adalah aspek keamanan.
+
+306
+00:14:37.000 --> 00:14:40.000
+Oleh karena itu, kami harus menjaga bandara yang aman.
+
+307
+00:14:40.000 --> 00:14:42.000
+Kami harus memberikan keamanan bagi publik yang bepergian.
+
+308
+00:14:43.000 --> 00:14:46.001
+Pengendali terintegrasi tersesat di mana-mana, bahkan di layanan
+
+309
+00:14:46.001 --> 00:14:48.000
+Ini tampaknya low-tech.
+
+310
+00:14:48.001 --> 00:14:53.001
+bekalan air di San Francisco datang melalui aqueduct dari gunung Sierra Nevada
+
+311
+00:14:53.001 --> 00:14:56.000
+menggunakan gravitas sebagai motor utama.
+
+312
+00:14:57.000 --> 00:15:01.001
+Tetapi pompa, sistem kimia dan injap dioperasikan oleh Programable Logic.
+
+313
+00:15:01.001 --> 00:15:04.000
+kontrol atau PLC.
+
+314
+00:15:04.000 --> 00:15:08.000
+Semua chip telah diinventori, tetapi bagaimana jika salah satu cacat?
+
+315
+00:15:08.001 --> 00:15:10.000
+“Sebenarnya ada sangat sedikit teknologi tinggi.
+
+316
+00:15:10.000 --> 00:15:14.001
+Ketika sistem ini dirancang, itu adalah sebuah pencapaian teknik yang cemerlang pada awalnya
+
+317
+00:15:14.001 --> 00:15:19.000
+bagian dari dunia.
+
+318
+00:15:19.000 --> 00:15:23.001
+[...] meningkatkan jumlah injap, perangkat yang menggerakkan
+
+319
+00:15:23.001 --> 00:15:25.001
+ventilasi dan peralatan pemantauan.
+
+320
+00:15:26.001 --> 00:15:29.000
+Valve terbuka atau tertutup, dan jenis valve ini tidak menutup
+
+321
+00:15:29.000 --> 00:15:32.000
+secara otomatis jika terjadi kegagalan elektronik atau kegagapan listrik.
+
+322
+00:15:32.001 --> 00:15:35.000
+Jadi kebanyakan dari mereka sangat nyaman bahwa air akan terus mengalir melalui
+
+323
+00:15:35.000 --> 00:15:37.001
+Gravitasi bahkan jika ada masalah Y2K.
+
+324
+00:15:38.000 --> 00:15:45.000
+Dan saya pikir, saya benar-benar, saya pikir orang akan terkejut bahwa ketika
+
+325
+00:15:45.000 --> 00:15:50.000
+31 Desember di tengah malam datang, dunia tidak akan datang ke akhir.
+
+326
+00:15:51.000 --> 00:15:54.000
+Pesawat akan terus terbang, lampu tidak akan keluar di
+
+327
+00:15:54.000 --> 00:15:58.000
+terminal, lampu tidak akan keluar di jalur bebas, dan saya tidak berpikir
+
+328
+00:15:58.000 --> 00:16:03.000
+Ini akan menjadi beberapa kegagalan besar yang telah digambarkan
+
+329
+00:16:03.000 --> 00:16:04.001
+di media baru-baru ini.
+
+330
+00:16:05.000 --> 00:16:08.000
+Untuk komputer kronik, saya adalah Sarah O&#x27;Brien.
+
+331
+00:16:24.000 --> 00:16:28.000
+Nah, satu masalah yang belum kita hadapi saat ini dalam masalah Y2K adalah apa yang
+
+332
+00:16:28.000 --> 00:16:30.000
+Sistem Operasi Komputer Anda?
+
+333
+00:16:30.000 --> 00:16:32.001
+Dan tentu saja, dalam kebanyakan kasus yang berarti adalah Windows
+
+334
+00:16:32.001 --> 00:16:34.001
+Y2K sesuai, jadi mari kita ketahui.
+
+335
+00:16:35.000 --> 00:16:39.000
+Don, ketika kami melakukan scan kecil itu sebelumnya dengan wanita yang menunjukkan kami Norton 2000, up
+
+336
+00:16:39.000 --> 00:16:41.001
+Windows 98 menjadi masalah serius.
+
+337
+00:16:41.001 --> 00:16:42.001
+Orang-orang sudah mendengar tentang hal ini.
+
+338
+00:16:42.001 --> 00:16:44.000
+Apa masalahnya dengan Windows 98?
+
+339
+00:16:44.001 --> 00:16:47.000
+Nah, sebenarnya ada patch untuk Windows 98 yang membuatnya penuh
+
+340
+00:16:47.000 --> 00:16:49.000
+mematuhi, sehingga semua masalah ini diselesaikan.
+
+341
+00:16:49.000 --> 00:16:50.001
+Okay, tapi saya maksud apa masalahnya?
+
+342
+00:16:51.000 --> 00:16:52.001
+Ya, ada beberapa masalah kecil yang kami temukan.
+
+343
+00:16:53.000 --> 00:16:53.001
+Mari kita berikan beberapa contoh.
+
+344
+00:16:55.000 --> 00:16:57.001
+Salah satunya adalah apa yang kita sebut dialer.
+
+345
+00:16:58.000 --> 00:17:00.000
+Jika Anda masuk ke dialer telepon, Anda tidak akan berpikir
+
+346
+00:17:00.000 --> 00:17:02.000
+Ini akan menjadi garis sensitif tanggal.
+
+347
+00:17:02.000 --> 00:17:05.000
+Ini relatif gelap, tetapi banyak hal yang menghasilkan log yang adalah tanggal
+
+348
+00:17:05.000 --> 00:17:06.001
+Tembak, dan itulah yang berasal dari itu.
+
+349
+00:17:07.000 --> 00:17:08.001
+Jadi Anda dapat menggunakan dialer telepon, katakan untuk menelepon Anda
+
+350
+00:17:08.001 --> 00:17:10.001
+Keluarga, dan kemudian lihat di log itu.
+
+351
+00:17:11.000 --> 00:17:15.000
+Dan apa yang akan terjadi adalah pada tahun 2000 di luar 2000, bukannya mengatakan panggilan
+
+352
+00:17:15.000 --> 00:17:19.000
+terjadi 1 Januari 2001, kata 1 Januari dari C1.
+
+353
+00:17:19.001 --> 00:17:20.000
+Oh, itu sangat berguna.
+
+354
+00:17:20.001 --> 00:17:21.001
+Jadi ini adalah masalah demonstrasi.
+
+355
+00:17:22.000 --> 00:17:23.000
+Apakah ada kemungkinan kehilangan data?
+
+356
+00:17:23.000 --> 00:17:23.001
+Tidak ada apa pun.
+
+357
+00:17:24.000 --> 00:17:26.000
+Memang benar, jadi ini adalah masalah bayi kecil, dan Anda dapat memperbaiki itu.
+
+358
+00:17:26.001 --> 00:17:28.000
+Apa lagi masalah Win98?
+
+359
+00:17:28.000 --> 00:17:31.000
+Nah, di Internet Explorer, ada fitur ini yang disebut
+
+360
+00:17:31.000 --> 00:17:33.001
+uang tunai, dan jika Anda benar-benar pergi ke konten ...
+
+361
+00:17:33.001 --> 00:17:35.000
+Dapatkah Anda menyimpan informasi kartu kredit, hal seperti itu?
+
+362
+00:17:35.001 --> 00:17:39.000
+Yang digunakan adalah untuk mengunggah informasi Anda ke sebuah
+
+363
+00:17:39.000 --> 00:17:41.000
+Situs web yang [...] akan dijual.
+
+364
+00:17:41.000 --> 00:17:42.001
+Saya melihat masalah datang, tarikh tamat.
+
+365
+00:17:42.001 --> 00:17:43.000
+Anda mendapatkannya.
+
+366
+00:17:44.000 --> 00:17:47.000
+Jadi mari kita katakan Anda menambahkan kartu kredit baru, dan Anda pergi ke penyihir kartu kredit, dan
+
+367
+00:17:47.000 --> 00:17:49.000
+Anda memasukkan kartu dan tanggal tamat.
+
+368
+00:17:49.000 --> 00:17:51.000
+Menetapkan tanggal tamat waktu di 00.
+
+369
+00:17:51.000 --> 00:17:52.001
+Jadi, jika ia berakhir pada tahun 2000 ...
+
+370
+00:17:52.001 --> 00:17:53.000
+Itu tidak akan bekerja.
+
+371
+00:17:53.001 --> 00:17:54.000
+Itu tidak bekerja.
+
+372
+00:17:54.001 --> 00:17:56.000
+Anda meletakkan pada tahun 2000, itu hanya bekerja dengan baik.
+
+373
+00:17:56.001 --> 00:17:59.000
+Okay, jadi Anda tidak dapat memasukkan jawaban dua digit di sana.
+
+374
+00:17:59.001 --> 00:17:59.001
+dengan tepat.
+
+375
+00:18:00.000 --> 00:18:02.001
+Sekarang itu sesuatu yang Anda hanya perlu tahu, atau ada patch untuk memperbaikinya?
+
+376
+00:18:02.001 --> 00:18:02.001
+Ada satu patch.
+
+377
+00:18:03.000 --> 00:18:05.000
+Windows 98 Y2K patch memperbaiki semua masalah ini.
+
+378
+00:18:05.000 --> 00:18:07.000
+Jadi, saya maksud, ini adalah hal-hal yang relatif kecil.
+
+379
+00:18:07.000 --> 00:18:10.000
+Anda mengatakan secara umum Win 95, Win 98, bukan masalah besar.
+
+380
+00:18:10.001 --> 00:18:12.000
+Semua masalah kecil, sangat tidak jelas.
+
+381
+00:18:12.001 --> 00:18:13.001
+Sebagian besar pengguna tidak akan masuk ke dalamnya.
+
+382
+00:18:14.000 --> 00:18:15.001
+Mari kita sampai ke sisi aplikasi.
+
+383
+00:18:15.001 --> 00:18:19.000
+Sekali lagi, ketika kami melakukan pemindaian itu, kami melihat semua hal Anda datang, Anda tahu, Excel
+
+384
+00:18:19.000 --> 00:18:21.000
+dan akses, dan dll, dan sebagainya.
+
+385
+00:18:22.000 --> 00:18:23.000
+Apa yang kamu lakukan tentang...
+
+386
+00:18:23.000 --> 00:18:25.000
+Saya maksudkan, Norton menunjukkan kepada kami bahwa kami memiliki masalah, dan kemudian kami
+
+387
+00:18:25.000 --> 00:18:26.001
+Anda harus pergi ke Microsoft untuk memperbaiki masalah ini.
+
+388
+00:18:27.000 --> 00:18:29.001
+Apa yang Anda lakukan untuk membantu kami menyelesaikan beberapa masalah aplikasi?
+
+389
+00:18:29.001 --> 00:18:31.001
+Nah, ya, hal pertama yang kita lakukan, tentu saja, adalah kita memiliki situs web,
+
+390
+00:18:31.001 --> 00:18:34.000
+yang memiliki 1.800 produk sekarang yang telah kami uji dan verifikasi.
+
+391
+00:18:34.000 --> 00:18:36.000
+Begitu juga dengan nomor bebas pajak.
+
+392
+00:18:36.000 --> 00:18:37.001
+Tetapi di luar itu, apa yang telah kita lakukan adalah kita telah datang
+
+393
+00:18:37.001 --> 00:18:39.001
+Salah satunya adalah produk yang disebut Product Analyzer.
+
+394
+00:18:40.000 --> 00:18:43.001
+Dan apa yang akan dilakukan ini adalah ia akan memindai hard drive Anda, ia akan mengkonfirmasi apa yang
+
+395
+00:18:43.001 --> 00:18:46.001
+Microsoft file yang Anda miliki terhadap database, melaporkan pematuhan kembali
+
+396
+00:18:46.001 --> 00:18:48.001
+status, dan kemudian informasi lain yang mungkin Anda miliki.
+
+397
+00:18:48.001 --> 00:18:50.001
+Jadi ini adalah versi scan Anda untuk semua
+
+398
+00:18:50.001 --> 00:18:52.001
+Apakah aplikasi Microsoft yang telah kami identifikasi dengan mereka?
+
+399
+00:18:52.001 --> 00:18:54.001
+Baiklah, jadi kita melewati dan akhirnya kita memiliki beberapa masalah.
+
+400
+00:18:55.000 --> 00:18:57.000
+Anda sekarang datang dengan beberapa jenis penyihir yang keren di
+
+401
+00:18:57.000 --> 00:18:58.001
+Microsoft gaya untuk menangani mereka.
+
+402
+00:18:58.001 --> 00:18:59.001
+Pergi melalui mereka.
+
+403
+00:18:59.001 --> 00:18:59.001
+Tentu saja
+
+404
+00:19:00.000 --> 00:19:01.001
+Anda sedang berbicara tentang sihir Excel kami secara khusus.
+
+405
+00:19:02.000 --> 00:19:04.000
+Dalam Excel, ada tiga penyihir yang kami ciptakan.
+
+406
+00:19:04.001 --> 00:19:07.000
+The Date Watch Wizard, Date Fix Wizards, dan Date Migration Wizars.
+
+407
+00:19:07.000 --> 00:19:08.000
+Tentu saja, salah satunya pada saat yang sama.
+
+408
+00:19:08.000 --> 00:19:09.001
+Apa yang dilakukan oleh Date Watch Wizard?
+
+409
+00:19:09.001 --> 00:19:12.001
+Ini memantau bagaimana pengguna memasuki tanggal dan kemudian ia memberitahu mereka jika mereka sedang
+
+410
+00:19:12.001 --> 00:19:14.001
+ambigu atau akan mengubah tanggal tersebut untuk mereka.
+
+411
+00:19:14.001 --> 00:19:15.000
+Tunjukkan apa yang Anda maksudkan.
+
+412
+00:19:15.001 --> 00:19:16.001
+Tentu saja, mari kita hanya membuat spreadsheet baru.
+
+413
+00:19:18.001 --> 00:19:22.000
+Dan kita hanya akan mencetak dalam 10 slash 01 slash 00.
+
+414
+00:19:22.000 --> 00:19:25.001
+Jadi jika saya menggunakan medan dua digit, saya benar, ia mengatakan 2000.
+
+415
+00:19:26.000 --> 00:19:27.000
+Ini akan mengubahnya menjadi medan empat digit.
+
+416
+00:19:27.001 --> 00:19:30.001
+Oh, jadi bahkan jika saya hanya melakukan dua, itu secara otomatis membuat medan empat digit mungkin.
+
+417
+00:19:30.001 --> 00:19:32.001
+Dan kemudian, tentu saja, ketika itu dilakukan, Anda dapat melihat
+
+418
+00:19:32.001 --> 00:19:34.000
+Dan katakan, oh, itu seharusnya benar-benar 1900.
+
+419
+00:19:34.001 --> 00:19:36.000
+Tergantung pada bagaimana Anda menggunakan spreadsheet Anda.
+
+420
+00:19:36.000 --> 00:19:38.000
+Jadi itu akan secara otomatis mengubah tanggal yang tidak jelas.
+
+421
+00:19:38.001 --> 00:19:40.001
+Baiklah, jadi apa yang lain, Date Fix, Anda katakan?
+
+422
+00:19:40.001 --> 00:19:41.000
+Tanggal yang ditetapkan penyihir.
+
+423
+00:19:41.000 --> 00:19:43.001
+Apa yang ia lakukan adalah ia sebenarnya akan mengambil spreadsheet
+
+424
+00:19:43.001 --> 00:19:45.001
+dan memperbaiki tanggal tersebut di dalamnya.
+
+425
+00:19:45.001 --> 00:19:46.001
+Jadi, apa yang kita lihat di sini?
+
+426
+00:19:46.001 --> 00:19:47.001
+Sekarang ini adalah sesuatu yang tidak tetap.
+
+427
+00:19:48.000 --> 00:19:48.001
+Sebuah spreadsheet yang tidak tetap.
+
+428
+00:19:49.000 --> 00:19:50.001
+Jadi apa yang Anda dapatkan adalah tanggal lahir kami dan
+
+429
+00:19:50.001 --> 00:19:52.000
+Nama-nama orang dan hanya satu graf yang diterapkan kepada mereka.
+
+430
+00:19:52.001 --> 00:19:54.001
+Sebenarnya, beberapa orang di sini lahir pada tahun 1909.
+
+431
+00:19:54.001 --> 00:19:55.001
+Anda pikir itu benar?
+
+432
+00:19:56.000 --> 00:19:56.001
+Kami akan melihat.
+
+433
+00:19:57.001 --> 00:20:00.000
+Mungkin tahun 2009 dan dia belum lahir.
+
+434
+00:20:00.001 --> 00:20:02.001
+Jujur saja, itu adalah masalah.
+
+435
+00:20:03.000 --> 00:20:06.000
+Baiklah, jadi Anda memiliki representasi grafis dari apa yang akan sekarang
+
+436
+00:20:06.000 --> 00:20:07.001
+Masalah yang tidak konsisten.
+
+437
+00:20:09.000 --> 00:20:10.000
+Dan apa yang membuat Date Fix?
+
+438
+00:20:10.000 --> 00:20:12.000
+Apa yang akan dilakukan adalah ia akan melewati, ia akan mengubah yang
+
+439
+00:20:12.000 --> 00:20:15.001
+tanggal dua digit ke empat digit dan kemudian melaporkan kembali apa yang dilakukan sehingga Anda dapat
+
+440
+00:20:15.001 --> 00:20:17.001
+Periksa dan pastikan dia melakukan hal yang benar.
+
+441
+00:20:19.000 --> 00:20:20.000
+Jadi kita hanya akan melakukannya.
+
+442
+00:20:20.000 --> 00:20:21.000
+Jadi kita akan memperbaiki semua ini secara otomatis.
+
+443
+00:20:21.000 --> 00:20:23.001
+Jadi ia akan mencetak spreadsheet yang mengatakan ini adalah apa yang ia lakukan.
+
+444
+00:20:23.001 --> 00:20:25.000
+Jadi jika saya ingin kembali dan mengatakan itu salah.
+
+445
+00:20:25.000 --> 00:20:26.001
+Dan itu adalah 2009.
+
+446
+00:20:27.000 --> 00:20:28.001
+Tentu saja itu adalah mock-up.
+
+447
+00:20:28.001 --> 00:20:29.001
+Sebenarnya, ada yang mock-up.
+
+448
+00:20:29.001 --> 00:20:31.001
+Ini akan membuat kesalahan itu menjadi masalah tipikal Y2K.
+
+449
+00:20:32.000 --> 00:20:34.000
+Jadi Anda akan harus melewati spreadsheets Anda atau pada kasus-kasus
+
+450
+00:20:34.000 --> 00:20:36.001
+berdasarkan seperti ini atau terhadap direktori keseluruhan dan sebenarnya menerapkan mereka.
+
+451
+00:20:36.001 --> 00:20:39.000
+Dan cepat-cepat, Date Migration Wizard, apa yang dilakukan itu?
+
+452
+00:20:39.000 --> 00:20:43.000
+Dia mengambil versi data terdahulu dari Excel dan ke Excel 98 dan melakukan
+
+453
+00:20:43.000 --> 00:20:44.001
+Jika saya memiliki spreadsheet lama, Anda akan memiliki masalah.
+
+454
+00:20:44.001 --> 00:20:46.000
+Anda dapat membetulkannya saat Anda memindahkannya.
+
+455
+00:20:46.000 --> 00:20:46.000
+dengan tepat.
+
+456
+00:20:46.000 --> 00:20:47.001
+Jadi, kalian sudah memberikan perbaikan.
+
+457
+00:20:48.000 --> 00:20:48.000
+Kami adalah.
+
+458
+00:20:48.001 --> 00:20:49.000
+Terima kasih banyak sekali.
+
+459
+00:20:49.000 --> 00:20:49.001
+Terima kasih Stuart.
+
+460
+00:20:49.001 --> 00:20:53.001
+Memang, seperti selalu, internet adalah sumber informasi yang bagus tentang Y2K
+
+461
+00:20:53.001 --> 00:20:56.001
+Dan dalam beberapa kasus, itu adalah sumber informasi yang salah.
+
+462
+00:20:57.000 --> 00:21:00.000
+Nah, untuk membantu kita menyusun semua itu keluar, kami telah meminta Mike Elgin, editor Windows
+
+463
+00:21:00.000 --> 00:21:03.001
+Majalah, bergabung dengan kami dan menunjukkan kepada kami beberapa hal baik dan buruk di web.
+
+464
+00:21:03.001 --> 00:21:06.000
+Saya pikir penting untuk memikirkan internet sebagai sumber karena kita adalah
+
+465
+00:21:06.000 --> 00:21:08.001
+Bercakap tentang hal-hal yang berubah setiap hari, bukan?
+
+466
+00:21:08.001 --> 00:21:11.000
+Anda mungkin tidak ingin pergi membeli buku tentang masalah Y2K.
+
+467
+00:21:11.001 --> 00:21:11.001
+dengan benar.
+
+468
+00:21:12.000 --> 00:21:16.000
+Orang-orang menemukan banyak dan akan terus belajar hal-hal baru sepanjang tahun.
+
+469
+00:21:16.000 --> 00:21:19.000
+Jadi itu adalah ide yang baik untuk terus kembali ke situs web terbaik.
+
+470
+00:21:19.001 --> 00:21:22.001
+Sekarang, kawan-kawan, Win Magazine, Anda memiliki situs web yang sangat baik di Y2K.
+
+471
+00:21:22.001 --> 00:21:25.000
+Mengapa Anda tidak menunjukkan kepada kami itu terlebih dahulu karena itu benar-benar sejenis portal, jika
+
+472
+00:21:25.000 --> 00:21:26.001
+Anda akan, untuk masalah Y2K.
+
+473
+00:21:27.000 --> 00:21:27.001
+Tentu saja ok.
+
+474
+00:21:28.000 --> 00:21:32.000
+Halaman utama Y2K kami adalah apa yang kami sebut Y2k Watch.
+
+475
+00:21:32.001 --> 00:21:36.000
+Dan ini terutama sekelompok tautan, yang kami pikir adalah tautan terbaik untuk orang-orang
+
+476
+00:21:36.000 --> 00:21:39.000
+mengkhawatirkan tentang aspek PC dari masalah Y2K,
+
+477
+00:21:39.000 --> 00:21:40.001
+Keduanya di sisi hardware dan software.
+
+478
+00:21:40.001 --> 00:21:41.001
+Jadi, apa jenis link, misalnya?
+
+479
+00:21:42.000 --> 00:21:43.000
+Di manakah kamu akan mengirimkan ini?
+
+480
+00:21:43.000 --> 00:21:45.000
+Nah, pertama-tama, kami memiliki forum diskusi Y2K kami.
+
+481
+00:21:45.001 --> 00:21:48.000
+Di sinilah orang-orang yang berpengetahuan dapat
+
+482
+00:21:48.000 --> 00:21:49.001
+bersama dengan orang-orang yang mencari informasi.
+
+483
+00:21:49.001 --> 00:21:51.000
+Informasi yang tepat tentang masalah apa yang telah mereka temukan, dll.
+
+484
+00:21:51.000 --> 00:21:51.001
+dengan tepat.
+
+485
+00:21:51.001 --> 00:21:52.000
+Ini adalah area diskusi.
+
+486
+00:21:52.000 --> 00:21:55.000
+Ini adalah brand baru, dan ini akan menjadi lebih dan lebih kaya
+
+487
+00:21:55.000 --> 00:21:56.001
+Informasi di sana saat kita pergi.
+
+488
+00:21:57.001 --> 00:22:01.000
+Satu lagi hal yang saya pikirkan, saya ingin semua orang membaca artikel ini.
+
+489
+00:22:01.001 --> 00:22:02.000
+Salah satunya adalah Fred Langgett.
+
+490
+00:22:02.000 --> 00:22:07.000
+Ini adalah satu artikel terbaik tentang menemukan dan memperbaiki masalah Y2K dengan
+
+491
+00:22:07.000 --> 00:22:09.000
+Komputer pribadi, dengan Anda dan komputer Anda sendiri.
+
+492
+00:22:09.001 --> 00:22:12.000
+Dan ini berbeda dengan IT.
+
+493
+00:22:12.000 --> 00:22:13.001
+Manajer yang harus mengkhawatirkan seluruh perusahaan.
+
+494
+00:22:14.000 --> 00:22:16.000
+Begitu banyak sumber daya di situs web Anda.
+
+495
+00:22:16.000 --> 00:22:17.000
+Dan bagaimana aku bisa sampai di sana?
+
+496
+00:22:17.000 --> 00:22:17.001
+Apa itu URL?
+
+497
+00:22:17.001 --> 00:22:19.000
+Ini adalah winmag.com.
+
+498
+00:22:19.000 --> 00:22:19.000
+[...]
+
+499
+00:22:19.001 --> 00:22:21.000
+Kemudian klik pada link Y2K.
+
+500
+00:22:21.000 --> 00:22:21.000
+[...]
+
+501
+00:22:21.001 --> 00:22:23.001
+Sekarang pemerintah juga memiliki beberapa situs web di sana, bukan?
+
+502
+00:22:24.000 --> 00:22:25.000
+Untuk secara teoritis membantu?
+
+503
+00:22:25.000 --> 00:22:25.001
+Itu memang benar.
+
+504
+00:22:26.000 --> 00:22:27.000
+Mereka memberikan banyak informasi.
+
+505
+00:22:27.000 --> 00:22:30.001
+Dan sebenarnya beberapa dari mereka didasarkan pada inisiatif Presiden Clinton
+
+506
+00:22:30.001 --> 00:22:32.001
+untuk menyelesaikan masalah Y2K.
+
+507
+00:22:33.001 --> 00:22:37.001
+Dan itu adalah situs konversi presiden Y2K.
+
+508
+00:22:37.001 --> 00:22:38.001
+Ada banyak informasi.
+
+509
+00:22:38.001 --> 00:22:40.001
+Link ini masuk ke semua jenis privasi dan publik.
+
+510
+00:22:40.001 --> 00:22:42.000
+Apakah itu jenis hal yang berorientasi bisnis?
+
+511
+00:22:42.000 --> 00:22:42.001
+Itu yang benar.
+
+512
+00:22:42.001 --> 00:22:43.001
+Terutama untuk pemilik bisnis.
+
+513
+00:22:44.000 --> 00:22:45.001
+Orang-orang yang melakukan bisnis dengan pemerintah.
+
+514
+00:22:45.001 --> 00:22:46.000
+Itu yang benar.
+
+515
+00:22:46.001 --> 00:22:46.001
+masalah hukum.
+
+516
+00:22:47.001 --> 00:22:48.001
+Beberapa hal yang lebih berat.
+
+517
+00:22:48.001 --> 00:22:50.000
+Bagaimana dari sudut pandang konsumen?
+
+518
+00:22:50.000 --> 00:22:54.000
+Pemerintah memiliki situs Y2K berbasis konsumen yang penuh dengan banyak informasi.
+
+519
+00:22:54.000 --> 00:22:57.000
+Dan kita akan menjawab hanya tentang setiap pertanyaan yang orang
+
+520
+00:22:57.000 --> 00:22:59.000
+dari departemen yang berbeda.
+
+521
+00:22:59.001 --> 00:23:01.000
+Bukankah saya harus khawatir tentang keamanan sosial?
+
+522
+00:23:01.001 --> 00:23:02.001
+Bukankah saya harus khawatir tentang ini dan itu?
+
+523
+00:23:02.001 --> 00:23:03.000
+dengan tepat.
+
+524
+00:23:03.001 --> 00:23:04.001
+Asuransi dan pada dan di atas.
+
+525
+00:23:04.001 --> 00:23:04.001
+[...]
+
+526
+00:23:05.000 --> 00:23:06.000
+Sekarang ada situs lain yang saya tahu Anda benar-benar suka.
+
+527
+00:23:06.000 --> 00:23:07.000
+Situs independen lainnya.
+
+528
+00:23:07.000 --> 00:23:08.001
+Itu adalah Y2000, bukan?
+
+529
+00:23:08.001 --> 00:23:08.001
+Ya ya.
+
+530
+00:23:09.000 --> 00:23:10.001
+Ini adalah situs Peter de Yeager.
+
+531
+00:23:10.001 --> 00:23:14.001
+Sekarang Peter adalah orang asli Y2K yang berada di sana menceritakan kepada semua orang.
+
+532
+00:23:15.001 --> 00:23:17.000
+Dan situs ini telah berdiri selama bertahun-tahun.
+
+533
+00:23:17.000 --> 00:23:19.001
+Dan dia membangun database informasi yang besar ini
+
+534
+00:23:19.001 --> 00:23:21.001
+Dan dia menarik semua ahli.
+
+535
+00:23:21.001 --> 00:23:22.001
+Jadi ini adalah situs yang sangat baik.
+
+536
+00:23:22.001 --> 00:23:23.001
+dan 2000.com
+
+537
+00:23:23.001 --> 00:23:24.001
+Ini adalah URL yang baik.
+
+538
+00:23:25.000 --> 00:23:28.001
+Sekarang, bagaimana dengan semua orang-orang ini yang mengatakan dunia akan datang ke
+
+539
+00:23:28.001 --> 00:23:32.000
+Akhirnya, pesawat tidak akan terbang, kekuatan tidak akan bekerja, ATM tidak akan berfungsi.
+
+540
+00:23:32.001 --> 00:23:36.000
+Ada situs-situs di sana yang hanya menyebarkan semua jenis cerita horor.
+
+541
+00:23:36.000 --> 00:23:36.001
+Itu memang benar.
+
+542
+00:23:37.000 --> 00:23:39.001
+Ke mana Anda pergi jika itu jenis perspektif Anda tentang ini?
+
+543
+00:23:39.001 --> 00:23:42.000
+Ada situs yang bagus yang ingin saya tunjukkan di sini.
+
+544
+00:23:42.000 --> 00:23:45.000
+Sekarang ini adalah situs yang relatif ringan yang disebut Cassandra Project.
+
+545
+00:23:45.000 --> 00:23:45.001
+[...]
+
+546
+00:23:46.000 --> 00:23:49.001
+Sekarang ini adalah untuk informasi praktis tentang bagaimana untuk bertahan hidup setiap jenis
+
+547
+00:23:49.001 --> 00:23:51.000
+Kekuatan listrik dan sebagainya.
+
+548
+00:23:51.000 --> 00:23:53.000
+Apa yang terjadi jika ATM tidak berfungsi?
+
+549
+00:23:53.001 --> 00:23:54.000
+dengan tepat.
+
+550
+00:23:54.001 --> 00:23:55.000
+Air berhenti
+
+551
+00:23:55.000 --> 00:23:57.000
+Pastikan Anda memiliki air, pastikan Anda memiliki panas dan sebagainya.
+
+552
+00:23:57.001 --> 00:24:00.001
+Ada juga beberapa informasi konstruktif tentang proyek komunitas untuk memastikan
+
+553
+00:24:00.001 --> 00:24:02.001
+Tetangga ini bekerja sama untuk hal ini.
+
+554
+00:24:02.001 --> 00:24:04.001
+Ini adalah CassandraProject.org.
+
+555
+00:24:05.000 --> 00:24:05.000
+Itu yang benar.
+
+556
+00:24:05.001 --> 00:24:07.000
+Tentu saja, ada beberapa situs lain yang sudah ada.
+
+557
+00:24:07.000 --> 00:24:08.000
+Namun hal itu agak liar.
+
+558
+00:24:08.000 --> 00:24:08.001
+dengan benar.
+
+559
+00:24:08.001 --> 00:24:10.001
+Mereka mendapatkan senjata dan beberapa air, bergerak ke
+
+560
+00:24:10.001 --> 00:24:12.001
+Montana, kau tahu, bersembunyi di lubang di suatu tempat.
+
+561
+00:24:12.001 --> 00:24:15.001
+Saya pikir mereka, saya pikir pandangan dari jalan itu tidak perlu.
+
+562
+00:24:15.001 --> 00:24:16.001
+Saya tidak berpikir itu adalah ...
+
+563
+00:24:16.001 --> 00:24:19.001
+Tetapi ini adalah jenis persiapan umum hanya jika hal-hal buruk terjadi.
+
+564
+00:24:20.000 --> 00:24:20.000
+dengan tepat.
+
+565
+00:24:20.001 --> 00:24:24.000
+Sekarang kau berkata Mike, aku ingin bertanya kepadamu, aku selalu meletakkanmu di tempat karena
+
+566
+00:24:24.000 --> 00:24:25.000
+Anda menghabiskan semua waktu Anda dengan hal ini.
+
+567
+00:24:25.001 --> 00:24:27.000
+Apa pendapatmu?
+
+568
+00:24:27.000 --> 00:24:28.001
+Saya maksud saya dengar, saya maksud saya tahu
+
+569
+00:24:28.001 --> 00:24:30.000
+Orang-orang yang mengatakan saya akan pergi ke bukit dengan senjata.
+
+570
+00:24:30.000 --> 00:24:30.001
+Tentu saja
+
+571
+00:24:30.001 --> 00:24:33.000
+Orang lain mengatakan bahwa saya berada di pesawat 1 Januari tidak mengganggu saya.
+
+572
+00:24:33.001 --> 00:24:34.000
+Apa pendapatmu?
+
+573
+00:24:34.001 --> 00:24:37.001
+Saya pikir mungkin akan ada beberapa masalah.
+
+574
+00:24:38.000 --> 00:24:39.001
+Akan ada masalah yang lebih kecil.
+
+575
+00:24:39.001 --> 00:24:41.001
+Rumah sakit akan menghadapi beberapa masalah tertentu.
+
+576
+00:24:42.001 --> 00:24:44.001
+Planet tidak akan terbang, jatuh dari langit.
+
+577
+00:24:45.000 --> 00:24:45.001
+Hal ini tidak akan terjadi.
+
+578
+00:24:45.001 --> 00:24:46.001
+Mungkin ada keterlambatan.
+
+579
+00:24:47.001 --> 00:24:49.001
+Mungkin ada beberapa hal yang tak terduga.
+
+580
+00:24:49.001 --> 00:24:51.001
+Namun secara keseluruhan, ini bukan akhir dunia.
+
+581
+00:24:52.000 --> 00:24:54.000
+Kami mendengar tentang masalah chip tertanam.
+
+582
+00:24:54.000 --> 00:24:57.000
+Hey, ya, Anda dapat memperbaiki semua bahasa kobalt lama ini tetapi apa tentang semua ini
+
+583
+00:24:57.000 --> 00:24:59.000
+Hardware benda yang tertanam dalam semua hal ini?
+
+584
+00:24:59.001 --> 00:25:02.000
+Ini benar-benar masalah terbesar karena Anda tidak dapat menjalankan Microsoft
+
+585
+00:25:02.000 --> 00:25:03.001
+Patch untuk memperbaiki hal-hal ini.
+
+586
+00:25:04.000 --> 00:25:06.001
+Itu semua tertanam dalam hardware dan ada beberapa ketidakpercayaan.
+
+587
+00:25:06.001 --> 00:25:09.000
+Beberapa chip ini berumur beberapa dekade.
+
+588
+00:25:09.000 --> 00:25:10.001
+Tidak ada yang benar-benar tahu apa yang akan terjadi.
+
+589
+00:25:10.001 --> 00:25:13.001
+Namun secara keseluruhan, semua masalah ini dapat diselesaikan.
+
+590
+00:25:13.001 --> 00:25:14.001
+Segala sesuatu dapat diselesaikan.
+
+591
+00:25:14.001 --> 00:25:17.000
+Apakah Anda akan membeli makanan tambahan dan mendapatkan uang tambahan?
+
+592
+00:25:17.000 --> 00:25:18.001
+Saya tinggal di New York.
+
+593
+00:25:18.001 --> 00:25:19.001
+Saya akan memastikan bahwa saya memiliki panas.
+
+594
+00:25:21.000 --> 00:25:24.000
+Tapi saya tidak berpikir akan ada apa-apa di luar mungkin beberapa hari
+
+595
+00:25:24.000 --> 00:25:26.000
+Batasan listrik dan telepon ke bawah.
+
+596
+00:25:27.000 --> 00:25:28.000
+Mike, terima kasih banyak.
+
+597
+00:25:28.001 --> 00:25:30.000
+Itulah pandangan kita tentang Y2K.
+
+598
+00:25:30.000 --> 00:25:32.000
+Saya akan kembali dalam beberapa saat dengan Mike Pickleby.
+
+599
+00:25:41.001 --> 00:25:45.001
+Sebelum saya sampai ke pilihan minggu saya, saya ingin menyebutkan program Y2K lain
+
+600
+00:25:45.001 --> 00:25:49.000
+yang sangat baik tetapi yang kami tidak punya waktu untuk menutupi selama persembahan.
+
+601
+00:25:49.001 --> 00:25:50.000
+Ini adalah itu.
+
+602
+00:25:50.000 --> 00:25:51.001
+Ini disebut Intellifix 2000.
+
+603
+00:25:52.000 --> 00:25:56.001
+Ini adalah solusi all-in-one yang mengerikan yang memecahkan masalah perangkat keras dan perangkat lunak.
+
+604
+00:25:56.001 --> 00:26:01.000
+Jika Anda menjalankan bisnis di PC Anda dan Y2K benar-benar penting untuk Anda, Anda
+
+605
+00:26:01.000 --> 00:26:03.000
+Anda mungkin ingin memeriksa Intellifix 2000.
+
+606
+00:26:03.001 --> 00:26:05.000
+Biaya hanya $ 79.
+
+607
+00:26:06.000 --> 00:26:07.000
+Sekarang untuk pilihan saya minggu ini.
+
+608
+00:26:07.000 --> 00:26:10.001
+Salah satu kegunaan baru internet adalah untuk mendengarkan audio.
+
+609
+00:26:11.000 --> 00:26:15.000
+Situs seperti broadcast.com di mana Anda dapat mendengarkan stasiun radio dan situs seperti
+
+610
+00:26:15.000 --> 00:26:18.001
+MP3 di mana Anda dapat mendengarkan dan mengunduh musik berkualitas CD.
+
+611
+00:26:19.000 --> 00:26:23.000
+Tetapi salah satu penggunaan audio yang paling cepat berkembang secara umum adalah buku-buku pada tape.
+
+612
+00:26:23.001 --> 00:26:27.000
+Dan ada situs web dan pemutar audio yang dirancang khusus
+
+613
+00:26:27.000 --> 00:26:28.001
+Untuk kata-kata yang diucapkan audio.
+
+614
+00:26:29.000 --> 00:26:31.000
+Ini pemain yang tepat di sini.
+
+615
+00:26:31.000 --> 00:26:32.000
+Hal ini disebut Audible.
+
+616
+00:26:32.001 --> 00:26:34.000
+Ini adalah pemain audio yang kuat.
+
+617
+00:26:34.000 --> 00:26:37.001
+Anda dapat mendengarkan ini menggunakan headset yang datang dengan itu.
+
+618
+00:26:37.001 --> 00:26:40.000
+Anda dapat menggunakan adaptor kaset stereo yang disertakan
+
+619
+00:26:40.000 --> 00:26:42.000
+Jika Anda ingin mendengarkan radio mobil Anda.
+
+620
+00:26:42.000 --> 00:26:46.000
+Untuk mengunduh buku audio Anda log masuk ke situs web Audible.com.
+
+621
+00:26:46.000 --> 00:26:50.000
+Anda dapat memilih dari ribuan buku yang tersedia dan biaya untuk buku-buku adalah
+
+622
+00:26:50.000 --> 00:26:52.001
+sekitar setengah dari harga yang akan Anda bayar untuk versi kaset
+
+623
+00:26:52.001 --> 00:26:54.001
+dari buku yang sama pada tape.
+
+624
+00:26:54.001 --> 00:26:59.001
+Saya telah mengunduh novel John Grisham Testament jadi biarkan saya menyertakan ini dan Anda
+
+625
+00:26:59.001 --> 00:27:01.000
+Anda bisa mendengar apa yang terdengar.
+
+626
+00:27:03.000 --> 00:27:05.000
+Saya memiliki tiga keluarga.
+
+627
+00:27:06.000 --> 00:27:07.000
+3 x dan Y.
+
+628
+00:27:07.000 --> 00:27:10.001
+Sekarang Anda dapat mengautomatikkan proses download dengan merancang feed di tengah-tengah
+
+629
+00:27:10.001 --> 00:27:14.001
+malam jika Anda suka dan jika buku itu lebih lama dari kapasitas memori
+
+630
+00:27:14.001 --> 00:27:19.001
+pemain, perangkat lunak secara otomatis memperbarui pemain dan menggantikan bagian
+
+631
+00:27:19.001 --> 00:27:21.000
+Anda telah mendengarkan dengan bagian-bagian baru.
+
+632
+00:27:21.001 --> 00:27:25.001
+Sekarang pemain itu sendiri membiarkan Anda melompat ke depan atau ke belakang sebuah bab
+
+633
+00:27:25.001 --> 00:27:27.000
+atau buku lain untuk hal itu.
+
+634
+00:27:27.000 --> 00:27:31.000
+Ini juga memungkinkan Anda untuk memasukkan buku catatan sehingga Anda dapat dengan mudah kembali ke suatu
+
+635
+00:27:31.000 --> 00:27:32.001
+Tempat favorit di buku ini.
+
+636
+00:27:33.000 --> 00:27:36.000
+The Audible datang dengan stasiun docking sederhana seperti ini
+
+637
+00:27:36.000 --> 00:27:38.000
+yang menghubungkan ke port serial Anda.
+
+638
+00:27:38.000 --> 00:27:40.000
+Ini juga berfungsi sebagai pengisi baterai.
+
+639
+00:27:40.001 --> 00:27:42.001
+Biaya untuk pemain adalah sekitar $ 200.
+
+640
+00:27:42.001 --> 00:27:47.001
+Anda dapat mendapatkannya untuk $ 99 jika Anda setuju untuk membeli minimal jumlah buku online.
+
+641
+00:27:48.000 --> 00:27:49.001
+Itulah yang terjadi pada edisi ini dari The Chronicles.
+
+642
+00:27:50.000 --> 00:27:50.001
+Terima kasih untuk bergabung dengan kami.
+
+643
+00:27:51.000 --> 00:27:53.000
+Kami akan kembali ke sini lagi minggu depan dengan yang terbaru di
+
+644
+00:27:53.000 --> 00:27:54.001
+perangkat keras, perangkat lunak dan internet.
+
+645
+00:27:55.000 --> 00:27:56.000
+Semoga kita bisa melihatmu di sini nanti.
+
+646
+00:28:00.000 --> 00:28:05.000
+Chronicles komputer dimungkinkan sebagian oleh PeopleSoft, penyedia global
+
+647
+00:28:05.000 --> 00:28:09.000
+Perangkat lunak aplikasi perusahaan untuk bisnis, pendidikan dan pemerintah.
+
+648
+00:28:09.001 --> 00:28:12.000
+PeopleSoft, kami bekerja di dunia Anda.
+
+649
+00:28:13.000 --> 00:28:16.000
+Melalui TechWeb untuk berita teknologi hingga menit.
+
+650
+00:28:17.001 --> 00:28:23.000
+Dan melalui TVA, televisi bersekutu menghubungkan dunia komputer dan video dengan
+
+651
+00:28:23.000 --> 00:28:26.000
+DVD dan MPEG coding.
+
+652
+00:28:29.000 --> 00:28:35.001
+Untuk membeli video tape salinan program hari ini, call toll gratis 1-888-310
+
+653
+00:28:35.001 --> 00:28:37.000
+Jumlah : 7850
+
+654
+00:28:38.000 --> 00:28:40.001
+Silakan jelaskan nomor acara dan tema.
+
+655
+00:28:44.000 --> 00:28:48.000
+Minggu depan di The Computer Chronicles, kami akan membawa Anda ke Los Angeles untuk
+
+656
+00:28:48.000 --> 00:28:53.000
+Keunggulan tahunan dalam penghargaan perangkat lunak, The Cody&#x27;s, aktor Robert Yurick, komedian
+
+657
+00:28:53.000 --> 00:28:58.001
+Rondell Sheridan dan mantan CEO Apple, Guillemilleux, bergabung dengan kami saat kami menghormati
+
+658
+00:28:58.001 --> 00:29:00.001
+Program Komputer Terbaik Tahun Ini
+
+659
+00:29:01.000 --> 00:29:03.000
+The Cody&#x27;s minggu depan di The Computer Chronicles.
