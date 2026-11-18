@@ -1,0 +1,1937 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:05.000
+Así que, si compra un ordenador personal, lo abre para descubrir lo que está dentro de él,
+
+2
+00:00:05.000 --> 00:00:08.000
+Y usted descubre que no hay nada dentro de ella, sólo un montón de slots vacíos.
+
+3
+00:00:08.001 --> 00:00:12.000
+¿Qué tipo de tablas puedes comprar para agregar funcionalidad a tu ordenador?
+
+4
+00:00:12.001 --> 00:00:16.001
+Te ayudaremos a responder esa pregunta hoy, ya que vamos a ver Add-On Boards en
+
+5
+00:00:16.001 --> 00:00:18.001
+Esta edición de las crónicas informáticas.
+
+6
+00:00:40.001 --> 00:00:45.000
+Las crónicas de ordenador se hacen posibles en parte por CompuServe, con un
+
+7
+00:00:45.000 --> 00:00:50.000
+biblioteca de referencia en línea, Wall Street informes, compras en casa, aerolíneas
+
+8
+00:00:50.000 --> 00:00:53.000
+reservas, juegos y cientos de otros servicios.
+
+9
+00:00:55.000 --> 00:00:58.000
+CompuServe, ayudando a las personas a obtener el máximo de los ordenadores.
+
+10
+00:01:01.001 --> 00:01:04.000
+El financiamiento adicional se proporciona por McGraw-Hill, editores de Byte.
+
+11
+00:01:05.000 --> 00:01:09.000
+Artículos técnicos detallados de Byte sobre el nuevo hardware, el software y la cubierta de idiomas
+
+12
+00:01:09.000 --> 00:01:11.000
+Desarrollo de la tecnología informática en todo el mundo.
+
+13
+00:01:16.001 --> 00:01:18.000
+Bienvenido a las crónicas informáticas.
+
+14
+00:01:18.000 --> 00:01:20.000
+Yo soy Stuart Chafay, y este es Gary Kildall.
+
+15
+00:01:20.000 --> 00:01:23.000
+Gary, estamos hablando de Add-On Boards hoy, y creerlo o
+
+16
+00:01:23.000 --> 00:01:24.001
+No, ese pequeño hombre es un add-on board.
+
+17
+00:01:24.001 --> 00:01:25.001
+Es, por supuesto, tan pequeño.
+
+18
+00:01:26.000 --> 00:01:27.001
+De hecho, se llama una tarjeta de facturación.
+
+19
+00:01:27.001 --> 00:01:28.001
+Se fabrica por una empresa en Canadá.
+
+20
+00:01:29.000 --> 00:01:32.000
+Y lo que haces con esto es que lo metes en tu 286 máquina, y lo permite
+
+21
+00:01:32.000 --> 00:01:35.001
+Usted accede a la memoria extendida, incluso si está operando en el modo real.
+
+22
+00:01:36.000 --> 00:01:39.000
+Cuando hablamos de Add-On Boards, realmente hay dos estrategias en
+
+23
+00:01:39.000 --> 00:01:41.000
+el mercado en el mundo de IBM donde usted tiene
+
+24
+00:01:41.000 --> 00:01:43.000
+Las máquinas están abiertas y puedes ponerlas en estas placas.
+
+25
+00:01:43.000 --> 00:01:45.000
+Entonces hay el mundo de Macintosh con un cerrado
+
+26
+00:01:45.000 --> 00:01:46.001
+Box, y usted realmente no puede cambiarlo en absoluto.
+
+27
+00:01:46.001 --> 00:01:49.001
+¿Alguna de estas estrategias se ha demostrado ser mejor a largo plazo?
+
+28
+00:01:49.001 --> 00:01:50.001
+Bueno, Stuart, ambos trabajan.
+
+29
+00:01:50.001 --> 00:01:54.000
+En el caso de Apple, el Macintosh, es un entorno estrictamente controlado.
+
+30
+00:01:54.001 --> 00:01:57.000
+El autor de la aplicación siempre puede asumir, por ejemplo, que hay altos
+
+31
+00:01:57.000 --> 00:01:59.000
+gráficos, hay un ratón allí, y eso es bueno.
+
+32
+00:01:59.001 --> 00:02:04.000
+En el caso de IBM PC, el software tiene que tener en cuenta, por ejemplo, cuatro tipos diferentes de
+
+33
+00:02:04.000 --> 00:02:08.000
+aparatos de pantalla, cuatro o cinco tipos diferentes de ratones, o tal vez ningún ratón en absoluto.
+
+34
+00:02:08.001 --> 00:02:10.001
+Y por lo tanto, hace más difícil escribir la solicitud en ese caso.
+
+35
+00:02:11.000 --> 00:02:14.000
+Pero para el consumidor, la ventaja es que puede construir su propio sistema informático
+
+36
+00:02:14.000 --> 00:02:17.000
+de tablas como este, y puede ser personalizado para exactamente lo que necesita.
+
+37
+00:02:17.001 --> 00:02:18.001
+Gary, eso es lo que vamos a hacer hoy.
+
+38
+00:02:18.001 --> 00:02:21.000
+Vamos a dar un vistazo a los tipos más importantes de placas adicionales.
+
+39
+00:02:21.000 --> 00:02:23.001
+Veremos la nueva generación de paneles de memoria multifuncional.
+
+40
+00:02:24.000 --> 00:02:25.001
+Vamos a dar un vistazo a una tarjeta gráfica VGA.
+
+41
+00:02:25.001 --> 00:02:29.001
+Veremos el nuevo Intel en la placa 386, y veremos una placa que vuelve a su
+
+42
+00:02:29.001 --> 00:02:31.001
+PC en una máquina de fax.
+
+43
+00:02:32.000 --> 00:02:35.000
+Ahora, la mayoría de las personas que compran tablas adicionales los compran a través de una casa de pedido por correo.
+
+44
+00:02:35.000 --> 00:02:39.000
+Así que empezamos hoy visitando la mayor de esas casas de pedido de correo, Jameco
+
+45
+00:02:39.000 --> 00:02:41.001
+Electronics, cerca de aquí en Belmont, California.
+
+46
+00:02:44.000 --> 00:02:49.000
+Jameco Electronics en Belmont, California es una empresa madura, al menos
+
+47
+00:02:49.000 --> 00:02:50.001
+En términos de Silicon Valley.
+
+48
+00:02:51.001 --> 00:02:56.001
+La compañía fue fundada en 1974 en un garaje, y creció con el ordenador.
+
+49
+00:02:56.001 --> 00:03:00.001
+industria que proporciona componentes, placas y piezas para lo que era
+
+50
+00:03:00.001 --> 00:03:02.000
+Entonces un mercado muy diferente.
+
+51
+00:03:02.001 --> 00:03:05.000
+Antes de 1984, la gente estaba comprando sus sistemas.
+
+52
+00:03:05.000 --> 00:03:06.000
+Estuvieron contentos con ellos.
+
+53
+00:03:06.000 --> 00:03:12.000
+Pero a medida que sus necesidades crecieron y esta locura del ordenador creció, creo que vieron una necesidad de
+
+54
+00:03:12.000 --> 00:03:17.000
+ampliabilidad, digamos como en tarjetas RAM o tarjetos multifuncionales, o digamos añadiendo un
+
+55
+00:03:17.000 --> 00:03:19.001
+Disque duro junto con una tarjeta de controlador.
+
+56
+00:03:20.001 --> 00:03:25.001
+Las tablas adicionales están entre los artículos más populares en el catálogo de Jameco, con ventas
+
+57
+00:03:25.001 --> 00:03:29.001
+a veces aumentando diez veces en un año, especialmente en el caso de
+
+58
+00:03:29.001 --> 00:03:31.000
+Tarjetas de color gráfico.
+
+59
+00:03:31.001 --> 00:03:37.000
+El deseo aparentemente insatiable de más memoria y velocidad ha hecho las ventas de mesa
+
+60
+00:03:37.000 --> 00:03:39.000
+una parte importante de los ingresos de Jameco.
+
+61
+00:03:40.000 --> 00:03:45.001
+La introducción de nuevas tecnologías, como el IBM PS2, no es de gran preocupación para
+
+62
+00:03:45.001 --> 00:03:47.001
+La empresa, por lo menos para el momento.
+
+63
+00:03:48.000 --> 00:03:51.000
+Lo que hace para nosotros, en realidad nos ayuda, porque el
+
+64
+00:03:51.000 --> 00:03:53.000
+PS2, bien, su precio puede pesar aquí.
+
+65
+00:03:53.001 --> 00:03:54.001
+Las características son fantásticas.
+
+66
+00:03:54.001 --> 00:03:58.000
+Tienen todos estos diferentes gadgets, nuevos drives, nuevas velocidades, y así sucesivamente.
+
+67
+00:03:58.000 --> 00:04:03.000
+Pero entonces nuestro postmarket para, digamos como los compalables XT y AT compalable,
+
+68
+00:04:03.000 --> 00:04:07.001
+de hecho aumenta porque la gente está interesada en el uso de un producto final inferior,
+
+69
+00:04:07.001 --> 00:04:10.001
+pagando un precio final inferior, pero aún con algunas características decentes como
+
+70
+00:04:10.001 --> 00:04:12.001
+Todo lo que necesitas para la computación.
+
+71
+00:04:13.000 --> 00:04:13.001
+Sólo no tienes la última.
+
+72
+00:04:14.001 --> 00:04:18.000
+Al menos parte de la razón del éxito de la tarjeta add-in
+
+73
+00:04:18.000 --> 00:04:20.000
+Hay que ser la caída en el precio.
+
+74
+00:04:20.001 --> 00:04:25.000
+Una de las primeras tablas de Jameco fue una tarjeta que proporcionó 80 columnas de texto.
+
+75
+00:04:25.000 --> 00:04:26.001
+El monitor de Apple II.
+
+76
+00:04:27.000 --> 00:04:29.001
+Su precio entonces, $ 395.
+
+77
+00:04:31.000 --> 00:04:34.000
+Hoy es todo tuyo por 40 dólares.
+
+78
+00:04:46.001 --> 00:04:50.001
+Se unen a nosotros en el estudio ahora es Rick Rolfe, que es gerente de marketing de productos con
+
+79
+00:04:50.001 --> 00:04:54.000
+AST Research, y sentado junto a Rick Buzz Roberts, VGA
+
+80
+00:04:54.000 --> 00:04:55.001
+Product Manager con Paradise Systems.
+
+81
+00:04:56.000 --> 00:04:59.000
+Rick, AST ha estado en el negocio de ad-on por un montón de años.
+
+82
+00:04:59.001 --> 00:05:02.000
+¿Qué la gente realmente pide en términos de add-ons?
+
+83
+00:05:03.000 --> 00:05:06.001
+Bueno, los obvios son puertos, memoria adicional, las cosas que hemos sido
+
+84
+00:05:06.001 --> 00:05:10.000
+muy bien conocido por, Six Pack Plus es uno de los mejores ejemplos de este tipo de
+
+85
+00:05:10.000 --> 00:05:13.000
+producto, pero recientemente hemos visto solicitudes para cosas adicionales.
+
+86
+00:05:13.000 --> 00:05:15.001
+Los paneles de comunicación están realmente llegando a gran para nosotros también,
+
+87
+00:05:15.001 --> 00:05:17.000
+Por lo tanto, nuestro grupo de datos está haciendo muy bien.
+
+88
+00:05:17.001 --> 00:05:21.001
+Y también hemos expandido más allá de las placas de mejora simples para construir nuestros propios PCs,
+
+89
+00:05:22.000 --> 00:05:25.000
+el AST Premium 286, que es la máquina que vamos a usar hoy para la demostración.
+
+90
+00:05:25.000 --> 00:05:28.000
+Bueno, ahora tendrás que mostrar algo de memoria extendida.
+
+91
+00:05:28.000 --> 00:05:29.000
+La memoria ampliada, en realidad.
+
+92
+00:05:29.001 --> 00:05:30.001
+Vamos a hablar de la memoria ampliada.
+
+93
+00:05:30.001 --> 00:05:33.000
+Voy a explicar, la gente va a ser confundida, cuál es la diferencia en
+
+94
+00:05:33.000 --> 00:05:34.001
+Memoria ampliada y memoria ampliada.
+
+95
+00:05:34.001 --> 00:05:38.001
+Ok, la memoria extendida es un tipo de memoria que está disponible en 286 o 386
+
+96
+00:05:38.001 --> 00:05:41.001
+máquinas, que tienen un espacio de dirección más grande que el original
+
+97
+00:05:41.001 --> 00:05:43.001
+PCs, las máquinas de procesador 8088.
+
+98
+00:05:44.001 --> 00:05:48.001
+Es la memoria que sólo se puede dirigir en modo protegido en el 286, y podría ser
+
+99
+00:05:48.001 --> 00:05:52.000
+dirigido en 386 modo protegido, así como en una máquina 386.
+
+100
+00:05:53.000 --> 00:05:56.001
+La memoria ampliada, por otra parte, es un tipo adicional de memoria adicional, que
+
+101
+00:05:56.001 --> 00:06:00.000
+se evapora en el espacio de memoria convencional del ordenador,
+
+102
+00:06:00.000 --> 00:06:01.001
+Se trata de un 8088 o un 286.
+
+103
+00:06:02.000 --> 00:06:03.001
+Esto es para superar esa limitación de 640K.
+
+104
+00:06:04.000 --> 00:06:04.000
+Exactamente justo .
+
+105
+00:06:05.000 --> 00:06:07.001
+Esto hace que el ordenador sea capaz de hacer más.
+
+106
+00:06:07.001 --> 00:06:09.000
+memoria de lo que de lo contrario pudiera hacer.
+
+107
+00:06:09.000 --> 00:06:10.001
+Por favor, cuéntanos de esta mesa ahora.
+
+108
+00:06:10.001 --> 00:06:10.001
+Seguro .
+
+109
+00:06:11.001 --> 00:06:14.001
+Lo que vamos a mostrar con el Premium 286 es una memoria ampliada
+
+110
+00:06:14.001 --> 00:06:18.000
+ordenador, pero quisimos destacar que no es simplemente un
+
+111
+00:06:18.000 --> 00:06:19.001
+La función del propio ordenador que utilizamos.
+
+112
+00:06:19.001 --> 00:06:25.000
+También tenemos placas que abarcan toda la gama de procesadores y tipos de autobuses.
+
+113
+00:06:25.000 --> 00:06:31.000
+Por ejemplo, para una máquina 8088, un PC, XD, o incluso el Modelo 30, el 8086,
+
+114
+00:06:31.000 --> 00:06:36.000
+Hay el Rampage 2, que es una placa de memoria de dos megabytes EEMS, EEMs 4.0.
+
+115
+00:06:36.001 --> 00:06:40.001
+Para las máquinas basadas en 286 y compatibles, tenemos el Rampage 286, y para el
+
+116
+00:06:40.001 --> 00:06:44.000
+Modelos 50 y 60 para la línea PS2, tenemos el Rampage 286.
+
+117
+00:06:45.000 --> 00:06:47.000
+Todos ellos proporcionan dos megabytes de...
+
+118
+00:06:47.000 --> 00:06:48.001
+Puedes darnos un poco de una...
+
+119
+00:06:48.001 --> 00:06:49.000
+[...]
+
+120
+00:06:49.000 --> 00:06:53.000
+Lo que queremos mostrar aquí es lo que esto puede hacer para el usuario promedio.
+
+121
+00:06:53.000 --> 00:06:57.001
+Las personas se han vuelto dependientes de cosas como discos RAM, spoolers de impresión, RAM
+
+122
+00:06:57.001 --> 00:06:59.001
+utilidades residenciales, y estas cosas pueden usar una gran cantidad de memoria.
+
+123
+00:07:00.000 --> 00:07:04.000
+Aquí tenemos un disco RAM, ya que aún no tenemos ninguna memoria ampliada, es
+
+124
+00:07:04.000 --> 00:07:07.001
+en la memoria convencional, y voy a cargar Sidekick Plus, que es uno de los
+
+125
+00:07:07.001 --> 00:07:10.001
+El tipo más popular de productos adicionales.
+
+126
+00:07:11.001 --> 00:07:18.000
+Y cuando introduzcas el tamaño de la memoria del sistema de Sidekick, notarás que
+
+127
+00:07:18.000 --> 00:07:21.001
+Se muestra un crecimiento de 250 AK de espacio de disco duro que se utiliza como memoria virtual,
+
+128
+00:07:21.001 --> 00:07:23.000
+Porque no hay memoria ampliada disponible.
+
+129
+00:07:24.000 --> 00:07:25.001
+Por lo tanto, toma un tiempo para que entre.
+
+130
+00:07:26.000 --> 00:07:29.000
+Ahora vamos a cargar 123, y vamos a trabajar en nuestro presupuesto.
+
+131
+00:07:29.000 --> 00:07:34.000
+Ahora tenemos un disco de RAM allí para superlados para archivos, tenemos nuestro residente de RAM
+
+132
+00:07:34.000 --> 00:07:36.001
+utilidad Sidekick Plus, y lo que tenemos ahora es un error.
+
+133
+00:07:37.000 --> 00:07:39.000
+No hay suficiente memoria en la máquina.
+
+134
+00:07:39.001 --> 00:07:42.001
+Y de hecho, cuando haces el estado de la hoja de trabajo, ves que hay un total de 14 bytes
+
+135
+00:07:42.001 --> 00:07:44.001
+a la izquierda, y no hay memoria ampliada disponible.
+
+136
+00:07:45.000 --> 00:07:50.000
+Así que lo que voy a hacer ahora es reiniciar la máquina, permitir la memoria ampliada,
+
+137
+00:07:50.001 --> 00:07:54.000
+y luego muestra cómo puede, utilizando la memoria ampliada, utilizar todas las mismas utilidades
+
+138
+00:07:54.000 --> 00:07:58.000
+que usted sólo estaba usando y aún conserva su memoria convencional para
+
+139
+00:07:58.000 --> 00:07:59.001
+uso por aplicaciones y programas.
+
+140
+00:08:00.001 --> 00:08:04.000
+La primera cosa que sucede es que el gerente de memoria ampliado llegará, iniciará
+
+141
+00:08:04.000 --> 00:08:08.000
+la memoria, y ahora todo que el disco RAM se va a la memoria ampliada.
+
+142
+00:08:08.000 --> 00:08:14.000
+Sidekick Plus, cuando lo lleves, mostrará que está
+
+143
+00:08:14.000 --> 00:08:18.001
+68K de memoria convencional se utiliza, pero ya no utiliza el disco duro como
+
+144
+00:08:18.001 --> 00:08:21.000
+Memoria virtual, se utiliza 800K de memoria ampliada.
+
+145
+00:08:22.001 --> 00:08:26.001
+Por lo tanto, ahora que trae su programa de aplicación, cargue es 123, y usted cargue
+
+146
+00:08:26.001 --> 00:08:31.000
+su presupuesto, llegará, no mostrará el mensaje de error, y
+
+147
+00:08:31.000 --> 00:08:33.000
+Tendrá unos segundos más.
+
+148
+00:08:33.000 --> 00:08:37.001
+Pero cuando muestra el estado de la hoja de trabajo, le muestra 315K de convencional, como
+
+149
+00:08:37.001 --> 00:08:42.001
+Además de 276K de memoria ampliada todavía disponible, y por supuesto su sidekick
+
+150
+00:08:42.001 --> 00:08:44.000
+todavía está disponible para usted.
+
+151
+00:08:44.001 --> 00:08:47.001
+Así que puedes hacer una especie de multitasking con esto, y esto
+
+152
+00:08:47.001 --> 00:08:49.000
+Es una forma muy rudimentaria de hacerlo.
+
+153
+00:08:49.001 --> 00:08:54.001
+También te permite utilizar
+
+154
+00:08:54.001 --> 00:09:00.000
+El programa está por encima de otro.
+
+155
+00:09:02.000 --> 00:09:03.000
+Bueno, ahí vamos a ir.
+
+156
+00:09:03.001 --> 00:09:07.000
+Bueno, ¿tendrías el teclado ahora en Buzz?
+
+157
+00:09:07.000 --> 00:09:10.000
+¿Cuáles son los problemas de compatibilidad aquí con el software en estas placas?
+
+158
+00:09:10.001 --> 00:09:12.001
+En realidad no hay un problema tan grande de compatibilidad.
+
+159
+00:09:13.000 --> 00:09:18.000
+Está diseñado para funcionar bajo la mayoría de los sistemas DOS, y hay muy pocos programas que
+
+160
+00:09:18.000 --> 00:09:20.000
+causar problemas de cualquier tipo con la memoria ampliada.
+
+161
+00:09:20.001 --> 00:09:25.000
+La única cosa que viene es que trata de aliviar alguna de la confusión en
+
+162
+00:09:25.000 --> 00:09:28.001
+La industria de los tipos de memoria ampliados ahora es la
+
+163
+00:09:28.001 --> 00:09:30.000
+Especificaciones unificadas, el 4.0.
+
+164
+00:09:30.000 --> 00:09:34.001
+Inicialmente había EMS 3.2, que fue diseñado para proporcionarle una manera de mover los datos,
+
+165
+00:09:35.000 --> 00:09:37.001
+pero no le dio una manera de mover los códigos del programa, por lo que no podía
+
+166
+00:09:37.001 --> 00:09:39.000
+Ejecutar más de un programa a la vez.
+
+167
+00:09:39.001 --> 00:09:44.000
+WEMS entonces salió, y fue una mejora a la especificación original de EMS.
+
+168
+00:09:44.001 --> 00:09:48.000
+Después de un par de años, el EMS 4. 0 se ha acordado, y es esencialmente el que requiere
+
+169
+00:09:48.000 --> 00:09:53.000
+una plataforma de hardware subyacente idéntica a WEMS, con un tweak diferente
+
+170
+00:09:53.000 --> 00:09:54.001
+Aquí y allí, nada tan importante.
+
+171
+00:09:55.000 --> 00:09:59.001
+Lo que es importante es que ahora 4. 0 Compatibilidad está saliendo, gente
+
+172
+00:09:59.001 --> 00:10:04.001
+Se ofrecen conductores 4.0 con la base 3. 2 hardware, y realmente no
+
+173
+00:10:04.001 --> 00:10:07.000
+Te ofrecemos los tipos de cosas que 4. El hardware puede hacerlo.
+
+174
+00:10:07.000 --> 00:10:10.001
+Así que para estar en el mejor interés de alguien que está pensando en salir y comprar
+
+175
+00:10:10.001 --> 00:10:12.001
+una placa de memoria ampliada para saber exactamente qué tipo de
+
+176
+00:10:12.001 --> 00:10:14.000
+de hardware que se están basando en eso.
+
+177
+00:10:14.001 --> 00:10:17.000
+Buzz, queremos volver a las tarjetas gráficas ahora, y eso es el negocio de Paradise.
+
+178
+00:10:17.000 --> 00:10:17.001
+¿Qué tienes allí?
+
+179
+00:10:17.001 --> 00:10:24.000
+He traído conmigo la tarjeta Paradise VGA Plus hoy, y este es el
+
+180
+00:10:24.000 --> 00:10:28.000
+basado en el nuevo estándar de vídeo de IBM que vino junto con la introducción de la
+
+181
+00:10:28.000 --> 00:10:30.000
+La familia de ordenadores de PS2 el año pasado.
+
+182
+00:10:30.000 --> 00:10:32.001
+Damos un ejemplo de lo que VGA parece.
+
+183
+00:10:33.001 --> 00:10:38.000
+Bueno, VGA le da mayor resolución y más colores en la pantalla que el anterior
+
+184
+00:10:38.000 --> 00:10:44.001
+muestra estándar, y estoy llevando ahora, bajo Windows, algunas ventanas en el
+
+185
+00:10:44.001 --> 00:10:46.001
+pantalla que muestra nuestros 800 por 600 gráficos.
+
+186
+00:10:48.000 --> 00:10:53.000
+Ahora, esto está por encima y más allá del estándar de IBM 640 por 480 gráficos, y este
+
+187
+00:10:53.000 --> 00:10:57.001
+proporciona más del 60% más información en pantalla.
+
+188
+00:10:58.001 --> 00:11:01.001
+Así que este es un ejemplo de una aplicación de tipo Windows.
+
+189
+00:11:02.000 --> 00:11:04.000
+Ahora vamos a una aplicación de tipo CAD.
+
+190
+00:11:04.001 --> 00:11:10.000
+De nuevo, esto es 800 por 600 gráficos, y esto está funcionando AutoCAD.
+
+191
+00:11:11.001 --> 00:11:12.001
+¿Y qué vamos a ver?
+
+192
+00:11:12.001 --> 00:11:17.001
+Veremos la famosa nave espacial Columbia aquí.
+
+193
+00:11:19.000 --> 00:11:22.001
+Y esto de nuevo, con una resolución de 800 a 600, puedes obtener mucho más
+
+194
+00:11:22.001 --> 00:11:25.001
+información en la pantalla, y como siempre, que
+
+195
+00:11:25.001 --> 00:11:27.001
+Ayuda en sus capacidades de edición.
+
+196
+00:11:28.001 --> 00:11:30.000
+Ahora nos dirigimos a la aplicación de texto.
+
+197
+00:11:30.001 --> 00:11:35.000
+Esta es nuestra 132 columnas WordStar Professional que funciona ahora, y con el VGA
+
+198
+00:11:35.000 --> 00:11:38.001
+personaje teléfono, es una aplicación de tipo mucho más leible aquí.
+
+199
+00:11:40.001 --> 00:11:45.000
+Y una vez más, cuando puedes ver 132 columnas a la vez, es mucho más fácil
+
+200
+00:11:45.000 --> 00:11:47.000
+edit, y puedes crear un documento mejor.
+
+201
+00:11:48.000 --> 00:11:53.001
+Ahora, bajo GEM, vamos a correr Ventura Publisher, una aplicación de escritorio, y como
+
+202
+00:11:53.001 --> 00:11:58.000
+Puedes ver, esto conecta texto y gráficos todos juntos, y puedes ver que
+
+203
+00:11:58.000 --> 00:11:59.001
+Hay muy poca información en la pantalla.
+
+204
+00:12:00.001 --> 00:12:05.001
+Otra vez, este es nuestro 800 por 600, y lo proporcionamos con un conductor con nuestra tarjeta.
+
+205
+00:12:06.000 --> 00:12:09.001
+¿Puedes sólo mostrarnos algunas fotos maravillosas que aprovecharían el VGA?
+
+206
+00:12:10.000 --> 00:12:13.000
+Claro, esa es una de las cosas grandes con VGA es el número
+
+207
+00:12:13.000 --> 00:12:14.001
+Los colores de la pantalla en un solo momento.
+
+208
+00:12:15.001 --> 00:12:20.000
+Y voy a mostrar algunas imágenes aquí en nuestra resolución gráfica 320 por 200
+
+209
+00:12:20.000 --> 00:12:25.000
+con 256 colores en la pantalla de un posible 256.000.
+
+210
+00:12:26.001 --> 00:12:27.001
+Bueno, eso es genial.
+
+211
+00:12:27.001 --> 00:12:29.000
+Bueno, Buzz, Rick, gracias mucho.
+
+212
+00:12:29.000 --> 00:12:32.000
+Ahora que piensas en las placas adicionales, tiendes a pensar en el PC compatible
+
+213
+00:12:32.000 --> 00:12:35.001
+mundo, pero, por supuesto, con el Macintosh 2, tienes slots, y la gente es
+
+214
+00:12:35.001 --> 00:12:37.000
+Vuelve con ad-on paneles para el Mac.
+
+215
+00:12:37.001 --> 00:12:38.001
+Wendy Woods tiene un informe.
+
+216
+00:12:40.001 --> 00:12:46.000
+De acuerdo con las nuevas reglas de seguridad aérea mandadas por la FAA y el Congreso, casi todos
+
+217
+00:12:46.000 --> 00:12:50.000
+Los aviones comerciales necesitarán alguna forma de evitación de colisiones a bordo
+
+218
+00:12:50.000 --> 00:12:52.000
+sistema en cinco años.
+
+219
+00:12:52.001 --> 00:12:57.001
+Pero los sistemas de evasión de colisiones son caros, hasta $ 200,000 por avión, y
+
+220
+00:12:57.001 --> 00:12:59.000
+Hay necesidad de una alternativa más barata.
+
+221
+00:12:59.000 --> 00:13:03.000
+Bueno, cree o no, una placa adicional para el Macintosh 2
+
+222
+00:13:03.000 --> 00:13:04.001
+Ayuda a diseñarlo.
+
+223
+00:13:05.000 --> 00:13:10.000
+Se llama productor de televisión, y está siendo utilizado por los sistemas de datos de radar en Burlingame,
+
+224
+00:13:10.000 --> 00:13:16.000
+California para diseñar un sistema visual que muestra el tráfico aéreo actual alrededor de un
+
+225
+00:13:16.000 --> 00:13:20.000
+avión con un mapa aeronáutico o el mapa del suelo.
+
+226
+00:13:21.000 --> 00:13:25.001
+Productor de televisión de Computer Friends de Portland, Oregon permite los dos
+
+227
+00:13:25.001 --> 00:13:27.001
+Las pantallas deben ser super impuestas.
+
+228
+00:13:28.000 --> 00:13:32.000
+En este caso, uno de ellos, el mapa, proviene de una cassette de vídeo.
+
+229
+00:13:33.000 --> 00:13:38.001
+La tecnología real que entrará en hacer que RDS evite colisiones de bajo costo
+
+230
+00:13:38.001 --> 00:13:43.001
+El sistema es propiedad y no implicará el uso de un productor de televisión.
+
+231
+00:13:44.000 --> 00:13:49.000
+Pero la tarjeta está haciendo posible crear una demostración del último
+
+232
+00:13:49.000 --> 00:13:54.000
+Productos y para ayudar a los programadores a elegir colores y diseño en pantalla
+
+233
+00:13:54.000 --> 00:13:56.000
+antes de ponerlos en silicona.
+
+234
+00:13:56.000 --> 00:14:02.000
+Podemos tener un buen sentimiento para muchas de estas cosas temprano en el proyecto,
+
+235
+00:14:02.001 --> 00:14:08.001
+En lugar de descubrir más tarde cuando hemos hecho una extensa programación
+
+236
+00:14:08.001 --> 00:14:12.001
+esfuerzos para lograr lo mismo y encontrar lo mismo
+
+237
+00:14:12.001 --> 00:14:14.001
+Hay un problema que surge.
+
+238
+00:14:15.000 --> 00:14:18.001
+Schulenberger espera que su primer sistema de alerta de tráfico aéreo esté en el
+
+239
+00:14:18.001 --> 00:14:20.000
+mercado en dos años.
+
+240
+00:14:21.000 --> 00:14:24.001
+En Burlingame, California, para las crónicas informáticas, soy Wendy Woods.
+
+241
+00:14:37.000 --> 00:14:39.000
+En la actualidad, en el estudio se encuentra Rich Bader.
+
+242
+00:14:39.000 --> 00:14:43.000
+Rich es el gerente general de la operación de Intel PC Enhancement y se basa en
+
+243
+00:14:43.000 --> 00:14:46.000
+Hillsboro, usted sabe, Stuart, Intel tuvo mucho éxito
+
+244
+00:14:46.000 --> 00:14:47.001
+con el procesador 386, por supuesto.
+
+245
+00:14:48.001 --> 00:14:52.000
+Y una de las cosas bonitas sobre esta mesa, entiendo, es que es mil
+
+246
+00:14:52.000 --> 00:14:55.001
+$ o menos ad-on a su PC XT o lo que sea para convertirlo en un
+
+247
+00:14:55.001 --> 00:14:57.001
+386 y un megabyte de memoria.
+
+248
+00:14:57.001 --> 00:15:00.000
+Y así que es una manera bastante rentable de ir, parece.
+
+249
+00:15:00.000 --> 00:15:01.001
+Así que en lugar de comprar un 386, se puede comprar el
+
+250
+00:15:01.001 --> 00:15:03.000
+La nave y su máquina funcionan como un 386.
+
+251
+00:15:03.001 --> 00:15:04.000
+Absolutamente justo .
+
+252
+00:15:04.001 --> 00:15:10.000
+Y lo que le permite hacer esto es una gran cantidad de tecnología, 16 megahertz 386
+
+253
+00:15:10.000 --> 00:15:13.001
+microprocesador, socket para el coprocesador matemático 387 para
+
+254
+00:15:13.001 --> 00:15:15.000
+Hacer aplicaciones matemáticas intensivas.
+
+255
+00:15:15.001 --> 00:15:18.001
+Como hemos dicho, un megabyte de 32 bits DRAM, un opcional
+
+256
+00:15:18.001 --> 00:15:20.001
+Capacidad para 2 megas adicionales.
+
+257
+00:15:20.001 --> 00:15:24.000
+Así que puedes poner hasta 3 meg realmente en tu viejo PC o XT.
+
+258
+00:15:24.001 --> 00:15:29.001
+Y además de toda la lógica que viene en la mesa, también proporcionamos un
+
+259
+00:15:29.001 --> 00:15:34.001
+conjunto de utilidades de software que vienen con él que hacen caching EGA, caching de disco,
+
+260
+00:15:35.000 --> 00:15:39.000
+proporcionar capacidad de memoria ampliada, Lotus Intel Microsoft memoria ampliada.
+
+261
+00:15:39.001 --> 00:15:42.001
+Así que es realmente una actualización completa, no sólo el rendimiento de la CPU, sino el disco
+
+262
+00:15:42.001 --> 00:15:44.001
+exhibición y memoria.
+
+263
+00:15:44.001 --> 00:15:46.001
+¿Hay alguna incompatibilidad que usted sabe de
+
+264
+00:15:46.001 --> 00:15:48.000
+¿En lo que se refiere al hardware?
+
+265
+00:15:48.001 --> 00:15:49.001
+cosas que la gente debe observar.
+
+266
+00:15:49.001 --> 00:15:53.000
+Hemos realizado una gran cantidad de pruebas de compatibilidad y todos los conocidos DOS
+
+267
+00:15:53.000 --> 00:15:55.001
+software que hemos sido capaces de conseguir nuestras manos en los corredores justo en la placa.
+
+268
+00:15:55.001 --> 00:15:56.001
+¿Puedes mostrarnos cómo funciona esto?
+
+269
+00:15:57.000 --> 00:15:57.000
+Seguro .
+
+270
+00:15:57.001 --> 00:15:59.000
+¿Le da tiempo a las comparaciones y así sucesivamente?
+
+271
+00:15:59.001 --> 00:16:04.000
+Bueno, algunos números descontados, el SI de Norton es un ejemplo, 15
+
+272
+00:16:04.000 --> 00:16:05.001
+3 por lo que vale la pena.
+
+273
+00:16:06.001 --> 00:16:08.000
+Bueno, creo que tienes algunos demos aquí, ¿no?
+
+274
+00:16:08.001 --> 00:16:08.001
+Sí, vamos a dar un vistazo.
+
+275
+00:16:08.001 --> 00:16:10.001
+Nos muestra desde el punto de vista de un usuario típico cómo las cosas
+
+276
+00:16:10.001 --> 00:16:12.000
+Con el uso más rápido de la tabla.
+
+277
+00:16:12.001 --> 00:16:12.001
+Seguro .
+
+278
+00:16:13.000 --> 00:16:17.000
+Si simplemente haces un DER, toma un directorio de la máquina, esto es lo que la máquina
+
+279
+00:16:17.000 --> 00:16:19.001
+Parece correr a velocidades XT.
+
+280
+00:16:20.000 --> 00:16:23.000
+Y desde el teclado, puedo controlar la velocidad y puedes ver que
+
+281
+00:16:23.000 --> 00:16:24.001
+El DER es dramáticamente más rápido.
+
+282
+00:16:25.001 --> 00:16:29.001
+Ahora, no gastarías $ 9,95 sólo para hacer que tu DER vaya, pero quizás si tomamos
+
+283
+00:16:29.001 --> 00:16:34.000
+una mirada a una aplicación diferente como AutoCAD, los ingenieros están muy emocionados
+
+284
+00:16:34.000 --> 00:16:37.000
+Los resultados de los 386 y los 387.
+
+285
+00:16:37.001 --> 00:16:41.000
+Y otra vez, aquí es lo que el rendimiento de ella parece en modo lento.
+
+286
+00:16:41.001 --> 00:16:46.000
+Ahora, esto es lo que un XT haría, pero los coprocesores de las matemáticas 387 hacen que las cosas van
+
+287
+00:16:46.000 --> 00:16:49.001
+Un poco más rápido de lo que se puede acostumbrar a tomar alrededor de 10 segundos para recortar
+
+288
+00:16:49.001 --> 00:16:51.000
+La nave espacial Columbia es así.
+
+289
+00:16:51.001 --> 00:16:56.001
+Si, sin embargo, ahora cambiamos al modo de alta velocidad y lo hacemos de nuevo, puede ver
+
+290
+00:16:56.001 --> 00:16:58.001
+que hay una dramática mejora del rendimiento.
+
+291
+00:16:59.000 --> 00:17:01.000
+Lo hace usable, muy usable para CAD.
+
+292
+00:17:01.000 --> 00:17:01.001
+Y usted apuesta.
+
+293
+00:17:02.001 --> 00:17:06.000
+No sólo para los ingenieros, también tenemos como ejemplo, Lotus 123.
+
+294
+00:17:07.000 --> 00:17:11.001
+Aquí tenemos una cartera que tiene alrededor de 2.000 números aleatorios que generamos.
+
+295
+00:17:12.000 --> 00:17:16.000
+Y en modo lento, toma alrededor de 10 segundos para que la hoja de espalda recalque.
+
+296
+00:17:16.000 --> 00:17:18.000
+Puedes ver la bandera de peso que va hacia arriba allí en el ángulo.
+
+297
+00:17:18.001 --> 00:17:21.001
+Después de generar todos los números, los añadimos a través de
+
+298
+00:17:21.001 --> 00:17:23.000
+todas las líneas y por todas las columnas.
+
+299
+00:17:23.000 --> 00:17:23.001
+Allí vas tú.
+
+300
+00:17:24.000 --> 00:17:27.000
+Y a alta velocidad, se puede ver que es significativo
+
+301
+00:17:27.000 --> 00:17:29.000
+más rápido, aproximadamente dos segundos para ese caso.
+
+302
+00:17:30.000 --> 00:17:35.001
+El otro ejemplo que tengo es que muchas personas piensan que para el uso de la energía de los paquetes CAD
+
+303
+00:17:35.001 --> 00:17:37.000
+y los platos, lo usarías.
+
+304
+00:17:37.001 --> 00:17:40.001
+Pero otro caso interesante es simplemente para el procesamiento de palabras.
+
+305
+00:17:40.001 --> 00:17:45.001
+Y aquí tenemos Microsoft Word versión 4 con un documento típico.
+
+306
+00:17:46.000 --> 00:17:48.001
+Y sólo vamos a escurrir por el documento.
+
+307
+00:17:49.000 --> 00:17:50.000
+Aquí estoy tocando la página abajo.
+
+308
+00:17:50.001 --> 00:17:52.001
+Y puedes ver que las pantallas aparecen bastante rápidamente.
+
+309
+00:17:53.000 --> 00:17:56.001
+Pero sin embargo, cuando vamos a un modo de alta velocidad, es
+
+310
+00:17:56.001 --> 00:17:58.000
+tan rápido como puedo tocar la llave.
+
+311
+00:17:59.000 --> 00:18:02.001
+Así que creemos que los 3 a 6 realmente tienen algún mejoramiento de rendimiento
+
+312
+00:18:02.001 --> 00:18:04.000
+Para todos los usuarios de PC.
+
+313
+00:18:04.001 --> 00:18:06.001
+No, ¿qué es India que viene con tan lejos como nuevos ad-on paneles?
+
+314
+00:18:07.000 --> 00:18:10.001
+Oh, seguramente puedes esperar a vernos seguir adelante
+
+315
+00:18:10.001 --> 00:18:12.000
+para salir con nuevas líneas de productos.
+
+316
+00:18:12.000 --> 00:18:16.000
+De hecho, habrá algunos productos en las comunicaciones, comunicaciones de PC
+
+317
+00:18:16.000 --> 00:18:19.000
+Un espacio que vamos a introducir en un futuro no muy lejano.
+
+318
+00:18:19.001 --> 00:18:20.000
+Rico, muchas gracias.
+
+319
+00:18:20.000 --> 00:18:22.001
+En sólo un minuto, vamos a dar un vistazo a un add-on que convierte su
+
+320
+00:18:22.001 --> 00:18:24.000
+PC en una máquina de fax.
+
+321
+00:18:24.001 --> 00:18:25.000
+Por lo tanto, permanezca tonificada.
+
+322
+00:18:38.001 --> 00:18:40.001
+En esta ocasión, el director del estudio es Jan Ozer.
+
+323
+00:18:41.000 --> 00:18:43.000
+Jan es director general de la división de fax en
+
+324
+00:18:43.000 --> 00:18:45.000
+Quadrum, y están basados en Norcross, Georgia.
+
+325
+00:18:45.001 --> 00:18:47.001
+Stuart, usted sabe, las transmisiones de fax similares son
+
+326
+00:18:47.001 --> 00:18:49.000
+que cada vez son parte de nuestra vida.
+
+327
+00:18:49.001 --> 00:18:52.001
+Cada día, poner una hoja de papel en la máquina y enviarlo a través de una línea de teléfono.
+
+328
+00:18:52.001 --> 00:18:54.000
+Es una de esas cosas, ¿cómo me he conseguido sin una?
+
+329
+00:18:54.000 --> 00:18:55.000
+Exactamente sí sí.
+
+330
+00:18:55.000 --> 00:18:58.000
+Ahora, este es un tipo de placa interesante porque hace que su ordenador personal
+
+331
+00:18:58.000 --> 00:18:59.001
+en algo diferente de un ordenador.
+
+332
+00:19:00.000 --> 00:19:02.001
+Es realmente lo hace una máquina de fax, creo, mucho más.
+
+333
+00:19:02.001 --> 00:19:05.001
+Jan, cómo hace esto, cómo lo hace diferente de
+
+334
+00:19:05.001 --> 00:19:07.000
+una máquina de fax cuando usted pone esto en su PC?
+
+335
+00:19:08.000 --> 00:19:09.000
+Bueno, te ahorra mucho tiempo, Gary.
+
+336
+00:19:10.000 --> 00:19:13.000
+La mayoría de los documentos que se envían hoy en día a través de los fax tradicionales son
+
+337
+00:19:13.000 --> 00:19:16.001
+creado en el ordenador en lugar de imprimirlo y caminarlo hacia abajo a la
+
+338
+00:19:16.001 --> 00:19:18.001
+La máquina de fax, se puede enviar directamente desde su PC.
+
+339
+00:19:19.000 --> 00:19:22.000
+Esto ahorra mucho tiempo, y usted obtendrá un resultado más claro en el otro extremo.
+
+340
+00:19:22.001 --> 00:19:24.001
+Vamos a ir aquí y enviar un fax ahora.
+
+341
+00:19:24.001 --> 00:19:25.001
+Tenemos otro establecimiento por encima.
+
+342
+00:19:25.001 --> 00:19:28.001
+Hay una máquina de fax real en la otra parte del conjunto allí, y quiero que
+
+343
+00:19:28.001 --> 00:19:32.000
+Enviar algo a esa máquina y ver cómo funciona todo esto.
+
+344
+00:19:34.000 --> 00:19:39.001
+Estoy nombrando el archivo a ser enviado, y luego buscando el teléfono, todo lo que tenemos es
+
+345
+00:19:39.001 --> 00:19:43.000
+el número de la Universidad de San Mateo en aquí, pero puede cargar como
+
+346
+00:19:43.000 --> 00:19:44.001
+Muchos números como se puede ajustar en el directorio.
+
+347
+00:19:45.000 --> 00:19:46.001
+Es un almacenamiento limitado, no un programa limitado.
+
+348
+00:19:47.000 --> 00:19:49.000
+La impresión entra, y luego queremos transmitirlo de inmediato.
+
+349
+00:19:49.001 --> 00:19:51.001
+Así que sólo hay dos o tres órdenes que necesitas pasar por
+
+350
+00:19:51.001 --> 00:19:53.001
+para enviar un fax desde el PC.
+
+351
+00:19:54.000 --> 00:19:57.000
+Así que este programa es un término que usted permanece residente programa
+
+352
+00:19:57.000 --> 00:19:58.001
+A medida que se mueve en su...
+
+353
+00:19:58.001 --> 00:20:00.001
+Eso es correcto, como Sidekick o algunos otros programas.
+
+354
+00:20:00.001 --> 00:20:03.000
+Bueno, así de nuevo, estuviste en el medio de un documento WordPerfect aquí.
+
+355
+00:20:03.001 --> 00:20:04.000
+Eso es correcto.
+
+356
+00:20:04.000 --> 00:20:09.000
+Usted dijo enviar un fax, y usted sólo llamó la función de fax aquí, y sólo
+
+357
+00:20:09.000 --> 00:20:11.001
+llamado la otra máquina de fax, que está por encima del otro lado de nuestro
+
+358
+00:20:11.001 --> 00:20:13.000
+El estudio, y está enviándole el fax.
+
+359
+00:20:13.001 --> 00:20:16.001
+Una de las cosas que queríamos...
+
+360
+00:20:16.001 --> 00:20:18.001
+Pensamos que era necesario lograr esto.
+
+361
+00:20:18.001 --> 00:20:20.000
+El programa era para hacerlo fácil de usar.
+
+362
+00:20:20.001 --> 00:20:23.001
+Por lo tanto, es compatible con la mayoría de los programas de procesamiento de palabras, y en realidad puede
+
+363
+00:20:23.001 --> 00:20:27.001
+Cambiar los programas de procesamiento de palabras en archivos de fax automáticamente.
+
+364
+00:20:28.001 --> 00:20:31.001
+Lo que me has visto hacer es todo lo que tienes que hacer para enviar un fax de
+
+365
+00:20:31.001 --> 00:20:33.001
+cualquier archivo de procesamiento de palabras.
+
+366
+00:20:34.000 --> 00:20:36.000
+Ahora es una tecnología básica. Estamos trabajando con el Grupo 3.
+
+367
+00:20:36.001 --> 00:20:37.000
+Eso es correcto.
+
+368
+00:20:37.001 --> 00:20:39.001
+¿Y también cuál es la tasa de datos?
+
+369
+00:20:40.000 --> 00:20:42.001
+La tasa de datos sobre este producto específico es de 4800 baus.
+
+370
+00:20:43.000 --> 00:20:47.000
+El precio de este es 395, que es la placa de fax de precio más baja en el mercado por...
+
+371
+00:20:48.000 --> 00:20:50.000
+En contra de 9600 modelos de baud por alrededor de $ 600.
+
+372
+00:20:50.000 --> 00:20:56.000
+Y entonces, ¿cuál es el tiempo de transmisión promedio para un 4800 baus pieza de papel?
+
+373
+00:20:56.001 --> 00:20:59.000
+Para una página de texto, toma aproximadamente un minuto.
+
+374
+00:20:59.001 --> 00:21:02.001
+Okay, Jen, just so we notice, there is the fax coming out of a fax machine at the
+
+375
+00:21:02.001 --> 00:21:04.000
+otro final de un teléfono sobre allí.
+
+376
+00:21:05.001 --> 00:21:07.001
+Somos una especie de simulación de una transacción de negocios
+
+377
+00:21:07.001 --> 00:21:09.000
+¿Aquí está bien, Jen? Dime lo que estamos haciendo.
+
+378
+00:21:09.000 --> 00:21:11.001
+Lo que estamos haciendo es confirmar un pedido de compra oral.
+
+379
+00:21:12.000 --> 00:21:15.001
+He enviado al señor que verbalmente me ordenó algo.
+
+380
+00:21:15.001 --> 00:21:19.000
+Ahora lo estamos recibiendo, y será enviado de vuelta a mí.
+
+381
+00:21:20.001 --> 00:21:24.000
+Bueno, así de nuevo, Sarah está firmando ese pedido de compra, y ella va
+
+382
+00:21:24.000 --> 00:21:26.000
+para fax que vuelve a nuestra máquina a través de aquí.
+
+383
+00:21:26.000 --> 00:21:29.000
+Eso es correcto. Será... Aunque estamos en el medio de WordPerfect, como
+
+384
+00:21:29.000 --> 00:21:32.000
+Se puede ver, se almacenará automáticamente y se salvará en el disco.
+
+385
+00:21:32.001 --> 00:21:35.001
+Aunque no puedes usar WordPerfect, mientras estás en el... Si un fax es
+
+386
+00:21:35.001 --> 00:21:40.000
+recibiendo, puede comprobar el archivo y ver el archivos de WordPerfect.
+
+387
+00:21:41.000 --> 00:21:43.001
+¿Tienes opciones para imprimir los documentos?
+
+388
+00:21:43.001 --> 00:21:48.000
+Sí, puedes imprimir a la mayoría de las impresoras láser y a la mayor parte de las impressoras de matriz de punto. Todo lo
+
+389
+00:21:48.000 --> 00:21:50.000
+que tiene dot gráficos abordables se puede utilizar.
+
+390
+00:21:50.001 --> 00:21:53.001
+¿Y qué pasa con el proceso de escaneamiento? Por supuesto, esto no incluye la
+
+391
+00:21:53.001 --> 00:21:55.001
+El escáner a ese precio.
+
+392
+00:21:56.000 --> 00:22:00.001
+Es compatible con muchos scanners. Estamos compatibles con usted con
+
+393
+00:22:00.001 --> 00:22:03.001
+Packard, Chinon y Princeton Graphics, así como algunos otros.
+
+394
+00:22:04.000 --> 00:22:07.001
+No necesitas realmente un escáner para la mayoría de las transmisiones. Basicamente, lo que necesitas
+
+395
+00:22:07.001 --> 00:22:11.000
+Es lo que está entrando en el ordenador a través de su WordProcessor.
+
+396
+00:22:11.001 --> 00:22:15.001
+Bueno, así que usted estaba en el medio de WordPerfect de nuevo. que automáticamente
+
+397
+00:22:15.001 --> 00:22:18.001
+interrumpido y le dijo que está recibiendo un fax similar ahora.
+
+398
+00:22:18.001 --> 00:22:19.000
+Eso es justo.
+
+399
+00:22:20.000 --> 00:22:22.001
+Y entonces, bien, creo que tardará mucho tiempo para que esa página vuelva a...
+
+400
+00:22:22.001 --> 00:22:26.001
+Menos de un minuto para recibir desde el fax similar.
+
+401
+00:22:26.001 --> 00:22:29.000
+Ahora, ¿puedes hacer cualquier trabajo mientras se lleva a cabo la transmisión?
+
+402
+00:22:29.001 --> 00:22:33.000
+No no. En este momento, la máquina está cerrada y dedicada al fax. Tenemos una
+
+403
+00:22:33.000 --> 00:22:37.001
+La placa de 9600 baus con un microprocesador que permitiría el funcionamiento de fondo.
+
+404
+00:22:37.001 --> 00:22:39.001
+Eso será muy pronto.
+
+405
+00:22:40.001 --> 00:22:41.001
+Bueno, ¿y es así que está completo?
+
+406
+00:22:42.000 --> 00:22:44.001
+Ahora está completo, y el programa está restaurado. Como puedes ver,
+
+407
+00:22:44.001 --> 00:22:46.000
+No hay pérdida de datos. Estás de vuelta en WordPerfect.
+
+408
+00:22:46.000 --> 00:22:48.000
+Bueno, así que supongo que queremos dar un vistazo al documento que acabamos de obtener.
+
+409
+00:22:49.000 --> 00:22:54.001
+Ok, vamos al log de la transacción, y acabamos de recibir
+
+410
+00:22:54.001 --> 00:22:56.001
+Recopilación32.
+
+411
+00:22:56.001 --> 00:22:58.000
+Así que le dieron un nombre final.
+
+412
+00:22:58.000 --> 00:22:59.001
+Eso es correcto, y luego golpeamos F3.
+
+413
+00:22:59.001 --> 00:23:00.000
+Allí está.
+
+414
+00:23:00.001 --> 00:23:04.000
+Hoy estoy muy contento con las manifestaciones.
+
+415
+00:23:04.000 --> 00:23:09.001
+Bueno, y como vemos, viene en realidad como un gráfico, no como un...
+
+416
+00:23:09.001 --> 00:23:10.000
+Como un archivo de texto.
+
+417
+00:23:10.000 --> 00:23:12.000
+Como un archivo de texto. Eso es correcto.
+
+418
+00:23:12.000 --> 00:23:16.000
+Y aquí está mi firma, que podemos entrar en unos segundos y mostrar que fue
+
+419
+00:23:16.000 --> 00:23:17.001
+la firma, así como la firma del destinatario.
+
+420
+00:23:18.001 --> 00:23:19.000
+Eso es genial.
+
+421
+00:23:20.000 --> 00:23:20.001
+Bueno, estamos fuera del tiempo.
+
+422
+00:23:21.000 --> 00:23:21.001
+Jan, muchas gracias.
+
+423
+00:23:22.000 --> 00:23:22.001
+Gracias por unirse a nosotros.
+
+424
+00:23:23.000 --> 00:23:24.001
+Estamos a favor de nuestra mirada en Add-On Boards.
+
+425
+00:23:24.001 --> 00:23:27.000
+Esperamos veros aquí la próxima semana en The Computer Chronicles.
+
+426
+00:23:38.000 --> 00:23:42.001
+En el archivo de acceso aleatorio esta semana, ahora que Apple ha bajado los precios en el
+
+427
+00:23:42.001 --> 00:23:46.001
+Macintosh, se ha seguido con la introducción de dos nuevos productos Apple II.
+
+428
+00:23:47.000 --> 00:23:52.000
+La compañía anunció un nuevo Apple IIc+, con un CPU cuatro veces más rápido que
+
+429
+00:23:52.000 --> 00:23:56.001
+el original, un disco interno de 3,5 pulgadas con cinco veces la capacidad del viejo
+
+430
+00:23:56.001 --> 00:24:00.001
+uno, un suministro interno de energía, y espacio para un modem interno.
+
+431
+00:24:00.001 --> 00:24:05.001
+Apple también ha lanzado un nuevo sistema operativo para el Apple IIgs llamado GSOS.
+
+432
+00:24:06.000 --> 00:24:09.001
+Es un sistema de 16 bits que permite que los IIgs funcionen mucho más rápido.
+
+433
+00:24:10.000 --> 00:24:14.001
+También permitirá a los IIgs manejar grandes archivos, incluidos los que utilizan el
+
+434
+00:24:14.001 --> 00:24:16.001
+Sistema de alta Sierra para CD-ROM.
+
+435
+00:24:17.000 --> 00:24:22.000
+Apple también ha anunciado oficialmente el nuevo Mac 2X con la capacidad de acceder a MS-DOS y
+
+436
+00:24:22.000 --> 00:24:25.000
+Los archivos de OS2, así como los archivos ProDOS de Apple.
+
+437
+00:24:25.000 --> 00:24:29.000
+Y hay rumores de que esto es sólo el comienzo, con anuncios esperados
+
+438
+00:24:29.000 --> 00:24:36.000
+de un nuevo low-end Macintosh, un nuevo laptop Mac, y un nuevo SE utilizando el chip 68030.
+
+439
+00:24:37.000 --> 00:24:40.001
+La guerra de autobuses continuó a calentarse la semana pasada con las grandes compañías de hardware
+
+440
+00:24:40.001 --> 00:24:43.001
+anunciar su apoyo a la nueva norma EISA.
+
+441
+00:24:43.001 --> 00:24:48.001
+Jumping en el bandwagon fueron Acer, AT&amp;T, DEC, KPRO, Unisys y Wang.
+
+442
+00:24:48.001 --> 00:24:53.000
+Mientras tanto, IBM lo jugó cool, indicando a algunas nuevas placas que finalmente tomará
+
+443
+00:24:53.000 --> 00:24:55.000
+Beneficios del autobús MCA.
+
+444
+00:24:55.000 --> 00:25:01.000
+Y Big Blue también anunció, como se prevé, un nuevo PS2 Model 30 utilizando el chip 8286
+
+445
+00:25:01.000 --> 00:25:03.000
+y el viejo autobús de estilo AT.
+
+446
+00:25:04.001 --> 00:25:07.001
+¿Y quién es IBM en la cama con estos días? No hay nada más que su
+
+447
+00:25:07.001 --> 00:25:09.000
+El antiguo nemesis, Steve Jobs.
+
+448
+00:25:09.000 --> 00:25:13.000
+IBM ha firmado un acuerdo con Jobs por el derecho a utilizar el nuevo usuario
+
+449
+00:25:13.000 --> 00:25:16.001
+La interfaz del siguiente ordenador debe ser anunciada en aproximadamente una semana.
+
+450
+00:25:16.001 --> 00:25:20.001
+Los rumores están creciendo sobre lo que el siguiente ordenador tendrá en él.
+
+451
+00:25:20.001 --> 00:25:25.000
+La última huida dice, busque un modem de fax integrado, un CD erasible
+
+452
+00:25:25.000 --> 00:25:27.000
+conducción, y la calidad de la televisión de vídeo.
+
+453
+00:25:27.001 --> 00:25:30.000
+Varios nuevos anuncios de productos salieron del reciente Seabold
+
+454
+00:25:30.000 --> 00:25:32.000
+Conferencia sobre Desktop Publishing.
+
+455
+00:25:32.000 --> 00:25:35.000
+Adobe anuncia una versión para PC de Illustrator.
+
+456
+00:25:35.000 --> 00:25:37.001
+Aldus mostró una gran actualización de Freehand.
+
+457
+00:25:38.000 --> 00:25:40.000
+Cricket lanza Cricket Presents 2.0.
+
+458
+00:25:40.001 --> 00:25:42.001
+Letroset presentó una nueva versión de Ready, Set, Go.
+
+459
+00:25:43.000 --> 00:25:47.000
+Y Quark anunció el QuarkStyle, un conjunto de modelos para los usuarios que no quieren
+
+460
+00:25:47.000 --> 00:25:50.000
+Hay que preocuparse por crear fonts, logos, etc.
+
+461
+00:25:51.000 --> 00:25:55.000
+Ultra Network Technologies ha anunciado un nuevo producto de red llamado Ultra,
+
+462
+00:25:55.000 --> 00:25:58.000
+Esto es 100 veces más rápido que Ethernet.
+
+463
+00:25:59.000 --> 00:26:02.001
+Execs dice que el UltraNet puede mover 1 mil millones de bits por segundo.
+
+464
+00:26:03.000 --> 00:26:06.000
+Por último, Computer World ha anunciado los resultados de su productividad informática
+
+465
+00:26:06.000 --> 00:26:10.001
+El estudio lista los 100 usuarios más eficientes de la tecnología informática.
+
+466
+00:26:10.001 --> 00:26:15.000
+No es de extrañar, no hubo correlación directa entre cuánto dinero usted
+
+467
+00:26:15.000 --> 00:26:17.001
+El gasto y la eficacia de su sistema.
+
+468
+00:26:18.000 --> 00:26:22.000
+Los grandes ganadores fueron las utilidades, que colocaron cuatro empresas en las diez mejores, los bancos
+
+469
+00:26:22.000 --> 00:26:24.000
+Fue en el medio, y los minoristas hicieron lo peor.
+
+470
+00:26:24.001 --> 00:26:29.000
+General Motors, que gastó casi 3 mil millones de dólares en sistemas de información el año pasado,
+
+471
+00:26:29.000 --> 00:26:33.000
+llegó sólo en el 96, y los gigantes petroleros Mobile y Exxon
+
+472
+00:26:33.000 --> 00:26:34.001
+No lo hizo hasta el top 100.
+
+473
+00:26:35.000 --> 00:26:37.001
+Eso es lo que es para las crónicas de esta semana. Te veremos la próxima vez.
+
+474
+00:26:39.001 --> 00:26:44.001
+Las crónicas de ordenador se hacen posibles en parte por CompuServe, con un
+
+475
+00:26:44.001 --> 00:26:49.000
+biblioteca de referencia en línea, Wall Street informes, compras en casa, aerolíneas
+
+476
+00:26:49.000 --> 00:26:52.000
+reservas, juegos y cientos de otros servicios.
+
+477
+00:26:54.000 --> 00:26:57.000
+CompuServe, ayudando a las personas a obtener el máximo de los ordenadores.
+
+478
+00:27:00.000 --> 00:27:03.000
+El financiamiento adicional se proporciona por McGraw-Hill, editores de Byte.
+
+479
+00:27:04.000 --> 00:27:08.000
+Artículos técnicos detallados de Byte sobre el nuevo hardware, el software y la cubierta de idiomas
+
+480
+00:27:08.000 --> 00:27:10.001
+Desarrollo de la tecnología informática en todo el mundo.
+
+481
+00:27:12.000 --> 00:27:17.000
+Para una transcripción de las crónicas informáticas de esta semana, envíe $ 3 a PTV Publications,
+
+482
+00:27:17.001 --> 00:27:23.001
+Post Office Box 701, Kent, Ohio 44240. Por favor indique la fecha del programa.
+
+483
+00:27:27.000 --> 00:27:49.001
+Gracias a ustedes.
+
+484
+00:27:57.000 --> 00:28:04.000
+[...]

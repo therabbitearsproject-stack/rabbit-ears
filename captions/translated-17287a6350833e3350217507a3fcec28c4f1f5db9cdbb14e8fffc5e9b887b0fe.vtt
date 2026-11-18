@@ -1,0 +1,1909 @@
+WEBVTT
+
+1
+00:00:18.000 --> 00:00:22.000
+Ketika kebanyakan orang berpikir tentang jaringan, mereka berpikir mengenai kombinasi tiga huruf.
+
+2
+00:00:22.000 --> 00:00:24.001
+Seperti NBC atau CBS atau bahkan PBS.
+
+3
+00:00:24.001 --> 00:00:27.001
+Tetapi ketika kita berbicara tentang jaringan, lebih relevan tiga huruf
+
+4
+00:00:27.001 --> 00:00:29.001
+Salah satu kombinasi mungkin adalah IBM.
+
+5
+00:00:30.000 --> 00:00:34.000
+Untuk jaringan komputer token ring baru IBM, mereka akhirnya meletakkan
+
+6
+00:00:34.000 --> 00:00:35.001
+Rangkaian komputer pada peta teknologi tinggi.
+
+7
+00:00:36.000 --> 00:00:39.001
+Hari ini kita lihat jaringan jenis komputer pada ini
+
+8
+00:00:39.001 --> 00:00:41.000
+edisi dari Computer Chronicles.
+
+9
+00:01:02.000 --> 00:01:06.001
+Komputer Chronicles dibuat mungkin sebagian oleh donasi dari AFIP, yang
+
+10
+00:01:06.001 --> 00:01:11.001
+American Federation of Information Processing Societies, sebuah federasi non-profit
+
+11
+00:01:11.001 --> 00:01:14.000
+dari 11 perusahaan nasional untuk profesional komputer.
+
+12
+00:01:15.000 --> 00:01:18.001
+AFIP, kepemimpinan dan layanan dalam komputer dan teknologi informasi.
+
+13
+00:01:19.001 --> 00:01:23.000
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte.
+
+14
+00:01:23.000 --> 00:01:28.000
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak dan bahasa baru
+
+15
+00:01:28.000 --> 00:01:31.000
+terkini dalam teknologi mikro komputer di seluruh dunia.
+
+16
+00:01:32.000 --> 00:01:33.001
+Bite adalah standar internasional.
+
+17
+00:01:39.000 --> 00:01:41.000
+Selamat Datang ke Komputer Chronicles
+
+18
+00:01:41.001 --> 00:01:43.001
+Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+19
+00:01:44.000 --> 00:01:47.001
+Gary, semua kabel dan kabel dan konektor yang kita miliki di sini berpotensi menjadi bagian
+
+20
+00:01:47.001 --> 00:01:51.001
+dari sistem jaringan komputer atau jaringan area lokal, LAN seperti yang kadang-kadang disebut.
+
+21
+00:01:51.001 --> 00:01:55.000
+Dan saya kira salah satu hal yang paling penting yang akan terjadi adalah IBM baru-baru ini
+
+22
+00:01:55.000 --> 00:01:57.000
+Pengumuman tentang sistem jaringan ring token baru.
+
+23
+00:01:58.000 --> 00:02:00.001
+Sekarang jaringan adalah salah satu hal yang tampaknya komputer pria telah berbicara
+
+24
+00:02:00.001 --> 00:02:03.000
+selama bertahun-tahun, tetapi dari sudut pandang pengguna
+
+25
+00:02:03.000 --> 00:02:04.001
+Tidak ada yang benar-benar tampaknya pernah terjadi.
+
+26
+00:02:05.000 --> 00:02:08.000
+Apakah langkah IBM ini sekarang akhirnya akan membuat hal-hal terjadi pada jaringan?
+
+27
+00:02:09.000 --> 00:02:12.001
+Baik Stuart, jaringan area lokal membiarkan komputer pribadi atau komputer kantor berbagi
+
+28
+00:02:12.001 --> 00:02:16.001
+file data besar dan ketika Anda berbicara tentang komputer kantor dan set IBM
+
+29
+00:02:16.001 --> 00:02:18.000
+Standar, tidak ada pertanyaan tentang itu.
+
+30
+00:02:18.000 --> 00:02:21.001
+Sekarang, jika standar ini dapat ditetapkan, saya pikir akan ada beberapa benar-benar
+
+31
+00:02:21.001 --> 00:02:24.000
+Peluang-peluang menarik dalam perangkat lunak berbasis jaringan yang
+
+32
+00:02:24.000 --> 00:02:25.001
+benar-benar menggunakan jaringan tersebut dengan benar.
+
+33
+00:02:26.001 --> 00:02:28.000
+Gary, hari ini kita akan pergi ke New York untuk mengetahui
+
+34
+00:02:28.000 --> 00:02:29.001
+Lebih lanjut tentang sistem IBM yang baru.
+
+35
+00:02:30.000 --> 00:02:33.000
+Kami akan bertemu dengan salah satu pengembang utama Ethernet dan kami akan membuang begitu banyak
+
+36
+00:02:33.000 --> 00:02:36.000
+Cahaya seperti yang kita bisa pada salah satu topik komputer yang lebih rumit.
+
+37
+00:02:36.000 --> 00:02:39.001
+Salah satu masalah dalam jaringan adalah kabel yang digunakan untuk menghubungkan satu
+
+38
+00:02:39.001 --> 00:02:42.001
+komputer ke komputer lain dan kita akan mulai dengan mengambil pandangan yang relatif
+
+39
+00:02:42.001 --> 00:02:46.001
+Sistem sederhana yang menggunakan garis telepon yang ada untuk menghubungkan komputer.
+
+40
+00:02:47.001 --> 00:02:52.001
+Saat stasiun kerja PC menjadi lebih umum dan fungsi stand-alone mereka lebih banyak
+
+41
+00:02:52.001 --> 00:02:56.000
+Mereka menjadi semakin menarik sebagai alternatif.
+
+42
+00:02:56.000 --> 00:02:57.001
+Jaringan berbasis mainframe.
+
+43
+00:02:58.001 --> 00:03:03.000
+Namun sampai saat ini mereka memiliki penerimaan terbatas karena ketidaksesuaian biasa dari
+
+44
+00:03:03.000 --> 00:03:07.001
+sistem operasi dan biaya instalasi mil kabel coaxial.
+
+45
+00:03:08.000 --> 00:03:12.001
+Tetapi logika dari jaringan PC ke PC adalah kuat dan beberapa
+
+46
+00:03:12.001 --> 00:03:14.000
+Solusi baru telah tiba.
+
+47
+00:03:14.001 --> 00:03:19.001
+Untuk bisnis yang sudah dilengkapi dengan telepon PBX, jaringan praktis dapat menjadi
+
+48
+00:03:19.001 --> 00:03:21.001
+Terdiri dari garis telepon yang ada.
+
+49
+00:03:22.000 --> 00:03:27.000
+Salah satu yang pertama dari ini adalah sistem Meridian dari Northern Telecom, yang bekerja di
+
+50
+00:03:27.000 --> 00:03:31.001
+koneksi dengan PBX lokal untuk menangani kedua data dan suara di atas standar
+
+51
+00:03:31.001 --> 00:03:33.001
+Berhubungan dengan kabel telepon pasangan.
+
+52
+00:03:34.001 --> 00:03:39.001
+dilengkapi dengan counter logisnya, suara dan data terminal terintegrasi,
+
+53
+00:03:39.001 --> 00:03:44.000
+jaringan menggabungkan fungsi komputer dan komunikasi, seperti direktori online
+
+54
+00:03:44.000 --> 00:03:46.000
+dan dialog otomatis.
+
+55
+00:03:47.000 --> 00:03:51.001
+Pesan dapat ditransmisikan dalam mode teks atau suara, atau kombinasi keduanya.
+
+56
+00:03:52.001 --> 00:03:57.000
+Terminal terikat ke dalam jaringan fitur login otomatis ke database eksternal,
+
+57
+00:03:57.001 --> 00:03:59.000
+Konversi protokol dan kode.
+
+58
+00:04:00.000 --> 00:04:03.001
+Dua pengguna dapat berbagi informasi multimedia secara bersamaan.
+
+59
+00:04:04.000 --> 00:04:10.000
+Jaringan berbentuk bintang memungkinkan penggunaan bersama printer dan hard disk, dan
+
+60
+00:04:10.000 --> 00:04:14.000
+Bus internal beroperasi pada responden 40 megabits per detik.
+
+61
+00:04:15.001 --> 00:04:19.000
+Memory enhanced telepon bukanlah sesuatu yang baru, dan setiap PC akan
+
+62
+00:04:19.000 --> 00:04:21.000
+Menyimpan direktori angka.
+
+63
+00:04:21.001 --> 00:04:26.000
+Tetapi suara digital komputer ini telah menemukan jalur praktis baru untuk bepergian,
+
+64
+00:04:26.001 --> 00:04:29.001
+Di sepanjang kabel yang akan Anda temukan di setiap dinding kantor.
+
+65
+00:04:41.000 --> 00:04:43.001
+Yang menyertai kami sekarang di studio adalah Bob Metcalf.
+
+66
+00:04:43.001 --> 00:04:47.000
+Bob adalah pendiri dan ketua salah satu perusahaan jaringan terkemuka, 3Com,
+
+67
+00:04:47.001 --> 00:04:51.000
+dan duduk di sebelah Bob, Sherry Geddes, dulu dari SciTech, dan sekarang seorang analis
+
+68
+00:04:51.000 --> 00:04:53.001
+mengkhususkan diri dalam jaringan dengan Strategic Incorporated.
+
+69
+00:04:54.000 --> 00:04:54.000
+dengan Gary?
+
+70
+00:04:54.001 --> 00:04:58.001
+Bob, dua tahun yang lalu kami memiliki sebuah acara di LAN, dan pada saat itu kami berbicara, saya
+
+71
+00:04:58.001 --> 00:05:01.000
+berpikir, melalui modem dan sebagainya ke sistem komputer besar.
+
+72
+00:05:01.000 --> 00:05:04.000
+Dan saya benar-benar tidak mempertimbangkan itu sendiri, setidaknya jaringan daerah lokal.
+
+73
+00:05:05.000 --> 00:05:10.000
+Anda akan mengatakan bahwa kami benar-benar telah membuat beberapa kemajuan dalam dua tahun terakhir, atau LAN
+
+74
+00:05:10.000 --> 00:05:12.000
+Apakah mereka berhasil, atau hanya apa yang terjadi?
+
+75
+00:05:12.001 --> 00:05:17.000
+Nah, saya pikir LAN akan datang dalam waktu yang lama, dan bagi beberapa dari kita
+
+76
+00:05:17.000 --> 00:05:18.001
+Mereka akan kembali 10 atau 15 tahun.
+
+77
+00:05:19.000 --> 00:05:24.001
+Saya kira ada sekitar 100.000 LAN dengan beberapa ratus ribu pribadi
+
+78
+00:05:24.001 --> 00:05:27.001
+komputer yang terhubung dengan mereka sekarang, dan bagi beberapa dari kita itu adalah
+
+79
+00:05:27.001 --> 00:05:29.000
+Jumlah besar, dan bagi yang lain yang merupakan jumlah kecil.
+
+80
+00:05:29.000 --> 00:05:33.000
+Nah, berkaitan dengan jumlah orang yang benar-benar membutuhkan LAN, saya maksudkan,
+
+81
+00:05:33.000 --> 00:05:35.001
+Orang rata-rata di rumah sebenarnya tidak perlu
+
+82
+00:05:35.001 --> 00:05:37.000
+memiliki jaringan lokal, apakah mereka benar-benar?
+
+83
+00:05:37.000 --> 00:05:40.001
+Saya maksud, jadi jika kita memiliki 100.000 yang dipasang, saya pikir itu akan
+
+84
+00:05:40.001 --> 00:05:42.000
+dipertimbangkan sebagai keberhasilan, bukan?
+
+85
+00:05:43.000 --> 00:05:45.000
+Sukses relatif, saya pikir beberapa dari kita berpikir bahwa
+
+86
+00:05:45.000 --> 00:05:46.001
+Potensi ini jauh lebih besar dari itu.
+
+87
+00:05:47.000 --> 00:05:50.000
+Dengan kata lain, kita melihat kedatangan LAN PC sebagai jenis utama berikutnya.
+
+88
+00:05:50.000 --> 00:05:54.001
+tentang bagaimana komputer harus dipenuhi, dan demikianlah bagi kita, 100
+
+89
+00:05:54.001 --> 00:05:56.000
+1000 LAN tampak seperti jumlah kecil.
+
+90
+00:05:56.000 --> 00:06:01.001
+Ada tujuh atau delapan juta PC sampai saat ini di bisnis, jadi saya pikir
+
+91
+00:06:01.001 --> 00:06:03.000
+Jumlahnya bisa sedikit lebih besar dari yang ada.
+
+92
+00:06:03.000 --> 00:06:07.000
+Nah, dalam kasus, mari kita ambil bisnis sebagai contoh, keuntungan nyata dari
+
+93
+00:06:07.000 --> 00:06:11.000
+komputer pribadi adalah duduk di sana di atas meja, itu semua dengan sendirinya, tetapi
+
+94
+00:06:11.000 --> 00:06:15.000
+Kelemahan adalah bahwa tidak memiliki akses ke database besar, dan itu benar-benar
+
+95
+00:06:15.000 --> 00:06:17.001
+tidak dibangun untuk pemrosesan IO, jadi di mana
+
+96
+00:06:17.001 --> 00:06:19.000
+Apakah LAN benar-benar membantu di kantor?
+
+97
+00:06:19.000 --> 00:06:24.000
+secara mutlak. Standalone PC adalah sejenis transitor dalam pengembangan
+
+98
+00:06:24.000 --> 00:06:29.000
+komputer, berguna sampai satu titik, dan seperti yang Anda katakan, salah satu alasan utama untuk memiliki
+
+99
+00:06:29.000 --> 00:06:34.000
+LAN adalah untuk memberikan PC akses ke sejumlah besar data yang tidak dapat dimiliki sendiri,
+
+100
+00:06:34.001 --> 00:06:36.001
+yang sering diperbarui oleh banyak, banyak orang lain.
+
+101
+00:06:36.001 --> 00:06:39.001
+Salah satu hal yang disebutkan adalah cincin token
+
+102
+00:06:39.001 --> 00:06:41.001
+Standar yang ditawarkan oleh IBM.
+
+103
+00:06:42.000 --> 00:06:45.000
+Ini hanya salah satu dari banyak cara yang berbeda yang mesin-mesin ini dapat berkomunikasi.
+
+104
+00:06:45.000 --> 00:06:48.001
+Sheri, Anda sudah bekerja tampaknya dengan sistem PBX dan...
+
+105
+00:06:48.001 --> 00:06:50.001
+Ya, aku punya PBX dan jaringan area lokal.
+
+106
+00:06:51.000 --> 00:06:54.000
+Dapatkah Anda mendapatkan tingkat data yang tinggi, katakan melalui PBX? PBX
+
+107
+00:06:54.000 --> 00:06:55.001
+Ini pada dasarnya sebuah sistem telepon, bukan?
+
+108
+00:06:56.001 --> 00:07:00.001
+Anda dapat mendapatkan tingkat data yang tinggi pada PBX khusus yang disebut PBx data.
+
+109
+00:07:01.000 --> 00:07:05.001
+Untuk tujuan umum PBX, high-end, data suara terintegrasi PB X,
+
+110
+00:07:05.001 --> 00:07:10.000
+tingkat masih relatif rendah, tetapi jalur yang sangat baik, dan itu adalah
+
+111
+00:07:10.000 --> 00:07:12.001
+Perbedaan yang signifikan antara rata-rata lalu lintas dan data.
+
+112
+00:07:13.000 --> 00:07:17.001
+Banyak pengguna tidak membutuhkan tingkat data yang tinggi. Mereka membutuhkan tingkat pendapatan yang tinggi karena
+
+113
+00:07:17.001 --> 00:07:20.000
+Banyak orang membutuhkan akses, pada dasarnya, pada saat yang sama.
+
+114
+00:07:21.001 --> 00:07:26.000
+Bob, sekarang Anda memiliki sistem di sini. Seperti yang kami sebutkan, saya pikir, sebelumnya, Anda adalah
+
+115
+00:07:26.000 --> 00:07:29.000
+yang terlibat dalam pengembangan Ethernet, dan Anda memiliki sejenis derivatif dari
+
+116
+00:07:29.000 --> 00:07:32.000
+yang itu. Anda memanggil EtherMac, yang terjadi untuk menghubungkan beberapa Macintosh di sini.
+
+117
+00:07:32.000 --> 00:07:34.001
+Tunjukkan kami bagaimana ini bekerja, sistem jaringan yang ada ini.
+
+118
+00:07:34.001 --> 00:07:38.001
+Nah, di sini adalah Macintosh, yang sekarang dikenal dengan ratusan ribu orang.
+
+119
+00:07:38.001 --> 00:07:43.000
+orang, dan Anda akan menyadari bahwa ada satu disket ini dan keyboardnya.
+
+120
+00:07:44.000 --> 00:07:47.001
+Sekarang, dengan meletakkan disket ini, apa yang kita lakukan untuk
+
+121
+00:07:47.001 --> 00:07:49.000
+untuk melintasi sebuah jaringan.
+
+122
+00:07:49.001 --> 00:07:52.000
+Ini terhubung ke jaringan Apple Talk untuk
+
+123
+00:07:52.000 --> 00:07:53.001
+Server jaringan di tempat lain di gedung.
+
+124
+00:07:54.000 --> 00:07:56.001
+Okay, ya, mari kita jelaskan sekarang. Kami memiliki server jaringan yang benar.
+
+125
+00:07:56.001 --> 00:08:01.000
+di sini, di tempat lain di studio kami, dengan Derek seolah-olah dia berada di kantor lain,
+
+126
+00:08:01.000 --> 00:08:04.001
+Katakanlah, di gedung yang beroperasi Macintosh lain, dan
+
+127
+00:08:04.001 --> 00:08:06.000
+Ini adalah server jaringan di atasnya.
+
+128
+00:08:06.000 --> 00:08:08.001
+Sekarang, apa yang terjadi saat Anda mengisi ini kemudian, Bob?
+
+129
+00:08:09.000 --> 00:08:14.000
+Nah, ini adalah disket saya, dan jadi ia mendaftar saya ke jaringan, karena itu mengidentifikasi
+
+130
+00:08:14.000 --> 00:08:18.001
+saya ke jaringan dan mengangkat saya dengan data saya, data yang tidak ada di boot ini
+
+131
+00:08:18.001 --> 00:08:21.001
+disket, tetapi yang ada di tempat lain dalam hal ini, pada server jaringan itu.
+
+132
+00:08:22.001 --> 00:08:26.000
+Dan kemudian, menurut praktek normal saya, itu sekarang mengidentifikasi saya dan terhubung
+
+133
+00:08:26.000 --> 00:08:32.000
+saya sampai data saya, dan apa yang akan Anda lihat di sini adalah berapa banyak untuk disket virtual,
+
+134
+00:08:32.000 --> 00:08:36.000
+masing-masing ikon ini mewakili disket yang
+
+135
+00:08:36.000 --> 00:08:37.001
+Rangkaian server di bawah ruang tamu.
+
+136
+00:08:38.000 --> 00:08:41.001
+Sekarang, jika Anda akan membandingkan ini, katakanlah, dengan kecepatan akses data dari ini
+
+137
+00:08:41.001 --> 00:08:46.001
+floppy disk ke jaringan, apa perbandingan dalam perlumbaan data?
+
+138
+00:08:48.000 --> 00:08:50.000
+Itu adalah sesuatu yang lucu. Anda akan berpikir bahwa itu akan
+
+139
+00:08:50.000 --> 00:08:51.001
+Dengan jarak yang lebih besar, hal-hal akan lebih lambat.
+
+140
+00:08:52.000 --> 00:08:56.001
+Sebenarnya, dalam jaringan ini, kita mendapatkan prestasi dua atau tiga kali
+
+141
+00:08:56.001 --> 00:08:58.000
+Anda harus keluar dari disket.
+
+142
+00:08:58.000 --> 00:09:02.000
+Ini berarti, jaringan lebih cepat dari cakera, dan server jaringan sebagai
+
+143
+00:09:02.000 --> 00:09:03.001
+Sebuah Winchester disk cukup cepat.
+
+144
+00:09:04.001 --> 00:09:07.001
+Sekarang, dapatkah Anda memberi contoh kepada kami sekarang? Kami memiliki Derek di sana bekerja di
+
+145
+00:09:07.001 --> 00:09:09.001
+pejabat, dan Anda ingin mengetahui apa yang dia bekerja pada
+
+146
+00:09:09.001 --> 00:09:11.000
+atau berbagi file tertentu dengan dia.
+
+147
+00:09:11.001 --> 00:09:12.000
+Bisakah kita benar-benar melihat Anda melakukannya?
+
+148
+00:09:13.000 --> 00:09:19.000
+Nah, saya tahu bahwa Derek, ini adalah disket Derek di sini yang disebut Data2.
+
+149
+00:09:20.000 --> 00:09:25.000
+Jadi, jika saya membukanya dengan cara yang normal bahwa saya akan membuka disket, sekarang saya melihat sebuah
+
+150
+00:09:25.000 --> 00:09:27.001
+banyak dokumen yang Derek mungkin
+
+151
+00:09:27.001 --> 00:09:29.000
+Saat ini kita melihat momen ini.
+
+152
+00:09:29.001 --> 00:09:36.001
+Jadi, jika saya akan naik ke sini, mari kita katakan, Diag X dan buka, ini adalah
+
+153
+00:09:36.001 --> 00:09:41.001
+Mac yang sama menggambarkan dokumen yang Derek sekarang berharap untuk melihat
+
+154
+00:09:41.001 --> 00:09:43.000
+Macintosh di atasnya.
+
+155
+00:09:43.001 --> 00:09:46.000
+Ini menimbulkan persoalan tentang perlindungan file, tentu saja, dan saya menganggap
+
+156
+00:09:46.000 --> 00:09:47.001
+Itu juga bagian dari sistem.
+
+157
+00:09:47.001 --> 00:09:53.000
+Sementara saya menghubungkan ke berbagai volume, jika ada kata sandi yang terkait
+
+158
+00:09:53.000 --> 00:09:55.000
+Dengan volume, saya harus memperkenalkan seperti yang saya lakukan.
+
+159
+00:09:55.000 --> 00:09:57.001
+Dan bagaimana tentang akses bersamaan ke file yang sama, menulis
+
+160
+00:09:57.001 --> 00:09:59.000
+dengan file yang sama dan hal-hal seperti itu?
+
+161
+00:09:59.000 --> 00:10:03.001
+Nah, sebagian besar perangkat lunak yang berjalan di PC, dan sebagian besar, saya maksudkan 99%
+
+162
+00:10:03.001 --> 00:10:05.000
+Dari itu, ditulis untuk berjalan pada satu PC.
+
+163
+00:10:05.001 --> 00:10:10.000
+Jika Anda mengarahkan dua PC secara bersamaan di disk yang sama, dan mereka berdua mencoba untuk
+
+164
+00:10:10.000 --> 00:10:14.001
+memanipulasi data, beberapa kerusakan data dapat ditemui, dan itulah sebabnya Anda memiliki
+
+165
+00:10:14.001 --> 00:10:17.001
+untuk mengambil perhatian khusus dalam desain jaringan untuk memastikan bahwa orang-orang
+
+166
+00:10:17.001 --> 00:10:20.000
+Jangan memanipulasi data yang sama secara bersamaan.
+
+167
+00:10:20.000 --> 00:10:24.000
+Ini adalah jenis masalah tradisional dengan mengambil aplikasi pengguna tunggal dan
+
+168
+00:10:24.000 --> 00:10:25.001
+Membangunnya dalam lingkungan multi-user.
+
+169
+00:10:27.000 --> 00:10:30.000
+Bob, demonstrasi Anda di sini terjadi dengan dua Mac, tetapi tentu saja,
+
+170
+00:10:30.000 --> 00:10:32.000
+Sistem yang Anda tunjukkan bisa dengan dua IBM
+
+171
+00:10:32.000 --> 00:10:33.001
+PC atau komputer lainnya, betul?
+
+172
+00:10:33.001 --> 00:10:36.000
+Ya, dalam kasus sistem tertentu ini, mungkin ada ratusan
+
+173
+00:10:36.000 --> 00:10:39.000
+Macintosh dan ratusan IBM PC dan Compacts dan sebagainya.
+
+174
+00:10:39.000 --> 00:10:43.001
+Sherry, mengingat masalah bahwa Gary dan Bob berbicara tentang standar,
+
+175
+00:10:44.001 --> 00:10:46.000
+Kami memiliki sistem yang bekerja di sini.
+
+176
+00:10:46.000 --> 00:10:48.000
+Apa itu perjanjian besar tentang IBM Token Ring
+
+177
+00:10:48.000 --> 00:10:50.000
+Sistemnya ? Apakah ini hanya salah satu standar baru?
+
+178
+00:10:51.000 --> 00:10:55.001
+Nah, itu adalah pendekatan yang berbeda. Jenis sistem yang kita miliki di sini adalah kerusakan
+
+179
+00:10:55.001 --> 00:11:00.000
+Sistem berbasis, dan memberikan akses yang sangat, sangat baik untuk pengguna
+
+180
+00:11:00.000 --> 00:11:02.000
+dalam lingkungan kantor.
+
+181
+00:11:02.000 --> 00:11:07.000
+Salah satu kelebihan utama dari pendekatan Token adalah bahwa setiap perangkat tahu bahwa
+
+182
+00:11:07.000 --> 00:11:10.000
+Anda akan mendapatkan token pada waktu yang sudah ditentukan.
+
+183
+00:11:10.000 --> 00:11:14.000
+Ini bisa sangat penting jika Anda memiliki, misalnya, situasi jenis pabrik
+
+184
+00:11:14.000 --> 00:11:19.000
+di mana Anda tahu bahwa perangkat itu harus ditarik setiap begitu banyak nanosekund atau
+
+185
+00:11:19.000 --> 00:11:20.001
+microsecond, seperti yang mungkin terjadi.
+
+186
+00:11:21.000 --> 00:11:24.000
+Dalam lingkungan kantor, ini berguna dalam bisinkronisasi
+
+187
+00:11:24.000 --> 00:11:26.001
+Salah satunya adalah IBM Bisync.
+
+188
+00:11:26.001 --> 00:11:31.001
+Ini juga berguna jika Anda memiliki populasi yang sangat besar dan Anda tidak memiliki jenis apa pun.
+
+189
+00:11:31.001 --> 00:11:33.001
+Strategi Prioritas untuk...
+
+190
+00:11:33.001 --> 00:11:36.000
+Jika tidak, Anda bisa secara harfiah memiliki pengguna yang mungkin tidak pernah
+
+191
+00:11:36.000 --> 00:11:38.001
+Mereka berhasil masuk ke jaringan.
+
+192
+00:11:39.000 --> 00:11:41.001
+Saya secara pribadi menganggap ini kemungkinan yang sangat langka.
+
+193
+00:11:41.001 --> 00:11:46.001
+Saya pikir pentingnya Token Ring adalah untuk pelanggan IBM dan toko-toko tersebut.
+
+194
+00:11:46.001 --> 00:11:51.000
+Ini terutama perangkat IBM, karena akhirnya akan berinteraksi dengan SNA.
+
+195
+00:11:51.000 --> 00:11:53.001
+dan memberikan transisi yang sangat baik melalui.
+
+196
+00:11:54.000 --> 00:11:57.000
+Bob, pada sistem Ethernet Anda di sini, kami hanya berbagi file sekarang.
+
+197
+00:11:57.000 --> 00:11:59.001
+Anda bisa berbagi peripheral, saya anggap, di bawah sistem ini juga.
+
+198
+00:12:00.000 --> 00:12:03.001
+Ya, sebenarnya, salah satu kelebihan yang kuat dari konfigurasi ini adalah Anda dapat
+
+199
+00:12:03.001 --> 00:12:07.001
+meletakkan penulis laser pada server jaringan dan kemudian semua PC dan semua Mac
+
+200
+00:12:07.001 --> 00:12:10.000
+dapat mengirimkan dokumen kepada penulis laser dan membagikannya.
+
+201
+00:12:10.000 --> 00:12:13.001
+Berapa biaya sistem ini? Ini adalah contoh yang kami tunjukkan di sini.
+
+202
+00:12:14.000 --> 00:12:16.000
+Sekitar $ 10.000 ditambah biaya PC.
+
+203
+00:12:16.001 --> 00:12:19.000
+Okay, Bob, Sherry, terima kasih banyak. Kita harus terus bergerak.
+
+204
+00:12:19.000 --> 00:12:22.000
+Kami akan ke berikutnya pergi ke New York dan melihat dan menemukan sedikit lebih banyak
+
+205
+00:12:22.000 --> 00:12:24.000
+Mengenai sistem Token Ring baru IBM.
+
+206
+00:12:24.000 --> 00:12:28.000
+Tidak lama lagi kita akan melihat demonstrasi di sini dari jaringan yang menggabungkan Mac dan IBM PC.
+
+207
+00:12:29.000 --> 00:12:31.001
+Pertama-tama, kita akan bertemu pemain kunci lain dalam cerita jaringan,
+
+208
+00:12:32.000 --> 00:12:34.000
+orang yang memiliki gagasan lain tentang semua ini, Bill
+
+209
+00:12:34.000 --> 00:12:35.001
+Godbout, Presiden dari CompuPro.
+
+210
+00:12:36.000 --> 00:12:37.001
+Wendy Woods memiliki laporan itu.
+
+211
+00:12:39.000 --> 00:12:43.001
+Perbedaan antara sistem multi pengguna dan jaringan adalah bahwa sistem multi-user
+
+212
+00:12:43.001 --> 00:12:48.001
+Sistem ini dirancang untuk menjadi jaringan, tidak seperti kantor yang penuh dengan PC. Dan salah satu dari
+
+213
+00:12:48.001 --> 00:12:54.000
+pemain di pasar ini adalah Vyacin, pembuat CPU dan terminal CompuPro. dari Vyacin
+
+214
+00:12:54.000 --> 00:12:57.001
+Presiden mengatakan ada dua kelebihan untuk melanjutkan jalannya.
+
+215
+00:12:58.000 --> 00:13:04.001
+kecepatan operasi dan garis bawah, ukuran semua usaha ekonomi adalah
+
+216
+00:13:04.001 --> 00:13:09.001
+apa biaya, perbandingan biaya-performa yang Anda lihat, dan yang sebenarnya
+
+217
+00:13:09.001 --> 00:13:13.001
+Biaya garis bawah akan agak sedikit lebih rendah untuk lebih banyak kinerja.
+
+218
+00:13:13.001 --> 00:13:19.000
+Godbout mengatakan sistem multi-user biasanya 20-50 persen lebih mahal
+
+219
+00:13:19.000 --> 00:13:20.001
+lebih dari jaringan PC.
+
+220
+00:13:21.001 --> 00:13:26.000
+Terminal CompuPro menggunakan Data Point&#x27;s ArcNet, arsitektur jaringan dengan
+
+221
+00:13:26.000 --> 00:13:28.000
+pangkalan terbesar yang dipasang di dunia.
+
+222
+00:13:28.001 --> 00:13:33.001
+Sistem ini dapat menghubungkan hingga 14 pengguna dan lebih jika CPU terhubung ke
+
+223
+00:13:33.001 --> 00:13:35.000
+titik-titik yang disebut nodus.
+
+224
+00:13:35.001 --> 00:13:38.001
+Departemen Vyacin sendiri saling terhubung dengan cara ini.
+
+225
+00:13:39.000 --> 00:13:42.001
+Sayangnya, kelemahan terbesar dalam jaringan, apakah kita sedang berbicara tentang
+
+226
+00:13:42.001 --> 00:13:46.001
+Sistem multi-user atau kamar yang penuh dengan PC, adalah kabel.
+
+227
+00:13:47.000 --> 00:13:49.001
+Kabel harus berjalan di seluruh gedung untuk setiap
+
+228
+00:13:49.001 --> 00:13:51.001
+Terminal terhubung ke jaringan.
+
+229
+00:13:52.000 --> 00:13:54.000
+Tidak banyak hal yang dapat dilakukan orang-orang di industri ini.
+
+230
+00:13:54.000 --> 00:13:56.000
+Itu, tapi satu hal yang pasti.
+
+231
+00:13:56.001 --> 00:14:01.000
+Bahkan IBM sedang merencanakan sistem multi-user, sistem yang dapat dihubungkan dengan
+
+232
+00:14:01.000 --> 00:14:03.000
+jaringan lokal dari PC.
+
+233
+00:14:04.000 --> 00:14:06.000
+Sementara itu, bagaimana bisnis tumbuh di sini di Hayward?
+
+234
+00:14:06.000 --> 00:14:08.000
+beberapa juta persen.
+
+235
+00:14:08.001 --> 00:14:10.001
+Untuk Computer Chronicles, saya Wendy Woods.
+
+236
+00:14:23.000 --> 00:14:26.001
+Perkembangan terbaru dalam jaringan komputer adalah Token baru IBM
+
+237
+00:14:26.001 --> 00:14:28.000
+Sistem jaringan ring untuk PC.
+
+238
+00:14:29.000 --> 00:14:31.001
+Apa itu Token Ring Network, dan akhirnya akan menetapkan
+
+239
+00:14:31.001 --> 00:14:33.000
+Standar untuk jaringan komputer?
+
+240
+00:14:33.000 --> 00:14:37.000
+Kami datang ke ibu pejabat IBM di New York untuk mengetahui.
+
+241
+00:14:37.001 --> 00:14:41.001
+Kami berbicara dengan Richard Goldberg, direktur pemasaran untuk divisi IBM, yang
+
+242
+00:14:41.001 --> 00:14:43.000
+Mengendalikan komunikasi komputer.
+
+243
+00:14:43.001 --> 00:14:48.000
+Saya bertanya kepadanya bagaimana jaringan Token Ring berbeda dari jaringan PC IBM yang ada.
+
+244
+00:14:48.001 --> 00:14:55.000
+Ketika Anda melihat jaringan PC, sekali lagi, untuk departemen kecil, kecil
+
+245
+00:14:55.000 --> 00:15:01.000
+perumahan, dari implementasi biaya yang lebih rendah, jika set persyaratan tersebut adalah
+
+246
+00:15:01.000 --> 00:15:03.001
+Semua kebutuhan pelanggan, rangkaian PC adalah solusi yang ideal.
+
+247
+00:15:04.001 --> 00:15:09.000
+Perbedaan yang ditetapkan untuk mungkin set permintaan dan kemampuan yang diperluas,
+
+248
+00:15:09.000 --> 00:15:11.001
+Token Ring, yang sedikit lebih mahal,
+
+249
+00:15:12.000 --> 00:15:13.001
+Ini mungkin solusi yang lebih baik.
+
+250
+00:15:14.001 --> 00:15:18.001
+Salah satu fitur bagus dari sistem Token Ring adalah bahwa tidak perlu menggunakan IBM.
+
+251
+00:15:18.001 --> 00:15:21.001
+Sistem kabel yang mahal, tetapi dapat bekerja pada garis telepon biasa.
+
+252
+00:15:22.000 --> 00:15:24.000
+Saya bertanya kepada Goldberg tentang perdagangan.
+
+253
+00:15:24.000 --> 00:15:28.001
+Ketika kita melihat telepon berbalik pasangan dan sistem kabel, keduanya
+
+254
+00:15:28.001 --> 00:15:30.001
+Menjalankan pada 4 megabits per detik.
+
+255
+00:15:31.000 --> 00:15:35.000
+Tetapi untuk mencapai prestasi itu, yang itulah yang kami ingin menembak,
+
+256
+00:15:35.001 --> 00:15:40.000
+Anda akan meletakkan batasan jarak tertentu, sebagai contoh, dari
+
+257
+00:15:40.000 --> 00:15:41.001
+dinding keluar ke lemari kabel.
+
+258
+00:15:41.001 --> 00:15:44.000
+Dalam kasus pasangan berputar, itu adalah 100 meter. Dalam hal kabel
+
+259
+00:15:44.000 --> 00:15:46.000
+Sistem, itu adalah 300 meter.
+
+260
+00:15:46.001 --> 00:15:51.001
+Jumlah perangkat pada cincin tertentu, bukannya 260 perangkat, adalah 72
+
+261
+00:15:51.001 --> 00:15:53.000
+peralatan untuk pasangan yang terbalik.
+
+262
+00:15:53.001 --> 00:15:58.000
+IBM mengikuti pendekatan arsitektur terbuka dengan jaringan Token Ring, dan
+
+263
+00:15:58.000 --> 00:16:01.000
+Goldberg mengatakan mereka belajar kebijaksanaan pendekatan itu dengan PC.
+
+264
+00:16:01.001 --> 00:16:06.000
+Untuk menjadi bermakna, ia harus mengenali dunia nyata di sana, dalam hal
+
+265
+00:16:06.000 --> 00:16:08.001
+mendukung berbagai jenis perangkat yang
+
+266
+00:16:08.001 --> 00:16:10.001
+ada, dan itu harus ada di masa depan.
+
+267
+00:16:11.001 --> 00:16:14.001
+Jadi dari sudut pandang perangkat, itu adalah nilai terbuka.
+
+268
+00:16:15.000 --> 00:16:18.001
+Bahagian kedua adalah hal yang sama. Ini harus mendukung pengembangan aplikasi.
+
+269
+00:16:18.001 --> 00:16:20.000
+Ini harus mendorong pengembangan aplikasi.
+
+270
+00:16:20.000 --> 00:16:24.001
+Langkah besar berikutnya dalam mendapatkan manfaat penuh dari jaringan komputer adalah untuk menemukan
+
+271
+00:16:24.001 --> 00:16:27.000
+Software yang ditulis untuk menggunakannya.
+
+272
+00:16:27.001 --> 00:16:32.001
+Banyak perangkat lunak telah tumbuh, telah benar-benar dikembangkan, sebagai pengguna tunggal
+
+273
+00:16:32.001 --> 00:16:38.000
+jenis aktivitas, atau tidak didistribusikan berbagi file, jika Anda ingin, dan
+
+274
+00:16:38.000 --> 00:16:40.001
+Tidak mengenal arsitektur yang teragih itu.
+
+275
+00:16:41.001 --> 00:16:46.000
+Dan apa yang kita lihat terjadi sekarang adalah semakin banyak paket perangkat lunak yang keluar dengan
+
+276
+00:16:46.000 --> 00:16:51.001
+implementasi jaringan area lokal yang benar, yang mengidentifikasi file tersebut akan
+
+277
+00:16:51.001 --> 00:16:55.000
+didistribusikan, sebenarnya, memungkinkan database untuk
+
+278
+00:16:55.000 --> 00:16:57.000
+didistribusikan dan dikelola dengan cara ini.
+
+279
+00:16:57.001 --> 00:17:01.001
+Goldberg mengatakan pertumbuhan jaringan komputer didorong oleh Token Ring baru
+
+280
+00:17:01.001 --> 00:17:04.001
+Standar akan memiliki dampak besar pada cara kita bekerja.
+
+281
+00:17:04.001 --> 00:17:08.001
+Kami memiliki banyak hal untuk belajar tentang bagaimana untuk lebih baik mengelola diri dan bagaimana untuk
+
+282
+00:17:08.001 --> 00:17:11.001
+Lebih baik beroperasi setelah kita mulai mengedarkan file
+
+283
+00:17:11.001 --> 00:17:13.000
+dan distribusi informasi dan sumber daya.
+
+284
+00:17:13.001 --> 00:17:16.000
+Dan itulah yang benar-benar jaringan daerah. Ini adalah perkongsian sumber daya
+
+285
+00:17:16.000 --> 00:17:18.000
+peralatan, dan itu akan mengubah kebiasaan kerja.
+
+286
+00:17:19.000 --> 00:17:22.001
+Stewart, bahkan jika Token Ring tidak menjadi standar yang dominan, setidaknya
+
+287
+00:17:22.001 --> 00:17:24.000
+Kita tahu bagaimana IBM menggunakannya.
+
+288
+00:17:24.001 --> 00:17:27.000
+Ini adalah sesuatu yang berguna untuk diketahui. Gary, saya ingin memperkenalkan
+
+289
+00:17:27.000 --> 00:17:28.001
+Sekarang Nat Goldhaber bergabung dengan kami.
+
+290
+00:17:28.001 --> 00:17:31.001
+Nat adalah presiden Centram Systems di barat Berkeley, California, dan
+
+291
+00:17:31.001 --> 00:17:33.000
+Sudah tentu, kita sudah bertemu Sherry Geddes.
+
+292
+00:17:34.000 --> 00:17:36.000
+Nat, Anda memiliki jenis jaringan yang berbeda di sini. Kami
+
+293
+00:17:36.000 --> 00:17:37.001
+Memiliki MAC yang terhubung ke MAC.
+
+294
+00:17:38.000 --> 00:17:41.000
+Berikut adalah MAC sekarang yang terhubung ke IBM PCAT.
+
+295
+00:17:41.000 --> 00:17:44.000
+Mari kita jelaskan bahwa kita memiliki AT di sana di sisi lain studio kita
+
+296
+00:17:44.000 --> 00:17:45.001
+Di mana produser kami, Holly Murray, berada.
+
+297
+00:17:46.000 --> 00:17:48.000
+Dan Anda memiliki MAC di sini, yang merupakan jaringan ke AT.
+
+298
+00:17:48.000 --> 00:17:52.000
+dengan benar. Penting untuk menekankan bahwa produk TOPS dapat jaringan MAC dan
+
+299
+00:17:52.000 --> 00:17:54.001
+Mac, PC dan PC, atau secara heterogen keduanya.
+
+300
+00:17:55.001 --> 00:17:59.000
+Ini adalah produk yang merupakan lingkungan file server yang didistribusikan.
+
+301
+00:18:00.000 --> 00:18:02.001
+Ini juga merupakan sistem interoperasi, seperti yang Anda perhatikan.
+
+302
+00:18:02.001 --> 00:18:06.001
+Ini berarti bahwa perangkat apa pun, komputer apa pun di jaringan, terlepas dari operasi
+
+303
+00:18:06.001 --> 00:18:11.001
+sistem atau jenis prosesor, dapat bertindak sebagai server file di jaringan atau membuat
+
+304
+00:18:11.001 --> 00:18:13.000
+Data yang tersedia untuk pengguna lain.
+
+305
+00:18:13.001 --> 00:18:17.000
+Jika kita menarik aksesori meja kami, aksesori desktop TOPS, itu menunjukkan kepada kita aksesori
+
+306
+00:18:17.000 --> 00:18:19.000
+Nama siapa yang ada di internet, bersama dengan ikon
+
+307
+00:18:19.000 --> 00:18:21.000
+yang mewakili jenis mesin seperti itu.
+
+308
+00:18:21.001 --> 00:18:27.000
+Jika kita double-click pada ikon mesin tertentu, kita dapat melihat bahwa ini
+
+309
+00:18:27.000 --> 00:18:31.001
+Volume data telah tersedia atau diterbitkan untuk jaringan.
+
+310
+00:18:31.001 --> 00:18:36.001
+Dan sebenarnya, jika kita double-click pada mereka, itu memungkinkan kita untuk, dalam
+
+311
+00:18:36.001 --> 00:18:38.001
+Metaphor dari Macintosh, mengumpulkan mereka.
+
+312
+00:18:39.000 --> 00:18:43.000
+Ini berarti bahwa volume ini sebenarnya tersedia untuk Macintosh ini dari
+
+313
+00:18:43.000 --> 00:18:47.000
+IBM PC, seolah-olah mereka berada di dalam Macintosh ini.
+
+314
+00:18:47.001 --> 00:18:51.001
+Dan sebenarnya, jika kita melihat di sini, kita dapat melihat bahwa ada campuran file IBM,
+
+315
+00:18:52.000 --> 00:18:55.001
+yang muncul sebagai ikon generik, dan file Macintosh yang sebenarnya dalam
+
+316
+00:18:55.001 --> 00:18:57.000
+Buku yang sama di IBM.
+
+317
+00:18:57.001 --> 00:19:01.001
+Jika kita sekarang menutup itu, saya bisa menunjukkan kepada Anda mungkin salah satu yang paling
+
+318
+00:19:01.001 --> 00:19:03.001
+demonstrasi yang menarik yang bisa kita lakukan.
+
+319
+00:19:03.001 --> 00:19:07.000
+Dan, mari kita mulai dari program yang sebenarnya Anda jalankan di Mac
+
+320
+00:19:07.000 --> 00:19:09.000
+Ini adalah program 68K.
+
+321
+00:19:09.000 --> 00:19:10.000
+Itulah proses yang ada di sini.
+
+322
+00:19:10.001 --> 00:19:14.001
+Program yang dijalankan pada IBM AT adalah 286 program.
+
+323
+00:19:15.000 --> 00:19:19.000
+Dan jadi Anda sebenarnya hanya berbagi file, bukan hanya berbagi fail, tetapi Anda adalah
+
+324
+00:19:19.000 --> 00:19:20.001
+berbagi file dengan cara yang sangat mudah.
+
+325
+00:19:20.001 --> 00:19:23.000
+Kami bertukar data secara bebas antara yang berbeda.
+
+326
+00:19:23.000 --> 00:19:24.001
+sistem operasi . dengan benar benar.
+
+327
+00:19:24.001 --> 00:19:29.001
+Jika saya menjalankan program ini yang disebut Microsoft Excel, sebuah program pintar oleh Microsoft,
+
+328
+00:19:30.000 --> 00:19:36.001
+yang dapat membaca dan menulis dalam format Lotus 123, saya dapat menunjukkan kepada Anda satu
+
+329
+00:19:36.001 --> 00:19:40.000
+Keuntungan dari sistem jaringan TOPS ini.
+
+330
+00:19:41.000 --> 00:19:47.000
+Ada kemungkinan untuk membuka spreadsheet yang terletak pada IBM AT yang
+
+331
+00:19:47.000 --> 00:19:51.001
+dibuat oleh Lotus 123 pada IBM T dan digunakan pada Macintosh.
+
+332
+00:19:51.001 --> 00:19:55.000
+Ini bisa dilakukan dengan hanya memindahkan file, katakanlah, pada cakera floppy atau
+
+333
+00:19:55.000 --> 00:19:56.001
+Sesuatu, tetapi ini adalah cara yang sangat mudah untuk melakukannya.
+
+334
+00:19:57.000 --> 00:19:58.001
+Itu memang benar. Hal ini dilakukan dalam waktu nyata.
+
+335
+00:19:58.001 --> 00:20:01.000
+dengan benar. Jadi apa yang kamu lakukan sekarang?
+
+336
+00:20:01.000 --> 00:20:04.001
+Saya akan mendapatkan kotak file standar yang menunjukkan nama file
+
+337
+00:20:04.001 --> 00:20:06.000
+yang terletak pada volume yang berbeda.
+
+338
+00:20:06.000 --> 00:20:11.000
+Berikut adalah volume IBM yang disebut Worksheets, dan di sini adalah file WKS, sebuah
+
+339
+00:20:11.000 --> 00:20:13.000
+file yang tidak sah dan sah.
+
+340
+00:20:13.000 --> 00:20:19.000
+Jika kita klik terbuka, sekarang akan pergi ke IBM AT, mendapatkan data dari file itu,
+
+341
+00:20:19.000 --> 00:20:24.001
+bawa ke Macintosh, dan tampaknya itu file Excel.
+
+342
+00:20:25.000 --> 00:20:25.000
+Dan di sini kita berada.
+
+343
+00:20:25.000 --> 00:20:28.000
+Sekarang, biarlah saya bertanya kepada Anda pertanyaan yang sama yang saya tanyakan kepada Bob sebelumnya, dan itulah bagaimana
+
+344
+00:20:28.000 --> 00:20:31.000
+Apakah kadar transfer ini membandingkan, katakanlah, tugas cakera floppy?
+
+345
+00:20:31.000 --> 00:20:36.000
+Ini sedikit lebih cepat dari kecepatan cakera floppy untuk mengambilnya keluar dari IBM AT
+
+346
+00:20:36.000 --> 00:20:37.001
+hard disk, yang, seperti yang Anda ketahui, sangat cepat.
+
+347
+00:20:38.001 --> 00:20:40.001
+Jadi kecepatan sangat baik di jaringan.
+
+348
+00:20:40.001 --> 00:20:45.000
+Dan juga biaya ini pada dasarnya adalah biaya nod, bukan?
+
+349
+00:20:45.001 --> 00:20:49.000
+dengan benar. dengan tepat. Ini adalah perangkat lunak-hanya produk untuk Macintosh, dan macintosh
+
+350
+00:20:49.000 --> 00:20:52.000
+Ada sistem jaringan yang sudah dibangun di dalamnya.
+
+351
+00:20:52.000 --> 00:20:56.000
+Untuk IBM, sebuah kartu diperlukan. Harga yang diharapkan untuk Mac adalah 100 bucks.
+
+352
+00:20:56.000 --> 00:21:00.000
+Untuk IBM AT ada 300 bucks dengan kartu dan perangkat lunak.
+
+353
+00:21:00.000 --> 00:21:03.000
+Mari saya bertanya satu pertanyaan sekarang yang berkaitan dengan perangkat lunak, dan ini adalah
+
+354
+00:21:03.000 --> 00:21:05.001
+Masalahnya, sekarang kita bisa berbagi file.
+
+355
+00:21:06.001 --> 00:21:09.000
+Bagaimana dengan masalah software lisensi?
+
+356
+00:21:09.001 --> 00:21:14.000
+Sekarang Anda memiliki, mari kita katakan, ribuan nod di jaringan ini. Apa artinya untuk
+
+357
+00:21:14.000 --> 00:21:16.001
+Beli satu versi dari program ini?
+
+358
+00:21:16.001 --> 00:21:19.001
+Kami pasti tidak menyarankan bahwa siapa pun melanggar lisensi
+
+359
+00:21:19.001 --> 00:21:21.001
+perjanjian yang mereka miliki dengan produsen.
+
+360
+00:21:21.001 --> 00:21:23.001
+Tetapi apakah perjanjian lisensi umumnya mengatakan apa-apa tentang itu?
+
+361
+00:21:24.000 --> 00:21:27.000
+Ya ya. Banyak yang mengatakan bahwa itu untuk satu komputer untuk digunakan
+
+362
+00:21:27.000 --> 00:21:28.001
+secara lokal dengan satu komputer.
+
+363
+00:21:28.001 --> 00:21:32.000
+Namun, saya pikir, bahwa semua perusahaan sekarang berurusan dengan isu yang dipanggil
+
+364
+00:21:32.000 --> 00:21:36.000
+Lisensi situs, yang akan memungkinkan beberapa komputer untuk menggunakan satu salinan program.
+
+365
+00:21:36.000 --> 00:21:39.000
+Sherry, kami memiliki sekitar setengah menit yang tersisa dari sudut pandang pengguna.
+
+366
+00:21:39.000 --> 00:21:41.001
+Seseorang harus duduk kembali dan menunggu sampai hal jaringan ini
+
+367
+00:21:41.001 --> 00:21:43.000
+Apakah Anda mengatur diri Anda sebelum Anda membeli sesuatu?
+
+368
+00:21:43.000 --> 00:21:50.000
+tidak . Saya tidak berpikir seperti itu, Stuart. Masalah ini begitu rumit pada beberapa tingkat yang
+
+369
+00:21:50.000 --> 00:21:52.001
+Jika Anda menunggu, semua yang Anda akan berakhir adalah perasaan
+
+370
+00:21:52.001 --> 00:21:54.001
+Lebih membingungkan dari yang sudah Anda lakukan.
+
+371
+00:21:54.001 --> 00:21:58.001
+Saya sangat merekomendasikan agar orang-orang keluar dan mendapatkan kaki basah. Dapatkan A
+
+372
+00:21:58.001 --> 00:22:03.001
+rangkaian skala kecil, mengangkat beberapa mesin, mencoba, dan mencari tahu apa yang benar-benar
+
+373
+00:22:03.001 --> 00:22:06.000
+Ini adalah manfaat jaringan untuk organisasi Anda.
+
+374
+00:22:06.001 --> 00:22:09.000
+Kemudian Anda dapat membuat keputusan yang jauh lebih terinformasi jika Anda berpikir
+
+375
+00:22:09.000 --> 00:22:11.000
+untuk menghubungkan seluruh perusahaan.
+
+376
+00:22:11.001 --> 00:22:15.001
+Anda memiliki gagasan yang jauh lebih baik tentang apa yang akan bekerja untuk Anda dan apa yang berubah akan
+
+377
+00:22:15.001 --> 00:22:17.000
+dalam struktur organisasi Anda.
+
+378
+00:22:17.001 --> 00:22:18.000
+Jadi masuklah ke dalamnya sekarang.
+
+379
+00:22:18.000 --> 00:22:19.000
+Masuklah ke dalamnya sekarang.
+
+380
+00:22:19.000 --> 00:22:22.000
+Sherry, terima kasih banyak. Ke mana semua teknologi jaringan ini akan pergi? Kami adalah
+
+381
+00:22:22.000 --> 00:22:25.000
+Sekarang saya akan beralih ke komentar kami, George Morrow, untuk pemikiran-pemikiran beliau.
+
+382
+00:22:27.000 --> 00:22:30.001
+Nah, apa semua kekeliruan ini tentang bisnis LAN?
+
+383
+00:22:31.000 --> 00:22:34.001
+Penjahat sama jelas dengan sasaran di galeri tembakan, dan
+
+384
+00:22:34.001 --> 00:22:36.000
+Yang terpenting adalah IBM sendiri.
+
+385
+00:22:37.000 --> 00:22:40.001
+Mereka terus ingin menjual mainframe sebagai server file, dan mereka takut bahwa
+
+386
+00:22:40.001 --> 00:22:43.000
+Orang yang melihat kabel tidak akan membayar begitu banyak untuk
+
+387
+00:22:43.000 --> 00:22:45.000
+mainframe jika mereka tidak melihat kabel itu.
+
+388
+00:22:45.000 --> 00:22:48.001
+Untuk mempertahankan kekeliruan pada maksimum, mereka telah memeluk bukan satu tetapi tiga
+
+389
+00:22:48.001 --> 00:22:50.001
+standar yang berbeda, semua tidak kompatibel.
+
+390
+00:22:51.000 --> 00:22:53.001
+Yang terakhir adalah yang paling kurang efisien dan yang paling tidak dapat diandalkan.
+
+391
+00:22:54.001 --> 00:22:59.000
+Tetapi masalah dengan LAN mungkin pergi sedikit lebih jauh dari hanya pemasaran dan
+
+392
+00:22:59.000 --> 00:23:01.000
+Ketakutan tidak bisa terus menjual mainframe.
+
+393
+00:23:01.001 --> 00:23:05.001
+Perbatasan antara dunia analog dan digital adalah satu yang dikejar, dipenuhi dengan
+
+394
+00:23:05.001 --> 00:23:07.001
+Quagmires dan lombong dan sebagainya.
+
+395
+00:23:08.001 --> 00:23:11.000
+Dan teknologi LAN melampaui batas itu.
+
+396
+00:23:11.001 --> 00:23:16.000
+Sekarang, sejak LAN telah dimulai, kami telah mengirim ke jurutera digital untuk
+
+397
+00:23:16.000 --> 00:23:18.001
+menyelesaikan masalah-masalah yang bersifat analog dan digital.
+
+398
+00:23:19.001 --> 00:23:23.001
+Dan mungkin mereka hanya tidak sampai pada itu. Itu pendapat saya. Saya adalah George Morrow.
+
+399
+00:23:33.001 --> 00:23:37.001
+Dalam file akses rawak minggu ini, Bangunan Kantor Pintar,
+
+400
+00:23:37.001 --> 00:23:41.000
+Rumah Pintar dan Pabrik Pintar semua berada dalam berita minggu ini.
+
+401
+00:23:41.001 --> 00:23:44.001
+Pertama sekali, beberapa tawaran diumumkan untuk mengembangkan apa yang disebut Intelligent
+
+402
+00:23:44.001 --> 00:23:47.001
+Pabrik, di mana robot dan komputer menjalankan seluruh pabrik.
+
+403
+00:23:47.001 --> 00:23:51.001
+Hewlett-Packard mengatakan mereka telah menandatangani perjanjian dengan Bechtel untuk merancang dan mengembangkan sebuah
+
+404
+00:23:51.001 --> 00:23:53.001
+Pabrik elektronik sepenuhnya otomatis.
+
+405
+00:23:54.000 --> 00:23:57.001
+Sebelumnya, Ford Motor Company mengumumkan kesepakatan dengan MeasureX untuk mengembangkan komputer
+
+406
+00:23:57.001 --> 00:24:00.000
+Sistem yang dikendalikan untuk menjalankan badan Ford dan pabrik perhimpunan.
+
+407
+00:24:00.001 --> 00:24:04.000
+Dan General Motors mengatakan ia akan mendedahkan modelnya untuk pabrik
+
+408
+00:24:04.000 --> 00:24:07.000
+masa depan, menggunakan apa yang diharapkan akan menjadi standar baru bagi orang yang cerdas.
+
+409
+00:24:07.000 --> 00:24:10.001
+Kilang, GM standar disebut NAP, singkat untuk
+
+410
+00:24:10.001 --> 00:24:12.000
+Protokol Automasi Produksi.
+
+411
+00:24:12.000 --> 00:24:16.000
+Sementara itu, Real Estate Research Corporation mengatakan sekarang ada hampir 200
+
+412
+00:24:16.000 --> 00:24:18.000
+Bangunan kantor pintar di seluruh dunia.
+
+413
+00:24:18.000 --> 00:24:21.001
+Di antara yang pertama adalah Citicorp Building di San Francisco dan kantor baru ini
+
+414
+00:24:21.001 --> 00:24:23.001
+Pembangunan yang disebut Exchange Square di Hong Kong.
+
+415
+00:24:24.001 --> 00:24:27.001
+Penyewa di gedung-gedung ini tidak hanya mendapatkan pemanasan, udara dan layanan telepon terpusat,
+
+416
+00:24:28.000 --> 00:24:31.000
+Tapi aplikasi komputer terpusat dan email elektronik.
+
+417
+00:24:31.001 --> 00:24:34.001
+Namun, permintaan masih lambat untuk bangunan pintar, dengan hanya sedikit
+
+418
+00:24:34.001 --> 00:24:38.000
+Peratusan penyewa yang mendaftar untuk menggunakan sistem komputer terpusat.
+
+419
+00:24:38.000 --> 00:24:40.001
+Dan rumah pintar juga datang ke pasar.
+
+420
+00:24:41.000 --> 00:24:44.001
+Ryan Homes of Pittsburgh adalah pembina pertama di negara ini yang menawarkan rumah yang
+
+421
+00:24:44.001 --> 00:24:49.000
+datang standar dengan kontrol komputer untuk semua outlet listrik rumah dan
+
+422
+00:24:49.000 --> 00:24:52.000
+sistem keamanan, termasuk kemampuan untuk memprogram
+
+423
+00:24:52.000 --> 00:24:53.001
+Elektronik rumah di atas telepon.
+
+424
+00:24:54.000 --> 00:24:57.000
+Rumah yang paling cerdas dari semua adalah di Dallas saat ini.
+
+425
+00:24:57.000 --> 00:25:02.000
+Ini disebut Future Home dan memiliki 13 komputer, 26 monitor, 14 telepon.
+
+426
+00:25:02.000 --> 00:25:04.000
+Terminal dan tag harga setengah juta dolar.
+
+427
+00:25:04.000 --> 00:25:08.001
+Kembali ke Bumi, lebih dari satu puluhan perusahaan komputer telah melompat ke
+
+428
+00:25:08.001 --> 00:25:10.000
+IBM Token Ring adalah bandwagon.
+
+429
+00:25:10.001 --> 00:25:15.001
+AT&amp;T, Data General, HP, NCR, SPURRI dan Xerox semua mengatakan mereka akan menawarkan jembatan untuk
+
+430
+00:25:15.001 --> 00:25:20.000
+perusahaan jaringan dan jaringan IBM seperti 3Com, Novell, Nestar, Proteon,
+
+431
+00:25:20.001 --> 00:25:24.001
+Corvus, Bridge dan Ungerman Bass semua telah mengumumkan jaringan cincin token baru atau
+
+432
+00:25:24.001 --> 00:25:27.000
+Hubungan antara tanah mereka dan jaringan IBM.
+
+433
+00:25:27.001 --> 00:25:30.000
+Waktu untuk ulasan perangkat lunak minggu ini dan di sini adalah Paul Schindler.
+
+434
+00:25:31.001 --> 00:25:34.000
+Apa yang akan mereka otomatiskan selanjutnya?
+
+435
+00:25:34.001 --> 00:25:39.000
+Rolodexes, kalendar, kartu indeks, mereka semua jelas calon untuk oblivion
+
+436
+00:25:39.000 --> 00:25:41.000
+dalam revolusi digital, tetapi siapa yang akan
+
+437
+00:25:41.000 --> 00:25:43.000
+Mungkinkah mereka bisa bertambah baik di dunia?
+
+438
+00:25:43.001 --> 00:25:46.001
+Baiklah, orang-orang yang menulis konsep komputer Atlas.
+
+439
+00:25:47.000 --> 00:25:49.001
+Mereka memiliki metode penjualan yang cerdas yang mereka sebut Phoenix Plan.
+
+440
+00:25:50.000 --> 00:25:53.000
+Anda dapat mendapatkan paket untuk $ 5 dan mencoba tiga kali.
+
+441
+00:25:53.000 --> 00:25:55.001
+Kemudian ia membekukan sampai Anda mengirim mereka $ 50 lagi.
+
+442
+00:25:56.000 --> 00:25:56.001
+yang cerah ya?
+
+443
+00:25:56.001 --> 00:25:58.001
+Nah, jika Anda berpikir metode pemasaran adalah
+
+444
+00:25:58.001 --> 00:26:00.001
+Pintar, dapatkan beban dari program itu sendiri.
+
+445
+00:26:01.000 --> 00:26:05.000
+Setelah pembukaan animasi, kursor selalu dimulai di Springfield, Illinois.
+
+446
+00:26:05.000 --> 00:26:06.001
+Karena itu, itulah sebabnya.
+
+447
+00:26:07.000 --> 00:26:10.001
+Kami akan memindahkannya ke Philadelphia, di mana komunitas Polandia besar mungkin ingin tahu
+
+448
+00:26:10.001 --> 00:26:13.000
+Berapa jauh ia sampai ke kuil di Czestochowa, Polandia.
+
+449
+00:26:13.001 --> 00:26:15.000
+Lebih dari 4.100 mil.
+
+450
+00:26:15.001 --> 00:26:17.000
+Anda ingin fakta tentang kota dan negara?
+
+451
+00:26:17.001 --> 00:26:18.001
+Di sinilah mereka berada.
+
+452
+00:26:19.000 --> 00:26:21.001
+Beralih ke peta Eropa dan Anda dapat melihat sisi lain dari transaksi ini.
+
+453
+00:26:21.001 --> 00:26:25.001
+Pemandangan normal adalah dari 12.000 mil ke luar, tetapi Anda juga dapat
+
+454
+00:26:25.001 --> 00:26:27.000
+Bergerak untuk mendekati.
+
+455
+00:26:28.000 --> 00:26:31.000
+Konsep-konsep yang dikomputerkan Atlas termasuk informasi tentang sepuluh
+
+456
+00:26:31.000 --> 00:26:32.001
+dari ribuan lokasi.
+
+457
+00:26:33.000 --> 00:26:36.000
+Penjelajah kerusi tangan akan gila mencoba untuk menghabiskan
+
+458
+00:26:36.000 --> 00:26:37.001
+Kemungkinan dari program ini.
+
+459
+00:26:38.000 --> 00:26:41.001
+Alas, ia dilindungi salinan, yang mengurangi kegunaannya.
+
+460
+00:26:42.001 --> 00:26:47.000
+Konsep perangkat lunak, Stanford, Connecticut, akan menerima $ 5 Anda atau $ 50.
+
+461
+00:26:47.001 --> 00:26:49.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+462
+00:26:50.001 --> 00:26:54.000
+Borland International mengatakan akan merilis perangkat lunak baru yang disebut
+
+463
+00:26:54.000 --> 00:26:58.001
+TurboLightning, sebuah program resident RAM yang menyediakan spelling berbasis AI
+
+464
+00:26:58.001 --> 00:27:02.000
+Checker, thesaurus dan encyclopedia, harga, $99 apiece.
+
+465
+00:27:03.000 --> 00:27:06.001
+Seorang pendeta di Sonoma County, California ditangkap minggu ini setelah dia pecah.
+
+466
+00:27:06.001 --> 00:27:10.000
+masuk ke sistem komputer pengadilan dan menghapus rekaman pengadilan yang berkaitan dengan
+
+467
+00:27:10.000 --> 00:27:14.000
+Ditangkap atas tuduhan memandu mabuk dan membatalkan penampilan mahkamah yang dijadwalkan.
+
+468
+00:27:14.001 --> 00:27:18.001
+Hacker pengadilan kini menghadapi tiga tahun penjara dan denda $ 10.000.
+
+469
+00:27:19.000 --> 00:27:22.001
+Akhirnya, mungkin tidak penting apakah Anda menyukai Coke baru atau Coke klasik, tetapi beberapa
+
+470
+00:27:22.001 --> 00:27:25.001
+Mesin Coke baru sekarang dilengkapi dengan komputer terintegrasi
+
+471
+00:27:25.001 --> 00:27:27.001
+permainan dan sintesis ucapan.
+
+472
+00:27:28.000 --> 00:27:31.001
+Mesin mengingatkan Anda untuk mengambil perubahan Anda dan mereka menawarkan dua permainan video, satu
+
+473
+00:27:31.001 --> 00:27:34.000
+Jenis angkasa menyerang sesuatu yang disebut Catch-A-Coke.
+
+474
+00:27:34.000 --> 00:27:36.001
+Sayangnya, Anda tidak akan mendapatkan kek gratis atau uang jika Anda menang.
+
+475
+00:27:37.000 --> 00:27:38.001
+Ini akan menjadi permainan klasik atau baru.
+
+476
+00:27:39.001 --> 00:27:41.001
+Itulah yang terjadi pada kronik minggu ini. Kita akan berjumpa denganmu lain kali.
+
+477
+00:27:48.001 --> 00:28:52.000
+“Kami akan bertemu dengan Anda lain kali. ... ...

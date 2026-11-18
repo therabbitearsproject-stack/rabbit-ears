@@ -1,0 +1,1357 @@
+WEBVTT
+
+1
+00:00:50.000 --> 00:00:56.000
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+2
+00:00:56.000 --> 00:01:01.001
+prazer em fornecer fundos importantes para a crônica de computador, a história
+
+3
+00:01:01.001 --> 00:01:03.001
+desta evolução contínua.
+
+4
+00:01:10.001 --> 00:01:15.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e este é Gary Kildall.
+
+5
+00:01:15.001 --> 00:01:19.001
+No nosso programa hoje estamos falando sobre os problemas da segurança do computador. E eu
+
+6
+00:01:19.001 --> 00:01:23.000
+Imagine até agora apenas que todos ouviram sobre o filme Jogos de Guerra e o tipo
+
+7
+00:01:23.000 --> 00:01:27.000
+problemas de segurança do computador causados por esse cenário. Mais tipicamente
+
+8
+00:01:27.000 --> 00:01:31.000
+Problemas com a segurança do computador não envolvem coisas espetaculares como o nuclear
+
+9
+00:01:31.000 --> 00:01:35.000
+guerra, mas coisas mais mundanas como roubar dinheiro e roubando informações.
+
+10
+00:01:36.000 --> 00:01:39.001
+Gary, nosso convidado neste programa é Don Parker. Ele é considerado o mundo
+
+11
+00:01:39.001 --> 00:01:43.000
+especialista em segurança de computadores. E ele diz algo muito
+
+12
+00:01:43.000 --> 00:01:44.001
+Interessante em seu livro sobre o crime de computador.
+
+13
+00:01:44.001 --> 00:01:50.000
+Segundo ele, os dados armazenados em um computador podem ser mais seguros do que os dados guardados por um físico.
+
+14
+00:01:50.000 --> 00:01:54.000
+Isso significa, como em um desenho de arquivo fechado de algum tipo. Mas aqui estamos fazendo isso
+
+15
+00:01:54.000 --> 00:01:58.000
+programa e parece haver um sentido de que a segurança de dados de computador é boa
+
+16
+00:01:58.000 --> 00:02:03.000
+de uma vulnerabilidade. Bem, existem técnicas que podem tornar os dados mais seguros enquanto
+
+17
+00:02:03.000 --> 00:02:07.000
+Como essas técnicas são usadas. Muitas vezes é necessário um indivíduo inteligente.
+
+18
+00:02:07.000 --> 00:02:09.001
+para entrar e quebrar o sistema antes que essas técnicas sejam aplicadas e nós
+
+19
+00:02:09.001 --> 00:02:13.001
+Descubra o quão vulneráveis são esses sistemas. Você sabe, estamos criando uma nova
+
+20
+00:02:13.001 --> 00:02:17.001
+geração de pessoas informáticas através da revolução de computadores pessoais e
+
+21
+00:02:17.001 --> 00:02:20.001
+É obrigatório que haja uma parte daquela população que vai usar essa
+
+22
+00:02:20.001 --> 00:02:27.000
+conhecimento de uma forma maliciosa. Hoje, eu acho, o crime de computador é realmente
+
+23
+00:02:27.000 --> 00:02:32.000
+um problema porque é uma questão de informação é poder e quando esse poder é
+
+24
+00:02:32.000 --> 00:02:34.001
+disponibilizados por meio de informações divulgadas, em seguida,
+
+25
+00:02:34.001 --> 00:02:36.000
+É uma ameaça para todos nós na sociedade.
+
+26
+00:02:37.001 --> 00:02:40.001
+Os serviços de partilha de tempo são particularmente vulneráveis porque são projetados para
+
+27
+00:02:40.001 --> 00:02:45.001
+Alguns estranhos que fazem uma chamada telefônica. E vamos tomar uma
+
+28
+00:02:45.001 --> 00:02:51.001
+Olhe e veja como é fácil fazer essa chamada. É muito fácil entrar
+
+29
+00:02:51.001 --> 00:02:55.000
+Uma base de dados de computador. Tudo o que você realmente precisa é um computador pessoal, algo como
+
+30
+00:02:55.000 --> 00:02:59.001
+Isto é, alguns software terminal. Você também precisa de um modem que conecta o seu telefone
+
+31
+00:02:59.001 --> 00:03:03.000
+para o seu computador, um telefone e você precisa saber o número de telefone de um
+
+32
+00:03:03.000 --> 00:03:07.001
+esses computadores. Vou criar uma base de dados de computador à direita
+
+33
+00:03:07.001 --> 00:03:09.000
+E agora. Eu conheço o número de um.
+
+34
+00:03:09.000 --> 00:03:13.000
+É apenas uma chamada local. Não é nem mesmo uma chamada e vamos esperar para ouvir um alto
+
+35
+00:03:13.000 --> 00:03:16.001
+-Tono picado que nos diz que o computador host é respondido.
+
+36
+00:03:21.001 --> 00:03:25.001
+Ok, o computador é respondido e vamos agora apenas ir para um log normal
+
+37
+00:03:25.001 --> 00:03:32.000
+procedimento em que o computador vai primeiro me pedir o meu número de ID e eu
+
+38
+00:03:32.000 --> 00:03:37.001
+ocorre ter um. Então eu vou inserir isso e se o computador anfitrião agora aceita meu ID
+
+39
+00:03:37.001 --> 00:03:41.000
+Número como um número legítimo, ele vai continuar pedindo-me para minha senha.
+
+40
+00:03:42.000 --> 00:03:45.000
+E naquele momento eu vou ter que vir com encontro com outro teste aqui para
+
+41
+00:03:45.000 --> 00:03:50.001
+Entre no banco de dados do computador. E agora está me perguntando por minha senha que eu
+
+42
+00:03:50.001 --> 00:03:53.001
+Vai entrar em. Você não pode vê-lo na tela porque o programa está destinado a
+
+43
+00:03:53.001 --> 00:03:58.001
+Proteja a segurança da minha senha para que você não possa roubá-la de mim. E se a
+
+44
+00:03:58.001 --> 00:04:02.000
+O anfitrião aceita isso como fez, você pode ver que estou agora neste banco de dados do computador.
+
+45
+00:04:02.001 --> 00:04:06.001
+Você vê o quão fácil foi para mim entrar nessa base de dados de computador. Claro que eu
+
+46
+00:04:06.001 --> 00:04:10.000
+Era um usuário qualificado. O problema é que até mesmo usuários não qualificados podem entrar em
+
+47
+00:04:10.000 --> 00:04:13.001
+esses computadores. Eles são chamados de hackers e eles tentam entrar nesses computadores
+
+48
+00:04:13.001 --> 00:04:15.001
+Só para descobrir o que está dentro.
+
+49
+00:04:16.000 --> 00:04:21.000
+E usando senhas comuns e, às vezes, números de código escolhidos aleatoriamente,
+
+50
+00:04:21.001 --> 00:04:25.000
+Eles podem entrar em bancos, registros hospitalares, até mesmo computadores da agência federal.
+
+51
+00:04:27.000 --> 00:04:30.000
+Global, térmico, nuclear e água.
+
+52
+00:04:32.000 --> 00:04:38.001
+Tudo bem . No filme Jogos de Guerra, os hackers adolescentes ganham entrada no top secret
+
+53
+00:04:38.001 --> 00:04:45.001
+programas de defesa e jogar blackmail nuclear para real. Embora os especialistas
+
+54
+00:04:45.001 --> 00:04:49.000
+afirma que a possibilidade de isso acontecer é essencialmente zero, federal
+
+55
+00:04:49.000 --> 00:04:52.001
+Os funcionários estão agora planejando reforçar as medidas de segurança muito rigorosas que
+
+56
+00:04:52.001 --> 00:04:57.000
+já existem. Se os amantes enganosos não parecem muito ameaçadores, há também
+
+57
+00:04:57.000 --> 00:05:01.001
+O ladrão profissional, um novo tipo de espião que é negociado em sua camisa e
+
+58
+00:05:01.001 --> 00:05:06.000
+câmera para um teclado e vídeo de exibição. Como fazer essa nova espécie de
+
+59
+00:05:06.000 --> 00:05:09.001
+O roubo de informações é um problema enfrentado por um número crescente de empresas e
+
+60
+00:05:09.001 --> 00:05:14.001
+das instituições. Um computador pode realmente ser programado para manter seus segredos secretos?
+
+61
+00:05:22.001 --> 00:05:27.000
+A sociedade tem um enorme investimento em computadores e um ainda maior em software.
+
+62
+00:05:28.000 --> 00:05:32.000
+O que é mais importante do que o investimento financeiro é o grau em que
+
+63
+00:05:32.000 --> 00:05:37.001
+que dependem dos computadores. Sem eles, os bancos de dados estão vazos. Palavras
+
+64
+00:05:37.001 --> 00:05:41.001
+Não se processam, os números não se quebram, e a velocidade da informação
+
+65
+00:05:41.001 --> 00:05:45.000
+A manipulação para a qual crescemos acostumados lentamente a um crawl.
+
+66
+00:05:46.000 --> 00:05:50.001
+Pode-se pensar que a proteção de tais recursos essenciais e valiosos
+
+67
+00:05:50.001 --> 00:05:57.001
+Seria rotina e substancial, mas isso não é sempre o caso. Recentemente, a maioria
+
+68
+00:05:57.001 --> 00:06:01.001
+O nosso tempo foi gasto para melhorar e expandir nossos sistemas, acrescentando aos seus
+
+69
+00:06:01.001 --> 00:06:06.001
+flexibilidade, a criação de redes e, essencialmente, a ser mais produtivo. A Segurança
+
+70
+00:06:06.001 --> 00:06:12.001
+Os aspectos são muitas vezes ignorados. Além disso, boa segurança de computador muitas vezes
+
+71
+00:06:12.001 --> 00:06:18.000
+Corre contra para tornar os computadores acessíveis, amigáveis e fáceis de usar. Nós vamos
+
+72
+00:06:18.000 --> 00:06:22.001
+Saiba mais sobre a necessidade de uma segurança de computador adequada no resto do
+
+73
+00:06:22.001 --> 00:06:27.000
+Apresentação . No próximo segmento, vamos encontrar um dos principais especialistas em computadores.
+
+74
+00:06:27.000 --> 00:06:29.001
+O crime. Agora vamos voltar ao programa.
+
+75
+00:06:33.001 --> 00:06:38.000
+Nosso hóspede hoje é Don Parker do Stanford Research Institute. Ele é uma prioridade
+
+76
+00:06:38.000 --> 00:06:42.001
+Especialista em crimes de computador. Ele trabalha na área há 30 anos.
+
+77
+00:06:42.001 --> 00:06:45.000
+E agora. Bem-vindo às crônicas de computador.
+
+78
+00:06:46.000 --> 00:06:50.000
+Parece que com o uso difundido de computadores na sociedade de hoje que temos
+
+79
+00:06:50.000 --> 00:06:53.001
+Um novo criminoso de alta tecnologia. Você pode nos dizer um pouco sobre o
+
+80
+00:06:53.001 --> 00:06:55.000
+Qual é a extensão deste problema, o crime de computador?
+
+81
+00:06:56.000 --> 00:07:01.000
+Sim, infelizmente não temos nenhuma estatística sobre este problema de crime de computador.
+
+82
+00:07:01.001 --> 00:07:08.000
+Portanto, temos que aprender a partir dela com base em um tipo de abordagem caso a caso. Para
+
+83
+00:07:08.000 --> 00:07:14.001
+Por exemplo, nos últimos quatro anos, tivemos a maior transferência de fundos
+
+84
+00:07:14.001 --> 00:07:21.001
+fraude, 10,2 milhões de dólares. Tivemos o maior empréstimo bancário, US$ 21
+
+85
+00:07:21.001 --> 00:07:27.001
+3 milhões de pessoas. Nós tivemos a maior fraude de valores mobiliários, US $ 53 milhões. Nós tivemos o
+
+86
+00:07:27.001 --> 00:07:33.000
+A maior fraude de mercadorias, US$ 50 milhões, e a maior frauda de inventário, US $ 67 milhões
+
+87
+00:07:33.000 --> 00:07:39.001
+um milhão. Esta é uma indicação de que quanto mais nós usamos computadores, então
+
+88
+00:07:39.001 --> 00:07:44.001
+quanto maiores as perdas potencialmente são, e certamente estamos quebrando muito
+
+89
+00:07:44.001 --> 00:07:47.000
+Os crimes registam quanto mais usamos computadores.
+
+90
+00:07:48.000 --> 00:07:52.001
+Então você acha que a escalada é um problema real agora? Sim, é realmente uma
+
+91
+00:07:52.001 --> 00:07:58.000
+A escalada porque eu acho que o crime de negócios provavelmente está a cair em
+
+92
+00:07:58.000 --> 00:08:03.000
+incidentes quanto mais usamos computadores, mas ao mesmo tempo quando a perda
+
+93
+00:08:03.000 --> 00:08:09.001
+ocorre, tende a ser maior. Você pode dar uma ideia de quais são as características de uma
+
+94
+00:08:09.001 --> 00:08:13.001
+O computador é criminoso? Que tipo de indivíduo você encontra este tipo de
+
+95
+00:08:13.001 --> 00:08:19.001
+A coisa? Bem, temos entrevistado cerca de 35 dessas pessoas até agora, pelo menos da
+
+96
+00:08:19.001 --> 00:08:25.001
+criminosos de computador mais sofisticados, e encontramos que eles tendem a ser jovens,
+
+97
+00:08:25.001 --> 00:08:30.000
+Mas então as pessoas no campo do computador geralmente são jovens de qualquer forma. Eles exibem
+
+98
+00:08:30.000 --> 00:08:34.000
+a síndrome de Robin Hood, ou é uma variação de Robin hood, é roubando de
+
+99
+00:08:34.000 --> 00:08:39.000
+os ricos e mantê-lo, mas é a ideia de que eles diferenciam muito fortemente
+
+100
+00:08:39.001 --> 00:08:44.000
+de fazer danos às pessoas que são altamente imorais para elas, e de fazer
+
+101
+00:08:44.000 --> 00:08:48.001
+organizações que podem facilmente racionalizar. Não só isso, eles estão fazendo isso.
+
+102
+00:08:48.001 --> 00:08:54.001
+para um computador, e o computador não pode chorar ou bater de volta, e assim o computadora é um
+
+103
+00:08:54.001 --> 00:08:59.000
+ideal para pessoas que possivelmente não poderiam subir e pegar uma arma em seu
+
+104
+00:08:59.000 --> 00:09:04.000
+cara e roubar dinheiro de você. Isso seria um crime, mas quando você pode
+
+105
+00:09:04.000 --> 00:09:08.001
+Faça isso através de um terminal ou um computador, então é uma matéria completamente diferente.
+
+106
+00:09:09.000 --> 00:09:16.000
+Essas pessoas não se vêem como criminosos. Eles se consideram um problema
+
+107
+00:09:16.000 --> 00:09:21.000
+e os solventes. Eles têm algum problema intenso e indistinguível que estão tentando
+
+108
+00:09:21.000 --> 00:09:25.001
+Solução . Eles estão em uma posição de confiança, e eles acham que violando essa confiança
+
+109
+00:09:25.001 --> 00:09:30.001
+É a maneira mais fácil de resolver o seu problema. Você está falando de amadores?
+
+110
+00:09:30.001 --> 00:09:35.001
+Aqui ou tipo de carreira criminosos de computador? Até agora, a maior parte do problema foi
+
+111
+00:09:35.001 --> 00:09:42.000
+dos criminosos amadores e brancos. Mas agora estamos começando a ver
+
+112
+00:09:42.000 --> 00:09:48.001
+um número crescente do que você pode chamar criminosos de carreira. Pessoas cujos
+
+113
+00:09:48.001 --> 00:09:55.001
+A vida em uma base contínua depende do crime, e você
+
+114
+00:09:55.001 --> 00:10:00.001
+É possível que, desde há alguns anos, quase todas as prisões
+
+115
+00:10:00.001 --> 00:10:05.000
+Os Estados Unidos estão ensinando o processamento de dados aos presos. Assim, eles têm
+
+116
+00:10:05.000 --> 00:10:09.000
+uma oportunidade de aprender a tecnologia, e eles estão achando que eles não podem
+
+117
+00:10:09.000 --> 00:10:14.001
+envolvendo-se no seu crime tradicional, exceto neste novo ambiente, este
+
+118
+00:10:14.001 --> 00:10:19.001
+do meio ambiente. Don, quais são algumas das técnicas que as pessoas usam, os criminosos usam
+
+119
+00:10:19.001 --> 00:10:25.000
+Para atacar um computador? Bem, temos cerca de 1.100 casos em nossa pesquisa
+
+120
+00:10:25.000 --> 00:10:31.001
+arquivos na SRI agora, e com base no que estudamos nos últimos 13 anos, há
+
+121
+00:10:31.001 --> 00:10:38.000
+Há uma série de técnicas comuns que estão emergindo. O mais comum um
+
+122
+00:10:38.000 --> 00:10:43.001
+Ou seja, referimos-se a falsificação de dados ou entrada de dados falsos. Mudança de dados antes
+
+123
+00:10:43.001 --> 00:10:48.001
+Ele vai para o computador, mas confiando no computador para esconder a evidência de
+
+124
+00:10:48.001 --> 00:10:53.000
+Os dados falsos. Nós também estamos lidando com técnicas muito sofisticadas como
+
+125
+00:10:53.000 --> 00:10:58.001
+Cavalos de Troia, bombas lógicas, ataques de salami, piggybacking, dados
+
+126
+00:10:58.001 --> 00:11:02.000
+deslizamento, deslizamentos e assim por diante.
+
+127
+00:11:02.000 --> 00:11:06.001
+Estes são todos os termos técnicos ou jargões para essas técnicas. Você pode
+
+128
+00:11:06.001 --> 00:11:10.000
+Tome um deles e explique? Por exemplo, o cavalo de Troia parece ser um
+
+129
+00:11:10.000 --> 00:11:12.001
+Termo explícito. O que isso significaria?
+
+130
+00:11:12.001 --> 00:11:15.001
+Parece que isso implica que há algo construído no programa. É que o
+
+131
+00:11:15.001 --> 00:11:19.000
+O caso? Isso é certo. O cavalo de Troia é um dos criminosos mais fundamentais.
+
+132
+00:11:19.000 --> 00:11:26.000
+métodos que foram usados, e é a ideia de tomar um programa e construir
+
+133
+00:11:26.000 --> 00:11:31.001
+Instruções secretas para esse programa. Assim, quando o programa é executado em um
+
+134
+00:11:31.001 --> 00:11:36.000
+domínio protegido em um sistema de computador, ele não apenas realiza o que é supostamente
+
+135
+00:11:36.000 --> 00:11:40.001
+Para fazer, mas também faz as instruções adicionais. Eu vejo, e isso
+
+136
+00:11:40.001 --> 00:11:44.000
+Seria usado para, talvez, colocar dinheiro na conta de alguém, conta de um empregado,
+
+137
+00:11:44.000 --> 00:11:48.000
+Ou algo assim. Pode ser usado para uma variedade de programas.
+
+138
+00:11:48.000 --> 00:11:54.000
+fraudes dentro de um sistema de computador que poderia usar uma técnica como uma bomba lógica, para
+
+139
+00:11:54.000 --> 00:12:00.001
+Por exemplo, onde você programou uma instrução de ramo em um programa para que quando
+
+140
+00:12:00.001 --> 00:12:07.001
+certas condições para a fraude ocorrer são óptimas, então a bomba do tempo ou a
+
+141
+00:12:07.001 --> 00:12:13.001
+A bomba lógica desaparece e faz com que o crime seja cometido. Parece que há,
+
+142
+00:12:13.001 --> 00:12:16.001
+Isso parece ser uma espécie de ataque interno em um sistema de computador quando você coloca em
+
+143
+00:12:16.001 --> 00:12:19.000
+Um cavalo de Troia ou uma bomba lógica ou algo assim.
+
+144
+00:12:19.000 --> 00:12:23.000
+Agora, vimos um exemplo antes dos jogos de guerra onde era que o sistema
+
+145
+00:12:23.000 --> 00:12:27.001
+foi atacado do lado de fora, tentando várias senhas e
+
+146
+00:12:27.001 --> 00:12:30.000
+sistematicamente a entrada no sistema.
+
+147
+00:12:30.000 --> 00:12:35.000
+É isso que realmente aconteceu onde você está tentando passar por uma
+
+148
+00:12:35.000 --> 00:12:38.001
+toda a sequência de senhas e, em seguida, você realmente descobrir um que se encaixa e vai
+
+149
+00:12:38.001 --> 00:12:45.000
+dentro do sistema? Sim, há uma gama inteira de hacking de sistemas maliciosos
+
+150
+00:12:45.000 --> 00:12:50.001
+técnicas para obter acesso a partir de um terminal remoto onde o nome do jogo
+
+151
+00:12:50.001 --> 00:12:55.000
+Principalmente é personalizar um usuário autorizado. Ou seja, você tem que saber o
+
+152
+00:12:55.000 --> 00:13:00.001
+ID e senha da pessoa para obter acesso. Há uma técnica de rastreamento em que você
+
+153
+00:13:00.001 --> 00:13:05.001
+Pode automaticamente ou às vezes manualmente simplesmente escanear números de telefone, ganhar
+
+154
+00:13:05.001 --> 00:13:11.000
+acessar um computador e, em seguida, escanear várias possibilidades de códigos de acesso,
+
+155
+00:13:11.000 --> 00:13:18.000
+palavras-passe para encontrar ou tocar em um que então é acesso a esse
+
+156
+00:13:18.000 --> 00:13:21.001
+do sistema. E os sistemas amigáveis ao usuário? Eles são um ajudante? São eles
+
+157
+00:13:21.001 --> 00:13:23.001
+Um obstáculo ao crime de computador?
+
+158
+00:13:24.000 --> 00:13:29.001
+Bem, essa é uma parte da guerra que estamos agarrando hoje. Todos nós queremos nossos sistemas
+
+159
+00:13:29.001 --> 00:13:35.000
+ser amigável e, infelizmente, um sistema de ser amável é quase o
+
+160
+00:13:35.000 --> 00:13:37.000
+Ao contrário do seu ser seguro.
+
+161
+00:13:37.001 --> 00:13:41.001
+E por isso estamos tentando equilibrar. Estamos tentando encontrar o equilíbrio entre a
+
+162
+00:13:41.001 --> 00:13:47.001
+um sistema amigável e um sistema seguro, porque o número de pessoas que têm este sistema
+
+163
+00:13:47.001 --> 00:13:54.001
+A capacidade de acessar esses sistemas está crescendo muito rapidamente. E assim temos um
+
+164
+00:13:54.001 --> 00:13:58.000
+inimigo que está aumentando em tamanho e em sofisticação.
+
+165
+00:13:58.001 --> 00:14:03.000
+E, portanto, não podemos mais permitir que nossos sistemas
+
+166
+00:14:03.000 --> 00:14:04.001
+tão amigáveis como foram.
+
+167
+00:14:05.001 --> 00:14:10.000
+Quanto ao, há um, eu acho que chamaríamos um boletim comunitário computadorizado
+
+168
+00:14:10.000 --> 00:14:16.000
+rede de board que cresce em torno de toda a área técnica hobbyista. Você
+
+169
+00:14:16.000 --> 00:14:18.001
+Ele falou sobre uma versão pirata disso.
+
+170
+00:14:18.001 --> 00:14:21.001
+Você pode nos dizer um pouco sobre o que um desses boletins de piratas seria
+
+171
+00:14:21.001 --> 00:14:26.000
+Ser como e qual é o propósito? Bem, como você sabe, boletins de notícias são extremamente
+
+172
+00:14:26.000 --> 00:14:32.001
+Serviços úteis no campo do computador. Mas
+
+173
+00:14:32.001 --> 00:14:36.001
+Infelizmente, há alguns deles que são estabelecidos, como você diz, para mal-intencionado
+
+174
+00:14:36.001 --> 00:14:42.001
+São chamados de piratas. De fato, em uma lista que vi recentemente,
+
+175
+00:14:43.000 --> 00:14:48.000
+encontramos 128 desses chamados boletins de notícias piratas em todo o país.
+
+176
+00:14:48.001 --> 00:14:54.001
+Eles são usados para fins de inteligência entre hackers de sistemas maliciosos e eles
+
+177
+00:14:54.001 --> 00:15:01.000
+freqüentemente transmitir os números de telefone de computadores e qualquer
+
+178
+00:15:01.000 --> 00:15:06.000
+passaportes que possam estar disponíveis e descrever vários protocolos para login em
+
+179
+00:15:06.000 --> 00:15:11.001
+Sistemas de computador de outras pessoas para se envolver neste acesso não autorizado a sistemas.
+
+180
+00:15:12.000 --> 00:15:15.000
+Desculpe-me, Gary e Don, em um minuto quero ver algumas soluções
+
+181
+00:15:15.000 --> 00:15:17.000
+para os tipos de problemas que você está levantando,
+
+182
+00:15:17.000 --> 00:15:18.001
+Não, e vamos fazer isso em apenas um minuto.
+
+183
+00:15:25.001 --> 00:15:30.001
+A maioria da discussão que gira em torno da segurança do computador trata com o computador
+
+184
+00:15:30.001 --> 00:15:34.001
+O crime. Há, no entanto, outros acidentes e condições que precisamos proteger
+
+185
+00:15:34.001 --> 00:15:39.001
+em contra. Primeiro, devemos proteger a nossa operação de computador de catástrofes naturais
+
+186
+00:15:39.001 --> 00:15:44.001
+por exemplo, incêndio, extinção de energia, inundações e assim por diante. Em segundo lugar, os sistemas devem ser
+
+187
+00:15:44.001 --> 00:15:49.000
+Proteção contra a destruição acidental de dados quando alguém desintencionalmente
+
+188
+00:15:49.000 --> 00:15:55.000
+ganha acesso ou se um procedimento terminal incorreto for executado ou se o programador
+
+189
+00:15:55.000 --> 00:16:01.000
+destruir acidentalmente os dados atuais ao alterar um programa operacional. Nós
+
+190
+00:16:01.000 --> 00:16:05.001
+nem sempre pode evitar danos, mas podemos garantir operação contínua através do armazenamento
+
+191
+00:16:05.001 --> 00:16:08.001
+cópias de backup de programas e arquivos de dados.
+
+192
+00:16:09.000 --> 00:16:14.000
+Em terceiro lugar, precisamos tomar precauções razoáveis para garantir que os funcionários não
+
+193
+00:16:14.000 --> 00:16:20.000
+abusar de seu acesso a computadores com uso pessoal excessivo. Em quarto lugar, devemos
+
+194
+00:16:20.000 --> 00:16:25.001
+Proteja o nosso equipamento contra o uso não autorizado por terceiros. Bom controle de acesso
+
+195
+00:16:25.001 --> 00:16:31.000
+incluindo senhas pessoais, sistemas e monitoramento de logs, separação de
+
+196
+00:16:31.000 --> 00:16:36.000
+As responsabilidades e os controlos de equilíbrio externos são alguns dos procedimentos para
+
+197
+00:16:36.000 --> 00:16:41.000
+proteção contra a intrusão. No próximo segmento, vamos ouvir de um dos
+
+198
+00:16:41.000 --> 00:16:47.001
+Especialistas em segurança de computadores. Então vamos voltar ao programa. O Don,
+
+199
+00:16:48.000 --> 00:16:51.000
+Você nos deu uma boa ideia do que alguns dos problemas estão relacionados ao computador
+
+200
+00:16:51.000 --> 00:16:53.000
+crime, então por que não tomaremos alguns minutos e descobrir o que alguns dos
+
+201
+00:16:53.000 --> 00:17:00.000
+As soluções são. Nós nos juntamos também a Jim Holmes da Tri-Data Corporation. JIM
+
+202
+00:17:00.000 --> 00:17:04.001
+Tem um produto que nos ajuda a garantir um sistema de dial-up. Então, Jim, você pode nos dizer um
+
+203
+00:17:04.001 --> 00:17:09.000
+Um pouco sobre o produto? Claro que eu gostaria de. Nós nos levantamos com
+
+204
+00:17:09.000 --> 00:17:14.000
+Uma abordagem para ser capaz de ajudar a proteger redes dial-up. Como você já discutiu com
+
+205
+00:17:14.000 --> 00:17:20.001
+Não antes, as redes dial-up têm o requisito de diálogo em e geralmente
+
+206
+00:17:20.001 --> 00:17:25.001
+inserir um logon ou uma senha que o próprio sistema requer. Agora nós fomos
+
+207
+00:17:25.001 --> 00:17:31.000
+Um passo adiante e tomamos dentro de um dispositivo de tipo 212 modem, um dial automático
+
+208
+00:17:31.000 --> 00:17:35.001
+Um modem que seria o front-end deste processador, o nosso sistema de compartilhamento de tempo.
+
+209
+00:17:36.000 --> 00:17:40.001
+Você colocaria o nosso dispositivo e ele tem o que chamamos de verificação de resposta
+
+210
+00:17:40.001 --> 00:17:44.001
+A capacidade. Podemos passar e eu vou dar-lhe um exemplo de como vamos armazenar
+
+211
+00:17:44.001 --> 00:17:49.000
+um um. Digamos que o seu nome era Adão. Podemos colocar em seu nome e uma senha que
+
+212
+00:17:49.000 --> 00:17:51.000
+Você usaria para acessar o sistema.
+
+213
+00:17:51.000 --> 00:17:57.001
+Então nós entramos AA para adicionar uma verificação de resposta e, em seguida, digite em seu nome Adam e
+
+214
+00:17:57.001 --> 00:18:02.001
+Entre um espaço e, em seguida, entre sua senha única e podemos colocar em uma senha
+
+215
+00:18:02.001 --> 00:18:08.000
+de qualquer lugar de um a 250 caracteres. Tipicamente as suas senhas que são usadas em
+
+216
+00:18:08.000 --> 00:18:12.000
+Os sistemas são cinco ou seis caracteres. Quanto mais longa a senha, mais dura
+
+217
+00:18:12.000 --> 00:18:16.001
+Seja para alguém para quebrar. Agora encontramos muitas vezes que as pessoas estão tentando usar 20 ou 30
+
+218
+00:18:16.001 --> 00:18:20.001
+caracteres de senhas se eles estão realmente tentando fornecer segurança para
+
+219
+00:18:20.001 --> 00:18:25.000
+A operação dial-in. Depois de entrarmos no comando aqui, poderíamos voltar e
+
+220
+00:18:25.000 --> 00:18:30.001
+Identificar exatamente quem tem acesso ao sistema de fora através de portos dial-in
+
+221
+00:18:30.001 --> 00:18:36.000
+olhando para um diretório de rotinas de verificação de respostas. Ao receber uma chamada
+
+222
+00:18:36.000 --> 00:18:40.000
+para o computador host onde o sistema seria tipicamente conectado, nós iríamos
+
+223
+00:18:40.000 --> 00:18:44.000
+Verificar e verificar qualquer uma dessas senhas. As senhas podem ser
+
+224
+00:18:44.000 --> 00:18:47.001
+Conteúdo ou controle de quantos caracteres são recebidos
+
+225
+00:18:47.001 --> 00:18:49.000
+antes que a chamada seja desligada.
+
+226
+00:18:50.000 --> 00:18:54.000
+Um dos problemas que ocorrem em muitos dos sistemas de dial-up é quando você dial
+
+227
+00:18:54.000 --> 00:18:58.001
+em, o sistema repetidamente permitirá que você entre a senha e ela virá
+
+228
+00:18:58.001 --> 00:19:03.000
+Voltar e dizer erro, re-enter a senha. Com o nosso dispositivo, depois de ter re-entrado
+
+229
+00:19:03.000 --> 00:19:06.001
+uma ou duas vezes, desligará automaticamente a chamada, evitando assim
+
+230
+00:19:06.001 --> 00:19:10.001
+de alguém que tenha acesso ao sistema. E é assim que estamos controlando
+
+231
+00:19:10.001 --> 00:19:15.001
+a parte da resposta do ambiente dial-up. Agora, além disso, há
+
+232
+00:19:15.001 --> 00:19:19.001
+também uma porção de origem que pode ser usada para ajudar a controlar a nossa segurança
+
+233
+00:19:19.001 --> 00:19:24.000
+das redes. Muitas das empresas, maiores empresas hoje e operando por telefone
+
+234
+00:19:24.000 --> 00:19:29.001
+As empresas estão usando o nosso dispositivo devido à sofisticada capacidade de
+
+235
+00:19:29.001 --> 00:19:33.001
+Configure remotamente senhas e log on procedimentos para seus sistemas.
+
+236
+00:19:34.000 --> 00:19:38.001
+Ao permitir-lhes esta configuração remota para o sistema, e isso é feito muito
+
+237
+00:19:38.001 --> 00:19:43.000
+Simplesmente, eu vou dar-lhe uma demonstração. Nós faríamos AD para adicionar diretório dial.
+
+238
+00:19:43.001 --> 00:19:56.000
+Vamos colocar em um rótulo. Vamos dizer que somos espaço, colocando no número de telefone de
+
+239
+00:19:56.000 --> 00:20:00.001
+o sistema que queremos chamar, e depois espaço e colocar em uma senha que
+
+240
+00:20:00.001 --> 00:20:04.000
+ser enviado ao sistema. E a senha só seria armazenada colocando em um
+
+241
+00:20:04.000 --> 00:20:08.000
+sequência de personagens. Mais uma vez, eles poderiam ser inseridos a partir do teclado local. Nosso
+
+242
+00:20:08.000 --> 00:20:12.000
+A parte única do nosso sistema é que eles poderiam ser baixados de uma linha remota.
+
+243
+00:20:12.000 --> 00:20:17.000
+Terminal ou um computador remoto. E, fazendo isso, você poderia colocar de novo em uma
+
+244
+00:20:17.000 --> 00:20:21.001
+A palavra-passe de 250 caracteres. Agora eu entendo isso corretamente, é que o básico
+
+245
+00:20:21.001 --> 00:20:25.001
+A ideia é que você diale no sistema de computador e depois o sistema de computação diale.
+
+246
+00:20:25.001 --> 00:20:30.000
+Voltar para você novamente para verificar se você é a pessoa real que você diz que você é.
+
+247
+00:20:30.000 --> 00:20:33.000
+Isso é correto? Bem, com o nosso dispositivo, o que estamos fazendo é dialogar
+
+248
+00:20:33.000 --> 00:20:34.001
+entrar no sistema e inserir uma senha.
+
+249
+00:20:35.000 --> 00:20:38.001
+Uma vez que a senha foi inserida, nesse ponto você então tem acesso
+
+250
+00:20:38.001 --> 00:20:40.000
+para o próprio sistema de computador.
+
+251
+00:20:40.001 --> 00:20:44.001
+Sim, eu acho que há outro sistema, Gary. A parte de trás do sistema de segurança,
+
+252
+00:20:44.001 --> 00:20:49.000
+que tem uma coisa chamada Digilink, na qual, na verdade, o que acontece é que você tem a
+
+253
+00:20:49.000 --> 00:20:52.001
+Técnicas de Salami. Eu chamo isso de pizza de defesa. Você sabe, onde a pizza chama
+
+254
+00:20:52.001 --> 00:20:55.001
+Chamou você de volta para garantir que você é o cara que ordenou a pizza, onde o anfitrião
+
+255
+00:20:55.001 --> 00:20:59.001
+O computador chama o diário de volta para se certificar de que o diador foi de fato o
+
+256
+00:20:59.001 --> 00:21:04.001
+Parte apropriada que solicita os serviços. Bem, Donna, esses tipos de dispositivos, fazem
+
+257
+00:21:04.001 --> 00:21:08.001
+Será que os dados são verdadeiramente seguros? Qual é o seu sentimento sobre isso? Essas
+
+258
+00:21:08.001 --> 00:21:14.001
+Os dispositivos adicionam mais uma camada de segurança e proporcionam um nível significativamente mais seguro.
+
+259
+00:21:14.001 --> 00:21:20.000
+sistema de computadores hoje do que já tivemos no passado. No entanto, temos que ser
+
+260
+00:21:20.000 --> 00:21:26.000
+consciente de que nenhum sistema de computador comercialmente disponível hoje é adequadamente seguro
+
+261
+00:21:26.000 --> 00:21:31.001
+relativamente ao valor dos ativos, dos bens de informação armazenados neles.
+
+262
+00:21:32.001 --> 00:21:38.001
+Por isso, temos que compensar as limitações tecnológicas nos sistemas
+
+263
+00:21:38.001 --> 00:21:44.001
+através de métodos operacionais, físicos e processuais, a fim de
+
+264
+00:21:44.001 --> 00:21:50.000
+organização segura que está usando o computador. Muitas vezes olhamos para o
+
+265
+00:21:50.000 --> 00:21:53.000
+Japoneses agora para o que eles estão fazendo e computadores em geral.
+
+266
+00:21:53.001 --> 00:21:55.001
+Os japoneses estão fazendo qualquer coisa em relação a esta segurança?
+
+267
+00:21:55.001 --> 00:21:57.000
+Problemas de que devemos estar cientes?
+
+268
+00:21:57.001 --> 00:22:03.001
+Bem, os japoneses estão um pouco atrás em que eles não experimentaram o
+
+269
+00:22:03.001 --> 00:22:08.000
+tipos de crime de computador que temos aqui nos Estados Unidos, mas eles são apenas
+
+270
+00:22:08.000 --> 00:22:13.000
+Agora começa a entender esse problema. E, claro, eles estão tentando abordar
+
+271
+00:22:13.000 --> 00:22:19.001
+Os Estados Unidos . mercado onde eles não entendem completamente os problemas criminais que nós
+
+272
+00:22:19.001 --> 00:22:23.001
+têm neste país. O crime é uma coisa muito cultural, e por isso é muito diferente.
+
+273
+00:22:23.001 --> 00:22:29.000
+de um país ou cultura para outro. As leis são adequadas agora em nosso
+
+274
+00:22:29.000 --> 00:22:33.001
+país para lidar com esta forma muito sofisticada de crime? Bem, as leis são
+
+275
+00:22:33.001 --> 00:22:39.000
+melhorando muito. Temos longos caminhos para ir. Atualmente, há 21 países que
+
+276
+00:22:39.000 --> 00:22:45.000
+Temos leis específicas de crimes de computador, e temos várias leis no Congresso
+
+277
+00:22:45.000 --> 00:22:51.000
+que, se passado, forneceria proteção específica a uma federação
+
+278
+00:22:51.000 --> 00:22:58.000
+de base nacional. Parece que também há um problema com
+
+279
+00:22:58.000 --> 00:23:02.000
+sistemas operacionais que se tornam populares hoje que a fonte está disponível
+
+280
+00:23:02.000 --> 00:23:04.000
+para os indivíduos.
+
+281
+00:23:04.000 --> 00:23:08.001
+Por exemplo, a Unix se tornou amplamente utilizada em ambientes comerciais. Então o que
+
+282
+00:23:08.001 --> 00:23:11.001
+O efeito faz isso quando as pessoas que realmente podem sair dos programas de fonte,
+
+283
+00:23:12.001 --> 00:23:16.001
+Você já viu algum efeito disso? Temos um grande sistema operacional como
+
+284
+00:23:16.001 --> 00:23:21.000
+Os sistemas operacionais da IBM que têm anos e anos de trabalho de segurança, existem
+
+285
+00:23:21.000 --> 00:23:23.001
+Sistemas operacionais mais populares agora. Que efeito isso tem?
+
+286
+00:23:24.000 --> 00:23:28.000
+Bem, a lei de Jackson diz que com um hamer grande o suficiente você pode quebrar qualquer coisa,
+
+287
+00:23:28.001 --> 00:23:34.001
+e, portanto, qualquer um desses sistemas pode ser quebrado com uma quantidade suficiente de
+
+288
+00:23:34.001 --> 00:23:41.000
+trabalho ou habilidades, conhecimento e acesso. A segurança é sempre uma relação
+
+289
+00:23:41.000 --> 00:23:48.000
+situações, e grandes programas de computador são complexos na medida em que não são
+
+290
+00:23:48.000 --> 00:23:52.001
+É previsível. E se um programa não é previsível, isto é, se não sabemos o que
+
+291
+00:23:52.001 --> 00:23:58.001
+Isso acontece em todas as circunstâncias, então temos que assumir que não é seguro.
+
+292
+00:23:59.000 --> 00:24:05.001
+Portanto, com base em pesquisas de longo alcance, estamos destinados a desenvolver a idéia de
+
+293
+00:24:05.001 --> 00:24:10.000
+um sistema provavelmente seguro onde você pode provar como ele funciona sob todos os
+
+294
+00:24:10.000 --> 00:24:15.001
+condições, e, portanto, obter alguma garantia de que você tem um adequadamente seguro
+
+295
+00:24:15.001 --> 00:24:19.001
+do sistema. No entanto, temos apenas um minuto para ficar. Quero te perguntar, falamos
+
+296
+00:24:19.001 --> 00:24:23.000
+sobre jogos de guerra antes na área de defesa nacional. E quanto à economia? I
+
+297
+00:24:23.000 --> 00:24:26.001
+Ou seja, nós temos os bancos agora todos ligados a este enorme transferência de fundos eletrônicos
+
+298
+00:24:26.001 --> 00:24:30.000
+do sistema. Qual o potencial de um grande desastre econômico?
+
+299
+00:24:30.000 --> 00:24:31.001
+Se o homem errado entrou nisso?
+
+300
+00:24:32.001 --> 00:24:38.001
+Bem, o potencial é catastrófico, mas o problema tem que ser feito
+
+301
+00:24:38.001 --> 00:24:40.001
+com os riscos envolvidos.
+
+302
+00:24:41.000 --> 00:24:47.001
+E acreditamos que a segurança está avançando, juntamente com a tecnologia avançada,
+
+303
+00:24:48.000 --> 00:24:55.000
+e, juntamente com a crescente quantidade de dinheiro que está exposto nestes grandes
+
+304
+00:24:55.000 --> 00:25:01.001
+Sistemas de transferência de fundos. Hoje, o risco é relativamente baixo.
+
+305
+00:25:02.000 --> 00:25:07.001
+Mas o nosso principal problema, no entanto, é garantir que a segurança, que a
+
+306
+00:25:07.001 --> 00:25:12.001
+cães eletrônicos construídos nestes sistemas, mantém-se com essa tecnologia, e com
+
+307
+00:25:12.001 --> 00:25:17.001
+a quantidade de ativos que ficam expostos nesses sistemas. Em breve, em torno de 30
+
+308
+00:25:17.001 --> 00:25:22.001
+Afinal, o que acontece com a criptografia? Isso é uma solução? A criptografia é a
+
+309
+00:25:22.001 --> 00:25:27.001
+A mais poderosa proteção, eu acho, que já foi desenvolvida em proteção de
+
+310
+00:25:27.001 --> 00:25:33.000
+dados através de linhas de comunicação, e também como pode ser armazenado em mídia de computador.
+
+311
+00:25:34.000 --> 00:25:39.000
+No entanto, não temos um problema a ser resolvido nessa área ainda, o deslizamento de águas
+
+312
+00:25:39.000 --> 00:25:43.000
+O problema. No entanto, no futuro, será o mais
+
+313
+00:25:43.000 --> 00:25:45.000
+garantia significativa que temos.
+
+314
+00:25:45.000 --> 00:25:48.000
+Senhores, estamos fora do tempo. Don Parker da SRI, muito obrigado por se juntar
+
+315
+00:25:48.000 --> 00:25:52.000
+Nós, Jim Holmes de TriData, e espero que você esteja de volta conosco novamente na próxima vez para
+
+316
+00:25:52.000 --> 00:26:05.000
+Outra edição do crime de computador existe. Empresas que foram repelidas
+
+317
+00:26:05.000 --> 00:26:10.000
+Eles são muitas vezes envergonhados e recusados a relatar o crime. Processo de A
+
+318
+00:26:10.000 --> 00:26:13.000
+Os trabalhadores da empresa para crimes de computador são muito raros.
+
+319
+00:26:14.000 --> 00:26:18.001
+Pode ser surpreendente saber que apenas cerca de metade dos nossos estados têm crimes de computador
+
+320
+00:26:18.001 --> 00:26:23.001
+As leis e a legislação federal estão em vigor. Então nós realmente não sabemos quanto
+
+321
+00:26:23.001 --> 00:26:28.001
+crimes de computador existem, mas sabemos que os computadores estão envolvidos em um
+
+322
+00:26:28.001 --> 00:26:33.001
+o número de crimes bem divulgados, multi-milhões de dólares, e essa intrusão em
+
+323
+00:26:33.001 --> 00:26:39.001
+Os computadores hospedados por indivíduos não autorizados estão se tornando um lugar comum. O nosso melhor
+
+324
+00:26:39.001 --> 00:26:44.000
+A defesa é uma boa ofensa. Em primeiro lugar, não devemos ser psicanalizados pelo computador.
+
+325
+00:26:44.000 --> 00:26:49.001
+da tecnologia. Podemos assumir a responsabilidade pela segurança do computador sem ser um
+
+326
+00:26:49.001 --> 00:26:55.000
+especialista em computador e, se necessário, especialistas estão disponíveis. Em segundo lugar, devemos fazer uma
+
+327
+00:26:55.000 --> 00:27:00.000
+Avaliação geral do risco de que ameaças de computador são e determinar quanto
+
+328
+00:27:00.000 --> 00:27:05.000
+Vale a pena proteger contra essas ameaças. Em terceiro lugar, podemos dar passos para
+
+329
+00:27:05.000 --> 00:27:10.000
+proteger fisicamente o nosso hardware e dados, como mencionado anteriormente. Em quarto lugar, podemos
+
+330
+00:27:10.000 --> 00:27:15.000
+Use as diretrizes da lista de verificação de segurança para garantir que os nossos procedimentos sejam suficientes.
+
+331
+00:27:15.001 --> 00:27:20.001
+Em quinto lugar, podemos garantir que abordamos a maior exposição não técnica, a
+
+332
+00:27:20.001 --> 00:27:25.001
+usuários, fazendo nossas políticas claras e seguindo práticas de sentido comum.
+
+333
+00:27:26.000 --> 00:27:30.000
+Em nossa próxima lição, vamos cobrir o fascinante campo da inteligência artificial.
+
+334
+00:27:31.000 --> 00:27:33.001
+Tenha certeza e leia o capítulo 24 em seu texto, e eu vou ver
+
+335
+00:27:33.001 --> 00:27:35.000
+Então você. Eu sou Herb Luckner.
+
+336
+00:28:18.001 --> 00:28:24.001
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+337
+00:28:24.001 --> 00:28:29.001
+prazer em fornecer fundos importantes para The Computer Promoquo, a história
+
+338
+00:28:29.001 --> 00:28:31.001
+desta evolução contínua.
+
+339
+00:28:53.001 --> 00:28:57.000
+Obrigado por você.

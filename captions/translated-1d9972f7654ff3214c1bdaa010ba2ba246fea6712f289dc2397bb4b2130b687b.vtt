@@ -1,0 +1,1381 @@
+WEBVTT
+
+1
+00:00:19.001 --> 00:00:24.000
+El horno de trabajo del programa espacial estadounidense ha sido este foguete Delta con
+
+2
+00:00:24.000 --> 00:00:29.000
+casi 200 lanzamientos y una tasa de éxito del 90%. De hecho, fue el Delta.
+
+3
+00:00:29.000 --> 00:00:32.001
+que mantuvieron el programa espacial estadounidense volando durante ese período después de la
+
+4
+00:00:32.001 --> 00:00:36.000
+Desastre de los desafíos. Pero todo el poder de los misiles en el mundo no te obtendrá nada
+
+5
+00:00:36.000 --> 00:00:41.000
+sin poder de procesamiento de información y que toma computadoras. Hoy tomamos una
+
+6
+00:00:41.000 --> 00:00:45.000
+Ver los ordenadores en el espacio en esta edición de las Crónicas del ordenador.
+
+7
+00:01:06.000 --> 00:01:10.001
+Las crónicas de ordenador se hacen posibles en parte por los Publishers de Software
+
+8
+00:01:10.001 --> 00:01:15.001
+Asociación que le recuerda que la piratería de software es un delito federal. Cuando a
+
+9
+00:01:15.001 --> 00:01:20.000
+Algunas personas roban software todos pierden. Se proporciona un financiamiento adicional por
+
+10
+00:01:20.000 --> 00:01:26.000
+CompuServe, por PC Connection y Mac Connection, por Byte Magazine y Bix, el
+
+11
+00:01:26.000 --> 00:01:30.001
+Byte Information Exchange y por Intel Corporation, ordenador personal
+
+12
+00:01:30.001 --> 00:01:37.001
+la mejora. Bienvenido a las crónicas informáticas de I&#x27;m Stuart
+
+13
+00:01:37.001 --> 00:01:40.001
+Chafay y esto es Gary Kildall. Gary tengo una gran imagen que quiero mostrarte
+
+14
+00:01:40.001 --> 00:01:44.001
+Mirad esto. Este es un tiro real tomado en la nave espacial Discovery durante
+
+15
+00:01:44.001 --> 00:01:48.000
+Su última misión. ¿Qué es interesante sobre esa imagen? Bueno, es muy
+
+16
+00:01:48.000 --> 00:01:50.001
+Imagen complicada pero parece que hay algo en el dash. A
+
+17
+00:01:50.001 --> 00:01:54.001
+computadora portátil sentada en el dash en el cockpit de la Discovery. El asunto de
+
+18
+00:01:54.001 --> 00:01:58.001
+de hecho este ordenador portátil es una red 1530 y muchas personas saben que la red ha fluido en
+
+19
+00:01:58.001 --> 00:02:02.000
+espacio muchas veces. De hecho, es interesante que hay un archivo de datos de vuelo que necesita
+
+20
+00:02:02.000 --> 00:02:06.000
+las misiones 2500 páginas, cinco volúmenes, toma mucho espacio, mucho peso,
+
+21
+00:02:06.001 --> 00:02:09.000
+están pensando en dumpar todo esto en el hard drive de la red y
+
+22
+00:02:09.000 --> 00:02:12.000
+ahorrar todo esto. Es obvio que necesitas computadoras en el programa espacial Gary
+
+23
+00:02:12.000 --> 00:02:15.000
+¿Qué hacen exactamente los ordenadores? Creo que podríamos hablar de
+
+24
+00:02:15.000 --> 00:02:19.001
+todo desde el salario hasta el mantenimiento de listas de partes y sistemas complicados en
+
+25
+00:02:19.001 --> 00:02:22.000
+y así por lo tanto, estos son reales obvias, pero creo que lo que es
+
+26
+00:02:22.000 --> 00:02:25.001
+Es interesante que el programa espacial realmente precedió a nuestra industria en el sentido real
+
+27
+00:02:25.001 --> 00:02:28.001
+porque hubo una necesidad cuando estás colocando vehículos no tripulados y manejados en
+
+28
+00:02:28.001 --> 00:02:32.001
+espacio para bajar las cosas en tamaño y peso que tienes que en lugar de tener tubos
+
+29
+00:02:32.001 --> 00:02:36.001
+tendrás que tener algún tipo de sistemas transistorizados o sistemas semiconductores y
+
+30
+00:02:36.001 --> 00:02:38.000
+Así que hay un verdadero interés en la miniaturización.
+
+31
+00:02:38.001 --> 00:02:41.001
+Como resultado, hay muchas y muchas industrias spin-off y una de las
+
+32
+00:02:41.001 --> 00:02:44.001
+Fue la industria del PC. Así que no es mucho lo que los ordenadores están haciendo para
+
+33
+00:02:44.001 --> 00:02:47.001
+El programa espacial es lo que el programa espacio se hace para los ordenadores. Vamos a ir
+
+34
+00:02:47.001 --> 00:02:51.000
+para dar un vistazo a los ordenadores en el espacio hoy vamos a visitar el espacio Goddard de la NASA
+
+35
+00:02:51.000 --> 00:02:54.001
+Centro de vuelos fuera de Washington DC veremos cómo están utilizando ordenadores para
+
+36
+00:02:54.001 --> 00:02:58.001
+Interpretar los datos de los satélites y ver el agujero en nuestra capa de ozono
+
+37
+00:02:58.001 --> 00:03:02.000
+veremos un nuevo programa de robots donde están utilizando robots para diseñar el nuevo
+
+38
+00:03:02.000 --> 00:03:06.000
+Estación Espacial . En primer lugar, cuando visitamos el Centro de Investigación Ames de la NASA
+
+39
+00:03:06.000 --> 00:03:08.000
+Aquí en Mountain View California.
+
+40
+00:03:13.001 --> 00:03:20.000
+Esta es la superficie de Marte, como se puede ver desde un avión de bajo volante. El
+
+41
+00:03:20.000 --> 00:03:25.000
+La acción se simula pero el detalle de la superficie es real agregado a partir de una compilación
+
+42
+00:03:25.000 --> 00:03:27.000
+fotografías de la superficie del planeta.
+
+43
+00:03:27.001 --> 00:03:33.001
+Es un ejemplo de la realidad virtual, un medio de recrear digitalmente una interactiva
+
+44
+00:03:33.001 --> 00:03:39.000
+modelo del entorno y es probable que desempeña un papel importante en los planes de la NASA
+
+45
+00:03:39.000 --> 00:03:44.001
+para los años 90. El simulador personal le permite ir más allá de las estaciones de trabajo que
+
+46
+00:03:44.001 --> 00:03:48.000
+Siéntate en tu mesa, por ejemplo, porque la estación de trabajo que está en tu escritorio no es
+
+47
+00:03:48.000 --> 00:03:52.001
+mejor que una ventana pero el simulador personal le permite pasar por eso
+
+48
+00:03:52.001 --> 00:03:56.001
+ventana y estar completamente inmersos en los datos espaciales y esto le permite
+
+49
+00:03:56.001 --> 00:04:01.000
+llevar a llevar todos los tipos de habilidades que aplica en el mundo cotidiano a
+
+50
+00:04:01.000 --> 00:04:06.001
+Manipular objetos directamente y explorar los entornos directamente. La base de
+
+51
+00:04:06.001 --> 00:04:11.001
+El simulador personal es un modelo digital o simulación del entorno.
+
+52
+00:04:12.000 --> 00:04:17.001
+Gracias al progreso en gráficos informáticos, las representaciones 3D en tiempo real son ahora
+
+53
+00:04:17.001 --> 00:04:24.001
+posible con los detalles adecuados. El hardware del operador
+
+54
+00:04:24.001 --> 00:04:29.001
+Se compone de una unidad montada con pantalla estereoscópica de ancho.
+
+55
+00:04:30.001 --> 00:04:35.001
+Los sensores magnéticos determinan la posición relativa del headset. Las imágenes pueden
+
+56
+00:04:35.001 --> 00:04:41.000
+proviene de una base de datos de modelos existentes o sintéticos o de la producción de un remoto.
+
+57
+00:04:41.000 --> 00:04:44.000
+Fuente como una cámara de televisión encima de un robot.
+
+58
+00:04:48.000 --> 00:04:53.000
+NASA espera que el simulador personal haga la realidad más accesible al espacio
+
+59
+00:04:53.000 --> 00:04:58.000
+los viajeros como en la manipulación de este brazo robótico operado a distancia.
+
+60
+00:05:01.001 --> 00:05:06.001
+El director del proyecto Scott Fisher lo llama telepresencia o virtual.
+
+61
+00:05:06.001 --> 00:05:08.001
+Estación de trabajo medioambiental.
+
+62
+00:05:09.000 --> 00:05:14.001
+Al llevar un globo con sensores ópticos de fibra, el operador de este brazo robot puede
+
+63
+00:05:14.001 --> 00:05:20.000
+Los movimientos de su pareja a los de los robots. Para lograr un control preciso
+
+64
+00:05:20.000 --> 00:05:25.001
+La telepresencia incluye comandos de voz y respuesta audible utilizando ambos sintéticos.
+
+65
+00:05:25.001 --> 00:05:27.001
+El discurso y los efectos sonoros.
+
+66
+00:05:30.001 --> 00:05:35.000
+Porque usted está transmitiendo este entorno remoto desde el telerobot a la
+
+67
+00:05:35.000 --> 00:05:38.001
+usuario no hay ninguna razón por la que no pueda mediar con el ordenador entre los dos
+
+68
+00:05:38.001 --> 00:05:42.000
+El entorno. No es necesario reportar exactamente lo que el mundo parecía.
+
+69
+00:05:42.000 --> 00:05:46.000
+Puedes crear un mundo sintético lo que debería parecer o lo que sería el
+
+70
+00:05:46.000 --> 00:05:51.001
+medio de tareas más beneficioso para el usuario y por lo tanto podría haber un
+
+71
+00:05:51.001 --> 00:05:54.000
+En el entorno de trabajo que en última instancia
+
+72
+00:05:54.000 --> 00:05:55.001
+Se conecta al mundo real.
+
+73
+00:05:57.000 --> 00:06:02.000
+Un aterrizaje en Marte es uno de los principales objetivos de la NASA para la próxima década.
+
+74
+00:06:02.000 --> 00:06:07.000
+La superficie del planeta requerirá nuevas técnicas que no dependen de la presencia
+
+75
+00:06:07.000 --> 00:06:12.000
+de los humanos. Debido a la cantidad de tiempo que se necesita para que los señales de radio sean
+
+76
+00:06:12.000 --> 00:06:16.001
+Transmitido entre la Tierra y Marte sería impracto para controlar el rover
+
+77
+00:06:16.001 --> 00:06:22.001
+de la Tierra un paso en un momento. En cambio, la agencia espacial está contando en un nuevo tipo de
+
+78
+00:06:22.001 --> 00:06:28.000
+Un vehículo de superficie inteligente que puede mirar y sentir su camino alrededor de Marte. Estos
+
+79
+00:06:28.000 --> 00:06:33.000
+Los roveres planetarios estarían programados para tomar decisiones sobre lo que examinar y
+
+80
+00:06:33.000 --> 00:06:38.000
+y cuando. ¿Cuál es la situación si quieres que el rover pueda navegar alrededor
+
+81
+00:06:38.000 --> 00:06:43.000
+crevices y alrededor de rocas y sobre terreno duro hay que darle alguna capacidad
+
+82
+00:06:43.000 --> 00:06:45.001
+Conocer su entorno y planear alrededor de ello.
+
+83
+00:06:46.000 --> 00:06:50.000
+Además, si quieres que el rover pueda reaccionar por sí mismo a estas ciencias
+
+84
+00:06:50.000 --> 00:06:56.000
+alarmas de manera oportunista sobre las pistas geológicas o la presencia de los subterráneos
+
+85
+00:06:56.000 --> 00:07:00.001
+agua y hacer algunas ciencias que de lo contrario podría faltar también tiene que construir un
+
+86
+00:07:00.001 --> 00:07:02.001
+Sistema de planificación del subsistema científico.
+
+87
+00:07:03.000 --> 00:07:08.000
+La tecnología crucial está construyendo un sistema que permitirá a estos planificadores
+
+88
+00:07:08.000 --> 00:07:14.000
+Los objetivos de interacción alcanzan lo más de los objetivos de prioridad posibles.
+
+89
+00:07:15.000 --> 00:07:19.000
+El futuro rover de Marte utilizará una especie de inteligencia artificial llamada
+
+90
+00:07:19.000 --> 00:07:25.000
+restricción de la propagación o la capacidad de elegir y coordinar tareas conflictivas.
+
+91
+00:07:26.000 --> 00:07:31.000
+La inteligencia artificial es la clave de muchos de los últimos proyectos informáticos de la NASA.
+
+92
+00:07:31.000 --> 00:07:36.000
+La gran influencia en el diseño de la nave espacial del futuro. Aquí en
+
+93
+00:07:36.000 --> 00:07:41.000
+AIM como diría alrededor de dos tercios de nuestro trabajo es bastante básico avanzar el estado de
+
+94
+00:07:41.000 --> 00:07:45.001
+El arte en la inteligencia artificial y alrededor de un tercio son aplicaciones impulsadas. Así
+
+95
+00:07:45.001 --> 00:07:50.000
+Nuestros proyectos abarcan de muy básica investigación científica fundamental en artificial
+
+96
+00:07:50.000 --> 00:07:54.000
+Inteligencia en campos como el aprendizaje de máquina y el conocimiento de planificación de máquina
+
+97
+00:07:54.000 --> 00:08:00.000
+la adquisición y así sucesivamente a algunas aplicaciones bastante detalladas a corto plazo de las
+
+98
+00:08:00.000 --> 00:08:06.000
+Tecnología para las misiones actuales. Los controladores de misión serán entre los primeros en
+
+99
+00:08:06.000 --> 00:08:10.001
+beneficiarse de una interfaz de ordenador avanzada como los terminales antiguos basados en texto son
+
+100
+00:08:10.001 --> 00:08:15.001
+reemplazado por monitores gráficos, pero los nuevos terminales harán más que sólo
+
+101
+00:08:15.001 --> 00:08:18.000
+Mostrar información en un estilo de lectura.
+
+102
+00:08:18.001 --> 00:08:23.000
+Son asistentes inteligentes que utilizan un sistema experto para procesar y
+
+103
+00:08:23.000 --> 00:08:24.001
+Análisis de datos telemétricos.
+
+104
+00:08:25.001 --> 00:08:30.000
+Los controladores luego reciben una clara representación visual de la nave espacial.
+
+105
+00:08:30.000 --> 00:08:36.000
+Sistemas críticos y problemas potenciales. La NASA espera ampliar el alcance de los expertos
+
+106
+00:08:36.000 --> 00:08:41.001
+sistemas para cubrir la shuttle y una futura estación espacial. Actualmente Shuttle
+
+107
+00:08:41.001 --> 00:08:46.001
+-Los experimentos científicos basados deben ser llevados a cabo por astronautas especialmente entrenados.
+
+108
+00:08:46.001 --> 00:08:50.000
+O los datos son devueltos a la Tierra para el análisis.
+
+109
+00:08:51.000 --> 00:08:57.000
+Actualmente estamos en una situación en la que los miembros de la tripulación no tienen la oportunidad de aprender
+
+110
+00:08:57.000 --> 00:09:01.001
+Ciertamente lo suficiente sobre el tipo de ciencia que están haciendo. Estamos en una situación
+
+111
+00:09:01.001 --> 00:09:07.000
+donde la mayoría de los experimentos son relativamente cortos, donde los datos se recogen en un
+
+112
+00:09:07.000 --> 00:09:09.000
+Modo automático y llevado de nuevo a la Tierra para análisis posteriores.
+
+113
+00:09:09.001 --> 00:09:14.001
+Nos gustaría experimentar con ayudar a la tripulación a convertirse en más como científicos reactivos
+
+114
+00:09:14.001 --> 00:09:19.001
+Sería en el suelo. Uno de los primeros experimentos asistidos por expertos se llama
+
+115
+00:09:19.001 --> 00:09:25.000
+SHOOT para super fluido, helio, transferencia orbital a bordo. El proyecto de disparo es
+
+116
+00:09:25.000 --> 00:09:30.000
+Se ha desarrollado en el Centro de Investigación de Ames en California para probar la viabilidad de
+
+117
+00:09:30.000 --> 00:09:32.001
+satélites con helio líquido.
+
+118
+00:09:34.000 --> 00:09:37.001
+En el fondo el software SHOOT funciona en un Macintosh 2 con una
+
+119
+00:09:37.001 --> 00:09:39.001
+Interfaz gráfica característica.
+
+120
+00:09:40.000 --> 00:09:45.001
+A bordo de la estación espacial, los astronautas verán una pantalla simplificada en un laptop
+
+121
+00:09:45.001 --> 00:09:49.001
+El ordenador. El sistema basado en el conocimiento será responsable de la
+
+122
+00:09:49.001 --> 00:09:52.000
+Control y diagnóstico del experimento.
+
+123
+00:09:53.001 --> 00:09:59.000
+Los astronautas tendrán acceso a ayuda en tiempo real en la resolución de problemas basada en consejos
+
+124
+00:09:59.000 --> 00:10:05.000
+de los diseñadores del experimento. La inteligencia artificial también se encuentra
+
+125
+00:10:05.000 --> 00:10:10.000
+aplicaciones en el proceso de diseño donde la creatividad acumulada de los ingenieros
+
+126
+00:10:10.000 --> 00:10:13.001
+Por lo general, se pierde una vez que se ha terminado un proyecto.
+
+127
+00:10:14.000 --> 00:10:19.000
+Un grupo de investigación en Ames está creando un notebook electrónico con el objetivo de
+
+128
+00:10:19.000 --> 00:10:24.001
+Conservar el método utilizado por un ingeniero para lograr un diseño exitoso. Basado
+
+129
+00:10:24.001 --> 00:10:30.000
+en el software VMAX de la Performing Graphics Company, el notebook con una memoria
+
+130
+00:10:30.000 --> 00:10:35.001
+puede analizar un dibujo y recomendar alternativas utilizando el conocimiento acumulado
+
+131
+00:10:35.001 --> 00:10:42.000
+Los diseños exitosos anteriores. Experimentos de la NASA con inteligencia artificial
+
+132
+00:10:42.000 --> 00:10:48.000
+todavía están en una etapa muy temprana, pero los científicos del proyecto no ven falta de práctica
+
+133
+00:10:48.000 --> 00:10:53.001
+las aplicaciones. La NASA cuenta con las aplicaciones de largo alcance más interesantes
+
+134
+00:10:53.001 --> 00:10:57.001
+La ciencia que nos gustaría ver. Creo que es realmente un golpe para poder trabajar
+
+135
+00:10:57.001 --> 00:11:02.000
+sobre las cosas sobre software que eventualmente podría aparecer dentro de nuestras vidas en un Marte
+
+136
+00:11:02.000 --> 00:11:07.000
+Por ejemplo, el rover. Creo que sabemos lo suficiente sobre lo que viene y se ha hecho
+
+137
+00:11:07.000 --> 00:11:11.001
+las personas que están diseñando esas cosas lo suficientemente conscientes de que como aplicación spin
+
+138
+00:11:11.001 --> 00:11:14.000
+-Después ocurren que tenemos un tiro real en llevarlos a esas misiones.
+
+139
+00:11:25.001 --> 00:11:30.000
+Cuando piensas en los ordenadores en el espacio tiendes a pensar en las enormes cantidades de
+
+140
+00:11:30.000 --> 00:11:34.001
+energía de ordenador que se necesita para lanzar un foguete o para poner un satélite en órbita o para
+
+141
+00:11:34.001 --> 00:11:39.000
+Hacer los cálculos complejos necesarios para una cita. Pero aquí en el Goddard de la NASA
+
+142
+00:11:39.000 --> 00:11:43.001
+Space Flight Center fuera de Washington usan su poder informático para no conseguir
+
+143
+00:11:43.001 --> 00:11:47.001
+en el espacio, pero para gestionar las masivas cantidades de información que vuelven de
+
+144
+00:11:47.001 --> 00:11:54.001
+El espacio. Hasta el momento, la NASA ha volado más de 300 misiones espaciales y todo lo que la investigación tiene
+
+145
+00:11:54.001 --> 00:12:01.000
+Esto ha llevado a toneladas de datos, en realidad, más de 125.000 tapas de ordenador. El tamaño actual de la
+
+146
+00:12:01.000 --> 00:12:05.001
+La base de datos de la NASA es de seis terabytes y se espera que el tamaño de la base de información
+
+147
+00:12:05.001 --> 00:12:07.000
+duplicarse cada dos años.
+
+148
+00:12:07.001 --> 00:12:12.000
+Así que el primer trabajo para los ordenadores en la NASA fue gestionar la inmensa cantidad de
+
+149
+00:12:12.000 --> 00:12:16.001
+información generada por el programa espacial. Hace diez años, la moda de
+
+150
+00:12:16.001 --> 00:12:21.001
+operación fue si necesitas archivar los datos en el centro de datos que basicamente
+
+151
+00:12:21.001 --> 00:12:28.000
+desembocó con un camión que cayó de sus cajas de datos y luego teníamos el
+
+152
+00:12:28.000 --> 00:12:33.000
+trabajo de abrir cada cuadro individual tomando los impresos y de
+
+153
+00:12:33.000 --> 00:12:36.000
+La imprenta derivó la información que necesitamos para gestionar la
+
+154
+00:12:36.000 --> 00:12:38.000
+datos sobre una base individual.
+
+155
+00:12:38.000 --> 00:12:43.001
+Lo que está sucediendo ahora, por supuesto, la tecnología de la óptica de fibra y la alta velocidad
+
+156
+00:12:43.001 --> 00:12:48.001
+Las redes nos permiten obtener esos datos de forma electrónica. Pero con una base de datos
+
+157
+00:12:48.001 --> 00:12:53.001
+este tamaño y con los usuarios dispersos en todo el mundo el verdadero desafío del software
+
+158
+00:12:53.001 --> 00:12:58.000
+que no sólo aceleró el proceso de acceso a la información, sino que creó una
+
+159
+00:12:58.000 --> 00:13:02.001
+Interfaz de usuario que podría gestionar una gran variedad de necesidades. La respuesta fue una
+
+160
+00:13:02.001 --> 00:13:06.001
+Sistema de gestión de bases de datos con una gran dosis de inteligencia artificial es
+
+161
+00:13:06.001 --> 00:13:13.000
+que se llama IDM. Esto es completamente oculto del usuario cualquier conocimiento que tiene que tener.
+
+162
+00:13:13.000 --> 00:13:17.001
+sobre la estructura interna de la base de datos o cualquier información cualquier conocimiento
+
+163
+00:13:17.001 --> 00:13:23.001
+que necesita en relación con la solicitud efectiva de los datos establecidos y que discute o
+
+164
+00:13:23.001 --> 00:13:30.000
+Conversa con este inteligente frente final en inglés. En la actualidad he visto
+
+165
+00:13:30.000 --> 00:13:36.000
+una sesión para la que puedes sentarte y hablar con esta inteligente gestión de datos
+
+166
+00:13:36.000 --> 00:13:41.000
+interfaz que generará todas sus preguntas en realidad lo he visto a veces en
+
+167
+00:13:41.000 --> 00:13:44.001
+Sólo unas pocas frases puede preguntarle un cierto conjunto de preguntas para las que
+
+168
+00:13:44.001 --> 00:13:49.001
+generar cien líneas de código y eso es lo que se emite a la base de datos
+
+169
+00:13:49.001 --> 00:13:53.000
+La máquina de gestión y luego los resultados son devueltos. Uno de los más populares
+
+170
+00:13:53.000 --> 00:13:59.000
+Las bases de datos de la NASA son TUMS, el espectrómetro de mapa de ozono total. Esta base de datos no
+
+171
+00:13:59.000 --> 00:14:03.001
+Sólo proporciona datos pero maravillosas imágenes gráficas del agujero que crece en la Tierra
+
+172
+00:14:03.001 --> 00:14:08.001
+La capa de ozono. En estas imágenes del satélite meteorológico Nimbus 7 de la NASA se puede ver
+
+173
+00:14:08.001 --> 00:14:14.000
+en azul la franja en la capa de ozono de la Tierra sobre el polo sur. Estos procesados
+
+174
+00:14:14.000 --> 00:14:20.000
+Las imágenes utilizan color y forma para dramatizar aún más el problema de ozono. Este terminal
+
+175
+00:14:20.000 --> 00:14:25.000
+se accede a imágenes de IRIS el satélite astronómico infrarrojo. Se utiliza
+
+176
+00:14:25.000 --> 00:14:30.000
+manipulación compleja de la imagen para mostrar una visión invertida de la galaxia para estudiar
+
+177
+00:14:30.000 --> 00:14:33.000
+las estrellas y sus radiaciones infrarrojas.
+
+178
+00:14:34.000 --> 00:14:38.000
+El Centro de Datos de la Ciencia Espacial de la NASA es una red enorme con unos 13
+
+179
+00:14:38.000 --> 00:14:39.001
+miles de terminales en todo el mundo.
+
+180
+00:14:40.000 --> 00:14:44.001
+Es una red relativamente abierta y por lo tanto hay preocupación estos días sobre el
+
+181
+00:14:44.001 --> 00:14:49.001
+Los daños que podrían hacerse a la red por un virus informático. Los virus como nuestro
+
+182
+00:14:49.001 --> 00:14:52.001
+La nueva tecnología informática es un hecho de la vida.
+
+183
+00:14:53.001 --> 00:15:00.001
+Tenemos que y hemos examinado nuestros sistemas para examinar dónde nuestros
+
+184
+00:15:00.001 --> 00:15:06.001
+Los agujeros de software o cualquier cosa que permita que un virus crezca y se propaga
+
+185
+00:15:06.001 --> 00:15:13.001
+y basado en nuestro conocimiento de que hemos tomado acciones que eso todavía está en línea
+
+186
+00:15:13.001 --> 00:15:16.000
+con lo que llamamos ese nivel aceptable de seguridad.
+
+187
+00:15:16.001 --> 00:15:22.000
+Este equilibrio entre la facilidad de uso y la dificultad de entrar en el sistema.
+
+188
+00:15:22.000 --> 00:15:26.001
+La otra preocupación evidente de la NASA es la seguridad. Una de sus bases de datos se llama
+
+189
+00:15:26.001 --> 00:15:31.001
+SPAN, la Red de Análisis de Física Espacial, se ha rompido recientemente por algunos
+
+190
+00:15:31.001 --> 00:15:36.001
+Hackers pero Jim Green dice que no está demasiado preocupado. España es una red que tiene
+
+191
+00:15:36.001 --> 00:15:43.000
+existió ahora por alrededor de nueve años y incluso en los primeros años de los ochenta tuvimos individuos
+
+192
+00:15:43.000 --> 00:15:49.001
+que hacían hacking o acceso no autorizado a las máquinas que
+
+193
+00:15:49.001 --> 00:15:56.000
+Recursos federales. Desde hace muchos años se ha desarrollado una estructura que permita
+
+194
+00:15:56.000 --> 00:16:00.001
+detección de los accesos no autorizados, la recopilación de información y
+
+195
+00:16:00.001 --> 00:16:05.000
+Esta información se transmite a las autoridades competentes. Así que el mensaje es
+
+196
+00:16:05.000 --> 00:16:10.000
+Puedes romper, pero también vas a ser capturado. Uno de los más complejos de la NASA
+
+197
+00:16:10.000 --> 00:16:14.001
+Los satélites deberán ser lanzados a finales de 1989. Se llama el espacio Hubble.
+
+198
+00:16:14.001 --> 00:16:19.000
+El Telescopio. El satélite es el tamaño de un autobús Greyhound y será el más grande.
+
+199
+00:16:19.000 --> 00:16:24.001
+un observatorio sofisticado que se ha puesto nunca en el espacio, pero a pesar de su sofisticación su
+
+200
+00:16:24.001 --> 00:16:26.000
+El poder de la computadora es mínimo.
+
+201
+00:16:27.000 --> 00:16:32.000
+De hecho, hay dos pequeñas computadoras a bordo, ambos utilizando muy
+
+202
+00:16:32.000 --> 00:16:38.001
+tecnología antigua según los estándares populares y la razón por la cual es que es
+
+203
+00:16:38.001 --> 00:16:45.001
+tan caro para calificar el equipo para el vuelo espacial que esto lleva mucho tiempo
+
+204
+00:16:45.001 --> 00:16:52.001
+El tiempo y los avances en la tecnología de la computadora se mueven mucho más rápido que nuestro
+
+205
+00:16:52.001 --> 00:16:59.000
+Capacidad de calificar las cosas para el vuelo. El equipo que tenemos a bordo fue seleccionado.
+
+206
+00:16:59.000 --> 00:17:06.000
+cuando el proyecto comenzó a finales de los años 70 y ese equipo había sido
+
+207
+00:17:06.000 --> 00:17:11.001
+espacio calificado antes de eso para que sea realmente un tipo de temprano
+
+208
+00:17:11.001 --> 00:17:18.001
+1970s finales de 1960s tecnología que estamos volando. Esto significa que el propio satélite
+
+209
+00:17:18.001 --> 00:17:25.000
+No muy inteligente. El único tipo de decisión que toma por sí misma es
+
+210
+00:17:25.000 --> 00:17:31.001
+Si detecta que se está desestabilizando y se está inclinando hacia el sol, entonces
+
+211
+00:17:31.001 --> 00:17:34.001
+se hará una acción protectora, porque si se
+
+212
+00:17:34.001 --> 00:17:36.000
+Mirando al sol, se destruiría.
+
+213
+00:17:36.000 --> 00:17:42.001
+Pero a excepción de las preocupaciones de seguridad extremas como que todo está predeterminado
+
+214
+00:17:42.001 --> 00:17:47.000
+Pre-direcionado desde el suelo. La buena noticia es que los ordenadores están a bordo.
+
+215
+00:17:47.000 --> 00:17:52.001
+El telescopio espacial o HST son modulares. Todos los subsistemas principales están compuestos por
+
+216
+00:17:52.001 --> 00:17:57.000
+Plug-in las cajas negras para que puedan ser actualizadas algún día. Esta es la primera
+
+217
+00:17:57.000 --> 00:18:03.000
+satélite que ha sido diseñado desde el día uno para ser servible en órbita y así
+
+218
+00:18:03.000 --> 00:18:09.000
+mientras estamos empezando con un ordenador que ya es viejo como los nuevos ordenadores
+
+219
+00:18:09.000 --> 00:18:15.001
+ser calificados seremos capaces de tomarlos y dejar los astronautas tomarlos
+
+220
+00:18:15.001 --> 00:18:20.001
+y reemplazar los ordenadores con nuevas versiones actualizadas. Mientras que la computación
+
+221
+00:18:20.001 --> 00:18:25.001
+la potencia a bordo del HST puede no ser mucho ahora el sistema de control terrestre es el
+
+222
+00:18:25.001 --> 00:18:30.001
+El sistema informático más sofisticado que se ha montado para un satélite y un
+
+223
+00:18:30.001 --> 00:18:34.001
+Las características del centro de control de operaciones del telescopio espacial son su énfasis en
+
+224
+00:18:34.001 --> 00:18:41.001
+Hardware no específico. Este es el primer satélite que conozco.
+
+225
+00:18:41.001 --> 00:18:47.001
+que se ha confiado tanto no sólo en la potencia del ordenador sino en una base de datos
+
+226
+00:18:47.001 --> 00:18:54.001
+Concepto de gestión. Todas las variables que sabemos de lo que tenemos
+
+227
+00:18:54.001 --> 00:19:00.001
+control sobre y puede querer que los cambios se mantengan en una base de datos grande
+
+228
+00:19:00.001 --> 00:19:07.000
+y en lugar de construir en parámetros en hardware
+
+229
+00:19:07.000 --> 00:19:13.000
+o en la capacidad operativa, todo el satélite está basicamente en la base de datos.
+
+230
+00:19:13.001 --> 00:19:17.000
+El mayor problema informático que enfrenta el proyecto del telescopio espacial es el
+
+231
+00:19:17.000 --> 00:19:21.001
+cantidad masiva de datos crudos que tienen que ser enviados a la Tierra y un megabyte
+
+232
+00:19:21.001 --> 00:19:26.000
+límite de la ancho de banda disponible para la transmisión de dichos datos. Vamos a ser forzados
+
+233
+00:19:26.000 --> 00:19:33.000
+para realizar el procesamiento de datos onboard y devolver sólo los datos analizados
+
+234
+00:19:33.000 --> 00:19:38.000
+datos en lugar de los datos primos. Esto será un tipo de agonizador para
+
+235
+00:19:38.000 --> 00:19:42.001
+Los científicos se enfrentan. Los científicos siempre quieren mirar sus datos crudos y ver
+
+236
+00:19:42.001 --> 00:19:49.000
+todas las niñas y todas las imperfecciones y tratarlas por sí mismas, pero no
+
+237
+00:19:49.000 --> 00:19:53.001
+tener el ancho de banda en las comunicaciones para que sea posible en el
+
+238
+00:19:53.001 --> 00:19:58.001
+El futuro. Así que una de las primeras cosas que me gustaría ser un VACS en un chip
+
+239
+00:19:58.001 --> 00:20:02.001
+Dijo que era un espacio cualificado que yo podía poner allí. Si hay una
+
+240
+00:20:02.001 --> 00:20:07.000
+sobrecargar el tema del ordenador en la NASA es esta necesidad para obtener más de la computadora
+
+241
+00:20:07.000 --> 00:20:11.000
+poder en el espacio en lugar de en el suelo. Es quizás uno de los problemas
+
+242
+00:20:11.000 --> 00:20:15.001
+en el programa FTS donde los ingenieros de la NASA están diseñando casi el más del mundo
+
+243
+00:20:15.001 --> 00:20:21.000
+Robótica del servicio de telerobotico de vuelo. La NASA tiene que lanzar su
+
+244
+00:20:21.000 --> 00:20:27.000
+El proyecto más ambicioso jamás en 1991 es su primera estación espacial jamás llena y
+
+245
+00:20:27.000 --> 00:20:31.000
+Hay sólo una manera de hacer que el envío hasta el espacio en piezas y unirlo en
+
+246
+00:20:31.000 --> 00:20:36.000
+orbita y hay sólo una manera práctica de hacer esto con los robots y eso significa
+
+247
+00:20:36.000 --> 00:20:40.000
+Mucho de poder informático. Hace cinco años no habríamos podido hacer mucho
+
+248
+00:20:40.000 --> 00:20:46.000
+muy significativa interpretación en el reino de los robots pero los ordenadores disponibles
+
+249
+00:20:46.000 --> 00:20:51.000
+Ahora son capaces de introducir todos los datos necesarios para que el robot pueda hacer mucho
+
+250
+00:20:51.000 --> 00:20:56.000
+trabajo significativo y otras palabras que puede introducir en tiempo real percepción sensorial
+
+251
+00:20:56.000 --> 00:21:00.000
+Ver las entradas de vídeo de las cámaras montando en el robot wrist force torque
+
+252
+00:21:00.000 --> 00:21:07.000
+los sensores montados para que pueda obtener fuerza reflejada o datos significativos que vuelven
+
+253
+00:21:07.000 --> 00:21:11.000
+de más de una fuente para que no sólo para controlar el robot para que el robot pueda
+
+254
+00:21:11.000 --> 00:21:16.000
+control de sí mismo. La energía informática es necesaria no sólo para conducir los robots, sino también
+
+255
+00:21:16.000 --> 00:21:21.000
+para crear modelos de simulación gráfica para que los problemas de los robots puedan ser resueltos antes
+
+256
+00:21:21.000 --> 00:21:25.001
+que ocurren. Ahora somos capaces de hacer simulaciones gráficas de lo que el robot
+
+257
+00:21:25.001 --> 00:21:29.001
+Se hará como función. Se puede ver la capacidad general de donde el
+
+258
+00:21:29.001 --> 00:21:33.001
+El robot puede llegar a donde la iluminación debe estar donde el ángulo de la cámara debe estar
+
+259
+00:21:33.001 --> 00:21:37.001
+donde el operador estaría en relación con el robot antes de que nunca comience a
+
+260
+00:21:37.001 --> 00:21:42.001
+Encontrarlo y, por ejemplo, la bahía de shuttle. Nosotros y estos no somos estos gráficos
+
+261
+00:21:42.001 --> 00:21:46.000
+las representaciones son matemáticamente precisas son de hecho modelos y usted puede
+
+262
+00:21:46.000 --> 00:21:49.001
+ver cuando el robot puede o no puede alcanzar una cosa cuando podría anular alcanzar un
+
+263
+00:21:49.001 --> 00:21:54.000
+singularidad en su capacidad de llegar a algún lugar y luego se movería una cosa o
+
+264
+00:21:54.000 --> 00:21:57.001
+el otro antes de que alguna vez llegues allí y descubras que tienes una confrontación con
+
+265
+00:21:57.001 --> 00:22:02.000
+Un problema que no puedes resolver. Esta simulación utilizando el software de gráficos de silicón es
+
+266
+00:22:02.000 --> 00:22:06.000
+ayudar a los ingenieros de ordenador aquí diseñar este robot de gantry para ser utilizado en
+
+267
+00:22:06.000 --> 00:22:10.000
+Construcción de componentes principales de la estación espacial. Tiene seis grados de libertad.
+
+268
+00:22:10.000 --> 00:22:14.001
+y puede elevar hasta cuatro mil libras y colocarlo con una precisión de un
+
+269
+00:22:14.001 --> 00:22:19.000
+10 de un pulgón. Es el robot gantry más sofisticado del país hasta ahora
+
+270
+00:22:19.000 --> 00:22:23.000
+Todo el trabajo de investigación robótica que ha pasado antes no es mucho ayuda
+
+271
+00:22:23.000 --> 00:22:24.001
+Con el diseño de este robot.
+
+272
+00:22:25.000 --> 00:22:28.000
+En primer lugar, su escenario entero no puede depender de la gravedad normalmente usted simplemente pone
+
+273
+00:22:28.000 --> 00:22:31.000
+Algo en conjunto gravedad te ayudaría a atraerlo juntos. Cuando usted pone
+
+274
+00:22:31.000 --> 00:22:34.001
+Algo juntos en el espacio cuando lo toca, sólo lo rechaza. Si usted tuviera una
+
+275
+00:22:34.001 --> 00:22:37.001
+gripe que no cerró alrededor de algo y que iba a dejarlo ir
+
+276
+00:22:37.001 --> 00:22:42.000
+De hecho, sería un proyectil si tenía algún impulso en absoluto. Y todas las cosas que somos
+
+277
+00:22:42.000 --> 00:22:46.001
+que se enfrentan de esta manera requieren hardware específico orientado al espacio y
+
+278
+00:22:46.001 --> 00:22:52.000
+Los defectores y los grippers las cosas que se usan en la tierra simplemente no serán significativas. Eva
+
+279
+00:22:52.000 --> 00:22:57.000
+La actividad extravehicular es la actividad más costosa y arriscada en el espacio.
+
+280
+00:22:57.000 --> 00:23:01.000
+Los ingenieros aquí están creando este robot para extender el alcance de los astronautas
+
+281
+00:23:01.000 --> 00:23:06.001
+sus propias manos y brazos. Este elegante robot tiene siete grados de libertad en cada brazo
+
+282
+00:23:06.001 --> 00:23:11.000
+es tele operado por un astronauta, ya sea a bordo de la nave espacial o incluso desde
+
+283
+00:23:11.000 --> 00:23:15.001
+El suelo . Pero aquí, de nuevo, el mayor desafío del ordenador es encontrar el ordenador
+
+284
+00:23:15.001 --> 00:23:20.001
+potencia y fiabilidad para que la capacidad de procesamiento real esté en el espacio
+
+285
+00:23:20.001 --> 00:23:25.001
+Y no en el suelo. Si usted tuvo terribles retrasos de tiempo entre el espacio y el suelo
+
+286
+00:23:25.001 --> 00:23:30.001
+te gustaría enviar una tarea de alto nivel encontrar la caja y moverla y luego la
+
+287
+00:23:30.001 --> 00:23:35.000
+Los robots tendrían que tener el poder computacional para decidir lo que significaba cómo
+
+288
+00:23:35.000 --> 00:23:39.001
+planear la tarea como planearía el camino a la realización de la tribu y la computación
+
+289
+00:23:39.001 --> 00:23:43.000
+poder entonces tendrían que residir en el espacio para que eliminaran el tiempo
+
+290
+00:23:43.000 --> 00:23:48.000
+retrasas si de hecho estuvieras en el espacio y estuviste tele operando el robot entonces
+
+291
+00:23:48.000 --> 00:23:52.000
+estaría justo en la proximidad con el robot y la potencia computacional también podría ser
+
+292
+00:23:52.000 --> 00:23:56.000
+con el individuo dice en la tele de la shuttle que lo opera y el robot en la derecha
+
+293
+00:23:56.000 --> 00:23:59.001
+fuera de la bahía de shuttle o incluso en la estación espacial. A pesar de la masiva
+
+294
+00:23:59.001 --> 00:24:03.001
+poderes de ordenador acumulados en el Centro Espacial Goddard con sus numerosos mainframes y
+
+295
+00:24:03.001 --> 00:24:07.001
+minis los diseñadores de sistemas aquí saben que para cualquier sistema informático que sea
+
+296
+00:24:07.001 --> 00:24:11.001
+funcionales en estos días tiene que trabajar en el nuevo entorno del personal
+
+297
+00:24:11.001 --> 00:24:17.001
+El ordenador. Así que lo que estamos tratando de hacer es adaptar a ese entorno los sistemas
+
+298
+00:24:17.001 --> 00:24:23.000
+Nosotros, por sí mismos, vamos mucho más allá de lo que el procesamiento
+
+299
+00:24:23.000 --> 00:24:28.000
+capacidades de un ordenador personal pero seguramente vemos que ese es el usuario
+
+300
+00:24:28.000 --> 00:24:32.000
+La interfaz y nuestro cliente final es el único que se sienta
+
+301
+00:24:32.000 --> 00:24:33.001
+en su ordenador personal.
+
+302
+00:24:44.000 --> 00:24:50.000
+En el archivo de acceso aleatorio esta semana Lotus ha comenzado a enviar 123G el más reciente
+
+303
+00:24:50.000 --> 00:24:54.000
+versión de su programa de hoja de espalda diseñado para el gestor de presentación de OS2
+
+304
+00:24:54.000 --> 00:24:59.000
+El medio ambiente. 123G presenta una herramienta gráfica con una serie de nuevas capacidades gráficas, incluyendo
+
+305
+00:24:59.000 --> 00:25:04.001
+una galería de tipos de gráficos utilizados en una interfaz de usuario basada en iconos. 123G también tiene características
+
+306
+00:25:04.001 --> 00:25:09.000
+Un entorno de ventana WYSIWYG. La escena fue San Diego, no Hollywood, sino el
+
+307
+00:25:09.000 --> 00:25:13.000
+Las apuestas fueron tan altas como la asociación de editores de software entregó su
+
+308
+00:25:13.000 --> 00:25:17.000
+La excelencia anual en el software otorga la versión informática de un Oscar. El
+
+309
+00:25:17.000 --> 00:25:21.001
+El ganador más grande fue un juego SimCity de Maxis que ganó los premios más altos por el mejor
+
+310
+00:25:21.001 --> 00:25:26.000
+Programa de simulación Mejor programa de entretenimiento y Mejor currículum ganadores
+
+311
+00:25:26.000 --> 00:25:30.001
+en la categoría de software de negocios incluidos Lotus Notes y Lotus Magellan Quattro
+
+312
+00:25:30.001 --> 00:25:35.000
+El ganador de Pro y ThinkSee por el mejor programa de productividad personal fue Quicken
+
+313
+00:25:35.000 --> 00:25:40.000
+donde en el tiempo es Carmen Sandiego ganó por el mejor programa de aprendizaje en casa el mejor
+
+314
+00:25:40.000 --> 00:25:44.000
+El premio de logros técnicos fue a RealSound de Access Software y el mejor
+
+315
+00:25:44.000 --> 00:25:48.000
+El premio fue otorgado al software de Hewlett-Packard New Wave Britannica.
+
+316
+00:25:48.000 --> 00:25:52.001
+ha anunciado que su galardonada enciclopedia multimedia de Compton será
+
+317
+00:25:52.001 --> 00:25:57.000
+Con el nuevo Tandy 2500 XL PC. El nuevo ordenador Tandy viene con un
+
+318
+00:25:57.000 --> 00:26:02.000
+Dispone de un CD-ROM interno. La enciclopedia de Compton contiene el total de 26 volúmenes.
+
+319
+00:26:02.000 --> 00:26:07.000
+Enciclopedia de impresión + 15.000 fotos 60 minutos de sonido y una búsqueda y
+
+320
+00:26:07.000 --> 00:26:12.000
+Función de recuperación todos en un CD-ROM de cinco pulgadas. Ver el mejor de esta semana
+
+321
+00:26:12.000 --> 00:26:16.000
+venta de software para IBM compatibles según PC Connection hay un nuevo
+
+322
+00:26:16.000 --> 00:26:21.000
+El programa número uno esta semana amplió el gerente de memoria 386 desde el número de QuarterDeck
+
+323
+00:26:21.000 --> 00:26:26.000
+También hay dos de QuarterDeck Q-RAM. TurboTax cae al número tres seguido de
+
+324
+00:26:26.000 --> 00:26:31.000
+Otro producto de QuarterDeck DespView 386 y WordPerfect en el top 10
+
+325
+00:26:31.000 --> 00:26:37.001
+son Microsoft Windows 286, Quicken, PC Globe, Andrew Tobias&#x27;s tax cut y ProCom
+
+326
+00:26:37.001 --> 00:26:42.000
+y más. Microlytics ha anunciado un nuevo producto de software llamado Inside Information.
+
+327
+00:26:42.001 --> 00:26:46.000
+Es un diccionario hacia atrás y está siendo tomado como el primer nuevo
+
+328
+00:26:46.000 --> 00:26:49.001
+sistema de clasificación para el idioma inglés desde que Roget desarrolló el sistema de
+
+329
+00:26:49.001 --> 00:26:54.000
+Tesaurus hace cien años. Con la información interior que escribe en una definición
+
+330
+00:26:54.000 --> 00:26:59.000
+Y el programa viene con palabras que satisfacen esa definición. Finalmente los datos
+
+331
+00:26:59.000 --> 00:27:02.001
+Desk ha llegado con un nuevo teclado de ordenador que tiene módulos móviles separados
+
+332
+00:27:02.001 --> 00:27:07.000
+para el tipógrafo se divide la tecla numérica y las claves del cursor para que las manos izquierdas
+
+333
+00:27:07.000 --> 00:27:11.001
+Por ejemplo, puede colocar el teclado y los cursores en el lado izquierdo del teclado. datos
+
+334
+00:27:11.001 --> 00:27:14.001
+Desk dice que también saldrán con una bola de pista modular para su
+
+335
+00:27:14.001 --> 00:27:17.001
+El teclado se llama el switchboard. Eso es para esto
+
+336
+00:27:17.001 --> 00:27:19.001
+Crónicas de la semana Yo soy María Gabriel.
+
+337
+00:27:21.000 --> 00:27:25.001
+Las crónicas de ordenador se hacen posibles en parte por CompuServe que ofrece
+
+338
+00:27:25.001 --> 00:27:30.001
+Información en línea relacionada con el tema de hoy. Los miembros de los tipos Go Chronicles. No
+
+339
+00:27:30.001 --> 00:27:32.000
+Los miembros piden más información.
+
+340
+00:27:32.000 --> 00:27:37.000
+El financiamiento adicional se proporciona por la Asociación de Publishers de Software, por PC
+
+341
+00:27:37.000 --> 00:27:41.001
+Connection y Mac Connection, por Byte Magazine y VIX la información de Byte
+
+342
+00:27:41.001 --> 00:27:47.000
+Intercambio y por Intel Corporation Personal Computer Enhancement. Para una transcripción
+
+343
+00:27:47.000 --> 00:27:52.000
+de esta semana Computer Chronicles envían cuatro dólares a PTV Publications, Post
+
+344
+00:27:52.000 --> 00:27:57.001
+Oficina 701 Kent, Ohio 44240. Por favor indique la fecha del programa.
+
+345
+00:28:32.000 --> 00:28:38.001
+Gracias a ustedes.
