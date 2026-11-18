@@ -1,0 +1,1945 @@
+WEBVTT
+
+1
+00:00:23.001 --> 00:00:26.000
+Ini adalah graf otak manusia.
+
+2
+00:00:26.000 --> 00:00:30.000
+Sekarang otak jelas tidak memiliki batas 640k, tetapi itu memiliki yang berbeda
+
+3
+00:00:30.000 --> 00:00:31.001
+Memori yang berbeda di berbagai tempat.
+
+4
+00:00:32.000 --> 00:00:35.001
+Memori jangka pendek, memori jangka panjang, dan untuk mengakses yang berbeda
+
+5
+00:00:35.001 --> 00:00:38.000
+bagian dari ingatan otak, Anda harus melewati sejenis bus
+
+6
+00:00:38.000 --> 00:00:40.000
+yang disebut sistem limbik.
+
+7
+00:00:40.000 --> 00:00:43.001
+Sekarang dengan komputer, itu jauh lebih sederhana meskipun tampaknya lebih rumit.
+
+8
+00:00:44.000 --> 00:00:48.000
+Itu karena aplikasi yang canggih hari ini sering membutuhkan Anda untuk menemukan dan
+
+9
+00:00:48.000 --> 00:00:50.000
+Gunakan semua memori di dalam komputer Anda.
+
+10
+00:00:50.001 --> 00:00:52.000
+Itu tidak selalu hal yang mudah untuk dilakukan.
+
+11
+00:00:52.000 --> 00:00:56.000
+Untuk membantu Anda menemukan cara untuk melakukannya, hari ini kami akan melihat memori tinggi
+
+12
+00:00:56.000 --> 00:00:59.000
+pengelolaan pada edisi ini dari The Computer Chronicles.
+
+13
+00:01:22.000 --> 00:01:25.000
+SBA memberikan informasi tentang bagaimana untuk tetap perangkat lunak legal.
+
+14
+00:01:25.001 --> 00:01:28.000
+Pembiayaan juga disediakan oleh PC Connection dan Mac Connection,
+
+15
+00:01:28.001 --> 00:01:30.000
+dan oleh majalah Bight dan PIX.
+
+16
+00:01:35.001 --> 00:01:39.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafane. Minggu ini saya bersama Tim.
+
+17
+00:01:39.001 --> 00:01:41.001
+Baharan, Wakil Presiden Eksekutif dengan Strategi Kreatif.
+
+18
+00:01:42.000 --> 00:01:42.000
+Sampaikan terima kasih
+
+19
+00:01:42.001 --> 00:01:45.001
+Tim, kita sedang berbicara tentang masalah memori tinggi dan manajemen memori, yang
+
+20
+00:01:45.001 --> 00:01:48.000
+Biasanya di dunia DOS pada masalah 640k.
+
+21
+00:01:48.000 --> 00:01:52.000
+Orang Mac, pengguna Mac memiliki masalah RAM mereka juga, dan kadang-kadang bahkan lebih buruk
+
+22
+00:01:52.000 --> 00:01:55.001
+masalah karena intensitas grafis, kebutuhan memori dari beberapa Mac
+
+23
+00:01:55.001 --> 00:01:58.001
+Aplikasi yang Jika Anda seorang pengguna Mac, berikut adalah solusi yang bagus untuk masalah ini.
+
+24
+00:01:59.000 --> 00:02:02.001
+Berikut adalah Mac 2 dengan 5 megabyte memori saat ini. Menggunakan produk ini disebut
+
+25
+00:02:02.001 --> 00:02:07.001
+Virtual 2.0, saya hanya bisa masuk ke sini dan meletakkan 14 megabyte di Mac di sini.
+
+26
+00:02:07.001 --> 00:02:11.000
+Ini berarti kita dapat menjalankan semua aplikasi ini pada saat yang sama. Hanya untuk
+
+27
+00:02:11.000 --> 00:02:14.000
+buktikan saya benar-benar melakukan itu, Anda dapat melihat kami berada di Excel sekarang dan saya melakukan
+
+28
+00:02:14.000 --> 00:02:16.001
+dan recalculation Jadi Anda melihat Excel benar-benar berjalan.
+
+29
+00:02:17.000 --> 00:02:20.001
+Sementara Excel berjalan, saya bisa masuk ke sini dan katakan, mari kita lihat apa yang
+
+30
+00:02:20.001 --> 00:02:24.000
+berjalan di PageMaker, yang juga naik dan berjalan, makan semua jenis
+
+31
+00:02:24.000 --> 00:02:28.000
+memori pada saat yang sama. Dan di atas itu, pada saat yang sama, saya bisa menjadi
+
+32
+00:02:28.000 --> 00:02:32.000
+menggambarkan pajak saya dengan Macintax menghancurkan angka berat, makan banyak
+
+33
+00:02:32.000 --> 00:02:36.001
+memori yang Dan tidak hanya itu, saya kemudian dapat menarik, katakan, gambar cat pixel ini dari
+
+34
+00:02:36.001 --> 00:02:40.001
+dari Frog. Kebaikan tahu berapa banyak ingatan yang dimakan.
+
+35
+00:02:40.001 --> 00:02:44.001
+Dan kemudian saya juga bisa menjalankan Mathematica, yang tidak akan berjalan pada sebagian besar Mac 2s semua
+
+36
+00:02:44.001 --> 00:02:46.001
+dengan diri sendiri jika kita tidak menambahkan semua kenangan itu.
+
+37
+00:02:47.000 --> 00:02:49.001
+Mari kita kembali ke dunia DOS, namun, yang kita benar-benar akan fokus
+
+38
+00:02:49.001 --> 00:02:51.000
+di atas. Berikan kami pelajaran sejarah yang cepat.
+
+39
+00:02:51.001 --> 00:02:54.000
+Apa penyebab masalah dengan barrier 640K ini?
+
+40
+00:02:54.001 --> 00:02:59.001
+Pada tahun 1979, ketika Intel memperkenalkan 8088, memori yang dapat dialihkan hanya 640K.
+
+41
+00:02:59.001 --> 00:03:05.000
+Ia dibekukan dengan cara itu dengan hanya memori 384K yang digunakan untuk ROM 640K yang dapat diatasi.
+
+42
+00:03:05.000 --> 00:03:09.000
+Dan kemudian, Anda tidak memiliki banyak program intensif yang berat. Sebenarnya, sebagian besar
+
+43
+00:03:09.000 --> 00:03:13.001
+Dari program-program yang hanya menggunakan 100,000 memori dan Anda dapat menggunakan selebihnya untuk RAM.
+
+44
+00:03:14.000 --> 00:03:17.000
+Sebagai hasil langsung dari apa yang terjadi di industri komputer, lebih
+
+45
+00:03:17.000 --> 00:03:21.000
+Sofistikasi, kami memiliki kebutuhan sekarang untuk pergi melebihi 640K.
+
+46
+00:03:21.001 --> 00:03:25.000
+Bahkan, beberapa program menggunakan hampir 640K penuh itu hanya untuk berjalan. Dan begitu pula,
+
+47
+00:03:25.001 --> 00:03:27.001
+Oleh karena itu, Anda harus melihat metode lain.
+
+48
+00:03:27.001 --> 00:03:30.000
+Dalam hal ini, kita akan melihat beberapa perangkat lunak dan perangkat keras lainnya hari ini.
+
+49
+00:03:30.000 --> 00:03:31.001
+Langkah-langkah untuk melewati halangan tersebut.
+
+50
+00:03:31.001 --> 00:03:34.000
+dengan tepat. Kami akan melihat beberapa solusi untuk
+
+51
+00:03:34.000 --> 00:03:36.000
+Mengakses dan mengelola memori tambahan.
+
+52
+00:03:36.001 --> 00:03:39.001
+Kami akan melihat solusi perangkat lunak, solusi perangkat keras, dan kami akan melihat bagaimana
+
+53
+00:03:39.001 --> 00:03:42.001
+Sistem operasi seperti OS2 dapat mengakses hingga satu gigabyte
+
+54
+00:03:42.001 --> 00:03:44.000
+Memori tanpa bantuan luar.
+
+55
+00:03:44.001 --> 00:03:48.000
+Sekarang, seperti Tim menjelaskan, kita membutuhkan produk manajemen memori karena inherent
+
+56
+00:03:48.000 --> 00:03:51.001
+Masalah memori pada prosesor asli Intel 8088.
+
+57
+00:03:51.001 --> 00:03:55.001
+Jadi kita akan memulai dengan kunjungan ke Intel untuk mengetahui lebih lanjut tentang asal-usul
+
+58
+00:03:55.001 --> 00:03:57.000
+dari 640K barrier.
+
+59
+00:03:59.000 --> 00:04:03.000
+Masalah dengan akses lebih banyak memori dimulai dengan pembatasan
+
+60
+00:04:03.000 --> 00:04:05.001
+Memiliki prosesor Intel 8088.
+
+61
+00:04:06.000 --> 00:04:10.000
+Sementara prosesor mengandung lebih dari satu megabyte ruang alamat, hanya 640K
+
+62
+00:04:10.000 --> 00:04:12.000
+Terdapat dua aplikasi yang tersedia.
+
+63
+00:04:12.001 --> 00:04:15.001
+Ruang memori yang tersisa didedikasikan untuk sistem ROM.
+
+64
+00:04:16.001 --> 00:04:19.000
+Bahkan ketika Intel meluncurkan 286 dan 386 yang baru
+
+65
+00:04:19.000 --> 00:04:21.000
+Chip, masalahnya masih tersisa.
+
+66
+00:04:21.000 --> 00:04:26.001
+286 dapat menangani 16 megabyte RAM, dan 386 dapat mengendalikan 4 gigabyte,
+
+67
+00:04:27.000 --> 00:04:30.001
+tetapi keterbatasan perangkat lunak aplikasi yang ada dan kurangnya aplikasi baru
+
+68
+00:04:30.001 --> 00:04:34.000
+lingkungan operasi standar berarti sebagian besar pengguna komputer masih menjalankan
+
+69
+00:04:34.000 --> 00:04:40.001
+286 dan 386 mesin seperti cepat 8088s tanpa mengambil keuntungan dari akses ke
+
+70
+00:04:40.001 --> 00:04:42.000
+Memori yang diperluas dan diperpanjang.
+
+71
+00:04:42.001 --> 00:04:45.000
+Ini disebut menjalankan CPU Anda dalam mode nyata.
+
+72
+00:04:45.000 --> 00:04:50.000
+Untuk mencapai ruang memori di atas satu megabyte, chips 286 dan 386 harus
+
+73
+00:04:50.000 --> 00:04:52.000
+Beroperasi dalam apa yang disebut mode yang dilindungi.
+
+74
+00:04:52.001 --> 00:04:54.000
+Mike Bemis dari Intel menjelaskan.
+
+75
+00:04:54.001 --> 00:04:59.000
+Solusi tipikal untuk melewati rintangan 640K akan menggunakan DOS
+
+76
+00:04:59.000 --> 00:05:04.000
+Extender, dan apa yang memungkinkan Anda untuk melakukannya adalah link di bagian perangkat lunak utilitas
+
+77
+00:05:04.000 --> 00:05:09.000
+dengan aplikasi, dan yang akan menempatkan prosesor ke mode yang dilindungi dan
+
+78
+00:05:09.000 --> 00:05:12.001
+memungkinkan Anda untuk mengakses lebih banyak memori daripada hanya 640K biasa.
+
+79
+00:05:13.000 --> 00:05:17.000
+Tetapi menjalankan PC Anda dalam mode yang dilindungi dapat memiliki masalah sendiri, karena sebagian besar
+
+80
+00:05:17.000 --> 00:05:19.001
+Aplikasi DOS ingin berjalan dalam mode nyata dan dengan demikian
+
+81
+00:05:19.001 --> 00:05:21.000
+Tidak kompatibel dengan mode yang dilindungi.
+
+82
+00:05:21.001 --> 00:05:26.000
+Tampaknya satu solusi sederhana adalah hanya mendapatkan akses ke yang hilang 384K
+
+83
+00:05:26.000 --> 00:05:29.001
+duduk di antara batas 640K DOS dan batas satu megabyte dari
+
+84
+00:05:29.001 --> 00:05:32.000
+prosesor, area yang disebut memori diperluas.
+
+85
+00:05:32.001 --> 00:05:36.001
+Tetapi bahkan itu membutuhkan penyelesaian perangkat lunak yang kompleks, dan Mike Bemis mengatakan itu adalah
+
+86
+00:05:36.001 --> 00:05:40.000
+tidak bernilai usaha dibandingkan dengan manfaat pembukaan memori yang diperpanjang.
+
+87
+00:05:40.000 --> 00:05:43.001
+Perpanjangan, pertama-tama, lebih mudah untuk mengakses. Itu langsung
+
+88
+00:05:43.001 --> 00:05:45.001
+Akses yang Anda tidak memerlukan hardware khusus.
+
+89
+00:05:45.001 --> 00:05:48.001
+Anda tidak membutuhkan driver perangkat lunak khusus yang memungkinkan Anda untuk berbicara melalui
+
+90
+00:05:48.001 --> 00:05:54.001
+kerangka halaman, dan dapat diperpanjang sepanjang jalan hingga empat gigabytes
+
+91
+00:05:54.001 --> 00:05:56.000
+Dalam kasus 386 prosesor.
+
+92
+00:05:57.000 --> 00:06:00.000
+Terlepas dari penambahbaikan dalam pengelolaan memori dari mikroprosesor Intel terbaru,
+
+93
+00:06:01.000 --> 00:06:04.001
+tampaknya solusi terakhir untuk memori akses terletak pada operasi baru
+
+94
+00:06:04.001 --> 00:06:06.000
+Sistem seperti OS2 atau Unix.
+
+95
+00:06:06.001 --> 00:06:09.000
+Untuk Chronicles Computer, saya adalah Maria Gabriel.
+
+96
+00:06:15.000 --> 00:06:15.001
+[...]
+
+97
+00:06:20.001 --> 00:06:24.001
+Salah satu produk perangkat lunak yang paling populer tahun lalu telah diperluas
+
+98
+00:06:24.001 --> 00:06:26.000
+Manajer memori dari QuarterDeck.
+
+99
+00:06:26.001 --> 00:06:28.000
+Dan di sini untuk menunjukkan versi terbaru dari produk adalah
+
+100
+00:06:28.000 --> 00:06:30.000
+Gary Saxer dari QuarterDeck.
+
+101
+00:06:30.001 --> 00:06:35.000
+Dan juga di sini dengan kami untuk menunjukkan 386 Max, versi terbaru adalah Patrick
+
+102
+00:06:35.000 --> 00:06:37.000
+Devlin dari kualitas. dengan tim?
+
+103
+00:06:37.001 --> 00:06:42.000
+Gary, jenis perangkat lunak ini sering dianggap sebagai perangkat switching, dan itu adalah
+
+104
+00:06:42.000 --> 00:06:44.000
+Tentu saja seorang manajer memori.
+
+105
+00:06:44.001 --> 00:06:48.000
+Dapatkah Anda memberi kami gambaran tentang apa contoh pengguna yang mungkin?
+
+106
+00:06:48.001 --> 00:06:51.000
+Contoh terbaik dari itu adalah driver jaringan.
+
+107
+00:06:52.000 --> 00:06:54.001
+Kebanyakan orang ingin memiliki jaringan mereka tersedia sepanjang waktu.
+
+108
+00:06:54.001 --> 00:06:58.000
+Bahkan jika Anda menjalankan lingkungan multitasking seperti Windows atau Deskview, Anda
+
+109
+00:06:58.000 --> 00:07:00.000
+Masih ingin jaringan di sana, semua surat-surat drive di sana.
+
+110
+00:07:00.001 --> 00:07:03.000
+Namun, driver jaringan akan mengambil memori dari Anda.
+
+111
+00:07:03.000 --> 00:07:07.000
+Apa yang Anda ingin lakukan adalah mendapatkan ingatan itu kembali, dan dengan meletakkannya dan mengelola
+
+112
+00:07:07.000 --> 00:07:12.000
+memori antara 640K dan 1024K, dan menggunakan driver jaringan di sana, Anda
+
+113
+00:07:12.000 --> 00:07:15.000
+Kemudian dapatkan lebih banyak memori di bawah 640K untuk program DOS biasa Anda.
+
+114
+00:07:15.000 --> 00:07:18.001
+Baiklah, tunjukkan kepada kami bagaimana Anda akan melakukannya dengan produk QuarterDeck.
+
+115
+00:07:18.001 --> 00:07:22.000
+Kami menggunakan salah satu produk kami yang datang bersama dengan QAMM386 yang disebut Manifest.
+
+116
+00:07:22.001 --> 00:07:24.000
+Hal ini memungkinkan kita untuk berputar di dalam mesin.
+
+117
+00:07:24.001 --> 00:07:27.000
+Di sini Anda dapat melihat, misalnya, itu menunjukkan kepada kita bahwa kita memiliki 539K.
+
+118
+00:07:28.000 --> 00:07:32.000
+Anda dapat melihat saya bergerak tikus sekitar sedikit tepat di sana. Jumlah 539K Selebihnya
+
+119
+00:07:32.000 --> 00:07:34.000
+Memori di bawah 640K dikendalikan oleh DOS
+
+120
+00:07:34.000 --> 00:07:35.001
+Dan hal-hal lain yang dilakukan dua orang.
+
+121
+00:07:36.000 --> 00:07:39.000
+Sekarang di atas 640K, EGA menggunakan beberapa memori.
+
+122
+00:07:40.000 --> 00:07:43.000
+Jika kita memiliki monitor monochrome, itu akan menggunakan spot ini di sini, 32K.
+
+123
+00:07:43.000 --> 00:07:44.000
+Aku tidak punya satu.
+
+124
+00:07:44.001 --> 00:07:48.000
+Kemudian area berikutnya digunakan untuk teks warna, yang adalah apa yang kita lihat,
+
+125
+00:07:48.000 --> 00:07:52.001
+dan area besar berikutnya ini digunakan untuk berbagai ROM, disk ROM, video ROM, dll.
+
+126
+00:07:52.001 --> 00:07:55.000
+Saya hanya memiliki ROM video di sana, jadi saya memiliki area 160K
+
+127
+00:07:55.000 --> 00:07:56.001
+yang tidak digunakan, dan kemudian sistem ROM.
+
+128
+00:07:56.001 --> 00:08:00.001
+Kami juga memiliki beberapa program yang dimuat di bawah 640K, dan itulah cara kami tahu itu.
+
+129
+00:08:00.001 --> 00:08:02.001
+Itulah cara kita tahu bahwa kita memiliki 539K.
+
+130
+00:08:03.000 --> 00:08:07.000
+Jika kita melihat item ini yang disebut Tanda-tanda di sini bahwa Manifest memberi kita, satu
+
+131
+00:08:07.000 --> 00:08:09.000
+Salah satunya adalah menginstal QAMM386.
+
+132
+00:08:10.000 --> 00:08:11.000
+Anda seharusnya tidak terkejut sama sekali.
+
+133
+00:08:11.001 --> 00:08:15.000
+Ide di sini adalah bahwa Manifest membantu Anda menemukan
+
+134
+00:08:15.000 --> 00:08:17.000
+apa yang seharusnya kamu lakukan.
+
+135
+00:08:17.000 --> 00:08:19.001
+Ia memegang tangan Anda, seperti itu, sepanjang jalan.
+
+136
+00:08:20.000 --> 00:08:22.000
+Apa yang perlu kita lakukan sekarang adalah untuk mengelola ingatan itu.
+
+137
+00:08:22.000 --> 00:08:28.001
+QAMM386 akan mengubah memori diperpanjang menjadi memori yang diperpanjang, dan itu juga
+
+138
+00:08:28.001 --> 00:08:30.001
+Ini akan memberi kita pengelolaan RAM yang tinggi.
+
+139
+00:08:31.000 --> 00:08:33.000
+Perhatikan bagaimana peta memori telah berubah sekarang sejak saya memulai ulang.
+
+140
+00:08:33.000 --> 00:08:37.001
+Berikut adalah area grafis EGA, dan area yang belum pernah digunakan ini sekarang RAM tinggi.
+
+141
+00:08:38.000 --> 00:08:41.000
+Dan area ini sekarang muncul tinggi RAM dan halaman frame.
+
+142
+00:08:41.001 --> 00:08:45.000
+Namun, semua program memori resident masih diisi di bawah 640K.
+
+143
+00:08:45.001 --> 00:08:47.000
+Hal ini menimbulkan dilema yang menarik di sini.
+
+144
+00:08:47.000 --> 00:08:51.000
+Kami memiliki driver Magellan dan driver tikus, dll, di sana, dan 537K.
+
+145
+00:08:51.000 --> 00:08:54.000
+Semua benar, jadi kami pergi ke belakang dengan 2K, tetapi kami akan sampai di sana.
+
+146
+00:08:54.001 --> 00:08:57.001
+Perhatikan bahwa kami juga memiliki wilayah 31K dan 96K yang tersedia.
+
+147
+00:08:58.001 --> 00:09:01.000
+Sekarang, kembali ketika mudah untuk mengetahui apa yang harus dilakukan, Anda
+
+148
+00:09:01.000 --> 00:09:02.001
+Ia hanya akan mengisi semuanya di satu tempat yang besar.
+
+149
+00:09:02.001 --> 00:09:06.000
+Kami memiliki program yang disebut Optimize, yang Manifest akan memberi Anda petunjuk dan memberitahu Anda
+
+150
+00:09:06.000 --> 00:09:08.000
+Anda akan berlari di sini, dan saya sedang berlari sekarang.
+
+151
+00:09:08.001 --> 00:09:13.000
+Tugas Optimize adalah untuk melihat ukuran, baik ukuran beban dan penduduk
+
+152
+00:09:13.000 --> 00:09:16.001
+ukuran, dari masing-masing program ini ia dimuat ke dalam memori, dan mengetahui
+
+153
+00:09:16.001 --> 00:09:18.001
+Cara terbaik untuk mengisi program ini.
+
+154
+00:09:19.000 --> 00:09:21.001
+Saya akan mencoba dan menghentikan layar di sini saat ia datang dengan
+
+155
+00:09:21.001 --> 00:09:23.001
+Auto-exec file di sini sehingga Anda dapat melihat.
+
+156
+00:09:23.001 --> 00:09:26.000
+Perhatikan, misalnya, Anda dapat melihat driver tikus di sana, Anda bisa melihat sed
+
+157
+00:09:26.000 --> 00:09:30.001
+pemandu, Anda dapat melihat pemandu keyboard, pemandu Magellan, mereka semua terisi
+
+158
+00:09:30.001 --> 00:09:32.001
+Dalam memori dengan sedikit hal tambahan pada awalnya.
+
+159
+00:09:33.000 --> 00:09:35.000
+Dan kemudian, di sana dekat bagian atas layar, ia mengatakan ia mencoba
+
+160
+00:09:35.000 --> 00:09:37.001
+729 kombinasi yang berbeda.
+
+161
+00:09:37.001 --> 00:09:40.000
+Jadi itu secara harfiah menjalankan percobaan itu untuk melihat apa yang optimal?
+
+162
+00:09:40.000 --> 00:09:42.001
+Ya, ia mengatakan meletakkan driver ANSI di sini dan driver tikus di sini.
+
+163
+00:09:42.001 --> 00:09:44.000
+Nah, itu tidak bekerja sama dengan meletakkan
+
+164
+00:09:44.000 --> 00:09:45.001
+pemandu tikus di sini dan pemandu ANSI di sini.
+
+165
+00:09:45.001 --> 00:09:48.001
+Dan kemudian langkah ketiga adalah, ia sebenarnya keluar dan mencoba.
+
+166
+00:09:48.001 --> 00:09:51.000
+Ini mungkin tidak bekerja, biasanya, tapi itu mungkin tidak
+
+167
+00:09:51.000 --> 00:09:52.001
+bekerja, jadi sebenarnya ia keluar dan mencobanya.
+
+168
+00:09:53.000 --> 00:09:58.000
+Jadi kami pergi dari 539K ke 537K, dan jika kita lihat sekarang, kita memiliki
+
+169
+00:09:58.000 --> 00:10:00.000
+dari 591K.
+
+170
+00:10:00.001 --> 00:10:03.001
+Dan bagaimanapun, semua pemandu itu masih diisi, buffer dan sed dan ANSI dan
+
+171
+00:10:03.001 --> 00:10:06.001
+keyboard dan Magellan, mereka semua diisi, sebenarnya, saya masih memiliki 73K memori
+
+172
+00:10:06.001 --> 00:10:08.000
+tersedia di atas 640K.
+
+173
+00:10:08.001 --> 00:10:11.001
+Kemudian apa yang Anda mungkin ingin lakukan adalah menjalankan beberapa jenis program lain.
+
+174
+00:10:11.001 --> 00:10:15.001
+Sekarang, kita dapat melakukan semua jenis hal yang telah kita lihat sampai sekarang di 8088 atau
+
+175
+00:10:15.001 --> 00:10:18.001
+8086 menggunakan produk yang disebut Cram yang kita miliki, QRAM.
+
+176
+00:10:19.000 --> 00:10:21.000
+Ini adalah 386, tentu saja kita menggunakan QAMM 386.
+
+177
+00:10:22.000 --> 00:10:24.000
+Hal lain yang akan kita jalankan adalah Microsoft Windows.
+
+178
+00:10:24.001 --> 00:10:27.000
+Anda dapat melihat bahwa meskipun kita memiliki program resident, termasuk tetikus
+
+179
+00:10:27.000 --> 00:10:31.000
+driver, diisi tinggi, saya masih memiliki Microsoft Windows diisi, dan saya dapat menjalankan
+
+180
+00:10:31.000 --> 00:10:32.001
+Windows yang sangat besar juga.
+
+181
+00:10:32.001 --> 00:10:35.000
+Di sini Anda dapat melihat saya memiliki program 564K.
+
+182
+00:10:35.001 --> 00:10:38.001
+Di jendela ini di sini, saya memiliki program 564K juga.
+
+183
+00:10:38.001 --> 00:10:40.001
+Saya sebenarnya menjalankan Microsoft Windows di dalam Densho.
+
+184
+00:10:40.001 --> 00:10:41.001
+Multitasking yang benar.
+
+185
+00:10:41.001 --> 00:10:45.001
+True multitasking dari program berbasis DOS sambil mengelola memori.
+
+186
+00:10:45.001 --> 00:10:46.001
+Triknya adalah mengurusnya.
+
+187
+00:10:46.001 --> 00:10:48.001
+Okay, itu memang benar. Berapa biaya produk tersebut?
+
+188
+00:10:49.000 --> 00:10:50.001
+Desk adalah... Rangkaian 386.
+
+189
+00:10:51.000 --> 00:10:51.001
+Itulah yang baru saja kita lihat.
+
+190
+00:10:52.000 --> 00:10:54.001
+DESQ 386 adalah $ 229.95.
+
+191
+00:10:56.000 --> 00:10:58.000
+QAMM 386 adalah $ 99.95.
+
+192
+00:10:58.000 --> 00:10:58.001
+Baiklah yang hebat.
+
+193
+00:10:58.001 --> 00:11:01.000
+Sekarang, saya ingin meminta Anda untuk menukar switch kecil di belakang monitor kami.
+
+194
+00:11:01.000 --> 00:11:04.001
+Karena Patrick, saya ingin beralih kepada Anda, dan pendekatan yang Anda miliki adalah
+
+195
+00:11:04.001 --> 00:11:06.000
+Sebuah produk yang disebut 386 Max.
+
+196
+00:11:06.001 --> 00:11:10.000
+Dan saya ingin Anda, saat Anda memulai di sini, memberitahu kami bagaimana berbeda dan menunjukkan kepada kami
+
+197
+00:11:10.000 --> 00:11:13.000
+Bagaimana Anda akan menggunakan 386 Max untuk menyelesaikan jenis masalah yang sama.
+
+198
+00:11:13.000 --> 00:11:16.000
+Nah, di mana kita memulai di sini adalah kita berada di akhir proses maksimizasi kita.
+
+199
+00:11:16.001 --> 00:11:20.000
+Ini adalah proses di mana kita mengambil alih kontrol pelaksanaan sistem
+
+200
+00:11:20.000 --> 00:11:24.001
+file sehingga kita dapat mengetahui bagaimana pengguna akhir menggunakan memori konvensional,
+
+201
+00:11:25.000 --> 00:11:26.001
+Apa yang digunakan untuk memori resident?
+
+202
+00:11:27.000 --> 00:11:31.000
+Dan dengan melakukan ini, kita dapat membuat keputusan yang sama untuk pengguna akhir.
+
+203
+00:11:31.000 --> 00:11:35.001
+Dan itulah yang penting tentang produk kami, adalah bahwa kami telah mengambil tingkat
+
+204
+00:11:35.001 --> 00:11:38.001
+Sofistikasi yang diperlukan untuk menggunakan dosis tinggi itu
+
+205
+00:11:38.001 --> 00:11:40.001
+memori, dan kami telah mengurangi itu sangat.
+
+206
+00:11:41.001 --> 00:11:46.000
+Di masa lalu, orang akan perlu bekerja, bahkan orang yang paling canggih, akan
+
+207
+00:11:46.000 --> 00:11:49.001
+kadang mengambil waktu untuk membuat keputusan konfigurasi jenis ini, dan kemudian
+
+208
+00:11:49.001 --> 00:11:52.000
+Namun, mereka tidak yakin bahwa mereka telah membuat keputusan yang optimal.
+
+209
+00:11:52.001 --> 00:11:54.001
+Anda mengatakan Anda tidak perlu menjadi seorang hacker jenius untuk menggunakannya.
+
+210
+00:11:54.001 --> 00:11:56.001
+Tidak, kau tidak Anda tidak.
+
+211
+00:11:57.000 --> 00:12:01.000
+Dan ada satu hal yang ingin saya fokuskan di sini, adalah
+
+212
+00:12:01.000 --> 00:12:02.001
+teknologi yang kita sebut FlexFrame.
+
+213
+00:12:03.001 --> 00:12:07.000
+Hal ini berkaitan dengan fakta bahwa ketika program resident dimuat ke dalam memori, mereka menggunakan
+
+214
+00:12:07.000 --> 00:12:10.001
+Lebih banyak ruang ketika mereka memulai daripada ketika mereka benar-benar menjadi penduduk.
+
+215
+00:12:11.000 --> 00:12:14.000
+Dan ini tidak terlihat untuk pengguna akhir dan dapat membuatnya sulit ketika mencoba untuk
+
+216
+00:12:14.000 --> 00:12:17.000
+program shoehorn di ruang yang sangat ketat dalam memori dosis tinggi.
+
+217
+00:12:18.000 --> 00:12:22.000
+Nah, saya memiliki cetut dari apa program akan kelihatan seperti
+
+218
+00:12:22.000 --> 00:12:23.001
+Seperti yang sebenarnya diisi dalam ingatan.
+
+219
+00:12:24.000 --> 00:12:27.001
+Jadi jika Anda menyadari apa yang akan saya cuba untuk menonjolkan garis di sini sehingga kita dapat melihat.
+
+220
+00:12:28.001 --> 00:12:34.001
+PK spooler, ia menggunakan lebih dari 47,000 byte ketika ia memulai, sementara hanya
+
+221
+00:12:34.001 --> 00:12:36.001
+menggunakan 18.000 byte ketika ia adalah resident.
+
+222
+00:12:37.000 --> 00:12:41.000
+Jadi jika Anda memiliki 20 kilobit ruang yang tersedia di tinggi
+
+223
+00:12:41.000 --> 00:12:43.000
+-Dose, program ini tidak bisa sesuai.
+
+224
+00:12:43.001 --> 00:12:45.001
+Anda biasanya akan mendapatkan pesan yang mengatakan, tidak cocok.
+
+225
+00:12:46.000 --> 00:12:50.000
+Nah, apa yang kita bisa lakukan adalah kita dapat secara dinamis mengalokasikan halaman EMS
+
+226
+00:12:50.000 --> 00:12:54.001
+frame, peta, dan membuat memori itu tersedia, yang merupakan tambahan 64K dari
+
+227
+00:12:54.001 --> 00:12:59.000
+memori, membuat memori itu tersedia selama inisialisasi sehingga program ini dapat
+
+228
+00:12:59.000 --> 00:13:02.001
+menggunakannya, memulai, dan kemudian ketika ia menjadi resident, kerangka halaman EMS dapat
+
+229
+00:13:02.001 --> 00:13:06.000
+kemudian dimulai semula dan tersedia untuk melayani tujuan EMS lainnya.
+
+230
+00:13:09.000 --> 00:13:13.001
+Dan sekali lagi, kami juga menawarkan penggunaan memori dosis tinggi ini dalam Windows 3.0
+
+231
+00:13:13.001 --> 00:13:15.001
+Meningkatkan lingkungan mode, yang signifikan.
+
+232
+00:13:16.000 --> 00:13:19.001
+Masalah lain yang muncul ketika berjalan di lingkungan mode 386 diperkuat di
+
+233
+00:13:19.001 --> 00:13:23.000
+Windows adalah bahwa Anda hanya memiliki satu resident program yang dimuat.
+
+234
+00:13:23.000 --> 00:13:27.000
+Dan jika Anda membutuhkan sumber daya dari program itu untuk tersedia dalam beberapa DOS
+
+235
+00:13:27.000 --> 00:13:30.001
+Windows, banyak kali Anda akan menemukan itu hanya tidak berfungsi atau
+
+236
+00:13:30.001 --> 00:13:32.000
+Anda mendapatkan hasil yang salah.
+
+237
+00:13:33.000 --> 00:13:36.001
+Kami telah melakukan sesuatu yang disebut data contoh, yang memungkinkan kami untuk, apakah sebuah program
+
+238
+00:13:36.001 --> 00:13:41.000
+benar-benar diisi tinggi atau rendah, kami dapat menjamin pengguna akhir bahwa dia akan
+
+239
+00:13:41.000 --> 00:13:45.000
+memiliki data unik yang tersedia untuk program resident itu di setiap jendela DOS.
+
+240
+00:13:46.000 --> 00:13:50.001
+Contoh dari ini, contoh yang agak sederhana, adalah bahwa saya akan membuka dua DOS
+
+241
+00:13:50.001 --> 00:13:57.000
+Windows, dan kemudian apa yang akan saya lakukan adalah saya akan menggunakan ANSI
+
+242
+00:13:57.000 --> 00:14:02.001
+.sys untuk mengubah warna layar, dan Anda akan menyadari bahwa ketika kita kembali itu
+
+243
+00:14:02.001 --> 00:14:06.001
+Perubahan ini tidak tercermin dalam jendela DOS lainnya.
+
+244
+00:14:07.000 --> 00:14:11.000
+Jadi jika kita memindahkan jendela DOS ini ke bawah beberapa, Anda dapat melihat bahwa perubahan ini tidak
+
+245
+00:14:11.000 --> 00:14:13.000
+Ini akan mempengaruhi jendela DOS terbuka lainnya.
+
+246
+00:14:13.001 --> 00:14:16.000
+Alright, Patrick, terima kasih banyak, dan Gary, dua produk yang mengesankan.
+
+247
+00:14:16.000 --> 00:14:20.001
+Nah, satu pendekatan untuk memungkinkan aplikasi perangkat lunak untuk mengakses lebih banyak RAM adalah untuk
+
+248
+00:14:20.001 --> 00:14:23.000
+Membangun dalam extender DOS di dalam aplikasi.
+
+249
+00:14:23.000 --> 00:14:26.000
+Itu adalah pendekatan yang diambil oleh Autodesk dengan AutoCAD, dan inilah laporan.
+
+250
+00:14:29.000 --> 00:14:34.000
+Desain sebuah hotel adalah proses yang bekerja keras yang membutuhkan ribuan blueprint, tetapi
+
+251
+00:14:34.000 --> 00:14:38.000
+Perusahaan San Francisco dari Hornberger dan Worstell telah menemukan cara untuk mengurangi
+
+252
+00:14:38.000 --> 00:14:41.001
+kertas dengan program desain yang didukung komputer yang dapat mengakses
+
+253
+00:14:41.001 --> 00:14:43.000
+Semua memori PC.
+
+254
+00:14:44.000 --> 00:14:49.001
+AutoCAD Release 11 dari Autodesk menggunakan FarLapse 386 DOS Extender.
+
+255
+00:14:50.000 --> 00:14:54.001
+Dengan perpanjangan, AutoCAD dapat memindahkan data dalam blok 8 kilobit pada
+
+256
+00:14:54.001 --> 00:14:57.000
+waktu, atau 8 kali lebih banyak dari dengan DOS biasa.
+
+257
+00:14:57.001 --> 00:15:01.001
+Arsitek dapat menggunakan seluruh memori untuk menyimpan bahkan lukisan terbesar
+
+258
+00:15:02.000 --> 00:15:04.001
+Tidak perlu beralih ke belakang dan ke depan ke hard disk.
+
+259
+00:15:05.000 --> 00:15:09.000
+Ketika kita bekerja pada proyek-proyek besar, kita sering perlu zoom ke dalam untuk melihat
+
+260
+00:15:09.000 --> 00:15:10.001
+Sebagian kecil dari proyek ini.
+
+261
+00:15:10.001 --> 00:15:16.001
+Oleh karena itu, untuk menghindari pemutaran layar itu sendiri,
+
+262
+00:15:18.000 --> 00:15:22.001
+Extender DOS membantu kita untuk mendapatkan sekitar lukisan jauh lebih cepat, dan kita dapat
+
+263
+00:15:22.001 --> 00:15:27.000
+Zoom masuk dari area kecil ke area besar ke area kecil lainnya sangat cepat.
+
+264
+00:15:27.001 --> 00:15:31.000
+Lanjutan DOS berjalan dalam mode yang dilindungi dari chip 386.
+
+265
+00:15:31.001 --> 00:15:34.001
+Mengambil sebagai sistem operasi untuk pekerjaan yang dibutuhkan
+
+266
+00:15:34.001 --> 00:15:36.000
+lebih dari 1 megabyte RAM.
+
+267
+00:15:36.000 --> 00:15:40.001
+Versi terbaru AutoCAD membutuhkan setidaknya 2 megabyte RAM.
+
+268
+00:15:41.000 --> 00:15:45.000
+Tetapi dengan pengembangan DOS, pekerjaan komputer besar, seperti arsitektur
+
+269
+00:15:45.000 --> 00:15:47.000
+Pekerjaan tidak perlu perlahan, pekerjaan tidak harus perlahan.
+
+270
+00:15:47.001 --> 00:15:51.000
+Perpanjangan DOS telah mampu membuat kami bekerja jauh lebih cepat.
+
+271
+00:15:52.001 --> 00:15:56.001
+Awalnya, kami terbatas dengan pembatasan DOS dari sebuah barrier 640K.
+
+272
+00:15:57.001 --> 00:16:01.001
+Sekarang kita memiliki dua ekstensi, seluruh lukisan, serta
+
+273
+00:16:01.001 --> 00:16:03.001
+program, diisi ke dalam memori.
+
+274
+00:16:03.001 --> 00:16:07.000
+Jadi itu membuat kita bekerja jauh lebih cepat daripada yang kita lakukan sebelumnya.
+
+275
+00:16:07.001 --> 00:16:10.000
+Untuk Chronicles Computer, saya adalah Maria Gabriel.
+
+276
+00:16:22.000 --> 00:16:26.000
+Satu lagi pendekatan untuk menyelesaikan masalah memori, terutama jika Anda hanya memiliki
+
+277
+00:16:26.000 --> 00:16:29.001
+286 mesin, adalah add-on perangkat keras seperti All Charge Card.
+
+278
+00:16:29.001 --> 00:16:33.000
+Dan di sini untuk menunjukkan kepada kita bagaimana itu bekerja adalah Shelly Sofer dari Semua Komputer, Inc.
+
+279
+00:16:33.001 --> 00:16:37.000
+Juga menyertai kami, Margaret Johnson, insinyur sistem di Microsoft, yang akan
+
+280
+00:16:37.000 --> 00:16:38.001
+Menunjukkan daya memori OS2.
+
+281
+00:16:40.001 --> 00:16:44.000
+Shelly, sampai saat ini, kami terutama melihat pendekatan perangkat lunak.
+
+282
+00:16:44.001 --> 00:16:46.001
+Anda memiliki solusi hardware. Mengapa
+
+283
+00:16:46.001 --> 00:16:48.000
+Apakah solusi hardware akan menjadi pendekatan yang lebih baik?
+
+284
+00:16:48.001 --> 00:16:53.000
+Nah, jika Anda memiliki komputer 286, Anda benar-benar membutuhkan beberapa perangkat keras untuk memungkinkan Anda untuk
+
+285
+00:16:53.000 --> 00:16:54.001
+Lebih dari 640K.
+
+286
+00:16:55.000 --> 00:16:59.000
+386 sudah memiliki hardware manajemen memori yang dibangun,
+
+287
+00:16:59.000 --> 00:17:00.001
+Jadi Anda bisa pergi dengan hanya perangkat lunak.
+
+288
+00:17:01.000 --> 00:17:05.001
+Tapi kartu pengisian menambahkan manajemen memori ke 286, melengkapkannya.
+
+289
+00:17:06.000 --> 00:17:08.000
+Shelly, mari kita katakan ia sebenarnya menggunakan kartu debit.
+
+290
+00:17:08.000 --> 00:17:11.000
+Nah, setelah kartu pengisian dipasang, itu sepenuhnya dikendalikan oleh
+
+291
+00:17:11.000 --> 00:17:13.000
+perangkat lunak, serupa dengan apa yang telah kita lihat sebelumnya.
+
+292
+00:17:14.000 --> 00:17:17.001
+Dan saya memiliki peta memori di sini bahwa kami menyediakan utilitas yang disebut All Menu.
+
+293
+00:17:18.000 --> 00:17:23.001
+Anda melihat area yang ditekankan di atas, semua ini T.
+
+294
+00:17:23.001 --> 00:17:26.001
+Ini menunjukkan bahwa saya memiliki memori di atas 640K.
+
+295
+00:17:27.000 --> 00:17:32.001
+Saat ini, saya Sidekick diisi tinggi, dan itu bisa menjadi jaringan jika saya
+
+296
+00:17:32.001 --> 00:17:34.001
+Menjalankan Novel, lebih rendah 3,000, atau Banyan.
+
+297
+00:17:36.000 --> 00:17:40.000
+Dan ini memungkinkan saya, saya telah memuat itu di atas 640K.
+
+298
+00:17:40.001 --> 00:17:46.000
+Sekarang, saya ingin kembali ke DOS dan sangat cepat menjalankan Check Disk untuk menunjukkan kepada Anda bagaimana
+
+299
+00:17:46.000 --> 00:17:53.000
+Banyak memori gratis yang saya miliki. 590, 480 byte gratis.
+
+300
+00:17:53.001 --> 00:17:55.001
+Tentu saja Sidekick benar-benar berpenduduk.
+
+301
+00:17:56.000 --> 00:18:02.000
+Sekarang, setelah perangkat keras dipasang, itu memungkinkan Anda untuk melakukan pada 286 apa yang kami miliki.
+
+302
+00:18:02.000 --> 00:18:03.001
+Hal ini dapat dilihat pada 386.
+
+303
+00:18:04.000 --> 00:18:09.001
+Misalnya, jika saya ingin melakukan multitask dan saya menjalankan Lotus 123 saya, ini
+
+304
+00:18:09.001 --> 00:18:11.000
+Lotus berfungsi sepenuhnya.
+
+305
+00:18:12.000 --> 00:18:15.000
+Saya memiliki status lembar kerja untuk menunjukkan saya memiliki banyak memori konvensional
+
+306
+00:18:15.000 --> 00:18:16.001
+dan memori yang diperluas.
+
+307
+00:18:16.001 --> 00:18:19.000
+Dan Sidekick saya juga adalah penduduk.
+
+308
+00:18:20.000 --> 00:18:21.000
+Saya juga bisa melakukan multitask sekarang.
+
+309
+00:18:21.001 --> 00:18:27.001
+Ya ya. Apa yang akan saya lakukan adalah menulis formula yang sangat sederhana dan menyalin formula itu,
+
+310
+00:18:28.000 --> 00:18:29.001
+8.000 sel melalui spreadsheet.
+
+311
+00:18:30.000 --> 00:18:32.001
+Sekarang, Anda dapat melihat di bagian atas kiri layar, Lotus memberitahu saya
+
+312
+00:18:32.001 --> 00:18:34.000
+untuk menunggu. Dia sedang menghitung kembali.
+
+313
+00:18:34.001 --> 00:18:39.000
+Tapi saat dia menghitung kembali, saya akan membuka DBase 3 plus saya.
+
+314
+00:18:40.001 --> 00:18:42.001
+Dan saya akan mulai mengatur database saya.
+
+315
+00:18:42.001 --> 00:18:46.001
+Jadi saya memiliki DBase 3 plus berjalan. Dan Anda dapat melihat sekarang Lotus dikira kembali.
+
+316
+00:18:46.001 --> 00:18:47.000
+pada saat yang sama.
+
+317
+00:18:47.001 --> 00:18:48.001
+Saya kembali ke lotus saya.
+
+318
+00:18:49.000 --> 00:18:49.001
+Kembali ke Sidekick?
+
+319
+00:18:50.000 --> 00:18:55.000
+Pergi ke Sidekick. Apa yang akan saya lakukan adalah menyalin 8
+
+320
+00:18:55.000 --> 00:18:57.000
+Seribu sel di seluruh spreadsheet.
+
+321
+00:18:57.001 --> 00:18:59.001
+Lalu Lotus kembali menghitung. DBAS adalah
+
+322
+00:18:59.001 --> 00:19:01.001
+Berlari dengan Saya pikir saya harus melakukan sesuatu dalam dua.
+
+323
+00:19:02.000 --> 00:19:05.001
+Sangat mudah untuk membuka dua jendela. Dan di sini saya hanya akan scroll melalui direktori.
+
+324
+00:19:06.000 --> 00:19:09.000
+Dan Anda melakukan ini pada apa itu 286 mesin, yang telah Anda modifikasi.
+
+325
+00:19:09.000 --> 00:19:13.001
+Sekarang, ketika Anda memberitahu saya, saya harus melompat di prosesor di luar papan induk saya.
+
+326
+00:19:13.001 --> 00:19:17.000
+Dan saya menjadi gugup sekarang, menunjukkan kepada saya betapa sulitnya untuk memasang hal ini.
+
+327
+00:19:17.000 --> 00:19:21.000
+Nah, kartu debit, kami sebenarnya mencakup semua alat yang Anda butuhkan.
+
+328
+00:19:21.001 --> 00:19:25.000
+Secara sederhana, dalam hal ini, di sini adalah papan sistem 286 saya.
+
+329
+00:19:25.001 --> 00:19:27.000
+Aku hanya meletakkan alat itu.
+
+330
+00:19:27.001 --> 00:19:30.000
+dan pul. CPU akan keluar.
+
+331
+00:19:30.001 --> 00:19:33.001
+Kemudian saya mendapatkan model kartu debit untuk komputer saya.
+
+332
+00:19:34.001 --> 00:19:36.000
+Jadi itu adalah kartu debit itu sendiri.
+
+333
+00:19:36.000 --> 00:19:40.001
+Masukkan ke dalamnya. Dapatkan CPU Letakkan kembali ke atas.
+
+334
+00:19:42.000 --> 00:19:43.000
+Aku baru saja mengoperasikan mesinku.
+
+335
+00:19:43.001 --> 00:19:45.001
+Okay, ya, itu tampaknya masuk akal. Dan apa semua biaya ini?
+
+336
+00:19:46.000 --> 00:19:47.001
+Kartu pembayaran disimpan pada $ 299.
+
+337
+00:19:48.000 --> 00:19:52.000
+Sebenarnya, kita ingin beralih ke pendekatan lain sekarang dengan OS2.
+
+338
+00:19:52.000 --> 00:19:54.000
+Kami benar-benar telah melihat, jika Anda akan, pada perbaikan, saya
+
+339
+00:19:54.000 --> 00:19:55.001
+Misalnya, masalah yang ada di dua.
+
+340
+00:19:56.000 --> 00:19:58.001
+Dan dengan OS2, Anda benar-benar seperti memulai dari scratch
+
+341
+00:19:58.001 --> 00:20:00.000
+Untuk mengatasi masalah memori ini, bukan?
+
+342
+00:20:00.001 --> 00:20:04.001
+Anda bertaruh OS2 adalah sistem operasi pertama yang dirancang untuk PC yang mendapat keuntungan.
+
+343
+00:20:04.001 --> 00:20:09.001
+kemampuan mini dan mainframe. Dirancang dari tanah ke atas untuk pergi.
+
+344
+00:20:09.001 --> 00:20:11.000
+dari batas-batas yang ada di 2.
+
+345
+00:20:11.001 --> 00:20:13.001
+Mari kita lihat semua solusi yang telah Anda cadangkan.
+
+346
+00:20:14.000 --> 00:20:18.000
+Kami telah terbatas pada barrier 640K. Kami memiliki memori yang diperluas.
+
+347
+00:20:18.001 --> 00:20:21.001
+Kami memiliki EMS 3.2, EMS 4.0. Kemudian kita akan melanjutkan.
+
+348
+00:20:21.001 --> 00:20:24.001
+Kami memiliki manajer memori yang diperpanjang. Kami memiliki N15H.
+
+349
+00:20:24.001 --> 00:20:27.000
+Saya maksud, mereka semua bertentangan, dan mereka semua melakukan hal yang berbeda.
+
+350
+00:20:27.001 --> 00:20:33.001
+OS2 hanya memberi Anda 16 megabyte area yang dapat ditangani, atau 1 gigabyte.
+
+351
+00:20:33.001 --> 00:20:35.000
+Manajemen memori virtual.
+
+352
+00:20:35.000 --> 00:20:38.001
+Jadi kita memiliki sistem operasi bersih yang sebenarnya melampaui rintangan 640K.
+
+353
+00:20:39.000 --> 00:20:40.001
+Sebuah lapangan bermain yang bersih dari get-go.
+
+354
+00:20:41.000 --> 00:20:45.000
+Tunjukkan pada contoh di sini apa kelebihan akses ini akan menjadi
+
+355
+00:20:45.000 --> 00:20:46.001
+sumber daya yang ditawarkan OS2 kepada kami.
+
+356
+00:20:46.001 --> 00:20:49.000
+Untuk memahami manfaat, Anda juga harus memahami
+
+357
+00:20:49.000 --> 00:20:50.001
+dengan fitur-fitur lain yang canggih.
+
+358
+00:20:50.001 --> 00:20:54.000
+Dan itulah keunggulan kemampuan multitasking pencegahan
+
+359
+00:20:54.000 --> 00:20:55.001
+OS2 didasarkan pada thread.
+
+360
+00:20:56.000 --> 00:20:57.001
+Anda juga harus memahami sesuatu yang berbeda.
+
+361
+00:20:57.001 --> 00:20:59.001
+yang berpikir. Ada kekeliruan dengan itu.
+
+362
+00:21:00.001 --> 00:21:03.001
+OS2 benar-benar ideal untuk lingkungan tempat kerja ini
+
+363
+00:21:03.001 --> 00:21:05.000
+yang bekerja dengan aplikasi yang didistribusikan.
+
+364
+00:21:05.001 --> 00:21:08.000
+Banyak data pada database DB2, misalnya.
+
+365
+00:21:08.001 --> 00:21:12.001
+Kami melihat akun perusahaan kami sangat tertarik pada OS2 untuk memenuhi kebutuhan
+
+366
+00:21:12.001 --> 00:21:17.000
+Mendapatkan data dari mainframe atau dari server lain dan menyimpannya semua bersama-sama
+
+367
+00:21:17.000 --> 00:21:19.000
+dalam satu aplikasi yang besar dan canggih.
+
+368
+00:21:19.001 --> 00:21:22.000
+Sistem informasi eksekutif, dan kita sedang menuju
+
+369
+00:21:22.000 --> 00:21:24.000
+informasi pada pendekatan jari Anda.
+
+370
+00:21:24.000 --> 00:21:25.000
+Mari kita lihat itu, Margaret.
+
+371
+00:21:25.000 --> 00:21:29.001
+yang hebat. Saat ini saya mengumpulkan skenario adalah saya seorang manajer produk
+
+372
+00:21:29.001 --> 00:21:31.001
+Dan produk saya adalah pantat fantasi.
+
+373
+00:21:32.000 --> 00:21:35.000
+Dan saya bekerja di lingkungan di mana saya memiliki akses ke data mainframe.
+
+374
+00:21:35.000 --> 00:21:38.001
+Dan itu terus-menerus diunduh kepada saya dalam waktu nyata oleh ini
+
+375
+00:21:38.001 --> 00:21:40.000
+3270 program emulasi.
+
+376
+00:21:41.000 --> 00:21:44.001
+Sementara itu, saya membuat layout saya di PageMaker, yang cukup
+
+377
+00:21:44.001 --> 00:21:46.000
+Sebuah aplikasi yang sangat besar dan canggih.
+
+378
+00:21:46.001 --> 00:21:51.000
+Jadi saya akan maju dan mengambil data mainframe saya dan meletakkannya dalam file.
+
+379
+00:21:53.000 --> 00:21:55.000
+Dalam satu skenario, itu sama mudahnya dengan menutup aplikasi,
+
+380
+00:21:55.001 --> 00:21:57.000
+Tapi dalam kenyataannya, itu sedikit berbeda.
+
+381
+00:21:58.000 --> 00:22:02.001
+Tetapi karena kita berada di tanah skenario, saya akan maju dan meletakkan dokumentasi itu,
+
+382
+00:22:04.000 --> 00:22:06.001
+File 200K ini, di dalam PageMaker.
+
+383
+00:22:07.000 --> 00:22:11.000
+Sekarang, jika ini adalah Windows atau aplikasi DOS lainnya, saya akan melihat gelas jam atau
+
+384
+00:22:11.000 --> 00:22:12.001
+Saya benar-benar akan keluar untuk mendapatkan beberapa salinan.
+
+385
+00:22:13.001 --> 00:22:14.001
+Mungkin dia bahkan tidak bisa menyesuaikan segalanya.
+
+386
+00:22:14.001 --> 00:22:19.000
+Tapi dengan PageMaker, karena kemampuan thread dan thread yang memungkinkan
+
+387
+00:22:19.000 --> 00:22:24.001
+beberapa sumber eksekutif dalam satu aplikasi, saya dapat melakukan hal-hal lain dalam
+
+388
+00:22:24.001 --> 00:22:28.000
+PageMaker atau saya dapat pergi dan menggunakan aplikasi OS2 lainnya.
+
+389
+00:22:28.001 --> 00:22:33.000
+Misalnya, program pemantauan CPU, yang sebenarnya memantau penggunaan CPU kami,
+
+390
+00:22:33.000 --> 00:22:36.000
+Membagi waktu slices dengan halaman ini.
+
+391
+00:22:36.001 --> 00:22:40.001
+Jadi, pada kenyataannya, kita mendapatkan sistem operasi baru dengan multitasking
+
+392
+00:22:40.001 --> 00:22:42.001
+Fitur untuk dua platform.
+
+393
+00:22:42.001 --> 00:22:45.000
+Untuk lingkungan tersebut, untuk stasiun-stasiun tersebut.
+
+394
+00:22:45.001 --> 00:22:48.001
+Dan saya akan mengambilnya satu langkah lebih jauh dalam mengatakan kepada pengguna yang canggih di sini
+
+395
+00:22:48.001 --> 00:22:53.000
+titik, untuk stasiun kerja tersebut di jaringan area lokal atau jaringan area luas
+
+396
+00:22:53.000 --> 00:22:55.001
+lingkungan atau aplikasi server.
+
+397
+00:22:55.001 --> 00:22:58.001
+Misalnya, OS2 adalah dasar untuk operasi jaringan kami.
+
+398
+00:22:58.001 --> 00:23:00.001
+Sistem pengelolaan tanah 2.0.
+
+399
+00:23:00.001 --> 00:23:04.000
+Sekarang, apa status versi OS2 ini sekarang, Margaret?
+
+400
+00:23:04.001 --> 00:23:09.000
+Versi saat ini yang dikirim adalah OS2 1. 21 dan itu adalah tanah yang
+
+401
+00:23:09.000 --> 00:23:10.001
+Manajer duduk di atas hari ini.
+
+402
+00:23:10.001 --> 00:23:13.001
+Ok ya. Terima kasih banyak sekali. Terima kasih Shelly.
+
+403
+00:23:14.000 --> 00:23:15.001
+Inilah pandangan kita tentang manajemen memori yang tinggi.
+
+404
+00:23:16.000 --> 00:23:18.000
+Tetap bersemangat sekarang untuk berita komputer minggu ini.
+
+405
+00:23:28.000 --> 00:23:33.000
+Dalam file Random Access minggu ini, aksesori komputer telah memperkenalkan file baru
+
+406
+00:23:33.000 --> 00:23:35.001
+perangkat input untuk PC yang sempurna untuk presentasi.
+
+407
+00:23:36.000 --> 00:23:38.000
+Pada dasarnya adalah tetikus kawalan jarak jauh yang
+
+408
+00:23:38.000 --> 00:23:40.000
+Tindakan seperti layar sentuh interaktif.
+
+409
+00:23:40.000 --> 00:23:43.001
+Hardware terdiri dari kamera yang memprojeksi gambar PC ke
+
+410
+00:23:43.001 --> 00:23:45.000
+layar projeksi LCD yang besar.
+
+411
+00:23:45.001 --> 00:23:47.001
+Anda kemudian menggunakan penunjuk elektronik dengan built-in
+
+412
+00:23:47.001 --> 00:23:49.001
+tombol mouse untuk mengontrol perangkat lunak.
+
+413
+00:23:50.000 --> 00:23:52.001
+Perangkat input berteknologi tinggi disebut Proxima Cyclops.
+
+414
+00:23:53.000 --> 00:23:57.000
+BMC Micro Industries telah mengembangkan jenis skanner tangan baru, yang memungkinkan Anda
+
+415
+00:23:57.000 --> 00:23:59.000
+Scan gambar besar tanpa mengangkat scanner.
+
+416
+00:24:00.000 --> 00:24:04.000
+Perangkat lunak scanner mengingatkan di mana scanner berada, sehingga Anda dapat memindai satu
+
+417
+00:24:04.000 --> 00:24:07.000
+kolom halaman besar, dan kemudian hanya slide di atas dan scan berikutnya
+
+418
+00:24:07.000 --> 00:24:09.000
+kolom dalam satu gerakan berkelanjutan.
+
+419
+00:24:09.000 --> 00:24:13.001
+Menggunakan gerakan zigzag ini, Anda dapat memindai halaman hingga 11 dengan 18 tanpa berhenti.
+
+420
+00:24:14.000 --> 00:24:17.001
+Multi-directional hand scanner adalah bar-shaped dan dijual untuk $ 299.
+
+421
+00:24:18.001 --> 00:24:22.000
+Nah, ada lagi paket pemrograman berorientasi objek baru yang memungkinkan Anda
+
+422
+00:24:22.000 --> 00:24:25.000
+Mengembangkan aplikasi yang kompleks tanpa menggunakan kode apa pun.
+
+423
+00:24:25.001 --> 00:24:29.001
+Ini disebut otak. Ini menggunakan menu pull-down dan perintah bahasa Inggris yang rata.
+
+424
+00:24:30.000 --> 00:24:34.000
+Anda dapat membuat objek tingkat rendah, menengah, dan tinggi, dan paket secara otomatis
+
+425
+00:24:34.000 --> 00:24:37.001
+Memelihara kamus objek yang digunakan untuk memastikan konsistensi desain.
+
+426
+00:24:37.001 --> 00:24:42.000
+Anda juga dapat mengimpor rutin program lain yang ditulis dalam bahasa tingkat tinggi.
+
+427
+00:24:42.001 --> 00:24:45.001
+Otak ini dijual oleh perusahaan Ingenio. Ini karena awal berikutnya
+
+428
+00:24:45.001 --> 00:24:47.001
+Tahun yang Harga adalah $ 795 .
+
+429
+00:24:48.001 --> 00:24:52.001
+Melihat sepuluh judul perangkat lunak teratas minggu ini untuk PC, PC Connection
+
+430
+00:24:52.001 --> 00:24:56.001
+Adobe Type Manager untuk Windows 3. 0 masih berada di nomor satu.
+
+431
+00:24:56.001 --> 00:24:58.000
+diikuti oleh TurboTax.
+
+432
+00:24:59.000 --> 00:25:03.000
+Di tempat ketiga adalah QuarterDEX Extended Memory Manager, dan PC Globe di tempat keempat.
+
+433
+00:25:03.000 --> 00:25:08.000
+Di tempat kelima adalah Quicken, mengelilingi sepuluh teratas adalah PC USA, Microsoft
+
+434
+00:25:08.000 --> 00:25:11.000
+Paket hiburan untuk Windows, Facelift untuk Windows
+
+435
+00:25:11.000 --> 00:25:13.001
+InfoSelect, dan Print Shop Companion baru.
+
+436
+00:25:14.001 --> 00:25:18.001
+AutoCAD mengatakan Release 11 dari Autodesk akan menjadi rilis terakhir dari popular
+
+437
+00:25:18.001 --> 00:25:21.000
+Program untuk mendukung 286 mesin atau lebih rendah.
+
+438
+00:25:21.001 --> 00:25:25.000
+Perusahaan mengatakan bahwa program ini menjadi terlalu rumit untuk berjalan pada yang dapat diterima.
+
+439
+00:25:25.000 --> 00:25:27.001
+kecepatan dalam batas-batas dari prosesor yang lebih tua.
+
+440
+00:25:28.001 --> 00:25:30.001
+Release 11 Autodesk akan diluncurkan pada bulan Maret.
+
+441
+00:25:31.000 --> 00:25:35.000
+HumanCAD telah mengumumkan program baru untuk menyediakan desainer dengan gambar manusia
+
+442
+00:25:35.000 --> 00:25:37.001
+Model yang secara anatomi dan ergonomi benar.
+
+443
+00:25:38.000 --> 00:25:41.001
+Program ini dimaksudkan untuk digunakan bersama dengan perangkat lunak CAD khusus.
+
+444
+00:25:42.000 --> 00:25:46.001
+Program PC, yang disebut Mannequin, akan memungkinkan desainer untuk menguji objek desain untuk
+
+445
+00:25:46.001 --> 00:25:49.000
+Lihat apakah mereka akan bekerja ergonomi dengan tubuh manusia.
+
+446
+00:25:49.001 --> 00:25:52.001
+Program ini akan dikirim pada bulan Januari dan dijual untuk kurang dari $ 700.
+
+447
+00:25:53.000 --> 00:25:56.000
+Waktu sekarang untuk ulasan perangkat lunak minggu ini dengan Paul Schindler.
+
+448
+00:25:57.000 --> 00:26:00.001
+Anda tidak perlu menjadi Sherlock Holmes untuk mengetahui bahwa lengan Anda akan menjadi cantik
+
+449
+00:26:00.001 --> 00:26:02.001
+Anda merasa lelah jika Anda harus menahan ini sepanjang waktu.
+
+450
+00:26:03.000 --> 00:26:06.000
+Namun bagi orang-orang yang memiliki penglihatan yang lemah, sangat sulit untuk membaca
+
+451
+00:26:06.000 --> 00:26:07.001
+Jenis kecil pada layar PC.
+
+452
+00:26:08.000 --> 00:26:12.000
+Pengguna Macintosh telah memiliki solusi untuk ini untuk beberapa waktu, tetapi sekarang PC
+
+453
+00:26:12.000 --> 00:26:13.001
+Pengguna memiliki iRelief.
+
+454
+00:26:14.000 --> 00:26:18.000
+Sekarang ada dua versi dari prosesor kata jenis besar ini, satu untuk laptop dan
+
+455
+00:26:18.000 --> 00:26:22.000
+Satu untuk PC. iRelief adalah prosesor kata ASCII yang sangat sederhana dan
+
+456
+00:26:22.000 --> 00:26:24.000
+Tidak berpura-pura menjadi sesuatu yang lain.
+
+457
+00:26:24.000 --> 00:26:27.001
+Ini muncul secara otomatis dalam ukuran apa pun yang Anda inginkan. Anda dapat memutar melalui
+
+458
+00:26:27.001 --> 00:26:29.000
+Menu memilih satu demi satu.
+
+459
+00:26:29.001 --> 00:26:33.000
+Di bawah opsi menu video, pilihan Anda berjalan dari jumbo ke kecil, yaitu
+
+460
+00:26:33.000 --> 00:26:35.000
+normal, dengan banyak gradasi di antara.
+
+461
+00:26:35.001 --> 00:26:39.000
+Ini juga memiliki warna dan yang lebih penting daripada kebanyakan orang berpikir.
+
+462
+00:26:39.001 --> 00:26:42.001
+Mereka dapat membuat perbedaan bagi orang-orang dengan pengurangan penglihatan spesifik warna.
+
+463
+00:26:43.000 --> 00:26:46.000
+Anda juga dapat mengubah spacing dan kursor blink rate.
+
+464
+00:26:46.001 --> 00:26:47.001
+Penulisan adalah rudimentar.
+
+465
+00:26:48.000 --> 00:26:51.000
+Jika Anda memiliki printer laser, Anda dapat menghasilkan jenis output yang besar.
+
+466
+00:26:51.000 --> 00:26:54.001
+Jika tidak, Anda memiliki semua fungsi editing biasa, termasuk menghitung kata dan
+
+467
+00:26:54.001 --> 00:26:58.000
+mencari dan mengganti. iRelief adalah hanya $ 300 dari
+
+468
+00:26:58.000 --> 00:26:59.001
+Tempat untuk menginap di Lexington, Massachusetts
+
+469
+00:27:00.000 --> 00:27:02.000
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+470
+00:27:03.000 --> 00:27:05.001
+Mirror Technologies telah mengembangkan display halaman penuh
+
+471
+00:27:05.001 --> 00:27:07.000
+untuk digunakan dengan Macintosh Classic.
+
+472
+00:27:07.001 --> 00:27:11.001
+Karena Classic tidak memiliki slot yang diperluas, layar menggunakan slot internal.
+
+473
+00:27:11.001 --> 00:27:13.001
+Video board yang melekat pada Board of Logic.
+
+474
+00:27:13.001 --> 00:27:18.001
+Paparan 15 inci tersedia untuk kurang dari $ 700 dan paparan halaman ganda 19 inci
+
+475
+00:27:18.001 --> 00:27:20.000
+Penjualan hanya di bawah $ 900.
+
+476
+00:27:21.000 --> 00:27:24.000
+Akhirnya, popularitas gelar Ilmu Komputer
+
+477
+00:27:24.000 --> 00:27:25.001
+telah jatuh di kampus universitas.
+
+478
+00:27:26.000 --> 00:27:28.001
+Departemen Pendidikan telah mengumumkan bahwa jumlah lulusan
+
+479
+00:27:28.001 --> 00:27:32.000
+Gelar yang diberikan dalam Ilmu Komputer dan Informasi
+
+480
+00:27:32.000 --> 00:27:33.001
+jatuh untuk tahun ketiga berturut-turut
+
+481
+00:27:34.000 --> 00:27:37.001
+Menurut The Washington Post, siswa yang masuk Ilmu Komputer mengatakan bahwa
+
+482
+00:27:37.001 --> 00:27:39.001
+Yang utama adalah waktu yang menghabiskan dan membosankan.
+
+483
+00:27:40.000 --> 00:27:41.000
+Tapi kemudian lagi, apa yang besar itu tidak?
+
+484
+00:27:41.000 --> 00:27:44.001
+Itulah yang dimaksud dengan komputer minggu ini. Saya adalah Maria Gabriel.
+
+485
+00:28:11.000 --> 00:28:16.000
+Pada CANT, OH 44240, silakan tunjukkan tanggal program.
+
+486
+00:28:41.000 --> 00:29:00.000
+Terima kasih untuk menonton.

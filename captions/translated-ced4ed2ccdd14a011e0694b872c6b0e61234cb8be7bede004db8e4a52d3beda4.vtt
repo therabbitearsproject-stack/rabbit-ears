@@ -1,0 +1,1405 @@
+WEBVTT
+
+1
+00:00:17.000 --> 00:00:22.000
+Ini bukan toko grafik atau studio musik. Ini adalah polisi San Jose
+
+2
+00:00:22.000 --> 00:00:25.001
+Departemen yang Pegawai-pegawai di sini ingin sistem komputer yang tidak hanya dapat mengendalikan
+
+3
+00:00:25.001 --> 00:00:29.001
+aplikasi bisnis rutin, tetapi satu yang juga dapat membantu mereka mengembalikan
+
+4
+00:00:29.001 --> 00:00:32.000
+tempat kecelakaan atau tempat kejahatan untuk membantu mereka dalam
+
+5
+00:00:32.000 --> 00:00:36.001
+penyelidikan . Mereka berakhir tidak dengan PC yang kompatibel atau Macintosh, tetapi dengan
+
+6
+00:00:36.001 --> 00:00:41.000
+dari Atari St. Anda tahu, orang memiliki stereotip dan kadang-kadang kita memiliki stereotyp.
+
+7
+00:00:41.000 --> 00:00:44.000
+tentang komputer. Hari ini kami akan mencoba untuk membantu Anda memecahkan setidaknya satu
+
+8
+00:00:44.000 --> 00:00:48.001
+stereotip ketika kita melihat kekuatan dan versatilitas Atari ST pada
+
+9
+00:00:48.001 --> 00:00:50.000
+edisi ini dari Computer Chronicles.
+
+10
+00:01:11.001 --> 00:01:17.000
+The Computer Chronicles dibuat mungkin sebagian oleh McGraw Hill, penerbit
+
+11
+00:01:17.000 --> 00:01:23.001
+Byte Magazine dan Bix, pertukaran informasi Byte. Dalam cetak dan online, Byte
+
+12
+00:01:23.001 --> 00:01:28.000
+dan Bix melayani profesional komputer di seluruh dunia dengan informasi rinci tentang yang baru
+
+13
+00:01:28.000 --> 00:01:30.000
+perangkat keras, perangkat lunak dan teknologi.
+
+14
+00:01:36.000 --> 00:01:39.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+15
+00:01:40.000 --> 00:01:43.000
+Dan Gary, apa yang kita miliki di sini bukan simulator penerbangan biasa. Khusus ini
+
+16
+00:01:43.000 --> 00:01:47.000
+perangkat input adalah kontrol radio jarak jauh yang sebenarnya yang Anda gunakan untuk menjalankan radio ini.
+
+17
+00:01:47.000 --> 00:01:50.000
+Model pesawat dan helikopter yang dikendalikan. Jadi sebelum Anda keluar dan menghancurkan Anda
+
+18
+00:01:50.000 --> 00:01:51.001
+$ 2.000 model, Anda dapat melakukan
+
+19
+00:01:51.001 --> 00:01:53.001
+gerakan yang sama untuk menjalankan pesawat yang sama di sini di layar.
+
+20
+00:01:53.001 --> 00:01:56.001
+Nah, Anda tahu, saya terhempas salah satu helikopter kecil ini beberapa tahun yang lalu,
+
+21
+00:01:56.001 --> 00:01:59.001
+Jadi saya pikir saya adalah pelanggan yang baik untuk produk ini. $199 disebut AeroJumper, Gary.
+
+22
+00:01:59.001 --> 00:02:02.001
+Itu adalah steeper. Yang menarik adalah ini membutuhkan banyak kekuatan kuda untuk menjalankan ini
+
+23
+00:02:02.001 --> 00:02:05.000
+sejenis simulasi yang Ini pertama kali ditulis untuk Atari ST.
+
+24
+00:02:05.001 --> 00:02:07.001
+Pertanyaan yang saya ada untuk Anda, meskipun memiliki hubungannya dengan Atari yang kita lihat di
+
+25
+00:02:07.001 --> 00:02:11.000
+Program ini dimulai di Departemen Polisi San Jose. Atari yang dibangun
+
+26
+00:02:11.000 --> 00:02:15.000
+untuk membaca tidak hanya perangkat lunak Atari, tetapi dapat membaca cakera Mac, cakera MS-DOS. Apakah itu
+
+27
+00:02:15.000 --> 00:02:18.000
+mungkin untuk dapat membeli mesin murah yang bagus seperti Atari dan menjalankan apa pun
+
+28
+00:02:18.000 --> 00:02:21.001
+Perangkat lunak ? Nah, saya pikir ini adalah ide yang baik pada prinsipnya, tentu saja, tapi meskipun
+
+29
+00:02:21.001 --> 00:02:25.000
+Ini adalah prosesor 68K di sini, itu bukan Mac, dan jadi akan ada beberapa
+
+30
+00:02:25.000 --> 00:02:28.001
+pertimbangan perangkat keras bahwa beberapa perangkat lunak akan mengharapkan, dan dengan demikian kita
+
+31
+00:02:28.001 --> 00:02:32.001
+Anda tidak bisa mengharapkan bahwa semua perangkat lunak akan berjalan. Hal ini juga tergantung pada jenis
+
+32
+00:02:32.001 --> 00:02:36.000
+simulasi yang Anda lakukan, apakah itu coprocessor, yang berarti ia akan
+
+33
+00:02:36.000 --> 00:02:39.001
+berjalan pada kecepatan tinggi, atau apakah itu emulasi perangkat lunak di mana setiap instruksi adalah
+
+34
+00:02:39.001 --> 00:02:43.000
+yang ditafsirkan. Itu bisa empat atau lima kali lebih lambat dari hal yang sebenarnya. dan yang
+
+35
+00:02:43.000 --> 00:02:47.001
+Atari ST memiliki kelebihan. Disk itu sendiri, bagaimanapun, menjadi kompatibel dengan RIBM dalam
+
+36
+00:02:47.001 --> 00:02:52.000
+Memahami bahwa format data adalah sama. Terima kasih kepada sejarah Jams DRI. Gary yang
+
+37
+00:02:52.000 --> 00:02:55.000
+Kami akan fokus pada Atari ST hari ini. Kami akan melihat beberapa aplikasi baru untuk
+
+38
+00:02:55.000 --> 00:02:59.000
+itu, program cat, high-end desktop publishing aplikasi CAD, dan kita akan melihat
+
+39
+00:02:59.000 --> 00:03:03.000
+Bagaimana ST dapat menjalankan perangkat lunak Mac. Sekarang, ketika Anda berbicara tentang Atari ST,
+
+40
+00:03:03.000 --> 00:03:06.001
+Tentu saja, Anda harus berbicara tentang musik. Kami mulai dengan mengunjungi sebuah universitas di mana Anda
+
+41
+00:03:06.001 --> 00:03:10.000
+Dapatkan gelar dalam teknik musik berkat Atari ST.
+
+42
+00:03:14.000 --> 00:03:20.001
+Meskipun komputer pribadi telah menjadi alat favorit dunia bisnis,
+
+43
+00:03:20.001 --> 00:03:27.000
+Bakat meluas jauh melampaui spreadsheets yang mengerikan dan graf pie berwarna-warni. Dengan A
+
+44
+00:03:27.000 --> 00:03:31.001
+sedikit perkakasan tambahan, itu juga menjadi alat pilihan untuk artis,
+
+45
+00:03:32.000 --> 00:03:37.000
+para musisi dan komposer. Di Cogswell College, sebuah sekolah teknis sekitar 40 mil
+
+46
+00:03:37.000 --> 00:03:43.000
+di selatan San Francisco, siswa menggunakan Atari ST untuk mempelajari cara baru untuk
+
+47
+00:03:43.000 --> 00:03:48.001
+menyusun dan melakukan musik. Dengan bantuan antara muka perangkat keras yang disebut MIDI atau
+
+48
+00:03:48.001 --> 00:03:55.001
+Interface digital instrumen musik. Fitur yang paling penting yang
+
+49
+00:03:55.001 --> 00:04:00.001
+MIDI membawa adalah memungkinkan Anda untuk merekam hanya kinerja terpisah dari suara.
+
+50
+00:04:01.000 --> 00:04:04.001
+Jadi saya dapat merekam persembahan dan kemudian memutuskan setelah fakta apa yang saya inginkan itu untuk
+
+51
+00:04:04.001 --> 00:04:08.001
+Aku ingin itu menjadi violin, aku ingin itu jadi violin. Hal lain yang MIDI lakukan
+
+52
+00:04:08.001 --> 00:04:13.000
+Hal yang dapat dilakukan adalah editing. Anda hanya dapat masuk dan mengambil seluruh blok dari
+
+53
+00:04:13.000 --> 00:04:18.000
+bahan dan memindahkannya dan meletakkannya kembali dengan cara yang berbeda. dan yang
+
+54
+00:04:18.000 --> 00:04:23.000
+Studio musik di Cogswell memiliki stok perangkat keras yang dikenal seperti elektronik
+
+55
+00:04:23.000 --> 00:04:28.000
+Keyboard dan sintesis. Produksi musik ini disusun melalui
+
+56
+00:04:28.000 --> 00:04:33.001
+perangkat lunak yang mengumpulkan dan mengubah jalur yang berbeda. COGSWELL menggunakan
+
+57
+00:04:33.001 --> 00:04:38.000
+Paket perangkat lunak bernama Notator dari DigiDesign untuk membuat dan mengedit musik
+
+58
+00:04:38.000 --> 00:04:45.000
+skor dalam waktu nyata. Program ini memungkinkan perubahan pada kunci, tempo, atau
+
+59
+00:04:45.000 --> 00:04:50.000
+instrumen untuk dimasukkan dan dimainkan kembali segera dan pengguna dapat memilih
+
+60
+00:04:50.000 --> 00:04:57.000
+antara berbagai paparan data waktu nyata. Cogswell juga menggunakan
+
+61
+00:04:57.000 --> 00:05:03.000
+Master Tracks Pro dari Passport Designs, sekuensi yang menyediakan 64 multi
+
+62
+00:05:03.000 --> 00:05:09.001
+- saluran rekaman jalur dan kenalan tampilan tape rekaman jenis kontrol. Untuk A
+
+63
+00:05:09.001 --> 00:05:14.000
+Komposer dengan pendidikan tradisional, elektronik mungkin tampak berlebihan
+
+64
+00:05:14.000 --> 00:05:19.000
+Tapi guru sekolah tidak melihat ini sebagai masalah. Kami tidak melempar
+
+65
+00:05:19.000 --> 00:05:23.001
+Teori musik dari jendela. Kami menggunakan teori musik, kami menggunakan ini
+
+66
+00:05:23.001 --> 00:05:28.000
+hal-hal sebagai alat Bisnis yang saya pikir sangat mirip dengan komputer adalah sekitar lima
+
+67
+00:05:28.000 --> 00:05:33.000
+beberapa tahun yang lalu. Ini adalah program baru dan pendidikan scrambling
+
+68
+00:05:33.000 --> 00:05:34.001
+Bertahan dengan teknologi.
+
+69
+00:05:45.001 --> 00:05:51.000
+Dengan kami di studio sekarang adalah Vincent Di Filippo. Dia adalah seorang spesialis Atari dari
+
+70
+00:05:51.000 --> 00:05:54.001
+The Winter Circle Computer Store di Berkeley, California dan duduk di sebelah
+
+71
+00:05:54.001 --> 00:05:58.000
+Vincent, Jim Kent, penulis Cyberpaint. dengan Gary? Jim, saya pikir semua orang suka
+
+72
+00:05:58.000 --> 00:06:02.000
+Filosofi Commodore dan Atari dalam hal harga. Anda mendapatkan banyak
+
+73
+00:06:02.000 --> 00:06:05.001
+Komputer bang untuk buck Anda. Apa lagi tentang Atari yang memimpin Anda untuk memilih
+
+74
+00:06:05.001 --> 00:06:10.001
+Apakah itu sebagai platform untuk program cyberspace Anda? Ada dua hal utama, yaitu
+
+75
+00:06:10.001 --> 00:06:16.000
+68.000 prosesor jadi saya tidak perlu menangani segmen memori yang aneh
+
+76
+00:06:16.000 --> 00:06:18.001
+Dan itu adalah warna.
+
+77
+00:06:19.000 --> 00:06:23.001
+Ok ya. Ya ya ya ya. Warna sangat penting. Nah, dan sejauh cyber painting, apa yang dilakukan
+
+78
+00:06:23.001 --> 00:06:29.001
+Apakah Cybersecurity? Cyberpaint adalah program yang berguna untuk animasi,
+
+79
+00:06:30.001 --> 00:06:35.000
+Video jenis kerja. Ini pada dasarnya sebuah program cat yang memungkinkan Anda melukis di atas banyak
+
+80
+00:06:35.000 --> 00:06:39.000
+dan banyak bingkai dan dengan beberapa efek khusus di atasnya. Okay, kami adalah
+
+81
+00:06:39.000 --> 00:06:40.001
+Aku akan melihat ini. Tunjukkan kepada kami apa yang dapat Anda lakukan dengan cyberspace. Saya harus
+
+82
+00:06:40.001 --> 00:06:44.000
+Menjelaskan di sini nyata dengan cepat. Kami memiliki dua ataris di sini. Kita tidak perlu semua ini
+
+83
+00:06:44.000 --> 00:06:47.001
+peralatan yang Ok ya. Kami berada di cyberspace. Ada dua sistem yang berbeda untuk apa yang
+
+84
+00:06:47.001 --> 00:06:51.000
+akan datang nanti. Pergi ke depan. Pertama-tama, saya hanya ingin menunjukkan
+
+85
+00:06:51.000 --> 00:06:52.001
+Anda melakukan sesuatu yang seseorang lakukan dengan itu.
+
+86
+00:06:52.001 --> 00:06:59.000
+Ini adalah animasi yang dilakukan oleh beberapa orang di Prancis. Itu agak spektakuler. Jenis dari A
+
+87
+00:06:59.000 --> 00:07:03.000
+Robot monster yang keluar dari bawah laut. Ya ya. Berjalan-jalan di belakang cawangan di sana
+
+88
+00:07:03.000 --> 00:07:08.000
+juga . Ya ya. Dengarkan judul Anda datang lagi. Ini adalah penggunaan cyberspace yang sangat populer.
+
+89
+00:07:08.001 --> 00:07:15.000
+Jadi ini mungkin seperti pembukaan film atau sesuatu seperti itu. Ya ya. yang hebat. Jadi
+
+90
+00:07:15.000 --> 00:07:20.001
+Di sini kamu telah melihatnya. Ini adalah kontrol cyberspace dasar Anda. Ini sedikit seperti A
+
+91
+00:07:20.001 --> 00:07:26.001
+dari VCR. Anda dapat pergi pop ke frame pertama pop ke yang terakhir. Anda bisa kembali ke belakang
+
+92
+00:07:26.001 --> 00:07:32.000
+cepat, maju cepat atau apa yang benar-benar menyenangkan adalah Anda bisa hanya jenis wiggle pria ini
+
+93
+00:07:32.000 --> 00:07:34.000
+dan mengontrolnya secara langsung.
+
+94
+00:07:36.000 --> 00:07:39.001
+Apa yang menunjukkan nomor bingkai di bagian bawah? Ya, itu yang dilakukan. Ia adalah seorang terkenal
+
+95
+00:07:39.001 --> 00:07:46.001
+Nombor pada knob slider Jadi bagaimanapun, ini pada dasarnya adalah sistem cat.
+
+96
+00:07:47.000 --> 00:07:53.001
+Biarlah saya melukis sedikit dengan itu dan mendapatkan sikat yang agak besar. Pastikan
+
+97
+00:07:53.001 --> 00:08:00.001
+Saya sedang dalam draw. Ya ya. Dan mari kita lihat. Mari kita tambahkan beberapa sampah ke
+
+98
+00:08:00.001 --> 00:08:04.001
+dengan air. Jadi kau akan sampai kau benar-benar bodoh. Itu semua benar. Jadi Anda melakukan beberapa
+
+99
+00:08:04.001 --> 00:08:09.000
+Waktu nyata bekerja di sini. Ya ya. Dan Anda akan memberi kami lelucon setia di sana.
+
+100
+00:08:11.000 --> 00:08:13.000
+Semoga tidak. Ok ya.
+
+101
+00:08:18.000 --> 00:08:24.001
+Jadi dasar untuk titik referensi Anda. Anda meletakkan pada frame setelah frame. dan
+
+102
+00:08:24.001 --> 00:08:29.001
+Tentu saja, itu akan mengambil waktu untuk membuat 151 bingkai. Tetapi
+
+103
+00:08:29.001 --> 00:08:36.001
+Namun, hal ini juga bisa menjadi sekuel yang
+
+104
+00:08:36.001 --> 00:08:41.000
+Anda memperkenalkan bahwa Anda mempersiapkan menggunakan cyberspace pada waktu lain. Dan juga,
+
+105
+00:08:41.001 --> 00:08:46.000
+Ya, jika Anda ingin melihatnya. Ini adalah salah satu kegunaan utama dari ini sebenarnya.
+
+106
+00:08:46.000 --> 00:08:49.000
+Dan saya memiliki animasi yang benar-benar menyenangkan yang saya ingin tunjukkan kepada Anda juga.
+
+107
+00:08:52.000 --> 00:08:58.000
+Hanya pergi ke sini. Lakukan hal yang berlebihan. Ini membawa ke atas
+
+108
+00:08:58.000 --> 00:08:59.001
+Permintaan file standar Atari.
+
+109
+00:09:00.001 --> 00:09:07.000
+Dan ini adalah cyber B yang dilakukan oleh Maurice. Nah, saya tahu ini dilakukan dalam sistem 3D.
+
+110
+00:09:10.000 --> 00:09:17.000
+Anda dapat melihat muncul untuk animasi. Bukankah itu? Ya ya. Jadi Anda memiliki sedikit B
+
+111
+00:09:17.000 --> 00:09:21.000
+Itu adalah flaping rollingnya di sekitar kacamata
+
+112
+00:09:21.000 --> 00:09:26.000
+dan . Terlalu lama di atas yang lain.
+
+113
+00:09:26.001 --> 00:09:30.000
+Jadi Jim, ini seperti teknik animasi tradisional di mana Anda melukis satu bingkai
+
+114
+00:09:30.000 --> 00:09:33.000
+Setelah sekuel dan sekuel berikutnya. Apakah itu benar? Anda bisa
+
+115
+00:09:33.000 --> 00:09:34.001
+Anda melakukannya, tetapi Anda tidak terbatas pada itu.
+
+116
+00:09:34.001 --> 00:09:38.000
+Ada banyak hal yang dibangun untuk membuatnya jauh lebih mudah untuk Anda.
+
+117
+00:09:39.000 --> 00:09:42.001
+Salah satunya adalah komposisi ini. Aku akan tunjukkan sesuatu yang lain.
+
+118
+00:09:46.000 --> 00:09:49.000
+Okay, saya akan memotong sedikit klip
+
+119
+00:09:49.000 --> 00:09:53.001
+dan . Maafkan aku
+
+120
+00:09:56.000 --> 00:09:59.001
+Okay, dan putar ini. Oh aku lihat. Tentu saja
+
+121
+00:10:00.000 --> 00:10:03.000
+Tapi itu bisa menjadi set kerangka yang akan Anda simpan di sana.
+
+122
+00:10:05.000 --> 00:10:12.000
+Ya, mungkin saja Jadi katakanlah, biarlah ia melebihi 180. dan
+
+123
+00:10:12.000 --> 00:10:16.001
+Ia membutuhkan sedikit waktu untuk menghitungnya sekarang. Jim, Kembali ke Gary&#x27;s
+
+124
+00:10:16.001 --> 00:10:20.000
+Pertanyaan yang Apa manfaat melakukan sesuatu seperti cat cyber di Atari
+
+125
+00:10:20.000 --> 00:10:24.000
+dengan ST? Kita berpikir tentang Amigas dalam vena yang serupa atau bahkan dibandingkan dengan Macintosh,
+
+126
+00:10:24.000 --> 00:10:29.001
+Sebagai contoh. Nah, keuntungan utama di atas Mac adalah ia dalam warna dan itu murah.
+
+127
+00:10:31.000 --> 00:10:37.001
+Keuntungan utama dari Amiga adalah bahwa ia cenderung jauh lebih dapat diandalkan. Saya punya
+
+128
+00:10:37.001 --> 00:10:42.000
+Saya telah kehilangan begitu banyak cakera floppy yang berjalan di Amiga. I
+
+129
+00:10:42.000 --> 00:10:43.001
+Ada beberapa orang yang tertekan dengan hal itu.
+
+130
+00:10:44.001 --> 00:10:48.000
+Nah, Vincent, ada sedikit kartun di sini yang mengatakan vector 128 terjebak
+
+131
+00:10:48.000 --> 00:10:52.000
+di sisi 1040 ini. Dan juga apa yang terlihat seperti layar Mac di Atari itu.
+
+132
+00:10:52.000 --> 00:10:55.000
+Bisakah Anda memberitahu kami sedikit apa yang sedang terjadi di sini? Tentu saja Ini adalah Spectre 128.
+
+133
+00:10:55.001 --> 00:11:00.000
+Ini adalah emulasi Macintosh kami untuk Atari. Saya berada dalam aplikasi populer
+
+134
+00:11:00.000 --> 00:11:04.000
+yang disebut HyperCard saat ini. HyperCard adalah sejenis peluncuran, antara lain
+
+135
+00:11:04.000 --> 00:11:09.000
+hal yang Ini adalah jenis penggunaan bahasa yang berbilang. Jadi seperti saya hanya bisa klik pada
+
+136
+00:11:09.000 --> 00:11:14.000
+satu item dan voila, saya dalam aplikasi itu. Seperti halnya yang terjadi
+
+137
+00:11:14.000 --> 00:11:15.001
+menjadi seperti jadual periodik.
+
+138
+00:11:16.000 --> 00:11:19.000
+Jadi saya bisa melihat ke atas. Kami sudah kenal dengan HyperCard. Mengapa Anda tidak memberitahu kami tentang bagaimana
+
+139
+00:11:19.000 --> 00:11:22.001
+Anda menjalankan HyperCard di dalam Atari. Apa yang dilakukan Spectre 128 di sini?
+
+140
+00:11:23.000 --> 00:11:27.001
+Okay, Spectre 128 menawarkan Anda untuk memegang ROM Macintosh, yang merupakan dasar
+
+141
+00:11:27.001 --> 00:11:32.000
+Sistem operasi Macintosh. Dan karena Atari dan Macintosh pada dasarnya
+
+142
+00:11:32.000 --> 00:11:39.000
+prosesor gaya yang sama dan apa yang tidak, itu tidak mudah, tetapi mudah untuk dilakukan dan membuat
+
+143
+00:11:39.000 --> 00:11:43.001
+Sebuah konversi untuk itu. Dan karena Atari memiliki pelabuhan kartun, itulah yang mereka
+
+144
+00:11:43.001 --> 00:11:47.000
+digunakan untuk membawa ROM Macintosh ke sistem operasi Atari. Ada yang ada
+
+145
+00:11:47.000 --> 00:11:51.001
+Apakah ada pembatasan terhadap penggunaan tersebut? Beberapa program tidak berjalan atau? Ya ya. Program yang
+
+146
+00:11:51.001 --> 00:11:55.001
+yang cenderung berjalan adalah apa yang disebut program yang berjalan dengan baik. Orang-orang yang pergi
+
+147
+00:11:55.001 --> 00:12:01.000
+melalui kotak alat. Orang-orang yang tidak akan berjalan biasanya seperti permainan atau sesuatu
+
+148
+00:12:01.000 --> 00:12:04.001
+seperti itu, di mana penulis mencoba untuk pergi ke perangkat keras untuk mencoba untuk mendapatkan lebih cepat
+
+149
+00:12:04.001 --> 00:12:08.000
+layar atau suara yang lebih baik, sesuatu seperti itu. Program-program seperti ini tidak akan
+
+150
+00:12:08.000 --> 00:12:11.001
+berlari Ketika Anda berbicara tentang emulasi juga, bagaimana kinerja sesuatu seperti
+
+151
+00:12:11.001 --> 00:12:14.001
+HyperCard berjalan di Atari dibandingkan dengan berjalan di Mac di
+
+152
+00:12:14.001 --> 00:12:16.001
+Tempat pertama ? Bagaimana dengan 20% lebih cepat?
+
+153
+00:12:17.000 --> 00:12:21.001
+Benarkah ? Ya ya. Mengapa ? Atari adalah prosesor yang lebih cepat dari Mac
+
+154
+00:12:21.001 --> 00:12:24.001
+Lebih dari Harga juga jauh lebih baik.
+
+155
+00:12:25.000 --> 00:12:30.000
+Apakah ada masalah dengan hak cipta dan sebagainya? Kita tahu segalanya. Apel adalah
+
+156
+00:12:30.000 --> 00:12:33.001
+sangat berhati-hati untuk melepaskan hal-hal ini. Apakah Anda memiliki masalah dengan itu?
+
+157
+00:12:34.000 --> 00:12:38.000
+Tidak, karena kita sebenarnya menggunakan produk Mac yang nyata. Kami tidak mengkloning mereka atau
+
+158
+00:12:38.000 --> 00:12:41.001
+menyalin mereka atau sesuatu seperti ini. Ada Mac ROM yang sebenarnya dijangka
+
+159
+00:12:41.001 --> 00:12:45.000
+dan kartun. Apakah ada produk di luar sana yang bisa melakukan hal yang sama dengan MS
+
+160
+00:12:45.000 --> 00:12:48.001
+Perangkat lunak DOS di Atari? Ya, sudah ada Ini adalah program yang disebut PCDitto.
+
+161
+00:12:49.000 --> 00:12:51.001
+Mereka datang dengan versi hardware. Mereka benar-benar dapat membawanya berjalan
+
+162
+00:12:51.001 --> 00:12:53.001
+dengan kecepatan IBM.
+
+163
+00:12:54.000 --> 00:12:55.001
+Dalam hal ini, ini adalah software emulasi
+
+164
+00:12:55.001 --> 00:12:57.001
+pada saat ini. Saat ini, ini adalah emulasi perangkat lunak.
+
+165
+00:12:58.000 --> 00:13:02.001
+Bagaimana kinerja dari itu? Performa di PCDitto saat ini adalah
+
+166
+00:13:02.001 --> 00:13:08.001
+Seperti menjalankan 1 MHz IBM. Anda bisa tidur di antara beberapa hal. Empat kali
+
+167
+00:13:08.001 --> 00:13:10.000
+Lebih lambat dari PC sebelumnya.
+
+168
+00:13:10.000 --> 00:13:14.000
+Itu memang benar. Sayang, terima kasih banyak sekali. Ada yang sangat menarik
+
+169
+00:13:14.000 --> 00:13:17.001
+proyek penelitian yang sedang berlangsung di Steinhardt Aquarium di San Francisco mencoba untuk
+
+170
+00:13:17.001 --> 00:13:21.000
+Mendapatkan manusia dan delfin untuk berkomunikasi. Dalam sistem komputer, mereka adalah
+
+171
+00:13:21.000 --> 00:13:25.001
+Menggunakan untuk mendukung eksperimen ini adalah Atari ST. Wendy Woods memiliki laporan.
+
+172
+00:13:28.000 --> 00:13:34.000
+Dua delfin bernama Thetis dan Amphie dan tiga sel, Reno, Geraldine dan Missy,
+
+173
+00:13:34.000 --> 00:13:38.001
+Dalam tiga tahun terakhir, mereka telah dapat berkomunikasi dengan para peneliti.
+
+174
+00:13:38.001 --> 00:13:44.000
+bantuan dari sebuah komputer. Di akvarium Steinhardt di San Francisco, para peneliti menemukan bahwa
+
+175
+00:13:44.000 --> 00:13:48.000
+Mereka menyediakan mereka dengan serangkaian pipa bawah air, masing-masing ketika
+
+176
+00:13:48.000 --> 00:13:50.000
+suara yang ditekan dengan nada yang berbeda.
+
+177
+00:13:51.000 --> 00:13:56.000
+Setiap nada mewakili objek yang berbeda. Ikan adalah yang paling populer, tetapi mereka dapat
+
+178
+00:13:56.000 --> 00:14:03.000
+juga meminta bola, cincin, hand-on petting atau semprot air. dari Atari St.
+
+179
+00:14:03.001 --> 00:14:08.000
+komputer yang terperangkap di dalam lubang yang dibangun di atas akuarium mencatat setiap kunci hewan
+
+180
+00:14:08.000 --> 00:14:11.001
+pers dan waktu yang tepat permintaan dibuat.
+
+181
+00:14:12.000 --> 00:14:16.001
+Para peneliti menyebut peningkatan lingkungan ini atau cara untuk meningkatkan kehidupan.
+
+182
+00:14:16.001 --> 00:14:21.001
+untuk mereka yang terperangkap di kolam proverbial. Tapi lebih dari sekedar menghibur hewan,
+
+183
+00:14:22.000 --> 00:14:25.000
+Atari ST mengumpulkan data penting.
+
+184
+00:14:25.000 --> 00:14:31.001
+Saya pikir kita melihat corak yang menarik. Fakta bahwa sel adalah yang paling
+
+185
+00:14:33.000 --> 00:14:35.001
+“Seperti yang saya katakan, ada sesuatu yang mungkin
+
+186
+00:14:35.001 --> 00:14:37.001
+Kami tidak mengharapkan awalnya.
+
+187
+00:14:38.000 --> 00:14:43.000
+Pola lain akan muncul saat para peneliti menganalisis data. oleh Eric Carlson, a
+
+188
+00:14:43.000 --> 00:14:47.000
+Universitas San Francisco lulusan, menulis program yang mengendalikan
+
+189
+00:14:47.000 --> 00:14:53.001
+Pipa menggunakan GFA Basic dari Michedron. Ini adalah komputer yang ideal untuk
+
+190
+00:14:53.001 --> 00:15:00.001
+ini . Akses ke pelabuhan sangat baik dan juga
+
+191
+00:15:00.001 --> 00:15:07.001
+Bahasa yang saya pilih untuk digunakan di sini adalah dasar. Suara yang
+
+192
+00:15:07.001 --> 00:15:14.000
+menghasilkan kemampuan dari Atari sangat berguna dan juga bagus untuk
+
+193
+00:15:14.000 --> 00:15:19.000
+Memiliki interface grafis. Interface grafis memungkinkan peneliti untuk
+
+194
+00:15:19.000 --> 00:15:24.001
+segera melihat kunci apa hewan yang ditekan, memungkinkan mereka untuk lebih fokus pada
+
+195
+00:15:24.001 --> 00:15:29.001
+pengamatan mereka. Selain itu, para peneliti juga mencatat bahwa hewan
+
+196
+00:15:29.001 --> 00:15:35.000
+reaksi menggunakan pembaca barcode, antarmuka ke Tandy portabel, dan merekam
+
+197
+00:15:35.000 --> 00:15:40.001
+Pengamatan sendiri pada audio tape. Langkah selanjutnya dari proyek ini adalah untuk memungkinkan
+
+198
+00:15:40.001 --> 00:15:46.001
+makhluk untuk memainkan musik. ST akan terhubung ke tiga deck audio tape.
+
+199
+00:15:47.001 --> 00:15:50.001
+Di Steinhardt Aquarium di San Francisco untuk Komputer
+
+200
+00:15:50.001 --> 00:15:52.000
+Saya adalah Wendy Woods.
+
+201
+00:16:05.000 --> 00:16:09.000
+Dengan kami di studio sekarang adalah Nathan Patesche, dia adalah presiden ISD Marketing di
+
+202
+00:16:09.000 --> 00:16:13.001
+Toronto dan duduk di samping Nathan dan Jurese editor dari Start Magazine. dan Stuart,
+
+203
+00:16:13.001 --> 00:16:16.001
+seolah-olah setiap kali seseorang mengatakan Atari mereka berpikir tentang mesin game tetapi
+
+204
+00:16:16.001 --> 00:16:21.000
+Kita harus menangkap mereka. Di sini kita memiliki sekelompok mesin yang dapat
+
+205
+00:16:21.000 --> 00:16:25.001
+Ini bukan setup standard Atari. Andrew, Anda bisa memberitahu kami sedikit tentang apa yang
+
+206
+00:16:25.001 --> 00:16:28.001
+Apakah konfigurasi hardware ini? Sebuah printer laser dan sebagainya. Tentu saja ini adalah
+
+207
+00:16:28.001 --> 00:16:35.000
+Semua perangkat keras Atari kecuali untuk monitor, monitor Viking. Apa yang kita miliki adalah Mega
+
+208
+00:16:35.000 --> 00:16:39.000
+4 ST4, 4 megabyte memori, 68.000 prosesor.
+
+209
+00:16:39.001 --> 00:16:46.001
+Di bawahnya adalah 30 meg hard drive Mega File 30. Ini adalah SLM804 printer dari
+
+210
+00:16:46.001 --> 00:16:50.000
+Atari dan di antara adalah papan antarmuka. Apa yang akan terjadi dengan hardware
+
+211
+00:16:50.000 --> 00:16:52.000
+Apakah biaya konfigurasi untuk sesuatu seperti ini?
+
+212
+00:16:52.001 --> 00:16:56.000
+Mengecualikan monitor itu adalah $ 39.95. Yang akan kurang dari yang Anda dapat membayar untuk
+
+213
+00:16:56.000 --> 00:17:00.000
+Hanya menggunakan laser pada printer. Itu memang benar. Sekarang Andrew memberitahu kami sedikit tentang
+
+214
+00:17:00.000 --> 00:17:04.001
+Dianabol adalah produk Anda. Dynacad adalah produk ISD dan itu lagi Nathan
+
+215
+00:17:04.001 --> 00:17:11.000
+perusahaan yang Ini adalah solusi profesional di Atari dan itu sama baiknya dengan mana-mana
+
+216
+00:17:11.000 --> 00:17:16.000
+Program CAD yang pernah saya lihat. Baiklah, mari kita lihat pada itu. Kami memiliki, Anda memiliki
+
+217
+00:17:16.000 --> 00:17:20.001
+Pilihan dari permata turun menu. Ada Keyboard Equivalent Plus
+
+218
+00:17:20.001 --> 00:17:27.000
+Ada banyak menu ikon yang bagus. Saat ini, kami memiliki sebuah frame dengan
+
+219
+00:17:27.000 --> 00:17:31.000
+dengan grid. Anda dapat melihat pola titik yang merupakan jaringan yang ditetapkan pada interval empat inci.
+
+220
+00:17:31.001 --> 00:17:38.001
+Mari kita pertama-tama zoom pada bagian dari itu dengan jendela zoom. Mari kita
+
+221
+00:17:38.001 --> 00:17:45.000
+Hanya mengambil sudut layar dan saya dapat melihat pola titik lebih besar. Sekarang
+
+222
+00:17:45.000 --> 00:17:51.000
+Saya akan pergi, saya di menu input dan kami hanya akan meletakkannya di kotak
+
+223
+00:17:51.000 --> 00:17:54.001
+Di suatu tempat di sekitarnya.
+
+224
+00:17:59.001 --> 00:18:02.001
+Sekarang salah satu fitur yang bagus dari Dynacad adalah bahwa ia memiliki
+
+225
+00:18:02.001 --> 00:18:04.000
+Bezier dan binatang buta.
+
+226
+00:18:04.001 --> 00:18:09.000
+Bezier curves dan Beast blinds. Jadi apa yang dapat kita lakukan sekarang adalah menambahkan tab ke kotak ini.
+
+227
+00:18:09.000 --> 00:18:15.000
+Seolah-olah kita akan membuat pita. Pertama-tama, itu memiliki entitas snap
+
+228
+00:18:15.000 --> 00:18:16.001
+yang berarti Anda dapat memilih entitas.
+
+229
+00:18:17.000 --> 00:18:21.001
+Pada titik ini kita memilih untuk meletakkan titik di akhir. Sekarang kita akan pergi ke
+
+230
+00:18:21.001 --> 00:18:26.001
+lokasi dan kita dapat meletakkan, Anda dapat melihat garis band getah. Ya ya.
+
+231
+00:18:32.001 --> 00:18:37.001
+Dan kembali, maafkan saya, lihat di mana saya berada.
+
+232
+00:18:39.001 --> 00:18:41.000
+Dan pergi entitas snap.
+
+233
+00:18:42.001 --> 00:18:49.000
+Sekarang klik kanan. Ya ya. Bagaimana Dynacad akan membandingkan kata dengan AutoCAD? Kebanyakan orang
+
+234
+00:18:49.000 --> 00:18:54.000
+Anda terbiasa dengan jenis paket CAD standar ini. Lebih cepat dan
+
+235
+00:18:54.000 --> 00:18:55.001
+Ini memiliki interaksi yang jauh lebih baik.
+
+236
+00:18:56.001 --> 00:19:01.001
+Ini adalah setara dengan AutoCAD versi 10. Ia memiliki
+
+237
+00:19:01.001 --> 00:19:03.001
+Paket 3D Dan harga bijak bagaimana ia membandingkan?
+
+238
+00:19:04.000 --> 00:19:08.001
+Paket ini adalah $795, $695, maafkan saya. Ya ya. Apakah Anda memiliki seseorang untuk mendapatkan
+
+239
+00:19:08.001 --> 00:19:13.000
+Menentang penjualan karena Atari? Brand baru Atari atau orang-orang melihat
+
+240
+00:19:13.000 --> 00:19:15.000
+Peralatan mengatakan baik itu melakukan pekerjaan.
+
+241
+00:19:15.000 --> 00:19:19.000
+Selalu ada itu tetapi perbandingan harga membuat ini
+
+242
+00:19:19.000 --> 00:19:21.000
+Banyak yang lebih baik. Ya ya. Bagaimana dengan kebolehpercayaan?
+
+243
+00:19:22.001 --> 00:19:27.001
+Sekarang saya memiliki Atari 520 sendiri yang saya telah meningkatkan menjadi dua setengah mag dan
+
+244
+00:19:27.001 --> 00:19:31.001
+Saya telah memilikinya selama dua tahun dan saya tidak pernah memiliki waktu penurunan kecuali ketika saya terbakar
+
+245
+00:19:31.001 --> 00:19:36.000
+keluar dari chip suara saya dan saya melakukannya sendiri. Bolehkah saya meminta Anda untuk keluar dari
+
+246
+00:19:36.000 --> 00:19:39.001
+Dynacad saat ini? Kita ingin melihat Calamus yang merupakan Atari yang lain.
+
+247
+00:19:39.001 --> 00:19:43.000
+program yang dimiliki perusahaan Nathan. Dan saat kita melakukannya, Nathan memberitahu kita sedikit
+
+248
+00:19:43.000 --> 00:19:48.000
+tentang tentang Calamus yang desktop penerbitan yang benar? Ya ya. Calamus adalah kemasukan kami
+
+249
+00:19:48.000 --> 00:19:52.001
+dalam penerbitan desktop profesional berdasarkan platform Atari. Anda harus memiliki
+
+250
+00:19:52.001 --> 00:19:55.001
+Tangkap tikus di sana dan meletakkannya di sisi tangan kanan Anda.
+
+251
+00:19:55.001 --> 00:19:57.000
+Aku hanya akan menggunakannya sekarang. Ya, lanjutkan ke depan
+
+252
+00:19:58.000 --> 00:20:05.000
+Ok ya. Kami telah uh itu adalah ini dimaksudkan sebagai entry level profesional. Itu
+
+253
+00:20:05.000 --> 00:20:11.001
+memiliki lebih dari 350 fitur terpisah dan bekerja cukup baik. Berbeda
+
+254
+00:20:11.001 --> 00:20:16.001
+Ikon-ikon yang ditarik kembali ikon yang di sudut kanan atas adalah area bantuan yang
+
+255
+00:20:16.001 --> 00:20:21.001
+menunjukkan persis apa yang saya tunjukkan pada bingkai grup teks berputar dan sebagainya. Jika aku masuk
+
+256
+00:20:21.001 --> 00:20:26.000
+dan saya membuka bingkai salah satu fitur terbaik dari Calamus memiliki built-in sendiri
+
+257
+00:20:26.000 --> 00:20:32.000
+Pengarang teks Saya bisa memasukkan apa pun yang saya inginkan dengan cepat dan mudah dan Anda
+
+258
+00:20:32.000 --> 00:20:36.001
+Anda dapat melihatnya di editor karena Anda melihat saya bahkan dapat melihat kesalahan saya jika saya melakukan salah satu. Jika
+
+259
+00:20:36.001 --> 00:20:43.000
+Saya dua kali klik pada gaya saya bisa sangat mudah mengubah ukuran titik dan mengirimkan
+
+260
+00:20:43.000 --> 00:20:46.001
+Kembali ke sesuatu yang bisa kita lihat.
+
+261
+00:20:49.000 --> 00:20:54.001
+Okay pergi ke itu cukup sederhana menonjolkan perubahan itu fokus teks apa pun
+
+262
+00:20:54.001 --> 00:21:01.001
+seperti itu dapat membuat saya tidak dimuat di font lain tetapi sangat mudah untuk pergi
+
+263
+00:21:01.001 --> 00:21:08.000
+Dalam pengisian, font secara harfiah membutuhkan detik. Ok, saya bisa pergi dan mengatakan highlight
+
+264
+00:21:08.000 --> 00:21:12.000
+COM masuk ke preview font kami dan Anda dapat melihatnya memberi Anda representasi yang baik
+
+265
+00:21:12.000 --> 00:21:19.000
+dari font itu sendiri dan mengubah ukuran titik untuk mengatakan 70 untuk ini tidak 710 itu
+
+266
+00:21:19.000 --> 00:21:23.000
+sampai 999 dan sederhana seperti yang telah saya ubah dan Anda dapat melihat
+
+267
+00:21:23.000 --> 00:21:27.000
+Perwakilan di layar. Jika saya masuk ke dalam ini dengan cepat dan mudah saya dapat membuat sebuah
+
+268
+00:21:27.000 --> 00:21:31.000
+macro untuk gaya tertentu itu mari kita hanya menyebutnya A dan kita hanya akan menyimpan itu
+
+269
+00:21:31.000 --> 00:21:35.001
+gaya Anda memiliki makro itu jika saya meletakkan kursor di sini dan memukul kontrol A saya berubah
+
+270
+00:21:35.001 --> 00:21:40.001
+gaya dari dokumen berikut ini. Saya membuat sedikit lebih dulu
+
+271
+00:21:40.001 --> 00:21:47.000
+Layout yang canggih itu memiliki tiga kolom yang memiliki
+
+272
+00:21:47.000 --> 00:21:53.000
+judul, gambar grafis vektor dan sebagainya. Sesuatu yang membuat orang yang lebih profesional
+
+273
+00:21:53.000 --> 00:21:59.001
+aplikasi dan saya ingin membawanya sehingga saya dapat menunjukkan kepada Anda apa sebenarnya itu
+
+274
+00:21:59.001 --> 00:22:04.000
+mampu dan seberapa cepat ia mencetak pada printer laser Atari. Itu hanya akan menjadi
+
+275
+00:22:04.000 --> 00:22:08.000
+mengunggah dokumen cetak saya pikir ada 12 bingkai di sana dan kita hanya akan
+
+276
+00:22:08.000 --> 00:22:12.001
+mengirimkannya ke printer. Ini akan mengambil waktu yang lebih sedikit dari itu.
+
+277
+00:22:12.001 --> 00:22:16.000
+akan dengan pencetak PostScript yang kita sudah terbiasa. Perhatikan bahwa ada grafis
+
+278
+00:22:16.000 --> 00:22:20.000
+di tengah-tengah node ini Anda dapat menangani baik grafis vektor dan gambar?
+
+279
+00:22:20.001 --> 00:22:27.000
+Itu benar kami menangani hampir setiap format gambar utama
+
+280
+00:22:27.000 --> 00:22:32.000
+dan grafis vektor, Calum adalah miliknya dan vektor
+
+281
+00:22:32.000 --> 00:22:33.001
+file grafis, file meta gem, dll.
+
+282
+00:22:36.000 --> 00:22:40.000
+Dari segi font yang Anda bicarakan tentang
+
+283
+00:22:40.000 --> 00:22:41.001
+huruf berapa banyak jenis huruf yang Anda ketahui?
+
+284
+00:22:42.000 --> 00:22:45.001
+Kami memiliki font kami sendiri bahwa kami mengirim paket dengan kami memiliki beberapa keluarga
+
+285
+00:22:45.001 --> 00:22:49.001
+tersedia kami juga memiliki editor font yang memiliki enam keluarga lagi dengan itu dan ini
+
+286
+00:22:49.001 --> 00:22:54.000
+adalah semua font vector yang disebutkan teknologi yang sama seperti ini dan juga kami menandatangani
+
+287
+00:22:54.000 --> 00:22:58.000
+perjanjian lisensi dengan Compu-Graphics Corporation dan kami awalnya telah
+
+288
+00:22:58.000 --> 00:22:59.001
+31 dari keluarga font mereka juga.
+
+289
+00:23:00.000 --> 00:23:02.001
+Komputer keras Anda sudah di sini di jalan. Itulah yang kita gunakan ini adalah
+
+290
+00:23:02.001 --> 00:23:07.000
+font compographic dan jika saya hanya memegang itu ke layar mendapatkan ok keluar dari
+
+291
+00:23:07.000 --> 00:23:10.001
+Cara Anda dapat melihatnya adalah apa yang Anda lihat adalah yang Anda dapatkan. tepat apa yang akan saya lakukan
+
+292
+00:23:10.001 --> 00:23:14.000
+tanyakan pada Anda tentang faktor kecepatan yang Anda tahu katakan saya bandingkan ini untuk mengatakan menggunakan poster
+
+293
+00:23:14.000 --> 00:23:19.000
+Menggunakan Page Maker dan sebagainya. Ini secara dramatis karena hasil DMA pada
+
+294
+00:23:19.000 --> 00:23:23.000
+Atari laser printer saya percaya ia output pada 9.600 bit per detik melalui DMA
+
+295
+00:23:23.000 --> 00:23:27.001
+port jadi benar-benar tidak ada perbandingan dengan port paralel atau serial yang printer
+
+296
+00:23:27.001 --> 00:23:31.001
+telah digunakan sebelumnya. Kami hanya memiliki sekitar satu menit meninggalkan Andy semua hal ini
+
+297
+00:23:31.001 --> 00:23:34.001
+Kami telah melihat selama seluruh program ini adalah kekuatan paket Atari
+
+298
+00:23:34.001 --> 00:23:37.001
+di sini dan banyak perangkat lunak yang begitu kompetitif dan masih sangat kurang
+
+299
+00:23:37.001 --> 00:23:44.000
+mahal ini akan berputar-putar ada orang-orang yang tampaknya melihat di Eropa? I
+
+300
+00:23:44.000 --> 00:23:48.001
+Sebagian dari masalahnya adalah bahwa Atari tidak memiliki DRAM dan diarahkan.
+
+301
+00:23:48.001 --> 00:23:54.000
+apa hasil mereka memiliki ke Eropa juga 1989 sebagai tahun Atari menurut mereka dan
+
+302
+00:23:54.000 --> 00:23:58.000
+Mereka akan membuat dorongan besar ke pasar ini dan sudah ada
+
+303
+00:23:58.000 --> 00:24:04.000
+Advertising massal dan perdagangan harga. Pada harga apa harga Calamus?
+
+304
+00:24:04.001 --> 00:24:09.000
+Calamus Retail Untuk $ 2.99 Jadi Lagi Di Platform Atari Sebagai Profesional
+
+305
+00:24:09.000 --> 00:24:13.001
+Solusi tidak ada apa-apa yang datang dekat di pasar hari ini. Sampaikan terima kasih
+
+306
+00:24:13.001 --> 00:24:17.000
+Anda sangat itu kami diperbarui melihat Atari ST kami akan kembali dalam hanya satu
+
+307
+00:24:17.000 --> 00:24:19.000
+Ini adalah berita komputer minggu ini.
+
+308
+00:24:31.000 --> 00:24:34.001
+Dalam file akses rahasia minggu ini melaporkan bahwa Apple akan melepaskan yang baru
+
+309
+00:24:34.001 --> 00:24:40.000
+Macintosh bulan depan menggandakan 2Ci. Ini akan menjadi peningkatan pada 2CX menggunakan
+
+310
+00:24:40.000 --> 00:24:47.000
+CPU yang sama 68030 tapi berjalan pada 25 megahertz bukannya 16. 2D juga akan
+
+311
+00:24:47.000 --> 00:24:51.001
+dilaporkan memiliki kapasitas video di papan utama harga runcit yang diharapkan untuk
+
+312
+00:24:51.001 --> 00:24:53.000
+Biarkan sekitar delapan ribu dolar.
+
+313
+00:24:53.001 --> 00:24:57.001
+Ini adalah minggu Macworld Expo di Boston dan kata ada bahwa Mac
+
+314
+00:24:57.001 --> 00:25:02.000
+Laptop akan diluncurkan bulan depan. Di antara produk-produk Mac yang baru diumumkan di
+
+315
+00:25:02.000 --> 00:25:06.001
+Macworld Expo adalah papan akselerator untuk Mac 2 dan Mac 2X yang akan menggandakan
+
+316
+00:25:06.001 --> 00:25:11.000
+kecepatan mencapai 50 megahertz. Keytronics juga telah memperkenalkan profesional pertamanya.
+
+317
+00:25:11.000 --> 00:25:15.001
+Kertas keyboard untuk Mac. Mac Pro Keyboard Terhubung dengan Macro
+
+318
+00:25:15.001 --> 00:25:21.000
+dengan software. Sebuah perusahaan perangkat lunak Inggris mengatakan telah menemukan virus MS-DOS baru
+
+319
+00:25:21.000 --> 00:25:26.000
+yang disebut jenayah data. Ini memperingatkan bahwa virus ini dikeluarkan untuk merusak cakera keras pada
+
+320
+00:25:26.000 --> 00:25:30.001
+12 Oktober dengan melampirkan diri ke file COM. Virus tersebut nampaknya dilepaskan.
+
+321
+00:25:30.001 --> 00:25:35.000
+pada bulan Maret tahun ini dan mungkin duduk di sekitar diam-diam menunggu untuk menyerang
+
+322
+00:25:35.000 --> 00:25:40.001
+Oktober yang Pertama Lotus mulai mengirim 123 release 3. Kini ia telah mengikuti dengan
+
+323
+00:25:40.001 --> 00:25:44.001
+Pembebasan 2. 2 untuk pengguna yang hanya memiliki 512k RAM atau kurang.
+
+324
+00:25:45.000 --> 00:25:49.001
+Versi baru 123 datang dengan selalu add-in. Memiliki file linking dan
+
+325
+00:25:49.001 --> 00:25:54.001
+dukungan yang lebih baik untuk jaringan dan add-ins. Pengguna Lotus dapat menaik taraf untuk $ 150.
+
+326
+00:25:55.000 --> 00:26:00.000
+Jika Anda membeli 123 dalam tahun yang lalu Anda berhak untuk upgrade gratis. IBM memiliki
+
+327
+00:26:00.000 --> 00:26:04.000
+Mengumumkan produk pertama menggunakan chip memori 4 megabit baru. Chip akan menjadi
+
+328
+00:26:04.000 --> 00:26:08.000
+Pada kartu pengembangan memori baru untuk model PS2 70 dan 80.
+
+329
+00:26:08.001 --> 00:26:14.000
+KPRO telah keluar dengan komputer baru murah 286 yang disebut KC2. akan menjadi retail
+
+330
+00:26:14.000 --> 00:26:20.001
+Untuk 1195 termasuk monitor monokrom 640k, 8 slot dan kecepatan 12 megahertz
+
+331
+00:26:20.001 --> 00:26:22.001
+dengan desain negara putih sifar.
+
+332
+00:26:23.001 --> 00:26:27.000
+Mahkamah Federal mengatakan bahwa AT&amp;T sekarang bebas untuk memasuki elektronik
+
+333
+00:26:27.000 --> 00:26:33.000
+perusahaan penerbitan membatalkan larangan pada Ma Bell yang dikenakan pada tahun 1982. Tidak ada kata
+
+334
+00:26:33.000 --> 00:26:37.000
+Namun dari AT&amp;T tentang langkah pertama mereka meskipun halaman kuning elektronik adalah kemungkinan
+
+335
+00:26:37.000 --> 00:26:41.001
+Langkah pertama. Sementara itu, Prodigy telah berpindah ke Houston karena terus berkembang
+
+336
+00:26:41.001 --> 00:26:46.001
+menggunakan basis pengguna. Tujuan Prodigy adalah untuk mengakses 40 persen pengguna PC di negara ini
+
+337
+00:26:46.001 --> 00:26:52.001
+Pada pertengahan tahun 1990. Lebih banyak detail muncul minggu ini tentang laptop baru NEC Color.
+
+338
+00:26:57.000 --> 00:27:02.000
+Itu tinggi 19 pound. Ini akan dijual untuk sekitar $ 5.000 tetapi pada saat ini ia adalah
+
+339
+00:27:02.000 --> 00:27:06.000
+Hanya dibebaskan di Jepang. Akhirnya, jika Anda suka menonton diet Anda ada satu
+
+340
+00:27:06.000 --> 00:27:08.000
+Sebuah program baru yang disebut Well Aware.
+
+341
+00:27:08.001 --> 00:27:13.000
+Ini dirancang oleh seorang dokter dan memiliki database lebih dari 3.000 makanan dan
+
+342
+00:27:13.000 --> 00:27:17.000
+bahan dan aditifnya. Dirancang terutama untuk membantu orang yang menderita
+
+343
+00:27:17.000 --> 00:27:21.001
+dari alergi yang berkaitan dengan makanan untuk mengidentifikasi makanan tertentu yang menyebabkan
+
+344
+00:27:21.001 --> 00:27:26.001
+masalahnya . Well Aware berjalan di PC dan dijual untuk $ 1.999. Itulah yang terjadi pada minggu ini
+
+345
+00:27:26.001 --> 00:27:31.000
+dengan kronik. Kita akan berjumpa denganmu lain kali. Komputer Chronicles menjadi mungkin dalam
+
+346
+00:27:31.000 --> 00:27:37.000
+oleh McGraw Hill, penerbit Byte Magazine dan VIX, The Byte Information
+
+347
+00:27:37.000 --> 00:27:42.001
+Pertukaran yang Dalam cetak dan online Byte dan VIX melayani profesional komputer di seluruh dunia
+
+348
+00:27:42.001 --> 00:27:49.000
+dengan informasi rinci tentang perangkat keras, perangkat lunak dan teknologi baru. Untuk A
+
+349
+00:27:49.000 --> 00:27:54.001
+Transcript dari Computer Chronicles minggu ini mengirimkan $4 ke PTV Publications Post
+
+350
+00:27:54.001 --> 00:28:01.001
+Kantor Kantor 701 Kent, Ohio 44240. Silakan jelaskan tanggal program.
+
+351
+00:28:20.000 --> 00:28:33.001
+Sampaikan terima kasih

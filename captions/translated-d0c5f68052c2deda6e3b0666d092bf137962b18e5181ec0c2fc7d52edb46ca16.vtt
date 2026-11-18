@@ -1,0 +1,2001 @@
+WEBVTT
+
+1
+00:00:23.001 --> 00:00:27.000
+C&#x27;est un dos dont vous n&#x27;êtes probablement pas trop familiers.
+
+2
+00:00:27.000 --> 00:00:28.001
+Il s’appelle PENDOS de IBM.
+
+3
+00:00:29.000 --> 00:00:32.001
+Et en utilisant une penne dans ce IBM ThinkPad, je peux utiliser l&#x27;entrée de la penne à n&#x27;importe quel
+
+4
+00:00:32.001 --> 00:00:34.000
+Les applications standard DOS ou Windows.
+
+5
+00:00:34.001 --> 00:00:36.000
+J’utilise Microsoft Word en ce moment.
+
+6
+00:00:36.001 --> 00:00:39.001
+Et je vais écrire au nom du spectacle que nous allons faire aujourd&#x27;hui.
+
+7
+00:00:40.000 --> 00:00:42.001
+C&#x27;est un spectacle sur MS-DOS 6.0.
+
+8
+00:00:43.000 --> 00:00:46.000
+Cependant, comme cela se révèle, Microsoft vient d&#x27;annoncer une version encore plus récente de
+
+9
+00:00:46.000 --> 00:00:48.000
+2 à la version 6.2.
+
+10
+00:00:48.001 --> 00:00:55.000
+Donc nous vous montrerons MS-DOS 6.2 et vous direons ce qui est nouveau avec 6.2 sur cette édition
+
+11
+00:00:55.000 --> 00:00:56.001
+Les Chroniques de l’ordinateur.
+
+12
+00:01:10.001 --> 00:01:14.001
+Les chronicles informatiques sont rendus possibles en partie par les éditeurs de logiciels
+
+13
+00:01:14.001 --> 00:01:19.000
+Association, fournisseurs de matériel éducatif pour aider à gérer le logiciel.
+
+14
+00:01:20.000 --> 00:01:21.000
+Ne copiez pas ce floppy.
+
+15
+00:01:22.000 --> 00:01:24.001
+Et par Hewlett-Packard, division informatique personnelle.
+
+16
+00:01:29.000 --> 00:01:30.001
+Bienvenue dans les chronicles informatiques.
+
+17
+00:01:30.001 --> 00:01:31.001
+Je suis Stuart Chafade.
+
+18
+00:01:31.001 --> 00:01:35.001
+Avec moi aujourd&#x27;hui est Van Wulverton, auteur de ce livre, Running MS-DOS, que je
+
+19
+00:01:35.001 --> 00:01:38.000
+C&#x27;est le livre le plus vendu de tous les temps sur DOS-VAN.
+
+20
+00:01:38.001 --> 00:01:41.001
+Ce que je faisais ici est de commencer à installer DOS 6.0.
+
+21
+00:01:42.000 --> 00:01:44.001
+Et j&#x27;ai juste découvert que, quiops, il y a six. 2 sortie en ce moment.
+
+22
+00:01:44.001 --> 00:01:45.001
+Alors pourquoi gaspiller le temps ?
+
+23
+00:01:46.000 --> 00:01:47.001
+Que se passe-t-il ici, Van ?
+
+24
+00:01:47.001 --> 00:01:49.000
+Pourquoi tout d’un coup il y a 6.2 ?
+
+25
+00:01:49.000 --> 00:01:50.001
+Pourquoi une si courte durée de vie pour 6.0?
+
+26
+00:01:51.000 --> 00:01:53.000
+Eh bien, vous avez probablement touché la question qui sera posée
+
+27
+00:01:53.000 --> 00:01:54.001
+Plus que n&#x27;importe quelle autre question cette année.
+
+28
+00:01:54.001 --> 00:01:58.000
+Une personne qui a probablement autant de réponses que vous trouverez des gens à demander.
+
+29
+00:01:59.001 --> 00:02:01.000
+Nous sommes courts sur les faits dans ce domaine.
+
+30
+00:02:01.001 --> 00:02:03.000
+Je vais vous donner mon avis.
+
+31
+00:02:03.000 --> 00:02:04.001
+Je ne peux pas vraiment vous donner les faits.
+
+32
+00:02:05.000 --> 00:02:10.000
+Mais quand 6.0 est sorti, pas trop longtemps après, Microsoft a commencé à entendre des histoires
+
+33
+00:02:10.000 --> 00:02:13.000
+Problèmes avec 6. 0, en particulier avec le double espace
+
+34
+00:02:13.000 --> 00:02:15.000
+l’utilité d’endommager les données des personnes.
+
+35
+00:02:16.000 --> 00:02:18.000
+Il a été difficile de mettre en dessous l&#x27;un d&#x27;eux pour les rendre réels.
+
+36
+00:02:18.001 --> 00:02:19.001
+Mais malgré tout, il s’est répandu.
+
+37
+00:02:20.000 --> 00:02:22.001
+C&#x27;est comme quand Procter &amp; Gamble avait l&#x27;histoire de leur
+
+38
+00:02:22.001 --> 00:02:24.001
+Le logo est une chose de démon adoration.
+
+39
+00:02:24.001 --> 00:02:25.000
+Ils avaient dû le changer.
+
+40
+00:02:26.000 --> 00:02:29.000
+Et donc je pense que ce que Microsoft fait, c&#x27;est qu&#x27;ils tentent de forestier
+
+41
+00:02:29.000 --> 00:02:31.000
+d’autres histoires comme celle-ci.
+
+42
+00:02:31.001 --> 00:02:34.000
+Ils viennent avec un rafraîchissement de lui, quelques nouvelles fonctionnalités.
+
+43
+00:02:35.000 --> 00:02:37.000
+Ils ont fait quelques changements à l&#x27;espace double pour le rendre plus sûr.
+
+44
+00:02:37.001 --> 00:02:41.000
+Mais essentiellement, je pense que c&#x27;est avant tout de rendre leurs clients se sentent mieux.
+
+45
+00:02:42.000 --> 00:02:45.000
+OK, aujourd’hui, nous allons regarder la dernière version de DOS 6.2.
+
+46
+00:02:45.000 --> 00:02:47.001
+Nous passons un peu de temps sur ce fichier controversé
+
+47
+00:02:47.001 --> 00:02:49.000
+fonction de compression dans le nouveau DOS.
+
+48
+00:02:49.000 --> 00:02:51.001
+Et nous allons regarder le plus récent Peter Norton add-on pour DOS.
+
+49
+00:02:51.001 --> 00:02:56.000
+Tout d&#x27;abord, une visite aux laboratoires Ziff Davis à Foster City, en Californie pour voir
+
+50
+00:02:56.000 --> 00:02:58.000
+Qu’est-ce qu’ils pensent sur le nouveau Microsoft DOS ?
+
+51
+00:02:59.000 --> 00:03:03.000
+Ziff Davis Labs est le centre de test pour la famille ZD des publications.
+
+52
+00:03:04.000 --> 00:03:08.000
+Les évaluations de produits sont conçues pour informer les lecteurs des aspects de travail de
+
+53
+00:03:08.000 --> 00:03:14.000
+matériel, logiciel et systèmes d&#x27;exploitation, tels que MS-DOS version 6.2.
+
+54
+00:03:14.000 --> 00:03:17.000
+Par exemple, nous allons mettre en place une base de données.
+
+55
+00:03:18.000 --> 00:03:22.001
+Et puis, après que nous allions faire une mise à jour à la base de données, nous verrons ensuite comment
+
+56
+00:03:22.001 --> 00:03:29.001
+Et bien les deux 6. 2 défragères vont et compacter et organiser
+
+57
+00:03:29.001 --> 00:03:31.000
+le disque après le fonctionnement de cette base de données.
+
+58
+00:03:32.000 --> 00:03:38.000
+MS-DOS 6.2 est sorti littéralement sur les heels de MS- DOS 6.0 en réponse au client
+
+59
+00:03:38.000 --> 00:03:42.000
+L&#x27;inquiétude sur la fonction de compression de données dans DOS 6.0.
+
+60
+00:03:42.001 --> 00:03:47.000
+ZD Labs a découvert qu&#x27;il était difficile de répéter les problèmes dans un cadre de laboratoire.
+
+61
+00:03:47.000 --> 00:03:50.000
+En fait, les problèmes devaient être induits à évaluer.
+
+62
+00:03:50.000 --> 00:03:56.001
+Il y a eu quelques problèmes avec la compression de données dans DOS 6.0, mais beaucoup de cela
+
+63
+00:03:56.001 --> 00:04:00.001
+Cela dépend vraiment de la façon dont vous avez effectivement configuré votre système.
+
+64
+00:04:01.001 --> 00:04:06.000
+Et si vous n&#x27;êtes pas prudent dans la configuration de votre système et suivez les lignes directrices
+
+65
+00:04:06.000 --> 00:04:12.001
+que Microsoft a intégré, vous êtes susceptibles de vous lancer dans des problèmes.
+
+66
+00:04:13.000 --> 00:04:18.001
+Et ce n&#x27;était pas aussi simple et simple que beaucoup d&#x27;utilisateurs sont venus attendre
+
+67
+00:04:18.001 --> 00:04:21.001
+avec le système d’exploitation DOS.
+
+68
+00:04:22.000 --> 00:04:27.001
+ZD Labs a déclaré MS-DOS 6.2 un produit solide, plus robuste que son précédent
+
+69
+00:04:27.001 --> 00:04:32.000
+versions, avec quelques améliorations agréables à son interface utilisateur et beaucoup
+
+70
+00:04:32.000 --> 00:04:34.000
+Améliorer la gestion de la mémoire.
+
+71
+00:04:34.000 --> 00:04:41.000
+DOS 6.0 à 6.2 permet fonctionnellement que le processus de création de mémoire
+
+72
+00:04:41.000 --> 00:04:45.000
+travailler beaucoup plus doucement et beaucoup plus efficacement avec beaucoup moins de connaissances
+
+73
+00:04:45.000 --> 00:04:47.000
+requise de la part de l’utilisateur.
+
+74
+00:04:48.000 --> 00:04:54.001
+En outre, l&#x27;utilité double-espace, l’utilité de compression du disque a libéré un
+
+75
+00:04:54.001 --> 00:04:56.000
+Beaucoup d’espace disque pour les utilisateurs.
+
+76
+00:04:57.000 --> 00:05:01.001
+Et cela est particulièrement important pour les utilisateurs de notebooks qui fonctionnent plus exigeants
+
+77
+00:05:01.001 --> 00:05:03.000
+Applications Windows sur leurs notebooks.
+
+78
+00:05:04.000 --> 00:05:08.000
+Utilités liées à MS-DOS 6. 2 sont considérés comme efficaces.
+
+79
+00:05:08.001 --> 00:05:11.000
+Il est difficile de compétitionner avec un tiers.
+
+80
+00:05:11.000 --> 00:05:12.000
+Utilisations partielles sur le marché.
+
+81
+00:05:12.000 --> 00:05:18.001
+En fonction de la quantité de fonctionnalité, de la facilité d&#x27;utilisation que vous aimeriez, comment
+
+82
+00:05:18.001 --> 00:05:25.000
+Beaucoup d&#x27;intégration que vous voulez, beaucoup d&#x27;utilisateurs seront satisfaits
+
+83
+00:05:25.000 --> 00:05:30.000
+Avec 2 à 6. 2, en particulier s&#x27;ils n&#x27;ont pas utilisé beaucoup de
+
+84
+00:05:30.000 --> 00:05:31.001
+les outils de tiers avant.
+
+85
+00:05:32.000 --> 00:05:37.000
+Mais beaucoup de personnes qui ont utilisé des outils de tiers comme Stacker,
+
+86
+00:05:37.001 --> 00:05:43.001
+Par exemple, QEMM ou Norton Utilities
+
+87
+00:05:43.001 --> 00:05:48.000
+Ils peuvent trouver qu&#x27;ils veulent continuer à s&#x27;attaquer à ces utilités.
+
+88
+00:05:48.001 --> 00:05:51.000
+Pour les Chroniques informatiques, je suis Janelle Patterson.
+
+89
+00:06:04.000 --> 00:06:08.001
+Il y a beaucoup de nouvelles fonctionnalités sur MS-DOS 6. 2, et ici pour nous montrer comment ils fonctionnent
+
+90
+00:06:08.001 --> 00:06:10.001
+Tony Audino et Ben Slifka de Microsoft.
+
+91
+00:06:11.001 --> 00:06:12.001
+Tony, tout d’abord, je vous demande
+
+92
+00:06:12.001 --> 00:06:14.000
+La question que j’ai posée à la tête du spectacle.
+
+93
+00:06:14.001 --> 00:06:15.001
+Il a dit qu&#x27;il n&#x27;avait pas toutes les informations.
+
+94
+00:06:15.001 --> 00:06:16.001
+Vous êtes de Microsoft.
+
+95
+00:06:16.001 --> 00:06:17.001
+Je suppose que vous avez les informations.
+
+96
+00:06:18.000 --> 00:06:19.001
+Pourquoi, tout à coup, 6.2 ?
+
+97
+00:06:19.001 --> 00:06:21.000
+Y a-t-il eu un problème avec 6.0 ?
+
+98
+00:06:21.001 --> 00:06:22.000
+[...]
+
+99
+00:06:22.000 --> 00:06:23.001
+Il y a vraiment deux raisons, Stuart.
+
+100
+00:06:24.000 --> 00:06:27.001
+Tout d’abord, après que nous avons lancé MS-DOS 6, il est sorti,
+
+101
+00:06:27.001 --> 00:06:29.000
+Beaucoup d&#x27;unités ont été vendues très rapidement.
+
+102
+00:06:29.001 --> 00:06:32.001
+Et nous sommes sortis, nous avons embrassé nos clients et nous avons parlé avec eux.
+
+103
+00:06:32.001 --> 00:06:36.001
+Et ils nous ont donné un grand feedback sur les améliorations que nous pouvons faire pour doubler l&#x27;espace, nouveau
+
+104
+00:06:36.001 --> 00:06:40.000
+Caractéristiques de facilité d&#x27;utilisation que nous pouvons mettre en place, et des fonctionnalités de performance supplémentaires que nous
+
+105
+00:06:40.000 --> 00:06:41.001
+Il peut être utilisé dans MS-DOS 6.2.
+
+106
+00:06:42.000 --> 00:06:45.000
+Ensuite, il y a eu une controverse sur le MS.
+
+107
+00:06:45.000 --> 00:06:46.001
+- DOS 6 et spécifiquement double espace.
+
+108
+00:06:47.000 --> 00:06:50.001
+Bien qu’il y ait eu, pour être équitable, un certain nombre de clients qui ont eu des données
+
+109
+00:06:50.001 --> 00:06:54.001
+Le problème de la corruption, il a vraiment été déversé, nous pensons,
+
+110
+00:06:55.000 --> 00:06:56.001
+plus grand que ce qui est réellement.
+
+111
+00:06:56.001 --> 00:06:58.001
+Mais nous pensons que nous devons faire face à cette tête.
+
+112
+00:06:59.000 --> 00:07:03.000
+Et la façon dont nous faisons cela est que nous fournissons MS-DOS 6.2 avec une sécurité supplémentaire
+
+113
+00:07:03.000 --> 00:07:06.000
+les caractéristiques et les améliorations à l’espace double,
+
+114
+00:07:06.000 --> 00:07:08.000
+Nous pensons que nous allons discuter de ces questions.
+
+115
+00:07:08.000 --> 00:07:11.000
+Il y a vraiment de nouvelles caractéristiques dans 6. 2, ou c&#x27;est vraiment juste une fixation de 6.
+
+116
+00:07:11.001 --> 00:07:11.001
+[...]
+
+117
+00:07:11.001 --> 00:07:12.001
+En fait, nous voudrions montrer
+
+118
+00:07:12.001 --> 00:07:14.000
+Vous avez beaucoup de nouvelles fonctionnalités que nous avons dans MS-DOS 6.2.
+
+119
+00:07:14.000 --> 00:07:15.000
+Tout est bien, allons le faire.
+
+120
+00:07:15.000 --> 00:07:16.000
+Ben, je suppose que vous avez pris ça et courir.
+
+121
+00:07:16.000 --> 00:07:16.001
+Et où sommes-nous maintenant ?
+
+122
+00:07:17.000 --> 00:07:17.000
+[...]
+
+123
+00:07:17.000 --> 00:07:18.001
+Pour l’instant, nous avons juste commencé l’ordinateur.
+
+124
+00:07:19.000 --> 00:07:24.000
+Et dans ce cas, MS-DOS 6 et 6. 2 possèdent une fonction appelée multi-config.
+
+125
+00:07:24.001 --> 00:07:27.001
+Et donc si vous avez une machine, qui, par exemple, est parfois dans une
+
+126
+00:07:27.001 --> 00:07:30.001
+station de docking connectée à un réseau, et parfois nous le prenons sur la route.
+
+127
+00:07:31.000 --> 00:07:34.000
+Et donc au lieu d&#x27;avoir à copier config sys et autoexec.bat fichiers autour,
+
+128
+00:07:34.000 --> 00:07:37.001
+Il y a une fonction appelée multi-config, qui vous permet de le contrôler.
+
+129
+00:07:37.001 --> 00:07:39.000
+Et je n&#x27;ai pas besoin de savoir ce que les commandes sont.
+
+130
+00:07:39.000 --> 00:07:42.001
+Donc, nous sommes sur la route, et donc nous prendrons notre non-net fonctionnalité.
+
+131
+00:07:43.000 --> 00:07:43.001
+Et où sommes-nous allés ?
+
+132
+00:07:44.000 --> 00:07:46.001
+OK, donc maintenant, nous allons à la DOS prompt, et
+
+133
+00:07:46.001 --> 00:07:48.000
+Je voudrais vous montrer un double espace.
+
+134
+00:07:48.001 --> 00:07:49.000
+[...]
+
+135
+00:07:49.001 --> 00:07:52.000
+Maintenant, nous ne voyons pas la routine habituelle de rouler à travers tous les conducteurs.
+
+136
+00:07:52.001 --> 00:07:54.000
+C&#x27;est bien ce que nous avons fait dans MS-DOS 6.
+
+137
+00:07:54.001 --> 00:08:00.001
+Beaucoup des programmes que nous avions avec MS-DOS, Hynum.csc et M386, ils
+
+138
+00:08:00.001 --> 00:08:02.000
+Les informations sont indiquées lorsqu’elles ont été installées.
+
+139
+00:08:02.000 --> 00:08:06.000
+Et donc seulement maintenant que nous avons une erreur, nous imprimerons tout sur l&#x27;écran.
+
+140
+00:08:06.001 --> 00:08:08.001
+OK, alors maintenant je vais entrer dans le double commandement spatial.
+
+141
+00:08:09.000 --> 00:08:14.001
+Et cette machine a un disque dur de 200 megabytes, que nous avons déjà compressé.
+
+142
+00:08:14.001 --> 00:08:16.000
+Et vous voyez que c conduit.
+
+143
+00:08:16.000 --> 00:08:17.000
+[...] 3 et 14.
+
+144
+00:08:17.000 --> 00:08:18.001
+Oui, c’est la taille totale.
+
+145
+00:08:18.001 --> 00:08:21.001
+Nous sommes donc un peu au-dessus de 1. 5 à 1 compression ici.
+
+146
+00:08:22.000 --> 00:08:24.001
+Et je veux juste vous montrer rapidement les caractéristiques sans
+
+147
+00:08:24.001 --> 00:08:26.000
+En fait, il passe par eux.
+
+148
+00:08:26.000 --> 00:08:28.001
+Ainsi, vous pouvez changer rapidement la taille d&#x27;un véhicule.
+
+149
+00:08:29.000 --> 00:08:34.000
+Si vous avez des moteurs supprimables, des floppies, ou peut-être un moteur Bernoulli, vous pouvez
+
+150
+00:08:34.000 --> 00:08:35.001
+Montez-les, les montez, quelques autres choses là-bas.
+
+151
+00:08:36.001 --> 00:08:39.000
+Vous pouvez également commprimer un disque existant, ce qui prend les données sur ce disque.
+
+152
+00:08:39.000 --> 00:08:41.000
+conduit, le comprime, et il rend la conduite plus grande.
+
+153
+00:08:41.000 --> 00:08:42.000
+Ou vous pouvez créer un nouveau moteur.
+
+154
+00:08:42.001 --> 00:08:45.000
+Peut-être que vous êtes un peu fou sur la compression des données, alors vous pouvez créer une nouvelle
+
+155
+00:08:45.000 --> 00:08:47.001
+Voyage vide, puis jouer avec cela pour obtenir une certaine connaissance.
+
+156
+00:08:48.000 --> 00:08:48.001
+Qu’est-ce qui se trouve sous les outils ?
+
+157
+00:08:49.000 --> 00:08:52.000
+Une des nouveautés que nous avons ajoutées dans MS-DOS 6. 2 est non comprimé.
+
+158
+00:08:52.001 --> 00:08:54.001
+Et ainsi, comme vous pouvez automatiquement comprimer un disque, maintenant vous
+
+159
+00:08:54.001 --> 00:08:56.000
+Vous pouvez décomprimer automatiquement un véhicule.
+
+160
+00:08:57.000 --> 00:08:59.001
+Cela suppose, bien sûr, que vous n&#x27;avez pas rempli ce nouveau disque.
+
+161
+00:09:01.000 --> 00:09:04.000
+Et puis, comme Todi a mentionné, il y a deux nouvelles caractéristiques.
+
+162
+00:09:04.001 --> 00:09:08.001
+L&#x27;un est le montage automatique, ce qui est que si vous avez un floppy comprimé, vous pouvez juste
+
+163
+00:09:08.001 --> 00:09:11.001
+Mettez-le dans et accédez-y immédiatement sans avoir à entrer aucune commande.
+
+164
+00:09:11.001 --> 00:09:14.000
+C&#x27;est une chose facile à utiliser sur MS-DOS.
+
+165
+00:09:15.000 --> 00:09:19.000
+Et puis DoubleGuard est une fonction de sécurité, que nous trouvons dans certains cas,
+
+166
+00:09:19.001 --> 00:09:21.001
+Les programmes corrompaient réellement la mémoire occupée par le double espace.
+
+167
+00:09:22.001 --> 00:09:27.000
+Et ainsi avec DoubleGuard, le double espace est en fait vérifier sa propre mémoire sur un
+
+168
+00:09:27.000 --> 00:09:29.001
+une base régulière pour détecter la corruption et arrêter le système
+
+169
+00:09:29.001 --> 00:09:31.001
+Avant que quelque chose de mauvais puisse arriver.
+
+170
+00:09:31.001 --> 00:09:33.000
+Tout est bien, alors qu&#x27;est-ce que vous pouvez nous montrer dans 6.2 ?
+
+171
+00:09:33.000 --> 00:09:34.000
+OK, nous allons sortir.
+
+172
+00:09:34.001 --> 00:09:38.001
+Une autre chose que nous avons découvert était que certaines personnes avaient en fait des engins lourds, qui
+
+173
+00:09:38.001 --> 00:09:41.000
+En fait, il y avait des erreurs de données sur eux, des erreures physiques.
+
+174
+00:09:41.000 --> 00:09:43.001
+C’est pourquoi nous avons écrit un programme appelé ScanDisk.
+
+175
+00:09:44.001 --> 00:09:49.000
+Et c&#x27;est une chose qui fait tous les types de vérifications que CheckDisk fait aujourd&#x27;hui.
+
+176
+00:09:49.000 --> 00:09:50.001
+Il fait aussi une analyse de surface.
+
+177
+00:09:51.000 --> 00:09:55.000
+Et il a une interface utilisateur beaucoup plus facile et quelques options de réparation plus fancy.
+
+178
+00:09:55.000 --> 00:09:56.001
+Assurez-vous que la pièce du disque
+
+179
+00:09:56.001 --> 00:09:58.000
+Vous mettez les données sur est vraiment son.
+
+180
+00:09:58.000 --> 00:09:58.001
+C’est juste ça.
+
+181
+00:09:59.000 --> 00:10:02.000
+Dans ce cas, il s’agit d’un double espace.
+
+182
+00:10:02.000 --> 00:10:03.000
+Il souhaite d’abord vérifier la conduite hôte.
+
+183
+00:10:03.001 --> 00:10:06.000
+Je vais échapper à cela et juste aller directement à vérifier un double disque spatial.
+
+184
+00:10:06.001 --> 00:10:08.000
+Et nous vous montrons ce que nous allons faire.
+
+185
+00:10:08.000 --> 00:10:09.000
+Nous vous donnons le statut.
+
+186
+00:10:09.000 --> 00:10:11.000
+Il y a un bouton d&#x27;information si vous voulez en savoir plus
+
+187
+00:10:11.000 --> 00:10:13.000
+sur les détails de ce qui se passe.
+
+188
+00:10:13.001 --> 00:10:16.000
+Vous pouvez l’arrêter si pour une raison quelconque vous voulez voir ce qui se passe.
+
+189
+00:10:17.000 --> 00:10:21.000
+Et donc cela va passer par l&#x27;ensemble de la conduite et vérifier toutes les différentes structures.
+
+190
+00:10:22.001 --> 00:10:24.000
+Dans ce cas, il s’agit d’un double espace.
+
+191
+00:10:24.000 --> 00:10:26.000
+Il s’agit donc de vérifier l’espace double spécifique.
+
+192
+00:10:26.000 --> 00:10:27.001
+Nous avons donc fait beaucoup de travail ici avec ScanDisk
+
+193
+00:10:27.001 --> 00:10:29.000
+C’est pour cela qu’on se rend compte de l’espace double.
+
+194
+00:10:29.000 --> 00:10:30.001
+Vous avez fait beaucoup de travail pour faire face au double
+
+195
+00:10:30.001 --> 00:10:32.001
+La situation spatiale dont vous parlez.
+
+196
+00:10:32.001 --> 00:10:34.000
+Qu’en est-il de la Meme Maker ?
+
+197
+00:10:34.000 --> 00:10:36.000
+Et c&#x27;est une caractéristique importante pour les gens à chercher.
+
+198
+00:10:36.001 --> 00:10:37.000
+Nous pouvons donc sortir de cela.
+
+199
+00:10:37.001 --> 00:10:39.000
+Et il y a un log qui est produit.
+
+200
+00:10:40.000 --> 00:10:42.000
+Maintenant, le constructeur de mem prendrait un peu de temps pour fonctionner.
+
+201
+00:10:42.000 --> 00:10:46.000
+Donc, ce que je vais vous montrer au lieu de cela, c&#x27;est cette machine que nous avons mis en marche avec le constructeur de memes.
+
+202
+00:10:46.000 --> 00:10:48.001
+Et je vais juste vous montrer la situation avec la mémoire maintenant.
+
+203
+00:10:49.000 --> 00:10:53.001
+Et vous pouvez voir au fond de la première table que l&#x27;espace gratuit est 613K.
+
+204
+00:10:54.001 --> 00:10:57.000
+Et c&#x27;est sans moi d&#x27;avoir fait n&#x27;importe quelle édition manuelle.
+
+205
+00:10:57.000 --> 00:10:58.000
+Vous n&#x27;avez pas besoin de jouer avec
+
+206
+00:10:58.000 --> 00:11:00.000
+changement dans les exécutions automatiques qui peuvent corriger cela.
+
+207
+00:11:00.000 --> 00:11:00.001
+C’est juste ça.
+
+208
+00:11:00.001 --> 00:11:01.001
+Vous allez faire un mémo maker.
+
+209
+00:11:01.001 --> 00:11:02.001
+Vous appuyez sur l’entrée quelques fois.
+
+210
+00:11:03.000 --> 00:11:04.001
+Cela permettra de maximiser la RAM gratuite disponible.
+
+211
+00:11:04.001 --> 00:11:05.000
+C’est juste ça.
+
+212
+00:11:05.000 --> 00:11:08.001
+Et vous saurez également que cet écran mem est nouveau avec MS-DOS 6.
+
+213
+00:11:09.000 --> 00:11:10.000
+Et il est beaucoup plus facile de lire.
+
+214
+00:11:10.001 --> 00:11:12.001
+Nous avons même ajouté MS-DOS 6.2, à
+
+215
+00:11:12.001 --> 00:11:14.000
+C&#x27;est un peu plus facile à lire.
+
+216
+00:11:15.001 --> 00:11:18.001
+OK, qu&#x27;en est-il de l&#x27;utilisateur Windows utilisant DOS 6.2 sous Windows?
+
+217
+00:11:18.001 --> 00:11:21.000
+OK, bien, nous allons popper dans Windows.
+
+218
+00:11:21.001 --> 00:11:22.001
+Eh bien, nous allons là.
+
+219
+00:11:23.000 --> 00:11:26.001
+Peut-être que nous allons parler de certaines des autres fonctionnalités dans MS-DOS 6.2 que nous
+
+220
+00:11:26.001 --> 00:11:28.000
+Je ne peux pas vraiment démo aujourd&#x27;hui.
+
+221
+00:11:28.001 --> 00:11:34.000
+Smart Drive était une fonctionnalité dans MS-DOS 6 que nous avions.
+
+222
+00:11:34.000 --> 00:11:35.001
+Nous avons eu un peu de feedback.
+
+223
+00:11:35.001 --> 00:11:38.001
+Et ce que nous avons fait, c’est que nous l’avons fait un cache plus conservateur.
+
+224
+00:11:39.000 --> 00:11:45.001
+Nous sommes donc passés et nous avons défauté d’avoir le
+
+225
+00:11:45.001 --> 00:11:47.000
+Le cache après l’écriture s’ouvre.
+
+226
+00:11:47.000 --> 00:11:49.001
+Il s’agit donc d’un cache de lecture seulement lorsqu’il est chargé.
+
+227
+00:11:49.001 --> 00:11:53.000
+Sauf si, bien sûr, Smart Drive est déjà là et il est juste derrière le cache, alors
+
+228
+00:11:53.000 --> 00:11:54.001
+Il va à l&#x27;avant et par défaut à écrire-en arrière cache.
+
+229
+00:11:55.000 --> 00:11:56.001
+L’autre partie intéressante de Smart Drive, cependant, est
+
+230
+00:11:56.001 --> 00:11:58.000
+Celle-ci cache maintenant les disques CD-ROM.
+
+231
+00:12:00.000 --> 00:12:02.000
+Les premiers tests ont été significatifs
+
+232
+00:12:02.000 --> 00:12:03.001
+Amélioration des performances pour les CD-ROM.
+
+233
+00:12:04.000 --> 00:12:06.000
+OK, que pouvez-vous nous montrer nouveau sous Windows?
+
+234
+00:12:06.000 --> 00:12:08.001
+Maintenant, nous avons commencé File Manager et nous avons ajouté plusieurs
+
+235
+00:12:08.001 --> 00:12:10.001
+Nouveaux outils qui s’intégrent avec Windows.
+
+236
+00:12:10.001 --> 00:12:14.001
+Ainsi, une chose que nous avons ajouté est un programme de fichier non sélectionné.
+
+237
+00:12:15.000 --> 00:12:18.000
+Oui, et donc il y a aussi une version MS-DOS de ce qui est inclus.
+
+238
+00:12:18.001 --> 00:12:22.000
+Et donc cela vous montre les fichiers dans n&#x27;importe quelle directory que vous avez sélectionné.
+
+239
+00:12:22.000 --> 00:12:25.001
+Et vous pouvez les sélectionner et non sélectionner, il indique également la condition.
+
+240
+00:12:26.000 --> 00:12:28.001
+Il y a aussi a- So undelete est automatiquement disponible dans 6.2.
+
+241
+00:12:28.001 --> 00:12:28.001
+C’est juste ça.
+
+242
+00:12:29.000 --> 00:12:29.001
+En fait, il y a trois niveaux.
+
+243
+00:12:30.001 --> 00:12:33.000
+Nous n&#x27;avons pas le système de suppression installé, mais si vous avez
+
+244
+00:12:33.000 --> 00:12:35.000
+Vous êtes assuré que vous serez en mesure de ne pas choisir.
+
+245
+00:12:36.001 --> 00:12:37.001
+Donc c’est ça.
+
+246
+00:12:37.001 --> 00:12:39.000
+Et puis nous avons ajouté un menu outils.
+
+247
+00:12:39.001 --> 00:12:44.000
+Il y a un programme de sauvegarde dans MS-DOS 6, à la fois pour MS- DOS et pour Windows.
+
+248
+00:12:44.001 --> 00:12:48.000
+Et c&#x27;est un succès juste ici de ce menu File Manager, ainsi que de l&#x27;antivirus,
+
+249
+00:12:48.000 --> 00:12:50.001
+Encore une fois, les versions MS-DOS et les versions Windows.
+
+250
+00:12:51.000 --> 00:12:53.000
+Et enfin, vous pouvez obtenir des informations spatiales doubles.
+
+251
+00:12:53.001 --> 00:12:56.000
+Donc, en fait, laissez-moi descendre ici et sélectionnez quelques fichiers.
+
+252
+00:12:57.001 --> 00:13:01.001
+Et puis je reviendrai et j&#x27;arracherai les outils et les informations de double espace.
+
+253
+00:13:03.001 --> 00:13:05.001
+Et il vous donne une image de votre disque.
+
+254
+00:13:05.001 --> 00:13:07.001
+Vous voyez combien d’espace est utilisé, combien de place est libre.
+
+255
+00:13:07.001 --> 00:13:09.000
+Il vous donne des informations relatives à la compression.
+
+256
+00:13:09.001 --> 00:13:13.000
+Et puis vous pouvez obtenir en fait un rapport de compression détaillé
+
+257
+00:13:13.000 --> 00:13:15.000
+Informations sur une base de profil.
+
+258
+00:13:15.000 --> 00:13:17.000
+Ainsi, vous utilisez du double espace à l&#x27;intérieur de Windows comme cela aussi.
+
+259
+00:13:17.000 --> 00:13:20.001
+En réalité, Tony, qu&#x27;est-ce que l&#x27;accord si j&#x27;ai acheté 6.0 et maintenant je veux obtenir 6.2?
+
+260
+00:13:21.000 --> 00:13:21.001
+Comment je fais ça ?
+
+261
+00:13:22.000 --> 00:13:22.000
+Il est certain.
+
+262
+00:13:22.001 --> 00:13:23.001
+Nous allons en effet avoir deux versions disponibles.
+
+263
+00:13:24.000 --> 00:13:26.001
+Nous allons avoir une version de détail disponible avec des revendeurs qui
+
+264
+00:13:26.001 --> 00:13:28.000
+Il sera vendu pour 9,95 $.
+
+265
+00:13:28.001 --> 00:13:30.001
+Ce sera le MS-DOS 6.2 étape en haut.
+
+266
+00:13:31.001 --> 00:13:34.001
+Et il dit juste dans le paquet pour 6. Il n’y a que 0 utilisateurs.
+
+267
+00:13:35.000 --> 00:13:39.000
+En outre, nous allons fournir MS-DOS 6. 2 version téléchargée sur CompuServe
+
+268
+00:13:39.000 --> 00:13:41.000
+et sur les bibliothèques Microsoft Download.
+
+269
+00:13:41.001 --> 00:13:43.000
+OK chers amis, merci beaucoup.
+
+270
+00:13:43.001 --> 00:13:44.001
+Vous avez raison, deux morts ?
+
+271
+00:13:44.001 --> 00:13:45.001
+Eh bien, apparemment pas.
+
+272
+00:13:45.001 --> 00:13:49.000
+Si nous montons à Redmond, à Washington, nous verrons les ingénieurs de Microsoft déjà au travail
+
+273
+00:13:49.000 --> 00:13:51.001
+La prochaine génération de DOS, 7.0.
+
+274
+00:13:52.001 --> 00:13:57.000
+L&#x27;équipe de projet MS-DOS a pris le modèle DOS de mode réel
+
+275
+00:13:57.000 --> 00:13:58.001
+Au-delà du point où il peut aller.
+
+276
+00:13:58.001 --> 00:14:02.000
+Mais les perfectionnements pour DOS 6.2 continuent d’évoluer.
+
+277
+00:14:02.001 --> 00:14:06.000
+La prochaine version, MS-DOS 7, partagera la technologie
+
+278
+00:14:06.000 --> 00:14:07.001
+avec les futures versions de Windows.
+
+279
+00:14:08.001 --> 00:14:15.000
+Modèle de pilote d&#x27;appareil partagé, modèle de pilotage de 32 bits partagés, système de base partagée
+
+280
+00:14:15.000 --> 00:14:18.000
+technologie, technologie système de fichiers, technologie de gestion de la mémoire.
+
+281
+00:14:18.001 --> 00:14:22.001
+Certaines des fonctionnalités que nous pourrions associer avec le MS-DOS sont Windows comme
+
+282
+00:14:22.001 --> 00:14:28.001
+Plusieurs applications DOS qui effectuent simultanément des multi-têtes préemptives
+
+283
+00:14:30.001 --> 00:14:35.000
+et l&#x27;accès au système de fichiers avancé et la gestion de la mémoire seront trouvés dans
+
+284
+00:14:35.000 --> 00:14:36.001
+Les futurs produits MS-DOS aussi.
+
+285
+00:14:37.001 --> 00:14:42.001
+Version 6.2 comprend ScanDisk, un outil de réparation de données qui vérifie les différences
+
+286
+00:14:42.001 --> 00:14:44.001
+dans vos fichiers, puis les corriger.
+
+287
+00:14:45.000 --> 00:14:48.000
+Au cours de la sortie 6.0, l&#x27;une des choses que nous avons remarquées après la libération et sur
+
+288
+00:14:48.000 --> 00:14:51.001
+CompuServe pendant la beta était que notre produit précédent pour remplir ce
+
+289
+00:14:51.001 --> 00:14:54.000
+Cette fonction, ce double-spaced CheckDisk, était un peu
+
+290
+00:14:54.000 --> 00:14:55.001
+Soutenu pour ce que nous avions besoin de faire.
+
+291
+00:14:56.001 --> 00:14:59.000
+Et juste après la libération, nous avons commencé à travailler sur des idées
+
+292
+00:14:59.000 --> 00:15:00.001
+pour améliorer le produit.
+
+293
+00:15:01.001 --> 00:15:06.000
+Et après cela, nous avons décidé qu’une fois que nous avions les routines, nous les attachions à
+
+294
+00:15:06.000 --> 00:15:10.001
+Quelques outils de réparation de disques existants, peut-être CheckDisk, peut être un autre de notre licence
+
+295
+00:15:10.001 --> 00:15:12.000
+des programmes que nous avons pris d&#x27;un autre fournisseur.
+
+296
+00:15:12.001 --> 00:15:14.000
+Mais il s’avère que c’était plus facile
+
+297
+00:15:14.000 --> 00:15:16.000
+Pour nous écrire le reste du programme.
+
+298
+00:15:16.000 --> 00:15:20.001
+Recherchez ScanDisk pour être plus rapide et incluez des vérifications supplémentaires dans la version 7.
+
+299
+00:15:21.000 --> 00:15:23.000
+En ce moment, ScanDisk peut vérifier un disque dur normal dans
+
+300
+00:15:23.000 --> 00:15:25.000
+10 minutes, peut-être 15 minutes.
+
+301
+00:15:25.001 --> 00:15:27.000
+Mais c&#x27;est plus longtemps que la plupart des gens veulent attendre.
+
+302
+00:15:27.000 --> 00:15:28.000
+Nous voulons donc accélérer cette routine.
+
+303
+00:15:28.001 --> 00:15:31.001
+Il y a aussi beaucoup de problèmes d&#x27;intégrité des données que nous pouvions vérifier
+
+304
+00:15:31.001 --> 00:15:33.000
+Nous n&#x27;avons pas pu le faire dans la version 6.2.
+
+305
+00:15:34.000 --> 00:15:35.001
+Vérifier les formats de fichiers spécifiques est un.
+
+306
+00:15:36.000 --> 00:15:39.001
+Conserver les clusters de perte et les examiner, c&#x27;est découvrir ce genre de
+
+307
+00:15:39.001 --> 00:15:41.000
+Pour les fichiers qu’ils sont, ce serait un autre.
+
+308
+00:15:41.001 --> 00:15:45.001
+Même si la grande majorité des clients de MS-DOS sont déjà des utilisateurs de Windows,
+
+309
+00:15:46.000 --> 00:15:50.001
+Microsoft reconnaît la valeur de MS-DOS comme un produit en soi.
+
+310
+00:15:51.001 --> 00:15:56.001
+La version 7 répondra probablement à la nécessité d&#x27;un disque dur plus grand dans DOS et
+
+311
+00:15:56.001 --> 00:15:58.001
+Soutien à la mémoire virtuelle de traitement avancé.
+
+312
+00:15:59.001 --> 00:16:02.000
+Pour les Chroniques informatiques, je suis Jonelle Patterson.
+
+313
+00:16:02.001 --> 00:16:02.001
+[...]
+
+314
+00:16:14.001 --> 00:16:18.000
+Aucun produit logiciel n&#x27;est parfait, bien sûr, et donc parfois vous devez
+
+315
+00:16:18.000 --> 00:16:20.000
+Ajoutez la fonctionnalité vous-même.
+
+316
+00:16:20.001 --> 00:16:24.001
+Nous allons regarder deux façons d&#x27;améliorer MS-DOS 6.2 et ici pour nous montrer comment
+
+317
+00:16:24.001 --> 00:16:28.001
+Chris Barr de PC Magazine et David Oldfield de Norton Group.
+
+318
+00:16:29.000 --> 00:16:30.000
+Chris, commencons par vous.
+
+319
+00:16:30.000 --> 00:16:33.000
+Et je suppose que nous faisons ici une enquête sur ce que les problèmes étaient vraiment sur 6.0.
+
+320
+00:16:33.001 --> 00:16:34.000
+Quel est votre point de vue ?
+
+321
+00:16:34.000 --> 00:16:35.000
+Y a-t-il des problèmes avec le double espace ?
+
+322
+00:16:35.001 --> 00:16:36.001
+Y a-t-il un risque que vous puissiez perdre vos données ?
+
+323
+00:16:37.000 --> 00:16:39.001
+Il y avait des problèmes avec le double espace, mais il n&#x27;y avait pas de problèmes qui pourraient être
+
+324
+00:16:39.001 --> 00:16:42.001
+facilement répliqué dans un cadre de laboratoire, qui est là où nous faisons nos tests.
+
+325
+00:16:43.000 --> 00:16:48.000
+Avec 6.2, Microsoft a, nous espérons, corrigé certains de ces erreurs et
+
+326
+00:16:48.000 --> 00:16:49.001
+Un réseau de sécurité sur un double espace.
+
+327
+00:16:50.000 --> 00:16:52.001
+En plus, ils ont ajouté un undo, un désinstallation.
+
+328
+00:16:52.001 --> 00:16:53.001
+Oui, ce qui est beau.
+
+329
+00:16:54.000 --> 00:16:56.001
+Il y a d’autres options pour les deux.
+
+330
+00:16:56.001 --> 00:16:59.000
+Ce n&#x27;est pas seulement le Microsoft DOS, donc évidemment c&#x27;est le
+
+331
+00:16:59.000 --> 00:17:00.001
+Les habitants de la place dominante vont.
+
+332
+00:17:01.000 --> 00:17:02.001
+Nous avons le Novell DOS 7.0.
+
+333
+00:17:02.001 --> 00:17:04.001
+Nous avons le PC-DOS 6.1 d’IBM.
+
+334
+00:17:04.001 --> 00:17:06.001
+Je vous laisse vous parler de ceux-ci, et nous allons commencer par le roman.
+
+335
+00:17:06.001 --> 00:17:08.000
+Les deux, que j’ai pensé être le DR-DOS.
+
+336
+00:17:08.001 --> 00:17:10.001
+La version la plus récente est 7. 0 et vous en avez ici.
+
+337
+00:17:10.001 --> 00:17:12.001
+Quelles sont certaines des caractéristiques que vous obtenez dans Novell&#x27;s DOS
+
+338
+00:17:12.001 --> 00:17:14.000
+Vous ne connaissez pas MS-DOS 6.2 ?
+
+339
+00:17:14.000 --> 00:17:18.001
+OK, Novell est leader dans la guerre des caractéristiques, de la même manière que le DR-DOS.
+
+340
+00:17:19.000 --> 00:17:23.000
+Novell DOS 7 dispose de quelques-unes des mêmes utilités que Microsoft DOS et IBM DOS.
+
+341
+00:17:23.000 --> 00:17:24.001
+Gestion de la mémoire, compression du disque.
+
+342
+00:17:24.001 --> 00:17:27.000
+Compression du disque Stacker, cache disque.
+
+343
+00:17:27.000 --> 00:17:29.000
+Est-ce, en fait, un stacker, je suis désolé, est-ce dans Novell?
+
+344
+00:17:29.000 --> 00:17:30.001
+C’est le stacker 3.1 qui est là.
+
+345
+00:17:31.001 --> 00:17:33.000
+Mais ils ont également ajouté quelques nouvelles choses.
+
+346
+00:17:33.000 --> 00:17:34.001
+Ils ont la sécurité, de sorte que vous pouvez sécuriser votre bureau.
+
+347
+00:17:35.001 --> 00:17:39.000
+Ils ont 386 multitasking, vous pouvez donc courir plus d&#x27;un
+
+348
+00:17:39.000 --> 00:17:41.000
+2 applications en même temps.
+
+349
+00:17:41.000 --> 00:17:43.000
+Et puisque ils sont Novell, ils ont ajouté le réseau.
+
+350
+00:17:44.000 --> 00:17:47.001
+Ceci peut être configuré comme soit un réseau peer-to-peer, un serveur client avec
+
+351
+00:17:47.001 --> 00:17:50.001
+votre bureau est soit le client ou le serveur, et il a un universel
+
+352
+00:17:50.001 --> 00:17:55.000
+client réseau, afin que vous puissiez vous connecter à n&#x27;importe quel réseau, deux, trois ou quatre.
+
+353
+00:17:56.000 --> 00:17:56.001
+[...]
+
+354
+00:17:58.000 --> 00:18:01.000
+Et donc, nous allons l&#x27;installer maintenant pour le réseau, et c&#x27;est très simple.
+
+355
+00:18:01.000 --> 00:18:04.001
+Vous allez juste entrer, retirer votre carte, accepter.
+
+356
+00:18:05.001 --> 00:18:08.000
+Il charge le logiciel correct, et vous êtes en.
+
+357
+00:18:08.001 --> 00:18:08.001
+Oui oui.
+
+358
+00:18:09.000 --> 00:18:12.001
+Donc, si vous êtes un utilisateur réseau, c&#x27;est évidemment un bon DOS pour vous à avoir.
+
+359
+00:18:12.001 --> 00:18:15.000
+Qu’en est-il de l’IBM PC-DOS 6.1 ?
+
+360
+00:18:15.000 --> 00:18:16.001
+Est-ce qu’il y a quelque chose de spécial dans ça ?
+
+361
+00:18:17.000 --> 00:18:20.001
+Non, rien de spécial, rien d’extérieur à l’ordinaire, mais c’est un bon DOS, et
+
+362
+00:18:20.001 --> 00:18:24.000
+Vous allez le trouver sur les PC IBM et les ordinateurs portables IBM.
+
+363
+00:18:24.001 --> 00:18:28.000
+Y a-t-il des risques de compatibilité si vous n’utilisez pas MS-DOS ?
+
+364
+00:18:28.001 --> 00:18:29.000
+pas vraiment.
+
+365
+00:18:29.000 --> 00:18:31.001
+Ils sont tous assez la même chose, et ils ont travaillé sur ces
+
+366
+00:18:31.001 --> 00:18:34.000
+Problèmes de compatibilité, de sorte que vous allez travailler sur n&#x27;importe quelle machine.
+
+367
+00:18:34.001 --> 00:18:35.001
+J’ai raison, la question finale.
+
+368
+00:18:35.001 --> 00:18:36.001
+Je suis l’utilisateur typique.
+
+369
+00:18:36.001 --> 00:18:38.000
+J&#x27;ai un DOS 5.0 dans ma machine.
+
+370
+00:18:38.001 --> 00:18:40.001
+Dois-je aller à la boutique et dépenser l&#x27;argent pour obtenir 6.2 maintenant?
+
+371
+00:18:40.001 --> 00:18:41.001
+Est-ce que je vais en sortir suffisamment ?
+
+372
+00:18:42.000 --> 00:18:46.000
+Si vous avez besoin de la compression du disque, si vous avez nécessaire la gestion de la mémoire, en principe
+
+373
+00:18:46.000 --> 00:18:47.001
+Vous les obtenez gratuitement dans la boîte.
+
+374
+00:18:48.000 --> 00:18:48.001
+C’est une bonne affaire.
+
+375
+00:18:49.000 --> 00:18:51.000
+Donc, vous obtiendrez toutes ces utilités jetées.
+
+376
+00:18:51.000 --> 00:18:51.000
+Pourquoi pas ?
+
+377
+00:18:51.001 --> 00:18:52.000
+Pratiquement gratuit !
+
+378
+00:18:52.000 --> 00:18:52.001
+OK Chris, merci !
+
+379
+00:18:52.001 --> 00:18:55.000
+Je vais passer ici à David Oldfield du Norton Group.
+
+380
+00:18:55.000 --> 00:18:55.001
+Qu’est-ce que tu fais, David ?
+
+381
+00:18:56.000 --> 00:18:56.001
+Très bien, bien sûr !
+
+382
+00:18:57.000 --> 00:19:00.000
+OK, David, vous, les gars de Norton, vous êtes dans le domaine de la sorte de sauter au-dessus de
+
+383
+00:19:00.000 --> 00:19:03.000
+Microsoft, et ils sortent avec Windows, ou ils sortont avec un autre DOS, et
+
+384
+00:19:03.000 --> 00:19:05.000
+Vous venez avec quelque chose qui fait que ça fonctionne juste un peu mieux.
+
+385
+00:19:05.001 --> 00:19:08.000
+Les derniers outils Norton sont 7.0.
+
+386
+00:19:08.000 --> 00:19:10.001
+Et dis-moi ce qui est là, et comment cela fait-il que DOS fonctionne mieux?
+
+387
+00:19:11.000 --> 00:19:17.001
+Comme vous l&#x27;avez dit, avec DOS il change, et probablement la plus
+
+388
+00:19:17.001 --> 00:19:21.000
+Il y a des progrès significatifs dans les dos 6. 0 a été la compression des données.
+
+389
+00:19:22.000 --> 00:19:25.000
+Lorsque vous allez utiliser quelque chose comme la compression de données, vous devez vous assurer
+
+390
+00:19:25.000 --> 00:19:28.000
+que le système sur lequel vous allez l&#x27;exécuter est absolument à snuff
+
+391
+00:19:28.000 --> 00:19:29.001
+du matériel et du logiciel.
+
+392
+00:19:30.000 --> 00:19:33.001
+Ainsi, le Norton Utility 7 comprend un module complet de diagnostic matériel.
+
+393
+00:19:34.000 --> 00:19:36.000
+J&#x27;ai le premier écran des diagnostics
+
+394
+00:19:36.000 --> 00:19:37.001
+Je suis là, et je vais commencer le test.
+
+395
+00:19:38.000 --> 00:19:42.000
+Et vous verrez ce nDiags, ce que nous appelons le module de diagnostic matériel
+
+396
+00:19:42.000 --> 00:19:46.000
+dans Norton Utility 7, vous passerez et vérifierez tous les composants du système, tous
+
+397
+00:19:46.000 --> 00:19:48.000
+du matériel, tous les composants liés aux données.
+
+398
+00:19:49.000 --> 00:19:51.001
+Une fois que vous savez que votre système n&#x27;a pas de problèmes, vous pouvez avoir un raisonnable
+
+399
+00:19:51.001 --> 00:19:54.000
+Confidence que c&#x27;est OK pour avancer et installer
+
+400
+00:19:54.000 --> 00:19:56.000
+Utilisez une technologie comme la compression.
+
+401
+00:19:56.001 --> 00:20:00.000
+Qu’il s’agisse de la compression à double espace dans Microsoft, ou de la comprimation des stackers,
+
+402
+00:20:00.001 --> 00:20:02.001
+ou add-store, qui est un autre des produits de compression sur le marché.
+
+403
+00:20:02.001 --> 00:20:03.001
+Avant d’aller en avant, écrasez dans tout cela.
+
+404
+00:20:03.001 --> 00:20:05.000
+Désormais, vous voulez vous assurer que votre machine peut le faire.
+
+405
+00:20:05.000 --> 00:20:05.001
+et absolument.
+
+406
+00:20:06.000 --> 00:20:07.001
+Le système ainsi que le disque.
+
+407
+00:20:08.000 --> 00:20:11.000
+Et il y a certainement un morceau du matériel
+
+408
+00:20:11.000 --> 00:20:12.001
+Un diagnostic qui contrôle complètement le disque.
+
+409
+00:20:13.000 --> 00:20:18.000
+Mais en plus de vérifier la partie physique du disque, Norton 7 comprend
+
+410
+00:20:18.000 --> 00:20:20.001
+Un module appelé Disk Doctor, qui a été dans les versions antérieures.
+
+411
+00:20:21.001 --> 00:20:26.000
+Disk Doctor a été mis à jour, cependant, pour pouvoir diagnostiquer et réparer des problèmes
+
+412
+00:20:26.000 --> 00:20:28.001
+Cela peut se produire avec des fichiers comprimés.
+
+413
+00:20:29.000 --> 00:20:33.000
+Donc, si les gens, en fait, n&#x27;ont pas rencontré la corruption des données dans un double espace ou un
+
+414
+00:20:33.000 --> 00:20:39.000
+fichiers comprimés, Disk Doctor peut sortir et analyser le volume, figure
+
+415
+00:20:39.000 --> 00:20:43.000
+Découvrez ce qui est mal ici, et puis, comme je l&#x27;ai dit, corriger automatiquement le problème.
+
+416
+00:20:43.000 --> 00:20:45.000
+Ce n’est pas comme si les gens perdaient des données.
+
+417
+00:20:45.000 --> 00:20:50.001
+Ils ont un moment de panique temporaire avant que Disk Doctor ne leur reçoive.
+
+418
+00:20:50.001 --> 00:20:53.001
+C&#x27;est donc ce genre de choses que les garçons de Microsoft ont parlé avec le disque de scan, dans
+
+419
+00:20:53.001 --> 00:20:56.001
+qu&#x27;ils entrent et vérifier le disque pour s&#x27;assurer de son intégrité avant
+
+420
+00:20:56.001 --> 00:20:58.000
+Est-ce que vous allez débarrasser et le comprimer ?
+
+421
+00:20:58.000 --> 00:21:02.000
+C&#x27;est certainement une fonctionnalité que vous aimeriez utiliser avant d&#x27;installer un double espace.
+
+422
+00:21:03.000 --> 00:21:07.000
+Nous pensons que Disk Doctor et les autres composants de NU7 sont là comme des outils pour
+
+423
+00:21:07.000 --> 00:21:09.000
+Donnez-vous une politique d’assurance si vous avez des problèmes
+
+424
+00:21:09.000 --> 00:21:10.001
+Après avoir commencé à courir le double-space.
+
+425
+00:21:10.001 --> 00:21:12.001
+Qu’est-ce que vous pouvez nous dire sur Norton Utility 7 ?
+
+426
+00:21:12.001 --> 00:21:15.000
+Qu’est-ce que nous en tirons d’autre qui vaut la peine ?
+
+427
+00:21:15.000 --> 00:21:19.001
+Une autre orientation pour les produits Norton a toujours été de tenter d&#x27;optimiser
+
+428
+00:21:19.001 --> 00:21:24.001
+systèmes, afin de les faire courir le plus rapidement possible, pour les rendre comme
+
+429
+00:21:24.001 --> 00:21:26.000
+Ils sont aussi productifs qu’ils peuvent être pour les gens.
+
+430
+00:21:27.000 --> 00:21:31.000
+Une des pièces précieuses de logiciels qui peuvent aider à faire cela
+
+431
+00:21:31.000 --> 00:21:33.000
+C’est ce que l’on appelle le disque de vitesse.
+
+432
+00:21:33.001 --> 00:21:40.001
+Speed Disk a pu emballer les données sur le disque dans les versions antérieures de NU.
+
+433
+00:21:42.000 --> 00:21:45.000
+NU7 permet au disque de vitesse de travailler aussi sur les volumes comprimés.
+
+434
+00:21:45.001 --> 00:21:49.000
+Donc, si vous avez un volume stack ou un volume double-space, vous pouvez maintenant commander le
+
+435
+00:21:49.000 --> 00:21:52.001
+information, non seulement en termes de compression de l&#x27;espace, mais en réalité avoir
+
+436
+00:21:52.001 --> 00:21:54.001
+Toutes les informations du fichier sont cohérentes.
+
+437
+00:21:55.000 --> 00:21:57.001
+Il y a quelques avantages, dont l’un est la vitesse.
+
+438
+00:21:58.000 --> 00:22:00.001
+Si vous allez obtenir quelques données, il va probablement être que vous alleez
+
+439
+00:22:00.001 --> 00:22:02.000
+Demandez plus de données du même fichier.
+
+440
+00:22:02.000 --> 00:22:04.001
+Donc, si tout est ensemble, cela rendra probablement l&#x27;accès plus rapide.
+
+441
+00:22:05.000 --> 00:22:07.000
+Mais il fait aussi la récupération des données, si vous rencontrez
+
+442
+00:22:07.000 --> 00:22:08.001
+Un problème, beaucoup, beaucoup plus fiable.
+
+443
+00:22:09.000 --> 00:22:13.000
+Et encore une fois, le disque de vitesse dans NU7 fonctionne sur toute la technologie comprimée
+
+444
+00:22:13.000 --> 00:22:15.000
+C’est aussi une technologie normale.
+
+445
+00:22:15.000 --> 00:22:16.001
+Quel est le prix sur NUTL7 ?
+
+446
+00:22:17.000 --> 00:22:18.001
+Le prix de la liste est de 179.
+
+447
+00:22:19.001 --> 00:22:23.000
+Des offres de mise à jour ont été rapportées pour les utilisateurs actuels de
+
+448
+00:22:23.000 --> 00:22:25.000
+6 et versions antérieures à NU7.
+
+449
+00:22:25.000 --> 00:22:25.001
+J’ai raison, merci David !
+
+450
+00:22:26.000 --> 00:22:30.000
+C’est ce que nous voyons sur le nouveau MS-DOS 6. 2 et les produits liés.
+
+451
+00:22:30.000 --> 00:22:32.001
+Restez à l&#x27;heure actuelle pour les nouvelles informatiques de cette semaine sur Random Access.
+
+452
+00:22:32.001 --> 00:22:33.000
+[...]
+
+453
+00:22:34.000 --> 00:22:34.000
+[...]
+
+454
+00:22:38.000 --> 00:22:38.001
+[...]
+
+455
+00:22:46.000 --> 00:22:50.001
+Dans le fichier Random Access cette semaine, Dell a introduit une nouvelle ligne de high-end
+
+456
+00:22:50.001 --> 00:22:53.000
+PC sous le nom de marque Optiplex.
+
+457
+00:22:53.000 --> 00:22:56.000
+Les machines sont ciblées sur le marché des sociétés en réseau et le plug-in fonctionnel et
+
+458
+00:22:56.000 --> 00:22:59.001
+capacité de jeu, ce qui signifie que vous pouvez ajouter des périphériques et le PC sera automatiquement
+
+459
+00:22:59.001 --> 00:23:02.000
+Configurez-vous pour accepter les add-ons.
+
+460
+00:23:02.001 --> 00:23:07.000
+Le top de la ligne Dell Optiplex dispose d&#x27;un chip Pentium de 90 MHz et d&#x27;une puce de 210 MHz.
+
+461
+00:23:07.000 --> 00:23:10.001
+Megabyte de disque dur pour moins de 2 800 $, y compris moniteur.
+
+462
+00:23:11.001 --> 00:23:14.001
+Compaq annonce qu&#x27;il va commencer à vendre ses PC via Sears.
+
+463
+00:23:15.000 --> 00:23:17.001
+Le premier produit Compaq disponible à travers la chaîne Sears sera
+
+464
+00:23:17.001 --> 00:23:19.001
+Le Notebook Contura Aero.
+
+465
+00:23:19.001 --> 00:23:22.001
+C’est la première fois que Sears va vendre des ordinateurs portables.
+
+466
+00:23:23.001 --> 00:23:27.000
+Les ordinateurs portables peuvent être des outils de productivité terribles, mais une nouvelle étude indique
+
+467
+00:23:27.000 --> 00:23:32.000
+Les ordinateurs portables sont cinq fois plus susceptibles de se décomposer que les ordinateurs de bureau.
+
+468
+00:23:32.001 --> 00:23:37.000
+L&#x27;étude a montré quatre marques de ordinateurs portables, Apple, Compaq, IBM et Toshiba.
+
+469
+00:23:37.001 --> 00:23:42.000
+Les ordinateurs portables les plus susceptibles d’échouer étaient le Compaq LTE et le ThinkPad 750.
+
+470
+00:23:42.001 --> 00:23:45.000
+Le composant le plus susceptible d’échouer est le disque dur.
+
+471
+00:23:46.000 --> 00:23:49.000
+Borland est sorti avec sa version Windows de Sidekick.
+
+472
+00:23:49.001 --> 00:23:52.000
+C&#x27;est le premier produit sous les nouveaux produits de consommation de Borland
+
+473
+00:23:52.000 --> 00:23:53.001
+Le nom de marque s’appelle Simplify.
+
+474
+00:23:54.000 --> 00:23:57.001
+Le PDG de Borland, Philippe Khan, a assuré que la presse regardait le nouveau Sidekick.
+
+475
+00:23:57.001 --> 00:24:02.001
+Les éditions de presse de Sidekick pour Windows incluent Philippe Khan&#x27;s own Rolodex for 1
+
+476
+00:24:02.001 --> 00:24:04.001
+700 chefs de l’industrie.
+
+477
+00:24:05.001 --> 00:24:08.001
+Saviez-vous que vous pouvez vous inscrire à l&#x27;université sur votre ordinateur?
+
+478
+00:24:09.000 --> 00:24:12.000
+Plus de la moitié des collèges nationaux participent désormais au College Link
+
+479
+00:24:12.000 --> 00:24:16.000
+programme, qui vous permet de remplir un formulaire de demande universitaire de base et
+
+480
+00:24:16.000 --> 00:24:19.001
+personnaliser automatiquement pour les différents collèges auxquels vous appliquez.
+
+481
+00:24:20.000 --> 00:24:22.001
+Vous envoyez votre demande sur un disque floppy à l&#x27;université
+
+482
+00:24:22.001 --> 00:24:24.001
+Lien, et ils l&#x27;envoient aux universités.
+
+483
+00:24:25.000 --> 00:24:28.001
+Le logiciel College Link vend pour moins de 35 $ et vous permettra de vous inscrire
+
+484
+00:24:28.001 --> 00:24:30.000
+Jusqu’à huit écoles différentes.
+
+485
+00:24:31.000 --> 00:24:33.000
+Qu’est-ce qui est chaud sur Internet ces jours-ci ?
+
+486
+00:24:33.000 --> 00:24:36.001
+Notre récent rapport sur l’utilisation d’Internet montre que les sections les plus populaires sur
+
+487
+00:24:36.001 --> 00:24:40.000
+Internet est la nouvelle section utilisateur, suivie par la section appelée
+
+488
+00:24:40.000 --> 00:24:41.001
+Toutes les histoires sexuelles.
+
+489
+00:24:42.001 --> 00:24:46.000
+Un demi-million d&#x27;utilisateurs d&#x27;Internet ont connecté à des histoires sexuelles ALT au cours du mois dernier.
+
+490
+00:24:46.001 --> 00:24:50.001
+La prochaine section la plus populaire dans le cyberspace est appelée ALT
+
+491
+00:24:50.001 --> 00:24:52.001
+Les images sont érotiques.
+
+492
+00:24:53.000 --> 00:24:56.000
+Un message électronique est-il une communication privée ou publique ?
+
+493
+00:24:56.001 --> 00:24:58.001
+Un tribunal a décidé qu’il était public.
+
+494
+00:24:59.000 --> 00:25:03.000
+L&#x27;ancien mari de Roseanne Arnold a été jugé avoir violé une ordonnance de gag
+
+495
+00:25:03.000 --> 00:25:07.000
+son accord de divorce avec Roseanne en révélant ses termes dans un e-mail
+
+496
+00:25:07.000 --> 00:25:08.001
+Un message à une femme au Tennessee.
+
+497
+00:25:09.001 --> 00:25:12.000
+Enfin, une utilisation pratique réelle de l’Internet.
+
+498
+00:25:12.001 --> 00:25:16.001
+Pizza Hat a annoncé un programme de procès à Santa Cruz, en Californie.
+
+499
+00:25:16.001 --> 00:25:19.000
+Vous commandez la pizza pour la livraison à domicile sur Internet.
+
+500
+00:25:19.000 --> 00:25:22.000
+La section en ligne s&#x27;appelle Pizza Net et comprend l&#x27;Internet.
