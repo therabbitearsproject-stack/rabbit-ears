@@ -1,0 +1,2441 @@
+WEBVTT
+
+1
+00:30.000 --> 00:37.920
+Cette semaine sur The Computer Chronicles, comment concevoir un grand site Web.
+
+2
+00:37.920 --> 00:41.760
+Nous vous montrerons comment utiliser Macromedia Flash pour jazz sur votre site Web.
+
+3
+00:41.760 --> 00:45.280
+Nous verrons plusieurs nouveaux outils graphiques et d&#x27;animation d&#x27;Adobe.
+
+4
+00:45.280 --> 00:50.240
+Vous rencontrerez un expert sur JavaScript qui nous montrera comment ajouter des smartphones à votre site Web.
+
+5
+00:50.240 --> 00:55.240
+Et nous rencontrerons un homme qui a été appelé le guru de l&#x27;usabilité du site, Jacob Nielsen.
+
+6
+00:55.240 --> 01:01.360
+Comment concevoir un grand site Web, sortie suivante sur The Computer Chronicles.
+
+7
+01:01.360 --> 01:07.360
+Les chronicles informatiques sont en partie rendus possibles par PC2PC, le service de migration informatique en ligne.
+
+8
+01:07.360 --> 01:08.800
+D’abord sur PC.
+
+9
+01:08.800 --> 01:14.840
+Fichiers, applications et préférences de votre ancien ordinateur à votre nouveau.
+
+10
+01:14.840 --> 01:20.120
+Un soutien supplémentaire est fourni par Upside Events, présentant la révolution numérique du style de vie
+
+11
+01:20.120 --> 01:25.760
+Conférence, où les gens et la technologie intersectent.
+
+12
+01:25.760 --> 01:35.440
+Bonjour, et bienvenue dans The Computer Chronicles.
+
+13
+01:35.440 --> 01:36.600
+Je suis Stuart Shafae.
+
+14
+01:36.600 --> 01:41.160
+Eh bien, pour certaines personnes, créer, concevoir et construire un site internet est toujours difficile.
+
+15
+01:41.160 --> 01:42.160
+Un obstacle à surmonter.
+
+16
+01:42.160 --> 01:47.280
+Il y a quelques outils en ligne simples pour créer des sites Web personnels de base, mais les intrigues
+
+17
+01:47.280 --> 01:50.840
+La création d’un site web vraiment cool reste un mystère pour beaucoup de gens.
+
+18
+01:50.840 --> 01:55.320
+Des choses telles que l&#x27;ajout de Flash, des applets Java, l&#x27;optimisation de votre interface utilisateur, assurer votre site
+
+19
+01:55.320 --> 01:56.700
+Le chargement rapide.
+
+20
+01:56.700 --> 02:00.760
+Ce sont les choses que nous allons regarder aujourd&#x27;hui comme nous vous montrons comment construire un site web de tueur.
+
+21
+02:00.760 --> 02:04.840
+Il y a en fait un nouveau site de création web en ligne qui est très puissant.
+
+22
+02:04.840 --> 02:09.040
+Il s&#x27;appelle moonfruit.com, et ici pour nous le dire, c&#x27;est Norman Meyerowitz, président
+
+23
+02:09.040 --> 02:10.040
+La société Macromedia Ventures.
+
+24
+02:10.040 --> 02:11.040
+Bonjour à la norme.
+
+25
+02:11.040 --> 02:12.040
+C’est Stuart !
+
+26
+02:12.040 --> 02:14.720
+Macromedia, vous gars sont connus pour Flash, bien sûr, qui est l&#x27;une des choses les plus cool
+
+27
+02:14.720 --> 02:16.020
+On le voit sur un site.
+
+28
+02:16.020 --> 02:20.000
+Pour les gens qui ne savent peut-être pas exactement ce que Flash est, donnez-nous quelques exemples de Flash
+
+29
+02:20.000 --> 02:21.400
+Comme nous le voyons sur le web en ce moment.
+
+30
+02:21.400 --> 02:22.400
+Ok bien, très bien !
+
+31
+02:22.400 --> 02:26.120
+Eh bien, les gens utilisent le Dreamweaver de Macromedia pour créer des sites Web, et ils utilisent Flash
+
+32
+02:26.120 --> 02:28.840
+pour créer des médias riches sur les sites Web.
+
+33
+02:28.840 --> 02:32.160
+Les gens le savent beaucoup ces jours-ci à cause du divertissement.
+
+34
+02:32.160 --> 02:36.720
+Voici un exemple de The Critic, qui était auparavant sur la télévision, mais maintenant exclusivement dans Flash.
+
+35
+02:36.720 --> 02:39.480
+Donc beaucoup de choses d&#x27;animation, qui, bien sûr, est un peu plus facile à faire sur le web
+
+36
+02:39.480 --> 02:43.440
+Avec Flash, vous utilisez la technologie de vos gars pour regarder la télévision sur le web.
+
+37
+02:43.440 --> 02:46.560
+Les valeurs de production de la télévision, mais elle fonctionne au-delà de la faible bande passante sur les modèmes.
+
+38
+02:46.560 --> 02:49.120
+Tout est bien, donc nous sommes familiers avec une sorte de choses de type divertissement.
+
+39
+02:49.120 --> 02:51.200
+Parlons de certaines applications commerciales.
+
+40
+02:51.200 --> 02:54.800
+Les gens utilisent en fait Flash de plus en plus dans l&#x27;arène publicitaire, bien, pour faire des annonces
+
+41
+02:54.800 --> 02:56.480
+Plus intéressant sur le web.
+
+42
+02:56.480 --> 02:57.480
+à droite.
+
+43
+02:57.480 --> 02:59.200
+Coca-Cola l’utilise pour le branding, par exemple.
+
+44
+02:59.200 --> 03:02.640
+C’est ce que les gens font, de sorte que vous pouvez vraiment obtenir la marque.
+
+45
+03:02.640 --> 03:05.980
+Donc, vous allez à la page Coca-Cola, un peu plus d&#x27;excitations se produisent.
+
+46
+03:05.980 --> 03:10.920
+Et puis les gens l&#x27;utilisent aussi, CNET, par exemple, et ZDNet l&#x27;utilise pour créer
+
+47
+03:10.920 --> 03:14.080
+Des exemples de médias riches à l&#x27;intérieur de leur page web.
+
+48
+03:14.080 --> 03:17.240
+Voici un exemple de l&#x27;annonce d&#x27;Oracle où vous pouvez l&#x27;avoir.
+
+49
+03:17.240 --> 03:19.360
+Vous voulez scroller cela pour que nous puissions voir le reste de l&#x27;annonce là-bas?
+
+50
+03:19.360 --> 03:20.360
+Bien sûr, vous pouvez en avoir.
+
+51
+03:20.360 --> 03:22.560
+Tout est bien, donc c&#x27;est comme la nouvelle version de la bannière publicitaire.
+
+52
+03:22.560 --> 03:27.120
+Donc la bannière d&#x27;annonce ennuyeuse, cliquez sur elle et quitte le site, en fait regarder une annonce en mouvement à l&#x27;intérieur
+
+53
+03:27.120 --> 03:28.120
+Le site .
+
+54
+03:28.120 --> 03:31.800
+Je suis en train d&#x27;annoncer, et maintenant je peux en savoir plus sur Oracle 9i exactement comme ça sans avoir à...
+
+55
+03:31.800 --> 03:33.880
+C&#x27;est une fenêtre vivante à l&#x27;intérieur de cette page.
+
+56
+03:33.880 --> 03:37.160
+Vivant la fenêtre, je ne quitte pas le site, donc le annonceur est heureux et le propriétaire du site
+
+57
+03:37.160 --> 03:38.160
+est satisfaite.
+
+58
+03:38.160 --> 03:39.160
+OK !
+
+59
+03:39.160 --> 03:43.080
+Donc voici un autre exemple intéressant, un peu plus subtile utilisation de Flash à l&#x27;intérieur d&#x27;un en ligne
+
+60
+03:43.080 --> 03:45.000
+La banque.
+
+61
+03:45.000 --> 03:51.440
+Si je regarde cette banque en ligne, l&#x27;une des choses que Flash est utilisé de plus en plus
+
+62
+03:51.440 --> 03:52.440
+Il y a des applications.
+
+63
+03:52.440 --> 03:56.920
+Il y a 300 millions de personnes qui peuvent vraiment voir Flash, 96% du web.
+
+64
+03:56.920 --> 03:59.080
+Et Flash vous permet de créer des expériences sans fil.
+
+65
+03:59.080 --> 04:02.360
+Au lieu du navigateur refroidissant tout le temps où vous avez cette rupture dans l&#x27;expérience,
+
+66
+04:02.360 --> 04:03.520
+Vous pouvez créer une expérience immersive.
+
+67
+04:03.520 --> 04:05.720
+Tout est bien, alors comment utilisez-vous Flash sur ce site bancaire?
+
+68
+04:05.720 --> 04:09.960
+Bon, voici une banque et je vais lancer cette banque.
+
+69
+04:09.960 --> 04:16.640
+Et imaginez que c&#x27;est un ATM, mais vous pouvez vraiment opérer à travers cela et il y a une voix qui est
+
+70
+04:16.640 --> 04:18.160
+En fait, je vous dis comment fonctionner.
+
+71
+04:18.160 --> 04:20.680
+Je peux vraiment transférer des fonds et je peux le faire.
+
+72
+04:20.680 --> 04:22.260
+Cela ne ressemble pas à un site.
+
+73
+04:22.260 --> 04:25.440
+Cela ressemble à un ATM avec la voix et les choses.
+
+74
+04:25.440 --> 04:29.200
+Donc, une fois de plus, l&#x27;idée est que vous sortez de cette ancienne métaphore de page, laissez-le aller ici,
+
+75
+04:29.200 --> 04:33.200
+Laissez cela aller ici, rester dans la banque, la banquette virtuelle, si vous voulez, et faire autrement
+
+76
+04:33.200 --> 04:34.200
+des choses dans cet environnement.
+
+77
+04:34.200 --> 04:35.960
+Et vous construisez cela en utilisant l&#x27;outil d&#x27;auteur Flash.
+
+78
+04:35.960 --> 04:40.920
+Tout est bien, maintenant montre-nous un autre exemple multimédia de la façon dont vous créeriez l&#x27;éducation
+
+79
+04:40.920 --> 04:43.960
+des choses ou des choses de divertissement en utilisant les outils traditionnels Flash.
+
+80
+04:43.960 --> 04:47.840
+Eh bien, c&#x27;est quelque chose que Business 2.0 a utilisé pour expliquer la différence entre
+
+81
+04:47.840 --> 04:50.320
+PC et le monde sans fil.
+
+82
+04:50.320 --> 04:54.320
+Et c&#x27;est là que vous faites des histoires, que vous ne feriez normalement pas sur une page web.
+
+83
+04:54.320 --> 04:56.360
+Vous utilisez de l’audio, vous utilisez l’animation.
+
+84
+04:56.360 --> 05:00.720
+Tout est bien, maintenant nous montrer brièvement en utilisant le type traditionnel d&#x27;outil logiciel, Flash Studio, comment je
+
+85
+05:00.720 --> 05:05.600
+peut entrer et modifier la chose et ce que cette interface aurait l&#x27;air.
+
+86
+05:05.600 --> 05:09.360
+Si vous êtes un professionnel, vous utiliserez en fait l&#x27;outil d&#x27;écriture Flash et il utilise un
+
+87
+05:09.360 --> 05:13.320
+La métaphore timeline pour réellement mettre en scène les différentes animations et l&#x27;audio.
+
+88
+05:13.320 --> 05:20.400
+Et c&#x27;est aussi simple que d&#x27;entrer et de cliquer sur différentes choses pour changer cela afin que je puisse
+
+89
+05:20.400 --> 05:23.000
+C’est le changement à l’ordinateur chronicle.
+
+90
+05:23.000 --> 05:25.000
+Mais je veux dire, c’est, comme vous l’avez dit, cela est pour le professionnel.
+
+91
+05:25.000 --> 05:26.840
+Il y a beaucoup de fenêtres, beaucoup de paramètres.
+
+92
+05:26.840 --> 05:27.840
+C’est une sorte de compliqué.
+
+93
+05:27.840 --> 05:28.840
+Vous devez vraiment apprendre.
+
+94
+05:28.840 --> 05:30.320
+Il y a un peu de courbe d&#x27;entraînement ici, non ?
+
+95
+05:30.320 --> 05:31.320
+Vous avez besoin d’un peu de pouvoir.
+
+96
+05:31.320 --> 05:32.320
+Oui oui.
+
+97
+05:32.320 --> 05:35.000
+Parlons ensuite de la prochaine chose, qui est ce que j&#x27;ai mentionné, Moonfruit.com, dans lequel
+
+98
+05:35.000 --> 05:39.200
+vous avez pris beaucoup de cette capacité, la mettre sur un site web en direct, une sorte de plus de traction et
+
+99
+05:39.200 --> 05:43.440
+Drop, point et clic, où les gens normaux peuvent réellement accomplir certaines des mêmes choses.
+
+100
+05:43.440 --> 05:48.320
+Ok, bien, nous allons à Moonfruit.com.
+
+101
+05:48.320 --> 05:49.800
+Et voici Moonfruit.com.
+
+102
+05:49.800 --> 05:52.400
+Je suis connecté comme moi-même.
+
+103
+05:52.400 --> 05:53.760
+Voici mes sites préférés.
+
+104
+05:53.760 --> 05:55.400
+C’est un site que j’ai construit moi-même.
+
+105
+05:55.400 --> 05:56.680
+Montrer cela à nous.
+
+106
+05:56.680 --> 06:00.040
+Ainsi Moonfruit a effectivement utilisé Flash pour créer cette application très sophistiquée.
+
+107
+06:00.040 --> 06:03.520
+Ainsi, ils ont utilisé l&#x27;outil d&#x27;offre Flash, mais ensuite ils l&#x27;ont fait pour que les utilisateurs finaux puissent réellement
+
+108
+06:03.520 --> 06:04.520
+Créer son propre site.
+
+109
+06:04.520 --> 06:05.520
+En fait, c’est dans le flash.
+
+110
+06:05.520 --> 06:07.120
+Nous utilisons Flash pour créer d&#x27;autres choses Flash.
+
+111
+06:07.120 --> 06:08.120
+Créer un autre flash.
+
+112
+06:08.120 --> 06:10.240
+C&#x27;est donc un site d&#x27;utilisateur final pour la musique pop.
+
+113
+06:10.240 --> 06:11.240
+J’ai une page d’accueil.
+
+114
+06:11.240 --> 06:12.560
+C&#x27;est quelque chose que vous auriez construit dans Moonfruit.
+
+115
+06:12.560 --> 06:14.000
+J’aurais fait mon travail sur le Moonfruit.
+
+116
+06:14.000 --> 06:17.560
+Voici un concert, des photos que je peux mettre en place.
+
+117
+06:17.560 --> 06:19.880
+Voici une base de données CD que je peux réellement créer.
+
+118
+06:19.880 --> 06:20.880
+C’est plutôt cool.
+
+119
+06:20.880 --> 06:23.680
+Et si je vais à la page d&#x27;accueil, c&#x27;est ainsi que vous l&#x27;éditez.
+
+120
+06:23.680 --> 06:25.680
+C’est ainsi qu’il est facile de créer votre propre page.
+
+121
+06:25.680 --> 06:27.280
+Je peux donc venir ici.
+
+122
+06:27.280 --> 06:35.520
+Je peux simplement toucher sur le bienvenue et dire le changement à bonjour, Stuart.
+
+123
+06:35.520 --> 06:36.520
+Et vous pouvez vous confondre avec cela.
+
+124
+06:36.520 --> 06:38.320
+Je veux le flip, le tourner, faire des sortes de choses cool comme ça.
+
+125
+06:38.320 --> 06:41.320
+Ici, je vais l’échanger.
+
+126
+06:41.320 --> 06:42.800
+Je peux le tourner.
+
+127
+06:42.800 --> 06:45.040
+C&#x27;est évidemment une interface beaucoup plus simple que nous l&#x27;avons vu auparavant.
+
+128
+06:45.040 --> 06:46.040
+à droite.
+
+129
+06:46.040 --> 06:47.040
+Je peux ajouter un article si j&#x27;aimerais.
+
+130
+06:47.040 --> 06:48.040
+OK !
+
+131
+06:48.040 --> 06:49.040
+Le site est moonfruit.com.
+
+132
+06:49.040 --> 06:52.440
+Je peux y aller et l&#x27;utiliser gratuitement et concevoir un site cool et mettre Flash en lui.
+
+133
+06:52.440 --> 06:53.440
+précisément .
+
+134
+06:53.440 --> 06:54.440
+Norm, merci beaucoup.
+
+135
+06:54.440 --> 06:55.440
+Merci à toi Stuart.
+
+136
+06:55.440 --> 06:58.720
+Un autre site vraiment attrayant et engagant, bien sûr, est la graphique.
+
+137
+06:58.720 --> 07:02.920
+Une entreprise qui a été autour depuis longtemps fournissant de grandes outils graphiques est Adobe,
+
+138
+07:02.920 --> 07:05.440
+Programmes tels que Photoshop, Illustrator, Premiere et cetera.
+
+139
+07:05.440 --> 07:10.120
+Eh bien, Adobe vient maintenant avec de nouveaux outils de conception pour jazzing votre site Web.
+
+140
+07:10.120 --> 07:12.320
+Et ici pour nous les montrer, c’est Mark Eamon d’Adobe.
+
+141
+07:12.320 --> 07:13.320
+Bonjour à Mark.
+
+142
+07:13.320 --> 07:14.320
+Bonjour
+
+143
+07:14.320 --> 07:15.320
+OK !
+
+144
+07:15.320 --> 07:16.320
+Quelques choses dont nous voulons parler.
+
+145
+07:16.320 --> 07:17.320
+Vous avez quelque chose qui s&#x27;appelle Go Live.
+
+146
+07:17.320 --> 07:18.320
+Oui oui.
+
+147
+07:18.320 --> 07:21.720
+Montrez-nous les bases de ce que vous pouvez faire avec Go Live et comment il fonctionne comme votre outil.
+
+148
+07:21.720 --> 07:22.720
+Il est certain.
+
+149
+07:22.720 --> 07:27.160
+Ainsi, Go Live est vraiment un outil pour créer des sites web de pointe qui le plus discernant,
+
+150
+07:27.160 --> 07:31.120
+Discriminer les utilisateurs du Web, les développeurs du Web utilisent.
+
+151
+07:31.120 --> 07:36.440
+Et ce que je voudrais vous montrer est comment il peut aussi être très efficace pour l&#x27;utilisation par quelqu&#x27;un
+
+152
+07:36.440 --> 07:38.120
+Qui commence à construire des sites Web ?
+
+153
+07:38.120 --> 07:39.120
+OK !
+
+154
+07:39.120 --> 07:41.520
+Nous avons mis en place ici quelques choses qui vous permettent de...
+
+155
+07:41.520 --> 07:42.760
+Nous sommes donc en live en ce moment.
+
+156
+07:42.760 --> 07:43.760
+C’est juste ça.
+
+157
+07:43.760 --> 07:44.760
+Nous sommes en live.
+
+158
+07:44.760 --> 07:47.760
+Et l&#x27;une des choses uniques que nous avons ici est une grille de layout.
+
+159
+07:47.760 --> 07:53.400
+Une grille de layout permet à l&#x27;utilisateur de placer un élément absolument n&#x27;importe où sur la page, sortant
+
+160
+07:53.400 --> 07:58.600
+comme la vieille métaphore d&#x27;édition de bureau, qui est quelque chose qui est non trivial si
+
+161
+07:58.600 --> 08:00.760
+Vous n’utilisez pas un...
+
+162
+08:00.760 --> 08:02.040
+Si vous utilisez un autre produit.
+
+163
+08:02.040 --> 08:06.440
+Donc, je veux dire, le point est que vous avez l&#x27;historique de Photoshop ici, donc vous, les gars, vous êtes une sorte de prendre
+
+164
+08:06.440 --> 08:08.480
+C’est ainsi qu’il est intégré dans l’outil Go Live.
+
+165
+08:08.480 --> 08:09.480
+C’est ça l’idée ?
+
+166
+08:09.480 --> 08:10.480
+et absolument.
+
+167
+08:10.480 --> 08:15.120
+Et je voudrais vous montrer à la suite un très étroit morceau d&#x27;intégration qui est, à nouveau, unique.
+
+168
+08:15.120 --> 08:20.080
+Parce que nous partageons les technologies, ce que je voudrais faire est de vous montrer comment nous pouvons prendre une
+
+169
+08:20.080 --> 08:22.400
+Une image qui a été créée pour un autre but.
+
+170
+08:22.400 --> 08:25.360
+Ainsi, voici une image qui est de 1,7 megabytes de fichier Photoshop.
+
+171
+08:25.360 --> 08:26.360
+Nous voulons le mettre sur notre site.
+
+172
+08:26.360 --> 08:29.040
+Donc un fichier monstre qui aurait pu être conçu pour imprimer quelque part.
+
+173
+08:29.040 --> 08:30.880
+Nous ne nous inquiétons pas de la taille du fichier.
+
+174
+08:30.880 --> 08:31.880
+précisément .
+
+175
+08:31.880 --> 08:32.880
+Eh bien, vous prenez soin sur le web.
+
+176
+08:32.880 --> 08:33.880
+Je ne vais pas partir avec ça ici.
+
+177
+08:33.880 --> 08:34.880
+précisément .
+
+178
+08:34.880 --> 08:37.600
+Donc nous avons cet outil dans Go Live appelé les objets intelligents.
+
+179
+08:37.600 --> 08:39.600
+Il met en place cette boîte de dialogue Save for Web.
+
+180
+08:39.600 --> 08:43.600
+Et si vous avez utilisé une demi-douzaine de produits Adobe, ceci est très connu pour vous.
+
+181
+08:43.600 --> 08:45.280
+Parce que votre courbe d’apprentissage est zéro.
+
+182
+08:45.280 --> 08:48.800
+Vous pouvez définir la compression que vous souhaitez pour cette image particulière.
+
+183
+08:48.800 --> 08:53.360
+Dans ce cas, je vais aussi vouloir rendre l&#x27;image un peu plus petite sur mon site.
+
+184
+08:53.360 --> 08:55.200
+Nous allons donc avancer et le rendre plus petit.
+
+185
+08:55.200 --> 09:00.000
+Je vais le sauvegarder sur mon bureau pour que les choses se produisent un peu plus rapidement ici.
+
+186
+09:00.000 --> 09:02.960
+Et encore une fois, je peux le déplacer n&#x27;importe où grâce à ma grille de layout.
+
+187
+09:02.960 --> 09:05.200
+Mais voici quelque chose qui est vraiment cool et unique.
+
+188
+09:05.200 --> 09:08.240
+Supposons que vous vouliez maintenant, comme je me rends compte, je l&#x27;ai fait un peu trop petit.
+
+189
+09:08.240 --> 09:09.240
+à droite.
+
+190
+09:09.240 --> 09:10.960
+Vous l&#x27;avez donc comprimé, mais vous l&#x27; avez aussi comprimée.
+
+191
+09:10.960 --> 09:12.600
+Je l&#x27;ai fait un peu trop petit.
+
+192
+09:12.600 --> 09:13.600
+Trop petit pour ce site.
+
+193
+09:13.600 --> 09:18.440
+Et maintenant, si j’étais dans n’importe quelle autre application de conception web, j’aurais, en étendant cette image,
+
+194
+09:18.440 --> 09:19.440
+Finir avec une jagière.
+
+195
+09:19.440 --> 09:20.440
+Je veux dire que nous avons tous vu ça.
+
+196
+09:20.440 --> 09:21.440
+Juste à droite.
+
+197
+09:21.440 --> 09:24.240
+Donc, vous voulez vraiment revenir au fichier natif d&#x27;origine et travailler avec celui-ci?
+
+198
+09:24.240 --> 09:25.920
+Eh bien, c’est là que tu devais aller.
+
+199
+09:25.920 --> 09:30.320
+Mais maintenant à cause de la productivité, parce que c&#x27;est ce que nous appelons un objet intelligent, tout ce que j&#x27;ai besoin
+
+200
+09:30.320 --> 09:32.240
+C’est de revenir à l’intérieur de Go Live.
+
+201
+09:32.240 --> 09:35.080
+Et je ne sais pas si vous voyez cette boîte de dialogue pop-up là-bas.
+
+202
+09:35.080 --> 09:41.280
+Ce qui a dit qu&#x27;il allait revenir au fichier Photoshop original pour ressembler à la même compression
+
+203
+09:41.280 --> 09:45.400
+Ce que j&#x27;ai mis auparavant, la même qualité d&#x27;image, mais maintenant à cette nouvelle taille.
+
+204
+09:45.400 --> 09:49.640
+Ok, donc encore une fois, nous obtenons de la rendre plus grande sans payer le prix de la faire plus grande, essentiellement.
+
+205
+09:49.640 --> 09:52.200
+Et économiser beaucoup de temps en ne pas avoir à changer les applications.
+
+206
+09:52.200 --> 09:53.200
+Oui oui.
+
+207
+09:53.200 --> 09:57.640
+Tout est bien, passons ici à ce que vous avez sur, par la suite, votre nouvelle marque G4 PowerBook.
+
+208
+09:57.640 --> 09:59.200
+Très cool, très cool en fait.
+
+209
+09:59.200 --> 10:00.200
+Slick à regarder.
+
+210
+10:00.200 --> 10:01.200
+Merci à vous.
+
+211
+10:01.200 --> 10:02.720
+Et sur cette machine, vous avez quoi ?
+
+212
+10:02.720 --> 10:03.720
+Le mouvement vivant.
+
+213
+10:03.720 --> 10:04.720
+Oui je le fais.
+
+214
+10:04.720 --> 10:08.080
+Quel est le moyen de créer les types d&#x27;animations flash que nous avons juste vu avant ?
+
+215
+10:08.080 --> 10:12.720
+Live Motion est l&#x27;outil d&#x27;Adobe pour créer des fichiers flash.
+
+216
+10:12.720 --> 10:16.400
+Et encore une fois, il partage beaucoup de technologie avec d&#x27;autres applications Adobe.
+
+217
+10:16.400 --> 10:19.640
+Tout est bien, maintenant la plupart des gens pensent qu&#x27;il est assez compliqué de créer certaines de ces choses.
+
+218
+10:19.640 --> 10:21.740
+Nous avons vu une version simple là-bas.
+
+219
+10:21.740 --> 10:23.840
+Découvrez à quel point il est facile d’utiliser Live Motion.
+
+220
+10:23.840 --> 10:24.840
+Bien sûr !
+
+221
+10:24.840 --> 10:26.440
+Nous allons aller à l’écran ici.
+
+222
+10:26.440 --> 10:30.960
+Nous avons le début d’une animation d’introduction à un site Web.
+
+223
+10:30.960 --> 10:32.880
+Et au fond de l&#x27;écran, nous avons la timeline.
+
+224
+10:32.880 --> 10:34.840
+La ligne de temps se déplace essentiellement par le temps.
+
+225
+10:34.840 --> 10:36.200
+J’ai quelques éléments ici.
+
+226
+10:36.200 --> 10:40.800
+Donc, vous vous déplacez en arrière et en avant et vous pouvez voir que j&#x27;ai différentes couches d&#x27;informations.
+
+227
+10:40.800 --> 10:46.320
+Mais ce que je veux faire est de vous montrer à quel point il est facile de juste commencer avec une nouvelle animation.
+
+228
+10:46.320 --> 10:48.600
+Encore une fois, j&#x27;ai un document sur mon bureau.
+
+229
+10:48.600 --> 10:50.200
+Encore une fois, un fichier Photoshop.
+
+230
+10:50.200 --> 10:51.200
+C’est très populaire.
+
+231
+10:51.200 --> 10:55.880
+Plus de 90% des pages Web ont des images créées avec Photoshop sur elles.
+
+232
+10:55.880 --> 10:58.520
+J’ai simplement tiré et descendu.
+
+233
+10:58.520 --> 11:04.200
+Et je finis avec une image sur l&#x27;écran qui est cette animation Photoshop.
+
+234
+11:04.200 --> 11:09.400
+En fait, une photographie Photoshop, qui a initialement deux couches.
+
+235
+11:09.400 --> 11:11.560
+Le ciel est une couche et le ski est une autre couche.
+
+236
+11:11.560 --> 11:13.200
+Vous ne voulez probablement pas animer le ciel, n’est-ce pas ?
+
+237
+11:13.200 --> 11:16.800
+C&#x27;est un peu drôle de voir le ciel se déplacer si vite.
+
+238
+11:16.800 --> 11:21.280
+Encore une fois, grâce à l’intégration entre nos produits, nous pouvons convertir les couches en
+
+239
+11:21.280 --> 11:22.280
+des objets séparés.
+
+240
+11:22.280 --> 11:24.960
+Donc je peux maintenant, dans ce cas, supprimer seulement le ciel.
+
+241
+11:24.960 --> 11:25.960
+OK !
+
+242
+11:25.960 --> 11:27.560
+Et maintenant, vous voulez animer le skier guy.
+
+243
+11:27.560 --> 11:29.620
+Nous allons utiliser le ski ici et l&#x27;animer.
+
+244
+11:29.620 --> 11:32.520
+Nous pouvons bien sûr le rejeter.
+
+245
+11:32.520 --> 11:37.920
+Et ce que je peux faire ici, c&#x27;est si j&#x27;indique le timeline, automatiquement j&#x27;ai une couche et
+
+246
+11:37.920 --> 11:40.760
+On l’appelle skier en raison de l’intégration entre nos produits.
+
+247
+11:40.760 --> 11:43.720
+Je me souviens de la façon dont je l&#x27;ai appelé dans Photoshop.
+
+248
+11:43.720 --> 11:46.000
+Et j&#x27;ai juste tourné ces petits cadres clés.
+
+249
+11:46.000 --> 11:48.720
+Et le cadre clé est essentiellement de fixer un point dans le temps.
+
+250
+11:48.720 --> 11:51.120
+Vous allez créer un peu de chemin pour l&#x27;animation ici?
+
+251
+11:51.120 --> 11:52.120
+précisément .
+
+252
+11:52.120 --> 11:55.680
+Donc, la première chose que je vous dis est à ce moment-là, vous voyez le petit point noir?
+
+253
+11:55.680 --> 11:59.760
+C&#x27;est là que je veux que vous soyez, X et Y coordonnent sur l&#x27;écran.
+
+254
+11:59.760 --> 12:06.480
+Je vais déplacer mon cursor jusqu&#x27;à la fin de l&#x27;animation et juste déplacer ce gars en dessous environ
+
+255
+12:06.480 --> 12:07.480
+de l’autre côté.
+
+256
+12:07.480 --> 12:08.480
+Et c’est ça.
+
+257
+12:08.480 --> 12:09.480
+J’ai fait l’animation.
+
+258
+12:09.480 --> 12:10.840
+Et cela montre qu’il fonctionne vraiment.
+
+259
+12:10.840 --> 12:12.680
+Faites ça, jouez à ça.
+
+260
+12:12.680 --> 12:17.600
+Voici la première animation de la soirée et voici le gars volant sur l&#x27;écran.
+
+261
+12:17.600 --> 12:18.600
+C’est facile.
+
+262
+12:18.600 --> 12:19.600
+Tout est juste.
+
+263
+12:19.600 --> 12:24.200
+Réel rapide ou hors de temps, combien coûte-t-il pour ces outils comme Go Live et Live Motion?
+
+264
+12:24.200 --> 12:28.160
+Adobe Go Live est disponible pour moins de 300 $ plus une promotion spéciale.
+
+265
+12:28.160 --> 12:29.920
+Il y a beaucoup d’utilisateurs de Photoshop.
+
+266
+12:29.920 --> 12:33.560
+Si vous renouvelez à 6.0, vous pouvez l’obtenir pour $99.
+
+267
+12:33.560 --> 12:35.560
+Et Live Motion est moins de 100 $.
+
+268
+12:35.560 --> 12:36.920
+Mark, je vous remercie beaucoup.
+
+269
+12:36.920 --> 12:39.960
+Ensuite, un guide pour utiliser JavaScript sur votre site Web.
+
+270
+12:39.960 --> 12:40.960
+Ne part pas.
+
+271
+12:40.960 --> 12:54.960
+Nous serons juste en arrière.
+
+272
+12:54.960 --> 13:00.600
+Si vous voulez vraiment un site web chaud qui fait les choses et est interactif, vous avez besoin de JavaScript.
+
+273
+13:00.600 --> 13:04.320
+Et ici pour nous donner quelques-unes des bases sur l&#x27;utilisation de JavaScript sur votre site Web est Danny
+
+274
+13:04.320 --> 13:08.960
+Goodman, auteur de la Bible JavaScript, mille pages de JavaScript.
+
+275
+13:08.960 --> 13:11.760
+Vous devez donc être l’auteur, l’expert de la Bible.
+
+276
+13:11.760 --> 13:12.760
+Nous verrons.
+
+277
+13:12.760 --> 13:13.760
+OK !
+
+278
+13:13.760 --> 13:14.760
+Danny, avant tout, définissons notre terme.
+
+279
+13:14.760 --> 13:17.280
+Il s’appelle JavaScript et les gens parlent de Java.
+
+280
+13:17.280 --> 13:20.160
+Qu’est-ce que JavaScript exactement et comment il est différent de Java plain ?
+
+281
+13:20.160 --> 13:21.800
+Il y a deux technologies très différentes.
+
+282
+13:21.800 --> 13:26.320
+Java a été développée par Sun et elle est utilisée principalement sur la programmation du serveur maintenant.
+
+283
+13:26.320 --> 13:32.440
+JavaScript est une langue générale, basée sur les normes, qui a été développée par Netscape et
+
+284
+13:32.440 --> 13:36.640
+Il est largement utilisé maintenant dans les navigateurs Web, la plupart des navigateurs modernes que nous utilisons maintenant.
+
+285
+13:36.640 --> 13:37.640
+Tout est juste.
+
+286
+13:37.640 --> 13:41.600
+Maintenant, quelle est la valeur de mettre certaines applications JavaScript dans mon site Web?
+
+287
+13:41.600 --> 13:43.920
+Quand et comment utiliser JavaScript ?
+
+288
+13:43.920 --> 13:50.240
+La façon dont j&#x27;aime l&#x27;utiliser est comme un additif à votre contenu afin que quelqu&#x27;un qui a un
+
+289
+13:50.240 --> 13:54.920
+Le navigateur script-enabled a une meilleure expérience que celui qui n&#x27;a pas un script- enabled
+
+290
+13:54.920 --> 13:55.920
+Le navigateur.
+
+291
+13:55.920 --> 13:56.920
+Tout est juste.
+
+292
+13:56.920 --> 13:57.920
+Expliquez-nous ce que vous voulez dire par cela.
+
+293
+13:57.920 --> 14:00.880
+Quelles sont les choses que vous pouvez faire en insérant JavaScript ?
+
+294
+14:00.880 --> 14:05.240
+Je sais que vous avez un exemple de mise à jour, assurez-vous que les choses sont à temps plutôt que juste sort
+
+295
+14:05.240 --> 14:06.880
+contenu statique et en acier.
+
+296
+14:06.880 --> 14:07.880
+Comment ça fonctionne ?
+
+297
+14:07.880 --> 14:13.320
+Eh bien, sur mon propre site, j&#x27;ai des pages qui listent les errata pour mes livres.
+
+298
+14:13.320 --> 14:20.840
+Vous avez peut-être visité il y a six mois et j&#x27;ai fait de nombreuses mises à jour irrégulièrement au cours de cette période.
+
+299
+14:20.840 --> 14:24.560
+Ce que vous voulez voir, c’est ce qui est nouveau pour vous.
+
+300
+14:24.560 --> 14:27.680
+Sans JavaScript, je vais là et je verrai toutes les mêmes choses que j&#x27;ai vues auparavant.
+
+301
+14:27.680 --> 14:31.320
+Avec JavaScript, il est plus intelligent de savoir quand la dernière fois que j&#x27;ai été là et seulement compter de
+
+302
+14:31.320 --> 14:32.320
+Il y en a.
+
+303
+14:32.320 --> 14:33.320
+De nouveaux objets sont marqués.
+
+304
+14:33.320 --> 14:39.320
+Comme sur cette page, de nouveaux articles apparaissent avec une petite icône qui indique que ceci est nouveau pour vous.
+
+305
+14:39.320 --> 14:41.160
+Aucune de ces informations n’est stockée sur le serveur.
+
+306
+14:41.160 --> 14:42.160
+Tout est fait localement.
+
+307
+14:42.160 --> 14:43.160
+OK !
+
+308
+14:43.160 --> 14:46.720
+Donc, JavaScript marque maintenant les choses spécifiques qui sont importantes pour moi en tant qu&#x27;individu
+
+309
+14:46.720 --> 14:47.720
+utilisateur .
+
+310
+14:47.720 --> 14:49.040
+Il y a donc un grand avantage là-bas.
+
+311
+14:49.040 --> 14:50.040
+OK !
+
+312
+14:50.040 --> 14:55.240
+Quels autres exemples de choses que nous pouvions faire en insérant JavaScript comme un additif sur notre site
+
+313
+14:55.240 --> 14:56.240
+Le site ?
+
+314
+14:56.240 --> 15:04.840
+Par exemple, si vous avez des visiteurs qui sont principalement des utilisateurs de navigateur activés par JavaScript,
+
+315
+15:04.840 --> 15:05.840
+Vous pouvez améliorer l’expérience.
+
+316
+15:05.840 --> 15:07.560
+Maintenant, expliquons ce que cela signifie.
+
+317
+15:07.560 --> 15:09.400
+Qu’est-ce qu’un navigateur JavaScript activé ?
+
+318
+15:09.400 --> 15:13.760
+C&#x27;est presque n&#x27;importe quel navigateur de Netscape 2 en avant et Internet Explorer 3 en avant.
+
+319
+15:13.760 --> 15:14.760
+La plupart des gens en ont.
+
+320
+15:14.760 --> 15:15.760
+Oui oui.
+
+321
+15:15.760 --> 15:16.760
+Tout est juste.
+
+322
+15:16.760 --> 15:17.760
+Que pouvez-vous faire avec cet exemple ?
+
+323
+15:17.760 --> 15:23.200
+C&#x27;est un cas d&#x27;un petit calculateur qui a amélioré l&#x27;interface à elle de sorte que si vous
+
+324
+15:23.200 --> 15:26.520
+Vous voulez savoir la valeur d&#x27;un composant résistant, par exemple.
+
+325
+15:26.520 --> 15:31.720
+Nous faisons les choses ici localement en modifiant les images et en faisant des calculs qui ne
+
+326
+15:31.720 --> 15:33.160
+Il faut revenir sur le serveur.
+
+327
+15:33.160 --> 15:37.520
+Nous manipulons tous les objets sur l&#x27;écran ici et localement et instantanément.
+
+328
+15:37.520 --> 15:38.520
+Tout est juste.
+
+329
+15:38.520 --> 15:41.600
+Donc, ce que nous faisons ici, au lieu de juste faire les chiffres de calcul, vous êtes en réalité
+
+330
+15:41.600 --> 15:45.040
+aussi en temps réel changer les couleurs appropriées sur le résistant afin que nous puissions voir ce que
+
+331
+15:45.040 --> 15:46.600
+Ces chiffres représentent.
+
+332
+15:46.600 --> 15:50.000
+Et nous utilisons le cerveau de l’ordinateur, l’ ordinateur local.
+
+333
+15:50.000 --> 15:51.000
+à droite.
+
+334
+15:51.000 --> 15:52.000
+Encore une fois, pas sur le serveur.
+
+335
+15:52.000 --> 15:53.000
+Il est assis juste ici.
+
+336
+15:53.000 --> 15:56.520
+Maintenant, parlons de cela, nous ne le ferons pas en quelques minutes, comment vous créez
+
+337
+15:56.520 --> 15:57.520
+et JavaScript.
+
+338
+15:57.520 --> 16:00.320
+Il suffit de nous donner un exemple simple d&#x27;ajouter un morceau de code JavaScript.
+
+339
+16:00.320 --> 16:03.240
+Oui, JavaScript va dans les documents HTML que vous créez.
+
+340
+16:03.240 --> 16:06.400
+Voici donc un document HTML très simple.
+
+341
+16:06.400 --> 16:07.400
+OK !
+
+342
+16:07.400 --> 16:12.400
+Et ici à l&#x27;intérieur du corps, il y a un étiquette de scénario ici et puis quelques déclarations de scène ici.
+
+343
+16:12.400 --> 16:19.240
+Dans ce cas, les déclarations généreront un certain contenu comme la page charge sur le navigateur
+
+344
+16:19.240 --> 16:20.240
+et ainsi de suite.
+
+345
+16:20.240 --> 16:24.040
+Lorsque vous téléchargez cette page dans le navigateur, vous obtenez une page qui ressemble à cela.
+
+346
+16:24.040 --> 16:26.540
+Pas très impressionnant, mais c&#x27;est un exemple très simple.
+
+347
+16:26.540 --> 16:29.160
+Et c&#x27;est vous dire que dans ce cas, nous courons 47.
+
+348
+16:29.160 --> 16:32.960
+Encore une fois, une sorte d&#x27;exemple de mise à jour pour le rendre une sorte de vie et interactive et liée à
+
+349
+16:32.960 --> 16:34.600
+Votre expérience particulière.
+
+350
+16:34.600 --> 16:36.040
+Le contenu est dynamiquement généré.
+
+351
+16:36.040 --> 16:37.040
+Tout est juste.
+
+352
+16:37.040 --> 16:41.240
+Y a-t-il des choses, vous savez, dans HTML, il y a un certain nombre de programmes que vous pouvez utiliser
+
+353
+16:41.240 --> 16:44.960
+ne vous demandez pas de connaître le code, ce type de juste vous laissez indiquer et cliquer et faire les choses.
+
+354
+16:44.960 --> 16:46.120
+Y a-t-il quelque chose comme ça pour JavaScript ?
+
+355
+16:46.120 --> 16:47.120
+Bien sûr !
+
+356
+16:47.120 --> 16:53.840
+Beaucoup des éditeurs WYSIWYG HTML comme Dreamweaver vous permettra de faire quelques-uns des JavaScript courants
+
+357
+16:53.840 --> 16:57.920
+fonctionnalités telles que les rouleurs de souris qui changent l&#x27;image sans que vous ayez à écrire
+
+358
+16:57.920 --> 16:58.920
+Code pour ça.
+
+359
+16:58.920 --> 16:59.920
+Tout est juste.
+
+360
+16:59.920 --> 17:02.000
+Ainsi, vous pouvez faire certaines choses limitées et certaines d&#x27;autres.
+
+361
+17:02.000 --> 17:05.440
+Mais si vous voulez juste le faire vous-même, vous pouvez utiliser un éditeur de texte pour générer le HTML
+
+362
+17:05.440 --> 17:06.440
+dans le scénario.
+
+363
+17:06.440 --> 17:07.440
+OK !
+
+364
+17:07.440 --> 17:08.440
+Il n’y a pas d’environnement fantastique.
+
+365
+17:08.440 --> 17:14.760
+L&#x27;un des problèmes avec le JavaScript, bien sûr, est les problèmes d&#x27;incompatibilité entre un Netscape
+
+366
+17:14.760 --> 17:15.760
+et un Internet Explorer.
+
+367
+17:15.760 --> 17:16.760
+Comment avez-vous traité cela ?
+
+368
+17:16.760 --> 17:20.720
+Il y a beaucoup de facteurs d’incompatibilité.
+
+369
+17:20.720 --> 17:27.200
+Mais l&#x27;une des façons que vous pouvez le faire est, par exemple, l&#x27;outil Dreamweaver pour ces rollovers,
+
+370
+17:27.200 --> 17:30.340
+Il génère un code qui fonctionnera sur un large éventail de navigateurs.
+
+371
+17:30.340 --> 17:34.000
+Une autre approche que vous pouvez utiliser si vous faites votre propre code est d&#x27;utiliser des bibliothèques de
+
+372
+17:34.000 --> 17:39.480
+code qui agit comme un intermédiaire entre votre simple code et toute la complexité.
+
+373
+17:39.480 --> 17:40.480
+Tout est juste.
+
+374
+17:40.480 --> 17:42.760
+Ainsi, ils savent où ils sont et ajoutent la bibliothèque appropriée pour résoudre ce problème.
+
+375
+17:42.760 --> 17:43.760
+à droite.
+
+376
+17:43.760 --> 17:46.720
+Le dernier exemple est quelque chose que nous appelons la collecte de données lookup.
+
+377
+17:46.720 --> 17:49.440
+Afficher un exemple de ce que cela ferait en utilisant JavaScript.
+
+378
+17:49.440 --> 17:56.280
+C&#x27;est ce que j&#x27;ai dû faire moi-même pour la page index à la quatrième édition du JavaScript
+
+379
+17:56.280 --> 17:57.280
+La Bible .
+
+380
+17:57.280 --> 18:00.560
+J&#x27;ai plus de 300 listes et je voulais créer un moyen facile d&#x27;y accéder et de les connaître.
+
+381
+18:00.560 --> 18:02.640
+Ceux qui sont compatibles avec votre navigateur.
+
+382
+18:02.640 --> 18:03.640
+Qu’est-ce que nous regardons ici ?
+
+383
+18:03.640 --> 18:10.800
+Ainsi, c&#x27;est la page d&#x27;index et vous choisissez quel chapitre que vous voulez et il liste le
+
+384
+18:10.800 --> 18:15.000
+des listes pour ce chapitre particulier et il souligne quelles couleurs sont compatibles
+
+385
+18:15.000 --> 18:16.000
+avec ce navigateur.
+
+386
+18:16.000 --> 18:18.640
+Et c&#x27;est quelque chose qui aurait pu être une collection de toutes ces pages séparées.
+
+387
+18:18.640 --> 18:20.760
+Vous pouvez rassembler toutes ces informations dans une sorte de page interactive.
+
+388
+18:20.760 --> 18:23.480
+Cette page entière est un document 37K.
+
+389
+18:23.480 --> 18:24.480
+Pas de mauvais.
+
+390
+18:24.480 --> 18:25.480
+Merci beaucoup Danny.
+
+391
+18:25.480 --> 18:26.480
+Merci à vous.
+
+392
+18:26.480 --> 18:27.480
+Tout est juste.
+
+393
+18:27.480 --> 18:30.760
+Eh bien, vous pouvez avoir tous les éléments exotiques jamais inventés sur votre site et encore avoir
+
+394
+18:30.760 --> 18:31.760
+Un site luxueux.
+
+395
+18:31.760 --> 18:35.240
+Une qui est difficile à utiliser, lente à charger, ou juste plain confusion.
+
+396
+18:35.240 --> 18:40.000
+Ici pour nous guider à travers les secrets de l&#x27;usabilité web est l&#x27;un des principaux experts du monde
+
+397
+18:40.000 --> 18:41.560
+sur le sujet, Jacob Nielsen.
+
+398
+18:41.560 --> 18:42.560
+Bienvenue Jacob !
+
+399
+18:42.560 --> 18:43.560
+Merci à Dan.
+
+400
+18:43.560 --> 18:44.560
+Tout est juste.
+
+401
+18:44.560 --> 18:45.560
+Passons par quelques exemples.
+
+402
+18:45.560 --> 18:47.360
+Je veux juste appeler quelques sites et je veux que vous jouiez critiquement ici.
+
+403
+18:47.360 --> 18:48.360
+Vous pouvez être le critique du film.
+
+404
+18:48.360 --> 18:49.360
+Je le fais.
+
+405
+18:49.360 --> 18:50.720
+Vous pouvez être la raison pour laquelle il est bon ou pourquoi il est mauvais.
+
+406
+18:50.720 --> 18:51.720
+OK ?
+
+407
+18:51.720 --> 18:52.720
+Et commençons par un, Mont Blanc.
+
+408
+18:52.720 --> 18:55.880
+Et je sais que vous avez des problèmes avec cette.
+
+409
+18:55.880 --> 19:00.240
+Eh bien, nous allons le tirer ici et voir ce qui se passe.
+
+410
+19:00.240 --> 19:01.720
+A quoi sert ce site ?
+
+411
+19:01.720 --> 19:02.720
+C’est pour les pens.
+
+412
+19:02.720 --> 19:03.720
+Très joli, je dois le dire.
+
+413
+19:03.720 --> 19:04.720
+OK !
+
+414
+19:04.720 --> 19:05.720
+Les mines sont le Mont Blanc.
+
+415
+19:05.720 --> 19:06.720
+Oui oui.
+
+416
+19:06.720 --> 19:07.720
+Ils sont très belles penses.
+
+417
+19:07.720 --> 19:08.720
+Mais voici, nous ne savons pas vraiment de quoi il s’agit.
+
+418
+19:08.720 --> 19:09.720
+Où est ma expérience ?
+
+419
+19:09.720 --> 19:11.120
+Nous attendons et nous attendons.
+
+420
+19:11.120 --> 19:13.120
+C’est le chargement et c’est la charge.
+
+421
+19:13.120 --> 19:15.200
+Donc, il s&#x27;agit d&#x27;essayer de mettre cette grande ouverture flash.
+
+422
+19:15.200 --> 19:16.200
+Oui, c’est ça !
+
+423
+19:16.200 --> 19:17.360
+Et nous attendons encore.
+
+424
+19:17.360 --> 19:19.840
+Et nous avons probablement même une connexion rapide ici dans le studio.
+
+425
+19:19.840 --> 19:23.560
+Maintenant, nous avons enfin obtenu leur logo et quelques petites choses sombres.
+
+426
+19:23.560 --> 19:26.400
+Je me demande, est-ce que ça vaut la peine d’attendre ?
+
+427
+19:26.400 --> 19:27.400
+Et je dis non.
+
+428
+19:27.400 --> 19:28.400
+Oui oui.
+
+429
+19:28.400 --> 19:29.400
+Donc, je veux dire, mais beaucoup de sites le font.
+
+430
+19:29.400 --> 19:32.240
+Ils ont tout simplement mis tout ce chouette junk, que l&#x27;homme qui l&#x27;a écrit peut aimer.
+
+431
+19:32.240 --> 19:34.760
+Mais l’utilisateur, vous êtes allé à un autre site à ce jour.
+
+432
+19:34.760 --> 19:36.560
+Ne mettez pas ces barrières sur mon chemin.
+
+433
+19:36.560 --> 19:38.840
+Mettez-moi droit où je veux.
+
+434
+19:38.840 --> 19:39.840
+Et une autre chose.
+
+435
+19:39.840 --> 19:40.840
+Ils font une fenêtre séparée.
+
+436
+19:40.840 --> 19:41.840
+Pourquoi faire ça ?
+
+437
+19:41.840 --> 19:45.520
+Je veux dire, derrière elle est ma fenêtre originale, mais pourquoi les fenêtres séparées?
+
+438
+19:45.520 --> 19:46.520
+Tout est juste.
+
+439
+19:46.520 --> 19:47.520
+C’est une sorte d’intéressant.
+
+440
+19:47.520 --> 19:48.520
+Le site de Sony.
+
+441
+19:48.520 --> 19:49.520
+à droite.
+
+442
+19:49.520 --> 19:51.560
+Maintenant, vous pensez que cela serait assez cool, mais vous avez quelques problèmes avec celui-ci.
+
+443
+19:51.560 --> 19:52.560
+à droite.
+
+444
+19:52.560 --> 19:54.160
+Juste fermé le site web de Mont Blanc et allons à Sony.
+
+445
+19:54.160 --> 19:58.680
+Eh bien, d&#x27;abord, vous devez en fait le tirer d&#x27;un W dans votre liste de notes parce que
+
+446
+19:58.680 --> 20:00.360
+On appelle le site de bienvenue.
+
+447
+20:00.360 --> 20:01.720
+Vous cherchez donc Sony.
+
+448
+20:01.720 --> 20:04.360
+Il se produit sous WXIS, ce qui est assez stupide.
+
+449
+20:04.360 --> 20:07.640
+Maintenant, je n&#x27;ai que quelques-uns dans cette liste particulière, mais si vous avez beaucoup de notes, beaucoup
+
+450
+20:07.640 --> 20:08.640
+Les gens font.
+
+451
+20:08.640 --> 20:09.640
+Oui oui.
+
+452
+20:09.640 --> 20:10.640
+Tout est juste.
+
+453
+20:10.640 --> 20:11.640
+Donc, nous allons tirer le site Sony.
+
+454
+20:11.640 --> 20:12.640
+Nous allons donc nous lancer sur le site Sony.
+
+455
+20:12.640 --> 20:13.640
+Quels sont les problèmes ici ?
+
+456
+20:13.640 --> 20:15.040
+Eh bien, nous attendons encore, mais il n&#x27;est pas en fait rapporté aussi mauvais que le précédent.
+
+457
+20:15.040 --> 20:19.120
+Mais ce que je veux vraiment faire ici est d&#x27;acheter un câble pour mon ordinateur portable Sony, ce qui m&#x27;arrive
+
+458
+20:19.120 --> 20:20.120
+à avoir.
+
+459
+20:20.120 --> 20:21.120
+C’est une très belle machine.
+
+460
+20:21.120 --> 20:22.120
+OK !
+
+461
+20:22.120 --> 20:25.640
+Et pour le faire, je dois aller à ce petit menu et je ne vais pas, maintenant je vais
+
+462
+20:25.640 --> 20:28.440
+la taille de la boîte de messagerie pour en réalité scroller à travers tous les...
+
+463
+20:28.440 --> 20:29.920
+Bien sûr, vous ne verrez pas le mot câble nulle part.
+
+464
+20:29.920 --> 20:30.920
+Non non non non.
+
+465
+20:30.920 --> 20:31.920
+J’ai eu l’impression de le faire en électronique.
+
+466
+20:31.920 --> 20:32.920
+Donc, vous devez deviner.
+
+467
+20:32.920 --> 20:38.760
+Mais tout le reste de l&#x27;espace d&#x27;écran est gaspillé et le petit menu est mon seul
+
+468
+20:38.760 --> 20:41.080
+pari ou un seul moyen de naviguer sur le site.
+
+469
+20:41.080 --> 20:45.960
+Donc, je demande les ordinateurs et je vais obtenir leurs ordinateurs.
+
+470
+20:45.960 --> 20:46.960
+Et vous n’avez pas atteint plus loin, vraiment.
+
+471
+20:46.960 --> 20:47.960
+Non pas.
+
+472
+20:47.960 --> 20:48.960
+Et notez que c&#x27;est un design complètement différent.
+
+473
+20:48.960 --> 20:51.760
+Donc, si j&#x27;ai appris le premier design, je dois maintenant apprendre quelque chose de nouveau.
+
+474
+20:51.760 --> 20:53.040
+Et vous ne savez pas encore où sont les câbles.
+
+475
+20:53.040 --> 20:54.040
+Je n’ai pas de clue.
+
+476
+20:54.040 --> 20:58.360
+Et j&#x27;ai dû regarder ces petites petites images ci-dessous et me rappeler quel type d&#x27;ordinateur
+
+477
+20:58.360 --> 20:59.760
+Je ne vais pas cliquer sur ça.
+
+478
+20:59.760 --> 21:01.920
+Et il y a beaucoup de clics jusqu&#x27;à ce que vous-
+
+479
+21:01.920 --> 21:03.520
+Et vous n’avez pas encore trouvé où vous voulez être.
+
+480
+21:03.520 --> 21:04.520
+Oh non non.
+
+481
+21:04.520 --> 21:05.520
+Tout est juste.
+
+482
+21:05.520 --> 21:06.520
+Il y a environ six clics de plus, en fait.
+
+483
+21:06.520 --> 21:08.160
+Nous allons vers un autre site, le site de Pepsi.
+
+484
+21:08.160 --> 21:09.160
+à droite.
+
+485
+21:09.160 --> 21:10.160
+à Pepsi.com
+
+486
+21:10.160 --> 21:12.200
+Encore une fois, vous pensez que ce serait un site assez cool, mais vous avez des problèmes avec celui-ci.
+
+487
+21:12.200 --> 21:16.160
+Eh bien, Pepsi, je veux dire, peut-être pour être équitable avec eux, il est difficile de voir ce qu&#x27;ils peuvent vraiment faire parce que
+
+488
+21:16.160 --> 21:18.400
+Vous ne pouvez pas faire un test de goût sur le web.
+
+489
+21:18.400 --> 21:19.400
+Oui oui.
+
+490
+21:19.400 --> 21:20.400
+Qu’est-ce que vous allez faire sur un site Pepsi ?
+
+491
+21:20.400 --> 21:21.400
+Qu’est-ce qu’ils vont faire, non ?
+
+492
+21:21.400 --> 21:22.640
+Donc, ils n’ont vraiment rien.
+
+493
+21:22.640 --> 21:26.440
+Je veux dire, ils ont ces petites choses bouillantes, en mouvement, mais rien de utile.
+
+494
+21:26.440 --> 21:29.160
+Et bien sûr, vous ne pouvez pas voir tout ce qui est là en ce moment en raison du chemin
+
+495
+21:29.160 --> 21:30.160
+Ils ont été faits.
+
+496
+21:30.160 --> 21:31.160
+J’ai besoin de scroller pour toujours.
+
+497
+21:31.160 --> 21:35.600
+Regardez, lorsque je scalle ici, seulement environ la moitié de mon espace d&#x27;écran est vraiment actif.
+
+498
+21:35.600 --> 21:40.440
+L&#x27;autre moitié est de type sur le haut et la moitiée du côté sont de type d&#x27;être gaspillé, étant
+
+499
+21:40.440 --> 21:43.280
+statique parce qu&#x27;ils utilisent des cadres, ce qui est généralement une mauvaise chose à faire.
+
+500
+21:43.280 --> 21:44.280
+Tout est juste.
+
+501
+21:44.280 --> 21:47.200
+Nous allons vers un autre, le site USPS, le service postal.
+
+502
+21:47.200 --> 21:48.200
+à droite.
+
+503
+21:48.200 --> 21:49.680
+Nous allons à la poste ou au service postal, comme ils l&#x27;appellent.
+
+504
+21:49.680 --> 21:51.600
+C’est très rapide, je dois le dire.
+
+505
+21:51.600 --> 21:56.480
+Une autre chose qui est très bonne à ce sujet est que la chose principale dans le web design est vraiment
+
+506
+21:56.480 --> 21:58.320
+Donner aux gens ce qu’ils sont là pour.
+
+507
+21:58.320 --> 21:59.320
+Pourquoi je vais au poste ?
+
+508
+21:59.320 --> 22:01.600
+Bien, pour trouver, bien, souvent les tarifs postal.
+
+509
+22:01.600 --> 22:02.600
+Et c&#x27;est juste là devant vous.
+
+510
+22:02.600 --> 22:03.600
+Juste ici devant moi.
+
+511
+22:03.600 --> 22:04.600
+Cliquez, Boom, vous avez la réponse.
+
+512
+22:04.600 --> 22:06.600
+Cliquez, Cali, courrier interne, courriel international.
+
+513
+22:06.600 --> 22:11.600
+Cependant, une mauvaise chose est que si je veux les taux de courrier internationaux, il va me donner un PDF
+
+514
+22:11.600 --> 22:12.600
+le fichier.
+
+515
+22:12.600 --> 22:13.600
+Et donc, attendez, attenchez, attentez, attenez.
+
+516
+22:13.600 --> 22:14.600
+Ce qui est vraiment ennuyeux.
+
+517
+22:14.600 --> 22:15.600
+Il crée un programme séparé.
+
+518
+22:15.600 --> 22:16.600
+Pourquoi vous devez le faire ?
+
+519
+22:16.600 --> 22:17.600
+Vous avez le plugin PDF ?
+
+520
+22:17.600 --> 22:18.600
+Oui, oh, peut-être que les gens ne le font pas.
+
+521
+22:18.600 --> 22:19.600
+Il est certain.
+
+522
+22:19.600 --> 22:22.440
+Et donc, les PDFs ne seraient qu&#x27;interdits du web, sauf si vous voulez télécharger
+
+523
+22:22.440 --> 22:24.280
+Un grand manuel et l’imprimer.
+
+524
+22:24.280 --> 22:25.280
+Et qui en a besoin ?
+
+525
+22:25.280 --> 22:26.280
+Regardez les tarifs de courrier.
+
+526
+22:26.280 --> 22:28.280
+Oui, c&#x27;est juste vraiment, il n&#x27;est qu&#x27;une seule page, en fait.
+
+527
+22:28.280 --> 22:29.280
+Pourquoi est-ce que c’est a.gov ?
+
+528
+22:29.280 --> 22:30.600
+C’est une confusion en premier lieu, non ?
+
+529
+22:30.600 --> 22:31.600
+Il faut vraiment être.gov.
+
+530
+22:31.600 --> 22:33.600
+Ils ont fait aussi cette erreur.
+
+531
+22:33.600 --> 22:37.160
+Allez à un autre, Williams-Sonoma, qui est un site que je sais que vous pensez qu&#x27;il est bien conçu.
+
+532
+22:37.160 --> 22:38.160
+à droite.
+
+533
+22:38.160 --> 22:43.040
+Je pense que c&#x27;est vraiment un très bon site parce qu&#x27;ils ont beaucoup de bon peu propre
+
+534
+22:43.040 --> 22:44.040
+Les photos .
+
+535
+22:44.040 --> 22:47.320
+Mais remarquez combien ils descendent rapidement parce qu&#x27;ils sont très petits et très propres.
+
+536
+22:47.320 --> 22:49.720
+Et ils donnent vraiment un aperçu de toutes les différentes choses qu&#x27;ils vendent.
+
+537
+22:49.720 --> 22:51.320
+Et que se passe-t-il si vous descendez ici ?
+
+538
+22:51.320 --> 22:55.600
+Laissez-moi cliquer sur le restaurant comme un exemple, et cela me montrera ce qu&#x27;ils vendent dans
+
+539
+22:55.600 --> 22:56.600
+dans cette catégorie.
+
+540
+22:56.600 --> 22:58.600
+Et encore une fois, des photos très rapides et très propres.
+
+541
+22:58.600 --> 23:03.760
+Et regardez ci-dessous comment cette photo m&#x27;aide vraiment à comprendre ce qu&#x27;ils signifient par le
+
+542
+23:03.760 --> 23:04.760
+Mettre des morceaux.
+
+543
+23:04.760 --> 23:07.840
+Donc, c&#x27;est un bon usage des graphiques, non seulement pour être doux, mais pour réellement résoudre un problème.
+
+544
+23:07.840 --> 23:09.840
+Oui, en réalité communiquer, aider l&#x27;utilisateur, c&#x27;est ce qu&#x27;il s&#x27;agit.
+
+545
+23:09.840 --> 23:10.840
+Tout est juste.
+
+546
+23:10.840 --> 23:13.400
+Dernière page je veux que vous tiriez, et je sais que vous pensez que c&#x27;est l&#x27;icône d&#x27;un grand site,
+
+547
+23:13.400 --> 23:14.400
+Ce qui est Amazon.
+
+548
+23:14.400 --> 23:15.400
+à droite.
+
+549
+23:15.400 --> 23:16.400
+Amazon est en fait un très bon site.
+
+550
+23:16.400 --> 23:17.880
+C&#x27;est pour cela que vous pensez que c&#x27;est un bon site.
+
+551
+23:17.880 --> 23:18.880
+à droite.
+
+552
+23:18.880 --> 23:21.600
+Il est vraiment facile de trouver les livres, ce qui est comme pourquoi vous êtes là.
+
+553
+23:21.600 --> 23:25.000
+Et c&#x27;est pourquoi ils vendent tellement parce qu&#x27;il est facile d&#x27;obtenir.
+
+554
+23:25.000 --> 23:27.880
+Et vous pouvez faire des choses comme les recherches, bien sûr, juste là.
+
+555
+23:27.880 --> 23:29.880
+Et vous voulez souvent faire des recherches.
+
+556
+23:29.880 --> 23:34.480
+Disons que nous voulons chercher, je ne sais pas, peut-être le livre de Dan.
+
+557
+23:34.480 --> 23:37.000
+Mais j&#x27;ai méprisé son nom, Danny Gutman plutôt que Gutman.
+
+558
+23:37.000 --> 23:38.000
+Juste à droite.
+
+559
+23:38.000 --> 23:39.320
+Mais il est assez difficile de le trouver.
+
+560
+23:39.320 --> 23:42.760
+Et je vous le dis, parce que je l&#x27;ai réellement essayé, il l&#x27;apporte.
+
+561
+23:42.760 --> 23:45.520
+Et beaucoup de sites web, si vous le ratez, il va dire...
+
+562
+23:45.520 --> 23:46.520
+Oui, et là nous allons.
+
+563
+23:46.520 --> 23:47.520
+Il l’a calculé.
+
+564
+23:47.520 --> 23:48.520
+Oui oui.
+
+565
+23:48.520 --> 23:49.520
+Je vais dire non, non, nous ne vous vendrons pas si vous êtes si stupide.
+
+566
+23:49.520 --> 23:52.680
+Toutes les choses douces dans le monde résoudent le problème de l&#x27;utilisateur.
+
+567
+23:52.680 --> 23:53.680
+précisément .
+
+568
+23:53.680 --> 23:54.840
+Jacob, je vous remercie beaucoup.
+
+569
+23:54.840 --> 23:56.560
+C’est pour cela que nous regardons le design du site.
+
+570
+23:56.560 --> 24:00.960
+Je serai de retour en un moment avec mon choix de la semaine, une façon cool d&#x27;accéder à n&#x27;importe quel site Web
+
+571
+24:00.960 --> 24:03.960
+Pas de câbles.
+
+572
+24:03.960 --> 24:10.440
+Ne part pas.
+
+573
+24:10.440 --> 24:12.080
+Maintenant pour le choix de la semaine.
+
+574
+24:12.080 --> 24:15.960
+Si vous êtes choqué sur le web et sur Internet, vous voulez toujours avoir accès.
+
+575
+24:15.960 --> 24:17.960
+Mais pour le moment, ce n’est pas si facile.
+
+576
+24:17.960 --> 24:22.080
+Vous devez généralement être près d&#x27;un outlet réseau ou un jack RJ11.
+
+577
+24:22.080 --> 24:25.600
+J&#x27;ai essayé des téléphones portables en ligne, mais c&#x27;est une sorte de frustration.
+
+578
+24:25.600 --> 24:27.800
+J’ai enfin trouvé la solution parfaite.
+
+579
+24:27.800 --> 24:30.480
+Et c’est ça, le modem sans fil Ricochet.
+
+580
+24:30.480 --> 24:34.000
+Ricochet a été autour pendant un certain temps, mais c&#x27;était une chose assez grande clunky qui
+
+581
+24:34.000 --> 24:35.600
+Ce n’était pas trop fiable.
+
+582
+24:35.600 --> 24:38.000
+C&#x27;est la version la plus récente, petite et portable.
+
+583
+24:38.000 --> 24:39.560
+Il pèse moins d’un kilo.
+
+584
+24:39.560 --> 24:45.080
+Il y a beaucoup plus grand réseau national là-bas, et il est rapide, jusqu&#x27;à 128 kilobits
+
+585
+24:45.080 --> 24:46.160
+par seconde.
+
+586
+24:46.160 --> 24:50.680
+Il suffit de le connecter au port USB de votre ordinateur portable, et vous pouvez surfer sur le web n&#x27;importe où, dans le
+
+587
+24:50.680 --> 24:54.760
+derrière une cabine, dans un aéronef, pendant que vous êtes sur le sol, ou assis à la piscine
+
+588
+24:54.760 --> 24:55.760
+La piscine.
+
+589
+24:55.760 --> 25:00.040
+Le service est très bon, et c&#x27;est une solution terrible d&#x27;avoir toujours accès au web sur une
+
+590
+25:00.040 --> 25:02.520
+Terminal complet comme votre ordinateur portable.
+
+591
+25:02.520 --> 25:03.520
+Pas de compromis.
+
+592
+25:03.520 --> 25:09.760
+Regardez la multimédia, regardez les affiches colorées de la page entière, gérer les cadres, les applications Java flash, tout sans
+
+593
+25:09.760 --> 25:10.760
+Le Wire !
+
+594
+25:10.760 --> 25:13.000
+L’utilisation du modem sans fil Ricochet n’est pas bon marché.
+
+595
+25:13.000 --> 25:14.880
+Il s’agit d’environ 75 dollars par mois.
+
+596
+25:14.880 --> 25:19.740
+Mais si vous êtes un professionnel mobile et que vous voulez un accès web réel, rapide et sans fil sur votre site
+
+597
+25:19.740 --> 25:24.560
+ordinateur portable, il vaut probablement les quelques centaines de dollars supplémentaires par an.
+
+598
+25:24.560 --> 25:26.080
+C&#x27;est ça pour les chronicles informatiques de cette semaine.
+
+599
+25:26.080 --> 25:27.080
+Merci de nous rejoindre.
+
+600
+25:27.080 --> 25:30.920
+Si vous avez des questions sur tout ce que vous avez vu sur le spectacle de cette semaine, veuillez vérifier notre
+
+601
+25:30.920 --> 25:33.680
+Sur le site de ComputerChronicles.org.
+
+602
+25:33.680 --> 25:40.760
+Nous espérons vous revoir la semaine prochaine.
+
+603
+25:40.760 --> 25:46.760
+Les chronicles informatiques sont en partie rendus possibles par PC2PC, le service de migration informatique en ligne.
+
+604
+25:46.760 --> 25:48.160
+D’abord sur PC.
+
+605
+25:48.160 --> 25:54.680
+Mettre des fichiers, des applications et des préférences de votre ancien ordinateur à votre nouveau.
+
+606
+25:54.680 --> 25:59.520
+Un soutien supplémentaire est fourni par Upside Events, présentant la révolution numérique du style de vie
+
+607
+25:59.520 --> 26:06.840
+Conférence, où les gens et la technologie intersectent.
+
+608
+26:06.840 --> 26:16.200
+Pour acheter une copie vidéo du programme d&#x27;aujourd&#x27;hui, appelez gratuitement 1-888-310-7850.
+
+609
+26:16.200 --> 26:40.320
+Il suffit de préciser le numéro de spectacle et le thème.
+
+610
+26:46.200 --> 27:04.760
+Merci à vous.

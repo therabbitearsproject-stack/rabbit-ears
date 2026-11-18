@@ -1,0 +1,1357 @@
+WEBVTT
+
+1
+00:00:50.000 --> 00:00:56.000
+Micro Focus, pencipta alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+2
+00:00:56.000 --> 00:01:01.001
+dengan senang hati memberikan dana besar untuk Computer Chronicle, cerita
+
+3
+00:01:01.001 --> 00:01:03.001
+dari evolusi yang berlanjut ini.
+
+4
+00:01:10.001 --> 00:01:15.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+5
+00:01:15.001 --> 00:01:19.001
+Pada program kami hari ini kita berbicara tentang masalah keamanan komputer. dan aku
+
+6
+00:01:19.001 --> 00:01:23.000
+Bayangkan sekarang hanya bahwa semua orang telah mendengar tentang film War Games dan jenis
+
+7
+00:01:23.000 --> 00:01:27.000
+masalah keamanan komputer yang timbul dari skenario ini. Tetapi lebih tipikal
+
+8
+00:01:27.000 --> 00:01:31.000
+Masalah keamanan komputer tidak melibatkan hal-hal spektakuler seperti nuklir
+
+9
+00:01:31.000 --> 00:01:35.000
+Perang, tetapi lebih mulia hal-hal seperti mencuri uang dan mencuri informasi.
+
+10
+00:01:36.000 --> 00:01:39.001
+Gary, tamu kami di program ini adalah Don Parker. Ia dianggap sebagai dunia
+
+11
+00:01:39.001 --> 00:01:43.000
+Ekspert utama di bidang keamanan komputer. Dia mengatakan sesuatu yang sangat
+
+12
+00:01:43.000 --> 00:01:44.001
+menarik dalam bukunya tentang kejahatan komputer.
+
+13
+00:01:44.001 --> 00:01:50.000
+Menurutnya, data yang disimpan di komputer bisa lebih aman dari data yang tersimpan oleh komputer.
+
+14
+00:01:50.000 --> 00:01:54.000
+Hal ini, seperti di sebuah buku catatan tertutup sejenis. Namun di sini kita melakukan hal ini
+
+15
+00:01:54.000 --> 00:01:58.000
+program dan tampaknya ada rasa bahwa keamanan data komputer adalah baik
+
+16
+00:01:58.000 --> 00:02:03.000
+dari yang rentan. Nah, ada teknik yang dapat membuat data lebih aman selama
+
+17
+00:02:03.000 --> 00:02:07.000
+Seperti teknik yang digunakan. Sayangnya, itu sering membutuhkan individu yang cerdas
+
+18
+00:02:07.000 --> 00:02:09.001
+untuk melanjutkan dan memecahkan sistem sebelum teknik ini diterapkan dan kita
+
+19
+00:02:09.001 --> 00:02:13.001
+Ketahui seberapa rentan sistem ini. Anda tahu, kami sedang membangkitkan sesuatu yang baru
+
+20
+00:02:13.001 --> 00:02:17.001
+generasi orang-orang yang berpengetahuan komputer melalui revolusi komputer pribadi dan
+
+21
+00:02:17.001 --> 00:02:20.001
+ada kewajiban untuk menjadi bagian dari populasi itu yang akan menggunakan yang
+
+22
+00:02:20.001 --> 00:02:27.000
+pengetahuan dengan cara yang berbahaya. Hari ini, saya kira, kejahatan komputer benar-benar
+
+23
+00:02:27.000 --> 00:02:32.000
+masalah karena masalah informasi adalah kekuasaan dan ketika kekuasaan itu
+
+24
+00:02:32.000 --> 00:02:34.001
+disampaikan melalui informasi yang terpasang, kemudian
+
+25
+00:02:34.001 --> 00:02:36.000
+Ini adalah ancaman bagi kita semua di masyarakat.
+
+26
+00:02:37.001 --> 00:02:40.001
+Layanan berbagi waktu sangat rentan karena mereka dirancang untuk
+
+27
+00:02:40.001 --> 00:02:45.001
+Ada banyak orang asing yang membuat panggilan telepon. Dan kami akan mengambil satu
+
+28
+00:02:45.001 --> 00:02:51.001
+Lihat dan lihat betapa mudahnya membuat panggilan itu. Sangat mudah untuk masuk
+
+29
+00:02:51.001 --> 00:02:55.000
+Sebuah database komputer. Yang benar-benar Anda butuhkan adalah komputer pribadi, sesuatu seperti
+
+30
+00:02:55.000 --> 00:02:59.001
+Ini, beberapa perangkat lunak terminal. Anda juga membutuhkan modem yang menghubungkan telepon Anda
+
+31
+00:02:59.001 --> 00:03:03.000
+ke komputer Anda, telepon dan Anda perlu mengetahui nomor telepon dari salah satu
+
+32
+00:03:03.000 --> 00:03:07.001
+dengan komputer tersebut. Saya akan mengembangkan database komputer kanan
+
+33
+00:03:07.001 --> 00:03:09.000
+sekarang . Aku tahu nomor satu.
+
+34
+00:03:09.000 --> 00:03:13.000
+Ini hanya panggilan lokal. Ini bahkan bukan panggilan tol dan kami akan menunggu untuk mendengar suara tinggi
+
+35
+00:03:13.000 --> 00:03:16.001
+-tone bergetar yang memberitahu kami bahwa komputer tuan rumah dijawab.
+
+36
+00:03:21.001 --> 00:03:25.001
+Ok, komputer dijawab dan kita akan ke sekarang hanya pergi ke log normal
+
+37
+00:03:25.001 --> 00:03:32.000
+prosedur di mana komputer akan pertama kali meminta saya untuk nomor ID saya dan saya
+
+38
+00:03:32.000 --> 00:03:37.001
+Terjadi untuk memiliki satu. Jadi saya akan memasukkan itu dan jika komputer tuan rumah sekarang menerima ID saya
+
+39
+00:03:37.001 --> 00:03:41.000
+nomor sebagai nomor yang sah, itu akan terus meminta saya password saya.
+
+40
+00:03:42.000 --> 00:03:45.000
+Dan pada saat itu saya akan harus datang dengan bertemu ujian lain di sini untuk
+
+41
+00:03:45.000 --> 00:03:50.001
+masuk ke database komputer. Dan sekarang ia meminta saya password yang saya
+
+42
+00:03:50.001 --> 00:03:53.001
+akan masuk ke dalam. Anda tidak dapat melihatnya di layar karena program ini dimaksudkan untuk
+
+43
+00:03:53.001 --> 00:03:58.001
+melindungi keamanan kata sandi saya sehingga Anda tidak dapat mencuri dari saya. Dan jika yang
+
+44
+00:03:58.001 --> 00:04:02.000
+host menerima seperti itu, Anda dapat melihat saya sekarang dalam database komputer ini.
+
+45
+00:04:02.001 --> 00:04:06.001
+Anda melihat betapa mudahnya bagi saya untuk masuk ke database komputer itu. Tentu saja, saya
+
+46
+00:04:06.001 --> 00:04:10.000
+Ia adalah pengguna yang berkualitas. Masalahnya adalah bahwa bahkan pengguna yang tidak berkelayakan dapat masuk
+
+47
+00:04:10.000 --> 00:04:13.001
+dengan komputer tersebut. Mereka dipanggil hacker dan mereka mencoba untuk masuk ke komputer ini
+
+48
+00:04:13.001 --> 00:04:15.001
+Hanya untuk mencari tahu apa yang ada di dalam.
+
+49
+00:04:16.000 --> 00:04:21.000
+Dan dengan menggunakan kata sandi umum dan bahkan kadang-kadang nomor kode yang dipilih secara tidak sengaja,
+
+50
+00:04:21.001 --> 00:04:25.000
+Mereka dapat masuk ke bank, rekaman rumah sakit, bahkan komputer agensi federal.
+
+51
+00:04:27.000 --> 00:04:30.000
+global, termal, nuklir dan air.
+
+52
+00:04:32.000 --> 00:04:38.001
+Semua yang benar. Dalam film War Games, hacker remaja mendapatkan masuk ke rahasia atas
+
+53
+00:04:38.001 --> 00:04:45.001
+Program pertahanan dan bermain blackmail nuklir untuk nyata. Meskipun para ahli
+
+54
+00:04:45.001 --> 00:04:49.000
+Menurutnya, kemungkinan kejadian ini pada dasarnya adalah nol.
+
+55
+00:04:49.000 --> 00:04:52.001
+Pihak berwenang sekarang berencana untuk memperkuat langkah-langkah keamanan yang sangat ketat yang
+
+56
+00:04:52.001 --> 00:04:57.000
+sudah ada. Jika penggemar yang salah tidak kelihatan terlalu mengancam, ada juga
+
+57
+00:04:57.000 --> 00:05:01.001
+pencuri profesional, jenis baru mata-mata yang diperdagangkan dalam mantelnya dan
+
+58
+00:05:01.001 --> 00:05:06.000
+Kamera untuk keyboard dan video display. Dan bagaimana untuk menghancurkan baka baru ini dari
+
+59
+00:05:06.000 --> 00:05:09.001
+pencurian informasi adalah masalah yang dihadapi oleh semakin banyak perusahaan dan
+
+60
+00:05:09.001 --> 00:05:14.001
+dari institusi. Bisakah sebuah komputer benar-benar diprogramkan untuk menjaga rahasia?
+
+61
+00:05:22.001 --> 00:05:27.000
+Masyarakat memiliki investasi besar di komputer dan bahkan lebih besar di perangkat lunak.
+
+62
+00:05:28.000 --> 00:05:32.000
+Apa yang lebih penting dari investasi keuangan adalah sejauh mana kita
+
+63
+00:05:32.000 --> 00:05:37.001
+Mereka datang untuk bergantung pada komputer. Tanpa mereka, database kosong. kata-kata
+
+64
+00:05:37.001 --> 00:05:41.001
+tidak diproses, angka tidak rusak, dan kecepatan informasi
+
+65
+00:05:41.001 --> 00:05:45.000
+Berurusan dengan yang kita telah tumbuh perlahan-lahan terbiasa dengan crawl.
+
+66
+00:05:46.000 --> 00:05:50.001
+Anda mungkin berpikir bahwa perlindungan sumber daya penting dan berharga seperti itu
+
+67
+00:05:50.001 --> 00:05:57.001
+akan rutin dan substansial, tetapi ini tidak selalu terjadi. Baru-baru ini, sebagian besar
+
+68
+00:05:57.001 --> 00:06:01.001
+waktu kita telah dihabiskan untuk memperbaiki dan memperluas sistem kita, menambahkan kepada
+
+69
+00:06:01.001 --> 00:06:06.001
+fleksibilitas, membuat jaringan, dan pada dasarnya menjadi lebih produktif. Keamanan
+
+70
+00:06:06.001 --> 00:06:12.001
+Aspek-aspek ini sering diabaikan. Selain itu, keamanan komputer yang baik sering
+
+71
+00:06:12.001 --> 00:06:18.000
+menjalankan counter untuk membuat komputer terjangkau, ramah, dan mudah digunakan. Kami akan
+
+72
+00:06:18.000 --> 00:06:22.001
+Ketahui lebih lanjut tentang kebutuhan untuk keamanan komputer yang memadai di sisa
+
+73
+00:06:22.001 --> 00:06:27.000
+dengan show. Dalam segmen berikutnya, kami akan bertemu dengan salah satu pakar terkemuka di komputer
+
+74
+00:06:27.000 --> 00:06:29.001
+dan kejahatan. Sekarang mari kita kembali ke program ini.
+
+75
+00:06:33.001 --> 00:06:38.000
+Pengunjung kami hari ini adalah Don Parker dari Stanford Research Institute. Dia adalah yang utama
+
+76
+00:06:38.000 --> 00:06:42.001
+pakar dalam kejahatan komputer. Dia telah bekerja di daerah ini selama 30 tahun.
+
+77
+00:06:42.001 --> 00:06:45.000
+sekarang . Selamat Datang ke Komputer Chronicles
+
+78
+00:06:46.000 --> 00:06:50.000
+Terlihat dengan penggunaan komputer yang luas di masyarakat hari ini bahwa kita memiliki
+
+79
+00:06:50.000 --> 00:06:53.001
+Penjahat berteknologi tinggi baru. Dapatkah Anda memberitahu kami sedikit tentang
+
+80
+00:06:53.001 --> 00:06:55.000
+Adakah masalah ini, kejahatan komputer?
+
+81
+00:06:56.000 --> 00:07:01.000
+Ya, sayangnya kami tidak memiliki statistik mengenai masalah kejahatan komputer ini.
+
+82
+00:07:01.001 --> 00:07:08.000
+Oleh karena itu, kita harus belajar dari itu berdasarkan jenis pendekatan kasus-kasus. Untuk
+
+83
+00:07:08.000 --> 00:07:14.001
+Misalnya, hanya dalam empat tahun terakhir, kami telah memiliki transfer dana terbesar
+
+84
+00:07:14.001 --> 00:07:21.001
+Penipuan adalah $ 10,2 juta. Kami memiliki deposit terbesar di bank, $ 21
+
+85
+00:07:21.001 --> 00:07:27.001
+dari 3 juta. Kami memiliki penipuan sekuritas terbesar, $ 53 juta. Kami sudah memiliki
+
+86
+00:07:27.001 --> 00:07:33.000
+Penipuan komoditas terbesar, $ 50 juta, dan penipuan inventori terbesar, € 67 juta
+
+87
+00:07:33.000 --> 00:07:39.001
+1 juta . Ini adalah indikasi bahwa semakin banyak kita menggunakan komputer, maka
+
+88
+00:07:39.001 --> 00:07:44.001
+semakin besar kerugian yang berpotensi, dan kita pasti memecahkan banyak
+
+89
+00:07:44.001 --> 00:07:47.000
+“Kejahatan mencatat semakin banyak kita menggunakan komputer.
+
+90
+00:07:48.000 --> 00:07:52.001
+Jadi Anda pikir escalation adalah masalah nyata saat ini? Ya, itu benar-benar sebuah
+
+91
+00:07:52.001 --> 00:07:58.000
+Kemajuan karena saya pikir kejahatan bisnis mungkin akan turun di
+
+92
+00:07:58.000 --> 00:08:03.000
+kejadian semakin banyak kita menggunakan komputer, tetapi pada saat yang sama ketika kerugian
+
+93
+00:08:03.000 --> 00:08:09.001
+terjadi, ia cenderung menjadi lebih besar. Dapatkah Anda memberi gambaran tentang ciri-ciri sebuah
+
+94
+00:08:09.001 --> 00:08:13.001
+Apakah komputer itu kriminal? Apa jenis orang yang Anda temukan jenis ini
+
+95
+00:08:13.001 --> 00:08:19.001
+Sesuatu ? Nah, kami telah diwawancarai sekitar 35 dari orang-orang ini sampai sekarang, setidaknya dari
+
+96
+00:08:19.001 --> 00:08:25.001
+lebih canggih penjahat komputer, dan kita menemukan bahwa mereka cenderung muda,
+
+97
+00:08:25.001 --> 00:08:30.000
+Tapi kemudian orang-orang di bidang komputer umumnya muda bagaimanapun. Mereka menunjukkan
+
+98
+00:08:30.000 --> 00:08:34.000
+Sindrom Robin Hood, atau itu adalah variasi dari Robin Hoed, itu mencuri dari
+
+99
+00:08:34.000 --> 00:08:39.000
+yang kaya dan mengekalkannya, tetapi itu adalah gagasan bahwa mereka membedakan sangat kuat
+
+100
+00:08:39.001 --> 00:08:44.000
+melakukan kerusakan kepada orang-orang yang sangat tidak bermoral kepada mereka, dan melakukan kerosakan kepada
+
+101
+00:08:44.000 --> 00:08:48.001
+organisasi yang dapat mereka rasionalkan dengan mudah. Tidak hanya itu, mereka melakukannya
+
+102
+00:08:48.001 --> 00:08:54.001
+ke komputer, dan komputer tidak bisa menangis atau memukul kembali, dan oleh itu komputer adalah
+
+103
+00:08:54.001 --> 00:08:59.000
+Tujuan ideal untuk orang-orang yang mungkin tidak bisa naik dan menempelkan senjata di dalam
+
+104
+00:08:59.000 --> 00:09:04.000
+Wajah dan mencuri uang dari Anda. Ini akan menjadi penjahat, tetapi ketika Anda dapat
+
+105
+00:09:04.000 --> 00:09:08.001
+Melakukannya melalui terminal atau komputer, maka itu adalah materi yang sama sekali berbeda.
+
+106
+00:09:09.000 --> 00:09:16.000
+Orang-orang ini tidak melihat diri mereka sebagai penjahat. Mereka melihat diri mereka sebagai masalah
+
+107
+00:09:16.000 --> 00:09:21.000
+dengan solver. Mereka memiliki beberapa masalah yang intensif, tidak dapat dibagi yang mereka cuba untuk
+
+108
+00:09:21.000 --> 00:09:25.001
+untuk menyelesaikan. Mereka berada dalam posisi kepercayaan, dan mereka menemukan bahwa melanggar kepercayaan itu
+
+109
+00:09:25.001 --> 00:09:30.001
+Ini adalah cara yang paling mudah untuk menyelesaikan masalah mereka. Apakah Anda sedang berbicara tentang amatir?
+
+110
+00:09:30.001 --> 00:09:35.001
+di sini atau jenis karir penjahat komputer? Sampai saat ini, sebagian besar masalah telah
+
+111
+00:09:35.001 --> 00:09:42.000
+dari orang-orang yang amatir, penjahat berkulit putih. Namun, sekarang kita mulai melihat
+
+112
+00:09:42.000 --> 00:09:48.001
+Jumlah yang semakin meningkat dari apa yang bisa Anda sebut kriminal karir. Orang yang
+
+113
+00:09:48.001 --> 00:09:55.001
+hidup secara berterusan tergantung pada kejahatan, dan Anda
+
+114
+00:09:55.001 --> 00:10:00.001
+Ia berharap bahwa sejak beberapa tahun yang lalu, hampir setiap penjara besar di
+
+115
+00:10:00.001 --> 00:10:05.000
+Amerika Serikat telah mengajarkan pemrosesan data kepada tahanan. Oleh karena itu mereka memiliki
+
+116
+00:10:05.000 --> 00:10:09.000
+kesempatan untuk mempelajari teknologi, dan mereka menemukan bahwa mereka tidak dapat
+
+117
+00:10:09.000 --> 00:10:14.001
+Berpartisipasi dalam kejahatan tradisional mereka kecuali dalam lingkungan baru ini, elektronik ini
+
+118
+00:10:14.001 --> 00:10:19.001
+lingkungan yang Don, apa saja beberapa teknik yang digunakan orang, penjahat,
+
+119
+00:10:19.001 --> 00:10:25.000
+Menyerang sistem komputer? Nah, kami memiliki sekitar 1.100 kasus dalam penelitian kami
+
+120
+00:10:25.000 --> 00:10:31.001
+data di SRI sekarang, dan berdasarkan apa yang telah kami pelajari selama 13 tahun terakhir, ada
+
+121
+00:10:31.001 --> 00:10:38.000
+Ada beberapa teknik umum yang muncul. Salah satu yang paling umum
+
+122
+00:10:38.000 --> 00:10:43.001
+Ya, kami merujuk sebagai data diddling atau input data palsu. Mengubah data sebelum
+
+123
+00:10:43.001 --> 00:10:48.001
+masuk ke komputer, tetapi bergantung pada komputer untuk menyembunyikan bukti
+
+124
+00:10:48.001 --> 00:10:53.000
+dengan data palsu. Kami juga berurusan dengan teknik yang sangat canggih seperti
+
+125
+00:10:53.000 --> 00:10:58.001
+Kuda Trojan, bom logik, serangan salami, piggybacking, data
+
+126
+00:10:58.001 --> 00:11:02.000
+melarikan diri, superzapping dan sebagainya.
+
+127
+00:11:02.000 --> 00:11:06.001
+Ini adalah semua istilah teknis atau jargon untuk teknik ini. Kamu bisa
+
+128
+00:11:06.001 --> 00:11:10.000
+Dapatkan salah satu dari mereka dan jelaskan? Misalnya, kuda Trojan tampaknya cukup
+
+129
+00:11:10.000 --> 00:11:12.001
+Terma yang jelas. Apa artinya itu?
+
+130
+00:11:12.001 --> 00:11:15.001
+Ini tampaknya berarti bahwa ada sesuatu yang dibangun dalam program ini. Apakah itu yang
+
+131
+00:11:15.001 --> 00:11:19.000
+kasusnya ? Itu memang benar. Kuda Trojan adalah salah satu jenayah yang paling mendasar.
+
+132
+00:11:19.000 --> 00:11:26.000
+metode yang telah digunakan, dan itu adalah gagasan untuk mengambil program dan membangun
+
+133
+00:11:26.000 --> 00:11:31.001
+instruksi rahasia dalam program ini. Dengan demikian, ketika program ini dilaksanakan di
+
+134
+00:11:31.001 --> 00:11:36.000
+Domain dilindungi dalam sistem komputer, itu tidak hanya melakukan apa yang diyakini
+
+135
+00:11:36.000 --> 00:11:40.001
+untuk melakukan, tetapi ia juga melakukan instruksi tambahan juga. Saya lihat, dan ini
+
+136
+00:11:40.001 --> 00:11:44.000
+mungkin digunakan untuk meletakkan uang di akun seseorang, akun karyawan,
+
+137
+00:11:44.000 --> 00:11:48.000
+Atau sesuatu seperti itu. Ini bisa digunakan untuk berbagai macam program.
+
+138
+00:11:48.000 --> 00:11:54.000
+penipuan dalam sistem komputer yang dapat menggunakan teknik seperti bom logik, untuk
+
+139
+00:11:54.000 --> 00:12:00.001
+Contohnya, di mana Anda telah memprogram instruksi cabang dalam sebuah program sehingga ketika
+
+140
+00:12:00.001 --> 00:12:07.001
+syarat-syarat tertentu untuk penipuan yang terjadi adalah optimal, maka bom waktu atau
+
+141
+00:12:07.001 --> 00:12:13.001
+Bom logik pergi dan menyebabkan kejahatan untuk dilakukan. Tampaknya ada,
+
+142
+00:12:13.001 --> 00:12:16.001
+Ini tampaknya sejenis serangan internal pada sistem komputer ketika Anda memasukkan
+
+143
+00:12:16.001 --> 00:12:19.000
+Sebuah kuda Trojan atau bom logik atau sesuatu seperti itu.
+
+144
+00:12:19.000 --> 00:12:23.000
+Sekarang, kita telah melihat contoh sebelumnya dari permainan perang di mana itu adalah bahwa sistem
+
+145
+00:12:23.000 --> 00:12:27.001
+telah diserang dari luar dengan mencoba beberapa kata sandi dan
+
+146
+00:12:27.001 --> 00:12:30.000
+secara sistematis masuk ke dalam sistem.
+
+147
+00:12:30.000 --> 00:12:35.000
+Apakah itu sesuatu yang benar-benar terjadi di mana Anda mencoba untuk melewati
+
+148
+00:12:35.000 --> 00:12:38.001
+seluruh urutan kata sandi dan kemudian Anda benar-benar menemukan satu yang cocok dan pergi
+
+149
+00:12:38.001 --> 00:12:45.000
+masuk ke dalam sistem? Ya, ada berbagai macam sistem jahat hacking
+
+150
+00:12:45.000 --> 00:12:50.001
+teknik untuk mendapatkan akses dari terminal jarak jauh di mana nama permainan
+
+151
+00:12:50.001 --> 00:12:55.000
+Pada dasarnya adalah untuk mengidentifikasi pengguna yang diberi izin. Dengan demikian, Anda harus mengetahui
+
+152
+00:12:55.000 --> 00:13:00.001
+ID dan kata sandi untuk mendapatkan akses. Ada teknik pemindaian di mana Anda
+
+153
+00:13:00.001 --> 00:13:05.001
+dapat secara otomatis atau kadang-kadang secara manual hanya memindai nomor telepon, mendapatkan
+
+154
+00:13:05.001 --> 00:13:11.000
+mengakses komputer, dan kemudian memindai berbagai kemungkinan kode akses,
+
+155
+00:13:11.000 --> 00:13:18.000
+kata sandi untuk menemukan atau mengetuk satu yang kemudian adalah akses ke itu
+
+156
+00:13:18.000 --> 00:13:21.001
+Sistem yang Bagaimana dengan sistem yang ramah pengguna? Apakah mereka seorang pembantu? Apakah mereka
+
+157
+00:13:21.001 --> 00:13:23.001
+Penghalang dalam kejahatan komputer?
+
+158
+00:13:24.000 --> 00:13:29.001
+Nah, itu adalah bagian dari perang yang kita rontok hari ini. Kita semua ingin sistem kita
+
+159
+00:13:29.001 --> 00:13:35.000
+untuk menjadi ramah dan, sayangnya, sistem yang ramah adalah hampir
+
+160
+00:13:35.000 --> 00:13:37.000
+yang bertentangan dengan kewaspadaannya.
+
+161
+00:13:37.001 --> 00:13:41.001
+Oleh karena itu, kami berusaha untuk menyeimbangkan. Kami berusaha mencari keseimbangan antara satu
+
+162
+00:13:41.001 --> 00:13:47.001
+sistem yang ramah dan sistem yang aman karena jumlah orang yang memiliki sistem ini
+
+163
+00:13:47.001 --> 00:13:54.001
+Kemampuan untuk mengakses sistem ini berkembang dengan sangat cepat. Oleh karena itu, kami memiliki satu
+
+164
+00:13:54.001 --> 00:13:58.000
+musuh yang semakin meningkat dalam ukuran dan dalam penyempurnaan.
+
+165
+00:13:58.001 --> 00:14:03.000
+Oleh karena itu, kita tidak lagi dapat membiarkan sistem kita menjadi
+
+166
+00:14:03.000 --> 00:14:04.001
+bersahabat seperti yang telah mereka lakukan.
+
+167
+00:14:05.001 --> 00:14:10.000
+Apa yang terjadi, ada satu, saya pikir kita akan memanggil buletin komunitas berkomputer
+
+168
+00:14:10.000 --> 00:14:16.000
+Jaringan board yang tumbuh di seluruh bidang hobi teknis. Engkau
+
+169
+00:14:16.000 --> 00:14:18.001
+Ada versi pirate dari hal ini.
+
+170
+00:14:18.001 --> 00:14:21.001
+Dapatkah Anda memberitahu kami sedikit tentang apa salah satu pirate bulletin board akan
+
+171
+00:14:21.001 --> 00:14:26.000
+menjadi seperti dan apa tujuan? Nah, seperti yang Anda ketahui, papan buletin sangat
+
+172
+00:14:26.000 --> 00:14:32.001
+Layanan yang berguna di bidang komputer. Tapi
+
+173
+00:14:32.001 --> 00:14:36.001
+Sayangnya, ada beberapa dari mereka yang ditetapkan, seperti yang Anda katakan, untuk jahat
+
+174
+00:14:36.001 --> 00:14:42.001
+tujuan yang disebut sebagai pirate board. Sebenarnya, dalam satu daftar yang saya lihat baru-baru ini,
+
+175
+00:14:43.000 --> 00:14:48.000
+Kami menemukan 128 dari apa yang disebut pirate bulletin board di seluruh negara.
+
+176
+00:14:48.001 --> 00:14:54.001
+Mereka digunakan untuk tujuan intelijen di antara penggodam sistem jahat dan mereka
+
+177
+00:14:54.001 --> 00:15:01.000
+Seringkali akan menyiarkan nomor telepon komputer dan
+
+178
+00:15:01.000 --> 00:15:06.000
+kata sandi yang mungkin tersedia dan menggambarkan berbagai protokol untuk login ke
+
+179
+00:15:06.000 --> 00:15:11.001
+Sistem komputer orang lain untuk terlibat dalam akses tidak sah ini ke sistem.
+
+180
+00:15:12.000 --> 00:15:15.000
+Maafkan saya, Gary dan Don, dalam satu menit saya ingin melihat beberapa solusi
+
+181
+00:15:15.000 --> 00:15:17.000
+terhadap jenis masalah yang telah Anda temukan,
+
+182
+00:15:17.000 --> 00:15:18.001
+Don, dan kita akan melakukannya dalam satu menit.
+
+183
+00:15:25.001 --> 00:15:30.001
+Sebagian besar perbincangan yang berputar di sekitar keamanan komputer berurusan dengan komputer
+
+184
+00:15:30.001 --> 00:15:34.001
+dan kejahatan. Namun, ada kecelakaan dan kondisi lain yang perlu kita jaga.
+
+185
+00:15:34.001 --> 00:15:39.001
+terhadapnya . Pertama, kita harus melindungi operasi komputer kita dari bencana alam
+
+186
+00:15:39.001 --> 00:15:44.001
+seperti kebakaran, pemadaman listrik, banjir dan sebagainya. Kedua, sistem harus
+
+187
+00:15:44.001 --> 00:15:49.000
+dilindungi dari kerusakan data secara tidak sengaja ketika seseorang
+
+188
+00:15:49.000 --> 00:15:55.000
+mendapatkan akses atau jika prosedur terminal yang salah dijalankan atau jika seorang programmer
+
+189
+00:15:55.000 --> 00:16:01.000
+secara tidak sengaja memusnahkan data saat mengubah program operasi. Kami
+
+190
+00:16:01.000 --> 00:16:05.001
+tidak selalu dapat mencegah kerusakan, tetapi kami dapat memastikan operasi berkelanjutan dengan menyimpan
+
+191
+00:16:05.001 --> 00:16:08.001
+menyimpan salinan program dan file data.
+
+192
+00:16:09.000 --> 00:16:14.000
+Ketiga, kita perlu mengambil tindakan pencegahan yang munasabah untuk memastikan bahwa karyawan tidak
+
+193
+00:16:14.000 --> 00:16:20.000
+menyalahgunakan akses mereka ke komputer dengan penggunaan pribadi yang berlebihan. Keempat, kita harus
+
+194
+00:16:20.000 --> 00:16:25.001
+melindungi peralatan kami dari penggunaan yang tidak diizinkan oleh pihak luar. Kontrol Akses yang Baik
+
+195
+00:16:25.001 --> 00:16:31.000
+termasuk kata sandi pribadi, sistem dan log monitoring, pemisahan
+
+196
+00:16:31.000 --> 00:16:36.000
+tanggung jawab dan kontrol keseimbangan eksternal adalah beberapa prosedur untuk
+
+197
+00:16:36.000 --> 00:16:41.000
+Perlindungan terhadap pencerobohan Pada bagian berikutnya, kita akan mendengar dari salah satu
+
+198
+00:16:41.000 --> 00:16:47.001
+Terutama para ahli keamanan komputer. Jadi mari kita kembali ke program ini. dan Don,
+
+199
+00:16:48.000 --> 00:16:51.000
+Anda telah memberi kami gagasan yang baik apa beberapa masalah yang berkaitan dengan komputer
+
+200
+00:16:51.000 --> 00:16:53.000
+kejahatan, jadi mengapa kita tidak mengambil beberapa menit dan mencari tahu apa beberapa dari
+
+201
+00:16:53.000 --> 00:17:00.000
+Solusi yang ada. Kami juga bergabung dengan Jim Holmes dari Tri-Data Corporation. Jim yang
+
+202
+00:17:00.000 --> 00:17:04.001
+memiliki produk yang membantu kami memastikan sistem dial-up. Jadi, Jim, Anda bisa memberitahu kami sebuah
+
+203
+00:17:04.001 --> 00:17:09.000
+Sedikit tentang produk? Tentu saja, saya akan senang. Kami telah naik dengan
+
+204
+00:17:09.000 --> 00:17:14.000
+satu pendekatan untuk dapat membantu aman dial-up jaringan. Seperti yang telah dibahas dengan
+
+205
+00:17:14.000 --> 00:17:20.001
+Sebelumnya, jaringan dial-up memiliki kebutuhan untuk berkomunikasi di dan biasanya
+
+206
+00:17:20.001 --> 00:17:25.001
+memasukkan login atau kata sandi yang diperlukan oleh sistem itu sendiri. Sekarang kita sudah pergi
+
+207
+00:17:25.001 --> 00:17:31.000
+satu langkah lebih jauh dan kami telah mengambil di dalam 212 modem jenis perangkat, sebuah auto dial
+
+208
+00:17:31.000 --> 00:17:35.001
+modem yang akan berada di hujung depan prosesor ini, sistem timeshare kami.
+
+209
+00:17:36.000 --> 00:17:40.001
+Anda akan memasukkan perangkat kami dan memiliki apa yang kami sebut verifikasi jawaban
+
+210
+00:17:40.001 --> 00:17:44.001
+kemampuan yang Kami dapat melewati dan saya akan memberi Anda contoh bagaimana kami akan menyimpan
+
+211
+00:17:44.001 --> 00:17:49.000
+Salah satunya. Katakanlah namamu adalah Adam. Kami dapat memasukkan nama Anda dan kata sandi yang
+
+212
+00:17:49.000 --> 00:17:51.000
+Anda akan menggunakan untuk mengakses sistem.
+
+213
+00:17:51.000 --> 00:17:57.001
+Jadi kami memasukkan AA untuk menambahkan verifikasi jawaban dan kemudian masukkan nama Anda Adam dan
+
+214
+00:17:57.001 --> 00:18:02.001
+Masukkan ruang dan kemudian masukkan kata sandi unik Anda dan kami dapat memasukkan kata sendi
+
+215
+00:18:02.001 --> 00:18:08.000
+dari satu hingga 250 karakter. Biasanya kata sandi Anda yang digunakan pada
+
+216
+00:18:08.000 --> 00:18:12.000
+Sistem terdiri dari lima atau enam karakter. Semakin panjang kata sandi, semakin kerasnya
+
+217
+00:18:12.000 --> 00:18:16.001
+Berikan seseorang untuk pecah. Sekarang kita menemukan sering orang mencoba menggunakan 20 atau 30
+
+218
+00:18:16.001 --> 00:18:20.001
+kata sandi karakter jika mereka benar-benar berniat untuk mencoba untuk memberikan keamanan untuk
+
+219
+00:18:20.001 --> 00:18:25.000
+Operasi yang dial-in Setelah kami memasuki perintah di sini, kami dapat kembali dan
+
+220
+00:18:25.000 --> 00:18:30.001
+Identifikasi siapa yang memiliki akses ke sistem dari luar melalui port dial-in
+
+221
+00:18:30.001 --> 00:18:36.000
+dengan melihat direktori rutin verifikasi jawaban. Setelah menerima panggilan
+
+222
+00:18:36.000 --> 00:18:40.000
+ke komputer host di mana sistem biasanya akan terhubung, kita akan pergi
+
+223
+00:18:40.000 --> 00:18:44.000
+Melalui dan memeriksa salah satu dari kata sandi tersebut. Kata sandi dapat menjadi
+
+224
+00:18:44.000 --> 00:18:47.001
+Mengatur atau mengontrol berapa banyak karakter yang diterima
+
+225
+00:18:47.001 --> 00:18:49.000
+Sebelum panggilan itu terhubung.
+
+226
+00:18:50.000 --> 00:18:54.000
+Salah satu masalah yang terjadi di banyak sistem dial-up adalah ketika Anda dial
+
+227
+00:18:54.000 --> 00:18:58.001
+Dalam, sistem akan berulang kali memungkinkan Anda untuk memasukkan kata sandi dan itu akan datang
+
+228
+00:18:58.001 --> 00:19:03.000
+Kembali dan katakan kesalahan, password re-enter. Dengan perangkat kami, setelah Anda masuk kembali
+
+229
+00:19:03.000 --> 00:19:06.001
+satu atau dua kali, itu akan secara otomatis mematikan panggilan, dengan demikian mencegah
+
+230
+00:19:06.001 --> 00:19:10.001
+seseorang dari mendapatkan akses ke sistem. Dan itulah cara kita mengendalikan
+
+231
+00:19:10.001 --> 00:19:15.001
+adalah bagian dari lingkungan dial-up. Sekarang, di samping itu, ada
+
+232
+00:19:15.001 --> 00:19:19.001
+juga bagian yang berasal yang dapat digunakan untuk membantu mengendalikan keamanan kami
+
+233
+00:19:19.001 --> 00:19:24.000
+Jaringan yang Banyak perusahaan, perusahaan yang lebih besar hari ini dan operasi telepon
+
+234
+00:19:24.000 --> 00:19:29.001
+perusahaan menggunakan perangkat kami karena kemampuannya untuk dapat
+
+235
+00:19:29.001 --> 00:19:33.001
+Remote mengkonfigurasi kata sandi dan log pada prosedur ke sistem mereka.
+
+236
+00:19:34.000 --> 00:19:38.001
+Dengan memungkinkan mereka konfigurasi remote ini ke sistem, dan itu dilakukan sangat
+
+237
+00:19:38.001 --> 00:19:43.000
+Biarkan saya memberi Anda demonstrasi. Kami akan melakukan AD untuk menambahkan direktori dial.
+
+238
+00:19:43.001 --> 00:19:56.000
+Kami akan meletakkan pada label. Mari kita katakan bahwa kita adalah ruang, ditempatkan di nomor telepon
+
+239
+00:19:56.000 --> 00:20:00.001
+sistem yang ingin kita hubungi, dan kemudian ruang di atas dan dimasukkan ke dalam kata sandi yang akan
+
+240
+00:20:00.001 --> 00:20:04.000
+dikirim ke sistem. Dan kata sandi hanya akan disimpan dengan memasukkan ke dalam
+
+241
+00:20:04.000 --> 00:20:08.000
+sekuel dari karakter. Sekali lagi, mereka dapat dimasukkan dari keyboard lokal. Kami
+
+242
+00:20:08.000 --> 00:20:12.000
+Satu-satunya bagian dari sistem kami adalah bahwa mereka dapat dimuat turun dari jarak jauh
+
+243
+00:20:12.000 --> 00:20:17.000
+terminal atau komputer remote. Dan dengan melakukan ini, Anda dapat memasukkan lagi dari satu
+
+244
+00:20:17.000 --> 00:20:21.001
+Jumlah kata sandi 250 karakter. Sekarang saya mengerti ini dengan benar, adalah bahwa dasar
+
+245
+00:20:21.001 --> 00:20:25.001
+Ide adalah bahwa Anda dial ke dalam sistem komputer dan kemudian sistem komputer dial
+
+246
+00:20:25.001 --> 00:20:30.000
+kembali kepada Anda lagi untuk mengkonfirmasi bahwa Anda adalah orang yang sebenarnya yang Anda katakan Anda adalah.
+
+247
+00:20:30.000 --> 00:20:33.000
+Apakah itu benar? Nah, dengan perangkat kita, apa yang kita lakukan adalah dialog
+
+248
+00:20:33.000 --> 00:20:34.001
+masuk ke sistem dan masuk kata sandi.
+
+249
+00:20:35.000 --> 00:20:38.001
+Setelah kata sandi telah dimasukkan, pada saat itu Anda kemudian memiliki akses
+
+250
+00:20:38.001 --> 00:20:40.000
+dengan sistem komputer itu sendiri.
+
+251
+00:20:40.001 --> 00:20:44.001
+Ya, saya pikir ada sistem lain, Gary. Di belakang sistem keamanan,
+
+252
+00:20:44.001 --> 00:20:49.000
+yang memiliki sesuatu yang disebut Digilink, di mana sebenarnya apa yang terjadi adalah Anda memiliki
+
+253
+00:20:49.000 --> 00:20:52.001
+Teknik dari Salami. Saya menyebutnya pertahanan pizza. Anda tahu, di mana pizza caller
+
+254
+00:20:52.001 --> 00:20:55.001
+memanggil Anda kembali untuk memastikan Anda adalah pria yang memesan pizza, di mana tuan rumah
+
+255
+00:20:55.001 --> 00:20:59.001
+komputer memanggil dialer kembali untuk memastikan bahwa dialer benar-benar
+
+256
+00:20:59.001 --> 00:21:04.001
+Pihak yang tepat meminta layanan. Nah, Donna, jenis perangkat ini, melakukan
+
+257
+00:21:04.001 --> 00:21:08.001
+Apakah data tersebut benar-benar aman? Apa perasaan Anda tentang itu? Mereka ini
+
+258
+00:21:08.001 --> 00:21:14.001
+perangkat menambahkan lapisan keamanan lain dan memberikan yang jauh lebih aman.
+
+259
+00:21:14.001 --> 00:21:20.000
+Sistem komputer hari ini lebih dari yang pernah kita miliki di masa lalu. Namun, kita harus menjadi
+
+260
+00:21:20.000 --> 00:21:26.000
+Mengetahui bahwa tidak ada sistem komputer yang tersedia secara komersial saat ini cukup aman
+
+261
+00:21:26.000 --> 00:21:31.001
+tentang nilai aset, aset informasi yang disimpan di dalamnya.
+
+262
+00:21:32.001 --> 00:21:38.001
+Oleh karena itu, kita harus mengimbangi keterbatasan teknologi dalam sistem
+
+263
+00:21:38.001 --> 00:21:44.001
+melalui metode operasional, fisik, dan prosedur untuk membuat
+
+264
+00:21:44.001 --> 00:21:50.000
+organisasi yang aman yang menggunakan komputer. Kita sering memandang ke
+
+265
+00:21:50.000 --> 00:21:53.000
+Jepang sekarang untuk apa yang mereka lakukan dan komputer secara umum.
+
+266
+00:21:53.001 --> 00:21:55.001
+Apakah orang Jepang melakukan apa pun mengenai keamanan ini?
+
+267
+00:21:55.001 --> 00:21:57.000
+Masalah yang harus kita ketahui?
+
+268
+00:21:57.001 --> 00:22:03.001
+Ya, orang-orang Jepang sedikit terbelakang dalam hal bahwa mereka belum mengalami
+
+269
+00:22:03.001 --> 00:22:08.000
+Jenis-jenis kejahatan komputer yang kita ada di sini di Amerika Serikat, tetapi mereka hanya
+
+270
+00:22:08.000 --> 00:22:13.000
+Sekarang saya mulai memahami masalah ini. Dan tentu saja, mereka mencoba untuk membahas
+
+271
+00:22:13.000 --> 00:22:19.001
+Amerika Serikat . pasar di mana mereka tidak sepenuhnya memahami masalah kriminal yang kita
+
+272
+00:22:19.001 --> 00:22:23.001
+ada di negara ini. Kejahatan adalah sesuatu yang sangat budaya, dan oleh karena itu sangat berbeda.
+
+273
+00:22:23.001 --> 00:22:29.000
+dari satu negara atau budaya ke negara lain. Adakah undang-undang yang tepat pada saat ini dalam
+
+274
+00:22:29.000 --> 00:22:33.001
+negara untuk menangani bentuk jenayah yang sangat canggih ini? Namun, undang-undang tersebut adalah
+
+275
+00:22:33.001 --> 00:22:39.000
+Meningkatkan banyak hal. Kami memiliki jalan yang panjang untuk pergi. Saat ini ada 21 negara yang
+
+276
+00:22:39.000 --> 00:22:45.000
+memiliki hukum kejahatan komputer tertentu, dan kami memiliki beberapa undang-undang di Kongres
+
+277
+00:22:45.000 --> 00:22:51.000
+yang akan, jika diluluskan, memberikan perlindungan khusus pada federal
+
+278
+00:22:51.000 --> 00:22:58.000
+atas dasar nasional. Tampaknya ada juga masalah dengan
+
+279
+00:22:58.000 --> 00:23:02.000
+sistem operasi yang menjadi populer saat ini bahwa sumbernya tersedia
+
+280
+00:23:02.000 --> 00:23:04.000
+untuk individu.
+
+281
+00:23:04.000 --> 00:23:08.001
+Misalnya, Unix telah menjadi banyak digunakan dalam lingkungan komersial. Jadi apa yang
+
+282
+00:23:08.001 --> 00:23:11.001
+Efek ini terjadi ketika orang-orang yang benar-benar dapat keluar dari program sumber,
+
+283
+00:23:12.001 --> 00:23:16.001
+Pernahkah Anda melihat efek dari itu sama sekali? Kami memiliki sistem operasi besar seperti
+
+284
+00:23:16.001 --> 00:23:21.000
+sistem operasi IBM yang memiliki tahun dan tahun kerja keamanan, ada
+
+285
+00:23:21.000 --> 00:23:23.001
+Sistem operasi yang lebih populer sekarang. Apa efeknya itu?
+
+286
+00:23:24.000 --> 00:23:28.000
+Ya, hukum Jackson mengatakan bahwa dengan hammer yang cukup besar, Anda bisa memecahkan apa pun.
+
+287
+00:23:28.001 --> 00:23:34.001
+dan oleh karena itu, salah satu dari sistem-sistem ini dapat pecah dengan jumlah yang cukup
+
+288
+00:23:34.001 --> 00:23:41.000
+kerja atau keterampilan, pengetahuan, dan akses. Keselamatan selalu relatif
+
+289
+00:23:41.000 --> 00:23:48.000
+situasi, dan program komputer besar kompleks sejauh yang mereka tidak
+
+290
+00:23:48.000 --> 00:23:52.001
+yang dapat diramalkan. Dan jika sebuah program tidak dapat diramalkan, yaitu, jika kita tidak tahu apa yang
+
+291
+00:23:52.001 --> 00:23:58.001
+Hal ini dilakukan dalam segala keadaan, maka kita harus menganggap bahwa itu tidak aman.
+
+292
+00:23:59.000 --> 00:24:05.001
+Oleh karena itu, berdasarkan penelitian jangka panjang, kami bertujuan untuk mengembangkan gagasan
+
+293
+00:24:05.001 --> 00:24:10.000
+sistem yang mungkin aman di mana Anda dapat membuktikan bagaimana ia berfungsi di bawah semua
+
+294
+00:24:10.000 --> 00:24:15.001
+kondisi, dan oleh karena itu, mendapatkan beberapa jaminan bahwa Anda memiliki yang cukup aman
+
+295
+00:24:15.001 --> 00:24:19.001
+Sistem yang Ya, kita hanya tinggal satu menit saja. Saya ingin bertanya, kami berbicara
+
+296
+00:24:19.001 --> 00:24:23.000
+tentang pertandingan perang sebelumnya di area pertahanan nasional. Bagaimana dengan ekonomi? I
+
+297
+00:24:23.000 --> 00:24:26.001
+Ini berarti, kita memiliki bank sekarang semua terikat dengan transfer dana elektronik yang besar ini
+
+298
+00:24:26.001 --> 00:24:30.000
+Sistem yang Apa potensi bencana ekonomi yang besar
+
+299
+00:24:30.000 --> 00:24:31.001
+Jika orang yang salah masuk ke dalam hal ini?
+
+300
+00:24:32.001 --> 00:24:38.001
+Potensi adalah bencana, tapi masalahnya harus
+
+301
+00:24:38.001 --> 00:24:40.001
+dengan risiko yang terlibat.
+
+302
+00:24:41.000 --> 00:24:47.001
+Dan kami percaya bahwa keamanan sedang maju, bersama dengan teknologi maju,
+
+303
+00:24:48.000 --> 00:24:55.000
+dan dengan jumlah uang yang semakin meningkat yang didedikasikan dalam jumlah besar ini
+
+304
+00:24:55.000 --> 00:25:01.001
+Sistem transfer dana. Dengan demikian, pada saat ini risiko yang relatif rendah,
+
+305
+00:25:02.000 --> 00:25:07.001
+Namun, masalah utama kami adalah memastikan bahwa keamanan, bahwa
+
+306
+00:25:07.001 --> 00:25:12.001
+sistem elektronik yang dibangun dalam sistem ini, tetap dengan teknologi itu, dan dengan
+
+307
+00:25:12.001 --> 00:25:17.001
+Jumlah aset yang terpapar dalam sistem ini. Secara singkat, sekitar 30
+
+308
+00:25:17.001 --> 00:25:22.001
+Sekejap yang tersisa, bagaimana dengan kriptografi? Apakah itu solusi? Cryptocurrency adalah
+
+309
+00:25:22.001 --> 00:25:27.001
+yang paling kuat, menurut saya, yang pernah dikembangkan dalam perlindungan dari
+
+310
+00:25:27.001 --> 00:25:33.000
+data melalui garis komunikasi, dan juga seperti yang mungkin disimpan dalam media komputer.
+
+311
+00:25:34.000 --> 00:25:39.000
+Namun, kita belum memiliki masalah yang harus diselesaikan di area itu, air terjun
+
+312
+00:25:39.000 --> 00:25:43.000
+masalahnya . Namun, di masa depan, akan menjadi yang paling
+
+313
+00:25:43.000 --> 00:25:45.000
+perlindungan yang besar yang kita miliki.
+
+314
+00:25:45.000 --> 00:25:48.000
+Tuan-tuan, kami sudah keluar dari waktu. Don Parker dari SRI, terima kasih banyak untuk bergabung
+
+315
+00:25:48.000 --> 00:25:52.000
+Kami, Jim Holmes dari TriData, dan saya harap Anda akan kembali dengan kami lagi kali berikutnya untuk
+
+316
+00:25:52.000 --> 00:26:05.000
+Ada edisi lain dari kejahatan komputer yang ada. Perusahaan-perusahaan yang telah dipecat
+
+317
+00:26:05.000 --> 00:26:10.000
+Mereka sering malu dan tidak mau melaporkan kejahatan. Penuntutan A
+
+318
+00:26:10.000 --> 00:26:13.000
+Pekerja perusahaan untuk kejahatan komputer sangat jarang.
+
+319
+00:26:14.000 --> 00:26:18.001
+Anda mungkin terkejut mengetahui bahwa hanya sekitar setengah negara kita memiliki kejahatan komputer.
+
+320
+00:26:18.001 --> 00:26:23.001
+Undang-Undang dan Undang-undang Federal telah berakhir. Jadi kita benar-benar tidak tahu berapa banyak
+
+321
+00:26:23.001 --> 00:26:28.001
+kejahatan komputer ada, tetapi kita tahu bahwa komputer telah terlibat dalam
+
+322
+00:26:28.001 --> 00:26:33.001
+jumlah jenayah yang dipublikasikan dengan baik, berjuta-juta dolar, dan pencerobohan itu ke dalam
+
+323
+00:26:33.001 --> 00:26:39.001
+Komputer yang disimpan oleh individu yang tidak berwenang menjadi tempat umum. yang terbaik kami
+
+324
+00:26:39.001 --> 00:26:44.000
+Pertahanan adalah pelanggaran yang baik. Pertama-tama, kita tidak harus dipikirkan oleh komputer
+
+325
+00:26:44.000 --> 00:26:49.001
+dan teknologi. Kami dapat bertanggung jawab atas keamanan komputer tanpa menjadi
+
+326
+00:26:49.001 --> 00:26:55.000
+ahli komputer, dan jika perlu, para ahli tersedia. Kedua, kita harus membuat sebuah
+
+327
+00:26:55.000 --> 00:27:00.000
+Penilaian keseluruhan risiko tentang apa ancaman komputer kami dan menentukan berapa banyak
+
+328
+00:27:00.000 --> 00:27:05.000
+Penting untuk melindungi diri dari ancaman ini. Ketiga, kita dapat mengambil langkah-langkah untuk
+
+329
+00:27:05.000 --> 00:27:10.000
+secara fisik melindungi perangkat keras dan data kami, seperti yang disebutkan sebelumnya. Keempat, kita bisa
+
+330
+00:27:10.000 --> 00:27:15.000
+Gunakan garis panduan daftar pemeriksaan keamanan untuk memastikan bahwa prosedur kami cukup.
+
+331
+00:27:15.001 --> 00:27:20.001
+Kelima, kita dapat memastikan bahwa kita menangani eksposur non-teknik terbesar, yang
+
+332
+00:27:20.001 --> 00:27:25.001
+Pengguna, dengan membuat kebijakan kami jelas dan dengan mengikuti praktik akal sehat.
+
+333
+00:27:26.000 --> 00:27:30.000
+Dalam pelajaran berikutnya, kami akan mencakup bidang yang menarik dari kecerdasan buatan.
+
+334
+00:27:31.000 --> 00:27:33.001
+Pastikan dan baca bab 24 dalam teks Anda, dan saya akan melihat
+
+335
+00:27:33.001 --> 00:27:35.000
+Kamu kemudian. Saya adalah Herb Luckner.
+
+336
+00:28:18.001 --> 00:28:24.001
+Micro Focus, pencipta alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+337
+00:28:24.001 --> 00:28:29.001
+dengan senang hati memberikan dana besar untuk The Computer Promoquo, cerita
+
+338
+00:28:29.001 --> 00:28:31.001
+dari evolusi yang berlanjut ini.
+
+339
+00:28:53.001 --> 00:28:57.000
+Sampaikan terima kasih

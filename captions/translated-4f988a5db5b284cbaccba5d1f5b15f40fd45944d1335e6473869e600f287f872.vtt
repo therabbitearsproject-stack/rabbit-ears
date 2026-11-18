@@ -1,0 +1,1529 @@
+WEBVTT
+
+1
+00:00:14.000 --> 00:00:19.000
+Kamera video ini adalah bagian dari sistem penglihatan komputer yang mencoba untuk bekerja seperti
+
+2
+00:00:19.000 --> 00:00:21.001
+dari otak manusia. Ini berarti memproses jutaan keping
+
+3
+00:00:21.001 --> 00:00:23.000
+Informasi dalam milisekund.
+
+4
+00:00:24.000 --> 00:00:27.001
+Komputer sekunder dapat menangani kecepatan seperti itu, jadi ilmuwan komputer di sini
+
+5
+00:00:27.001 --> 00:00:32.000
+Mereka mengembangkan komputer yang bekerja lebih seperti otak secara paralel. Hari ini kami mengambil
+
+6
+00:00:32.000 --> 00:00:36.000
+Lihat ke puncak pencarian untuk pemrosesan paralel kecepatan komputer
+
+7
+00:00:36.000 --> 00:00:38.001
+pada edisi ini dari Computer Chronicles.
+
+8
+00:01:00.000 --> 00:01:05.001
+Komputer Chronicles dibuat mungkin sebagian oleh grant dari AFIP, yang
+
+9
+00:01:05.001 --> 00:01:11.000
+Federasi Masyarakat Pemrosesan Informasi Amerika. PBB, Sponsor OAC
+
+10
+00:01:11.000 --> 00:01:16.000
+86, konferensi terkemuka di negara ini tentang teknologi bisnis. Untuk konferensi
+
+11
+00:01:16.000 --> 00:01:22.001
+informasi panggilan 800-OAC-1986, mengeksplorasi solusi bisnis hari ini.
+
+12
+00:01:23.001 --> 00:01:28.000
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte. oleh byte
+
+13
+00:01:28.000 --> 00:01:32.001
+artikel teknis terperinci tentang perangkat keras, perangkat lunak dan bahasa baru yang meliputi
+
+14
+00:01:32.001 --> 00:01:37.001
+terkini dalam teknologi mikro komputer di seluruh dunia. BITTE adalah standar internasional.
+
+15
+00:01:43.000 --> 00:01:47.000
+Selamat datang ke Komputer Chronicles, saya Stuart Chafay dan ini adalah Gary Kildall.
+
+16
+00:01:47.000 --> 00:01:50.001
+Gary, apa yang saya lakukan di kereta mainan saya di sini mencoba untuk memahami paralel
+
+17
+00:01:50.001 --> 00:01:54.001
+pemrosesan . Kau beritahu aku jika aku benar. Pada komputer sekuensial pada dasarnya
+
+18
+00:01:54.001 --> 00:01:58.000
+Anda memiliki satu jalur, satu mesin, katakanlah, membawa satu keping informasi atau
+
+19
+00:01:58.000 --> 00:02:01.001
+Satu instruksi Dalam sistem paralel kita bisa memiliki dua atau lebih jalur, dua atau
+
+20
+00:02:01.001 --> 00:02:05.001
+lebih banyak mesin, masing-masing membawa beberapa informasi itu ke bawah garis dan
+
+21
+00:02:05.001 --> 00:02:08.001
+Jadi kita bisa mendapatkan pekerjaan selesai dalam setengah waktu dan masalahnya tentu saja
+
+22
+00:02:08.001 --> 00:02:12.000
+Untuk memastikan bahwa kereta api ini tahu apa yang sedang dilakukan. Sekarang aku berada di sebelah kanan
+
+23
+00:02:12.000 --> 00:02:18.000
+dengan track? Saya akan mengatakan itu adalah model yang baik. Ya Stuart, ide dasarnya adalah untuk mengambil
+
+24
+00:02:18.000 --> 00:02:21.001
+tugas yang rumit dan memecahkannya menjadi tugas kecil independen yang dapat dilakukan
+
+25
+00:02:21.001 --> 00:02:25.001
+keluar pada saat yang sama. Sebagai contoh, jika kita memiliki ribuan orang yang ingin bergerak
+
+26
+00:02:25.001 --> 00:02:29.001
+Di bawah ini satu jalur kereta api kita bisa mengambil beberapa kereta dan memindahkannya ke
+
+27
+00:02:29.001 --> 00:02:33.000
+tujuan atau kita bisa mengambil sepuluh jalur yang berbeda dengan sepuluh kereta yang berbeda dan
+
+28
+00:02:33.000 --> 00:02:36.000
+Dapatkan mereka semua di sana hampir pada waktu yang sama. Masalahnya adalah untuk menyelaraskan
+
+29
+00:02:36.000 --> 00:02:40.000
+Kursus di akhir ini. Misalnya, komputer pribadi Anda yang benar.
+
+30
+00:02:40.000 --> 00:02:44.000
+Sekarang sudah banyak proses paralel yang terjadi di dalamnya. Misalnya, Anda memiliki sebuah
+
+31
+00:02:44.000 --> 00:02:47.001
+microprocessor dalam keyboard yang menonton kunci, microprocesor dalam
+
+32
+00:02:47.001 --> 00:02:51.000
+pencetak yang memantau gerakan plat dan buffer dan cetak
+
+33
+00:02:51.000 --> 00:02:53.000
+data dan kemudian unit pemrosesan pusat yang
+
+34
+00:02:53.000 --> 00:02:54.001
+mengkoordinasikan semua kegiatan tersebut secara independen.
+
+35
+00:02:55.001 --> 00:02:58.001
+Nah hari ini kita akan mencoba untuk mengetahui lebih lanjut tentang pemrosesan paralel dan mencoba
+
+36
+00:02:58.001 --> 00:03:01.001
+untuk memahaminya. Ini tentu saja area yang sangat penting dari penelitian komputer
+
+37
+00:03:01.001 --> 00:03:05.000
+sekarang . Kami akan bertemu beberapa peneliti dan ilmuwan terkemuka di bidang ini di seluruh
+
+38
+00:03:05.000 --> 00:03:08.001
+negara dan kami akan benar-benar menunjukkan Anda komputer pemrosesan paralel sehingga Anda dapat
+
+39
+00:03:08.001 --> 00:03:12.000
+Lihatlah sendiri betapa cepatnya itu. Kami akan memulai dengan latar belakang
+
+40
+00:03:12.000 --> 00:03:16.000
+melihat arsitektur paralel dan kami akan membantu mencoba untuk membantu Anda memahami mengapa kami
+
+41
+00:03:16.000 --> 00:03:22.001
+Itu benar-benar dibutuhkan. Mengelilingi mikros, minis dan mainframe adalah
+
+42
+00:03:22.001 --> 00:03:28.000
+dengan super komputer. Mesin yang dapat menyesuaikan satu sidik jari di antara jutaan, simulasi
+
+43
+00:03:28.000 --> 00:03:31.001
+bentuk kehidupan dan desain senjata doom.
+
+44
+00:03:32.000 --> 00:03:36.001
+Jenis daya komputasi ini menggabungkan kecepatan yang luar biasa dengan kapasitas pemrosesan
+
+45
+00:03:36.001 --> 00:03:41.001
+telah menjadi provinsi eksklusif mesin yang berharga puluhan juta dolar
+
+46
+00:03:41.001 --> 00:03:47.000
+Tetapi minat yang luas dalam arsitektur paralel dapat mengubah itu. Paralel
+
+47
+00:03:47.000 --> 00:03:51.001
+pemrosesan atau pemisahan komputasi antara prosesor yang bekerja di
+
+48
+00:03:51.001 --> 00:03:57.000
+Unison dapat dicapai dengan cara yang berbeda. Bus data adalah yang paling umum
+
+49
+00:03:57.000 --> 00:04:01.000
+metode tetapi efektif hanya untuk sejumlah prosesor yang terbatas.
+
+50
+00:04:01.001 --> 00:04:06.001
+Distribusi crossbar adalah cara lain untuk mendistribusikan pemrosesan meskipun
+
+51
+00:04:06.001 --> 00:04:12.001
+perlu untuk menghubungkan setiap prosesor meletakkan batas praktis untuk sistem ini juga. dan yang
+
+52
+00:04:12.001 --> 00:04:17.000
+jaringan switch butterfly yang canggih adalah salah satu cara untuk memperluas permisi crossbar
+
+53
+00:04:17.000 --> 00:04:24.000
+hingga 256 prosesor secara keseluruhan tetapi terlepas dari metode yang digunakan multi-processor
+
+54
+00:04:24.000 --> 00:04:30.001
+Super minis memberikan kekuatan menghancurkan angka baru kepada pengguna khusus. di San
+
+55
+00:04:30.001 --> 00:04:35.000
+Francisco University of California baru-baru ini menginstal pemrosesan paralel
+
+56
+00:04:35.000 --> 00:04:41.000
+mesin untuk studi pemodelan molekul. Mesin 64-bit dari titik berlayar
+
+57
+00:04:41.000 --> 00:04:47.001
+Sistem ini mampu melakukan 38 juta operasi titik berlayar per detik. yang baru
+
+58
+00:04:47.001 --> 00:04:52.001
+Mesin dapat mengurangi nilai perhitungan malam menjadi beberapa jam. Dengan yang
+
+59
+00:04:52.001 --> 00:04:56.001
+dengan bantuan komputer baru mereka departemen menghasilkan beberapa yang paling menakjubkan
+
+60
+00:04:56.001 --> 00:04:59.000
+grafis yang pernah dilihat pada layar komputer.
+
+61
+00:05:12.000 --> 00:05:15.001
+Yang bergabung dengan kami sekarang di studio adalah Dr. Howard Resnickoff saat ini mengunjungi
+
+62
+00:05:15.001 --> 00:05:20.000
+Ilmuwan di MIT Center for Biological Information Processing dan Dr. Resnickoff
+
+63
+00:05:20.000 --> 00:05:24.000
+Ia juga merupakan co-pengasas Thinking Machines Corporation. Bersama kami juga Dr. Eugene yang
+
+64
+00:05:24.000 --> 00:05:27.001
+Brooks seorang fisikawan yang terlibat dalam penelitian pemrosesan paralel di Caltech
+
+65
+00:05:27.001 --> 00:05:32.000
+Dan yang sekarang terlibat di area yang sama di Lawrence Livermore Labs. dengan Gary? Howard yang
+
+66
+00:05:32.000 --> 00:05:35.000
+Apa hubungannya dengan pemrosesan informasi biologis dengan pemprosesan paralel?
+
+67
+00:05:36.000 --> 00:05:41.000
+Ini adalah pertanyaan yang baik, Gary. Tentu saja informasi paralel yang paling baik
+
+68
+00:05:41.000 --> 00:05:45.001
+Prosesor adalah organisme biologis. Mari kita berikan contoh yang tipikal. Jika
+
+69
+00:05:45.001 --> 00:05:49.001
+Anda mengemudi mobil Anda di sepanjang jalan dan seorang anak berlari keluar di depan di dalam
+
+70
+00:05:49.001 --> 00:05:54.000
+Sepuluh dari satu detik Anda menanggapi dan memiliki target kaki Anda ke arah rem. Apa yang telah
+
+71
+00:05:54.000 --> 00:05:58.001
+Dalam waktu yang singkat itu? Cahaya yang baik memukul mata Anda itu bergerak ke atas saraf optik.
+
+72
+00:05:59.000 --> 00:06:03.001
+Otak Anda membuat rencana membandingkan informasi dengan beberapa pengetahuan yang disimpan dan
+
+73
+00:06:03.001 --> 00:06:09.000
+mengirim sinyal ke sistem motor untuk menggerakkan otot Anda. Neuron yang ada di dalam
+
+74
+00:06:09.000 --> 00:06:14.000
+otak berubah dalam milisekund Anda hanya memiliki sepuluh dari satu detik dalam keseluruhan
+
+75
+00:06:14.000 --> 00:06:18.001
+Program yang melakukan ini hanya 100 langkah dalam. Harus ada yang besar
+
+76
+00:06:18.001 --> 00:06:22.000
+Jumlah pemrosesan paralel. secara mutlak. Sekarang di Lawrence Livermore Labs di sana
+
+77
+00:06:22.000 --> 00:06:27.000
+Masalah harian diselesaikan di sana. Bagaimana Paralelisme digunakan di
+
+78
+00:06:27.000 --> 00:06:31.001
+Solusi untuk masalah? Baik kita menerapkan paralelisme di Livermore Labs untuk melakukan dua
+
+79
+00:06:31.001 --> 00:06:37.001
+hal yang Salah satunya adalah mengurangi biaya suatu masalah, mengurangi biaya sebuah
+
+80
+00:06:37.001 --> 00:06:42.001
+Simulasi lebih baik. Ide ini adalah untuk menerapkan beberapa komputer yang lebih murah pada satu
+
+81
+00:06:42.001 --> 00:06:46.001
+Simulasi daripada menggunakan satu komputer yang lebih mahal. Yang kedua adalah untuk mengurangi
+
+82
+00:06:46.001 --> 00:06:52.000
+waktu yang diperlukan untuk simulasi fisik. Untuk membuat kemajuan menggunakan
+
+83
+00:06:52.000 --> 00:06:55.001
+Simulasi fisika Anda harus mendapatkan jawaban Anda kembali cukup cepat untuk Anda
+
+84
+00:06:55.001 --> 00:06:59.000
+Jangan lupa apa masalahnya. Apa yang akan menjadi masalah fisik tipikal yang
+
+85
+00:06:59.000 --> 00:07:03.001
+Anda bisa menyelesaikan? Ada banyak masalah yang bisa Anda selesaikan. Ada cuaca
+
+86
+00:07:03.001 --> 00:07:09.000
+Simulasi yang Ada simulasi dari deformasi logam. Ada yang A
+
+87
+00:07:09.000 --> 00:07:12.001
+dan variasi. Mari kita ambil simulasi cuaca misalnya. Apa yang bersifat paralel
+
+88
+00:07:12.001 --> 00:07:16.001
+Dan sesuatu seperti itu? Dalam simulasi cuaca, Anda membagi ruang,
+
+89
+00:07:17.000 --> 00:07:21.000
+ruang fisik yang Anda simulasikan ke dalam sejumlah besar zon. Dan yang
+
+90
+00:07:21.000 --> 00:07:26.000
+Update karakteristik fisik dari masing-masing zona dapat berlanjut dalam subjek paralel
+
+91
+00:07:26.000 --> 00:07:30.000
+Untuk informasi dari tetangga. Anda dapat menghitung masing-masing area ini.
+
+92
+00:07:30.000 --> 00:07:33.001
+secara terpisah dan berturut-turut tetapi dengan cara ini menggunakan paralelisme Anda hanya dapat melakukan
+
+93
+00:07:33.001 --> 00:07:36.001
+mereka semua bersama. Eugene apa faktor kecepatan yang kita bicarakan di
+
+94
+00:07:36.001 --> 00:07:39.000
+menyelesaikan melakukan simulasi cuaca dengan cray atau
+
+95
+00:07:39.000 --> 00:07:41.000
+Apa yang dilakukan dengan pendekatan paralel?
+
+96
+00:07:41.001 --> 00:07:47.001
+Baik faktor kecepatan yang Anda dapatkan ketika Anda menggunakan pemrosesan paralel untuk menerapkan,
+
+97
+00:07:48.000 --> 00:07:51.000
+Ketika Anda menggunakan pemrosesan paralel untuk menyelesaikan masalah, sangat banyak yang dipertanyakan.
+
+98
+00:07:51.000 --> 00:07:56.000
+pada dasarnya karena Anda mungkin melihat sejumlah besar paralelisme dalam cuaca
+
+99
+00:07:56.000 --> 00:07:59.000
+simulasi, ribuan atau jutaan poin yang dapat diperbarui di
+
+100
+00:07:59.000 --> 00:08:04.000
+secara paralel, tetapi biaya mengatur komputasi cenderung mengganggu dengan
+
+101
+00:08:04.000 --> 00:08:09.001
+Menggunakan banyak prosesor paralel pada masalah ini. Jadi ada beberapa
+
+102
+00:08:09.001 --> 00:08:14.000
+rangkaian paralelisme yang harus Anda gunakan untuk menggunakan prosesor
+
+103
+00:08:14.000 --> 00:08:18.001
+dengan efisien Howard jika kita melihat masalah mengatakan simulasi biologi
+
+104
+00:08:18.001 --> 00:08:21.001
+Jadi, apakah kita akan melihat pemprosesan paralel yang diterapkan pada sebenarnya buatan
+
+105
+00:08:21.001 --> 00:08:26.001
+Misalnya dengan kecerdasan? Saya pikir kita sudah mulai melihatnya. Contohnya
+
+106
+00:08:26.001 --> 00:08:32.000
+yang saya berikan dari visi biologi tentu saja sangat mirip dengan contoh-contoh
+
+107
+00:08:32.000 --> 00:08:35.001
+penglihatan mesin, tetapi Anda harus menyadari bahwa jumlah sumber daya komputer
+
+108
+00:08:35.001 --> 00:08:40.000
+yang diperlukan jauh lebih besar dari mana-mana mesin serial dapat menyediakan hari ini. Di dalam
+
+109
+00:08:40.000 --> 00:08:46.000
+Contoh biologis dari mata manusia ada lebih dari 2500 megabyte per detik
+
+110
+00:08:46.000 --> 00:08:51.000
+Data yang jatuh pada mata. Tidak ada mesin yang tersedia hari ini mampu mengatasi ini.
+
+111
+00:08:51.001 --> 00:08:54.001
+Eugene ketika Anda berada di Caltech Anda bekerja pada satu versi dari sebuah paralel
+
+112
+00:08:54.001 --> 00:08:57.001
+Mesin pemrosesan disebut Hypercube. Sekarang beritahu kami apa pendekatan Hypercube
+
+113
+00:08:57.001 --> 00:09:02.000
+adalah . Nah, pendekatan Hypercube adalah pesan yang melewati arsitektur di mana Anda
+
+114
+00:09:02.000 --> 00:09:07.000
+menggunakan banyak CPU yang terhubung satu sama lain dan secara efektif mengirim komputer
+
+115
+00:09:07.000 --> 00:09:11.000
+mengirimkan surat kepada satu sama lain untuk menyelesaikan pekerjaan. Data dari algoritma tersebut memiliki
+
+116
+00:09:11.000 --> 00:09:14.000
+untuk didistribusikan di antara semua CPU oleh programmer.
+
+117
+00:09:15.000 --> 00:09:20.000
+Nah, dan kamu berbicara tentang biologi. Betapa baiknya otak sebagai analog untuk dilihat
+
+118
+00:09:20.000 --> 00:09:25.001
+Sebagai contoh biologi bagaimana mengembangkan mesin paralel? Itu adalah yang sangat
+
+119
+00:09:25.001 --> 00:09:30.000
+Pertanyaan yang rumit. Tidak banyak yang kita ketahui tentang cara otak bekerja. Beberapa
+
+120
+00:09:30.000 --> 00:09:33.000
+Orang-orang berpikir bahwa mungkin ada sebanyak 10 hingga 12 neuron.
+
+121
+00:09:33.001 --> 00:09:36.000
+Itu adalah angka yang sangat besar. Elektronik tidak
+
+122
+00:09:36.000 --> 00:09:37.001
+Kami akan membangun mesin yang kompleks.
+
+123
+00:09:37.001 --> 00:09:42.000
+Di sisi lain, mereka adalah unit yang sangat lambat. Mereka sangat tidak dapat dipercaya. Di sana
+
+124
+00:09:42.000 --> 00:09:46.000
+Harus ada banyak redundansi. Pertanyaan yang paling mendasar adalah bagaimana
+
+125
+00:09:46.000 --> 00:09:50.000
+struktur program, algoritma, tampaknya bagi saya tempat yang paling
+
+126
+00:09:50.000 --> 00:09:54.001
+akan dilakukan kemajuan dan saya pikir harus ada prinsip-prinsip umum yang
+
+127
+00:09:54.001 --> 00:09:58.000
+Informasi elektronik dan biologis. Wahai teman-teman, kami akan terus
+
+128
+00:09:58.000 --> 00:10:00.000
+sekejap saja. Pertama-tama, mari kita lihat sebuah
+
+129
+00:10:00.000 --> 00:10:02.000
+Komputer pemrosesan paralel yang sebenarnya.
+
+130
+00:10:02.000 --> 00:10:05.000
+Kita akan melihat Alexi dan Wendy Woods memiliki cerita itu dari San Jose.
+
+131
+00:10:07.001 --> 00:10:12.001
+Semua komputer akan menjadi prosesor paralel sampai tahun 2000. Itu adalah prediksi
+
+132
+00:10:12.001 --> 00:10:18.000
+Presiden Alexi yang perusahaan membuat Alexi 6400. Mampu beroperasi sampai
+
+133
+00:10:18.000 --> 00:10:24.001
+12 CPU bersamaan, 6400 bersinar cepat, memproses pada bagian dari
+
+134
+00:10:24.001 --> 00:10:29.001
+kecepatan komputer serial konvensional, itulah sebabnya ia sudah dijual untuk
+
+135
+00:10:29.001 --> 00:10:35.001
+60 pelanggan utama. Sebagai contoh, General Motors menggunakan pemrosesan paralel untuk
+
+136
+00:10:35.001 --> 00:10:39.001
+desain tubuh mobil dan untuk merancang bagian-bagian mereka untuk kendaraan dan melakukan struktural
+
+137
+00:10:39.001 --> 00:10:44.000
+analisis terhadap kendaraan tersebut. Industri semikonduktor menggunakan pemrosesan paralel
+
+138
+00:10:44.000 --> 00:10:49.001
+Untuk membuat chip untuk komputer baru. Mereka dapat mendapatkan perhitungan yang sama untuk kemungkinan
+
+139
+00:10:49.001 --> 00:10:53.001
+Satu perempat dari harga yang mereka dapat menggunakan satu prosesor. Prosesor Paralel
+
+140
+00:10:53.001 --> 00:10:59.001
+Jangan datang murah. Puncak garis 6400 biaya hampir tiga juta dolar,
+
+141
+00:10:59.001 --> 00:11:05.000
+Tapi Alexi melihat teknologi ini turun dalam harga dan ukuran sebagai industri
+
+142
+00:11:05.000 --> 00:11:09.000
+menyadari potensi mereka. Komputer pribadi yang digunakan dalam bisnis hari ini akan
+
+143
+00:11:09.000 --> 00:11:12.000
+menjadi komputer pribadi paralel dalam 10-15 tahun
+
+144
+00:11:12.000 --> 00:11:14.000
+waktu yang Ini adalah langkah alami yang harus diambil.
+
+145
+00:11:15.000 --> 00:11:20.000
+Setelah Anda mengakui bahwa kami berjalan keluar dari kinerja dalam proses serial, maka
+
+146
+00:11:20.000 --> 00:11:24.001
+Perkembangan akan dilakukan dalam proses paralel. Alexi Menjual 22 Juta
+
+147
+00:11:24.001 --> 00:11:29.000
+Dolar untuk hardware tahun lalu. Tidak buruk bagi perusahaan yang memimpin perusahaan baru
+
+148
+00:11:29.000 --> 00:11:33.001
+dan teknologi. Dan tahun ini, perusahaan tidak hanya mengharapkan untuk pecah bahkan, tetapi juga untuk
+
+149
+00:11:33.001 --> 00:11:38.000
+membuat keuntungan atas investasi awalnya, setelah itu langit tampaknya menjadi
+
+150
+00:11:38.000 --> 00:11:41.000
+dengan batas. Untuk Computer Chronicles, saya Wendy Woods.
+
+151
+00:11:53.001 --> 00:11:57.000
+Yang menyertai kami sekarang di studio adalah David Rogers, Wakil Presiden untuk Teknik
+
+152
+00:11:57.000 --> 00:12:01.000
+Sistem Komputer Sequin di Portland, Oregon. Kembali lagi dengan kami,
+
+153
+00:12:01.000 --> 00:12:02.001
+Dr yang Howard Resnickoff dari MIT.
+
+154
+00:12:03.000 --> 00:12:06.000
+Dan jika Anda mendengar gelombang besar di latar belakang, itu adalah komputer David Sequin
+
+155
+00:12:06.000 --> 00:12:09.001
+di sana, yang akan kita capai dalam sekejap saja. dengan Gary? Howard, pada
+
+156
+00:12:09.001 --> 00:12:13.001
+Pada awalnya kami memiliki 10 kereta yang bertabrakan di stasiun kereta api. Berikut adalah contoh dari
+
+157
+00:12:13.001 --> 00:12:17.000
+dan paralelisme. Seberapa baik itu benar-benar model paralelisme? Ya, Gary, seperti Anda
+
+158
+00:12:17.000 --> 00:12:22.000
+kata, itu model yang baik, tapi itu tidak sempurna. Misalnya, untuk database
+
+159
+00:12:22.000 --> 00:12:26.001
+mencari di mana seseorang mencari beberapa string tertentu, yang bekerja dengan baik. Tetapi untuk
+
+160
+00:12:26.001 --> 00:12:30.000
+masalah jenis yang Eugene menyebutkan, prosesor harus
+
+161
+00:12:30.000 --> 00:12:33.001
+Berkomunikasi sedikit saja. Dan dalam hal ini, topologi jaringan menjadi
+
+162
+00:12:33.001 --> 00:12:36.001
+yang penting. dengan benar. Okay, David, ada beberapa hal yang luar biasa yang terjadi di
+
+163
+00:12:36.001 --> 00:12:39.001
+layar di komputer Anda sekarang. Beritahu saya tentang demonstrasi ini Anda akan
+
+164
+00:12:39.001 --> 00:12:44.001
+Tunjukkan kami di Sequin. Hari ini saya membawa contoh dari sebuah komputasi yang
+
+165
+00:12:44.001 --> 00:12:48.001
+dapat dibagi menjadi segmen paralel. Penghitungan
+
+166
+00:12:48.001 --> 00:12:50.000
+Ia dikenal sebagai Mandelbrot set.
+
+167
+00:12:50.001 --> 00:12:55.001
+Ini adalah set angka dalam pesawat kompleks. Dan ini adalah contoh yang baik dari masalah
+
+168
+00:12:55.001 --> 00:13:00.000
+yang cocok untuk pemrosesan paralel karena dapat dibagi dan berjalan
+
+169
+00:13:00.000 --> 00:13:01.001
+pada beberapa komputer secara bersamaan.
+
+170
+00:13:02.001 --> 00:13:07.001
+Komputer akan, pada kenyataannya, membagi, seperti yang ditunjukkan di sini pada layar,
+
+171
+00:13:07.001 --> 00:13:12.000
+masalah dalam banyak segmen kecil. Sistem yang saya bawa hari ini memiliki
+
+172
+00:13:12.000 --> 00:13:15.001
+Jumlahnya 12 komputer. Dan dengan demikian segmen akan diproses 12 di a
+
+173
+00:13:15.001 --> 00:13:17.000
+Waktu sampai hasilnya selesai.
+
+174
+00:13:17.001 --> 00:13:19.001
+Okay, jadi seperti yang saya faham, kami akan melihat dan menyelesaikan masalah ini dengan
+
+175
+00:13:19.001 --> 00:13:23.001
+satu prosesor, kemudian dua, dan kemudian 12 sekaligus. Itu adalah benar. Di sini Anda melihat
+
+176
+00:13:23.001 --> 00:13:27.001
+satu prosesor yang menghasilkan segmen gambar yang akan mengisi seluruh
+
+177
+00:13:27.001 --> 00:13:34.001
+dengan rektangle. Kemudian pada saat tertentu, kita akan menambahkan penampilan rektangle kedua adalah
+
+178
+00:13:34.001 --> 00:13:39.000
+yang dua kali. Dan akhirnya, kami akan menambahkan semua 12 prosesor, dan Anda akan melihat
+
+179
+00:13:39.000 --> 00:13:42.001
+bahwa rektangle sedang naik. Nah, saat ini, kita sedang melihat sebuah
+
+180
+00:13:42.001 --> 00:13:46.000
+Visualisasi sebenarnya dari kecepatan di mana satu prosesor sedang menyelesaikan masalah ini.
+
+181
+00:13:46.001 --> 00:13:48.001
+Ini sebenarnya adalah yang kedua. dengan benar. Sekarang kita sudah sampai dua. Kami adalah
+
+182
+00:13:48.001 --> 00:13:50.000
+Sekarang sampai dua prosesor sekaligus.
+
+183
+00:13:51.000 --> 00:13:54.000
+Dan sekarang semua 12 akan bekerja. Dan sekarang semua 12 sedang berlari. Dan kamu melihat bahwa
+
+184
+00:13:54.000 --> 00:13:58.001
+tingkat eksekusi telah naik secara linear, yang merupakan salah satu keuntungan dari
+
+185
+00:13:58.001 --> 00:14:03.000
+pemprosesan paralel Secara umum, seseorang ingin mencapai salah satu dari dua hasil dengan
+
+186
+00:14:03.000 --> 00:14:07.001
+pemrosesan paralel, atau pengurangan dalam waktu berjalan untuk mendapatkan hasil lebih banyak
+
+187
+00:14:07.001 --> 00:14:13.001
+cepat, atau penambahbaikan dalam proses. Satu diukur dalam hasil per unit
+
+188
+00:14:13.001 --> 00:14:17.000
+waktu, dan yang lain diukur dalam waktu untuk mencapai satu hasil.
+
+189
+00:14:17.001 --> 00:14:21.000
+David, kami berbicara tentang hypercube sebagai satu arsitektur beberapa menit yang lalu. dan
+
+190
+00:14:21.000 --> 00:14:24.000
+Apa arsitektur yang Anda miliki? Berikanlah sedikit
+
+191
+00:14:24.000 --> 00:14:26.000
+menjelaskan apa yang dilakukan arsitektur tersebut.
+
+192
+00:14:26.000 --> 00:14:32.000
+Ya ya. Hypercube adalah contoh mesin koneksi, jaringan komputer.
+
+193
+00:14:33.000 --> 00:14:38.001
+Berbicara satu sama lain, tidak berbagi kenangan yang sama. Mesin yang saya bawa
+
+194
+00:14:38.001 --> 00:14:43.000
+Dengan saya, Balance8000, adalah contoh multiprocessor yang terhubung rapat. Semua
+
+195
+00:14:43.000 --> 00:14:47.001
+prosesor berbagi akses ke data yang sama pada setiap saat dalam waktu. Salah satu
+
+196
+00:14:47.001 --> 00:14:52.000
+akan menggunakan mesin koneksi untuk masalah di mana tingkat komunikasi antara
+
+197
+00:14:52.000 --> 00:14:57.000
+prosesor lebih rendah, dan distribusi data lebih tinggi. dan
+
+198
+00:14:57.000 --> 00:15:01.001
+sebaliknya, dengan mesin yang terhubung rapat, satu bekerja pada masalah di mana
+
+199
+00:15:01.001 --> 00:15:05.001
+Komunikasi lebih sering dan volume data lebih besar.
+
+200
+00:15:06.001 --> 00:15:10.000
+Jika kita menerapkan ini, mari kita katakan, industri komputer pribadi dalam beberapa tahap, adalah
+
+201
+00:15:10.000 --> 00:15:12.001
+Ada permohonan, katakanlah, dari
+
+202
+00:15:12.001 --> 00:15:14.001
+Paralelisme dalam komputer pribadi Anda bisa berpikir tentang?
+
+203
+00:15:15.000 --> 00:15:21.000
+PCRT yang baru-baru ini diumumkan sebenarnya memungkinkan pengkomputeran paralel. Risiko yang
+
+204
+00:15:21.000 --> 00:15:25.001
+teknologi mesin dapat melakukan teknik dan komputasi ilmiah, dan
+
+205
+00:15:25.001 --> 00:15:31.001
+PC-kompatibel mesin dapat melakukan lebih banyak aplikasi berorientasi komersial seperti
+
+206
+00:15:31.001 --> 00:15:35.001
+dengan spreadsheet. Bagaimana dengan aplikasi, mari kita katakan, dalam grafik? Baiklah, seperti Anda
+
+207
+00:15:35.001 --> 00:15:40.001
+Mungkin Anda tahu, banyak komputer yang kita pikirkan sebagai komputer tunggal hari ini sebenarnya
+
+208
+00:15:40.001 --> 00:15:44.001
+terdiri dari beberapa mikroprosesor, masing-masing didedikasikan untuk fungsi tertentu. Itu yang
+
+209
+00:15:44.001 --> 00:15:50.000
+Jenis distribusi fungsional telah digunakan untuk waktu yang lama. Howard, kami
+
+210
+00:15:50.000 --> 00:15:53.001
+Saya baru saja melihat 12 prosesor di tempat kerja dan mesin pengejar David. Sekarang, kamu telah
+
+211
+00:15:53.001 --> 00:15:56.001
+terkadang terlibat dengan mesin pemikiran, dan mereka memiliki pendekatan yang besar,
+
+212
+00:15:56.001 --> 00:16:00.000
+Bukankah mereka? Beritahu kami tentang itu. Ya, mesin koneksi mesin pemikiran
+
+213
+00:16:00.000 --> 00:16:06.001
+memiliki 64.000 prosesor, masing-masing yang relatif sederhana, namun, dan
+
+214
+00:16:06.001 --> 00:16:11.001
+Sekali lagi, jaringan interkoneksi hypercube. Dan untuk sebuah mesin seperti itu, yang
+
+215
+00:16:11.001 --> 00:16:17.001
+beroperasi dalam mode kontrol SIMD, yang berarti ada konduktor orkestra
+
+216
+00:16:17.001 --> 00:16:23.000
+memberikan instruksi yang sama kepada semua prosesor, masalah grafik, masalah
+
+217
+00:16:23.000 --> 00:16:27.000
+yang berkaitan dengan pemrosesan gambar, dan berbagai orang lain juga, dapat
+
+218
+00:16:27.000 --> 00:16:30.000
+diperlakukan dengan cara yang serupa dengan apa yang Anda lihat di sini, tetapi pada banyak lagi
+
+219
+00:16:30.000 --> 00:16:34.000
+dengan skala besar. David, apa aplikasi di mana mesin pengikut Anda adalah
+
+220
+00:16:34.000 --> 00:16:40.001
+untuk digunakan? Kami tergolong dalam beberapa kategori, beberapa yang berorientasi pada waktu kerja dan
+
+221
+00:16:40.001 --> 00:16:44.001
+Beberapa yang berorientasi. Orang-orang yang berorientasi waktu, seperti yang
+
+222
+00:16:44.001 --> 00:16:48.000
+contoh yang saya bawa dengan saya, aplikasi grafis, simulasi fisik
+
+223
+00:16:48.000 --> 00:16:54.000
+sistem, seperti yang dikatakan Eugene Brooks. Orang-orang yang berorientasi melalui jalur cenderung menjadi
+
+224
+00:16:54.000 --> 00:16:58.000
+Berorientasi pada transaksi. Hal-hal di mana banyak orang ingin
+
+225
+00:16:58.000 --> 00:17:02.000
+akses ke database yang sama. Wahai teman-teman, terima kasih banyak sekali. Itu adalah satu
+
+226
+00:17:02.000 --> 00:17:05.001
+demonstrasi yang mengesankan. Sekarang, salah satu pusat penelitian terkemuka di negara ini
+
+227
+00:17:05.001 --> 00:17:09.001
+Untuk pemrosesan paralel adalah Carnegie Mellon University di Pittsburgh. Hanya di A
+
+228
+00:17:09.001 --> 00:17:12.000
+Saat ini, kami akan pergi ke CMU dan melihat Warp.
+
+229
+00:17:12.000 --> 00:17:13.001
+Proyek, jadi tinggal bersama kami.
+
+230
+00:17:21.001 --> 00:17:26.000
+Ketika Kapten Kirk memberitahu Scotty untuk menetapkan mesin pada kecepatan warp, Anda tahu apa yang dia lakukan.
+
+231
+00:17:26.000 --> 00:17:30.000
+berarti . Dia ingin perusahaan berjalan dengan cepat. Jadi, ketika ilmuwan komputer di sini
+
+232
+00:17:30.000 --> 00:17:34.000
+Carnegie Mellon University memulai Warp Project, Anda tahu apa yang mereka miliki di
+
+233
+00:17:34.000 --> 00:17:38.000
+pikiran, mereka ingin komputer yang akan berjalan cepat, dan itu berarti paralel
+
+234
+00:17:38.000 --> 00:17:43.000
+pemrosesan . Para ilmuwan komputer di sini di CMU mencoba membangun paralel
+
+235
+00:17:43.000 --> 00:17:46.001
+mesin yang dapat memberikan daya komputer yang diperlukan untuk pemrosesan visi,
+
+236
+00:17:47.000 --> 00:17:51.001
+yang penting untuk masa depan robot. Karena pemrosesan penglihatan mudah dibagi
+
+237
+00:17:51.001 --> 00:17:56.000
+sampai ke pengiraan terpisah, tampaknya ideal untuk pemrosesan paralel dan
+
+238
+00:17:56.000 --> 00:18:00.001
+Pendekatan memori lokal dari mesin warp. Pemrosesan penglihatan membutuhkan
+
+239
+00:18:00.001 --> 00:18:04.001
+kecepatan yang luar biasa hanya untuk melakukan penapisan yang diperlukan untuk menghapus gambar yang salah
+
+240
+00:18:04.001 --> 00:18:09.001
+seperti bayang-bayang atau kotoran. Prosesor penglihatan harus melakukan 20 pengiraan per
+
+241
+00:18:09.001 --> 00:18:14.001
+Pixel per detik. Dengan matriks tipikal dari seperempat juta piksel, yang berarti
+
+242
+00:18:14.001 --> 00:18:19.000
+5 juta pengiraan per detik, jauh melampaui kecepatan sekuel hari ini
+
+243
+00:18:19.000 --> 00:18:24.001
+dengan komputer. Dr yang H dan T. Kung mengetuai proyek komputer arsitektur paralel CMU,
+
+244
+00:18:24.001 --> 00:18:29.001
+Dan dia mengatakan membangun mesin adalah bagian yang mudah. Hal yang sulit biasanya
+
+245
+00:18:29.001 --> 00:18:35.001
+dalam proses paralel, itu adalah bahwa setelah hardware dibangun, kita tidak tahu bagaimana untuk
+
+246
+00:18:35.001 --> 00:18:41.001
+Menggunakannya Itulah masalah yang tetap. Kami ingin memastikan bahwa setiap bagian dari
+
+247
+00:18:41.001 --> 00:18:46.001
+Hardware yang kita buat, kita punya cara untuk menggunakannya. Dengan demikian Dr. Pendekatan Kung adalah untuk membangun sebuah
+
+248
+00:18:46.001 --> 00:18:52.000
+Mesin paralel dengan arsitektur yang sangat sederhana. Kita ingin orang bisa
+
+249
+00:18:52.000 --> 00:18:59.000
+menggunakan mesin warp dengan cara yang dapat diprogram sehingga mereka dapat mengubah
+
+250
+00:18:59.000 --> 00:19:04.001
+algoritma, mereka dapat mengubah model pengkomputeran mereka kapan saja dan kita harus
+
+251
+00:19:04.001 --> 00:19:06.001
+mampu mendukungnya.
+
+252
+00:19:06.001 --> 00:19:12.001
+Baiklah, jadi apa yang kita miliki adalah jenis mesin yang sangat sederhana di tingkat perangkat keras, tetapi kita
+
+253
+00:19:12.001 --> 00:19:17.000
+membuat banyak perangkat lunak di atasnya. Untuk menjadi berguna dalam pemrosesan visi,
+
+254
+00:19:17.000 --> 00:19:21.001
+mesin warp tidak hanya perlu mengenali apa yang dilihatnya, ia harus terlebih dahulu menerjemahkan
+
+255
+00:19:21.001 --> 00:19:26.001
+gambar yang terganggu dari lensa ke proporsi aspek linear normal, dan
+
+256
+00:19:26.001 --> 00:19:30.001
+pengkomputeran membutuhkan kecepatan yang luar biasa, karena gambar terus berubah sebagai
+
+257
+00:19:30.001 --> 00:19:35.001
+Komputer memindai lingkungan. Metode biasa untuk mencapai kecepatan komputer
+
+258
+00:19:35.001 --> 00:19:39.001
+adalah pendekatan superkomputer yang digunakan oleh Cray, tetapi Dr. Qing mengatakan Paralel
+
+259
+00:19:39.001 --> 00:19:46.001
+Pendekatan yang lebih tinggi. Ini akan menjadi perbedaan dasar antara melakukan
+
+260
+00:19:46.001 --> 00:19:53.001
+hal-hal yang sangat cepat tetapi Anda tahu, sangat jenis hardware fisik yang besar
+
+261
+00:19:53.001 --> 00:19:58.000
+dan melakukan hal-hal dengan sangat cepat pada potongan kecil perangkat keras. Jika Anda bisa
+
+262
+00:19:58.000 --> 00:20:02.000
+melakukan hal-hal dengan cepat pada potongan kecil perangkat keras, Anda akan dapat menemukan banyak
+
+263
+00:20:02.000 --> 00:20:07.001
+Penggunaan baru dari itu. Anda akan dapat membawa pemrosesan Anda ke tempat di mana
+
+264
+00:20:07.001 --> 00:20:12.000
+yang dibutuhkan. Salah satu langkah besar berikutnya untuk proyek warp akan menjadi penggunaan sangat
+
+265
+00:20:12.000 --> 00:20:16.001
+integrasi skala besar, yang akan mengurangi ukuran papan pemrosesan ini untuk
+
+266
+00:20:16.001 --> 00:20:20.001
+hanya dua inci dengan empat inci. Dengan tingkat integrasi ini, Dr. Kung mengatakan
+
+267
+00:20:20.001 --> 00:20:25.000
+Ini hanya masalah waktu sebelum Anda menemukan pemrosesan paralel di
+
+268
+00:20:25.000 --> 00:20:32.000
+dengan microcomputer. Anda mungkin akan memiliki prosesor penglihatan yang sangat kuat yang terikat
+
+269
+00:20:32.000 --> 00:20:38.001
+Untuk sistem mikroprosesor Anda. Anda dapat melakukan banyak hal yang lebih menarik daripada
+
+270
+00:20:38.001 --> 00:20:44.001
+Anda bisa melakukannya sekarang karena Anda akan dapat melihat hal-hal sekarang. Ya, saya percaya itu.
+
+271
+00:20:45.000 --> 00:20:50.000
+Itulah salah satu hal besar paralelisme akan membeli kita adalah bahwa kita dapat melakukan hal-hal
+
+272
+00:20:50.000 --> 00:20:54.001
+Cepat dengan cara yang jauh lebih murah. Ya Stuart, itu aplikasi seperti gambar
+
+273
+00:20:54.001 --> 00:20:58.001
+proses yang dapat membantu membawa proses paralel ke hadapan. Gary, biarkan aku
+
+274
+00:20:58.001 --> 00:21:00.001
+Perkenalkan dua orang yang baru yang telah bergabung dengan kami di sini.
+
+275
+00:21:00.001 --> 00:21:04.000
+Pertama sekali, Craig Monday, yang merupakan wakil presiden dan co-pengasas Alliant
+
+276
+00:21:04.000 --> 00:21:08.000
+Sistem Komputer di Massachusetts dan juga dengan kami adalah Jeffrey Kanan, senior
+
+277
+00:21:08.000 --> 00:21:11.000
+Analis dengan perusahaan investasi Hambrick dan Quist di sini di San Francisco.
+
+278
+00:21:11.001 --> 00:21:14.001
+Craig, kami telah berbicara tentang hypercube dan seterusnya. Apa itu perusahaan Anda
+
+279
+00:21:14.001 --> 00:21:18.000
+Adakah pendekatan untuk pemrosesan paralel? Pendekatan kami terhadap pemrosesan paralel berbeda
+
+280
+00:21:18.000 --> 00:21:22.000
+sedikit dari yang sekunder atau hypercube di mana kita ingin menghasilkan
+
+281
+00:21:22.000 --> 00:21:25.001
+berbagai produk yang akan digunakan dalam teknik komputasi sekitar dari
+
+282
+00:21:25.001 --> 00:21:28.000
+Harga dari $100.000 hingga $1 juta.
+
+283
+00:21:28.001 --> 00:21:32.001
+Dan yang lebih penting, tujuan kami adalah untuk menyediakan bentuk paralel yang transparan.
+
+284
+00:21:32.001 --> 00:21:37.000
+pemrosesan di mana orang-orang dengan aplikasi yang ada biasanya dikodkan di FORTRAN
+
+285
+00:21:37.000 --> 00:21:41.001
+akan dapat mengambil mereka dari mesin prosesor Uni yang ada dan membuat mereka berjalan
+
+286
+00:21:41.001 --> 00:21:45.000
+di mesin prosesor paralel kami tanpa perlu mengembangkan ulang aplikasi.
+
+287
+00:21:45.000 --> 00:21:48.000
+Bukankah ini jenis masalah yang sulit untuk mengambil program FORTRAN, misalnya,
+
+288
+00:21:48.000 --> 00:21:52.000
+tidak benar-benar dibangun untuk mengatakan ia tidak dibangun dengan model paralel
+
+289
+00:21:52.000 --> 00:21:56.001
+Pemprosesan dari saya? Itu adalah benar. Itu agak sulit. memerlukan beberapa negara-negara
+
+290
+00:21:56.001 --> 00:22:00.000
+-Pembangunan terkini baik dalam teknologi kompiler dan mesin tingkat rendah yang sebenarnya
+
+291
+00:22:00.000 --> 00:22:05.000
+Arsitektur untuk menghasilkan mekanisme perencanaan dan sinkronisasi berbasis perangkat keras
+
+292
+00:22:05.000 --> 00:22:09.001
+yang memungkinkan granularitas pemrosesan paralel menjadi begitu kecil bahwa kita dapat
+
+293
+00:22:09.001 --> 00:22:13.000
+Sebenarnya menemukan banyak paralelisme bahkan dalam program FORTRAN. Jika Anda mengambil
+
+294
+00:22:13.000 --> 00:22:16.001
+Contoh, apa yang akan menjadi pelanggan sampel untuk mesin seperti ini?
+
+295
+00:22:17.001 --> 00:22:23.000
+Pelanggan yang telah membeli mesin dan sedang menggunakannya termasuk banyak
+
+296
+00:22:23.000 --> 00:22:28.000
+Fortune 500 jenis perusahaan yang memiliki laboratorium R &amp; D, perusahaan di telepon
+
+297
+00:22:28.000 --> 00:22:31.001
+industri, industri aerospace, dan mereka menggunakannya untuk berbagai aplikasi
+
+298
+00:22:31.001 --> 00:22:37.000
+dari pemodelan elemen finite hingga sintesis dan analisis ucapan, ray tracing
+
+299
+00:22:37.000 --> 00:22:41.000
+Misalnya masalahnya. Jeffrey, kami telah mendengar tentang pemprosesan paralel untuk waktu yang lama
+
+300
+00:22:41.000 --> 00:22:44.001
+waktu sekarang. Kami berada di titik di mana itu benar-benar produk komersial, saya maksud kami memiliki
+
+301
+00:22:44.001 --> 00:22:47.001
+pasar sekarang dan banyak orang benar-benar menjual mesin yang melakukan ini. Ya, aku
+
+302
+00:22:47.001 --> 00:22:52.001
+Pada tahun 1985-1986, kita akan melihat beberapa
+
+303
+00:22:52.001 --> 00:22:54.000
+Kesuksesan komersial di pasar ini.
+
+304
+00:22:54.001 --> 00:22:58.000
+Sudah sangat lama dalam janji dan banyak penjual mencoba
+
+305
+00:22:58.000 --> 00:22:59.001
+untuk masuk ke titik ini.
+
+306
+00:23:00.000 --> 00:23:03.000
+Craig, Gary menyebutkan pada awal persembahan, sebenarnya, bahkan pribadi
+
+307
+00:23:03.000 --> 00:23:08.000
+Komputer pada tahap tertentu memiliki beberapa paralelisme di dalamnya. Dalam hal ini tingkat dan
+
+308
+00:23:08.000 --> 00:23:11.000
+orang-orang yang menonton program kami, misalnya, apa konsekuensi untuk
+
+309
+00:23:11.000 --> 00:23:16.000
+Pengguna komputer dari teknologi pemrosesan paralel yang sedang berlangsung sekarang? I
+
+310
+00:23:16.000 --> 00:23:19.001
+Menurutnya, salah satu konsekuensi adalah bahwa teknologi
+
+311
+00:23:19.001 --> 00:23:25.000
+Terutama menjadi bimodally distributed. Masalah-masalah teknis saat ini
+
+312
+00:23:25.000 --> 00:23:30.001
+diselesaikan di mana masalah ini diformulasikan dan hampir input dan output selesai
+
+313
+00:23:30.001 --> 00:23:34.000
+dalam lingkungan komputer pribadi atau stasiun kerja. Dan melalui penggunaan
+
+314
+00:23:34.000 --> 00:23:39.000
+jaringan mesin paralel dengan kinerja yang jauh lebih tinggi digunakan dalam
+
+315
+00:23:39.000 --> 00:23:43.000
+peran server untuk memberikan pengkomputeran kinerja tinggi yang sangat ketat
+
+316
+00:23:43.000 --> 00:23:47.000
+terintegrasi ke dalam lingkungan pengguna komputer pribadi atau stasiun kerja
+
+317
+00:23:47.000 --> 00:23:49.001
+Pengguna yang Kita akan perlu mengubah cara kita berpikir tentang cara kita merencanakan
+
+318
+00:23:49.001 --> 00:23:55.000
+Menggunakan mesin secara efektif. Hal ini tergantung pada kelas mana yang
+
+319
+00:23:55.000 --> 00:23:56.001
+mesin yang akan Anda coba dan gunakan.
+
+320
+00:23:56.001 --> 00:24:00.001
+Untuk menggunakan hypercube, misalnya, saya pikir itu akan membutuhkan baik yang baru
+
+321
+00:24:00.001 --> 00:24:04.001
+bahasa pemrograman atau setidaknya teknik pemrograman baru. Seperti yang saya katakan sebelumnya,
+
+322
+00:24:04.001 --> 00:24:09.001
+Tujuan saya adalah untuk dapat mendapatkan efisiensi yang munasabah karena Anda menambahkan angka
+
+323
+00:24:09.001 --> 00:24:15.001
+dari prosesor bahkan untuk bahasa seperti Fortran yang secara tradisional hanya digunakan
+
+324
+00:24:15.001 --> 00:24:19.000
+dalam proses scalar. Jadi saya pikir keduanya akan terjadi.
+
+325
+00:24:19.001 --> 00:24:23.000
+Jeffrey, berbicara tentang kompetisi, kita telah mendengar banyak tentang pekerjaan Jepang di
+
+326
+00:24:23.000 --> 00:24:25.000
+pemprosesan paralel Bagaimanakah usaha Amerika
+
+327
+00:24:25.000 --> 00:24:27.000
+Apakah perusahaan membandingkan dengan apa yang terjadi di Jepang?
+
+328
+00:24:27.001 --> 00:24:31.000
+Nah, di pasar tertentu ini, pasar, Craig merujuk pada pengisi jurang.
+
+329
+00:24:31.001 --> 00:24:35.000
+Sebenarnya, itu adalah perusahaan-perusahaan Amerika yang memimpin. Kebanyakan orang Jepang
+
+330
+00:24:35.000 --> 00:24:39.001
+Usaha benar-benar berada di puncak di area yang saat ini diselenggarakan oleh penelitian Craig
+
+331
+00:24:39.001 --> 00:24:44.001
+dan data yang terkontrol. Sekarang, ini adalah area lain yang saya dapatkan perasaan di mana
+
+332
+00:24:44.001 --> 00:24:47.001
+Hardware agak sedikit di depan perangkat lunak dan benar-benar pekerjaan yang harus
+
+333
+00:24:47.001 --> 00:24:52.001
+Hal ini dilakukan untuk menemukan lebih banyak cara untuk menggunakan teknologi. Saya pikir yang signifikan
+
+334
+00:24:52.001 --> 00:24:56.001
+Kemajuan telah dilakukan baru-baru ini di kedua bidang, baik dalam pengembangan yang baru
+
+335
+00:24:56.001 --> 00:25:00.001
+bahasa dan juga dalam pengembangan teknologi kompilator yang lebih baik yang akan
+
+336
+00:25:00.001 --> 00:25:06.000
+membolehkan paralelisme ditemukan pada tingkat rendah dan dipaparkan ke mesin yang memiliki
+
+337
+00:25:06.000 --> 00:25:10.000
+Mereka sangat berhati-hati dirancang untuk mendukung hal itu. Selain itu, tampaknya penekanan
+
+338
+00:25:10.000 --> 00:25:15.000
+Ini benar-benar di dunia ilmiah dalam beberapa tahap. Apakah itu benar atau kita melihat bisnis
+
+339
+00:25:15.000 --> 00:25:18.001
+Adakah aplikasi yang muncul untuk pemrosesan paralel? Saya pikir akan ada bisnis
+
+340
+00:25:18.001 --> 00:25:22.001
+aplikasi secara pribadi, saya percaya, terutama di arena manajemen database.
+
+341
+00:25:22.001 --> 00:25:27.000
+Ada banyak potensi paralelisme yang harus ada di sana. Saya pikir yang
+
+342
+00:25:27.000 --> 00:25:30.001
+perusahaan, misalnya, seperti kami dan Sequin dan perusahaan startup lainnya memiliki
+
+343
+00:25:30.001 --> 00:25:34.001
+didorong ke dalam teknik berprestasi tinggi dan komputasi ilmiah
+
+344
+00:25:34.001 --> 00:25:38.000
+pasar, sebahagiannya hanya karena kondisi pasar dalam kehadiran pemain utama
+
+345
+00:25:38.000 --> 00:25:45.000
+di arena pemrosesan data dan sebahagiannya karena teknologi sangat diterapkan
+
+346
+00:25:45.000 --> 00:25:50.000
+atau lebih mudah diterapkan pada berbagai masalah teknik. Teman yang baik,
+
+347
+00:25:50.000 --> 00:25:54.001
+Kami berada di luar waktu. Kita membutuhkan televisi paralel. dan Gary. Okay, terima kasih banyak
+
+348
+00:25:54.001 --> 00:26:11.000
+untuk berada bersama kami. Saya akan kembali dalam hanya satu In the Random Access File minggu ini, U
+
+349
+00:26:11.000 --> 00:26:15.000
+dan S. dan ilmuwan Soviet telah mencapai kesepakatan percobaan pada komputer baru
+
+350
+00:26:15.000 --> 00:26:19.000
+jaringan yang akan menghubungkan Institut Sistem Automatik Soviet di Moskow dengan
+
+351
+00:26:19.000 --> 00:26:22.001
+dari New Jersey Institute of Technology. Jaringan komputer baru akan memungkinkan
+
+352
+00:26:22.001 --> 00:26:26.001
+Ilmuwan Soviet dan Amerika untuk berbagi database dan bekerja bersama pada berbagai
+
+353
+00:26:26.001 --> 00:26:31.001
+dari proyek penelitian. IBM mengatakan penurunan harga baru-baru ini dan pasar lembut untuk
+
+354
+00:26:31.001 --> 00:26:35.000
+Pengeluaran modal akan menekan pendapatan IBM untuk kuartal pertama
+
+355
+00:26:35.000 --> 00:26:39.001
+tahun 1986. Pernyataan IBM menunjukkan bahwa turnaround komputer yang lama ditunggu-tunggu adalah
+
+356
+00:26:39.001 --> 00:26:43.001
+Belum cukup di sini. Mereka masih merayakan zenithnya setelah IRS
+
+357
+00:26:43.001 --> 00:26:49.001
+Keputusan untuk membeli $ 28 juta dari Zenith Z171 lap portable dan IRS
+
+358
+00:26:49.001 --> 00:26:53.000
+Keputusan ini menyebabkan beberapa kejutan. Analis mengatakan keputusan untuk pergi dengan lima
+
+359
+00:26:53.000 --> 00:26:57.001
+dan mesin cakera seperempat inci akan membantu format yang lebih besar tetap di depan
+
+360
+00:26:57.001 --> 00:26:59.000
+tiga dan setengah inci mikroflopi.
+
+361
+00:26:59.000 --> 00:27:03.001
+Selain perjanjian perangkat keras zenith, IRS juga memilih paket perangkat lunak
+
+362
+00:27:03.001 --> 00:27:07.001
+Bersama dengan mesin. Mereka adalah poly jendela sebagai aksesori meja, a
+
+363
+00:27:07.001 --> 00:27:12.001
+Navel sebagai paket terintegrasi, dan basis kami 5000 sebagai database. Di dalam kami
+
+364
+00:27:12.001 --> 00:27:16.000
+Undang-Undang Undang-undang, Komite Hal Ehwal Pemerintah Senat telah mengumumkan
+
+365
+00:27:16.000 --> 00:27:19.000
+Laporan yang mengkritik Amerika Serikat Kebijakan keamanan komputer pemerintah.
+
+366
+00:27:19.001 --> 00:27:23.001
+Laporan mengatakan ada screening yang tidak memadai dari staf komputer dan kurangnya
+
+367
+00:27:23.001 --> 00:27:28.001
+Perancangan dalam bidang analisis risiko keamanan komputer. Sebuah laporan nasional oleh
+
+368
+00:27:28.001 --> 00:27:32.000
+National Science Board mengatakan penelitian berteknologi tinggi Amerika pada dasarnya baik
+
+369
+00:27:32.000 --> 00:27:36.001
+Bentuknya Laporan itu, meskipun memperingatkan peranan militer yang semakin meningkat dalam penelitian dan
+
+370
+00:27:36.001 --> 00:27:40.001
+Penurunan dalam peran umum pemerintah federal sebagai pembiayaan R &amp; D. dan yang
+
+371
+00:27:40.001 --> 00:27:44.000
+Laporan itu mengatakan kelemahan terbesar saat ini adalah pengajaran matematika dan ilmu di
+
+372
+00:27:44.000 --> 00:27:48.000
+tingkat sekolah menengah. Di Michigan, pengaruh otomatisasi dalam mobil
+
+373
+00:27:48.000 --> 00:27:52.000
+Industri sedang mengubah kurikulum sekolah menengah. Sebuah sekolah tinggi di Grand Rapids adalah
+
+374
+00:27:52.000 --> 00:27:56.000
+Sekarang mengajarkan empat R membaca, menulis, aritmetik, dan robotik. Timur
+
+375
+00:27:56.000 --> 00:27:59.001
+Kentwood High telah membeli enam robot industri untuk memulai program baru.
+
+376
+00:28:00.001 --> 00:28:05.000
+Akhirnya, seorang programmer di Iowa telah keluar dengan sesuatu yang disebut BABL123. Itu adalah A
+
+377
+00:28:05.000 --> 00:28:09.000
+program sintesis ucapan yang dirancang untuk berbicara dengan cara yang menenangkan dan mencintai
+
+378
+00:28:09.000 --> 00:28:14.000
+dan Hogs. Para peneliti mengatakan babi makan lebih banyak dan mendapatkan lebih cepat ketika mereka
+
+379
+00:28:14.000 --> 00:28:18.000
+bahagia, dan penelitian menunjukkan bahwa berbicara dengan lembut membuat mereka bahagia.
+
+380
+00:28:18.001 --> 00:28:22.001
+BABL123 sedang diuji bulan ini di Fairfield, Iowa. Itulah yang dimaksud dengan ini
+
+381
+00:28:22.001 --> 00:28:24.000
+Chronicles minggu ini. Kita akan berjumpa denganmu lain kali.
+
+382
+00:29:20.000 --> 00:29:22.000
+[...]
