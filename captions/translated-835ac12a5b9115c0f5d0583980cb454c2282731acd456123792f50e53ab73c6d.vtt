@@ -1,0 +1,1673 @@
+WEBVTT
+
+1
+00:00:07.001 --> 00:00:14.001
+angka, angka dan angka. Sulit untuk membayangkan hari modern perlumbaan kuda tanpa
+
+2
+00:00:14.001 --> 00:00:18.000
+semua angka dan tanpa semua komputer yang harus menghancurkan angka-angka itu.
+
+3
+00:00:18.001 --> 00:00:22.000
+Komputer yang menghitung peluang dan pembayaran. Pada kenyataannya, komputer memiliki
+
+4
+00:00:22.000 --> 00:00:25.001
+Efek pada semua jenis perjudian, bukan hanya perlumbaan kuda. Semua dari
+
+5
+00:00:25.001 --> 00:00:29.001
+mesin slot komputer di Vegas untuk database besar untuk profesional
+
+6
+00:00:29.001 --> 00:00:33.000
+Para penjudi Hari ini kita akan melihat komputer dan perjudian pada ini
+
+7
+00:00:33.000 --> 00:00:35.000
+Edisi dari Computer Chronicles
+
+8
+00:00:58.001 --> 00:01:02.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+9
+00:01:02.001 --> 00:01:06.000
+sistem komputer yang kompatibel, termasuk pemrosesan kata dengan koreksi spelling,
+
+10
+00:01:06.001 --> 00:01:12.000
+Software komunikasi dan Haze kompatibel modem 1200 dan 2400 VOD. Kepemimpinan Edge
+
+11
+00:01:12.000 --> 00:01:14.000
+Dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+12
+00:01:14.001 --> 00:01:19.000
+Leading Edge memimpin jalan menuju era informasi. Pembiayaan tambahan adalah
+
+13
+00:01:19.000 --> 00:01:23.000
+disampaikan oleh McGraw Hill, penerbit Byte. Artikel teknis terperinci Byte
+
+14
+00:01:23.000 --> 00:01:26.000
+pada perangkat keras, perangkat lunak dan bahasa baru yang mencakup perkembangan di
+
+15
+00:01:26.000 --> 00:01:28.000
+teknologi komputer di seluruh dunia.
+
+16
+00:01:34.000 --> 00:01:37.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chiffay dan
+
+17
+00:01:37.000 --> 00:01:38.001
+Minggu ini saya bersama George Morrow.
+
+18
+00:01:38.001 --> 00:01:41.001
+George tertarik di sana di jalur, jadi saya mendapatkan perlumbaan sehari-hari
+
+19
+00:01:41.001 --> 00:01:45.000
+dari sini dan komputer kecil ini. Saya memasukkan semua data di sini dari kompetisi
+
+20
+00:01:45.000 --> 00:01:48.001
+bentuk ke dalam komputer dan komputer memprediksi kuda mana yang paling mungkin
+
+21
+00:01:48.001 --> 00:01:52.000
+memenangkan perlumbaan. Kita akan lihat apakah itu bekerja. Tampaknya sedang menggunakan komputer untuk mengetahui
+
+22
+00:01:52.000 --> 00:01:55.000
+Kuda yang akan memenangkan perlumbaan adalah benar-benar hal yang sama seperti menggunakan komputer
+
+23
+00:01:55.000 --> 00:01:57.000
+Untuk mengetahui saham mana yang akan menang di Wall Street.
+
+24
+00:01:57.000 --> 00:02:01.000
+Saya pikir Anda benar Stuart. Orang-orang yang melakukan ini untuk hidup yang memberi Anda peluang
+
+25
+00:02:01.000 --> 00:02:05.001
+Kuda adalah cacat. Orang yang melakukan hal yang sama atau menasihati Anda tentang
+
+26
+00:02:05.001 --> 00:02:10.001
+dengan stok. Saya pikir mereka mengakui kekurangan saham. Jadi di sini komputer membantu
+
+27
+00:02:10.001 --> 00:02:13.000
+Anda membentuk penghakiman. Ini adalah alat analisis.
+
+28
+00:02:13.001 --> 00:02:17.001
+Ada aspek lain dari perjudian yang merupakan bagian dari kesempatan itu dan ada di
+
+29
+00:02:17.001 --> 00:02:20.001
+permainan kesempatan murni Saya pikir komputer digunakan untuk membantu Anda menghibur
+
+30
+00:02:20.001 --> 00:02:23.001
+Anda sendiri seperti Anda meletakkan uang Anda di mesin-mesin ini. George kita akan melihat keduanya.
+
+31
+00:02:23.001 --> 00:02:26.001
+Contoh-contoh yang sebenarnya ada dalam program ini. Kami akan memulai dengan melakukan perjalanan
+
+32
+00:02:26.001 --> 00:02:30.001
+ke Reno, Nevada untuk melihat bagaimana komputer telah berevolusi bisnis kasino.
+
+33
+00:02:33.000 --> 00:02:38.001
+Kasino besar dengan paparan neon ekstravagant. Kartu-kartu dan chips pada
+
+34
+00:02:38.001 --> 00:02:44.001
+hijau merasakan meja dan mesin slot yang melengkung. Inilah simbol-simbol tradisional
+
+35
+00:02:44.001 --> 00:02:50.000
+dari perjudian tetapi di Amerika kasino modal poker chip semakin berbagi
+
+36
+00:02:50.000 --> 00:02:55.000
+Lantai dengan microchips terutama di mesin slot. Ya, mesin poker
+
+37
+00:02:55.000 --> 00:03:00.000
+adalah contoh utama dari apa yang untuk semua niat dan tujuan bahkan tidak ada
+
+38
+00:03:00.000 --> 00:03:05.001
+Sepuluh tahun yang lalu dan ia adalah sekitar 34 hingga 36 persen dari pasar Nevada hari ini.
+
+39
+00:03:06.001 --> 00:03:11.001
+Di International Gaming Technology Corporation di Reno, mesin slot Nevada
+
+40
+00:03:11.001 --> 00:03:16.000
+Tidak banyak yang berhubungan dengan nenek moyang mekanik mereka. Slot ini adalah
+
+41
+00:03:16.000 --> 00:03:21.001
+PC yang canggih dikendalikan oleh mikroprosesor Intel dan mereka memiliki spesifikasi khusus
+
+42
+00:03:21.001 --> 00:03:28.000
+Graphics dan sound chips. Mereka bahkan dirancang oleh komputer. Menempatkan koin di
+
+43
+00:03:28.000 --> 00:03:32.000
+Slot ini hampir seperti bangkit. Pada dasarnya, ketika Anda meletakkan uang Anda di
+
+44
+00:03:32.000 --> 00:03:37.000
+mesin dan mari kita ambil contoh mesin slot dan Anda menarik handuk di
+
+45
+00:03:37.000 --> 00:03:42.001
+Pada titik waktu itu, mikrokomputer diprogram untuk memilih nomor rahasia.
+
+46
+00:03:42.001 --> 00:03:48.000
+sebenarnya komputer random number menggunakan 32-bit random number generator. akan
+
+47
+00:03:48.000 --> 00:03:54.000
+Kemudian ambil angka 32-bit itu dan pada dasarnya akan dibagi menjadi angka.
+
+48
+00:03:54.000 --> 00:03:59.000
+yang berada dalam jangkauan dari jumlah simbol pada strip yang sebenarnya dalam
+
+49
+00:03:59.000 --> 00:04:02.001
+mesin dan itu akan menentukan apa hasil permainan akan menjadi.
+
+50
+00:04:02.001 --> 00:04:08.000
+Karena hasil permainan ditentukan secara elektronik, gulungan berputar adalah
+
+51
+00:04:08.000 --> 00:04:12.001
+yang dimasukkan hanya untuk mempertahankan penampilan eksternal tradisional permainan
+
+52
+00:04:12.001 --> 00:04:17.000
+Aspek penting bagi operator kasino. Dalam beberapa kasus, elektronik
+
+53
+00:04:17.000 --> 00:04:24.000
+menakut-nakuti mereka untuk menjadi spesifik jika kita memiliki mesin nyata simulasi
+
+54
+00:04:24.000 --> 00:04:29.000
+pada perangkat video dan kami memiliki semua jenis animasi dan saya pikir Anda mungkin memiliki
+
+55
+00:04:29.000 --> 00:04:34.000
+melihat beberapa contoh dari itu yang tidak semestinya berputar pada pemain slot itu
+
+56
+00:04:34.000 --> 00:04:40.001
+hanya terlalu banyak dari layar komputer adalah kesan kita sementara dalam permainan poker
+
+57
+00:04:40.001 --> 00:04:47.001
+Ini adalah teknologi yang sama yang terlibat tetapi mereka suka itu. tersembunyi
+
+58
+00:04:47.001 --> 00:04:52.001
+Dalam interaksi yang ramah ada tingkat keamanan elektronik yang tinggi seperti:
+
+59
+00:04:52.001 --> 00:04:57.000
+pembaca optik yang dapat mengatakan apakah koin sedang ditarik ke dalam atau ditarik keluar dari
+
+60
+00:04:57.000 --> 00:05:02.000
+slot dan sensor yang mengidentifikasi jika pintu terbuka atau jika seseorang telah terjebak dengan
+
+61
+00:05:02.000 --> 00:05:07.000
+dan reels. mesin slot terikat ke dalam jaringan area lokal yang memindahkan semua
+
+62
+00:05:07.000 --> 00:05:12.000
+ketidaksesuaian dengan ruang komputer pusat yang menentukan jenis kesalahan dan
+
+63
+00:05:12.000 --> 00:05:18.000
+dan nomor mesin. Di Harris Casino di Reno, sebuah permainan yang disebut Megabucks menggunakan
+
+64
+00:05:18.000 --> 00:05:22.001
+terbaru dalam fiber optik dan bahkan transmisi satelit untuk menghubungkan ratusan
+
+65
+00:05:22.001 --> 00:05:28.000
+mesin bersama-sama ke komputer jackpot pusat karena setiap koin menurunkan jumlah
+
+66
+00:05:28.000 --> 00:05:33.000
+taruhan dipindahkan melalui kabel fiber optik ke pusat komputer kasino.
+
+67
+00:05:33.000 --> 00:05:38.001
+mainframe menghitung kembali dan mentransmisikan jackpot baru ke layar LED di
+
+68
+00:05:38.001 --> 00:05:44.000
+kasino lantai sistem yang sama beroperasi antara kasino di sekitar negeri di atas
+
+69
+00:05:44.000 --> 00:05:49.000
+Hubungan satelit Kino adalah permainan lain yang telah secara radikal diubah oleh komputer
+
+70
+00:05:49.000 --> 00:05:54.001
+pemrosesan sementara tiket kertas masih ditulis oleh pemain semua data entri
+
+71
+00:05:54.001 --> 00:05:59.001
+Pembacaan nomor dan tabulasi taruhan dilakukan oleh komputer yang dapat memproses
+
+72
+00:05:59.001 --> 00:06:06.000
+Hasil pertandingan dalam waktu sekitar 22 detik. Mesin Harris dilengkapi dengan lebih banyak
+
+73
+00:06:06.000 --> 00:06:10.001
+lebih dari slot koin generasi baru dari satu bandit bersenjata adalah lebih seperti
+
+74
+00:06:10.001 --> 00:06:15.001
+mesin penghitungan otomatis di bank dengan beberapa perbedaan penting yang tidak dapat Anda lakukan
+
+75
+00:06:15.001 --> 00:06:21.000
+pengeluaran atau deposit tetapi kasino akan mengeluarkan kartu identitas pribadi
+
+76
+00:06:21.000 --> 00:06:23.000
+untuk setiap pelanggan yang tertarik.
+
+77
+00:06:35.001 --> 00:06:39.000
+Yang menyertai kami di studio sekarang adalah Robin Kabi. Presiden Robin dari Computer Sports
+
+78
+00:06:39.000 --> 00:06:43.001
+Dunia dan di samping Robin adalah Roxy Roxborough. Roxy adalah pembuat peluang dari Las Vegas
+
+79
+00:06:43.001 --> 00:06:47.000
+Dan secara umum dianggap sebagai pembuat peluang teratas di negara ini. dan George. dan Robin,
+
+80
+00:06:48.001 --> 00:06:52.000
+Computer Sports World adalah database statistik olahraga yang dimiliki oleh
+
+81
+00:06:52.000 --> 00:06:57.000
+dengan kronik. Bagaimana hal itu bekerja sama? Sejumlah surat kabar dalam beberapa
+
+82
+00:06:57.000 --> 00:07:01.001
+Bertahun-tahun telah ingin terlibat dalam bentuk komunikasi dan komunikasi baru
+
+83
+00:07:01.001 --> 00:07:05.001
+Perkhidmatan database dan Computer Sports World adalah salah satu perusahaan yang
+
+84
+00:07:05.001 --> 00:07:10.000
+yang berada di pasar yang baik itu adalah konsep yang baik dan itu adalah sesuatu yang
+
+85
+00:07:10.000 --> 00:07:14.000
+Kronik sangat tertarik untuk mengejar. Ini hampir unik
+
+86
+00:07:14.000 --> 00:07:18.001
+Database yang Apakah ada orang lain yang keluar atau sesuatu seperti ini? Tidak seperti ini. Kami adalah
+
+87
+00:07:18.001 --> 00:07:22.000
+database online yang berarti bahwa jika Anda memiliki komputer dan modem atau
+
+88
+00:07:22.000 --> 00:07:26.001
+berkomunikasi terminal Anda dapat mendaftar ke kami membuat panggilan telepon lokal 24 jam a
+
+89
+00:07:26.001 --> 00:07:32.001
+hari itu. Dan Roxy Anda menggunakan database ini. Ya, itu adalah bagian instrumental dari membuat
+
+90
+00:07:32.001 --> 00:07:37.001
+Kemungkinan Apa pendapat Anda tentang itu? Saya pikir itu fantastis karena ia membutuhkan
+
+91
+00:07:37.001 --> 00:07:41.001
+banyak waktu yang telah saya habiskan untuk membuat catatan tertulis tangan dan menyimpan
+
+92
+00:07:41.001 --> 00:07:45.000
+Ada banyak statistik. Jadi ia tetap mengikuti semua yang perlu Anda ketahui untuk
+
+93
+00:07:45.000 --> 00:07:48.000
+membuat peluang. Yang benar dan ia menyusun dan mengatur segala sesuatu. Apakah Anda benar-benar mampu
+
+94
+00:07:48.000 --> 00:07:50.001
+Sebelum Anda memiliki komputer dan database seperti ini tetap mengikuti saya berarti
+
+95
+00:07:50.001 --> 00:07:56.001
+Jumlah statistik dan angka yang luar biasa untuk membuat peluang? Kami telah melakukannya tetapi
+
+96
+00:07:56.001 --> 00:08:00.000
+Kami melakukan pekerjaan yang jauh lebih baik sekarang. Jadi Anda merasa bahwa Anda jauh lebih tepat memiliki
+
+97
+00:08:00.000 --> 00:08:03.001
+Database ini? Lebih tepat dan Anda tahu Anda harus mengingat pemain
+
+98
+00:08:03.001 --> 00:08:07.000
+memiliki database ini juga jadi itulah salah satu alasan yang perlu kita simpan di atasnya.
+
+99
+00:08:07.001 --> 00:08:10.000
+Apakah Anda tahu tentang orang-orang dalam bisnis perjudian yang
+
+100
+00:08:10.000 --> 00:08:11.001
+Menggunakannya dengan begitu luas seperti yang Anda lakukan?
+
+101
+00:08:12.001 --> 00:08:17.000
+Ya, ada pemain yang menggunakannya. Robin, mari kita lihat
+
+102
+00:08:17.000 --> 00:08:19.001
+sistem sekarang dan menunjukkan kepada kami jenis-jenis hal yang dapat Anda dapatkan dari database ini.
+
+103
+00:08:19.001 --> 00:08:23.000
+Apakah kami online saat ini untuk layanan Anda? Hal pertama yang akan kita lakukan
+
+104
+00:08:23.000 --> 00:08:27.000
+ingin melakukannya adalah sekarang kita melihatnya hidup jadi kita melihat
+
+105
+00:08:27.000 --> 00:08:32.000
+Informasi yang masuk dengan benar. Hal pertama adalah Scropper akan mengatakan itu sangat mudah
+
+106
+00:08:32.000 --> 00:08:37.001
+untuk digunakan Anda mendapatkan Anda hanya masuk dengan memasukkan kode tiga digit dan Anda akan mendapatkan menu
+
+107
+00:08:37.001 --> 00:08:40.001
+Itu tampaknya seperti ini yang akan membawa Anda ke itu. Saat ini kita sedang melihat
+
+108
+00:08:40.001 --> 00:08:44.000
+informasi yang datang langsung jika saya ingin melihat jika saya mahu melihat matchup untuk
+
+109
+00:08:44.000 --> 00:08:47.001
+Contoh yang adalah file yang Roxy menggunakan agak sedikit saya mencetak dalam tiga digit itu
+
+110
+00:08:47.001 --> 00:08:51.001
+Dia segera naik. Jadi Anda bisa pergi ke mana saja? Ini adalah pertandingan basket NCAA.
+
+111
+00:08:51.001 --> 00:08:54.001
+Ya, ada tiga angka. Apa yang kamu dapatkan dari Roxy ini? Nah, di sini kita memiliki Georgia Tech
+
+112
+00:08:54.001 --> 00:08:58.000
+di DePaul saya segera melihat bahwa DePaol adalah 13 dan 0 di rumah yang berarti mereka adalah
+
+113
+00:08:58.000 --> 00:09:01.000
+tidak memukul di rumah mereka yang akan membuat mereka yang cukup baik favorit bahkan
+
+114
+00:09:01.000 --> 00:09:05.000
+Sebuah tim ACC yang baik seperti Georgia Tech. Saya dapat melihat bahwa Georgia Tech hanya enam
+
+115
+00:09:05.000 --> 00:09:09.000
+dan enam di jalan ia juga menunjukkan kepada saya semua rekaman mereka yang tersebar dan ia menunjukkan kepada aku
+
+116
+00:09:09.000 --> 00:09:12.001
+Lima pertandingan terakhir yang dimainkan oleh masing-masing tim. Dengan demikian, Anda bisa mendapatkan keuntungan rumah.
+
+117
+00:09:12.001 --> 00:09:17.000
+Semua hal seperti itu apa tentang bola basket NBA menunjukkan kita contoh di sana
+
+118
+00:09:17.000 --> 00:09:22.000
+dan Robin. Baik kita mendapat skor box kita bisa melihat setelah setiap pertandingan adalah di atas kita
+
+119
+00:09:22.000 --> 00:09:25.000
+melebihi skor kotak untuk memastikan bahwa semua pemain kunci adalah kedua tim
+
+120
+00:09:25.000 --> 00:09:29.001
+Bermain di sini adalah permainan di mana San Antonio bermain Dallas malam tadi. Saat ini San
+
+121
+00:09:29.001 --> 00:09:32.001
+Pemain Antonio datang tepat di sini di mana semua pemula mereka bermain
+
+122
+00:09:32.001 --> 00:09:39.000
+dan reserve utama mereka dan kemudian kita akan memeriksa Dallas. Ini adalah sesuatu yang Anda akan
+
+123
+00:09:39.000 --> 00:09:42.000
+lakukan setiap hari. Ya, setelah setiap pertandingan berakhir. Apa yang ini menunjukkan kepada Anda? dengan benar
+
+124
+00:09:42.000 --> 00:09:46.000
+Sekarang saya lihat di mana Dallas adalah penjaga titik bintang Derek Harper tidak bermain sebenarnya dia
+
+125
+00:09:46.000 --> 00:09:50.001
+Bahkan tidak ada reserve, jadi saya harus tahu mengapa. Presentasi yang indah. Baiklah
+
+126
+00:09:50.001 --> 00:09:53.001
+Dan bagaimana Anda melakukan itu apa yang Anda lakukan Robin? Kami langsung menuju luka-luka
+
+127
+00:09:53.001 --> 00:09:55.000
+Tiga dari empat kecederaan dari NBA. Jadi Anda memiliki kecederaan khusus.
+
+128
+00:09:55.000 --> 00:09:59.000
+Database yang Dan kemudian kita akan memeriksa untuk melihat apakah mereka memiliki alasan yang mungkin
+
+129
+00:09:59.000 --> 00:10:05.000
+Harper tidak bermain malam tadi untuk Dallas. Jadi, mari kita pergi ke Dallas. Apa itu
+
+130
+00:10:05.000 --> 00:10:09.000
+Katakan kepada Anda? Nah, ia mengatakan bahwa Harper memiliki tengkorak yang terinfeksi dan juga penjaga reserve
+
+131
+00:10:09.000 --> 00:10:12.001
+Al Woods memiliki bahu kiri yang tertekan. Mereka berdua terlepas dari pertandingan Jumat mereka adalah
+
+132
+00:10:12.001 --> 00:10:16.000
+Saya berharap untuk melihat aksi terbatas jika ada pada hari Sabtu jadi saya tahu bahwa ketika mereka bermain
+
+133
+00:10:16.000 --> 00:10:19.000
+Golden State malam ini saya akan perlu melakukan beberapa penyesuaian ringan di garis. Baiklah
+
+134
+00:10:19.000 --> 00:10:23.000
+apa tentang baseball Robin yang statistik permainan gila apa yang dapat Anda tunjukkan kepada kami di
+
+135
+00:10:23.000 --> 00:10:28.000
+dengan baseball? Baseball biarkan saya menunjukkan indeks statistik baseball kami. Ini adalah
+
+136
+00:10:28.000 --> 00:10:34.000
+di mana kita benar-benar memiliki banyak statistik baseball menjadi begitu statistik dan kita
+
+137
+00:10:34.000 --> 00:10:35.001
+Kembali ke beberapa tahun. Lihat saja ya itu.
+
+138
+00:10:36.001 --> 00:10:39.001
+Jadi Anda dapat melihat bagaimana tangan kiri pitchers melakukan terhadap tangan kanan bagaimana Anda melakukan pada
+
+139
+00:10:39.001 --> 00:10:45.000
+AstroTurf versus rumput bagaimana pitchers melakukan setelah begitu banyak hari keluar itu semua ada. dan
+
+140
+00:10:45.000 --> 00:10:48.000
+Sangat mudah untuk mendapatkan itu juga. Ada tiga angka di sini. dan Roxy Anda
+
+141
+00:10:48.000 --> 00:10:51.000
+Apakah Anda akan menggunakan banyak hal dan meletakkan garis Anda pada permainan baseball? Saya banyak menggunakannya.
+
+142
+00:10:51.000 --> 00:10:54.001
+Kunci adalah bagaimana tim melakukan melawan keadilan dan kejahatan dan prestasi siang dan malam.
+
+143
+00:10:55.000 --> 00:10:57.000
+Okay, bisakah Anda memberitahu kami siapa yang akan memenangkan penantang tahun ini Robin?
+
+144
+00:10:57.000 --> 00:11:01.000
+Oh kita memiliki kemungkinan bahwa kita mungkin salah satu yang pertama di sana Roxy
+
+145
+00:11:01.000 --> 00:11:04.001
+memberikan hal itu kepada kami. Nah, jika Anda berada di New York atau Anda mungkin akan bahagia
+
+146
+00:11:04.001 --> 00:11:08.000
+Karena kami memiliki kedua tim New York favorit Mets untuk mengulangi dan memenangkan
+
+147
+00:11:08.000 --> 00:11:11.000
+Liga Nasional ada tujuh hingga lima favorit dan Yankees untuk menjadi
+
+148
+00:11:11.000 --> 00:11:14.001
+Juara Liga Amerika adalah tujuh hingga dua favorit. Roxy ada banyak
+
+149
+00:11:14.001 --> 00:11:17.001
+Olahraga yang berbeda yang orang-orang berjudi pada jelas saya bertanya-tanya apa-apa
+
+150
+00:11:17.001 --> 00:11:20.001
+Sukan di mana komputer benar-benar keuntungan besar? Ya, itu adalah yang terbesar
+
+151
+00:11:20.001 --> 00:11:25.000
+Keunggulan dalam kolegi basket karena kita harus merancang dan menjejaki 162 tim.
+
+152
+00:11:25.001 --> 00:11:29.000
+Ada ribuan variabel ada cedera untuk dicatat untuk setiap tim ada
+
+153
+00:11:29.000 --> 00:11:32.000
+Hanya begitu banyak bahwa tanpa layanan ini akan hampir mustahil. besar
+
+154
+00:11:32.000 --> 00:11:35.001
+Database kemudian. Ya ya. Saya kira Robin seperti yang Anda katakan Anda adalah Dow Jones atau olahraga
+
+155
+00:11:35.001 --> 00:11:38.001
+Dunia yang Dunia olahraga memang benar. Robin Roxy sangat berterima kasih. Seperti yang kita lihat di
+
+156
+00:11:38.001 --> 00:11:42.000
+awal program perlumbaan kuda sangat tergantung pada komputer untuk
+
+157
+00:11:42.000 --> 00:11:45.001
+Sistem taruhan dan salah satu sistem taruhan komputer terbaru dan paling modern
+
+158
+00:11:45.001 --> 00:11:48.000
+Tempat untuk menginap di Golden Gate Fields di San Francisco Bay
+
+159
+00:11:48.000 --> 00:11:49.001
+wilayah tersebut. Wendy Woods memiliki laporan itu.
+
+160
+00:11:59.000 --> 00:12:03.000
+Meskipun tradisi tertentu di jalur tidak akan pernah jatuh di bawah penjuru
+
+161
+00:12:03.000 --> 00:12:08.000
+teknologi bisnis taruhan racetrack memiliki banyak bidang yang otomatis untuk
+
+162
+00:12:08.000 --> 00:12:13.000
+Tingkat yang begitu rumit seperti sistem pemilu negara. Berbeda dengan hari-hari lama
+
+163
+00:12:13.000 --> 00:12:18.001
+Hanya beberapa tahun yang lalu sistem relay dan tallying oleh individu klerik telah
+
+164
+00:12:18.001 --> 00:12:23.001
+digantikan oleh sistem taruhan komputer besar. Terletak di Golden Gate Fields
+
+165
+00:12:23.001 --> 00:12:28.001
+Albany California kemungkinan hasil perlumbaan mencapai $ 3 juta di
+
+166
+00:12:28.001 --> 00:12:33.001
+taruhan ditempatkan setiap hari melalui tujuh garis telepon yang beroperasi terus-menerus ke
+
+167
+00:12:33.001 --> 00:12:39.000
+Otak operasi adalah mainframe di rute berdekatan Bay Meadows. yang lebih baik
+
+168
+00:12:39.000 --> 00:12:43.001
+masih bisa berhadapan muka dengan manusia untuk taruhan mereka tetapi para pelayan semua menggunakan
+
+169
+00:12:43.001 --> 00:12:48.001
+terminal yang terhubung dengan sistem. Semakin petualangan yang lebih baik dapat menggunakan diri sendiri
+
+170
+00:12:48.001 --> 00:12:54.001
+melayani mesin taruhan atau terminal layar sentuh terbaru. Mereka bertaruh dan mengumpulkan
+
+171
+00:12:54.001 --> 00:13:00.001
+Dengan voucher yang dapat digunakan sepanjang hari menang atau kalah. Bahkan yang
+
+172
+00:13:00.001 --> 00:13:05.000
+papan tote pada jalur ini dikendalikan dan secara otomatis diperbarui oleh
+
+173
+00:13:05.000 --> 00:13:10.001
+Sistem Komputer Marty Miller dari Amto adalah otak di balik operasi. Itu adalah
+
+174
+00:13:10.001 --> 00:13:15.001
+sebenarnya sangat sederhana karena kami memiliki akses ke komputer di Bay Meadows dan saya
+
+175
+00:13:15.001 --> 00:13:19.001
+Anda dapat kembali ke jendela apa pun di pabrik di sini dan memberitahu mereka di mana mereka berada.
+
+176
+00:13:19.001 --> 00:13:23.000
+berdiri dengan taruhan mereka berapa banyak tiket mereka telah menjual apa yang mereka telah lakukan di
+
+177
+00:13:23.000 --> 00:13:28.000
+Empat transaksi terakhir mereka. Kadang-kadang mereka lupa di mana mereka berada kita dapat membantu
+
+178
+00:13:28.000 --> 00:13:33.000
+Mereka menyeimbangkan. Dia menambahkan taruhan berkomputer tidak hanya efisien itu jujur.
+
+179
+00:13:33.001 --> 00:13:37.000
+Menunjuk satu tahun adalah setiap penny yang pernah kita perlakukan di tangan bersama memiliki
+
+180
+00:13:37.000 --> 00:13:44.000
+diperhitungkan untuk. Kami tahu persis apa yang setiap penjual jual. Kami tahu dengan tepat tentang
+
+181
+00:13:44.000 --> 00:13:48.000
+sistem yang telah mereka bayar. Mereka akan menyeimbangkan penny. Kami akan menghitung
+
+182
+00:13:48.000 --> 00:13:52.000
+tiket, apa pembayaran, berapa banyak negara mendapat. Untuk setiap penny. Setiap penny
+
+183
+00:13:52.000 --> 00:13:56.000
+telah diperhitungkan selama bertahun-tahun. Hal-hal tidak selalu berjalan dengan lancar seperti ini
+
+184
+00:13:56.000 --> 00:14:00.000
+Pada hari itu kartu baru dikeluarkan untuk mesin. Sistem itu runtuh.
+
+185
+00:14:01.000 --> 00:14:05.000
+Pegawai-pegawai lapangan Golden Gate menghancurkan tempers dengan mengeluarkan cek hujan gratis untuk
+
+186
+00:14:05.000 --> 00:14:10.000
+Hari itu komputer-komputer itu kembali. Sistem pertaruhan komputer adalah
+
+187
+00:14:10.000 --> 00:14:14.001
+dipasang di ribuan jalur kereta di seluruh dunia dan itu adalah jalur yang cukup baik
+
+188
+00:14:14.001 --> 00:14:19.000
+Rekaman di Albany, California untuk komputer Chronicles. Saya adalah Wendy Woods.
+
+189
+00:14:30.001 --> 00:14:34.001
+Dengan kami di studio sekarang Bob Archer adalah presiden PDS Software of Torrance,
+
+190
+00:14:34.001 --> 00:14:38.001
+dari California. Setelah Bob, Profesor Michael Orkin adalah pendiri Best Bet.
+
+191
+00:14:38.001 --> 00:14:45.001
+Perangkat lunak dan George. Mike, Roxy adalah pembuat peluang yang sangat baik dan dia tampaknya
+
+192
+00:14:45.001 --> 00:14:49.001
+untuk memiliki ambang dengan melihat data dan memahami di mana dia dapat mengakses
+
+193
+00:14:49.001 --> 00:14:53.000
+untuk itu tetapi dia tampaknya tidak menggunakan komputer dan melakukan apa pun
+
+194
+00:14:53.000 --> 00:14:55.000
+dengan analisis. Dapatkah Anda berkomentar tentang hal ini?
+
+195
+00:14:55.000 --> 00:14:59.001
+Nah, jika dia memiliki program yang mengambil garis dan ada bias di dalamnya,
+
+196
+00:14:59.001 --> 00:15:03.000
+Para penjudi akan mengambilnya, apa pun sedikit bias dan mereka akan mulai bertaruh
+
+197
+00:15:03.000 --> 00:15:08.000
+dengan demikian dan sebagai hasilnya ia akan tertutup ke dalam sistem yang akan menyebabkan
+
+198
+00:15:08.000 --> 00:15:09.001
+Pencipta buku harus kalah.
+
+199
+00:15:10.001 --> 00:15:15.001
+Tapi dia tidak bisa menggunakan program untuk mengikuti itu dan untuk mengubah itu dan
+
+200
+00:15:15.001 --> 00:15:17.001
+Apakah Anda benar-benar menjadi pembuat peluang yang lebih baik?
+
+201
+00:15:17.001 --> 00:15:23.000
+Saya yakin dia menggunakan komputer untuk menjaga data tetapi jika dia memiliki program yang
+
+202
+00:15:23.000 --> 00:15:28.000
+benar-benar memilih garis dia harus terus mengubahnya karena jika ada
+
+203
+00:15:28.000 --> 00:15:30.001
+Bias dan mungkin beberapa akan terjadi dari waktu ke waktu.
+
+204
+00:15:31.000 --> 00:15:34.000
+Tetapi ketika dia menghitung garis, dia akan melalui analisis.
+
+205
+00:15:35.001 --> 00:15:39.001
+Itu benar tetapi ini adalah proses yang sangat dinamis dan dia harus tetap dengan apa yang
+
+206
+00:15:39.001 --> 00:15:43.000
+berjalan dan ada begitu banyak faktor yang membuatnya tertutup dalam sebuah program
+
+207
+00:15:43.000 --> 00:15:45.000
+akan sangat berbahaya.
+
+208
+00:15:45.000 --> 00:15:48.000
+Saat ini dia melakukan lebih baik dengan menjauh dari program.
+
+209
+00:15:48.001 --> 00:15:51.000
+Memang, dia melakukan yang lebih baik dengan menjauh dari program yang benar-benar memicu
+
+210
+00:15:51.000 --> 00:15:53.001
+garis tersebut. Namun, ia bergantung pada komputer untuk
+
+211
+00:15:53.001 --> 00:15:55.001
+memberikan semua data yang dia butuhkan.
+
+212
+00:15:55.001 --> 00:15:59.000
+Bob, Anda sedang menjengkelkan kuda sekarang. Apakah itu juga sedikit subjektif atau
+
+213
+00:15:59.000 --> 00:16:00.001
+Apakah Anda benar-benar bisa mengurangi ini ke statistik?
+
+214
+00:16:01.000 --> 00:16:07.001
+Tidak, itu akan selalu subjektif. Komputer adalah alat yang digunakan oleh pengguna.
+
+215
+00:16:07.001 --> 00:16:12.001
+dapat memanipulasi semua data ke mana dia menginginkannya sehingga dia memiliki
+
+216
+00:16:12.001 --> 00:16:15.000
+Semua dalam satu mode ke mana ia dapat menggunakannya.
+
+217
+00:16:15.000 --> 00:16:17.000
+Anda sebenarnya membuat pilihan dari itu.
+
+218
+00:16:17.000 --> 00:16:20.000
+Tunjukkan kepada kami apa yang akan Anda lakukan dengan perangkat lunak Anda di sini dalam mengganggu perlumbaan, Bob.
+
+219
+00:16:20.001 --> 00:16:26.000
+Nah, pada dasarnya program kami akan bekerja di bawah prinsip memasukkan data
+
+220
+00:16:26.000 --> 00:16:31.000
+Dari bentuk balapan untuk setiap kuda tertentu dalam balapan ini hari ini.
+
+221
+00:16:31.000 --> 00:16:32.000
+Jadi, jenis variabel apa yang ada di sana?
+
+222
+00:16:32.000 --> 00:16:38.000
+Pada dasarnya kita memiliki tiga variabel untuk perlumbaan itu sendiri dan
+
+223
+00:16:38.000 --> 00:16:39.001
+sekitar 11 variabel untuk kuda.
+
+224
+00:16:39.001 --> 00:16:43.001
+Pertama Anda memasukkan nama kuda, jumlah permulaan, mari kita katakan, adalah 12. Dia adalah
+
+225
+00:16:43.001 --> 00:16:48.000
+Mereka mendapat tiga kemenangan. Dia mendapat pendapatan total $ 67,890.
+
+226
+00:16:49.000 --> 00:16:54.000
+Dan dia telah jauh dari kereta api selama 23 hari. Dia adalah yang kedua, katakanlah, dalam
+
+227
+00:16:54.000 --> 00:16:56.000
+Perlumbaan terakhirnya, memiliki panggilan pertamanya.
+
+228
+00:16:56.000 --> 00:16:57.001
+Sekali lagi, ini adalah informasi yang Anda tarik dari formulir perlumbaan data.
+
+229
+00:16:57.001 --> 00:17:01.000
+Dari bentuk perlumbaan, itu benar. Kategori jalurnya, mari kita katakan dia adalah
+
+230
+00:17:01.000 --> 00:17:03.001
+Perlumbaan di Santa Anita, kategori treknya akan menjadi nomor satu.
+
+231
+00:17:03.001 --> 00:17:07.001
+Jarak dalam furlongs, dia pergi satu mil, jadi itu akan menjadi delapan furlong.
+
+232
+00:17:08.000 --> 00:17:11.001
+Penilaian kecepatan dari perlumbaan terbaiknya dari tiga terakhir adalah 90,
+
+233
+00:17:12.000 --> 00:17:13.001
+dengan varian trek dari 12.
+
+234
+00:17:14.001 --> 00:17:18.001
+Dia memiliki top 10 jockey di punggungnya dan rating pelatihnya adalah 12.33.
+
+235
+00:17:19.001 --> 00:17:21.001
+Ok ya. Sekarang, kami telah memasukkan profil untuk tiga yang berbeda
+
+236
+00:17:21.001 --> 00:17:23.001
+Kuda yang Mari kita berpura-pura ini adalah perlumbaan tiga kuda sekarang.
+
+237
+00:17:24.000 --> 00:17:25.001
+Bisakah Anda masuk dan menganalisis tiga kuda ini sekarang?
+
+238
+00:17:25.001 --> 00:17:31.001
+Ya ya. Kami akan, pada saat ini, datang dengan layar berikutnya. Kami akan masuk ke nol, dan
+
+239
+00:17:31.001 --> 00:17:35.000
+Ia akan menghitung dan menempatkan semua tiga kuda dalam perintah yang tepat.
+
+240
+00:17:35.000 --> 00:17:37.001
+Dan Anda memiliki rating daya yang menunjukkan bahwa Bosto adalah yang paling
+
+241
+00:17:37.001 --> 00:17:39.000
+Anda mungkin akan memenangkan perlumbaan antara dua kuda ini.
+
+242
+00:17:39.001 --> 00:17:45.000
+Bosto, itu yang benar. Bosto adalah favorit di sini. Dia memiliki rating kekuasaan
+
+243
+00:17:45.000 --> 00:17:46.001
+Lebih dari 12 poin.
+
+244
+00:17:47.000 --> 00:17:51.000
+Kami mencari tiga setengah titik yang tersebar antara kuda pertama dan kuda
+
+245
+00:17:51.000 --> 00:17:53.001
+Kuda kedua untuk mendapatkan apa yang kita sebut perlumbaan yang dimainkan.
+
+246
+00:17:53.001 --> 00:17:54.000
+Saya lihat.
+
+247
+00:17:54.001 --> 00:17:57.001
+Ini tertakluk kepada bias pribadi penyandang disabilitas pada saat itu.
+
+248
+00:17:58.000 --> 00:18:00.000
+Bob, apa sebenarnya apa yang dilakukan oleh perangkat lunak? Bagaimana
+
+249
+00:18:00.000 --> 00:18:01.001
+Apakah itu akan datang dengan penilaian itu untuk kuda-kuda itu?
+
+250
+00:18:02.000 --> 00:18:08.001
+Ini membandingkan input semua data pada setiap item individu dengan
+
+251
+00:18:08.001 --> 00:18:12.000
+set standar yang harus dibandingkan.
+
+252
+00:18:12.001 --> 00:18:13.000
+Dengan faktor berat?
+
+253
+00:18:13.000 --> 00:18:17.000
+Dengan faktor berat kepada masing-masing dari mereka yang kemudian muncul dan membandingkan semua
+
+254
+00:18:17.000 --> 00:18:18.001
+Sepuluh dari mereka kuda melawan satu sama lain.
+
+255
+00:18:18.001 --> 00:18:22.000
+Okay, Bob, jika saya bisa meminta Anda untuk memindahkan keyboard ke Mike sekarang. Mike, Anda sudah
+
+256
+00:18:22.000 --> 00:18:25.001
+mendapatkan program yang membantu panduan taruhan di sepak bola, bukan kuda, bukan?
+
+257
+00:18:25.001 --> 00:18:26.000
+dengan benar.
+
+258
+00:18:26.000 --> 00:18:27.000
+Dan apa yang dilakukan oleh software?
+
+259
+00:18:27.001 --> 00:18:33.001
+Perangkat lunak ini memiliki setiap permainan NFL sejak 1979, dan memberikan konten sendiri
+
+260
+00:18:33.001 --> 00:18:38.000
+database yang datang pada satu cakera floppy, dan memungkinkan orang yang tertarik
+
+261
+00:18:38.000 --> 00:18:42.000
+Sepak bola untuk mengajukan pertanyaan tentang bagaimana tim telah melakukannya dalam berbagai situasi.
+
+262
+00:18:42.000 --> 00:18:43.001
+Tunjukkan jenis pertanyaan yang akan Anda tanyakan.
+
+263
+00:18:43.001 --> 00:18:48.001
+Nah, saya telah masuk ke program sekarang melihat semua permainan New York Giants sejak
+
+264
+00:18:48.001 --> 00:18:52.001
+1983, di mana mereka kehilangan minggu sebelumnya dan bermain di jalan minggu sebelumnya.
+
+265
+00:18:52.001 --> 00:18:54.000
+Dan yang lebih baik mungkin benar-benar bertanya pertanyaan itu.
+
+266
+00:18:54.001 --> 00:18:57.000
+Ya ya. Minggu ini, orang-orang gergasi mungkin bermain di rumah. Mereka kalah terakhir
+
+267
+00:18:57.000 --> 00:18:59.000
+Minggu yang Mungkin mereka benar-benar ingin menang.
+
+268
+00:18:59.001 --> 00:19:03.000
+Perhatikan bahwa mereka telah menang di atas dan di kiri. Mereka menang melawan spread.
+
+269
+00:19:03.000 --> 00:19:05.000
+66,7 persen dari waktu itu.
+
+270
+00:19:05.000 --> 00:19:10.001
+Pada dasarnya mereka telah menang di rumah melawan disebarkan 61% dari waktu jauh melawan
+
+271
+00:19:10.001 --> 00:19:12.001
+Dia menyebarkan dua dari dua pertandingan.
+
+272
+00:19:12.001 --> 00:19:16.001
+Anda juga dapat mendapatkan daftar permainan dan melihat persis apa permainan yang dimainkan di bawah
+
+273
+00:19:16.001 --> 00:19:19.000
+Kondisi itu, apa yang disebarkan,
+
+274
+00:19:19.000 --> 00:19:20.001
+Apakah mereka menang atau kalah terhadap penyebaran.
+
+275
+00:19:21.000 --> 00:19:23.000
+Okay, Mike, hal-hal seperti itu, saya pikir saya memiliki pertanyaan tentang
+
+276
+00:19:23.000 --> 00:19:24.001
+Apa kelebihan lapangan di rumah pada pertandingan malam Senin, bukan?
+
+277
+00:19:24.001 --> 00:19:30.000
+Nah, Anda bisa melihat hari minggu. Jadi, mari kita turun dan lakukan itu dan
+
+278
+00:19:30.000 --> 00:19:32.001
+Lihat saja semua pertandingan malam Senin sejak 1983.
+
+279
+00:19:33.001 --> 00:19:38.000
+Jadi hari minggu turun di sana. Aku akan lakukan. Dalam hal ini, negara-negara akan
+
+280
+00:19:38.000 --> 00:19:41.000
+hanya untuk tim rumah langsung ke atas dan terhadap [...]
+
+281
+00:19:41.000 --> 00:19:42.001
+Apakah ada pertanyaan yang lebih baik?
+
+282
+00:19:42.001 --> 00:19:45.001
+Nah, ini adalah salah satu dari banyak hal yang lebih baik ingin tahu tentang kapan
+
+283
+00:19:45.001 --> 00:19:47.001
+Memutuskan tim mana yang harus dipilih.
+
+284
+00:19:47.001 --> 00:19:48.000
+Apa yang program ini memberitahu Anda?
+
+285
+00:19:48.001 --> 00:19:52.001
+Nah, bahwa pada hari Senin malam tim rumah telah mengalahkan spread 59.4
+
+286
+00:19:52.001 --> 00:19:54.000
+% dari waktu sejak 1983.
+
+287
+00:19:54.001 --> 00:19:55.001
+Jadi mereka mendapat sedikit dari satu inci?
+
+288
+00:19:56.000 --> 00:19:58.001
+Nah, mereka memiliki sedikit pengetahuan di sana yang mungkin mereka masukkan dengan beberapa
+
+289
+00:19:58.001 --> 00:20:00.000
+Hal-hal lain yang akan mereka temukan juga di database ini.
+
+290
+00:20:01.000 --> 00:20:04.000
+Mike, berapa banyak keuntungan itu benar-benar untuk yang lebih baik untuk memiliki potongan
+
+291
+00:20:04.000 --> 00:20:05.001
+Perangkat lunak seperti ini dan jenis informasi ini?
+
+292
+00:20:05.001 --> 00:20:09.000
+Ya, ini memungkinkan yang lebih baik untuk menjawab pertanyaan dalam beberapa detik. Bisa jadi
+
+293
+00:20:09.000 --> 00:20:11.001
+mengambil beberapa jam untuk melakukannya dengan tangan atau mungkin
+
+294
+00:20:11.001 --> 00:20:13.000
+Bahkan tidak bisa menjawab sama sekali.
+
+295
+00:20:13.001 --> 00:20:15.001
+Jadi ambangannya di sini adalah dia memiliki banyak data secara keseluruhan.
+
+296
+00:20:16.000 --> 00:20:16.000
+dengan benar.
+
+297
+00:20:17.000 --> 00:20:20.000
+Mike, Bob, terima kasih banyak. Sekarang, salah satu bentuk yang paling populer dari perjudian di
+
+298
+00:20:20.000 --> 00:20:22.000
+Negara ini bertaruh pada lotere negara.
+
+299
+00:20:22.001 --> 00:20:25.000
+Salah satu loteri negara tertua dan paling canggih adalah yang
+
+300
+00:20:25.000 --> 00:20:27.001
+Pennsylvania, di mana mereka menggunakan komputer agak sedikit.
+
+301
+00:20:28.001 --> 00:20:31.000
+Pertandingan Loteri Pennsylvania.
+
+302
+00:20:31.001 --> 00:20:35.001
+Setiap tahun, Pennsylvania menjual lebih dari satu miliar dolar dalam tiket loteri.
+
+303
+00:20:36.000 --> 00:20:40.000
+Dan ketika jackpot menjadi cukup besar, itu bisa berarti volume penjualan hingga satu.
+
+304
+00:20:40.000 --> 00:20:42.000
+1 juta transaksi per jam.
+
+305
+00:20:42.001 --> 00:20:44.001
+Tidak ada yang bisa dilakukan tanpa komputer.
+
+306
+00:20:45.000 --> 00:20:49.000
+Dan sebenarnya Pennsylvania Lottery memiliki investasi besar-besaran dalam komputer.
+
+307
+00:20:50.000 --> 00:20:52.001
+Retail menjual nomor lotere dari terminal online.
+
+308
+00:20:52.001 --> 00:20:57.001
+Komputer mengembangkan permainan setiap hari pada sistem sandaran IBM yang terpisah untuk
+
+309
+00:20:57.001 --> 00:20:59.000
+Memastikan integritas permainan.
+
+310
+00:20:59.001 --> 00:21:03.000
+Komputer digunakan untuk menganalisis penjualan, jackpot proyek dan
+
+311
+00:21:03.000 --> 00:21:04.001
+untuk memantau taruhan yang sebenarnya.
+
+312
+00:21:05.001 --> 00:21:09.001
+The Pennsylvania Lottery, sebenarnya, menjalankan salah satu jaringan komputer yang paling kompleks
+
+313
+00:21:09.001 --> 00:21:13.000
+Dengan hampir 3000 terminal pada sistem data yang terkontrol.
+
+314
+00:21:13.000 --> 00:21:17.000
+Sistem ini memiliki 100% redundancy dan backup panas.
+
+315
+00:21:17.000 --> 00:21:20.000
+Jadi jarang orang mendengar bahwa komputer terjatuh.
+
+316
+00:21:20.000 --> 00:21:25.001
+Dalam 10 tahun, dan penonton Anda akan tertarik untuk mengetahui bahwa uptime kami adalah 99
+
+317
+00:21:25.001 --> 00:21:27.001
+dari 98 persen.
+
+318
+00:21:28.000 --> 00:21:31.001
+Begitu dekat dengan kesempurnaan seperti yang mungkin bisa Anda dapatkan dengan sistem online.
+
+319
+00:21:32.000 --> 00:21:38.000
+Saya tidak ingat waktu yang besar sejak 1977, ketika kami memulai.
+
+320
+00:21:38.001 --> 00:21:42.001
+Salah satu fungsi utama dari sistem komputer adalah untuk selalu memantau
+
+321
+00:21:42.001 --> 00:21:46.000
+tanggung jawab pembayaran loteri untuk memastikan bahwa tidak ada yang dapat memecahkan bank.
+
+322
+00:21:46.000 --> 00:21:51.000
+Pada permainan besar empat, yang membayar peluang dari 5000 ke satu, komputer memastikan
+
+323
+00:21:51.000 --> 00:21:54.000
+Negara tidak pernah terdedah kepada tanggung jawab yang melebihi
+
+324
+00:21:54.000 --> 00:21:55.001
+$ 5 juta per pertandingan.
+
+325
+00:21:56.000 --> 00:22:00.001
+Jika ia merasakan taruhan berat pada nomor tertentu, dalam kasus ini 1111, ia mengirimkan
+
+326
+00:22:00.001 --> 00:22:03.001
+mengeluarkan peringatan dan kemudian memotong taruhan pada angka itu.
+
+327
+00:22:04.000 --> 00:22:08.000
+Pertaruhan berat pada angka tertentu sering terjadi karena pemain loteri cenderung untuk
+
+328
+00:22:08.000 --> 00:22:10.000
+Ikuti pola umum dalam memilih angka.
+
+329
+00:22:10.000 --> 00:22:15.001
+Misalnya, beberapa tahun yang lalu ketika Pete Rose berada di Philadelphia dan dia memiliki
+
+330
+00:22:15.001 --> 00:22:19.000
+Beberapa hit, mereka memainkan angka itu.
+
+331
+00:22:19.000 --> 00:22:23.000
+Mereka bermain dengan skor Super Bowl. Mereka memainkan Yahudi Baru
+
+332
+00:22:23.000 --> 00:22:25.000
+Tahun yang Mereka bermain Cina Tahun Baru.
+
+333
+00:22:25.001 --> 00:22:29.001
+Sementara sistem komputer menjamin lukisan rawak setiap kali, hukum
+
+334
+00:22:29.001 --> 00:22:31.000
+rata-rata membutuhkan waktu untuk bekerja.
+
+335
+00:22:31.001 --> 00:22:36.000
+Kami memiliki lebih dari 3100 lukisan nomor harian, memilih tiga lukisan, dalam 10 tahun.
+
+336
+00:22:36.000 --> 00:22:42.000
+Namun, ada dua atau tiga puluhan angka yang belum keluar dari 3100
+
+337
+00:22:42.000 --> 00:22:44.000
+Teka-teki dan hanya ada seribu angka.
+
+338
+00:22:44.001 --> 00:22:47.000
+Komputer loteri memiliki banyak jaminan untuk
+
+339
+00:22:47.000 --> 00:22:48.001
+melindungi dari pecah.
+
+340
+00:22:49.000 --> 00:22:54.000
+Permainan ditutup tepat 168 detik sebelum pemenang menggambar sehingga
+
+341
+00:22:54.000 --> 00:22:56.000
+Semua tab komputer dapat dihapus.
+
+342
+00:22:56.000 --> 00:22:59.000
+Dengan cara ini, tidak ada yang dapat memasukkan nomor pemenang setelah lukisan.
+
+343
+00:22:59.000 --> 00:23:04.000
+Dan para ahli komputer di sini benar-benar menyewa hacker dan mencabar mereka untuk mencoba
+
+344
+00:23:04.000 --> 00:23:08.000
+memecah sehingga mereka dapat mendeteksi kelemahan apa pun yang mungkin ada dalam sistem.
+
+345
+00:23:08.001 --> 00:23:12.001
+Tujuh tahun yang lalu, loteri Pennsylvania menjadi korban skandal, tetapi
+
+346
+00:23:12.001 --> 00:23:14.000
+Tidak ada hubungannya dengan komputer.
+
+347
+00:23:14.001 --> 00:23:18.000
+Sebagian besar bola yang digunakan dalam lukisan telah ditimbang sehingga hanya
+
+348
+00:23:18.000 --> 00:23:20.000
+Sixi akan naik ke puncak.
+
+349
+00:23:20.000 --> 00:23:24.000
+Tetapi analisis gerakan lambat dari lukisan, dikombinasikan dengan komputer terperinci
+
+350
+00:23:24.000 --> 00:23:26.000
+analisis, mengarah penyelidik ke penjenayah.
+
+351
+00:23:26.000 --> 00:23:32.000
+Pemrosesan offline menunjukkan tepat dari mana taruhan ini berasal.
+
+352
+00:23:33.000 --> 00:23:36.001
+Kami pergi ke ritel itu, menemukan siapa yang duduk di Cadillac putih
+
+353
+00:23:36.001 --> 00:23:39.001
+mengatur semua taruhan tersebut, dan pada dasarnya dapat
+
+354
+00:23:39.001 --> 00:23:41.001
+didakwa atas bukti komputer.
+
+355
+00:23:42.000 --> 00:23:45.000
+Tapi meskipun semua komputer, ketika ia datang untuk menghitung
+
+356
+00:23:45.000 --> 00:23:47.001
+Pembayaran, tidak ada yang percaya pada komputer.
+
+357
+00:23:48.000 --> 00:23:51.000
+Nombor-nombor yang disusun secara manual dengan meja lama yang baik
+
+358
+00:23:51.000 --> 00:23:53.001
+kalkulator, beberapa kertas, dan sebuah pensil.
+
+359
+00:23:53.001 --> 00:23:56.000
+Ketika Anda duduk sendirian di tengah malam memberikan berjuta-juta
+
+360
+00:23:56.000 --> 00:23:59.000
+Dolar, Anda harus benar-benar yakin bahwa Anda melakukannya dengan sempurna.
+
+361
+00:24:00.000 --> 00:24:04.000
+Dan itulah pandangan kita pada komputer dan perjudian. Kami akan kembali dalam satu menit
+
+362
+00:24:04.000 --> 00:24:05.001
+dengan berita komputer minggu ini.
+
+363
+00:24:16.001 --> 00:24:20.000
+Saya adalah Susan Shea, duduk untuk Stuart Chafee dalam File Akses Random minggu ini.
+
+364
+00:24:20.000 --> 00:24:24.000
+NCR Corporation mengungkapkan rangkaian komputer pribadi baru.
+
+365
+00:24:24.000 --> 00:24:29.001
+NCR memperkenalkan dua AT kompatibel, satu 286 mesin dan satu 386 stasiun kerja.
+
+366
+00:24:30.000 --> 00:24:34.000
+Mesin-mesin ini didasarkan pada arsitektur stasiun kerja incremental NCR, dan
+
+367
+00:24:34.000 --> 00:24:35.001
+Mereka akan tersedia di akhir tahun ini.
+
+368
+00:24:36.001 --> 00:24:40.000
+Hewlett Packard mengumumkan tiga komputer teknis baru dan mengatakan bahwa 930 dan
+
+369
+00:24:40.000 --> 00:24:45.000
+950 komputer bisnis yang diumumkan pada tahun 1986 akhirnya akan dikirim pada musim gugur ini.
+
+370
+00:24:45.000 --> 00:24:49.000
+Semua lima komputer didasarkan pada teknologi instruksi yang dikurangi.
+
+371
+00:24:49.000 --> 00:24:50.001
+Menggunakan komputer atau RISC.
+
+372
+00:24:51.000 --> 00:24:54.000
+Peralatan digital dan penelitian Cray akan segera memperkenalkan yang baru
+
+373
+00:24:54.000 --> 00:24:55.001
+interaksi antara komputer mereka.
+
+374
+00:24:56.000 --> 00:25:00.001
+Produk baru, kombinasi perangkat keras digital dan perangkat lunak Cray, adalah bagian dari
+
+375
+00:25:00.001 --> 00:25:03.001
+Sebuah upaya untuk mempercepat transfer data antara komputer kedua perusahaan.
+
+376
+00:25:04.000 --> 00:25:08.000
+Digital akan memasarkan antarmuka dalam upaya untuk meningkatkan tekanan pada IBM di
+
+377
+00:25:08.000 --> 00:25:09.001
+pasar komputer ilmiah.
+
+378
+00:25:10.001 --> 00:25:13.001
+Dan sekarang sudah waktunya untuk minggu ini Software Review, dan di sini adalah Paul Schindler.
+
+379
+00:25:14.000 --> 00:25:19.001
+Anda tahu, mungkin saya akan lebih baik dengan ini jika saya memiliki komputer ketika saya masih muda.
+
+380
+00:25:20.000 --> 00:25:24.000
+Nah, untuk membantu anak-anak Anda melakukan yang lebih baik, di sini adalah beberapa pendidikan Macintosh terbang teratas
+
+381
+00:25:24.000 --> 00:25:28.000
+perangkat lunak, KidsTime, koleksi lima permainan pendidikan.
+
+382
+00:25:29.000 --> 00:25:33.000
+Sekarang, pertama-tama ada Connect the Dots. Setelah selesai, komputer akan memutarnya kembali.
+
+383
+00:25:33.001 --> 00:25:37.001
+Kemudian ada A.B. Kunci, yang memanfaatkan suara max yang canggih.
+
+384
+00:25:38.000 --> 00:25:40.000
+Ini menamakan huruf-huruf jenis anak Anda.
+
+385
+00:25:41.000 --> 00:25:45.001
+Ini adalah permainan yang cocok dengan logika. Hal ini dimulai dengan robot puzzle.
+
+386
+00:25:46.000 --> 00:25:49.000
+Setiap bagian yang Anda salah, komputer menarik kembali.
+
+387
+00:25:50.000 --> 00:25:52.001
+KidsNotes akan memainkan lagu dan juga akan memungkinkan Anda untuk
+
+388
+00:25:52.001 --> 00:25:54.000
+menyusun dan merekam sendiri.
+
+389
+00:25:56.000 --> 00:26:00.000
+Storywriter membaca cerita saat Anda menulisnya atau semuanya sekaligus di akhir.
+
+390
+00:26:00.000 --> 00:26:03.001
+Saya melihat [...] tinggal dengan seorang manusia.
+
+391
+00:26:06.000 --> 00:26:10.001
+KidsTime adalah perangkat lunak pendidikan kelas dunia untuk Apple Macintosh, $ 50 dari
+
+392
+00:26:10.001 --> 00:26:13.000
+Great Wave Software di Stanford, California.
+
+393
+00:26:13.001 --> 00:26:15.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+394
+00:26:17.000 --> 00:26:20.000
+Berita dari Indeks Musim Semi di Atlanta telah mulai mengejutkan.
+
+395
+00:26:20.001 --> 00:26:24.001
+Sharp berencana untuk memperkenalkan dua laptop, satu klon PC-AT yang disebut PC
+
+396
+00:26:24.001 --> 00:26:29.001
+-7200, dan yang lain PC-4500 kompatibel dengan PC-XT.
+
+397
+00:26:30.000 --> 00:26:32.001
+Samsung Akan Memperkenalkan Klon Baru
+
+398
+00:26:33.000 --> 00:26:36.001
+SAM-88T dirancang untuk kompatibel dengan XT dan SAM-286
+
+399
+00:26:36.001 --> 00:26:38.001
+adalah mesin yang kompatibel.
+
+400
+00:26:39.000 --> 00:26:43.000
+Akhirnya, perusahaan Jepang sedang bekerja pada metode baru distribusi perangkat lunak
+
+401
+00:26:43.000 --> 00:26:45.001
+Ini bertujuan untuk menghapus pirasi perangkat lunak.
+
+402
+00:26:46.000 --> 00:26:50.000
+Dikenal sebagai Software Service System, produk adalah kotak yang melekat pada
+
+403
+00:26:50.000 --> 00:26:52.001
+komputer yang ada atau dapat dibangun ke dalam komputer baru.
+
+404
+00:26:52.001 --> 00:26:56.001
+Perangkat lunak tidak akan berjalan di komputer sampai kotak membenarkannya.
+
+405
+00:26:57.000 --> 00:27:00.001
+Pengguna akan membeli kartu khusus untuk mengaktifkan kotak dan memberikan kredit untuk setiap
+
+406
+00:27:00.001 --> 00:27:02.000
+Software yang ingin dibeli oleh pengguna.
+
+407
+00:27:02.001 --> 00:27:06.000
+Pengguna akan dianjurkan untuk menyalin perangkat lunak tetapi dihindari dari menggunakan
+
+408
+00:27:06.000 --> 00:27:07.001
+tanpa membayar untuk itu.
+
+409
+00:27:07.001 --> 00:27:09.001
+Dan itu adalah untuk komputer Chronicles minggu ini.
+
+410
+00:27:13.001 --> 00:27:17.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+411
+00:27:17.001 --> 00:27:21.000
+-Sistem komputer yang kompatibel, termasuk pemrosesan kata dengan koreksi spelling,
+
+412
+00:27:21.001 --> 00:27:25.001
+Software komunikasi, dan modem Haze-kompatibel 1200 dan 2400 VOD.
+
+413
+00:27:26.000 --> 00:27:28.001
+Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+414
+00:27:29.001 --> 00:27:32.000
+Leading Edge, memimpin jalan ke era informasi.
+
+415
+00:27:32.001 --> 00:27:35.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte.
+
+416
+00:27:36.001 --> 00:27:40.000
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak, dan bahasa yang baru
+
+417
+00:27:40.000 --> 00:27:42.001
+perkembangan teknologi komputer di seluruh dunia.
+
+418
+00:28:18.001 --> 00:28:21.001
+dan www.mooji.org

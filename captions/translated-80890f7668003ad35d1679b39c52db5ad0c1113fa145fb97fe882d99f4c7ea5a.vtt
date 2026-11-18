@@ -1,0 +1,2125 @@
+WEBVTT
+
+1
+00:00:16.000 --> 00:00:19.001
+Este es el laboratorio ZD en Foster City, California.
+
+2
+00:00:20.000 --> 00:00:23.001
+Hay un equipo entero de profesionales informáticos que trabajan aquí con todos estos
+
+3
+00:00:23.001 --> 00:00:27.001
+computadoras pruebas de nuevo hardware y software para Ziv Davis Publications.
+
+4
+00:00:28.001 --> 00:00:29.000
+¿Y adivinar qué?
+
+5
+00:00:29.000 --> 00:00:32.000
+Incluso estos chicos tienen problemas de instalación.
+
+6
+00:00:32.001 --> 00:00:35.000
+Ver todos estos E&#x27;s que acaba de popping en todos estos monitores aquí?
+
+7
+00:00:35.001 --> 00:00:36.001
+Eso es un error.
+
+8
+00:00:37.000 --> 00:00:39.000
+Memoria insuficiente para realizar la aplicación.
+
+9
+00:00:39.001 --> 00:00:42.001
+Así que no solo le pasa a usted, sino que le sucede a todos.
+
+10
+00:00:43.000 --> 00:00:46.001
+Hoy vamos a dar un vistazo a los problemas de memoria de su PC y te mostraremos cómo
+
+11
+00:00:46.001 --> 00:00:50.000
+Resolverlos en esta edición de las Crónicas de Computadores.
+
+12
+00:01:05.001 --> 00:01:10.000
+Las crónicas de ordenador se hacen posible en parte por Hewlett Packard, trabajando con
+
+13
+00:01:10.000 --> 00:01:14.001
+líderes de la industria para garantizar la compatibilidad en todo el panel y a través de la red.
+
+14
+00:01:15.001 --> 00:01:19.000
+HPPC, usted está mirando a la asociación en una luz completamente nueva.
+
+15
+00:01:30.000 --> 00:01:32.000
+Hola y bienvenido a las crónicas informáticas.
+
+16
+00:01:32.000 --> 00:01:33.000
+Yo soy Stuart Chafay.
+
+17
+00:01:33.001 --> 00:01:38.000
+Conmigo hoy es Yael Liron, editor senior con la revista PC Computing y un
+
+18
+00:01:38.000 --> 00:01:40.001
+experto en estas cuestiones de memoria que estamos tratando hoy.
+
+19
+00:01:41.000 --> 00:01:42.001
+En primer lugar, ¿cuál es el problema básico?
+
+20
+00:01:42.001 --> 00:01:43.001
+¿Por qué tenemos estos problemas de memoria?
+
+21
+00:01:44.001 --> 00:01:48.001
+El problema es que las aplicaciones de pérdida tienen sólo 640K de memoria para
+
+22
+00:01:48.001 --> 00:01:50.000
+trabajo con, que se llama memoria convencional.
+
+23
+00:01:50.000 --> 00:01:52.000
+Independientemente de la cantidad de memoria que se instala en su sistema,
+
+24
+00:01:53.000 --> 00:01:54.001
+Sólo están limitados a trabajar con eso.
+
+25
+00:01:56.001 --> 00:02:00.000
+Por lo general, las personas tienen demasiadas cosas que funcionan dentro de esa memoria convencional,
+
+26
+00:02:00.000 --> 00:02:04.000
+conductores de dispositivos, utilidades residentes de memoria que ocupan ese espacio.
+
+27
+00:02:04.001 --> 00:02:06.001
+Así que usted piensa que tiene 640K pero no está realmente todo disponible.
+
+28
+00:02:07.000 --> 00:02:07.000
+Y justo.
+
+29
+00:02:07.001 --> 00:02:11.000
+Ahora un problema básico es que simplemente puede no tener suficiente RAM en su ordenador y
+
+30
+00:02:11.000 --> 00:02:13.001
+¿Quieres salir y comprar más RAM, eso no es tan difícil de hacer, ¿verdad?
+
+31
+00:02:13.001 --> 00:02:14.000
+Y justo.
+
+32
+00:02:14.000 --> 00:02:18.000
+Todo lo que tienes que hacer es comprar el SIM adecuado para tu sistema y
+
+33
+00:02:18.000 --> 00:02:20.000
+instalarlo en su sistema.
+
+34
+00:02:20.000 --> 00:02:21.000
+Es muy fácil de instalar.
+
+35
+00:02:21.000 --> 00:02:25.001
+Usted simplemente lo pone en su propio slot y se pone en el lugar.
+
+36
+00:02:25.001 --> 00:02:27.001
+Así que no tienes que tener miedo de instalar la memoria.
+
+37
+00:02:27.001 --> 00:02:29.000
+Era un megabyte y un boom, lo hiciste.
+
+38
+00:02:29.000 --> 00:02:29.000
+Y justo.
+
+39
+00:02:29.001 --> 00:02:31.000
+Todo está bien, vamos a volver al problema 640K.
+
+40
+00:02:31.001 --> 00:02:32.001
+No tienes que hacer nada complicado.
+
+41
+00:02:32.001 --> 00:02:36.001
+Si tiene DOS 6 o mejor, puede realmente ejecutar una utilidad llamada MemMaker para
+
+42
+00:02:36.001 --> 00:02:38.001
+reallugar la memoria y resolver algunos de esos problemas, ¿verdad?
+
+43
+00:02:39.000 --> 00:02:39.000
+Y justo.
+
+44
+00:02:39.000 --> 00:02:41.000
+Si tienes MS-DOS, se llama MemMaker.
+
+45
+00:02:41.000 --> 00:02:42.001
+Si tienes PC-DOS, se llama RAM Boost.
+
+46
+00:02:43.000 --> 00:02:44.001
+Estas dos utilidades basicamente hacen lo mismo.
+
+47
+00:02:45.000 --> 00:02:48.001
+optimizan el sistema por sí mismos y no
+
+48
+00:02:48.001 --> 00:02:50.000
+Hay que saber mucho sobre la gestión de la memoria.
+
+49
+00:02:50.000 --> 00:02:51.001
+Sólo lo hacen por ti.
+
+50
+00:02:51.001 --> 00:02:53.000
+Usted hace un montón de clics y podemos ver los resultados.
+
+51
+00:02:53.000 --> 00:02:56.001
+Usted acaba de correr MemMaker en esta máquina y fuera de la 640K, podríamos
+
+52
+00:02:56.001 --> 00:02:58.000
+Sólo realmente utilizan 517.
+
+53
+00:02:59.000 --> 00:03:01.001
+Fue el director de MemMaker y obtuvimos 31K de memoria adicional.
+
+54
+00:03:02.000 --> 00:03:03.000
+Así que ahora podemos usar 549.
+
+55
+00:03:03.001 --> 00:03:03.001
+Y justo.
+
+56
+00:03:04.000 --> 00:03:06.001
+Todo está bien, hay otra solución que tienes sobre esa otra máquina, que es
+
+57
+00:03:06.001 --> 00:03:09.001
+Configuraciones realmente diferentes para diferentes entornos de trabajo, ¿verdad?
+
+58
+00:03:10.000 --> 00:03:10.000
+Y justo.
+
+59
+00:03:10.001 --> 00:03:12.001
+Es un bote selectivo.
+
+60
+00:03:13.000 --> 00:03:13.001
+Se llama multi-config.
+
+61
+00:03:14.001 --> 00:03:18.001
+Y por lo tanto, cuando desactivas tu ordenador, puedes seleccionar si quieres hacer el trabajo.
+
+62
+00:03:18.001 --> 00:03:23.000
+cosas relacionadas como las ventanas de carga, redes, CD-ROM, o
+
+63
+00:03:23.000 --> 00:03:25.001
+Optimiza tu sistema solo para los juegos.
+
+64
+00:03:26.000 --> 00:03:28.000
+Bueno, de hecho, el CD-ROM sería un buen que tener también.
+
+65
+00:03:28.000 --> 00:03:31.000
+Por lo tanto, su máquina comenzaría de diferentes maneras dependiendo del tipo de memoria que usted
+
+66
+00:03:31.000 --> 00:03:33.000
+necesarios, dependiendo de lo que estaba haciendo con su ordenador.
+
+67
+00:03:33.001 --> 00:03:33.001
+Y justo.
+
+68
+00:03:33.001 --> 00:03:35.000
+Ya lo has escrito en la revista, ¿verdad?
+
+69
+00:03:35.000 --> 00:03:35.000
+Y justo.
+
+70
+00:03:36.000 --> 00:03:39.001
+Hay un artículo en el tema de junio 94 que es un detalle paso a paso
+
+71
+00:03:39.001 --> 00:03:43.000
+instrucciones sobre cómo crear un menú como este en cualquiera de las versiones de DOS.
+
+72
+00:03:43.000 --> 00:03:46.001
+Es muy sencillo y el artículo se publica en su foro informático.
+
+73
+00:03:47.000 --> 00:03:47.000
+El terrible.
+
+74
+00:03:47.000 --> 00:03:48.001
+Y finalmente, hay un libro que quería mencionar.
+
+75
+00:03:48.001 --> 00:03:49.000
+[...]
+
+76
+00:03:49.001 --> 00:03:54.000
+Este libro es todo lo que quieres saber sobre la gestión de la memoria y luego algunos.
+
+77
+00:03:54.000 --> 00:03:59.000
+Y viene con un disco con 14 utilidades para la memoria, para optimizar su memoria.
+
+78
+00:03:59.001 --> 00:04:00.000
+Es altamente recomendado.
+
+79
+00:04:00.001 --> 00:04:01.000
+Muchas gracias mucho.
+
+80
+00:04:01.001 --> 00:04:05.000
+Bueno, si usted comenzó con los PC hace 10 años, es difícil imaginar problemas de RAM
+
+81
+00:04:05.000 --> 00:04:08.000
+Hoy en día cuando su máquina viene con 4 megabytes o más.
+
+82
+00:04:08.000 --> 00:04:10.000
+Mi primer PC llegó con 4 kilobytes.
+
+83
+00:04:10.001 --> 00:04:14.000
+Bueno, vamos a comenzar nuestra mirada a los problemas de memoria con una breve lección de historia sobre
+
+84
+00:04:14.000 --> 00:04:15.001
+Evolución de la memoria informática.
+
+85
+00:04:16.000 --> 00:04:20.000
+El Museo Intel en Santa Clara, California es un microcosmo de memoria
+
+86
+00:04:20.000 --> 00:04:22.000
+Historia del microprocesador.
+
+87
+00:04:22.001 --> 00:04:27.000
+Dentro de sus habitaciones compactas, encontrarás pantallas que explican la memoria básica temprana, la
+
+88
+00:04:27.000 --> 00:04:31.001
+primer DRAM o memoria de acceso aleatorio dinámico, y los primeros ordenadores KIT.
+
+89
+00:04:32.000 --> 00:04:36.001
+Sólo vuelven alrededor de 20 años, pero están generaciones lejos de los PC de hoy.
+
+90
+00:04:37.000 --> 00:04:43.001
+Las memorias centrales eran en realidad hechas de cable alrededor de un dispositivo mecánico, y
+
+91
+00:04:43.001 --> 00:04:46.001
+permitiendo que la carga se almacene en un campo magnético.
+
+92
+00:04:47.000 --> 00:04:49.000
+De hecho, esa carga representaba los datos.
+
+93
+00:04:50.000 --> 00:04:54.001
+Fue rápidamente reemplazado por DRAM porque el DRAM era mucho más pequeño y más rápido.
+
+94
+00:04:54.001 --> 00:04:58.001
+y más barato para construir que el núcleo porque se basaba en la tecnología silicona.
+
+95
+00:04:59.001 --> 00:05:03.001
+Ahora, este primer DRAM era de hecho sólo una memoria 1K, que por la actualidad
+
+96
+00:05:03.001 --> 00:05:05.000
+Los estándares son muy pequeños.
+
+97
+00:05:05.001 --> 00:05:06.000
+Es muy pequeña.
+
+98
+00:05:06.001 --> 00:05:12.000
+Pero 1K de DRAM todavía destruyó absolutamente el negocio de la memoria central y
+
+99
+00:05:12.000 --> 00:05:14.000
+que lo sacó del rostro de la tierra.
+
+100
+00:05:15.000 --> 00:05:20.000
+El original 1K DRAM de los años 70 se duplicó en tamaño alrededor de cada 18 meses para llegar
+
+101
+00:05:20.000 --> 00:05:22.000
+Los chips de 16 megabytes.
+
+102
+00:05:22.001 --> 00:05:26.000
+La ventaja de la RAM dinámica fue su bajo coste y gran tamaño.
+
+103
+00:05:27.000 --> 00:05:31.001
+Luego llegó la RAM estática, una memoria mucho más rápida pero más costosa utilizada donde la velocidad es
+
+104
+00:05:31.001 --> 00:05:33.000
+esencial, como en cajas de memoria.
+
+105
+00:05:34.000 --> 00:05:37.001
+Recientemente, un nuevo tipo de memoria se ha vuelto disponible conocido como flash.
+
+106
+00:05:38.000 --> 00:05:42.000
+A diferencia de la RAM estática o dinámica, la memoria flash tiene la ventaja distinta de
+
+107
+00:05:42.000 --> 00:05:45.001
+Mantener los datos almacenados dentro de él, incluso cuando el ordenador está cerrado.
+
+108
+00:05:46.000 --> 00:05:49.001
+Los chips están envasados en tarjetas PCMCIA, populares para portátiles
+
+109
+00:05:49.001 --> 00:05:51.001
+las máquinas y como flash BIOS.
+
+110
+00:05:52.000 --> 00:05:56.001
+Flash BIOS es excelente para un PC porque lo permite estar actualizado en todo momento.
+
+111
+00:05:57.000 --> 00:06:01.001
+Si alguna vez el código cambia o el programa cambia, el usuario puede volver y
+
+112
+00:06:01.001 --> 00:06:03.001
+reprogramar directamente en el flash BIOS, el último
+
+113
+00:06:03.001 --> 00:06:05.001
+características que se necesitan en la industria.
+
+114
+00:06:06.000 --> 00:06:09.000
+Una de las aplicaciones más dramáticas de la memoria flash es probablemente
+
+115
+00:06:09.000 --> 00:06:11.000
+para estar en plug y sistemas de juego.
+
+116
+00:06:11.001 --> 00:06:14.001
+Con plug y play, los usuarios ya no tendrán que enfrentar el pesadilla de
+
+117
+00:06:14.001 --> 00:06:17.001
+reconfigurar sus PCs cada vez que añaden una tarjeta.
+
+118
+00:06:18.000 --> 00:06:22.000
+Los sistemas tendrán nuevas slots en el software y la memoria flash de BIOS.
+
+119
+00:06:22.001 --> 00:06:27.000
+Un plug y play requiere un dispositivo de memoria flash en el BIOS para mantener
+
+120
+00:06:27.000 --> 00:06:29.001
+la configuración de la tarjeta que está conectando.
+
+121
+00:06:30.000 --> 00:06:34.001
+Cuando un usuario final se une a una nueva tarjeta sonora, por ejemplo, el BIOS tiene que reescribir
+
+122
+00:06:34.001 --> 00:06:38.001
+a sí mismo y para almacenar esos datos de configuración directamente en él.
+
+123
+00:06:39.000 --> 00:06:43.000
+Cuando el usuario final vuelve y vuelve al ordenador, tiene que
+
+124
+00:06:43.000 --> 00:06:44.001
+Estos datos se almacenan permanentemente.
+
+125
+00:06:45.001 --> 00:06:47.001
+Para las crónicas informáticas, soy Giles Bateman.
+
+126
+00:07:01.000 --> 00:07:05.000
+Quizás la parte más confusa de lidiar con los problemas de memoria es
+
+127
+00:07:05.000 --> 00:07:07.000
+comprender lo que es el problema.
+
+128
+00:07:07.001 --> 00:07:11.000
+Una manera de conseguir una guía sobre esto es usar el software de diagnóstico.
+
+129
+00:07:11.001 --> 00:07:15.000
+Y un buen ejemplo es QA Plus para Windows desde Diagsoft.
+
+130
+00:07:15.001 --> 00:07:17.000
+Jeff Kraft se une a nosotros para explicar.
+
+131
+00:07:17.000 --> 00:07:17.001
+¿Cómo estás haciendo, Jeff?
+
+132
+00:07:17.001 --> 00:07:18.001
+Muy bueno Stuart.
+
+133
+00:07:18.001 --> 00:07:22.000
+A veces, si usted tiene un problema de memoria, puede realmente tener un problema en la memoria.
+
+134
+00:07:22.000 --> 00:07:24.000
+Usted puede tener mal chips RAM, ¿verdad?
+
+135
+00:07:24.000 --> 00:07:27.000
+Así que usted quiere hacer algunas pruebas fundamentales de su memoria en primer lugar.
+
+136
+00:07:27.000 --> 00:07:28.001
+¿Puede hacerlo con QA Plus?
+
+137
+00:07:28.001 --> 00:07:32.001
+Podemos hacerlo con QA Plus así como probar todos los aspectos del PC.
+
+138
+00:07:33.000 --> 00:07:34.001
+Así que hay todo tipo de cosas que puedo ver
+
+139
+00:07:34.001 --> 00:07:36.000
+Por eso, pero vamos a hacer el test de memoria aquí.
+
+140
+00:07:36.001 --> 00:07:36.001
+Bueno .
+
+141
+00:07:37.001 --> 00:07:43.000
+El test de memoria, básicamente tenemos la capacidad de llevar a cabo varias pruebas diferentes
+
+142
+00:07:43.000 --> 00:07:48.001
+en todo el campo de RAM, tanto para la base RAM y RAM extendido y ampliado.
+
+143
+00:07:49.001 --> 00:07:52.000
+Bueno, ahora esto es diferente de la prueba de RAM que normalmente ve cuando empiezo
+
+144
+00:07:52.000 --> 00:07:54.000
+¿Mi computadora y dice que la RAM ha pasado?
+
+145
+00:07:54.001 --> 00:07:55.001
+Es mucho más profundo.
+
+146
+00:07:56.000 --> 00:08:01.000
+Cuando se inicia en su ordenador y se realiza a través de un test de RAM, se realiza una
+
+147
+00:08:01.000 --> 00:08:04.000
+Modelo de datos a través de la RAM y lo lee de vuelta.
+
+148
+00:08:04.000 --> 00:08:06.001
+Y una vez que se ha terminado, se ha hecho.
+
+149
+00:08:07.000 --> 00:08:11.000
+No puede identificar las malas líneas SIM o el dispositivo malo en absoluto.
+
+150
+00:08:11.001 --> 00:08:13.001
+¿No puedes necesariamente confiar en eso?
+
+151
+00:08:14.000 --> 00:08:14.000
+Y justo.
+
+152
+00:08:14.000 --> 00:08:17.001
+Bueno, así que puedes hacer el tipo de prueba de hardware básico aquí y asegurarte de que
+
+153
+00:08:17.001 --> 00:08:19.000
+Todo su RAM realmente funciona.
+
+154
+00:08:19.001 --> 00:08:24.000
+Ahora la otra cosa que puedes hacer con esto, como entiendo, es realmente subir mi
+
+155
+00:08:24.000 --> 00:08:28.001
+archivo auto-exec, mi configura este archivo, mi cualquier archivo y todo eso, para tener su
+
+156
+00:08:28.001 --> 00:08:32.000
+Los chicos de tecnología analizan mi PC por control remoto.
+
+157
+00:08:33.000 --> 00:08:38.001
+Si, por sí, que tuvimos un fracaso de RAM, lo que sucedería es que un mensaje
+
+158
+00:08:38.001 --> 00:08:41.001
+Vuelve y pregunta si te gustaría saltar a nuestro centro de apoyo electrónico.
+
+159
+00:08:41.001 --> 00:08:43.001
+Y si el usuario decía sí, entonces
+
+160
+00:08:43.001 --> 00:08:45.000
+Esta sería la primera pantalla que vería.
+
+161
+00:08:45.001 --> 00:08:48.000
+En primer lugar, el sistema anotaría que es un problema de memoria.
+
+162
+00:08:48.001 --> 00:08:51.001
+Tenemos un espacio aquí para que el usuario nos envíe un mensaje.
+
+163
+00:08:52.000 --> 00:08:54.001
+Y el usuario simplemente va basicamente, ok.
+
+164
+00:08:55.000 --> 00:09:00.000
+Y lo que recogemos como parte de este proceso, recogimos quién es el usuario, cómo
+
+165
+00:09:00.000 --> 00:09:05.000
+entrar en contacto con el usuario sin nunca hablar con ellos, y un número de datos si
+
+166
+00:09:05.000 --> 00:09:07.001
+Hay un número de datos, correos electrónicos, así en y así sucesivamente.
+
+167
+00:09:08.000 --> 00:09:13.001
+Lo que se envía a nuestro centro de soporte tecnológico es inventario completo del sistema, hardware
+
+168
+00:09:13.001 --> 00:09:19.001
+inventario, mapas de memoria, información DOS, información de Windows, los archivos INI, todos
+
+169
+00:09:19.001 --> 00:09:24.001
+de los datos críticos que deberíamos ser capaces de hacer un primer paso diagnóstico
+
+170
+00:09:24.001 --> 00:09:29.000
+del problema sin tener que estar en línea con el cliente.
+
+171
+00:09:29.001 --> 00:09:36.000
+Ahora, una vez que vamos y este proceso sucede, nosotros, voy a salir aquí, pero nosotros
+
+172
+00:09:36.000 --> 00:09:42.001
+recibirían los datos en nuestro PC, entonces lo cargaríamos en nuestro pc, y
+
+173
+00:09:42.001 --> 00:09:47.000
+Buscar problemas de configuración obvios, problemas de memoria obvios, leer los datos
+
+174
+00:09:47.000 --> 00:09:48.001
+Esto se desprende del informe de pruebas.
+
+175
+00:09:48.001 --> 00:09:52.001
+Y así puedes entonces realmente resolver esos problemas y luego subir tu
+
+176
+00:09:52.001 --> 00:09:55.000
+Correción de archivos o configuración de vuelta a mi PC.
+
+177
+00:09:56.000 --> 00:10:00.000
+De vuelta directamente al usuario, y luego el usuario tiene la capacidad de cargar esos datos
+
+178
+00:10:00.000 --> 00:10:06.000
+entrar en su PC o ponerse en contacto con nosotros de nuevo con otra pregunta o tal vez quieren
+
+179
+00:10:06.000 --> 00:10:08.001
+Vamos a tomar el siguiente paso y diale su ordenador
+
+180
+00:10:08.001 --> 00:10:10.001
+Descargar y realizar los diagnósticos para ellos.
+
+181
+00:10:10.001 --> 00:10:13.000
+Por lo tanto, no tiene que ser una tecnología super.
+
+182
+00:10:14.000 --> 00:10:16.001
+Y justo. Y otra vez, esto podría ser más que literalmente un problema de hardware,
+
+183
+00:10:16.001 --> 00:10:18.000
+El tipo de problemas de configuración que tenemos
+
+184
+00:10:18.000 --> 00:10:20.000
+Hablaban de esto antes de que los chicos pudieran resolver.
+
+185
+00:10:20.000 --> 00:10:23.000
+Puede ser un problema de aplicación de carga con...
+
+186
+00:10:23.000 --> 00:10:23.001
+¿Cuál es el coste del servicio?
+
+187
+00:10:24.000 --> 00:10:27.000
+Es $99.95 al año. Se basa en...
+
+188
+00:10:27.000 --> 00:10:27.001
+Todo lo que quieres?
+
+189
+00:10:28.000 --> 00:10:29.000
+En principio, es ilimitado.
+
+190
+00:10:29.001 --> 00:10:30.001
+Todo lo que puedes comer. Bueno, no muy malo.
+
+191
+00:10:31.001 --> 00:10:35.001
+Todo está bien, ahora los problemas de RAM no se limitan a la plataforma PC y Windows.
+
+192
+00:10:35.001 --> 00:10:37.001
+También puede tener problemas de memoria con un Macintosh.
+
+193
+00:10:38.000 --> 00:10:40.000
+Pero hay una solución muy sencilla para el Mac.
+
+194
+00:10:40.000 --> 00:10:41.001
+RAM duplicado de Connectix.
+
+195
+00:10:42.000 --> 00:10:44.000
+Y aquí para mostrarlo a nosotros es Roy McDonald. ¿Cómo lo haces, Roy?
+
+196
+00:10:44.001 --> 00:10:44.001
+Buena historia .
+
+197
+00:10:45.000 --> 00:10:48.000
+En primer lugar, es un poco diferente en el entorno de Mac.
+
+198
+00:10:48.000 --> 00:10:48.001
+Esto hace...
+
+199
+00:10:48.001 --> 00:10:51.000
+No tenemos los 640K tipos de problemas que vemos en DOS.
+
+200
+00:10:51.001 --> 00:10:54.001
+Normalmente no es suficiente RAM para hacer todas las cosas que queremos hacer, ¿verdad?
+
+201
+00:10:54.001 --> 00:10:57.000
+El Macintosh es un ordenador muy intenso de memoria debido a
+
+202
+00:10:57.000 --> 00:10:59.000
+todos los gráficos que se hacen a menudo en ella.
+
+203
+00:10:59.000 --> 00:11:01.000
+Y así, a menudo las personas encuentran que no tienen suficiente memoria.
+
+204
+00:11:01.001 --> 00:11:03.000
+Connectix RAM-Doubler, este es el
+
+205
+00:11:03.000 --> 00:11:05.000
+Versión de Macintosh que te voy a mostrar aquí.
+
+206
+00:11:05.000 --> 00:11:05.000
+¿Un disco?
+
+207
+00:11:05.001 --> 00:11:08.000
+Es sólo un disco, toma unos 15 segundos para instalar.
+
+208
+00:11:08.001 --> 00:11:10.001
+Es una extensión que te da exactamente
+
+209
+00:11:10.001 --> 00:11:12.001
+Dos veces más memoria que cuando comenzó.
+
+210
+00:11:13.000 --> 00:11:16.000
+Así que todo lo que tienes que hacer es doble clic en el instalador, el producto está instalado.
+
+211
+00:11:16.001 --> 00:11:21.000
+Y aquí tenemos un PowerBook 140 con un viejo procesador 6830 con 4MB de RAM.
+
+212
+00:11:21.001 --> 00:11:24.001
+Una vez instalado, funcionará como un PowerBook con 8MB de RAM.
+
+213
+00:11:25.000 --> 00:11:27.001
+Además de esto, tenemos un PowerPC, un 7100.
+
+214
+00:11:28.000 --> 00:11:30.000
+Antes de llegar hasta ahora, ¿cuál es el truco?
+
+215
+00:11:30.000 --> 00:11:32.000
+Yo quiero decir que no puedes hacer oro de tinta, ¿sabes lo que quiero decir?
+
+216
+00:11:32.000 --> 00:11:34.000
+¿Dónde puedes encontrar todo este extra RAM mágicamente?
+
+217
+00:11:34.000 --> 00:11:37.000
+Bueno, la verdad es que hay un poco de ineficiencia inherente en el Mac
+
+218
+00:11:37.000 --> 00:11:39.000
+El uso del sistema operativo de RAM.
+
+219
+00:11:39.001 --> 00:11:42.000
+Así que, por ejemplo, si miras sobre este Macintosh, que es algo que es
+
+220
+00:11:42.000 --> 00:11:45.000
+construido en el sistema operativo de Mac, y un informe que le dice cómo es la memoria
+
+221
+00:11:45.000 --> 00:11:48.001
+Cuando se utilizó, este Mac tenía 24MB de memoria integrada.
+
+222
+00:11:49.000 --> 00:11:51.001
+Se duplicó a 49MB utilizando un duplicador de RAM.
+
+223
+00:11:52.000 --> 00:11:53.001
+Ahora, ¿cómo hemos obtenido la memoria extra?
+
+224
+00:11:54.000 --> 00:11:57.001
+Todas estas aplicaciones están abiertas y funcionan en este 24MB.
+
+225
+00:11:58.000 --> 00:11:59.001
+Vamos a ver Adobe Photoshop.
+
+226
+00:12:00.000 --> 00:12:05.000
+Este número aquí, el 8MB, nos dice que 8MB de memoria ha sido asignado a
+
+227
+00:12:05.000 --> 00:12:07.000
+Photoshop para usar siempre que utilice Photoshop.
+
+228
+00:12:07.001 --> 00:12:10.000
+Esta es una decisión que el usuario tiene que tomar cuando primero instale el software.
+
+229
+00:12:10.001 --> 00:12:14.000
+Pero si miras a estas barras, la parte negra de la barra es la parte de Photoshop
+
+230
+00:12:14.000 --> 00:12:15.001
+De hecho, en este momento se utiliza la RAM.
+
+231
+00:12:16.000 --> 00:12:18.000
+Toda esta memoria aquí ha sido atribuida por el operativo
+
+232
+00:12:18.000 --> 00:12:19.001
+sistema, pero actualmente no se utiliza.
+
+233
+00:12:19.001 --> 00:12:21.001
+Por lo tanto, usted está devolviendo algunos de esos perdidos
+
+234
+00:12:21.001 --> 00:12:23.001
+RAM que se atribuye a una aplicación.
+
+235
+00:12:23.001 --> 00:12:27.001
+Todas estas barras blancas son espacios de memoria que están basicamente llenos de zeros
+
+236
+00:12:27.001 --> 00:12:29.001
+Ahora que el sistema operativo no sabe cómo usar.
+
+237
+00:12:30.000 --> 00:12:32.001
+Esto solamente es suficiente para darle dos veces la memoria.
+
+238
+00:12:32.001 --> 00:12:35.001
+Si no es así, entonces vamos a las barras negras.
+
+239
+00:12:36.000 --> 00:12:37.001
+Estas son partes de la memoria que en realidad tienen
+
+240
+00:12:37.001 --> 00:12:39.000
+El código que está ahí y que está en marcha.
+
+241
+00:12:39.001 --> 00:12:41.001
+Pero a menudo, ese es el código que se utilizó sólo una vez.
+
+242
+00:12:41.001 --> 00:12:44.001
+ejecutar un solo código para lanzar el sistema o para
+
+243
+00:12:44.001 --> 00:12:46.000
+Descargar Adobe Photoshop, por ejemplo.
+
+244
+00:12:46.001 --> 00:12:49.000
+Esta parte de esa barra negra, la parte muy temprana, puede ser
+
+245
+00:12:49.000 --> 00:12:51.000
+Comprimir tres a uno para crear más espacio.
+
+246
+00:12:51.001 --> 00:12:53.001
+La combinación de todo esto nos da un doble exacto.
+
+247
+00:12:54.000 --> 00:12:54.000
+[...]
+
+248
+00:12:54.001 --> 00:12:56.001
+Roy, tienes tu pequeña cam rápida allí ahora.
+
+249
+00:12:56.001 --> 00:12:56.001
+Seguro .
+
+250
+00:12:57.000 --> 00:12:58.000
+¿Y cuál es el punto de eso?
+
+251
+00:12:58.000 --> 00:13:00.001
+El punto es mostrar por qué desearía tanta memoria en un ordenador.
+
+252
+00:13:00.001 --> 00:13:04.001
+Y la ventaja de tener tanta memoria en un ordenador es que puedes hacer muchas cosas.
+
+253
+00:13:04.001 --> 00:13:06.001
+cosas sin entrar y salir de las aplicaciones.
+
+254
+00:13:07.000 --> 00:13:09.001
+Así que, por ejemplo, sólo tomé mi foto utilizando la cámara rápida.
+
+255
+00:13:10.000 --> 00:13:14.000
+Ahora puedo simplemente ir a Adobe Photoshop, que ya está abierto, crear un
+
+256
+00:13:14.000 --> 00:13:18.001
+Nuevo documento, y yo simplemente saldré del clipboard.
+
+257
+00:13:19.000 --> 00:13:20.001
+Voy a echar mi imagen.
+
+258
+00:13:21.001 --> 00:13:22.000
+de Oops.
+
+259
+00:13:22.001 --> 00:13:23.000
+Toma la imagen.
+
+260
+00:13:24.000 --> 00:13:24.001
+Dump en el interior.
+
+261
+00:13:27.000 --> 00:13:27.001
+Allí estoy yo.
+
+262
+00:13:27.001 --> 00:13:30.000
+Ahora puedo ejecutar Photoshop mediante la esferización, por supuesto.
+
+263
+00:13:31.001 --> 00:13:33.001
+Así que, de nuevo, el verdadero punto es ser capaz de tener todas estas
+
+264
+00:13:33.001 --> 00:13:35.000
+Aplicaciones y funcionamiento al mismo tiempo.
+
+265
+00:13:35.000 --> 00:13:36.001
+Y eso es lo que necesitas correr por ellos ahora.
+
+266
+00:13:36.001 --> 00:13:36.001
+Y justo.
+
+267
+00:13:36.001 --> 00:13:38.001
+Todas estas aplicaciones y el Macintosh, el
+
+268
+00:13:38.001 --> 00:13:40.000
+La capacidad de ir entre todos ellos es la ventaja.
+
+269
+00:13:40.001 --> 00:13:40.001
+Todo lo justo.
+
+270
+00:13:40.001 --> 00:13:41.000
+Muchas gracias.
+
+271
+00:13:41.001 --> 00:13:45.001
+Ahora, si has lanzado un mensaje de error que dice que no hay suficiente memoria, las probabilidades son
+
+272
+00:13:45.001 --> 00:13:48.001
+Estás tratando de instalar o ejecutar un nuevo juego multimedia.
+
+273
+00:13:49.000 --> 00:13:53.000
+Bueno, una pequeña tienda de computadoras en Canadá se cansó de tener llamadas de clientes
+
+274
+00:13:53.000 --> 00:13:55.001
+y se quejan de que decidió desarrollar su propia
+
+275
+00:13:55.001 --> 00:13:57.001
+solución, y se llama el Doctor del juego.
+
+276
+00:13:58.001 --> 00:14:02.001
+Calgary es la puerta de Alberta a los Rockies Canadianos, un parque de juegos de invierno
+
+277
+00:14:02.001 --> 00:14:05.001
+Conocido por las maravillosas vistas y el espectacular esquí.
+
+278
+00:14:06.001 --> 00:14:10.001
+Aunque Silicon Valley está a más de mil millas de distancia, un retailer de ordenadores local
+
+279
+00:14:10.001 --> 00:14:15.000
+llamado Mad Mouse Multimedia Warehouse ha logrado producir un poco de programa
+
+280
+00:14:15.000 --> 00:14:17.000
+Esto puede hacer la vida más fácil para muchos usuarios de juegos.
+
+281
+00:14:18.000 --> 00:14:21.000
+Se llama Game Doctor, y su origen se basa en un problema de la vida real.
+
+282
+00:14:22.000 --> 00:14:24.001
+Bueno, como una tienda de alquiler, acabamos con obtener una gran cantidad de personas que comprarían un
+
+283
+00:14:24.001 --> 00:14:26.000
+Juego, llevarlo a casa, y no ser capaz de llevarlo para correr.
+
+284
+00:14:27.001 --> 00:14:28.000
+Así que volverían.
+
+285
+00:14:28.001 --> 00:14:29.001
+Normalmente regresaban a nosotros primero.
+
+286
+00:14:30.000 --> 00:14:32.000
+El primer lugar donde lo compran es donde vuelven.
+
+287
+00:14:32.000 --> 00:14:33.000
+No llaman un número de soporte tecnológico.
+
+288
+00:14:33.001 --> 00:14:35.001
+Entraron y dijeron que tenía un problema.
+
+289
+00:14:36.000 --> 00:14:37.001
+Y luego se pregunta cuál es el problema.
+
+290
+00:14:37.001 --> 00:14:38.000
+Por lo general, está fuera de la memoria.
+
+291
+00:14:38.001 --> 00:14:42.000
+Y les preguntamos, ¿sabes cómo reconfigurar tu auto-exec o config.sys?
+
+292
+00:14:42.001 --> 00:14:43.000
+Ellos dicen no.
+
+293
+00:14:43.001 --> 00:14:46.000
+Así que entonces pasamos unos minutos o más hablando con ellos,
+
+294
+00:14:46.000 --> 00:14:47.001
+Dejarles saber cómo hacerlo por sí mismos.
+
+295
+00:14:48.000 --> 00:14:51.000
+Lo que sucedió la mayoría de las veces es que la gente realmente llevaría su
+
+296
+00:14:51.000 --> 00:14:54.001
+sistema en y nosotros haríamos un limitado multi-config
+
+297
+00:14:54.001 --> 00:14:56.000
+que, en realidad, los llevaría a funcionar.
+
+298
+00:14:56.001 --> 00:15:00.000
+Para mantener su tiro de convertirse en una línea de apoyo técnico extendida para el juego
+
+299
+00:15:00.000 --> 00:15:02.001
+los editores, los propietarios de los ratones locos decidieron hacer su
+
+300
+00:15:02.001 --> 00:15:04.000
+Utilidad de configuración del juego.
+
+301
+00:15:05.000 --> 00:15:08.001
+Game Doctor es un programa multi-configurado que puede ajustar la memoria de un ordenador
+
+302
+00:15:08.001 --> 00:15:13.000
+asignación y recursos del sistema para correr y cambiar entre varios juegos sin
+
+303
+00:15:13.000 --> 00:15:16.000
+boot discos o cambiar los archivos de configuración del ordenador.
+
+304
+00:15:16.001 --> 00:15:19.001
+Puede que no parezca como un gran logro excepto para un usuario de juego.
+
+305
+00:15:20.001 --> 00:15:24.001
+Fue frustrante porque usted puso el juego en y usted se saca del error de memoria.
+
+306
+00:15:25.001 --> 00:15:28.001
+Usted tendría que tomar el tiempo, leerlo, descubrir cómo hacer un disco de inicio.
+
+307
+00:15:29.000 --> 00:15:32.000
+No soy literario, para ser honesto.
+
+308
+00:15:32.001 --> 00:15:35.000
+Prefiero algo que es muy amable al usuario.
+
+309
+00:15:36.000 --> 00:15:40.001
+Y he descubierto con el Doctor del juego, me permitirá utilizar una variedad de
+
+310
+00:15:40.001 --> 00:15:43.000
+Configuraciones de juego así que ya no tengo que preocuparme con un disco de inicio.
+
+311
+00:15:44.001 --> 00:15:46.000
+Se lo ha puesto en.
+
+312
+00:15:47.000 --> 00:15:51.000
+Si recibe la configuración equivocada al principio, entonces sólo puede probar otro
+
+313
+00:15:51.000 --> 00:15:53.000
+uno o otro y, finalmente, usted
+
+314
+00:15:53.000 --> 00:15:55.000
+Obtendrá la configuración correcta para que funcione.
+
+315
+00:15:55.001 --> 00:15:58.000
+Mad Mouse comienza a anunciar su producto, pero Game Doctor
+
+316
+00:15:58.000 --> 00:16:00.000
+Se vende principalmente por palabra de boca.
+
+317
+00:16:00.001 --> 00:16:03.001
+Los problemas recurrentes que enfrentan los compradores de juegos también aumentan las ventas.
+
+318
+00:16:04.001 --> 00:16:08.001
+En cuanto a suministrar a los clientes con software sin problemas desde el principio, Mad Mouse
+
+319
+00:16:08.001 --> 00:16:12.000
+Considera que es una responsabilidad compartida entre el editor y el minorista.
+
+320
+00:16:12.001 --> 00:16:16.000
+Uno de los problemas más grandes es que hay tantas variaciones de
+
+321
+00:16:16.000 --> 00:16:19.001
+computadoras allí, usted debe ser capaz de reconocer lo que están haciendo.
+
+322
+00:16:20.000 --> 00:16:25.001
+Y luego, en base a esto, crear una configuración que se ajuste al juego.
+
+323
+00:16:25.001 --> 00:16:27.000
+Y también para el ordenador.
+
+324
+00:16:27.001 --> 00:16:31.000
+La industria del software no puede
+
+325
+00:16:31.000 --> 00:16:33.000
+Todo el mundo tiene en cuenta cuando hace un producto.
+
+326
+00:16:34.001 --> 00:16:36.000
+Hay que cambiar, hay que hacer algo.
+
+327
+00:16:36.000 --> 00:16:39.001
+Así que lo que han hecho es que han tratado de dar un producto que funciona en un buen
+
+328
+00:16:39.001 --> 00:16:42.000
+porcentaje de las máquinas y del producto y de las maquinarias que no son
+
+329
+00:16:42.000 --> 00:16:44.000
+Configurado correctamente, aquí está cómo hacerlos funcionar.
+
+330
+00:16:44.001 --> 00:16:48.001
+Ya sea o no el Doctor del juego debe incluirse con cada juego caro o vendido
+
+331
+00:16:48.001 --> 00:16:52.000
+separadamente, los desarrolladores han encontrado una manera de superar uno de los más comunes
+
+332
+00:16:52.000 --> 00:16:54.000
+frustraciones de los usuarios de PC.
+
+333
+00:16:54.001 --> 00:16:56.000
+Ya no se juega con nada.
+
+334
+00:16:56.001 --> 00:17:00.001
+No tengo que probar y hacer estos discos de inicio y creo que soy como todo el mundo.
+
+335
+00:17:00.001 --> 00:17:03.000
+Cuando recibo el juego por primera vez, no quiero leer el manual.
+
+336
+00:17:03.000 --> 00:17:03.001
+Quiero ponerlo en.
+
+337
+00:17:04.000 --> 00:17:05.001
+Quiero tener un vistazo y ver cómo se ve el juego.
+
+338
+00:17:05.001 --> 00:17:07.000
+Quiero jugar un poco con ella.
+
+339
+00:17:07.001 --> 00:17:10.001
+Ahora, me lleva un par de quizás 30 segundos
+
+340
+00:17:10.001 --> 00:17:12.001
+Para conseguir el sistema correcto, me voy y me voy.
+
+341
+00:17:13.000 --> 00:17:15.001
+Para las crónicas informáticas, soy Giles Bateman.
+
+342
+00:17:29.000 --> 00:17:33.000
+Una solución estándar para los problemas de memoria ha sido simplemente comprar una pieza de
+
+343
+00:17:33.000 --> 00:17:35.001
+software que puede reconfigurar su memoria para
+
+344
+00:17:35.001 --> 00:17:37.000
+Se ajusta a las aplicaciones que está corriendo.
+
+345
+00:17:37.001 --> 00:17:41.001
+Uno de los líderes en esa categoría es QuarterDeck y su software QEMM.
+
+346
+00:17:42.000 --> 00:17:44.000
+Aquí para mostrarnos cómo usarlo es Gary Saxer.
+
+347
+00:17:44.000 --> 00:17:44.000
+Bienvenido Gary.
+
+348
+00:17:44.001 --> 00:17:45.000
+Gracias por .
+
+349
+00:17:45.000 --> 00:17:46.001
+Vamos a tratar de aclarar algunas cosas.
+
+350
+00:17:46.001 --> 00:17:49.000
+Antes del programa, hablamos de ese límite de 640K.
+
+351
+00:17:49.000 --> 00:17:51.001
+El hecho de la cuestión es que es un límite de un meg, ¿verdad?
+
+352
+00:17:51.001 --> 00:17:52.000
+Eso es justo.
+
+353
+00:17:52.001 --> 00:17:56.000
+Las máquinas DOS en realidad están limitadas a 1024K o un megabyte.
+
+354
+00:17:56.001 --> 00:17:59.000
+La diferencia de 384K no es mucho, pero es suficiente
+
+355
+00:17:59.000 --> 00:18:00.001
+Para hacer una gran diferencia en muchos programas.
+
+356
+00:18:01.000 --> 00:18:02.001
+Así que también puedes jugar con esa memoria.
+
+357
+00:18:02.001 --> 00:18:02.001
+por absoluto.
+
+358
+00:18:03.000 --> 00:18:03.000
+Todo lo justo.
+
+359
+00:18:03.000 --> 00:18:06.001
+El segundo punto es que hemos mostrado MemMaker al principio y que
+
+360
+00:18:06.001 --> 00:18:08.000
+Resuelve algunos de sus problemas de distribución de la memoria.
+
+361
+00:18:08.000 --> 00:18:09.000
+Seguro . Deberías correrlo si lo tienes.
+
+362
+00:18:09.000 --> 00:18:12.001
+Pero puedes hacer otras cosas con un QEMM que no puedes hacer con MemMaker.
+
+363
+00:18:12.001 --> 00:18:13.000
+Eso es justo.
+
+364
+00:18:13.000 --> 00:18:16.000
+Tenemos formas de extraer aún más memoria de los programas aquí.
+
+365
+00:18:16.001 --> 00:18:19.001
+Tenemos una función llamada Squeeze que puede realmente poner programas en lugares
+
+366
+00:18:19.001 --> 00:18:21.000
+dónde normalmente no podrían estar adecuados.
+
+367
+00:18:21.001 --> 00:18:21.001
+Todo lo justo.
+
+368
+00:18:21.001 --> 00:18:23.000
+Vamos a echar un vistazo a QEMM y mostrarme lo que quieres decir.
+
+369
+00:18:23.001 --> 00:18:23.001
+Bueno .
+
+370
+00:18:24.000 --> 00:18:27.000
+Esta máquina particular actualmente tiene 459K.
+
+371
+00:18:27.000 --> 00:18:31.000
+Puedes ver que mi pequeño ratón de diamante se mueve allí. 459K por debajo de 640K.
+
+372
+00:18:31.000 --> 00:18:31.001
+[...]
+
+373
+00:18:31.001 --> 00:18:35.000
+Hay algunas áreas de memoria aquí por encima de 640K que podemos utilizar.
+
+374
+00:18:35.000 --> 00:18:38.000
+Pero ahora todos los conductores están cargados por debajo de 640K.
+
+375
+00:18:38.001 --> 00:18:40.000
+Estos son los auto-exec.bat.
+
+376
+00:18:40.001 --> 00:18:42.000
+Y estamos utilizando nuestro programa manifiesto aquí para ver esto.
+
+377
+00:18:42.000 --> 00:18:46.000
+Y aquí puedes ver mis adaptadores PCMCIA aquí y mi disco CD-ROM, etc.
+
+378
+00:18:46.001 --> 00:18:51.000
+Ahora la idea es tomar estos conductores de debajo de 640K y moverlos en el
+
+379
+00:18:51.000 --> 00:18:53.000
+área de memoria superior a 640K.
+
+380
+00:18:53.001 --> 00:18:58.000
+Ahora esto se hace utilizando nuestro programa llamado Optimize, que es una mejor versión de
+
+381
+00:18:58.000 --> 00:19:00.000
+El programa que obtendrá se llama MemMaker o RamBoost.
+
+382
+00:19:00.001 --> 00:19:04.000
+Y su trabajo toma estos programas, explica cuán grandes son, y en realidad,
+
+383
+00:19:04.000 --> 00:19:06.000
+Puede hacer muchas otras cosas, figurando cosas especiales.
+
+384
+00:19:06.001 --> 00:19:09.000
+Puede ver las tarjetas PCMCIA allí y evitarlas,
+
+385
+00:19:09.001 --> 00:19:11.000
+cosas que MemMaker normalmente no hace.
+
+386
+00:19:11.000 --> 00:19:11.001
+Bueno .
+
+387
+00:19:11.001 --> 00:19:15.000
+Y su trabajo es encontrar esta cosa y obtener esta cosa movida por encima de 640K.
+
+388
+00:19:15.001 --> 00:19:19.001
+Así que, después de que todo haya terminado, el programa optimizado que es, ahora tenemos
+
+389
+00:19:19.001 --> 00:19:21.000
+582K de memoria.
+
+390
+00:19:21.001 --> 00:19:23.001
+Ahora notarás que todavía hay un par de cosas.
+
+391
+00:19:23.001 --> 00:19:26.001
+Por ejemplo, hay el driver CD-ROM aquí cargado por debajo de 640K.
+
+392
+00:19:26.001 --> 00:19:30.001
+Algunas de estas cosas todavía se mantienen por debajo de 640K. 582 es mucho, bien.
+
+393
+00:19:31.000 --> 00:19:32.000
+La mayoría de los programas de juego serán capaces de correr.
+
+394
+00:19:32.001 --> 00:19:33.000
+Pero queremos más.
+
+395
+00:19:33.001 --> 00:19:35.001
+Por eso no hemos podido conseguir más.
+
+396
+00:19:35.001 --> 00:19:38.001
+Mirando esta imagen aquí, verás toda esta zona azul aquí
+
+397
+00:19:38.001 --> 00:19:40.000
+La superficie es inferior a 640K.
+
+398
+00:19:40.000 --> 00:19:42.001
+Esta zona con la letra V&#x27;s es mi tarjeta de vídeo.
+
+399
+00:19:43.000 --> 00:19:44.001
+Eso es el área gráfica y el área de texto.
+
+400
+00:19:44.001 --> 00:19:45.001
+Así que este es un mapa de mi RAM.
+
+401
+00:19:45.001 --> 00:19:47.000
+Este es el mapa de un megabyte.
+
+402
+00:19:47.000 --> 00:19:47.001
+Eso es justo.
+
+403
+00:19:47.001 --> 00:19:48.001
+Y qué está sucediendo allí?
+
+404
+00:19:49.000 --> 00:19:51.000
+Esta letra R aquí, por ejemplo, es mi video ROM.
+
+405
+00:19:51.001 --> 00:19:54.000
+Este otro área arriba aquí es mi sistema ROM, controla el disco
+
+406
+00:19:54.000 --> 00:19:56.000
+y el teclado y las cosas así.
+
+407
+00:19:56.000 --> 00:19:57.000
+El marco de la página está ahí.
+
+408
+00:19:57.000 --> 00:20:00.000
+Utilizo un cache de disco que utiliza el marco de página.
+
+409
+00:20:00.000 --> 00:20:02.001
+Así que es bueno como 3K en tamaño en lugar de 30K en tamaños.
+
+410
+00:20:03.000 --> 00:20:05.001
+Y mi CD-ROM también utiliza el marco de página.
+
+411
+00:20:05.001 --> 00:20:07.001
+A partir de 50K, se reduce a 16K.
+
+412
+00:20:07.001 --> 00:20:10.001
+Pero lo importante aquí son estas letras verdes de H.
+
+413
+00:20:10.001 --> 00:20:13.000
+Usted le gusta tener muchas de estas letras verdes H&#x27;s.
+
+414
+00:20:13.000 --> 00:20:15.000
+Esta es la cantidad de memoria que tienes por encima de 640K.
+
+415
+00:20:15.000 --> 00:20:19.001
+En este caso particular aquí, tengo 128K de memoria superior a 640K que estoy utilizando.
+
+416
+00:20:20.000 --> 00:20:23.000
+Y todo excepto. 9K es lo que es este pequeño número
+
+417
+00:20:23.000 --> 00:20:24.001
+Dice que está siendo utilizado por los conductores.
+
+418
+00:20:25.000 --> 00:20:27.001
+Lo que nos gustaría hacer, sin embargo, es deshacerse de esos ROMs.
+
+419
+00:20:27.001 --> 00:20:30.000
+Ahora, por supuesto, si yo realmente se deshacía de los ROMs, no habría
+
+420
+00:20:30.000 --> 00:20:31.001
+Puede ver cualquier cosa en el video o cualquier cosa.
+
+421
+00:20:32.000 --> 00:20:33.000
+Usted no realmente se libra de ellos, pero pretenden que estamos se librando de ellos.
+
+422
+00:20:33.001 --> 00:20:34.001
+Bueno, lo llamamos esta característica stealth.
+
+423
+00:20:35.000 --> 00:20:37.001
+Y lo que estamos haciendo es ocultar a los romanos.
+
+424
+00:20:37.001 --> 00:20:42.000
+Los ROMs realmente están allí, pero sólo los usa cuando realmente los necesita.
+
+425
+00:20:42.000 --> 00:20:45.001
+Es decir, cuando vas a leer algo fuera del disco, traeremos el ROM de vuelta.
+
+426
+00:20:45.001 --> 00:20:48.001
+para la vida, va adelante y utilice el ROM, y luego lo esconde una vez más.
+
+427
+00:20:49.000 --> 00:20:50.000
+Y por eso lo llamamos ladrón.
+
+428
+00:20:50.000 --> 00:20:53.001
+Y la idea aquí es obtener, en este caso, casi 100K
+
+429
+00:20:53.001 --> 00:20:55.000
+Más memoria disponible para nosotros.
+
+430
+00:20:55.001 --> 00:20:58.000
+Si miramos la misma imagen aquí, después de que he rebootado con el robo
+
+431
+00:20:58.000 --> 00:21:01.000
+Aquí, en realidad, puedes ver todas estas letras verdes de H.
+
+432
+00:21:01.000 --> 00:21:02.001
+Todos los buenos verdes de H.
+
+433
+00:21:02.001 --> 00:21:04.000
+Mucho de buena letra verde H&#x27;s.
+
+434
+00:21:04.000 --> 00:21:10.001
+De hecho, más memoria al tono de más de 630K de memoria por debajo de 640K.
+
+435
+00:21:11.000 --> 00:21:14.000
+Y que el 630K es muy importante, incluso si usted ejecuta programas de Windows.
+
+436
+00:21:14.000 --> 00:21:17.000
+De hecho, Ryan Livingston en un informe reciente de Infoworld señaló que
+
+437
+00:21:17.000 --> 00:21:21.001
+mensajes de memoria insuficientes, incluso si tienes 16 o 20 megabytes de memoria, es
+
+438
+00:21:21.001 --> 00:21:23.000
+Memoria por debajo de un megabytes que necesitas.
+
+439
+00:21:23.001 --> 00:21:26.000
+Y eso es lo que estamos recibiendo, más memoria por debajo de un megabyte.
+
+440
+00:21:26.000 --> 00:21:27.000
+muy cool. Muchas gracias Gary.
+
+441
+00:21:27.000 --> 00:21:27.001
+Gracias por .
+
+442
+00:21:28.000 --> 00:21:32.000
+Bueno, ahora hay otro enfoque para resolver problemas de memoria, especialmente cuando
+
+443
+00:21:32.000 --> 00:21:34.000
+Se trata de los CD ROMs.
+
+444
+00:21:34.000 --> 00:21:37.001
+Esta es la utilidad multimedial de Helix Software.
+
+445
+00:21:37.001 --> 00:21:39.001
+Michael Spiele es el presidente de Helix.
+
+446
+00:21:39.001 --> 00:21:40.000
+¿Cómo estás haciendo, Michael?
+
+447
+00:21:40.001 --> 00:21:40.001
+Bueno y bueno. Gracias por .
+
+448
+00:21:41.000 --> 00:21:43.000
+Todo lo justo. Por lo tanto, sí, el problema ocurre más probablemente
+
+449
+00:21:43.000 --> 00:21:44.001
+Si estoy intentando ejecutar un juego de CD-ROM.
+
+450
+00:21:44.001 --> 00:21:47.001
+Pongo en el CD-ROM y no funcionará porque no tengo suficiente memoria.
+
+451
+00:21:48.000 --> 00:21:50.001
+¿Cómo puedo usar tu utilidad de clausura para resolver ese problema?
+
+452
+00:21:50.001 --> 00:21:53.000
+Bueno, en la pantalla, puedes ver el problema muy claramente.
+
+453
+00:21:53.001 --> 00:21:58.000
+Tipicamente, esta es una máquina que es un sistema multimedia y sólo tiene
+
+454
+00:21:58.000 --> 00:22:00.001
+506K, como puedes ver aquí.
+
+455
+00:22:01.000 --> 00:22:03.001
+Y eso es lo mejor que el creador de mem podría hacer.
+
+456
+00:22:03.001 --> 00:22:04.000
+Y eso es totalmente optimizado.
+
+457
+00:22:04.000 --> 00:22:05.001
+Así que esto es después de correr mem maker.
+
+458
+00:22:05.001 --> 00:22:06.000
+Eso es correcto.
+
+459
+00:22:06.001 --> 00:22:07.000
+Y esto es bebé.
+
+460
+00:22:07.001 --> 00:22:08.001
+No hay ni una tarjeta de sonido aquí.
+
+461
+00:22:08.001 --> 00:22:09.001
+No hay ningún sonido.
+
+462
+00:22:09.001 --> 00:22:11.000
+No hay PCMCIA.
+
+463
+00:22:11.000 --> 00:22:12.000
+No hay ninguna red.
+
+464
+00:22:12.001 --> 00:22:14.000
+No hay nada como un antivirus
+
+465
+00:22:14.000 --> 00:22:16.000
+utilidad, que probablemente debe utilizar.
+
+466
+00:22:16.001 --> 00:22:20.001
+Y puedes ver que sólo tengo 506K disponible para programas.
+
+467
+00:22:22.000 --> 00:22:25.001
+Y lo que sucede es cuando trato y ejecuto un programa, típicamente
+
+468
+00:22:25.001 --> 00:22:27.001
+Acabo con un mensaje así.
+
+469
+00:22:27.001 --> 00:22:29.000
+Hay nuestro mensaje, no hay suficiente memoria para comenzar esto
+
+470
+00:22:29.000 --> 00:22:30.001
+CD-ROM que estamos tratando de realizar.
+
+471
+00:22:30.001 --> 00:22:34.000
+Por lo tanto, lo que voy a hacer es que estoy a instalar nuestra utilidad multimedial.
+
+472
+00:22:34.001 --> 00:22:36.000
+Y la instalación es realmente muy simple.
+
+473
+00:22:36.000 --> 00:22:40.001
+Es un par de clics del ratón y viene con tres conductores diferentes que
+
+474
+00:22:40.001 --> 00:22:45.001
+Toma el lugar de sus condutores actuales y en realidad están licenciados por Microsoft.
+
+475
+00:22:46.001 --> 00:22:50.001
+Y las extensiones de CD-ROM, por ejemplo, es exactamente la misma, pero ha sido
+
+476
+00:22:50.001 --> 00:22:53.000
+Modificado para utilizar nuestra tecnología de clausura.
+
+477
+00:22:53.000 --> 00:22:56.001
+Así que parte de lo que estás haciendo es reemplazar a mis conductores con sus conductores, que son
+
+478
+00:22:56.001 --> 00:22:58.000
+más eficiente en el uso de la memoria.
+
+479
+00:22:58.001 --> 00:22:59.000
+y exactamente.
+
+480
+00:22:59.000 --> 00:23:03.001
+Y utilizan nuestra nueva tecnología de clausura para que puedan correr por encima de un megabyte.
+
+481
+00:23:04.000 --> 00:23:06.001
+Pero no estoy arriesgando mi sistema al sustituir a estos conductores.
+
+482
+00:23:07.000 --> 00:23:07.001
+Son los mismos conductores.
+
+483
+00:23:08.000 --> 00:23:11.001
+Y de hecho, son más seguros porque corren en la zona protegida de su memoria.
+
+484
+00:23:11.001 --> 00:23:16.000
+de modo que hay menos probabilidades de un conflicto entre estos conductores y otros
+
+485
+00:23:16.000 --> 00:23:18.000
+software que puede cargar en el sistema.
+
+486
+00:23:18.001 --> 00:23:21.000
+OK, así que haces tu clic y instales la clausura multimedia.
+
+487
+00:23:21.000 --> 00:23:24.000
+Y voila, has ganado más de 100K.
+
+488
+00:23:24.001 --> 00:23:28.001
+En esta configuración particular, creo que he ganado 101K
+
+489
+00:23:28.001 --> 00:23:30.000
+Sólo instalando estos conductores.
+
+490
+00:23:30.001 --> 00:23:32.000
+No tenía que correr MemMaker de nuevo y no
+
+491
+00:23:32.000 --> 00:23:34.000
+Hay que re-optimizar o cualquier otra cosa.
+
+492
+00:23:34.000 --> 00:23:36.001
+Sólo cargue los conductores y obtengo más memoria.
+
+493
+00:23:36.001 --> 00:23:38.001
+OK, ahora usted está hablando de esta tecnología clavante.
+
+494
+00:23:39.000 --> 00:23:41.000
+Gary hablaba de su tecnología de robo.
+
+495
+00:23:41.001 --> 00:23:42.000
+¿Son diferentes?
+
+496
+00:23:42.001 --> 00:23:43.001
+Son diferentes, sí.
+
+497
+00:23:44.000 --> 00:23:49.001
+La tecnología de clausura de hecho desplaza el programa para que se ejecuten por encima
+
+498
+00:23:49.001 --> 00:23:52.000
+un meg en el área de la memoria que es plenamente.
+
+499
+00:23:52.000 --> 00:23:56.000
+Y así no toman ninguna de las preciosas primeras megabytes
+
+500
+00:23:56.000 --> 00:23:58.000
+que necesitas ejecutar todo tu software.
+
+501
+00:23:58.000 --> 00:24:01.000
+Así que usted está diciendo que realmente no hay ni siquiera ese límite de un megabyte.
+
+502
+00:24:01.000 --> 00:24:03.001
+Usted puede incluso ir por encima de eso para ejecutar estas funciones de rutina.
+
+503
+00:24:03.001 --> 00:24:04.000
+Eso es justo.
+
+504
+00:24:04.000 --> 00:24:07.000
+Con el cloaking, va por encima del primer megabyte.
+
+505
+00:24:07.001 --> 00:24:11.001
+Y el resultado final es que el programa que intentamos ejecutar antes del CD-ROM
+
+506
+00:24:11.001 --> 00:24:16.001
+El juego que no correría y se desmarcaría de la memoria ahora llega y corre.
+
+507
+00:24:17.000 --> 00:24:17.000
+Y ahí va.
+
+508
+00:24:17.001 --> 00:24:18.000
+Es tan fácil como eso.
+
+509
+00:24:18.000 --> 00:24:22.001
+Todo está bien, ahora tienes otra solución aquí llamada Netroom, que es, yo
+
+510
+00:24:22.001 --> 00:24:24.001
+¿Es más poderoso que el multimídia?
+
+511
+00:24:25.000 --> 00:24:25.001
+Eso es correcto.
+
+512
+00:24:25.001 --> 00:24:29.000
+Netroom es un gerente de memoria completa que implementa el cloaking para su BIOS.
+
+513
+00:24:29.001 --> 00:24:35.000
+Por lo tanto, aquellos ROMs que Gary estaba ocultando, en realidad los relocamos por encima de uno.
+
+514
+00:24:35.000 --> 00:24:36.001
+y que los ejecuten allí.
+
+515
+00:24:37.000 --> 00:24:39.000
+Y eso puede darte mucha memoria adicional.
+
+516
+00:24:39.001 --> 00:24:44.000
+Y lo que vamos a mostrar aquí es la combinación de Netroom y multimedia
+
+517
+00:24:44.000 --> 00:24:50.000
+Cloaking, que es si tienes la red y el PCMCIA y el CD-ROM y el
+
+518
+00:24:50.000 --> 00:24:54.001
+sonido y el escáner y su sistema es realmente totalmente cargado y realmente necesita
+
+519
+00:24:54.001 --> 00:24:58.001
+Mucho de RAM adicional, esa es la combinación que lo hará para usted.
+
+520
+00:24:59.000 --> 00:24:59.001
+Y así tienes Netroom.
+
+521
+00:25:00.000 --> 00:25:06.001
+El resultado final es visible con nuestra utilidad de descubrimiento que le muestra a todos
+
+522
+00:25:06.001 --> 00:25:11.001
+sobre los interiores de su PC y haga clic en el botón de memoria.
+
+523
+00:25:11.001 --> 00:25:15.001
+Y usted ve que hemos ido a 902K por debajo de un meg.
+
+524
+00:25:15.001 --> 00:25:18.001
+Así que es casi todo el primer megabyte es usable para sus programas.
+
+525
+00:25:19.000 --> 00:25:21.000
+Y 800 de ellos todavía están disponibles.
+
+526
+00:25:21.000 --> 00:25:24.001
+Así que, en realidad, hay más que suficiente para cargar todos los conductores que usted podría querer.
+
+527
+00:25:24.001 --> 00:25:27.000
+Así que la buena noticia es que hay soluciones a estos problemas de memoria.
+
+528
+00:25:28.000 --> 00:25:28.000
+Todo lo justo.
+
+529
+00:25:28.000 --> 00:25:28.001
+Muchas gracias.
+
+530
+00:25:29.000 --> 00:25:30.001
+Esa es nuestra mirada a los problemas de memoria.
+
+531
+00:25:30.001 --> 00:25:32.000
+Espero que te damos algunas buenas ideas.
