@@ -1,0 +1,1501 @@
+WEBVTT
+
+1
+00:00:23.000 --> 00:00:27.001
+Jika Anda memiliki chip komputer di bawah lubang mobil Anda jalan ini 89 Corvette
+
+2
+00:00:27.001 --> 00:00:32.000
+Ya, semua yang harus Anda lakukan adalah menyambungkannya ke salah satu mesin diagnostik ini dan Anda
+
+3
+00:00:32.000 --> 00:00:36.001
+Anda dapat melihat apa yang sedang terjadi di dalam mesin. Namun, itu harus benar kemudian
+
+4
+00:00:36.001 --> 00:00:40.001
+dari PC Anda karena setelah semua tidak ada apa-apa kecuali chip komputer di bawah lubang
+
+5
+00:00:40.001 --> 00:00:45.001
+yang itu. Nah, itu benar jika Anda memiliki alat diagnostik yang tepat. Hari ini kita akan mengambil satu
+
+6
+00:00:45.001 --> 00:00:50.000
+Lihatlah perangkat lunak diagnostik pada edisi ini dari Computer Chronicles.
+
+7
+00:01:04.000 --> 00:01:08.000
+Komputer Chronicles telah dimungkinkan sebagian oleh PC Connection dan
+
+8
+00:01:08.000 --> 00:01:12.001
+Untuk MacConnection. Perangkat lunak dan perkakasan peripheral untuk PC dan
+
+9
+00:01:12.001 --> 00:01:17.001
+Macintosh dan Persatuan Penerbit Software. Penyedia Pendidikan
+
+10
+00:01:17.001 --> 00:01:21.001
+bahan untuk membantu mengelola perangkat lunak. Jangan menyalin floppy itu.
+
+11
+00:01:26.000 --> 00:01:30.001
+Selamat Datang ke Komputer Chronicles Saya Stuart Chafay. Pada hari-hari awal dari
+
+12
+00:01:30.001 --> 00:01:34.001
+komputer pribadi jika Anda ingin mengetahui apa yang terjadi di dalam PC Anda
+
+13
+00:01:34.001 --> 00:01:38.001
+Ada alat yang terbatas yang tersedia. Misalnya, Anda dapat menggunakan perintah DOS seperti cek
+
+14
+00:01:38.001 --> 00:01:42.001
+Disk dan dapatkan sedikit informasi di sini tentang apa yang ada pada hard drive kami dan
+
+15
+00:01:42.001 --> 00:01:46.000
+Di mana ingatan kita duduk saat ini. Setelah itu, Peter Norton datang dengan
+
+16
+00:01:46.000 --> 00:01:49.000
+Norton utilitas dan kita bisa melakukan sedikit lebih banyak dengan perintah Norton
+
+17
+00:01:49.000 --> 00:01:54.000
+Seperti halnya Sysinfo. Kami mendapatkan beberapa informasi lebih lanjut. Berikut ini adalah ringkasan sistem dasar dan kami
+
+18
+00:01:54.000 --> 00:01:58.000
+Kita bisa lebih mendalam tentang situasi video kita. Perangkat lunak terputus, perangkat lunak
+
+19
+00:01:58.000 --> 00:02:02.001
+mengganggu, sesuatu tentang nilai-nilai CMOS, informasi lebih lanjut tentang cara kita
+
+20
+00:02:02.001 --> 00:02:06.001
+cakera dikonfigurasi, tabel partisi bahkan, resume memori dan sebagainya. Tetapi sebagai
+
+21
+00:02:06.001 --> 00:02:11.000
+Komputer hari ini menjadi lebih kuat dan lebih rumit dan sebagai perangkat lunak
+
+22
+00:02:11.000 --> 00:02:15.001
+mulai menuntut lebih banyak dari komputer kita kita membutuhkan alat yang lebih kuat
+
+23
+00:02:15.001 --> 00:02:19.001
+untuk melihat di dalam PC untuk mengetahui apa yang sedang terjadi terutama jika ada masalah.
+
+24
+00:02:20.000 --> 00:02:23.001
+Sekarang Anda dapat melakukan banyak sendiri hari ini dengan perangkat lunak diagnostik yang akan kami
+
+25
+00:02:23.001 --> 00:02:28.001
+melihat tetapi bahkan jika Anda tidak dapat memperbaikinya sendiri diagnostik software dapat membantu Anda
+
+26
+00:02:28.001 --> 00:02:34.001
+menjelaskan kepada toko perbaikan apa yang salah dan yang dapat menghemat uang. Ketika Anda
+
+27
+00:02:34.001 --> 00:02:38.001
+memiliki masalah dengan komputer Anda Anda ingin ia diselesaikan segera. Di sini di Advanced
+
+28
+00:02:38.001 --> 00:02:43.001
+Perbaikan Komputer di San Francisco biaya kerja saja untuk perbaikan komputer adalah $ 71
+
+29
+00:02:43.001 --> 00:02:48.001
+satu jam. Pada harga yang Anda ingin mereka untuk memperbaiki komputer tidak menghabiskan banyak waktu
+
+30
+00:02:48.001 --> 00:02:53.000
+Menjelaskan apa yang salah. Salah satu cara untuk melakukannya adalah menggunakan perangkat lunak diagnostik pada
+
+31
+00:02:53.000 --> 00:02:56.000
+komputer Anda sebelum membawanya ke toko perbaikan.
+
+32
+00:02:56.001 --> 00:03:00.000
+Perangkat lunak diagnostik dapat membantu pengguna dalam menentukan apa masalah sebenarnya
+
+33
+00:03:00.000 --> 00:03:05.001
+Mereka adalah. Salah satu pekerjaan yang harus kita lakukan adalah menjadi pembaca pikiran dan mengetahui
+
+34
+00:03:05.001 --> 00:03:09.001
+Apa yang sebenarnya salah. Jika Anda pergi ke dokter dan Anda tidak dapat menjelaskan apa yang
+
+35
+00:03:09.001 --> 00:03:15.001
+Gejala-gejala adalah dia tidak akan dapat mengetahui apa masalah yang Anda miliki. Dengan melakukan
+
+36
+00:03:15.001 --> 00:03:20.000
+Anda membuat pekerjaan kami lebih mudah karena kami tahu apa yang harus dicari. Bahkan jika Anda tidak bisa
+
+37
+00:03:20.000 --> 00:03:24.000
+Diagnosis masalah itu sendiri Anda masih dapat menghemat uang dengan menggunakan diagnosis
+
+38
+00:03:24.000 --> 00:03:28.001
+utilitas untuk membuat hard drive backup Anda sendiri sebelum mengambil komputer Anda ke dalam
+
+39
+00:03:28.001 --> 00:03:35.000
+Toko yang Pengguna dapat menggunakan perangkat lunak diagnostik untuk menemukan titik buruk pada cakera keras mereka. A
+
+40
+00:03:35.000 --> 00:03:39.001
+banyak kali biaya perbaikan mereka akan jauh lebih tinggi jika kita harus melakukan data
+
+41
+00:03:39.001 --> 00:03:45.001
+pemulihan pada cakera keras bukannya memiliki mereka memiliki backup terlebih dahulu karena
+
+42
+00:03:45.001 --> 00:03:50.000
+Mereka tahu bahwa hard disk mereka sedang dalam perjalanan keluar. Perbedaan dalam biaya
+
+43
+00:03:50.000 --> 00:03:55.001
+Itu bisa sebesar $ 2.500. Perangkat lunak diagnostik tidak hanya mengurangi biaya
+
+44
+00:03:55.001 --> 00:04:00.000
+komputer memperbaiki tetapi dalam banyak kasus menghapus mereka semua bersama-sama. Aku akan mengatakan
+
+45
+00:04:00.000 --> 00:04:04.001
+sekitar 20% dari masalah yang kita lihat adalah masalah yang pengguna mungkin memiliki
+
+46
+00:04:04.001 --> 00:04:10.000
+diselesaikan atau dihapus dengan menjalankan beberapa perangkat lunak diagnostik secara berkala sebelum
+
+47
+00:04:10.000 --> 00:04:16.000
+Datanglah kepada kami. Baru-baru ini, banyak virus menyebabkan masalah seperti pencetak tidak mencetak,
+
+48
+00:04:17.000 --> 00:04:20.001
+Floppy drive tidak bekerja dan ini adalah jenis masalah yang dapat mereka selesaikan
+
+49
+00:04:20.001 --> 00:04:23.000
+mereka sendiri tanpa harus memanggil kami. Untuk komputer
+
+50
+00:04:23.000 --> 00:04:25.000
+Saya adalah Janelle Stelson.
+
+51
+00:04:36.000 --> 00:04:43.000
+Sebagian besar perangkat lunak diagnostik telah dikembangkan untuk platform PC dan itu adalah
+
+52
+00:04:43.000 --> 00:04:46.001
+di mana kita akan mulai hari ini dengan produk diagnostik yang membantu menyelesaikan misteri
+
+53
+00:04:46.001 --> 00:04:51.000
+Windows dan lubang hitam memori atas. Di sini untuk menunjukkan kepada kita adalah Frank Westall dari
+
+54
+00:04:51.000 --> 00:04:55.000
+Dariana dan Gary Saxer dari Quarterdeck. Gary, biarlah aku memulai denganmu. Aku telah
+
+55
+00:04:55.000 --> 00:04:58.000
+berputar pada komputer untuk waktu yang lama dan selalu menjalankan pemeriksaan memori dan
+
+56
+00:04:58.000 --> 00:05:01.000
+Periksa ini dan itu selalu benar. Saya maksud siapa yang harus
+
+57
+00:05:01.000 --> 00:05:02.001
+Berhati-hatilah dengan jenis perangkat lunak ini.
+
+58
+00:05:02.001 --> 00:05:04.001
+Saya maksud pengguna rata-rata ini hanya untuk hacker untuk
+
+59
+00:05:04.001 --> 00:05:06.000
+Bermain di sekitar dengan? Bukan untuk semua orang.
+
+60
+00:05:07.000 --> 00:05:10.000
+Stuart ada hanya dua jenis pengguna komputer di dunia, novices
+
+61
+00:05:10.000 --> 00:05:11.001
+dan para ahli. Tidak ada kelas menengah.
+
+62
+00:05:12.000 --> 00:05:16.000
+Aku benar-benar tidak berpikir seperti itu. Anda hanya menggunakan mesin atau Anda mulai mendapatkan
+
+63
+00:05:16.000 --> 00:05:20.000
+masuk ke dalamnya dan Anda menemukan segala-galanya dan jadi Anda perlu tahu tentang ini luar biasa
+
+64
+00:05:20.000 --> 00:05:22.000
+Hal-hal penting yang terjadi di dalam mesin. Tentu saja, ketika terjadi
+
+65
+00:05:22.000 --> 00:05:24.001
+Memori itu sudah pasti. Kami akan kembali kepada Anda dalam beberapa menit. Sekarang Windows
+
+66
+00:05:24.001 --> 00:05:28.000
+Jenis-jenis mengangkat ante lebih banyak Frank karena orang-orang berlari di bawah
+
+67
+00:05:28.000 --> 00:05:29.001
+Windows sekarang dan siapa yang tahu apa yang terjadi di dunia
+
+68
+00:05:29.001 --> 00:05:31.000
+Pada saat Anda sedang mengunggah program Windows Anda.
+
+69
+00:05:31.000 --> 00:05:35.000
+Anda memiliki Winsloot yang membantu kita memahami apa yang terjadi di sana. Tunjukkan bagaimana
+
+70
+00:05:35.000 --> 00:05:38.001
+Anda akan menggunakan Winsloot. Bahkan, Anda memiliki masalah tambahan di dalamnya.
+
+71
+00:05:38.001 --> 00:05:42.001
+lingkungan Windows karena apa yang harus Anda lakukan adalah pengguna tidak hanya ingin
+
+72
+00:05:42.001 --> 00:05:46.000
+belajar tentang apa yang terjadi di dalam Windows tetapi mereka juga ingin belajar tentang
+
+73
+00:05:46.000 --> 00:05:50.000
+Apa yang terjadi di dalam hardware mereka? Oleh karena itu, sebuah representasi dari sistem muncul
+
+74
+00:05:50.000 --> 00:05:54.000
+dan Anda dapat mengambil kursor dan Anda bisa menunjuknya sebagai contoh ke arah yang keras
+
+75
+00:05:54.000 --> 00:05:58.001
+mengemudi Informasi hard drive muncul di sistem dan kami memiliki lebih dari 52 tombol
+
+76
+00:05:58.001 --> 00:06:02.001
+menjelaskan apa yang telah kami dapatkan atau kami turun menu. Sebagai contoh, kita bisa
+
+77
+00:06:02.001 --> 00:06:06.001
+dan melakukan tes motherboard pada sistem. Kita bisa melakukan sesuatu di sepanjang
+
+78
+00:06:06.001 --> 00:06:09.000
+Lini untuk menguji port paralel dan serial Anda.
+
+79
+00:06:09.001 --> 00:06:14.000
+Area lain yang dapat Anda masuk adalah area seperti memandang memori. Anda bisa
+
+80
+00:06:14.000 --> 00:06:19.000
+Perhatikan memori konvensional dan kemudian Anda dapat memecahkannya. Masukkan ke dalam A
+
+81
+00:06:19.000 --> 00:06:21.000
+Tetingkap yang lebih kecil dan teruskan.
+
+82
+00:06:21.000 --> 00:06:25.000
+Anda dapat melihat dalam lingkungan Windows pada masalah seperti daftar tugas. di dalam
+
+83
+00:06:25.000 --> 00:06:30.000
+daftar tugas apa yang terjadi adalah ini adalah area yang terbuka aplikasi yang
+
+84
+00:06:30.000 --> 00:06:36.000
+yang terbuka. Sebagai contoh, saya akan memberikan sesuatu untuk Anda di sini. Aku bisa menurunkan ini
+
+85
+00:06:36.000 --> 00:06:37.001
+Membuka sesuatu seperti kalkulator.
+
+86
+00:06:39.000 --> 00:06:46.000
+Saya akan meminimalisirnya dan Anda akan melihat setiap lima detik update daftar tugas ini
+
+87
+00:06:46.000 --> 00:06:50.001
+Diri dan alasan untuk jenis aplikasi ini adalah memantau apa yang sedang terjadi.
+
+88
+00:06:50.001 --> 00:06:54.000
+Tepat banyak pengguna akan berputar dan mereka akan membuka lima belas belas
+
+89
+00:06:54.000 --> 00:06:58.001
+Aplikasi yang Lupakan untuk menutupnya. Dua minggu kemudian mereka terus menggunakan hal yang sama.
+
+90
+00:06:58.001 --> 00:07:02.001
+Jenis dari prosedur. Mereka mengalir keluar dari memori yang dikurangi oleh dua megabytes lebih
+
+91
+00:07:02.001 --> 00:07:05.001
+memori dan mereka berada dalam banyak masalah di sana. Ini memberitahu Anda mengapa itu adalah
+
+92
+00:07:05.001 --> 00:07:09.001
+yang terjadi. dengan tepat. Hal-hal lain yang dapat Anda perhatikan
+
+93
+00:07:09.001 --> 00:07:11.001
+dalam lingkungan sistem operasi.
+
+94
+00:07:12.001 --> 00:07:16.000
+Windows bukanlah lingkungan yang sempurna. Orang menggunakan aplikasi DOS dan juga
+
+95
+00:07:16.000 --> 00:07:20.000
+dengan Windows. Mereka ingin melihat masalah seperti driver perangkat. Jika Anda memiliki video
+
+96
+00:07:20.000 --> 00:07:23.001
+kartu mereka memiliki driver perangkat pada kartu video serta pada jenis Windows
+
+97
+00:07:23.001 --> 00:07:29.000
+dari kartu. Dalam area itu sebagai contoh pada kartu video jika mereka ingin melakukan
+
+98
+00:07:29.000 --> 00:07:33.000
+Sesuatu seperti memasang papan baru. Ya, mereka bisa pergi ke sana menggunakan sesuatu
+
+99
+00:07:33.000 --> 00:07:38.001
+Seperti pembantu instalasi. Kebanyakan pengguna tidak tahu apa IRQ adalah apa port IO
+
+100
+00:07:38.001 --> 00:07:42.001
+adalah . Semua yang mereka lakukan adalah mereka membaca manual yang mengatakan Anda harus menggunakan IRQ tertentu
+
+101
+00:07:42.001 --> 00:07:46.000
+lokasi atau lokasi pelabuhan IO tertentu. Nah, tahukah Anda apa yang sudah ada 5
+
+102
+00:07:46.000 --> 00:07:51.000
+Kartu di dalamnya. Satu-satunya hal yang dapat mereka lakukan adalah menghubungi penjual atau mengambil
+
+103
+00:07:51.000 --> 00:07:54.000
+keluar dari semua papan satu pada satu waktu. Ketika mereka memanggil penjual, penjual akan pergi
+
+104
+00:07:54.000 --> 00:07:57.001
+Mereka ingin tahu apa yang mereka miliki di dalam sistem. Dengan pembantu instalasi ini
+
+105
+00:07:57.001 --> 00:08:03.001
+daerah hijau yang tersedia. Bagian biru dari daerah-daerah di dalam
+
+106
+00:08:03.001 --> 00:08:07.001
+Hardware menghentikan bahwa mereka memiliki akses ke. Sekarang juga apa yang akan dilakukan adalah memberikan
+
+107
+00:08:07.001 --> 00:08:12.001
+Anda memiliki sedikit penjelasan dan Anda dapat pergi untuk membantu pada paparan data dan
+
+108
+00:08:12.001 --> 00:08:16.000
+Anda dapat mengetahui apa yang dirujuk oleh ROM dan ini adalah masalah pendidikan untuk Anda sebagai
+
+109
+00:08:16.000 --> 00:08:20.001
+dengan baik. Oleh karena itu, jenis hal ini benar-benar bermanfaat bagi pengguna dari kedua
+
+110
+00:08:20.001 --> 00:08:25.000
+Dari sudut pandang diagnostik serta dari sudut pandangan pendidikan. Dan kamu bisa
+
+111
+00:08:25.000 --> 00:08:29.000
+Jenis penggunaan Winsloot untuk menyempurnakan instalasi Windows Anda untuk memaksimalkannya?
+
+112
+00:08:30.000 --> 00:08:34.000
+Tune up adalah fungsi yang pengguna cenderung berpikir bahwa datang dari DOS
+
+113
+00:08:34.000 --> 00:08:38.001
+lingkungan sekarang dengan 3.1 keluar ada jutaan pengguna baru datang ke
+
+114
+00:08:38.001 --> 00:08:43.001
+dan fold. Pengguna berpikir mereka dapat mengisi program sama seperti mereka dapat DOS. Baik sekali lagi
+
+115
+00:08:43.001 --> 00:08:47.001
+Ini bukan dunia yang sempurna. Apa yang akan terjadi dalam kasus seperti ini adalah jika Anda berlari tun
+
+116
+00:08:47.001 --> 00:08:51.001
+kemudian Anda dapat berputar dan itu membuat rekomendasi tentang apa yang
+
+117
+00:08:51.001 --> 00:08:56.000
+Salah dengan sistem Anda. Anda dapat mengambil rekomendasi tersebut dan berputar dan
+
+118
+00:08:56.000 --> 00:08:59.000
+mengkonfigurasi sistem dengan benar dan ia memberitahu Anda apa yang harus dilakukan.
+
+119
+00:08:59.000 --> 00:09:03.000
+Itu yang hebat. Okay Gary mari kita berbalik kepada Anda dan ingatan adalah salah satu mimpi buruk besar
+
+120
+00:09:03.000 --> 00:09:07.000
+mencoba untuk mengetahui apa yang terjadi di dalam komputer Anda dan di Quarter Deck
+
+121
+00:09:07.000 --> 00:09:09.001
+itulah yang Anda spesialisasikan dan beritahu saya bagaimana Anda dapat membantu saya menemukan
+
+122
+00:09:09.001 --> 00:09:13.000
+Apa yang sedang terjadi. Nah, kami menggunakan manifesto produk kami di sini untuk membantu kami melihat
+
+123
+00:09:13.000 --> 00:09:18.000
+Aplikasi DOS klasik kami dan juga membantu aplikasi Windows
+
+124
+00:09:18.000 --> 00:09:21.000
+dan juga. Melihat pada layar manifest di sini misalnya Anda melihat di sana di mana
+
+125
+00:09:21.000 --> 00:09:24.000
+Memori konvensional berakhir pada 640k tepat di tengah tepat di atasnya.
+
+126
+00:09:24.000 --> 00:09:29.001
+Ia mengatakan 533k. Itulah seberapa banyak ingatan yang saya miliki. Sekarang kita semua berpikir kita memiliki 640k
+
+127
+00:09:29.001 --> 00:09:35.000
+Anda tidak memiliki 5.0. Semua program kecil ini diisi di sana. I
+
+128
+00:09:35.000 --> 00:09:39.000
+Sebenarnya ada driver jaringan di sini, driver tikus, beberapa hal istimewa lainnya.
+
+129
+00:09:39.000 --> 00:09:43.001
+Sebenarnya ada juga kata cache cakera dan driver ANSI Sys dan hal-hal seperti itu.
+
+130
+00:09:43.001 --> 00:09:45.001
+Jadi Anda mencoba untuk memuat perangkat lunak yang tidak cukup memori dan Anda mengatakan apa yang Anda lakukan
+
+131
+00:09:45.001 --> 00:09:47.001
+Apakah Anda tidak cukup memori? Apa yang Anda maksudkan saya memiliki semua jenisnya tetapi Anda perlu
+
+132
+00:09:47.001 --> 00:09:51.001
+Itu di bawah 640k dan ada banyak hal lain di sana. Apa yang bisa kita lakukan sekarang juga
+
+133
+00:09:51.001 --> 00:09:55.001
+Namun, ada area antara 640k dan 1024k.
+
+134
+00:09:55.001 --> 00:10:00.001
+Ini adalah gambaran khusus dari daerah-daerah tersebut. huruf H adalah area di atas 640k
+
+135
+00:10:00.001 --> 00:10:03.001
+yang tidak digunakan oleh apa pun dan kita bisa meletakkan beberapa program di sana dan
+
+136
+00:10:03.001 --> 00:10:06.001
+di daerah dengan huruf R terutama di bagian bawah di mana
+
+137
+00:10:06.001 --> 00:10:09.001
+Sistem ROM adalah area yang Anda tidak bisa menggunakan.
+
+138
+00:10:10.000 --> 00:10:15.000
+Sekarang masalahnya adalah bahwa apa yang kita ingin bisa lakukan adalah mengumpulkan apa yang
+
+139
+00:10:15.000 --> 00:10:20.000
+Mengisi antara 640k dan 1024k semuanya benar dan membuatnya bekerja dengan benar. Sekarang apa yang saya
+
+140
+00:10:20.000 --> 00:10:24.000
+untuk melakukan adalah reboot mesin di sini dan saya menjalankan program ini dipanggil
+
+141
+00:10:24.000 --> 00:10:27.001
+Optimize dan apa yang Optimize lakukan adalah ia mengambil semua program Anda driver jaringan
+
+142
+00:10:27.001 --> 00:10:31.001
+pengemudi tetikus dan masing-masing program lain ini dan ia menemukan setiap area
+
+143
+00:10:31.001 --> 00:10:38.000
+antara 640k dan 1024k dan mengoptimalkan angka di mana antara 640.k dan 10.24k masing-masing
+
+144
+00:10:38.000 --> 00:10:41.001
+Program-program ini harus berjalan. Oleh karena itu, Anda tidak perlu melakukan apa yang Anda tahu
+
+145
+00:10:41.001 --> 00:10:45.001
+DOS5 hanya memberitahu Anda untuk memberikannya sebuah percobaan mencoba mengisi yang mengisi di sana dan lihat apakah itu
+
+146
+00:10:45.001 --> 00:10:49.001
+bekerja . Itu bodoh karena Anda akan melihat di sini dalam sekejap saja karena Optimize
+
+147
+00:10:49.001 --> 00:10:54.001
+telah menghitung 500.000 karena itu adalah angka di sudut tangan kanan bawah
+
+148
+00:10:54.001 --> 00:10:56.001
+Kombinasi yang berbeda untuk memasukkan program.
+
+149
+00:10:56.001 --> 00:11:02.000
+Sekarang cukup menarik, ada hal-hal lain yang bisa Anda lakukan untuk melakukan ini
+
+150
+00:11:02.000 --> 00:11:07.000
+Hal-hal yang bekerja lebih baik. Apa yang akan saya gunakan adalah fitur yang disebut Stealth. Sekarang
+
+151
+00:11:07.000 --> 00:11:11.000
+Stealth memberi kita kemampuan untuk dapat benar-benar mengambil program ini
+
+152
+00:11:11.000 --> 00:11:16.000
+mengambil area yang kami sebut ROM dan mengambil area ROM dan menyingkirkan
+
+153
+00:11:16.000 --> 00:11:20.001
+dari mereka dan bukannya itu hanya memiliki beberapa area kecil di antara
+
+154
+00:11:20.001 --> 00:11:25.001
+640k dan 1024k di mana untuk meletakkan program resident ini kita memiliki area besar sebagai
+
+155
+00:11:25.001 --> 00:11:31.000
+Sebenarnya, ROM hilang sepenuhnya ketika Anda menggunakan fitur Stealth. dan yang
+
+156
+00:11:31.000 --> 00:11:34.001
+Hasil net dari ini adalah semua program kecil ini yang Anda miliki di bawah 640k Anda sekarang
+
+157
+00:11:34.001 --> 00:11:39.000
+memiliki kemampuan untuk mendapatkan semua dari mereka di atas 640k dan mendapatkan kembali semua yang
+
+158
+00:11:39.000 --> 00:11:45.000
+Memori di bawah 640k. Sebenarnya karena kita ada salah satu dari driver ini mengambil 96k memori
+
+159
+00:11:45.000 --> 00:11:48.001
+Kita dapat melihat di sini di layar kecil ini di bawah di sana di bagian bawah cermin
+
+160
+00:11:48.001 --> 00:11:53.000
+Program mengambil 96k memori tetapi hanya mengambil 6k ketika ia adalah resident itu membutuhkan
+
+161
+00:11:53.000 --> 00:11:56.001
+Jumlah memori besar antara 640k dan 1024k. Jadi Anda telah membuang-buang ingatan itu.
+
+162
+00:11:57.000 --> 00:11:58.001
+Nah, kamu tidak membuangnya.
+
+163
+00:11:59.000 --> 00:12:00.001
+Ini adalah salah satu hal yang melihat analisis ini
+
+164
+00:12:00.001 --> 00:12:02.001
+Ini menunjukkan kepada Anda di sini bahwa Anda tidak membuangnya.
+
+165
+00:12:02.001 --> 00:12:06.001
+Saya akan meluncurkan kembali untuk kali terakhir di sini. Apa yang Anda tidak membazirkan apa yang
+
+166
+00:12:06.001 --> 00:12:11.000
+Anda melakukannya adalah Anda harus menggunakannya begitu banyak dan kemudian ia menghancurkan ketika selesai.
+
+167
+00:12:11.000 --> 00:12:14.001
+Anda melihat tanpa alat analisis Anda tidak tahu bahwa itu terjadi dan
+
+168
+00:12:14.001 --> 00:12:19.001
+itulah sebabnya orang mengatakan saya memiliki banyak memori mengapa saya tidak dapat menggunakannya karena ia menggunakan
+
+169
+00:12:19.001 --> 00:12:23.001
+memori yang Anda tidak menyadari dan kemudian mengabaikannya atau menyingkirkannya setelah
+
+170
+00:12:23.001 --> 00:12:28.000
+Semua sudah dilakukan. Sekarang optimisasi semuanya dilakukan sekarang dan seperti yang dapat kita lihat di sini melihat sama
+
+171
+00:12:28.000 --> 00:12:32.001
+Display yang kami lihat pada awalnya kami memiliki 621k memori. Kami baru saja memperoleh
+
+172
+00:12:32.001 --> 00:12:34.000
+90k atau sebagainya dari proses tersebut.
+
+173
+00:12:35.000 --> 00:12:40.000
+Dan semua ROM telah pergi Anda dapat melihat tidak ada lagi huruf R yang begitu jelas
+
+174
+00:12:40.000 --> 00:12:44.001
+menunjukkan kepada kami apa yang sedang terjadi dan mengoptimalkan yang merupakan fitur dari QEMM 386 dan kami
+
+175
+00:12:44.001 --> 00:12:48.001
+produk yang disebut Cram benar-benar membantu membuatnya sehingga Anda dapat menggunakan area tersebut sebagai
+
+176
+00:12:48.001 --> 00:12:51.001
+yang terbaik mungkin. Tuan-tuan yang benar dua alat diagnostik yang hebat terima kasih banyak
+
+177
+00:12:51.001 --> 00:12:55.001
+banyak Frank dan Gary. Sekarang ketika penyedia perangkat keras memberi Anda dukungan teknis gratis
+
+178
+00:12:55.001 --> 00:13:00.000
+Saya ingin beberapa bantuan dari Anda pengguna. Untuk membuat itu terjadi banyak komputer
+
+179
+00:13:00.000 --> 00:13:05.001
+produsen sekarang menghubungkan perangkat lunak diagnostik dengan PC mereka. Komputer Acer
+
+180
+00:13:05.001 --> 00:13:11.000
+menghasilkan satu PC setiap 15 detik yang sekitar 10.000 unit per minggu sehingga ada
+
+181
+00:13:11.000 --> 00:13:15.001
+Banyak pengguna Acer di luar sana yang mungkin ingin memanggil garis dukungan teknologi Acer.
+
+182
+00:13:16.000 --> 00:13:20.000
+Perusahaan ingin menyediakan pengguna dengan dukungan tetapi dalam era margin yang ketat
+
+183
+00:13:20.000 --> 00:13:24.001
+Untuk PC maker itu tidak dapat membayar biaya tinggi layanan pribadi untuk setiap pengguna.
+
+184
+00:13:25.000 --> 00:13:30.001
+Jawab Acer adalah menghubungkan perangkat lunak diagnostik gratis dengan setiap PC. dalam
+
+185
+00:13:30.001 --> 00:13:35.001
+untuk memasukkan disket diagnostik atau perangkat lunak yang lebih canggih dalam
+
+186
+00:13:35.001 --> 00:13:41.001
+Firmware yang dapat meningkatkan biaya komputer dengan dua hingga lima dolar.
+
+187
+00:13:42.000 --> 00:13:48.000
+Namun, ketika Anda faktor dalam biaya dukungan komputer lebih dari satu atau dua atau bahkan
+
+188
+00:13:48.000 --> 00:13:52.001
+sampai periode lima tahun saya pikir konservatif waktu dan biaya yang terlibat
+
+189
+00:13:52.001 --> 00:13:57.001
+dari mengambil panggilan layanan dapat berada pada pesanan dua puluh dolar sehingga hasilnya
+
+190
+00:13:57.001 --> 00:14:02.001
+adalah dalam kepentingan terbaik dari produsen jangka panjang untuk menyediakan tingkat ini
+
+191
+00:14:02.001 --> 00:14:07.000
+Investasi untuk mendukung pelanggan. Perangkat lunak Acer ditulis di dalam dan
+
+192
+00:14:07.000 --> 00:14:11.000
+Membantu pengguna menguji berbagai komponen di dalam komputer. Diagnosis yang
+
+193
+00:14:11.000 --> 00:14:15.001
+perangkat lunak memudahkan para teknisi Acer untuk menyelesaikan masalah Anda dan
+
+194
+00:14:15.001 --> 00:14:18.001
+Banyak kasus yang dapat menyelamatkan Anda dari harus membuat panggilan sama sekali.
+
+195
+00:14:19.000 --> 00:14:23.001
+Mengenai jumlah pertanyaan telepon yang kami terima saat kami memulai
+
+196
+00:14:23.001 --> 00:14:29.000
+termasuk disket diagnostik dengan komputer yang telah kita lihat pengurangan
+
+197
+00:14:29.000 --> 00:14:33.000
+di mana saja dari satu pertiga hingga setengah dari jumlah permintaan layanan.
+
+198
+00:14:33.001 --> 00:14:38.001
+Selain itu, kita menemukan bahwa bagi mereka yang kita terima mereka jauh lebih tinggi
+
+199
+00:14:38.001 --> 00:14:43.000
+tingkat pertanyaan yang berkualitas sehingga mengurangi jumlah waktu dan usaha
+
+200
+00:14:43.000 --> 00:14:47.001
+bahwa staf layanan kami perlu bekerja dan mendukung jenis pencarian tersebut. Untuk yang
+
+201
+00:14:47.001 --> 00:14:50.000
+Saya adalah Janelle Stelson.
+
+202
+00:15:04.000 --> 00:15:07.001
+Diagnosis Macintosh biasanya agak sederhana tetapi dengan semua kebaikan baru yang dibangun
+
+203
+00:15:07.001 --> 00:15:11.001
+Dalam Mac yang lebih baru dan lebih kuat ada pasar yang tumbuh untuk peeking
+
+204
+00:15:11.001 --> 00:15:16.001
+Di dalam Macintosh Anda juga. Di sini untuk menunjukkan kepada kita dua program diagnostik Mac adalah Jeff
+
+205
+00:15:16.001 --> 00:15:21.000
+Bodine dari Micro-Mat dan juga dengan kami Presiden MacSA Brent Luckman. Brent Anda
+
+206
+00:15:21.000 --> 00:15:25.001
+pria biasa untuk mengkhususkan diri dalam alat diagnostik PC dan sekarang Anda keluar dengan
+
+207
+00:15:25.001 --> 00:15:29.001
+Perangkat lunak diagnostik Mac pertama Anda. Apa yang terjadi di sini? Apakah hal itu terjadi sama seperti
+
+208
+00:15:29.001 --> 00:15:32.000
+sulit untuk mengetahui apa yang terjadi di dalam Mac karena ada di DOS
+
+209
+00:15:32.000 --> 00:15:36.001
+dengan mesin? Secara mutlak dan mutlak. Kami melihatnya dan sekitar 6 bulan yang lalu
+
+210
+00:15:36.001 --> 00:15:40.000
+Setelah memiliki permintaan selama dua tahun memutuskan bahwa dengan FX, Quadras dan
+
+211
+00:15:40.000 --> 00:15:45.000
+PowerBooks ada kebutuhan tertentu berdasarkan kartu akselerator, diperpanjang
+
+212
+00:15:45.000 --> 00:15:48.000
+dan video. Kami benar-benar perlu datang dengan alat yang akan membantu pengguna dan
+
+213
+00:15:48.000 --> 00:15:52.000
+perusahaan benar-benar mengambil keuntungan penuh dari apa yang terjadi di mesin-mesin ini untuk
+
+214
+00:15:52.000 --> 00:15:54.001
+dengan cepat menemukan dan mengisolasi masalah. Jadi PC akan mendapatkan Windows
+
+215
+00:15:54.001 --> 00:15:56.000
+Mac menjadi lebih rumit. secara mutlak.
+
+216
+00:15:57.000 --> 00:16:01.001
+Saat ini, Anda memiliki produk yang disebut Mac EKG. yang benar. Jeff dan apa yang membuatnya
+
+217
+00:16:01.001 --> 00:16:06.001
+Biarkan saya tahu tentang apa yang terjadi di dalam Mac saya? Mac EKG adalah CDev yang
+
+218
+00:16:06.001 --> 00:16:10.001
+banyak seperti init atau ekspansi TSR di dunia IBM dan apa yang ia lakukan adalah
+
+219
+00:16:10.001 --> 00:16:15.000
+pada dasarnya mempelajari cara mesin pengguna berkelakuan normal. Dengan cara ini harus
+
+220
+00:16:15.000 --> 00:16:20.000
+sesuatu yang aneh terjadi, sesuatu yang melambatkan laporan sistem, program
+
+221
+00:16:20.000 --> 00:16:24.000
+Dia akan datang dan memberitahu Anda. Sebelum Anda melakukan diagnosis sistem. Ia berjalan melalui A
+
+222
+00:16:24.000 --> 00:16:28.000
+Serangkaian tes logika. Itulah yang ia lakukan saat ini dan saat itu
+
+223
+00:16:28.000 --> 00:16:31.000
+Ini menunjukkan sedikit informasi tentang mesin Anda. Jadi Anda sedang mengisi
+
+224
+00:16:31.000 --> 00:16:32.001
+EKG setelah semua yang lain ada di dalam.
+
+225
+00:16:33.000 --> 00:16:34.001
+Setelah semua yang lain berjalan. EKG masuk dan melihat
+
+226
+00:16:34.001 --> 00:16:36.000
+dan menggambarkan apa yang sedang terjadi. yang benar.
+
+227
+00:16:36.001 --> 00:16:40.000
+Jadi apa itu memberitahu saya? Sekarang ini ia mengatur fungsi logik dan tepat di sini
+
+228
+00:16:40.000 --> 00:16:44.001
+Aku akan meletakkannya. Memeriksa parameter RAM yang merupakan area penyimpanan.
+
+229
+00:16:44.001 --> 00:16:49.000
+yang menyimpan informasi setelah mesin mematikan. Ia menguji hal-hal yang khusus
+
+230
+00:16:49.000 --> 00:16:50.001
+Chip dan tentu saja memaparkan informasi itu.
+
+231
+00:16:51.001 --> 00:16:58.000
+Setelah menguji parameter RAM ia berjalan melalui ujian RAM semua memori
+
+232
+00:16:58.000 --> 00:17:03.000
+Dan kemudian ia menguji chip VIA yang merupakan Versal Interface Adapter. Ini memungkinkan
+
+233
+00:17:03.000 --> 00:17:08.000
+untuk berkomunikasi dengan keyboard dan kemudian harus menguji SCC yang
+
+234
+00:17:08.000 --> 00:17:09.001
+Chip pengontrol komunikasi serial.
+
+235
+00:17:10.000 --> 00:17:13.001
+Itu adalah modem, kerja pencetak dan kemudian cip SCSI yang sebenarnya yang
+
+236
+00:17:13.001 --> 00:17:15.000
+Interface ke drive cakera SCSI.
+
+237
+00:17:16.000 --> 00:17:20.000
+Langkah seterusnya dari tes itu akan menguji media nyata yang tergelincir ke
+
+238
+00:17:20.000 --> 00:17:24.001
+mengemudi Ini akan menguji setiap drive di bus, menunjukkan Anda banyak informasi tentang itu
+
+239
+00:17:24.001 --> 00:17:29.001
+dan mempelajari cara yang harus dikendalikan oleh drive tertentu. Semua sistem nominal. Ketika
+
+240
+00:17:29.001 --> 00:17:33.000
+itu lengkap ia memberi Anda histogram dan jika kami menemukan masalah itu akan
+
+241
+00:17:33.000 --> 00:17:36.001
+Anda telah memberitahu kami tepat di sini. Ada masalah di sini untuk melihat ke dalamnya.
+
+242
+00:17:37.001 --> 00:17:40.001
+Nah, apa lagi yang bisa kita lakukan dengan hal ini? Saya hanya akan menggunakan ini
+
+243
+00:17:40.001 --> 00:17:46.000
+rutin memeriksa komputer saya setiap hari atau memecahkan masalah? Sebagai sebuah kuasa
+
+244
+00:17:46.000 --> 00:17:51.000
+pengguna yang akan menjadi cara untuk menggunakannya adalah untuk menjalankan sekali sehari mungkin beberapa kali
+
+245
+00:17:51.000 --> 00:17:54.000
+satu hari atau bahkan hanya sekali seminggu. Kami memiliki beberapa pengaturan untuk itu. Untuk yang
+
+246
+00:17:54.000 --> 00:17:58.001
+Teknik layanan ini memungkinkan mereka untuk menguji chip sebelumnya hanya dapat diuji oleh
+
+247
+00:17:58.001 --> 00:18:04.000
+bagian dari perangkat lunak Apple yang disebut tes MAC yang tidak tersedia untuk
+
+248
+00:18:04.000 --> 00:18:07.000
+publik baru diperbolehkan Apple dealer. Ini memberi Anda cara untuk menguji
+
+249
+00:18:07.000 --> 00:18:09.000
+Langkah-langkah yang rendah pada logika.
+
+250
+00:18:09.000 --> 00:18:13.000
+Ok sekarang jika saya hanya pengguna rata-rata saya menjalankan EKG sekali sehari atau sekali seminggu atau
+
+251
+00:18:13.000 --> 00:18:16.001
+Ada sesuatu dan saya melihat ada masalah apa yang saya lakukan? Hal yang terbaik untuk
+
+252
+00:18:16.001 --> 00:18:19.001
+Ya, itu sebenarnya mungkin akan datang dan memberitahu Anda ada masalah.
+
+253
+00:18:19.001 --> 00:18:24.000
+Salah satu kesalahan terbesar yang kita temukan memiliki toko layanan yang memperbaiki Macintosh adalah bahwa
+
+254
+00:18:24.000 --> 00:18:27.000
+Orang sering menjadi penjahat dari mesin mereka sendiri. Mereka meletakkan sesuatu di dalam
+
+255
+00:18:27.000 --> 00:18:30.000
+sistem folder yang menyebabkan masalah. Mereka menghancurkannya sendiri. Lain kali mereka
+
+256
+00:18:30.000 --> 00:18:34.000
+memulai kembali jika EKG melihat kegagalan atau penurunan kinerja
+
+257
+00:18:34.000 --> 00:18:35.001
+Dia akan datang dan memberitahu Anda. Kau mengganggu aku, itu akan mengatakan.
+
+258
+00:18:35.001 --> 00:18:40.000
+dengan tepat. Ini akan memberitahu Anda ada sesuatu yang salah dan untuk melihat ke dalamnya dan hanya
+
+259
+00:18:40.000 --> 00:18:43.001
+Dengan deduksi Anda akan tahu dengan baik saya melakukannya kemarin mungkin itulah sebabnya. Semua yang benar
+
+260
+00:18:43.001 --> 00:18:47.001
+Brent Anda memiliki perangkat keras dan perangkat lunak alat diagnostik untuk MAC. menjelaskan bahwa
+
+261
+00:18:47.001 --> 00:18:52.001
+kepada saya. Ya itu benar. Apa yang kami lakukan adalah kami telah memberikan kepada pengguna a
+
+262
+00:18:52.001 --> 00:18:57.001
+Kartu diagnostik yang akan membantu pengguna menemukan masalah bahkan jika MAC yang menyedihkan
+
+263
+00:18:57.001 --> 00:19:02.000
+muncul di layar. Seperti yang Anda ketahui, diagnosis perangkat lunak membuat yang mengerikan
+
+264
+00:19:02.000 --> 00:19:05.000
+banyak asumsi yang memantau, video, drive disk, RAM
+
+265
+00:19:05.000 --> 00:19:06.001
+Dan semuanya harus berfungsi dengan sempurna.
+
+266
+00:19:07.001 --> 00:19:11.000
+Jadi apa yang kami lakukan adalah kami membuat papan ini untuk mesin bus baru untuk memperkenalkan beberapa
+
+267
+00:19:11.000 --> 00:19:14.001
+standardisasi sejak MAC sebelumnya lainnya memiliki semua jenis yang berbeda
+
+268
+00:19:14.001 --> 00:19:18.000
+Struktur untuk slot ekspansi. Dan lembaga itu benar-benar memiliki readoutsnya sendiri
+
+269
+00:19:18.000 --> 00:19:21.000
+di atasnya. Secara mutlak dan sangat mudah digunakan. Jadi apa itu yang memberitahu Anda? Dengan demikian
+
+270
+00:19:21.000 --> 00:19:25.000
+Apa yang akan memberitahu pengguna adalah nomor satu adalah tegangan bekalan listrik mereka adalah
+
+271
+00:19:25.000 --> 00:19:30.000
+Pergi ke setiap garis. Ini memberitahu jam apa-apa aktivitas bus dan mencari ADB sebagai
+
+272
+00:19:30.000 --> 00:19:34.000
+dengan baik. Dan ini akan benar-benar memberitahu pengguna hey saya memiliki masalah itu lebih
+
+273
+00:19:34.000 --> 00:19:38.000
+serius daripada saya dapat menangani saya membutuhkan bekalan baru saya memiliki masalah bus mendapatkan kembali
+
+274
+00:19:38.000 --> 00:19:41.000
+kepada dealer saya mendapatkan kembali ke toko atau salah satu distributor yang sekarang
+
+275
+00:19:41.000 --> 00:19:44.001
+Menggunakan produk Apple. Semua benar dan saya lihat Anda memiliki Terminator Plug
+
+276
+00:19:44.001 --> 00:19:48.000
+Dari beberapa jenis di sana, apa yang kamu lakukan dengan itu? Ya dengan program kami yang kami tawarkan
+
+277
+00:19:48.000 --> 00:19:53.001
+Terminator plug untuk kedua port serial dan modem dan ini adalah untuk memastikan
+
+278
+00:19:53.001 --> 00:19:57.000
+integritas dan bahwa pelabuhan-pelabuhan tersebut berfungsi dengan baik. Kami telah memasang satu di sini.
+
+279
+00:19:57.000 --> 00:20:01.001
+di belakang mesin kami di sini untuk menunjukkan bahwa itu gagal dan dapat gagal. Dan ini adalah
+
+280
+00:20:01.001 --> 00:20:06.001
+sangat penting kita benar-benar menguji perangkat keras pada tes unit individu serta
+
+281
+00:20:06.001 --> 00:20:08.001
+Pengujian otomatis Dan kita benar-benar memiliki
+
+282
+00:20:08.001 --> 00:20:10.000
+Kami telah memecahkan program kami dan mungkin kita harus melihatnya.
+
+283
+00:20:10.000 --> 00:20:12.000
+Ya, mari kita lihat bagian perangkat lunak dari itu. Baik dengan baik.
+
+284
+00:20:13.000 --> 00:20:14.001
+Jadi Anda akan membakar Snooper.
+
+285
+00:20:16.001 --> 00:20:22.000
+SNOOPER dimulai dengan layar otomatis yang dikenal di dunia DOS sebagai go
+
+286
+00:20:22.000 --> 00:20:26.001
+Tidak pergi menu dan apa yang ia lakukan secara otomatis menguji area kunci fungsi
+
+287
+00:20:26.001 --> 00:20:28.000
+Di mana kegagalan bisa terjadi.
+
+288
+00:20:28.000 --> 00:20:31.001
+Dan ini benar-benar bagus karena ketika kami menyelidiki pengguna kami menemukan bahwa mereka tidak
+
+289
+00:20:31.001 --> 00:20:36.001
+Saya benar-benar ingin duduk dan bermain dengan menu menarik. Tapi untuk melakukan itu kita
+
+290
+00:20:36.001 --> 00:20:40.000
+Juga kemudian memberikan beberapa tes menyeluruh yang akan kita lihat dalam satu menit. Apa yang
+
+291
+00:20:40.000 --> 00:20:44.001
+Kami memiliki adalah kotak dialog di bagian bawah yang memberitahu mereka status dan kami juga
+
+292
+00:20:44.001 --> 00:20:48.000
+mencatat kontrol lulus atau beberapa kali perangkat mungkin gagal.
+
+293
+00:20:48.001 --> 00:20:54.000
+Jika sesuatu gagal di sini ia akan memberi mereka mengatakan buruk ia akan mengisi kotak dan
+
+294
+00:20:54.000 --> 00:20:57.000
+akan tercatat dia kemudian akan pergi ke manual itu akan memberitahu pengguna apa yang dia butuhkan
+
+295
+00:20:57.000 --> 00:21:00.000
+untuk melakukan. Hal ini menunjukkan kepada saya secara berurutan hanya berjalan melalui setiap tes ini satu
+
+296
+00:21:00.000 --> 00:21:04.000
+pada suatu saat. Sama seperti Anda dapat melihat port modem gagal dan kami memiliki lingkaran kembali
+
+297
+00:21:04.000 --> 00:21:08.001
+Terminator sudah dihapus sekarang. Hal ini bisa berlangsung selama beberapa waktu, jadi mengapa?
+
+298
+00:21:08.001 --> 00:21:12.001
+Aku tidak mengambil pandangan. Kami telah membagi program ke dalam informasi sistem pengujian
+
+299
+00:21:12.001 --> 00:21:18.000
+yang ditakrifkan sebagai membantu pengguna atau teknisi menentukan apa yang dipasang di
+
+300
+00:21:18.000 --> 00:21:23.000
+mesin di mana ia terletak dan kita melihat CPU, info ADB, info bus baru, SCSI
+
+301
+00:21:23.000 --> 00:21:24.001
+Info bus dan informasi lengkap.
+
+302
+00:21:25.000 --> 00:21:30.000
+Apa yang dipasang di mesin dan di mana ia pada dasarnya terletak dan dengan itu kita
+
+303
+00:21:30.000 --> 00:21:34.001
+sekarang memiliki laporan yang dapat dihasilkan untuk perusahaan untuk mempertahankan inventori
+
+304
+00:21:34.001 --> 00:21:38.000
+semua peralatan mereka dan di mana benda-benda itu terletak. Apa yang ada di dalamnya
+
+305
+00:21:38.000 --> 00:21:42.000
+mesin yang Yang tepat dan itu sangat berharga bagi beberapa perusahaan besar
+
+306
+00:21:42.000 --> 00:21:46.000
+Kami sudah melakukan bisnis dengan. Kemudian kita melihat benchmarking dan dalam benchmark kita adalah
+
+307
+00:21:46.000 --> 00:21:50.000
+Lihat sekarang kita membandingkan pada dasarnya untuk pengguna untuk menentukan harga
+
+308
+00:21:50.000 --> 00:21:55.000
+Perbandingan kinerja mengapa dia akan membeli satu mesin dengan satu akselerator dengan
+
+309
+00:21:55.000 --> 00:21:58.000
+Kartu video khusus. Jadi ini adalah keputusan pembelian untuk perusahaan
+
+310
+00:21:58.000 --> 00:22:00.000
+dan pengguna akhir. Tunjukkan contohnya.
+
+311
+00:22:00.000 --> 00:22:04.000
+Saya akan melihat di sini pada tes video hanya untuk memberi Anda ide dan kami
+
+312
+00:22:04.000 --> 00:22:10.000
+membandingkan di sini kecepatan video dari CI terhadap quadra 900 dan seperti yang dapat Anda lihat
+
+313
+00:22:10.000 --> 00:22:13.001
+Saya pikir desainer saya pergi sedikit gila pada satu ini. Baiklah, mereka sedang menjalankan yang bagus
+
+314
+00:22:13.001 --> 00:22:17.001
+tes video yang rumit di sini. Ya, itu hebat dan jadi mesin sedang mengukur
+
+315
+00:22:17.001 --> 00:22:20.000
+prestasi mesin saya membandingkannya dengan apa yang akan terlihat jika saya memiliki
+
+316
+00:22:20.000 --> 00:22:23.000
+dari Quadra. Itu benar, jadi itu 41 persen. Baiklah
+
+317
+00:22:23.000 --> 00:22:25.001
+Jadi saya akan memberi Anda gagasan tentang apa yang kita lakukan.
+
+318
+00:22:25.001 --> 00:22:31.000
+Apa lagi yang bisa kita lakukan? Jadi kami memiliki tes disk, kami memilih perangkat, kami
+
+319
+00:22:31.000 --> 00:22:35.001
+melakukan apa yang disebut tes cepat, kita melakukan tes menyeluruh, mencari segmensi. yang besar
+
+320
+00:22:35.001 --> 00:22:39.001
+Keluhan dari banyak pengguna adalah penghentian. Apa yang ada di bus SCSI,
+
+321
+00:22:39.001 --> 00:22:41.000
+Apa yang terjadi, itu bebas dan jelas.
+
+322
+00:22:41.000 --> 00:22:46.000
+Kami melakukan tes memori, kami melakukan tes pola dasar dan ini adalah cara untuk
+
+323
+00:22:46.000 --> 00:22:51.000
+menentukan modul SIM mana yang cacat. Kami memberikan contoh, kami akan membuat sebuah
+
+324
+00:22:51.000 --> 00:22:54.001
+berjalan yang menguji dan kita akan menunjukkan di sini dan menunjukkan dengan jelas alamat yang buruk
+
+325
+00:22:54.001 --> 00:22:58.001
+Atau jika itu defektif. Pengguna pergi ke manualnya, melihat jenis CPU dan
+
+326
+00:22:58.001 --> 00:23:01.001
+Mesin yang dia miliki dan tahu modul SIM mana yang harus diganti.
+
+327
+00:23:03.000 --> 00:23:08.000
+Okay, kami melakukan tes video lagi untuk layar. Kami melakukan hal-hal seperti pin cushion
+
+328
+00:23:08.000 --> 00:23:11.000
+menguji, melihat apa pun sudut atau apa pun yang bisa keluar di
+
+329
+00:23:11.000 --> 00:23:12.001
+Pemeriksaan Konvergensi dan Monitoring.
+
+330
+00:23:15.001 --> 00:23:19.001
+Okay dan seluruh urutan kami melakukan semua jenis Anda tahu warna tempat tidur, roda warna.
+
+331
+00:23:20.001 --> 00:23:23.001
+Hanya untuk memberi pengguna gagasan bahwa semuanya bekerja secara fungsional dan sampai
+
+332
+00:23:23.001 --> 00:23:29.001
+dan snuff. Dan kemudian di sini pada tes kita melakukan tes baterai, PRAM, kita melakukan individu
+
+333
+00:23:29.001 --> 00:23:31.001
+Ujian pelabuhan, kami menguji jam real-time.
+
+334
+00:23:31.001 --> 00:23:38.001
+Kami juga melakukan tes audio di sini. Ok ya. Audio berfungsi dengan baik. I
+
+335
+00:23:38.001 --> 00:23:40.000
+Ingatlah begitu. harus mendapatkannya.
+
+336
+00:23:40.000 --> 00:23:46.000
+Dan kemudian kami juga menyediakan pengguna dengan informasi tes lengkap. Sebuah ringkasan yang nyata
+
+337
+00:23:46.000 --> 00:23:50.000
+atau histogram, seperti yang disebutkan oleh Jeff sebelumnya, dari segala sesuatu yang telah terjadi untuk
+
+338
+00:23:50.000 --> 00:23:54.001
+teknis atau perusahaan sebagai laporan status. Itu bagus, Anda bisa
+
+339
+00:23:54.001 --> 00:23:59.001
+benar-benar melihat ke dalam, Anda dapat mengetuk di dalam komputer Anda. atau mengambil EKG, apa pun yang Anda
+
+340
+00:23:59.001 --> 00:24:02.001
+ingin melakukan. Kamu benar-benar orang-orang yang hebat. Terima kasih banyak sekali. Itulah pandangan kita
+
+341
+00:24:02.001 --> 00:24:05.001
+Perangkat lunak diagnostik. Tetap bersemangat sekarang untuk minggu ini
+
+342
+00:24:05.001 --> 00:24:07.000
+Informasi tentang Random Access.
+
+343
+00:24:20.001 --> 00:24:24.000
+Dalam File Akses Random minggu ini, ini adalah edisi musim panas khusus
+
+344
+00:24:24.000 --> 00:24:25.001
+Dengan fokus pada software.
+
+345
+00:24:25.001 --> 00:24:28.001
+Berikut adalah judul perangkat lunak terlaris minggu lalu untuk
+
+346
+00:24:28.001 --> 00:24:30.000
+PC sesuai dengan koneksi PC.
+
+347
+00:24:31.000 --> 00:24:36.000
+Microsoft MS-DOS 5.0 upgrade menduduki posisi nomor satu, mengelilingi
+
+348
+00:24:36.000 --> 00:24:39.001
+Top 10 atau Stacker 2. 0 dari Stack Electronics dan Berkeley
+
+349
+00:24:39.001 --> 00:24:41.000
+Sistem setelah gelap untuk Windows.
+
+350
+00:24:42.000 --> 00:24:47.001
+Paul Schindler dan ulasan perangkat lunak musim panas kami. Kau tahu aku tidak akan pernah mendapatkan
+
+351
+00:24:47.001 --> 00:24:51.001
+kertas saya dirancang seperti yang saya inginkan dan seperti untuk daftar tiga digit saya untuk melakukan,
+
+352
+00:24:52.000 --> 00:24:56.000
+melupakan itu. Tetapi dengan Datebook Anda memiliki kesempatan bertarung untuk terorganisir. Sekarang
+
+353
+00:24:56.000 --> 00:25:00.000
+setiap hari Anda dapat melihat atau daftar yang harus Anda lakukan, barang-barang membawa ke depan jika tidak
+
+354
+00:25:00.000 --> 00:25:04.001
+selesai, atau peristiwa Anda untuk hari itu. Lihat peristiwa hari ini sebagai teks, Gantt
+
+355
+00:25:04.001 --> 00:25:09.000
+Kartu atau bar waktu. Pemandangan minggu terlihat sangat mirip dengan kalendar kertas dan sebenarnya
+
+356
+00:25:09.000 --> 00:25:13.001
+Anda dapat mencetaknya untuk menyesuaikan waktu hari populer atau format Filofax. yang unik
+
+357
+00:25:13.001 --> 00:25:17.001
+Fitur dari Datebook ini adalah indikator busyness. Membagi hari kerja Anda ke dalam
+
+358
+00:25:17.001 --> 00:25:21.000
+Tiga periode yang Anda pilih dan kalender menunjukkan Anda dengan pandangan hijau,
+
+359
+00:25:21.000 --> 00:25:26.000
+kuning, atau bar merah sama ada Anda bebas, sedikit sibuk, atau benar-benar rusak. Untuk
+
+360
+00:25:26.000 --> 00:25:28.000
+Sebagian besar dari kita minggu dimulai pada hari Senin dan Datebook
+
+361
+00:25:28.000 --> 00:25:30.000
+Minggu dimulai ketika Anda mengatakan itu.
+
+362
+00:25:30.001 --> 00:25:34.000
+Anda dapat menggunakan banner untuk menunjukkan acara multi-hari. Datebook datang dengan variasi
+
+363
+00:25:34.000 --> 00:25:38.001
+dari ikon yang dapat Anda gunakan untuk menandakan jenis acara tertentu. Datebook adalah $ 125
+
+364
+00:25:38.001 --> 00:25:43.000
+dari After Hours Software di Van Nuys, California. Untuk komputer kronik
+
+365
+00:25:43.000 --> 00:25:47.001
+Saya adalah Paul Schindler. Itulah yang terjadi pada minggu ini untuk komputer kronik. Aku adalah Janelle
+
+366
+00:25:47.001 --> 00:25:54.000
+dari Stelson. Komputer Chronicles telah dimungkinkan sebagian oleh PC Connection dan
+
+367
+00:25:54.000 --> 00:25:58.001
+Untuk MacConnection. Perangkat lunak dan perkakasan peripheral untuk PC dan
+
+368
+00:25:58.001 --> 00:26:03.001
+Macintosh dan Persatuan Penerbit Software. Penyedia Pendidikan
+
+369
+00:26:03.001 --> 00:26:10.000
+bahan untuk membantu mengelola perangkat lunak. Jangan menyalin floppy itu. Video Kaset Kopi
+
+370
+00:26:10.000 --> 00:26:12.000
+Program ini tersedia.
+
+371
+00:26:12.000 --> 00:26:16.000
+Computer Chronicles juga menerbitkan newsletter yang berisi rincian tentang
+
+372
+00:26:16.000 --> 00:26:20.001
+Produk yang dipamerkan ditambah informasi latar belakang tentang topik program. Untuk memerintahkan a
+
+373
+00:26:20.001 --> 00:26:27.001
+video kaset atau langganan untuk surat kabar panggilan 1-800-366-9484 atau menulis
+
+374
+00:26:27.001 --> 00:26:32.001
+Sejarah komputer. Silakan jelaskan subjek program untuk tapes. Semua pesanan termasuk
+
+375
+00:26:32.001 --> 00:26:35.001
+Perangkat lunak gratis untuk audit penggunaan perangkat lunak.

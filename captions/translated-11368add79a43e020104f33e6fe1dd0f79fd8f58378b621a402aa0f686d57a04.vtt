@@ -1,0 +1,1429 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:32.000
+[...]
+
+2
+00:00:37.001 --> 00:00:43.001
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+3
+00:00:43.001 --> 00:00:48.001
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+4
+00:00:48.001 --> 00:00:50.001
+de cette évolution continue.
+
+5
+00:00:58.001 --> 00:00:59.001
+Bienvenue dans les chronicles informatiques.
+
+6
+00:01:00.001 --> 00:01:03.000
+Je suis Stuart Chiffay et c&#x27;est Gary Kildall.
+
+7
+00:01:04.000 --> 00:01:07.000
+Monsieur Kildall, que je puisse avoir un dollar.
+
+8
+00:01:07.001 --> 00:01:08.001
+Elle m’a emmenée sur cette.
+
+9
+00:01:10.000 --> 00:01:12.000
+Ce que j&#x27;ai demandé, c&#x27;est que vous me prêteriez un dollar ?
+
+10
+00:01:13.000 --> 00:01:17.000
+Je n’ai utilisé que la langue française pour communiquer à votre cerveau, à votre ordinateur,
+
+11
+00:01:17.000 --> 00:01:19.001
+et je suppose que vous êtes programmés en anglais, donc vous n&#x27;avez pas réalisé le
+
+12
+00:01:19.001 --> 00:01:21.001
+Programme comme j&#x27;espérais que tu le ferais, tu ne m&#x27;as pas donné le dollar.
+
+13
+00:01:22.001 --> 00:01:26.001
+Le point de cette petite histoire est que notre sujet aujourd&#x27;hui est la programmation informatique
+
+14
+00:01:26.001 --> 00:01:29.001
+langues, Gary, et bien sûr il y a beaucoup de langues que vous pouvez programmer, juste
+
+15
+00:01:29.001 --> 00:01:31.001
+Comme il y a beaucoup de langues que nous pouvons parler.
+
+16
+00:01:32.000 --> 00:01:35.000
+Avant de parler de ces différentes langues de programmation individuelles, je pensais
+
+17
+00:01:35.000 --> 00:01:38.000
+Vous pouvez expliquer les différents niveaux de langage informatique.
+
+18
+00:01:38.000 --> 00:01:41.000
+Il y a trois niveaux majeurs de langues de programmation informatique qui
+
+19
+00:01:41.000 --> 00:01:43.000
+dépend de votre niveau de
+
+20
+00:01:43.000 --> 00:01:45.000
+Sofistication, pour quoi vous allez utiliser la langue.
+
+21
+00:01:45.001 --> 00:01:49.000
+Le niveau le plus bas est ce que l&#x27;on appelle la langue machine, et c&#x27;est le langage qui
+
+22
+00:01:49.000 --> 00:01:51.000
+La machine comprend, les zéro et les zéros.
+
+23
+00:01:51.001 --> 00:01:55.001
+Le niveau suivant est ce qu’ils appellent les langues des systèmes, et le
+
+24
+00:01:55.001 --> 00:01:58.001
+Les langues comme le langage de programmation C seraient dans cette catégorie.
+
+25
+00:01:59.001 --> 00:02:03.000
+et ces langues sont utilisées pour les applications de programmation, comme
+
+26
+00:02:03.000 --> 00:02:05.000
+processeurs de mots ou diffuseurs.
+
+27
+00:02:05.001 --> 00:02:08.001
+Et puis le troisième niveau, le plus haut niveau, est ce qu&#x27;on appelle une application
+
+28
+00:02:08.001 --> 00:02:12.000
+langue ou une langue d&#x27;utilisateur final, et ces langues comme Fortran, COBOL,
+
+29
+00:02:12.001 --> 00:02:14.000
+Le logo, donc, s’inscrit dans cette catégorie.
+
+30
+00:02:14.001 --> 00:02:15.001
+Aujourd’hui, nous aurons l’occasion de parler
+
+31
+00:02:15.001 --> 00:02:17.000
+Découvrez quelques-unes de ces langues et voyez comment elles sont utilisées.
+
+32
+00:02:17.001 --> 00:02:20.000
+En fait, nous verrons une démonstration de COBOL, Quatrième,
+
+33
+00:02:20.001 --> 00:02:22.000
+Logos, nous allons parler de Pascal.
+
+34
+00:02:22.001 --> 00:02:26.000
+Tout d’abord, essayons de comprendre un peu mieux ce problème créé par
+
+35
+00:02:26.000 --> 00:02:27.001
+De nombreuses langues de programmation différentes.
+
+36
+00:02:32.000 --> 00:02:37.000
+Ce clavier multilingue peut accomplir les tâches d&#x27;interprète, grammaire
+
+37
+00:02:37.000 --> 00:02:41.001
+conseiller, et artiste dans la traduction des sons en anglais dans le texte japonais.
+
+38
+00:02:42.001 --> 00:02:46.001
+Le programme fait pour les langues humaines ce que la plupart des ordinateurs sont incapables de
+
+39
+00:02:46.001 --> 00:02:48.000
+faire avec leurs propres langues.
+
+40
+00:02:49.000 --> 00:02:53.000
+Parce que les codes de machine varient d&#x27;un microprocesseur à un autre, les mêmes
+
+41
+00:02:53.000 --> 00:02:56.000
+Le langage de programmation ne peut pas être partagé par deux ordinateurs différents.
+
+42
+00:02:56.001 --> 00:02:59.000
+Apple Basic n’est pas IBM Basic.
+
+43
+00:03:00.000 --> 00:03:03.000
+Une langue personnalisée pour une machine ne fonctionnera pas sur une autre.
+
+44
+00:03:04.000 --> 00:03:07.001
+Comme leurs homologues humains, les langues de programmation informatique diffèrent en
+
+45
+00:03:07.001 --> 00:03:10.000
+structure, syntaxe, code et même symboles.
+
+46
+00:03:10.001 --> 00:03:14.000
+Mais le manque de code standard transférable met le programmeur
+
+47
+00:03:14.000 --> 00:03:15.001
+Un défaut de consommation de temps.
+
+48
+00:03:16.000 --> 00:03:18.001
+Après avoir appris à écrire un programme pour un ordinateur,
+
+49
+00:03:19.000 --> 00:03:20.001
+Il doit le réécrire pour un autre.
+
+50
+00:03:21.000 --> 00:03:25.000
+En raison de la large gamme d&#x27;applications d&#x27;un ordinateur, les langues sont spécialisées.
+
+51
+00:03:26.000 --> 00:03:27.001
+Fortran pour la science et les mathématiques.
+
+52
+00:03:28.001 --> 00:03:29.001
+COBOL pour les affaires.
+
+53
+00:03:30.001 --> 00:03:31.001
+Le logo de l’éducation.
+
+54
+00:03:32.001 --> 00:03:36.001
+Plus une langue de haut niveau est sympathique, plus la traduction est requise avant
+
+55
+00:03:36.001 --> 00:03:41.000
+Il peut être exécuté au niveau de la machine, et correspondant, plus lent il fonctionne.
+
+56
+00:03:41.001 --> 00:03:45.001
+Dans certains cas, le manque de vitesse au niveau de la machine est un trade-off pour
+
+57
+00:03:45.001 --> 00:03:47.000
+Une interaction rapide avec l’utilisateur.
+
+58
+00:03:48.000 --> 00:03:51.001
+Ajouter une troisième couche de complexité à la programmation informatique est l&#x27;assemblage
+
+59
+00:03:51.001 --> 00:03:56.000
+langue requise pour traduire des langues de haut niveau en code machine.
+
+60
+00:03:56.001 --> 00:04:00.001
+Les programmes écrits en langue d&#x27;assemblage sont plus rapides dans l&#x27;exécution, mais plus difficiles
+
+61
+00:04:00.001 --> 00:04:03.000
+Ecrire plus que ceux dans une langue de haut niveau.
+
+62
+00:04:04.000 --> 00:04:08.000
+Les entreprises de logiciels développent des langues plus puissantes et portables pour être utilisées dans
+
+63
+00:04:08.000 --> 00:04:13.000
+micros, mais tant que les fabricants d&#x27;ordinateurs ont conçu l&#x27;exclusivité dans leur
+
+64
+00:04:13.000 --> 00:04:16.001
+Les produits et les langues, les utilisateurs sont confrontés au même dilemme.
+
+65
+00:04:17.001 --> 00:04:20.001
+Les machines qui communiquent avec tout le monde, s’acceptent les uns les autres.
+
+66
+00:04:24.000 --> 00:04:25.000
+Le Luski Jazik.
+
+67
+00:04:35.001 --> 00:04:39.001
+Nos invités aujourd&#x27;hui sont Paul O&#x27;Grady, Paul est vice-président exécutif pour un
+
+68
+00:04:39.001 --> 00:04:42.000
+développement stratégique à Microfocus, et Paul travaille avec COBOL.
+
+69
+00:04:42.001 --> 00:04:46.001
+Et à côté de Paul, Dave Eisenberg, un ingénieur et développeur de logiciels de haut niveau avec
+
+70
+00:04:46.001 --> 00:04:48.001
+Les ordinateurs Apple et Dave travaillent avec Pascal.
+
+71
+00:04:49.000 --> 00:04:49.001
+et Gary.
+
+72
+00:04:49.001 --> 00:04:53.001
+Vous savez, Stuart, il y a eu beaucoup de langues autour depuis plusieurs années qui
+
+73
+00:04:53.001 --> 00:04:56.001
+Ce sont des langues traditionnelles considérées comme PL-1,
+
+74
+00:04:56.001 --> 00:04:59.001
+Fortran, COBOL est un bon exemple de cela.
+
+75
+00:05:00.000 --> 00:05:02.001
+Et l&#x27;une des difficultés dans la petite industrie informatique cherche à apporter
+
+76
+00:05:02.001 --> 00:05:05.001
+Il s’agit de langues réellement utilisables.
+
+77
+00:05:07.000 --> 00:05:08.001
+Aujourd&#x27;hui, les gens attendent beaucoup plus d&#x27;interaction
+
+78
+00:05:08.001 --> 00:05:10.000
+la façon dont ils traitent les systèmes informatiques.
+
+79
+00:05:10.000 --> 00:05:14.000
+Et je sais que Microfocus a travaillé sur COBOL, essayant de faire plus de
+
+80
+00:05:14.000 --> 00:05:16.001
+Une orientation personnelle. Qu’avez-vous donc fait ?
+
+81
+00:05:17.001 --> 00:05:23.000
+Eh bien, nous nous voyons, Gary, comme dans l’entreprise des mythes explosifs sur COBOL.
+
+82
+00:05:24.000 --> 00:05:26.001
+Les gens de mainframe ont des mythes sur ce que c&#x27;est
+
+83
+00:05:26.001 --> 00:05:28.000
+Vous ne pouvez pas utiliser ce type d&#x27;équipement.
+
+84
+00:05:29.000 --> 00:05:33.000
+Et les gens de micro-ordinateurs ont des mythes à ce sujet dans le sens qu&#x27;ils
+
+85
+00:05:33.000 --> 00:05:35.001
+Je n&#x27;aime pas la langue, beaucoup de gens.
+
+86
+00:05:36.001 --> 00:05:39.001
+Ce que nous essayons de faire est d’essayer de différencier les
+
+87
+00:05:39.001 --> 00:05:41.001
+l’environnement et la langue elle-même.
+
+88
+00:05:42.000 --> 00:05:45.001
+Et l’environnement dans le passé pour COBOL a été l’Environnement principal.
+
+89
+00:05:45.001 --> 00:05:51.000
+Nous croyons que c’est ce qui a entraîné beaucoup d’insatisfaction dans cet environnement.
+
+90
+00:05:52.001 --> 00:05:56.000
+Ce que nous avons fait ici, cependant, avec Personal COBOL, qui est l&#x27;un de nos derniers
+
+91
+00:05:56.000 --> 00:06:00.001
+Produits, c’est montrer ce que nous croyons est le type de chose qui peut être fait et qui
+
+92
+00:06:00.001 --> 00:06:03.000
+C’est très intéressant pour ce type d’équipement.
+
+93
+00:06:04.000 --> 00:06:06.000
+Je me suis déjà mis dans le COBOL personnel.
+
+94
+00:06:07.001 --> 00:06:13.000
+COBOL personnel est une combinaison d&#x27;un éditeur, d&#x27;une génératrice de formulaire, d’un checker, d
+
+95
+00:06:13.000 --> 00:06:17.001
+Syntax checker, et la capacité à exécuter des programmes.
+
+96
+00:06:18.001 --> 00:06:25.000
+Dans ce cas, je vais aller directement dans la partie des formes, et j&#x27;ai
+
+97
+00:06:25.000 --> 00:06:29.000
+Il a déjà créé une forme pour nous.
+
+98
+00:06:29.000 --> 00:06:33.000
+C&#x27;est une forme que vous avez créée en dessinant les lignes dans et ainsi de suite.
+
+99
+00:06:33.000 --> 00:06:33.001
+Oui oui.
+
+100
+00:06:33.001 --> 00:06:40.000
+Tout ce que vous voyez sur cet écran ici a été créé en cliquant directement sur
+
+101
+00:06:40.000 --> 00:06:45.000
+Les lignes, le texte, les x, les brackets carrés, toute la chose.
+
+102
+00:06:45.001 --> 00:06:51.000
+Et je l&#x27;ai fait en environ cinq minutes ou ainsi avant que les programmes commencent.
+
+103
+00:06:52.001 --> 00:06:58.000
+Ce que je vais faire maintenant, c&#x27;est de commencer à générer le COBOL pour cela parce que
+
+104
+00:06:58.000 --> 00:07:05.000
+Un autre des entreprises que Microfocus considère comme être en est en train de
+
+105
+00:07:05.000 --> 00:07:06.001
+Définir le terme de programmation.
+
+106
+00:07:07.001 --> 00:07:12.000
+Et la programmation pour nous est simplement de générer le code de toute façon.
+
+107
+00:07:12.000 --> 00:07:14.001
+possible, de la manière la plus efficace possible.
+
+108
+00:07:15.000 --> 00:07:17.001
+Dans ce cas, nous allons générer tout le code
+
+109
+00:07:17.001 --> 00:07:19.000
+Pour cet écran automatiquement.
+
+110
+00:07:20.000 --> 00:07:22.000
+Ce que je vais faire maintenant.
+
+111
+00:07:23.000 --> 00:07:28.001
+Nous avons également écrit ce programme pour que les gens qui ont des problèmes de doigts comme moi
+
+112
+00:07:28.001 --> 00:07:30.001
+Je n’ai jamais vraiment brisé le programme.
+
+113
+00:07:30.001 --> 00:07:31.001
+J’espère prouver cela.
+
+114
+00:07:33.001 --> 00:07:36.001
+Je vais créer un programme complet, un programme index.
+
+115
+00:07:38.000 --> 00:07:40.001
+Je pose le curseur comme il me dit.
+
+116
+00:07:42.001 --> 00:07:46.000
+Et nous générons maintenant COBOL dans la partie inférieure de l&#x27;écran.
+
+117
+00:07:47.000 --> 00:07:50.001
+Maintenant, traditionnellement, à nouveau, si vous parlez de la programmation COBOL traditionnelle,
+
+118
+00:07:50.001 --> 00:07:54.000
+Vous allez commencer par un programme qui, vous allez travailler sur tout le
+
+119
+00:07:54.000 --> 00:07:55.001
+Les détails de ce qui produirait cet écran.
+
+120
+00:07:56.000 --> 00:07:56.001
+Est-ce que cela est correct ?
+
+121
+00:07:56.001 --> 00:07:59.001
+Maintenant, dans ce cas, ce que vous avez fait, c&#x27;est que vous vous avez manuellement fait l&#x27;écran
+
+122
+00:07:59.001 --> 00:08:02.000
+Mettre le curseur autour et il fait l&#x27;inverse.
+
+123
+00:08:02.000 --> 00:08:03.001
+C’est en fait la production du programme au lieu.
+
+124
+00:08:04.000 --> 00:08:04.001
+C’est juste ça.
+
+125
+00:08:05.000 --> 00:08:05.000
+Oui oui.
+
+126
+00:08:05.000 --> 00:08:06.000
+Nous l’avons déjà produit.
+
+127
+00:08:06.001 --> 00:08:08.001
+Nous avons fabriqué le COBOL pour cela.
+
+128
+00:08:09.001 --> 00:08:14.001
+Ce que je peux faire maintenant, c’est que je puisse décider si je veux sauver ça ou pas.
+
+129
+00:08:15.000 --> 00:08:19.001
+Dans ce cas, je sortirai sans économiser.
+
+130
+00:08:19.001 --> 00:08:24.000
+J’ai déjà écrit le texte ailleurs.
+
+131
+00:08:27.000 --> 00:08:29.001
+Comme je l’ai dit, certaines personnes ont des problèmes de doigts.
+
+132
+00:08:30.000 --> 00:08:33.000
+Et j&#x27;ai toujours des problèmes de doigts sur des points comme ça.
+
+133
+00:08:33.000 --> 00:08:37.001
+Paul, vous avez mentionné que certains programmeurs n&#x27;ont pas aimé COBOL dans le passé.
+
+134
+00:08:38.000 --> 00:08:38.001
+Pourquoi c’est ça ?
+
+135
+00:08:38.001 --> 00:08:40.000
+Qu’est-ce qui a créé un problème ?
+
+136
+00:08:43.001 --> 00:08:46.001
+Il y a beaucoup de détails sur la syntaxe.
+
+137
+00:08:47.001 --> 00:08:52.000
+La période à la fin de chaque déclaration COBOL provoque souvent des problèmes.
+
+138
+00:08:52.001 --> 00:08:59.000
+Mais il y a aussi la nécessité de définir les enregistrements au début d&#x27;un programme précédent
+
+139
+00:08:59.000 --> 00:09:02.001
+Pour s’en rendre dans les gouttes, faire le programme faire le travail.
+
+140
+00:09:03.001 --> 00:09:09.000
+Mais cela vient du type d&#x27;application que COBOL a été
+
+141
+00:09:09.000 --> 00:09:11.000
+Conçu pour porter.
+
+142
+00:09:12.000 --> 00:09:16.001
+Ce sont généralement des applications de traitement de données, des applications manipulant les fichiers.
+
+143
+00:09:17.001 --> 00:09:21.000
+Pour ce type d’application, il est nécessaire de créer
+
+144
+00:09:21.000 --> 00:09:23.001
+Les enregistrements à commencer.
+
+145
+00:09:23.001 --> 00:09:29.000
+Ce que nous travaillons à adhérer est un concept de génération de programme.
+
+146
+00:09:30.000 --> 00:09:33.001
+Maintenant, si vous parlez de formulaires, vous mettez les formulaires à l&#x27;avance
+
+147
+00:09:33.001 --> 00:09:35.000
+Ensuite, vous créez un programme COBOL.
+
+148
+00:09:35.000 --> 00:09:37.001
+Pouvez-vous le faire aussi pour les structures de données pour accéder aux fichiers?
+
+149
+00:09:37.001 --> 00:09:39.001
+Ou est-ce quelque chose qui arriverait à l’avenir ?
+
+150
+00:09:40.001 --> 00:09:46.000
+En ce qui concerne les structures de données, elles sont déjà construites dans la séquence d&#x27;indice
+
+151
+00:09:46.000 --> 00:09:48.000
+Le mécanisme de fichier du COBOL.
+
+152
+00:09:49.000 --> 00:09:51.000
+Nous respectons la norme COBOL.
+
+153
+00:09:51.000 --> 00:09:56.000
+Mais oui, à l&#x27;avenir, on peut concevoir de la capacité d&#x27;entrer les données
+
+154
+00:09:56.000 --> 00:10:00.001
+la structure directement dans le programme avant de la générer.
+
+155
+00:10:01.001 --> 00:10:03.001
+Dave, vous travaillez principalement avec Pascal.
+
+156
+00:10:03.001 --> 00:10:06.000
+Parlez-nous de Pascal et pourquoi vous l’aimez.
+
+157
+00:10:06.000 --> 00:10:07.001
+Quelles sont ses caractéristiques spéciales ?
+
+158
+00:10:08.000 --> 00:10:11.000
+L’une des plus belles choses sur Pascal est sa puissance d’expression.
+
+159
+00:10:12.000 --> 00:10:18.000
+En ce qui concerne pour une petite quantité de texte sur l&#x27;écran, qui est donné le droit
+
+160
+00:10:18.000 --> 00:10:22.000
+Programme ou étonnamment lisible, vous pouvez obtenir beaucoup de puissance de celui-ci.
+
+161
+00:10:22.001 --> 00:10:27.001
+Il vous permet d&#x27;exprimer un algorithme, une méthode pour faire un calcul ou un
+
+162
+00:10:27.001 --> 00:10:30.000
+le processus, la façon dont vous en pensez au lieu d&#x27;avoir à
+
+163
+00:10:30.000 --> 00:10:31.001
+Mettez-le dans une autre forme.
+
+164
+00:10:32.001 --> 00:10:34.001
+Et c&#x27;est l&#x27;un des avantages de COBOL pour les applications d&#x27;affaires.
+
+165
+00:10:35.001 --> 00:10:39.001
+Il est construit pour cela, de telle sorte que vous pouvez penser en termes d&#x27;une entreprise ou
+
+166
+00:10:39.001 --> 00:10:41.000
+Enregistrer le problème et le faire de cette façon.
+
+167
+00:10:41.001 --> 00:10:47.001
+Pascal est similaire, mais assez pour des applications plus générales.
+
+168
+00:10:47.001 --> 00:10:52.001
+Pascal avait il y a plusieurs années un grand intérêt en ce qui concerne son utilisation en tant que système.
+
+169
+00:10:52.001 --> 00:10:54.001
+La langue, et c&#x27;était une sorte de touted comme
+
+170
+00:10:54.001 --> 00:10:56.000
+Le langage nécessaire pour tout faire.
+
+171
+00:10:57.000 --> 00:10:59.001
+Que s’est passé ? Pourquoi cela ne s’est-il pas vraiment passé ?
+
+172
+00:11:00.001 --> 00:11:03.000
+Pascal a été d&#x27;abord conçu comme une langue pour enseigner
+
+173
+00:11:03.000 --> 00:11:04.001
+Informatique et sciences informatiques.
+
+174
+00:11:05.001 --> 00:11:11.000
+Et même son inventeur a admis que c&#x27;était pour ça.
+
+175
+00:11:11.000 --> 00:11:15.000
+Et il a travaillé récemment sur quelque chose appelé Modula, qui est conçu pour
+
+176
+00:11:15.000 --> 00:11:20.001
+prenez de Pascal en termes de la zone des systèmes, ce qui vous permet de vous rapprocher de
+
+177
+00:11:20.001 --> 00:11:25.000
+Le niveau de la machine, mais encore une fois, ont le pouvoir d’expression que Pascal a.
+
+178
+00:11:26.000 --> 00:11:30.000
+Paul, en arrivant avec quelque chose comme COBOL personnel, COBUL nous pensons comme vous
+
+179
+00:11:30.000 --> 00:11:34.001
+dire, mainframe, grand environnement corporatif type langage, quel type d&#x27;utilisation, que
+
+180
+00:11:34.001 --> 00:11:37.000
+Un type d&#x27;application que vous voyez avec quelque chose comme COBOL personnel?
+
+181
+00:11:37.001 --> 00:11:44.001
+Eh bien, nous ne voyons pas seulement les applications classiques de traitement de données d&#x27;affaires, nous voyons
+
+182
+00:11:44.001 --> 00:11:49.001
+applications personnelles telles que la demande quotidienne, les demandes personnelles,
+
+183
+00:11:50.000 --> 00:11:55.001
+Et nous voyons aussi que les applications d&#x27;automatisation des bureaux sont toutes applicables à COBOL.
+
+184
+00:11:56.000 --> 00:12:00.000
+Ils nécessitent tous le traitement des données et la maintenance des fichiers, qui
+
+185
+00:12:00.000 --> 00:12:01.001
+COBOL a été initialement conçu pour.
+
+186
+00:12:01.001 --> 00:12:05.001
+Je pense qu&#x27;il est aussi important de penser à COBOL en tant qu&#x27;implémentateur de système.
+
+187
+00:12:05.001 --> 00:12:09.001
+langue, c’est-à-dire, ce n’est pas le genre de langue que vous promouvez vraiment comme, dit-on,
+
+188
+00:12:09.001 --> 00:12:11.000
+Un langage d’utilisateur final. Est-ce que cela est correct ?
+
+189
+00:12:11.001 --> 00:12:12.000
+Je serai d’accord avec ça.
+
+190
+00:12:12.001 --> 00:12:16.000
+Plus à la sorte d&#x27;un individu qui va sortir et écrire un peu étendu
+
+191
+00:12:16.000 --> 00:12:18.001
+les programmes, puis partir et vendre ces programmes.
+
+192
+00:12:19.000 --> 00:12:23.000
+Et donc il y a une couche complète de langues de programmation qui correspondent à cette catégorie
+
+193
+00:12:23.000 --> 00:12:26.001
+que peut-être un utilisateur final ne veut même pas envisager, au moins jusqu&#x27;à ce qu&#x27;ils aient
+
+194
+00:12:26.001 --> 00:12:28.001
+J’ai eu une expérience dans les langues de programmation.
+
+195
+00:12:28.001 --> 00:12:35.000
+Oui, je suis d&#x27;accord Je ne pense pas à la norme, la programmation normalement acceptée
+
+196
+00:12:35.000 --> 00:12:39.001
+Les langues sont applicables aux utilisateurs finaux à ce stade, personnellement. Pas même de base.
+
+197
+00:12:41.000 --> 00:12:44.000
+Bon, bien, notre troisième hôte va nous parler de
+
+198
+00:12:44.000 --> 00:12:46.000
+Quatrième, et cela se produit en un instant.
+
+199
+00:12:56.001 --> 00:13:00.000
+Aujourd’hui, il y a Elizabeth Rather. Elizabeth est le président de la quatrième,
+
+200
+00:13:00.000 --> 00:13:01.001
+Inc., sur la plupart de chaque Californie.
+
+201
+00:13:02.001 --> 00:13:05.001
+Elizabeth, dites-nous de la quatrième. Qu’est-ce qui en fait un langage de programmation unique ?
+
+202
+00:13:05.001 --> 00:13:12.001
+C’est unique en deux sens. C’est la seule langue que je connais.
+
+203
+00:13:12.001 --> 00:13:17.001
+qui a été conçu à partir des premiers principes pour fonctionner sur un petit ordinateur,
+
+204
+00:13:17.001 --> 00:13:20.001
+Développement de logiciels interactifs pour les applications en temps réel.
+
+205
+00:13:21.001 --> 00:13:27.001
+La deuxième zone qui est unique concerne la note de Gary au début du programme lorsque
+
+206
+00:13:27.001 --> 00:13:32.001
+Il a mentionné les trois niveaux de programmation, et le quatrième inclut tous les
+
+207
+00:13:32.001 --> 00:13:36.000
+à eux. Vous pouvez travailler au niveau du code de machine lorsque vous avez besoin.
+
+208
+00:13:37.000 --> 00:13:41.000
+Vous pouvez faire la programmation du système en quatrième. Le système d’exploitation que nous sommes
+
+209
+00:13:41.000 --> 00:13:43.000
+Tout ce qui se passe ici est écrit dans le quatrième.
+
+210
+00:13:44.000 --> 00:13:48.001
+Et vous pouvez faire des types de choses de très haut niveau, une application de très bon niveau
+
+211
+00:13:48.001 --> 00:13:50.001
+La programmation orientée.
+
+212
+00:13:50.001 --> 00:13:57.000
+Par exemple, nous avons ici un programme graphique qui est chargé, et j&#x27;ai une liste de
+
+213
+00:13:57.000 --> 00:14:01.000
+Un grand nombre de programmes de démonstration que je pouvais exécuter ici.
+
+214
+00:14:01.001 --> 00:14:06.001
+Je vais essayer l&#x27;un d&#x27;eux appelé Logos, qui tire - il n&#x27;est pas lié à la
+
+215
+00:14:06.001 --> 00:14:11.001
+Le logo de la langue – il attire le logo de notre entreprise, qui est un peu chauviniste.
+
+216
+00:14:11.001 --> 00:14:16.001
+Mais le principe que cela illustre - c&#x27;est une figure assez complexe
+
+217
+00:14:16.001 --> 00:14:22.000
+Ici, et nous faisons le remplissage de la zone, qui est un graphisme assez sophistiqué
+
+218
+00:14:22.000 --> 00:14:28.001
+technique, et il le fait très vite et très bien. Maintenant, il a tout
+
+219
+00:14:28.001 --> 00:14:31.001
+blanc sauf pour ce qui était caché dans les petits endroits là-bas.
+
+220
+00:14:32.001 --> 00:14:38.001
+Et finalement, nous serons en mesure de faire disparaître même les petits endroits. Mais il y a
+
+221
+00:14:38.001 --> 00:14:41.001
+des mots de haut niveau qui rassemblent tout cela
+
+222
+00:14:41.001 --> 00:14:43.001
+C’est un processus, et je peux vous montrer quelques-uns d’entre eux.
+
+223
+00:14:44.000 --> 00:14:48.000
+Si cela avait été entièrement fait au quatrième au-delà de la — c’était n’importe quelle langue d’assemblée
+
+224
+00:14:48.000 --> 00:14:50.001
+Est-ce que c’est dans ce domaine qui a été rempli, ou a-t-il été complètement fait dans le quatrième ?
+
+225
+00:14:50.001 --> 00:14:52.000
+Non, il y a un langage d’assemblée.
+
+226
+00:14:52.000 --> 00:14:54.001
+C&#x27;est donc un mélange de ces deux dans le quatrième, je vois.
+
+227
+00:14:54.001 --> 00:14:58.001
+Mais vous mettez autant de langage d&#x27;assemblage que vous avez besoin pour contrôler le matériel
+
+228
+00:14:58.001 --> 00:15:03.001
+directement ou pour faire que les choses fonctionnent rapidement – et vous remarquez que c’est un programme très rapide –
+
+229
+00:15:04.001 --> 00:15:09.001
+Mais vous avez la version de haut niveau. Je peux dire, locate logos,
+
+230
+00:15:13.001 --> 00:15:15.001
+Plongez la place par exemple.
+
+231
+00:15:17.000 --> 00:15:22.001
+C&#x27;est la routine de remplissage de la zone, qui est écrite dans le code parce que la zone de rempli est
+
+232
+00:15:22.001 --> 00:15:25.000
+Quelque chose qui doit courir très, très vite.
+
+233
+00:15:25.000 --> 00:15:30.000
+Vous avez le code de langue ici. Et puis nous avons quelques autres mots appelés
+
+234
+00:15:30.000 --> 00:15:33.000
+L’obscurité et la lumière sont ce que nous appelons haut niveau.
+
+235
+00:15:33.001 --> 00:15:34.001
+Donc, une partie de cela est la langue d’assemblage. Une partie de cela est le langage d’assemblage. Vous êtes
+
+236
+00:15:34.001 --> 00:15:37.000
+Il nous montre une partie de ce qu&#x27;il est quatrième dans la quatrieme déclaration. Est-ce que cela est vrai ?
+
+237
+00:15:37.000 --> 00:15:44.000
+Oui, c’est juste ça. Le mot sombre, par exemple, que je souligne ici,
+
+238
+00:15:44.001 --> 00:15:48.000
+L’écran est sombre, comme ça.
+
+239
+00:15:49.001 --> 00:15:55.001
+Et c&#x27;est tout simplement que la couleur s&#x27;accroche et noirce l&#x27;écran, puis réaffiche ce que la
+
+240
+00:15:55.001 --> 00:15:58.001
+La couleur précédente était de telle sorte que lorsque vous dessinez quelque chose de nouveau, vous
+
+241
+00:15:58.001 --> 00:16:00.000
+Le dessinez dans quelle que soit la couleur.
+
+242
+00:16:00.000 --> 00:16:03.000
+Ainsi, ce que nous voyons ici est la ligne soulignée
+
+243
+00:16:03.000 --> 00:16:04.001
+Elle est la quatrième dans ce cas.
+
+244
+00:16:05.000 --> 00:16:06.000
+Oui, c’est juste ça.
+
+245
+00:16:06.000 --> 00:16:09.001
+Gary, vous avez votre entreprise, Digital Research, a un logo maintenant.
+
+246
+00:16:09.001 --> 00:16:10.001
+J’ai juste un disque avec toi.
+
+247
+00:16:11.000 --> 00:16:14.001
+Et peut-être que vous pourriez télécharger le logo pendant une minute et nous montrer comment le logo peut
+
+248
+00:16:14.001 --> 00:16:16.001
+Comparez-nous avec ces autres langues.
+
+249
+00:16:17.000 --> 00:16:21.001
+Dave, alors que nous attendons le logo pour y démarrer, laissez-moi vous demander, vous êtes là
+
+250
+00:16:21.001 --> 00:16:25.001
+Il y aura toujours toutes ces différentes langues, ou vont-elles se fusionner ?
+
+251
+00:16:25.001 --> 00:16:27.000
+Pour un nombre plus petit ?
+
+252
+00:16:27.001 --> 00:16:29.000
+Il serait agréable d’avoir un idéal.
+
+253
+00:16:29.000 --> 00:16:31.000
+Le langage, mais je ne pense pas que ça arrive vraiment.
+
+254
+00:16:31.001 --> 00:16:36.000
+C&#x27;est surtout parce que, bien, par exemple, COBOL, que nous avons vu auparavant, est conçu et
+
+255
+00:16:36.000 --> 00:16:38.000
+Utilisé principalement pour les applications commerciales.
+
+256
+00:16:38.001 --> 00:16:41.000
+Le quatrième est conçu pour les applications en temps réel.
+
+257
+00:16:41.001 --> 00:16:44.001
+Le logo est conçu pour l’éducation, en enseignant les gens à la programmation.
+
+258
+00:16:45.001 --> 00:16:49.001
+Et bien, quand vous discutez des langues, elle devient presque un argument religieux.
+
+259
+00:16:49.001 --> 00:16:51.000
+En réalité, une langue n’est qu’un outil.
+
+260
+00:16:51.001 --> 00:16:54.000
+Et c&#x27;est comme se débattre, bien, qui est mieux, un hammer ou un scrawdriver?
+
+261
+00:16:54.001 --> 00:16:56.000
+Et tu me dis ce que tu veux faire avec
+
+262
+00:16:56.000 --> 00:16:57.001
+C’est ça, et puis je vais vous dire qui est meilleur.
+
+263
+00:16:57.001 --> 00:17:00.001
+Je pense que c&#x27;est probablement le point le plus important sur les langues, c&#x27;était
+
+264
+00:17:00.001 --> 00:17:02.000
+Si vous utilisez la bonne pour la bonne
+
+265
+00:17:02.000 --> 00:17:04.001
+application, alors c&#x27;est la chose la plus efficace que vous pouvez faire.
+
+266
+00:17:05.000 --> 00:17:08.000
+Le logo est comme beaucoup de langues différentes interprétées.
+
+267
+00:17:08.001 --> 00:17:13.001
+Il vous donne un feedback immédiat sur le travail que vous faites.
+
+268
+00:17:13.001 --> 00:17:17.001
+Et ce que je vais faire ici, je vais juste faire ce écran dans un écran divisé.
+
+269
+00:17:20.001 --> 00:17:23.000
+Et je vais vous montrer ce que je veux dire par l&#x27;interaction immédiate.
+
+270
+00:17:23.001 --> 00:17:28.001
+Par exemple, si je mette en avant 30, alors vous voyez l&#x27;indicateur, ou la tortue, est
+
+271
+00:17:28.001 --> 00:17:30.001
+Appeler, se déplacer dans une direction.
+
+272
+00:17:30.001 --> 00:17:32.001
+Maintenant, c&#x27;est le feedback immédiat sur ce que vous avez écrit.
+
+273
+00:17:33.000 --> 00:17:37.001
+Maintenant, beaucoup de langues de programmation comme Fortran ou, disons, beaucoup Pascal
+
+274
+00:17:37.001 --> 00:17:40.000
+Les versions sont ce qu’elles appellent les langues compilées.
+
+275
+00:17:40.001 --> 00:17:42.000
+Vous ne recevez pas de feedback immédiat.
+
+276
+00:17:42.000 --> 00:17:44.000
+Vous devez passer par une étape d&#x27;édition et une compilation
+
+277
+00:17:44.000 --> 00:17:46.000
+Une étape et peut-être même une édition de lien.
+
+278
+00:17:46.001 --> 00:17:47.001
+Et cela nécessite beaucoup de
+
+279
+00:17:47.001 --> 00:17:49.001
+Abstraction, beaucoup de réflexion sur ce que vous faites.
+
+280
+00:17:50.000 --> 00:17:53.000
+où les langues interactives telles que Logo et Fortran, d’autres
+
+281
+00:17:53.000 --> 00:17:55.000
+Les interprètes vous donnent un feedback immédiat.
+
+282
+00:17:55.001 --> 00:17:59.001
+Maintenant, la prochaine chose que je vais charger ici est appelée Blackjack.
+
+283
+00:18:01.001 --> 00:18:02.001
+Il s’agit d’un programme de démo.
+
+284
+00:18:04.000 --> 00:18:09.000
+Maintenant, la raison pour laquelle je charge cette, cela arrive à être un exemple de la façon dont vous
+
+285
+00:18:09.000 --> 00:18:11.001
+Utilisez des graphiques ou des graphismes pour dessiner des images.
+
+286
+00:18:13.000 --> 00:18:16.000
+Et ce programme particulier a été écrit par un 13 ans en
+
+287
+00:18:16.000 --> 00:18:17.001
+Environ trois ou quatre jours.
+
+288
+00:18:17.001 --> 00:18:19.000
+Et c&#x27;était un très précieux 13 ans.
+
+289
+00:18:19.000 --> 00:18:20.000
+Et ton fils. Ce n’est pas ton fils.
+
+290
+00:18:21.000 --> 00:18:22.000
+génétiquement supérieure.
+
+291
+00:18:22.001 --> 00:18:23.001
+C’était en fait son ami.
+
+292
+00:18:25.000 --> 00:18:32.000
+Mais le point est que vous pouvez faire des choses comme ça, comme un petit jeu
+
+293
+00:18:32.000 --> 00:18:36.000
+du blackjack, sans beaucoup d&#x27;efforts dans une langue qui est
+
+294
+00:18:36.000 --> 00:18:37.001
+interactif et graphique dans la nature.
+
+295
+00:18:38.001 --> 00:18:42.000
+Une des belles choses sur ces langues où vous définissez vos propres mots est
+
+296
+00:18:42.000 --> 00:18:44.001
+Vous pouvez le lire assez proche de l’anglais.
+
+297
+00:18:44.001 --> 00:18:46.001
+Vous pouvez récupérer un programme et le lire.
+
+298
+00:18:49.001 --> 00:18:51.000
+Alors que vous jouez au blackjack là-bas.
+
+299
+00:18:52.000 --> 00:18:56.000
+La plupart des nouveaux utilisateurs d’ordinateurs sont exposés à BASIC comme leur type de langage.
+
+300
+00:18:56.001 --> 00:18:58.000
+Et nous n’avons pas vraiment parlé de cela encore.
+
+301
+00:18:58.000 --> 00:19:00.001
+Vous montrez à quel point il est facile de faire un jeu comme celui-ci dans le logo.
+
+302
+00:19:01.000 --> 00:19:02.001
+Qu’est-ce que c’est mieux que la base ? Qu’est ce que les
+
+303
+00:19:02.001 --> 00:19:04.000
+Problèmes de base en tant que langage de programmation ?
+
+304
+00:19:04.000 --> 00:19:08.001
+Eh bien, BASIC est historiquement venu de Fortran et a beaucoup de
+
+305
+00:19:08.001 --> 00:19:10.001
+Problèmes d’origine de Fortran.
+
+306
+00:19:10.001 --> 00:19:14.000
+Fortran est l&#x27;un des, en fait, peut-être le premier, je suppose, de haut niveau
+
+307
+00:19:14.000 --> 00:19:18.000
+Langage de programmation, langage de programme de haut niveau reconnu.
+
+308
+00:19:18.000 --> 00:19:23.000
+Et donc le genre de base suivie que la généalogie et a une orientation scientifique à
+
+309
+00:19:23.000 --> 00:19:29.001
+c&#x27;est, étape par étape, la rupture du problème en étapes simples qui
+
+310
+00:19:29.001 --> 00:19:34.001
+Parfois, pas vraiment la meilleure façon de penser à briser un problème.
+
+311
+00:19:34.001 --> 00:19:39.001
+Maintenant, le logo vient du projet MIT Learning où ils ont pensé au problème
+
+312
+00:19:39.001 --> 00:19:43.000
+de résoudre le problème lui-même et ensuite la langue qui serait, une
+
+313
+00:19:43.000 --> 00:19:44.001
+Un langage qui serait bon pour ça.
+
+314
+00:19:45.001 --> 00:19:50.001
+Donc je pense que la base est juste, c&#x27;est une langue facile à apprendre, mais elle a sa
+
+315
+00:19:50.001 --> 00:19:52.001
+Les limites dès que vous commencez à faire quelque chose de compliqué.
+
+316
+00:19:53.001 --> 00:19:57.000
+BASIC a été conçu pour être appris rapidement par les diplômés du collège
+
+317
+00:19:57.000 --> 00:19:59.001
+Faites des choses très simples.
+
+318
+00:19:59.001 --> 00:20:01.000
+Il n&#x27;était pas conçu pour faire soit sophistiqué
+
+319
+00:20:01.000 --> 00:20:04.000
+Les programmes ne sont pas nécessaires, ni conçus pour grandir.
+
+320
+00:20:04.000 --> 00:20:10.000
+Et je pense que Fortran et Logo ont la capacité de croître dans le sens que vous
+
+321
+00:20:10.000 --> 00:20:12.000
+On peut leur apprendre de nouvelles choses.
+
+322
+00:20:12.001 --> 00:20:17.001
+Et il y a un processus d&#x27;apprentissage en cours dans l&#x27;ordinateur, ou entre
+
+323
+00:20:17.001 --> 00:20:22.000
+programmateur et l&#x27;ordinateur, qui est très similaire au processus d&#x27;apprentissage de
+
+324
+00:20:22.000 --> 00:20:25.000
+Enseigner un petit enfant à faire de nouvelles choses.
+
+325
+00:20:25.001 --> 00:20:30.000
+Eh bien, je pense qu&#x27;il est intéressant avec le logo aussi c&#x27;est qu&#x27;elle est une sorte de bait-and
+
+326
+00:20:30.000 --> 00:20:34.000
+-Switch tactique dans le sens que vous obtenez des enfants intéressés par le
+
+327
+00:20:34.000 --> 00:20:37.001
+la langue à cause des graphiques, parce qu’ils en pensent comme une grande piste qui
+
+328
+00:20:37.001 --> 00:20:40.000
+Le programmeur tourne autour du sol, dans ce cas une tortue.
+
+329
+00:20:40.001 --> 00:20:44.001
+Mais derrière elle est une langue, un Lisp, qui a été utilisé pendant des années dans l&#x27;art.
+
+330
+00:20:44.001 --> 00:20:46.001
+Intelligence, et tous les processus Lisp
+
+331
+00:20:46.001 --> 00:20:49.000
+Ce qui fait partie de Lisp fait aussi partie du logo.
+
+332
+00:20:49.001 --> 00:20:53.000
+Et donc il y a, le quatrième dans Lisp, partage en fait quelques
+
+333
+00:20:53.000 --> 00:20:55.000
+fondations qui sont un peu similaires.
+
+334
+00:20:55.001 --> 00:20:57.001
+Dave, il y a des nouvelles langues sur l&#x27;horizon, ou
+
+335
+00:20:57.001 --> 00:20:59.000
+Est-ce que nous avons un numéro final ?
+
+336
+00:21:00.001 --> 00:21:04.001
+Les derniers langages de programmation que j&#x27;ai vu avaient environ sept ou huit
+
+337
+00:21:04.001 --> 00:21:06.000
+Des centaines de noms en lui.
+
+338
+00:21:06.001 --> 00:21:09.000
+Je ne vois pas la fin en vue. Beaucoup de langues sont
+
+339
+00:21:09.000 --> 00:21:10.001
+Conçu pour une chose spécifique.
+
+340
+00:21:11.000 --> 00:21:12.000
+Je pense que vous les appelleriez presque un jouet
+
+341
+00:21:12.000 --> 00:21:14.001
+langue, à l’exception de la personne qui l’invente.
+
+342
+00:21:16.001 --> 00:21:20.001
+Par conséquent, la plupart d&#x27;entre eux, je pense, sont des offshots des langues principales comme Fortran,
+
+343
+00:21:20.001 --> 00:21:22.001
+COBOL, ALGOL ou Lisp.
+
+344
+00:21:23.001 --> 00:21:28.000
+Et, oui, tant que les gens ont des idées pour les choses qu&#x27;ils veulent
+
+345
+00:21:28.000 --> 00:21:29.001
+Ils inventent une nouvelle langue.
+
+346
+00:21:29.001 --> 00:21:32.000
+C’est une sorte de processus évolutionnaire, je pense que vous tous
+
+347
+00:21:32.000 --> 00:21:34.000
+dit, où une langue de type se construit sur la suivante.
+
+348
+00:21:34.000 --> 00:21:36.001
+Je pense que c&#x27;est aussi une question de recevoir
+
+349
+00:21:36.001 --> 00:21:38.000
+Il a commencé à apprendre une langue.
+
+350
+00:21:38.000 --> 00:21:40.000
+Une fois que vous avez appris une langue, ce n&#x27;est pas très
+
+351
+00:21:40.000 --> 00:21:42.000
+Difficile de commencer à apprendre d’autres langues.
+
+352
+00:21:42.000 --> 00:21:44.001
+Mais il semble que ce soit une limite à franchir pour la première fois.
+
+353
+00:21:45.001 --> 00:21:47.001
+Donc je pense que c&#x27;est une chose intéressante sur l&#x27;apprentissage
+
+354
+00:21:47.001 --> 00:21:49.000
+des langues, que vous commencez au moins.
+
+355
+00:21:49.001 --> 00:21:53.000
+Ok, bien, nous avons commencé et nous sommes terminés. Merci beaucoup d’être avec nous,
+
+356
+00:21:53.001 --> 00:21:56.000
+Et merci de nous rejoindre dans cette édition des Chroniques informatiques.
+
+357
+00:22:49.000 --> 00:23:02.000
+Merci à vous.

@@ -1,0 +1,1409 @@
+WEBVTT
+
+1
+00:00:46.001 --> 00:00:52.001
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+2
+00:00:52.001 --> 00:00:57.001
+heureux de fournir un financement majeur pour la Chronicle d&#x27;ordinateur, l&#x27;histoire
+
+3
+00:00:57.001 --> 00:00:59.001
+de cette évolution continue.
+
+4
+00:01:09.000 --> 00:01:13.000
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay et c&#x27;est Herb Lechner,
+
+5
+00:01:13.000 --> 00:01:16.001
+C&#x27;est une sorte de séance pour Gary Kildall cette semaine. pas vraiment. Gary va être
+
+6
+00:01:16.001 --> 00:01:20.000
+avec nous, mais à l&#x27;autre côté de la table aujourd&#x27;hui parce que notre sujet est
+
+7
+00:01:20.000 --> 00:01:24.000
+systèmes d’exploitation . Et comme vous le savez, Gary Kildall est le créateur de CPM,
+
+8
+00:01:24.001 --> 00:01:29.000
+Le principal système d’exploitation utilisé aujourd’hui. Les systèmes d’exploitation d’herbe sont bons
+
+9
+00:01:29.000 --> 00:01:33.000
+C&#x27;est un sujet difficile parce que, en tant que utilisateurs d&#x27;ordinateurs, nous travaillons tous avec des systèmes d&#x27;exploitation,
+
+10
+00:01:33.001 --> 00:01:37.000
+Mais franchement, beaucoup d’entre nous ne comprennent pas vraiment ce qu’il est. Donnez-nous un bref
+
+11
+00:01:37.000 --> 00:01:40.001
+Introduction générale à un système d’exploitation. J’ai du mal, je pense que ça fonctionne
+
+12
+00:01:40.001 --> 00:01:44.001
+Les systèmes sont les plus excitants quand ils ne fonctionnent pas et que vous ne voulez pas avoir
+
+13
+00:01:44.001 --> 00:01:49.000
+Il se passe. Mais sur le petit côté de la machine, les systèmes d&#x27;exploitation gèrent l&#x27;ordinateur
+
+14
+00:01:49.000 --> 00:01:53.001
+ressources et ils sauvent le programmeur une énorme quantité d&#x27;efforts nitty gritty
+
+15
+00:01:53.001 --> 00:01:58.000
+et ils fournissent un environnement d&#x27;exploitation standard pour permettre aux applications de fonctionner
+
+16
+00:01:58.000 --> 00:02:03.000
+sur différentes machines et sur différentes configurations. Sur le côté de la grande machine,
+
+17
+00:02:03.000 --> 00:02:07.000
+les systèmes d&#x27;exploitation deviennent très sophistiqués et gèrent littéralement l&#x27;ordinateur
+
+18
+00:02:07.000 --> 00:02:12.000
+ressources de telle manière qu’elles puissent réaliser leur potentiel. Oui, avant que nous
+
+19
+00:02:12.000 --> 00:02:16.001
+rejoindre Gary et nos autres invités, nous allons vous emmener dans un ordinateur pour
+
+20
+00:02:16.001 --> 00:02:19.000
+Voyez exactement ce que le système d’exploitation fait.
+
+21
+00:02:25.001 --> 00:02:28.001
+Bonjour, je peux vous aider ? Oui, où sommes nous ?
+
+22
+00:02:29.000 --> 00:02:32.001
+Vous êtes à l&#x27;intérieur d&#x27;un micro-ordinateur Apple IIe. Et vous qui êtes vous ? Je suis
+
+23
+00:02:32.001 --> 00:02:36.001
+Bruce Tognazini, je suis un ingénieur avec un ordinateur Apple et je suis ici pour vérifier
+
+24
+00:02:36.001 --> 00:02:39.001
+et assurez-vous que tout est parfait sur ce ordinateur parce que nous avons un rapport
+
+25
+00:02:39.001 --> 00:02:43.001
+Et dans quelques secondes, l’un de nos propriétaires va le faire.
+
+26
+00:02:43.001 --> 00:02:47.001
+Un ordinateur sur. Et qu’est-ce que toutes ces choses ? Ce sont les parties qui constituent un
+
+27
+00:02:47.001 --> 00:02:52.000
+L&#x27;ordinateur Apple, ce chip particulier sur lequel vous êtes, ou je suis désolé, appelle
+
+28
+00:02:52.000 --> 00:02:56.001
+le microprocesseur et c’est le cœur de l’ordinateur, ce type de
+
+29
+00:02:56.001 --> 00:03:01.000
+Le modérateur du spectacle qui se poursuit. Et ces deux chips là-bas, ces deux
+
+30
+00:03:01.000 --> 00:03:05.001
+sont des chips ROM très importants qui ont la langue de base intégrée et le
+
+31
+00:03:05.001 --> 00:03:10.001
+le noyau du système d’exploitation. Et puis ces huit chips qui sortent ici sont la RAM
+
+32
+00:03:10.001 --> 00:03:15.000
+les chips et ils gardent les informations qui viennent du disque et qui
+
+33
+00:03:15.000 --> 00:03:19.001
+les types d’utilisateurs, les programmes et ainsi de suite. Bruce, nous essayons de déterminer
+
+34
+00:03:19.001 --> 00:03:23.001
+Ce qu&#x27;un système d&#x27;exploitation fait et peut-être que vous pourriez l&#x27;aider à l&#x27;expliquer. Bien sûr, un
+
+35
+00:03:23.001 --> 00:03:27.000
+le système d&#x27;exploitation fonctionne essentiellement l&#x27;ensemble de l&#x27;ordinateur une fois qu&#x27;il est entré, mais
+
+36
+00:03:27.000 --> 00:03:30.001
+Pour l&#x27;instant, il n&#x27;a pas tourné sur tout cela. Je vois que l&#x27;utilisateur est en train de cliquer sur le
+
+37
+00:03:30.001 --> 00:03:34.001
+Changer, tout est bien, c&#x27;est seulement environ 12 volts. La lumière de puissance continue et
+
+38
+00:03:34.001 --> 00:03:39.000
+alors le petit microprocesseur ici a la tâche de se vérifier et ensuite
+
+39
+00:03:39.000 --> 00:03:44.001
+Remplacer le contrôle sur ce chip ROM. C’est le chip ROM qui possède une petite
+
+40
+00:03:44.001 --> 00:03:49.000
+Programme qui revient à l&#x27;arrière de l&#x27;ordinateur et vérifie et voit
+
+41
+00:03:49.000 --> 00:03:53.000
+peut-il trouver une carte de contrôleur de disque, qui, bien sûr, peut-être parce que
+
+42
+00:03:53.000 --> 00:03:58.001
+Il y a un plug ici. Et sur la carte de contrôleur disque, il y a un autre ROM et ce
+
+43
+00:03:58.001 --> 00:04:03.000
+ROM prend maintenant le contrôle de celui-ci et commence à entrer dans le disque en fonctionnement
+
+44
+00:04:03.000 --> 00:04:07.001
+Éteignez le disque à travers ce câble blanc. Vous avez probablement vu le disque
+
+45
+00:04:07.001 --> 00:04:12.000
+conduire pendant que vous étiez sur votre chemin ici et puis ce qui descend et commence
+
+46
+00:04:12.000 --> 00:04:17.001
+Remplir ces chips RAM ici. Il remplit environ un cinquième à un quart de la RAM.
+
+47
+00:04:17.001 --> 00:04:22.000
+Chip avec le système d&#x27;exploitation disque. Il s’agit de toutes les langues et peut-être de toutes
+
+48
+00:04:22.000 --> 00:04:28.001
+Programme que l’utilisateur veut faire. Et après environ 15 à 30 secondes, tout est terminé, le
+
+49
+00:04:28.001 --> 00:04:33.000
+L&#x27;écran donne un message à l&#x27;utilisateur et l&#x27;Utilisateur peut ensuite aller au travail. OK bien
+
+50
+00:04:33.000 --> 00:04:35.000
+Je dois revenir aux chronicles informatiques,
+
+51
+00:04:35.000 --> 00:04:36.001
+Merci beaucoup. Bien sûr, merci à vous.
+
+52
+00:04:50.001 --> 00:04:56.000
+Le système d&#x27;exploitation est un programme informatique sophistiqué qui rend l&#x27;ordinateur
+
+53
+00:04:56.000 --> 00:05:00.001
+plus facile à utiliser et à fonctionner plus efficacement. Les systèmes d’exploitation sont parfois
+
+54
+00:05:00.001 --> 00:05:06.000
+appelé logiciel système ou logiciels système, comme contraste avec l&#x27;application
+
+55
+00:05:06.000 --> 00:05:08.001
+Programmes qui sont le sujet d&#x27;une leçon ultérieure.
+
+56
+00:05:10.000 --> 00:05:14.001
+Les systèmes d&#x27;exploitation fournissent jusqu&#x27;à sept fonctions, toutes lesquelles ne sont pas présentes dans
+
+57
+00:05:14.001 --> 00:05:19.001
+Des systèmes d’exploitation informatiques plus petits. Une fonction de tous les systèmes d’exploitation est de
+
+58
+00:05:19.001 --> 00:05:24.000
+définir la façon dont l’interface utilisateur avec l’ordinateur. Par exemple, comment les données sont
+
+59
+00:05:24.000 --> 00:05:27.000
+stockés sur les fichiers et la façon dont les programmes sont lancés.
+
+60
+00:05:28.000 --> 00:05:31.001
+Une deuxième fonction des systèmes d’exploitation est de permettre plusieurs
+
+61
+00:05:31.001 --> 00:05:33.000
+utilisateurs pour partager le même matériel.
+
+62
+00:05:34.001 --> 00:05:39.000
+Une troisième fonction est de gérer les fichiers de données afin que les données puissent être partagées entre plusieurs
+
+63
+00:05:39.000 --> 00:05:44.000
+utilisateurs ou applications. Les utilisateurs potentiels peuvent être planifiés et
+
+64
+00:05:44.000 --> 00:05:45.001
+L’accès non autorisé est interdit.
+
+65
+00:05:47.000 --> 00:05:52.000
+Une quatrième fonction importante est la gestion de tous les données d&#x27;entrée et de sortie. Depuis
+
+66
+00:05:52.000 --> 00:05:56.001
+Beaucoup d&#x27;applications vont fonctionner sur l&#x27;ordinateur et partager ses appareils de stockage, il est
+
+67
+00:05:56.001 --> 00:06:00.001
+nécessaire d’avoir un contrôle commun sur la manière dont les données sont stockées, accessées, et
+
+68
+00:06:00.001 --> 00:06:06.000
+récupérée . Une cinquième fonction est de fournir la récupération d&#x27;erreur pour le système informatique.
+
+69
+00:06:07.000 --> 00:06:10.001
+Si une erreur se produit dans le processus de lecture des données d&#x27;un appareil d&#x27;entrée, pour
+
+70
+00:06:10.001 --> 00:06:16.000
+Par exemple, le système va essayer de réévaluer les données plusieurs fois jusqu&#x27;à ce que l&#x27;erreur soit
+
+71
+00:06:16.000 --> 00:06:22.000
+des procédures de récupération ou de bypass initiées. Le système de comptabilité est un sixième opérateur
+
+72
+00:06:22.000 --> 00:06:27.000
+fonctionnement du système. Cette fonction maintient la trace des ressources de la machine afin que les coûts puissent être
+
+73
+00:06:27.000 --> 00:06:32.000
+Il est distribué parmi plusieurs utilisateurs. Combien de temps CPU est utilisé par chaque
+
+74
+00:06:32.000 --> 00:06:37.000
+L’application ? Combien de disques et d&#x27;enregistrements sont écrits et lues par chacun
+
+75
+00:06:37.000 --> 00:06:42.001
+Application et ainsi de suite ? La dernière fonction fournit la comptabilité de maintenance. Il est
+
+76
+00:06:42.001 --> 00:06:46.000
+maintient la trace des erreurs correctives de la machine pour aider à la maintenance et
+
+77
+00:06:46.000 --> 00:06:47.001
+Remplacement des composants manquants.
+
+78
+00:06:49.000 --> 00:06:53.000
+Les systèmes d&#x27;exploitation disponibles pour les micro-ordinateurs d&#x27;aujourd&#x27;hui approchent
+
+79
+00:06:53.000 --> 00:06:58.000
+la sophistication des systèmes décrits ici et sont le sujet de la vidéo
+
+80
+00:06:58.000 --> 00:06:59.001
+partie de ce programme.
+
+81
+00:07:00.001 --> 00:07:04.001
+Gary Kildall présente l&#x27;un de ses derniers dans le prochain segment. Nous allons nous joindre à lui maintenant.
+
+82
+00:07:09.000 --> 00:07:13.001
+Maintenant, nous rejoignons Gary Kildall, qui n’est pas étranger à ce programme. Bien entendu, Gary est
+
+83
+00:07:13.001 --> 00:07:17.001
+le créateur de CPM, une multitude de Chroniques informatiques, et aussi le chef
+
+84
+00:07:17.001 --> 00:07:19.000
+Directeur exécutif de la recherche numérique.
+
+85
+00:07:19.001 --> 00:07:24.000
+Et avec Gary est Tony Fanning avec le Département d&#x27;ingénierie corporative de HP
+
+86
+00:07:24.000 --> 00:07:29.000
+Les laboratoires de Hewlett-Packard et Tony travaillent principalement avec MS-DOS. Les herbes ? Gary, dans
+
+87
+00:07:29.000 --> 00:07:33.001
+vu le succès immense de CPM 80, vous pourriez nous dire un peu sur la façon dont
+
+88
+00:07:33.001 --> 00:07:37.000
+L’idée a commencé et comment est-elle devenue ce qu’elle est aujourd’hui ?
+
+89
+00:07:37.001 --> 00:07:41.000
+Eh bien, je pense que je suis une sorte de personne connue comme un système d&#x27;exploitation, mais réaliste,
+
+90
+00:07:41.001 --> 00:07:45.000
+J&#x27;ai vraiment commencé à revenir dans les premiers jours de l&#x27;informatique et je suis surtout intéressé par
+
+91
+00:07:45.000 --> 00:07:50.000
+Les langues de programmation plutôt que les systèmes d’exploitation. J’ai travaillé avec Intel
+
+92
+00:07:50.000 --> 00:07:55.000
+Corporation, travaillant sur une langue appelée PLM qui a été utilisée dans les premiers jours de la
+
+93
+00:07:55.000 --> 00:08:00.000
+Les microprocesseurs. Il était nécessaire d’avoir un système d’exploitation pour
+
+94
+00:08:00.000 --> 00:08:04.001
+Soutenir la langue. Et c’est là que vient le nom. CPM est un contrôle
+
+95
+00:08:04.001 --> 00:08:07.001
+Programme pour micro-ordinateurs tel que PLM a été nommé
+
+96
+00:08:07.001 --> 00:08:09.001
+Le langage de programmation pour les micro-ordinateurs.
+
+97
+00:08:10.001 --> 00:08:15.000
+Et nous avons utilisé des tapis de papier à l&#x27;époque, et nous avions besoin de quelque chose d&#x27;autre
+
+98
+00:08:15.000 --> 00:08:20.000
+Pour stocker des programmes en plus des tapis papier. C’était un processus assez aveugle. et ainsi
+
+99
+00:08:20.000 --> 00:08:25.000
+Les disques floppy sont venus autour, et CPM était dans le logiciel qui a fait ces disques
+
+100
+00:08:25.000 --> 00:08:27.001
+Disques utilisables dans un petit système informatique.
+
+101
+00:08:28.000 --> 00:08:33.000
+Gary, le système d&#x27;exploitation est un peu un mystère pour beaucoup d&#x27;utilisateurs informatiques normaux
+
+102
+00:08:33.000 --> 00:08:36.000
+qui n’en profite pas, mais n’arrive jamais vraiment à s’enfoncer. Vous pouvez
+
+103
+00:08:36.000 --> 00:08:41.001
+Donnez-nous une description rigoureuse de ce que le système d&#x27;exploitation fait à l&#x27;intérieur de
+
+104
+00:08:41.001 --> 00:08:47.000
+Un ordinateur ? Il y a trois niveaux de logiciel. Vous voulez penser
+
+105
+00:08:47.000 --> 00:08:49.000
+de la manière dont vous travaillez sur un ordinateur personnel.
+
+106
+00:08:49.001 --> 00:08:53.001
+L&#x27;un d&#x27;eux est un niveau d&#x27;instructions de machine. Ce n’est que si vous tournez le
+
+107
+00:08:53.001 --> 00:08:58.000
+la machine, vous ne mettez pas un disque qui est là-bas. La machine est capable de
+
+108
+00:08:58.000 --> 00:09:02.001
+Comprendre certaines instructions. Ce sont des instructions de machine. Mais vous avez
+
+109
+00:09:02.001 --> 00:09:04.000
+Pour y mettre quelque chose pour que la chose fonctionne.
+
+110
+00:09:04.000 --> 00:09:08.001
+Le second niveau est ce qu’on appelle le logiciel système, et ce qui se trouve juste au-dessus du
+
+111
+00:09:08.001 --> 00:09:12.000
+Le langage automatique lui-même. Et le troisième niveau est le logiciel d&#x27;application, et
+
+112
+00:09:12.000 --> 00:09:14.001
+C&#x27;est ce que vous allez vraiment dans la boutique et achetez, c&#x27;est l&#x27;application
+
+113
+00:09:14.001 --> 00:09:18.001
+Le logiciel . Ensuite, le logiciel d’application utilise le système de logiciels comme un
+
+114
+00:09:18.001 --> 00:09:23.001
+La Fondation. Le logiciel système fonctionne ensuite la machine en utilisant les instructions de la machine.
+
+115
+00:09:25.000 --> 00:09:28.001
+Ainsi, dans cette couche moyenne du logiciel système, vous trouverez un certain nombre de choses comme
+
+116
+00:09:28.001 --> 00:09:33.001
+les langues de programmation, les utilités et les systèmes d’exploitation. Un système d’exploitation maintenant
+
+117
+00:09:33.001 --> 00:09:39.000
+C’est une sorte de police de la circulation. Il maintient le suivi des fichiers ou la façon dont vos fichières sont
+
+118
+00:09:39.000 --> 00:09:43.001
+stocké, comment votre écran est traité, et le clavier est traités, et les choses de
+
+119
+00:09:43.001 --> 00:09:48.001
+C’est ce genre. Et c&#x27;est donc la base pour le joueur enregistré choisi quand
+
+120
+00:09:48.001 --> 00:09:51.001
+Vous jouez des records. Eh bien, vous avez la perspective en tant que développeur, Gary.
+
+121
+00:09:52.000 --> 00:09:56.001
+Tony, vous êtes un utilisateur de systèmes d&#x27;exploitation. Qu’est-ce que vous cherchez en tant qu’utilisateur
+
+122
+00:09:56.001 --> 00:10:02.001
+Un système d’exploitation ? J&#x27;ai un intérêt, bien sûr, techniquement dans le
+
+123
+00:10:02.001 --> 00:10:07.000
+système d’exploitation et comment il fonctionne. Mais en fait, quand je l&#x27;utilise, je veux le
+
+124
+00:10:07.000 --> 00:10:11.001
+Le système d’exploitation doit être transparent. Je ne veux pas le voir. Je veux juste
+
+125
+00:10:11.001 --> 00:10:16.001
+Utilisez une application. Et je sais que vous avez posé la question plus tôt sur ce qui devrait être
+
+126
+00:10:16.001 --> 00:10:20.001
+Un à chercher ? Eh bien, qu’est-ce que vous essayez de faire ? Si je cherche à faire quelque chose
+
+127
+00:10:20.001 --> 00:10:24.000
+comme, par exemple, le traitement de mots, je voudrais que le système d&#x27;exploitation
+
+128
+00:10:24.000 --> 00:10:25.001
+Il disparaît et ne me dérange pas.
+
+129
+00:10:27.001 --> 00:10:32.001
+Maintenant, vous travaillez principalement avec MS-DOS, Tony. Comment cela serait différent
+
+130
+00:10:32.001 --> 00:10:34.000
+D’où vient le CPM de Gary ?
+
+131
+00:10:35.001 --> 00:10:40.000
+Dans de nombreuses façons, il fait les mêmes types de choses que le CPM de Gary fait. Je pense
+
+132
+00:10:40.000 --> 00:10:44.000
+Gary peut vous parler de certaines variantes de CPM qui sont très différentes
+
+133
+00:10:44.000 --> 00:10:45.001
+C’est ce que fait MS-DOS aujourd’hui.
+
+134
+00:10:47.001 --> 00:10:53.000
+C’est essentiellement la même chose. Il vous permet de prendre soin des fichiers, de prendre en charge
+
+135
+00:10:53.000 --> 00:10:58.001
+de transfert de données d’un endroit à l’autre, prend soin de l’ensemble de l&#x27;homme
+
+136
+00:10:58.001 --> 00:11:02.001
+interface entre vous, vos doigts, l&#x27;ordinateur, les programmes qui fonctionnent.
+
+137
+00:11:03.000 --> 00:11:06.000
+Gary, nous avons traversé plusieurs générations maintenant de, disons, CPM.
+
+138
+00:11:07.000 --> 00:11:11.000
+Chacun ajoute quelque chose. Pouvez-vous nous décrire ce qui est ajouté chaque fois ?
+
+139
+00:11:11.001 --> 00:11:14.000
+Comment améliorer un système d&#x27;exploitation chaque fois que vous sortez avec une nouvelle version?
+
+140
+00:11:14.001 --> 00:11:18.000
+Eh bien, la vraie clé de tout logiciel système est de tenter de correspondre à ce que vous faites
+
+141
+00:11:18.000 --> 00:11:21.001
+avec ce logiciel avec le système informatique, la capacité de l&#x27;ordinateur
+
+142
+00:11:21.001 --> 00:11:25.001
+système que vous avez. Et ce qui s’est passé, je pense, tôt dans le micro-ordinateur
+
+143
+00:11:25.001 --> 00:11:30.001
+Le grand système informatique possède 16K de mémoire. Ainsi, l’idée est de
+
+144
+00:11:30.001 --> 00:11:35.000
+d’un système d’exploitation qui n’utilise que la très petite partie de
+
+145
+00:11:35.000 --> 00:11:39.001
+La mémoire. Maintenant, lorsque vous ajoutez plus de mémoire, plus de processeurs, vous obtenez plus
+
+146
+00:11:39.001 --> 00:11:41.001
+fonctionnalités que vous ajoutez au système d’exploitation.
+
+147
+00:11:41.001 --> 00:11:48.000
+Vous faites plus pour l’opérateur. Et ce qui s&#x27;est passé avec, bien, ces 8
+
+148
+00:11:48.000 --> 00:11:54.000
+-Les systèmes bits, par exemple, sont tous maintenant 64K. C’est la taille maximale de la mémoire. et
+
+149
+00:11:54.000 --> 00:11:59.000
+Même dans les machines de 16 bits, la taille moyenne de la mémoire est, disons, 128, 256,
+
+150
+00:11:59.000 --> 00:12:01.001
+Même avec 512K. Nous nous déplaçons dans cette direction.
+
+151
+00:12:02.000 --> 00:12:06.000
+Et ce qui se passe, c’est que le système d’exploitation s’étend, il obtient plus de fonctionnalité pour
+
+152
+00:12:06.000 --> 00:12:13.000
+Profitez de la plus grande zone de mémoire. L’un des principaux atributs du CPM et
+
+153
+00:12:13.000 --> 00:12:17.001
+Certains autres systèmes d&#x27;exploitation étaient qu&#x27;ils étaient simples et propres et net. et
+
+154
+00:12:17.001 --> 00:12:21.000
+maintenant que les ordinateurs deviennent plus grands et que cette croissance se produit que vous êtes
+
+155
+00:12:21.000 --> 00:12:25.000
+Nous allons voir la sophistication et la complexité grandir dans le
+
+156
+00:12:25.000 --> 00:12:30.001
+système d’exploitation ? Eh bien, il est certainement vrai qu&#x27;il est très facile d&#x27;ajouter ce qui est
+
+157
+00:12:30.001 --> 00:12:33.001
+appeler des balles et des cloches à un système d&#x27;exploitation, des choses qui ne ajoutent pas vraiment
+
+158
+00:12:33.001 --> 00:12:37.001
+Il y a beaucoup de fonctionnalités juste parce qu&#x27;il y a plus d&#x27;espace mémoire. Et je pense
+
+159
+00:12:37.001 --> 00:12:40.001
+C&#x27;est la vraie question cruciale, c&#x27;est comment vous ajoutez les bons types de fonctions ?
+
+160
+00:12:42.000 --> 00:12:47.001
+Ce que nous voyons maintenant avec les machines 16 bits et les grands systèmes de mémoire est que nous verrons
+
+161
+00:12:47.001 --> 00:12:51.000
+Les choses sont comme la concurrence et nous serons en mesure de démontrer quelques-uns de cela aujourd&#x27;hui. Cette
+
+162
+00:12:51.000 --> 00:12:55.001
+ou, les grands systèmes informatiques ont eu des systèmes d&#x27;exploitation concurrents ou multitasking
+
+163
+00:12:55.001 --> 00:13:00.000
+C&#x27;est ce qu&#x27;on appelle le grand business informatique depuis des années. C’est l’idée d’être
+
+164
+00:13:00.000 --> 00:13:03.000
+Il est possible d’utiliser le système informatique pour faire plus d’une chose en même temps. Mais
+
+165
+00:13:03.000 --> 00:13:08.001
+Si vous regardez du petit ordinateur, des micro-ordinateurs jusqu&#x27;à aujourd&#x27;hui, vous verrez
+
+166
+00:13:08.001 --> 00:13:11.001
+Ce qui s&#x27;est passé est que nous avons commencé avec une tâche unique dans votre utilisateur unique
+
+167
+00:13:11.001 --> 00:13:15.000
+des systèmes. Et ce qui se passe maintenant, c’est que nous sommes venus ensemble et concurrents ou
+
+168
+00:13:15.000 --> 00:13:18.000
+l&#x27;idée de faire votre imprimer pendant que vous faites le traitement de votre mot, pour
+
+169
+00:13:18.000 --> 00:13:23.000
+Par exemple, c&#x27;est celui que nous trouvons dans cette fonctionnalité supplémentaire qui est
+
+170
+00:13:23.000 --> 00:13:27.000
+ajouté . Gary, vous avez pensé concurrent CPM ici sur le sur IBM PC à droite
+
+171
+00:13:27.000 --> 00:13:29.000
+et maintenant. Peut-être que vous pourriez juste courir un peu et nous montrer
+
+172
+00:13:29.000 --> 00:13:30.001
+Quels sont les composants de ce système ?
+
+173
+00:13:30.001 --> 00:13:37.000
+Ok, maintenant l&#x27;idée du système concurrent et du CPM concurrent est ce qu&#x27;il est
+
+174
+00:13:37.000 --> 00:13:42.000
+C’est un système en temps réel. C&#x27;est-à-dire qu&#x27;il est en mesure de changer entre les programmes en
+
+175
+00:13:42.000 --> 00:13:47.000
+des intervalles de temps courts et, par exemple, être en mesure de recevoir des données sur un modem pendant
+
+176
+00:13:47.000 --> 00:13:52.001
+Vous voyez l’opération de la directory. Maintenant, ce que je vais faire ici, c&#x27;est que je l&#x27;utiliserai
+
+177
+00:13:52.001 --> 00:13:56.001
+le clavier pour changer entre ce que nous appelons des écrans virtuels.
+
+178
+00:13:56.001 --> 00:14:01.000
+C&#x27;est-à-dire, vous pouvez vous imaginer maintenant que vous regardez quatre consoles différentes comme moi
+
+179
+00:14:01.000 --> 00:14:06.001
+Passez de console à console. Donc, si nous disons que la console zéro est celle que nous sommes
+
+180
+00:14:06.001 --> 00:14:10.000
+regarder en ce moment et ce qui arrive est montré sur le côté gauche inférieur de
+
+181
+00:14:10.000 --> 00:14:15.001
+à l’écran. Console un, vous verrez se produire une affichage des lieux de mémoire.
+
+182
+00:14:16.000 --> 00:14:23.000
+Console deux, j&#x27;ai changé pour arriver à être un catalogue et console trois est un
+
+183
+00:14:23.000 --> 00:14:29.000
+Un nouvel écran gratuit. Je vais commencer un commandement ici. Je vais commencer un déboucher juste
+
+184
+00:14:29.000 --> 00:14:35.000
+pour obtenir quelque chose qui va et il est chargé hors du disque et il me donne aussi la
+
+185
+00:14:35.000 --> 00:14:37.001
+Je me dis vite qu&#x27;il est prêt à partir. Maintenant, je vais juste dire montrer tout
+
+186
+00:14:37.001 --> 00:14:41.001
+C’est la mémoire, nous aurons quelque chose d’actif qui se passe là-bas. Maintenant que cela continue,
+
+187
+00:14:41.001 --> 00:14:45.001
+Je retournerai et vous verrez que nous sommes dans une opération de directory ici et ainsi de suite
+
+188
+00:14:45.001 --> 00:14:52.000
+Je vais juste recommencer sur cette console et comme ça va, je vais mieux
+
+189
+00:14:52.000 --> 00:14:57.001
+Inscrivez-le juste ici. C’est le point faible du système comme le
+
+190
+00:14:57.001 --> 00:15:02.001
+L’opérateur Et puis, comme cela se passe, je vais avancer et retourner et nous pouvons
+
+191
+00:15:02.001 --> 00:15:06.001
+voir ce que nous avons, maintenant nous obtenons une affichage du catalogue en ce moment et je
+
+192
+00:15:06.001 --> 00:15:10.001
+retourner et vous pouvez voir ce autre programme est encore activement traitant. OK
+
+193
+00:15:10.001 --> 00:15:15.000
+C’est fini ! Retour à l’écran original. C’est maintenant un très
+
+194
+00:15:15.000 --> 00:15:21.000
+démonstration courte du concept de multitasking ou de concurrence mais la
+
+195
+00:15:21.000 --> 00:15:24.000
+La façon dont il serait en fait utilisé pour dire dans une entreprise est que vous auriez votre mot
+
+196
+00:15:24.000 --> 00:15:28.000
+le processeur fonctionne sur une seule écran et alors pendant que vous allez passer à dire
+
+197
+00:15:28.000 --> 00:15:34.000
+un autre écran pour effectuer un vérification ou recevoir des données sur un modem. Ainsi le
+
+198
+00:15:34.000 --> 00:15:38.000
+L&#x27;effet est que vous obtenez plusieurs systèmes de micro-ordinateur devant vous sur votre
+
+199
+00:15:38.000 --> 00:15:43.000
+Le bureau. C&#x27;est ainsi que les systèmes d&#x27;exploitation se déplacent en ce moment, en raison de
+
+200
+00:15:43.000 --> 00:15:46.000
+Le fait que nous avons, dit-on, une demi-mégabyte de mémoire dans la machine. Nous voulons que
+
+201
+00:15:46.000 --> 00:15:49.001
+Assurez-vous que nous utilisons cette machine efficacement en raison de ce que nous regardons
+
+202
+00:15:49.001 --> 00:15:55.000
+Aujourd’hui, avec des ordinateurs de ce type, ce sont vraiment les principaux cadres qui descendent
+
+203
+00:15:55.000 --> 00:15:57.001
+Votre bureau, nous voulons donc nous assurer que nous avons cette capacité.
+
+204
+00:15:58.001 --> 00:16:03.001
+Unix et Xenix pourraient ressembler à deux personnages d&#x27;un épisode Star Trek
+
+205
+00:16:03.001 --> 00:16:06.001
+Mais en fait, ils sont deux systèmes d&#x27;exploitation très élégants et nous allons
+
+206
+00:16:06.001 --> 00:16:08.000
+Regardez-les en un instant.
+
+207
+00:16:17.001 --> 00:16:23.000
+Les systèmes d’exploitation des plus grands systèmes informatiques ont évolué au fil du temps et ont
+
+208
+00:16:23.000 --> 00:16:28.000
+Il est principalement utilisé pour améliorer l’efficacité du matériel. Leur tâche principale était de conserver la CPU.
+
+209
+00:16:28.000 --> 00:16:33.001
+et le stockage principal aussi productif que possible en planifiant autant d&#x27;utilisateurs différents et
+
+210
+00:16:33.001 --> 00:16:38.001
+Applications via le système matériel le plus possible. Une manière, c’était
+
+211
+00:16:38.001 --> 00:16:43.001
+Il a été réalisé à travers le multitasking ou la concurrence. C’est le système informatique
+
+212
+00:16:43.001 --> 00:16:49.001
+Capacité à exécuter plusieurs applications à la fois. La plupart des applications qui utilisent un juste
+
+213
+00:16:49.001 --> 00:16:56.000
+Le montant de I.O. Ne pas utiliser efficacement le CPU. Le CP est souvent idle attente
+
+214
+00:16:56.000 --> 00:17:01.000
+pour le programme d&#x27;application pour obtenir les données d&#x27;un I.O plus lent. le dispositif. L’opération
+
+215
+00:17:01.000 --> 00:17:07.000
+le système accomplit une multitasking en permettant à un programme d&#x27;application de fonctionner jusqu&#x27;à
+
+216
+00:17:07.000 --> 00:17:12.001
+Il demande à I.O. Le système d&#x27;exploitation suspend ensuite le traitement de la CPU pour ce
+
+217
+00:17:12.001 --> 00:17:17.001
+application et commence une autre application qui se poursuit jusqu&#x27;à ce qu&#x27;elle a besoin d&#x27;I.O.
+
+218
+00:17:18.000 --> 00:17:21.001
+Le système d&#x27;exploitation lancera autant d&#x27;applications que
+
+219
+00:17:21.001 --> 00:17:23.001
+Il faut que le CPU soit occupé.
+
+220
+00:17:24.001 --> 00:17:28.000
+Lorsque le I.O. Les demandes sont satisfaites, le système d’exploitation
+
+221
+00:17:28.000 --> 00:17:30.001
+réinitier une demande suspendue.
+
+222
+00:17:31.001 --> 00:17:35.001
+Ceci n’est qu’un exemple des types de fonction relativement sophistiquées.
+
+223
+00:17:35.001 --> 00:17:41.000
+réalisée par le système d’exploitation. UNIX, un système d’exploitation initialement
+
+224
+00:17:41.000 --> 00:17:46.000
+introduit pour de nombreux ordinateurs mais qui trouve rapidement l&#x27;application dans les micros,
+
+225
+00:17:46.000 --> 00:17:49.001
+C’est le sujet de notre prochain segment. Revenons donc à notre programme.
+
+226
+00:17:53.001 --> 00:17:57.001
+Gene Yates est le président de Yates Ventures, une entreprise
+
+227
+00:17:57.001 --> 00:18:02.000
+Il est principalement impliqué dans la recherche du système d&#x27;exploitation UNIX.
+
+228
+00:18:02.000 --> 00:18:05.000
+Bienvenue dans les chroniques informatiques. Merci à vous. Dites-nous un peu sur
+
+229
+00:18:05.000 --> 00:18:10.000
+UNIX et ce qui est particulièrement comparé à CPM et MS-DOS, les autres choses que nous avons
+
+230
+00:18:10.000 --> 00:18:14.000
+On a parlé. UNIX est l’un des systèmes d’exploitation standard qui
+
+231
+00:18:14.000 --> 00:18:18.001
+Les utilisateurs de l&#x27;ordinateur vont trouver plus intéressant pour eux en raison de la variété
+
+232
+00:18:18.001 --> 00:18:23.000
+de logiciels d&#x27;application et de différentes marques d&#x27;ordinateurs qu&#x27;ils peuvent choisir par
+
+233
+00:18:23.000 --> 00:18:28.001
+Il s’agit d’un système d’exploitation standard en tant que base de son système informatique. et
+
+234
+00:18:28.001 --> 00:18:34.000
+UNIX est particulièrement unique parce qu&#x27;il fonctionne sur des microcomputés, mini-ordinateurs,
+
+235
+00:18:34.001 --> 00:18:39.000
+et les principaux cadres du plus petit aux plus grands systèmes d&#x27;un personnel IBM
+
+236
+00:18:39.000 --> 00:18:44.001
+L&#x27;ordinateur pour un grand grand superordinateur Cray. UNIX est disponible pour tous
+
+237
+00:18:44.001 --> 00:18:49.000
+à eux. UNIX est également très facile à nettoyer afin que vous puissiez connecter ces différents
+
+238
+00:18:49.000 --> 00:18:54.000
+Les marques et les dimensions des ordinateurs ensemble facilement. Et si les deux ordinateurs utilisent UNIX,
+
+239
+00:18:55.000 --> 00:18:59.001
+Vous pouvez vous retrouver en envoyant un courrier électronique, en transférant des fichiers, en partageant
+
+240
+00:18:59.001 --> 00:19:04.000
+logiciels d&#x27;application très rapidement, plus que beaucoup d&#x27;autres
+
+241
+00:19:04.000 --> 00:19:09.001
+Les produits . Un autre aspect majeur de l’UNIX est qu’il est multi-utilisateur. Cela signifie que
+
+242
+00:19:09.001 --> 00:19:14.001
+Plus d&#x27;un utilisateur peut accéder à plusieurs programmes différents en même temps avec
+
+243
+00:19:14.001 --> 00:19:19.000
+Unix ! Ainsi, une personne dans un terminal dans un ordinateur pourrait utiliser un système comptable,
+
+244
+00:19:19.000 --> 00:19:23.000
+Lorsque une autre personne effectue en même temps le traitement de la parole, une autre
+
+245
+00:19:23.000 --> 00:19:27.000
+la personne envoie un courrier électronique, chacune en cours d&#x27;application différente à la
+
+246
+00:19:27.000 --> 00:19:32.001
+En même temps, en utilisant le même ordinateur, seulement différents terminaux. Jean, comme moi
+
+247
+00:19:32.001 --> 00:19:38.000
+Rappelez-vous, UNIX a grandi dans les laboratoires de Bell et a ensuite été autorisé pendant un certain temps uniquement pour
+
+248
+00:19:38.000 --> 00:19:43.000
+Universités et organisations à but non lucratif. est-elle entièrement soutenue commercialement ?
+
+249
+00:19:43.000 --> 00:19:47.001
+Et maintenant ? Bon, UNIX a une longue histoire et il a été introduit pour la première fois dans la plupart des
+
+250
+00:19:47.001 --> 00:19:53.001
+La forme primitive en 1969. Ce n&#x27;était pas jusqu&#x27;à ce que le système Bell ait été déregulé, je pense
+
+251
+00:19:53.001 --> 00:19:59.000
+Nous sommes tous conscients des grandes actions avec ATT, que ce que ATT pourrait vraiment vendre
+
+252
+00:19:59.000 --> 00:20:03.001
+et soutenir le produit. Ils ne pouvaient pas faire beaucoup avec cela parce qu&#x27;ils étaient
+
+253
+00:20:03.001 --> 00:20:08.000
+interdite d’entrer dans l’industrie informatique jusqu’à ce qu’elle soit déregulée. Mais le plus récent
+
+254
+00:20:08.000 --> 00:20:13.001
+La version de l’UNIX, appelée System 5, est la sixième version jamais sortie.
+
+255
+00:20:13.001 --> 00:20:18.000
+par eux et un certain nombre de noms différents, est commercialement soutenu.
+
+256
+00:20:18.000 --> 00:20:22.001
+Et bien que le produit ait toujours besoin d&#x27;être amélioré et d&#x27;améliorer pour les petits
+
+257
+00:20:22.001 --> 00:20:27.000
+systèmes et commencer les utilisateurs finaux, ATT semble faire quelques grandes batailles vers
+
+258
+00:20:27.000 --> 00:20:33.001
+C’est ça Comment ZNIX est-il comparé à UNIX ? Bien, bien le
+
+259
+00:20:33.001 --> 00:20:39.001
+Le logiciel UNIX de ATT est vendu sous deux formes. En fait, il est autorisé.
+
+260
+00:20:40.001 --> 00:20:45.001
+La licence de code source est une licence coûteuse, très élevée qui vous permet de prendre
+
+261
+00:20:45.001 --> 00:20:50.000
+le logiciel et en fait le modifier ou le réorganiser ou le faire différent pour votre
+
+262
+00:20:50.000 --> 00:20:54.000
+Un type de ordinateur spécifique. Les fabricants d’ordinateurs sont des sociétés de logiciels
+
+263
+00:20:54.000 --> 00:20:58.001
+Les licences de code source et Microsoft est l&#x27;une de ces sociétés. Microsoft a
+
+264
+00:20:58.001 --> 00:21:03.001
+a acheté le code source UNIX et l&#x27;a fixé, modifié, amélioré, quoi que ce soit,
+
+265
+00:21:04.000 --> 00:21:07.000
+Il fonctionne sur différents types de micro-ordinateurs.
+
+266
+00:21:07.001 --> 00:21:14.000
+Il fonctionne sur le système Tandy 16, l&#x27;Apple Lisa, le système Fortune 3216. Il est
+
+267
+00:21:14.000 --> 00:21:21.000
+Il y a des rumeurs qu&#x27;ils vont l&#x27;introduire pour IBM PC XT. Le ZNIX n’est qu’UNIX avec un
+
+268
+00:21:21.000 --> 00:21:27.001
+Quelques améliorations pour les ordinateurs personnels ou pour les micro-ordinateurs. Tony, vous avez
+
+269
+00:21:27.001 --> 00:21:34.001
+Utiliser unix. J&#x27;ai toujours un type d&#x27;UNIX associé avec la ligne informatique mini PDP et
+
+270
+00:21:34.001 --> 00:21:38.001
+Jean nous a juste dit qu&#x27;il est en train de grandir et de descendre. Ce qui a été votre
+
+271
+00:21:38.001 --> 00:21:42.000
+Une expérience avec UNIX et combien de temps l’avez-vous utilisé ? Oh, je pense que je l&#x27;ai utilisé
+
+272
+00:21:42.000 --> 00:21:46.000
+cinq ans qui me font un relatif nouveau-né par rapport à beaucoup de
+
+273
+00:21:46.000 --> 00:21:50.000
+personnes qui l&#x27;ont utilisé, mais qui me rendent un vieux-timer en ce qui concerne la
+
+274
+00:21:50.000 --> 00:21:55.001
+utilisateurs de microinformatique. Je ne l&#x27;ai pas encore utilisé sur un micro-ordinateur.
+
+275
+00:21:55.001 --> 00:22:02.000
+Ce qui est assez étonnant. Comme je vous l&#x27;ai dit plus tôt, j&#x27;utilise MS-DOS sur une variété de
+
+276
+00:22:02.000 --> 00:22:07.000
+Les ordinateurs. MS-DOS est réputée se déplacer dans la direction de
+
+277
+00:22:07.000 --> 00:22:08.001
+Je regarde de plus en plus comme UNIX.
+
+278
+00:22:10.000 --> 00:22:14.000
+Vous pourriez vouloir nous dire ce que cela signifie réellement. Je suis vraiment curieux de voir
+
+279
+00:22:14.000 --> 00:22:20.000
+Quelle sera la prochaine sortie ? C’est difficile car jusqu’à présent, le plus
+
+280
+00:22:20.000 --> 00:22:27.000
+Les moteurs énergétiques et les shakers vers le micro-ordinateur UNIX ont été des entreprises qui ne
+
+281
+00:22:27.000 --> 00:22:34.000
+ATT parce que ATT n&#x27;a pas été autorisé. Microsoft et quelques autres
+
+282
+00:22:34.000 --> 00:22:39.001
+Les entreprises y entrent aussi. Nous pouvons théoriser que l&#x27;ATT introduira une
+
+283
+00:22:39.001 --> 00:22:42.000
+toute la ligne d’ordinateurs. Ils seront un ordinateur
+
+284
+00:22:42.000 --> 00:22:43.001
+Une entreprise bien établie.
+
+285
+00:22:43.001 --> 00:22:48.001
+S&#x27;ils introduisent des micros, des minis et des mainframes qui fonctionnent tous UNIX, nous devrions
+
+286
+00:22:48.001 --> 00:22:53.001
+supposons qu&#x27;ils le font immédiatement ou à court terme, ils devront essayer
+
+287
+00:22:53.001 --> 00:22:57.001
+d’offrir les caractéristiques commerciales que l’utilisateur va demander en raison de
+
+288
+00:22:57.001 --> 00:23:02.000
+maintenant il coûte beaucoup plus pour une entreprise informatique pour soutenir, tenir la main d&#x27;une
+
+289
+00:23:02.000 --> 00:23:07.000
+Commencer l&#x27;utilisateur UNIX que ce qu&#x27;il fait pour MS-DOS ou un produit CPM86.
+
+290
+00:23:07.001 --> 00:23:11.001
+Gary, Tony, a déclaré que MS-DOS se poursuit dans la direction de
+
+291
+00:23:11.001 --> 00:23:13.000
+Unix ! Nous sommes un CPM dans cette image.
+
+292
+00:23:13.001 --> 00:23:18.000
+Je pense que l&#x27;influence de l&#x27;UNIX a été une très bonne dans la
+
+293
+00:23:18.000 --> 00:23:21.001
+microinformatique, en particulier autour des outils UNIX, la langue C, la
+
+294
+00:23:21.001 --> 00:23:27.001
+des objets, des choses de ce genre. Il y a aussi un travail que nous faisons avec UNIX
+
+295
+00:23:27.001 --> 00:23:33.001
+Nous travaillons ensemble avec Intel. Nous verrons quelques offres de ce genre.
+
+296
+00:23:34.001 --> 00:23:40.001
+Nous croyons que c&#x27;est essentiellement que les systèmes UNIX sont pour une variété de personnes,
+
+297
+00:23:40.001 --> 00:23:45.000
+Un certain segment du marché est un marché très important. Nous ressentons aussi que dans
+
+298
+00:23:45.000 --> 00:23:47.001
+le cas du CPM et du concurrent CPM, qu’il y a plus d’un commerce
+
+299
+00:23:47.001 --> 00:23:51.001
+orientation à ces systèmes d’exploitation. Il y a donc une matrice de ces opérations
+
+300
+00:23:51.001 --> 00:23:55.001
+systèmes qui sont complémentaires de nombreuses manières. J’ai l’impression que quand
+
+301
+00:23:55.001 --> 00:23:59.001
+Quelqu&#x27;un achète CPM, ils l&#x27;achètent et ils ne le touchent pas. Ils l’ont mis sur leur
+
+302
+00:23:59.001 --> 00:24:04.000
+l&#x27;ordinateur et l&#x27;espoir qu&#x27;il devienne invisible pour eux, sauf pour effectuer les fonctions
+
+303
+00:24:04.000 --> 00:24:09.001
+Ils veulent . Je ne crois pas qu&#x27;il y ait deux systèmes UNIX semblables, au moins comme je l&#x27;ai fait
+
+304
+00:24:09.001 --> 00:24:14.001
+la base touchée avec elle, qui semble être modifiée, utilisée par les développeurs de systèmes, et
+
+305
+00:24:14.001 --> 00:24:17.001
+Mise en garde avec. Cela représente-t-il une différence entre
+
+306
+00:24:17.001 --> 00:24:19.000
+Les deux marchés pour ces systèmes ?
+
+307
+00:24:19.001 --> 00:24:25.000
+Eh bien, vous devez garder à l&#x27;esprit que CPM86 et les nouvelles versions de CPM sont améliorées
+
+308
+00:24:25.000 --> 00:24:32.000
+et des versions de plus en plus fonctionnelles d&#x27;un produit micro-ordinateur.
+
+309
+00:24:32.001 --> 00:24:37.001
+UNIX est un produit mini-ordinateur dérivé. Il s&#x27;agit d&#x27;un grand produit système, et
+
+310
+00:24:37.001 --> 00:24:42.000
+Par conséquent, il a 400 programmes intégrés qui font tout de
+
+311
+00:24:42.000 --> 00:24:49.000
+Type à courrier électronique à traitement de texte à calendrier à métrique
+
+312
+00:24:49.000 --> 00:24:54.001
+Les fonctions de conversion à inches sont converties à des outils de programmation étendus. C&#x27;est un très grand
+
+313
+00:24:54.001 --> 00:24:59.000
+système, mais il est très moduleux. C&#x27;est comme des blocs de construction ou des blocks d&#x27;alphabet de
+
+314
+00:24:59.000 --> 00:25:02.001
+L’enfance Vous pouvez prendre ces blocs et vous pouvez les combiner dans de nombreux différents
+
+315
+00:25:02.001 --> 00:25:08.001
+les voies. Ainsi, les gens qui achètent généralement UNIX, par exemple, mon ordinateur UNIX assis sur
+
+316
+00:25:08.001 --> 00:25:13.001
+mon bureau, j&#x27;ai supprimé, extrait d&#x27;elle environ deux tiers des programmes parce que
+
+317
+00:25:13.001 --> 00:25:17.000
+Je ne les utilise pas. Je ne travaille pas sur le développement du programme. Je ne fais pas de type,
+
+318
+00:25:17.001 --> 00:25:21.001
+J’ai juste gardé les pièces que j’aime. Et la bonne chose sur UNIX est que c&#x27;est
+
+319
+00:25:21.001 --> 00:25:26.000
+Un type de système d’exploitation vous-même. Vous pouvez utiliser toutes ces utilités
+
+320
+00:25:26.000 --> 00:25:30.000
+Ils sont disponibles et faire votre propre petit système ensemble. Il prend plus
+
+321
+00:25:30.000 --> 00:25:34.000
+étudier et savoir-faire pour être en mesure de le faire plutôt que avec CPM. Il est plus difficile de
+
+322
+00:25:34.000 --> 00:25:38.000
+Comprendre le produit. Monsieur le Président, nous sommes hors de temps. Gary Kildall de la recherche numérique
+
+323
+00:25:38.000 --> 00:25:42.000
+pour aujourd’hui. Tony Fanning de HP Labs et Gene Yates de Yates Ventures. Merci pour
+
+324
+00:25:42.000 --> 00:25:44.000
+rejoindre nous et vous remercier de nous joindre pour
+
+325
+00:25:44.000 --> 00:25:45.001
+Cette édition des Chroniques informatiques.
+
+326
+00:25:50.001 --> 00:25:55.000
+Ce sont des moments très passionnants pour les créateurs et les utilisateurs des systèmes d&#x27;exploitation, et
+
+327
+00:25:55.000 --> 00:26:00.000
+L’avenir semble très brillant. Il y a un peu de personnalités très populaires
+
+328
+00:26:00.000 --> 00:26:06.000
+Systèmes d’exploitation informatiques. CPM et MS-DOS sont aussi. L’UNIX devient aussi
+
+329
+00:26:06.000 --> 00:26:11.001
+Disponible pour micros. La popularité de ces systèmes s’est largement propagée à travers
+
+330
+00:26:11.001 --> 00:26:16.001
+le travail des développeurs de logiciels tiers et des concepteurs de matériel. sur l’autre
+
+331
+00:26:16.001 --> 00:26:21.001
+main, il y a quelques systèmes propriétaires prospères tels que Apple-DOS et TRS
+
+332
+00:26:21.001 --> 00:26:23.000
+-DOS, qui sont bien soutenus.
+
+333
+00:26:24.000 --> 00:26:27.000
+Il n’y a donc pas encore à émerger une norme que l’ensemble
+
+334
+00:26:27.000 --> 00:26:29.000
+L’industrie est prête à le soutenir.
+
+335
+00:26:30.001 --> 00:26:34.001
+Comme dans l&#x27;ensemble de l&#x27;industrie informatique, le développement des systèmes d&#x27;exploitation est dans un
+
+336
+00:26:34.001 --> 00:26:39.000
+Un état constant de changement. Comme de nouvelles capacités sont ajoutées à un système matériel,
+
+337
+00:26:39.001 --> 00:26:45.000
+Des disques dur, des ports de télécommunications et des disques laser, des systèmes d&#x27;exploitation
+
+338
+00:26:45.000 --> 00:26:50.001
+Ils doivent être révisés pour les accueillir. Comme les nouveaux designs matériels ont été incorporés dans
+
+339
+00:26:50.001 --> 00:26:55.001
+le microprocesseur de 16 bits, les concepteurs devaient créer de nouveaux systèmes d&#x27;exploitation pour
+
+340
+00:26:55.001 --> 00:27:01.000
+Un avantage total de la puissance de traitement accrue. Et maintenant, le nouveau 32-bit
+
+341
+00:27:01.000 --> 00:27:05.001
+Les microprocesseurs avec une vitesse et une efficacité accrues sont un défi
+
+342
+00:27:05.001 --> 00:27:07.000
+créateurs de logiciels de système.
+
+343
+00:27:08.000 --> 00:27:12.001
+Il y aura une concurrence continue et élargie au niveau du système, comme
+
+344
+00:27:12.001 --> 00:27:17.000
+C’est au niveau du matériel et de l’application. Une partie de cette compétition
+
+345
+00:27:17.000 --> 00:27:21.001
+Il va se concentrer sur la création de systèmes d&#x27;exploitation qui fournissent un programme d&#x27;application
+
+346
+00:27:21.001 --> 00:27:28.000
+La portabilité . C&#x27;est la capacité des programmes d&#x27;application à exécuter sur de nombreux types de
+
+347
+00:27:28.000 --> 00:27:32.001
+Les ordinateurs. Dans notre prochaine leçon, nous découvrirons le monde de l&#x27;application
+
+348
+00:27:32.001 --> 00:27:38.000
+développement et les utilités du programme. Veuillez lire le chapitre 8 de votre texte, et
+
+349
+00:27:38.000 --> 00:27:40.001
+Je te verrai alors. Je suis Herb Luckner.
+
+350
+00:27:48.001 --> 00:28:22.000
+[...] Le développement du premier mot est heureux de fournir un financement majeur pour le
+
+351
+00:28:22.000 --> 00:28:26.000
+Chronicles informatiques, l’histoire de cette évolution continue.
+
+352
+00:28:47.001 --> 00:28:49.001
+[...]

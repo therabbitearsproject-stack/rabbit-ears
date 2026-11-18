@@ -1,0 +1,1741 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:20.000
+[...]
+
+2
+00:00:25.001 --> 00:00:32.000
+Halaman minggu ini pada Computer Chronicles, teknologi komputer di Olimpiade.
+
+3
+00:00:33.000 --> 00:00:37.000
+Jika Anda pernah bertanya-tanya bagaimana komentar TV itu tahu begitu banyak tentang atlet
+
+4
+00:00:37.000 --> 00:00:41.000
+dan peristiwa, kami akan menunjukkan kepada Anda sistem perangkat lunak yang memberi mereka data.
+
+5
+00:00:42.000 --> 00:00:45.001
+Jaringan di Olimpiade adalah salah satu sistem yang paling aman yang pernah dibangun.
+
+6
+00:00:46.000 --> 00:00:47.001
+Kami akan menunjukkan kepada Anda bagaimana mereka melakukannya.
+
+7
+00:00:47.001 --> 00:00:50.001
+Bagian belakang jaringan di Utah berjalan di Unix.
+
+8
+00:00:51.000 --> 00:00:55.000
+Kami akan menunjukkan Anda instalasi massal server Sun dan unit penyimpanan data.
+
+9
+00:00:55.001 --> 00:00:57.001
+Anda pikir menyusun jaringan Anda bersama-sama adalah sulit.
+
+10
+00:00:58.000 --> 00:01:00.000
+Bagaimana Anda ingin membangun satu di sisi gunung
+
+11
+00:01:00.000 --> 00:01:01.001
+Pada suhu sub-dingin?
+
+12
+00:01:02.000 --> 00:01:03.001
+Kami akan memberitahu Anda bagaimana mereka melakukannya.
+
+13
+00:01:04.000 --> 00:01:07.000
+Dan kantor tanpa kertas, bukan di Olimpiade. 50 juta
+
+14
+00:01:07.000 --> 00:01:09.000
+Halaman ini dicetak dalam 17 hari.
+
+15
+00:01:09.001 --> 00:01:11.001
+Kami akan menunjukkan kepada Anda bagaimana Xerox menariknya keluar.
+
+16
+00:01:12.000 --> 00:01:13.001
+Teknologi komputer di Olimpiade.
+
+17
+00:01:14.000 --> 00:01:17.001
+Kembali ke edisi ini dari Computer Chronicles.
+
+18
+00:01:19.001 --> 00:01:23.001
+Komputer Chronicles dibawa ke Anda oleh Oracle Small Business Suite.
+
+19
+00:01:23.001 --> 00:01:28.000
+Satu aplikasi yang sepenuhnya terintegrasi yang membantu membuat lebih mudah untuk menjalankan
+
+20
+00:01:28.000 --> 00:01:33.000
+bisnis, termasuk akuntansi, penjualan dan layanan, kehadiran web Anda dan banyak lagi.
+
+21
+00:01:35.001 --> 00:01:38.001
+Pembiayaan tambahan disediakan oleh PC ke PC.
+
+22
+00:01:39.000 --> 00:01:42.000
+Layanan Migrasi Online dari PC Pertama.
+
+23
+00:01:42.001 --> 00:01:46.001
+Bergerak file, aplikasi dan preferensi dari lama Anda
+
+24
+00:01:46.001 --> 00:01:48.000
+Komputer untuk yang baru.
+
+25
+00:01:49.000 --> 00:01:52.001
+Selamat datang dan selamat datang ke edisi khusus ini dari Komputer Chronicles.
+
+26
+00:01:52.001 --> 00:01:54.001
+Kami berada di Salt Lake City, Utah.
+
+27
+00:01:55.000 --> 00:01:57.000
+Inilah kuil Mormon yang ada di belakangku.
+
+28
+00:01:57.001 --> 00:02:00.000
+Ini tentu saja adalah situs Olimpiade Musim Sejuk.
+
+29
+00:02:00.000 --> 00:02:02.001
+Saya yakin banyak dari Anda menonton permainan di televisi.
+
+30
+00:02:03.000 --> 00:02:07.000
+Apa yang akan kita lakukan minggu ini adalah membawa Anda di belakang adegan dan menunjukkan kepada Anda
+
+31
+00:02:07.000 --> 00:02:10.001
+teknologi komputer dan infrastruktur IT di
+
+32
+00:02:10.001 --> 00:02:12.000
+Olimpiade yang membuat semua itu mungkin.
+
+33
+00:02:13.000 --> 00:02:17.000
+Integrator keseluruhan untuk sistem IT di sini di Olimpiade Musim Sejuk adalah sebuah perusahaan
+
+34
+00:02:17.000 --> 00:02:19.000
+yang disebut Schlumberger Sema.
+
+35
+00:02:19.000 --> 00:02:23.001
+Sebelumnya dikenal terutama untuk membekalkan teknologi kepada perusahaan pengeboran minyak,
+
+36
+00:02:24.000 --> 00:02:27.001
+Tapi sekarang terlibat dalam yang terbesar dan paling unik di dunia
+
+37
+00:02:27.001 --> 00:02:29.000
+Kontrak Teknologi Olahraga
+
+38
+00:02:30.000 --> 00:02:31.001
+Olimpiade adalah sistem yang besar dan besar.
+
+39
+00:02:32.000 --> 00:02:36.001
+Saya pikir orang pasti tidak mengerti seberapa besar
+
+40
+00:02:36.001 --> 00:02:38.000
+Sistem yang kami install di sini.
+
+41
+00:02:39.000 --> 00:02:42.001
+Ketika kita memiliki sistem dan berjalan selama waktu permainan, kita memiliki sekitar
+
+42
+00:02:42.001 --> 00:02:49.000
+3 dan setengah ribu PC, 150 server UNIX, 225 NT
+
+43
+00:02:49.000 --> 00:02:54.000
+Server, 1000 printer, 750 perangkat jaringan.
+
+44
+00:02:54.001 --> 00:02:59.000
+Semua ini dihubungkan bersama oleh jaringan area lokal yang besar dan banyak
+
+45
+00:02:59.000 --> 00:03:00.001
+rangkaian daerah lokal.
+
+46
+00:03:01.000 --> 00:03:04.000
+Ini unik karena dua alasan.
+
+47
+00:03:04.001 --> 00:03:10.001
+Salah satunya karena kontrak ini adalah kontrak dukungan IT terbesar di dunia.
+
+48
+00:03:10.001 --> 00:03:12.001
+Ini adalah tantangan itu sendiri.
+
+49
+00:03:13.001 --> 00:03:17.001
+Tapi di samping itu adalah karena teknologi itu benar-benar kompleks, terutama karena
+
+50
+00:03:17.001 --> 00:03:24.001
+perlu untuk mencampur banyak layanan yang berbeda untuk orang-orang yang mengharapkan besar
+
+51
+00:03:24.001 --> 00:03:29.000
+Perkara-perkara selama Olimpiade yang Anda tidak bisa mengalami kegagalan.
+
+52
+00:03:29.001 --> 00:03:31.000
+Itu yang paling penting.
+
+53
+00:03:31.001 --> 00:03:33.000
+Tidak ada kesempatan kedua.
+
+54
+00:03:33.001 --> 00:03:34.001
+Ini adalah tantangan besar.
+
+55
+00:03:35.000 --> 00:03:39.000
+Ada sekitar 2.500 atlet di sini di Olimpiade Musim Sejuk, tetapi
+
+56
+00:03:39.000 --> 00:03:40.001
+Terdapat lebih banyak techies.
+
+57
+00:03:40.001 --> 00:03:45.001
+Kira-kira 3.000 dari mereka bekerja hari dan malam yang panjang untuk memastikan bahwa komputer
+
+58
+00:03:45.001 --> 00:03:48.001
+dan sistem jaringan di Olimpiade bebas glitch.
+
+59
+00:03:49.001 --> 00:03:53.001
+Dan sementara tugas Olimpiade adalah unik, itu tidak sama sekali berbeda dari
+
+60
+00:03:53.001 --> 00:03:55.001
+Aplikasi kritikal misi lainnya.
+
+61
+00:03:56.000 --> 00:03:57.000
+Teknologi adalah sama.
+
+62
+00:03:58.000 --> 00:04:02.001
+Server klien, cara Anda mengatur hal-hal, database, pertanyaan, beberapa situs,
+
+63
+00:04:03.001 --> 00:04:06.001
+Resiliensi, redundansi, itu semua sama.
+
+64
+00:04:06.001 --> 00:04:10.000
+Jadi dari sudut pandang techies, apa yang kita lakukan di sini tidak berbeda
+
+65
+00:04:10.000 --> 00:04:11.001
+Apa yang kita lakukan di luar.
+
+66
+00:04:12.000 --> 00:04:15.001
+Dan hal yang sama dengan sistem perbankan dan sistem telekomunikasi kami.
+
+67
+00:04:16.000 --> 00:04:17.000
+Ini adalah sistem yang besar.
+
+68
+00:04:17.001 --> 00:04:22.000
+Tantangan yang kita miliki di sini adalah tanggal tidak terlepas. 8 Februari akan datang
+
+69
+00:04:22.000 --> 00:04:23.001
+Dan kami akan siap.
+
+70
+00:04:24.000 --> 00:04:25.000
+Para atlet akan datang.
+
+71
+00:04:25.000 --> 00:04:26.000
+Upacara pembukaan akan terjadi.
+
+72
+00:04:26.001 --> 00:04:27.001
+Dan tidak ada alasan.
+
+73
+00:04:28.000 --> 00:04:32.000
+Kami suka mengatakan ini adalah tembakan satu-off dan kami akan berada di sana dan kami siap.
+
+74
+00:04:33.000 --> 00:04:37.001
+Anda mungkin bertanya mengapa Asema Schlumber harus meninjau kembali roda dan membuat
+
+75
+00:04:37.001 --> 00:04:40.000
+Sistem IT yang baru di Utah?
+
+76
+00:04:40.001 --> 00:04:43.001
+Bukan jenis perangkat lunak yang sama yang digunakan di Olimpiade Musim Sejuk terakhir
+
+77
+00:04:43.001 --> 00:04:45.001
+Permainan di Nagano, Jepang?
+
+78
+00:04:46.000 --> 00:04:50.000
+Nah di Nagano, kami memiliki informasi yang datang dari Nagano.
+
+79
+00:04:50.000 --> 00:04:51.001
+IUC memberikan informasi tersebut.
+
+80
+00:04:52.001 --> 00:04:57.001
+Pada kenyataannya, sistem di sini benar-benar menerima bagian yang kami sediakan di
+
+81
+00:04:57.001 --> 00:04:59.000
+Nagano, pada dasarnya akreditasi.
+
+82
+00:04:59.001 --> 00:05:00.001
+Itu adalah sistem kita di sana.
+
+83
+00:05:01.000 --> 00:05:03.000
+Di sini sistem ini benar-benar baru.
+
+84
+00:05:05.001 --> 00:05:08.001
+Saya percaya bahwa untuk menggunakan pengalaman di Nagano adalah
+
+85
+00:05:08.001 --> 00:05:10.001
+Sebagian sulit untuk bahasa.
+
+86
+00:05:11.000 --> 00:05:14.001
+Semua dokumen ditulis dalam bahasa Jepang dan sebagainya.
+
+87
+00:05:15.000 --> 00:05:16.000
+Itu tidak mudah.
+
+88
+00:05:16.001 --> 00:05:20.001
+Saya pikir itu dalam bahasa Inggris adalah jauh lebih mudah untuk menggunakan kembali pengalaman.
+
+89
+00:05:21.000 --> 00:05:24.001
+Selain perbedaan bahasa, ada satu lagi titik kecil.
+
+90
+00:05:24.001 --> 00:05:29.000
+IBM memiliki sebagian besar perangkat lunak yang digunakan di Nagano dan mereka tidak memiliki
+
+91
+00:05:29.000 --> 00:05:31.000
+Kontrak untuk pertandingan Utah.
+
+92
+00:05:32.000 --> 00:05:37.000
+Untuk Schlumber&#x27;s Asema, tugas IT di sini di Utah adalah untuk membangun sebuah massive redundant
+
+93
+00:05:37.000 --> 00:05:42.000
+rangkaian di tengah salju menutupi gunung-gunung beku, menjamin
+
+94
+00:05:42.000 --> 00:05:46.000
+keamanan dan memberikan informasi sub-sekunder di seluruh jaringan.
+
+95
+00:05:46.001 --> 00:05:48.000
+Ini adalah tantangan terbesar yang kita miliki.
+
+96
+00:05:49.001 --> 00:05:54.001
+Sebaik sahaja pelangi atau pelangi itu turun ke bukit, orang-orang
+
+97
+00:05:54.001 --> 00:05:56.000
+Saya ingin mengetahui hasilnya segera.
+
+98
+00:05:56.000 --> 00:05:58.000
+Mereka tidak ingin ada keterlambatan.
+
+99
+00:05:58.000 --> 00:05:59.001
+Mereka ingin tahu yang pertama, yang kedua, yang ketiga.
+
+100
+00:06:00.001 --> 00:06:05.001
+Ada tekanan yang besar untuk mendapatkan informasi itu kepada komentator dengan segera.
+
+101
+00:06:05.001 --> 00:06:09.001
+Komentar dapat mengumumkan karena Anda tidak ingin reaksi orang ramai
+
+102
+00:06:09.001 --> 00:06:12.000
+untuk skor sebelum komentar mengetahui apa hasilnya.
+
+103
+00:06:12.000 --> 00:06:16.001
+Anda ingin mereka semua disinkronkan dan Anda berbicara kadang-kadang setengah detik.
+
+104
+00:06:17.000 --> 00:06:22.000
+Dan kita harus benar-benar berhati-hati tentang bagaimana kita memasang semua peralatan,
+
+105
+00:06:22.000 --> 00:06:23.001
+Sensitivitas suhu dari semua peralatan kami.
+
+106
+00:06:24.000 --> 00:06:28.001
+Seperti yang kami katakan, banyak kabel kami berjalan di luar, mereka berjalan di kutub, di
+
+107
+00:06:28.001 --> 00:06:33.000
+tanah dan kita harus memastikan bahwa mereka tidak masuk ke jalan hujan salju
+
+108
+00:06:33.000 --> 00:06:35.000
+atau kucing salju atau bahkan badai es.
+
+109
+00:06:36.000 --> 00:06:39.001
+Untuk membantu kita mengatasi semua masalah yang mungkin terjadi, kita
+
+110
+00:06:39.001 --> 00:06:41.001
+Mereka cenderung melakukan banyak redundansi.
+
+111
+00:06:42.000 --> 00:06:44.000
+Kami selalu memiliki dua tembakan di satu tempat.
+
+112
+00:06:44.001 --> 00:06:47.000
+Kami memiliki jalur kembar dengan cara yang berbeda.
+
+113
+00:06:47.001 --> 00:06:50.001
+Jadi jika ada sesuatu yang harus turun, kita memiliki jalur alternatif.
+
+114
+00:06:51.000 --> 00:06:54.001
+Ada tiga suite aplikasi utama di sini di Olimpiade yang dibangun
+
+115
+00:06:54.001 --> 00:06:56.000
+oleh Schlumberger Sema.
+
+116
+00:06:56.000 --> 00:06:58.000
+Salah satunya adalah sistem manajemen permainan.
+
+117
+00:06:59.000 --> 00:07:01.000
+Ini adalah satu set aplikasi, sembilan dari mereka.
+
+118
+00:07:01.000 --> 00:07:03.001
+Kami mendukung sistem permainan.
+
+119
+00:07:04.000 --> 00:07:09.001
+Kami melakukan akreditasi, penginapan, medis, protokol dan hal-hal seperti ini.
+
+120
+00:07:10.000 --> 00:07:12.000
+Tidak ada yang pernah melihatnya kecuali tanpa mereka.
+
+121
+00:07:12.000 --> 00:07:14.000
+Aplikasi yang menjalankan permainan tidak akan terjadi.
+
+122
+00:07:14.001 --> 00:07:21.000
+Ketika kesempatan datang pada tahun 1998 untuk mengajukan kontrak ini karena IBM dan
+
+123
+00:07:21.000 --> 00:07:25.001
+IOC memutuskan untuk tidak melanjutkan hubungan mereka, Schlumberger Sema menentang
+
+124
+00:07:25.001 --> 00:07:30.001
+perusahaan seperti EDS untuk kesempatan untuk berpartisipasi dalam hal yang indah ini
+
+125
+00:07:30.001 --> 00:07:32.000
+Peluang untuk mendukung acara.
+
+126
+00:07:32.001 --> 00:07:38.000
+Suite aplikasi kedua disebut Info2002, sebuah sistem berbasis kiosk yang
+
+127
+00:07:38.000 --> 00:07:42.000
+memberikan informasi tentang pertandingan, acara dan atlet kepada semua
+
+128
+00:07:42.000 --> 00:07:47.000
+orang-orang yang diakreditasi secara resmi di lokasi Olimpiade termasuk atlet, hakim,
+
+129
+00:07:47.001 --> 00:07:49.000
+Pegawai dan wartawan Komite Olimpik.
+
+130
+00:07:50.000 --> 00:07:55.000
+Suite aplikasi ketiga disebut CIS, sistem informasi commentator,
+
+131
+00:07:55.001 --> 00:08:00.001
+yang memberikan hasil yang hampir instan kepada komentar televisi yang
+
+132
+00:08:00.001 --> 00:08:05.000
+perlu untuk melihat data secara sinkron dengan apa yang mereka lihat secara langsung di layar TV mereka.
+
+133
+00:08:05.000 --> 00:08:08.001
+Jadi garis bawah untuk pengembang perangkat lunak di sini adalah kecepatan.
+
+134
+00:08:09.000 --> 00:08:15.000
+Dalam dunia teknologi IT hari ini, semua orang menuntut komunikasi IT instan di
+
+135
+00:08:15.000 --> 00:08:20.001
+mode tanpa kesalahan dan yang datang pada biaya dan biaya adalah integrasi,
+
+136
+00:08:21.000 --> 00:08:22.001
+tes fasilitas seperti yang kita duduk di sini.
+
+137
+00:08:23.001 --> 00:08:26.000
+Ini berarti pengembang perangkat lunak kami harus melihat aplikasi.
+
+138
+00:08:27.000 --> 00:08:32.000
+Kadang-kadang untuk kecepatan kita harus menyerah sesuatu yang lain dan untuk komentar kita
+
+139
+00:08:32.000 --> 00:08:36.000
+Sistem informasi yang kita sebut ini sub-second response time.
+
+140
+00:08:36.001 --> 00:08:40.001
+Sejak saat atlet berakhir di garis akhir di depan broadcaster
+
+141
+00:08:40.001 --> 00:08:45.000
+Semua informasi baru harus dikumpulkan di layar dalam format yang dia
+
+142
+00:08:45.000 --> 00:08:46.001
+Ingin dalam waktu kurang dari satu detik.
+
+143
+00:08:47.001 --> 00:08:51.000
+Salah satu tantangan untuk mengembangkan sistem perangkat lunak untuk Olimpiade adalah
+
+144
+00:08:51.000 --> 00:08:55.001
+Setiap olahraga memiliki aturan dan persyaratan masing-masing.
+
+145
+00:08:56.000 --> 00:09:00.001
+Misalnya, di alpine skiing the downhill kita memiliki skiers yang terjebak.
+
+146
+00:09:00.001 --> 00:09:03.001
+Bagaimana sistem hasil menangani hal ini?
+
+147
+00:09:03.001 --> 00:09:06.000
+Bagaimana kita memperkenalkan hasil dari sesuatu seperti itu?
+
+148
+00:09:07.000 --> 00:09:10.000
+Dalam skating kecepatan kita memiliki diskvalifikasi dalam anomali lain.
+
+149
+00:09:11.000 --> 00:09:13.000
+Setiap elemen perangkat lunak memiliki tantangan tersendiri.
+
+150
+00:09:13.000 --> 00:09:19.001
+Misalnya, ski alpine sangat cepat turun, flash untuk bang dalam kurang dari satu
+
+151
+00:09:19.001 --> 00:09:23.000
+Minit dan yang memiliki satu tantangan unik dari timing, tepat timing.
+
+152
+00:09:23.001 --> 00:09:28.000
+Kemudian Anda beralih ke hoki es dan curling dan mereka didorong oleh statistik.
+
+153
+00:09:29.000 --> 00:09:33.000
+Hoki es cukup cepat tetapi curling tidak terlalu cepat
+
+154
+00:09:33.000 --> 00:09:35.000
+Anda mengumpulkan data sepanjang waktu.
+
+155
+00:09:35.001 --> 00:09:37.001
+Jadi ada berbagai tantangan tentang cara Anda mengumpulkan data.
+
+156
+00:09:38.000 --> 00:09:42.001
+Dan untuk membuatnya lebih rumit perangkat lunak yang dikembangkan untuk menjalankan acara Piala Dunia
+
+157
+00:09:42.001 --> 00:09:46.000
+Tidak bisa digunakan di Olimpiade karena aturan berbeda.
+
+158
+00:09:46.001 --> 00:09:48.001
+Kami memiliki subkontraktor yang berbeda untuk setiap olahraga.
+
+159
+00:09:49.001 --> 00:09:53.000
+Apa yang dipilih Komite Organisasi untuk dilakukan di sini adalah mereka telah pergi ke semua
+
+160
+00:09:53.000 --> 00:09:58.001
+Federasi mengutamakan penyedia perangkat lunak yang mendukung Federasi selama
+
+161
+00:09:58.001 --> 00:10:03.000
+Piala Dunia dan di luar Olimpiade dan kami telah menggunakan Federasi ini disukai
+
+162
+00:10:03.000 --> 00:10:06.000
+pembekal untuk memberikan kami perangkat lunak kami untuk Olimpiade.
+
+163
+00:10:06.001 --> 00:10:11.000
+Peraturan untuk Olimpiade berbeda dengan peraturan untuk Piala Dunia.
+
+164
+00:10:11.001 --> 00:10:15.000
+Jadi kita harus membuat beberapa perubahan dan perubahan kecuali
+
+165
+00:10:15.000 --> 00:10:17.000
+Asas-asas dari software masih ada.
+
+166
+00:10:17.000 --> 00:10:20.000
+Membangun jaringan komputer ini akan menjadi tantangan yang cukup besar di bawah
+
+167
+00:10:20.000 --> 00:10:24.000
+keadaan normal tetapi orang-orang IT di sini harus sepenuhnya
+
+168
+00:10:24.000 --> 00:10:26.000
+Kembali setelah tanggal 11 September.
+
+169
+00:10:26.001 --> 00:10:33.000
+Beberapa area kami berhenti dan kami kembali mencari solusi lain.
+
+170
+00:10:33.001 --> 00:10:34.001
+Salah satunya adalah kekerasan.
+
+171
+00:10:35.001 --> 00:10:36.001
+Ini adalah sampel yang sangat jelas.
+
+172
+00:10:37.000 --> 00:10:39.001
+Ya, setelah 11 kami telah menganalisis situasi lagi.
+
+173
+00:10:40.001 --> 00:10:43.001
+Dalam beberapa kasus, kami telah mengamankan kembali beberapa area.
+
+174
+00:10:43.001 --> 00:10:48.001
+Di daerah lain kami telah membatalkan proses dan di daerah lain kita telah membiarkan
+
+175
+00:10:48.001 --> 00:10:50.001
+Proses seperti itu karena itu ok.
+
+176
+00:10:51.000 --> 00:10:57.000
+Sebagian karena 11 September keamanan, redundansi dan risiko aversion
+
+177
+00:10:57.000 --> 00:11:00.001
+pemandu utama di belakang desain sistem IT di sini.
+
+178
+00:11:01.000 --> 00:11:05.000
+Sesekali Semer adalah integrator yang ingin memilih jalan konservatif ke depan.
+
+179
+00:11:05.001 --> 00:11:07.000
+Ini tidak berarti mengatakan gaya lama ke depan tetapi
+
+180
+00:11:07.000 --> 00:11:09.001
+Teknologi yang telah diuji dan terbukti.
+
+181
+00:11:10.001 --> 00:11:13.000
+Seperti kita menggunakan teknologi server saat ini, kita menggunakan
+
+182
+00:11:13.000 --> 00:11:15.001
+Unix, kami menggunakan beberapa lingkungan Windows.
+
+183
+00:11:15.001 --> 00:11:20.000
+Apa yang kita inginkan adalah sistem yang stabil dan terbukti.
+
+184
+00:11:20.001 --> 00:11:22.001
+Kami terus-menerus baik tuning perangkat lunak.
+
+185
+00:11:23.000 --> 00:11:26.001
+Kami tidak pada saat ini dalam permainan membuat perubahan inti pada sistem.
+
+186
+00:11:27.000 --> 00:11:28.001
+Kami sangat berisiko sebagai lawan.
+
+187
+00:11:29.001 --> 00:11:32.001
+Semua yang kita lakukan kita mencoba untuk menghindari risiko karena kita
+
+188
+00:11:32.001 --> 00:11:34.000
+Anda tidak bisa membiarkan ada kegagalan apa pun.
+
+189
+00:11:35.000 --> 00:11:40.001
+Tugas dasar IT di sini adalah untuk membuat database besar, menjamin dan membuatnya
+
+190
+00:11:40.001 --> 00:11:44.000
+tersedia secara instan untuk jutaan pengguna pada saat yang sama.
+
+191
+00:11:44.000 --> 00:11:49.001
+Semua ini untuk beroperasi 24-7 sampai 17 hari lurus tanpa kegagalan.
+
+192
+00:11:50.001 --> 00:11:53.000
+Kami memiliki beberapa lapisan redundansi dengan sistem kritis kami.
+
+193
+00:11:53.001 --> 00:11:57.001
+Kami tidak hanya memiliki sistem standby panas A dan B untuk kegagalan otomatis, kami memiliki apa yang
+
+194
+00:11:57.001 --> 00:12:03.001
+sistem C atau sistem yang benar-benar terpisah berdasarkan arsitektur
+
+195
+00:12:03.001 --> 00:12:05.001
+Kedua kegagalan primary dan secondary.
+
+196
+00:12:06.000 --> 00:12:09.001
+Hal yang unik tentang Olimpiade dan saya seperti pergi kembali ke beberapa dari saya
+
+197
+00:12:09.001 --> 00:12:16.000
+Peristiwa ini terjadi ketika NBC dan
+
+198
+00:12:16.000 --> 00:12:19.001
+Kekuatan televisi mengatakan bahwa jumper harus memukul tanda ini pada ini
+
+199
+00:12:19.001 --> 00:12:22.000
+Waktu, Anda harus mengirimkan produk.
+
+200
+00:12:22.001 --> 00:12:26.001
+Tidak ada kebocoran, Anda harus dapat melakukan dan tidak ada yang kedua
+
+201
+00:12:26.001 --> 00:12:31.000
+Peluang, Anda mendapatkannya tepat kali pertama, tidak ada kesempatan kedua.
+
+202
+00:12:31.001 --> 00:12:33.001
+Jadi itulah bagian yang menarik tentang itu.
+
+203
+00:12:34.000 --> 00:12:38.000
+Kami harus melakukannya dan menyampaikannya pada jadwal tertentu untuk standar tertentu.
+
+204
+00:12:39.000 --> 00:12:42.001
+Salah satu tantangan bagi orang-orang IT di sini di Olimpiade adalah konstan
+
+205
+00:12:42.001 --> 00:12:46.001
+Upgrade, debug dan perubahan pada sistem berdasarkan
+
+206
+00:12:46.001 --> 00:12:48.000
+Pengujian awal dan feedback pengguna.
+
+207
+00:12:48.001 --> 00:12:52.001
+Dan seperti mana-mana programmer tahu, ketika Anda membuat perubahan di salah satu bagian dari program, Anda
+
+208
+00:12:52.001 --> 00:12:56.000
+Tidak pernah tahu dengan pasti apa yang akan terjadi di bagian lain dari program.
+
+209
+00:12:57.000 --> 00:13:00.001
+Saya kira salah satu tantangan adalah fakta bahwa sistem terus-menerus
+
+210
+00:13:00.001 --> 00:13:05.000
+berubah, mereka selalu melakukan sedikit tweaks dan mencoba untuk memperbaiki sistem.
+
+211
+00:13:05.000 --> 00:13:08.001
+Jadi salah satu tantangan yang ada adalah memastikan semuanya berada pada tingkat yang sama dan
+
+212
+00:13:08.001 --> 00:13:12.000
+bahwa perubahan yang mereka lakukan untuk memperbaiki sistem sebenarnya adalah
+
+213
+00:13:12.000 --> 00:13:13.001
+memperbaiki sistem, tidak ada efek samping.
+
+214
+00:13:14.000 --> 00:13:18.000
+Apa yang saya sukai untuk memberitahu orang adalah kita menguji, menguji dan meninjau dan ketika kita tidak berpikir
+
+215
+00:13:18.000 --> 00:13:19.001
+Kami sudah melakukan banyak tes, kami melakukan sedikit lebih banyak tes.
+
+216
+00:13:20.000 --> 00:13:24.000
+Alasan mereka perlu menguji perangkat lunak begitu banyak adalah karena itu tidak hanya memiliki
+
+217
+00:13:24.000 --> 00:13:27.000
+untuk bekerja sendiri, tetapi harus terintegrasi dengan tuan rumah
+
+218
+00:13:27.000 --> 00:13:28.001
+aplikasi perangkat lunak lainnya.
+
+219
+00:13:29.000 --> 00:13:32.000
+Tantangan dengan sistem besar adalah, terutama dengan sistem terintegrasi besar,
+
+220
+00:13:32.001 --> 00:13:36.001
+Ada begitu banyak antarmuka, begitu banyak protokol dan jika itu sedikit kode
+
+221
+00:13:36.001 --> 00:13:40.001
+tidak benar dan tidak berinteraksi dengan bit kode lainnya, Anda akan mendapatkan semua
+
+222
+00:13:40.001 --> 00:13:44.000
+berbagai hal yang terjadi di dalam sistem, terutama aplikasi downstream.
+
+223
+00:13:44.000 --> 00:13:48.001
+Kami mengambil pengiriman aplikasi itu, kami menguji aplikasi itu untuk memastikan bahwa
+
+224
+00:13:48.001 --> 00:13:51.001
+Apa yang mereka katakan adalah, kami memeriksa dokumentasi, konfigurasi.
+
+225
+00:13:52.000 --> 00:13:56.001
+Kemudian ketika kita puas dengan aplikasi yang terpisah, kita kemudian meletakkannya di dalam
+
+226
+00:13:56.001 --> 00:13:59.000
+Laboratorium ujian untuk apa yang kita sebut integrasi akhir-ke-akhir.
+
+227
+00:14:00.000 --> 00:14:04.000
+Seperti yang telah Anda lihat di sini, kita memiliki banyak sistem yang perlu diintegrasikan.
+
+228
+00:14:05.001 --> 00:14:10.001
+Dari proses aliran, ia dimulai dengan Seiko, timing dan scoring aliran ke dalam kami.
+
+229
+00:14:10.001 --> 00:14:14.001
+hasil pendapatan, mengalir ke database pusat kami dan kemudian dari pusat kami
+
+230
+00:14:14.001 --> 00:14:18.001
+Database, itu mengalir keluar ke sistem informasi kami, ke feed kami.
+
+231
+00:14:19.000 --> 00:14:21.000
+Jadi ada banyak yang harus dilakukan dan banyak yang perlu dikumpulkan.
+
+232
+00:14:32.000 --> 00:14:36.000
+Sementara atlet di sini di Olimpiade Musim Sejuk menghabiskan satu atau dua tahun dalam pelatihan
+
+233
+00:14:36.000 --> 00:14:40.000
+menjadi siap untuk acara besar, yang mungkin tidak ada dibandingkan dengan jumlah
+
+234
+00:14:40.000 --> 00:14:42.001
+Persiapan yang dilakukan oleh para profesional IT.
+
+235
+00:14:42.001 --> 00:14:46.001
+Untuk banyak komputer techies di sini, mereka telah menghabiskan tiga tahun terakhir atau lebih
+
+236
+00:14:46.001 --> 00:14:50.001
+menjadi siap untuk Olimpiade ini, memastikan bahwa sistem informasi
+
+237
+00:14:50.001 --> 00:14:52.000
+Menjalankan serta para atlet.
+
+238
+00:14:53.000 --> 00:14:57.000
+Perencanaan untuk sistem komputer Olimpiade dimulai kembali pada tahun 1999.
+
+239
+00:14:58.000 --> 00:15:02.001
+Schlumberger Sema, sebuah perusahaan berbasis Eropa, mendapat kontrak untuk Utah
+
+240
+00:15:02.001 --> 00:15:07.000
+Olimpiade serta Olimpiade yang akan datang di Yunani, Italia dan China, menggantikan
+
+241
+00:15:07.000 --> 00:15:10.000
+IBM sebagai integrator teknologi utama.
+
+242
+00:15:11.000 --> 00:15:14.001
+Schlumberger Sema adalah subkontraktor perangkat lunak untuk Olimpiade yang dimulai
+
+243
+00:15:14.001 --> 00:15:18.000
+Pada tahun 1992, di Sukan Musim Panas di Barcelona.
+
+244
+00:15:20.000 --> 00:15:24.000
+Tim yang bekerja pada sistem IT Olimpiade adalah internasional dengan orang-orang
+
+245
+00:15:24.000 --> 00:15:25.001
+dari semua bagian dunia.
+
+246
+00:15:25.001 --> 00:15:28.001
+Kami memiliki orang dari lebih dari 23 negara yang berbeda di sini.
+
+247
+00:15:28.001 --> 00:15:29.001
+Itu sangat menarik.
+
+248
+00:15:30.000 --> 00:15:32.001
+Kami memiliki banyak budaya yang berbeda, banyak latar belakang yang berbeda.
+
+249
+00:15:33.000 --> 00:15:36.001
+Satu hal yang telah kami lakukan untuk proyek ini adalah untuk berjalan sepanjang
+
+250
+00:15:36.001 --> 00:15:40.000
+dunia dan memilih orang-orang yang paling baik untuk membuat proyek ini sukses.
+
+251
+00:15:41.000 --> 00:15:45.000
+Selama Olimpiade, ini adalah IT Mission Control Center, yang sebenarnya disebut sebagai
+
+252
+00:15:45.000 --> 00:15:48.000
+ITC, Pusat Teknologi Informasi
+
+253
+00:15:49.000 --> 00:15:53.001
+Di sini, insinyur dan teknisi memantau semua sistem komputer, menjalankan
+
+254
+00:15:53.001 --> 00:15:57.001
+masalah desk dan operasi keamanan dan mengelola jaringan besar dan
+
+255
+00:15:57.001 --> 00:16:00.001
+subnet yang mendukung sistem IT di Utah.
+
+256
+00:16:01.001 --> 00:16:05.001
+Salah satu tantangan utama bagi para insinyur di Schlumberger Sema adalah untuk
+
+257
+00:16:05.001 --> 00:16:10.000
+benar-benar yakin bahwa jaringan mereka tahan tembakan dan aman dari hacker.
+
+258
+00:16:10.001 --> 00:16:16.000
+Dan kami memiliki tim besar ahli keamanan dan analis di sini di gedung ini
+
+259
+00:16:16.000 --> 00:16:21.001
+dan tim telah berada di sini selama bertahun-tahun, banyak bulan dan mereka melihat semua cara
+
+260
+00:16:21.001 --> 00:16:26.000
+Kami dapat melindungi data kami, tidak hanya dari sumber internal tetapi dari sumber eksternal.
+
+261
+00:16:26.000 --> 00:16:31.000
+sumber karena tidak hanya kita harus melindungi diri kita dari hacker eksternal, kita
+
+262
+00:16:31.000 --> 00:16:35.000
+Kita harus melindungi diri kita dari niat jahat internal.
+
+263
+00:16:36.000 --> 00:16:40.000
+Dan jika Anda melihat berbagai kertas IT, Anda dapat melihat pada beberapa kesempatan
+
+264
+00:16:40.000 --> 00:16:44.000
+korporasi besar kehilangan data, bukan dari luar tetapi dari yang terpecah belah
+
+265
+00:16:44.000 --> 00:16:45.001
+Pekerja di dalam.
+
+266
+00:16:46.000 --> 00:16:48.000
+Jadi kita melihat kedua sisi dengan sangat serius.
+
+267
+00:16:48.001 --> 00:16:54.001
+Kami telah mengambil beberapa langkah untuk menyingkirkan diri dari internet sehingga kami
+
+268
+00:16:54.001 --> 00:16:56.000
+memiliki akses internet yang sangat terbatas.
+
+269
+00:16:57.000 --> 00:17:01.000
+Kami tidak memiliki banyak kehadiran di awan sehingga orang tidak dapat sampai kepada kami
+
+270
+00:17:01.000 --> 00:17:03.000
+Dan ini adalah beberapa langkah utama.
+
+271
+00:17:03.000 --> 00:17:07.001
+Bahkan orang-orang di sini tidak memiliki akses dial-up ke jaringan kami sendiri.
+
+272
+00:17:08.001 --> 00:17:13.000
+Ini hampir sistem tertutup saat ini sejauh yang kita bisa.
+
+273
+00:17:13.000 --> 00:17:17.000
+Tentu saja, beberapa federasi memiliki persyaratan untuk dapat masuk tetapi
+
+274
+00:17:17.000 --> 00:17:21.000
+Akses tersebut sangat terbatas selama periode pertandingan.
+
+275
+00:17:22.000 --> 00:17:28.000
+Dalam pertemuan teknis terakhir kami, tepat sebelum Natal, dua orang dari kami
+
+276
+00:17:28.000 --> 00:17:33.000
+perusahaan yang tidak ada hubungannya dengan proyek ini diberitahu oleh perusahaan untuk
+
+277
+00:17:33.000 --> 00:17:35.000
+Pada dasarnya hack dengan cara yang mereka bisa.
+
+278
+00:17:35.001 --> 00:17:40.001
+Dan mereka memiliki beberapa percobaan yang baik, mereka menemukan beberapa lubang tetapi mereka tidak dapat
+
+279
+00:17:40.001 --> 00:17:42.001
+Dalam rangkaian permainan kami yang kami sangat bangga.
+
+280
+00:17:43.001 --> 00:17:46.001
+Rangkaian backbone untuk Olimpiade Musim Sejuk disediakan
+
+281
+00:17:46.001 --> 00:17:48.000
+oleh Sun Microsystems.
+
+282
+00:17:48.001 --> 00:17:52.001
+Lebih dari 200 server Unix dan kotak penyimpanan data digunakan di
+
+283
+00:17:52.001 --> 00:17:54.000
+membangun jaringan yang digunakan di Utah.
+
+284
+00:17:55.000 --> 00:17:59.000
+Sun digunakan untuk menangani permintaan kredibilitas dari pelanggan korporatnya
+
+285
+00:17:59.000 --> 00:18:01.001
+dan menyediakan infrastruktur jaringan untuk
+
+286
+00:18:01.001 --> 00:18:03.000
+Olimpiade Musim Sejuk tidak berbeda.
+
+287
+00:18:04.000 --> 00:18:06.001
+Kita hidup dalam budaya waktu nyata dan ini adalah peristiwa waktu nyata terakhir.
+
+288
+00:18:07.000 --> 00:18:10.001
+Penonton ingin tahu dalam waktu nyata siapa yang bersaing melawan siapa yang berada di
+
+289
+00:18:10.001 --> 00:18:12.000
+Top 10 , Top 5 , Top 10
+
+290
+00:18:12.000 --> 00:18:16.001
+Tapi mungkin lebih penting daripada harus memberikan informasi acara langsung dalam real
+
+291
+00:18:16.001 --> 00:18:23.000
+Waktu adalah kebutuhan untuk memiliki sistem informasi yang tidak 99.99% dapat diandalkan tetapi
+
+292
+00:18:23.000 --> 00:18:24.001
+100% dapat diandalkan.
+
+293
+00:18:25.000 --> 00:18:30.001
+Apa yang membuat ini begitu rumit adalah bahwa informasi itu harus duplikasi dan
+
+294
+00:18:30.001 --> 00:18:32.000
+dikirim ke berbagai sumber yang berbeda.
+
+295
+00:18:33.000 --> 00:18:39.000
+Ada scoreboard, grafis TV, intranet, internet, feed berbasis web.
+
+296
+00:18:39.000 --> 00:18:43.001
+Informasi tersebut tidak dapat hilang dalam keadaan apapun karena persaingan
+
+297
+00:18:43.001 --> 00:18:45.000
+Tidak pernah bisa berlari lagi.
+
+298
+00:18:45.001 --> 00:18:49.001
+Kami tidak pernah bisa meminta maaf kepada pesaing snowboard dan berkata, kami minta maaf, kami
+
+299
+00:18:49.001 --> 00:18:51.000
+Hanya kehilangan skor Anda, Anda bisa melakukannya
+
+300
+00:18:51.000 --> 00:18:52.001
+Berlari lagi dan itu bisa menjadi yang terbaik dari hidup mereka.
+
+301
+00:18:53.000 --> 00:18:56.000
+Salah satu hal yang perlu dilakukan adalah membangun infrastruktur jaringan sehingga
+
+302
+00:18:56.000 --> 00:18:57.001
+secara teoritis dapat diandalkan.
+
+303
+00:18:58.000 --> 00:19:03.000
+Ini adalah tugas lain untuk memantau jaringan dan memastikan bahwa itu sebenarnya dapat diandalkan.
+
+304
+00:19:03.001 --> 00:19:06.001
+Perusahaan dengan pekerjaan penting itu mungkin salah satu yang Anda miliki.
+
+305
+00:19:06.001 --> 00:19:08.000
+Aku tidak pernah mendengarnya, Icon.
+
+306
+00:19:08.001 --> 00:19:13.000
+layar ini sebenarnya memberikan kita unsur-unsur yang berbeda atau bagian-bagian yang berbeda dari
+
+307
+00:19:13.000 --> 00:19:15.001
+Informasi yang dapat kami gunakan untuk memantau jaringan.
+
+308
+00:19:16.000 --> 00:19:20.000
+Misalnya, di sini kita dapat melihat penggunaan pada masing-masing segmen
+
+309
+00:19:20.000 --> 00:19:25.001
+yang berada di luar tempat lalu lintas hanya untuk melihat apakah ada
+
+310
+00:19:25.001 --> 00:19:29.001
+Kerusakan, ada jenis lalu lintas berlebihan di mana jaringan akan terlihat lambat.
+
+311
+00:19:30.000 --> 00:19:32.001
+Kita benar-benar dapat mengatasi ini dan mengalihkan lalu lintas.
+
+312
+00:19:33.000 --> 00:19:37.001
+Selain itu, di bagian bawah di sini Anda melihat layar lain yang sebenarnya memberitahu kita adalah
+
+313
+00:19:37.001 --> 00:19:39.000
+perangkat yang ada atau tidak.
+
+314
+00:19:39.000 --> 00:19:42.000
+Apakah itu benar-benar kehilangan daya atau kehilangan semua konektivitas?
+
+315
+00:19:43.001 --> 00:19:46.000
+Apakah tidak ada jalur ke perangkat khusus itu?
+
+316
+00:19:46.000 --> 00:19:49.000
+Kami benar-benar dapat menjejaki ini dan sekali lagi segera menjawabnya.
+
+317
+00:19:49.000 --> 00:19:53.000
+Dengan permintaan besar untuk lalu lintas jaringan kecepatan tinggi di Olimpiade, banyak tempat
+
+318
+00:19:53.000 --> 00:19:58.000
+Ada sekitar delapan garis T1 yang terpisah yang masuk, tapi itu saja masih belum
+
+319
+00:19:58.000 --> 00:20:00.001
+Dapatkan 100% ketersediaan.
+
+320
+00:20:01.000 --> 00:20:04.000
+Kami benar-benar dapat memantau setiap dan setiap garis T1 individu.
+
+321
+00:20:04.000 --> 00:20:07.001
+Banyak alat lain yang kita miliki tidak dapat melakukan apa yang datang langsung dari
+
+322
+00:20:07.001 --> 00:20:11.000
+kotak yang hanya aplikasi yang dikembangkan khusus Anda
+
+323
+00:20:11.000 --> 00:20:12.001
+Karena kita menggunakan multi-link.
+
+324
+00:20:13.001 --> 00:20:17.001
+Ketika satu garis T1 turun, kita kehilangan bagian dari lebar bandwidth kita, tetapi
+
+325
+00:20:17.001 --> 00:20:21.001
+Semua tampaknya berfungsi dan pemantauan tipikal Anda
+
+326
+00:20:21.001 --> 00:20:23.000
+Alat-alat tersebut tidak akan bisa disensor.
+
+327
+00:20:23.001 --> 00:20:27.001
+Kami sebenarnya telah menyesuaikan membangun aplikasi yang ketika satu baris turun,
+
+328
+00:20:28.000 --> 00:20:31.000
+Meskipun persaingan terus berlanjut, meskipun data masih bergerak, kita
+
+329
+00:20:31.000 --> 00:20:35.000
+sebenarnya dapat melihatnya sebagai persegi di sana berubah menjadi warna yang berbeda
+
+330
+00:20:35.000 --> 00:20:36.001
+Dan kita bisa menjawabnya.
+
+331
+00:20:37.000 --> 00:20:41.000
+Kemudian kita dapat membuat keputusan, apakah kita memperbaikinya sekarang atau kita menunggu sampai setelah itu.
+
+332
+00:20:41.000 --> 00:20:45.001
+persaingan berakhir atau kita benar-benar menggerakkan lebar jalur, jalur yang mungkin Anda katakan
+
+333
+00:20:45.001 --> 00:20:49.001
+bahwa data dipindahkan dari satu bundle multi-link ke bundle lain.
+
+334
+00:20:49.001 --> 00:20:54.000
+Kami memiliki berbagai pilihan yang dapat kami lakukan pada penerbangan atau menunggu sampai kemudian.
+
+335
+00:20:54.001 --> 00:20:58.000
+Salah satu tantangan untuk membangun jaringan yang dapat diandalkan di sini adalah hampir fisik
+
+336
+00:20:58.000 --> 00:21:02.000
+Tugas meletakkan kabel jaringan di atas pita ski yang tertutup salju.
+
+337
+00:21:03.000 --> 00:21:07.000
+Pertimbangkan tentang ski slope, itu salju, tetapi sudah tiba masanya untuk menginstal jaringan ini.
+
+338
+00:21:08.000 --> 00:21:14.000
+Jadi ya, kami memiliki insinyur di sana dengan peralatan di tangan berjalan melalui
+
+339
+00:21:14.000 --> 00:21:19.000
+kaki dan setengah bubuk untuk mendapatkan dari satu lokasi ke tempat lain dan mereka akan menggali
+
+340
+00:21:19.000 --> 00:21:22.000
+Peralatan plastik untuk melindungi dan mengeringkan dari unsur-unsur.
+
+341
+00:21:23.000 --> 00:21:26.001
+Dan ketika Anda sampai ke fasilitas lain, itu bisa menjadi trailer atau bahkan tenda di
+
+342
+00:21:26.001 --> 00:21:28.001
+Tiga cerita yang beredar di atas.
+
+343
+00:21:28.001 --> 00:21:32.000
+Jadi mereka benar-benar harus berlari ke atas tangga yang tertutup es ini untuk mencapai puncak.
+
+344
+00:21:32.001 --> 00:21:38.001
+Pergi ke dalam tenda ini dan masuk ke sudut adalah meja di mana Anda benar-benar memasang
+
+345
+00:21:38.001 --> 00:21:42.000
+switch ini atau apa pun perangkat jaringan dan Anda menggerakkan kabel Anda
+
+346
+00:21:42.000 --> 00:21:48.001
+dan sementara itu mungkin ada beberapa angin mengalir melalui tenda ini sehingga Anda sangat
+
+347
+00:21:48.001 --> 00:21:51.000
+Khawatir tentang salju yang masuk ke dalam
+
+348
+00:21:51.000 --> 00:21:53.000
+pelabuhan dan sebenarnya mengecilkan peralatan.
+
+349
+00:21:54.001 --> 00:21:57.001
+Ada beberapa komponen berisiko tinggi dari semua hal ini yang sangat tidak biasa.
+
+350
+00:21:57.001 --> 00:22:01.001
+Ini jelas bukan lingkungan ruangan yang bersih untuk membangun jaringan
+
+351
+00:22:01.001 --> 00:22:03.000
+Seperti yang kita inginkan secara ideal.
+
+352
+00:22:03.001 --> 00:22:07.001
+Tantangan lain bagi pemasang adalah perlu untuk memanipulasi kabel serat
+
+353
+00:22:07.001 --> 00:22:09.000
+di bawah suhu beku.
+
+354
+00:22:10.000 --> 00:22:15.001
+Mereka akan mengikatnya sementara ke lokasi tertentu seperti dan membungkusnya.
+
+355
+00:22:16.000 --> 00:22:20.000
+Bayangkan menggali serat dan menggantungnya tinggi di beberapa pohon di samping ski
+
+356
+00:22:20.000 --> 00:22:25.000
+tempat dan kemudian pada waktu yang tepat ketika mereka memiliki akses ke fasilitas yang mereka
+
+357
+00:22:25.000 --> 00:22:30.000
+sebenarnya harus memanjat pohon dengan pengering pukulan, memanaskan serat sehingga
+
+358
+00:22:30.000 --> 00:22:32.001
+pada suhu yang tepat dan mereka dapat mengalirnya keluar dari jalan yang lain
+
+359
+00:22:32.001 --> 00:22:34.001
+Tanpa memecahkannya karena sudah beku.
+
+360
+00:22:35.001 --> 00:22:41.001
+Ini adalah jenis yang menarik dan di sini kami bergantung pada ini untuk menjalankan jaringan yang
+
+361
+00:22:41.001 --> 00:22:46.000
+memiliki penonton yang lebih dari tiga miliar orang menonton dan itu tidak bisa gagal.
+
+362
+00:22:46.001 --> 00:22:50.001
+Sementara mengendalikan elektronik di Olimpiade Musim Sejuk adalah tantangan, lebih awal atau
+
+363
+00:22:50.001 --> 00:22:53.001
+Kemudian orang-orang juga ingin melihat hasilnya di kertas.
+
+364
+00:22:54.000 --> 00:22:58.001
+Xerox adalah penjual cetak resmi untuk Olimpiade dan memberikan sekitar 3000
+
+365
+00:22:58.001 --> 00:23:02.000
+Printer yang didistribusikan di berbagai lokasi Olimpiade.
+
+366
+00:23:03.000 --> 00:23:06.001
+Mereka adalah pencetak kantor biasa yang Anda dan saya akan mengenali tetapi mereka
+
+367
+00:23:06.001 --> 00:23:11.000
+Ada juga sistem penerbitan akhir tinggi, mesin faks, kopier dan plotter.
+
+368
+00:23:12.000 --> 00:23:16.001
+Selama 17 hari Olimpiade, lebih dari 50 juta halaman dicetak di
+
+369
+00:23:16.001 --> 00:23:22.001
+Xerox printer termasuk 28.000 buku catatan yang meringkas hasil untuk masing-masing
+
+370
+00:23:22.001 --> 00:23:24.000
+15 Sukan Olimpik Musim Sejuk
+
+371
+00:23:24.001 --> 00:23:29.000
+Untuk mendukung operasi cetak di Utah, Xerox menyediakan lebih dari 100
+
+372
+00:23:29.000 --> 00:23:34.000
+engineers dan layanan teknologi sejak kita semua tahu printer dan kopier cenderung untuk
+
+373
+00:23:34.000 --> 00:23:36.000
+Anda harus memecahkannya ketika Anda paling membutuhkannya.
+
+374
+00:23:36.001 --> 00:23:41.000
+Sekarang setelah permainan selesai, Xerox sedang mengubah semua hasil salinan kerasnya menjadi
+
+375
+00:23:41.000 --> 00:23:47.000
+Lebih dari 7.000 CD-ROM sebagai rekaman elektronik permanen dari permainan musim dingin ini.
+
+376
+00:23:48.000 --> 00:23:53.000
+Salah satu aplikasi teknologi yang tidak biasa di Olimpiade adalah penggunaan dua spesial
+
+377
+00:23:53.000 --> 00:23:58.000
+Situs web yang dibuat oleh Monster.com, satu-satunya sponsor dot com di Olimpiade Musim Sejuk.
+
+378
+00:23:59.000 --> 00:24:03.001
+Ketika Anda melihat sponsor Olimpiade, pertama Anda melihat peluang, apa yang
+
+379
+00:24:03.001 --> 00:24:07.001
+cincin yang mewakili dan meletakkan merek Monster dengan mereka Olimpik
+
+380
+00:24:07.001 --> 00:24:09.001
+Cincin adalah kredibilitas yang besar.
+
+381
+00:24:10.000 --> 00:24:16.000
+Saya pikir hubungan alami antara Monster dan Olimpiade jauh melampaui
+
+382
+00:24:16.000 --> 00:24:18.001
+Begitu juga dengan branding superficial.
+
+383
+00:24:18.001 --> 00:24:22.001
+Saya pikir ada beberapa kemungkinan bahwa Monster benar-benar dapat mengintegrasikan sepenuhnya
+
+384
+00:24:22.001 --> 00:24:26.000
+yang berbeda, terlebih dahulu dari sukarelawan, dari para profesional yang
+
+385
+00:24:26.000 --> 00:24:27.001
+Mereka sebenarnya bekerja di Olimpiade.
+
+386
+00:24:28.000 --> 00:24:29.001
+Anda melihat para atlet dan fakta bahwa mereka adalah
+
+387
+00:24:29.001 --> 00:24:31.000
+sudah berada di puncak karir mereka.
+
+388
+00:24:31.001 --> 00:24:35.000
+Apa yang akan mereka lakukan setelah mereka selesai dengan permainan dan bagaimana Monster dapat
+
+389
+00:24:35.000 --> 00:24:38.001
+jenis memeluk tantangan mereka dan membantu mereka melewati
+
+390
+00:24:38.001 --> 00:24:40.000
+Kemenangan dalam karir mereka.
+
+391
+00:24:41.000 --> 00:24:44.000
+Di antara 80.000 orang yang membantu untuk menjalankan Olimpiade Musim Sejuk adalah
+
+392
+00:24:44.000 --> 00:24:46.000
+25 ribu orang sukarelawan.
+
+393
+00:24:46.001 --> 00:24:52.000
+Banyak dari mereka direkrut di situs khusus Team 2002 yang dikendalikan oleh Monster.com.
+
+394
+00:24:53.001 --> 00:24:58.001
+Monster juga menyusun bagian pekerjaan khusus di situs mereka yang disebut Team USA Net untuk
+
+395
+00:24:58.001 --> 00:25:01.000
+Pelatih Olimpiade yang sedang mencari pekerjaan.
+
+396
+00:25:02.000 --> 00:25:06.000
+Ketika kesempatan Olimpik datang ke jalan kita, itu adalah semulajadi nyata untuk Monster
+
+397
+00:25:06.000 --> 00:25:13.000
+Karena ada korelasi alami yang nyata antara atlet yang bersaing di
+
+398
+00:25:13.000 --> 00:25:16.001
+Olimpiade dan kemudian setelah karir Olimpiade mereka berakhir mereka akan membutuhkan pekerjaan.
+
+399
+00:25:18.000 --> 00:25:22.000
+Berbeda dengan banyak sifat chip biru lainnya yang bisa Anda sponsor seperti
+
+400
+00:25:22.000 --> 00:25:26.000
+Sepak bola profesional atau sepak bola profesional, di mana atlet ketika mereka
+
+401
+00:25:26.000 --> 00:25:30.001
+karir yang berakhir tidak perlu menggunakan perusahaan seperti Monster.com untuk
+
+402
+00:25:30.001 --> 00:25:33.000
+Transisi ke dunia kerja.
+
+403
+00:25:33.001 --> 00:25:37.001
+Sebagian dari apa yang Monster telah lakukan adalah membuat program mentoring online di mana
+
+404
+00:25:37.001 --> 00:25:42.001
+Bekas atlet Olimpik membantu pemain Olimpik saat mereka berurusan dengan peralihan
+
+405
+00:25:42.001 --> 00:25:44.001
+Dari kerja-kerja medali hingga pekerjaan pemegang.
+
+406
+00:25:45.000 --> 00:25:49.001
+Atlet benar-benar harus menghabiskan banyak waktu dalam olahraga mereka dan orang tidak
+
+407
+00:25:49.001 --> 00:25:54.000
+Mengetahui bahwa menjadi atlet kaliber dunia hampir seperti pekerjaan.
+
+408
+00:25:54.000 --> 00:25:59.000
+Anda harus menghabiskan 100% waktu Anda untuk itu dan mereka membutuhkan seseorang yang berada di luar
+
+409
+00:25:59.000 --> 00:26:04.000
+Sukan yang dapat melihat kembali karir mereka dengan 20-20 visi dan memberi mereka beberapa
+
+410
+00:26:04.000 --> 00:26:07.000
+Perspektif tentang apa yang tersisa untuk masa depan mereka.
+
+411
+00:26:08.000 --> 00:26:11.001
+Ini adalah bagian dari salah satu seri khusus kami pada komputer di Olimpiade.
+
+412
+00:26:11.001 --> 00:26:16.001
+Untuk Computer Chronicles, saya adalah Stuart Chiffay di Olimpiade Musim Sejuk di Utah.
+
+413
+00:26:18.000 --> 00:26:23.000
+Komputer Chronicles dibawa ke Anda oleh Oracle Small Business Suite, satu
+
+414
+00:26:23.000 --> 00:26:27.000
+Aplikasi yang sepenuhnya terintegrasi yang membantu membuatnya lebih mudah untuk menjalankan bisnis Anda
+
+415
+00:26:27.000 --> 00:26:31.001
+termasuk akuntansi, penjualan dan layanan, kehadiran web Anda dan banyak lagi.
+
+416
+00:26:34.000 --> 00:26:40.001
+Pembiayaan tambahan disediakan oleh PC2PC, layanan migrasi online dari PC
+
+417
+00:26:40.001 --> 00:26:45.000
+Pertama, memindahkan file, aplikasi dan preferensi dari
+
+418
+00:26:45.000 --> 00:26:46.001
+Komputer lama untuk yang baru.
+
+419
+00:26:48.001 --> 00:26:52.000
+Minggu depan di Computer Chronicles, bagian kedua dari seri khusus kami
+
+420
+00:26:52.000 --> 00:26:54.000
+Teknologi komputer di Olimpiade.
+
+421
+00:26:54.001 --> 00:26:59.001
+Apa yang akan Anda lakukan jika 7.000 PC muncul di kantor Anda dan Anda harus mengkonfigurasi
+
+422
+00:26:59.001 --> 00:27:01.001
+Mereka semua untuk ratusan kegunaan yang berbeda?
+
+423
+00:27:02.000 --> 00:27:03.000
+Kami akan menunjukkan kepada Anda bagaimana hal itu dilakukan.
+
+424
+00:27:04.000 --> 00:27:06.000
+Apakah Anda mengikuti beberapa hasil Olimpiade di web?
+
+425
+00:27:06.001 --> 00:27:09.000
+Kami akan menunjukkan kepada Anda sistem informasi besar yang memakan internet.
+
+426
+00:27:10.000 --> 00:27:14.000
+Ketika jaringan Anda harus 100% dapat diandalkan, Anda membutuhkan banyak redundansi.
+
+427
+00:27:14.001 --> 00:27:18.000
+Kami akan menunjukkan kepada Anda bagaimana mereka memprovokasi sistem IT di Olimpiade.
+
+428
+00:27:18.001 --> 00:27:20.000
+Pernahkah Anda menonton permainan hoki?
+
+429
+00:27:20.000 --> 00:27:23.001
+Kami akan menunjukkan kepada Anda sistem perangkat lunak yang kompleks yang digunakan untuk mendokumentasikan
+
+430
+00:27:23.001 --> 00:27:25.001
+setiap momen dari setiap pertandingan.
+
+431
+00:27:26.000 --> 00:27:29.000
+Dan komputer juga membantu atlet berjalan lebih cepat.
+
+432
+00:27:29.000 --> 00:27:33.001
+Kami akan menunjukkan kepada Anda bagaimana Nike menggunakan teknologi untuk membantu AS. Kelajuan skating tim.
+
+433
+00:27:33.001 --> 00:27:37.001
+Bahagian 2 dari seri kami di komputer di Olimpiade, datang ke depan
+
+434
+00:27:37.001 --> 00:27:39.001
+Beberapa hari di komputer kronik.
+
+435
+00:27:41.000 --> 00:27:44.000
+[...]

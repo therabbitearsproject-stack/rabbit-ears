@@ -1,0 +1,1905 @@
+WEBVTT
+
+1
+00:00:09.001 --> 00:00:14.000
+Esta mujer no lleva a cabo un procesador de palabras. Es un científico informático en el
+
+2
+00:00:14.000 --> 00:00:16.000
+El FBI trata de resolver un delito.
+
+3
+00:00:16.001 --> 00:00:19.001
+De hecho, las agencias de aplicación de la ley en todo el país están volviendo a los ordenadores
+
+4
+00:00:19.001 --> 00:00:23.000
+para hacer que el trabajo de la policía sea más eficiente y eficaz.
+
+5
+00:00:23.001 --> 00:00:26.000
+Hoy, estamos mirando a los ordenadores como interruptores del crimen en este
+
+6
+00:00:26.000 --> 00:00:28.000
+Edición de The Computer Chronicles.
+
+7
+00:00:49.000 --> 00:00:54.001
+Las crónicas informáticas se hacen posibles en parte por una subvención de AFIPs, el
+
+8
+00:00:54.001 --> 00:00:57.000
+Federación Americana de Sociedades de Procesamiento de Información.
+
+9
+00:00:58.000 --> 00:01:03.001
+AFIPs, patrocinadores de OAC 86, la conferencia líder de la nación sobre negocios
+
+10
+00:01:03.001 --> 00:01:08.001
+Tecnología . Para información de la conferencia, llame 800-OAC-1986.
+
+11
+00:01:09.001 --> 00:01:11.001
+Explorar las soluciones de negocio de hoy.
+
+12
+00:01:12.000 --> 00:01:15.001
+El financiamiento adicional se proporciona por McGraw-Hill, editores de Byte.
+
+13
+00:01:16.001 --> 00:01:20.001
+Artículos técnicos detallados de Byte sobre el nuevo hardware, el software y la cubierta de idiomas
+
+14
+00:01:20.001 --> 00:01:23.001
+las últimas tecnologías de microcomputadores en todo el mundo.
+
+15
+00:01:24.000 --> 00:01:26.000
+Bite, el estándar internacional.
+
+16
+00:01:32.000 --> 00:01:35.001
+Bienvenido a las crónicas informáticas. Yo soy Stuart Chiffay y este es Gary Kildall.
+
+17
+00:01:36.000 --> 00:01:39.001
+Gary, en el ordenador tenemos un juego llamado Murder by the Dozen en el que yo juego un
+
+18
+00:01:39.001 --> 00:01:42.000
+Detective en la ciudad de Metropolis y estoy tratando de resolver un delito.
+
+19
+00:01:42.001 --> 00:01:46.000
+Y puedes ver que una de las herramientas que tengo a mi disposición es un ordenador del crimen.
+
+20
+00:01:46.000 --> 00:01:48.001
+Y puedo llamar el ordenador y me da algunas pistas como
+
+21
+00:01:48.001 --> 00:01:50.000
+¿Quiénes son los sospechosos de este crimen?
+
+22
+00:01:50.000 --> 00:01:53.000
+Bueno, esto es sólo un juego, pero en realidad los políticos reales usan el juego real.
+
+23
+00:01:53.000 --> 00:01:55.000
+los ordenadores para nab criminales reales en estos días.
+
+24
+00:01:55.001 --> 00:01:58.001
+¿Este es otro ejemplo, Gary, de una de estas aplicaciones verticales que hemos visto
+
+25
+00:01:58.001 --> 00:02:02.001
+antes de la increíble capacidad del ordenador para masajar cantidades masivas de datos?
+
+26
+00:02:02.001 --> 00:02:05.000
+Bueno Stuart, creo que es eso y mucho más porque no sólo los datos
+
+27
+00:02:05.000 --> 00:02:07.000
+los registros, estamos tratando de materiales gráficos como
+
+28
+00:02:07.000 --> 00:02:09.000
+impresiones, fotografías, cosas de este tipo.
+
+29
+00:02:09.000 --> 00:02:13.000
+Y es una situación ahora en la que nadie puede lidiar con estas cosas en 3x5
+
+30
+00:02:13.000 --> 00:02:15.000
+Cartas, cartas de papel y llamadas telefónicas.
+
+31
+00:02:15.000 --> 00:02:17.001
+Así que será interesante ver cómo la tecnología informática, los datos
+
+32
+00:02:17.001 --> 00:02:21.001
+las comunicaciones, los sistemas de bases de datos se aplican en esta área donde necesitamos tener
+
+33
+00:02:21.001 --> 00:02:23.001
+Acceso rápido a la información de este tipo.
+
+34
+00:02:24.000 --> 00:02:25.001
+En el programa de hoy vamos a ver
+
+35
+00:02:25.001 --> 00:02:27.000
+computadoras en la aplicación de la ley.
+
+36
+00:02:27.000 --> 00:02:29.001
+Veremos un supercomputador que puede sortear a través de millones
+
+37
+00:02:29.001 --> 00:02:31.000
+de las huellas digitales en unos segundos.
+
+38
+00:02:31.000 --> 00:02:34.000
+Veremos los ordenadores que entran en acción cuando diale 911.
+
+39
+00:02:34.001 --> 00:02:36.001
+Y vamos a ver la última inteligencia artificial.
+
+40
+00:02:36.001 --> 00:02:38.001
+sistemas utilizados por el FBI.
+
+41
+00:02:38.001 --> 00:02:42.001
+Vamos a comenzar mirando a un ordenador de un millón de dólares que ayudó a nab
+
+42
+00:02:42.001 --> 00:02:45.001
+Primero sospechoso en el infamable caso Night Stalker de California.
+
+43
+00:02:47.000 --> 00:02:51.001
+Desde que Scotland Yard comenzó a usar huellas digitales para rastrear a los delincuentes en el siglo XIX
+
+44
+00:02:51.001 --> 00:02:55.001
+Durante los siglos, las agencias de aplicación de la ley han enfrentado el incómodo hecho de que una
+
+45
+00:02:55.001 --> 00:02:58.001
+La impresión de los dedos sin un sospechoso es a menudo inútil.
+
+46
+00:02:59.000 --> 00:03:03.001
+para coincidir con una impresión parcial sacada de la escena de un delito a uno de los
+
+47
+00:03:03.001 --> 00:03:08.000
+millones en los archivos es tan tiempo que un criminal es probable que muera
+
+48
+00:03:08.000 --> 00:03:10.000
+antes de que se haga un partido exacto.
+
+49
+00:03:10.001 --> 00:03:14.001
+Pero para romper este código intrigante de los golpes y los rayos que hace que cada persona
+
+50
+00:03:14.001 --> 00:03:19.000
+Unicamente, el Departamento de Justicia de California ha reemplazado sus siete millones
+
+51
+00:03:19.000 --> 00:03:25.000
+Tarjetas de impresión con billones de bajas de discos ópticos, búsquedas manuales intercambiadas
+
+52
+00:03:25.000 --> 00:03:26.001
+Con una búsqueda de patrones por ordenador.
+
+53
+00:03:26.001 --> 00:03:29.000
+Y los resultados han sido recompensantes.
+
+54
+00:03:30.000 --> 00:03:35.001
+En el caso del asesinato de los dos jóvenes de la UCLA, la única imprenta disponible
+
+55
+00:03:35.001 --> 00:03:37.000
+Era muy, muy débil.
+
+56
+00:03:37.000 --> 00:03:41.000
+Fue retirado de un coche que había sido derribado, derribada a
+
+57
+00:03:41.000 --> 00:03:42.001
+Trate de destruir cualquier rastro.
+
+58
+00:03:43.001 --> 00:03:46.001
+Y es un ejemplo perfecto de un caso que nunca habría sido resuelto.
+
+59
+00:03:46.001 --> 00:03:48.000
+Sin el ID de Cal.
+
+60
+00:03:48.000 --> 00:03:55.000
+Ahora para coincidir con esta impresión particular, teníamos que buscar más de tres millones de registros.
+
+61
+00:03:55.001 --> 00:03:57.001
+Es decir, tres millones de impresiones individuales.
+
+62
+00:03:58.001 --> 00:04:04.001
+Estimamos que habría tomado nuestro especialista de huellas digitales 67 años, 67 años
+
+63
+00:04:04.001 --> 00:04:07.000
+años para hacer esa búsqueda manualmente.
+
+64
+00:04:08.000 --> 00:04:12.000
+Cal ID lo hizo en menos de 20 minutos, y, por supuesto, recibimos a nuestro hombre.
+
+65
+00:04:12.000 --> 00:04:19.000
+Para coincidir con el sospechoso con la impresión, los 22 millones de dólares NEC supercomputadores buscan
+
+66
+00:04:19.000 --> 00:04:24.000
+12 millones de impresiones digitalizadas a una tasa de 12.000 por segundo.
+
+67
+00:04:24.001 --> 00:04:30.000
+A medida que las impresas entran, se escánan y se rastrean electrónicamente. Áreas desconocidas
+
+68
+00:04:30.000 --> 00:04:31.001
+Son zonados con una pena ligera.
+
+69
+00:04:31.001 --> 00:04:37.000
+Minutiae, o los puntos de identificación de una imprenta, se mapean de acuerdo con
+
+70
+00:04:37.000 --> 00:04:41.001
+a la cantidad de ridgelinas entre un punto y sus cuatro vecinos más cercanos.
+
+71
+00:04:42.001 --> 00:04:46.001
+Es la posición relativa de cada punto a los demás que el ordenador
+
+72
+00:04:46.001 --> 00:04:48.001
+Considera cuando busca un partido.
+
+73
+00:04:49.001 --> 00:04:55.000
+Cada impresión se da una puntuación que indica la probabilidad de un partido exacto, pero el
+
+74
+00:04:55.000 --> 00:04:58.001
+La confirmación final sigue siendo realizada por un ser humano.
+
+75
+00:04:58.001 --> 00:05:04.001
+El sistema Cal ID ofrecerá, finalmente, acceso remoto para que la policía local
+
+76
+00:05:04.001 --> 00:05:08.001
+los departamentos pueden recibir ayuda inmediata de los más rápidos del mundo y
+
+77
+00:05:08.001 --> 00:05:10.000
+La más exacta de los clavos.
+
+78
+00:05:20.001 --> 00:05:24.000
+Nos une ahora en el estudio es Louise Anderson, la coordinadora de marketing para
+
+79
+00:05:24.000 --> 00:05:28.000
+Los sistemas de datos de mando de Dublín, California, y junto a ella, el capitán Steve Port
+
+80
+00:05:28.000 --> 00:05:30.000
+del Departamento de Policía de Hawthorne, California.
+
+81
+00:05:30.001 --> 00:05:30.001
+¿Por qué Gary?
+
+82
+00:05:31.000 --> 00:05:34.000
+Entonces, yo solo voy a comenzar con una pregunta simple. ¿Cómo es el uso de
+
+83
+00:05:34.000 --> 00:05:36.000
+¿Los ordenadores realmente te ayudaron como policía?
+
+84
+00:05:36.000 --> 00:05:38.000
+Has estado con el Departamento de Policía de Hawthorne durante varios años.
+
+85
+00:05:38.000 --> 00:05:39.001
+¿Qué has visto el cambio?
+
+86
+00:05:40.000 --> 00:05:43.001
+He visto muchos cambios. Esto nos ayudó mucho. Se rompió con la ayuda informática
+
+87
+00:05:43.001 --> 00:05:46.001
+Descargar hace casi diez años, lo que verás aquí hoy.
+
+88
+00:05:47.001 --> 00:05:52.000
+Y ha simplificado mucho la ruta de llamadas, descubriendo cuáles son los oficiales
+
+89
+00:05:52.000 --> 00:05:54.001
+Disponible y entrar en las llamadas más rápido y de manera más eficiente.
+
+90
+00:05:54.001 --> 00:05:58.001
+¿Qué pasa con este sistema 911 que hemos oído hablar?
+
+91
+00:05:58.001 --> 00:06:02.001
+El sistema 911 ha sido realmente genial en que cuando la gente llama a la policía, encontramos
+
+92
+00:06:02.001 --> 00:06:05.001
+de inmediato donde están, de qué dirección están llamando, pueden verificar
+
+93
+00:06:05.001 --> 00:06:09.001
+Lo que está pasando, y hacer que la policía va allí mucho más rápido. A veces es muy
+
+94
+00:06:09.001 --> 00:06:13.000
+difícil de listar esa información de alguien que es muy angustiado y temido.
+
+95
+00:06:13.000 --> 00:06:17.000
+Louise, al final de la entrega, brevemente, ¿cómo tiene en su sistema VAC este
+
+96
+00:06:17.000 --> 00:06:19.000
+La transmisión de computadora, ¿cómo funcionaría cuando diale 911?
+
+97
+00:06:20.000 --> 00:06:24.000
+Cuando usted llama 911, lo que aparecerá en el fondo de la pantalla del transmisor es
+
+98
+00:06:24.000 --> 00:06:28.000
+la información relacionada con el número de teléfono que está llamando.
+
+99
+00:06:28.001 --> 00:06:31.001
+El expedidor entonces verificará, ¿dónde está el problema?
+
+100
+00:06:31.001 --> 00:06:34.001
+Supongo que estoy realmente nervioso y pánico y digo que estoy en un supermercado alfa-beta.
+
+101
+00:06:34.001 --> 00:06:38.001
+Lo que podemos hacer es entonces tener el control del ordenador para ver cuántos alfa-betas están en
+
+102
+00:06:38.001 --> 00:06:42.000
+la zona y entonces el enviador puede decir, ¿estás en el uno en el Lane de Farmer?
+
+103
+00:06:42.001 --> 00:06:45.001
+¿Estás en el uno aquí? Y puedes ir adelante y la clave que entra.
+
+104
+00:06:46.000 --> 00:06:49.001
+Así que esto ayuda a coordinar todo el envío y la recopilación de información
+
+105
+00:06:49.001 --> 00:06:52.000
+y así por medio de un sistema de ordenador central todo al mismo tiempo?
+
+106
+00:06:52.000 --> 00:06:54.001
+Eso es justo. También realmente asegurarnos de que estamos
+
+107
+00:06:54.001 --> 00:06:56.000
+Envío de oficiales al lugar adecuado.
+
+108
+00:06:56.000 --> 00:07:00.000
+Y justo. Bueno . Ahora también hay otro sistema, Louise, que recoge varios
+
+109
+00:07:00.000 --> 00:07:02.000
+Tipos de información y tipos de
+
+110
+00:07:02.000 --> 00:07:04.000
+Obtendrá todas las pistas. ¿Puedes mostrarnos esto?
+
+111
+00:07:04.000 --> 00:07:09.000
+Eso es justo. Este es nuestro sistema de análisis del crimen de Sherlock y lo que utilizamos para
+
+112
+00:07:09.000 --> 00:07:12.001
+Es hacer búsquedas cuando no conoces a una persona
+
+113
+00:07:12.001 --> 00:07:14.000
+nombre o no conoces un número de caso.
+
+114
+00:07:14.000 --> 00:07:17.001
+Me refiero a aquellas cosas que en el pasado podrías ver en una tarjeta 3x5.
+
+115
+00:07:18.000 --> 00:07:22.000
+¿Qué es esta historia? Usted conoce un montón de hechos y está tratando de obtener el nombre.
+
+116
+00:07:22.000 --> 00:07:24.001
+Así que usted quiere decir que los testigos podrían decir, bien el coche es algo así y el hombre
+
+117
+00:07:24.001 --> 00:07:26.001
+Parece algo así y estás tratando de rastrearlo.
+
+118
+00:07:26.001 --> 00:07:31.000
+Eso es justo. Lo que vamos a hacer sobre esto es que buscaremos un modelo más antiguo
+
+119
+00:07:31.000 --> 00:07:33.000
+Chevy o Ford.
+
+120
+00:07:33.000 --> 00:07:38.000
+Así que voy a decir como analista del crimen que un modelo más viejo es de 1960 a 1970
+
+121
+00:07:38.000 --> 00:07:42.001
+Y voy a decir, bien, quiero a los Chevys o a los Ford.
+
+122
+00:07:43.000 --> 00:07:45.001
+Y eso es todo lo que sé. En el pasado, sólo
+
+123
+00:07:45.001 --> 00:07:47.000
+No podrían hacer una búsqueda así.
+
+124
+00:07:47.000 --> 00:07:50.000
+¿Cuánto grande es la base de datos que está utilizando para la búsqueda de este tipo?
+
+125
+00:07:50.000 --> 00:07:52.001
+Este tipo de dependen. ¿Cuántas personas estarían involucradas, diría.
+
+126
+00:07:53.000 --> 00:07:57.001
+Esta es nuestra base de datos de demostración, por lo que no tenemos tanta gente. En una policía regular
+
+127
+00:07:57.001 --> 00:08:01.000
+el departamento que usted puede tener de 300 a 400 personas en su archivo conocido delincuente.
+
+128
+00:08:01.000 --> 00:08:03.000
+Sí, vamos a rastrear ocho coches que son Chevys
+
+129
+00:08:03.000 --> 00:08:05.000
+Fords entre los 60 y los 70.
+
+130
+00:08:06.000 --> 00:08:08.001
+Bueno, ¿qué haces después de decir la descripción de la persona?
+
+131
+00:08:10.000 --> 00:08:13.001
+Diga que el detective viene y dice, bueno, he hablado con algunos testigos y
+
+132
+00:08:13.001 --> 00:08:15.000
+Ahora tengo una descripción de una persona.
+
+133
+00:08:16.001 --> 00:08:20.000
+Lo que puedo hacer es mirar a las personas que están asociadas con estos ocho
+
+134
+00:08:20.000 --> 00:08:22.000
+Vehículos y realmente estrecharlo.
+
+135
+00:08:23.001 --> 00:08:26.000
+Por lo tanto, ahora entrará sólo una cantidad limitada de
+
+136
+00:08:26.000 --> 00:08:28.000
+información sobre un sospechoso.
+
+137
+00:08:29.000 --> 00:08:33.001
+Eso es justo. Porque muchas veces la gente piensa que han visto mucho de
+
+138
+00:08:33.001 --> 00:08:38.000
+la escena pero realmente no hay o simplemente no se puede verificar.
+
+139
+00:08:38.000 --> 00:08:41.000
+Así que el detective dice que era un hombre blanco de mediana edad. ¿Qué haces tú?
+
+140
+00:08:41.000 --> 00:08:45.001
+Bueno, así que digamos que el hombre blanco, el policía que trabaja en la edad media, ¿es alguien más de 30?
+
+141
+00:08:46.001 --> 00:08:51.000
+Así que voy a decir 30 a 45 y decir que es una especie de media altura. Así que voy a
+
+142
+00:08:51.000 --> 00:08:55.000
+Es de 5&#x27;8 a 5&#x27;10 y eso es todo lo que sé.
+
+143
+00:08:55.001 --> 00:08:59.000
+Bueno, así que su ordenador ahora está buscando todos los registros de lo que
+
+144
+00:08:59.000 --> 00:09:01.000
+La información que tienes en...
+
+145
+00:09:01.001 --> 00:09:03.001
+Personas que han sido detenidas por delitos.
+
+146
+00:09:03.001 --> 00:09:05.000
+Estos son los registros de detención pasados.
+
+147
+00:09:05.000 --> 00:09:05.000
+Eso es justo.
+
+148
+00:09:05.001 --> 00:09:10.000
+Bueno, para ver si alguien se encuentra con ellos, bien, lo has hecho. ¿Qué es lo que te dice?
+
+149
+00:09:10.000 --> 00:09:14.001
+Tenemos una persona y como analista del crimen lo que yo haría es ir a atraer a una persona.
+
+150
+00:09:14.001 --> 00:09:17.001
+Recordar y llevarlo al detective y decir, aquí es tu chico.
+
+151
+00:09:19.000 --> 00:09:22.001
+¿Steve, esto ha hecho de hecho la lucha contra el crimen más eficiente? Entonces, ¿tú tienes una
+
+152
+00:09:22.001 --> 00:09:24.001
+mayor porcentaje de detenciones y condenas
+
+153
+00:09:24.001 --> 00:09:26.000
+¿Por causa de su información informática?
+
+154
+00:09:26.001 --> 00:09:30.000
+Bueno, creo que es difícil decir a este ritmo que la belleza de esto, Louise sólo
+
+155
+00:09:30.000 --> 00:09:33.000
+Lo que te ha demostrado es que no sólo Louise sino cualquier agente puede
+
+156
+00:09:33.000 --> 00:09:34.001
+Obtenga esta información desde el ordenador.
+
+157
+00:09:35.000 --> 00:09:38.000
+No tienes que ir a un punto central y decir, por favor, haga esta encuesta
+
+158
+00:09:38.000 --> 00:09:42.000
+para mí. Cualquier oficial con algún entrenamiento puede sentarse y extraer el mismo tipo de
+
+159
+00:09:42.000 --> 00:09:44.001
+información basada en su investigación desde el ordenador.
+
+160
+00:09:44.001 --> 00:09:48.001
+Así que desde ese punto de vista, sí, somos más productivos porque somos capaces de capturar
+
+161
+00:09:48.001 --> 00:09:50.001
+la información, va a usarla, obtenga un verdadero giro rápido
+
+162
+00:09:50.001 --> 00:09:52.001
+Y probablemente solucionará más delitos.
+
+163
+00:09:53.001 --> 00:09:54.001
+Bueno, vamos a volver a ti en solo un minuto.
+
+164
+00:09:55.000 --> 00:09:58.000
+Como usted podría sospechar, una de las compañías de policía de alta tecnología más del país
+
+165
+00:09:58.000 --> 00:10:00.000
+Se encuentra en el Silicon Valley de San José.
+
+166
+00:10:00.001 --> 00:10:03.000
+Nuestro reportero, Wendy Woods, salió y escribió en la policía de San José
+
+167
+00:10:03.000 --> 00:10:05.000
+para ver cómo se utilizan los ordenadores.
+
+168
+00:10:06.001 --> 00:10:11.000
+Durante años, los servicios de emergencia y policía mantienen seguimiento de unidades en el campo a través de
+
+169
+00:10:11.000 --> 00:10:13.000
+La tarjeta antigua en un método peg.
+
+170
+00:10:13.000 --> 00:10:18.000
+Hoy en día, cada vez más de ellos han computado prácticamente todos los aspectos de la entrega
+
+171
+00:10:18.000 --> 00:10:22.001
+los servicios, y el Departamento de Policía de San José está entre una mancha que ha tomado
+
+172
+00:10:22.001 --> 00:10:24.001
+Computadores un paso más.
+
+173
+00:10:25.000 --> 00:10:29.001
+Todos los coches de la tripulación de los oficiales de mando están equipados con terminales de ordenador móvil,
+
+174
+00:10:30.000 --> 00:10:35.000
+que proporcionan a los funcionarios el acceso a la ubicación y el estado de todas las unidades en el
+
+175
+00:10:35.000 --> 00:10:39.001
+en el campo, así como una variedad de datos del vehículo y del registro del crimen de
+
+176
+00:10:39.001 --> 00:10:41.000
+bases de datos estatales y nacionales.
+
+177
+00:10:41.001 --> 00:10:44.001
+Cuando el sistema está abajo, o como la semana que no los teníamos cuando estábamos
+
+178
+00:10:44.001 --> 00:10:48.001
+cambiando a nuestras nuevas unidades, realmente se siente perdido sin ellas.
+
+179
+00:10:48.001 --> 00:10:51.001
+Es como estar en un túnel oscuro y no tener luz.
+
+180
+00:10:51.001 --> 00:10:54.001
+Disponible . No sabes lo que está sucediendo en el distrito.
+
+181
+00:10:54.001 --> 00:10:58.001
+Realmente tienes que escuchar la radio para capturar todas las cosas pequeñas, y gastas
+
+182
+00:10:58.001 --> 00:11:01.001
+Mucho tiempo preguntando al enviador, ¿cuántas unidades tengo?
+
+183
+00:11:01.001 --> 00:11:03.001
+¿Hay alguna llamada pendiente en el distrito, que
+
+184
+00:11:03.001 --> 00:11:05.001
+Tiene un tiempo de radio más valioso.
+
+185
+00:11:05.001 --> 00:11:11.000
+Las 48 unidades móviles acceden a una frecuencia de radio separada y están interactivas con la
+
+186
+00:11:11.000 --> 00:11:15.001
+las gigantes mini computadoras digitales del condado, que controlan todo el sistema de envío,
+
+187
+00:11:16.000 --> 00:11:18.000
+A través de un simple IBM PC.
+
+188
+00:11:19.000 --> 00:11:23.000
+El sistema ha funcionado sin problemas desde su instalación hace seis meses.
+
+189
+00:11:23.000 --> 00:11:27.000
+En los próximos años, casi todos los departamentos de Policía Metropolitana son
+
+190
+00:11:27.000 --> 00:11:30.000
+Se espera que haya instalado terminales móviles en sus coches de equipo.
+
+191
+00:11:30.000 --> 00:11:34.001
+Ahora que los terminales son más pequeños, son menos conspicuos, y su poder para
+
+192
+00:11:34.001 --> 00:11:37.000
+Ayudar a un oficial nunca ha sido más importante.
+
+193
+00:11:37.001 --> 00:11:39.001
+Para las crónicas de la computadora, soy Wendy Woods.
+
+194
+00:11:41.000 --> 00:11:44.000
+Mientras estábamos mirando el informe de Wendy, Louise y Steve han establecido
+
+195
+00:11:44.000 --> 00:11:45.001
+Otro programa que funciona en un PC.
+
+196
+00:11:46.000 --> 00:11:48.001
+Tuvimos un poco de interrupción y giras aquí. No estamos hablando de una línea telefónica.
+
+197
+00:11:49.000 --> 00:11:51.001
+Tenemos un compacto regular sentado debajo de la mesa aquí.
+
+198
+00:11:52.000 --> 00:11:53.000
+Steve, ¿puedes decirnos lo que hace este programa?
+
+199
+00:11:54.000 --> 00:11:57.000
+Lo que Louise y yo queremos mostrarle es el software LandTrack, y lo que hace es que
+
+200
+00:11:57.000 --> 00:11:59.001
+va contra la base de datos con algún software gráfico.
+
+201
+00:11:59.001 --> 00:12:03.001
+Es un mapa de la ciudad aquí, y lo que nos gustaría hacer es extraer de la
+
+202
+00:12:03.001 --> 00:12:06.000
+base de datos de todos los robos que ocurren entre un
+
+203
+00:12:06.000 --> 00:12:08.000
+cantidad de tiempo en los últimos 30 días.
+
+204
+00:12:08.000 --> 00:12:11.000
+Vamos a decir entre mediodía y 10 horas en los últimos 30 días.
+
+205
+00:12:11.001 --> 00:12:15.001
+Se sale a la base de datos y coloca esos crímenes en el mapa.
+
+206
+00:12:16.001 --> 00:12:19.001
+Por lo tanto, cada uno de esos puntos representa el lugar de un delito.
+
+207
+00:12:20.000 --> 00:12:23.000
+Eso es justo. Como se puede ver, están ligados, muchos de ellos a lo largo de algunos de los
+
+208
+00:12:23.000 --> 00:12:24.001
+Las principales calles de la zona.
+
+209
+00:12:24.001 --> 00:12:29.001
+Lo que haríamos es utilizar esta información visualmente para ir con la policía, el
+
+210
+00:12:29.001 --> 00:12:33.000
+del leutnant, del sergente de la policía, y les pida que vienen con un plan, cómo
+
+211
+00:12:33.000 --> 00:12:36.001
+implantar, cómo tratar con estos crímenes en el momento en que están ocurriendo, y
+
+212
+00:12:36.001 --> 00:12:38.000
+Buscar los tipos de personas que están haciendo
+
+213
+00:12:38.000 --> 00:12:39.001
+con información de análisis del crimen.
+
+214
+00:12:40.000 --> 00:12:42.000
+Esta información podría estar bastante actualizada en ese momento.
+
+215
+00:12:42.001 --> 00:12:44.001
+Oh sí, todos los días. De hecho, se puede actualizar todos los días.
+
+216
+00:12:45.001 --> 00:12:48.000
+Ahora, Steve, supongo que quieres volver ahora y preguntar a Louise, quiero saber
+
+217
+00:12:48.000 --> 00:12:51.001
+Exactamente qué tipo de delito se cometió en ese fondo verde allí.
+
+218
+00:12:51.001 --> 00:12:56.000
+Todo lo que tiene que hacer es centrar la cruz en uno de los estériles y será
+
+219
+00:12:56.000 --> 00:12:57.001
+muestra un perfil del delito en la pantalla inferior.
+
+220
+00:12:58.001 --> 00:13:03.000
+Bueno, por lo que está sacando ahora el archivo de palabras que apoya el delito que tomó
+
+221
+00:13:03.000 --> 00:13:04.001
+lugar en ese lugar particular, y allí es.
+
+222
+00:13:04.001 --> 00:13:08.000
+Es cierto, y le da un perfil del tipo de delito. En este caso, es una
+
+223
+00:13:08.000 --> 00:13:12.001
+el robo que ocurrió en Breeze Wood Drive, el tiempo de
+
+224
+00:13:12.001 --> 00:13:14.000
+El día, el oficial que tomó el informe.
+
+225
+00:13:14.000 --> 00:13:17.001
+Sólo le da una verdadera buena idea de las especificidades del delito.
+
+226
+00:13:17.001 --> 00:13:21.001
+También tiene algunas cosas en el panel aquí que dicen zona zoom, slide, y
+
+227
+00:13:21.001 --> 00:13:23.000
+Y así por adelante. ¿Qué hacen estas otras funciones?
+
+228
+00:13:23.001 --> 00:13:27.000
+Esta es una funcionalidad diferente del software. Se puede zoomar en un determinado
+
+229
+00:13:27.000 --> 00:13:31.000
+zona, en este caso algunos distritos de información, ciertos segmentos de la calle.
+
+230
+00:13:32.000 --> 00:13:35.001
+Puedes editar algunas de las cosas que están allí si quieres cambiar eso.
+
+231
+00:13:36.000 --> 00:13:38.000
+Hay sólo un número de funciones que se pueden ver listadas allí.
+
+232
+00:13:38.000 --> 00:13:39.001
+El ratón te permite hacerlo.
+
+233
+00:13:39.001 --> 00:13:42.001
+Y Louise, estos sistemas están realmente en uso ahora. Esto no es sólo una...
+
+234
+00:13:42.001 --> 00:13:48.000
+Eso es justo. Además de Hawthorne, hay uno en Norwalk. Tampoco hemos tenido
+
+235
+00:13:48.000 --> 00:13:50.001
+se han contratado para instalarlos en varios otros lugares.
+
+236
+00:13:50.001 --> 00:13:53.001
+Bueno, gracias muy, muy mucho. Ahora, en un minuto, vamos a
+
+237
+00:13:53.001 --> 00:13:57.000
+Washington y visitar el FBI para ver el absoluto más ligero en los ordenadores que ayudan
+
+238
+00:13:57.000 --> 00:13:58.001
+para combatir los crímenes. Así que permanezcan con nosotros.
+
+239
+00:14:06.000 --> 00:14:11.000
+Esta es la sede del FBI en la capital del país. Si alguien debería saber cómo
+
+240
+00:14:11.000 --> 00:14:14.000
+Utilice computadoras para capturar crooks, debe ser estos chicos.
+
+241
+00:14:14.000 --> 00:14:17.001
+Y saben cómo, con una colección sofisticada de las últimas
+
+242
+00:14:17.001 --> 00:14:19.000
+hardware y software de ordenador.
+
+243
+00:14:20.000 --> 00:14:24.000
+El FBI ha invertido medio mil millones de dólares en computadoras. Tienen siete
+
+244
+00:14:24.000 --> 00:14:27.000
+los principales, muchos con backups conjugados, aquí en el
+
+245
+00:14:27.000 --> 00:14:28.001
+Centro Nacional de Información del Crimen.
+
+246
+00:14:29.000 --> 00:14:34.001
+Las estadísticas aquí son sobresalientes. 250 mil millones de caracteres de almacenamiento masivo, 17
+
+247
+00:14:34.001 --> 00:14:38.000
+millones de registros, 500.000 transacciones al día.
+
+248
+00:14:38.000 --> 00:14:42.001
+Y hablando de redes, hay 20.000 terminales que acceden a este sistema.
+
+249
+00:14:43.000 --> 00:14:47.000
+Los ordenadores han dado al FBI capacidades de investigación, que nunca pudo
+
+250
+00:14:47.000 --> 00:14:49.001
+En los días de 3x5 tarjetas de índice.
+
+251
+00:14:49.001 --> 00:14:53.001
+Un ejemplo es un reciente caso de asesinato que involucra a un juez en Texas.
+
+252
+00:14:54.000 --> 00:14:58.001
+Un alibi para uno de los sospechosos era que estaba en un lugar diferente. Nos hemos ido
+
+253
+00:14:58.001 --> 00:15:02.001
+a través de todos los registros del hotel buscando el nombre o alias del sospechoso.
+
+254
+00:15:02.001 --> 00:15:09.000
+Utilizando una lógica de búsqueda de ordenador y la lógico de ajuste para fechas y alianzas y
+
+255
+00:15:09.000 --> 00:15:14.000
+los nombres, pudimos entonces identificar el hecho y señalar el hecho de que nuestro
+
+256
+00:15:14.000 --> 00:15:18.000
+El primer sospechoso estaba en San Antonio, la noche del asesinato.
+
+257
+00:15:18.000 --> 00:15:23.000
+Una de las principales prioridades del FBI es el terrorismo interno. Y con su nuevo ordenador
+
+258
+00:15:23.000 --> 00:15:26.000
+sistemas, ahora puede proporcionar inteligencia sofisticada
+
+259
+00:15:26.000 --> 00:15:28.000
+Incluso para los agentes en el campo.
+
+260
+00:15:28.001 --> 00:15:35.000
+Un agente está conduciendo su coche en Route 10 desde El Paso, hacia el oeste, siguiendo un
+
+261
+00:15:35.000 --> 00:15:38.000
+de los sospechosos terroristas.
+
+262
+00:15:38.001 --> 00:15:45.001
+Ahora puede esperar para acceder a cualquier base de datos del FBI desde ese coche mientras
+
+263
+00:15:45.001 --> 00:15:47.000
+Lo conduce en tiempo real.
+
+264
+00:15:47.001 --> 00:15:51.000
+Y será capaz de hacerlo mientras conduce, y todavía puede mantener su
+
+265
+00:15:51.000 --> 00:15:55.000
+vigilancia visual de este vehículo terrorista sospechoso.
+
+266
+00:15:55.000 --> 00:16:01.000
+El FBI también utiliza perfiles de comportamiento generados por ordenador. En la crisis de los asesinos, el
+
+267
+00:16:01.000 --> 00:16:05.001
+La agencia consulta a sus ordenadores para predecir el comportamiento terrorista para ayudar
+
+268
+00:16:05.001 --> 00:16:07.001
+desarrollar su estrategia de negociación.
+
+269
+00:16:08.000 --> 00:16:11.001
+Los perfiles de comportamiento se utilizan no sólo para capturar a los criminales después de que el delito
+
+270
+00:16:11.001 --> 00:16:15.000
+se ha cometido, pero para evitar que los crímenes ocurran en primer lugar.
+
+271
+00:16:15.000 --> 00:16:21.001
+Tenemos un archivo que es patrocinado por la U. El S. Servicio secreto de amenazas a la federación
+
+272
+00:16:21.001 --> 00:16:25.000
+protectores, el presidente y otros que están protegidos por la ley.
+
+273
+00:16:26.001 --> 00:16:30.001
+Después de que ese archivo había sido activado durante una hora, hubo un golpe en el sistema de
+
+274
+00:16:30.001 --> 00:16:33.001
+Alguien en su camino a Washington con una amenaza contra el presidente.
+
+275
+00:16:33.001 --> 00:16:38.000
+Por primera vez, los Estados Unidos. El servicio secreto tiene la capacidad de saber ahora
+
+276
+00:16:38.000 --> 00:16:43.000
+donde hay personas que están fuera, que no están detenidas o detenidas,
+
+277
+00:16:43.001 --> 00:16:45.001
+Pero los que son amenazas, amenazos legítimos.
+
+278
+00:16:46.000 --> 00:16:50.001
+El FBI es más orgulloso de su uso de inteligencia artificial, en particular OSIS,
+
+279
+00:16:51.000 --> 00:16:53.000
+El Sistema de Información del Crimen Organizado.
+
+280
+00:16:53.001 --> 00:16:57.000
+Es un sistema de expertos que utiliza conocimientos ingenieros de los principales agentes del FBI.
+
+281
+00:16:57.000 --> 00:17:02.000
+Aplica sus reglas a una base de datos masiva que busca conducta sospechosa. por
+
+282
+00:17:02.000 --> 00:17:06.000
+Por ejemplo, en esta demostración fictificada, el agente del FBI puede investigar un
+
+283
+00:17:06.000 --> 00:17:10.001
+individuo o organización particular, pida al ordenador que explore una variedad de
+
+284
+00:17:10.001 --> 00:17:15.000
+Pide al ordenador por qué recomienda un curso de acción, o qué
+
+285
+00:17:15.000 --> 00:17:16.001
+Lo conocemos en un área particular.
+
+286
+00:17:17.000 --> 00:17:22.000
+OSIS puede incluso grabar sospechosas relaciones ilegales, y en demanda, puede pop
+
+287
+00:17:22.000 --> 00:17:23.001
+Un perfil de cualquier sospechoso.
+
+288
+00:17:24.001 --> 00:17:28.000
+Gary, no conseguimos ver algunas de las mejores cosas en el FBI debido a la seguridad
+
+289
+00:17:28.000 --> 00:17:31.000
+las consideraciones, pero te aseguro que sus sistemas informáticos son muy sofisticados.
+
+290
+00:17:31.000 --> 00:17:33.000
+Oh, bueno, algunas de nuestras propias sofisticaciones en este segmento.
+
+291
+00:17:33.001 --> 00:17:36.001
+Yo creo así. Introducimos a los dos huéspedes que nos han llegado ahora. El Dr. Erlena
+
+292
+00:17:36.001 --> 00:17:39.001
+Bush, que es el presidente de Sistemas de Acceso a la Información de Boulder, Colorado,
+
+293
+00:17:40.000 --> 00:17:43.000
+David Hall, director de programas de sistemas de información en
+
+294
+00:17:43.000 --> 00:17:45.000
+Grupo de búsqueda, Inc., de Sacramento.
+
+295
+00:17:45.001 --> 00:17:46.001
+Entonces, ¿nos dirías algo sobre la prueba 1?
+
+296
+00:17:46.001 --> 00:17:51.000
+Probe 1 es un sistema de gestión de información de investigación. Es decir, es una
+
+297
+00:17:51.000 --> 00:17:55.001
+Sistema de apoyo profesional para los investigadores. En su primer capítulo, usted
+
+298
+00:17:55.001 --> 00:17:59.001
+Tenía sistemas de datos de mando en los que tenía Sherlock. Creo que
+
+299
+00:17:59.001 --> 00:18:01.000
+Podemos llamarlo Watson.
+
+300
+00:18:01.001 --> 00:18:03.000
+Mostra lo que puede hacer Watson.
+
+301
+00:18:03.000 --> 00:18:09.001
+En esencia, lo que hace, voy a romper la parte más dulce, permite a los investigadores
+
+302
+00:18:09.001 --> 00:18:15.001
+Introduce solicitudes para modus operandi en sus propias palabras.
+
+303
+00:18:16.001 --> 00:18:21.000
+En este caso, estoy preguntando el sistema, estoy pretendiendo como si yo fuera un detective, estoy
+
+304
+00:18:21.000 --> 00:18:26.001
+pidiendo al sistema que me entregue documentos en los que se produjo un homicidio, la víctima
+
+305
+00:18:26.001 --> 00:18:29.001
+Fue atacado, y el cadáver fue encontrado en el coche, simplemente eso.
+
+306
+00:18:29.001 --> 00:18:35.001
+El sistema vuelve y dice que funciona. Lo que está haciendo, está tratando de mi
+
+307
+00:18:35.001 --> 00:18:39.001
+Solicitud como un documento. Es decir, está determinando el tema
+
+308
+00:18:39.001 --> 00:18:41.001
+El tema del documento.
+
+309
+00:18:41.001 --> 00:18:45.000
+Ahora, ¿cuál es la fuente del material en este caso? ¿Qué es la búsqueda?
+
+310
+00:18:46.000 --> 00:18:52.001
+Está buscando, en realidad, una serie de telexes sobre asesinatos. Hemos cambiado todo
+
+311
+00:18:52.001 --> 00:18:56.000
+Los nombres y los hechos correctos.
+
+312
+00:18:56.001 --> 00:19:00.000
+Un investigador normalmente tendría que leer todo este material, intentarlo y asimilarlo
+
+313
+00:19:00.000 --> 00:19:01.001
+Descubre lo que es relevante, lo que no es relevante.
+
+314
+00:19:02.000 --> 00:19:06.001
+No sólo tendrían que leerlo, tienen que ir a encontrarlo. En esencia, el
+
+315
+00:19:06.001 --> 00:19:09.000
+El sistema funciona como un muy buen asistente de investigación.
+
+316
+00:19:09.000 --> 00:19:10.000
+¿Qué le dijo el sistema?
+
+317
+00:19:10.001 --> 00:19:14.001
+Ok, en primer lugar, el sistema regresó y me dijo que hay 28 documentos
+
+318
+00:19:14.001 --> 00:19:19.000
+que son relevantes para mi solicitud, y que los ordenó para mí.
+
+319
+00:19:19.001 --> 00:19:21.001
+Desculpa, cuando dices relevante a tu solicitud, ¿qué significa?
+
+320
+00:19:21.001 --> 00:19:26.000
+En términos muy humanos, es como lo es en materia.
+
+321
+00:19:26.001 --> 00:19:29.001
+Bueno, encontraron otros casos que se relacionan con las víctimas atacantes y encontraron en coches.
+
+322
+00:19:29.001 --> 00:19:30.000
+y correcta.
+
+323
+00:19:30.001 --> 00:19:31.001
+Y en concreto, ¿qué te dice?
+
+324
+00:19:31.001 --> 00:19:37.000
+Y me cuenta cuán cerca está. Es decir, el primero está muy cerca. Sería una
+
+325
+00:19:37.000 --> 00:19:39.000
+El ojo del bull, justo en, así para hablar.
+
+326
+00:19:39.001 --> 00:19:44.000
+El segundo y el tercero están muy lejos, y están cerca unos de otros.
+
+327
+00:19:44.000 --> 00:19:45.000
+¿Puedo dar un vistazo a esta?
+
+328
+00:19:45.001 --> 00:19:48.000
+Bueno, así que puedes sacar el registro ahora en ese primer documento, que el
+
+329
+00:19:48.000 --> 00:19:51.000
+El ordenador dice que es muy similar a la situación que describes.
+
+330
+00:19:51.000 --> 00:19:51.001
+[...]
+
+331
+00:19:52.000 --> 00:19:54.001
+Lo que significa que podría haber sido cometido por el mismo hombre, por ejemplo.
+
+332
+00:19:55.000 --> 00:19:59.001
+Este es el concepto general detrás del modus operandi, que
+
+333
+00:19:59.001 --> 00:20:01.000
+Se repetirá un patrón.
+
+334
+00:20:01.000 --> 00:20:02.000
+Bueno, ¿qué te dice?
+
+335
+00:20:02.000 --> 00:20:08.000
+Bueno, es describir a una mujer que fue atacada y golpeada
+
+336
+00:20:08.000 --> 00:20:11.001
+y a la izquierda. Ella fue llevada a mano en el coche.
+
+337
+00:20:13.000 --> 00:20:18.001
+No obstante, el documento no contiene el término homicidio, que sería un básico
+
+338
+00:20:18.001 --> 00:20:21.001
+requerimiento en cualquier tipo de tecnología de palabras clave.
+
+339
+00:20:22.000 --> 00:20:23.000
+Por favor, diga un poco sobre la tecnología.
+
+340
+00:20:24.001 --> 00:20:29.000
+Vamos a tomar el sentido mismo. ¿Lo tomas separado, lo parás, descubras dónde está el
+
+341
+00:20:29.000 --> 00:20:30.001
+¿Las verbas y los adjetivos y así sucesivamente?
+
+342
+00:20:31.000 --> 00:20:34.001
+No, lo que hacemos en el frente es decir al sistema el tema
+
+343
+00:20:34.001 --> 00:20:36.000
+Lo que importa es que se va a tratar.
+
+344
+00:20:36.000 --> 00:20:41.001
+En este caso, se trata de los asesinatos. En otra instalación que hemos hecho, fue
+
+345
+00:20:41.001 --> 00:20:43.001
+Documentación de apoyo minero.
+
+346
+00:20:44.000 --> 00:20:47.000
+En otro caso, se trata de la biblioteca legal.
+
+347
+00:20:47.000 --> 00:20:49.001
+Por lo tanto, hay ciertas palabras en ella que sólo serían los titulares del lugar,
+
+348
+00:20:50.000 --> 00:20:51.001
+El y o y así por delante.
+
+349
+00:20:51.001 --> 00:20:52.001
+Estos son ignorados.
+
+350
+00:20:53.000 --> 00:20:56.000
+Bueno, y así, ¿cómo realmente realiza este proceso de ajuste?
+
+351
+00:20:56.000 --> 00:20:59.000
+Preanálisis de todos estos documentos y figuras
+
+352
+00:20:59.000 --> 00:21:01.000
+¿Es que las palabras se corresponden entre sí?
+
+353
+00:21:01.000 --> 00:21:06.000
+No, analizamos el tema y los términos que hacen distinciones entre
+
+354
+00:21:06.000 --> 00:21:11.000
+cuestiones subjetivas, tales como las capturas de neumáticos relacionadas con la investigación del escenario del crimen,
+
+355
+00:21:11.001 --> 00:21:14.000
+La víctima se refiere al asesinato.
+
+356
+00:21:15.000 --> 00:21:18.000
+David, ahora este sistema se está utilizando, como entiendo, en el estado de Washington.
+
+357
+00:21:18.000 --> 00:21:21.001
+En el caso del asesinato del Río Verde, la investigación, que no ha sido resuelta.
+
+358
+00:21:22.000 --> 00:21:25.000
+Trabaja con los departamentos de policía en todo el país. Cuánto hace la policía
+
+359
+00:21:25.000 --> 00:21:28.000
+¿Los departamentos comparten estos tipos de bases de datos y este tipo de información?
+
+360
+00:21:29.000 --> 00:21:31.000
+Bases de datos del tipo de que Erlene habla
+
+361
+00:21:31.000 --> 00:21:32.001
+Aquí es muy difícil compartir.
+
+362
+00:21:33.001 --> 00:21:35.000
+Debido a su propia naturaleza,
+
+363
+00:21:35.000 --> 00:21:36.001
+Tienen que enviar los documentos de vuelta y de vuelta.
+
+364
+00:21:36.001 --> 00:21:39.001
+No hay sistema para diseñar en este momento para poder
+
+365
+00:21:39.001 --> 00:21:41.001
+transferir estos sistemas hacia atrás y hacia adelante fácilmente.
+
+366
+00:21:43.000 --> 00:21:45.001
+Tienes que saber lo que estás buscando cuando contactas con otro
+
+367
+00:21:45.001 --> 00:21:47.000
+Policía y pedirle algo.
+
+368
+00:21:47.001 --> 00:21:50.001
+¿Acaso ves que esta tendencia cambia? ¿Hay, quiero decir, que vamos a
+
+369
+00:21:50.001 --> 00:21:52.000
+¿Comienza a ver una integración de estos sistemas o no?
+
+370
+00:21:52.000 --> 00:21:56.001
+Creo en el desarrollo de este tipo de sistema y otros sistemas de este
+
+371
+00:21:56.001 --> 00:22:01.001
+tipo, como se refiere al FBI, que veremos mucho más grande
+
+372
+00:22:01.001 --> 00:22:03.001
+compartir este tipo de información.
+
+373
+00:22:04.000 --> 00:22:08.001
+¿Cuánto frecuentemente se utilizan estos tipos de sistemas sofisticados? Por lo tanto, costó un
+
+374
+00:22:08.001 --> 00:22:11.000
+El principal factor en si o no un departamento de policía
+
+375
+00:22:11.000 --> 00:22:12.001
+¿Puedo acceder a este tipo de soporte informático?
+
+376
+00:22:13.000 --> 00:22:19.001
+Definitivamente . para obtener los fondos de los municipios o de los estados o
+
+377
+00:22:19.001 --> 00:22:21.001
+Los municipios involucrados son un proceso difícil.
+
+378
+00:22:21.001 --> 00:22:26.000
+La adquisición de este tipo de sistema es muy difícil.
+
+379
+00:22:27.001 --> 00:22:29.001
+¿Hay... Lo siento, Gary
+
+380
+00:22:29.001 --> 00:22:33.000
+Siempre hay una pregunta cada vez que estamos hablando de grandes bases de datos y
+
+381
+00:22:33.000 --> 00:22:36.001
+Esta cuestión de acceso y cerraduras y claves y así sucesivamente.
+
+382
+00:22:37.000 --> 00:22:39.000
+¿Véis que esto aparece también en la colección de
+
+383
+00:22:39.000 --> 00:22:40.001
+información sobre personas relacionadas con el delito.
+
+384
+00:22:42.000 --> 00:22:46.000
+Depende de quién tiene acceso a la información. Lo principal que somos
+
+385
+00:22:46.000 --> 00:22:49.000
+La preocupación es quién tendrá acceso a lo que
+
+386
+00:22:49.000 --> 00:22:50.001
+tipo de información o qué circunstancias.
+
+387
+00:22:51.001 --> 00:22:56.000
+La información de este tipo que estamos refiriendo sólo estaría abierta a
+
+388
+00:22:56.000 --> 00:22:57.001
+La justicia penal, las agencias de justicia criminal.
+
+389
+00:22:57.001 --> 00:23:01.000
+Y esto no sería algo que veríamos en el público que
+
+390
+00:23:01.000 --> 00:23:04.000
+¿Puede ser que los medios de comunicación o algo así, porque
+
+391
+00:23:04.000 --> 00:23:05.001
+Es del tipo de sistema que es.
+
+392
+00:23:06.001 --> 00:23:10.001
+Erlene, es el uso del sistema de sonda en el caso del asesinato del Río Verde el primer
+
+393
+00:23:10.001 --> 00:23:12.000
+¿Cuándo se ha utilizado de esta manera?
+
+394
+00:23:12.001 --> 00:23:15.001
+De esa manera, sí. La otra aplicación fue la automatización de oficinas.
+
+395
+00:23:16.001 --> 00:23:19.000
+Ah Ah Ah ¿Y cuál es el feedback hasta ahora? ¿Qué hace el
+
+396
+00:23:19.000 --> 00:23:20.001
+¿La policía en el estado de Washington piensa en esto?
+
+397
+00:23:20.001 --> 00:23:26.000
+Bueno, me gustaría haber tenido al oficial Shoemaker en el espectáculo porque él
+
+398
+00:23:26.000 --> 00:23:27.001
+El administrador del sistema está ahí.
+
+399
+00:23:27.001 --> 00:23:30.001
+Él es bastante familiar con la tecnología y bastante entusiasta.
+
+400
+00:23:30.001 --> 00:23:34.001
+Y también, siempre hay una pregunta que surge también en programas como este.
+
+401
+00:23:35.000 --> 00:23:39.001
+¿Cuántas decisiones se tomarán por el programa en el sentido de que cuando el
+
+402
+00:23:39.001 --> 00:23:44.000
+Programas que se unen hay que conducir a ciertos casos más a menudo que otros.
+
+403
+00:23:45.000 --> 00:23:48.000
+¿Los investigadores realmente van de vuelta y comprobar y asegurarse de que
+
+404
+00:23:48.000 --> 00:23:49.001
+¿Son los casos relevantes?
+
+405
+00:23:51.000 --> 00:23:54.001
+Los ordenadores no toman las decisiones. Ellos simplemente recomiendan el...
+
+406
+00:23:54.001 --> 00:24:00.001
+El juicio que hace el ordenador es simplemente en referencia a la base del documento y
+
+407
+00:24:00.001 --> 00:24:04.000
+determinados documentos relacionados con la solicitud.
+
+408
+00:24:04.000 --> 00:24:05.000
+Para el desgaste de la estación relay.
+
+409
+00:24:05.001 --> 00:24:09.000
+Muchas gracias mucho. Ahora, es fascinante tener este increíble ordenador
+
+410
+00:24:09.000 --> 00:24:12.001
+la capacidad de ayudar a los funcionarios de la ley en la búsqueda de los delincuentes.
+
+411
+00:24:13.000 --> 00:24:15.000
+Hay algunas preocupaciones, por supuesto, acerca de estas masivas
+
+412
+00:24:15.000 --> 00:24:16.001
+bases de datos y lo que se puede hacer con ellos.
+
+413
+00:24:17.000 --> 00:24:20.000
+Hay algunas preguntas éticas clásicas de techno y nuestro comentarista George
+
+414
+00:24:20.000 --> 00:24:21.001
+Morrow trata de proporcionar algunas respuestas.
+
+415
+00:24:22.001 --> 00:24:25.000
+Raramente se escuchan los ordenadores mencionados en
+
+416
+00:24:25.000 --> 00:24:26.001
+las quejas que tienen que ver con la aplicación de la ley.
+
+417
+00:24:27.000 --> 00:24:30.000
+No quiero decir que no tenemos nada que preocuparnos en este ámbito.
+
+418
+00:24:30.001 --> 00:24:34.001
+No obstante, las técnicas utilizadas en las pruebas de auditoría y los registros de acceso de seguridad,
+
+419
+00:24:34.001 --> 00:24:38.001
+que protegen los sistemas operativos y el software de contabilidad, son herramientas que pueden
+
+420
+00:24:38.001 --> 00:24:41.001
+el abuso de la información por parte del personal de aplicación de la ley al mínimo.
+
+421
+00:24:42.001 --> 00:24:44.000
+Necesitamos garantías en esta zona.
+
+422
+00:24:44.000 --> 00:24:48.001
+Pero igualmente importante, tenemos que entender que la misma naturaleza del crimen hace
+
+423
+00:24:48.001 --> 00:24:51.001
+Las computadoras son potencialmente una herramienta productiva para nuestros departamentos de policía.
+
+424
+00:24:52.001 --> 00:24:56.001
+Los criminales casi siempre repiten la forma en que cometen un delito, y los ordenadores son
+
+425
+00:24:56.001 --> 00:25:00.000
+Especialmente bueno en detectar y analizar patrones repetitivos.
+
+426
+00:25:00.001 --> 00:25:04.000
+Además, pueden ahorrar tiempo y esfuerzo con la multitud de papel, que es
+
+427
+00:25:04.000 --> 00:25:08.000
+convertirse en una mayor parte del día de un policía, ya sea en relación con un delito
+
+428
+00:25:08.000 --> 00:25:11.001
+o como parte de algo tan simple como la rutina como un accidente de coche.
+
+429
+00:25:12.000 --> 00:25:15.000
+Hoy, hay una fuerte competencia para nuestros dólares fiscales,
+
+430
+00:25:15.000 --> 00:25:17.000
+que no cambiará en un futuro cercano.
+
+431
+00:25:18.000 --> 00:25:21.000
+Los ordenadores pueden hacer que estos dólares fiscales trabajen más duro para nosotros en la aplicación de la ley.
+
+432
+00:25:21.001 --> 00:25:23.001
+Así es como lo veo. Yo soy George Morrow.
+
+433
+00:25:31.000 --> 00:25:35.001
+En el archivo de acceso aleatorio esta semana, parece que el 21 de enero será el día
+
+434
+00:25:35.001 --> 00:25:38.001
+IBM finalmente lanza varios nuevos productos esperados.
+
+435
+00:25:38.001 --> 00:25:43.000
+Se espera que se introducan ese día son el portátil de laptop clamshell y el
+
+436
+00:25:43.000 --> 00:25:44.000
+Nuevo Top View 1.1.
+
+437
+00:25:44.001 --> 00:25:48.001
+La nueva versión de Top View añadirá funciones de red y soporte
+
+438
+00:25:48.001 --> 00:25:53.000
+para los discos floppy de 3,5 pulgadas, pero aparentemente no resolverá el problema de
+
+439
+00:25:53.000 --> 00:25:55.000
+Los límites de 640K de MS-DOS.
+
+440
+00:25:56.000 --> 00:26:00.000
+Atari planea introducir una nueva versión actualizada del 520ST.
+
+441
+00:26:00.000 --> 00:26:04.000
+El nuevo ordenador será llamado el 1040ST, y como el nombre implica, será
+
+442
+00:26:04.000 --> 00:26:05.001
+Tiene más de un megabyte de memoria.
+
+443
+00:26:05.001 --> 00:26:10.001
+El 1040 también mejorará en el 520 integrando el suministro de energía y la
+
+444
+00:26:10.001 --> 00:26:13.000
+disque en la unidad principal, eliminando así el
+
+445
+00:26:13.000 --> 00:26:15.000
+El cable actual se mezcla con el 520.
+
+446
+00:26:15.001 --> 00:26:20.000
+Atari también anunció que una nueva versión del 520ST con un convertidor RF será
+
+447
+00:26:20.000 --> 00:26:22.001
+Comienza a aparecer en las placas de las tiendas de mercancías de masas
+
+448
+00:26:22.001 --> 00:26:24.001
+como Kmart y Toys R Us.
+
+449
+00:26:25.001 --> 00:26:29.000
+En nuestro archivo de actualización legislativa, varias piezas principales de la legislación informática
+
+450
+00:26:29.000 --> 00:26:32.001
+permanecerá infinitamente cuando el Congreso reconozca para 1986.
+
+451
+00:26:32.001 --> 00:26:37.000
+Incluyen leyes sobre protección de derechos de autor, delitos informáticos y privacidad informática,
+
+452
+00:26:37.001 --> 00:26:39.001
+y las disposiciones para los créditos fiscales de R&amp;D.
+
+453
+00:26:40.001 --> 00:26:43.000
+Epson y Toshiba anuncian el desarrollo de un nuevo color
+
+454
+00:26:43.000 --> 00:26:45.000
+Dispositores LCD para ordenadores.
+
+455
+00:26:45.001 --> 00:26:50.000
+Epson dice que su nueva pantalla de 5 pulgadas es 10 veces más brillante que el negro existente
+
+456
+00:26:50.000 --> 00:26:55.000
+pantalla LCD blanca con una resolución de 480 por 440 píxeles.
+
+457
+00:26:55.000 --> 00:27:00.001
+Un optometrista californiano dice que la razón por la que los usuarios de ordenadores sufren estrés ocular es
+
+458
+00:27:00.001 --> 00:27:03.001
+Porque los ojos se centran en un punto más allá del plano de la pantalla.
+
+459
+00:27:04.000 --> 00:27:08.000
+Así que ha llegado con un modelo de VDT, que dice que te ayuda
+
+460
+00:27:08.000 --> 00:27:09.001
+Concéntrate los ojos en el nivel correcto.
+
+461
+00:27:09.001 --> 00:27:12.000
+Se llama EyeSaver, y cuesta $15.
+
+462
+00:27:13.000 --> 00:27:16.001
+Bueno, los médicos ya no pueden hacer llamadas domésticas, pero un nuevo programa llama
+
+463
+00:27:16.001 --> 00:27:18.000
+La llamada de la casa puede ser un sustituto.
+
+464
+00:27:18.000 --> 00:27:24.000
+Sus desarrolladores dicen que convierte su PC en un MD con la capacidad de diagnosticar algunos
+
+465
+00:27:24.000 --> 00:27:25.001
+400 problemas médicos comunes.
+
+466
+00:27:26.000 --> 00:27:30.000
+House Call viene en dos discos de doble densidad y se vende por $40.
+
+467
+00:27:32.000 --> 00:27:35.000
+Por último, si has visto la película Young Sherlock Holmes y te has preguntado cómo
+
+468
+00:27:35.000 --> 00:27:39.000
+hizo que el hombre de vidrio salta de la ventana y saca su sangre
+
+469
+00:27:39.000 --> 00:27:43.000
+espada, la respuesta es un nuevo ordenador gráfico de la Luz Industrial y
+
+470
+00:27:43.000 --> 00:27:45.000
+Magia, una división de Lucas Films.
+
+471
+00:27:45.000 --> 00:27:49.000
+El ordenador se llama Pixar, y no sólo creó la imagen, sino que
+
+472
+00:27:49.000 --> 00:27:52.000
+se combina electrónicamente con el escáner por láser con el
+
+473
+00:27:52.000 --> 00:27:54.000
+Imagen de la película existente del actor.
+
+474
+00:27:54.001 --> 00:27:59.001
+Los 38 segundos de la película llevaron a Pixar y seis ingenieros nueve meses para crear.
+
+475
+00:28:00.000 --> 00:28:03.000
+Esto es lo que es para las crónicas informáticas de esta semana. Te veremos de nuevo la próxima vez.
+
+476
+00:28:45.000 --> 00:29:07.001
+Gracias por ver.

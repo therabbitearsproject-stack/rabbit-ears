@@ -1,0 +1,1429 @@
+WEBVTT
+
+1
+00:00:22.001 --> 00:00:28.000
+Micro Focus, pencipta alat pemrograman visual untuk pengembangan perangkat lunak.
+
+2
+00:00:28.000 --> 00:00:31.000
+Komputer kronik senang memberikan dana besar
+
+3
+00:00:31.000 --> 00:00:33.000
+Untuk komputer kronik.
+
+4
+00:00:33.001 --> 00:00:36.001
+Sejarah evolusi yang berlanjut ini.
+
+5
+00:00:42.000 --> 00:00:46.001
+Selamat datang di komputer kronik. Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+6
+00:00:47.001 --> 00:00:51.000
+Pada program hari ini kita akan berbicara tentang perangkat penyimpanan massa, cakera
+
+7
+00:00:51.000 --> 00:00:55.000
+drive, floppy disk, Winchester, dan beberapa teknologi terbaru untuk
+
+8
+00:00:55.000 --> 00:00:57.001
+Meningkatkan penyimpanan massal data komputer.
+
+9
+00:00:57.001 --> 00:01:02.000
+Dan kita akan bertemu dengan Alan Shugart, salah satu perintis dalam teknologi drive disk.
+
+10
+00:01:02.001 --> 00:01:06.001
+Gary, kita menyebut drive cakera sebagai peripheral, tetapi sebenarnya itu tampaknya bagi saya dari semua
+
+11
+00:01:06.001 --> 00:01:09.001
+Peripheral, cakera adalah benar-benar bagian kunci dari sistem komputer.
+
+12
+00:01:09.001 --> 00:01:12.000
+Sebenarnya tidak banyak aplikasi serius yang bisa Anda lakukan.
+
+13
+00:01:12.000 --> 00:01:13.001
+Beroperasi di komputer tanpa cakera.
+
+14
+00:01:14.000 --> 00:01:18.000
+Itu benar sekali benar. Model tradisional dari sebuah komputer termasuk backup
+
+15
+00:01:18.000 --> 00:01:22.001
+perangkat penyimpanan, unit pemrosesan pusat, dan memori utama atau memori pusat.
+
+16
+00:01:23.000 --> 00:01:26.001
+Dan itu sebenarnya adalah penurunan dari tiga komponen yang benar-benar menyebabkan
+
+17
+00:01:26.001 --> 00:01:28.001
+Revolusi mikro komputer di tempat pertama.
+
+18
+00:01:29.000 --> 00:01:33.001
+Pada awal 1970-an, kita sudah memiliki memori semikonduktor yang menggantikan inti.
+
+19
+00:01:33.001 --> 00:01:38.000
+penyimpanan dan perusahaan-perusahaan yang mulai memproduksi chip mikroprosesor ini.
+
+20
+00:01:38.001 --> 00:01:41.001
+Dan itu benar-benar tidak sampai cakera floppy datang sekitar bahwa kami memiliki lengkap
+
+21
+00:01:41.001 --> 00:01:44.001
+Sistem komputer yang dapat digunakan untuk melakukan hal-hal yang berguna, seperti yang Anda sebutkan.
+
+22
+00:01:45.001 --> 00:01:49.000
+Menariknya, disk drive adalah benar-benar satu-satunya bagian dari itu, yang satu-satu
+
+23
+00:01:49.000 --> 00:01:51.001
+adalah komponen dari sistem di mana masih mekanis.
+
+24
+00:01:52.001 --> 00:01:54.001
+Dan akan menarik untuk berbicara dengan para ahli kami
+
+25
+00:01:54.001 --> 00:01:56.000
+Hari ini dan lihat di mana mereka pikir ia akan pergi.
+
+26
+00:01:56.000 --> 00:01:58.000
+Apakah kita akan bertahan dengan penyimpanan mekanikal atau apakah itu akan
+
+27
+00:01:58.000 --> 00:01:59.001
+Menjadi semikonduktor juga?
+
+28
+00:02:00.000 --> 00:02:03.001
+Okay, sebelum kita bertemu tetamu kita, kita akan melihat sedikit sejarah
+
+29
+00:02:03.001 --> 00:02:05.001
+teknologi penyimpanan massa.
+
+30
+00:02:07.000 --> 00:02:10.001
+Kemajuan dalam bidang penyimpanan memori massa untuk komputer telah diarahkan
+
+31
+00:02:10.001 --> 00:02:12.001
+dengan tiga kebutuhan dasar.
+
+32
+00:02:12.001 --> 00:02:17.000
+Volume dan kepadatan informasi dan kecepatan akses ke informasi tersebut.
+
+33
+00:02:18.000 --> 00:02:22.000
+Pada tahun 1950-an, penyimpanan data komputer meminjam teknologi rekaman yang digunakan.
+
+34
+00:02:22.000 --> 00:02:24.001
+oleh engineer suara, tape magnetik.
+
+35
+00:02:24.001 --> 00:02:27.001
+Seperti pendahulunya, rekaman kabel, oksida
+
+36
+00:02:27.001 --> 00:02:29.001
+Data yang disimpan secara berurutan.
+
+37
+00:02:30.000 --> 00:02:33.001
+Untuk mencapai informasi yang disimpan di akhir reel berarti berjalan melalui segala sesuatu
+
+38
+00:02:33.001 --> 00:02:35.001
+disimpan di pita sampai titik itu.
+
+39
+00:02:35.001 --> 00:02:39.001
+Kurang dari drive tape yang lebih cepat, satu-satunya cara untuk membuat data lebih mudah diakses adalah dengan
+
+40
+00:02:39.001 --> 00:02:42.000
+Mengubah format media rekaman.
+
+41
+00:02:43.000 --> 00:02:46.001
+Penyimpanan cakera, yang memungkinkan akses rawak ke informasi, sudah berada di bawah
+
+42
+00:02:46.001 --> 00:02:50.001
+perkembangan di pertengahan 50-an, tetapi popularitas dan potensi teknik ini
+
+43
+00:02:50.001 --> 00:02:52.001
+Ini menjadi jelas hanya dalam dekade terakhir.
+
+44
+00:02:53.000 --> 00:02:58.000
+Plat 24 inci asli hanya tersimpan pada 5. 25 inci dalam diameter, sementara bit
+
+45
+00:02:58.000 --> 00:03:02.001
+Densitas meningkat 3.900 kali, dari beberapa ribu bit ke hampir 8
+
+46
+00:03:02.001 --> 00:03:04.000
+1 juta bit per inci persegi.
+
+47
+00:03:04.000 --> 00:03:08.000
+Perbaikan yang membawa kepada kemajuan ini hari ini telah memberikan jalan untuk pendekatan baru
+
+48
+00:03:08.000 --> 00:03:11.000
+Ini menjanjikan peningkatan drastis lagi dalam kepadatan penyimpanan.
+
+49
+00:03:12.000 --> 00:03:16.000
+Kepala film yang lebih tipis adalah kepala yang lebih kecil, lebih sensitif membaca-menulis, yang dimungkinkan oleh
+
+50
+00:03:16.000 --> 00:03:18.000
+Teknologi yang dikembangkan dalam produksi chip.
+
+51
+00:03:19.000 --> 00:03:22.001
+Karena komponen mereka yang lebih muda, mereka dapat membaca bit yang tercatat jauh lebih dekat
+
+52
+00:03:22.001 --> 00:03:26.001
+bersama-sama di jalur yang lebih sempit, sekitar 12 juta per inci persegi.
+
+53
+00:03:27.000 --> 00:03:30.001
+Perkembangan lain yang disebut rekaman perpendikular magnetisasi permukaan cakera
+
+54
+00:03:30.001 --> 00:03:34.000
+dengan pulsa yang terdaftar secara vertikal, bit data yang tercatat pada
+
+55
+00:03:34.000 --> 00:03:36.000
+Berakhir, bukan disusun secara horizontal.
+
+56
+00:03:36.001 --> 00:03:40.001
+Sekali lagi, efeknya dramatis. Perubahan kecil ini dalam penyelarasan data
+
+57
+00:03:40.001 --> 00:03:44.000
+Ini berarti peningkatan kapasitas penyimpanan dua hingga tiga kali lipat.
+
+58
+00:03:50.001 --> 00:03:53.001
+Saat ini ia bergabung dengan Alan Shugart. Dia adalah salah satu pioneer
+
+59
+00:03:53.001 --> 00:03:55.000
+dalam industri drive disk.
+
+60
+00:03:55.001 --> 00:03:59.000
+Alan bekerja dengan IBM, kemudian dia memulai perusahaan sendiri Shugart Corporation,
+
+61
+00:03:59.000 --> 00:04:01.000
+Dan kemudian dia memulai perusahaan lain, Seagate.
+
+62
+00:04:01.000 --> 00:04:02.001
+Selamat Datang ke Komputer Chronicles.
+
+63
+00:04:03.001 --> 00:04:03.001
+Sampaikan terima kasih
+
+64
+00:04:04.001 --> 00:04:08.000
+Alan, saya tidak tahu jika Anda tahu ini, tetapi saya mendapatkan drive disk pertama saya dari Anda
+
+65
+00:04:08.000 --> 00:04:10.000
+perusahaan sebelumnya, Shugart Associates, dan mereka
+
+66
+00:04:10.000 --> 00:04:11.001
+Dia memberikannya kepada saya secara gratis pada saat itu.
+
+67
+00:04:12.000 --> 00:04:13.000
+Aku tidak melakukannya lagi kan?
+
+68
+00:04:13.000 --> 00:04:16.001
+Aku ingat itu. Aku ingat itu. Aku menolak untuk menyerah apa pun.
+
+69
+00:04:17.000 --> 00:04:20.000
+Saya pikir itu adalah 10.000 jam di sebuah test drive. Mereka adalah
+
+70
+00:04:20.000 --> 00:04:21.001
+Dia memberikan saya set baru yang membawa untuk pergi dengan itu juga.
+
+71
+00:04:24.000 --> 00:04:28.001
+Apakah Anda berpikir bahwa floppy disk drive benar-benar instrumental dalam
+
+72
+00:04:28.001 --> 00:04:30.000
+Menghapus seluruh revolusi mikrokomputer?
+
+73
+00:04:31.000 --> 00:04:36.000
+Tidak ada keraguan dalam pikiran saya bahwa pengenalan floppy 8 inci benar-benar terbukti
+
+74
+00:04:36.000 --> 00:04:40.001
+teknologi, tetapi pengenalan floppy 5-1-1 inci benar-benar memperluas
+
+75
+00:04:40.001 --> 00:04:42.001
+Pasar dan disediakan untuk ledakan besar.
+
+76
+00:04:43.000 --> 00:04:44.000
+Tidak ada pertanyaan sama sekali.
+
+77
+00:04:44.001 --> 00:04:49.000
+Kami memiliki perangkat ini sekarang yang disebut cakera Winchester atau cakera keras,
+
+78
+00:04:49.000 --> 00:04:54.001
+Dan mereka tampaknya keluar dari Seagate, tentu saja, sebagai perusahaan utama di
+
+79
+00:04:54.001 --> 00:04:58.000
+daerah itu. Bagaimana sistem hard disk akan mempengaruhi komputer pribadi?
+
+80
+00:04:58.000 --> 00:05:02.001
+Nah, saya pikir apa yang dilakukan sistem hard disk adalah benar-benar melengkapi dengan
+
+81
+00:05:02.001 --> 00:05:07.000
+floppy, dan apa yang akan dilakukan adalah memperluas kapasitas desktop kecil
+
+82
+00:05:07.000 --> 00:05:12.000
+Komputer untuk melakukan beberapa pekerjaan yang sangat besar yang membutuhkan banyak penyimpanan.
+
+83
+00:05:13.000 --> 00:05:17.000
+Anda tidak melihat komputer desktop kecil dengan sistem cakera keras yang juga tidak
+
+84
+00:05:17.000 --> 00:05:20.000
+Ada juga mini floppy di dalamnya.
+
+85
+00:05:21.000 --> 00:05:23.001
+Ada cara untuk mendapatkan data dari satu sistem komputer ke sistem lain.
+
+86
+00:05:23.001 --> 00:05:26.000
+secara mutlak. Ini adalah input output dan backup.
+
+87
+00:05:26.000 --> 00:05:31.000
+Salah satu kritikan untuk menggunakan cakera keras pada komputer kecil, ketika Anda memindahkannya
+
+88
+00:05:31.000 --> 00:05:33.001
+Di sekitar, orang-orang khawatir tentang kebolehpercayaan.
+
+89
+00:05:34.000 --> 00:05:35.001
+Apa perasaanmu tentang hal itu? Apakah ada masalah dengan
+
+90
+00:05:35.001 --> 00:05:38.000
+Mengangkut cakera Winchester di sekitar?
+
+91
+00:05:38.001 --> 00:05:43.000
+Tentu saja, cakera Winchester jauh lebih rentan terhadap kerusakan akibat kejutan dan
+
+92
+00:05:43.000 --> 00:05:48.000
+vibrasi lebih dari floppy, dan itu karena media dan kepala magnet memiliki
+
+93
+00:05:48.000 --> 00:05:51.000
+Tetap di sana sepanjang waktu, dan kepala berada dalam kontak dengan media.
+
+94
+00:05:51.000 --> 00:05:54.001
+Jika Anda membungkusnya terlalu banyak, Anda mungkin memiliki beberapa masalah, di mana di
+
+95
+00:05:54.001 --> 00:05:59.000
+Floppy, Anda dapat mengeluarkan kepala disk floppy itu sendiri ketika Anda mengangkutnya.
+
+96
+00:05:59.000 --> 00:06:02.000
+Jadi Winchester jauh lebih halus.
+
+97
+00:06:02.000 --> 00:06:03.001
+Apakah itu sesuatu yang akan menjadi
+
+98
+00:06:03.001 --> 00:06:05.001
+Apakah masalah ini akan diperlakukan di masa depan?
+
+99
+00:06:05.001 --> 00:06:10.000
+Nah, saya pikir mereka menjadi lebih baik dan lebih baik. Saya pikir yang baru
+
+100
+00:06:10.000 --> 00:06:15.001
+Versi menjadi jauh lebih tahan kejutan dengan beban udara yang lebih kuat
+
+101
+00:06:15.001 --> 00:06:17.000
+Dan begitu juga, meskipun saya pikir mereka menjadi lebih baik.
+
+102
+00:06:18.000 --> 00:06:22.000
+Nah, salah satu hal yang kita miliki di sini adalah drive disk floppy 5-1-1-4 inci, dan
+
+103
+00:06:22.000 --> 00:06:26.000
+Hal ini agak umum. Ini muncul di komputer pribadi.
+
+104
+00:06:27.001 --> 00:06:33.001
+Dan ia memiliki banyak peralatan mekanis di dalamnya. Ada sedikit bola dan kepala
+
+105
+00:06:33.001 --> 00:06:37.000
+yang muncul di sini, dan ada papan untuk mendekodkan seluruh sirkuit, atau
+
+106
+00:06:37.000 --> 00:06:39.000
+informasi yang datang dari kepala.
+
+107
+00:06:40.000 --> 00:06:44.000
+Dan tampaknya ada banyak mekanik di sana, jenis Model T dari
+
+108
+00:06:44.000 --> 00:06:45.001
+Komputer dalam beberapa hal.
+
+109
+00:06:45.001 --> 00:06:50.001
+Di sini kita memiliki papan memori bubble. Hal ini terjadi pada
+
+110
+00:06:50.001 --> 00:06:52.000
+yang diproduksi oleh Intel Corporation.
+
+111
+00:06:53.000 --> 00:06:58.000
+Dan ini adalah modul memori gelembung itu sendiri yang merupakan chip 1 megabit.
+
+112
+00:06:58.001 --> 00:07:03.001
+Sekarang, beberapa orang akan mengatakan bahwa jenis perangkat ini akan digantikan
+
+113
+00:07:03.001 --> 00:07:07.001
+Akhirnya dengan perangkat memori semikonduktor.
+
+114
+00:07:07.001 --> 00:07:08.001
+Apa perasaanmu tentang hal itu, Al?
+
+115
+00:07:08.001 --> 00:07:14.000
+Nah, saya tidak berpikir itu akan terjadi. Sekarang, floppy disk drive secara teoritis memiliki
+
+116
+00:07:14.000 --> 00:07:17.001
+kapasitas penyimpanan tak terbatas karena Anda dapat terus menghapus kepala cakera dan
+
+117
+00:07:17.001 --> 00:07:19.001
+Masukkan kepala disk baru ke dalam.
+
+118
+00:07:19.001 --> 00:07:24.000
+Jadi benar-benar memiliki kapasitas penyimpanan offline yang tidak terbatas, yang
+
+119
+00:07:24.000 --> 00:07:25.001
+Memori bubble tidak ada.
+
+120
+00:07:26.001 --> 00:07:31.001
+Jadi pada dasar biaya per bit, saya tidak berpikir Anda akan pernah mengalahkan cakera magnet
+
+121
+00:07:31.001 --> 00:07:35.000
+Penyimpanan dengan perangkat semikonduktor atau memori gelembung.
+
+122
+00:07:35.000 --> 00:07:39.001
+Al, Anda mengatakan 5-1⁄4-inch disk itu benar-benar ukuran yang diperoleh
+
+123
+00:07:39.001 --> 00:07:41.000
+Komputer pribadi yang bergerak.
+
+124
+00:07:42.000 --> 00:07:45.000
+Kami melihat di sini sebuah komputer yang menggunakan 3-1⁄2-inch, dan di sini adalah 3
+
+125
+00:07:45.000 --> 00:07:46.001
+1 inci micro floppy.
+
+126
+00:07:47.000 --> 00:07:50.000
+Apakah Anda melihat ukuran ini sebagai pengganti format 5-1⁄4-inch?
+
+127
+00:07:51.000 --> 00:07:55.001
+Tidak, aku tidak Saya pikir ada pasar untuk ukuran yang lebih kecil, dan saya tidak tahu
+
+128
+00:07:55.001 --> 00:08:00.000
+Jika itu akan menjadi 3-1⁄2 atau 3-1⁄4, 3 atau 3-3⁄4.
+
+129
+00:08:00.001 --> 00:08:04.001
+Tampaknya ada banyak format yang berbeda untuk menjadi standar.
+
+130
+00:08:04.001 --> 00:08:08.000
+Mungkin ada lebih dari satu standar, tapi saya tidak melihat bahwa mereka tidak akan pernah menggantikan
+
+131
+00:08:08.000 --> 00:08:12.001
+5-1⁄4-inch mini floppy karena program dunia ditulis pada mini
+
+132
+00:08:12.001 --> 00:08:17.000
+floppies, dan Anda tidak akan pernah dapat, dalam imajinasi paling liar Anda,
+
+133
+00:08:18.000 --> 00:08:20.001
+Tuliskan semua program tersebut ke cakera yang lebih kecil.
+
+134
+00:08:20.001 --> 00:08:22.000
+Itu hanya tidak akan dilakukan.
+
+135
+00:08:23.000 --> 00:08:26.000
+Anda tahu, mungkin layak untuk hanya menghabiskan satu menit berbicara tentang yang lain
+
+136
+00:08:26.000 --> 00:08:30.000
+teknologi yang tampaknya muncul hari-hari ini, dan itu adalah salah satu cakera video.
+
+137
+00:08:31.000 --> 00:08:33.001
+Tiba-tiba ada yang ada di atas meja.
+
+138
+00:08:33.001 --> 00:08:34.001
+Seperti si penyihir bersama Anda.
+
+139
+00:08:38.001 --> 00:08:39.001
+“Tidak ada Beatles yang lengkap.
+
+140
+00:08:41.000 --> 00:08:44.000
+Dan di sini ia mengatakan bahwa jika Anda menarik barang-barang kecil ini keluar, Anda mendapatkan ...
+
+141
+00:08:45.000 --> 00:08:48.000
+Kami baru saja mengajarkan semua orang bagaimana untuk mendapatkan cakera video di sana.
+
+142
+00:08:49.000 --> 00:08:55.000
+Sekarang, ini terjadi menjadi cakera video RCA, dan
+
+143
+00:08:55.000 --> 00:08:57.000
+Ini adalah cakera video linear.
+
+144
+00:08:57.000 --> 00:09:01.001
+Ini tidak dibangun untuk menjadi perangkat akses rawak, setidaknya cara ia direkodkan.
+
+145
+00:09:03.000 --> 00:09:07.001
+Dan saya pikir mereka mengatakan mereka memiliki sesuatu seperti 10 gigabytes? Apakah itu benar?
+
+146
+00:09:08.000 --> 00:09:08.001
+[...] bisa dibayangkan.
+
+147
+00:09:08.001 --> 00:09:09.000
+satu gigabyte
+
+148
+00:09:09.001 --> 00:09:10.000
+Jumlah yang sangat besar, bagaimanapun.
+
+149
+00:09:10.001 --> 00:09:15.000
+Dan itu adalah setara dengan Encyclopedia Britannica.
+
+150
+00:09:15.001 --> 00:09:20.000
+Sekarang, ada apa-apa aplikasi untuk hal ini, katakanlah, komputer pribadi
+
+151
+00:09:20.000 --> 00:09:22.000
+Sebagai alat penyimpanan?
+
+152
+00:09:23.000 --> 00:09:25.001
+Saya tidak berpikir demikian, kecuali mungkin untuk beberapa penyimpanan arkib.
+
+153
+00:09:25.001 --> 00:09:30.001
+Masalah dengan jenis teknologi ini adalah salah satu tingkat kesalahan.
+
+154
+00:09:31.000 --> 00:09:35.000
+Rekaman jenis hiburan untuk audio atau video, Anda dapat memiliki banyak
+
+155
+00:09:35.000 --> 00:09:37.001
+Kesalahan, dan mata dan telinga Anda tidak dapat mendengarnya.
+
+156
+00:09:38.000 --> 00:09:41.001
+Dan tingkat kesalahan yang terkait dengan jenis teknologi ini,
+
+157
+00:09:41.001 --> 00:09:43.000
+Ada beberapa urutan ukuran.
+
+158
+00:09:44.000 --> 00:09:48.000
+Kurang dapat diandalkan dari kebutuhan komputasi bisnis.
+
+159
+00:09:49.000 --> 00:09:53.000
+Disk drive, kebolehpercayaan data disk drive adalah beberapa perintah
+
+160
+00:09:53.000 --> 00:09:56.000
+Magnitude lebih baik dari yang dapat Anda dapatkan pada jenis teknologi ini.
+
+161
+00:09:56.001 --> 00:09:59.001
+Sekarang, itu adalah cakera video non-optik.
+
+162
+00:10:00.000 --> 00:10:03.001
+Hal ini terdengar seperti disebut CED. Ini adalah versi RCA dari cakera video.
+
+163
+00:10:03.001 --> 00:10:09.001
+Ya ya. Bagaimana dengan perangkat optik, cakera jenis laser? Apakah itu lebih dapat diandalkan?
+
+164
+00:10:09.001 --> 00:10:15.000
+Nah, saya pikir memori optik yang Anda lihat diiklankan di kertas sepanjang waktu
+
+165
+00:10:15.000 --> 00:10:18.001
+Sekarang, itu benar-benar untuk penyimpanan arkib.
+
+166
+00:10:18.001 --> 00:10:20.001
+Anda menulisnya, dan kemudian itu akan tetap sama selamanya.
+
+167
+00:10:21.001 --> 00:10:24.001
+Dan saya pikir ada tempat di sistem komputer untuk optik
+
+168
+00:10:24.001 --> 00:10:26.000
+Memori untuk penyimpanan arkib.
+
+169
+00:10:26.001 --> 00:10:32.000
+Tapi penilaian saya tentang memori optik yang memiliki kemampuan update, seperti yang dapat Anda lakukan
+
+170
+00:10:32.000 --> 00:10:36.000
+Dengan penyimpanan cakera magnet, masih dalam tahap keingintahuan laboratorium.
+
+171
+00:10:36.001 --> 00:10:41.001
+Bagaimana tentang saya telah mendengar tentang rekaman magnet perpendikular sebagai cara untuk
+
+172
+00:10:41.001 --> 00:10:45.000
+mengatur data pada cakera sehingga Anda dapat mendapatkan lebih banyak volume, lebih banyak kepadatan.
+
+173
+00:10:45.000 --> 00:10:47.000
+Beritahu saya apa itu dan di mana itu berada.
+
+174
+00:10:48.001 --> 00:10:54.000
+Nah, ketika Anda menyimpan data pada permukaan magnet cakera, apa yang Anda lakukan
+
+175
+00:10:54.000 --> 00:10:58.000
+Apakah Anda mengalir magnet kecil yang Anda tidak bisa benar-benar melihat, tetapi ada
+
+176
+00:10:58.000 --> 00:11:01.000
+magnet kecil di cakera yang berbaring di sisi mereka, dan Anda mencatat
+
+177
+00:11:01.000 --> 00:11:03.001
+sesuatu, Anda flip magnet itu di atas, dan kemudian Anda dapat mendeteksi
+
+178
+00:11:03.001 --> 00:11:05.000
+kemudian pada itu Anda flip magnet itu.
+
+179
+00:11:06.000 --> 00:11:10.000
+Dan hanya ada begitu banyak magnet kecil yang berbaring rata yang dapat Anda dapatkan di
+
+180
+00:11:10.000 --> 00:11:13.000
+permukaan cakera tertentu, dan itulah kapasitas ketumpatan rekaman.
+
+181
+00:11:14.000 --> 00:11:17.000
+Jika Anda dapat dengan cara apa pun mendapatkan magnet kecil itu berdiri di akhir,
+
+182
+00:11:17.001 --> 00:11:19.000
+Itu seperti tali kayu.
+
+183
+00:11:19.001 --> 00:11:22.000
+Anda dapat mendapatkan lebih banyak kayu berdiri di hujung daripada Anda dapat berbaring rata.
+
+184
+00:11:22.001 --> 00:11:26.000
+Dan jika Anda dapat mendapatkan mereka berdiri di hujung dan kemudian flip mereka dan mendeteksi flip,
+
+185
+00:11:26.000 --> 00:11:29.000
+Anda dapat mendapatkan lebih banyak penyimpanan data di area tertentu daripada Anda.
+
+186
+00:11:29.000 --> 00:11:30.001
+Dengan mereka semua bisa berbaring.
+
+187
+00:11:30.001 --> 00:11:33.000
+Dan saya pikir rekaman vertikal pasti dalam kartu.
+
+188
+00:11:33.001 --> 00:11:39.000
+Mengenai 5 1⁄2 inci mini floppy, sekali lagi, satu cara Anda dapat mendapatkan lebih banyak pada
+
+189
+00:11:39.000 --> 00:11:42.000
+ada untuk menggunakan kedua sisi cakera, dan ada beberapa kontroversi tentang
+
+190
+00:11:42.000 --> 00:11:45.001
+Apakah itu ide yang baik atau tidak dan apakah cakera dua sisi sama-sama dapat diandalkan.
+
+191
+00:11:46.000 --> 00:11:46.001
+Apa pendapat Anda tentang hal ini?
+
+192
+00:11:47.001 --> 00:11:52.001
+Nah, saya tidak yakin dengan apa yang tersedia sekarang, apakah itu lebih dapat diandalkan atau apakah itu
+
+193
+00:11:52.001 --> 00:11:55.000
+kurang dapat diandalkan atau tidak, tetapi tidak ada alasan dasar.
+
+194
+00:11:55.001 --> 00:11:57.001
+Saya tidak percaya mengapa dua sisi tidak harus sama seperti
+
+195
+00:11:57.001 --> 00:11:59.001
+dapat diandalkan sebagai satu sisi.
+
+196
+00:11:59.001 --> 00:12:04.001
+Saya pikir mungkin beberapa penjual di industri memperluas teknologi lebih jauh
+
+197
+00:12:04.001 --> 00:12:06.001
+yang seharusnya dan tidak melakukan hal-hal lain.
+
+198
+00:12:07.000 --> 00:12:11.000
+Dan sebagai hasilnya, floppy kepadatan dua sisi, dua jalur memiliki nama yang buruk.
+
+199
+00:12:11.001 --> 00:12:14.001
+Dan dalam beberapa kasus, mereka mungkin tidak begitu dapat diandalkan seperti yang baik tua 48
+
+200
+00:12:14.001 --> 00:12:18.001
+-track-per-inch satu sisi, tetapi tidak ada dasar teknis
+
+201
+00:12:18.001 --> 00:12:20.001
+Alasan mengapa mereka tidak sepatutnya sama dapat diandalkan.
+
+202
+00:12:22.001 --> 00:12:27.000
+Dan dari sudut pandang pengguna, ada perbedaan besar dalam kualitas
+
+203
+00:12:27.000 --> 00:12:29.000
+Sebuah mini floppy disk yang Anda beli?
+
+204
+00:12:30.001 --> 00:12:32.000
+Gee, aku tidak tahu. Saya tidak membeli banyak.
+
+205
+00:12:33.001 --> 00:12:39.000
+Tapi saya maksud, dalam teknologi manufaktur, medium itu sendiri, saya maksudkan, Anda
+
+206
+00:12:39.000 --> 00:12:41.001
+tahu, ada variasi harga yang berbeda dan sebagainya, dan dari titik pengguna
+
+207
+00:12:41.001 --> 00:12:43.000
+Apakah mereka semua sama atau tidak semua sama?
+
+208
+00:12:43.000 --> 00:12:46.000
+Saya benar-benar tidak bisa memberitahu Anda. Saya yakin Gary lebih akrab dengan itu daripada saya,
+
+209
+00:12:46.000 --> 00:12:50.000
+Tapi saya tidak menggunakan banyak floppies, jadi saya benar-benar tidak bisa memberitahu Anda.
+
+210
+00:12:50.000 --> 00:12:51.000
+Gary, bisa kau katakan?
+
+211
+00:12:51.001 --> 00:12:55.000
+Saya tidak punya masalah khusus dengan siapa pun.
+
+212
+00:12:55.000 --> 00:12:57.000
+media yang telah saya jalani selama bertahun-tahun.
+
+213
+00:12:57.000 --> 00:12:59.001
+Saya telah menemukan kebolehpercayaan yang tersendiri dalam hampir semua ini.
+
+214
+00:13:00.000 --> 00:13:03.001
+Saya pikir, seperti yang disebutkan oleh Alan, ini terutama berdasarkan jenis elektronik
+
+215
+00:13:03.001 --> 00:13:05.000
+orang-orang yang memasukkan mesin-mesin ini.
+
+216
+00:13:05.001 --> 00:13:07.001
+Baiklah, tuan-tuan, dan kami akan mengambil istirahat singkat.
+
+217
+00:13:07.001 --> 00:13:11.000
+Dalam sekejap saja, kami akan bergabung dengan seorang pria dari Memorex, dan Anda akan
+
+218
+00:13:11.000 --> 00:13:14.000
+Anda dapat memutuskan untuk diri sendiri apakah dia di sini hidup atau di atas tape.
+
+219
+00:13:22.000 --> 00:13:25.000
+Nah, bergabung dengan kami sekarang adalah Frank Sordello dari Memorex.
+
+220
+00:13:25.000 --> 00:13:29.000
+Frank adalah wakil presiden perusahaan untuk teknologi di sana, seperti Alan Shugart.
+
+221
+00:13:29.000 --> 00:13:31.001
+Frank adalah dengan IBM jalan kembali ketika, saya percaya.
+
+222
+00:13:32.000 --> 00:13:36.000
+Dan juga, Frank adalah pemegang 38 paten dalam magnetik
+
+223
+00:13:36.000 --> 00:13:37.001
+Teknologi rekaman dan disk.
+
+224
+00:13:38.000 --> 00:13:38.001
+Gary, Anda ingin memulai?
+
+225
+00:13:39.000 --> 00:13:41.000
+Dengan latar belakang seperti itu, saya yakin Anda dapat memberikan
+
+226
+00:13:41.000 --> 00:13:43.000
+Kami memiliki ide yang bagus tentang apa yang sedang terjadi.
+
+227
+00:13:43.000 --> 00:13:46.000
+Frank, Anda memiliki beberapa jenis plat yang berbeda di sini.
+
+228
+00:13:46.000 --> 00:13:47.001
+Dapatkah Anda memberitahu kami sedikit tentang apa yang Anda miliki?
+
+229
+00:13:47.001 --> 00:13:48.000
+Tentu saja .
+
+230
+00:13:49.001 --> 00:13:55.000
+Plat dengan substrate tebal yang kita lihat di sini adalah produk terbaru kami
+
+231
+00:13:55.000 --> 00:13:57.000
+Lantai dengan diameter 14 inci.
+
+232
+00:13:58.000 --> 00:14:04.000
+Untuk Memorex Corporation, itu adalah 3680 1. 2 gigabyte per
+
+233
+00:14:04.000 --> 00:14:06.000
+Spindle disk file platter.
+
+234
+00:14:06.000 --> 00:14:07.001
+Anda bisa membawanya, mungkin, Frank?
+
+235
+00:14:07.001 --> 00:14:09.000
+Kami akan memberikan gambaran tentang apa yang Anda bicarakan.
+
+236
+00:14:09.001 --> 00:14:09.001
+Tentu saja .
+
+237
+00:14:10.001 --> 00:14:16.001
+Item kunci dengan teknologi file disk berprestasi tinggi terbaru terdiri dari:
+
+238
+00:14:16.001 --> 00:14:21.000
+Adjektif tebal dan tipis, substrate tebal, itulah ketebalan
+
+239
+00:14:21.000 --> 00:14:25.000
+substrate aluminium, dan kepala film tipis yang pergi dengan itu.
+
+240
+00:14:26.000 --> 00:14:30.001
+Dengan itu, kita dapat menyimpan kapasitas yang saya sebutkan, yang
+
+241
+00:14:30.001 --> 00:14:36.000
+sama dengan semua kata dan huruf dalam empat set lengkap ensiklopedia,
+
+242
+00:14:36.000 --> 00:14:40.001
+Britannica, Americana, Buku Pengetahuan, dan mungkin bahkan Funkenwagnalls.
+
+243
+00:14:41.000 --> 00:14:42.001
+Di salah satu piring itu?
+
+244
+00:14:42.001 --> 00:14:45.001
+Tidak, pada sembilan plat dari satu spindle di perangkat.
+
+245
+00:14:47.001 --> 00:14:49.001
+Dan apa lagi yang kita miliki di sini?
+
+246
+00:14:50.000 --> 00:14:56.000
+Nah, ini adalah substrat yang lebih tipis, substrat aluminium 75-milli-inch, delapan-inch
+
+247
+00:14:56.000 --> 00:15:00.001
+plat disk yang digunakan dalam beberapa produk yang lebih kecil dari hari ini.
+
+248
+00:15:01.000 --> 00:15:06.001
+Dan ini adalah plat disk lima dan seperempat inci yang digunakan dalam
+
+249
+00:15:06.001 --> 00:15:08.000
+Ada yang disebut Winchester Mini Drive.
+
+250
+00:15:08.000 --> 00:15:11.000
+Itulah yang kita bicarakan di sini.
+
+251
+00:15:11.001 --> 00:15:11.001
+Ya ya.
+
+252
+00:15:12.000 --> 00:15:15.001
+Ini adalah oksida partikel sama seperti plat ini.
+
+253
+00:15:16.000 --> 00:15:20.000
+Ini adalah plat film tipis, yang merupakan generasi berikutnya plat.
+
+254
+00:15:21.001 --> 00:15:26.001
+Sekarang, Anda menyebutkan, Frank, medium tebal di sini dan kepala film tipis
+
+255
+00:15:26.001 --> 00:15:28.001
+dan teknologi. Beritahu kami apa yang tepat.
+
+256
+00:15:28.001 --> 00:15:32.001
+Semua kanan, kepala pada dasarnya adalah kuku yang terikat dengan kabel yang diikat di sekitar mereka.
+
+257
+00:15:32.001 --> 00:15:36.000
+Teknologi ini terdiri dari ukuran kuku bent.
+
+258
+00:15:36.001 --> 00:15:42.000
+Untuk meletakkan 15.000 bit per inci di sepanjang lingkaran piring,
+
+259
+00:15:42.001 --> 00:15:45.001
+ukuran kuku, selimut yang setara di sekitar
+
+260
+00:15:45.001 --> 00:15:47.001
+kuku, harus sangat, sangat kecil.
+
+261
+00:15:48.001 --> 00:15:53.001
+Saat ini, produk kepala ferrite, dan saat ini dalam delapan tahun terakhir, memiliki
+
+262
+00:15:53.001 --> 00:15:58.000
+dilakukan dengan melapisi dan menggarap dan menggerakkan dimensi geometrik dari
+
+263
+00:15:58.000 --> 00:16:00.000
+yang disebut, kutipan, kuku, unquote.
+
+264
+00:16:00.001 --> 00:16:06.001
+Industri semikonduktor telah mengajarkan kita bagaimana meletakkan komputer pada chip menggunakan
+
+265
+00:16:06.001 --> 00:16:11.000
+Fotolithography dan teknik deposit, teknik deposit film tipis.
+
+266
+00:16:11.001 --> 00:16:16.000
+Oleh karena itu, teknologi kepala film tipis terdiri dari produksi ekvivalent
+
+267
+00:16:16.000 --> 00:16:23.000
+dari kuku bent, menggunakan fotolithografi untuk mendapatkan dimensi yang berada di
+
+268
+00:16:23.000 --> 00:16:27.001
+jutaths dari satu inci, dan pengulangan dan produksi massal.
+
+269
+00:16:28.000 --> 00:16:30.000
+Apakah itu sebuah film tipis yang berkepala atas
+
+270
+00:16:30.000 --> 00:16:31.001
+di sana? Mungkin Anda bisa menunjukkan kepada kami bagaimana hal itu terlihat.
+
+271
+00:16:31.001 --> 00:16:37.000
+Ya ya. Ini adalah 3680s film tipis rekaman magnet head arm assembly.
+
+272
+00:16:38.000 --> 00:16:44.000
+Ada empat kepala di akhir. Top 2 Layanan Bagian Bawah
+
+273
+00:16:44.000 --> 00:16:46.000
+dari cakera atas.
+
+274
+00:16:46.000 --> 00:16:50.001
+Dua bagian bawah melayani permukaan atas cakera bawah.
+
+275
+00:16:52.000 --> 00:16:59.000
+Kepala ini terdiri dari slider yang membawa udara, yang memiliki sepasang sayap
+
+276
+00:16:59.000 --> 00:17:05.000
+atau skis, dan di belakang, sangat sulit untuk dilihat, tetapi dapat dilihat dalam gambar,
+
+277
+00:17:05.001 --> 00:17:09.001
+Foto mikro, adalah elemen film tipis yang telah disimpan.
+
+278
+00:17:11.000 --> 00:17:16.000
+Perangkat ini dapat merekam 12. 5 juta bit untuk setiap
+
+279
+00:17:16.000 --> 00:17:17.001
+1 inci persegi dari permukaan cakera.
+
+280
+00:17:19.000 --> 00:17:21.001
+Fred, apakah Anda merasa seperti Anda akan mencapai apa-apa jenis batasan mekanik?
+
+281
+00:17:21.001 --> 00:17:24.000
+di sini pada titik tertentu, atau apakah Anda akan dapat hanya mengekalkan
+
+282
+00:17:24.000 --> 00:17:25.001
+Mendapatkan ini lebih padat, lebih padang?
+
+283
+00:17:26.000 --> 00:17:31.000
+Nah, kami telah merancang dalam rencana strategis kami apa batasan itu.
+
+284
+00:17:32.000 --> 00:17:35.000
+Ada tiga pengukuran kunci dalam setiap produk file disk.
+
+285
+00:17:35.000 --> 00:17:39.000
+Mereka terdiri dari jumlah trek per inci di sepanjang radius cakera.
+
+286
+00:17:39.001 --> 00:17:41.001
+Yang kedua adalah jumlah bit per inci.
+
+287
+00:17:41.001 --> 00:17:43.000
+sekitar lingkaran cakera.
+
+288
+00:17:43.001 --> 00:17:47.000
+Dan parameter utama ketiga adalah produk dari dua, jalur
+
+289
+00:17:47.000 --> 00:17:48.001
+per inch kali bit per inch.
+
+290
+00:17:49.001 --> 00:17:53.001
+Pada produk saat ini yang diproduksi secara massal dengan kepala film tipis dan maju
+
+291
+00:17:53.001 --> 00:18:00.001
+media partikel, kami memiliki 800 jalur per inci, 15,200
+
+292
+00:18:00.001 --> 00:18:04.000
+Bits per inci, dan produk keluar 12. 5 juta bit per inci persegi.
+
+293
+00:18:04.000 --> 00:18:10.000
+Melalui kepala film tipis tambahan dan media film tifus yang akan membuatnya
+
+294
+00:18:10.000 --> 00:18:16.000
+Dalam waktu singkat, kepadatan udara akan berubah dengan faktor 16 kali.
+
+295
+00:18:16.001 --> 00:18:23.000
+Kami memiliki prinsip-prinsip di mana kita dapat meningkatkan kepadatan udara sebanyak 16 kali dalam
+
+296
+00:18:23.000 --> 00:18:27.000
+Perintah 200 juta bit per inci persegi.
+
+297
+00:18:27.001 --> 00:18:31.000
+Apa faktor biaya yang terlibat dalam teknologi kepala tipis ini?
+
+298
+00:18:31.000 --> 00:18:36.000
+Nah, jika kita melihat kepala rekaman, itu terdiri dari dua bagian, udara membawa
+
+299
+00:18:36.000 --> 00:18:40.000
+slider, yang merupakan bagian yang lebih besar yang Anda lihat, dan kemudian transducer magnet,
+
+300
+00:18:40.000 --> 00:18:43.001
+Apa yang saya sebut kuku bent sebelumnya, bagian yang ada di belakang.
+
+301
+00:18:44.000 --> 00:18:50.000
+Jika kita membandingkannya dengan kepala Winchester ferrite produksi massal hari ini dan
+
+302
+00:18:50.000 --> 00:18:55.001
+Teknologi yang lebih tua, kita menemukan bahwa biaya slider udara adalah kira-kira sama.
+
+303
+00:18:56.000 --> 00:19:01.000
+Transducer akhirnya akan memiliki biaya yang lebih rendah sama seperti biaya tiub vakum
+
+304
+00:19:01.000 --> 00:19:03.000
+kurang dari peralatan negara yang kuat.
+
+305
+00:19:03.001 --> 00:19:09.001
+Faktor biaya produk lima, enam tahun dari sekarang akan berada dalam urutan 3 untuk
+
+306
+00:19:09.001 --> 00:19:13.000
+5 persen lebih sedikit, tetapi tidak sedikit.
+
+307
+00:19:13.001 --> 00:19:19.000
+Namun, jika Anda mencoba untuk membuat kepala ferrite untuk melakukan pada kemampuan
+
+308
+00:19:19.000 --> 00:19:24.000
+dari kepala film tipis, maka gambar biaya akan diputar.
+
+309
+00:19:24.000 --> 00:19:28.000
+Ketika kita berbicara tentang teknologi kepala film tipis, yang hanya berkaitan dengan
+
+310
+00:19:28.000 --> 00:19:31.000
+Disk keras Winchester, atau apakah itu memiliki aplikasi untuk floppies?
+
+311
+00:19:31.000 --> 00:19:33.001
+Ini memiliki aplikasi untuk semua rekaman magnet.
+
+312
+00:19:34.001 --> 00:19:40.000
+Bahan-bahan film tipis, yang begitu baik untuk rakaman magnet,
+
+313
+00:19:40.001 --> 00:19:44.001
+Mereka relatif lembut, dan oleh karena itu mereka memiliki masalah memakai.
+
+314
+00:19:45.001 --> 00:19:52.000
+Disk keras memiliki slider yang membawa udara, yang memungkinkan kepala untuk terbang pada 13
+
+315
+00:19:52.000 --> 00:19:56.000
+sampai 15 jutaths dari satu inci di atas permukaan, oleh karena itu tidak ada pengeringan.
+
+316
+00:19:56.001 --> 00:19:59.000
+Oleh karena itu, kepala film tipis membuat debut mereka di sana terlebih dahulu.
+
+317
+00:19:59.001 --> 00:20:04.000
+Ketika masalah berpakaian diselesaikan, kepala film tipis akan menemukan jalan melalui
+
+318
+00:20:04.000 --> 00:20:06.001
+Floppies, tape drive, semua rekaman magnet.
+
+319
+00:20:06.001 --> 00:20:09.001
+Untuk mencoba menghargai jarak itu, saya pikir Anda memiliki analogi tentang
+
+320
+00:20:09.001 --> 00:20:11.001
+pesawat, bukan kamu, untuk membantu kita memahami itu?
+
+321
+00:20:11.001 --> 00:20:13.000
+Ya, itu adalah satu klasik.
+
+322
+00:20:13.001 --> 00:20:17.001
+Produk dari delapan tahun yang lalu, ketinggian terbang adalah 20 juta
+
+323
+00:20:17.001 --> 00:20:24.001
+1 inci, di atas permukaan bumi.
+
+324
+00:20:25.001 --> 00:20:30.001
+Produk yang dipamerkan di sini, terbang pada 13 mikro inci, dimensi ini adalah
+
+325
+00:20:30.001 --> 00:20:33.001
+Lebih dekat 1 enam belas dari satu inci di atas permukaan bumi.
+
+326
+00:20:34.001 --> 00:20:38.000
+Alan, dari perspektif Anda dan akhir bisnis Anda, ini adalah
+
+327
+00:20:38.000 --> 00:20:40.000
+Faktor utama dalam apa yang Anda lakukan?
+
+328
+00:20:41.000 --> 00:20:45.001
+Saat ini, saat ini, itu tidak, karena kepadatan rekaman yang kita miliki,
+
+329
+00:20:45.001 --> 00:20:48.001
+yang kita perlukan dalam produk kita, tidak perlu jenis teknologi itu.
+
+330
+00:20:48.001 --> 00:20:52.001
+Pada suatu saat di masa depan, kita akan mengharapkan kepala film tipis akan digunakan dalam
+
+331
+00:20:52.001 --> 00:20:55.000
+Produk-produk kecil dan sangat mahal juga.
+
+332
+00:20:55.001 --> 00:21:02.001
+Sangat menarik untuk dicatat bahwa ini adalah 1. 2 gigabytes per spindle, yang berarti,
+
+333
+00:21:03.000 --> 00:21:06.001
+Jika kita kembali ke diskusi asli kita tentang cakera video, ini hanya tentang
+
+334
+00:21:06.001 --> 00:21:08.001
+Ukuran yang sama dengan cakera video itu, sekitar.
+
+335
+00:21:09.001 --> 00:21:13.000
+Dan ada banyak perbincangan di industri tentang bagaimana Anda melakukan beberapa
+
+336
+00:21:13.000 --> 00:21:15.001
+simulasi cakera video, dan mungkin ini adalah bagian dari jawaban, adalah dalam
+
+337
+00:21:15.001 --> 00:21:18.000
+1.2 gigabyte per spindle
+
+338
+00:21:19.001 --> 00:21:22.000
+Sangat cepat, hanya sedikit waktu yang tersisa. ini
+
+339
+00:21:22.000 --> 00:21:23.001
+Ini adalah sesuatu yang saya anggap layak diperhatikan.
+
+340
+00:21:24.000 --> 00:21:27.001
+Ini adalah kartu laser, yang kita hanya perlu melihat, yang tampaknya memiliki dua
+
+341
+00:21:27.001 --> 00:21:29.000
+Megabyte informasi tentang hal ini.
+
+342
+00:21:29.001 --> 00:21:32.001
+Frank, apakah Anda melihat perangkat penyimpanan optik sebagai pengganti di
+
+343
+00:21:32.001 --> 00:21:34.000
+Bagaimana dengan perangkat penyimpanan magnet?
+
+344
+00:21:35.000 --> 00:21:41.001
+Ya, ketika satu hal terjadi, ketika yang dapat dihapus, masa nyata yang dapat dikeluarkan,
+
+345
+00:21:42.000 --> 00:21:47.001
+Sama seperti rekaman magnetik dapat dihapus dalam waktu nyata, media optik membuat debutnya,
+
+346
+00:21:48.000 --> 00:21:53.000
+Kemudian saya percaya kita akan melihat kejatuhan eksponensial pada waktu rekaman magnet.
+
+347
+00:21:54.000 --> 00:22:00.001
+Rekaman optik memberi kita janji lebih dari 2 miliar bit
+
+348
+00:22:00.001 --> 00:22:02.000
+per inci persegi.
+
+349
+00:22:03.000 --> 00:22:09.000
+Perangkat optik non-erasable pertama berada dalam jangkauan seperempat miliar,
+
+350
+00:22:09.000 --> 00:22:13.000
+Artinya, 250 juta hingga 500 juta bit per inci persegi sudah.
+
+351
+00:22:13.001 --> 00:22:15.001
+Frank, saya harus berhenti karena kami keluar dari waktu.
+
+352
+00:22:15.001 --> 00:22:19.000
+Frank Sordello dari Memorex dan Alan Shugart dari Seagate, terima kasih banyak untuk menjadi
+
+353
+00:22:19.000 --> 00:22:21.000
+dengan kami, dan saya harap Anda akan bergabung dengan kami minggu depan
+
+354
+00:22:21.000 --> 00:22:22.001
+Edisi lain dari The Computer Chronicles.
+
+355
+00:23:02.001 --> 00:23:08.000
+Pencipta alat pemrograman visual untuk pengembangan perangkat lunak senang untuk
+
+356
+00:23:08.000 --> 00:23:12.000
+memberikan dana besar untuk The Computer Chronicles, cerita
+
+357
+00:23:12.000 --> 00:23:14.000
+dari evolusi yang berlanjut ini.

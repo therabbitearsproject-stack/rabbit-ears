@@ -1,0 +1,1437 @@
+WEBVTT
+
+1
+00:00:54.000 --> 00:01:00.000
+Micro Focus, pengembang alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+2
+00:01:00.000 --> 00:01:06.000
+dengan senang hati memberikan dana besar untuk komputer kronik, cerita
+
+3
+00:01:06.000 --> 00:01:07.001
+evolusi yang berlanjut ini.
+
+4
+00:01:16.001 --> 00:01:21.001
+Selamat datang ke Komputer Chronicles, saya Stuart Chafay dan ini adalah Gary Kildall.
+
+5
+00:01:21.001 --> 00:01:26.000
+Pada program kami hari ini kita akan berbicara tentang jaringan. Itu adalah panas
+
+6
+00:01:26.000 --> 00:01:30.000
+Tema dalam industri komputer selama bertahun-tahun sekarang. Secara umum, networking berarti
+
+7
+00:01:30.000 --> 00:01:34.000
+kemampuan untuk saling menghubungkan beberapa komputer sehingga mereka dapat berbagi hal-hal seperti
+
+8
+00:01:34.000 --> 00:01:39.000
+peripheral atau perangkat lunak atau bahkan data. Para tamu hari ini adalah dua pemimpin dalam hal ini.
+
+9
+00:01:39.000 --> 00:01:44.001
+Michael Pliner dari SciTech dan Charlie Bass dari Ungerman Bass. Gary, kami berdua
+
+10
+00:01:44.001 --> 00:01:48.001
+tamu berdua terlibat dalam bentuk khusus jaringan, saya pikir Anda akan memanggil
+
+11
+00:01:48.001 --> 00:01:52.000
+Hal ini disebut dengan Local Area Networking, LAN. Bagaimana Anda mendefinisikan itu?
+
+12
+00:01:52.001 --> 00:01:56.000
+Apa itu jaringan area lokal? Saya pernah berpikir sejak kami memiliki komputer di sekitar kami
+
+13
+00:01:56.000 --> 00:02:00.000
+mencoba untuk menggerakkan mereka ke atas untuk menyampaikan data di belakang dan ke depan. Wilayah lokal
+
+14
+00:02:00.000 --> 00:02:03.000
+jaringan umumnya digunakan di sekitar lingkungan kantor, itu terbatas
+
+15
+00:02:03.000 --> 00:02:09.000
+secara geografis untuk area yang lebih kecil. Biasanya dimiliki dan dikendalikan oleh klien.
+
+16
+00:02:09.000 --> 00:02:14.000
+Daripada menjadi utilitas komersial yang sedang digunakan. Karena itu terbatas
+
+17
+00:02:14.000 --> 00:02:18.000
+secara geografis, kinerja biasanya sedikit lebih baik dari yang Anda temukan, cukup
+
+18
+00:02:18.000 --> 00:02:21.001
+sedikit lebih baik dari yang akan Anda temukan di beberapa sistem jaringan tradisional. Kami adalah
+
+19
+00:02:21.001 --> 00:02:27.000
+Saya akan melihat contoh bagaimana jaringan daerah lokal digunakan dan saya pikir
+
+20
+00:02:27.000 --> 00:02:31.000
+Kami memiliki bagian di sini yang akan menunjukkan kepada kami contoh dari jaringan area lokal yang digunakan di
+
+21
+00:02:31.000 --> 00:02:36.000
+Sebuah lingkungan kantor. Jenis Terminal Komputer yang Tipikal
+
+22
+00:02:36.000 --> 00:02:39.000
+Kantor modern memiliki batasan yang terintegrasi.
+
+23
+00:02:39.001 --> 00:02:44.000
+Ia hanya bercakap dengan komputer pusat yang menghubungkannya dan terminal lainnya dengan satu
+
+24
+00:02:44.000 --> 00:02:49.001
+Badan dari data. Sebuah jaringan area adalah cara untuk memperluas sistem dengan menghubungkan beberapa
+
+25
+00:02:49.001 --> 00:02:53.000
+Komputer bersama-sama untuk berbagi informasi langsung dengan satu sama lain.
+
+26
+00:02:54.000 --> 00:02:59.000
+Rangkaian bidang yang relatif baru masih memungkinkan organisasi atau komunitas untuk
+
+27
+00:02:59.000 --> 00:03:04.001
+Menghubungkan berbagai cabangnya ke sumber daya terintegrasi yang terdesentralisasi. Pada
+
+28
+00:03:04.001 --> 00:03:08.001
+Stanford University Central Computer Facility memberikan jaringan perpustakaan
+
+29
+00:03:08.001 --> 00:03:13.000
+penyelidik akses instan ke bahan yang disimpan di seluruh Amerika Serikat.
+
+30
+00:03:13.000 --> 00:03:17.001
+Terminal kampus dapat menyentuh sistem melalui satu kabel kuning yang
+
+31
+00:03:17.001 --> 00:03:23.001
+Ular melewati kampus seperti garis bawah tanah yang tenang. Meskipun jaringan lokal dapat
+
+32
+00:03:23.001 --> 00:03:28.000
+beroperasi murah di sepanjang kabel telepon yang disebut pasangan terbalik, kabel tunggal
+
+33
+00:03:28.000 --> 00:03:33.001
+Sistem yang dikenal sebagai baseband dan broadband memiliki lebih banyak fleksibilitas, lebih banyak data
+
+34
+00:03:33.001 --> 00:03:38.000
+kecepatan dan bahkan membawa tangle kabel dan kabel hampir di bawah kendali.
+
+35
+00:03:39.000 --> 00:03:43.001
+Ada beberapa cara bahwa informasi dikongsi di dalam jaringan
+
+36
+00:03:43.001 --> 00:03:50.001
+Tangan bintang, di sekitar cincin atau melalui bus. Mesej-mesej yang dikirim secara otomatis
+
+37
+00:03:50.001 --> 00:03:55.001
+Prioritas atau perjalanan seperti token dari satu stasiun ke stasiune lain. Tentu saja yang sebenarnya
+
+38
+00:03:55.001 --> 00:04:00.000
+Keuntungan dari semua ini adalah kepada pengguna yang akses langsung ke berbagai sumber
+
+39
+00:04:00.000 --> 00:04:03.000
+Informasi menjadi lebih mudah dan lebih cepat.
+
+40
+00:04:13.000 --> 00:04:18.000
+Para tamu kami hari ini adalah Michael Pliner, presiden CyTech dan Charlie Bass, wakil
+
+41
+00:04:18.000 --> 00:04:21.001
+Presiden Ungermann Bass. Keduanya adalah pemimpin di bidang
+
+42
+00:04:21.001 --> 00:04:27.000
+pengembangan sistem jaringan. dengan Gary? Kami sudah berbicara tentang jaringan lokal seperti
+
+43
+00:04:27.000 --> 00:04:32.000
+menjadi jenis khusus dari jaringan geografi yang dikurangi. Charlie adalah apa yang
+
+44
+00:04:32.000 --> 00:04:37.000
+Apakah hal-hal yang membedakan jaringan daerah lokal? Saya pikir itu lebih dari sekedar sebuah
+
+45
+00:04:37.000 --> 00:04:42.001
+Geografi dari Gary. Yang pasti memungkinkan kita untuk memahami masalah dan memahami
+
+46
+00:04:42.001 --> 00:04:47.000
+teknologi tetapi kita berbicara tentang konektivitas total antara perangkat dan
+
+47
+00:04:47.000 --> 00:04:50.001
+Kita berbicara tentang hubungan peer-to-peer yang berarti kita ingin menyingkirkan itu
+
+48
+00:04:50.001 --> 00:04:54.001
+komputer pusat dan memungkinkan semua perangkat ini untuk berbicara secara bebas antara satu sama lain.
+
+49
+00:04:56.000 --> 00:04:59.001
+Jenis aplikasi apa yang kita temukan di lingkungan pemula yang memungkinkan
+
+50
+00:04:59.001 --> 00:05:01.001
+Apakah komputer-komputer kecil ini berbicara dengan diri mereka sendiri?
+
+51
+00:05:02.001 --> 00:05:06.001
+Jika salah satu motivasi dasar adalah untuk berbagi sumber daya dan berbagi
+
+52
+00:05:06.001 --> 00:05:10.001
+informasi, yang berarti kita ingin memiliki satu terminal yang dapat berbicara lebih banyak
+
+53
+00:05:10.001 --> 00:05:15.001
+lebih dari satu komputer dan kami ingin dapat memiliki pengguna berbagi sumber daya yang
+
+54
+00:05:15.001 --> 00:05:20.000
+biasanya mungkin tidak dapat membiayai atau memiliki akses ke data yang umum
+
+55
+00:05:20.000 --> 00:05:24.000
+Untuk memastikan integritas data tersebut. Mike, kau punya apa-apa
+
+56
+00:05:24.000 --> 00:05:28.001
+Untuk menambahkan itu? Ya, saya berbagi pendapat yang sama. Kami melihat jaringan lokal yang
+
+57
+00:05:28.001 --> 00:05:33.001
+digunakan dalam lingkungan otomatis kantor. Kami juga melihat jaringan yang digunakan dalam
+
+58
+00:05:33.001 --> 00:05:37.001
+lantai manufaktur yang mengumpulkan data serta mampu memindahkan data
+
+59
+00:05:37.001 --> 00:05:43.000
+Kembali ke operasi produksi. Kami juga melihat jaringan area lokal yang digunakan
+
+60
+00:05:43.000 --> 00:05:47.001
+banyak untuk hanya umum data komunikasi utilitas. Jaringan ini menjadi sebuah
+
+61
+00:05:47.001 --> 00:05:51.001
+Mengetahui suatu utilitas komunikasi seperti listrik didistribusikan di dalam rumah.
+
+62
+00:05:52.000 --> 00:05:58.000
+Terminal saling terhubung ke banyak sumber daya komputasi yang berbeda. Kami juga melihat itu
+
+63
+00:05:58.000 --> 00:06:02.001
+Rangkaian area lokal menyediakan serangkaian layanan campuran. Misalnya pada broadband.
+
+64
+00:06:02.001 --> 00:06:07.001
+jaringan yang dapat memberikan suara video dan data pada sistem kabel yang sama. Anda
+
+65
+00:06:07.001 --> 00:06:11.001
+yang disebut broadband. Apa itu konsep broadband dan baseball dan sebagainya?
+
+66
+00:06:12.000 --> 00:06:18.000
+Apa saja teknologi itu? Ciri-ciri yang benar-benar menonjol dari broadband
+
+67
+00:06:18.000 --> 00:06:23.000
+dan baseband adalah teknik modulasi. Dalam sistem baseball Anda langsung
+
+68
+00:06:23.000 --> 00:06:28.000
+Modulasi kabel dengan sinyal listrik. Dalam sistem broadband yang Anda gunakan
+
+69
+00:06:28.000 --> 00:06:34.001
+Teknologi yang sama yang mendistribusikan video, video CATV ke rumah. Anda menggunakan RF
+
+70
+00:06:34.001 --> 00:06:38.001
+sebagai teknik modulasi dan Anda dapat menggunakan apa yang disebut divisi frekuensi
+
+71
+00:06:38.001 --> 00:06:42.001
+untuk multiplexing. Ini pada dasarnya merusak saluran data yang berbeda atau
+
+72
+00:06:42.001 --> 00:06:47.001
+informasi atau video pada kabel dan mereka dapat berjalan secara bersamaan. Jadi jenis ini
+
+73
+00:06:47.001 --> 00:06:50.001
+Dengan teknologi Anda dapat mendapatkan tingkat data yang cukup tinggi. Jenis Data Tahap Apa
+
+74
+00:06:50.001 --> 00:06:55.001
+Apakah Anda mengharapkan untuk menemukan di jaringan daerah lokal? Anda akan menemukan tingkat data
+
+75
+00:06:55.001 --> 00:07:01.000
+yang dapat bervariasi di mana saja dari 9.2 kilobit per detik hingga jaringan jenis Ethernet
+
+76
+00:07:01.000 --> 00:07:06.000
+Ini adalah 10 megabits per detik. Kebanyakan teknologi bahkan dapat membawa data
+
+77
+00:07:06.000 --> 00:07:12.000
+Lebih cepat dari itu. Broadband memiliki 400 megahertz yang tersedia untuk itu. Fiber optik dapat
+
+78
+00:07:12.000 --> 00:07:15.001
+Pergi ke ranting gigahertz. Jadi kami mendapatkan data yang lebih cepat
+
+79
+00:07:15.001 --> 00:07:17.001
+Komunikasi yang akan kita temukan dan katakan beberapa dari tradisi
+
+80
+00:07:17.001 --> 00:07:19.000
+Teknik tersebut telah digunakan.
+
+81
+00:07:19.001 --> 00:07:22.001
+Itu adalah benar. Maafkan aku Bagaimana Anda membuat keputusan tentang yang mana
+
+82
+00:07:22.001 --> 00:07:27.001
+Teknologi yang Anda gunakan dalam aplikasi tertentu? Baiklah jika saya bisa menjawabnya.
+
+83
+00:07:28.000 --> 00:07:32.000
+Pertama, konsep ini atau argumen ini antara baseband dan broadband memiliki
+
+84
+00:07:32.000 --> 00:07:38.000
+benar-benar mendominasi media dan diskusi tentang teknologi untuk beberapa waktu
+
+85
+00:07:38.000 --> 00:07:43.000
+sekarang . Dan saya pikir bagi kebanyakan orang sekarang mereka menyadari bahwa kedua teknologi
+
+86
+00:07:43.000 --> 00:07:48.001
+keduanya memiliki kekuatan mereka dan memiliki aplikasi mereka dan mungkin akan
+
+87
+00:07:48.001 --> 00:07:53.001
+untuk bersama-sama, bukannya membunuh yang lain atau mendominasi untuk pengecualian
+
+88
+00:07:53.001 --> 00:07:58.001
+dari yang lain. Tetapi memilih antara mereka sulit. Ini adalah masalah dari
+
+89
+00:07:58.001 --> 00:08:04.001
+untuk aplikasi. Ini adalah masalah biaya dan itu adalah masalah efisiensi dan tepat
+
+90
+00:08:04.001 --> 00:08:09.001
+Apa yang akan kita lakukan setelahnya. Yang paling penting dalam pertandingan sepak bola mungkin adalah
+
+91
+00:08:09.001 --> 00:08:12.001
+kesederhanaan dan yang mengakibatkan penjimatan biaya
+
+92
+00:08:12.001 --> 00:08:19.000
+Salah satu masalah utama dalam broadband adalah
+
+93
+00:08:19.000 --> 00:08:23.001
+Ini adalah beberapa saluran yang memungkinkan beberapa aplikasi. Sesuatu yang berbaseband
+
+94
+00:08:23.001 --> 00:08:30.000
+Saya tidak bisa dan saya akan menggambarkan broadband sebagai sedikit lebih kompleks
+
+95
+00:08:30.000 --> 00:08:35.000
+Dan sedikit lebih mahal. Namun jika Anda membutuhkan aplikasi itu, jika Anda memerlukan
+
+96
+00:08:35.000 --> 00:08:41.001
+kemampuan untuk mentransfer sesuatu selain aliran data sederhana, broadband adalah
+
+97
+00:08:41.001 --> 00:08:46.000
+Satu-satunya cara untuk pergi Bagaimana dengan beberapa masalah perangkat lunak yang berkaitan dengan dukungan
+
+98
+00:08:46.000 --> 00:08:50.001
+Komunitas jaringan lokal? Apakah kita melihat banyak perangkat lunak khusus yang
+
+99
+00:08:50.001 --> 00:08:54.001
+yang dikembangkan untuk mendukung kata inter-office komunikasi dan mail atau kita
+
+100
+00:08:54.001 --> 00:08:58.000
+mengembangkan sistem operasi dan lingkungan operasi dan alat yang mendukung
+
+101
+00:08:58.000 --> 00:08:59.001
+Lingkungan pemrograman yang lebih mudah?
+
+102
+00:09:00.001 --> 00:09:07.001
+Pertama sekali, ada satu set lengkap perangkat lunak khusus yang berkaitan dengan lokal.
+
+103
+00:09:07.001 --> 00:09:12.001
+jaringan yang biasanya kita sebut sebagai protokol dari jaringan ini. dan dalam
+
+104
+00:09:12.001 --> 00:09:16.001
+Untuk meletakkan jaringan ini di tempat, itu berarti bahwa kita harus menyediakan
+
+105
+00:09:16.001 --> 00:09:22.000
+program dalam konteks sistem yang dibangun tanpa pengetahuan apa pun tentang
+
+106
+00:09:22.000 --> 00:09:27.001
+Jaringan yang Jadi dalam banyak kasus kami telah menambahkan perangkat lunak ke sistem yang ada. di atas
+
+107
+00:09:27.001 --> 00:09:33.000
+waktu saya pikir Anda akan melihat bahwa perangkat lunak itu akan mulai menembus sistem ini
+
+108
+00:09:33.000 --> 00:09:38.000
+diri mereka sendiri. Dengan kata lain, sistem operasi akan mulai dibangun dengan
+
+109
+00:09:38.000 --> 00:09:41.001
+menganggap bahwa ada jaringan di sana dan bukan kasus hari ini di mana kita mencoba
+
+110
+00:09:41.001 --> 00:09:46.000
+untuk melakukannya dengan sistem yang ada. Hal ini sedikit membatasi aplikasi
+
+111
+00:09:46.000 --> 00:09:51.000
+berarti bahwa kita harus kompromi bagaimana kita menggunakannya karena itu tidak sepenuhnya
+
+112
+00:09:51.000 --> 00:09:56.000
+yang terintegrasi Dengan waktu, sistem akan dibangun dengan asumsi itu dan kita akan
+
+113
+00:09:56.000 --> 00:10:00.000
+melihat lebih banyak aplikasi, lebih banyak kekuatan sebagai hasilnya. Mike adalah Anda
+
+114
+00:10:00.000 --> 00:10:03.001
+melihat setiap integrasi fungsi perangkat lunak melalui jaringan area lokal sebenarnya
+
+115
+00:10:03.001 --> 00:10:08.000
+Menggunakan jaringan dan pekerjaan yang telah Anda lihat? Oh ya dan saya setuju dengan Charlie
+
+116
+00:10:08.000 --> 00:10:14.000
+Saya pikir penyedia jaringan area lokal mengambil banyak perangkat lunak dan bergerak yang
+
+117
+00:10:14.000 --> 00:10:19.000
+ke dalam peralatan itu sendiri. Sebagai contoh, perangkat ini memiliki
+
+118
+00:10:19.000 --> 00:10:22.001
+mikroprosesor di unit itu dan ada sejumlah besar komunikasi
+
+119
+00:10:22.001 --> 00:10:27.001
+dengan software. Anda juga akan melihat bagaimana aplikasi bermigrasi ke distribusi lebih lanjut
+
+120
+00:10:27.001 --> 00:10:33.001
+pemrosesan, berbagi file, berbagi email, yang akan Anda lihat
+
+121
+00:10:33.001 --> 00:10:38.001
+perangkat lunak aplikasi khusus yang ditulis untuk pada dasarnya tinggal di host
+
+122
+00:10:38.001 --> 00:10:43.000
+komputer atau mikrokomputer yang akan terhubung ke jaringan area lokal.
+
+123
+00:10:43.001 --> 00:10:48.001
+Apakah standar adalah masalah di area ini dari jaringan area lokal? Anda bisa menghubungkan
+
+124
+00:10:48.001 --> 00:10:54.001
+Hardware yang berbeda, sistem operasi yang berbeda? Mike meminta maaf dengan baik.
+
+125
+00:10:55.000 --> 00:11:00.000
+Okay ya kau bisa. Pada saat ini, ada beberapa standar, misalnya
+
+126
+00:11:00.000 --> 00:11:07.000
+Perkataan-perkataan yang sama bahwa Charlie dan kita sebenarnya
+
+127
+00:11:07.000 --> 00:11:11.001
+menyertai itu hanya koneksi RS232 yang memungkinkan kita untuk saling menghubungkan banyak
+
+128
+00:11:11.001 --> 00:11:15.001
+pembeli peralatan yang berbeda. Namun, hal ini membuat Anda terbatas dalam hal
+
+129
+00:11:15.001 --> 00:11:20.000
+prestasi dalam hal fungsi dan ada kegiatan standar yang sedang berlangsung
+
+130
+00:11:20.000 --> 00:11:25.001
+IEEE 802 adalah lembaga standar nasional yang
+
+131
+00:11:25.001 --> 00:11:30.000
+akan menghasilkan set standar untuk masa depan dan kedua perusahaan kami adalah
+
+132
+00:11:30.000 --> 00:11:33.001
+Berpartisipasi Apakah ini standar yang sebenarnya digunakan untuk mengatakan interkomunikasi
+
+133
+00:11:33.001 --> 00:11:37.000
+antara berbagai jenis jaringan lokal? Standar yang benar-benar
+
+134
+00:11:37.000 --> 00:11:41.000
+penting jika Anda mengatakan Anda memiliki produk vendor di mana semua itu sendiri terkandung
+
+135
+00:11:41.000 --> 00:11:46.000
+Dalam satu area geografis, itu benar-benar perlu untuk memiliki standar tersebut atau kita
+
+136
+00:11:46.000 --> 00:11:49.000
+Lihatlah standar untuk gateways misalnya? Di manakah Anda melihat standar tersebut?
+
+137
+00:11:49.000 --> 00:11:55.001
+Benarkah menjadi penting? Ada banyak kegiatan standar karena kita
+
+138
+00:11:55.001 --> 00:12:00.000
+Bercakap tentang interkoneksi perangkat yang berbeda dan semakin umum mereka
+
+139
+00:12:00.000 --> 00:12:05.000
+Komunikasi adalah lebih sederhana yang akan terjadi. Namun, kami mulai dengan
+
+140
+00:12:05.000 --> 00:12:10.000
+fakta bahwa standar ini tidak ada dan sebagian besar pekerjaan kami adalah untuk menemukan
+
+141
+00:12:10.000 --> 00:12:13.001
+denominator umum terendah yang Mike telah menyebutkan RS232. Itu bukan
+
+142
+00:12:13.001 --> 00:12:17.001
+Pasti ideal untuk menghubungkan jaringan tetapi ada dan itu adalah baik
+
+143
+00:12:17.001 --> 00:12:23.000
+Standar yang ditetapkan tetapi ada standar teknologi jaringan itu sendiri di
+
+144
+00:12:23.000 --> 00:12:26.001
+Jika Anda akan tingkat kabel dari jenis kabel apa kita akan menginstal bagaimana
+
+145
+00:12:26.001 --> 00:12:30.000
+Kami akan berbagi itu dan sebagian besar aktivitas jaringan telah berada di sekitar itu
+
+146
+00:12:30.000 --> 00:12:35.001
+set masalah yang ada. Yang terjadi adalah masalah yang sangat rendah tingkat primitif dibandingkan dengan
+
+147
+00:12:35.001 --> 00:12:42.000
+seluruh masalah dan seiring waktu kita melihat perhatian yang diberikan kepada mereka yang lebih tinggi
+
+148
+00:12:42.000 --> 00:12:47.001
+masalah tingkat sehingga setelah kita dapat menginstal kabel yang sama dan mulai berbagi
+
+149
+00:12:47.001 --> 00:12:52.000
+Sebenarnya kita bisa mulai berkomunikasi melalui kabel tersebut. Kami tidak
+
+150
+00:12:52.000 --> 00:12:58.001
+masih ada dan ketika kami memulai ini sedikit baik dari industri berpikir dan berharap
+
+151
+00:12:58.001 --> 00:13:02.000
+bahwa satu standar akan muncul itu jelas tidak terjadi. Kami mungkin
+
+152
+00:13:02.000 --> 00:13:06.000
+akan berakhir dengan beberapa tema yang dominan dan kemudian kita akan harus mencari
+
+153
+00:13:06.000 --> 00:13:10.000
+mengungkapkan apa hubungan antara topik-topik tersebut dan
+
+154
+00:13:10.000 --> 00:13:11.001
+teknologi pintu gerbang yang Anda bicarakan.
+
+155
+00:13:11.001 --> 00:13:15.001
+Maafkan saya, saya ingin meminta Anda untuk menunjukkan salah satu sistem jaringan ini untuk
+
+156
+00:13:15.001 --> 00:13:18.001
+Kami hanya dalam satu menit sehingga saat Anda siap kami akan mengambil istirahat dan kami akan kembali
+
+157
+00:13:18.001 --> 00:13:21.001
+Hanya dalam satu momen dengan demonstrasi dari jaringan daerah lokal.
+
+158
+00:13:28.001 --> 00:13:31.001
+Bergabunglah dengan kami sekarang adalah Phil Edholm dari SciTech dan Phil Anda akan pergi
+
+159
+00:13:31.001 --> 00:13:33.000
+Untuk memberikan demonstrasi jaringan.
+
+160
+00:13:33.001 --> 00:13:36.001
+Ya, apa yang akan kita lakukan di sini adalah menunjukkan pada jaringan prototipe kecil
+
+161
+00:13:36.001 --> 00:13:41.000
+Kami sudah menyiapkan sesi. Pertama-tama, saya akan benar-benar memanggil melalui jaringan ini
+
+162
+00:13:41.000 --> 00:13:46.000
+menggunakan terminal ini ke komputer tuan rumah dan kemudian ketika komputer mendorong saya untuk
+
+163
+00:13:46.000 --> 00:13:52.000
+Sebuah login sebenarnya terdaftar. Sekarang saya sudah melakukan sesi di jaringan. Komputer yang
+
+164
+00:13:52.000 --> 00:13:55.000
+membutuhkan waktu untuk mendaftar dan sementara apa yang ingin saya bicarakan adalah
+
+165
+00:13:55.000 --> 00:13:58.001
+Apa yang kita miliki di sini. Kami memiliki terminal jenis terminal ASCII asynchronous
+
+166
+00:13:58.001 --> 00:14:03.001
+terhubung ke unit komunikasi paket berbasis mikroprosesor. Unit ini
+
+167
+00:14:03.001 --> 00:14:08.001
+Mengintegrasikan memori mikroprosesor dan perangkat lunak yang diperlukan untuk semua lapisan
+
+168
+00:14:08.001 --> 00:14:13.001
+protokol untuk memungkinkan komunikasi melalui kabel penyelesaian kesalahan pemulihan
+
+169
+00:14:13.001 --> 00:14:17.001
+retransmisi dan sebagainya. Ketika komputer datang kembali Anda akan menyadari bahwa sekarang kita memiliki
+
+170
+00:14:17.001 --> 00:14:23.000
+sesi ke komputer host dan dengan mengetik sesuatu seperti sistem perintah kita
+
+171
+00:14:23.000 --> 00:14:27.001
+Anda dapat mendapatkan daftar direktori di komputer. Dengan menghitung istirahat, kita sekarang
+
+172
+00:14:27.001 --> 00:14:33.000
+kembali berbicara benar-benar ke jaringan dan kita dapat membuat paparan status dan Anda melihat
+
+173
+00:14:33.000 --> 00:14:37.001
+Sekarang bahwa kita sebenarnya memiliki satu sesi di atas jaringan. Dengan sebuah jaringan, salah satu
+
+174
+00:14:37.001 --> 00:14:41.000
+Kemampuan unik adalah memiliki beberapa sesi daripada hanya memiliki satu kabel.
+
+175
+00:14:41.000 --> 00:14:45.000
+Berjalan dari terminal di satu ruangan ke komputer di ruangan lain. Kita bisa
+
+176
+00:14:45.000 --> 00:14:49.001
+secara harfiah memiliki banyak kabel yang beroperasi dari terminal itu, kabel virtual melalui
+
+177
+00:14:49.001 --> 00:14:54.001
+kabel ke banyak komputer yang berbeda dan dapat memutar dan mematikan mereka. yang sangat versatile
+
+178
+00:14:54.001 --> 00:14:59.001
+teknologi yang mendukung ribuan terminal pada satu kabel. Okay, itu adalah sebuah
+
+179
+00:14:59.001 --> 00:15:03.000
+Contohnya adalah kecerdasan terpusat. Sekarang kita ingin melihat demonstrasi dari
+
+180
+00:15:03.000 --> 00:15:06.001
+didistribusikan kecerdasan dan Phil apa yang akan Anda tunjukkan kepada kami? Apa yang kita pergi
+
+181
+00:15:06.001 --> 00:15:10.000
+untuk melihat saat ini adalah komputer pribadi yang terhubung kembali ke jaringan melalui
+
+182
+00:15:10.000 --> 00:15:14.001
+pada dasarnya jenis teknologi yang sama yang memuat turun dari komputer yang sama file
+
+183
+00:15:14.001 --> 00:15:19.000
+masuk ke komputer pribadi dan kemudian mencetak file itu keluar. Kali ini lebih baik
+
+184
+00:15:19.000 --> 00:15:23.000
+daripada berada di terminal kotor kita memiliki kemampuan untuk mengunduh file cetak itu keluar
+
+185
+00:15:23.000 --> 00:15:26.001
+atau bekerja dengan itu dan memuatkannya kemudian. Untuk melakukan ini apa yang telah kita lakukan adalah
+
+186
+00:15:26.001 --> 00:15:30.001
+diisi ke dalam program PCA yang memungkinkan kita untuk berkomunikasi dengan jaringan
+
+187
+00:15:30.001 --> 00:15:36.000
+Pada dasarnya adalah simulasi terminal. Sekali lagi kita memanggil melalui jaringan ke komputer
+
+188
+00:15:36.000 --> 00:15:41.001
+alamat dan kemudian memulai prosedur login untuk login ke komputer seperti yang kita lihat
+
+189
+00:15:41.001 --> 00:15:47.001
+sebelum ini. Hal ini dilakukan untuk menghindari penceroboh dari komputer dengan meminta
+
+190
+00:15:47.001 --> 00:15:52.001
+login password ke komputer dan kemudian komputer harus menanggapi kami
+
+191
+00:15:52.001 --> 00:15:58.001
+Dan ini biasanya memakan waktu beberapa saat. Jadi Anda menunggu untuk mendengar kembali dari tuan rumah
+
+192
+00:15:58.001 --> 00:16:02.000
+dengan komputer? Dari komputer tuan rumah tepat dan di sini ia datang dengan pesan dari
+
+193
+00:16:02.000 --> 00:16:07.000
+hari pada dasarnya memberitahu kami beberapa informasi tentang komputer itu sendiri dan dalam
+
+194
+00:16:07.000 --> 00:16:11.001
+Saat ini, kita akan segera kembali dari komputer. Ketika kita mendapatkan yang cepat kembali
+
+195
+00:16:11.001 --> 00:16:17.000
+Apa yang akan kita lakukan adalah memulai prosedur untuk mendapatkan file dari komputer
+
+196
+00:16:17.000 --> 00:16:23.001
+yang merupakan file surat dan muat turun ke
+
+197
+00:16:23.001 --> 00:16:27.001
+Sebuah file di PC yang disebut surat.
+
+198
+00:16:32.000 --> 00:16:36.000
+Jadi Anda sedang men-download sekarang dari host? Pada saat ini, file-file yang sedang diunduh dan
+
+199
+00:16:36.000 --> 00:16:42.001
+sekarang sudah selesai dan sekarang apa yang bisa kita lakukan adalah keluar dari download
+
+200
+00:16:42.001 --> 00:16:48.000
+program simulasi terminal dan kembali berkomunikasi langsung ke PC dengan
+
+201
+00:16:48.000 --> 00:16:52.001
+mengetikkan pada perintah yang Anda perhatikan mengalir kita kembali berbicara ke PC dan itu sekarang
+
+202
+00:16:52.001 --> 00:16:59.000
+mungkin untuk mengambil file yang kami muat turun dan mencetaknya di printer.
+
+203
+00:17:05.001 --> 00:17:07.001
+Dan kami harus mencetaknya lagi.
+
+204
+00:17:14.001 --> 00:17:19.001
+Dan di sana kita pergi dan sekarang ini adalah file yang sebenarnya telah dimuat turun dari
+
+205
+00:17:19.001 --> 00:17:25.000
+Host komputer dan itu hanyalah surat jawaban kepada pelanggan. yang menarik
+
+206
+00:17:25.000 --> 00:17:29.000
+Tentu saja tentang teknologi ini adalah bahwa pada bagian yang sama kabel ini
+
+207
+00:17:29.000 --> 00:17:32.001
+seluruh jaringan beroperasi melalui jenis kabel ini yang merupakan
+
+208
+00:17:32.001 --> 00:17:34.001
+75 Ohm kabel koaksial.
+
+209
+00:17:35.001 --> 00:17:40.000
+Kita juga bisa mendapatkan video. Ini diwakili di sini kita memiliki jenis kecil Walkman
+
+210
+00:17:40.000 --> 00:17:44.001
+TV set yang sebenarnya memiliki gambar yang sedang disiarkan dari
+
+211
+00:17:44.001 --> 00:17:48.001
+Studio modulasi pada bagian yang sama dari kabel. Sebagian besar kabel yang bisa
+
+212
+00:17:48.001 --> 00:17:54.000
+dukungan secara harfiah ribuan terminal dan bilangan PC dan host untuk host
+
+213
+00:17:54.000 --> 00:17:58.000
+Komunikasi komputer juga dapat mendukung video dan jenis sistem lainnya.
+
+214
+00:17:59.000 --> 00:18:03.000
+Phil biarkan saya bertanya sedikit tentang operasi ini di sini. Ini adalah file
+
+215
+00:18:03.000 --> 00:18:05.000
+Operasi transfer saya pikir saya akan memanggil transfer file
+
+216
+00:18:05.000 --> 00:18:07.000
+Operasi upload dan download.
+
+217
+00:18:08.000 --> 00:18:11.000
+Apakah ini tipikal dari jenis perangkat lunak yang kita bicarakan dalam hal
+
+218
+00:18:11.000 --> 00:18:15.001
+komunikasi melalui LAN atau kita benar-benar melihat distribusi keseluruhan
+
+219
+00:18:15.001 --> 00:18:19.001
+sistem operasi di atas lingkungan. Idealnya, kita tidak ingin memiliki
+
+220
+00:18:19.001 --> 00:18:23.001
+membuat transfer file ini tetapi kami hanya mengakses file dan itu terjadi akan berakhir
+
+221
+00:18:23.001 --> 00:18:29.000
+Setelah itu jaringan. Dalam hal ini, jaringan sebenarnya berkomunikasi dengan PC
+
+222
+00:18:29.000 --> 00:18:34.001
+sebagai terminal dan PC kemudian dimulai di atas jaringan file download
+
+223
+00:18:34.001 --> 00:18:41.000
+proses dan yang melibatkan bagian khusus dari perangkat lunak yang sangat kecil di PC untuk
+
+224
+00:18:41.000 --> 00:18:44.000
+Sebenarnya file download. Komunikasi jaringan dengan kata lain
+
+225
+00:18:44.000 --> 00:18:47.001
+untuk memastikan bahwa data diterima tanpa kesalahan
+
+226
+00:18:47.001 --> 00:18:49.001
+Sebenarnya dalam jaringan node itu sendiri.
+
+227
+00:18:50.000 --> 00:18:53.000
+Tapi idealnya saya kira seberapa lama kita ingin memiliki operasi itu
+
+228
+00:18:53.000 --> 00:18:55.000
+sepenuhnya transparan untuk Anda.
+
+229
+00:18:55.001 --> 00:18:55.001
+dengan tepat.
+
+230
+00:18:56.000 --> 00:18:57.000
+Charlie, apa jawabanmu terhadap hal ini?
+
+231
+00:18:57.001 --> 00:19:01.001
+Saya pikir itu benar-benar itu Gary. Kami memiliki kasus di sini untuk menambahkan komunikasi
+
+232
+00:19:01.001 --> 00:19:05.001
+kepada lingkungan yang ada dan kita membuat sebagian besar komunikasi itu
+
+233
+00:19:05.001 --> 00:19:10.000
+Namun, seperti yang Anda katakan, kami ingin semua ini terjadi secara transparan sehingga
+
+234
+00:19:10.000 --> 00:19:15.000
+perintah yang dilihat pengguna sangat alami dan memiliki dia tidak tahu tepat di mana
+
+235
+00:19:15.000 --> 00:19:20.000
+sumber daya adalah di mana transfer terjadi itu terjadi karena
+
+236
+00:19:20.000 --> 00:19:23.000
+mengatur mekanisme dan bukan karena ia secara eksplisit meminta.
+
+237
+00:19:23.001 --> 00:19:25.001
+Dan ini kembali ke komentar asli yang saya anggap bahwa kami telah
+
+238
+00:19:25.001 --> 00:19:29.000
+integrasi jaringan area lokal ke dalam perangkat lunak itu sendiri.
+
+239
+00:19:29.001 --> 00:19:32.001
+Itu memang benar. Apa yang akan terjadi dari waktu ke waktu? Ini berarti generasi yang akan datang dari
+
+240
+00:19:32.001 --> 00:19:35.000
+perangkat akan mengambil alih jaringan dan hal-hal ini akan
+
+241
+00:19:35.000 --> 00:19:37.000
+Hal ini terjadi jauh lebih alami dari yang kita lihat.
+
+242
+00:19:38.001 --> 00:19:45.001
+Kami berbicara sebelumnya tentang standar secara umum dan jika saya ingat Xerox dan
+
+243
+00:19:45.001 --> 00:19:49.000
+Intel dan Digital Equipment Corporation memiliki standar yang mereka cadangkan itu adalah
+
+244
+00:19:49.000 --> 00:19:52.001
+yang disebut Ethernet dan apa yang terjadi dengan itu? Sudah ada di sekitarnya untuk sementara waktu.
+
+245
+00:19:53.001 --> 00:19:59.000
+Nah, dalam beberapa cara bisa dikatakan sangat sukses dalam jumlah itu
+
+246
+00:19:59.000 --> 00:20:02.001
+Perusahaan telah menyetujui dan orang membuat peralatan sesuai dengan standar tersebut.
+
+247
+00:20:02.001 --> 00:20:09.000
+Saya pikir beberapa hal yang harus dikatakan namun dan satu adalah Ethernet tidak
+
+248
+00:20:09.000 --> 00:20:10.001
+Sebuah akhir dalam dirinya sendiri.
+
+249
+00:20:10.001 --> 00:20:16.000
+Ini mewakili teknologi dasar yang membantu dalam masalah ini dan kedua, itu tidak
+
+250
+00:20:16.000 --> 00:20:20.000
+Satu-satunya teknologi yang akan digunakan. Kita lihat contoh di sini
+
+251
+00:20:20.000 --> 00:20:24.000
+teknologi broadband yang memiliki atributnya sendiri dan
+
+252
+00:20:24.000 --> 00:20:26.000
+Alternatif untuk Ethernet.
+
+253
+00:20:26.001 --> 00:20:31.000
+Jadi jika kita melihat rangkaian daerah lokal secara umum, tampaknya bagi saya bahwa di atas
+
+254
+00:20:31.000 --> 00:20:35.001
+Dalam beberapa tahun terakhir, kami telah mendengar percakapan tentang jaringan daerah yang mungkin
+
+255
+00:20:35.001 --> 00:20:38.001
+Salah satu hal yang menyebabkan kesulitan dan penerimaan adalah
+
+256
+00:20:38.001 --> 00:20:40.001
+Standardisasi antara muka. Apakah itu benar?
+
+257
+00:20:41.001 --> 00:20:45.001
+Tentu saja Fakta bahwa sekali lagi kita sedang mencari sesuatu yang akan menyelesaikan semua
+
+258
+00:20:45.001 --> 00:20:47.001
+masalah dan kami tidak akan menemukannya.
+
+259
+00:20:47.001 --> 00:20:50.001
+Ini seperti komputer universal. Tidak ada satu dan kita mungkin tidak akan
+
+260
+00:20:50.001 --> 00:20:53.001
+Saya senang dengan itu jika ada. Ini mungkin akan menjadi mesin turing.
+
+261
+00:20:55.000 --> 00:21:01.001
+Saya pikir standar datang tepat waktu. Untuk mencoba keluar dengan
+
+262
+00:21:01.001 --> 00:21:05.000
+Sebuah standar terlalu cepat akan berarti bahwa mungkin kita akan
+
+263
+00:21:05.000 --> 00:21:06.001
+Standar pada hal yang salah.
+
+264
+00:21:07.001 --> 00:21:12.000
+Kami melihat banyak aktivitas sekarang dengan Ethernet dengan broadband dalam standar
+
+265
+00:21:12.000 --> 00:21:17.001
+Komunitas serta token berlalu untuk manufaktur dan manufaktura
+
+266
+00:21:17.001 --> 00:21:22.000
+Keperluan otomatisasi dan keseluruhan pertanyaan mereka adalah apa yang akan dilakukan IBM dan
+
+267
+00:21:22.000 --> 00:21:24.000
+Ini akan menetapkan standar untuk industri.
+
+268
+00:21:25.001 --> 00:21:29.001
+Ya, kami sudah keluar dari waktu untuk catatan itu. Terima kasih banyak untuk bergabung dengan kami bertiga.
+
+269
+00:21:29.001 --> 00:21:32.001
+tetamu dan semua Anda dan harap Anda akan bersama kami lagi untuk
+
+270
+00:21:32.001 --> 00:21:34.000
+Edisi berikutnya dari Computer Chronicles
+
+271
+00:22:00.000 --> 00:22:15.001
+Sampaikan terima kasih
+
+272
+00:22:35.001 --> 00:22:41.000
+Akses rawak dimungkinkan dengan bantuan dari byte jurnal sistem kecil
+
+273
+00:22:41.000 --> 00:22:45.000
+penerbit majalah bulanan tentang teknologi mikro komputer dan inovasi
+
+274
+00:22:45.000 --> 00:22:47.001
+proyek-proyek di dunia komputer.
+
+275
+00:22:50.001 --> 00:22:55.000
+Dalam file akses rawak hari ini, Anda selalu ingin masuk ke pasar saham.
+
+276
+00:22:55.000 --> 00:22:57.000
+Tapi dia tidak pernah ingin berurusan dengan broker saham itu.
+
+277
+00:22:57.001 --> 00:23:01.001
+Baik jika Anda memiliki komputer pribadi Anda dapat membeli dan menjual seperti anak-anak besar sekarang
+
+278
+00:23:01.001 --> 00:23:03.001
+Jangan pernah berbicara dengan broker.
+
+279
+00:23:04.001 --> 00:23:08.000
+C dan D Anderson, broker diskon kecil di San Francisco telah mengumumkan yang pertama
+
+280
+00:23:08.000 --> 00:23:12.000
+sistem komputer brokering rumah untuk biaya awal tiga ratus dolar.
+
+281
+00:23:12.001 --> 00:23:15.001
+Anda dapat menggunakan layanan ini untuk membuat pesanan untuk hampir setiap jenis investasi
+
+282
+00:23:15.001 --> 00:23:20.000
+Transaksi dan Charles Schwab juga mengumumkan rencana untuk memulai rumah
+
+283
+00:23:20.000 --> 00:23:23.000
+Perkhidmatan perantara komputer dimulai awal tahun depan.
+
+284
+00:23:25.000 --> 00:23:28.001
+Invasion komputer sekolah-sekolah publik berlanjut tetapi di tengah-tengah yang baru
+
+285
+00:23:28.001 --> 00:23:33.000
+Kabar terbaru kontroversi adalah bahwa 86 persen dari semua sekolah menengah memiliki setidaknya
+
+286
+00:23:33.000 --> 00:23:37.001
+satu komputer pribadi untuk penggunaan siswa dan 61 persen dari semua
+
+287
+00:23:37.001 --> 00:23:39.001
+Sekolah memiliki setidaknya satu komputer.
+
+288
+00:23:40.000 --> 00:23:43.000
+Tetapi para pendidik mulai berdebat tentang apa yang harus dilakukan dengan komputer.
+
+289
+00:23:43.001 --> 00:23:46.001
+Beberapa ahli mengatakan itu adalah buang-buang waktu untuk mengajar anak-anak pemrograman.
+
+290
+00:23:47.001 --> 00:23:51.000
+Orang lain mengatakan bahwa sebagian besar komputer dan sekolah sekarang digunakan hanya sebagai
+
+291
+00:23:51.000 --> 00:23:52.001
+Sistem kartu flash elektronik.
+
+292
+00:23:53.001 --> 00:23:56.001
+Pekerjaan untuk mendapatkan cukup komputer ke sekolah-sekolah adalah monumental.
+
+293
+00:23:57.000 --> 00:24:01.001
+Sebuah perusahaan penelitian mengatakan itu akan biaya empat setengah miliar dolar untuk mencukupi
+
+294
+00:24:01.001 --> 00:24:05.001
+Sekolah-sekolah Amerika dilengkapi dengan komputer dan nilai dari semua itu masih belum
+
+295
+00:24:05.001 --> 00:24:10.001
+dengan jelas. Dalam satu studi, 69 persen siswa yang diuji tahu bagaimana untuk menggambar 90
+
+296
+00:24:10.001 --> 00:24:14.000
+tingkat sudut pada komputer tetapi hanya 19 persen dari mereka
+
+297
+00:24:14.000 --> 00:24:15.001
+Dia tahu bagaimana untuk menggambar satu di kertas.
+
+298
+00:24:17.000 --> 00:24:20.001
+Sebuah studi Stanford yang baru saja dirilis menunjukkan bahwa anak laki-laki jauh lebih
+
+299
+00:24:20.001 --> 00:24:22.000
+Mereka lebih tertarik dengan komputer daripada anak perempuan.
+
+300
+00:24:22.001 --> 00:24:27.000
+Sebagian besar siswa yang terdaftar di kamp komputer adalah anak laki-laki.
+
+301
+00:24:27.000 --> 00:24:30.000
+dengan kepemilikan komputer dan pembelian permainan komputer.
+
+302
+00:24:30.001 --> 00:24:33.001
+Studi Stanford mengatakan dapat menciptakan masalah nyata bagi wanita
+
+303
+00:24:33.001 --> 00:24:35.000
+di tempat kerja masa depan.
+
+304
+00:24:36.000 --> 00:24:39.001
+IBM dan Hitachi menguburkan hatchet sampai kesepakatan penyelesaian
+
+305
+00:24:39.001 --> 00:24:41.001
+dan kasus rahasia perdagangan yang dicuri.
+
+306
+00:24:42.000 --> 00:24:45.000
+Hitachi memperkirakan akan membayar IBM beberapa juta dolar.
+
+307
+00:24:45.001 --> 00:24:49.001
+Hitachi juga telah setuju untuk tidak menggunakan informasi apa pun yang diperoleh dan untuk
+
+308
+00:24:49.001 --> 00:24:51.001
+Mengembalikan semua dokumen yang dicuri ke IBM.
+
+309
+00:24:52.001 --> 00:24:56.001
+Hitachi juga setuju untuk mendedahkan nama siapa pun yang menawarkan untuk menjual perdagangan IBM
+
+310
+00:24:56.001 --> 00:24:58.001
+Rahasia dari perusahaan komputer Jepang.
+
+311
+00:24:58.001 --> 00:25:03.001
+Para ahli industri berharap formula penyelesaian akan menetapkan precedent untuk
+
+312
+00:25:03.001 --> 00:25:05.001
+Menyelesaikan kasus rahasia perdagangan di masa depan.
+
+313
+00:25:07.000 --> 00:25:11.000
+Baik AT&amp;T mengatakan itu masuk ke dalam bisnis informasi dan itu pasti.
+
+314
+00:25:11.000 --> 00:25:16.000
+AT&amp;T baru saja mengumumkan penjualan sistem informasi AS$70 juta kepada perusahaan.
+
+315
+00:25:16.000 --> 00:25:18.001
+Perusahaan telepon Jepang Nippon Telegraph dan Telephone.
+
+316
+00:25:19.000 --> 00:25:22.001
+Sistem perangkat lunak komputer AT&amp;T akan digunakan untuk memantau
+
+317
+00:25:22.001 --> 00:25:24.000
+lalu lintas komunikasi Nippon.
+
+318
+00:25:24.000 --> 00:25:29.001
+Nippon juga berencana untuk membeli 12 juta dolar Cray komputer untuk menjalankan sistem.
+
+319
+00:25:30.000 --> 00:25:33.000
+Seluruh kesepakatan tergantung pada kelulusan lisensi ekspor.
+
+320
+00:25:35.000 --> 00:25:37.001
+Berita dari suite eksekutif lebih banyak perubahan manajemen atas
+
+321
+00:25:37.001 --> 00:25:39.000
+di lembah minggu lalu.
+
+322
+00:25:39.001 --> 00:25:41.000
+Dua eksekutif Atari teratas telah berhenti.
+
+323
+00:25:41.001 --> 00:25:45.001
+John Cavalier dan Jeffrey Heimbek telah meninggalkan posisi mereka di Sunnyvale.
+
+324
+00:25:46.000 --> 00:25:49.000
+Cavalier pindah ke Apple dan meninggalkan Apple adalah John
+
+325
+00:25:49.000 --> 00:25:51.000
+Couch, pria di balik proyek Lisa.
+
+326
+00:25:51.000 --> 00:25:54.001
+Couch bergabung dengan Lembaga Software Ventures Inc. dari pemandangan gunung.
+
+327
+00:25:55.000 --> 00:25:58.001
+Couch mengatakan dia ingin mendorong teknologi perangkat lunak empat atau
+
+328
+00:25:58.001 --> 00:26:00.000
+Lima langkah lebih jauh dari Lisa.
+
+329
+00:26:01.001 --> 00:26:04.000
+Jika Anda bingung dengan semua buku komputer baru yang datang
+
+330
+00:26:04.000 --> 00:26:05.001
+Di pasar, ada alasan yang baik.
+
+331
+00:26:06.000 --> 00:26:10.001
+Industri penerbitan mengatakan sekarang ada 2000 komputer bagaimana buku dicetak
+
+332
+00:26:10.001 --> 00:26:15.000
+Dan buku-buku komputer itu menjual semua buku lain yang berkaitan dengan bisnis.
+
+333
+00:26:15.000 --> 00:26:19.000
+Bahkan, Crown Books mengatakan pertumbuhan dalam buku komputer hanya disesuaikan dengan
+
+334
+00:26:19.000 --> 00:26:20.001
+Pertumbuhan dalam novel romantis.
+
+335
+00:26:21.001 --> 00:26:25.000
+Tahun lalu, lebih dari 7 juta buku komputer dijual untuk total
+
+336
+00:26:25.000 --> 00:26:26.001
+30 juta dolar dalam penjualan.
+
+337
+00:26:27.000 --> 00:26:28.001
+Dan cerita yang sama dengan majalah komputer.
+
+338
+00:26:29.000 --> 00:26:33.001
+Sekarang ada 72 majalah komputer bulanan di pasar dan ini adalah bisnis
+
+339
+00:26:33.001 --> 00:26:36.000
+yang belum ada enam tahun yang lalu.
+
+340
+00:26:37.001 --> 00:26:40.000
+Minggu lalu kami memeriksa perangkat lunak bisnis yang paling terjual.
+
+341
+00:26:40.001 --> 00:26:43.001
+Minggu ini kami akan memeriksa penjual teratas dalam perangkat lunak game komputer.
+
+342
+00:26:43.001 --> 00:26:50.000
+Lima yang teratas dalam urutan adalah Zaxxon dari DataSoft, Wizardry dari Sirtech, Flight
+
+343
+00:26:50.000 --> 00:26:55.000
+Simulator dari Microsoft, Pinball Construction Set dari Electronic Arts, dan
+
+344
+00:26:55.000 --> 00:26:57.000
+Salah satu dari infocom.
+
+345
+00:26:59.000 --> 00:27:03.000
+Akhirnya itu harus terjadi ketika Sweet Lady menandatangani ke saluran CB CompuServe.
+
+346
+00:27:03.001 --> 00:27:05.000
+Dia tidak tahu apa yang ada di toko.
+
+347
+00:27:05.001 --> 00:27:09.001
+Dia bertemu dengan Mr. Mike yang membantu dia mencari tahu bagaimana untuk mendapatkan email.
+
+348
+00:27:09.001 --> 00:27:13.001
+Mr. yang Mike dan Sweet Lady kemudian pindah ke mode percakapan pribadi dan Anda tidak akan tahu
+
+349
+00:27:13.001 --> 00:27:18.001
+Minggu lalu, Puan dan Puan. Mike menikah di saluran CB tentu saja.
+
+350
+00:27:18.001 --> 00:27:22.001
+Seluruh upacara berlangsung di CompuServe dengan lebih dari 70 tamu yang diundang
+
+351
+00:27:22.001 --> 00:27:26.001
+masuk dan ketika menteri masuk kata-kata, Anda bisa mencium pengantin perempuan, En.
+
+352
+00:27:26.001 --> 00:27:29.000
+K-I-S yang ditampilkan di K-S-S.
+
+353
+00:27:29.000 --> 00:27:30.000
+Sekarang itu adalah networking.
+
+354
+00:27:30.001 --> 00:27:33.000
+Dan inilah edisi minggu ini dari Random Access.
+
+355
+00:27:33.000 --> 00:27:35.000
+Sebuah kapsul melihat apa yang sedang terjadi di dunia komputer.
+
+356
+00:27:35.001 --> 00:27:39.000
+Perhatikan Random Access setiap minggu dengan segera mengikuti Chronicles Computer.
+
+357
+00:27:42.001 --> 00:27:47.001
+Akses rawak dimungkinkan dengan bantuan dari Byte, Small Systems Journal,
+
+358
+00:27:48.000 --> 00:27:52.000
+penerbit majalah bulanan tentang teknologi mikrokomputer dan inovasi
+
+359
+00:27:52.000 --> 00:27:54.000
+proyek-proyek di dunia komputer.

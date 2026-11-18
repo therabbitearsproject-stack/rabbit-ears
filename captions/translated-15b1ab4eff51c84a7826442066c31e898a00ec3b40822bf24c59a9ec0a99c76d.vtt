@@ -1,0 +1,1849 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:05.001
+Avez-vous déjà l&#x27;impression d&#x27;un juggler qui tente de garder votre processeur de mots en cours
+
+2
+00:00:05.001 --> 00:00:08.001
+utilisant votre logiciel de communication et tout en souhaitant
+
+3
+00:00:08.001 --> 00:00:10.000
+Tirez-vous des chiffres de votre brochure ?
+
+4
+00:00:10.001 --> 00:00:14.001
+Eh bien, nous sommes tous des jugglers d&#x27;une manière parce que faire notre travail signifie généralement faire
+
+5
+00:00:14.001 --> 00:00:16.000
+plusieurs tâches en même temps.
+
+6
+00:00:16.001 --> 00:00:20.000
+Il y a une façon de jugler toutes ces tâches informatiques simultanément.
+
+7
+00:00:20.000 --> 00:00:21.001
+C’est ce qu’on appelle le multitasking.
+
+8
+00:00:22.000 --> 00:00:25.000
+Et aujourd’hui, nous examinons le logiciel multitasking sur ce sujet.
+
+9
+00:00:25.000 --> 00:00:26.001
+Édition de The Computer Chronicles.
+
+10
+00:00:48.000 --> 00:00:53.000
+Les chronicles informatiques sont rendus possibles en partie par CompuServe, avec un
+
+11
+00:00:53.000 --> 00:00:57.001
+bibliothèque de référence en ligne, Wall Street rapports, achats à domicile, compagnie aérienne
+
+12
+00:00:57.001 --> 00:00:59.001
+Réservations, jeux et des centaines de dollars.
+
+13
+00:01:02.001 --> 00:01:05.001
+CompuServe, en aidant les gens à obtenir le maximum des ordinateurs.
+
+14
+00:01:09.000 --> 00:01:12.000
+Un financement supplémentaire est fourni par McGraw-Hill, publié à Byte.
+
+15
+00:01:12.001 --> 00:01:16.001
+Articles techniques détaillés de Byte sur les nouveaux matériels, logiciels et langues couverts
+
+16
+00:01:16.001 --> 00:01:19.000
+développement de la technologie informatique dans le monde entier.
+
+17
+00:01:25.000 --> 00:01:28.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay et c&#x27;est Gary Dillemott.
+
+18
+00:01:29.000 --> 00:01:32.000
+Gary, c&#x27;est Multifinder sur le Macintosh ici. C’est bien sûr le nouveau de Apple.
+
+19
+00:01:32.000 --> 00:01:33.001
+Un environnement multi-travail pour Mac.
+
+20
+00:01:34.000 --> 00:01:36.000
+Et comme vous pouvez le voir, nous avons trois applications en cours
+
+21
+00:01:36.000 --> 00:01:37.001
+et ici. Je suis prêt, prêt et je vais dans la fenêtre principale.
+
+22
+00:01:38.000 --> 00:01:41.001
+Je peux cliquer sur mon souris et il y a mon processeur de mots en cours. Mac à droite. Je peux
+
+23
+00:01:41.001 --> 00:01:43.001
+Cliquez ici et il y a ma brochure, Excel.
+
+24
+00:01:44.000 --> 00:01:46.000
+Vous êtes personnellement dans DRI je sais avoir été impliqué
+
+25
+00:01:46.000 --> 00:01:47.001
+Développement de logiciels multitasking.
+
+26
+00:01:47.001 --> 00:01:50.000
+Dans le passé, vous m&#x27;avez dit quel travail difficile c&#x27;est d&#x27;un
+
+27
+00:01:50.000 --> 00:01:52.000
+du point de vue du développeur. Pourquoi est-ce si difficile ?
+
+28
+00:01:52.001 --> 00:01:55.001
+Eh bien, Stuart, comme vous le savez, le système d&#x27;exploitation lui-même est cette couche de logiciel
+
+29
+00:01:55.001 --> 00:01:57.000
+entre une application et le matériel.
+
+30
+00:01:58.000 --> 00:02:01.000
+Et beaucoup de logiciels existants qui sont écrits pour un seul système de tâches
+
+31
+00:02:01.000 --> 00:02:03.000
+Aujourd’hui, ils utilisent peu de go-rounds.
+
+32
+00:02:03.000 --> 00:02:06.000
+Et cela signifie essentiellement qu&#x27;ils appellent directement dans le matériel pour faire des choses spéciales
+
+33
+00:02:06.000 --> 00:02:09.001
+des choses, pour accélérer le logiciel ou pour simuler le multitasking, comme les
+
+34
+00:02:09.001 --> 00:02:11.000
+TSRs, Programmes de résidence d’État terminés.
+
+35
+00:02:11.000 --> 00:02:15.000
+La difficulté d’essayer de les faire fonctionner dans un environnement multitasking est
+
+36
+00:02:15.000 --> 00:02:17.001
+Vous devez détecter ces go-rounds, assurez-vous que vous simulez l&#x27;environnement
+
+37
+00:02:17.001 --> 00:02:20.000
+Ils ne se détruisent pas les uns les autres dans le processus.
+
+38
+00:02:21.000 --> 00:02:25.000
+Maintenant, beaucoup d&#x27;applications aujourd&#x27;hui sont écrites pour multitasking explicitement, de sorte qu&#x27;ils
+
+39
+00:02:25.000 --> 00:02:26.001
+Vous n&#x27;avez pas besoin d&#x27;utiliser ces go-rounds. Ils utilisent
+
+40
+00:02:26.001 --> 00:02:28.000
+En réalité, il y a des installations dans l’OS lui-même.
+
+41
+00:02:28.001 --> 00:02:31.000
+Gary, aujourd&#x27;hui, nous allons regarder quelques-unes des dernières multitasking
+
+42
+00:02:31.000 --> 00:02:33.000
+Le logiciel . Nous verrons votre produit Concurrent DOS.
+
+43
+00:02:33.000 --> 00:02:37.001
+Nous verrons Windows 386 de Microsoft. Et nous allons regarder l&#x27;extension de OS2
+
+44
+00:02:37.001 --> 00:02:40.000
+L’édition et le manager de présentation d’IBM.
+
+45
+00:02:40.000 --> 00:02:43.001
+Nous verrons également AUX, le nouveau système d&#x27;exploitation pour Mac 2.
+
+46
+00:02:44.000 --> 00:02:46.000
+Maintenant, dans le passé, si vous voulez multi-utilisateur, multitasking
+
+47
+00:02:46.000 --> 00:02:48.000
+Vous avez peut-être rejoint l’Unix.
+
+48
+00:02:48.001 --> 00:02:52.000
+Nous allons commencer par regarder une mise en œuvre de l’Unix, le Zenix.
+
+49
+00:02:52.000 --> 00:02:54.001
+système d&#x27;exploitation, sur un système Tandy 3000.
+
+50
+00:02:56.001 --> 00:03:01.000
+Foothill Securities est une petite entreprise familiale basée à Los Altos,
+
+51
+00:03:01.000 --> 00:03:03.000
+La Californie, près de San Francisco.
+
+52
+00:03:03.000 --> 00:03:09.000
+Le propriétaire et le président, M. Rex Gardner, partage un bureau à deux chambres confortable avec son
+
+53
+00:03:09.000 --> 00:03:15.001
+son fils, deux autres employés, et un 286-basé Tandy 3000 qui exploite le SCO
+
+54
+00:03:15.001 --> 00:03:18.000
+Système d’exploitation multitasking Zenix.
+
+55
+00:03:18.001 --> 00:03:25.000
+Nous voulions que notre peuple puisse accéder aux mêmes fichiers en même temps.
+
+56
+00:03:25.001 --> 00:03:32.000
+Et en utilisant Zenix, nous avons une capacité multi-utilisateur, multitasking.
+
+57
+00:03:32.001 --> 00:03:38.000
+Donc, nous avons plusieurs bases de données différentes, une pour les listes de nos représentants,
+
+58
+00:03:38.001 --> 00:03:42.001
+Une autre liste de produits, une autre liste des fonds mutuels, par exemple.
+
+59
+00:03:42.001 --> 00:03:49.000
+Et lorsque nous entrons les commandes, nous accédons à toutes ces bases de données,
+
+60
+00:03:49.001 --> 00:03:53.000
+parfois simultanément, mais nous pouvons avoir des personnes différentes qui accèdent aux mêmes
+
+61
+00:03:53.000 --> 00:03:54.001
+Les bases de données en même temps.
+
+62
+00:03:55.001 --> 00:04:00.000
+Les jardiniers traitent une quantité impressionnante d&#x27;informations et d&#x27;argent de leur
+
+63
+00:04:00.000 --> 00:04:05.000
+Spartan office, environ 36 millions de dollars de commandes juste l&#x27;année dernière.
+
+64
+00:04:05.000 --> 00:04:10.001
+Dans cette société, l&#x27;avantage réel d&#x27;un système de multitasking est qu&#x27;il est multi-
+
+65
+00:04:10.001 --> 00:04:16.000
+utilisateur . Une machine peut fournir une liste de fonds mutuels, des détails sur une vente,
+
+66
+00:04:16.001 --> 00:04:20.001
+et la comptabilité générale en même temps à tout le monde avec un écran terminal.
+
+67
+00:04:21.001 --> 00:04:26.001
+Il faut plus de temps pour obtenir des informations lorsque tout le monde est en ligne. Pourtant, c’est le
+
+68
+00:04:26.001 --> 00:04:30.001
+Un système de multitasking qui donne à cette entreprise sa limite concurrentielle.
+
+69
+00:04:31.000 --> 00:04:36.001
+Nous mettons seulement moins d’heures masculines ou féminines pour faire le même travail. C’est ce
+
+70
+00:04:36.001 --> 00:04:41.000
+et simple. Nous prenons des ordinateurs au lieu des gens. Ce n’est pas parce que nous ne recrutons pas des gens,
+
+71
+00:04:41.000 --> 00:04:44.000
+Mais si nous n’avions pas les ordinateurs, nous aurions besoin d’embaucher deux ou trois personnes supplémentaires.
+
+72
+00:04:55.001 --> 00:04:59.001
+Nous rejoignons maintenant dans le studio Tony Harris de Digital Research Incorporated, et
+
+73
+00:04:59.001 --> 00:05:03.000
+Je pourrais mentionner que Gary, alors qu&#x27;il n&#x27;est pas hébergant les Chroniques informatiques, arrive
+
+74
+00:05:03.000 --> 00:05:04.001
+Président du conseil d’administration du BRI.
+
+75
+00:05:06.001 --> 00:05:10.001
+Ce qui est intéressant sur l’ensemble de l’entreprise du micro-ordinateur est que le
+
+76
+00:05:10.001 --> 00:05:12.001
+Les processus sont devenus très puissants. Nous pouvons
+
+77
+00:05:12.001 --> 00:05:14.000
+Il y a beaucoup de souvenirs sur eux et ainsi de suite.
+
+78
+00:05:14.001 --> 00:05:18.000
+Nous allons indiquer maintenant, si nous avons un bon multitasking, multi-utilisateur opérationnel
+
+79
+00:05:18.000 --> 00:05:21.001
+systèmes, nous pouvons commencer à remplacer de nombreux ordinateurs à un coût beaucoup plus élevé
+
+80
+00:05:21.001 --> 00:05:23.001
+Une manière efficace. C’est là que nous sommes.
+
+81
+00:05:24.000 --> 00:05:27.000
+Tony, le produit que nous allons regarder de DRI en seulement une seconde est concurrentiel
+
+82
+00:05:27.000 --> 00:05:30.001
+Deux . Tout d’abord, je veux que vous me disiez comment cela va dans la grande photo
+
+83
+00:05:30.001 --> 00:05:32.000
+C’est en particulier avec OS2.
+
+84
+00:05:32.000 --> 00:05:38.000
+C’est Concurrent DOS 386, et il fait partie d’une famille de Concurent DOS opérant
+
+85
+00:05:38.000 --> 00:05:43.000
+des systèmes. En principe, si vous regardez juste en arrière sur PC DOS, PC DOS est vraiment le seul
+
+86
+00:05:43.000 --> 00:05:46.001
+Le système d&#x27;exploitation pour le monde DOS, exécute une application DOS à la fois.
+
+87
+00:05:47.000 --> 00:05:51.000
+OS2, d&#x27;autre part, est un système d&#x27;exploitation multi-tasking qui fonctionne multi
+
+88
+00:05:51.000 --> 00:05:56.001
+Développer les programmes OS2. Le concurrent DOS 386 est vraiment un fonctionnement multi-tasking
+
+89
+00:05:56.001 --> 00:05:59.000
+Système pour 2 applications. C’est vraiment tout son accent.
+
+90
+00:05:59.001 --> 00:06:04.001
+Son objectif est de fonctionner plusieurs applications DOS, les multipliant sur les deux
+
+91
+00:06:04.001 --> 00:06:06.000
+C’est le même ou, en fait, sur plusieurs terminaux. Il est
+
+92
+00:06:06.000 --> 00:06:08.000
+Un système d’exploitation multi-utilisateur aussi.
+
+93
+00:06:08.000 --> 00:06:11.001
+Ok, c&#x27;est-à-dire, je prends ce que nous avons mis en place ici et décrivons ce qui est ici et ensuite
+
+94
+00:06:11.001 --> 00:06:13.000
+Il s’agit d’un concurrent DOS 386.
+
+95
+00:06:13.000 --> 00:06:19.000
+Eh bien, essentiellement ce que nous avons sous la table est en fait un IBM PS2 Model
+
+96
+00:06:19.000 --> 00:06:24.001
+80, qui est bien sûr un modèle 386 d&#x27;IBM. Nous avons la console principale.
+
+97
+00:06:24.001 --> 00:06:26.000
+qui est directement liée à l’intérieur.
+
+98
+00:06:26.001 --> 00:06:31.000
+Puis, en fait, connecté hors les deux ports de série, les deux RS232 communication
+
+99
+00:06:31.000 --> 00:06:35.000
+Les ports de la machine sont deux terminaux sériels standard.
+
+100
+00:06:35.001 --> 00:06:38.001
+C&#x27;est plutôt intéressant si vous regardez réellement, car en fait tous les trois
+
+101
+00:06:38.001 --> 00:06:40.001
+Il s’agit du Lotus 123, dont nous savons qu’il s’agissait de
+
+102
+00:06:40.001 --> 00:06:42.000
+Programme de diffusion standard de l&#x27;industrie.
+
+103
+00:06:42.000 --> 00:06:45.000
+Vous pourriez plutôt s&#x27;attendre à ce qu&#x27;il soit vraiment en cours ici.
+
+104
+00:06:46.000 --> 00:06:50.000
+Ce qui est encore plus intéressant, c&#x27;est que tout n&#x27;est pas exactement comme il semble, parce que dans
+
+105
+00:06:50.000 --> 00:06:53.001
+En fait, si vous appuyez sur un peu de clé ici, vous verrez en fait qu&#x27;il y a beaucoup et
+
+106
+00:06:53.001 --> 00:06:56.000
+Beaucoup de processus sont en train de fonctionner, beaucoup de tâches sont en cours ici.
+
+107
+00:06:56.001 --> 00:07:01.000
+En fait, sur ces terminaux de série même eux-mêmes, je peux toucher une clé sur cette,
+
+108
+00:07:01.000 --> 00:07:05.000
+Par exemple, et découvrez que j&#x27;exécute DBASE 3 en même temps.
+
+109
+00:07:05.000 --> 00:07:11.000
+Ce que nous voyons ici est la capacité de l&#x27;IBM PS2 Model 80 comme un 386 basé
+
+110
+00:07:11.000 --> 00:07:17.001
+machine en conjonction avec Concurrent DOS 386, sa capacité à exécuter les deux standards
+
+111
+00:07:17.001 --> 00:07:21.001
+Les applications DOS, car le système d&#x27;exploitation est complètement compatible avec DOS, mais
+
+112
+00:07:21.001 --> 00:07:26.001
+pour pouvoir exécuter plusieurs applications DOS et permettre un accès partagé à elles.
+
+113
+00:07:26.001 --> 00:07:32.000
+La configuration typique ici serait où je dirais que le gestionnaire est assis à
+
+114
+00:07:32.000 --> 00:07:35.001
+le bureau, j&#x27;ai eu accès à ma feuille d&#x27;écran, puis mes stations de travail secrétariales
+
+115
+00:07:35.001 --> 00:07:37.001
+Peut-être qu’il y a un processus de mots, ou même un certain nombre de brochures.
+
+116
+00:07:37.001 --> 00:07:39.000
+Pouvez-vous nous montrer quelque chose sur le fond ?
+
+117
+00:07:39.001 --> 00:07:39.001
+Oui, c’est exactement
+
+118
+00:07:40.001 --> 00:07:44.000
+Ce que j&#x27;ai réellement ici, nous pouvons voir que je peux en fait aller d&#x27;une vue fenêtre
+
+119
+00:07:44.000 --> 00:07:46.000
+123 à l’écran complet.
+
+120
+00:07:46.000 --> 00:07:53.000
+Ce que je peux aussi faire, c’est de changer ces multiples fenêtres en avant, en
+
+121
+00:07:53.000 --> 00:07:57.000
+l&#x27;avant-garde, et en fait, si je prends ce dernier jusqu&#x27;à l&#x27;écran complet, nous verrons que
+
+122
+00:07:57.000 --> 00:08:01.000
+Nous avons une utilité de statut système qui nous montre toutes les différentes tâches et
+
+123
+00:08:01.000 --> 00:08:02.001
+des processus qui fonctionnent dans le système d’exploitation.
+
+124
+00:08:03.001 --> 00:08:08.001
+Et revenez ici, revenez à Lotus, retirez-le à l&#x27;écran complet, et sur la
+
+125
+00:08:08.001 --> 00:08:10.001
+Les terminaux de série, vous savez, comment utiliseriez-vous cela?
+
+126
+00:08:10.001 --> 00:08:12.000
+Je pense que vous pourriez dire, qu’est-ce que l’utilisation de cela ?
+
+127
+00:08:12.001 --> 00:08:16.001
+Eh bien, bien sûr ici, j&#x27;ai DBase 3+, qui fonctionne sur le terminal.
+
+128
+00:08:17.000 --> 00:08:20.000
+J&#x27;ai frappé une clé, et ce qu&#x27;il commence à faire maintenant est d&#x27;emballer ma base de données.
+
+129
+00:08:20.000 --> 00:08:23.001
+C&#x27;est en fait la compression de la base de données, et alors ce que je peux faire est de se déplacer
+
+130
+00:08:23.001 --> 00:08:27.001
+De là, allez à Lotus, et commencez en fait à manipuler mon panneau, ajoutant
+
+131
+00:08:27.001 --> 00:08:31.000
+Quelques données et calculant alors que cela se passe en réalité dans le contexte.
+
+132
+00:08:31.001 --> 00:08:32.001
+Un système très, très puissant.
+
+133
+00:08:33.000 --> 00:08:34.001
+Bon Tony, merci beaucoup.
+
+134
+00:08:34.001 --> 00:08:36.001
+En quelques minutes, nous allons regarder Windows 386
+
+135
+00:08:36.001 --> 00:08:38.001
+Avec Microsoft, soyez avec nous !
+
+136
+00:08:50.001 --> 00:08:54.001
+Il s’agit de Dave Jaworski de Microsoft. et Gary.
+
+137
+00:08:55.000 --> 00:08:58.001
+Dave, Microsoft a introduit deux systèmes d&#x27;exploitation, deux opérations multitasking
+
+138
+00:08:58.001 --> 00:09:01.000
+Systèmes, OS2 et Windows 386. Comment posez-vous ces deux ?
+
+139
+00:09:01.001 --> 00:09:06.001
+Ok, l&#x27;interface est la même sur OS2 Presentation Manager, Windows 386, et
+
+140
+00:09:06.001 --> 00:09:08.001
+Windows 2 et c’est important.
+
+141
+00:09:08.001 --> 00:09:12.001
+Windows 386, que nous allons regarder aujourd&#x27;hui, suit la SAA d&#x27;IBM,
+
+142
+00:09:13.000 --> 00:09:14.001
+Accès utilisateur commun, standard.
+
+143
+00:09:14.001 --> 00:09:17.001
+Ainsi, à l’avenir, toutes les applications auront cette interface.
+
+144
+00:09:18.000 --> 00:09:24.001
+Windows 386 ne fonctionne que sur le processeur Intel 80386. OS2 est construit pour le 286
+
+145
+00:09:24.001 --> 00:09:27.001
+plateforme et au-delà, et c&#x27;est vraiment l&#x27;opération
+
+146
+00:09:27.001 --> 00:09:29.000
+Un système et une plate-forme pour l’avenir.
+
+147
+00:09:29.001 --> 00:09:34.000
+Le 386 produit que nous allons regarder aujourd&#x27;hui est un produit à court terme dans ce
+
+148
+00:09:34.000 --> 00:09:37.000
+Il n&#x27;en profite que des 386 en ce moment et ne courra nulle part ailleurs.
+
+149
+00:09:37.001 --> 00:09:41.000
+Il est certain. Dans l&#x27;avenir, toutes les applications auront ces menus de retrait et
+
+150
+00:09:41.000 --> 00:09:43.000
+Un moyen commun d’interagir avec l’utilisateur.
+
+151
+00:09:43.001 --> 00:09:46.001
+Nous avons une fenêtre ouverte ici. Je peux cliquer sur cette fenêtre, un
+
+152
+00:09:46.001 --> 00:09:48.001
+Une montre qui fonctionne en même temps.
+
+153
+00:09:48.001 --> 00:09:52.001
+Je peux regarder dans le coin ici. J&#x27;ai des icônes qui représentent différentes
+
+154
+00:09:52.001 --> 00:09:56.000
+les actions, donc si je clique sur cette icône, elle réduit à un
+
+155
+00:09:56.000 --> 00:09:58.000
+Petite photo d’un disque.
+
+156
+00:09:58.001 --> 00:10:03.000
+Voici Microsoft Excel, un programme de brochure, et cela peut aller et obtenir
+
+157
+00:10:03.000 --> 00:10:04.001
+des informations provenant de diverses sources.
+
+158
+00:10:04.001 --> 00:10:09.001
+Non seulement je peux travailler avec mes panneaux standard, mais je peux aussi charger
+
+159
+00:10:09.001 --> 00:10:14.000
+une application qui peut parler à d&#x27;autres applications Windows à travers quelque chose que nous
+
+160
+00:10:14.000 --> 00:10:16.000
+L’échange de données dynamique, DDE.
+
+161
+00:10:16.001 --> 00:10:20.000
+Ce programme, comme il commence, il sait qu&#x27;il manque un peu de feuille de passe
+
+162
+00:10:20.000 --> 00:10:23.001
+information, et il dit, je peux rétablir un lien à cela. Si tu voudrais que je
+
+163
+00:10:23.001 --> 00:10:25.001
+fait ça ? Nous lui demanderons donc de le faire.
+
+164
+00:10:26.000 --> 00:10:30.000
+Il a également noté que le serveur d&#x27;application ne fonctionne pas, donc il dit que vous
+
+165
+00:10:30.000 --> 00:10:32.000
+J’ai envie de commencer ça ? Et je dis simplement oui.
+
+166
+00:10:32.000 --> 00:10:36.000
+Cela va simuler un aliment venant d&#x27;une bourse. Il pourrait être
+
+167
+00:10:36.000 --> 00:10:39.001
+Traiter des données sur un réseau provenant d’une variété de sources.
+
+168
+00:10:40.000 --> 00:10:43.001
+Et maintenant vous remarquerez que nous avons une mise à jour en temps réel de la feuille de passe. Je peux
+
+169
+00:10:43.001 --> 00:10:47.000
+Allez au-delà de cela et dites, veuillez me donner un graphique de cette information.
+
+170
+00:10:47.000 --> 00:10:51.000
+Par conséquent, Excel prendra maintenant cette information et fera quelques hypothèses sur sa
+
+171
+00:10:51.000 --> 00:10:53.000
+Le format, et il me donnera un graphique.
+
+172
+00:10:53.001 --> 00:10:56.001
+Ne prenez pas le téléphone et appelez personne. Ce n’est qu’une simulation. Ces sont
+
+173
+00:10:56.001 --> 00:10:58.000
+Pas de résultats réels sur le marché boursier.
+
+174
+00:10:58.000 --> 00:11:03.000
+Alors que cela marche, ce que je vais faire est de réduire cela vers une fenêtre, et je vais
+
+175
+00:11:03.000 --> 00:11:08.001
+pour revenir maintenant et démarrer l&#x27;exécutif, et entrer et charger Microsoft Word.
+
+176
+00:11:09.000 --> 00:11:12.001
+Il s’agit d’une application standard. Comme beaucoup de produits, les gens travaillent
+
+177
+00:11:12.001 --> 00:11:14.001
+Aujourd’hui, avec leurs ordinateurs, nous voulons s’assurer que
+
+178
+00:11:14.001 --> 00:11:16.001
+Ceux qui sont dans ce nouvel environnement.
+
+179
+00:11:16.001 --> 00:11:20.001
+Je peux exécuter l&#x27;écran complet et télécharger les fichiers, faire toutes les choses normales que je ferais
+
+180
+00:11:20.001 --> 00:11:25.000
+travailler dans DOS, ou je peux choisir de tirer des informations du produit Windows
+
+181
+00:11:25.000 --> 00:11:27.000
+Je l&#x27;ai ajouté à mon processeur de mots.
+
+182
+00:11:27.000 --> 00:11:33.000
+Je suis également en mesure de rattraper et d&#x27;exécuter Word dans une fenêtre, puis encore, comme nous travaillons
+
+183
+00:11:33.000 --> 00:11:37.000
+Ici, l’horloge est encore en marche, et si je le réduis à nouveau, vous verrez
+
+184
+00:11:37.000 --> 00:11:40.001
+que mon brochure de retour ici nous donne toujours cette nourriture vivante.
+
+185
+00:11:44.000 --> 00:11:47.001
+Donc, je peux travailler avec plusieurs applications, les deux applications DOS existantes
+
+186
+00:11:47.001 --> 00:11:50.000
+et de nouvelles applications pour l’avenir sur cette plateforme.
+
+187
+00:11:50.001 --> 00:11:54.000
+Oh Dave, merci beaucoup. C’est impressionnant ! Comme nous l’avons déjà mentionné, l’Unix
+
+188
+00:11:54.000 --> 00:11:57.001
+c&#x27;est un système d&#x27;exploitation auquel les utilisateurs s&#x27;intéressent
+
+189
+00:11:57.001 --> 00:11:59.001
+Capacité de multi-utilisateur.
+
+190
+00:11:59.001 --> 00:12:03.000
+Il n’a jamais été connu pour son amitié à l’utilisateur. Apple tente de résoudre
+
+191
+00:12:03.000 --> 00:12:07.000
+Ce problème avec son nouveau AUX pour le Mac 2. Wendy Woods a un rapport.
+
+192
+00:12:09.001 --> 00:12:13.001
+C&#x27;est un système d&#x27;exploitation Unix, qui combine pour la première fois le multi-
+
+193
+00:12:13.001 --> 00:12:17.000
+- Travailler Unix avec l&#x27;interface amiable du Macintosh.
+
+194
+00:12:18.000 --> 00:12:24.000
+C’est la version d’Unix d’Apple, appelée AUX. Berkeley, les concepts Abacus de Californie
+
+195
+00:12:24.000 --> 00:12:27.000
+C&#x27;est l&#x27;un des premiers développeurs de logiciels à écrire pour cela.
+
+196
+00:12:27.000 --> 00:12:28.001
+Nouveau système d’exploitation hybride.
+
+197
+00:12:29.001 --> 00:12:34.001
+Abacus a adapté son paquet d&#x27;analyse statistique Statview 2, conçu pour
+
+198
+00:12:34.001 --> 00:12:36.001
+Mac, pour fonctionner comme un programme Unix.
+
+199
+00:12:37.000 --> 00:12:40.001
+Les gens ici disent AUX est excitant parce qu&#x27;il les donne
+
+200
+00:12:40.001 --> 00:12:42.000
+Des outils qu’ils n’ont jamais eu auparavant.
+
+201
+00:12:42.000 --> 00:12:46.001
+Il n&#x27;est pas encore visuel, mais la vraie multi-travail est là, véritable inter-procès
+
+202
+00:12:46.001 --> 00:12:50.001
+La communication, et aussi la mémoire virtuelle, qui est important pour nous aussi.
+
+203
+00:12:51.000 --> 00:12:55.000
+L’idée d’être en mesure d’accéder plus à la mémoire que physiquement réside dans le
+
+204
+00:12:55.000 --> 00:12:58.000
+La machine est très importante pour des applications très grandes.
+
+205
+00:12:58.001 --> 00:13:02.000
+Les capacités multi-tasking devraient être beaucoup plus évidentes dans la
+
+206
+00:13:02.000 --> 00:13:03.001
+Nouvelle version de Statview 2.
+
+207
+00:13:04.001 --> 00:13:09.000
+Eh bien, nous prévoyons que généralement les gens vont utiliser un Statview sur AUX
+
+208
+00:13:09.000 --> 00:13:14.001
+systèmes quand ils ont de grandes analyses à effectuer, et nous allons briser
+
+209
+00:13:14.001 --> 00:13:18.001
+Statview up de telle manière qu&#x27;ils peuvent initier ces analyses et les avoir en cours
+
+210
+00:13:18.001 --> 00:13:22.000
+dans le fond alors qu&#x27;ils peuvent partir et accéder à leurs données, jouer avec les choses,
+
+211
+00:13:22.001 --> 00:13:25.000
+Ou faire d&#x27;autres calculs plus petits dans l&#x27;avant-garde.
+
+212
+00:13:27.000 --> 00:13:29.001
+C’est le moyen le plus intelligent pour nous de le faire.
+
+213
+00:13:29.001 --> 00:13:35.000
+Abacus et d&#x27;autres développeurs sont en banque sur la croyance que AUX va étendre la
+
+214
+00:13:35.000 --> 00:13:39.001
+Un marché Unix pour les gens de tous les sentiers de la vie qui veulent le pouvoir de l’Unix et de la
+
+215
+00:13:39.001 --> 00:13:41.001
+Facile à utiliser pour un Mac.
+
+216
+00:13:42.000 --> 00:13:45.001
+À Berkeley, en Californie, pour The Computer Chronicles, je suis Wendy Woods.
+
+217
+00:13:57.001 --> 00:14:02.000
+Avec nous dans le studio maintenant est Lee Reiswig, directeur du Austin Lab à IBM.
+
+218
+00:14:03.000 --> 00:14:05.001
+Vous savez, regardez toute cette configuration ici, Lee, et il ressemble à un
+
+219
+00:14:05.001 --> 00:14:07.000
+Un ordinateur plutôt qu’un ordinateur personnel.
+
+220
+00:14:07.001 --> 00:14:08.001
+Que avez-vous ici ?
+
+221
+00:14:08.001 --> 00:14:12.000
+Nous avons apporté Gary partie du Austin Lab ici sur le spectacle ce soir afin que nous
+
+222
+00:14:12.000 --> 00:14:13.001
+Vous pouvez vous montrer toutes les choses que OS2 fait.
+
+223
+00:14:13.001 --> 00:14:17.000
+Nous avons deux modèles 60s, tous deux en OS2, et un
+
+224
+00:14:17.000 --> 00:14:19.000
+moniteur d&#x27;un côté et moniteur de l&#x27;autre.
+
+225
+00:14:19.000 --> 00:14:23.000
+Puis nous avons quelques unités de contrôle de la communication de retour à Austin qui nous permettent de
+
+226
+00:14:23.000 --> 00:14:25.000
+être en direct connecté avec les communications de ces systèmes.
+
+227
+00:14:25.000 --> 00:14:27.000
+Je vais vous montrer comment certaines des communications fonctionnent dans OS2.
+
+228
+00:14:27.001 --> 00:14:28.001
+Ok, bien, nous allons avancer et entrer dans elle.
+
+229
+00:14:28.001 --> 00:14:31.001
+Ok, c&#x27;est le menu principal que vous voyez lors de l&#x27;installation de OS2.
+
+230
+00:14:31.001 --> 00:14:34.001
+C&#x27;est comme le DOS vieux C prompt, mais c&#x27;est maintenant comment il arrive.
+
+231
+00:14:34.001 --> 00:14:37.001
+Sur le côté gauche, vous verrez les programmes que vous pouvez exécuter, et sur la droite
+
+232
+00:14:37.001 --> 00:14:39.001
+-de la main, il montre les programmes qui sont en réalité en cours de fonctionnement.
+
+233
+00:14:39.001 --> 00:14:40.001
+Nous avons déjà commencé un groupe.
+
+234
+00:14:40.001 --> 00:14:44.001
+Le premier est le commandement DOS prompt, et nous pouvons aller de l&#x27;avant et le faire.
+
+235
+00:14:45.000 --> 00:14:48.001
+C&#x27;est en fait la fenêtre de compatibilité DOS dans OS2 qui fonctionne
+
+236
+00:14:48.001 --> 00:14:50.000
+Programmes PC-DOS sans modification.
+
+237
+00:14:50.001 --> 00:14:53.001
+Je travaille ici avec un simulateur de vol F16, par exemple.
+
+238
+00:14:54.001 --> 00:14:57.000
+Il y a l&#x27;écran principal du simulateur de vol.
+
+239
+00:14:57.000 --> 00:15:00.000
+Nous pouvons revenir à ce menu principal maintenant et
+
+240
+00:15:00.000 --> 00:15:01.001
+Regardez les autres choses que nous avons ici.
+
+241
+00:15:01.001 --> 00:15:03.000
+Nous avons le gestionnaire de la communication en cours.
+
+242
+00:15:03.001 --> 00:15:07.001
+Nous avons quelques programmes de communication de programme à programme avancés en cours, 3270
+
+243
+00:15:07.001 --> 00:15:10.001
+L&#x27;émulation terminale revient au système 370 à Austin.
+
+244
+00:15:10.001 --> 00:15:12.001
+Une séance terminale asynchronique comme le Dow
+
+245
+00:15:12.001 --> 00:15:14.001
+Jones, nous utilisons un système à Austin à nouveau.
+
+246
+00:15:15.000 --> 00:15:20.000
+Le nouveau gestionnaire de base de données relationnelle pour OS2 et l&#x27;affichage écrit pour OS2.
+
+247
+00:15:20.000 --> 00:15:22.000
+dans la nouvelle mémoire grand réelle.
+
+248
+00:15:22.000 --> 00:15:25.001
+Nous allons parcourir quelques-uns d’entre eux et le regarder.
+
+249
+00:15:25.001 --> 00:15:29.000
+La première chose que nous faisons, c’est de choisir ce que nous voulons, et de
+
+250
+00:15:29.000 --> 00:15:30.001
+Allez au menu de gestion de la communication.
+
+251
+00:15:32.000 --> 00:15:34.000
+Nous pouvons commencer et arrêter la communication.
+
+252
+00:15:34.001 --> 00:15:38.000
+Le gestionnaire de la communication de l&#x27;OS2, les choses uniques à son sujet sont qu&#x27;il peut
+
+253
+00:15:38.000 --> 00:15:39.001
+Il y a tellement de types de communications.
+
+254
+00:15:39.001 --> 00:15:41.000
+On peut les faire concurrentiellement.
+
+255
+00:15:42.000 --> 00:15:44.001
+Actuellement, nous organisons plusieurs séances de communication entre
+
+256
+00:15:44.001 --> 00:15:46.001
+Ces deux modèles 60s.
+
+257
+00:15:46.001 --> 00:15:50.000
+Nous transférons des fichiers d&#x27;un modèle 60 à l&#x27;autre, et nous le faisons avec
+
+258
+00:15:50.000 --> 00:15:54.001
+Deux transferts de fichiers séparés se déroulent en parallèle, ainsi que de se connecter en arrière
+
+259
+00:15:54.001 --> 00:15:56.001
+Les systèmes d’hébergement d’Austin.
+
+260
+00:15:56.001 --> 00:15:58.000
+C’est l’une des séances 6.2.
+
+261
+00:15:58.001 --> 00:16:01.001
+Vous pouvez voir les données cyclant à travers les fenêtres ici.
+
+262
+00:16:02.000 --> 00:16:03.000
+Il vient de ce système.
+
+263
+00:16:03.000 --> 00:16:06.001
+Nous allons avancer et regarder la même session qui fonctionne sur ce système.
+
+264
+00:16:09.000 --> 00:16:12.001
+Vous pouvez voir que les deux systèmes cyclent et transférent des données.
+
+265
+00:16:12.001 --> 00:16:16.001
+Nous faisons en fait plusieurs sessions simultanément ici entre les systèmes.
+
+266
+00:16:17.000 --> 00:16:17.001
+Je vais passer à la seconde.
+
+267
+00:16:18.000 --> 00:16:19.000
+C’est la deuxième séance.
+
+268
+00:16:19.000 --> 00:16:20.000
+Il est également en cours sur cette.
+
+269
+00:16:21.001 --> 00:16:25.001
+Ils fonctionnent simultanément sur la ligne SDLC entre ces deux systèmes.
+
+270
+00:16:26.000 --> 00:16:27.000
+Nous allons à la prochaine.
+
+271
+00:16:27.000 --> 00:16:32.000
+C&#x27;est le système PROFs à Austin, où nous l&#x27;utilisons pour recevoir notre courrier et l&#x27;échange
+
+272
+00:16:32.000 --> 00:16:33.001
+Les notes de l’IBM Corporation.
+
+273
+00:16:33.001 --> 00:16:37.001
+Nous ne faisons pas seulement une session ici, cependant, avec les 370 à Austin.
+
+274
+00:16:37.001 --> 00:16:39.000
+C’est la séance des profs.
+
+275
+00:16:39.001 --> 00:16:41.000
+Il s’agit d’une séance PROF asynchronique.
+
+276
+00:16:41.000 --> 00:16:44.001
+Si j&#x27;ai été envoyé de chez moi et que je voulais pouvoir recevoir mon mail, je pouvais utiliser
+
+277
+00:16:44.001 --> 00:16:49.000
+Un modem bon marché sur OS2 et parler à mon système d&#x27;hébergement.
+
+278
+00:16:49.000 --> 00:16:52.000
+Ceci est le gérant de base de données pour OS2.
+
+279
+00:16:52.001 --> 00:16:57.001
+Il s’agit d’un nouveau gestionnaire de base de données relationnelle qui fournit un accès facile aux données.
+
+280
+00:16:57.001 --> 00:16:59.001
+Faisons une question ici, par exemple.
+
+281
+00:17:01.000 --> 00:17:02.000
+C’est le menu principal.
+
+282
+00:17:02.000 --> 00:17:04.000
+Il dit, vous voulez créer une nouvelle demande ou
+
+283
+00:17:04.000 --> 00:17:08.000
+Utilisez-vous l’un que vous avez créé auparavant ?
+
+284
+00:17:08.000 --> 00:17:12.001
+Je vais avancer et faire une nouvelle.
+
+285
+00:17:13.001 --> 00:17:15.000
+Je veux ouvrir la requête.
+
+286
+00:17:19.001 --> 00:17:22.001
+Il dit, quelles tables aimeriez-vous utiliser pour votre requête?
+
+287
+00:17:22.001 --> 00:17:24.000
+Je lui demanderai de me donner une liste.
+
+288
+00:17:24.000 --> 00:17:26.001
+Il dit, vous avez trois : l’inventaire, l’organe, le personnel.
+
+289
+00:17:26.001 --> 00:17:27.001
+Je vais prendre la table du personnel.
+
+290
+00:17:27.001 --> 00:17:28.001
+Il le place juste dans le menu.
+
+291
+00:17:29.001 --> 00:17:30.001
+Je m’entraîne et j’entrerai.
+
+292
+00:17:30.001 --> 00:17:36.000
+Ce qui me pousse à travers les options que je dois créer une requête SQL
+
+293
+00:17:36.000 --> 00:17:38.000
+Je n&#x27;ai pas besoin de connaître SQL.
+
+294
+00:17:38.001 --> 00:17:41.000
+Nous entendons que SQL fait partie de la version étendue.
+
+295
+00:17:41.001 --> 00:17:41.001
+[...]
+
+296
+00:17:42.000 --> 00:17:43.001
+Ce que nous faisons ici est la version étendue.
+
+297
+00:17:43.001 --> 00:17:45.000
+Je regarde l’édition étendue.
+
+298
+00:17:45.001 --> 00:17:49.000
+Il contient un gestionnaire de communication IBM que je vous ai montré quelques-uns.
+
+299
+00:17:49.000 --> 00:17:52.000
+Il contient également cette base de données relationnelle
+
+300
+00:17:52.000 --> 00:17:54.000
+l’intégralité du système d’exploitation.
+
+301
+00:17:55.000 --> 00:17:57.001
+Maintenant, il me demande quelles columnes de données je veux.
+
+302
+00:17:57.001 --> 00:17:59.000
+Je vais les prendre tous.
+
+303
+00:18:00.000 --> 00:18:02.001
+Il enregistre toutes les colonnes du côté gauche.
+
+304
+00:18:02.001 --> 00:18:06.000
+Maintenant, il me demande quelles conditions d&#x27;ordre si je voulais choisir si un nom était égal
+
+305
+00:18:06.000 --> 00:18:08.000
+Pour une chose ou une quantité était une certaine quantité.
+
+306
+00:18:08.001 --> 00:18:14.001
+Je vais juste aller en avant et faire cette requête et regarder toutes les lignes et
+
+307
+00:18:14.001 --> 00:18:18.001
+Les colonnes pour le rendre un peu plus simple et un peu moins rapide pour nous.
+
+308
+00:18:19.000 --> 00:18:20.000
+Je vais ici à l’action.
+
+309
+00:18:20.001 --> 00:18:21.001
+La première action est en cours.
+
+310
+00:18:21.001 --> 00:18:26.000
+Je sélectionne l&#x27;exécution et elle va contre cette table dans la base de données et déclenche la
+
+311
+00:18:26.000 --> 00:18:28.001
+le rapport dans un format par défaut que je peux ensuite personnaliser.
+
+312
+00:18:29.000 --> 00:18:32.000
+Tout cela s’est déroulé pendant ces séances de communication.
+
+313
+00:18:32.000 --> 00:18:33.001
+Il s’agit de la séance 6.2.
+
+314
+00:18:34.000 --> 00:18:36.000
+Les 3270 sessions sont reliées à Austin.
+
+315
+00:18:36.001 --> 00:18:40.000
+Les modèmes fonctionnent avec les transferts de fichiers entre les deux systèmes.
+
+316
+00:18:40.001 --> 00:18:44.001
+Cela vous donne une sensation de la puissance de OS2 et les types de choses qu&#x27;il peut faire.
+
+317
+00:18:44.001 --> 00:18:47.001
+Voyez-vous que l&#x27;interface SQL est alors quelque chose
+
+318
+00:18:47.001 --> 00:18:49.000
+Cela va-t-il jusqu’à votre mainframe ?
+
+319
+00:18:50.001 --> 00:18:56.000
+Toutes les interfaces d’utilisateur de l’Extended Edition ainsi que les interférés de programmation
+
+320
+00:18:56.000 --> 00:18:59.001
+C’est ce que l’IBM désigne comme conforme à SAA.
+
+321
+00:19:00.000 --> 00:19:03.001
+OS2 est la mise en œuvre de l&#x27;architecture d&#x27;application des systèmes pour IBM.
+
+322
+00:19:03.001 --> 00:19:07.000
+Il serait cohérent sur nos 370 systèmes, sur nos systèmes à moyen terme et sur
+
+323
+00:19:07.000 --> 00:19:08.001
+et les PS2.
+
+324
+00:19:08.001 --> 00:19:10.001
+Pouvez-vous nous montrer le manager de présentation, Lee?
+
+325
+00:19:11.000 --> 00:19:14.000
+C’est une version très précoce de la présentation.
+
+326
+00:19:14.000 --> 00:19:15.001
+Il sort en octobre sur la Standard Edition.
+
+327
+00:19:15.001 --> 00:19:17.001
+Il est mis à jour dans l’extension.
+
+328
+00:19:17.001 --> 00:19:22.000
+Il apporte l&#x27;architecture d&#x27;application du système IBM, standard d&#x27;accès utilisateur commun
+
+329
+00:19:22.000 --> 00:19:24.000
+pour OS2 et PS2.
+
+330
+00:19:24.000 --> 00:19:26.001
+C’est un développement conjoint entre nous et Microsoft.
+
+331
+00:19:26.001 --> 00:19:30.000
+Comme vous pouvez le voir, les Windows sont très analogues et la présentation est très
+
+332
+00:19:30.000 --> 00:19:33.000
+analogue à ce qui est dans le produit Windows 386 et Windows 2.
+
+333
+00:19:33.001 --> 00:19:35.000
+Je vais vous donner quelques exemples de ce genre.
+
+334
+00:19:35.000 --> 00:19:37.000
+Ce que les applications peuvent faire.
+
+335
+00:19:37.000 --> 00:19:43.000
+Je vais passer par une liste de fichiers ici et exécuter un qui
+
+336
+00:19:43.000 --> 00:19:44.001
+Il crée des graphiques pour nous.
+
+337
+00:19:44.001 --> 00:19:49.000
+Vous pouvez voir certaines des capacités de graphique que nous allons commencer à voir.
+
+338
+00:19:50.000 --> 00:19:52.000
+Je vais élargir la fenêtre ici.
+
+339
+00:19:53.001 --> 00:19:58.000
+Il a le même type de menu pull-down que nous sommes habitués.
+
+340
+00:19:58.001 --> 00:20:01.001
+Choisissez un graphique bar ici, par exemple.
+
+341
+00:20:01.001 --> 00:20:02.001
+Voici un bar graph.
+
+342
+00:20:03.000 --> 00:20:07.001
+Nous pouvons regarder les diagrammes de ligne et nous pouvions regarder le diagramme de Gantt.
+
+343
+00:20:07.001 --> 00:20:12.001
+Il nous donne la possibilité pour les applications maintenant de traiter les informations graphiques
+
+344
+00:20:12.001 --> 00:20:16.000
+sur l&#x27;écran et les utilisateurs pour traiter les informations graphiques sur l’écran aussi.
+
+345
+00:20:16.001 --> 00:20:23.001
+Revenons et regardez, parce que nous sommes sur une multitasking
+
+346
+00:20:23.001 --> 00:20:27.001
+système d&#x27;exploitation qui fonctionne plusieurs applications, l&#x27;avantage d&#x27;un système Windows
+
+347
+00:20:27.001 --> 00:20:32.001
+C&#x27;est que nous pouvons réellement voir les choses se dérouler simultanément dans ces Windows.
+
+348
+00:20:33.001 --> 00:20:38.000
+Prenons l&#x27;exemple d&#x27;une application que nous avons ici qui nous donne quelques
+
+349
+00:20:38.000 --> 00:20:40.000
+mouvement sur l’écran dans l’application.
+
+350
+00:20:41.000 --> 00:20:44.000
+Nous pouvons commencer quelques-uns de ceux-ci et vous voyez en réalité
+
+351
+00:20:44.000 --> 00:20:45.001
+L’application se déroule simultanément.
+
+352
+00:20:47.000 --> 00:20:49.000
+Il s’agit d’un scroll comme les personnages.
+
+353
+00:20:49.001 --> 00:20:55.001
+Ces applications peuvent être scrollées et fenêtres uniquement
+
+354
+00:20:55.001 --> 00:20:57.000
+Comme n’importe quelle autre application.
+
+355
+00:20:57.000 --> 00:20:59.000
+En fait, nous pouvons commencer plus d&#x27;un.
+
+356
+00:21:00.000 --> 00:21:01.000
+Je vais commencer un autre ici.
+
+357
+00:21:01.000 --> 00:21:07.000
+Vous pouvez vraiment regarder ce qui se passe dans les deux fenêtres simultanément, ce qui est
+
+358
+00:21:07.000 --> 00:21:13.000
+Bon si vous êtes à la recherche, dire, un message ou un particulier ...
+
+359
+00:21:13.000 --> 00:21:15.000
+Oops, tu as fait le mal...
+
+360
+00:21:18.001 --> 00:21:19.000
+Vous pouvez réellement voir...
+
+361
+00:21:19.000 --> 00:21:21.000
+Ceci pourrait être un programme de communication en arrière-plan, par exemple.
+
+362
+00:21:21.001 --> 00:21:22.001
+C’est juste, exactement !
+
+363
+00:21:26.000 --> 00:21:27.001
+C’est le manager de présentation.
+
+364
+00:21:27.001 --> 00:21:28.001
+C’est le manager de présentation.
+
+365
+00:21:28.001 --> 00:21:34.000
+Lee, avec le passage de la version standard de OS2 à, semble un propriétaire
+
+366
+00:21:34.000 --> 00:21:36.001
+La version, c&#x27;est que ce que IBM fait maintenant, est en train de se déplacer vers
+
+367
+00:21:36.001 --> 00:21:38.001
+Propriétaire de son propre logiciel ?
+
+368
+00:21:39.000 --> 00:21:39.000
+Non pas.
+
+369
+00:21:40.000 --> 00:21:43.000
+Il est très important, comme nous l&#x27;avons pensé, d&#x27;avoir les capacités OS2
+
+370
+00:21:43.000 --> 00:21:44.001
+dans tous les systèmes de l’industrie.
+
+371
+00:21:44.001 --> 00:21:48.000
+C&#x27;est pourquoi nous avons travaillé avec Microsoft pour fournir l&#x27;édition standard de OS2.
+
+372
+00:21:48.001 --> 00:21:51.001
+Mais nous voulions aussi fournir des améliorations à IBM pour qu&#x27;il communique
+
+373
+00:21:51.001 --> 00:21:55.000
+mieux avec nos propres systèmes et mettre une architecture d&#x27;application des systèmes
+
+374
+00:21:55.000 --> 00:21:59.000
+standard à travers notre matériel et faire que cela fonctionne mieux dans n&#x27;importe quelle industrie.
+
+375
+00:21:59.000 --> 00:22:00.001
+Et c’est pour cela que nous avons étendu l’édition.
+
+376
+00:22:01.000 --> 00:22:04.000
+L&#x27;édition étendue n&#x27;empêche personne d&#x27;exécuter ses propres communications
+
+377
+00:22:04.000 --> 00:22:07.001
+ou système de gestion des bases de données sur l&#x27;édition étendue ou sur l’édition standard.
+
+378
+00:22:08.000 --> 00:22:09.000
+Lee, merci beaucoup d&#x27;être ici.
+
+379
+00:22:09.000 --> 00:22:10.000
+Nous sommes hors du temps.
+
+380
+00:22:10.000 --> 00:22:13.000
+C&#x27;est notre regard sur le multitasking, OS2, et le gestionnaire de présentation.
+
+381
+00:22:13.001 --> 00:22:15.001
+J&#x27;espère que nous vous verrons ici la semaine prochaine sur les Chroniques informatiques.
+
+382
+00:22:27.000 --> 00:22:31.000
+Dans le fichier d&#x27;accès aléatoire cette semaine, l&#x27;été Macworld Expo
+
+383
+00:22:31.000 --> 00:22:32.001
+Il a eu lieu à Boston la semaine dernière.
+
+384
+00:22:33.000 --> 00:22:38.000
+Parmi les introductions de produits pour le Macintosh, il y avait un nouveau 2MB Mac SE avec un
+
+385
+00:22:38.000 --> 00:22:39.001
+40MB de disque dur.
+
+386
+00:22:40.000 --> 00:22:43.001
+Apple a également montré un nouveau scanner, et il y a eu des discussions sur le prochain lancement
+
+387
+00:22:43.001 --> 00:22:45.000
+68030 pour Macintosh.
+
+388
+00:22:46.000 --> 00:22:49.001
+Il n&#x27;y a pas encore d&#x27;ordinateur Mac, mais General Computer Corporation est prête.
+
+389
+00:22:49.001 --> 00:22:53.000
+Ils ont montré une imprimante portable pour le Mac mesurant seulement 2 pouces
+
+390
+00:22:53.000 --> 00:22:55.000
+à 6,5 pouces.
+
+391
+00:22:55.001 --> 00:22:59.000
+Total Systems Integration a révélé un panneau d&#x27;accélérateur qui rend un ordinaire
+
+392
+00:22:59.000 --> 00:23:04.000
+Mac fonctionne comme une machine 68020, fonctionnant à 16-20 MHz.
+
+393
+00:23:05.000 --> 00:23:09.001
+Sur le côté du logiciel, Macromind a introduit une nouvelle version plus puissante de
+
+394
+00:23:09.001 --> 00:23:13.001
+VideoWorks, y compris un disque CD-ROM avec une bibliothèque d&#x27;images et de sons.
+
+395
+00:23:14.000 --> 00:23:19.000
+Oracle a dévoilé sa nouvelle base de données Mac en utilisant SQL et HyperCard, et
+
+396
+00:23:19.000 --> 00:23:22.001
+Mediagenic, auparavant Activision, a révélé plusieurs nouveaux HyperStacks.
+
+397
+00:23:23.001 --> 00:23:27.000
+Nous aurons un spectacle spécial sur l&#x27;Expo Macworld de Boston qui sortira le mois prochain.
+
+398
+00:23:28.000 --> 00:23:32.000
+Le grand spectacle avant l&#x27;Expo Macworld a été SIGGRAPH à Atlanta, le
+
+399
+00:23:32.000 --> 00:23:33.001
+Première émission de graphiques informatiques.
+
+400
+00:23:34.000 --> 00:23:38.000
+Les points forts étaient de nouvelles stations de travail graphiques puissantes et des interfaces d&#x27;utilisateur plus conviviales
+
+401
+00:23:38.000 --> 00:23:40.001
+On parle beaucoup du problème des normes.
+
+402
+00:23:41.001 --> 00:23:44.001
+Texas Instruments déclare avoir développé le prototype pour un tri-dimensionnel
+
+403
+00:23:44.001 --> 00:23:46.000
+Système de graphiques informatiques.
+
+404
+00:23:46.000 --> 00:23:51.000
+La machine TI utilise des pulseurs laser, en éteignant un disque de rotation pour créer un réel disque
+
+405
+00:23:51.000 --> 00:23:55.000
+temps, modifiant les images 3D qui flottent dans l&#x27;espace et peuvent être vues à partir de la
+
+406
+00:23:55.000 --> 00:23:56.001
+avant, le dos ou les côtés.
+
+407
+00:23:57.001 --> 00:24:02.000
+Casio déclare avoir un nouveau écran de cristal liquide coloré avec 200 000
+
+408
+00:24:02.000 --> 00:24:03.001
+pixels sur un écran de 6 pouces.
+
+409
+00:24:04.000 --> 00:24:07.000
+Les développeurs disent que la résolution est aussi bonne que sur un tube de rayon cathode.
+
+410
+00:24:08.000 --> 00:24:10.000
+C’est le moment de l’analyse du logiciel de cette semaine. Voilà Paul Schindler.
+
+411
+00:24:11.000 --> 00:24:13.001
+Si vous voyagez comme je le fais, vous avez du mal à
+
+412
+00:24:13.001 --> 00:24:15.000
+Mettez tout ce que vous voulez dans votre sac.
+
+413
+00:24:15.000 --> 00:24:19.000
+Eh bien, la même chose peut être vrai sur les accessoires de bureau avec votre Macintosh.
+
+414
+00:24:19.001 --> 00:24:23.000
+Selon les règles de Mac, vous ne pouvez avoir qu&#x27;un peu plus d&#x27;une douzaine d&#x27;accessoires de bureau
+
+415
+00:24:23.000 --> 00:24:26.000
+À un moment donné, c’est pourquoi vous avez besoin de Suitcase.
+
+416
+00:24:26.001 --> 00:24:30.000
+Vous pouvez avoir pratiquement autant d&#x27;accessoires de bureau ou DAs
+
+417
+00:24:30.000 --> 00:24:31.001
+Comme vous le voulez en Suitcase.
+
+418
+00:24:32.000 --> 00:24:33.001
+Vous n&#x27;avez pas besoin de les avoir tous dans votre dossier système
+
+419
+00:24:33.001 --> 00:24:35.001
+Et aussi. Ils peuvent être n&#x27;importe où sur votre disque.
+
+420
+00:24:36.000 --> 00:24:38.001
+Lorsque vous lancez Suitcase, il s&#x27;installe comme le premier
+
+421
+00:24:38.001 --> 00:24:40.001
+Les accessoires de bureau sous le symbole Apple.
+
+422
+00:24:40.001 --> 00:24:44.000
+Vous prenez un accessoire de bureau d&#x27;un autre dossier et le mettez dans la
+
+423
+00:24:44.000 --> 00:24:45.001
+Les chaussures sont comme les emballages.
+
+424
+00:24:45.001 --> 00:24:48.000
+Vous ne l&#x27;avez pas déplacé, vous avez juste obtenu l&#x27;accès.
+
+425
+00:24:48.001 --> 00:24:51.000
+En plus, lorsque vous achetez Suitcase, vous obtenez Pyro, un protecteur d&#x27;écran.
+
+426
+00:24:51.001 --> 00:24:55.001
+Vous pouvez ajuster Pyro depuis le panneau de contrôle, vous pouvez configurer un coin pour tourner le
+
+427
+00:24:55.001 --> 00:24:57.001
+écran éteint, et vous pouvez ajuster l&#x27;ouverture automatique
+
+428
+00:24:57.001 --> 00:24:59.000
+Temps de 1 minute à 2 heures.
+
+429
+00:24:59.001 --> 00:25:04.000
+Suitcase pour Macintosh, 60 $ de Software Supply à Sunnyvale, en Californie.
+
+430
+00:25:04.001 --> 00:25:06.001
+Pour les Chroniques informatiques, je suis Paul Schindler.
+
+431
+00:25:06.001 --> 00:25:09.001
+Les ventes de logiciels aux États-Unis ont augmenté
+
+432
+00:25:09.001 --> 00:25:11.001
+Au cours du deuxième trimestre de 1988.
+
+433
+00:25:12.000 --> 00:25:15.001
+L’Association des éditeurs de logiciels déclare que les ventes du logiciel sont
+
+434
+00:25:15.001 --> 00:25:17.000
+Une hausse de 50 % par rapport à l’année dernière.
+
+435
+00:25:17.001 --> 00:25:22.001
+Les ventes de titres compatibles avec IBM ont atteint plus de 700 millions de dollars, mais la croissance la plus rapide
+
+436
+00:25:22.001 --> 00:25:26.000
+Le segment de l&#x27;entreprise logicielle était Macintosh Software, qui a atteint
+
+437
+00:25:26.000 --> 00:25:28.000
+Ventes de plus de 100 millions de dollars.
+
+438
+00:25:29.000 --> 00:25:32.001
+Western Digital Corporation annonce un nouveau disque dur pour Apple
+
+439
+00:25:32.001 --> 00:25:34.001
+IIe et IIGS.
+
+440
+00:25:34.001 --> 00:25:37.001
+Il est disponible dans des capacités de 20 ou 40 megabytes.
+
+441
+00:25:38.000 --> 00:25:40.000
+Il dispose d&#x27;un parc automatique et d&#x27;une petite empreinte.
+
+442
+00:25:41.001 --> 00:25:44.000
+En outre, Iomega Corporation dit qu&#x27;elle vient avec une
+
+443
+00:25:44.000 --> 00:25:45.001
+La nouvelle boîte Bernoulli pour le Macintosh.
+
+444
+00:25:46.000 --> 00:25:50.000
+Le Mac Bernoulli comprend un logiciel qui permettra à un Mac de lire des fichiers à partir d&#x27;un
+
+445
+00:25:50.000 --> 00:25:53.000
+Cartridge Bernoulli qui a été créé sur un PC IBM.
+
+446
+00:25:54.000 --> 00:25:58.000
+Enfin, le Musée informatique de Boston accueille une exposition d&#x27;art informatique Macintosh.
+
+447
+00:25:58.000 --> 00:26:01.001
+Jusqu’à la fin du mois d’octobre, le spectacle sera noir et blanc.
+
+448
+00:26:01.001 --> 00:26:05.000
+couleurs, plus plusieurs œuvres animées et slideshows.
+
+449
+00:26:05.001 --> 00:26:08.000
+C&#x27;est ce que c&#x27;est pour le fichier d&#x27;accès aléatoire de cette semaine. Je suis Cynthia Steele.
+
+450
+00:26:10.000 --> 00:26:14.001
+Les chronicles informatiques sont rendus possibles en partie par CompuServe, avec un
+
+451
+00:26:14.001 --> 00:26:19.001
+bibliothèque de référence en ligne, Wall Street rapports, achats à domicile, compagnie aérienne
+
+452
+00:26:19.001 --> 00:26:22.001
+réservations, jeux et des centaines d&#x27;autres services.
+
+453
+00:26:24.000 --> 00:26:27.000
+CompuServe, en aidant les gens à obtenir le maximum des ordinateurs.
+
+454
+00:26:30.000 --> 00:26:32.001
+Un financement supplémentaire est fourni par McGraw-Hill.
+
+455
+00:26:33.000 --> 00:26:33.001
+Les éditeurs de Byte.
+
+456
+00:26:34.000 --> 00:26:38.000
+Articles techniques détaillés de Byte sur le nouveau matériel, le logiciel et les langues couvertes
+
+457
+00:26:38.000 --> 00:26:40.001
+développement de la technologie informatique dans le monde entier.
+
+458
+00:26:42.001 --> 00:26:47.001
+Pour une transcription des Chroniques informatiques de cette semaine, envoyez 3 $ à PTV Publications,
+
+459
+00:26:48.000 --> 00:26:52.000
+Post Office Box 701, Kent, Ohio 44240.
+
+460
+00:26:52.001 --> 00:26:54.000
+Veuillez indiquer la date du programme.
+
+461
+00:26:57.000 --> 00:27:11.001
+Merci à vous.
+
+462
+00:27:27.000 --> 00:27:32.001
+[...]
