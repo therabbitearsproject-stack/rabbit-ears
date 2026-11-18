@@ -1,0 +1,1845 @@
+WEBVTT
+
+1
+00:00:00.001 --> 00:00:03.001
+Este é um verdadeiro pedaço de cabo do Golden Gate Bridge.
+
+2
+00:00:04.001 --> 00:00:08.001
+Os cabos de ponte conectam Marin County lá e San Francisco lá.
+
+3
+00:00:09.000 --> 00:00:12.001
+A ponte permite que as pessoas em Marino usem os recursos da cidade e da
+
+4
+00:00:12.001 --> 00:00:14.001
+pessoas na cidade para usar os recursos de Marin.
+
+5
+00:00:15.000 --> 00:00:19.000
+E os veículos que vão para cima e para trás através dos cabos da ponte estão transportando pessoas,
+
+6
+00:00:19.000 --> 00:00:21.001
+Informações e informações de um local para o outro.
+
+7
+00:00:22.000 --> 00:00:25.000
+Você pode considerar isso como uma espécie de rede local.
+
+8
+00:00:25.000 --> 00:00:28.000
+Em princípio, é muito como uma rede de área local de computador.
+
+9
+00:00:28.000 --> 00:00:32.001
+Hoje, continuamos a nossa especial olhada em duas partes em redes de computadores sobre isso
+
+10
+00:00:32.001 --> 00:00:34.000
+Edição de The Computer Chronicles.
+
+11
+00:00:55.001 --> 00:01:00.001
+As crônicas de computador são feitas possíveis em parte por CompuServe, com uma
+
+12
+00:01:00.001 --> 00:01:05.000
+biblioteca de referência on-line, Wall Street relatórios, compras em casa, companhia aérea
+
+13
+00:01:05.000 --> 00:01:08.001
+reservas, jogos e centenas de outros serviços.
+
+14
+00:01:10.000 --> 00:01:13.000
+CompuServe, ajudando as pessoas a obter o máximo dos computadores.
+
+15
+00:01:16.000 --> 00:01:19.001
+O financiamento adicional é fornecido por McGraw-Hill, editores da Byte.
+
+16
+00:01:20.000 --> 00:01:24.000
+Artigos técnicos detalhados da Byte sobre novos hardware, software e cobertura de idiomas
+
+17
+00:01:24.000 --> 00:01:26.001
+desenvolvimentos em tecnologias informáticas em todo o mundo.
+
+18
+00:01:30.001 --> 00:01:33.000
+Stewart, estou preocupado com a largura de banda desta rede.
+
+19
+00:01:33.001 --> 00:01:35.001
+George, vamos chegar ao seu problema em apenas um minuto.
+
+20
+00:01:36.000 --> 00:01:37.001
+Bem-vindo às crônicas de computador.
+
+21
+00:01:37.001 --> 00:01:41.000
+Eu sou Stuart Chafay, e assentar para Gary Kildall esta semana é George Morrow.
+
+22
+00:01:42.000 --> 00:01:45.001
+George, suponho que o sistema de cabos de rede original era uma corrente em duas caixas.
+
+23
+00:01:46.000 --> 00:01:47.001
+Todas as crianças brincam com esse tipo de coisa.
+
+24
+00:01:47.001 --> 00:01:50.001
+É realmente mais parecido com o sistema de telefone, mas o sistema telefônico é, de fato, um belo
+
+25
+00:01:50.001 --> 00:01:52.001
+Uma boa analogia para uma rede de computadores, não é mesmo?
+
+26
+00:01:52.001 --> 00:01:53.001
+Você tem razão, Stuart
+
+27
+00:01:53.001 --> 00:01:57.000
+O sistema de telefone original era um sistema de linha de festa com vários telefones conectados
+
+28
+00:01:57.000 --> 00:02:01.001
+da mesma linha, muito semelhante à estrutura de ônibus das redes de hoje, onde
+
+29
+00:02:01.001 --> 00:02:05.000
+múltiplos computadores estão conectados ao mesmo único
+
+30
+00:02:05.000 --> 00:02:06.001
+um fio que vai de um para o outro.
+
+31
+00:02:07.000 --> 00:02:10.001
+Na verdade, a analogia é ainda melhor do que isso, Stuart, porque há múltiplos
+
+32
+00:02:10.001 --> 00:02:15.000
+padrões hoje em redes, e existiam várias empresas telefônicas,
+
+33
+00:02:15.000 --> 00:02:16.001
+Às vezes é muito difícil transferir
+
+34
+00:02:16.001 --> 00:02:18.001
+Uma chamada de uma empresa para outra.
+
+35
+00:02:19.000 --> 00:02:21.001
+George, hoje vamos nos concentrar nas redes Macintosh.
+
+36
+00:02:21.001 --> 00:02:25.000
+Vamos ver Macs falando com Macs, e vamos ver o último na conectividade,
+
+37
+00:02:26.000 --> 00:02:27.001
+Macs falam com o IBM PCs.
+
+38
+00:02:28.000 --> 00:02:31.001
+Começamos hoje pagando uma visita à Arthur Young Company em San Jose,
+
+39
+00:02:31.001 --> 00:02:35.000
+Califórnia com seu teste beta, algo chamado MacLink.
+
+40
+00:02:37.001 --> 00:02:41.001
+Quando a empresa de contabilidade de Arthur Young &amp; Company decidiu instalar uma
+
+41
+00:02:41.001 --> 00:02:45.000
+rede integrada, ele estava enfrentando alguns problemas especiais.
+
+42
+00:02:45.001 --> 00:02:50.000
+Na sucursal de San Jose, Califórnia, hardware incompatível é dividido em
+
+43
+00:02:50.000 --> 00:02:53.000
+diferentes redes paralelas em três andares de escritórios.
+
+44
+00:02:54.000 --> 00:02:59.000
+No oitavo andar, Macintoshes estão em todos os lugares, mas no piso inferior, IBM
+
+45
+00:02:59.000 --> 00:03:01.000
+Compatíveis têm a mão superior.
+
+46
+00:03:01.001 --> 00:03:06.000
+Hoje, a empresa está a testar um novo gateway que permite que qualquer usuário se comunique
+
+47
+00:03:06.000 --> 00:03:08.000
+em qualquer parte da rede.
+
+48
+00:03:09.000 --> 00:03:16.000
+O que estamos realmente abordando aqui é a capacidade de tomar uma rede existente que
+
+49
+00:03:16.000 --> 00:03:22.001
+Foi projetado exclusivamente para um único ambiente, DOS neste caso, e gateway
+
+50
+00:03:22.001 --> 00:03:25.000
+Para o mundo do Macintosh.
+
+51
+00:03:25.001 --> 00:03:28.001
+O que podemos fazer é dedicar uma máquina.
+
+52
+00:03:29.000 --> 00:03:31.000
+É um gateway. É uma caixa de dois.
+
+53
+00:03:31.000 --> 00:03:35.000
+Tem um cartão ArcNet nele. Ele tem um cartão Apple Talk dentro dele.
+
+54
+00:03:35.000 --> 00:03:36.000
+Fala com as duas redes.
+
+55
+00:03:37.001 --> 00:03:44.000
+A linha de fundo é, isto é, para todas as intenções e propósitos, sem sentido porque qualquer
+
+56
+00:03:44.000 --> 00:03:50.000
+O arquivo que é publicado através do NetBIOS está disponível para quem tem acesso a ele.
+
+57
+00:03:50.001 --> 00:03:54.000
+Também está disponível para todos no Macintosh.
+
+58
+00:03:54.000 --> 00:03:56.000
+através da máquina do gateway.
+
+59
+00:03:57.000 --> 00:04:01.001
+Os servidores de arquivos ThreeCom atualmente ligam diferentes máquinas e diferentes redes
+
+60
+00:04:01.001 --> 00:04:03.001
+sobre as linhas telefônicas.
+
+61
+00:04:04.000 --> 00:04:08.000
+Enquanto o chamado Interbridge fala com todas as redes, a decisão de
+
+62
+00:04:08.000 --> 00:04:11.001
+diferentes máquinas levou a frustrações e atrasos.
+
+63
+00:04:11.001 --> 00:04:16.000
+Eu acho que o maior problema foi apenas chegar a acordo com as verdadeiras capacidades
+
+64
+00:04:16.000 --> 00:04:21.000
+da rede, não empurrando a rede além do que se esperava fazer.
+
+65
+00:04:21.001 --> 00:04:27.000
+O problema costumava ser coisas como dados corrompidos e tabelas de alocação de arquivos que
+
+66
+00:04:27.000 --> 00:04:28.001
+Saia do Whack e coisas assim.
+
+67
+00:04:29.001 --> 00:04:34.000
+Os problemas que enfrentamos agora são apenas gastar muito tempo tentando algo que
+
+68
+00:04:34.000 --> 00:04:40.000
+nunca foi destinado a trabalhar, e você chega ao fim, e a linha de fundo é,
+
+69
+00:04:40.000 --> 00:04:42.001
+Não funciona, e você acabou de gastar muito tempo tentando.
+
+70
+00:04:42.001 --> 00:04:49.000
+Então eu acho que é até o ponto agora onde não está causando problemas para os usuários.
+
+71
+00:04:49.001 --> 00:04:52.000
+É causando as pessoas que estão tentando empurrar os problemas tecnológicos.
+
+72
+00:04:53.000 --> 00:04:56.000
+O MAC2 IBM gateway ainda não é aperfeiçoado.
+
+73
+00:04:56.001 --> 00:04:59.001
+Levou várias tentativas para transferir um arquivo para esta manifestação.
+
+74
+00:05:00.001 --> 00:05:02.000
+Mas o seu apelo é inegável.
+
+75
+00:05:03.000 --> 00:05:07.001
+Através do Interbridge, um usuário pode obter um documento formado, enviar uma memória,
+
+76
+00:05:08.000 --> 00:05:11.000
+ou e-mail literalmente para qualquer lugar na rede.
+
+77
+00:05:12.000 --> 00:05:16.001
+Em Arthur Young, o Macintosh é um outnumber da IBM, ainda um incomum
+
+78
+00:05:16.001 --> 00:05:18.000
+Site no mundo dos negócios.
+
+79
+00:05:18.001 --> 00:05:22.001
+É comum ver os contadores embalando MACs de volta para seus escritórios de
+
+80
+00:05:22.001 --> 00:05:24.001
+Viagens de campo para escritórios de clientes.
+
+81
+00:05:25.000 --> 00:05:30.000
+E apesar de alguns erros persistentes na rede MAC2 da IBM, a empresa planeja
+
+82
+00:05:30.000 --> 00:05:35.001
+expandir o seu sistema para fornecer acesso à rede de locais remotos, e uma ampla
+
+83
+00:05:35.001 --> 00:05:38.001
+rede de área para ligar escritórios em todo o mundo.
+
+84
+00:05:51.001 --> 00:05:54.000
+Junte-se a nós no estúdio agora é Chris Bryant, trabalho
+
+85
+00:05:54.000 --> 00:05:55.001
+Diretor do grupo na Apple Computer.
+
+86
+00:05:56.001 --> 00:05:59.001
+E ajudando Chris na outra estação de trabalho acima é Andrew McClung,
+
+87
+00:05:59.001 --> 00:06:01.001
+Especialista em Marketing com a Apple. E o George?
+
+88
+00:06:01.001 --> 00:06:06.001
+Chris, a rede chegou à Apple quando, ou a rede veio à
+
+89
+00:06:06.001 --> 00:06:08.001
+Mac quando apareceu pela primeira vez.
+
+90
+00:06:08.001 --> 00:06:09.001
+Mas muito aconteceu desde então.
+
+91
+00:06:10.000 --> 00:06:13.001
+Por que você não nos informa onde as coisas estão em rede no MAC2?
+
+92
+00:06:13.001 --> 00:06:18.000
+Ok, nos últimos anos, introduzimos, mudamos do primeiro
+
+93
+00:06:18.000 --> 00:06:21.001
+A implementação da rede, que foi chamada da Apple Talk Personal Network, através de
+
+94
+00:06:21.001 --> 00:06:25.000
+uma série de serviços adicionais para o Macintosh no ambiente de rede, para
+
+95
+00:06:25.000 --> 00:06:29.000
+Agora, de fato, novas implementações de rede para o sistema de rede Apple Talk.
+
+96
+00:06:29.000 --> 00:06:31.000
+Uma das coisas que gostaríamos de falar sobre
+
+97
+00:06:31.000 --> 00:06:32.001
+Aqui, provavelmente, é o Apple Share File Server.
+
+98
+00:06:33.000 --> 00:06:34.001
+Você vai nos dar uma demo.
+
+99
+00:06:34.001 --> 00:06:40.000
+É certo. Uma das primeiras coisas que os usuários notam sobre servidores de arquivos, geralmente,
+
+100
+00:06:40.000 --> 00:06:42.001
+É que eles são diferentes para usar do que usar
+
+101
+00:06:42.001 --> 00:06:44.000
+recursos locais em seu computador pessoal.
+
+102
+00:06:44.001 --> 00:06:47.001
+Uma das coisas que tentamos fazer com o Apple Share File Server é fazer o
+
+103
+00:06:47.001 --> 00:06:51.001
+utilizar o servidor de arquivos o mais transparente possível para o usuário, para torná-lo
+
+104
+00:06:51.001 --> 00:06:54.000
+Assim como a utilização de recursos locais como podemos.
+
+105
+00:06:54.000 --> 00:06:57.001
+Chris, desculpe-me, descreva a configuração que temos aqui antes de você ir.
+
+106
+00:06:57.001 --> 00:07:02.000
+O que temos é uma estação de trabalho do Macintosh II, o monitor de cores aqui.
+
+107
+00:07:02.001 --> 00:07:05.001
+Este é conectado ao servidor de arquivos através da rede.
+
+108
+00:07:06.001 --> 00:07:10.000
+O próximo é um Macintosh II que realmente funciona como o servidor de arquivos.
+
+109
+00:07:10.001 --> 00:07:13.001
+Ele está executando o software Apple Share, e você pode ver em sua tela que ele tem
+
+110
+00:07:13.001 --> 00:07:15.000
+Exibição do status do servidor.
+
+111
+00:07:15.001 --> 00:07:20.001
+A próxima é a impressora Laser Rider Plus e, em seguida, diante de Andrew é uma
+
+112
+00:07:20.001 --> 00:07:23.000
+Macintosh SE estação de trabalho, que também está conectado ao servidor de arquivos.
+
+113
+00:07:23.001 --> 00:07:24.001
+Agora, mostre-nos como tudo funciona.
+
+114
+00:07:24.001 --> 00:07:29.001
+Ok, o disco rígido local é representado por este ícone, e quando abrimos isso,
+
+115
+00:07:29.001 --> 00:07:33.001
+podemos ver folhetos, ou o equivalente de subdirecções, que são armazenados
+
+116
+00:07:33.001 --> 00:07:35.001
+É o caso do Macintosh II.
+
+117
+00:07:35.001 --> 00:07:37.001
+Cada uma dessas pequenas cartas é uma subdirectoria.
+
+118
+00:07:37.001 --> 00:07:41.000
+Isso é certo, e se abrirmos isso, podemos ver se...
+
+119
+00:07:41.000 --> 00:07:41.001
+E isso é um vazio.
+
+120
+00:07:42.001 --> 00:07:42.001
+OK  ⁇
+
+121
+00:07:43.000 --> 00:07:46.001
+Podemos ver os programas ou documentos que são armazenados dentro.
+
+122
+00:07:46.001 --> 00:07:48.001
+Estes são ícones para arquivos.
+
+123
+00:07:49.000 --> 00:07:51.001
+E podemos ter mais folhas armazenadas dentro disso.
+
+124
+00:07:52.000 --> 00:07:57.000
+Agora, quando abrimos o volume do servidor de arquivo, você notará que o remote
+
+125
+00:07:57.000 --> 00:08:01.000
+A informação, a representação dela, é particularmente idêntica ao local.
+
+126
+00:08:01.000 --> 00:08:03.001
+informação, e, na verdade, trabalhamos com ela da mesma maneira.
+
+127
+00:08:03.001 --> 00:08:05.001
+Agora, Chris, uma dessas folhas é cinza.
+
+128
+00:08:06.000 --> 00:08:06.001
+Isso é certo.
+
+129
+00:08:07.000 --> 00:08:08.000
+Algumas folhas...
+
+130
+00:08:08.000 --> 00:08:11.001
+No Macintosh, há uma metáfora para recursos
+
+131
+00:08:11.001 --> 00:08:13.001
+que você não tem acesso ou escondido.
+
+132
+00:08:13.001 --> 00:08:16.001
+Por exemplo, se vamos para este menu, você verá que algumas das seleções
+
+133
+00:08:16.001 --> 00:08:19.000
+são cinzentos, porque não podemos usá-los neste momento.
+
+134
+00:08:19.000 --> 00:08:20.001
+Não há nada no lixo, então não podemos esvaziar isso.
+
+135
+00:08:20.001 --> 00:08:25.000
+Da mesma forma, uma pasta que não podemos ter acesso é cinza, e quando tentamos
+
+136
+00:08:25.000 --> 00:08:27.001
+Abre-o, na verdade, recebemos uma mensagem que diz que não temos acesso.
+
+137
+00:08:27.001 --> 00:08:29.001
+Bem, e você não tem acesso a isso porque...
+
+138
+00:08:29.001 --> 00:08:33.000
+Porque o proprietário, que tem controle sobre dar acesso a
+
+139
+00:08:33.000 --> 00:08:34.001
+Outros usuários, mantêm isso privado.
+
+140
+00:08:34.001 --> 00:08:36.000
+Na verdade, este é um tipo especial de folheto.
+
+141
+00:08:36.001 --> 00:08:38.000
+Isso é o que chamamos de drop folder.
+
+142
+00:08:38.000 --> 00:08:41.000
+Eu posso fazer mudanças para essa pasta, mas eu não posso ver o que está dentro.
+
+143
+00:08:41.001 --> 00:08:44.001
+Isso é como um alérgico à caixa de correio que está no canto.
+
+144
+00:08:45.000 --> 00:08:47.001
+Você pode ir e colocar as coisas, mas você não pode ver o que está lá dentro.
+
+145
+00:08:47.001 --> 00:08:52.001
+Pode ser útil se você estava fazendo relatórios de estado ou avaliações de desempenho.
+
+146
+00:08:53.000 --> 00:08:56.001
+Você pode submeter esses, e ninguém senão o gerente tem acesso a ele.
+
+147
+00:08:56.001 --> 00:09:00.000
+Chris, se isso fosse realmente um sistema user-friendly, eu seria capaz de tomar algo
+
+148
+00:09:00.000 --> 00:09:02.000
+Deixe-o para cima e apenas mova-o lá para baixo na tela.
+
+149
+00:09:02.000 --> 00:09:03.000
+Bem, isso é possível?
+
+150
+00:09:03.000 --> 00:09:05.000
+Isso é certo, George. É assim que o projetamos.
+
+151
+00:09:05.001 --> 00:09:06.000
+Você é para a Apple, George?
+
+152
+00:09:07.001 --> 00:09:12.001
+Quando eu clique e arruma esta pasta aqui, eu realmente posso colocá-la no servidor,
+
+153
+00:09:13.001 --> 00:09:17.000
+e copia diretamente para o ambiente do servidor, ou se eu quiser,
+
+154
+00:09:17.000 --> 00:09:18.001
+Eu poderia movê-lo para aquela pasta de queda.
+
+155
+00:09:19.000 --> 00:09:21.000
+Você vai perceber que quando eu faço isso, ele diz que
+
+156
+00:09:21.000 --> 00:09:23.000
+Eu não vou vê-lo uma vez que eu coloque lá.
+
+157
+00:09:23.000 --> 00:09:25.001
+Se eu clicar em OK, agora está dentro daquela pasta.
+
+158
+00:09:26.000 --> 00:09:29.000
+Bem, eu acho que o que eu esperava existir para a metáfora funcionar
+
+159
+00:09:29.000 --> 00:09:31.000
+Bem, e a Apple fez isso funcionar corretamente.
+
+160
+00:09:32.000 --> 00:09:35.001
+Podemos levar Andrew para criar algo lá e mostrar-nos como
+
+161
+00:09:35.001 --> 00:09:37.000
+Será que isso será refletido na sua estação de trabalho?
+
+162
+00:09:37.000 --> 00:09:37.001
+É certo.
+
+163
+00:09:37.001 --> 00:09:41.000
+Agora, você verá que se você olhar abaixo aqui no volume do servidor, que quando
+
+164
+00:09:41.000 --> 00:09:45.001
+Andrew cria um documento no servidor ou uma nova pasta, que depois de alguns
+
+165
+00:09:45.001 --> 00:09:49.001
+segundos, o que ele criou no servidor realmente aparece no meu ecrã.
+
+166
+00:09:49.001 --> 00:09:50.000
+E aí está, sim.
+
+167
+00:09:50.001 --> 00:09:51.001
+Então, há uma atualização dinâmica.
+
+168
+00:09:51.001 --> 00:09:55.000
+Mas você vai notar que a maneira como foi criada, foi criado privado para Andrew.
+
+169
+00:09:55.001 --> 00:09:58.000
+Tudo o que um usuário faz, começa a ser privado.
+
+170
+00:09:58.001 --> 00:10:03.000
+Mas porque ele tem controle sobre os privilégios de acesso, ele pode me dar acesso a isso.
+
+171
+00:10:03.000 --> 00:10:09.000
+Ficheiro, e ele tira uma janela lá onde ele tem a oportunidade de dar
+
+172
+00:10:09.000 --> 00:10:11.000
+privilégios de acesso a outros usuários, e você
+
+173
+00:10:11.000 --> 00:10:12.001
+Observe agora que essa pasta é branca.
+
+174
+00:10:12.001 --> 00:10:14.000
+Você só libertou isso, Chris.
+
+175
+00:10:14.000 --> 00:10:17.001
+Chris, deixe-me perguntar alguma coisa sobre essas duas metáforas, se eu pudesse.
+
+176
+00:10:18.000 --> 00:10:21.001
+Esta é a metáfora dos recursos no servidor de arquivos.
+
+177
+00:10:21.001 --> 00:10:24.001
+Esta é a metáfora dos recursos do sistema local.
+
+178
+00:10:25.000 --> 00:10:25.001
+Isso é certo.
+
+179
+00:10:25.001 --> 00:10:29.000
+Estas imagens são revertidas lá em cima no servidor de arquivos?
+
+180
+00:10:29.000 --> 00:10:33.000
+Bem, o próprio servidor de arquivos, um servidor de ficheiros Apple Share é um servidor dedicado.
+
+181
+00:10:33.000 --> 00:10:34.000
+Nós fazemos isso por algumas razões.
+
+182
+00:10:34.001 --> 00:10:35.001
+O número um é o desempenho.
+
+183
+00:10:36.001 --> 00:10:40.001
+O servidor de arquivos ajuda, fornece recursos a muitos usuários na rede,
+
+184
+00:10:40.001 --> 00:10:44.001
+e assim, a fim de maximizar o desempenho para os usuários que estão a tirar proveito de
+
+185
+00:10:44.001 --> 00:10:46.000
+Isso faz com que ele seja um servidor dedicado.
+
+186
+00:10:46.001 --> 00:10:49.001
+Pode executar serviços adicionais na mesma peça de hardware.
+
+187
+00:10:50.000 --> 00:10:53.001
+Por exemplo, LaserShare, nosso software de impressão para o Laser Rider, pode executar
+
+188
+00:10:53.001 --> 00:10:55.001
+Em conjunto com a Apple Share em um único servidor.
+
+189
+00:10:55.001 --> 00:10:57.000
+Mas não conseguiu executar aplicações.
+
+190
+00:10:57.001 --> 00:10:58.000
+Isso é certo.
+
+191
+00:10:58.001 --> 00:11:01.000
+Seu objetivo inteiro é servir para servidores de arquivos na rede.
+
+192
+00:11:01.000 --> 00:11:02.001
+É um servidor de rede, isso é certo.
+
+193
+00:11:02.001 --> 00:11:06.000
+Agora, o fato de que implementamos no hardware Macintosh padrão, pensamos que é
+
+194
+00:11:06.000 --> 00:11:09.001
+um plus porque como os usuários aumentam suas necessidades, eles podem mover-se de um Macintosh
+
+195
+00:11:09.001 --> 00:11:12.000
+Além de um SE para um Macintosh II, que temos aqui.
+
+196
+00:11:12.001 --> 00:11:15.001
+Agora, você precisa do Mac 2 como o servidor de arquivos neste tipo de sistema?
+
+197
+00:11:16.000 --> 00:11:20.000
+Bem, vai funcionar, como eu disse, em um Macintosh Plus como um servidor ou um Macinosh SE,
+
+198
+00:11:20.000 --> 00:11:23.000
+Mas acreditamos que o Macintosh 2 faz um melhor servidor
+
+199
+00:11:23.000 --> 00:11:25.000
+plataforma porque é uma máquina de maior desempenho.
+
+200
+00:11:25.000 --> 00:11:26.001
+É estritamente uma questão de desempenho.
+
+201
+00:11:27.000 --> 00:11:28.001
+Direito e expansão.
+
+202
+00:11:28.001 --> 00:11:33.000
+O Macintosh 2 tem slots de expansão e permite que os usuários adicionem outros
+
+203
+00:11:33.000 --> 00:11:35.001
+recursos, outros serviços na mesma caixa.
+
+204
+00:11:35.001 --> 00:11:41.001
+Se há, não há diferença estrutural entre isso, é o mesmo
+
+205
+00:11:41.001 --> 00:11:44.001
+hardware, se era um servidor ou se era uma estação.
+
+206
+00:11:45.000 --> 00:11:49.001
+Então, na teoria, se você quiser tomar a tecnologia um passo mais longe e
+
+207
+00:11:49.001 --> 00:11:53.000
+Deixe um pouco sobre o desempenho, isso poderia ser tanto uma estação e um servidor.
+
+208
+00:11:53.001 --> 00:11:55.000
+Bem, você pode fazer isso.
+
+209
+00:11:55.000 --> 00:11:58.000
+Há problemas envolvidos com a execução de aplicativos em um servidor, onde se o
+
+210
+00:11:58.000 --> 00:12:02.001
+A aplicação tem problemas, todos na rede vêem esse impacto no
+
+211
+00:12:02.001 --> 00:12:04.001
+Servidor, seja lá ou não.
+
+212
+00:12:04.001 --> 00:12:06.000
+Mas o servidor também é apenas um Mac.
+
+213
+00:12:06.000 --> 00:12:10.000
+Isso é certo, e, na verdade, devido ao sistema de rede Apple Talk, a maneira que
+
+214
+00:12:10.000 --> 00:12:15.000
+é arquitetado, a mesma funcionalidade do servidor está agora em funcionamento em VACs, VMS
+
+215
+00:12:15.000 --> 00:12:19.000
+computadores do DEC, e para que você tenha uma migração transparente de
+
+216
+00:12:19.000 --> 00:12:21.000
+O Macintosh Plus vai até um DECVAC.
+
+217
+00:12:21.000 --> 00:12:23.000
+Senhores, estaremos de volta em apenas um minuto, e vamos mostrar-lhe
+
+218
+00:12:23.000 --> 00:12:27.001
+Como você pode usar o Apple Talk para ter o Mac conversando para um PC IBM, então fique conosco.
+
+219
+00:12:39.001 --> 00:12:42.001
+Estamos de volta no estúdio com Chris Bryant da Apple, e agora passamos para o
+
+220
+00:12:42.001 --> 00:12:44.001
+Outra estação de trabalho é Bill Berner.
+
+221
+00:12:44.001 --> 00:12:46.001
+Chris, algumas perguntas antes de entrar na nova demo.
+
+222
+00:12:47.000 --> 00:12:49.000
+O que é o protocolo, a tecnologia de hardware
+
+223
+00:12:49.000 --> 00:12:50.001
+Você está usando aqui para a rede?
+
+224
+00:12:51.000 --> 00:12:55.000
+Bem, neste caso, a estação de trabalho Macintosh II está conectada ao Macintush II
+
+225
+00:12:55.000 --> 00:12:57.001
+Servidor de arquivos usando EtherTalk e Ethernet
+
+226
+00:12:57.001 --> 00:12:59.001
+implementação do sistema de rede Apple Talk.
+
+227
+00:12:59.001 --> 00:13:05.000
+A estação de trabalho Macintosh SE anteriormente e agora o portátil compacto é
+
+228
+00:13:05.000 --> 00:13:08.001
+conectado ao servidor usando a rede pessoal da Apple Talk, que é um
+
+229
+00:13:08.001 --> 00:13:11.000
+Implementação de custos com menor velocidade.
+
+230
+00:13:11.001 --> 00:13:15.000
+Chris, as telas e a metáfora, isso tem nada a ver com o
+
+231
+00:13:15.000 --> 00:13:18.000
+Ethernet, ou qual parte ele joga no
+
+232
+00:13:18.000 --> 00:13:19.001
+Sistema operacional ou ambiente operacional?
+
+233
+00:13:20.000 --> 00:13:23.001
+Bem, os protocolos de rede da Apple Talk são projetados em todos os Macintosh
+
+234
+00:13:23.001 --> 00:13:28.001
+e o Laser Rider também, e o que você vê aqui é consistente em toda a
+
+235
+00:13:28.001 --> 00:13:32.000
+Macintosh linha, se você está usando uma rede Ethernet, se está usando um
+
+236
+00:13:32.000 --> 00:13:35.000
+Rede pessoal da Apple Talk, ou alguns dos outros meios de comunicação que executamos uma Apple Talc
+
+237
+00:13:35.000 --> 00:13:37.001
+rede intermedia, que inclui fibra óptica e telefone
+
+238
+00:13:37.001 --> 00:13:39.000
+O que você vê, você sempre vê a mesma coisa.
+
+239
+00:13:39.000 --> 00:13:42.000
+Estamos tentando tornar essa rede transparente. É integrado
+
+240
+00:13:42.000 --> 00:13:43.001
+para o sistema operacional Macintosh.
+
+241
+00:13:44.001 --> 00:13:47.001
+Ok, Chris, como você mencionou agora, não temos mais um SC lá, mas nós
+
+242
+00:13:47.001 --> 00:13:52.001
+tem uma parte na expressão IBM Compatible, um portátil compacto II, e mostra-me
+
+243
+00:13:52.001 --> 00:13:56.000
+Agora, como você pode ter o Mac e a máquina MS-DOS trabalhando juntos.
+
+244
+00:13:56.000 --> 00:13:59.001
+Bem, Bill pode mostrar agora que ele está conectado ao servidor e ele pode fazer um
+
+245
+00:13:59.001 --> 00:14:01.000
+Apresentação do volume do servidor.
+
+246
+00:14:01.000 --> 00:14:03.001
+Agora, uma das coisas importantes com o Apple Share PC, o produto de software que
+
+247
+00:14:03.001 --> 00:14:08.000
+Isso torna possível, é que representa a informação do servidor na
+
+248
+00:14:08.000 --> 00:14:11.001
+formato ou contexto apropriado que a estação de trabalho do usuário exija.
+
+249
+00:14:12.000 --> 00:14:16.000
+Então, quando ele faz um diretório do servidor, ele vê os mesmos nomes de folha como
+
+250
+00:14:16.000 --> 00:14:20.000
+subdirecções que vemos, exceto aquelas que são demasiado longas para representar em
+
+251
+00:14:20.000 --> 00:14:25.000
+o formato MS-DOS 8.3, no qual o servidor de arquivos, Apple Share, truncata que
+
+252
+00:14:25.000 --> 00:14:28.000
+nome e fornece um nome MS-DOS apropriado para a estação de trabalho.
+
+253
+00:14:28.001 --> 00:14:32.001
+E Bill fez esse diretório, e agora ele pode mostrar que usando, ele vai lançar
+
+254
+00:14:32.001 --> 00:14:39.001
+Lotus 1.2.3, o aplicativo, e ele pode abrir um documento do servidor e fazer
+
+255
+00:14:39.001 --> 00:14:43.000
+alterar o documento e salvá-lo no servidor, e eu vou ser capaz de
+
+256
+00:14:43.000 --> 00:14:47.000
+e executar o Excel e acessar o mesmo documento diretamente.
+
+257
+00:14:47.000 --> 00:14:50.001
+Então ele tem um 1.2.3 spreadsheet para cima no compacto. Ele vai salvar esse arquivo.
+
+258
+00:14:50.001 --> 00:14:52.000
+Isso é certo. Ele economiza para o servidor,
+
+259
+00:14:53.000 --> 00:14:55.000
+E você percebe que ele faz isso de forma transparente.
+
+260
+00:14:55.001 --> 00:14:57.000
+É como se ele esconder em um disco local.
+
+261
+00:14:57.001 --> 00:15:01.001
+E agora vemos na minha janela que essa folha de trabalho apareceu na
+
+262
+00:15:01.001 --> 00:15:03.000
+Apple compartilha volume, no volume do servidor.
+
+263
+00:15:03.001 --> 00:15:10.000
+E agora, se eu executar o Excel e estamos agora
+
+264
+00:15:10.000 --> 00:15:16.001
+no MultiFiner, estamos no Excel, eu posso abrir o documento no servidor.
+
+265
+00:15:16.001 --> 00:15:20.000
+Então, agora vamos obter o arquivo padrão do Macintosh. O volume da Apple Share aumenta, e
+
+266
+00:15:20.000 --> 00:15:25.001
+Esse é o trabalho, as vendas. WKS, e nós podemos abri-lo, e o Excel fará um
+
+267
+00:15:25.001 --> 00:15:27.000
+conversão desse arquivo WKS diretamente.
+
+268
+00:15:27.001 --> 00:15:31.001
+E, na verdade, usando o Excel, podemos imediatamente criar um gráfico
+
+269
+00:15:31.001 --> 00:15:34.000
+com essa informação.
+
+270
+00:15:34.001 --> 00:15:38.001
+Então nós clicamos no gráfico, dizendo OK, e nós realmente temos um gráfico.
+
+271
+00:15:38.001 --> 00:15:41.001
+Então você está fazendo um gráfico em um Mac também da folha de entrada que ele tinha
+
+272
+00:15:41.001 --> 00:15:43.000
+do Lotus 1.2.3 no compacto.
+
+273
+00:15:43.000 --> 00:15:46.001
+Então o que é importante é que o arquivo que abrimos foi um arquivo Lotus 1.2.3.
+
+274
+00:15:47.000 --> 00:15:49.001
+Chris, eu gostaria de lhe fazer uma pergunta sobre o custo.
+
+275
+00:15:50.001 --> 00:15:54.001
+Eu acho que algumas das capacidades de rede são construídas diretamente no Macintosh.
+
+276
+00:15:55.000 --> 00:15:59.000
+Isso é certo. O hardware que é necessário para fazer a rede e o software
+
+277
+00:15:59.000 --> 00:16:03.001
+Os protocolos são integrados em todos os Macintosh e no Laser Rider também.
+
+278
+00:16:03.001 --> 00:16:06.001
+Tudo o que você precisa para conectar estações de trabalho usando a Apple Talk Personal Network
+
+279
+00:16:06.001 --> 00:16:08.001
+É um conector de US $ 75 por nodo.
+
+280
+00:16:09.000 --> 00:16:12.000
+Qualquer Macintosh pode agir como um servidor de arquivos?
+
+281
+00:16:12.000 --> 00:16:15.000
+Isso é certo. Um Macintosh Plus, Macintush SE, ou um Macintash 2.
+
+282
+00:16:15.000 --> 00:16:17.000
+Chris, estamos fora do tempo. George, muito obrigado por isso.
+
+283
+00:16:17.001 --> 00:16:21.000
+Agora, as universidades têm sido um terreno de reprodução lógica para as redes locais.
+
+284
+00:16:22.000 --> 00:16:23.001
+Faculdade e estudantes se espalharam por todo o lugar, muitos
+
+285
+00:16:23.001 --> 00:16:25.000
+recursos que precisam ser compartilhados.
+
+286
+00:16:25.001 --> 00:16:28.000
+Um bom exemplo é na Universidade de Stanford em Palo
+
+287
+00:16:28.000 --> 00:16:30.000
+Alto, onde Wendy Woods relata.
+
+288
+00:16:32.001 --> 00:16:35.000
+Universidade de Stanford tem um dos maiores campus
+
+289
+00:16:35.000 --> 00:16:36.001
+redes de computadores no país.
+
+290
+00:16:36.001 --> 00:16:42.001
+Cerca de 1.300 computadores, variando de Macintoshes, estações de trabalho sofisticadas e
+
+291
+00:16:42.001 --> 00:16:48.000
+PCs, para Vaxes, Microvaxes, e IBM mainframes, todos falam uns com os outros
+
+292
+00:16:48.000 --> 00:16:50.000
+através da rede Ethernet.
+
+293
+00:16:50.001 --> 00:16:55.001
+Em vários armários em todo o campus, você pode ver as portas e repetidores, em
+
+294
+00:16:55.001 --> 00:16:59.000
+condições, as opções de tráfego que fazem o sistema funcionar em todo o
+
+295
+00:16:59.000 --> 00:17:00.001
+grandes distâncias necessárias.
+
+296
+00:17:00.001 --> 00:17:05.000
+Esta impressionante rede até se espalha para os dormitórios, onde os alunos têm
+
+297
+00:17:05.000 --> 00:17:10.000
+acesso às bolsas de notícias, bancos de trabalho, até mesmo os registros bibliográficos completos da
+
+298
+00:17:10.000 --> 00:17:12.000
+Sistema de Biblioteca da Universidade de Stanford.
+
+299
+00:17:13.000 --> 00:17:17.000
+Eles podem fazer cursos atribuídos em programação, até mesmo enviar e-mail para seus instrutores
+
+300
+00:17:17.000 --> 00:17:19.000
+ou qualquer outra pessoa no campus.
+
+301
+00:17:20.000 --> 00:17:24.001
+O diretor de rede, Bill Yunt, diz que todos esses sistemas são combinados com
+
+302
+00:17:24.001 --> 00:17:27.000
+Macintoshes chegou com alguns trade-offs.
+
+303
+00:17:27.000 --> 00:17:33.000
+A maneira como escolhemos fazer isso é por escrever software que funciona em um compatível
+
+304
+00:17:33.000 --> 00:17:36.001
+moda com as outras máquinas na rede, que compartilham a família de protocolos
+
+305
+00:17:36.001 --> 00:17:42.000
+chamado TCPIP, e permite que um Macintosh sentar-se em uma rede Apple Talk e
+
+306
+00:17:42.000 --> 00:17:48.000
+conectados através da rede Apple Talk ao nosso Ethernet, para que eles olhem para
+
+307
+00:17:48.000 --> 00:17:51.000
+O resto da rede, como se eles fossem fisicamente conectados à Ethernet.
+
+308
+00:17:51.000 --> 00:17:55.001
+Macintoshs são lentos e têm apenas tarefas singulares operando
+
+309
+00:17:55.001 --> 00:17:57.001
+sistemas, mas os alunos os amam.
+
+310
+00:17:58.000 --> 00:18:00.001
+Eles são fáceis de operar e boas máquinas de ensino.
+
+311
+00:18:01.001 --> 00:18:04.000
+A maneira mais comum de usar Macs é nas salas de aula.
+
+312
+00:18:04.001 --> 00:18:09.001
+Em pequenas redes locais como esta sala de aula interativa, os Macintoshes
+
+313
+00:18:09.001 --> 00:18:13.000
+compartilhar programas de software armazenados em um servidor de arquivos designado.
+
+314
+00:18:13.000 --> 00:18:17.000
+O que está na máquina do instrutor pode ser visto em todos os alunos
+
+315
+00:18:17.001 --> 00:18:21.001
+Macintosh, ou seu Macintush pode ser usado para ver o que está correndo em
+
+316
+00:18:21.001 --> 00:18:23.000
+Computadores dos alunos individuais.
+
+317
+00:18:24.000 --> 00:18:28.001
+Até agora, a história francesa e a literatura informática foram ensinadas desta forma.
+
+318
+00:18:29.000 --> 00:18:32.000
+Ligar todos os computadores em campi é um fenômeno crescente
+
+319
+00:18:32.000 --> 00:18:33.001
+das melhores universidades do país.
+
+320
+00:18:34.001 --> 00:18:39.000
+MIT e Carnegie Mellon são outros dois excelentes exemplos, mas as pessoas aqui
+
+321
+00:18:39.000 --> 00:18:42.001
+dizem que estão à frente do resto porque encontraram uma maneira de fazer sua rede
+
+322
+00:18:42.001 --> 00:18:46.001
+útil com os principais pesquisadores e estudantes frescos, assim como.
+
+323
+00:18:47.000 --> 00:18:51.000
+Na Universidade de Stanford, para as crônicas de computador, eu sou Wendy Woods.
+
+324
+00:18:55.000 --> 00:18:56.000
+[...]
+
+325
+00:19:03.001 --> 00:19:07.000
+Com nós no estúdio agora é Jan Lewis, presidente da Lewis Research
+
+326
+00:19:07.000 --> 00:19:11.000
+A empresa, e ao lado de Jan Timbahar, vice-presidente executivo da Micro
+
+327
+00:19:11.000 --> 00:19:12.001
+Grupo de computadores em estratégias criativas.
+
+328
+00:19:13.000 --> 00:19:16.001
+Jan, vimos sobre estes dois últimos programas agora um monte de nova área local
+
+329
+00:19:16.001 --> 00:19:19.001
+produtos de rede, mas ainda ouvimos queixas sobre complexidade e lento
+
+330
+00:19:19.001 --> 00:19:21.001
+Desempenho e confiabilidade nas redes.
+
+331
+00:19:22.001 --> 00:19:24.001
+As coisas mudaram realmente? Já fizemos um grande progresso nas terras?
+
+332
+00:19:25.000 --> 00:19:27.001
+Na verdade, fizemos muitos progressos nas terras.
+
+333
+00:19:28.000 --> 00:19:31.001
+Ainda há uma enorme quantidade para ir em termos de todos os aspectos que você falou
+
+334
+00:19:31.001 --> 00:19:35.001
+sobre, a complexidade, o custo, o desempenho, etc., mas
+
+335
+00:19:35.001 --> 00:19:37.000
+Fizemos muito progresso.
+
+336
+00:19:37.001 --> 00:19:39.001
+E acho que tem muito a ver com a sua perspectiva.
+
+337
+00:19:40.000 --> 00:19:42.001
+Se você está sentado lá em um ambiente onde você tem muitas coisas diferentes
+
+338
+00:19:42.001 --> 00:19:46.001
+arquiteturas, muitas máquinas diferentes, os tipos de conexões que temos certo
+
+339
+00:19:46.001 --> 00:19:49.001
+Agora ainda são insuficientes para atender ao seu ambiente inteiro.
+
+340
+00:19:49.001 --> 00:19:53.000
+Por outro lado, se você está sentado lá em um departamento, vamos dizer, e você
+
+341
+00:19:53.000 --> 00:19:57.000
+Tem algumas pessoas usando Macs, e você tem algumas pessoas utilizando IBMs,
+
+342
+00:19:57.000 --> 00:20:00.001
+produto agora como a Apple Share, que realmente lhe dá uma quantidade justa de arquivos
+
+343
+00:20:00.001 --> 00:20:04.001
+transferibilidade e, em particular, a comunidade em termos do servidor de arquivos, para
+
+344
+00:20:04.001 --> 00:20:07.001
+Alguém nessa posição, eles não poderiam fazer isso há alguns anos atrás.
+
+345
+00:20:07.001 --> 00:20:09.000
+Para eles, é um grande passo em frente.
+
+346
+00:20:10.000 --> 00:20:13.001
+Mais uma vez, se você olhar global para toda a indústria, há centenas de
+
+347
+00:20:13.001 --> 00:20:17.000
+diferentes máquinas, arquiteturas, etc. e levá-los todos uns aos outros.
+
+348
+00:20:17.000 --> 00:20:17.001
+Tem que ser complexo.
+
+349
+00:20:18.000 --> 00:20:18.001
+Ele se exponenta.
+
+350
+00:20:18.001 --> 00:20:21.001
+Nunca vi nada tão natural como este ambiente da Apple.
+
+351
+00:20:22.000 --> 00:20:24.001
+A implementação nisso é verdadeiramente elegante.
+
+352
+00:20:25.001 --> 00:20:30.001
+Em primeiro lugar, em termos da própria interface do usuário, é realmente fácil.
+
+353
+00:20:31.000 --> 00:20:32.001
+É literalmente fácil de descobrir.
+
+354
+00:20:32.001 --> 00:20:36.000
+A ideia de ter a parte, você sabe, o que está sentado no servidor abaixo aqui,
+
+355
+00:20:36.001 --> 00:20:40.000
+ser capaz de fazer várias coisas com ela, é literalmente intuitivo, é
+
+356
+00:20:40.000 --> 00:20:41.001
+fácil de aprender, fácil de lembrar, etc.
+
+357
+00:20:42.000 --> 00:20:43.000
+Tim, o que você acha disso?
+
+358
+00:20:43.000 --> 00:20:47.000
+O que você está realmente vendo com este modelo da Apple é o que acreditamos que será o
+
+359
+00:20:47.000 --> 00:20:49.000
+futuro, que serão gestores de rede inteligentes.
+
+360
+00:20:49.001 --> 00:20:55.001
+Se estamos realmente a ver todo esse tipo de trabalho de interconectividade, estamos
+
+361
+00:20:55.001 --> 00:20:59.001
+Vou ter que ver esses vários LANs trabalhando em estreita colaboração com um monte de
+
+362
+00:20:59.001 --> 00:21:01.001
+Interface de usuário mais limpa e muita potência.
+
+363
+00:21:02.000 --> 00:21:05.001
+Jan disse antes, dependendo da sua perspectiva, se eu sou de um mainframe ou mini
+
+364
+00:21:05.001 --> 00:21:08.001
+Um ambiente multi-usuário, os LANs que eu vejo
+
+365
+00:21:08.001 --> 00:21:11.000
+Hoje eu não considero isso significativo.
+
+366
+00:21:11.000 --> 00:21:13.000
+Eles não chegaram longe o suficiente para mim.
+
+367
+00:21:13.000 --> 00:21:16.000
+Mas se você está vindo de um lugar onde você não poderia conectar as coisas juntos dois
+
+368
+00:21:16.000 --> 00:21:18.000
+Há anos, esses LANs parecem maravilhosos.
+
+369
+00:21:18.001 --> 00:21:23.000
+Agora, o gerente de apresentação que vai estar aqui um dia da Microsoft, você
+
+370
+00:21:23.000 --> 00:21:28.000
+pensar que teremos um ambiente que fará redes RIA locais no mundo do PC
+
+371
+00:21:28.000 --> 00:21:30.000
+É tão natural como está aqui na Apple?
+
+372
+00:21:30.001 --> 00:21:33.000
+Provavelmente, embora o grande problema seja a memória.
+
+373
+00:21:34.000 --> 00:21:39.000
+Gestor de apresentação, Microsoft Windows, X Windows, sempre que você começar a falar
+
+374
+00:21:39.000 --> 00:21:42.001
+sobre este tipo de função de rede, você está falando de uma enorme quantidade de
+
+375
+00:21:42.001 --> 00:21:46.001
+energia necessária a esse nível de CPU na memória, bem como velocidade de processamento.
+
+376
+00:21:47.000 --> 00:21:48.001
+Jan, Tim, eu me arrependo de estar fora do tempo.
+
+377
+00:21:49.000 --> 00:21:51.000
+Muito obrigado muito. Obrigado por se juntar a nós neste especial 2
+
+378
+00:21:51.000 --> 00:21:52.001
+- Parte olha para as redes locais.
+
+379
+00:21:53.000 --> 00:21:54.000
+Esperamos vê-lo na próxima semana.
+
+380
+00:22:03.000 --> 00:22:06.000
+No arquivo de acesso aleatório desta semana, o Apple Computer é
+
+381
+00:22:06.000 --> 00:22:07.001
+Com Hewlett Packard e Microsoft.
+
+382
+00:22:08.000 --> 00:22:11.000
+A Apple diz que sua única tela Mac e imagens de tela são de direitos autorais.
+
+383
+00:22:11.001 --> 00:22:14.000
+A empresa diz que Hewlett Packard e Microsoft infringem isso
+
+384
+00:22:14.000 --> 00:22:16.000
+direitos autorais com New Wave e Windows.
+
+385
+00:22:16.001 --> 00:22:19.000
+Esse caso pode ser um longo. Hewlett Packard emitiu uma declaração
+
+386
+00:22:19.000 --> 00:22:20.001
+Dizem que vão lutar com vigor.
+
+387
+00:22:21.000 --> 00:22:24.000
+A Microsoft afirma que estão convencidos que o caso não merece e
+
+388
+00:22:24.000 --> 00:22:25.001
+negam qualquer violação de direitos autorais.
+
+389
+00:22:26.000 --> 00:22:29.000
+Pela primeira vez na história da indústria de computadores, veremos
+
+390
+00:22:29.000 --> 00:22:31.000
+Os preços vão para cima, não para baixo.
+
+391
+00:22:31.000 --> 00:22:35.000
+Uma pesquisa dos fabricantes de painéis periféricos mostra que a escassez de chips DRAM está pressionando
+
+392
+00:22:35.000 --> 00:22:37.001
+Os preços dos gráficos e da memória aumentam.
+
+393
+00:22:38.000 --> 00:22:41.000
+Se a escassez continuar, os fabricantes de sistemas são esperados para ser o próximo.
+
+394
+00:22:41.000 --> 00:22:46.000
+Tudo de 64K a 1MB chips estão em preço, às vezes o dobro do que eles
+
+395
+00:22:46.000 --> 00:22:47.001
+Foi no início do ano passado.
+
+396
+00:22:48.001 --> 00:22:51.000
+Não só os preços dos chips estão aumentando, mas assim são os templers.
+
+397
+00:22:51.001 --> 00:22:54.000
+A Atari está em processo contra Micron, um fornecedor de chips DRAM.
+
+398
+00:22:54.000 --> 00:22:59.000
+Atari diz que a Micron Technology de Boise, Idaho falhou em honrar uma ordem de telefone
+
+399
+00:22:59.000 --> 00:23:03.001
+Para 3 milhões de chips DRAM em US$ 3. 75 cada um, então tentou vender o
+
+400
+00:23:03.001 --> 00:23:05.000
+chips para Atari a um preço mais alto.
+
+401
+00:23:05.001 --> 00:23:09.001
+Atari quer danos de Micron por violação de contrato, má fé e
+
+402
+00:23:09.001 --> 00:23:11.000
+violação das leis antitrust.
+
+403
+00:23:11.001 --> 00:23:14.000
+Micron diz que a empresa não tem comentários além de dizer
+
+404
+00:23:14.000 --> 00:23:15.001
+Eles foram servidos com documentos judiciais.
+
+405
+00:23:16.000 --> 00:23:19.000
+Sua fusão, Mania, Tandy Corporation anunciou em 16 de março.
+
+406
+00:23:19.000 --> 00:23:24.000
+Ele vai pagar US$ 55 milhões para comprar sistemas de rede de Fremont, na Califórnia.
+
+407
+00:23:24.001 --> 00:23:27.000
+A Grid é um dos primeiros fabricantes de computadores portáteis poderosos.
+
+408
+00:23:27.001 --> 00:23:30.001
+A compra dá a Tandy um laptop de linha superior respeitado que você poderia
+
+409
+00:23:30.001 --> 00:23:32.001
+A Chrysler compra a Maserati.
+
+410
+00:23:33.000 --> 00:23:35.000
+Os PCs de rede não serão vendidos através das lojas Radio Shack.
+
+411
+00:23:35.001 --> 00:23:39.001
+Somente vendedores de rede venderão PCs uma vez que o acordo for concluído, diz um porta-voz Tandy.
+
+412
+00:23:40.001 --> 00:23:42.001
+Agora, para uma revisão de software, aqui está Paul Schindler.
+
+413
+00:23:48.001 --> 00:23:52.001
+Eu sou um escritor profissional, mas você acha que vou olhar uma palavra em um tesouro?
+
+414
+00:23:53.000 --> 00:23:54.001
+Nenhuma maneira! Quem tem tempo?
+
+415
+00:23:55.000 --> 00:23:59.000
+Eu faço e você vai se você obter o tesouro eletrônico de Webster.
+
+416
+00:23:59.001 --> 00:24:03.000
+Não, este produto não vai soar tudo isso emocionante a menos que você use um processador de palavras.
+
+417
+00:24:03.001 --> 00:24:04.001
+E então torna-se inestimável.
+
+418
+00:24:05.000 --> 00:24:07.001
+Em primeiro lugar, o Webster é o maior tesouro no mercado.
+
+419
+00:24:07.001 --> 00:24:12.000
+Ele pode olhar para 40.000 palavras e sugerir 470.000 alternativas.
+
+420
+00:24:12.000 --> 00:24:16.000
+No entanto, não ocupa mais espaço de disco e opera tão rapidamente quanto um tesauro menor.
+
+421
+00:24:16.001 --> 00:24:20.000
+Sua melhor característica é que o Webster fornece uma ou mais definições para o
+
+422
+00:24:20.000 --> 00:24:23.001
+A palavra que você tenta substituir, então sugere sinônimos para cada definição.
+
+423
+00:24:23.001 --> 00:24:27.000
+Outros tesauros incluem apenas uma simples lista indeterminada de sinônimos.
+
+424
+00:24:27.001 --> 00:24:31.000
+Outra boa característica, se o noun é plural, as escolhas oferecidas são plural.
+
+425
+00:24:31.000 --> 00:24:33.001
+Como dizem os wordsmiths, as inflexões correspondem.
+
+426
+00:24:33.001 --> 00:24:37.000
+Tesauro eletrônico de Webster, US$ 90 da Proximity
+
+427
+00:24:37.000 --> 00:24:39.000
+Em Fort Lauderdale, na Flórida.
+
+428
+00:24:39.000 --> 00:24:41.001
+Para as crônicas de computador, eu sou Paul Schindler.
+
+429
+00:24:42.000 --> 00:24:45.000
+Um desenvolvedor de software está tomando uma abordagem diferente para o OS2.
+
+430
+00:24:45.001 --> 00:24:49.000
+Em vez de esperar para o lançamento do gerente de apresentação do OS2, Timberline
+
+431
+00:24:49.000 --> 00:24:53.000
+O software está desenvolvendo um emulador baseado em personagens do gerente de apresentação.
+
+432
+00:24:53.001 --> 00:24:56.000
+A empresa desenvolve programas para a indústria de construção.
+
+433
+00:24:56.001 --> 00:24:59.000
+Eles vão usar uma abordagem de caráter em seu primeiro produto OS2.
+
+434
+00:24:59.000 --> 00:25:03.001
+A ideia é permitir que os clientes da Timberline comecem com a interface do menu
+
+435
+00:25:03.001 --> 00:25:06.001
+e ações de keystroke e mouse que se tornarão padrão em
+
+436
+00:25:06.001 --> 00:25:08.001
+Aplicações de Gestor de apresentação.
+
+437
+00:25:09.001 --> 00:25:11.000
+AT&amp;T está tentando algo novo novamente.
+
+438
+00:25:11.001 --> 00:25:15.000
+A empresa lançou um pequeno clone de PC de impressão de pé chamado AT&amp;T
+
+439
+00:25:15.000 --> 00:25:17.001
+6300 Sistemas de trabalho.
+
+440
+00:25:18.000 --> 00:25:24.001
+Os preços variam de US$ 1.411 para um único modelo floppy para US$ 2.091 para um single floppie.
+
+441
+00:25:24.001 --> 00:25:26.001
+20 megabytes de disco rígido.
+
+442
+00:25:26.001 --> 00:25:30.001
+O novo modelo só precisa de 70% da base de escritório dos modelos anteriores
+
+443
+00:25:30.001 --> 00:25:32.000
+na linha 6300.
+
+444
+00:25:33.001 --> 00:25:37.000
+Pirates Better Beware, um bônus de US $ 50 é oferecido pelos Software Publishers
+
+445
+00:25:37.000 --> 00:25:39.001
+Associação de Informações sobre Piratas
+
+446
+00:25:39.001 --> 00:25:41.001
+O Bulletin Board oferece software comercial.
+
+447
+00:25:42.001 --> 00:25:45.001
+O Spa quer o nome, endereço e número de telefone do operador do sistema.
+
+448
+00:25:46.000 --> 00:25:49.001
+Uma impressora do software comercial que o conselho oferece, log em informação
+
+449
+00:25:49.001 --> 00:25:52.001
+incluindo senhas e data, e colocar tudo isso por escrito.
+
+450
+00:25:53.000 --> 00:25:54.000
+As identidades dos informantes serão protegidas.
+
+451
+00:25:54.000 --> 00:25:58.001
+Um programa de bônus semelhante na primavera passada fechou 30 bolsas e resultou em
+
+452
+00:25:58.001 --> 00:26:00.000
+US$ 3 mil em bolsas.
+
+453
+00:26:00.001 --> 00:26:03.000
+É isso que é para as crônicas de computador desta semana. Eu sou Cynthia Steele.
+
+454
+00:26:24.001 --> 00:26:28.000
+O financiamento adicional é fornecido por McGraw-Hill, editores da Byte.
+
+455
+00:26:28.001 --> 00:26:32.001
+Artigos técnicos detalhados da Byte sobre novos hardware, software e cobertura de idiomas
+
+456
+00:26:32.001 --> 00:26:35.000
+desenvolvimentos em tecnologias informáticas em todo o mundo.
+
+457
+00:26:36.001 --> 00:26:39.001
+Transcrições das crônicas de computador estão disponíveis on-line no CompuServe.
+
+458
+00:26:40.000 --> 00:26:42.000
+Tipo Go Chronicles em qualquer CompuServe prompt.
+
+459
+00:26:42.001 --> 00:26:46.000
+Se você gostaria do número de acesso CompuServe na sua área ou de um livro gratuito
+
+460
+00:26:46.000 --> 00:26:51.000
+Descrição de como usar os serviços on-line, ligue para 1-800-848-8199.
+
+461
+00:26:54.000 --> 00:27:25.000
+[...].com www.compuServe.com

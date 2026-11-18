@@ -1,0 +1,1957 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:05.001
+Esta es una tienda Toys R Us en Redwood City, California, pero de lo que ves
+
+2
+00:00:05.001 --> 00:00:08.001
+En los rayos aquí usted piensa que debe ser llamado Software R Us.
+
+3
+00:00:09.000 --> 00:00:14.000
+La mayoría de los títulos que se venden aquí son para el Commodore 64, uno de los originales
+
+4
+00:00:14.000 --> 00:00:17.000
+computadoras domésticas, pero hay mucha vida que queda en esa vieja máquina.
+
+5
+00:00:17.001 --> 00:00:20.001
+Nuevos títulos de software todavía están saliendo para lo que todavía es muy
+
+6
+00:00:20.001 --> 00:00:22.000
+Base de usuario instalada.
+
+7
+00:00:22.001 --> 00:00:26.001
+Hoy vamos a ver un viejo pero bueno, el Commodore 64, en este
+
+8
+00:00:26.001 --> 00:00:28.000
+Edición de The Computer Chronicles.
+
+9
+00:00:50.000 --> 00:00:55.001
+Las crónicas informáticas se hacen posibles en parte por McGraw-Hill, editores de
+
+10
+00:00:55.001 --> 00:00:59.001
+Revista Byte, y VIX, el intercambio de información Byte.
+
+11
+00:01:00.000 --> 00:01:05.000
+En la impresión y en línea, Byte y VIX sirven a profesionales informáticos en todo el mundo con
+
+12
+00:01:05.000 --> 00:01:08.001
+información detallada sobre nuevos hardware, software y tecnologías.
+
+13
+00:01:15.000 --> 00:01:18.001
+Bienvenido a The Computer Chronicles, soy Stuart Chiffay. Este es Gary Kildall, y
+
+14
+00:01:18.001 --> 00:01:21.001
+Gary estoy jugando este nuevo juego de Spectrum Hollowlight llamado Tetris.
+
+15
+00:01:22.000 --> 00:01:25.001
+Lo interesante sobre él, es el primer software de juego vendido en United
+
+16
+00:01:25.001 --> 00:01:27.000
+Estados escritos por programadores rusos.
+
+17
+00:01:27.000 --> 00:01:30.000
+Pero lo que es realmente interesante es que aquí está una nueva pieza de software caliente. ¿Qué máquina
+
+18
+00:01:30.000 --> 00:01:33.000
+¿Se viene por primera vez? El buen antiguo Commodore 64.
+
+19
+00:01:33.001 --> 00:01:36.001
+Este es el modelo de los ordenadores personales, pero la gente todavía los compra,
+
+20
+00:01:36.001 --> 00:01:38.001
+La gente está escribiendo nuevo software para ello, ¿cómo viene?
+
+21
+00:01:39.000 --> 00:01:41.000
+Bueno, Stuart, como sabes, Jack Tramiel se dirigió
+
+22
+00:01:41.000 --> 00:01:43.000
+Commodore antes de trasladarse a Atari.
+
+23
+00:01:43.001 --> 00:01:45.001
+Y la filosofía de Jack es minimizar al usuario final.
+
+24
+00:01:45.001 --> 00:01:47.001
+precio y simplemente inundar el mercado con el producto.
+
+25
+00:01:48.000 --> 00:01:51.000
+Lo hizo con un calculador de 10 dólares en la mitad de los años 70, recuerda que uno. También lo hizo
+
+26
+00:01:51.000 --> 00:01:53.001
+Con el Commodore 64, menos de $ 200.
+
+27
+00:01:53.001 --> 00:01:56.001
+La competición fue cinco veces ese precio. Es sólo un buen
+
+28
+00:01:56.001 --> 00:01:58.000
+ordenador básico a un precio muy asequible.
+
+29
+00:01:59.000 --> 00:02:00.001
+El resultado es sobre, lo que, siete
+
+30
+00:02:00.001 --> 00:02:02.000
+Miles de estas cosas solo en los Estados Unidos.
+
+31
+00:02:02.001 --> 00:02:05.000
+Ofrece una verdadera buena cama de hardware para los escritores de software porque pueden tomar
+
+32
+00:02:05.000 --> 00:02:08.001
+el costo del desarrollo de software y amortizarlo a través de estos millones de unidades.
+
+33
+00:02:09.000 --> 00:02:11.001
+El resultado es que usted obtendrá un montón de buen software a un precio muy asequible.
+
+34
+00:02:12.000 --> 00:02:15.001
+Gary, hoy vamos a centrarnos en el buen viejo Commodore 64. Nos reuniremos con muchos
+
+35
+00:02:15.001 --> 00:02:17.001
+C64 usuarios y ver los interesantes
+
+36
+00:02:17.001 --> 00:02:19.001
+aplicaciones que han desarrollado para el ordenador.
+
+37
+00:02:19.001 --> 00:02:23.001
+Ahora, una de las razones por las que el Commodore 64 todavía está alrededor es que tiene un nuevo funcionamiento
+
+38
+00:02:23.001 --> 00:02:25.001
+sistema hace unos años, algo que se llama GEOS.
+
+39
+00:02:26.000 --> 00:02:28.001
+Comenzamos hoy visitando al hombre que escribió GEOS, Brian
+
+40
+00:02:28.001 --> 00:02:30.001
+Doherty, en Berkeley Softworks.
+
+41
+00:02:33.000 --> 00:02:36.000
+La historia de los ordenadores personales está marcada por algunos espectaculares
+
+42
+00:02:36.000 --> 00:02:38.000
+éxitos y fracasos.
+
+43
+00:02:38.001 --> 00:02:44.000
+Pero el premio por popularidad debe ir al Commodore 64, una pequeña máquina de 8 bits
+
+44
+00:02:44.000 --> 00:02:45.001
+que se niega a morir.
+
+45
+00:02:45.001 --> 00:02:51.001
+El éxito comercial de 64 y su enorme base de usuarios han inspirado a algunos
+
+46
+00:02:51.001 --> 00:02:55.001
+Los desarrolladores de software para tomar un segundo vistazo en el potencial de 64 .
+
+47
+00:02:56.000 --> 00:02:59.001
+Una de esas empresas es Berkeley Softworks, junto a la universidad
+
+48
+00:02:59.001 --> 00:03:01.001
+Campus en Berkeley, California.
+
+49
+00:03:02.000 --> 00:03:06.001
+Lo que hicimos es que miramos a estos mercados, en el mercado Commodore 64 primero y
+
+50
+00:03:06.001 --> 00:03:12.000
+Apple II, y básicamente toma un tiempo para que la gente realmente impulse un
+
+51
+00:03:12.000 --> 00:03:13.001
+La máquina hasta sus límites.
+
+52
+00:03:13.001 --> 00:03:17.000
+Y una de las cosas que realmente creemos aquí que el resto de la
+
+53
+00:03:17.000 --> 00:03:21.000
+El mundo del software creo que sólo ha comenzado realmente a capturar que está utilizando
+
+54
+00:03:21.000 --> 00:03:23.000
+herramientas de desarrollo muy sofisticadas.
+
+55
+00:03:23.000 --> 00:03:27.001
+Y la red de todo lo que estamos capaces ahora de desarrollar aplicaciones para estas
+
+56
+00:03:27.001 --> 00:03:31.000
+Las máquinas que yo no creo que la gente realmente pensó que estas máquicas eran capaces
+
+57
+00:03:31.000 --> 00:03:33.000
+de la actuación.
+
+58
+00:03:34.000 --> 00:03:38.001
+El producto más importante de Berkeley es el sistema operativo GEOS, un gráfico
+
+59
+00:03:38.001 --> 00:03:44.001
+La interfaz para los 64 y 128 que contiene menús, iconos y ventanas.
+
+60
+00:03:45.001 --> 00:03:50.000
+El nuevo sistema operativo abre la puerta a algunas aplicaciones muy sofisticadas,
+
+61
+00:03:50.001 --> 00:03:56.001
+como una hoja de referencia llamada Geocalc y Geophile, una base de datos
+
+62
+00:03:56.001 --> 00:03:58.000
+Con formularios diseñados por el usuario.
+
+63
+00:03:59.001 --> 00:04:04.000
+Incluso hay un paquete de publicación de escritorio, algo que generalmente requiere un gran
+
+64
+00:04:04.000 --> 00:04:06.000
+Memorias y grandes presupuestos.
+
+65
+00:04:06.001 --> 00:04:09.001
+Pero en Berkeley Softworks, todo está en el código.
+
+66
+00:04:10.000 --> 00:04:12.000
+Se trata principalmente de codificar mucho más eficazmente.
+
+67
+00:04:13.000 --> 00:04:18.000
+La teoría de la ciencia informática es que cualquier programa informático puede ser
+
+68
+00:04:18.000 --> 00:04:19.001
+Implementado por una máquina de Turing de un bit.
+
+69
+00:04:20.000 --> 00:04:22.001
+Eso es, en realidad, una teoría que se ha demostrado en la ciencia informática.
+
+70
+00:04:22.001 --> 00:04:27.000
+Así que incluso este procesador de 8 bits es capaz de hacer todas las cosas que mucho más
+
+71
+00:04:27.000 --> 00:04:31.001
+Un ordenador caro, como decir un Macintosh o un IBM PC, es capaz de hacerlo.
+
+72
+00:04:32.000 --> 00:04:36.000
+Ahora puede que no sea capaz de hacerlo tan rápido, aunque tratamos de hacer frente a la
+
+73
+00:04:36.000 --> 00:04:39.001
+limitaciones y la capacidad de la máquina mediante la programación más eficiente.
+
+74
+00:04:40.000 --> 00:04:42.000
+Pero en realidad puedes hacer cualquier cosa con un ordenador.
+
+75
+00:04:55.001 --> 00:04:59.000
+Hoy en día en el estudio se encuentra Lucy Morton. Lucy es miembro del Diablo
+
+76
+00:04:59.000 --> 00:05:01.000
+El Grupo de Usuarios de Valparaíso 64 .
+
+77
+00:05:01.001 --> 00:05:04.000
+Y junto a Lucy está Mike Dunsmore, miembro de la
+
+78
+00:05:04.000 --> 00:05:05.001
+propietarios de la península. ¿Por qué Gary?
+
+79
+00:05:06.000 --> 00:05:09.000
+Mike, el grupo de usuarios de Commodore, se ve principalmente
+
+80
+00:05:09.000 --> 00:05:10.001
+64 usuarios. ¿Qué es la composición?
+
+81
+00:05:11.001 --> 00:05:17.001
+Hay algunos grupos de usuarios que son sólo Commodore 64s, y puede haber algunos
+
+82
+00:05:17.001 --> 00:05:19.001
+Tiene una Amiga N64.
+
+83
+00:05:19.001 --> 00:05:22.000
+Ahora, usted comunica a través de boletines de boletos sobre modems? ¿Es eso correcto?
+
+84
+00:05:23.000 --> 00:05:25.001
+Sí, hay alrededor de dos o tres boletines, o BBS.
+
+85
+00:05:26.000 --> 00:05:30.000
+¿Están estas tablas de boletín funcionando por C64 a veces o no?
+
+86
+00:05:31.000 --> 00:05:37.000
+Generalmente en otra máquina, pero podrían tener un Commodore 64
+
+87
+00:05:37.000 --> 00:05:41.000
+Base de datos y descargas.
+
+88
+00:05:41.001 --> 00:05:46.000
+Lucy, puede ser un poco presunto para mí, pero no parecen ser los
+
+89
+00:05:46.000 --> 00:05:49.001
+El jugador promedio utiliza un Commodore 64. ¿Por qué compró un C64?
+
+90
+00:05:50.000 --> 00:05:53.000
+Siempre estábamos interesados en los ordenadores, y
+
+91
+00:05:53.000 --> 00:05:54.001
+Su esposo también hace algún programa.
+
+92
+00:05:55.000 --> 00:05:59.000
+Y el programa es muy fácil en esta máquina, porque puede editarlo muy
+
+93
+00:05:59.000 --> 00:06:01.001
+fácil, y cometemos errores muy a menudo.
+
+94
+00:06:02.001 --> 00:06:04.000
+Por lo tanto, usted está principalmente programando en básicos.
+
+95
+00:06:04.000 --> 00:06:05.000
+Eso es cierto, en el básico.
+
+96
+00:06:05.001 --> 00:06:08.000
+Tienes un programa que has escrito que te ayuda a hacer sudores, ¿es correcto?
+
+97
+00:06:08.000 --> 00:06:11.000
+Eso me ayuda a dibujarlos. Hacer es otra cosa.
+
+98
+00:06:11.000 --> 00:06:13.000
+Bueno . Nos dice un poco de eso.
+
+99
+00:06:13.001 --> 00:06:18.000
+Sí sí. Es un programa interactivo. A medida que usted corre a través del programa, le pide
+
+100
+00:06:18.000 --> 00:06:22.001
+¿Qué estilo te gustaría, y tienes que tener una cosa antes de comenzar, que
+
+101
+00:06:22.001 --> 00:06:26.000
+es el número de columnas por pulgón y la cantidad de líneas por pulga, que
+
+102
+00:06:26.000 --> 00:06:28.000
+Tiene una swatch como esta.
+
+103
+00:06:28.001 --> 00:06:31.001
+Todo lo justo. Ya hemos decidido que vamos a hacer una camiseta, y que
+
+104
+00:06:31.001 --> 00:06:36.000
+Vamos a tener un knit-on band que está knit justo en uno con un sweater.
+
+105
+00:06:36.000 --> 00:06:39.001
+Y así vamos a tenerlo en la ribera. Y ahora nos
+
+106
+00:06:39.001 --> 00:06:41.000
+Debemos decidir si queremos un V-neck.
+
+107
+00:06:41.001 --> 00:06:45.001
+Creo que vamos a elegir el V-neck hoy. Y vamos a poner el cuello a la derecha
+
+108
+00:06:45.001 --> 00:06:47.000
+en uno con la banda delantero, así que es un poco más rápido.
+
+109
+00:06:47.000 --> 00:06:48.000
+Así que el programa te lleva a través del césped.
+
+110
+00:06:48.000 --> 00:06:51.000
+Te lleva a través de todo, ¿por qué tipo de césped quieres?
+
+111
+00:06:51.001 --> 00:06:55.000
+Bueno, no se toma nada para esto. Así que voy a tener un raglan sleeve.
+
+112
+00:06:55.001 --> 00:06:57.001
+Entonces se pregunta si quieres largo o corto, y
+
+113
+00:06:57.001 --> 00:06:59.000
+Continuará con este tipo de cosas.
+
+114
+00:06:59.001 --> 00:07:01.001
+¿Quieres una columna recta o una columna recta? Y el
+
+115
+00:07:01.001 --> 00:07:03.001
+Continuamos a través de todas las preguntas.
+
+116
+00:07:04.000 --> 00:07:05.000
+Entonces se programará.
+
+117
+00:07:05.000 --> 00:07:06.000
+¿Con qué terminas? Nos muestra el tipo de...
+
+118
+00:07:06.000 --> 00:07:11.000
+Sí sí. También lo hará en la pantalla, pero acabará con algo como
+
+119
+00:07:11.000 --> 00:07:14.001
+Esto, lo que creo que es esto lo que te gustaría ver?
+
+120
+00:07:15.000 --> 00:07:20.000
+Ahora esta imprime, sí, esta imprima todas las direcciones para realmente para una
+
+121
+00:07:20.000 --> 00:07:22.000
+de suavidad, muy parecida a la que tengo.
+
+122
+00:07:22.000 --> 00:07:24.000
+Y el que está llevando está diseñado usando su propio programa.
+
+123
+00:07:24.001 --> 00:07:25.000
+Sí, eso es correcto.
+
+124
+00:07:25.000 --> 00:07:26.001
+Eso es genial. Ahora me voy a dirigir a Mike. Si tú
+
+125
+00:07:26.001 --> 00:07:28.000
+Puede pasar el ordenador a Mike.
+
+126
+00:07:28.001 --> 00:07:30.000
+Y Mike, usted ha usado el C64 para hacer
+
+127
+00:07:30.000 --> 00:07:31.001
+algún tipo de arte. Dime lo que haces.
+
+128
+00:07:31.001 --> 00:07:35.000
+Sí, he hecho algunas fotos, pantallas.
+
+129
+00:07:36.000 --> 00:07:37.001
+¿Para qué propósito particular?
+
+130
+00:07:38.000 --> 00:07:43.001
+Bueno, sólo para hacer una foto. Algunas veces los pondríamos en una... Sería una
+
+131
+00:07:43.001 --> 00:07:45.001
+Título de pantalla para un programa en el que trabajaba.
+
+132
+00:07:46.000 --> 00:07:47.001
+o para un menú.
+
+133
+00:07:48.000 --> 00:07:50.001
+¿Utilizas el C64 y lo demás?
+
+134
+00:07:51.000 --> 00:07:51.001
+de KoalaPad.
+
+135
+00:07:52.000 --> 00:07:53.000
+¿Qué tipo de software?
+
+136
+00:07:53.001 --> 00:07:56.001
+Hay un KoalaPad... El propio software KoalaPad.
+
+137
+00:07:57.000 --> 00:07:58.001
+Ok, ¿puedes mostrarnos algunas de las cosas que haces con KoalaPad?
+
+138
+00:07:58.001 --> 00:08:01.001
+Por supuesto, me pongo en este pintor Koala.
+
+139
+00:08:02.001 --> 00:08:03.001
+Tenemos el menú aquí.
+
+140
+00:08:05.000 --> 00:08:09.000
+Lo que usted haría es que usted podría catalogar el disco de esa icona.
+
+141
+00:08:10.000 --> 00:08:14.000
+Puedes salvar, obtener, o nombre y ahorrar para que sólo podamos clicar en el Get...
+
+142
+00:08:14.000 --> 00:08:16.000
+Supongo que queríamos ver a Wacko.
+
+143
+00:08:16.001 --> 00:08:20.000
+Así que hacemos clic en llegar y subir a Wacko, presione el botón.
+
+144
+00:08:21.000 --> 00:08:21.001
+Ya lo he cargado.
+
+145
+00:08:23.000 --> 00:08:24.000
+Esta es la imagen.
+
+146
+00:08:24.001 --> 00:08:27.001
+Bueno, eso es bastante bueno. Y eso es lo que? ¿Para qué creó esto?
+
+147
+00:08:28.000 --> 00:08:32.000
+Esto fue para un boletín que conocía el
+
+148
+00:08:32.000 --> 00:08:33.001
+El hombre que estaba corriendo y que quería...
+
+149
+00:08:33.001 --> 00:08:34.001
+El Consejo Mundial de Wacko.
+
+150
+00:08:34.001 --> 00:08:35.000
+El mundo de Wacko.
+
+151
+00:08:36.000 --> 00:08:38.000
+¿Puedes sacar otra cosa que estás en medio de trabajar?
+
+152
+00:08:39.000 --> 00:08:41.001
+Por supuesto, simplemente va a swap aquí.
+
+153
+00:08:42.001 --> 00:08:42.001
+Hicimos eso.
+
+154
+00:08:43.000 --> 00:08:46.001
+Esto es para un programa, un programa de menú.
+
+155
+00:08:47.000 --> 00:08:49.001
+Todo lo que verías es esta pantalla.
+
+156
+00:08:50.000 --> 00:08:53.000
+Y yo podía presionar A, B, C, D, E, F, G.
+
+157
+00:08:53.001 --> 00:08:56.001
+Supongo que quieres agregar algo de arte a esa pantalla ahora. ¿Cómo harías eso?
+
+158
+00:08:56.001 --> 00:09:00.001
+Bueno, hay una parte abajo en el fondo que todavía estoy trabajando. Vuelve a zoom aquí.
+
+159
+00:09:01.000 --> 00:09:03.000
+Póngase la ventana aquí.
+
+160
+00:09:04.000 --> 00:09:06.001
+y tocando estas cartas. Seleccione una color.
+
+161
+00:09:08.001 --> 00:09:10.001
+O, así que quiero deshacerse de esa línea verde.
+
+162
+00:09:11.001 --> 00:09:15.001
+Yo lo hago pixel por pixel. Pudiéronme arrastrar el indicador.
+
+163
+00:09:16.001 --> 00:09:18.001
+Y entonces sólo puedes pintar un gráfico en ese pequeño
+
+164
+00:09:18.001 --> 00:09:20.000
+¿El espacio a la derecha si quieres?
+
+165
+00:09:20.001 --> 00:09:21.000
+Sí sí.
+
+166
+00:09:22.000 --> 00:09:24.001
+De hecho, es el momento de consumir.
+
+167
+00:09:25.000 --> 00:09:28.001
+Una de las cosas interesantes es que este es un video, un video compuesto, lo mismo
+
+168
+00:09:28.001 --> 00:09:30.000
+como sus pequeños camcorders y así sucesivamente.
+
+169
+00:09:30.001 --> 00:09:33.000
+Así que usted realmente podría hacer títulos y todo tipo de cosas para sus videos de casa.
+
+170
+00:09:33.001 --> 00:09:34.001
+Es muy interesante, creo que Mike.
+
+171
+00:09:34.001 --> 00:09:37.001
+Me gustaría decir que usted tiene su tipo de estación de diseño gráfico aquí para una inversión de
+
+172
+00:09:37.001 --> 00:09:41.000
+Probablemente bien por debajo de $400 en comparación con algunos de los sistemas caros que hemos visto.
+
+173
+00:09:41.000 --> 00:09:42.000
+Bueno para eso.
+
+174
+00:09:42.001 --> 00:09:44.000
+Bueno, Lucy y Mike, muchas gracias.
+
+175
+00:09:44.000 --> 00:09:46.001
+Como hemos visto, los grupos de usuarios han sido un elemento muy importante
+
+176
+00:09:46.001 --> 00:09:48.000
+El éxito del Commodore 64.
+
+177
+00:09:48.000 --> 00:09:51.000
+Le pedimos a Wendy Woods que visite un grupo de usuarios
+
+178
+00:09:51.000 --> 00:09:52.001
+Encuentro en Foster City, California.
+
+179
+00:09:53.000 --> 00:09:54.000
+Y aquí está su informe.
+
+180
+00:09:55.001 --> 00:09:59.000
+Si compras por precio, no siempre obtendrás buen servicio.
+
+181
+00:09:59.001 --> 00:10:04.001
+Y esto es especialmente cierto para los propietarios de Commodore 64 y 128 cuyo bajo coste
+
+182
+00:10:04.001 --> 00:10:08.001
+Las máquinas no reciben el apoyo de los comerciantes de masas que las venden.
+
+183
+00:10:09.001 --> 00:10:14.000
+Entre en el grupo de usuarios de Commodore, como este en Foster City, California, donde
+
+184
+00:10:14.000 --> 00:10:19.000
+personas como Ralph Hornbrook intentan programas, consejos comerciales, y simplemente
+
+185
+00:10:19.000 --> 00:10:20.001
+Obtén la ayuda que necesitan.
+
+186
+00:10:21.001 --> 00:10:24.001
+Es casi imposible describir la ayuda.
+
+187
+00:10:25.000 --> 00:10:29.001
+Me parece que, estando en un neofito absoluto hace tres o cuatro años, no sabíamos nada.
+
+188
+00:10:30.000 --> 00:10:31.000
+¿A dónde vas?
+
+189
+00:10:31.000 --> 00:10:32.000
+¿Qué haces tú?
+
+190
+00:10:32.000 --> 00:10:33.001
+¿Cómo trabajas estas cosas?
+
+191
+00:10:34.000 --> 00:10:37.001
+Sabíamos que queríamos entrar, pero no sabíamos cómo entrar.
+
+192
+00:10:37.001 --> 00:10:44.001
+Lo que hacemos es que ofrecemos una reunión informal de tipo de mano, donde si
+
+193
+00:10:44.001 --> 00:10:48.000
+alguien no entiende cómo usar un ordenador, nos sentaremos con ellos, mostraremos
+
+194
+00:10:48.000 --> 00:10:53.000
+los cómo operar, mostrarles cómo hacer los diferentes procesos que son
+
+195
+00:10:53.000 --> 00:10:58.001
+necesarios para ejecutar programas, y mostrarles cómo poner todo juntos.
+
+196
+00:10:59.001 --> 00:11:02.001
+En otras palabras, sólo cómo usar su ordenador y usarlo para
+
+197
+00:11:02.001 --> 00:11:04.000
+Una ventaja productiva.
+
+198
+00:11:04.000 --> 00:11:08.001
+A pesar del hecho de que el Amiga más potente ahora se ve en los usuarios de Commodore
+
+199
+00:11:08.001 --> 00:11:12.001
+Las reuniones de grupo, el interés en el C64 sigue siendo fuerte.
+
+200
+00:11:13.000 --> 00:11:17.000
+El precio sigue cayendo y la gente sigue comprándolo, por lo que debe venir
+
+201
+00:11:17.000 --> 00:11:20.000
+No es de extrañar que la participación en grupos como este
+
+202
+00:11:20.000 --> 00:11:21.001
+aumentado a lo largo de los años.
+
+203
+00:11:22.001 --> 00:11:26.000
+En Foster City, California, para las crónicas informáticas, soy Wendy Woods.
+
+204
+00:11:41.000 --> 00:11:45.000
+Con nosotros en el estudio ahora está Malcolm Lowe con el grupo de usuarios de Commodore West,
+
+205
+00:11:45.000 --> 00:11:48.000
+Y junto a Malcolm está Kelly Flock con Electronic Arts.
+
+206
+00:11:48.001 --> 00:11:51.000
+Kelly, Electronic Arts es obviamente un bien conocido
+
+207
+00:11:51.000 --> 00:11:52.001
+Productor de software y productor de juego.
+
+208
+00:11:53.000 --> 00:11:56.001
+Cuán importante es el Commodore 64 en relación con su viejo plan de marketing, usted sabe,
+
+209
+00:11:56.001 --> 00:11:58.001
+¿Como Apple, en relación con Apple, IBM, PC, etc?
+
+210
+00:11:58.001 --> 00:12:02.000
+El Commodore es muy importante. Yo diría que es nuestro segundo más importante
+
+211
+00:12:02.000 --> 00:12:04.001
+El formato está detrás del formato IBM compatible.
+
+212
+00:12:05.000 --> 00:12:07.000
+¿Qué es sobre el Commodore que lo hace un buen objetivo para un juego?
+
+213
+00:12:08.000 --> 00:12:12.001
+Es probablemente el principal ordenador doméstico con su base instalada de como siete
+
+214
+00:12:12.001 --> 00:12:16.001
+millones de unidades, y es muy intenso el juego ya que, como sabes, hacemos
+
+215
+00:12:16.001 --> 00:12:18.000
+Mucho software de entretenimiento.
+
+216
+00:12:18.001 --> 00:12:20.000
+Es un lugar natural para nosotros.
+
+217
+00:12:21.000 --> 00:12:23.000
+Y Malcolm, tienes un programa en el modo rastreado aquí en el
+
+218
+00:12:23.000 --> 00:12:24.001
+El fondo que se lleva aquí se llama el vino
+
+219
+00:12:24.001 --> 00:12:27.000
+de Steward. ¿Puedes contarnos un poco sobre este programa?
+
+220
+00:12:27.000 --> 00:12:31.001
+Sí sí seguro. El Wine Steward es un programa diseñado para ayudar a las personas que están
+
+221
+00:12:31.001 --> 00:12:36.001
+no familiar con la compra de vinos para poder hacer una elección basada en el alimento
+
+222
+00:12:36.001 --> 00:12:38.000
+que tendrán para la cena.
+
+223
+00:12:39.000 --> 00:12:40.001
+Y esto está escrito para el 64.
+
+224
+00:12:41.000 --> 00:12:42.001
+Y se usa en los supermercados, entiendo.
+
+225
+00:12:42.001 --> 00:12:43.001
+Eso es correcto, sí.
+
+226
+00:12:43.001 --> 00:12:44.001
+Mostrarnos cómo lo usarías.
+
+227
+00:12:45.000 --> 00:12:52.000
+Sí sí seguro. La pantalla básica es un menú de opciones. Descargarlo en el menú
+
+228
+00:12:52.000 --> 00:12:57.001
+con el uso de un botón blanco que está en una cabina, y con el botón verde,
+
+229
+00:12:58.000 --> 00:13:03.000
+Seleccione un menú adicional, desciende a la opción, y seleccione de nuevo, y usted
+
+230
+00:13:03.000 --> 00:13:06.001
+Se dará una elección de un total de nueve vinos.
+
+231
+00:13:06.001 --> 00:13:09.000
+Bueno, así que está tomando su decisión sobre qué vinos recomendar?
+
+232
+00:13:09.000 --> 00:13:13.000
+Eso es correcto. Y hay tres en la primera pantalla, que son el precio presupuestario
+
+233
+00:13:13.000 --> 00:13:17.000
+los vinos. La segunda pantalla le ofrece otros tres al precio popular, y el
+
+234
+00:13:17.000 --> 00:13:19.000
+3o a los precios de los vinos.
+
+235
+00:13:20.000 --> 00:13:23.001
+¿Cómo le gusta a la gente esto? Parece que lo están tomando muy bien.
+
+236
+00:13:23.001 --> 00:13:26.000
+¿Hay alguna razón particular por la que lo escribiste para el Commodore 64?
+
+237
+00:13:27.001 --> 00:13:31.001
+Muy bien, un ordenador fácil de programar. Tiene muchas características,
+
+238
+00:13:32.000 --> 00:13:35.001
+color, y puede programar diferentes fuentes para ello.
+
+239
+00:13:36.000 --> 00:13:40.000
+Okay, Kelly, volvemos a ti, y Electronic Arts tiene un nuevo juego para el 64
+
+240
+00:13:40.000 --> 00:13:42.000
+llamado Skate o Die, y quiero que me lo digas.
+
+241
+00:13:43.000 --> 00:13:47.000
+Este es un juego multi-evento donde es un tipo de simulación de skateboard, donde
+
+242
+00:13:47.000 --> 00:13:51.001
+Puedes hacer todas las cosas que normalmente no harías a menos que... Y tú
+
+243
+00:13:51.001 --> 00:13:53.001
+No quieren arriesgar sus rodillas y sus brazos. Justo, todo lo
+
+244
+00:13:53.001 --> 00:13:55.001
+La diversión y ninguna de las molestias, como decimos.
+
+245
+00:13:55.001 --> 00:13:57.001
+Bueno, Kelly, me muestra cómo juega Skate o Die.
+
+246
+00:13:57.001 --> 00:14:01.001
+Bueno, esta es la mitad de tubo, que es un evento regular de skateboarding, y usted hace
+
+247
+00:14:01.001 --> 00:14:04.001
+es a través de una combinación que es un giro de movimientos de joystick
+
+248
+00:14:04.001 --> 00:14:06.000
+y los controles del botón.
+
+249
+00:14:08.000 --> 00:14:11.001
+No hay necesidad de mirar la documentación. Y lo haces con el propósito.
+
+250
+00:14:12.001 --> 00:14:13.000
+Yo deseo.
+
+251
+00:14:16.001 --> 00:14:18.000
+Voy a intentar y subir en el aire en este uno.
+
+252
+00:14:18.001 --> 00:14:19.000
+[...]
+
+253
+00:14:20.000 --> 00:14:20.001
+Todo lo justo.
+
+254
+00:14:22.001 --> 00:14:23.000
+hermosa .
+
+255
+00:14:26.000 --> 00:14:28.000
+Así que es una combinación de joystick y los botones.
+
+256
+00:14:29.001 --> 00:14:29.001
+y correcta.
+
+257
+00:14:30.000 --> 00:14:31.000
+Un buen movimiento.
+
+258
+00:14:35.000 --> 00:14:35.001
+Sin embargo...
+
+259
+00:14:35.001 --> 00:14:41.000
+Así que hay como 12 movimientos diferentes que puedes hacer aquí, y obtendrás puntos para
+
+260
+00:14:41.000 --> 00:14:43.001
+la variedad de su rutina, y usted obtendrá puntos de bonificación al final.
+
+261
+00:14:44.001 --> 00:14:47.000
+Así que he obtenido 8.000 puntos, que es un puntuación bastante buena. Puedes subir
+
+262
+00:14:47.000 --> 00:14:48.001
+hasta 15.000 puntos aquí.
+
+263
+00:14:49.000 --> 00:14:49.001
+La multitud en la espalda.
+
+264
+00:14:50.000 --> 00:14:54.000
+Kelly, ¿Es Skate o Die disponible en cualquier máquina que no sea el Commodore 64?
+
+265
+00:14:54.000 --> 00:14:56.000
+No, actualmente sólo está disponible en el Commodore.
+
+266
+00:14:56.000 --> 00:14:58.001
+Fue diseñado en el Commodore y aprovecha algunas características únicas,
+
+267
+00:14:58.001 --> 00:15:02.000
+como los espritos y los 16 colores y las tres voces.
+
+268
+00:15:02.001 --> 00:15:04.001
+Estamos en el proceso de desarrollarlo para la máquina.
+
+269
+00:15:05.000 --> 00:15:08.000
+Ahora, Kelly, ¿hay más cosas que puedes hacer además de solo escalar en esta rampa?
+
+270
+00:15:08.000 --> 00:15:10.001
+Hay un total de cinco eventos. La Rampa es el único evento modelado en real
+
+271
+00:15:10.001 --> 00:15:13.001
+skateboarding, pero hay un par de eventos de descenso donde se puede... La brecha
+
+272
+00:15:13.001 --> 00:15:16.000
+Botellas y esquí a través de botellas y a través del tubo de drenaje.
+
+273
+00:15:16.001 --> 00:15:19.001
+Y hay un evento en el que tienes tres oponentes de ordenador y tú
+
+274
+00:15:19.001 --> 00:15:21.001
+Obtenga a... ... Llamarlos con el pequeño bopping marino
+
+275
+00:15:21.001 --> 00:15:23.000
+El stick. Es un pequeño juego muy divertido.
+
+276
+00:15:23.000 --> 00:15:23.001
+¿Y el precio?
+
+277
+00:15:24.001 --> 00:15:26.000
+La oferta de retail en ella es de $29.95.
+
+278
+00:15:26.001 --> 00:15:30.001
+Bueno . ¿Y hay algo sobre el mercado de Commodore? Sólo no obtendrá más
+
+279
+00:15:30.001 --> 00:15:32.000
+¿Más de $30 para los juegos?
+
+280
+00:15:32.001 --> 00:15:36.000
+A medida que el mercado de Commodore se envellece, se vuelve más sensible al precio. Hay una
+
+281
+00:15:36.000 --> 00:15:39.000
+mucho más producto desarrollado para ello, en vez de, por ejemplo, un mercado como
+
+282
+00:15:39.000 --> 00:15:40.001
+Amiga, donde hay muy pocos juegos en este momento.
+
+283
+00:15:40.001 --> 00:15:42.001
+¿Será algo que usted está de-emphasizando después de un tiempo?
+
+284
+00:15:42.001 --> 00:15:46.000
+No no. Lo hacemos en volumen.
+
+285
+00:15:46.001 --> 00:15:47.001
+¿Cómo lo hacemos? El volumen.
+
+286
+00:15:48.000 --> 00:15:50.001
+Kelly Malcolm, muchas gracias. A principios de la semana he tenido la oportunidad de
+
+287
+00:15:50.001 --> 00:15:53.000
+El nuevo presidente de Commodore, Max Toy.
+
+288
+00:15:53.000 --> 00:15:55.001
+Y empecé preguntándole si Commodore miraba a la
+
+289
+00:15:55.001 --> 00:15:57.001
+64 ¿Es realmente una máquina de juego?
+
+290
+00:15:58.000 --> 00:16:01.001
+Bueno, sería realmente fácil decirlo. Pero lo que hemos visto en el mercado
+
+291
+00:16:01.001 --> 00:16:04.001
+Es que se usa continuamente en los negocios.
+
+292
+00:16:05.000 --> 00:16:08.000
+Estamos viendo que se utiliza en aplicaciones más amplias que nunca hemos visto antes.
+
+293
+00:16:08.000 --> 00:16:10.001
+Commodore 64 está siendo utilizado para la publicación de escritorio.
+
+294
+00:16:11.000 --> 00:16:12.001
+Se utiliza en las pequeñas y pequeñas empresas.
+
+295
+00:16:13.000 --> 00:16:17.000
+Hay una resurrección de nuevo en el mercado de la educación. Así que es
+
+296
+00:16:17.000 --> 00:16:19.000
+mucho más que un mercado de juguetes.
+
+297
+00:16:19.001 --> 00:16:24.000
+Ahora, os diré que hemos visto un crecimiento y una mejora en el
+
+298
+00:16:24.000 --> 00:16:26.000
+Mercado de entretenimiento para algunos de los software.
+
+299
+00:16:26.001 --> 00:16:27.001
+Pero todavía estamos viendo nuevos negocios
+
+300
+00:16:27.001 --> 00:16:29.001
+El software también está escrito para el producto.
+
+301
+00:16:30.000 --> 00:16:33.001
+¿Es una máquina actual? ¿Hay gente que está comprando Commodore 64s?
+
+302
+00:16:33.001 --> 00:16:37.001
+Lo increíble sobre el Commodore 64 es que continúa creciendo
+
+303
+00:16:37.001 --> 00:16:39.001
+Y el mercado sigue expandiendo.
+
+304
+00:16:40.000 --> 00:16:42.001
+vendemos en todo el mundo entre un millón y un millon y un
+
+305
+00:16:42.001 --> 00:16:44.000
+La mitad. Commodore 64 es cada año.
+
+306
+00:16:45.000 --> 00:16:49.000
+Y lo que hemos visto es una nueva onda de clientes que vienen al mercado.
+
+307
+00:16:50.000 --> 00:16:54.000
+Commodore 64 siempre ha sido fuerte en el mercado de pequeñas y pequeñas empresas.
+
+308
+00:16:54.001 --> 00:16:58.000
+Pero estamos viendo un montón de jóvenes usuarios de primera vez que vienen al mercado.
+
+309
+00:16:58.000 --> 00:17:03.000
+De hecho, he oído decir que Commodore acoge más ordenadores de primera vez,
+
+310
+00:17:03.001 --> 00:17:05.001
+usuarios, más que cualquier otra empresa en el mundo.
+
+311
+00:17:06.000 --> 00:17:08.001
+La marca de nuevo software está llegando al mercado. Y tienes que recordar,
+
+312
+00:17:08.001 --> 00:17:12.001
+No es una tecnología antigua para el primer usuario.
+
+313
+00:17:12.001 --> 00:17:16.000
+Y estamos viendo que muchas personas usan este ordenador como su primer
+
+314
+00:17:16.000 --> 00:17:17.001
+Introducción al poder de la computación.
+
+315
+00:17:18.000 --> 00:17:20.000
+Y por lo tanto, usted está trayendo nuevos clientes en
+
+316
+00:17:20.000 --> 00:17:21.001
+cada año en este mercado.
+
+317
+00:17:21.001 --> 00:17:26.000
+Y por lo tanto, es nueva tecnología en cuanto a lo que se preocupe.
+
+318
+00:17:26.000 --> 00:17:29.000
+Y vemos que las personas de software siguen utilizando las capacidades de alto rendimiento
+
+319
+00:17:29.000 --> 00:17:31.001
+por un dólar de gran valor.
+
+320
+00:17:32.001 --> 00:17:35.000
+¿Quién ve ahora como la competición para los 64?
+
+321
+00:17:35.000 --> 00:17:40.001
+¿Es la Apple más baja o es la Atari ST? ¿O tú vas a subir
+
+322
+00:17:40.001 --> 00:17:43.001
+¿En contra de Nintendo y Sega?
+
+323
+00:17:43.001 --> 00:17:46.001
+Bueno, la respuesta realmente es probablemente C, todo lo anterior.
+
+324
+00:17:46.001 --> 00:17:49.001
+Al final del mercado, usted compite contra
+
+325
+00:17:49.001 --> 00:17:51.000
+Nintendo y las máquinas de juego.
+
+326
+00:17:52.000 --> 00:17:55.000
+Y lo que estamos viendo son los padres que están decidiendo que quieren mucho más
+
+327
+00:17:55.000 --> 00:17:58.000
+Tiene más que una máquina de juego para que sus hijos usen.
+
+328
+00:17:58.001 --> 00:18:02.001
+Y utilizar el software de entretenimiento y tomarlo un paso más con la educación y
+
+329
+00:18:02.001 --> 00:18:06.000
+uso real para el cual el niño puede utilizarlo.
+
+330
+00:18:06.001 --> 00:18:09.001
+Pero al mismo tiempo, todavía estamos siendo usados en el negocio. Nos vemos y
+
+331
+00:18:09.001 --> 00:18:12.000
+También se utiliza en el entorno de producción de televisión.
+
+332
+00:18:12.000 --> 00:18:15.000
+Es una parte muy, muy importante de nuestro negocio. continúa creciendo.
+
+333
+00:18:15.000 --> 00:18:19.000
+Continuamos gastando nuestros dólares de investigación y desarrollo en el producto y
+
+334
+00:18:19.000 --> 00:18:22.001
+las periferias y las capacidades de apoyo de dicho producto.
+
+335
+00:18:22.001 --> 00:18:25.000
+Así que es un producto muy, muy importante de Commodore
+
+336
+00:18:25.000 --> 00:18:27.000
+El presente y su futuro.
+
+337
+00:18:27.001 --> 00:18:30.000
+Si miras a nuestros mayores activos, son una base de instalación.
+
+338
+00:18:30.001 --> 00:18:34.000
+Hay capacidad de fabricación y diseño para construir una máquina de silicón.
+
+339
+00:18:35.001 --> 00:18:38.001
+Y el hecho de que tenemos una comunidad de grupo de usuarios tan fuerte.
+
+340
+00:18:38.001 --> 00:18:44.001
+La pasión que los usuarios de Commodore tienen por las máquinas de Commedore y por lo que
+
+341
+00:18:44.001 --> 00:18:47.001
+Han sido capaces de hacer con esas máquinas es absolutamente increíble.
+
+342
+00:18:47.001 --> 00:18:49.001
+Y eso es emocionante. Eso es divertido.
+
+343
+00:19:01.001 --> 00:19:04.001
+Se unen a nosotros en el estudio ahora es Bill Morrow, un Commodore 64
+
+344
+00:19:04.001 --> 00:19:06.000
+Usuario de Pacifica, California.
+
+345
+00:19:06.001 --> 00:19:10.001
+Y detrás de Bill, la mesa de Gary, llena de sintetizadores, se inclinó hasta un 64.
+
+346
+00:19:11.000 --> 00:19:13.001
+Bill, eres un músico muy logrado. ¿Qué pasa con este Commodore?
+
+347
+00:19:13.001 --> 00:19:15.000
+64 que lo hace un buen ordenador de música?
+
+348
+00:19:15.001 --> 00:19:22.001
+Número uno, es muy barato. La otra cosa es el chip SID y eso es
+
+349
+00:19:22.001 --> 00:19:24.000
+El dispositivo de interfaz sonora.
+
+350
+00:19:25.000 --> 00:19:26.000
+¿Qué hace el SID chip?
+
+351
+00:19:27.000 --> 00:19:33.000
+Eso hace sonido. Tiene tres músicos en ella, podrías decir.
+
+352
+00:19:34.000 --> 00:19:39.000
+Y estos tres músicos pueden tocar notas individuales separadas
+
+353
+00:19:39.000 --> 00:19:40.001
+O pueden jugarlos simultáneamente.
+
+354
+00:19:40.001 --> 00:19:47.000
+Podemos tener un flute y un bass y un violín jugando todos al mismo tiempo.
+
+355
+00:19:47.000 --> 00:19:49.001
+Y luego puedes experimentar con los diferentes sonidos y mezclarlos y así sucesivamente.
+
+356
+00:19:50.000 --> 00:19:53.001
+Puedo estudiar el ataque, retrasar y mantener y liberar.
+
+357
+00:19:54.000 --> 00:19:56.000
+Ahora tienes algún software aquí, alguna composición
+
+358
+00:19:56.000 --> 00:19:58.000
+El software llamado Master Composer, ¿verdad?
+
+359
+00:19:58.001 --> 00:20:01.000
+Mostrarnos cómo funciona con el chip SID, Bill.
+
+360
+00:20:02.000 --> 00:20:07.000
+Aquí puedes ver que ya he introducido algunas notas.
+
+361
+00:20:07.000 --> 00:20:11.001
+Tengo tres voces. Tengo mi músico número 2 aquí.
+
+362
+00:20:14.001 --> 00:20:16.001
+Veo que tengo un poco de descanso allí.
+
+363
+00:20:17.000 --> 00:20:23.000
+Así que tengo por fin, yo diría que tengo 16 posiciones que puedo...
+
+364
+00:20:23.001 --> 00:20:27.001
+Si quieres ir adelante y escuchar esa música, simplemente pondrías allí.
+
+365
+00:20:27.001 --> 00:20:29.001
+Esto sólo usa un chip SID, ¿verdad? No hay sintetizadores.
+
+366
+00:20:30.000 --> 00:20:31.000
+Sólo un Commodore.
+
+367
+00:20:32.001 --> 00:20:34.000
+OK, ¿Quieres escucharlo?
+
+368
+00:20:34.000 --> 00:20:34.000
+Sí sí.
+
+369
+00:20:34.001 --> 00:20:35.000
+[...]
+
+370
+00:20:38.000 --> 00:20:41.000
+Y está mostrando las notas que está jugando a medida que continúa.
+
+371
+00:20:42.000 --> 00:20:43.001
+Todo esto acaba de salir de los 64.
+
+372
+00:20:44.000 --> 00:20:47.000
+Exactamente como están jugando. Todo esto viene de los 64. No hay ayuda.
+
+373
+00:20:48.001 --> 00:20:50.000
+Y hay las notas que habéis entrado antes.
+
+374
+00:20:50.001 --> 00:20:52.000
+Esta es una pequeña pieza de música que estás colocando allí.
+
+375
+00:20:52.001 --> 00:20:54.000
+Bueno, ¿podemos desactivar esto sólo un segundo?
+
+376
+00:20:55.001 --> 00:20:58.001
+Y quiero pedirle ahora que nos deje todo el juego de baloncesto aquí y quede todo tu
+
+377
+00:20:58.001 --> 00:21:01.001
+Síntesis y ver si los 64 pueden gestionar todo esto.
+
+378
+00:21:01.001 --> 00:21:02.001
+¿Qué hacemos para hacer esto?
+
+379
+00:21:02.001 --> 00:21:07.001
+En primer lugar, tengo la interfaz MIDI encubierta con el Commodore.
+
+380
+00:21:08.000 --> 00:21:13.001
+Y desde la interfaz MIDI voy a través de mi MIDI a través del cuadro, que no podemos ver.
+
+381
+00:21:14.000 --> 00:21:19.001
+Y de eso me he ahogado hasta uno, dos, tres teclados, que
+
+382
+00:21:19.001 --> 00:21:21.001
+Todos son múltiples canales.
+
+383
+00:21:21.001 --> 00:21:26.000
+Y tengo alrededor de 14 canales o pistas.
+
+384
+00:21:26.001 --> 00:21:29.000
+El músico pensaría en ellos como pistas, diferentes pistas que corren.
+
+385
+00:21:29.000 --> 00:21:34.001
+Entonces tenemos la máquina de tambor y tenemos un generador de sonido sobre ella, que
+
+386
+00:21:34.001 --> 00:21:36.001
+Me da alrededor de 16 pistas.
+
+387
+00:21:37.000 --> 00:21:38.001
+¿Y cuál es el software que controla todo esto?
+
+388
+00:21:39.000 --> 00:21:44.001
+El software es el Dr. El software de T. Y es un software muy poderoso.
+
+389
+00:21:44.001 --> 00:21:49.000
+Puedes grabar con esto al igual que estás grabando en un estudio.
+
+390
+00:21:49.000 --> 00:21:51.001
+Como dicen, toma uno y juega.
+
+391
+00:21:51.001 --> 00:21:56.001
+O puedes insertar las notas de...
+
+392
+00:21:56.001 --> 00:21:58.000
+¿Y qué pasa con tomar uno? Vamos a ver cómo suena.
+
+393
+00:21:58.000 --> 00:22:00.000
+Toma uno y digas, bien.
+
+394
+00:22:03.000 --> 00:22:03.001
+Cuéntanos lo que estás haciendo.
+
+395
+00:22:04.000 --> 00:22:11.000
+Estoy haciendo un tune original que yo y James Anderson coescribimos.
+
+396
+00:22:17.000 --> 00:22:18.001
+Eso es bastante bueno.
+
+397
+00:22:21.001 --> 00:22:24.000
+Ahora, te pregunto, eres un músico.
+
+398
+00:22:24.001 --> 00:22:28.000
+¿Cuál es el placer de trabajar con algo como el C64?
+
+399
+00:22:28.000 --> 00:22:30.000
+Nos habéis dicho antes de pensar en salir de la
+
+400
+00:22:30.000 --> 00:22:31.001
+El negocio de la música, pero ahora estás de vuelta a la vida.
+
+401
+00:22:31.001 --> 00:22:38.000
+Bueno, el placer es que no tengo que tener un montón de músicos para reunirse con.
+
+402
+00:22:38.001 --> 00:22:40.001
+No tengo que decirles que tocar mi música sencilla.
+
+403
+00:22:41.000 --> 00:22:46.000
+Y tengo un drummer que esta máquina loca sólo jugará todo el día.
+
+404
+00:22:46.001 --> 00:22:49.000
+Y la mayoría de las veces me llevaría a los músicos.
+
+405
+00:22:49.000 --> 00:22:52.001
+Me gusta reanudarme, reanutarme y reanuarme. Y tiene mucho tiempo.
+
+406
+00:22:53.000 --> 00:22:55.000
+Así que, como compositor y como músico, tienes más control ahora.
+
+407
+00:22:55.000 --> 00:22:56.001
+Tengo más control.
+
+408
+00:22:57.000 --> 00:22:58.001
+Con un poco de inversión, como decimos.
+
+409
+00:22:59.000 --> 00:23:00.001
+Es una inversión muy barata.
+
+410
+00:23:00.001 --> 00:23:03.001
+Muchas gracias por estar aquí, Bill. Esta es nuestra mirada al Commodore 64.
+
+411
+00:23:03.001 --> 00:23:06.000
+Espero que los veamos de nuevo aquí la próxima semana en The Computer Chronicles.
+
+412
+00:23:17.001 --> 00:23:22.000
+En el archivo de acceso aleatorio esta semana, hay informes de que el nuevo D-Bass 4
+
+413
+00:23:22.000 --> 00:23:24.001
+El programa tiene algunos errores en el modo SQL.
+
+414
+00:23:24.001 --> 00:23:28.001
+El servicio Microbyte de la revista Byte y una compañía llamada Quadbase tienen ambos
+
+415
+00:23:28.001 --> 00:23:32.001
+informa que las respuestas a las declaraciones de consulta de SQL pueden conducir a informes incorrectos sobre
+
+416
+00:23:32.001 --> 00:23:35.000
+el número de registros o a un mensaje de error interno
+
+417
+00:23:35.000 --> 00:23:37.000
+que impide la ejecución de la solicitud.
+
+418
+00:23:37.001 --> 00:23:40.000
+Ashton Tate dice que está investigando los informes.
+
+419
+00:23:40.001 --> 00:23:44.001
+El Invervirus, que atacó la comunidad de Macintosh hace varios meses, ha
+
+420
+00:23:44.001 --> 00:23:48.000
+Fue descubierto en un disco CD-ROM de software de dominio público.
+
+421
+00:23:48.001 --> 00:23:51.000
+El virus infectó siete archivos en el disco, incluyendo
+
+422
+00:23:51.000 --> 00:23:52.001
+Hipercarta y Stuffit.
+
+423
+00:23:52.001 --> 00:23:56.000
+El disco se llama el Megarom y se produce por Quantum Leap Technology.
+
+424
+00:23:57.000 --> 00:24:00.000
+La compañía dice que ha encontrado y eliminado el virus y
+
+425
+00:24:00.000 --> 00:24:01.001
+Las nuevas copias del disco son limpias.
+
+426
+00:24:02.000 --> 00:24:06.000
+El Invervirus se transmitió a través de una utilidad de disco duro, infecta aplicaciones
+
+427
+00:24:06.000 --> 00:24:09.000
+y, en última instancia, causar un desastre de sistemas no recuperables.
+
+428
+00:24:09.001 --> 00:24:14.000
+Se dice que el virus puede ser detectado por el Programa de Detective de Virus, pero puede escapar.
+
+429
+00:24:14.000 --> 00:24:16.000
+El programa de Apple se llama VirusRX.
+
+430
+00:24:17.000 --> 00:24:20.001
+Los rusos dicen que habían sido golpeados por su primer virus informático.
+
+431
+00:24:20.001 --> 00:24:24.001
+El virus, conocido como DOS-62, infectó a 80 ordenadores en el
+
+432
+00:24:24.001 --> 00:24:26.000
+Academia de Ciencias de la URSS.
+
+433
+00:24:26.001 --> 00:24:30.001
+Los rusos sospechan que el virus entró en el sistema después de que algunos estudiantes, que
+
+434
+00:24:30.001 --> 00:24:34.000
+Asistió a un campamento informático internacional de verano, tratando de copiar algunos infectados
+
+435
+00:24:34.000 --> 00:24:36.001
+programas que utilizan los ordenadores de la Academia.
+
+436
+00:24:38.000 --> 00:24:41.001
+IBM dice que ha desarrollado un nuevo circuito experimental que podría conducir a
+
+437
+00:24:41.001 --> 00:24:43.000
+PCs con velocidad de mainframe.
+
+438
+00:24:43.000 --> 00:24:47.001
+El circuito CMOS es el 1.300th de la espesor de un cabello humano.
+
+439
+00:24:48.000 --> 00:24:50.001
+Se puede cambiar en y de 30 mil millones de veces por segundo.
+
+440
+00:24:51.000 --> 00:24:54.000
+Un chip de memoria que utiliza el nuevo circuito podría contener hasta 256
+
+441
+00:24:54.000 --> 00:24:56.000
+Megabits de información.
+
+442
+00:24:57.000 --> 00:24:59.001
+El tiempo para la revisión de software de esta semana. Aquí está Paul Schindler.
+
+443
+00:25:00.000 --> 00:25:03.001
+En nuestro momento disponible, no podemos resolver la pregunta de edad de si usted
+
+444
+00:25:03.001 --> 00:25:05.001
+Realmente necesita una enciclopedia o no.
+
+445
+00:25:06.000 --> 00:25:08.000
+Pero si decides que lo haces por ti mismo o por tu
+
+446
+00:25:08.000 --> 00:25:10.000
+Niños, ¿qué te gustaría tener?
+
+447
+00:25:10.000 --> 00:25:13.000
+Estos 20 volúmenes o este disco compacto.
+
+448
+00:25:13.001 --> 00:25:17.001
+Esta es la enciclopedia electrónica, y contiene todo el texto de la
+
+449
+00:25:17.001 --> 00:25:19.000
+Enciclopedia Académica Americana.
+
+450
+00:25:19.001 --> 00:25:24.000
+Esto es 9 millones de palabras, 30.000 entradas, 60 megabytes de datos.
+
+451
+00:25:24.001 --> 00:25:28.001
+Puedes pagar un dólar por minuto para acceder a esta enciclopedia en línea a través de Dow Jones,
+
+452
+00:25:28.001 --> 00:25:32.000
+O usted paga $ 300 una vez y tiene esto en su casa.
+
+453
+00:25:32.001 --> 00:25:34.001
+Ahora no vamos a mostrar ninguna pantalla hoy, porque las pantallas están llenas de
+
+454
+00:25:34.001 --> 00:25:36.001
+El texto no es muy interesante para mirar.
+
+455
+00:25:36.001 --> 00:25:40.001
+Pero puedo decirle que cuando usted da el programa de búsqueda de la enciclopedia electrónica
+
+456
+00:25:40.001 --> 00:25:44.000
+una palabra, se encuentra cada artículo en la enciclopedia que incluye esa palabra
+
+457
+00:25:44.000 --> 00:25:46.000
+Te contamos el título del artículo.
+
+458
+00:25:46.000 --> 00:25:48.001
+Puedes leerlo, imprimirlo o ponerlo en un archivo de disco.
+
+459
+00:25:49.000 --> 00:25:50.001
+Ahora tenga cuidado con lo que haces con ese archivo de disco, porque
+
+460
+00:25:50.001 --> 00:25:52.000
+No quieres plagiarizar este trabajo.
+
+461
+00:25:52.001 --> 00:25:57.000
+Ahora sé que para usar esto, necesitas un reproductor CD-ROM de $ 800 para tu PC.
+
+462
+00:25:58.000 --> 00:26:01.000
+Cree en mí, esto no es el último programa de CD-ROM que quieres.
+
+463
+00:26:01.001 --> 00:26:04.000
+La enciclopedia electrónica es de $300 de Grolier
+
+464
+00:26:04.000 --> 00:26:05.001
+Publicación electrónica en Nueva York.
+
+465
+00:26:05.001 --> 00:26:08.000
+Para las crónicas informáticas, yo soy Paul Schindler.
+
+466
+00:26:09.000 --> 00:26:13.000
+Hewlett-Packard ha anunciado que está introduciendo un nuevo 386 ordenador que utiliza
+
+467
+00:26:13.000 --> 00:26:15.000
+La arquitectura del autobús.
+
+468
+00:26:15.001 --> 00:26:18.001
+El autobús permitirá el paso de 32 bits, pero será compatible
+
+469
+00:26:18.001 --> 00:26:20.000
+con las tablas de tipo AT existentes.
+
+470
+00:26:20.001 --> 00:26:24.000
+La nueva máquina HP está prevista para embarcarse en la segunda mitad de 1989.
+
+471
+00:26:25.000 --> 00:26:27.001
+SAC Technologies ha introducido una nueva lengua inglesa
+
+472
+00:26:27.001 --> 00:26:29.000
+La interfaz DOS se llama DOSTalk.
+
+473
+00:26:29.001 --> 00:26:33.001
+Es una pieza de software Lisp que le permite escribir en los comandos de lenguaje natural
+
+474
+00:26:33.001 --> 00:26:35.000
+para dos funciones normales.
+
+475
+00:26:35.000 --> 00:26:37.001
+El software se vende por $ 89.95.
+
+476
+00:26:39.000 --> 00:26:41.001
+Chartered Electronics de Singapur ha introducido la Faxility.
+
+477
+00:26:42.000 --> 00:26:46.000
+Es una caja negra que se adhiere a su ordenador y permite que su placa de fax reciba
+
+478
+00:26:46.000 --> 00:26:48.000
+Faxes, incluso si su PC está desactivado.
+
+479
+00:26:48.001 --> 00:26:52.001
+La caja se venderá por 145 dólares. Se espera la aprobación de la FCC.
+
+480
+00:26:53.001 --> 00:26:56.001
+¿Qué sucede cuando dos máquinas informáticas se encuentran juntos?
+
+481
+00:26:57.000 --> 00:26:59.000
+Usted obtendrá una máquina ATM que vende estampas.
+
+482
+00:26:59.000 --> 00:27:03.000
+Equibank de Pittsburgh está vendiendo las nuevas máquinas a los bancos, y el bonito
+
+483
+00:27:03.000 --> 00:27:04.001
+La parte es que ni siquiera necesitas dinero.
+
+484
+00:27:05.000 --> 00:27:08.001
+El ATM cargará automáticamente su cuenta de verificación para los estampos que compra.
+
+485
+00:27:09.000 --> 00:27:11.001
+Esto es lo que es para el acceso aleatorio de esta semana. Yo soy Cynthia Steele.
+
+486
+00:27:31.000 --> 00:27:37.000
+Para una transcripción de las crónicas informáticas de esta semana, envíe $4 a PTV
+
+487
+00:27:37.000 --> 00:27:43.000
+Publicaciones Post Office Box 701, Kent, Ohio 44240.
+
+488
+00:27:44.000 --> 00:27:45.001
+Por favor indique la fecha del programa.
+
+489
+00:28:25.000 --> 00:28:29.000
+Gracias a ustedes.
