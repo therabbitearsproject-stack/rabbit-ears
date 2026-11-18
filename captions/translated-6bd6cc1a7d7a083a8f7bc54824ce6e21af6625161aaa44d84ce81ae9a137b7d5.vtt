@@ -1,0 +1,2045 @@
+WEBVTT
+
+1
+00:00:09.001 --> 00:00:14.000
+Ketika Anda memikirkan jaringan televisi, Anda mungkin berpikir tentang sebuah studio besar.
+
+2
+00:00:14.000 --> 00:00:16.000
+di Hollywood di mana mereka membuat program televisi.
+
+3
+00:00:16.001 --> 00:00:19.000
+Sebuah jaringan televisi sebenarnya adalah jaringan dengan cara tertentu.
+
+4
+00:00:19.001 --> 00:00:22.001
+Ada sistem pemrosesan pusat besar di New York di mana mereka memiliki banyak
+
+5
+00:00:22.001 --> 00:00:26.001
+program, ratusan pengguna tersebar di seluruh negara berbagi
+
+6
+00:00:26.001 --> 00:00:30.000
+program, pertukaran informasi di sepanjang garis atau pautan satelit.
+
+7
+00:00:30.001 --> 00:00:34.000
+Sekarang aspek teknis dari jaringan televisi sebenarnya cukup sederhana
+
+8
+00:00:34.000 --> 00:00:37.000
+dibandingkan dengan kompleksitas jaringan komputer.
+
+9
+00:00:37.000 --> 00:00:41.000
+Hari ini kami memulai pandangan khusus dua bagian pada jaringan PC di atas ini
+
+10
+00:00:41.000 --> 00:00:43.000
+edisi dari komputer kronik.
+
+11
+00:01:04.001 --> 00:01:09.001
+Komputer Chronicles dimungkinkan sebagian oleh CompuServe, dengan
+
+12
+00:01:09.001 --> 00:01:14.000
+perpustakaan referensi online, laporan Wall Street, belanja di rumah, maskapai penerbangan
+
+13
+00:01:14.000 --> 00:01:17.000
+reservasi, permainan dan ratusan layanan lainnya.
+
+14
+00:01:19.000 --> 00:01:22.000
+CompuServe, membantu orang mendapatkan yang terbaik dari komputer.
+
+15
+00:01:25.000 --> 00:01:28.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, diterbitkan di Byte.
+
+16
+00:01:29.000 --> 00:01:33.000
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak dan bahasa yang baru
+
+17
+00:01:33.000 --> 00:01:35.001
+perkembangan teknologi komputer di seluruh dunia.
+
+18
+00:01:41.000 --> 00:01:42.001
+Selamat Datang ke Komputer Chronicles
+
+19
+00:01:43.000 --> 00:01:46.001
+Saya Stuart Chufe dan duduk minggu ini untuk Gary Kildall adalah George Morrow.
+
+20
+00:01:47.000 --> 00:01:50.000
+George, pada awal program saya membuat analog ke televisi
+
+21
+00:01:50.000 --> 00:01:51.001
+jaringan, sesuatu seperti jaringan komputer.
+
+22
+00:01:52.000 --> 00:01:55.001
+Sebenarnya, jika Anda melihat dua skema ini, ini adalah jaringan PBS dan ini adalah
+
+23
+00:01:55.001 --> 00:01:58.001
+Sebuah jaringan komputer, Anda dapat melihat struktur yang benar-benar sangat mirip.
+
+24
+00:01:58.001 --> 00:01:59.000
+Itu adalah.
+
+25
+00:01:59.001 --> 00:02:03.001
+Saya ingin bertanya kepada Anda, George, dengan sesuatu seperti PC 386 sekarang, apakah itu berarti
+
+26
+00:02:03.001 --> 00:02:06.000
+Apakah lebih mudah, lebih murah bagi seseorang untuk masuk ke situasi jaringan?
+
+27
+00:02:06.001 --> 00:02:07.000
+Saya yakin, Stuart
+
+28
+00:02:07.001 --> 00:02:10.001
+Mesin-mesin ini akan memindahkan titik kinerja harga jaringan
+
+29
+00:02:10.001 --> 00:02:12.000
+Sistem adalah langkah besar.
+
+30
+00:02:12.001 --> 00:02:16.001
+Prosesor sangat kuat, sangat mampu dan bus IELTS telah
+
+31
+00:02:16.001 --> 00:02:19.001
+Dirancang untuk memindahkan data ke dan keluar dari jaringan dan ke dan luar
+
+32
+00:02:19.001 --> 00:02:21.001
+dengan cakera yang sangat cepat.
+
+33
+00:02:21.001 --> 00:02:22.001
+Bagaimana dengan MAC2?
+
+34
+00:02:23.000 --> 00:02:25.001
+Baiklah, MAC2, itu juga mesin yang sangat mampu.
+
+35
+00:02:25.001 --> 00:02:32.000
+Keluarga prosesor 68.000 sama-sama mampu dengan bus 386 dan bus baru.
+
+36
+00:02:32.000 --> 00:02:34.001
+Mac2 juga merupakan bus yang sangat cepat.
+
+37
+00:02:35.000 --> 00:02:37.001
+George, pada program pertama ini berurusan dengan jaringan, kita akan
+
+38
+00:02:37.001 --> 00:02:39.000
+Fokus pada lingkungan PC DOS.
+
+39
+00:02:39.001 --> 00:02:42.000
+Kami akan melihat beberapa sistem jaringan yang sangat besar, hal-hal yang digunakan
+
+40
+00:02:42.000 --> 00:02:44.000
+3Com’s Ethernet dan Novell’s Netware.
+
+41
+00:02:44.000 --> 00:02:47.000
+Kami juga akan melihat beberapa sistem jaringan kecil menggunakan produk
+
+42
+00:02:47.000 --> 00:02:48.001
+Seperti Grapevine dan Easyland.
+
+43
+00:02:49.000 --> 00:02:51.001
+Kami akan memulai dengan melihat cincin token yang sangat besar
+
+44
+00:02:51.001 --> 00:02:53.000
+Rangkaian di Concord, California.
+
+45
+00:02:53.001 --> 00:02:55.001
+Ini berakhir dengan Burroughs mainframe.
+
+46
+00:02:58.001 --> 00:03:03.001
+Di pinggir kota San Francisco Concord, hal terdekat dengan jaringan di City
+
+47
+00:03:03.001 --> 00:03:09.000
+Hall digunakan untuk sistem tiub pneumatik ini, solusi yang dapat diandalkan tetapi terbatas untuk
+
+48
+00:03:09.000 --> 00:03:12.000
+masalah perpindahan dokumen antara kantor yang berbeda.
+
+49
+00:03:13.000 --> 00:03:16.000
+Hari ini, jaringan komputer sedang mengubah kota
+
+50
+00:03:16.000 --> 00:03:18.000
+pemerintah, departemen per departemen.
+
+51
+00:03:18.001 --> 00:03:23.000
+Awalnya, jenis produktivitas desktop adalah puncak utama.
+
+52
+00:03:25.000 --> 00:03:28.001
+Departemen tingkat pemrosesan kata, kemampuan untuk mendapatkan dokumen di
+
+53
+00:03:28.001 --> 00:03:30.000
+waktu dan dengan format yang konsisten.
+
+54
+00:03:31.000 --> 00:03:34.001
+Aplikasi spreadsheet, Anda tahu, semua orang harus membuat anggaran.
+
+55
+00:03:35.000 --> 00:03:40.001
+Dan pemeliharaan daftar, biasanya di dalam departemen Anda memiliki file atau rekaman
+
+56
+00:03:40.001 --> 00:03:42.001
+informasi yang benar-benar tidak relevan untuk
+
+57
+00:03:42.001 --> 00:03:44.000
+orang lain, tetapi mereka sangat penting bagi Anda.
+
+58
+00:03:44.001 --> 00:03:49.001
+dan kemampuan untuk memiliki proses pemulihan yang mudah untuk mengingatkan mereka
+
+59
+00:03:49.001 --> 00:03:54.000
+rekaman di tingkat departemen, untuk menyingkirkan semua kotak kartu indeks, Anda
+
+60
+00:03:54.000 --> 00:03:57.001
+tahu, kartu 3x5 dan daftar Rolodex, saya maksud, mereka berada di mana-mana.
+
+61
+00:03:58.000 --> 00:03:59.000
+Saya ingin mengkonsolidasikan hal itu.
+
+62
+00:04:00.000 --> 00:04:04.001
+Di kantor Klerk Kota, di Departemen Pekerjaan Publik, dan di Central Word
+
+63
+00:04:04.001 --> 00:04:09.000
+Pemrosesan, jaringan cincin token telah memudahkan kompleksitas penyimpanan,
+
+64
+00:04:09.000 --> 00:04:13.000
+Mencari dan mengubah dokumen yang dikendalikan oleh banyak orang yang berbeda.
+
+65
+00:04:14.000 --> 00:04:17.001
+Proses birokrasi tampaknya sesuai dengan fungsi jaringan.
+
+66
+00:04:18.000 --> 00:04:25.000
+Di mana Anda memiliki data yang masuk mengenai pelanggaran kode di lapangan dan
+
+67
+00:04:25.000 --> 00:04:29.001
+yang diselesaikan atas dasar tertentu dan orang yang mendeteksi pelanggaran dapat
+
+68
+00:04:29.001 --> 00:04:32.000
+yang berbeda dari orang yang melanggar, dapat berbeda dari
+
+69
+00:04:32.000 --> 00:04:35.001
+orang yang menyelesaikan pelanggaran dan Anda ingin memiliki sistem elektronik
+
+70
+00:04:35.001 --> 00:04:38.001
+yang menghapus pencarian dan pencarian serta hal-hal yang diperlukan untuk itu.
+
+71
+00:04:40.000 --> 00:04:42.000
+Jaringan Concord belum terhubung.
+
+72
+00:04:42.001 --> 00:04:46.000
+Setiap departemen memiliki sistem dan server file sendiri.
+
+73
+00:04:46.001 --> 00:04:50.001
+Di beberapa departemen, di mana kegunaan jaringan terbatas pada transfer
+
+74
+00:04:50.001 --> 00:04:55.001
+file dan berbagi peripheral, komputer terhubung bersama dengan hanya satu
+
+75
+00:04:55.001 --> 00:04:58.000
+Menggunakan RS-232 Smart Connector
+
+76
+00:04:58.001 --> 00:05:03.001
+Sementara sebagian besar karyawan telah menyesuaikan diri dengan sistem jaringan, beberapa file backup kertas
+
+77
+00:05:03.001 --> 00:05:09.000
+masih terlihat dan membuat perangkat lunak sebagai user-friendly sebagai kartu indeks
+
+78
+00:05:09.000 --> 00:05:10.001
+Tidak selalu mudah.
+
+79
+00:05:11.000 --> 00:05:16.000
+Aplikasi yang dirancang untuk jaringan tidak terlalu sulit untuk menangkap
+
+80
+00:05:16.000 --> 00:05:18.000
+Semua manfaat dari jaringan.
+
+81
+00:05:18.001 --> 00:05:21.001
+Aplikasi yang benar-benar dirancang untuk lingkungan pengguna tunggal, di mana Anda
+
+82
+00:05:21.001 --> 00:05:25.001
+memiliki utilitas yang memungkinkan Anda untuk membuatnya berfungsi di lingkungan jaringan, tetapi
+
+83
+00:05:25.001 --> 00:05:30.001
+Itu membutuhkan sedikit kreativitas dari pihak Anda karena banyak fitur dari
+
+84
+00:05:30.001 --> 00:05:35.001
+Jaringan hanya dapat diaktifkan pada tingkat perintah prompt.
+
+85
+00:05:36.000 --> 00:05:41.000
+Saya pikir hal berikutnya sekarang adalah datang dengan pandangan dan merasa itu konsisten
+
+86
+00:05:41.000 --> 00:05:47.001
+dengan jenis sistem lain, sistem logik yang digunakan orang, seperti di telepon
+
+87
+00:05:47.001 --> 00:05:52.000
+sistem, Anda terbiasa dengan gagasan prefix, nomor telepon, dan perpanjangan.
+
+88
+00:05:52.001 --> 00:05:54.001
+Orang dapat berurusan dengan itu, alamat dan kode zip.
+
+89
+00:05:54.001 --> 00:06:01.001
+Ada metafora yang memungkinkan Anda dalam pikiran Anda untuk internalisasi apa yang
+
+90
+00:06:01.001 --> 00:06:04.000
+yang terjadi dengan sistem informasi ini.
+
+91
+00:06:16.000 --> 00:06:19.001
+Bersama kami di studio sekarang adalah Ken Scott, Presiden Komputer Ken
+
+92
+00:06:19.001 --> 00:06:21.001
+Pathways, pembuat dari Grapevine.
+
+93
+00:06:21.001 --> 00:06:25.001
+Juga dengan kami di stasiun kerja lain di sana adalah Warren Sly, Wakil Presiden
+
+94
+00:06:25.001 --> 00:06:27.000
+untuk pemasaran di Computer Pathways.
+
+95
+00:06:27.000 --> 00:06:27.001
+dengan George?
+
+96
+00:06:28.001 --> 00:06:30.000
+Grapevine adalah nama yang menarik.
+
+97
+00:06:30.000 --> 00:06:32.000
+Ini menawarkan produk yang sangat menarik.
+
+98
+00:06:32.000 --> 00:06:33.001
+Mungkin Anda bisa memberitahu kami sedikit tentang hal itu.
+
+99
+00:06:33.001 --> 00:06:35.000
+Ini adalah nama yang menarik.
+
+100
+00:06:35.001 --> 00:06:39.000
+Kami memilihnya dengan sangat hati-hati karena menyarankan bahwa orang-orang
+
+101
+00:06:39.000 --> 00:06:40.001
+Anda harus tahu cara menggunakan produk ini.
+
+102
+00:06:41.000 --> 00:06:43.000
+Dan tepat di luar, itulah yang kami dirancang.
+
+103
+00:06:43.001 --> 00:06:48.000
+Kami berpikir lebih baik memiliki jaringan daerah yang
+
+104
+00:06:48.000 --> 00:06:51.000
+pengguna PC rata-rata atau tipikal, seseorang yang akrab dengan spreadsheets atau dengan
+
+105
+00:06:51.000 --> 00:06:53.001
+prosesor, saya bisa menggunakan pertama kalinya.
+
+106
+00:06:54.001 --> 00:06:57.000
+Secara topologis, jaringan sedikit berbeda dari memiliki
+
+107
+00:06:57.000 --> 00:06:59.000
+Server yang didedikasikan.
+
+108
+00:06:59.001 --> 00:07:00.000
+Apakah itu benar, Ken?
+
+109
+00:07:00.000 --> 00:07:01.000
+Ya, sangat banyak hal itu.
+
+110
+00:07:02.000 --> 00:07:05.001
+Apa yang telah kami lakukan adalah kami telah memberikan kemampuan untuk meletakkan server
+
+111
+00:07:05.001 --> 00:07:07.000
+berfungsi di seluruh jaringan.
+
+112
+00:07:07.001 --> 00:07:12.001
+Oleh karena itu, setiap stasiun yang membentuk jaringan dapat menjadi server dan oleh karena itu
+
+113
+00:07:12.001 --> 00:07:17.000
+menyediakan fungsi server untuk setiap pengguna di jaringan dan bukannya memiliki
+
+114
+00:07:17.000 --> 00:07:19.001
+server khusus di mana mereka tahu bahwa itu adalah di mana segala sesuatu harus tinggal.
+
+115
+00:07:20.000 --> 00:07:20.001
+Oleh karena itu dibagikan.
+
+116
+00:07:20.001 --> 00:07:21.001
+Disebarkan saja ya.
+
+117
+00:07:22.000 --> 00:07:24.000
+Dan saya pikir Anda memiliki demo yang akan Anda tunjukkan kepada kami.
+
+118
+00:07:24.000 --> 00:07:26.001
+Ya, pertama-tama saya akan memperkenalkan Anda dengan setup di sini.
+
+119
+00:07:27.001 --> 00:07:29.001
+Warren sedang mengoperasikan sistem di sini.
+
+120
+00:07:29.001 --> 00:07:31.001
+Ini terdiri dari ATs dan XTs.
+
+121
+00:07:32.000 --> 00:07:33.001
+Dia menjalankan sistem pemrosesan kata.
+
+122
+00:07:34.000 --> 00:07:35.001
+Kami akan menjalankan spreadsheet di atas ini.
+
+123
+00:07:36.000 --> 00:07:39.001
+Dan dalam kompak, kita juga akan berlari, saya pikir, hanya stabil di sini.
+
+124
+00:07:40.000 --> 00:07:41.000
+Kami memiliki database di atasnya sebelumnya.
+
+125
+00:07:41.001 --> 00:07:42.001
+Jadi ini adalah sistem dengan tiga nodus.
+
+126
+00:07:43.000 --> 00:07:44.000
+Tiga titik, itu benar.
+
+127
+00:07:44.000 --> 00:07:48.001
+Sistem ini mampu menyebar hingga 50 nodus.
+
+128
+00:07:48.001 --> 00:07:50.000
+lebih dari jarak 4.000 kaki.
+
+129
+00:07:50.000 --> 00:07:52.001
+Setiap nod ini bisa menjadi bagian dari jaringan server, maka?
+
+130
+00:07:53.000 --> 00:07:53.000
+Ya ya.
+
+131
+00:07:53.001 --> 00:07:57.001
+Setiap node dapat bertindak sebagai server sehingga ketika Anda menginstal jaringan di mana Anda
+
+132
+00:07:57.001 --> 00:08:00.000
+Jika Anda sudah memiliki printer, Anda bisa tinggal di sana.
+
+133
+00:08:00.000 --> 00:08:03.000
+Tidak perlu bergerak ke tempat server file berada.
+
+134
+00:08:03.000 --> 00:08:04.001
+Tunjukkan bagaimana sebuah grapevine bekerja di sini, Ken.
+
+135
+00:08:04.001 --> 00:08:05.000
+Tentu saja
+
+136
+00:08:05.000 --> 00:08:09.001
+Biarkan saya hanya menyimpulkan bahwa jaringan terdiri dari tiga bidang fungsi.
+
+137
+00:08:10.000 --> 00:08:15.000
+Mereka memberikan kemampuan untuk berbagi sumber daya fisik seperti printer, untuk berbagi
+
+138
+00:08:15.000 --> 00:08:18.001
+file baik pada basis pengguna tunggal atau multi-user, atau untuk memberikan
+
+139
+00:08:18.001 --> 00:08:20.001
+Komunikasi antara anggota jaringan.
+
+140
+00:08:21.000 --> 00:08:21.000
+Itu memang benar.
+
+141
+00:08:21.001 --> 00:08:24.000
+Sekarang, apa yang kita lakukan adalah kita akan menunjukkan ini sementara pada saat yang sama kita
+
+142
+00:08:24.000 --> 00:08:27.001
+menjalankan Lotus 123, yang dalam dirinya adalah perbedaan untuk produk.
+
+143
+00:08:28.001 --> 00:08:31.001
+Sebagian besar produk tidak akan memungkinkan Anda untuk mengakses fungsi jaringan
+
+144
+00:08:31.001 --> 00:08:34.001
+Kecuali jika Anda keluar dari program aplikasi Anda.
+
+145
+00:08:35.000 --> 00:08:38.000
+Dalam hal ini, Anda dapat membawa kapasitas jaringan ke depan.
+
+146
+00:08:38.000 --> 00:08:39.001
+dengan menekan satu kunci.
+
+147
+00:08:40.000 --> 00:08:43.001
+Di sini, apa yang kami tunjukkan adalah bahwa ada beberapa printer
+
+148
+00:08:43.001 --> 00:08:45.001
+yang tersedia di jaringan.
+
+149
+00:08:46.000 --> 00:08:51.000
+Salah satu hal yang perlu kita ketahui adalah bahwa LQ1500
+
+150
+00:08:51.000 --> 00:08:52.001
+variasi yang berbeda pada printer tersebut.
+
+151
+00:08:53.000 --> 00:08:55.000
+Kami dapat membuat cetakan kompresi dari menu ini.
+
+152
+00:08:55.001 --> 00:08:58.000
+Kami dapat membuat kualitas surat, atau kami dapat membuat desain kualitas.
+
+153
+00:08:58.001 --> 00:09:01.001
+Ini adalah, dalam erti kata tertentu, sejumlah sumber daya yang tersedia benar
+
+154
+00:09:01.001 --> 00:09:04.000
+Saat Anda sedang menjalankan aplikasi.
+
+155
+00:09:04.000 --> 00:09:04.001
+Itu memang benar.
+
+156
+00:09:05.000 --> 00:09:06.001
+Dalam hal ini, kami menjalankan spreadsheet.
+
+157
+00:09:06.001 --> 00:09:10.000
+Jika saya ingin mengirim pekerjaan cetak ke salah satu pencetak ini, saya hanya akan
+
+158
+00:09:10.000 --> 00:09:12.001
+Hanya pergi ke menu dan membuat pemilihan.
+
+159
+00:09:12.001 --> 00:09:15.000
+Saya akan diberitahu bahwa pemilihan itu dibuat.
+
+160
+00:09:16.000 --> 00:09:20.001
+Dalam menu berikutnya, apa yang kami lakukan adalah kami menunjukkan Anda pekerjaan apa, jika ada, terkait dengan
+
+161
+00:09:20.001 --> 00:09:23.000
+dengan sumber cetak tertentu yang Anda pilih.
+
+162
+00:09:23.001 --> 00:09:29.001
+Kami juga memberi Anda kesempatan untuk memilih dan melihat pekerjaan yang terkait dengan
+
+163
+00:09:29.001 --> 00:09:32.000
+setiap printer lain di jaringan itu sendiri.
+
+164
+00:09:32.000 --> 00:09:32.001
+Saya lihat.
+
+165
+00:09:33.001 --> 00:09:37.000
+Anda juga, dalam menu ini, Anda diizinkan untuk mengelola pekerjaan.
+
+166
+00:09:37.000 --> 00:09:41.001
+Misalnya, jika Anda ingin menyesuaikan prioritas, Anda ingin memindahkan pekerjaan ke
+
+167
+00:09:41.001 --> 00:09:45.001
+kepala pertama dari kue, atau Anda ingin membatalkan pekerjaan, atau pekerjaan besar, Anda dapat
+
+168
+00:09:45.001 --> 00:09:49.001
+Ingin menghapus cetakannya dengan meletakkannya di tahan sampai kemudian di malam hari.
+
+169
+00:09:50.001 --> 00:09:54.001
+Menu berikutnya menggambarkan apa yang kita sebut pengganti derivatif.
+
+170
+00:09:54.001 --> 00:10:00.000
+Apa yang benar-benar memungkinkan Anda untuk melakukannya adalah, karena itu adalah jaringan yang teragih, Anda adalah
+
+171
+00:10:00.000 --> 00:10:05.000
+dapat mengakses file yang terletak pada mesin di seluruh jaringan, dan
+
+172
+00:10:05.000 --> 00:10:08.001
+Lebih dari hanya memiliki file di server yang dibagikan oleh orang-orang.
+
+173
+00:10:09.000 --> 00:10:11.000
+Bagaimana dengan masalah file lockout?
+
+174
+00:10:11.001 --> 00:10:13.001
+Misalkan satu pengguna mengakses file.
+
+175
+00:10:13.001 --> 00:10:16.000
+Apakah pengguna lain dapat mengakses file yang sama di lingkungan ini?
+
+176
+00:10:16.000 --> 00:10:21.000
+Dalam sistem multi-user, ada perintah kunci di mana pengguna dikunci keluar
+
+177
+00:10:21.000 --> 00:10:23.001
+file atau rekaman yang terkait dengan file tersebut.
+
+178
+00:10:24.001 --> 00:10:28.000
+Jika ini adalah versi pengguna tunggal, ya, kedua pengguna dapat mengaksesnya.
+
+179
+00:10:28.000 --> 00:10:31.000
+Itu benar-benar aplikasi program yang akan mendorong itu.
+
+180
+00:10:32.000 --> 00:10:37.001
+Kami juga menyediakan beberapa lapisan keamanan yang terkait dengan masing-masing file.
+
+181
+00:10:37.001 --> 00:10:41.000
+Jadi pengguna dapat mengunci orang dari semua cakera,
+
+182
+00:10:41.001 --> 00:10:43.000
+atau hanya bagian dari disk drive.
+
+183
+00:10:43.001 --> 00:10:47.000
+Atau mereka dapat menyediakan kemudahan untuk seseorang yang bisa masuk dan hanya membacanya,
+
+184
+00:10:47.000 --> 00:10:49.000
+atau hanya untuk menulis di area file tertentu itu.
+
+185
+00:10:50.001 --> 00:10:53.001
+Area berikutnya yang ingin saya tunjukkan adalah email.
+
+186
+00:10:54.000 --> 00:10:58.000
+Kemudahan email di sini cukup kuat.
+
+187
+00:10:58.000 --> 00:11:03.001
+Kami diizinkan untuk membuat apa yang kami sebut eForms, yang tidak biasa bagi sistem di
+
+188
+00:11:03.001 --> 00:11:05.000
+Perasaan itu... Maafkan aku
+
+189
+00:11:07.000 --> 00:11:12.000
+Kami dapat membuat eForm di sini, yang mengatakan, dari, misalnya.
+
+190
+00:11:12.001 --> 00:11:16.000
+Kami dapat membuat memo pad yang unik untuk sistem.
+
+191
+00:11:16.001 --> 00:11:18.001
+Ada formulir email standar yang dapat Anda hubungi setiap kali.
+
+192
+00:11:18.001 --> 00:11:19.000
+dengan tepat.
+
+193
+00:11:19.001 --> 00:11:22.000
+Tetapi Anda dapat menyesuaikannya dengan aktivitas kerja Anda tertentu.
+
+194
+00:11:22.000 --> 00:11:22.001
+Jika Anda ingin.
+
+195
+00:11:22.001 --> 00:11:25.001
+Sekarang hanya menyimpannya dengan nama memo.
+
+196
+00:11:28.000 --> 00:11:31.001
+Dan Anda dapat memanggil backup itu sebagai kerangka untuk mengirim pesan kembali dan ke belakang.
+
+197
+00:11:31.001 --> 00:11:32.001
+Sebenarnya, saya akan memanggilnya sekarang.
+
+198
+00:11:33.001 --> 00:11:35.001
+Dan Anda dapat melihat sebagian dari itu diisi untuk Anda.
+
+199
+00:11:35.001 --> 00:11:37.001
+Jika saya harus meletakkan tanggal di sana, itu akan dipenuhi pada tanggal,
+
+200
+00:11:38.000 --> 00:11:39.001
+waktu, itu akan dipenuhi dalam waktu.
+
+201
+00:11:41.000 --> 00:11:44.000
+Pilihan yang tersedia dalam email juga cukup mengesankan.
+
+202
+00:11:44.000 --> 00:11:48.001
+Misalnya, saya dapat mengirim, mengirim dan melanjutkan, yang berarti saya dapat menghantar email, saya bisa
+
+203
+00:11:48.001 --> 00:11:52.000
+mengirimkan rancangan kasar, saya dapat menyimpan, saya bisa menyimpannya.
+
+204
+00:11:52.000 --> 00:11:54.001
+Saya bisa menyimpannya sebagai ePrint, eForm, atau apa pun.
+
+205
+00:11:54.001 --> 00:11:56.001
+Dan saya bisa menghantarnya keluar untuk dicetak jika saya ingin.
+
+206
+00:11:58.000 --> 00:12:02.000
+Sekarang salah satu pernyataan yang saya anggap penting adalah bahwa kami telah bekerja ini
+
+207
+00:12:02.000 --> 00:12:04.000
+Seluruh waktu kita membangun Lotus 123.
+
+208
+00:12:05.000 --> 00:12:08.001
+Dan itu adalah atribut utama karena kami tidak perlu meninggalkan aplikasi
+
+209
+00:12:08.001 --> 00:12:11.001
+Program untuk memanfaatkan perubahan file
+
+210
+00:12:11.001 --> 00:12:13.001
+atau mendapatkan akses ke email.
+
+211
+00:12:13.001 --> 00:12:16.000
+Ken, Lotus berjalan di bawah MS-DOS, bukan?
+
+212
+00:12:16.001 --> 00:12:17.000
+Itu adalah benar.
+
+213
+00:12:17.000 --> 00:12:21.000
+Dan hubungan dengan perangkat lunak dengan MS-DOS, bagaimana Anda akan menggambarkannya?
+
+214
+00:12:21.001 --> 00:12:22.000
+yang intim.
+
+215
+00:12:24.000 --> 00:12:27.001
+Nah, apakah itu co-reside dengan MS-DOS atau tidak?
+
+216
+00:12:27.001 --> 00:12:30.001
+Ini co-reside, itu adalah proses resident RAM.
+
+217
+00:12:31.001 --> 00:12:34.000
+Ini adalah sistem operasi multitasking dalam waktu nyata.
+
+218
+00:12:34.001 --> 00:12:39.000
+Dan apa yang ia lakukan adalah ia memperlakukan MS-DOS dan hal-hal lain sebagai tugas yang berbeda dan
+
+219
+00:12:39.000 --> 00:12:42.000
+mengendalikan tugas-tugas tersebut serta tanggung jawab server.
+
+220
+00:12:42.001 --> 00:12:46.000
+Ken, apa manfaatnya kemudian secara umum dari pendekatan Anda, Grapevine
+
+221
+00:12:46.000 --> 00:12:48.001
+pendekatan pada jaringan yang bertentangan dengan tradisi pertama
+
+222
+00:12:48.001 --> 00:12:50.001
+Generasi LAN dengan satu file server?
+
+223
+00:12:50.001 --> 00:12:51.001
+Nah, saya pikir ada beberapa.
+
+224
+00:12:52.000 --> 00:12:55.000
+Salah satunya adalah Anda menghindari semua congestion yang normal.
+
+225
+00:12:55.000 --> 00:12:56.001
+Terhubung dengan server file khusus.
+
+226
+00:12:57.000 --> 00:13:01.000
+Dengan server file khusus, semakin banyak pengguna yang Anda mulai meletakkan di jaringan,
+
+227
+00:13:01.000 --> 00:13:04.000
+semakin banyak lalu lintas yang mengalir ke dalamnya dan oleh karena itu kinerja
+
+228
+00:13:04.000 --> 00:13:05.001
+Rangkaian ini sangat memburuk.
+
+229
+00:13:06.001 --> 00:13:09.001
+Hal kedua adalah bahwa Anda dapat mendistribusikan sumber daya fisik Anda di
+
+230
+00:13:09.001 --> 00:13:12.000
+cara yang lebih pragmatik atau realistis.
+
+231
+00:13:12.000 --> 00:13:15.001
+Anda tidak perlu terikat di hujung lain dari bangunan ke sistem.
+
+232
+00:13:15.001 --> 00:13:20.000
+Jadi jika satu pengguna menggunakan kelompok file tertentu, lebih wajar untuk meletakkan
+
+233
+00:13:20.000 --> 00:13:23.001
+pada drive yang dia ada dengan sehingga dia tidak mengikat jaringan begitu banyak?
+
+234
+00:13:23.001 --> 00:13:23.001
+Tentu saja .
+
+235
+00:13:24.000 --> 00:13:27.000
+Dalam sistem kita, misalnya, kita ada di suatu tempat di lingkungan 20
+
+236
+00:13:27.000 --> 00:13:29.000
+pengguna pada satu waktu.
+
+237
+00:13:29.000 --> 00:13:31.000
+Kami memiliki tiga atau empat program multi-user yang berjalan.
+
+238
+00:13:31.001 --> 00:13:32.000
+Kami berbagi file.
+
+239
+00:13:32.000 --> 00:13:32.001
+Kami sedang melakukan email.
+
+240
+00:13:33.001 --> 00:13:36.000
+Dan kita masih belum melihat sebarang degradasi jaringan sama sekali.
+
+241
+00:13:36.001 --> 00:13:38.001
+Sekarang, itulah keluhan biasa tentang situasi jaringan.
+
+242
+00:13:38.001 --> 00:13:41.000
+Pria ke-20 datang dan ia mengambilnya untuk selamanya untuk mengakses sesuatu.
+
+243
+00:13:41.000 --> 00:13:41.001
+Itu memang benar.
+
+244
+00:13:41.001 --> 00:13:43.000
+Anda pikir ini tidak terjadi dalam pendekatan ini?
+
+245
+00:13:43.000 --> 00:13:44.000
+Itu tidak perlu terjadi.
+
+246
+00:13:44.000 --> 00:13:50.001
+Hanya karena sumber daya yang akan dibagi antara anggota jaringan
+
+247
+00:13:50.001 --> 00:13:53.001
+didistribusikan di seluruh jaringan dan bukan
+
+248
+00:13:53.001 --> 00:13:56.000
+yang masuk ke dalam satu drive tertentu.
+
+249
+00:13:56.000 --> 00:13:59.001
+Hal lain yang terjadi pada saya adalah bahwa jika sumber daya, jika seseorang adalah
+
+250
+00:13:59.001 --> 00:14:02.001
+Dengan menggunakan sumber daya, mereka dapat dipindahkan ke bagian servernya.
+
+251
+00:14:02.001 --> 00:14:04.000
+Daripada harus jauh.
+
+252
+00:14:04.001 --> 00:14:06.000
+Cepat, hanya sekitar 30 detik yang tersisa.
+
+253
+00:14:06.000 --> 00:14:07.000
+Apa itu Grapevine?
+
+254
+00:14:07.000 --> 00:14:08.001
+Itu perangkat keras dan perangkat lunak kan?
+
+255
+00:14:08.001 --> 00:14:10.001
+Ini adalah kombinasi hardware dan software.
+
+256
+00:14:10.001 --> 00:14:14.001
+Hardware terdiri dari satu kartu yang Anda masukkan ke mesin itu sendiri.
+
+257
+00:14:15.000 --> 00:14:15.001
+Untuk setiap PC.
+
+258
+00:14:15.001 --> 00:14:16.001
+Untuk setiap PC.
+
+259
+00:14:17.000 --> 00:14:18.000
+Ada sistem kabel.
+
+260
+00:14:18.000 --> 00:14:20.000
+Ini bisa sama ada cox atau twisted pair.
+
+261
+00:14:20.001 --> 00:14:23.000
+Jarak yang saya mengukur, seperti yang disebutkan sebelumnya, dapat
+
+262
+00:14:23.000 --> 00:14:24.001
+menjadi lebih dari 4.000 kaki tersebar.
+
+263
+00:14:25.000 --> 00:14:26.001
+Dan ini adalah satu produk perangkat lunak cakera tunggal.
+
+264
+00:14:26.001 --> 00:14:28.001
+Itu membutuhkan sekitar 128.000 byte dalam RAM.
+
+265
+00:14:28.001 --> 00:14:32.000
+Ken, tidak kelihatan ada banyak silikon yang mengerikan di papan itu dibandingkan dengan
+
+266
+00:14:32.000 --> 00:14:35.000
+sesuatu seperti papan cincin token atau salah satu papan Ethernet.
+
+267
+00:14:35.000 --> 00:14:38.000
+Ya, itu adalah jumlah yang cukup menakjubkan dari teknik yang masuk ke dalam ini untuk
+
+268
+00:14:38.000 --> 00:14:40.000
+memberikan tingkat kinerja yang kita miliki.
+
+269
+00:14:40.001 --> 00:14:44.000
+Dan ini memungkinkan kami untuk membekalkannya kepada pelanggan pada harga yang sangat murah.
+
+270
+00:14:44.000 --> 00:14:45.000
+Ken, terima kasih banyak.
+
+271
+00:14:45.000 --> 00:14:47.001
+Sekarang kita akan pergi dari yang sederhana ke yang relatif rumit.
+
+272
+00:14:47.001 --> 00:14:49.001
+Kita akan melihat sistem Ethernet.
+
+273
+00:14:50.000 --> 00:14:54.001
+Ini memiliki empat server file, lebih dari 60 stasiun kerja, 640 megabyte.
+
+274
+00:14:55.000 --> 00:14:58.000
+Wendy Woods melaporkan dari Computer Associates di San Jose.
+
+275
+00:15:00.001 --> 00:15:05.000
+Computer Associates International, perusahaan perangkat lunak terbesar di dunia, tidak
+
+276
+00:15:05.000 --> 00:15:07.000
+Perbedaannya dengan kebodohan ketika terjadi efisiensi.
+
+277
+00:15:07.001 --> 00:15:12.000
+Semua programmer, insinyur, dan kontrol kualitas orang bekerja pada komputer terhubung
+
+278
+00:15:12.000 --> 00:15:14.001
+melalui jaringan area lokal 3-com.
+
+279
+00:15:15.000 --> 00:15:18.000
+Jaringan ini menyediakan mereka dengan dua manfaat penting.
+
+280
+00:15:18.001 --> 00:15:22.000
+Mereka dapat berkomunikasi dan memprogram jauh lebih baik daripada jika mereka
+
+281
+00:15:22.000 --> 00:15:23.001
+Beroperasi di terminal stand-alone.
+
+282
+00:15:24.000 --> 00:15:29.000
+Dengan bekerja dengan jaringan, kami dapat berbagi data.
+
+283
+00:15:30.000 --> 00:15:35.001
+Jadi seseorang dapat bekerja pada modul sendiri, bekerja pada fitur yang
+
+284
+00:15:35.001 --> 00:15:41.000
+dia perlu, dan dia dapat mengintegrasikannya dengan modul programmer lainnya
+
+285
+00:15:41.000 --> 00:15:46.000
+serta-merta dan dapat menguji kode mereka dengan yang terbaru yang semua orang memiliki.
+
+286
+00:15:46.001 --> 00:15:50.001
+Dan kemudian Asuransi Kualitas dapat segera menguji kode itu karena
+
+287
+00:15:50.001 --> 00:15:52.000
+Ini ada di jaringan dan mereka memiliki akses ke itu.
+
+288
+00:15:52.000 --> 00:15:55.000
+Jadi orang tidak terus-menerus melewati floppy, mencoba untuk menyalin
+
+289
+00:15:55.000 --> 00:15:57.000
+hal-hal untuk floppy disk dan melewati mereka sekitar.
+
+290
+00:15:57.001 --> 00:16:02.000
+Selain dari tiga server file yang bertindak sebagai penjaga lalu lintas untuk semua 70
+
+291
+00:16:02.000 --> 00:16:08.001
+dari server CPU, komputer yang kuat untuk
+
+292
+00:16:08.001 --> 00:16:10.000
+Pekerjaan apa yang bisa dipecat.
+
+293
+00:16:11.000 --> 00:16:15.000
+Mereka mengkompilasi kode dan membuat angka crunching, membebaskan individu programmer
+
+294
+00:16:15.000 --> 00:16:16.001
+mesin untuk tugas lain.
+
+295
+00:16:17.000 --> 00:16:21.001
+Kami memiliki alat server CPU yang memungkinkan kami untuk menjejaki pekerjaan yang sedang berlangsung.
+
+296
+00:16:23.001 --> 00:16:29.000
+Kami memiliki beberapa hal yang memungkinkan kami untuk memantau file untuk dapat berkomunikasi.
+
+297
+00:16:29.001 --> 00:16:32.001
+Kami memiliki layanan email yang benar-benar membantu dalam komunikasi.
+
+298
+00:16:33.000 --> 00:16:38.000
+Dan dengan bekerja di jaringan area lokal, programmer mendapatkan pengalaman tangan pertama
+
+299
+00:16:38.000 --> 00:16:43.000
+mengatur empat jaringan area lokal, yang meningkatkan 100 atau lebih produk
+
+300
+00:16:43.000 --> 00:16:44.001
+Komputer yang berkomunikasi itu dibuat.
+
+301
+00:16:46.000 --> 00:16:48.000
+Okay, dan Anda masih tidak mendapatkan informasi biaya dan penjualan individu?
+
+302
+00:16:49.000 --> 00:16:51.000
+Okay, di mana kamu meletakkannya?
+
+303
+00:16:51.001 --> 00:16:55.001
+Di bagian lain dari ibu pejabat perusahaan di San Jose, layanan pelanggan dan
+
+304
+00:16:55.001 --> 00:16:58.001
+Orang-orang akuntansi bekerja di jaringan area lokal yang romantis.
+
+305
+00:16:59.000 --> 00:17:04.000
+Sistem ini memantau seluruh operasi dukungan telepon dari saat
+
+306
+00:17:04.000 --> 00:17:05.001
+panggilan pelanggan untuk hasilnya.
+
+307
+00:17:06.001 --> 00:17:09.000
+Akhirnya, orang-orang di sini ingin menghubungkan kedua dukungan pelanggan
+
+308
+00:17:09.000 --> 00:17:11.000
+dan jaringan teknikal.
+
+309
+00:17:11.001 --> 00:17:15.000
+Laporan bug dan saran pelanggan dapat ditempatkan di jaringan yang sama
+
+310
+00:17:15.000 --> 00:17:17.000
+Untuk kedua departemen untuk berbagi.
+
+311
+00:17:17.001 --> 00:17:21.001
+Saat ini informasi ini dipindahkan dengan cara lama di atas kertas.
+
+312
+00:17:22.000 --> 00:17:26.000
+Dan akhirnya, ada satu lagi ide lama yang masih ada di sini.
+
+313
+00:17:26.000 --> 00:17:27.001
+interaksi pribadi .
+
+314
+00:17:28.001 --> 00:17:32.001
+Meskipun efisiensi jaringan, pemrograman masih perlu berkumpul dan
+
+315
+00:17:32.001 --> 00:17:35.000
+Pertukaran pikiran di hadapan pertemuan.
+
+316
+00:17:35.001 --> 00:17:38.000
+Sesuatu yang jaringan masih belum menggantikan.
+
+317
+00:17:38.001 --> 00:17:41.001
+Di San Jose untuk Komputer Chronicles, saya Wendy Woods.
+
+318
+00:17:50.000 --> 00:17:56.001
+Dengan kami di studio sekarang adalah Dick Kent, presiden dari
+
+319
+00:17:56.001 --> 00:17:58.000
+Konsultan DLM di Santa Clara.
+
+320
+00:17:58.001 --> 00:18:00.001
+Dan di samping Dick adalah Bill Myers, direktur penjualan untuk
+
+321
+00:18:00.001 --> 00:18:02.001
+Teknologi server di Sunnyvale.
+
+322
+00:18:03.001 --> 00:18:06.000
+Bill, perusahaan Anda memiliki pendekatan lain ke daerah lokal
+
+323
+00:18:06.000 --> 00:18:07.001
+jaringan, sesuatu yang disebut Easyland.
+
+324
+00:18:07.001 --> 00:18:08.001
+Deskripsi itu kepada kami.
+
+325
+00:18:08.001 --> 00:18:12.000
+Ini digambarkan sebagai sistem slot nol atau sistem RS-232 .
+
+326
+00:18:12.000 --> 00:18:12.001
+Apa itu itu?
+
+327
+00:18:13.001 --> 00:18:16.001
+Kami suka memikirkan Easyland sebagai alternatif jaringan biaya rendah.
+
+328
+00:18:16.001 --> 00:18:19.000
+Itu tidak berarti bahwa itu tidak perlu berfungsi dalam banyak cara.
+
+329
+00:18:19.001 --> 00:18:24.001
+Tetapi dengan RS-232 kita maksudkan bahwa kita menggunakan sistem sinyal yang inherent dalam
+
+330
+00:18:24.001 --> 00:18:26.001
+Hampir semua PC dan PC saat ini kompatibel.
+
+331
+00:18:27.000 --> 00:18:28.001
+Ini adalah port serial.
+
+332
+00:18:29.000 --> 00:18:32.000
+Pengguna tahu ini dari menggunakan printer serial atau modem.
+
+333
+00:18:32.000 --> 00:18:35.001
+Kami hanya memiliki skema kabel yang mengarah langsung ke port serial dan dengan
+
+334
+00:18:35.001 --> 00:18:37.001
+Perangkat lunak kami sendiri membuat jaringan.
+
+335
+00:18:38.000 --> 00:18:40.000
+Apa jenis kemampuan yang Anda dapatkan dari itu?
+
+336
+00:18:40.001 --> 00:18:44.001
+Anda mendapatkan apa yang kami pikir adalah kemampuan fungsional penting yang pengguna dalam
+
+337
+00:18:44.001 --> 00:18:47.000
+Rangkaian cenderung mencari pertama, berbagi mahal
+
+338
+00:18:47.000 --> 00:18:48.001
+peralatan perifer seperti printer.
+
+339
+00:18:49.000 --> 00:18:52.000
+Hari ini printer laser cenderung menjadi jenis hal yang orang ingin berbagi.
+
+340
+00:18:52.001 --> 00:18:56.000
+Untuk dapat bertukar file, seseorang yang bekerja pada surat ingin memiliki
+
+341
+00:18:56.000 --> 00:18:57.001
+Orang lain melihatnya atau bekerja di atasnya.
+
+342
+00:18:58.000 --> 00:19:02.000
+Anda dapat melakukannya di Easyland bukannya harus menyalin cakera dan berjalan
+
+343
+00:19:02.000 --> 00:19:03.001
+Dia melakukannya dan memberikannya kepada orang lain.
+
+344
+00:19:04.000 --> 00:19:05.000
+Begitu pula dengan jenis-jenis hal tersebut.
+
+345
+00:19:05.000 --> 00:19:10.000
+Sekarang ketika Anda harus naik ke multitasking atau multi-file sharing di mana Anda berada
+
+346
+00:19:10.000 --> 00:19:13.001
+file sharing real-time, sistem Anda tidak memiliki kemampuan itu.
+
+347
+00:19:13.001 --> 00:19:14.000
+dengan jelas.
+
+348
+00:19:14.000 --> 00:19:15.001
+Kami tidak memberikan kapasitas tersebut.
+
+349
+00:19:15.001 --> 00:19:18.000
+Tetapi sekarang jika seseorang perlu menambahkan itu, mereka harus
+
+350
+00:19:18.000 --> 00:19:19.001
+Hentikan sistem Anda atau mereka bisa menyimpannya?
+
+351
+00:19:20.000 --> 00:19:24.001
+Easyland dapat berjalan di lingkungan lain tepat bersama dengan jaringan lain
+
+352
+00:19:24.001 --> 00:19:26.001
+Ini akan memberikan fungsi seperti itu.
+
+353
+00:19:27.000 --> 00:19:28.001
+Jadi, dengan Easyland, tidak ada lembaga.
+
+354
+00:19:29.000 --> 00:19:29.000
+[...]
+
+355
+00:19:29.001 --> 00:19:30.000
+Fungsi yang Anda sebutkan.
+
+356
+00:19:30.001 --> 00:19:33.000
+Sekarang kita telah melihat banyak pendekatan sekarang ke jaringan daerah lokal.
+
+357
+00:19:33.000 --> 00:19:34.001
+Dick, menggambarkan yang berbeda dan apa yang
+
+358
+00:19:34.001 --> 00:19:36.001
+biaya dan trade-off dalam setiap pendekatan.
+
+359
+00:19:37.000 --> 00:19:39.001
+Dalam RS232 pendekatan seperti Easyland adalah
+
+360
+00:19:39.001 --> 00:19:42.000
+Menggunakan, perbedaan dasar adalah biaya.
+
+361
+00:19:42.000 --> 00:19:44.001
+Biaya sistem adalah $ 100 hingga $ 200 per node.
+
+362
+00:19:45.000 --> 00:19:49.000
+Ketika Anda berbicara tentang jaringan tradisional seperti Novella atau 3Com, Anda memiliki
+
+363
+00:19:49.000 --> 00:19:52.001
+harus berbicara tentang biaya hardware dan papan yang disebut kartu interaksi jaringan.
+
+364
+00:19:53.000 --> 00:19:55.000
+Biaya harus antara $ 300 dan $ 500 per kartu
+
+365
+00:19:55.000 --> 00:19:56.001
+Tergantung pada jaringan mana yang Anda pilih.
+
+366
+00:19:57.000 --> 00:20:00.000
+Ada sistem operasi jaringan yang dapat biaya antara $ 2.000 dan $ 3.000
+
+367
+00:20:00.000 --> 00:20:02.000
+Untuk sistem hingga 6 pengguna.
+
+368
+00:20:03.000 --> 00:20:06.000
+Dan kemudian ada perbedaan antara fungsi antara RS232s
+
+369
+00:20:06.000 --> 00:20:08.000
+dan jaringan tradisional.
+
+370
+00:20:08.000 --> 00:20:11.000
+Anda dapat menjalankan program multi-user di 3Coms dan Novells.
+
+371
+00:20:11.000 --> 00:20:13.001
+Anda tidak bisa melakukannya di ...
+
+372
+00:20:13.001 --> 00:20:16.000
+Tapi itu, itu terdengar seperti sekitar $ 1.000 per node.
+
+373
+00:20:16.001 --> 00:20:17.001
+Kira-kira $ 1.000 per nod.
+
+374
+00:20:17.001 --> 00:20:18.000
+Itu adalah yang baik...
+
+375
+00:20:18.000 --> 00:20:22.001
+Sekarang ketika Anda menjalankan program seperti ini atau jaringan seperti ini di mana ada
+
+376
+00:20:22.001 --> 00:20:26.000
+banyak kekuatan kuda dan kemampuan, bagaimana dengan aspek keamanan dari itu?
+
+377
+00:20:26.001 --> 00:20:28.001
+Nah, masalah keamanan meliputi dua bidang.
+
+378
+00:20:28.001 --> 00:20:33.001
+Ada akses yang tidak diizinkan ke jaringan itu sendiri dan data di jaringan.
+
+379
+00:20:34.001 --> 00:20:37.001
+dan integritas data dalam kasus kegagalan bencana seperti
+
+380
+00:20:37.001 --> 00:20:39.001
+kecelakaan sistem atau kegagalan kuasa.
+
+381
+00:20:39.001 --> 00:20:44.000
+Jadi itu mungkin pada pikiran kebanyakan orang ketika mereka meletakkan dalam kekuatan tinggi ini
+
+382
+00:20:44.000 --> 00:20:46.001
+Rangkaian adalah apa yang terjadi jika kuasa keluar?
+
+383
+00:20:47.000 --> 00:20:48.000
+Apa yang terjadi pada file server?
+
+384
+00:20:48.001 --> 00:20:52.001
+Nah, hal pertama yang harus diingat adalah bahwa ketika Anda memiliki file server di
+
+385
+00:20:52.001 --> 00:20:57.000
+jaringan, Anda harus memiliki UPS atau bekalan listrik yang tidak terputus yang melindungi
+
+386
+00:20:57.000 --> 00:20:59.000
+Anda dalam kasus brownout atau blackout.
+
+387
+00:20:59.001 --> 00:21:03.000
+Dan ia memberi Anda dari lima hingga 20 menit tergantung pada sistem untuk membawa Anda
+
+388
+00:21:03.000 --> 00:21:04.001
+sistem turun dengan baik dan tutup semua file
+
+389
+00:21:04.001 --> 00:21:06.001
+dan memperbaiki semua direktori yang harus ditetapkan.
+
+390
+00:21:07.000 --> 00:21:13.001
+Jika Anda tidak memiliki power UPS universal di sistem Anda,
+
+391
+00:21:13.001 --> 00:21:16.001
+Sistem operasi jaringan menyediakan Anda dengan beberapa bentuk perlindungan menggunakan
+
+392
+00:21:16.001 --> 00:21:20.001
+menggandakan direktori, menggunakan cermin cakera dengan dua cakera yang terpisah atau dalam banyak
+
+393
+00:21:20.001 --> 00:21:23.000
+kasus redundant perangkat keras, cakera, kontrol dan bekalan listrik.
+
+394
+00:21:23.001 --> 00:21:28.000
+Dan pengalaman Anda ketika satu atau lebih nodus keluar, adalah
+
+395
+00:21:28.000 --> 00:21:29.001
+Apakah sistem ini cukup tahan lama?
+
+396
+00:21:30.000 --> 00:21:32.000
+Jadi, apakah mereka bisa bersumpah untuk fakta bahwa sesuatu tidak ada di sana?
+
+397
+00:21:32.001 --> 00:21:35.001
+Banyak pekerjaan telah dilakukan baru-baru ini dan ada satu
+
+398
+00:21:35.001 --> 00:21:37.000
+Banyak pekerjaan yang berlanjut di bidang ini.
+
+399
+00:21:38.000 --> 00:21:42.001
+Dan efek lama dari satu nod yang turun seperti jaringan cincin yang membawa
+
+400
+00:21:42.001 --> 00:21:45.000
+Seluruh sistem di bawah tidak benar-benar ada hari ini.
+
+401
+00:21:45.001 --> 00:21:47.001
+Masalahnya bukan untuk mendiagnosis di mana masalahnya berada.
+
+402
+00:21:48.000 --> 00:21:51.000
+Apa yang akan terjadi dalam banyak kasus adalah seluruh jaringan melambat.
+
+403
+00:21:52.000 --> 00:21:53.000
+Tapi itu tidak mati.
+
+404
+00:21:53.000 --> 00:21:53.001
+Ia tidak mati.
+
+405
+00:21:54.000 --> 00:21:56.000
+Namun, waktu tindak balas bisa berjalan hingga menit bukannya detik.
+
+406
+00:21:56.001 --> 00:21:57.001
+Bill, sekitar 30 detik yang tersisa.
+
+407
+00:21:58.000 --> 00:22:00.001
+Bagaimanakah jaringan area lokal dikategorikan?
+
+408
+00:22:00.001 --> 00:22:02.001
+Apa yang menjadi target user untuk masing-masing
+
+409
+00:22:02.001 --> 00:22:04.001
+Berbagai jenis produk yang dimulai dengan milik Anda?
+
+410
+00:22:06.000 --> 00:22:09.000
+Saya pikir seseorang yang melihat jaringan mungkin perlu menilai
+
+411
+00:22:09.000 --> 00:22:11.000
+tujuan yang ingin dicapai dengan jaringan.
+
+412
+00:22:12.000 --> 00:22:16.000
+Dan saya pikir tujuan-tujuan ini dimulai dengan sesuatu yang kami sebutkan sebelumnya, dasar
+
+413
+00:22:16.000 --> 00:22:18.001
+fungsi dan kemudian Anda mendapatkan tingkat yang lebih tinggi jenis fungsi.
+
+414
+00:22:19.001 --> 00:22:23.001
+Tentu saja berkongsi sumber daya, kemudian pergi ke file sharing dan kemudian pergi untuk multi
+
+415
+00:22:23.001 --> 00:22:29.000
+Jenis-jenis aplikasi pengguna di mana aplikasi dibagikan mengatur satu jenis
+
+416
+00:22:29.000 --> 00:22:31.001
+Penilaian yang harus dilakukan oleh seorang pengguna.
+
+417
+00:22:32.000 --> 00:22:34.001
+Kami menyediakan produk pada satu akhir fungsi tersebut.
+
+418
+00:22:34.001 --> 00:22:36.000
+Dan jangan membicarakan akhir yang lain.
+
+419
+00:22:36.001 --> 00:22:38.000
+Produk lain mencakup keseluruhan spektrum.
+
+420
+00:22:38.001 --> 00:22:39.001
+Teman-teman, terima kasih banyak sekali.
+
+421
+00:22:39.001 --> 00:22:40.000
+Kami berada di luar waktu.
+
+422
+00:22:40.000 --> 00:22:42.001
+Ini adalah bagian dari pandangan kami tentang jaringan daerah lokal.
+
+423
+00:22:42.001 --> 00:22:45.001
+Minggu depan, kita akan melihat rangkaian Apple Talk dengan McIntosh.
+
+424
+00:22:45.001 --> 00:22:46.001
+Saya harap Anda akan bergabung dengan kami kemudian.
+
+425
+00:22:58.000 --> 00:23:00.001
+Saya adalah Cynthia Steele dalam File Akses Random.
+
+426
+00:23:01.000 --> 00:23:04.001
+Keytronic Corporation, produsen keyboard terkemuka di negara ini, mengumumkan
+
+427
+00:23:04.001 --> 00:23:07.001
+Jumlah karyawan sekitar 150 dari 2.000 karyawan.
+
+428
+00:23:08.000 --> 00:23:10.001
+Perusahaan ini menghadapi persaingan yang kuat dari produsen offshore.
+
+429
+00:23:11.000 --> 00:23:15.001
+Perusahaan juga harus menyerap biaya 1 juta dolar pembersihan sisa beracun di
+
+430
+00:23:15.001 --> 00:23:17.001
+Sebuah tanah liat di dekat Spokane, pabrik Washington.
+
+431
+00:23:17.001 --> 00:23:21.000
+Namun, mereka telah mengumumkan produk baru, Quicksilver, perjalanan penuh
+
+432
+00:23:21.000 --> 00:23:24.000
+Teknologi membran keyboard, akan diproduksi dengan biaya
+
+433
+00:23:24.000 --> 00:23:26.000
+Ini akan memungkinkan mereka untuk bersaing dengan impor.
+
+434
+00:23:26.001 --> 00:23:30.001
+Western Digital Corporation memperoleh aset hard disk dari Tandem Corporation
+
+435
+00:23:30.001 --> 00:23:33.000
+Operasi memandu sekitar $ 49 juta.
+
+436
+00:23:33.001 --> 00:23:36.000
+Pembelian sesuai dengan rencana Barat untuk menyediakan
+
+437
+00:23:36.000 --> 00:23:37.001
+berbagai macam produk penyimpanan.
+
+438
+00:23:37.001 --> 00:23:41.000
+Ini termasuk drive bersepadu dengan cakera dan kontrol dalam satu paket,
+
+439
+00:23:41.001 --> 00:23:45.000
+Solusi terintegrasi di mana elektronik controller terintegrasikan pada papan induk
+
+440
+00:23:45.000 --> 00:23:49.000
+dan dibungkus dengan cakera standar, dan satu lagi, pintar terintegrasi
+
+441
+00:23:49.000 --> 00:23:51.000
+Beroperasi dengan subsistem jaringan lokal.
+
+442
+00:23:52.000 --> 00:23:54.001
+Telenet mengumumkan pembentukan PC Services Group.
+
+443
+00:23:55.000 --> 00:23:58.000
+Ini dirancang untuk mengembangkan layanan pesan untuk pasar komputer pribadi.
+
+444
+00:23:58.001 --> 00:24:03.000
+Grup ini akan mengembangkan versi masa depan dari perangkat lunak telomel PC Telenet untuk IBM.
+
+445
+00:24:03.000 --> 00:24:06.001
+dan kompatibel dan PC telomele untuk jaringan area lokal.
+
+446
+00:24:07.000 --> 00:24:09.000
+Mereka juga ingin mengembangkan program untuk McIntosh
+
+447
+00:24:09.000 --> 00:24:10.001
+dan komputer non-IBM lainnya.
+
+448
+00:24:11.001 --> 00:24:14.000
+Printer laser dapat dimasukkan untuk beberapa pengisian turbo.
+
+449
+00:24:14.001 --> 00:24:18.001
+Menurut Raster Image Processing Systems, mereka mengembangkan risiko 8 megahertz
+
+450
+00:24:18.001 --> 00:24:24.000
+prosesor yang beroperasi pada 10 MIPS, menggunakan halaman klon PostScript yang dapat
+
+451
+00:24:24.000 --> 00:24:26.000
+Meningkatkan kinerja dengan margin yang signifikan.
+
+452
+00:24:26.001 --> 00:24:29.001
+Perusahaan mengatakan printer yang menggunakan chipnya dapat menunjukkan 30
+
+453
+00:24:29.001 --> 00:24:31.000
+Meningkatkan 1 kinerja.
+
+454
+00:24:31.001 --> 00:24:33.001
+Sekarang waktunya untuk ulasan perangkat lunak Paul Schindler.
+
+455
+00:24:36.001 --> 00:24:40.000
+Anda tahu, kembali pada hari-hari kertas, Anda ingat kertas, bukan?
+
+456
+00:24:40.000 --> 00:24:42.000
+Ketika Anda melewati sesuatu yang Anda ingin menyelamatkan untuk
+
+457
+00:24:42.000 --> 00:24:43.001
+Setelah itu, Anda hanya memotongnya.
+
+458
+00:24:44.000 --> 00:24:47.000
+Ini tidak begitu mudah untuk dilakukan di era elektronik kecuali Anda memiliki memori yang dibuat.
+
+459
+00:24:47.001 --> 00:24:50.000
+Ini adalah perangkat lunak memori resident sederhana dan berguna.
+
+460
+00:24:50.001 --> 00:24:52.000
+Anda dapat meletakkan apa pun yang Anda inginkan di dalamnya.
+
+461
+00:24:52.001 --> 00:24:54.000
+Satu kunci menyimpan apa yang telah Anda tulis.
+
+462
+00:24:54.001 --> 00:24:57.000
+Program ini bertanya apakah Anda ingin ini digunakan sebagai sistem peringatan.
+
+463
+00:24:57.001 --> 00:24:59.001
+Kunci lain memungkinkan Anda untuk menemukan catatan apa pun.
+
+464
+00:25:00.000 --> 00:25:01.000
+Tidak ada indeks.
+
+465
+00:25:01.000 --> 00:25:05.000
+Program ini dapat mencari 180.000 karakter dalam tiga detik.
+
+466
+00:25:05.000 --> 00:25:06.001
+Hal ini dikenal sebagai pencarian teks penuh.
+
+467
+00:25:06.001 --> 00:25:11.000
+Jadi Anda dapat mencari Sam atau Pete atau nomor telepon dari 123 area code.
+
+468
+00:25:11.001 --> 00:25:13.000
+Anda dapat memotong potongan salinan dari kata Anda
+
+469
+00:25:13.000 --> 00:25:14.001
+prosesor dan menyimpannya dalam memori mate.
+
+470
+00:25:15.000 --> 00:25:19.000
+Beralih ke layar pemrosesan kata, memulai pemotongan, kursor ke akhir, beralih
+
+471
+00:25:19.000 --> 00:25:21.000
+Kembali dan masukkan ke dalam memori mate.
+
+472
+00:25:21.000 --> 00:25:23.001
+Sekarang Anda dapat menemukannya lagi kapan saja yang Anda inginkan.
+
+473
+00:25:24.000 --> 00:25:26.001
+Jika Anda sudah memiliki file alamat di database, Anda dapat menggunakannya ke memori.
+
+474
+00:25:26.001 --> 00:25:29.000
+Memanfaatkan dan memanfaatkan pencarian teks gratis.
+
+475
+00:25:29.001 --> 00:25:33.000
+Memory mate, $ 80 dari Broderbund Software di San Rafael, California.
+
+476
+00:25:33.001 --> 00:25:35.001
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+477
+00:25:36.000 --> 00:25:38.000
+UNIX mendapat tembakan di lengan minggu ini.
+
+478
+00:25:38.000 --> 00:25:41.001
+UNIX Corporation, perusahaan komputer terbesar ketiga di negara ini, menandatangani
+
+479
+00:25:41.001 --> 00:25:45.000
+perjanjian dengan AT&amp;T dan Sun Microsystems untuk meningkatkan penggunaan
+
+480
+00:25:45.000 --> 00:25:46.001
+Sistem Operasi Multi User.
+
+481
+00:25:46.001 --> 00:25:51.000
+UNIX akan bekerja sama dengan AT&amp;T untuk meningkatkan sistem operasi dan akan lisensi Sun
+
+482
+00:25:51.000 --> 00:25:54.001
+Sparkchip untuk digunakan pada sistem UNIX yang akan datang yang menjalankan UNIX.
+
+483
+00:25:55.000 --> 00:25:59.000
+Apple Watchers berspekulasi jika dan kapan Apple melepaskan laptop
+
+484
+00:25:59.000 --> 00:26:02.001
+dikembangkan di bawah nama kode Laguna, itu akan dihargai pada $ 6.000.
+
+485
+00:26:03.000 --> 00:26:06.001
+Kata Laguna adalah 12 pound portable dengan stand-up aktif matriks
+
+486
+00:26:06.001 --> 00:26:09.001
+layar, mirip dengan yang digunakan di beberapa televisi Jepang.
+
+487
+00:26:11.000 --> 00:26:14.001
+Lotus mengumumkan pengiriman Metro versi 1.1, program yang sama,
+
+488
+00:26:15.000 --> 00:26:17.000
+Kecuali bagaimana ia menggunakan memori komputer Anda.
+
+489
+00:26:17.000 --> 00:26:22.000
+Versi baru dibagi menjadi dua bagian, kernel 64K yang tetap tinggal dan kernel
+
+490
+00:26:22.000 --> 00:26:25.001
+pengguna-defined blok aksesori yang lebih besar yang menduduki akhir tinggi memori
+
+491
+00:26:25.001 --> 00:26:28.001
+dan ditukar ke cakera ketika ruang diperlukan untuk program lain.
+
+492
+00:26:29.001 --> 00:26:33.000
+Hertz, perusahaan sewa mobil, mengumumkan bahwa mereka akan melengkapi 74 dari mereka.
+
+493
+00:26:33.000 --> 00:26:37.000
+Lokasi dengan kios yang berisi arah memandu berkomputer terminal.
+
+494
+00:26:37.000 --> 00:26:40.001
+Anda memilih tujuan Anda dari menu, lihat peta di monitor, dan sistem
+
+495
+00:26:40.001 --> 00:26:43.000
+mencetak satu set arah dalam pilihan Anda bahasa Inggris,
+
+496
+00:26:43.000 --> 00:26:45.000
+Bahasa Spanyol, Perancis, Jerman atau Italia.
+
+497
+00:26:45.000 --> 00:26:50.001
+Setiap kiosk dibangun di sekitar IBM PS2 Model 50 dengan cakera keras 20 meg dan itu berjalan
+
+498
+00:26:50.001 --> 00:26:53.000
+Sebuah database dengan sekitar 350 destinasi lokal.
+
+499
+00:26:53.001 --> 00:26:55.000
+Ini adalah untuk minggu ini Computer Chronicles.
+
+500
+00:26:55.000 --> 00:26:56.000
+Saya adalah Cynthia Steele.
+
+501
+00:26:57.000 --> 00:27:02.000
+Komputer Chronicles dimungkinkan sebagian oleh CompuServe, dengan
+
+502
+00:27:02.000 --> 00:27:06.001
+perpustakaan referensi online, laporan Wall Street, belanja di rumah, maskapai penerbangan
+
+503
+00:27:06.001 --> 00:27:09.001
+reservasi, permainan dan ratusan layanan lainnya.
+
+504
+00:27:11.001 --> 00:27:14.001
+CompuServe, membantu orang mendapatkan yang terbaik dari komputer.
+
+505
+00:27:17.001 --> 00:27:20.001
+Pembiayaan tambahan disediakan oleh McGraw Hill, menerbitkan byte.
+
+506
+00:27:21.001 --> 00:27:25.001
+Tetes artikel teknis terperinci tentang perangkat keras, perangkat lunak dan bahasa baru yang ditutupi
+
+507
+00:27:25.001 --> 00:27:28.000
+perkembangan teknologi komputer di seluruh dunia.
+
+508
+00:27:29.001 --> 00:27:32.001
+Transcripts dari Computer Chronicles tersedia secara online di CompuServe.
+
+509
+00:27:33.000 --> 00:27:35.000
+Tipe Go Chronicles pada setiap waktu CompuServe.
+
+510
+00:27:35.001 --> 00:27:38.001
+Jika Anda ingin nomor akses CompuServe di area Anda atau buku catatan gratis
+
+511
+00:27:38.001 --> 00:27:43.001
+Untuk menjelaskan cara menggunakan layanan online, hubungi 1-800-848-8199.

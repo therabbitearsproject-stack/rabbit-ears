@@ -1,0 +1,1865 @@
+WEBVTT
+
+1
+00:00:12.001 --> 00:00:14.000
+Uma boa base antiga.
+
+2
+00:00:14.001 --> 00:00:18.001
+Os alunos ainda o usam para fazer tarefas de programação em aulas de computador,
+
+3
+00:00:18.001 --> 00:00:20.001
+Mas quase ninguém é.
+
+4
+00:00:20.001 --> 00:00:25.000
+Esta é a era das ferramentas de programação visual, tornando-a mais fácil de desenvolver
+
+5
+00:00:25.000 --> 00:00:29.001
+Aplicações personalizadas, mesmo em ambientes gráficos complexos como o Windows.
+
+6
+00:00:30.000 --> 00:00:34.000
+Hoje vamos dar uma olhada em linguagens de programação visual nesta edição
+
+7
+00:00:34.000 --> 00:00:35.001
+das crônicas de computador.
+
+8
+00:00:49.001 --> 00:00:54.001
+As crônicas de computador são trazidas para você em parte pela Intel Microprocessor Technology
+
+9
+00:00:54.001 --> 00:00:56.001
+O software de hoje e de amanhã.
+
+10
+00:00:57.000 --> 00:00:58.001
+Intel, o computador dentro.
+
+11
+00:01:00.000 --> 00:01:04.000
+O financiamento adicional é fornecido pela Associação de Publicações de Software, fornecedores
+
+12
+00:01:04.000 --> 00:01:06.001
+de materiais educacionais para ajudar a gerenciar software.
+
+13
+00:01:07.000 --> 00:01:08.000
+Não copie esse floppy.
+
+14
+00:01:13.000 --> 00:01:14.001
+Bem-vindo às crônicas de computador.
+
+15
+00:01:14.001 --> 00:01:17.001
+Eu sou Stuart Chafay e comigo hoje é George Phibisch.
+
+16
+00:01:18.000 --> 00:01:21.001
+George é o co-autor deste livro, Windows Rapid Application Development.
+
+17
+00:01:21.001 --> 00:01:24.001
+Neste livro, George, você fala sobre algo chamado Marvel.
+
+18
+00:01:24.001 --> 00:01:26.000
+Técnicas para uso de Visual Basic.
+
+19
+00:01:26.001 --> 00:01:29.000
+Mostre-me como você usaria esta técnica em Visual Basic.
+
+20
+00:01:29.001 --> 00:01:33.001
+Vou mostrar um exemplo de construção de uma função bastante complexa, que é um
+
+21
+00:01:33.001 --> 00:01:37.000
+gráfico, que pode ser alimentado de alguns dados de uma base de dados.
+
+22
+00:01:37.001 --> 00:01:44.000
+Aqui eu criei o gráfico e agora vou dar-lhe um título, Vendas 1992.
+
+23
+00:01:46.000 --> 00:01:48.000
+Eu tenho meu gráfico sem qualquer programação.
+
+24
+00:01:49.000 --> 00:01:55.000
+Usando isso em um programa real, eu posso carregar um programa aqui.
+
+25
+00:01:57.001 --> 00:02:01.001
+Isso vai mostrar-nos dois gráficos lado a lado.
+
+26
+00:02:02.000 --> 00:02:06.001
+Nesta interface, clicando no gráfico, o usuário pode selecionar que
+
+27
+00:02:06.001 --> 00:02:12.001
+Gosto de vê-lo como um 3D pie e este como um gráfico de tipo linha.
+
+28
+00:02:13.000 --> 00:02:14.001
+Isso é feito com poucas linhas de código.
+
+29
+00:02:14.001 --> 00:02:18.000
+dificilmente, sem escrever qualquer código, você não apenas criou o gráfico, você criou a
+
+30
+00:02:18.000 --> 00:02:21.000
+interface para que o usuário decida que tipo de gráfico ele quer.
+
+31
+00:02:22.000 --> 00:02:23.000
+O que é Marvel?
+
+32
+00:02:24.000 --> 00:02:29.000
+A Marvel é uma técnica para minimizar a quantidade de código que deve ser escrito por
+
+33
+00:02:29.000 --> 00:02:33.001
+Usando funções que já estão lá, algo como hardware ICs.
+
+34
+00:02:33.001 --> 00:02:36.001
+Hoje vamos olhar para seis idiomas de programação visual
+
+35
+00:02:36.001 --> 00:02:38.001
+Para Macintosh e Windows.
+
+36
+00:02:39.000 --> 00:02:41.001
+Um dos primeiros idiomas de programação visual para Windows foi
+
+37
+00:02:41.001 --> 00:02:43.001
+Livro da Asimetria.
+
+38
+00:02:43.001 --> 00:02:47.000
+Vamos começar hoje com uma visita ao Blue Shield onde eles usam Toolbook
+
+39
+00:02:47.000 --> 00:02:48.001
+Escrever aplicações personalizadas.
+
+40
+00:02:51.001 --> 00:02:55.001
+Quando os funcionários da Blue Shield visitam um dos kiosques de informações pessoais em
+
+41
+00:02:55.001 --> 00:03:00.000
+seu local de trabalho, eles podem acessar sua conta de plano de poupança, revisar listas de emprego,
+
+42
+00:03:00.001 --> 00:03:03.001
+Verifique as mais recentes atividades da empresa ou compras para compras.
+
+43
+00:03:03.001 --> 00:03:09.001
+Minha idéia era criar uma maneira de fornecer informações aos funcionários que
+
+44
+00:03:09.001 --> 00:03:14.001
+Dê-lhes informações mais rápidas, consistentemente e com esperança ao mesmo tempo cortadas
+
+45
+00:03:14.001 --> 00:03:18.000
+custos de papel e nos permitem usar alguns dos nossos recursos
+
+46
+00:03:18.000 --> 00:03:19.001
+Fazer mais esforços relacionados ao projeto.
+
+47
+00:03:20.000 --> 00:03:23.001
+O programador John Conkle usou o Toolbook by Asymmetrics para escrever uma
+
+48
+00:03:23.001 --> 00:03:25.000
+uma série de aplicações personalizadas.
+
+49
+00:03:26.000 --> 00:03:29.001
+Esta foi a sua primeira experiência em usar uma linguagem de programação visual.
+
+50
+00:03:30.000 --> 00:03:35.000
+É muito mais simples porque você pode realmente desenhar seus ecrãs primeiro, que
+
+51
+00:03:35.000 --> 00:03:37.001
+Na verdade, provavelmente leva mais tempo, na verdade leva mais
+
+52
+00:03:37.001 --> 00:03:39.001
+tempo em vez de programação.
+
+53
+00:03:40.001 --> 00:03:44.000
+Então você desenha seus ecrãs primeiro e, em seguida, adicione o script depois.
+
+54
+00:03:45.001 --> 00:03:50.000
+E também você pode testar imediatamente como você está realmente programando, você pode realmente
+
+55
+00:03:50.000 --> 00:03:52.001
+Verifique imediatamente para ver se isso funciona.
+
+56
+00:03:53.000 --> 00:03:57.001
+Apesar da facilidade de usar uma linguagem de programação visual como o Toolbook, quando Blue
+
+57
+00:03:57.001 --> 00:04:01.000
+Shield queria adicionar um nível mais elevado de interatividade à sua aplicação,
+
+58
+00:04:01.000 --> 00:04:03.000
+Ele pediu um consultor de programação.
+
+59
+00:04:03.000 --> 00:04:10.000
+Queremos entrar em nosso servidor SQL e também imprimir um
+
+60
+00:04:10.000 --> 00:04:11.001
+Formulário de inscrição.
+
+61
+00:04:12.000 --> 00:04:15.001
+Essas foram algumas coisas que não tínhamos feito antes em nossa aplicação inicial, então
+
+62
+00:04:15.001 --> 00:04:19.001
+É por isso que saímos à procura de um consultor que talvez tenha alguma experiência.
+
+63
+00:04:19.001 --> 00:04:21.001
+Um livro que não tivemos.
+
+64
+00:04:22.000 --> 00:04:24.001
+Para as crônicas de computador, eu sou Jonel Patterson.
+
+65
+00:04:24.001 --> 00:04:31.001
+O ponto é que você pode fazer coisas assim, como um pouco
+
+66
+00:04:31.001 --> 00:04:35.001
+Jogo de Blackjack, sem muito esforço em uma maneira.
+
+67
+00:04:38.001 --> 00:04:41.001
+No Mac, existem dois principais programas de programação visual
+
+68
+00:04:41.001 --> 00:04:43.001
+línguas, Prograph e Sirius.
+
+69
+00:04:44.000 --> 00:04:48.000
+Vamos olhar para ambos agora com Phil Cox de TGS Systems com sede em Halifax,
+
+70
+00:04:48.000 --> 00:04:50.001
+Canadá, e também conosco, Joe Fermage de Sirius
+
+71
+00:04:50.001 --> 00:04:52.001
+Empresa, e você está baseado em Salt Lake City.
+
+72
+00:04:53.000 --> 00:04:55.001
+Fil, vamos começar com você e falar sobre Prograph.
+
+73
+00:04:56.000 --> 00:04:58.001
+Acredite ou não, em alguns minutos, vamos construir ou pelo menos
+
+74
+00:04:58.001 --> 00:05:01.000
+Modificar uma peça de um aplicativo usando o Prograph.
+
+75
+00:05:02.000 --> 00:05:03.001
+Mostre-nos o que é a aplicação.
+
+76
+00:05:03.001 --> 00:05:09.000
+O que temos aqui, Stuart, é uma aplicação de banco de dados pessoal que apresenta um
+
+77
+00:05:09.000 --> 00:05:11.001
+Livro de endereço com nomes e endereços e números de telefone.
+
+78
+00:05:11.001 --> 00:05:13.000
+Qual é a tela agora que estamos olhando antes de você chegar a isso?
+
+79
+00:05:13.000 --> 00:05:16.001
+Estamos olhando para a parte da hierarquia de classes que é fornecida com
+
+80
+00:05:16.001 --> 00:05:18.001
+Programa para aplicações de construção.
+
+81
+00:05:19.000 --> 00:05:22.000
+Você pode ver, na verdade, há uma classe selecionada chamada Livro de Endereços, que é o
+
+82
+00:05:22.000 --> 00:05:23.001
+janela para a nossa aplicação do livro de endereços.
+
+83
+00:05:24.000 --> 00:05:25.001
+Vamos correr e ver como parece.
+
+84
+00:05:27.000 --> 00:05:28.001
+Essa é a aplicação como existe?
+
+85
+00:05:29.000 --> 00:05:30.000
+Esta é a aplicação corrente, sim.
+
+86
+00:05:30.000 --> 00:05:35.000
+Você pode ver que a janela tem na esquerda algumas caixas de texto editáveis, que nós
+
+87
+00:05:35.000 --> 00:05:39.001
+Você pode inserir informações e, em seguida, clicar no botão Adicionar, que irá adicionar um
+
+88
+00:05:39.001 --> 00:05:42.000
+registrar na base de dados e, de fato, inserir o
+
+89
+00:05:42.000 --> 00:05:44.000
+Nome correspondente na lista de rastreamento.
+
+90
+00:05:44.000 --> 00:05:48.000
+Ou podemos selecionar elementos da lista de rolagem e os detalhes
+
+91
+00:05:48.000 --> 00:05:50.000
+aparecerão nestas caixas.
+
+92
+00:05:50.001 --> 00:05:54.001
+Bem, o que vamos fazer é modificar esta aplicação para melhorar a sua
+
+93
+00:05:54.001 --> 00:05:57.001
+funcionalidade, permitindo que as pessoas sejam excluídas da base de dados.
+
+94
+00:05:57.001 --> 00:05:58.001
+Ok, como fazemos isso?
+
+95
+00:05:59.000 --> 00:06:01.001
+Bem, queremos colocar um botão Remover nesta janela primeiro.
+
+96
+00:06:02.000 --> 00:06:06.000
+Então eu vou entrar no editor, que volta o editor da janela.
+
+97
+00:06:06.001 --> 00:06:09.001
+Eu quero um botão que pareça bastante como aquele em tamanho e forma.
+
+98
+00:06:09.001 --> 00:06:12.001
+Então eu vou simplesmente selecionar isso e dizer Replicar Objeto.
+
+99
+00:06:13.000 --> 00:06:16.000
+Então você está editando o programa mesmo enquanto o programa está em andamento?
+
+100
+00:06:16.000 --> 00:06:18.000
+Mesmo enquanto está correndo, sim, que é uma característica muito poderosa deste
+
+101
+00:06:18.000 --> 00:06:20.001
+ambiente porque você pode flip para trás e para a frente entre os dois.
+
+102
+00:06:21.000 --> 00:06:26.001
+Ok, vou dobrar o botão para alterar sua identidade para Remover e
+
+103
+00:06:26.001 --> 00:06:29.000
+O nome do método a ser chamado a Delete também.
+
+104
+00:06:29.001 --> 00:06:31.000
+Será que vai cair ou?
+
+105
+00:06:31.001 --> 00:06:32.001
+Sim, isso deveria ser um salto.
+
+106
+00:06:33.000 --> 00:06:34.001
+Desculpe, eu continuo pressionando o...
+
+107
+00:06:34.001 --> 00:06:35.000
+Aqui estamos nós.
+
+108
+00:06:35.000 --> 00:06:35.000
+OK  ⁇
+
+109
+00:06:36.000 --> 00:06:37.001
+Então, agora eu edito esse botão.
+
+110
+00:06:37.001 --> 00:06:38.000
+É lá que está.
+
+111
+00:06:38.001 --> 00:06:43.001
+Eu posso sair do editor e ir adiante e executar este botão.
+
+112
+00:06:43.001 --> 00:06:44.001
+Clique em Delete.
+
+113
+00:06:46.000 --> 00:06:48.001
+E Prograph não encontrou o método chamado Delete.
+
+114
+00:06:48.001 --> 00:06:49.000
+não existe.
+
+115
+00:06:49.001 --> 00:06:51.001
+Então, em vez de dizer que isso é errado, é
+
+116
+00:06:51.001 --> 00:06:53.000
+Digo, bem, eu gostaria de criá-lo agora.
+
+117
+00:06:53.001 --> 00:06:55.000
+O botão foi criado, mas agora você tem a operação.
+
+118
+00:06:55.001 --> 00:06:56.001
+Não é a operação, sim.
+
+119
+00:06:56.001 --> 00:06:57.001
+Então eu digo, tudo bem.
+
+120
+00:06:59.000 --> 00:07:02.000
+Agora é dizer, em que classe eu deveria criar este método?
+
+121
+00:07:02.000 --> 00:07:05.000
+E é a identificação correta do livro de endereço de classe como o lugar certo.
+
+122
+00:07:06.000 --> 00:07:10.000
+Então o que aconteceu agora é que foi feito o método e começou a executá-lo.
+
+123
+00:07:10.000 --> 00:07:11.001
+E esta é uma imagem dela em execução.
+
+124
+00:07:12.000 --> 00:07:12.001
+Então eu vou movê-lo para baixo lá.
+
+125
+00:07:14.000 --> 00:07:16.001
+Agora, eu posso obter uma versão de edição desta janela
+
+126
+00:07:16.001 --> 00:07:18.000
+Duplo clique no fundo.
+
+127
+00:07:19.000 --> 00:07:21.001
+Então parece semelhante, mas é aqui que eu realmente posso escrever os dados
+
+128
+00:07:21.001 --> 00:07:23.000
+fluxo, que vai trazer tudo isso para a vida.
+
+129
+00:07:24.000 --> 00:07:29.001
+Então eu posso tirar a janela e alimentá-la em uma operação chamada deselect.
+
+130
+00:07:31.000 --> 00:07:34.001
+Quando eu pressione a chave de retorno, Prograph descobre esse endereço
+
+131
+00:07:34.001 --> 00:07:36.000
+O livro é onde este método está localizado.
+
+132
+00:07:38.000 --> 00:07:40.000
+Esta operação é uma entrada e uma saída.
+
+133
+00:07:40.000 --> 00:07:43.001
+E o resultado é o índice e a lista do item que é desativado.
+
+134
+00:07:44.000 --> 00:07:50.000
+A próxima coisa que eu quero fazer é remover da base de dados
+
+135
+00:07:50.000 --> 00:07:54.001
+o item correspondente ao item selecionado da lista.
+
+136
+00:07:54.001 --> 00:07:57.001
+Então eu coloquei este índice aqui para que ele saiba que
+
+137
+00:07:57.001 --> 00:07:59.000
+O item no banco de dados está sendo removido.
+
+138
+00:07:59.001 --> 00:08:02.001
+E a última coisa que eu quero fazer, eu vou apenas limpar isso, tirando essas
+
+139
+00:08:02.001 --> 00:08:06.000
+As operações acima, é para atualizar a interface.
+
+140
+00:08:06.001 --> 00:08:10.000
+Então eu vou alimentar a janela em uma operação chamada atualização.
+
+141
+00:08:11.000 --> 00:08:14.000
+Mais uma vez, isso é identificado como no livro de endereços de classe.
+
+142
+00:08:14.001 --> 00:08:19.001
+E eu vou garantir que essa atualização ocorre depois que o item é removido.
+
+143
+00:08:20.001 --> 00:08:22.001
+Então vamos voltar aqui e executar isso.
+
+144
+00:08:22.001 --> 00:08:24.001
+E eu posso passar por isso com a chave de retorno.
+
+145
+00:08:25.001 --> 00:08:27.001
+OK, que desativou o item na lista de rolagem.
+
+146
+00:08:28.001 --> 00:08:32.000
+Isso remove, remove o item da base de dados.
+
+147
+00:08:32.001 --> 00:08:34.000
+E isso atualizou a interface.
+
+148
+00:08:34.001 --> 00:08:36.000
+Isso acaba com a execução.
+
+149
+00:08:37.000 --> 00:08:40.001
+OK, se estou feliz com isso, posso desativar o show passo
+
+150
+00:08:40.001 --> 00:08:43.000
+Modo, feche a janela do programa.
+
+151
+00:08:43.000 --> 00:08:44.001
+E agora eu tenho apenas minha aplicação corrente.
+
+152
+00:08:45.000 --> 00:08:48.000
+Eu posso selecionar, excluir e funciona.
+
+153
+00:08:49.000 --> 00:08:49.000
+Sim, foi muito bom.
+
+154
+00:08:49.001 --> 00:08:50.001
+É o desenvolvimento de cima para baixo.
+
+155
+00:08:51.000 --> 00:08:53.000
+Tudo bem, Joe, vamos falar sobre o Sirius Workshop.
+
+156
+00:08:53.000 --> 00:08:55.000
+E como é a sua abordagem para desenvolver no
+
+157
+00:08:55.000 --> 00:08:57.000
+Mac é diferente do que acabamos de ver com o Programa?
+
+158
+00:08:57.001 --> 00:09:00.000
+Bem, basicamente, é a diferença entre usar menores
+
+159
+00:09:00.000 --> 00:09:01.001
+Legos e maiores legos.
+
+160
+00:09:01.001 --> 00:09:06.001
+Os componentes objetos do Sirius são peças de grão muito grandes que permitem que você
+
+161
+00:09:06.001 --> 00:09:08.000
+Criar aplicações mais rapidamente.
+
+162
+00:09:08.001 --> 00:09:11.001
+Tudo bem, você pode nos mostrar como você construiria algo usando o Sirius Workshop?
+
+163
+00:09:12.000 --> 00:09:17.001
+Bem, o ambiente Sirius Workshop fornece uma paleta flutuante de ícones,
+
+164
+00:09:17.001 --> 00:09:22.001
+Cada um dos quais representa um noun ou um verbo na funcionalidade do computador.
+
+165
+00:09:23.001 --> 00:09:27.000
+Então, para a aplicação do livro de endereço que estamos construindo, eu preciso de um
+
+166
+00:09:27.000 --> 00:09:28.001
+janela para exibir essa informação.
+
+167
+00:09:29.000 --> 00:09:33.001
+Então eu encontrei esse ícone de janela nesta lista e coloque-o no nosso espaço de trabalho.
+
+168
+00:09:34.000 --> 00:09:35.001
+Então, é uma função para criar uma janela.
+
+169
+00:09:36.000 --> 00:09:36.001
+É uma janela em si.
+
+170
+00:09:37.000 --> 00:09:40.000
+E contém todo o código necessário para executá-lo por trás das cenas.
+
+171
+00:09:40.000 --> 00:09:43.000
+Na verdade, há cerca de 20.000 linhas de código por trás desse ícone.
+
+172
+00:09:43.001 --> 00:09:44.000
+apenas clique.
+
+173
+00:09:44.000 --> 00:09:44.001
+Isso é certo.
+
+174
+00:09:45.001 --> 00:09:49.000
+Então, dentro da janela, eu gostaria de exibir o nome do amigo ou família
+
+175
+00:09:49.000 --> 00:09:53.000
+o membro no livro de endereços, o endereço da pessoa e o número de telefone.
+
+176
+00:09:53.000 --> 00:09:57.000
+E vamos dar esses itens nomes para que eu saiba qual é que.
+
+177
+00:10:00.000 --> 00:10:03.001
+E eu também gostaria de ser capaz de armazenar muitos
+
+178
+00:10:03.001 --> 00:10:05.000
+Nomes, endereços e números de telefone.
+
+179
+00:10:05.001 --> 00:10:08.001
+Para fazer isso, eu preciso armazená-los em uma base de dados.
+
+180
+00:10:09.000 --> 00:10:11.000
+Então, vamos cair em um componente de banco de dados.
+
+181
+00:10:11.001 --> 00:10:13.001
+Isso contém o código de gerenciamento de dados.
+
+182
+00:10:14.000 --> 00:10:17.000
+E quando eu clique duas vezes em um objeto, eu edito seus atributos.
+
+183
+00:10:17.000 --> 00:10:23.001
+Então, se eu dobrar o clique na janela, eu posso dar à janela um título como
+
+184
+00:10:23.001 --> 00:10:28.001
+livro de endereços, escolha um estilo visual, e digam a janela que
+
+185
+00:10:28.001 --> 00:10:30.000
+Objetos para exibir dentro de si.
+
+186
+00:10:31.000 --> 00:10:36.000
+E quando estou pressionando o layout, vejo um exemplo de trabalho desta janela.
+
+187
+00:10:36.000 --> 00:10:42.001
+E vamos apenas colocar esses campos de qualquer maneira, assim.
+
+188
+00:10:43.001 --> 00:10:46.000
+Não vamos preocupar-nos com fazer isso bonito para o momento.
+
+189
+00:10:47.000 --> 00:10:50.000
+E acabamos com o layout dos campos do livro de endereços.
+
+190
+00:10:50.001 --> 00:10:55.000
+Agora, eu também preciso dobrar clique no objeto de banco de dados e dizer-lhe para armazenar o nome
+
+191
+00:10:55.000 --> 00:10:57.001
+e endereço e número de telefone nos arquivos, assim.
+
+192
+00:10:59.000 --> 00:11:03.001
+O último passo nesta aplicação é fornecer uma paleta de botões para adicionar um
+
+193
+00:11:03.001 --> 00:11:08.000
+gravação e apagar um registro que você viu em uma demo de gráficos pro, dois desses botões, mas
+
+194
+00:11:08.000 --> 00:11:11.000
+Encontre e atualize e assim por diante.
+
+195
+00:11:11.001 --> 00:11:17.000
+Então vamos passar por um componente do navegador, que você vai ter uma ideia
+
+196
+00:11:17.000 --> 00:11:21.000
+da funcionalidade que ele fornece quando eu colocá-lo dentro
+
+197
+00:11:21.000 --> 00:11:22.001
+A janela e os outros campos.
+
+198
+00:11:25.001 --> 00:11:31.000
+E ele fornece, oh, cerca de uma dúzia de operações de banco de dados comuns.
+
+199
+00:11:32.000 --> 00:11:35.001
+E novamente, você foi capaz de fazer isso apenas clicando na operação do navegador.
+
+200
+00:11:35.001 --> 00:11:36.000
+Isso é correto.
+
+201
+00:11:36.000 --> 00:11:39.000
+E se eu dobrar clique nele, eu digo que funciona.
+
+202
+00:11:39.000 --> 00:11:40.001
+No banco de dados dos amigos e da família.
+
+203
+00:11:41.001 --> 00:11:44.001
+Então agora esses botões são vivos e inteligentes e sabem o que fazer.
+
+204
+00:11:44.001 --> 00:11:47.000
+E estamos acabando com esta aplicação neste momento.
+
+205
+00:11:47.001 --> 00:11:50.001
+Vamos escolher a partir do menu do projeto.
+
+206
+00:11:51.001 --> 00:11:56.000
+E em cerca de 10 segundos ou assim, ele vai criar uma nova aplicação executável.
+
+207
+00:11:56.000 --> 00:11:59.001
+Portanto, é reunir o código por trás de todos os objetos que você coloca lá.
+
+208
+00:11:59.001 --> 00:12:00.000
+Isso é correto.
+
+209
+00:12:00.001 --> 00:12:02.000
+E agora você verá que ele está correndo na tela.
+
+210
+00:12:04.000 --> 00:12:07.000
+Bem, como usamos isso agora?
+
+211
+00:12:07.000 --> 00:12:10.000
+Vamos continuar a criar um arquivo pressionando o novo botão.
+
+212
+00:12:10.001 --> 00:12:14.000
+E nós vamos chamar isso só amigos, assim.
+
+213
+00:12:14.001 --> 00:12:17.001
+E vou colocar alguns nomes de amigos neste arquivo.
+
+214
+00:12:18.001 --> 00:12:20.001
+Tenho um amigo chamado Rick.
+
+215
+00:12:21.001 --> 00:12:23.001
+Ele vive em Texas.
+
+216
+00:12:24.000 --> 00:12:30.000
+E seu número de telefone é, oh, eu não sei, 619-555-1212.
+
+217
+00:12:30.000 --> 00:12:32.000
+E adicione-o ao banco de dados.
+
+218
+00:12:32.001 --> 00:12:37.000
+Eu também poderia adicionar Sarah, que vive em Salt Lake City.
+
+219
+00:12:39.000 --> 00:12:43.001
+E o seu número de telefone é isso.
+
+220
+00:12:44.000 --> 00:12:45.001
+E vamos adicionar esse registro à base de dados.
+
+221
+00:12:45.001 --> 00:12:47.001
+Então eu poderia navegar através das pessoas nesta base de dados.
+
+222
+00:12:48.000 --> 00:12:52.001
+Ou encontre onde Rick vive, digitando em Rick e pressionando o botão de busca.
+
+223
+00:12:53.001 --> 00:12:55.001
+Assim, cerca de dois ou três minutos você criou o
+
+224
+00:12:55.001 --> 00:12:57.001
+aplicativo, e boom, você estava usando imediatamente.
+
+225
+00:12:57.001 --> 00:12:57.001
+Isso é correto.
+
+226
+00:12:58.000 --> 00:13:00.001
+E usando os outros objetos e funções, podemos refinar e melhorá-lo.
+
+227
+00:13:01.000 --> 00:13:03.000
+Tudo bem, Sirius Workshop está no Mac aqui.
+
+228
+00:13:03.000 --> 00:13:04.001
+Agora, você também tem uma versão do Windows?
+
+229
+00:13:04.001 --> 00:13:05.000
+Isso é correto.
+
+230
+00:13:05.001 --> 00:13:08.000
+Qualquer aplicação que você cria para qualquer plataforma dentro de um assunto
+
+231
+00:13:08.000 --> 00:13:09.001
+Por alguns segundos, você pode subir e correr sobre o outro.
+
+232
+00:13:10.001 --> 00:13:13.000
+Fil, rápido, que nível de usuário são as coisas como
+
+233
+00:13:13.000 --> 00:13:14.001
+O Prograph e o Sirius Workshop estão focados?
+
+234
+00:13:14.001 --> 00:13:16.000
+Quem usa esse tipo de linguagem de programação?
+
+235
+00:13:16.001 --> 00:13:21.001
+Bem, o Prograph é dirigido aos desenvolvedores da Sirius, e eu não quero punir-me, dentro
+
+236
+00:13:21.001 --> 00:13:25.000
+empresas e também desenvolvedores e consultores de terceiros.
+
+237
+00:13:25.000 --> 00:13:26.001
+E a mesma ideia para o Sirius Workshop?
+
+238
+00:13:26.001 --> 00:13:27.000
+Isso é correto.
+
+239
+00:13:27.001 --> 00:13:31.000
+Tudo bem, bem, há outro idioma de programação visual para o Macintosh.
+
+240
+00:13:31.001 --> 00:13:36.000
+É chamado HyperCard, e a versão mais recente 2.1 é impressionante para os especialistas.
+
+241
+00:13:37.001 --> 00:13:41.001
+Usuários de Mac inventivos sabem que você pode escrever aplicativos personalizados usando o HyperCard
+
+242
+00:13:41.001 --> 00:13:44.001
+sem ter que enfrentar a curva de aprendizagem estreita de
+
+243
+00:13:44.001 --> 00:13:46.000
+Uma linguagem de programação tradicional.
+
+244
+00:13:47.000 --> 00:13:52.000
+Embora o HyperCard seja fácil de usar, não é realmente um idioma de programação visual.
+
+245
+00:13:52.000 --> 00:13:56.001
+Agora, a própria programação ainda é feita em texto, para que em HyperTalk, ou alguns
+
+246
+00:13:56.001 --> 00:14:02.000
+extensões para HyperTalk, mas o ambiente parece e se sente gráficamente
+
+247
+00:14:02.000 --> 00:14:04.000
+rico, e esse é o assunto crítico.
+
+248
+00:14:04.000 --> 00:14:06.001
+Você não está sentado em um editor com uma tela branca que o atreve a
+
+249
+00:14:06.001 --> 00:14:08.000
+Insira um código significativo nele.
+
+250
+00:14:08.000 --> 00:14:10.000
+Ele fornece-lhe um monte de suporte visual.
+
+251
+00:14:10.001 --> 00:14:15.000
+Normalmente você não pode usar o HyperCard para construir uma interface Mac padrão, mas uma nova adição
+
+252
+00:14:15.000 --> 00:14:17.001
+-A ferramenta do Heiser Software muda tudo isso.
+
+253
+00:14:17.001 --> 00:14:22.000
+Podemos começar com o HyperCard e um produto chamado Windows Script de Heiser
+
+254
+00:14:22.000 --> 00:14:26.000
+Software, no qual podemos construir uma interface Macintosh completa, não apenas o que
+
+255
+00:14:26.000 --> 00:14:30.000
+HyperCard nos permite fazer, cores e pop-up menus e filmes QuickTime e assim por diante.
+
+256
+00:14:30.001 --> 00:14:35.001
+E então tome o resultado desse trabalho e crie um standalone,
+
+257
+00:14:35.001 --> 00:14:37.000
+- Aplicação clicável a partir dela.
+
+258
+00:14:37.001 --> 00:14:42.000
+Podemos se livrar do HyperCard estar ao redor para o usuário final, reduzir a memória e
+
+259
+00:14:42.000 --> 00:14:45.001
+outros tipos de requisitos, e criar um verdadeiro standalone Macintosh
+
+260
+00:14:45.001 --> 00:14:48.001
+A aplicação que você não pode dizer foi escrita em HyperCard.
+
+261
+00:14:49.000 --> 00:14:52.001
+O Windows Script dá-lhe o que é essencialmente uma versão atualizada do HyperCard.
+
+262
+00:14:53.000 --> 00:14:58.000
+Essas ferramentas criam efetivamente o que poderia ter sido o HyperCard 3.0 se tivesse sido
+
+263
+00:14:58.000 --> 00:15:00.001
+Assim foi desenvolvido por Claris, porque
+
+264
+00:15:00.001 --> 00:15:02.000
+Adicione a cor, que todo mundo está pedindo.
+
+265
+00:15:02.001 --> 00:15:03.001
+Adicionar a interface de usuário adicional
+
+266
+00:15:03.001 --> 00:15:05.001
+componentes, e eles adicionam efetivamente um compilador.
+
+267
+00:15:06.000 --> 00:15:08.001
+Para as crônicas de computador, eu sou Jonelle Patterson.
+
+268
+00:15:21.000 --> 00:15:25.000
+No lado do Windows, existem vários idiomas de programação visual.
+
+269
+00:15:25.000 --> 00:15:28.001
+Entre os melhores estão o novo Visual Basic da Microsoft e o novo visual.
+
+270
+00:15:28.001 --> 00:15:30.000
+C++ da Microsoft.
+
+271
+00:15:30.001 --> 00:15:33.000
+Aqui para mostrar-lhes são Cornelius Willis e Jeff
+
+272
+00:15:33.000 --> 00:15:35.000
+Beeler, ambos, é claro, da Microsoft.
+
+273
+00:15:35.001 --> 00:15:37.001
+Cornelius, permita-me começar com você e apenas
+
+274
+00:15:37.001 --> 00:15:39.000
+colocando esses dois produtos diferentes para mim.
+
+275
+00:15:39.000 --> 00:15:42.001
+Qual a diferença entre Visual Basic e Visual C++?
+
+276
+00:15:42.001 --> 00:15:46.001
+Bem, Visual Basic é a ferramenta que você usa quando a produtividade é essencial, e
+
+277
+00:15:46.001 --> 00:15:48.000
+Você tem que obter uma aplicação colocada em conjunto rapidamente.
+
+278
+00:15:48.001 --> 00:15:53.000
+Visual C++ dá-lhe a plena potência e flexibilidade da linguagem C++, e
+
+279
+00:15:53.000 --> 00:15:56.000
+Também permite que você crie componentes reutilizáveis que podem então
+
+280
+00:15:56.000 --> 00:15:57.001
+Usados em aplicações Visual Basic.
+
+281
+00:15:57.001 --> 00:16:00.000
+Bem, vamos começar com Visual Basic então, e mostre-me como você iria construir
+
+282
+00:16:00.000 --> 00:16:02.000
+Tudo isso usando o Visual Basic.
+
+283
+00:16:02.001 --> 00:16:06.001
+muito bom. Em Visual Basic, você cria sua interface de usuário com este conjunto de
+
+284
+00:16:06.001 --> 00:16:08.000
+Componentes ou controles personalizados.
+
+285
+00:16:08.000 --> 00:16:12.001
+Existem todos os tipos de diferentes controles aqui, coisas para a interface do usuário, coisas
+
+286
+00:16:12.001 --> 00:16:14.001
+para um display semelhante ao spreadsheet.
+
+287
+00:16:15.000 --> 00:16:16.000
+Aqui está um controle de gauge.
+
+288
+00:16:16.001 --> 00:16:18.001
+Há também cerca de 100 controles personalizados disponíveis
+
+289
+00:16:18.001 --> 00:16:20.001
+no postmarket de terceiros.
+
+290
+00:16:20.001 --> 00:16:22.001
+Tudo a partir da conectividade mainframe para
+
+291
+00:16:22.001 --> 00:16:24.000
+redes neurais para a animação multimídia.
+
+292
+00:16:24.000 --> 00:16:27.000
+Então você pode chamar uma operação apenas clicando em algo lá.
+
+293
+00:16:27.000 --> 00:16:28.001
+Direito, ou simplesmente por incluí-lo em sua aplicação.
+
+294
+00:16:29.000 --> 00:16:32.000
+Por exemplo, eu posso colocar esta caixa de texto aqui na tela.
+
+295
+00:16:33.000 --> 00:16:34.001
+Cada um desses controles tem um conjunto de propriedades.
+
+296
+00:16:35.000 --> 00:16:39.000
+Por exemplo, eu posso mudar a propriedade itálica da letra aqui para verdade, e então
+
+297
+00:16:39.000 --> 00:16:41.000
+Esta caixa de texto torna-se italiana.
+
+298
+00:16:41.001 --> 00:16:44.000
+Há também ajuda sensível ao contexto em tudo na língua.
+
+299
+00:16:44.001 --> 00:16:48.001
+Eu simplesmente posicionar o cursor sobre um item, bater F1, e eu recebo ajuda contextualmente sensível
+
+300
+00:16:48.001 --> 00:16:51.000
+com um exemplo de código que eu posso então inserir em minha aplicação.
+
+301
+00:16:52.001 --> 00:16:54.001
+O que eu pensei que eu faria hoje para mostrar-lhe Visual Basic
+
+302
+00:16:54.001 --> 00:16:56.001
+Construa-se uma aplicação de banco de dados rápida.
+
+303
+00:16:57.000 --> 00:17:01.000
+O Visual Basic inclui o motor de banco de dados de backend de acesso completo.
+
+304
+00:17:01.000 --> 00:17:04.001
+Isso lhe dá acesso aos arquivos Paradox, XBase, bem como
+
+305
+00:17:04.001 --> 00:17:06.000
+Servidor de cliente e dados de mainframe.
+
+306
+00:17:06.001 --> 00:17:11.001
+Eu coloquei o controle de dados aqui no formulário, e agora vou configurar sua base de dados
+
+307
+00:17:11.001 --> 00:17:15.001
+Nome igual a este banco de dados de acesso local, armazenamento DB.
+
+308
+00:17:16.001 --> 00:17:20.001
+Em seguida, vou apontar para uma tabela nessa base de dados de acesso, a tabela dos funcionários,
+
+309
+00:17:21.000 --> 00:17:23.001
+que é, como você pode imaginar, uma base de dados de funcionários.
+
+310
+00:17:24.001 --> 00:17:26.001
+Vou colocar um par de mais caixas de texto aqui.
+
+311
+00:17:26.001 --> 00:17:27.001
+E mais uma caixa de texto?
+
+312
+00:17:28.000 --> 00:17:32.000
+Então eu também vou colocar uma caixa de fotos aqui.
+
+313
+00:17:33.000 --> 00:17:36.001
+Vamos fazer isso um pouco maior aqui e saque minha propriedade.
+
+314
+00:17:37.000 --> 00:17:41.000
+Agora vou selecionar todos estes e indicar a sua fonte de dados no
+
+315
+00:17:41.000 --> 00:17:43.001
+Data1 controle lá no formulário.
+
+316
+00:17:44.000 --> 00:17:47.000
+A pergunta que é controlada-definida é agora a coisa que vai
+
+317
+00:17:47.000 --> 00:17:48.001
+populações desses controlos.
+
+318
+00:17:49.000 --> 00:17:51.001
+Outra coisa que eu preciso fazer, eu preciso configurar a propriedade de tamanho automático
+
+319
+00:17:51.001 --> 00:17:53.001
+Nesta caixa de imagens para a verdade.
+
+320
+00:17:53.001 --> 00:17:55.001
+Agora eu vou passando e apontando cada um deles em um campo.
+
+321
+00:17:58.000 --> 00:18:00.001
+Neste caso, esse será o primeiro nome do trabalhador.
+
+322
+00:18:01.000 --> 00:18:04.000
+Este será o último nome do empregado.
+
+323
+00:18:04.001 --> 00:18:08.000
+Essa será a foto do trabalhador, que
+
+324
+00:18:08.000 --> 00:18:09.001
+Está aqui abaixo como o campo de fotos.
+
+325
+00:18:10.000 --> 00:18:15.000
+Agora, se eu tocar o botão de execução do Visual Basic, eu tenho um bonito pequeno visor de banco de dados,
+
+326
+00:18:16.000 --> 00:18:18.001
+que tem auto-size-se fora do controle.
+
+327
+00:18:21.000 --> 00:18:24.000
+Uma das coisas boas sobre Visual Basic é que se eu fizer uma
+
+328
+00:18:24.000 --> 00:18:25.001
+Erro, é muito fácil corrigir.
+
+329
+00:18:26.001 --> 00:18:29.000
+Vamos apenas colocar este controle de dados abaixo aqui e vai funcionar bem.
+
+330
+00:18:31.001 --> 00:18:31.001
+muito bom.
+
+331
+00:18:33.001 --> 00:18:36.000
+Foi um teste, deslizamento e ciclo de execução em cerca de dois segundos.
+
+332
+00:18:36.001 --> 00:18:38.000
+Você realmente fez tudo isso no voo aqui.
+
+333
+00:18:38.000 --> 00:18:40.000
+Eu fiz tudo isso no avião e não tive que escrever nenhum
+
+334
+00:18:40.000 --> 00:18:41.001
+Código para construir a aplicação de banco de dados.
+
+335
+00:18:41.001 --> 00:18:43.001
+Jeff Lurch se transforma em Visual C++.
+
+336
+00:18:43.001 --> 00:18:46.001
+Eu sei que não há tempo para construir uma aplicação inteira usando isso agora.
+
+337
+00:18:46.001 --> 00:18:49.001
+Mas você construiu um pouco antes de você vir aqui e esse tipo de corrida através
+
+338
+00:18:49.001 --> 00:18:51.000
+O processo para nós, de qualquer forma.
+
+339
+00:18:51.000 --> 00:18:51.001
+com certeza.
+
+340
+00:18:52.000 --> 00:18:54.001
+Na verdade, eu escrevi uma solicitação no caminho da saída aqui.
+
+341
+00:18:54.001 --> 00:18:58.001
+É um multimídia player, que permite que você reproduza arquivos multimídicos.
+
+342
+00:18:59.000 --> 00:19:02.000
+Como você pode ver, é uma aplicação de Windows com funcionalidade completa já e é
+
+343
+00:19:02.000 --> 00:19:03.001
+Só me demorou cerca de 25 minutos.
+
+344
+00:19:04.000 --> 00:19:09.001
+Eu tive uma barra de ferramentas e um menu de barra de status e este controle VCR na minha aplicação.
+
+345
+00:19:09.001 --> 00:19:15.001
+Tudo que eu faço é clicar no controle VCR e você pode ver que eu sou capaz de jogar vídeo
+
+346
+00:19:15.001 --> 00:19:17.001
+arquivos que estão na minha máquina.
+
+347
+00:19:17.001 --> 00:19:20.000
+Então, o aplicativo que você criou foi o jogador VCR.
+
+348
+00:19:20.000 --> 00:19:20.001
+Isso é correto.
+
+349
+00:19:21.000 --> 00:19:22.000
+Mostre-me como você fez isso.
+
+350
+00:19:22.000 --> 00:19:22.000
+É certo.
+
+351
+00:19:22.001 --> 00:19:25.000
+O primeiro passo que tive foi executar o App Wizard.
+
+352
+00:19:25.001 --> 00:19:28.001
+App Wizard faz todo o projeto startup trabalhar para você, cria
+
+353
+00:19:28.001 --> 00:19:31.000
+Arquivos de origem e arquivos de recursos.
+
+354
+00:19:31.000 --> 00:19:32.000
+O que é isso que estamos olhando aqui?
+
+355
+00:19:32.001 --> 00:19:35.000
+Esta é a caixa de diálogo de opções para App Wizard.
+
+356
+00:19:35.000 --> 00:19:39.000
+Ele mostra todas as opções de aplicação de alto nível que estão disponíveis
+
+357
+00:19:39.000 --> 00:19:42.000
+para a nossa nova aplicação.
+
+358
+00:19:43.000 --> 00:19:46.000
+Agora vamos mostrar-lhe alguns dos arquivos que criamos com o App Wizard.
+
+359
+00:19:46.001 --> 00:19:51.001
+Estes são os C++ e os arquivos de cabeçalho necessários para criar a nossa aplicação.
+
+360
+00:19:52.000 --> 00:19:55.000
+Clique no arquivo RC e que contém todos os recursos.
+
+361
+00:19:55.001 --> 00:19:58.000
+Então eu vou para o modo de edição de recursos no App Studio.
+
+362
+00:19:58.001 --> 00:20:00.001
+Estes são todos os recursos que estão em minha aplicação,
+
+363
+00:20:01.000 --> 00:20:02.001
+coisas como ícones e diálogos.
+
+364
+00:20:02.001 --> 00:20:07.001
+Eu dou um duplo clique em um particular e ele traz o editor de diálogo que eu posso
+
+365
+00:20:07.001 --> 00:20:10.001
+Em seguida, edite o UI da minha aplicação.
+
+366
+00:20:11.000 --> 00:20:13.000
+Na verdade, eu não escrevi esse controle VCR.
+
+367
+00:20:13.000 --> 00:20:16.001
+Esse é um componente visual básico que eu tiruei e caí na minha aplicação.
+
+368
+00:20:17.001 --> 00:20:21.000
+É tão fácil simplesmente integrar aplicações de alto nível
+
+369
+00:20:21.000 --> 00:20:22.001
+características na sua aplicação.
+
+370
+00:20:23.001 --> 00:20:27.000
+Agora vamos ver como eu liguei os vídeos do UI para o código.
+
+371
+00:20:27.000 --> 00:20:31.001
+Este é o feiticeiro de classe e o que ele mostra você é todos os objetos em meu
+
+372
+00:20:31.001 --> 00:20:34.000
+aplicações, incluindo esse controle multimídia.
+
+373
+00:20:34.000 --> 00:20:38.001
+Agora, neste painel aqui você vê que estas são todas as mensagens que podem
+
+374
+00:20:38.001 --> 00:20:40.000
+ser enviado para esse controlo particular.
+
+375
+00:20:40.000 --> 00:20:45.001
+Então, ao mudar para um objeto diferente na minha aplicação como o menu de jogo de arquivos
+
+376
+00:20:45.001 --> 00:20:48.000
+Eu vejo um conjunto diferente de mensagens.
+
+377
+00:20:48.001 --> 00:20:52.000
+Eu clique duas vezes em uma mensagem e ela cria uma função de membro para mim.
+
+378
+00:20:52.000 --> 00:20:56.000
+Essa função membro é onde eu coloque o código para executar quando o usuário
+
+379
+00:20:56.000 --> 00:20:58.000
+Peça o item do menu.
+
+380
+00:20:58.000 --> 00:21:02.000
+Eu clique duas vezes sobre essa função particular de membro que me leva diretamente para
+
+381
+00:21:02.000 --> 00:21:06.001
+O banco de trabalho visual onde posso editar o código e criar o meu aplicativo.
+
+382
+00:21:07.001 --> 00:21:11.000
+Então, neste ponto, acrescentou mais cinco linhas de código e construiu e desbloqueou o
+
+383
+00:21:11.000 --> 00:21:13.000
+Aplicações no visual workbench.
+
+384
+00:21:14.000 --> 00:21:20.000
+Agora você pode ver como trouxemos o poder e a produtividade do C++ para uma grande quantidade de
+
+385
+00:21:20.000 --> 00:21:25.000
+mais fácil de usar, fornecendo uma interface visual para tudo isso.
+
+386
+00:21:25.001 --> 00:21:27.001
+Alright, Jeff, que está usando algo como Visual
+
+387
+00:21:27.001 --> 00:21:29.001
+E o C++? O que está escrito usando isso?
+
+388
+00:21:30.000 --> 00:21:33.000
+Muitas aplicações do Windows lá fora no mercado hoje foram escritas com
+
+389
+00:21:33.000 --> 00:21:35.001
+Visual C++ incluindo o próprio C++.
+
+390
+00:21:36.001 --> 00:21:39.000
+Então eu quero dizer que você na Microsoft está usando isso para escrever aplicativos.
+
+391
+00:21:39.000 --> 00:21:43.001
+absolutamente . Muitas das nossas aplicações são escritas com Visual C++ e depois outra.
+
+392
+00:21:43.001 --> 00:21:45.000
+Alguns deles são escritos com Visual Basic.
+
+393
+00:21:45.001 --> 00:21:48.000
+E então, o que é Visual Basic? Como é que isso é usado?
+
+394
+00:21:48.000 --> 00:21:51.001
+Bem, na Microsoft usamos para escrever o Microsoft Profit. O lucro da Microsoft
+
+395
+00:21:51.001 --> 00:21:53.000
+Está escrito em Visual Basic.
+
+396
+00:21:53.001 --> 00:21:57.001
+Também é usado por muitas grandes corporações para linhas de aplicações de negócios.
+
+397
+00:21:58.001 --> 00:22:02.001
+Algumas pessoas ainda estão em Poopoo Basic ou qualquer coisa que é derivada de Basic. É
+
+398
+00:22:02.001 --> 00:22:04.001
+É uma língua muito antiga e primitiva?
+
+399
+00:22:04.001 --> 00:22:06.000
+Bem, como dizemos, esta não é a base de seu pai.
+
+400
+00:22:07.000 --> 00:22:10.000
+Isso é óbvio. Senhores, muito obrigado a vocês. Esta é a nossa
+
+401
+00:22:10.000 --> 00:22:11.001
+Veja as linguagens de programação visual.
+
+402
+00:22:12.001 --> 00:22:15.000
+Mantenha-se atento agora para as Notícias de Computação desta semana em Random Access.
+
+403
+00:22:37.000 --> 00:22:41.001
+O login da rede está concluído. Deixar de pé.
+
+404
+00:22:45.001 --> 00:22:50.000
+No arquivo de acesso aleatório desta semana, a Compaq revelou dois modelos de computador doméstico
+
+405
+00:22:50.000 --> 00:22:52.000
+em sua nova linha Presario.
+
+406
+00:22:52.001 --> 00:22:56.000
+Ambos podem enviar e receber faks e vir ligados com software para alcançar o
+
+407
+00:22:56.000 --> 00:22:58.000
+Prodigy em Estados Unidos serviços online.
+
+408
+00:22:58.001 --> 00:23:02.000
+Um modelo tem uma máquina de resposta telefônica incorporada. Compaq vai vender o
+
+409
+00:23:02.000 --> 00:23:04.000
+Presario linha através de várias lojas de varejo.
+
+410
+00:23:05.000 --> 00:23:08.001
+Logar-se na Internet será tão fácil quanto girar em sua TV na cidade de
+
+411
+00:23:08.001 --> 00:23:10.001
+Boston começa no início do ano que vem.
+
+412
+00:23:11.000 --> 00:23:14.001
+Continental Cablevision vai oferecer uma internet hookup que irá alimentar diretamente
+
+413
+00:23:14.001 --> 00:23:16.000
+Televisão dos clientes.
+
+414
+00:23:16.001 --> 00:23:20.000
+Mas não será barato. O custo inicial será de cerca de US $ 100 por mês.
+
+415
+00:23:21.000 --> 00:23:24.000
+Panasonic começa a lançar seu novo Side Rider Laser Quality
+
+416
+00:23:24.000 --> 00:23:25.001
+Impressor portátil no próximo mês.
+
+417
+00:23:26.000 --> 00:23:29.001
+O Side Rider está 14 polegadas alto e pesa apenas 14 libras.
+
+418
+00:23:29.001 --> 00:23:34.001
+Ele vem em duas versões, PostScript e PCL, e vai vender por menos de $ 1.000.
+
+419
+00:23:36.000 --> 00:23:40.000
+Apple oferece um pacote de presentes CD-ROM gratuito que contém música e vídeos de animação
+
+420
+00:23:40.000 --> 00:23:43.000
+Para estudantes e professores que compraram novos Macs este outono.
+
+421
+00:23:43.001 --> 00:23:47.000
+O back-to-school freebie vem com a compra de sete modelos Mac, incluindo
+
+422
+00:23:47.000 --> 00:23:51.001
+As cores clássicas LC3, Centra 610, e o PowerBook Duo 230.
+
+423
+00:23:53.000 --> 00:23:56.000
+MacPlay tornou-se aprendendo como escrever em um jogo com o lançamento de
+
+424
+00:23:56.000 --> 00:23:57.001
+Mario ensina a escrever.
+
+425
+00:23:57.001 --> 00:24:02.000
+O programa de tutor animado funciona em três níveis diferentes de dificuldade.
+
+426
+00:24:02.000 --> 00:24:06.000
+Os usuários podem escolher seus próprios personagens, Mario, Luigi, ou a Princesa,
+
+427
+00:24:06.001 --> 00:24:08.000
+Você pode aprender a escrever em seu próprio ritmo.
+
+428
+00:24:08.001 --> 00:24:11.001
+Agora é hora da revisão de software desta semana com Paul Schindler,
+
+429
+00:24:12.000 --> 00:24:13.001
+Avaliação de publicações do CMP.
+
+430
+00:24:15.000 --> 00:24:19.001
+Hoje vamos olhar para uma publicação de impressão venerável agora disponível no CD
+
+431
+00:24:19.001 --> 00:24:23.001
+-ROM para Windows, o Guinness Book of World Records, ou como o produto conhecido
+
+432
+00:24:23.001 --> 00:24:27.000
+Em 1993, foi lançado o Guinness Multimedia Disc of Records.
+
+433
+00:24:27.001 --> 00:24:31.001
+Claro, quando você coloca um livro no CD-ROM, as pessoas esperam que você faça tudo o que você precisa.
+
+434
+00:24:31.001 --> 00:24:35.001
+texto facilmente disponível, mais facilmente disponíveis, na verdade, do que era antes.
+
+435
+00:24:36.000 --> 00:24:40.000
+Então pressione os dedos caminhando se você quiser algo como uma mesa de conteúdo, ou
+
+436
+00:24:40.000 --> 00:24:43.000
+pressione o vidro magnificante e entre algumas palavras específicas ou
+
+437
+00:24:43.000 --> 00:24:44.001
+Um conjunto de palavras que você deseja procurar.
+
+438
+00:24:45.000 --> 00:24:49.001
+Há um índice superlativo, o ícone mostra uma pessoa alta e uma pessoa curta, e
+
+439
+00:24:49.001 --> 00:24:51.001
+É o material que torna isso um produto multimídia.
+
+440
+00:24:51.001 --> 00:24:56.001
+Ainda fotos e filmes. Se você quiser cortar a direita para a caça, pressione o
+
+441
+00:24:56.001 --> 00:25:00.000
+imagem no quadro ou na câmera do filme, e você pode limitar a sua navegação para
+
+442
+00:25:00.000 --> 00:25:02.000
+As entradas às quais a Guinness acrescentou esses elementos.
+
+443
+00:25:02.001 --> 00:25:05.000
+Quando você seleciona tal entrada, você verá o registro primeiro.
+
+444
+00:25:05.001 --> 00:25:10.000
+O 1993 Guinness Multimedia Disc of Records é de $100 da Corollier Electronic
+
+445
+00:25:10.000 --> 00:25:12.000
+Edição em Danbury, Connecticut.
+
+446
+00:25:12.001 --> 00:25:14.001
+Para as crônicas de computador, eu sou Paul Schindler.
+
+447
+00:25:16.000 --> 00:25:19.001
+Crianças com menos de 3 anos aprenderão tudo sobre bebês
+
+448
+00:25:19.001 --> 00:25:21.000
+Livro do Conhecimento da Aventura.
+
+449
+00:25:21.000 --> 00:25:26.001
+Kids Zoo, uma aventura de bebê animal, apresenta vídeo de movimento completo, música, digitalizado
+
+450
+00:25:26.001 --> 00:25:31.000
+fala, imagens de qualidade fotográfica e música em uma variedade de módulos de aprendizagem.
+
+451
+00:25:31.001 --> 00:25:35.001
+E, finalmente, a Time Out Sports Technologies lançou um programa chamado
+
+452
+00:25:35.001 --> 00:25:39.001
+Escritório do Comissário de Hockey que automatiza a recuperação de jogadores da NHL
+
+453
+00:25:39.001 --> 00:25:41.001
+estatísticas em segundos.
+
+454
+00:25:42.000 --> 00:25:46.000
+Jogadores das ligações de hockey de fantasia podem se inscrever para a temporada para baixar hockey
+
+455
+00:25:46.000 --> 00:25:47.001
+Estadísticas através do modem.
+
+456
+00:25:47.001 --> 00:25:51.000
+É isso que é para as crônicas de computador desta semana. Eu sou Janelle Stelson.
+
+457
+00:26:17.001 --> 00:26:21.000
+Este vídeo publica uma newsletter de companheiros que contém detalhes sobre produtos
+
+458
+00:26:21.000 --> 00:26:24.000
+demonstros e informações sobre os temas do programa.
+
+459
+00:26:25.000 --> 00:26:31.000
+Para encomendar uma videocassette ou uma newsletter, ligue para 1-800-799-4949
+
+460
+00:26:31.000 --> 00:26:32.001
+Ou escrever crônicas de computador.
+
+461
+00:26:33.001 --> 00:26:36.000
+Por favor, especifique o assunto do programa para tapetes.
+
+462
+00:26:36.001 --> 00:26:41.000
+Todas as encomendas incluem um programa de software gratuito para auditar o uso do software e
+
+463
+00:26:41.000 --> 00:26:43.001
+Informações sobre o guia definitivo para manter o seu
+
+464
+00:26:43.001 --> 00:26:45.000
+Software legal da organização.
+
+465
+00:26:47.001 --> 00:27:03.001
+Obrigado por você.
+
+466
+00:27:17.001 --> 00:27:24.000
+[...]

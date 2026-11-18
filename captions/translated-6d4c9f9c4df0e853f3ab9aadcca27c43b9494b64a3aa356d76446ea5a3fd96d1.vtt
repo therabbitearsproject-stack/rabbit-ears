@@ -1,0 +1,1589 @@
+WEBVTT
+
+1
+00:00:33.000 --> 00:00:38.000
+Saya selalu berpikir PIMS hanyalah minuman dari Inggris, tetapi kata itu telah diambil pada
+
+2
+00:00:38.000 --> 00:00:43.000
+Sebuah makna baru dalam bidang komputer. PIMS dengan satu m, P-I-M-S, adalah akronim
+
+3
+00:00:43.000 --> 00:00:47.000
+Software Manajemen Informasi Pribadi. Ini adalah kategori baru dari
+
+4
+00:00:47.000 --> 00:00:51.000
+software yang menghasilkan banyak kegembiraan, hal-hal seperti agenda dari Lotus dan
+
+5
+00:00:51.000 --> 00:00:56.000
+Pemandangan dari Symantec. Hari ini, mari kita lihat PIMS. Tidak seperti ini,
+
+6
+00:00:56.001 --> 00:00:58.001
+Software Manajemen Informasi Pribadi.
+
+7
+00:00:58.001 --> 00:01:01.000
+Pada edisi ini dari Computer Chronicles.
+
+8
+00:01:22.001 --> 00:01:27.001
+The Computer Chronicles dibuat mungkin sebagian oleh McGraw-Hill, penerbit
+
+9
+00:01:27.001 --> 00:01:34.000
+Majalah Byte dan VIX, Pertukaran Informasi Byte. Dalam cetak dan online, Byte
+
+10
+00:01:34.000 --> 00:01:38.001
+dan VIX melayani profesional komputer di seluruh dunia dengan informasi rinci tentang yang baru
+
+11
+00:01:38.001 --> 00:01:41.000
+perangkat keras, perangkat lunak dan teknologi.
+
+12
+00:01:45.001 --> 00:01:49.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Gary Kildall.
+
+13
+00:01:50.000 --> 00:01:52.001
+Gary, tampaknya industri komputer adalah semua tiba-tiba mengakui kita memiliki
+
+14
+00:01:52.001 --> 00:01:56.000
+masalah pengelolaan informasi kami. Program di seluruh tempat. Titik fokus
+
+15
+00:01:56.000 --> 00:01:57.001
+Beroperasi dengan HyperCard di Mac.
+
+16
+00:01:58.000 --> 00:02:02.001
+Panduan program baru dari Al untuk 286 dan 386 mesin. Penghargaan dari Broderbund
+
+17
+00:02:02.001 --> 00:02:07.000
+Beroperasi pada PC yang sederhana. Pada sisi perangkat keras, memori 32K, 1500 hal yang dapat Anda lakukan
+
+18
+00:02:07.000 --> 00:02:11.000
+menyimpan di dalam buku harian digital Casio ini dengan manajemen yang sangat canggih
+
+19
+00:02:11.000 --> 00:02:15.000
+kemampuan yang Scion Organizer, Anda dapat mengunduh file Focal Point ke dalam ini
+
+20
+00:02:15.000 --> 00:02:18.001
+hal tersebut. Dan akhirnya, pada Wrist Mac, Anda dapat mengunduh stack HyperCard melalui
+
+21
+00:02:18.001 --> 00:02:23.000
+Cable pada jam tangan kecil itu. Mengapa pengertian tiba-tiba bahwa kita memiliki
+
+22
+00:02:23.000 --> 00:02:25.001
+Apakah kita perlu mengelola informasi kita? Okay, Stuart, saya tidak berpikir itu tiba-tiba
+
+23
+00:02:25.001 --> 00:02:30.001
+untuk realisasi. Dia selalu disebut sekretaris pribadi, saya pikir. Atau menemukan hal itu
+
+24
+00:02:30.001 --> 00:02:35.000
+surat yang saya tulis kepada Joe minggu lalu atau masukkan janji ini dalam kalender saya dan biarkan
+
+25
+00:02:35.000 --> 00:02:38.001
+Aku tahu aku dari waktu ke waktu sehingga aku bisa berada di sana pada waktu yang tepat. Dan hal lain yang saya pikirkan
+
+26
+00:02:38.001 --> 00:02:41.001
+Salah satu faktor adalah bahwa banyak informasi yang kita miliki sekarang adalah
+
+27
+00:02:41.001 --> 00:02:43.001
+disimpan di cakera. Itu dalam bentuk digital.
+
+28
+00:02:43.001 --> 00:02:46.001
+Ini bukan sekeping kertas yang diletakkan di sebuah drawer di suatu tempat. Jadi kita bisa melintasi referensi
+
+29
+00:02:46.001 --> 00:02:49.001
+dan itu. Kita dapat menemukan hal-hal dengan menggunakan sistem Hyper-Tech, apa pun yang terjadi.
+
+30
+00:02:50.000 --> 00:02:52.001
+Jadi saya pikir apa yang kita lakukan adalah kita mengautomatikkan banyak sekretariat
+
+31
+00:02:52.001 --> 00:02:55.001
+Fungsi yang telah kita lihat sebelumnya. Gary, hari ini, kita akan melihat beberapa
+
+32
+00:02:55.001 --> 00:03:00.001
+Penilaian PIMS Teratas Kita akan melihat mata, Grandview, agenda, tornado, dan bertanya Sam. dan
+
+33
+00:03:00.001 --> 00:03:04.000
+Kami akan memulai dengan mengunjungi bisnis kecil dan mengetahui bagaimana ia mengelola
+
+34
+00:03:04.000 --> 00:03:08.000
+Informasi menggunakan program dari program Valor yang disebut InfoXL.
+
+35
+00:03:11.000 --> 00:03:16.000
+Ini mungkin tidak terlihat mungkin pada pandangan pertama, tetapi pelayar yang tidak berhati-hati ini telah
+
+36
+00:03:16.000 --> 00:03:20.001
+disentuh oleh kategori baru perangkat lunak yang disebut Personal Information Manager.
+
+37
+00:03:21.000 --> 00:03:25.000
+Wetsuits, papan, dan aksesori surfer dirancang oleh O&#x27;Neill
+
+38
+00:03:25.000 --> 00:03:29.001
+Incorporated, sebuah perusahaan yang berbasis di California yang terkenal karena asal-usul yang pertama
+
+39
+00:03:29.001 --> 00:03:35.001
+dengan Wetsuit terisolasi. Hari ini, Direktur Sistem dan Operasi O&#x27;Neill bergantung pada
+
+40
+00:03:35.001 --> 00:03:41.001
+paket yang disebut InfoXL untuk membantu merancang dan melaksanakan ekspansi pesat perusahaan.
+
+41
+00:03:41.001 --> 00:03:46.001
+Hal yang menarik tentang kemunculan teknologi ini adalah bahwa kita mendapatkan
+
+42
+00:03:46.001 --> 00:03:50.000
+informasi dari berbagai sumber dan dalam berbagai cara.
+
+43
+00:03:50.001 --> 00:03:53.000
+Kami mendapatkan teks bebas. Kami mendapatkan informasi yang terstruktur,
+
+44
+00:03:53.001 --> 00:03:55.000
+Jumlah, dan sebagainya dari laporan.
+
+45
+00:03:56.000 --> 00:04:01.001
+InfoXL, dalam berbagai jendela, menyediakan saya dengan berbagai struktur dan
+
+46
+00:04:01.001 --> 00:04:07.000
+kemampuan untuk menyesuaikan layar saya untuk memasukkan informasi itu ke dalam teks freeform,
+
+47
+00:04:07.001 --> 00:04:14.000
+kotak komentar, teks terstruktur ke dalam log kencan harian atau outlining, dan
+
+48
+00:04:14.000 --> 00:04:16.001
+Biarkan saya mencari di salah satu jendela tersebut.
+
+49
+00:04:17.001 --> 00:04:23.000
+InfoXL adalah multi-window organizer yang mengkategorikan dan menghubungkan informasi dengan
+
+50
+00:04:23.000 --> 00:04:29.001
+Nama, dengan tugas atau dengan tanggal. Konfigurasi jendela berbilang memberikan visual
+
+51
+00:04:29.001 --> 00:04:35.001
+hubungan antara orang atau perusahaan, tanggal, dan komentar yang terkait. Itu adalah
+
+52
+00:04:35.001 --> 00:04:41.000
+Tidak sepenuhnya pengatur desktop atau outliner, tetapi itu mencakup kualitas dari
+
+53
+00:04:41.000 --> 00:04:47.001
+Keduanya Manajer Informasi Pribadi memberikan sebuah
+
+54
+00:04:47.001 --> 00:04:53.001
+database informasi yang dapat saya tanyakan dengan cepat dan mudah untuk memberikan cepat dan
+
+55
+00:04:53.001 --> 00:04:59.001
+Informasi yang tepat untuk orang yang memerlukannya. Itulah fungsi saya. Untuk melakukan pencarian
+
+56
+00:04:59.001 --> 00:05:05.001
+atau koneksi, InfoXL akan menanggapi pemutaran parsial atau mendekati. Sejak
+
+57
+00:05:05.001 --> 00:05:10.001
+informasi yang dihubungkan bersama-sama seperti yang dimasukkan, program ini juga akan membiarkan Anda
+
+58
+00:05:10.001 --> 00:05:15.001
+menggunakan beberapa pendekatan yang berbeda atau pencarian terbuka untuk menemukan kata yang diinginkan,
+
+59
+00:05:16.000 --> 00:05:21.000
+Subjek atau tanggal. Sementara manajer informasi pribadi mungkin tidak memiliki refined
+
+60
+00:05:21.000 --> 00:05:26.000
+Keputusan seorang sekretaris pribadi, jelas bahwa mereka memiliki banyak yang ditawarkan untuk
+
+61
+00:05:26.000 --> 00:05:29.000
+Setiap orang dengan pekerjaan yang harus dilakukan dan jadwal yang harus diikuti.
+
+62
+00:05:41.000 --> 00:05:45.000
+Bersama kami di studio sekarang adalah Denise Creche. Dia adalah Wakil Presiden Micrologic
+
+63
+00:05:45.000 --> 00:05:49.000
+Korporasi, pembuat Tornado, dan di samping Denise Mack McKinney, presiden
+
+64
+00:05:49.000 --> 00:05:50.001
+Pertanyaan dari Sam Systems. dengan Gary?
+
+65
+00:05:51.000 --> 00:05:53.000
+Mack, tampaknya kita punya istilah baru sekarang. Ia dipanggil
+
+66
+00:05:53.000 --> 00:05:55.000
+Software Manajemen Informasi Pribadi.
+
+67
+00:05:55.001 --> 00:05:59.001
+Ini tampaknya mencakup berbagai paket. Jenis-jenis hal yang kita harapkan
+
+68
+00:05:59.001 --> 00:06:04.000
+Apa yang harus dicari dalam kategori PIMS? Kemampuan untuk menyimpan informasi rahasia,
+
+69
+00:06:04.001 --> 00:06:11.000
+freeform, informasi teks, untuk memperolehnya berdasarkan ad hoc queries untuk
+
+70
+00:06:11.000 --> 00:06:15.001
+dapat menghasilkan laporan dari informasi tersebut dengan atau tanpa bidang yang
+
+71
+00:06:15.001 --> 00:06:20.000
+dimasukkan pada awalnya. Jadi seperti manajemen database tradisional kecuali ini
+
+72
+00:06:20.000 --> 00:06:23.001
+Bagian bebas dari apa pun seperti tali harus. dapat sepenuhnya bebas
+
+73
+00:06:23.001 --> 00:06:27.001
+Atau mungkin ada beberapa bidang yang baru ditentukan. Apakah itu melampaui itu atau
+
+74
+00:06:27.001 --> 00:06:29.000
+Apakah itu yang Anda anggap PIMS?
+
+75
+00:06:29.001 --> 00:06:34.001
+Maaf, apakah ada yang lain selain itu? Di dalam diri kita, misalnya, kita
+
+76
+00:06:34.001 --> 00:06:38.001
+baru-baru ini telah terintegrasi hypertext yang meningkatkan apa yang kita
+
+77
+00:06:38.001 --> 00:06:40.000
+sudah ada untuk penarikan kami. Kita akan bisa melihat itu.
+
+78
+00:06:40.000 --> 00:06:42.001
+Ya, hampir tidak lama lagi. Denise, Anda memiliki paket yang disebut
+
+79
+00:06:42.001 --> 00:06:44.001
+dengan Tornado. Bisakah kamu berbicara sedikit tentang hal itu?
+
+80
+00:06:45.000 --> 00:06:51.000
+Beritahu kami apa yang sedang dilakukan. Tentu saja, Tornado adalah program resident memori dan digunakan
+
+81
+00:06:51.000 --> 00:06:54.001
+untuk memantau jenis informasi yang paling mungkin Anda kehilangan jejak
+
+82
+00:06:54.001 --> 00:06:58.000
+selama hari itu. Jenis-jenis hal yang akan Anda letakkan pada catatan dan kertas dan Anda berada di
+
+83
+00:06:58.000 --> 00:07:00.001
+di tengah sesuatu dan Anda mendapatkan panggilan telepon dan Anda ingin mengingat
+
+84
+00:07:00.001 --> 00:07:03.001
+Nombor atau nama dan Anda mengikatnya di suatu tempat dan Anda meletakkannya di samping untuk
+
+85
+00:07:03.001 --> 00:07:06.001
+memelihara dan kemudian ketika Anda memerlukannya Anda tidak dapat menemukannya. Analogi adalah semua
+
+86
+00:07:06.001 --> 00:07:10.000
+kepingan kertas yang biasanya tersebar di meja Anda di dunia nyata
+
+87
+00:07:10.000 --> 00:07:14.000
+lingkungan kerja. dengan benar. Nah, Anda sudah mendapatkan Word Perfect di sini di komputer.
+
+88
+00:07:14.001 --> 00:07:18.000
+Ya, aku melakukannya Seperti yang telah Anda katakan, Tornado adalah penduduk memori di sini. Tunjukkan kepada kami bagaimana Anda
+
+89
+00:07:18.000 --> 00:07:23.000
+sebenarnya menggunakannya. Okay, jika saya sedang mengedit dokumen ini dan saya ingat saya harus
+
+90
+00:07:23.000 --> 00:07:29.000
+memanggil Harry kemudian, saya akan mengakses Tornado dengan menggunakan dua kunci dan ini
+
+91
+00:07:29.000 --> 00:07:33.000
+Seperti yang terlihat layar Tornado yang khas. Setiap jendela pada layar simulasi
+
+92
+00:07:33.000 --> 00:07:38.000
+Sebuah kertas atau catatan yang akan Anda miliki dan jika Anda ingin melihat melalui
+
+93
+00:07:38.000 --> 00:07:42.001
+Anda akan menggunakan kunci kursor Anda dan Anda dapat turun. Ini memberi Anda berbagai
+
+94
+00:07:42.001 --> 00:07:46.000
+dan layar. Jadi layar aktif adalah yang memiliki bar kuning di atasnya.
+
+95
+00:07:46.000 --> 00:07:50.000
+Memang benar ya. Jendela saat ini adalah biru gelap. Dan ketika Anda pertama kali memanggil
+
+96
+00:07:50.000 --> 00:07:53.001
+Tornado, saya maksudkan apa potongan kertas tertentu yang ada di layar? Bagaimana itu
+
+97
+00:07:53.001 --> 00:07:58.000
+yang ditentukan? Nah, itu hanya informasi yang telah Anda masukkan sebelumnya. Oleh karena itu,
+
+98
+00:07:58.000 --> 00:08:01.000
+Sebagian besar potongan kertas baru-baru ini pada dasarnya akan muncul di layar. dengan benar,
+
+99
+00:08:01.000 --> 00:08:03.000
+Kecuali Anda telah memutuskan untuk menyesuaikan pesanan karena
+
+100
+00:08:03.000 --> 00:08:05.001
+Anda dapat memindahkan catatan Anda.
+
+101
+00:08:06.000 --> 00:08:09.000
+[...] Jika saya ingin... Jadi setiap jendela adalah catatan kecil yang terpisah yang telah Anda buat di beberapa
+
+102
+00:08:09.000 --> 00:08:10.001
+waktu yang Memang benar ya.
+
+103
+00:08:11.001 --> 00:08:15.001
+Dan sekarang saya ingin memasukkan satu yang baru tentang Harry. Hal ini sama mudahnya dengan menekan untuk
+
+104
+00:08:15.001 --> 00:08:20.001
+Tanda baru dan saya bisa mengingatkan diri saya untuk memanggil Harry
+
+105
+00:08:23.000 --> 00:08:30.000
+tentang pertemuan. Menekan Escape dua kali akan menutup jendela baru. Dan sekarang,
+
+106
+00:08:30.000 --> 00:08:35.000
+Ketika saya berbicara dengan Harry, jika saya ingin berbicara dengannya tentang beberapa kutipan harga yang saya miliki
+
+107
+00:08:35.000 --> 00:08:39.000
+sudah masuk ke Tornado, saya dapat mendapatkan jendela informasi itu dengan hanya
+
+108
+00:08:39.000 --> 00:08:44.000
+menekan G untuk mendapatkan dan saya menunjukkan gambaran keseluruhan jendela yang saya miliki
+
+109
+00:08:44.000 --> 00:08:47.000
+informasi yang telah saya masukkan. Jadi semua kotak putih kecil ini mewakili jendela
+
+110
+00:08:47.000 --> 00:08:50.001
+yang ada dalam ingatan mereka. baik, baik, dan kemudian di sudut kiri bawah
+
+111
+00:08:50.001 --> 00:08:54.000
+layar yang meminta kunci. Sekarang dengan Tornado Anda tidak perlu mendefinisikan kata kunci.
+
+112
+00:08:54.001 --> 00:09:01.000
+Setiap kata di setiap jendela bertindak sebagai kutipan. Jadi Q, Anda menyadari bahwa
+
+113
+00:09:01.000 --> 00:09:04.001
+kotak yang tidak sesuai dengan pencarian mulai menghilang. Jendela di sebelah kiri adalah
+
+114
+00:09:04.001 --> 00:09:10.001
+Hanya orang yang memiliki kata dengan Q. Baiklah, Anda, O, dan sebelum saya dapat menyelesaikan penulisan
+
+115
+00:09:10.001 --> 00:09:16.000
+Kata yang ditemukan dan dipaparkan di layar. Jika saya ingin mencetak ini
+
+116
+00:09:16.000 --> 00:09:20.001
+Saya hanya akan mencetak P untuk cetakan dan kemudian satu karena dalam hal ini saya ingin mencetak
+
+117
+00:09:20.001 --> 00:09:22.000
+Saya ingin mencetak satu jendela.
+
+118
+00:09:23.000 --> 00:09:28.001
+Ini bisa menjadi sejumlah jendela. Sekarang jika saya ingin memanggil Harry sekarang, saya memiliki semua milik saya.
+
+119
+00:09:28.001 --> 00:09:34.001
+informasi bersama untuk panggilan telepon, saya akan mencetak G untuk mendapatkan dan mulai mencetak
+
+120
+00:09:34.001 --> 00:09:40.000
+Harry, H, A, R, dan itu membawa saya langsung ke hanya tiga jendela. dengan menekan
+
+121
+00:09:40.000 --> 00:09:42.000
+masuk akan menunjukkan kepada saya tiga jendela di Harry.
+
+122
+00:09:42.001 --> 00:09:46.000
+Orang di tengah-tengah memiliki nomor teleponnya. Setelah saya memanggilnya dan berbicara
+
+123
+00:09:46.000 --> 00:09:51.001
+Dengan dia, saya tidak perlu mengingatkan diri saya lagi bahwa saya perlu memanggilnya. Jadi saya
+
+124
+00:09:51.001 --> 00:09:57.001
+dapat melemparkan jendela ini ke sudut kiri atas dengan mengetik T untuk melempar
+
+125
+00:09:57.001 --> 00:10:00.001
+Dan di bagian bawah kanan saya menunjukkan kotoran bisa.
+
+126
+00:10:00.001 --> 00:10:03.001
+T untuk sampah bisa. Semua yang benar. Jadi, Anda membuang satu keping kertas itu. Mmmmmmm
+
+127
+00:10:03.001 --> 00:10:06.001
+Dan ia memiliki jaminan. Ia bertanya kepada Anda jika Anda yakin jika Anda telah berubah
+
+128
+00:10:06.001 --> 00:10:10.000
+Anda dapat mengembalikannya tetapi karena kami yakin kami akan menandakan ya dan itu akan menjadi
+
+129
+00:10:10.000 --> 00:10:13.000
+sudah pergi. Ok cepat Denise, saya percaya ada fungsi yang bisa Anda dapatkan dari
+
+130
+00:10:13.000 --> 00:10:17.000
+Program untuk program melalui Tornado. Ya itu benar. Tornado dapat berfungsi sebagai
+
+131
+00:10:17.000 --> 00:10:23.001
+Jembatan antara program Jadi jika saya bekerja di spreadsheet misalnya, saya dapat
+
+132
+00:10:23.001 --> 00:10:29.000
+Tangkap informasi tersebut ke Tornado. Saya bisa mengedit informasi ini sehingga
+
+133
+00:10:29.000 --> 00:10:31.001
+itu tidak terlihat sama sekali seperti spreadsheet dan kemudian saya dapat memasukkannya ke dalam laporan tentang
+
+134
+00:10:31.001 --> 00:10:37.001
+Kata saya prosesor. Aku hanya bisa. Jadi halaman itu menjadi Tornado kepingan kertas
+
+135
+00:10:37.001 --> 00:10:43.000
+yang kemudian dimasukkan ke dalam program lain. Ia juga bekerja dengan orang lain.
+
+136
+00:10:43.000 --> 00:10:48.001
+Pengelolaan informasi pribadi sebagai jembatan dan di sana informasi ada. yang baik.
+
+137
+00:10:49.000 --> 00:10:51.001
+Denise Saya akan meminta Anda untuk mengalihkan keyboard ke Mac sehingga kami dapat mengambil
+
+138
+00:10:51.001 --> 00:10:56.000
+Tanyakan saja kepada Sam. Oh ya biarlah. Ya, jika Anda dapat jenis dump keluar dari sana dan sebagai
+
+139
+00:10:56.000 --> 00:10:59.001
+Anda mengatakan Denise, Tornado adalah penduduk memori. Ya memang itu.
+
+140
+00:10:59.001 --> 00:11:04.000
+Okay, tanyakan Sam, bagaimana akan bertanya Sam berbeda dari apa yang baru saja kita lihat? Tanya saja Sam.
+
+141
+00:11:04.000 --> 00:11:08.001
+bahwa Anda secara eksplisit menggunakannya dan kami belum memiliki pop-up di atasnya dan
+
+142
+00:11:08.001 --> 00:11:10.001
+Biarkan aku hanya menunjukkan kepadamu. Tentu saja
+
+143
+00:11:14.000 --> 00:11:17.000
+Oops, saya pikir saya harus melihat. Oops [...] akan mendapatkan
+
+144
+00:11:17.000 --> 00:11:18.001
+Di direktori yang tepat di mana saya menganggap.
+
+145
+00:11:19.001 --> 00:11:21.000
+dengan tiping. Dini saat dia sedang mengisi
+
+146
+00:11:21.000 --> 00:11:22.001
+Berapa harga untuk sesuatu seperti Tornado?
+
+147
+00:11:23.001 --> 00:11:30.000
+Tornado saat ini dijual pada harga $99.95. Seperti yang kita ketahui, layar pertama yang
+
+148
+00:11:30.000 --> 00:11:33.001
+muncul di sana ia secara otomatis naik ke mode hypertext dan saya hanya
+
+149
+00:11:33.001 --> 00:11:37.000
+Melarikan diri kembali ke menu utama sehingga kita dapat memulai dari beberapa tanah nol. Hanya lari kami
+
+150
+00:11:37.000 --> 00:11:43.000
+Tanyakan saja kepada Sam. Baiklah, Anda dapat membuat file dan menghapusnya dan menukar dari satu
+
+151
+00:11:43.000 --> 00:11:48.001
+kepada yang lain. Anda dapat dalam hal ini di sini demo saya bahwa saya memiliki itu semua di bawah
+
+152
+00:11:48.001 --> 00:11:55.001
+mode hypertext jadi mari kita pergi ke itu dan ini satu setiap baris di sini
+
+153
+00:11:55.001 --> 00:12:00.001
+Efek bertindak seperti item menu dan dengan ini kemudian saya dapat beralih ke yang lain
+
+154
+00:12:00.001 --> 00:12:04.000
+Rekor dalam hal ini. Jadi ia akan mencari pada string lain yang ditekankan dan menemukan
+
+155
+00:12:04.000 --> 00:12:07.001
+dan itu. Cukup dan itu terlihat dalam file saat ini dalam kasus ini untuk setiap kejadian
+
+156
+00:12:07.001 --> 00:12:12.000
+yang bertentangan dan ini hanya beberapa catatan di sini untuk menggambarkan jenis metafora
+
+157
+00:12:12.000 --> 00:12:17.000
+Kami telah datang dengan apa Ask Sam adalah seperti dan visi kami tentang informasi
+
+158
+00:12:17.000 --> 00:12:20.001
+Manajer yang Ini seperti barel file di mana Anda dapat melemparkan barang-barang ke dalam file
+
+159
+00:12:20.001 --> 00:12:25.000
+Barrel, Anda dapat meletakkannya dalam urutan apa pun yang Anda inginkan dan mengambilnya berdasarkan apa pun.
+
+160
+00:12:25.000 --> 00:12:30.000
+di dalamnya dan Anda dapat memperbarui hal-hal di dalam itu. Anda dapat jika Anda memiliki perintah alami
+
+161
+00:12:30.000 --> 00:12:33.001
+apa pun di dalamnya atau perintah eksplisit seperti nama lapangan. Kamu bisa tunjukkan kami
+
+162
+00:12:33.001 --> 00:12:39.000
+Sesuatu yang? Aku pasti akan senang dengan itu. Berikut adalah beberapa perintah alami di sini.
+
+163
+00:12:39.001 --> 00:12:42.001
+Ini adalah catatan yang mungkin Anda telah mengimpor dari kata
+
+164
+00:12:42.001 --> 00:12:44.000
+dari prosesor. Mungkin ini memo.
+
+165
+00:12:45.000 --> 00:12:49.000
+Jadi alami atau dalam hal ini adalah medan tanggal? Perkataan-perkataan yang ada, kata-kata yang ada
+
+166
+00:12:49.000 --> 00:12:54.000
+Kata dari dan Tanya Sam apa pun kata dapat digunakan sebagai nama lapangan dan catatan ini
+
+167
+00:12:54.000 --> 00:13:01.000
+Di sini dengan cara ini akan digunakan kemudian di sini. Ini adalah program kecil
+
+168
+00:13:01.000 --> 00:13:06.000
+yang jenis memo dan apa yang dilakukan itu diambil memo yang sama dan beberapa yang lain
+
+169
+00:13:06.000 --> 00:13:09.001
+yang berada dalam file yang sama dan diselaraskan kembali dan dipilih dan disusun oleh yang terakhir
+
+170
+00:13:09.001 --> 00:13:14.001
+Nama yang Jadi pada dasarnya apa yang dapat Anda lakukan adalah Anda melakukan pencarian teks penuh di sini
+
+171
+00:13:14.001 --> 00:13:18.001
+menyesuaikan kata-kata dan kemudian jadi saya meneka apa yang mereka sebut sideways browse kadang-kadang ketika
+
+172
+00:13:18.001 --> 00:13:22.001
+Anda dapat pergi dari lapangan ke lapangan seperti itu. Sesuai dengan segala sesuatu dalam setiap rekaman
+
+173
+00:13:22.001 --> 00:13:27.001
+adalah permainan yang adil untuk menghubungkan dengan setiap rekaman lainnya di Ask Sam. Itu adalah semulajadi
+
+174
+00:13:27.001 --> 00:13:29.001
+Ada beberapa jenis ikatan intrinsik.
+
+175
+00:13:31.000 --> 00:13:37.000
+Contohnya, di sini adalah program yang memiliki dialog. Saya tertarik jika saya berada di
+
+176
+00:13:37.000 --> 00:13:40.001
+Kata Mike itu akan membawa saya rekaman yang berisi Mike atau setiap
+
+177
+00:13:40.001 --> 00:13:42.000
+disimpan dalam file yang mencakup itu.
+
+178
+00:13:44.000 --> 00:13:48.001
+Anda juga dapat menghasilkan laporan bisnis dengan laporan bisnis numerik dengan
+
+179
+00:13:48.001 --> 00:13:53.000
+kontrol breaks dan judul halaman yang sama dan semua dan apa saja yang sekarang Anda letakkan pada
+
+180
+00:13:53.000 --> 00:13:57.000
+layar yang dapat Anda output ke disk atau printer juga tentu saja. Dalam penggunaan Anda dari
+
+181
+00:13:57.000 --> 00:14:00.001
+hypertext di sini Mac banyak orang sudah tahu dengan hypercard sekarang di
+
+182
+00:14:00.001 --> 00:14:04.000
+dan lingkungan Macintosh. Apakah ini akan menjadi cara yang serupa dengan jenis penyebaran
+
+183
+00:14:04.000 --> 00:14:08.000
+Di mana-mana dimensi dalam informasi? Selain dari fakta di hypercard Anda harus
+
+184
+00:14:08.000 --> 00:14:12.001
+memiliki tautan keras dengan jelas menyatakan tautan dan dalam Ask Sam semuanya adalah tautan.
+
+185
+00:14:14.001 --> 00:14:21.000
+Berikut adalah pandangan lain yang kita dapat menggunakan Ask Sam dalam hypertext. Catatan ini
+
+186
+00:14:21.000 --> 00:14:27.001
+dengan cara ini adalah nama file dan yang hanya ditukar ke file yang berbeda dan file ini
+
+187
+00:14:27.001 --> 00:14:31.000
+memiliki beberapa pertanyaan dan jawaban yang saya pikir Anda mungkin tertarik untuk mengetahui
+
+188
+00:14:31.000 --> 00:14:38.000
+Dan aku tidak akan bersedih melewati semua ini tetapi bagaimanapun kamu dapat mengekalkan mereka dan
+
+189
+00:14:38.000 --> 00:14:42.000
+Itu hanya menunjukkan kepada Anda satu cara untuk mendapatkan itu keluar. Berikut adalah cara yang berbeda dari
+
+190
+00:14:42.000 --> 00:14:45.000
+mendapatkan informasi yang sama disusun semula dan diformat di dalamnya. Apakah yang
+
+191
+00:14:45.000 --> 00:14:48.001
+Pertanyaan benar-benar untuk Anda berdua bahwa Anda melakukan apa yang mereka sebut total
+
+192
+00:14:48.001 --> 00:14:53.000
+inversi data dengan kata lain tabel simbol penuh yang memberitahu Anda di mana
+
+193
+00:14:53.000 --> 00:14:57.000
+Apakah setiap kata di depan waktu? Tidak ada prototipe pertama saya yang melakukannya dan saya mengambil
+
+194
+00:14:57.000 --> 00:15:03.001
+itu keluar beberapa tahun yang lalu dan itu adalah pemindaian teks penuh hari ini dan kita dapat mengindeks
+
+195
+00:15:03.001 --> 00:15:08.000
+Sam, tapi sebagian besar itu hanya teks penuh. Tidak diindeks. Denise Mac Terima Kasih
+
+196
+00:15:08.000 --> 00:15:12.000
+banyak sekali. Di puncak pasar PIMS ada sesuatu yang disebut EYES itu sangat
+
+197
+00:15:12.000 --> 00:15:18.001
+harga tapi pengguna mengatakan itu sangat kuat. Wendy Woods memiliki laporan. Untuk 20
+
+198
+00:15:18.001 --> 00:15:22.001
+tahun UC Berkeley Institute for the Study of Social Change telah melakukan
+
+199
+00:15:22.001 --> 00:15:28.000
+penelitian sosial yang penting. Sebagian besar dari 20 tahun penelitian
+
+200
+00:15:28.000 --> 00:15:33.001
+Subjek dari longshoremen hingga kejahatan disimpan pada kartu indeks dan tape audio
+
+201
+00:15:33.001 --> 00:15:37.000
+Bahan-bahan yang hampir tidak dapat diperoleh
+
+202
+00:15:37.000 --> 00:15:38.001
+Informasi dengan cepat dan efektif.
+
+203
+00:15:39.001 --> 00:15:44.000
+Itulah sebabnya komputer menjadi penting. Laporan lapangan, wawancara dan
+
+204
+00:15:44.000 --> 00:15:49.000
+laporan sekarang ditulis dan disimpan di komputer dan peneliti sedang mencari
+
+205
+00:15:49.000 --> 00:15:53.001
+Alat-alat yang akan membantu mereka menganalisis semuanya. Hal yang paling sulit dengan jenis
+
+206
+00:15:53.001 --> 00:15:58.001
+Data teks adalah bahwa itu sangat membosankan. Itu hampir Anda hanya perlu mengembalikan
+
+207
+00:15:58.001 --> 00:16:05.001
+dan reed. EYES spelled I-Z-E adalah salah satu beberapa paket yang sedang dipelajari. mata
+
+208
+00:16:05.001 --> 00:16:10.001
+akan membuat outlines dari berbagai dokumen yang dimasukkan ke dalam database yang menunjukkan
+
+209
+00:16:10.001 --> 00:16:16.000
+frekuensi dengan apa kata kunci muncul tetapi itu tidak akan melampaui gagasan orang yang memiliki
+
+210
+00:16:16.000 --> 00:16:21.001
+yang sudah diputuskan sangat signifikan. Sebuah kelemahan besar bagi mereka yang ingin satu paket untuk
+
+211
+00:16:21.001 --> 00:16:26.000
+Lakukan semua itu. Masalahnya adalah bahwa kita dapat mengatakan dengan baik di sini ini adalah produk yang akan
+
+212
+00:16:26.000 --> 00:16:31.000
+melakukan begitu banyak dan mereka mengatakan oh itu menarik tetapi kemudian mereka mengatakan dengan baik apa yang terjadi
+
+213
+00:16:31.000 --> 00:16:35.001
+Jika saya ingin melakukan ini mereka mengatakan baik di sini adalah produk lain dan banyak orang
+
+214
+00:16:35.001 --> 00:16:40.001
+Tidak ingin mempelajari 10 atau 15 paket yang berbeda. Inilah sebabnya mengapa bagian ini dari UC
+
+215
+00:16:40.001 --> 00:16:45.000
+Berkeley masih berjalan melalui semua manajer informasi pribadi ini melihat
+
+216
+00:16:45.000 --> 00:16:47.000
+Untuk alat yang tepat untuk pekerjaan.
+
+217
+00:16:48.000 --> 00:16:51.001
+Di Berkeley California untuk Computer Chronicles saya Wendy Woods.
+
+218
+00:17:03.000 --> 00:17:07.000
+Dengan kami di studio sekarang adalah John Friend. Dia adalah penulis Grandview dari
+
+219
+00:17:07.000 --> 00:17:10.000
+Symantec dan di samping John adalah Andrew Hammond, Manajer Pemasaran dengan
+
+220
+00:17:10.000 --> 00:17:11.001
+Lotus dan produk mereka tentu saja Agenda.
+
+221
+00:17:12.000 --> 00:17:15.001
+dengan Gary? John kami mendefinisikan pengelolaan informasi pribadi yang sangat baru ini dan kami
+
+222
+00:17:15.001 --> 00:17:21.001
+baru saja melihat dua produk yang mengendalikan catatan pada dasarnya yang terbaik di meja Anda. adalah
+
+223
+00:17:21.001 --> 00:17:24.000
+Apakah ada lebih banyak tentang pengelolaan informasi pribadi daripada itu? Informasi pribadi
+
+224
+00:17:24.000 --> 00:17:29.001
+manajemen adalah kategori besar dan Grandview benar-benar membahas tiga item utama dalam
+
+225
+00:17:29.001 --> 00:17:35.000
+kategori tersebut. Ia berurusan dengan perencanaan, organisasi, dan menulis. Andrew dapat menambahkan
+
+226
+00:17:35.000 --> 00:17:40.000
+Lebih dari itu cerita tentang apa itu PIM? Kami melihat bahwa itu benar-benar memberikan sebuah
+
+227
+00:17:40.000 --> 00:17:43.000
+manfaat dalam hal pengelolaan informasi, mengambil bagian-bagian rahasia
+
+228
+00:17:43.000 --> 00:17:47.000
+informasi yang kita semua kerjakan. Ini adalah email, sticky kuning, sesuatu di dalam
+
+229
+00:17:47.000 --> 00:17:51.000
+Wall Street Journal dan memiliki tempat untuk menyimpan, memanipulasi, dan menganalisis bahwa
+
+230
+00:17:51.000 --> 00:17:56.000
+Informasi yang Okay John, kau bisa tunjukkan kami Grandview? Beritahu kami tentang itu. Pasti
+
+231
+00:17:56.000 --> 00:18:00.000
+Grandview memiliki tiga pandangan utama tentang produk ini. Ini memiliki pandangan outline, kategori
+
+232
+00:18:00.000 --> 00:18:03.001
+pandangan, dan pandangan dokumen dan kita akan mulai dalam pandangan outline di sini. Aku akan ke
+
+233
+00:18:03.001 --> 00:18:07.001
+berpura-pura bahwa saya seorang manajer manufaktur di sebuah pabrik drive dan saya hanya
+
+234
+00:18:07.001 --> 00:18:11.001
+saya mendapatkan Grandview dan saya ingin menggunakannya untuk merancang sebuah pertemuan yang saya miliki, seminggu sekali
+
+235
+00:18:11.001 --> 00:18:17.000
+pertemuan tersebut. Jadi saya memasukkan beberapa item yang saya biasanya membahas dalam
+
+236
+00:18:17.000 --> 00:18:23.000
+pertemuan tersebut. Saya akan membahas jumlah produksi. Saya membahas ide-ide pengurangan biaya.
+
+237
+00:18:24.001 --> 00:18:31.001
+dengan kunci kunci kunci. Bicara tentang kunci kunci kunci. dengan benar. Saya berbicara tentang pengurangan biaya
+
+238
+00:18:31.001 --> 00:18:36.001
+ide dan saya dapat memasukkan beberapa item yang berbeda di sini. Aku akan beralih ke yang lain
+
+239
+00:18:36.001 --> 00:18:38.000
+Di mana saya sudah memasuki beberapa.
+
+240
+00:18:38.001 --> 00:18:42.000
+Jadi ini adalah outline dasar dari apa yang saya ingin membahas dalam pertemuan. Kami akan masuk
+
+241
+00:18:42.000 --> 00:18:46.001
+pertemuan dan kita berjalan melalui masing-masing item ini dan memperluas di atasnya dan menugaskan
+
+242
+00:18:46.001 --> 00:18:48.000
+tanggung jawab untuk berbagai hal.
+
+243
+00:18:48.001 --> 00:18:55.000
+Jadi saya bisa menemukan bahwa produk 1001 membuat 98 persen dari rencana kuartal terakhir dan
+
+244
+00:18:55.000 --> 00:18:58.001
+yang produk 1100 hanya membuat 50% dari rencana suku terakhir dan saya ingin menulis
+
+245
+00:18:58.001 --> 00:19:05.000
+Menurunkan beberapa catatan mengapa ia melakukannya. Mereka memiliki kekurangan bagian yang parah dan Anda bisa pergi
+
+246
+00:19:05.000 --> 00:19:08.001
+Untuk lebih detail seperti itu. Jadi setelah kita melewati setiap item
+
+247
+00:19:08.001 --> 00:19:14.001
+di sini kita mungkin memiliki sesuatu seperti ini di mana untuk setiap item utama yang saya punya
+
+248
+00:19:14.001 --> 00:19:17.001
+Pengiriman, kualitas, produk pengurangan biaya. Kami memiliki banyak detail.
+
+249
+00:19:18.000 --> 00:19:20.001
+Anda masih dalam mode outline. dengan benar. Aku masih dalam outline. Dan Anda telah diubah
+
+250
+00:19:20.001 --> 00:19:25.000
+Keterangan dengan informasi baru. dengan benar. Kami telah menambahkan sejumlah
+
+251
+00:19:25.000 --> 00:19:30.001
+Informasi untuk outline. Oleh karena itu, ini akan menjadi pertemuan yang baik untuk
+
+252
+00:19:30.001 --> 00:19:32.001
+keluar untuk orang-orang di pertemuan dan mereka akan memahami apa tambahan
+
+253
+00:19:32.001 --> 00:19:37.001
+tanggung jawab yang mereka miliki. Selain itu, kita juga bisa melihat kategori ini,
+
+254
+00:19:38.000 --> 00:19:42.000
+satu kunci kita pergi ke kategori pandangan di sini dan sekarang bagaimana kategori ini diatur?
+
+255
+00:19:42.001 --> 00:19:46.001
+Mereka adalah kategori yang ditentukan pengguna. Informasi yang sama yang kami lihat di outline
+
+256
+00:19:46.001 --> 00:19:50.001
+Sebaliknya diatur oleh proyek dan sub-proyek sekarang diatur
+
+257
+00:19:50.001 --> 00:19:54.001
+orang yang bertanggung jawab. Jadi saya bisa memilih kategori yang saya inginkan, pilih orang yang saya mau
+
+258
+00:19:54.001 --> 00:19:59.000
+Dan saya dapat melihat berbagai item yang ditugaskan kepada orang itu. Dan aku bisa
+
+259
+00:19:59.000 --> 00:20:02.001
+Tuliskan laporan untuk masing-masing orang dalam pertemuan di sini. Maka kamu beruntung
+
+260
+00:20:02.001 --> 00:20:06.001
+untuk mengatur kembali informasi dengan kunci siapa orang tersebut terkait dengan
+
+261
+00:20:06.001 --> 00:20:09.001
+dengan item. dengan benar. dengan tepat. Dan itulah kunci untuk kategori pandangan. Apa yang memungkinkan Anda untuk
+
+262
+00:20:09.001 --> 00:20:12.000
+dan melakukan. Dan Anda dapat membuat laporan cetak untuk setiap orang. dan pemandangan yang indah
+
+263
+00:20:12.000 --> 00:20:16.001
+Mendukung beberapa kemampuan cetak yang sangat bagus. Dengan demikian, kategori-kategori lain dapat
+
+264
+00:20:16.001 --> 00:20:20.001
+prioritas yang Anda mungkin telah terhubung di sana, tanggal, dll. dengan benar. Oleh karena itu, bukannya
+
+265
+00:20:20.001 --> 00:20:25.000
+Pertimbangkan dengan tanggung jawab pribadi, kunci pada atau dengan prioritas. Dan ada yang ketiga
+
+266
+00:20:25.000 --> 00:20:29.000
+pandangan yang kau katakan. dengan benar. Pandangan ketiga adalah Pandangan Dokumen. Di mana saja di dalam
+
+267
+00:20:29.000 --> 00:20:32.000
+outline Anda dapat beralih ke pandangan dokumen dan Anda dapat menulis memo dan laporan.
+
+268
+00:20:33.001 --> 00:20:40.000
+Jadi selain hanya mencetak ini di waktu pertemuan, kami dapat mengikuti
+
+269
+00:20:40.000 --> 00:20:43.001
+pertemuan mingguan berikutnya dan menggunakan dukungan jaringan yang dibangun dalam pandangan besar.
+
+270
+00:20:44.001 --> 00:20:47.000
+Orang-orang ini dapat mengakses outline yang sama di sini.
+
+271
+00:20:47.001 --> 00:20:54.001
+Dan sebaliknya, jika Amy memutuskan bahwa bukannya dua minggu itu akan mengambil enam
+
+272
+00:20:54.001 --> 00:20:58.000
+Beberapa minggu, Anda dapat mengubahnya sesuai. Semua yang benar. Jika Anda bisa keluar dari pandangan besar,
+
+273
+00:20:58.001 --> 00:21:02.000
+dengan John? Tentu saja Dan saya ingin memberi Andrew kesempatan untuk menunjukkan kepada kami agenda. Tentu saja Dan sementara
+
+274
+00:21:02.000 --> 00:21:05.001
+Anda sedang menggosok kunci itu, apa pun, bagaimana Anda akan menempatkan pandangan besar? Gary yang
+
+275
+00:21:06.000 --> 00:21:09.000
+Anda menyarankan pada awalnya ini PIMS menggambarkan seluruh kategori
+
+276
+00:21:09.000 --> 00:21:14.000
+dengan software. Di manakah pemandangan besar di rentang itu? Hal ini bertujuan secara khusus untuk
+
+277
+00:21:14.000 --> 00:21:18.001
+Tiga item yang saya sebutkan, dalam perencanaan, organisasi, dan menulis. Dan hari itu
+
+278
+00:21:18.001 --> 00:21:22.000
+Hal-hal sehari-hari yang Anda lakukan dengan mereka. Ok ya. Andrew, di mana agenda ini
+
+279
+00:21:22.000 --> 00:21:28.000
+Spektrum dari PIMS? Kami melihat agenda benar-benar seperti hampir menentukan kategori dalam hal
+
+280
+00:21:28.000 --> 00:21:33.000
+menyediakan lingkungan yang lengkap untuk mengelola informasi. Sejarah agenda,
+
+281
+00:21:33.001 --> 00:21:39.000
+Sangat singkat, pendiri Lotus, Mitch Gopor, jelas, sebenarnya membuat agenda.
+
+282
+00:21:39.001 --> 00:21:45.000
+Dan dia menyadari bahwa dia terlalu sibuk untuk mencapai. Apa yang membedakan agenda
+
+283
+00:21:45.000 --> 00:21:49.001
+adalah fakta bahwa ia memiliki lingkungan yang lengkap yang dapat disesuaikan dan
+
+284
+00:21:49.001 --> 00:21:51.001
+fleksibel untuk memenuhi hampir setiap kebutuhan
+
+285
+00:21:51.001 --> 00:21:53.000
+dalam hal informasi. Nah, mungkin mari kita lihat jika
+
+286
+00:21:53.000 --> 00:21:54.001
+Itu tentang cara terbaik untuk melakukannya. Tentu, mengapa kita tidak pergi dan melakukannya.
+
+287
+00:21:55.001 --> 00:21:59.001
+Ada tiga komponen dasar dari agenda. Item, kategori dan pandangan. Ini adalah
+
+288
+00:21:59.001 --> 00:22:05.001
+Item yang Di balik item dapat ada catatan yang merupakan informasi sandaran yang dapat Anda
+
+289
+00:22:05.001 --> 00:22:09.001
+Saya ingin terikat dengan satu item. Untuk memasukkan item yang saya hanya mulai mencetak,
+
+290
+00:22:10.000 --> 00:22:12.000
+Pilih Bill hari ini.
+
+291
+00:22:15.001 --> 00:22:18.001
+Apa perbedaan dalam ikon di sebelah kiri di sana, Andrew? Aku melihat sedikit musik
+
+292
+00:22:18.001 --> 00:22:22.000
+Tanda-tanda peringatan terhadap notis. Ini menandakan, jika Anda ingin, sebuah catatan.
+
+293
+00:22:23.000 --> 00:22:28.000
+Okay, itu adalah catatan. Ok ya. dengan tepat. Jadi saya benar-benar dapat membuat catatan pada item ini
+
+294
+00:22:28.000 --> 00:22:35.000
+dengan memukul F5, hubungi hari ini, apa pun informasi latar belakang kami
+
+295
+00:22:35.000 --> 00:22:36.001
+ingin ada, dan kemudian akan ada catatan di sana.
+
+296
+00:22:37.001 --> 00:22:42.000
+Catatan itu juga dapat menjadi informasi yang dipindai, file ASCII yang diimpor, atau yang terhubung
+
+297
+00:22:42.000 --> 00:22:45.001
+File eksternal juga. Sekarang kita benar-benar mengatur ini
+
+298
+00:22:45.001 --> 00:22:47.000
+Informasi dengan membuat kategori.
+
+299
+00:22:47.000 --> 00:22:51.000
+Dalam hal ini saya ingin tahu siapa yang ditugaskan masing-masing rencana ini, jadi saya akan membawa
+
+300
+00:22:51.000 --> 00:22:54.000
+mengangkat kategori orang, dan agenda sebenarnya berjalan melalui dan membuat ini
+
+301
+00:22:54.000 --> 00:22:56.000
+Tugas untuk saya secara otomatis.
+
+302
+00:22:57.000 --> 00:23:02.000
+Jika saya masuk dan benar-benar edit... Apakah itu jenis melakukan apa yang baru saja kita lihat Grandview
+
+303
+00:23:02.000 --> 00:23:03.001
+dengan cara tertentu, adalah jenis reorganisasi
+
+304
+00:23:03.001 --> 00:23:05.000
+informasi tentang orang-orang yang terlibat di dalamnya?
+
+305
+00:23:05.001 --> 00:23:12.000
+Pada tahap tertentu, ya. Mari kita katakan, bukannya Liz, saya ingin Tom,
+
+306
+00:23:15.001 --> 00:23:20.000
+Anda melihat agenda itu sebenarnya ditugaskan Tom juga.
+
+307
+00:23:21.000 --> 00:23:23.000
+Tunggu sebentar, bagaimana kamu bisa
+
+308
+00:23:23.000 --> 00:23:24.001
+Tom sebagai bagian dari tugas hanya dengan memindai itu?
+
+309
+00:23:24.001 --> 00:23:26.001
+Dengan menerjemahkan teks yang sebenarnya, setelah
+
+310
+00:23:26.001 --> 00:23:28.000
+Menembak masuk ke dalamnya scan melalui ...
+
+311
+00:23:28.000 --> 00:23:31.001
+Jadi hal-hal yang mungkin Anda bisa memiliki di bawah kategori orang akan Liz,
+
+312
+00:23:32.000 --> 00:23:33.001
+Tom, dan sebagainya, dan kemudian ia mengangkatnya dari garis.
+
+313
+00:23:33.001 --> 00:23:37.001
+Atau istilah apa pun yang ingin Anda gunakan, harus menggunakan kategori di sini. Kami juga akan
+
+314
+00:23:37.001 --> 00:23:42.000
+Selalu ingin tahu kapan rencana nyata ini akan dipenuhi, jadi kami akan membawa
+
+315
+00:23:42.000 --> 00:23:43.001
+A ketika kolom.
+
+316
+00:23:44.001 --> 00:23:47.000
+Dan sekali lagi, agenda adalah memindai melalui teks, mengambil
+
+317
+00:23:47.000 --> 00:23:48.001
+pada hari Kamis dan menetapkan tanggal kalendar.
+
+318
+00:23:49.001 --> 00:23:56.000
+Sekali lagi saya bisa mengedit ini, mari kita katakan selanjutnya
+
+319
+00:23:56.000 --> 00:24:00.001
+Minggu, dan tanggal akan berubah.
+
+320
+00:24:01.001 --> 00:24:04.001
+Sekarang hal terakhir yang saya sebutkan, item, kategori, dan pandangan. Item, yang
+
+321
+00:24:04.001 --> 00:24:06.001
+Informasi yang disimpan, kategori, bagaimana kami mengaturnya.
+
+322
+00:24:07.000 --> 00:24:12.000
+Akhirnya, bagaimana kita benar-benar melihat informasi, dalam hal ini adalah pandangan. dan di sini
+
+323
+00:24:12.000 --> 00:24:16.001
+Kami memiliki informasi yang sama, slice dan diced, jika Anda mau, oleh Liz, Bob, dan Jim.
+
+324
+00:24:17.001 --> 00:24:21.000
+Kami sedang mencari tahu siapa yang bertanggung jawab atas informasi ini. Biarkan aku
+
+325
+00:24:21.000 --> 00:24:23.000
+Sebenarnya bergerak ke file yang berbeda sekarang.
+
+326
+00:24:23.001 --> 00:24:27.000
+Ini akan menunjukkan kepada kami bagaimana agenda benar-benar membantu Anda membuat keputusan. Dalam hal ini kita
+
+327
+00:24:27.000 --> 00:24:32.000
+Saya memiliki daftar properti dari Los Angeles Times, dan saya ingin
+
+328
+00:24:32.000 --> 00:24:33.001
+untuk menemukan rumah impian Anda, jadi untuk berbicara.
+
+329
+00:24:33.001 --> 00:24:40.001
+Jadi kita akan membawa dua kategori yang berbeda, mari kita katakan VISTA atau pandangan, dan
+
+330
+00:24:40.001 --> 00:24:43.000
+agenda memindai melalui dan membawa apa pandangan itu.
+
+331
+00:24:44.000 --> 00:24:50.000
+Dan saya akan membawa berapa banyak kamar tidur yang ada, itu membuat pertandingan di atasnya.
+
+332
+00:24:50.000 --> 00:24:56.001
+Kami kemudian akan menggunakan kemampuan screening untuk pergi ke kamar tidur dan ke laut.
+
+333
+00:25:00.001 --> 00:25:04.001
+Dan agenda mengambil kira-kira 30 sifat dan berdasarkan kriteria itu, memberikan kita
+
+334
+00:25:04.001 --> 00:25:06.000
+Mereka berdua yang ingin keluar dan melihat.
+
+335
+00:25:07.001 --> 00:25:12.000
+Keduanya adalah contoh berbagai jenis aplikasi agenda. Orang menggunakan agenda
+
+336
+00:25:12.000 --> 00:25:16.000
+cukup sedikit dalam orang dan proyek tracking jenis aplikasi, tetapi juga
+
+337
+00:25:16.000 --> 00:25:17.001
+Ada keputusan pemodelan aplikasi.
+
+338
+00:25:18.000 --> 00:25:22.000
+Dan salah satu area yang paling menarik yang telah kita lihat di masa lalu, seperti
+
+339
+00:25:22.000 --> 00:25:27.000
+teknologi portabel turun menjadi semakin kompak dan lebih kecil,
+
+340
+00:25:27.000 --> 00:25:29.000
+menggabungkan laptop atau agenda portabel menjadi
+
+341
+00:25:29.000 --> 00:25:31.000
+Alat manajemen yang bagus juga.
+
+342
+00:25:31.000 --> 00:25:33.001
+Di manakah kita akhirnya dan dengan cepat
+
+343
+00:25:33.001 --> 00:25:35.000
+harga ? Di manakah agenda Grandview, John?
+
+344
+00:25:35.001 --> 00:25:39.001
+Grandview saat ini bernilai 2,95 USD. Dan Los Agendas pada $ 3.95 single copy retail.
+
+345
+00:25:39.001 --> 00:25:42.000
+Okay, saya pikir kita tahu sedikit lebih banyak tentang PIMS, tuan-tuan. Terima kasih banyak.
+
+346
+00:25:42.001 --> 00:25:45.001
+Inilah pandangan kami tentang Software Manajemen Informasi Pribadi. Tetap tertutup sekarang
+
+347
+00:25:45.001 --> 00:25:47.000
+berita komputer minggu ini.
+
+348
+00:25:58.000 --> 00:26:03.000
+Dalam File Akses Random minggu ini, itu adalah Macworld Expo Time di San Francisco
+
+349
+00:26:03.000 --> 00:26:05.001
+Minggu lalu sebagai produk Macintosh terbaru telah diumumkan.
+
+350
+00:26:06.000 --> 00:26:10.001
+Di antara mereka, printer laser baru dari NEC yang memiliki Atlas berbasis 68020
+
+351
+00:26:10.001 --> 00:26:13.001
+Controller dari Adobe yang menggandakan kecepatan transmisi.
+
+352
+00:26:13.001 --> 00:26:18.000
+Printer ini juga dapat meniru HP LaserJet 2. Ini datang dengan 4 megabytes RAM.
+
+353
+00:26:19.000 --> 00:26:23.000
+Digital Vision mengumumkan Computer Eyes, digitizer grafis untuk Mac yang
+
+354
+00:26:23.000 --> 00:26:27.000
+menyediakan 256 level kelabu dengan biaya hanya $250.
+
+355
+00:26:27.001 --> 00:26:32.000
+Produk kompetitif telah dihargai lebih dari $ 1.000. Pengetahuan set mengumumkan a
+
+356
+00:26:32.000 --> 00:26:36.001
+Macintosh versi baru dari Knowledge Retrieval System, atau KRS, untuk digunakan di
+
+357
+00:26:36.001 --> 00:26:38.000
+Mendapatkan data dari CD-ROM.
+
+358
+00:26:38.000 --> 00:26:43.001
+Produk ini memungkinkan Anda untuk berbagi data CD-ROM secara transparan antara Macintosh, MS-DOS dan
+
+359
+00:26:43.001 --> 00:26:48.000
+dengan sistem Unix. Knowledge Set juga merilis HyperKRS, yang memungkinkan Anda mencari dan
+
+360
+00:26:48.000 --> 00:26:51.000
+Dapatkan stok HyperCard dari CD-ROM.
+
+361
+00:26:51.001 --> 00:26:56.001
+Dan Banyan Systems mengumumkan sistem email Mac PC baru yang memungkinkan Mac
+
+362
+00:26:56.001 --> 00:27:00.001
+dan MS-DOS mesin perdagangan email melalui Vines multi-user sistem operasi.
+
+363
+00:27:01.000 --> 00:27:03.001
+Kami akan memiliki acara khusus yang didedikasikan untuk Macworld Expo
+
+364
+00:27:03.001 --> 00:27:05.001
+akan muncul dalam beberapa minggu saja.
+
+365
+00:27:05.001 --> 00:27:09.001
+Digital Equipment Corporation telah mengungkapkan rangkaian komputer desktop baru,
+
+366
+00:27:10.000 --> 00:27:15.000
+Termasuk 3 PC MS-DOS menggunakan chipset Intel 286 dan 386.
+
+367
+00:27:15.001 --> 00:27:20.000
+Digital juga mengumumkan stasiun kerja baru Vax dan dua stasius kerja berbasis risiko baru
+
+368
+00:27:20.000 --> 00:27:23.001
+dirancang untuk bersaing dengan stasiun kerja berisiko dari Sun Microsystems.
+
+369
+00:27:24.000 --> 00:27:26.001
+Mesin deck dilaporkan lebih cepat dan
+
+370
+00:27:26.001 --> 00:27:28.001
+Lebih murah dari produk Sun yang kompetitif.
+
+371
+00:27:28.001 --> 00:27:33.000
+Sun juga diserang dari sisi lain saat Soulborne Computers mengumumkan sebuah
+
+372
+00:27:33.000 --> 00:27:36.001
+Klon dari stasiun kerja Sun 4 berdasarkan CPU Spark.
+
+373
+00:27:38.000 --> 00:27:41.000
+Open Software Foundation telah mengumumkan
+
+374
+00:27:41.000 --> 00:27:42.001
+Interface pengguna grafik untuk Unix.
+
+375
+00:27:43.000 --> 00:27:48.000
+Ini disebut Motif dan menyediakan antarmuka jenis MS-DOS standar untuk sistem
+
+376
+00:27:48.000 --> 00:27:50.000
+Menggunakan OSF versi Unix.
+
+377
+00:27:50.000 --> 00:27:55.000
+Hewlett-Packard sedang memecahkan laptop Vectra lama dan menurunkan harga
+
+378
+00:27:55.000 --> 00:27:59.001
+yang ketiga karena ia memperkenalkan laptop LS12 baru, yang dilaporkan akan menjadi
+
+379
+00:27:59.001 --> 00:28:02.000
+Salah satunya adalah Zenith Super Sport 286.
+
+380
+00:28:02.001 --> 00:28:05.001
+HP juga memperkenalkan dua desktop baru 386.
+
+381
+00:28:06.000 --> 00:28:09.001
+Akhirnya, jika Anda telah melihat kamus komputer yang baru dan
+
+382
+00:28:09.001 --> 00:28:11.001
+Perawan, jangan beli satu.
+
+383
+00:28:12.000 --> 00:28:13.001
+Ada versi baru yang keluar dari percakapan itu.
+
+384
+00:28:13.001 --> 00:28:18.001
+Franklin Language Master 4000 memiliki kamus 83.000 kata.
+
+385
+00:28:19.000 --> 00:28:21.000
+Menulis dalam satu kata dan itu tidak hanya memeriksa penulisan,
+
+386
+00:28:21.001 --> 00:28:23.000
+Tetapi ia mengucapkan firman itu untukmu.
+
+387
+00:28:23.001 --> 00:28:27.000
+Ini adalah penggunaan konsumen pertama yang murah dari teks Berkeley Speech Technology
+
+388
+00:28:27.000 --> 00:28:29.000
+Sistem Konversi Perkataan.
+
+389
+00:28:29.000 --> 00:28:32.000
+The Franklin Language Master akan dijual untuk kurang dari $ 300.
+
+390
+00:28:33.000 --> 00:28:35.001
+Ini adalah akses rawak minggu ini. Saya adalah Cynthia Steele.
+
+391
+00:28:43.001 --> 00:28:46.000
+BIX adalah pertukaran informasi byte.
+
+392
+00:28:46.001 --> 00:28:51.001
+Dalam pencetakan dan online, Byte dan BIX melayani profesional komputer di seluruh dunia dengan
+
+393
+00:28:51.001 --> 00:28:55.000
+Informasi terperinci tentang perangkat keras, perangkat lunak, dan teknologi baru.
+
+394
+00:28:56.001 --> 00:29:02.001
+Untuk transcript dari Computer Chronicles minggu ini, kirim $4 ke PTV Publications,
+
+395
+00:29:03.000 --> 00:29:07.001
+Pejabat Pos 701, Kent, Ohio 44240.
+
+396
+00:29:08.001 --> 00:29:10.000
+Silakan jelaskan tanggal program.
+
+397
+00:29:13.001 --> 00:29:26.001
+Sampaikan terima kasih

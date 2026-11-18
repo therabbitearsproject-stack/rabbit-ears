@@ -1,0 +1,1137 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:18.000
+[...]
+
+2
+00:00:38.001 --> 00:00:44.001
+Micro Focus, créateur d’outils de programmation visuelle pour le développement de logiciels, est
+
+3
+00:00:44.001 --> 00:00:50.000
+heureux de fournir un financement majeur pour les Chroniques informatiques, l&#x27;histoire
+
+4
+00:00:50.000 --> 00:00:52.000
+de cette évolution continue.
+
+5
+00:01:00.000 --> 00:01:03.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay, et je suis assis pour Gary
+
+6
+00:01:03.001 --> 00:01:07.001
+Cette semaine, c’est Herb Lutner. Nous parlons des imprimantes aujourd’hui.
+
+7
+00:01:07.001 --> 00:01:10.001
+programme, et je pense que la plupart des utilisateurs d&#x27;ordinateurs ont trouvé qu&#x27;un ordinateur seul est vraiment
+
+8
+00:01:10.001 --> 00:01:15.000
+ne vous fait pas très bien sauf si vous avez un appareil de sortie sur lequel vous pouvez
+
+9
+00:01:15.000 --> 00:01:19.001
+Économisez les données, les graphiques, les listes de programme sur un bon morceau de papier ancien.
+
+10
+00:01:20.000 --> 00:01:23.001
+Maintenant, Herb, il semble que la technologie d&#x27;imprimante soit derrière l&#x27;ordinateur
+
+11
+00:01:23.001 --> 00:01:28.000
+La technologie en général. L&#x27;imprimante est toujours la composante la plus lente du système.
+
+12
+00:01:28.000 --> 00:01:31.001
+Le prix n&#x27;a pas vraiment baissé autant, et c&#x27;est souvent la première partie de la
+
+13
+00:01:31.001 --> 00:01:36.000
+système à briser. Pourquoi c’est ça ? Je pense, Stuart, la réponse à cela est la
+
+14
+00:01:36.000 --> 00:01:41.000
+Il n&#x27;y a pas eu d&#x27;échecs et de composants mécaniques de
+
+15
+00:01:41.000 --> 00:01:45.001
+Les imprimantes, qu’il y a eu les zones électroniques. Je crois que les deux
+
+16
+00:01:45.001 --> 00:01:51.000
+Les utilisateurs et les fabricants sont également bien conscients de cela et tentent de devenir
+
+17
+00:01:51.000 --> 00:01:56.000
+moins dépendant du fonctionnement purement mécanique des imprimantes et essayant de
+
+18
+00:01:56.000 --> 00:02:01.000
+développer des composants électroniques contrôlés, des exemples dont nous aurons sur notre
+
+19
+00:02:01.000 --> 00:02:05.001
+montre aujourd&#x27;hui, l&#x27;imprimante d&#x27;encre et la imprimante laser, au lieu de mécanique
+
+20
+00:02:05.001 --> 00:02:10.001
+Les technologies d’impact. Ok, avant de regarder la dernière fois dans l&#x27;imprimante
+
+21
+00:02:10.001 --> 00:02:17.001
+technologie, nous allons examiner brièvement l&#x27;histoire de la technologie d&#x27;imprimante. Quand Charles
+
+22
+00:02:17.001 --> 00:02:22.000
+Hollerith introduit sa machine de censure en 1890, elle avait une importante
+
+23
+00:02:22.000 --> 00:02:26.001
+la tâche, de recueillir et de tabuler de grands nombres plus efficacement que les humains
+
+24
+00:02:26.001 --> 00:02:31.000
+et remplacé. Comme d&#x27;autres ordinateurs prématurés, sa mémoire électromécanique était limitée,
+
+25
+00:02:31.001 --> 00:02:36.001
+et l&#x27;impression des informations stockées était restreinte au calcul final. comme
+
+26
+00:02:36.001 --> 00:02:40.001
+Les ordinateurs sont devenus moins mécaniques et plus électroniques, les informations recueillies
+
+27
+00:02:40.001 --> 00:02:45.000
+Il devient plus flexible. Une fois codé de manière magnétique sur un rouleau de tape, les données pouvaient
+
+28
+00:02:45.000 --> 00:02:50.001
+modifier ou supprimer immédiatement, et le média d&#x27;enregistrement est utilisé à nouveau. imprimé
+
+29
+00:02:50.001 --> 00:02:55.001
+l&#x27;information ou la copie dure n&#x27;était pas nécessaire tant que les données n&#x27;étaient utilisées que dans le cadre du
+
+30
+00:02:55.001 --> 00:03:00.001
+Les fonctions de la machine. La collecte d&#x27;informations devient encore plus périssable lorsque
+
+31
+00:03:00.001 --> 00:03:05.000
+Les terminaux d&#x27;affichage vidéo sont devenus standard, reproduisant le texte, les graphiques, et même
+
+32
+00:03:05.000 --> 00:03:09.001
+Imiter les environs physiques d’un lieu de travail. Aujourd’hui, les ordinateurs
+
+33
+00:03:09.001 --> 00:03:14.000
+peut avoir réduit la nécessité de stocker des informations écrites, une vue rapide sur la
+
+34
+00:03:14.000 --> 00:03:18.001
+Un bureau typique révèle que l’un des périphériques les plus courants est ironiquement
+
+35
+00:03:18.001 --> 00:03:23.001
+La imprimante. Les imprimantes d&#x27;impact populaires comme cette roue daisy fonctionnent encore beaucoup comme une
+
+36
+00:03:23.001 --> 00:03:28.001
+typeur, mais avec moins de pièces en mouvement et beaucoup plus de vitesse. Bien que les progrès
+
+37
+00:03:28.001 --> 00:03:32.001
+dans la technologie d&#x27;imprimante n&#x27;ont pas cohérent avec les progrès réalisés sur le côté électronique,
+
+38
+00:03:33.000 --> 00:03:37.000
+la tendance loin de la complexité mécanique a amené le papier et l&#x27;encre à
+
+39
+00:03:37.000 --> 00:03:42.000
+Nouveau niveau de sophistication. La recherche se concentre sur les imprimantes non-impact
+
+40
+00:03:42.000 --> 00:03:46.000
+utilisant la chaleur, l&#x27;électricité, la configuration de type photo, ou même les laser qui
+
+41
+00:03:46.000 --> 00:03:48.000
+Faire brûler les personnages dans le papier.
+
+42
+00:03:57.001 --> 00:04:00.001
+Plus tard, nous allons regarder l&#x27;avant-garde de la imprimante
+
+43
+00:04:00.001 --> 00:04:04.001
+Les imprimantes laser sont actuellement développées par Xerox. Tout d’abord, nous voulons
+
+44
+00:04:04.001 --> 00:04:07.001
+Parlons cependant des types d&#x27;imprimantes qui sont disponibles pour la plupart des ordinateurs
+
+45
+00:04:07.001 --> 00:04:11.001
+utilisateurs . Et avec nous à faire ce sont deux gentils de la Division Diablo Printer
+
+46
+00:04:11.001 --> 00:04:15.001
+à Xerox. Nous avons Steve Ray, qui est un ingénieur de systèmes avec Diablo, et Paul
+
+47
+00:04:15.001 --> 00:04:18.001
+Shapiro, qui est le gestionnaire de la planification des produits. Les herbes ?
+
+48
+00:04:19.001 --> 00:04:24.001
+Vous pourriez peut-être nous faire commencer en prenant les différents chiffres et
+
+49
+00:04:24.001 --> 00:04:27.001
+différents types d&#x27;imprimantes qui sont disponibles aujourd&#x27;hui et le type de catégorie
+
+50
+00:04:27.001 --> 00:04:31.001
+Ils sont pour nous afin que nous sachions de quoi nous parlons. Ok, bien, la plupart du temps là
+
+51
+00:04:31.001 --> 00:04:36.000
+Vous pouvez classifier les imprimantes comme des technologies non-impact ou impact. et
+
+52
+00:04:36.000 --> 00:04:41.001
+Dans chacun d&#x27;eux, vous pourriez les semi-classifier comme quel type de technologies
+
+53
+00:04:41.001 --> 00:04:46.000
+Ils utilisent pour mettre des marques sur le papier. Par exemple, il y a une matrice dans l&#x27;impact et
+
+54
+00:04:46.000 --> 00:04:50.001
+Injection à l’intérieur de non-impact. Dans ce contexte, il y a différents rangs de performance de coûts,
+
+55
+00:04:51.000 --> 00:04:54.000
+Et puis, bien sûr, vous devriez toujours tenir compte de la qualité de l&#x27;impression, qui
+
+56
+00:04:54.000 --> 00:04:59.001
+Il y a une densité spot. Comment un utilisateur tente de déterminer quel imprimant est correct de
+
+57
+00:04:59.001 --> 00:05:02.001
+à lui ? Et nous avons trois imprimantes assis ici, et cela ne commence même pas à
+
+58
+00:05:02.001 --> 00:05:07.000
+Il représente la variété là-bas. Comment faire une détermination sur ce qui
+
+59
+00:05:07.000 --> 00:05:09.000
+Une imprimante doit-elle être achetée par un utilisateur particulier ? Et Steve ?
+
+60
+00:05:10.000 --> 00:05:13.001
+Eh bien, je pense que ce que vous aimeriez faire est, avec l&#x27;explosion des PC, le
+
+61
+00:05:13.001 --> 00:05:18.001
+les ordinateurs personnels sur le marché aujourd&#x27;hui, catégorisez-les comme si vous voulez avoir
+
+62
+00:05:18.001 --> 00:05:23.000
+un type d&#x27;impression d&#x27;impact, une copie très dure qui est bonne pour les lettres et les courriers ou
+
+63
+00:05:23.000 --> 00:05:26.000
+Ce genre de chose. Et puis, bien sûr, pour une sortie très rapide, vous pourriez
+
+64
+00:05:26.000 --> 00:05:30.001
+vouloir entrer dans une technologie de type thermique, qui est le transfert de la chaleur au plat
+
+65
+00:05:30.001 --> 00:05:34.001
+du papier. Et puis bien sûr, si vous voulez vraiment aller, avec toutes les couleurs
+
+66
+00:05:34.001 --> 00:05:38.001
+La production que les gens ont maintenant, vous allez pour un incet de couleur. Et ici nous avons
+
+67
+00:05:38.001 --> 00:05:40.000
+Un type d&#x27;encre de trois couleurs aujourd&#x27;hui.
+
+68
+00:05:40.001 --> 00:05:45.001
+Comment dire le premier niveau, dire, je choisis entre un impact de la matrice de point
+
+69
+00:05:45.001 --> 00:05:51.000
+imprimante et imprimante d’impact de roue. Comment je fais ma détermination, dis-je,
+
+70
+00:05:51.000 --> 00:05:52.001
+Choisir entre ces deux ?
+
+71
+00:05:53.001 --> 00:05:57.000
+Eh bien, cela dépend de la qualité de la production que vous recherchez dans un
+
+72
+00:05:57.000 --> 00:06:02.000
+un produit ainsi qu’une sorte de vitesse de production. Si j’étais, par exemple, à la recherche
+
+73
+00:06:02.000 --> 00:06:06.000
+caractères entièrement formés, une lettre de qualité de production, je graviterai vers un
+
+74
+00:06:06.000 --> 00:06:10.000
+imprimante à roue daisy, qui a tendance à vous donner la meilleure qualité possible. Si vous êtes
+
+75
+00:06:10.000 --> 00:06:14.000
+chercher un type de sortie très rapide avec moins que la qualité de la lettre appelé
+
+76
+00:06:14.000 --> 00:06:17.001
+qualité de la correspondance ou de la qualité du dessin, une imprimante de matrix de point
+
+77
+00:06:17.001 --> 00:06:19.000
+Peut-être que c’est la voie à aller.
+
+78
+00:06:20.000 --> 00:06:22.000
+Où s’agit-il de l’imprimante thermique ?
+
+79
+00:06:23.000 --> 00:06:27.001
+Je dirais pour une production très haute vitesse, notre imprimante thermique ici que nous avons aujourd&#x27;hui
+
+80
+00:06:27.001 --> 00:06:33.001
+fonctionne à six pages par minute, typiquement, ce qui est assez rapide par rapport à, dit-on, une
+
+81
+00:06:33.001 --> 00:06:37.001
+La roue daisy, qui serait plus lente, peut-être une page, deux pages par minute. Et puis
+
+82
+00:06:37.001 --> 00:06:41.000
+Pour l&#x27;encre, nous courons encore plus lentement, mais bien sûr
+
+83
+00:06:41.000 --> 00:06:42.001
+Nous travaillons avec la couleur dans ce cas.
+
+84
+00:06:43.001 --> 00:06:47.001
+Peut-être que nous pourrions démontrer au moins les deux premiers que vous avez au sommet là-bas,
+
+85
+00:06:47.001 --> 00:06:49.000
+Steve, parce qu&#x27;il serait intéressant d&#x27;entendre cela, le
+
+86
+00:06:49.000 --> 00:06:51.000
+Comparaison de vitesse dont vous parlez.
+
+87
+00:06:51.000 --> 00:06:51.001
+[...]
+
+88
+00:06:51.001 --> 00:06:55.001
+Peut-être que vous pourriez brûler votre roue daisy et voir, numéro un, combien
+
+89
+00:06:55.001 --> 00:06:58.000
+Le bruit le fait et le numéro deux, combien il va vite.
+
+90
+00:06:58.000 --> 00:06:58.000
+OK !
+
+91
+00:06:59.001 --> 00:07:01.001
+Et peut-être que vous pouvez nous parler à travers cela comme vous le faites.
+
+92
+00:07:02.000 --> 00:07:07.000
+Bien sûr, montrer ici aujourd&#x27;hui est une roue daisy qui est sortie sur le marché
+
+93
+00:07:07.000 --> 00:07:13.000
+de nombreuses années au début des années 70. Il a été initialement introduit par Diablo Systems, comme
+
+94
+00:07:13.000 --> 00:07:19.000
+Une question de fait. Ce que nous avons est une roue d&#x27;impression de caractère ici avec 192 entièrement
+
+95
+00:07:19.000 --> 00:07:23.001
+les caractères formés sur elle afin que vous puissiez faire une notation scientifique. Et nous avons aussi
+
+96
+00:07:23.001 --> 00:07:28.000
+d&#x27;autres roues d&#x27;impression d&#x27;application pour un marché juridique ou en fait même se déplacer,
+
+97
+00:07:28.000 --> 00:07:32.001
+Un marché multi-purpose où vous voulez faire une sorte de type européen
+
+98
+00:07:32.001 --> 00:07:37.001
+les applications. Avec une seule roue d&#x27;impression, nous pouvons imprimer 33 langues européennes occidentales
+
+99
+00:07:37.001 --> 00:07:41.001
+avec ne jamais changer cet élément d&#x27;impression, et c&#x27;est dans un caractère entièrement formé.
+
+100
+00:07:43.000 --> 00:07:47.001
+Nous voyons deux tendances dans la technologie d&#x27;impression de roues daisy. La première est de
+
+101
+00:07:47.001 --> 00:07:53.000
+Plus grand nombre de caractères par roue d&#x27;impression. Il y en a 192. Nous voyons aussi
+
+102
+00:07:53.000 --> 00:07:54.001
+La croissance de l’accessorisation.
+
+103
+00:07:54.001 --> 00:07:58.000
+Vous voyez en fait un double bin électronique. C’est une très grande traversée
+
+104
+00:07:58.000 --> 00:08:01.001
+Une tendance orientée vers le marché pour augmenter le montant
+
+105
+00:08:01.001 --> 00:08:03.000
+de l’écoulement pour n’importe quelle durée.
+
+106
+00:08:04.001 --> 00:08:07.001
+Peut-être que nous pouvons regarder votre bruit thermique. Je pense que tout le monde sait combien de bruit
+
+107
+00:08:07.001 --> 00:08:10.001
+la roue daisy fait, qui est un facteur, je suppose, si vous êtes
+
+108
+00:08:10.001 --> 00:08:12.000
+Essayez de le placer dans un environnement de bureau.
+
+109
+00:08:12.001 --> 00:08:12.001
+et sûre.
+
+110
+00:08:14.000 --> 00:08:16.000
+À quelle vitesse, par la suite, a-t-il fait fonctionner cette roue daisy ?
+
+111
+00:08:16.000 --> 00:08:19.001
+Environ 40 caractères par seconde est ce que nous pouvons spécifier pour ce que
+
+112
+00:08:19.001 --> 00:08:21.001
+Appelez un texte AAA.
+
+113
+00:08:22.001 --> 00:08:29.001
+L&#x27;imprimante thermique est beaucoup plus calme, 55 dVA. En ce qui concerne les coûts, il serait
+
+114
+00:08:29.001 --> 00:08:32.001
+Plus cher, bien sûr, parce que vous obtenez cette vitesse supplémentaire.
+
+115
+00:08:35.001 --> 00:08:41.000
+dans le domaine de la performance des coûts, la machine de transfert thermique, la
+
+116
+00:08:41.000 --> 00:08:46.000
+Si vous voyez l&#x27;impression ici, elle fonctionne à environ six pages par minute au contraire de
+
+117
+00:08:46.000 --> 00:08:50.001
+Deux, et cependant le prix n&#x27;est que environ deux fois le prix d&#x27;une imprimante à rouleau. dans
+
+118
+00:08:50.001 --> 00:08:55.000
+termes de points par pouce, la machine de transfert thermique est environ un peu moins
+
+119
+00:08:55.000 --> 00:08:58.001
+plus dense qu&#x27;une roue daisy, qui fonctionne à environ 450 points par pouce, contrairement à
+
+120
+00:08:58.001 --> 00:09:00.001
+Les 200 points par pouce que vous voyez ici.
+
+121
+00:09:01.000 --> 00:09:05.001
+Je suppose que ce genre de choses nous mène alors dans la nouvelle technologie, la couleur et la
+
+122
+00:09:05.001 --> 00:09:09.001
+La technologie graphique. Comment le marché va-t-il pour ce type d’appareil maintenant ?
+
+123
+00:09:09.001 --> 00:09:14.000
+Comme les graphiques deviennent et la couleur devient une partie plus importante de l&#x27;utilisateur PC, le
+
+124
+00:09:14.000 --> 00:09:17.001
+Le marché a tendance à être gravité beaucoup en termes de graphisme et de couleur,
+
+125
+00:09:18.000 --> 00:09:22.001
+spécialement avec ces processeurs comme Apple, LISA, et ils sont en mesure de
+
+126
+00:09:22.001 --> 00:09:26.000
+graphiques bitmap, c&#x27;est-à-dire, contrôler chacun et chaque bit sur un tube, chacun et chacun
+
+127
+00:09:26.000 --> 00:09:29.001
+Un peu sur une page. La machine de transfert thermique, qui a une grande capacité à
+
+128
+00:09:29.001 --> 00:09:33.000
+graphiques, ainsi que l&#x27;encjet, a une couleur graphique comme un
+
+129
+00:09:33.000 --> 00:09:34.001
+Migration naturelle et naturelle.
+
+130
+00:09:35.001 --> 00:09:40.000
+Comment interférer ces imprimantes avec un ordinateur ? Nous avons un ordinateur et nous
+
+131
+00:09:40.000 --> 00:09:45.000
+Nous voulons savoir que nous pouvons obtenir certaines de ces capacités, mais nous voulons
+
+132
+00:09:45.000 --> 00:09:48.001
+Pour s’assurer que nous achetons quelque chose où le plug s’adapte.
+
+133
+00:09:49.001 --> 00:09:54.000
+Nous l’avons fait des démons. Nous avons essayé de répondre que dans ce que nous appelons tous
+
+134
+00:09:54.000 --> 00:09:57.001
+-pour les interfaces, quelque chose que vous pouvez simplement prendre un ordinateur personnel parce que
+
+135
+00:09:57.001 --> 00:10:01.000
+typiquement votre utilisateur final voudra simplement avoir quelque chose que nous appelons plug et
+
+136
+00:10:01.000 --> 00:10:04.001
+Je joue. Vous prenez votre ordinateur personnel, vous prenez le câble de données et vous le connectez
+
+137
+00:10:04.001 --> 00:10:08.000
+dans . Ce que nous avons fait, c’est que nous pensons que nous sommes assez innovants dans la façon d’être
+
+138
+00:10:08.000 --> 00:10:13.000
+capable de fonctionner des machines parallèles ou sérielles hors d&#x27;un processeur hôte afin qu&#x27;il devienne
+
+139
+00:10:13.000 --> 00:10:15.000
+très, très utilisateur-friendly dans ce cas.
+
+140
+00:10:15.001 --> 00:10:19.001
+Nous n’avons qu’un peu de temps. Peut-être que vous pourriez brûler votre injection
+
+141
+00:10:19.001 --> 00:10:21.000
+L&#x27;imprimante et nous dit aussi comment cela fonctionne.
+
+142
+00:10:22.000 --> 00:10:26.001
+et sûre. Ce que nous spécifions pour cela, bien, ce que nous disons est une série de couleur C
+
+143
+00:10:26.001 --> 00:10:31.001
+L&#x27;incjet est un type de 3 incjet, qui est une baisse sur la demande qui diffère d&#x27;un
+
+144
+00:10:31.001 --> 00:10:36.001
+le flux continu dans le fait que nous sommes en mesure de réellement, comme Paul a mentionné,
+
+145
+00:10:37.001 --> 00:10:41.001
+spécifier où sur le papier vous voulez mettre le point et à travers un réservoir d&#x27;encre
+
+146
+00:10:41.001 --> 00:10:46.000
+à travers un type électronique piezoélectrique signifie squirt une goutte par
+
+147
+00:10:46.000 --> 00:10:47.001
+Nozzle sur le papier.
+
+148
+00:10:48.000 --> 00:10:49.000
+Combien sont rapides les couverts ?
+
+149
+00:10:49.001 --> 00:10:56.000
+Il faut environ 20 caractères par seconde pour un texte. Nous avons la capacité d’avoir
+
+150
+00:10:56.000 --> 00:11:00.001
+Quatre couleurs sur ici pour générer par le mélange, pour produire sept couleurs
+
+151
+00:11:00.001 --> 00:11:04.001
+Et en fait huit si vous incluez le blanc comme une couleur. Très silencieux ! C&#x27;est très beau
+
+152
+00:11:04.001 --> 00:11:06.001
+pour le tenir à côté d&#x27;une seule station de travail.
+
+153
+00:11:07.001 --> 00:11:10.001
+Quel est le facteur de coût de l&#x27;encre par rapport aux autres ?
+
+154
+00:11:11.000 --> 00:11:14.001
+L&#x27;encre est légèrement moins coûteux qu&#x27;une imprimante de caractère entièrement formée ici
+
+155
+00:11:14.001 --> 00:11:19.000
+et je suppose par rapport au transfert thermique, qui est assez franchement cinq fois
+
+156
+00:11:19.000 --> 00:11:22.001
+le passage comme un, ou six fois le passage d&#x27;une injection, c&#x27;est environ un
+
+157
+00:11:22.001 --> 00:11:24.000
+Cinquième coût, un cinquième.
+
+158
+00:11:24.000 --> 00:11:28.000
+Une dernière question. Sur le thermale, vous n&#x27;avez pas quelque chose construit dans les limites
+
+159
+00:11:28.000 --> 00:11:30.001
+Il y a ? Vous avez besoin de papier spécial, vous ne pouvez pas faire plusieurs
+
+160
+00:11:30.001 --> 00:11:33.000
+copies, vous ne pouvez pas utiliser fan fold et ainsi de suite?
+
+161
+00:11:33.000 --> 00:11:37.000
+En fait, ce n’est que partiellement correct. Le thermale est en mesure d&#x27;utiliser un papier obligatoire
+
+162
+00:11:37.000 --> 00:11:42.001
+ici, en fonction du contenu de la rage, vous donnez bien sûr une meilleure qualité et
+
+163
+00:11:42.001 --> 00:11:46.001
+à la production. Fan folded n&#x27;est pas nécessairement, vous pouvez utiliser, comme vous pouvez voir, nous utilisons
+
+164
+00:11:46.001 --> 00:11:51.001
+couper la feuille de nourriture ici, couper le papier de feuille et ainsi la belle chose sur le thermale
+
+165
+00:11:51.001 --> 00:11:55.001
+le transfert, contrairement au thermal direct, avec lequel vous êtes probablement familiers,
+
+166
+00:11:55.001 --> 00:11:59.000
+c&#x27;est qu&#x27;il est en mesure d&#x27;utiliser le papier bond plat, ce qui est très agréable
+
+167
+00:11:59.000 --> 00:12:00.001
+caractéristiques de cette nouvelle technologie.
+
+168
+00:12:01.001 --> 00:12:05.000
+Ok, c&#x27;est une véritable brève introduction, Steve Ray et Paul Shapiro et je vous remercie
+
+169
+00:12:05.000 --> 00:12:08.001
+Vous avez beaucoup pour nous introduire à ces trois types de imprimantes de base et dans
+
+170
+00:12:08.001 --> 00:12:12.000
+Juste un moment que nous allons regarder les derniers dans la technologie d&#x27;impression,
+
+171
+00:12:12.000 --> 00:12:14.000
+L&#x27;impression laser, et ce qui arrive à la suite.
+
+172
+00:12:25.001 --> 00:12:30.001
+Nous avons été informés que l&#x27;une des caractéristiques ou des catégories de
+
+173
+00:12:30.001 --> 00:12:32.000
+Les imprimantes sont leur vitesse.
+
+174
+00:12:33.000 --> 00:12:39.000
+Pour parler d&#x27;une technologie d&#x27;imprimante très rapide, nous avons avec nous Dr. - John Urbach
+
+175
+00:12:39.000 --> 00:12:45.000
+du Centre de recherche Palo Alto de ZROC pour parler des imprimantes laser. John, tu peux
+
+176
+00:12:45.000 --> 00:12:48.000
+Dites-nous en général comment fonctionne une imprimante laser ?
+
+177
+00:12:49.000 --> 00:12:54.001
+Eh bien, une imprimante laser fonctionne d&#x27;une manière qui est un peu analogue à la façon
+
+178
+00:12:54.001 --> 00:13:01.001
+un système de télévision fonctionne, seulement dans ce cas un rayon de lumière finement focalisé
+
+179
+00:13:01.001 --> 00:13:08.001
+Un laser est scanné sur une ligne. Il s’ouvre et s’éteint à un
+
+180
+00:13:08.001 --> 00:13:13.001
+très élevée par ce que nous appelons une technologie de modulateur, et cela peint
+
+181
+00:13:13.001 --> 00:13:19.001
+régions d&#x27;éclairage ou de manque d&#x27;illumination le long de la ligne de scan. Le scan
+
+182
+00:13:19.001 --> 00:13:24.001
+La ligne peut ensuite être répétée de plus en plus et une sorte de lumière-sensible
+
+183
+00:13:24.001 --> 00:13:31.000
+le médium d&#x27;enregistrement est déplacé le long de la ligne de scan, générant ainsi un
+
+184
+00:13:31.000 --> 00:13:37.000
+L&#x27;image de raster à deux dimensions, assez analogue au type que nous avions vu là
+
+185
+00:13:37.000 --> 00:13:38.001
+à partir de l’imprimante d’encre.
+
+186
+00:13:39.001 --> 00:13:44.001
+La différence, cependant, est que cela va beaucoup plus vite et à beaucoup plus haut
+
+187
+00:13:44.001 --> 00:13:47.000
+résolution de ce type d&#x27;imprimante d&#x27;encre.
+
+188
+00:13:47.000 --> 00:13:52.000
+Habituellement, combien de vitesses en termes de lignes ou de pages est une imprimante laser?
+
+189
+00:13:52.000 --> 00:13:57.000
+Oui oui. Nous sommes plus à l&#x27;aise de parler des pages que des lignes parce que le grand
+
+190
+00:13:57.000 --> 00:14:03.000
+La flexibilité dans la taille du caractère que vous avez avec ces imprimantes rend difficile à
+
+191
+00:14:03.000 --> 00:14:09.001
+décrire avec précision en termes de lignes. En termes de pages, elles varient d&#x27;une haute
+
+192
+00:14:09.001 --> 00:14:16.000
+de près de trois pages par seconde en dessous à l&#x27;ordre de 10
+
+193
+00:14:16.000 --> 00:14:20.000
+Pages par minute. Ils couvrent une gamme assez large de vitesses.
+
+194
+00:14:20.001 --> 00:14:23.001
+Oui oui. Vous avez mentionné la flexibilité. Qu’est ce que tu veux dire
+
+195
+00:14:23.001 --> 00:14:25.000
+La flexibilité dans une imprimante laser.
+
+196
+00:14:25.001 --> 00:14:30.001
+Eh bien, car vous pouvez peindre tous les éléments de résolution possibles sur la page
+
+197
+00:14:30.001 --> 00:14:36.001
+tel que vous pouvez dans un système de télévision, vous avez la capacité de créer un
+
+198
+00:14:36.001 --> 00:14:42.000
+une carte entièrement arbitraire de tout type d&#x27;informations d&#x27;image que votre ordinateur peut
+
+199
+00:14:42.000 --> 00:14:47.000
+et générer. La plupart des ordinateurs ne peuvent pas générer des informations de manière suffisamment flexible
+
+200
+00:14:47.000 --> 00:14:51.000
+pour profiter de la capacité d’une imprimante laser. Si l’ordinateur peut
+
+201
+00:14:51.000 --> 00:14:53.001
+générer l&#x27;image, puis dans une partie très large
+
+202
+00:14:53.001 --> 00:14:55.001
+Les limites, l&#x27;imprimante laser peut générer.
+
+203
+00:14:55.001 --> 00:14:57.000
+Tout ce que vous pouvez compter, vous pouvez imprimer.
+
+204
+00:14:57.001 --> 00:14:57.001
+C’est juste ça.
+
+205
+00:14:57.001 --> 00:15:02.000
+Eh bien, vous êtes prêt à nous donner une démonstration d&#x27;une imprimante laser aujourd&#x27;hui. Il serait
+
+206
+00:15:02.000 --> 00:15:04.000
+Vous aimez décrire ce que nous verrons, s&#x27;il vous plaît?
+
+207
+00:15:04.001 --> 00:15:11.000
+Oui oui. Rappelez-vous, le principe de base, que nous pouvons voir sur cette figure,
+
+208
+00:15:11.000 --> 00:15:16.000
+c&#x27;est que la lumière du laser passe par un modulateur qui le transforme sur
+
+209
+00:15:16.000 --> 00:15:22.001
+et à partir très rapidement, et ensuite à travers un système de scan dont, dans notre cas, un
+
+210
+00:15:22.001 --> 00:15:27.001
+La polygone de ce type est le cœur. La polygone routière a une grande
+
+211
+00:15:27.001 --> 00:15:31.000
+le nombre de facettes, les facettes miroirées sur elle, et c&#x27;est ce qui déflète en fait la
+
+212
+00:15:31.000 --> 00:15:37.000
+Lumière pour générer la ligne de scan. Cette ligne de scan est ensuite focalisée par une fixée
+
+213
+00:15:37.000 --> 00:15:42.000
+Système optique sur le photorecepteur. Dans notre cas, le photorecepteur est de
+
+214
+00:15:42.001 --> 00:15:48.001
+Machine de copie xérographique conventionnelle. Au lieu de faire une copie de
+
+215
+00:15:48.001 --> 00:15:53.001
+original, que le photorecepteur enregistre maintenant l&#x27;image qui a été générée par le
+
+216
+00:15:53.001 --> 00:15:58.000
+ordinateur . Dans la manifestation que nous verrons, nous avons une
+
+217
+00:15:58.000 --> 00:16:04.000
+imprimante laser colorée expérimentale. Ils sont relativement là, mais ils sont
+
+218
+00:16:04.000 --> 00:16:06.000
+Une illustration du pouvoir.
+
+219
+00:16:06.000 --> 00:16:07.000
+Ce n’est pas un produit standard dans le [...]
+
+220
+00:16:07.000 --> 00:16:10.001
+Non, il y a de tels produits disponibles, mais ils ne sont pas largement utilisés encore.
+
+221
+00:16:10.001 --> 00:16:13.001
+Maintenant, nous allons voir la manifestation. et Stuart ?
+
+222
+00:16:14.000 --> 00:16:18.001
+C’est Doug Curry, ingénieur de systèmes avec Xerox. Et Doug, vous avez un fichier dans
+
+223
+00:16:18.001 --> 00:16:22.000
+mémoire maintenant d&#x27;un graphique d&#x27;une babou, que nous allons utiliser pour la démonstration
+
+224
+00:16:22.000 --> 00:16:26.001
+Des buts ici. Je veux que vous me montriez quel contrôle vous avez ici sur l&#x27;ordinateur
+
+225
+00:16:26.001 --> 00:16:30.000
+Terminal sur les paramètres que nous allons utiliser pour imprimer ceci.
+
+226
+00:16:30.001 --> 00:16:36.001
+Oui à Stuart. Lorsque nous imprimons un fichier de couleur, nous le faisons en surimposant trois
+
+227
+00:16:36.001 --> 00:16:42.001
+Images de magenta, jaune et cyan. Maintenant, ce que j&#x27;ai fait ici, c&#x27;est que je l&#x27;ai apporté
+
+228
+00:16:42.001 --> 00:16:48.001
+Magenta coupe sur l&#x27;écran afin que nous puissions modifier certaines couleurs
+
+229
+00:16:48.001 --> 00:16:55.000
+Distribution d’intensité. Maintenant, par exemple, je peux prendre la souris et montrer
+
+230
+00:16:55.000 --> 00:17:01.001
+différents endroits sur le boboon et découvrir quelle est l&#x27;intensité du pixel à ce
+
+231
+00:17:01.001 --> 00:17:08.001
+Localisation . Je peux ensuite descendre à la courbe de reproduction de ton et
+
+232
+00:17:08.001 --> 00:17:11.000
+Modifiez-le en utilisant la souris.
+
+233
+00:17:11.001 --> 00:17:16.001
+Par exemple, si je veux un plus de contraste dans ma production, je peux faire un peu
+
+234
+00:17:16.001 --> 00:17:23.000
+fonction non linéaire pour mon dessin et je peux modifier
+
+235
+00:17:23.000 --> 00:17:29.000
+en cliquant sur le bouton de souris et puis je peux montrer le
+
+236
+00:17:29.000 --> 00:17:30.001
+La version modifiée.
+
+237
+00:17:33.001 --> 00:17:38.000
+Et je peux fléchir derrière et derrière pour savoir si c&#x27;est ce que je suis vraiment
+
+238
+00:17:38.000 --> 00:17:42.001
+Je veux. Et ce que je vais faire maintenant, c’est d’imprimer les trois séparés.
+
+239
+00:17:42.001 --> 00:17:47.000
+les couches et puis après cela, je vais imprimer l&#x27;image de couleur complète finale.
+
+240
+00:17:54.000 --> 00:17:58.001
+C’est Tibor Fischli, directeur de la technologie d’imprimante chez Xerox, et Tibor
+
+241
+00:17:58.001 --> 00:18:02.001
+Il m&#x27;a expliqué maintenant que nous imprimons ce qui se passe à l&#x27;intérieur de l&#x27;imprimante. Maintenant
+
+242
+00:18:02.001 --> 00:18:08.001
+l&#x27;information vient de l&#x27;ordinateur et cette vidéo est utilisée pour moduler
+
+243
+00:18:08.001 --> 00:18:14.001
+l&#x27;écran qui, à son tour, met l&#x27;image en dessous sur le drone photorecepteur un
+
+244
+00:18:14.001 --> 00:18:16.000
+par un, couleur par couleur.
+
+245
+00:18:16.001 --> 00:18:23.001
+Et en réalité, le processus zirgographique ne sait vraiment ni ne se soucie où le
+
+246
+00:18:23.001 --> 00:18:29.000
+La lumière vient pour, pour l’exposition et l’initiation de tout le processus. Et ce que
+
+247
+00:18:29.000 --> 00:18:33.000
+Faut-il sortir de la machine ? Nous avons une couleur complète
+
+248
+00:18:33.000 --> 00:18:35.001
+L’image du Baboon.
+
+249
+00:18:41.000 --> 00:18:45.001
+Tibor, ce graphique est assez impressionnant vient de cette imprimante. Vous pouvez montrer
+
+250
+00:18:45.001 --> 00:18:49.000
+J&#x27;ai maintenant une démonstration de ce que l&#x27;appareil est à l&#x27;intérieur de l&#x27;imprimante qui le fait?
+
+251
+00:18:50.000 --> 00:18:56.000
+Oui oui. Cette imprimante laser est identique à celle qui a été
+
+252
+00:18:56.000 --> 00:18:57.001
+utilisés pour la manifestation.
+
+253
+00:18:59.000 --> 00:19:04.001
+Je voudrais maintenant vous dire le composant principal et décrire la voie optique.
+
+254
+00:19:05.000 --> 00:19:12.000
+La flamme de ce laser hélium neon est remplie et focalisée sur ce
+
+255
+00:19:12.000 --> 00:19:18.001
+Modulateur optique acousto. La flèche divergente du moduleur est remplie
+
+256
+00:19:18.001 --> 00:19:25.001
+la voie optique dans le polygone et après la réflexion du polygon
+
+257
+00:19:25.001 --> 00:19:32.001
+revient à travers le même élément et il est plié et axé sur
+
+258
+00:19:32.001 --> 00:19:38.001
+la surface du photorecepteur qui n&#x27;est pas ici représentée par ce blanc
+
+259
+00:19:38.001 --> 00:19:45.001
+sur écran. Pouvez-vous vraiment nous montrer la flamme laser à l&#x27;intérieur ici? Oui, je vais faire du spray
+
+260
+00:19:45.001 --> 00:19:52.000
+Un peu de freon. Cela rendra visible le chemin de la lumière. Vous pouvez voir que c&#x27;est
+
+261
+00:19:52.000 --> 00:19:57.000
+sortie du laser passant par le modulateur dans les optiques de folding
+
+262
+00:19:57.000 --> 00:19:59.001
+et dans la polygone.
+
+263
+00:20:04.001 --> 00:20:09.001
+C’était une démonstration très intéressante, John. Maintenant, vous pouvez parler avec nous
+
+264
+00:20:09.001 --> 00:20:15.000
+L’avenir de la technologie laser ? Il y aura plus de laser.
+
+265
+00:20:15.000 --> 00:20:19.001
+Les imprimantes ? Est-ce qu’ils vont tomber dans le prix ? Ils remplaceront une autre imprimante.
+
+266
+00:20:19.001 --> 00:20:24.001
+Les technologies dont nous avons parlé aujourd’hui ? La réponse est oui à tous les
+
+267
+00:20:24.001 --> 00:20:28.000
+Ces questions. Il y aura plus d&#x27;imprimantes laser et elles descendront dans
+
+268
+00:20:28.000 --> 00:20:33.000
+Le prix . Les premières imprimantes laser étaient très rapides mais aussi très coûteuses.
+
+269
+00:20:33.000 --> 00:20:37.001
+coûte des centaines de milliers de dollars. Le prix baisse rapidement,
+
+270
+00:20:38.000 --> 00:20:43.000
+aide dans certains des produits futurs et certains récemment introduits par les
+
+271
+00:20:43.000 --> 00:20:46.001
+l&#x27;utilisation du laser de diode de jonction, ce petit gadget que j&#x27;ai ici, qui
+
+272
+00:20:46.001 --> 00:20:51.001
+remplacez le grand laser hélium néon et le modulateur réduisant la taille et le coût
+
+273
+00:20:51.001 --> 00:20:56.000
+Les futures imprimantes. Avec ce et d&#x27;autres refinements, nous verrons le prix à venir
+
+274
+00:20:56.000 --> 00:21:01.000
+très vite dans les années à venir. Vous êtes naturellement enthousiaste
+
+275
+00:21:01.000 --> 00:21:07.000
+sur l&#x27;avenir de cette technologie et sa capacité à effectuer le traitement du texte et
+
+276
+00:21:07.000 --> 00:21:12.001
+Le processus graphique dont nous avons parlé auparavant. Oui je suis et je crois aussi
+
+277
+00:21:12.001 --> 00:21:17.000
+en augmentant la résolution comme dans cette machine expérimentale, nous pouvons aussi
+
+278
+00:21:17.000 --> 00:21:20.001
+Passez vers des graphismes et des tutoriels à haute résolution. Je crains que nous soyons hors de temps
+
+279
+00:21:20.001 --> 00:21:25.000
+pour cette séance de chronicles informatiques. Merci beaucoup et nous vous verrons
+
+280
+00:21:25.000 --> 00:21:26.001
+à notre séance la semaine prochaine.
+
+281
+00:22:03.000 --> 00:22:36.000
+[...] Le focus de l’ordinateur, les créateurs d’outils de programmation visuelle pour le logiciel
+
+282
+00:22:36.000 --> 00:22:42.000
+développement, il est heureux de fournir un financement majeur pour les chronicles informatiques, les
+
+283
+00:22:42.000 --> 00:22:44.001
+C’est l’histoire de cette évolution continue.
+
+284
+00:23:02.001 --> 00:23:06.001
+[...]
