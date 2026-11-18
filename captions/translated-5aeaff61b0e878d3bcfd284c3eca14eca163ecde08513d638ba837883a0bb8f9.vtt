@@ -1,0 +1,1945 @@
+WEBVTT
+
+1
+00:00:23.001 --> 00:00:26.000
+C’est un tableau du cerveau humain.
+
+2
+00:00:26.000 --> 00:00:30.000
+Maintenant, le cerveau n&#x27;a évidemment pas une limite de 640k, mais il a une différence
+
+3
+00:00:30.000 --> 00:00:31.001
+Un type de mémoire à différents endroits.
+
+4
+00:00:32.000 --> 00:00:35.001
+Il y a la mémoire à court terme, il y a une mémoires à long terme, et pour accéder aux différents
+
+5
+00:00:35.001 --> 00:00:38.000
+Parties de la mémoire du cerveau, vous devez passer par un type de bus
+
+6
+00:00:38.000 --> 00:00:40.000
+C’est ce qu’on appelle le système limbic.
+
+7
+00:00:40.000 --> 00:00:43.001
+Maintenant avec un ordinateur, il est beaucoup plus simple, même s&#x27;il semble plus compliqué.
+
+8
+00:00:44.000 --> 00:00:48.000
+C&#x27;est parce que les applications sophistiquées d&#x27;aujourd&#x27;hui vous demandent souvent de trouver et de
+
+9
+00:00:48.000 --> 00:00:50.000
+Utilisez toute la mémoire dans votre ordinateur.
+
+10
+00:00:50.001 --> 00:00:52.000
+Ce n’est pas toujours une chose facile à faire.
+
+11
+00:00:52.000 --> 00:00:56.000
+Pour vous aider à comprendre comment le faire, aujourd&#x27;hui nous allons regarder la mémoire élevée
+
+12
+00:00:56.000 --> 00:00:59.000
+Cette édition de The Computer Chronicles.
+
+13
+00:01:22.000 --> 00:01:25.000
+La SBA fournit des informations sur la façon de rester le logiciel légal.
+
+14
+00:01:25.001 --> 00:01:28.000
+Le financement est également fourni par PC Connection et Mac Connection,
+
+15
+00:01:28.001 --> 00:01:30.000
+et de la revue Bight et PIX.
+
+16
+00:01:35.001 --> 00:01:39.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafane. Cette semaine, c&#x27;est Tim
+
+17
+00:01:39.001 --> 00:01:41.001
+Baharan, vice-président exécutif avec des stratégies créatives.
+
+18
+00:01:42.000 --> 00:01:42.000
+Merci à vous.
+
+19
+00:01:42.001 --> 00:01:45.001
+Tim, nous parlons des problèmes de haute mémoire et de gestion de la mémoires, qui
+
+20
+00:01:45.001 --> 00:01:48.000
+Il est généralement dans le monde DOS sur le problème de 640k.
+
+21
+00:01:48.000 --> 00:01:52.000
+Les gens de Mac, les utilisateurs de Mac ont leurs problèmes de RAM aussi, et parfois encore pire
+
+22
+00:01:52.000 --> 00:01:55.001
+problèmes en raison de l&#x27;intensité graphique, la mémoire exige certains des Mac
+
+23
+00:01:55.001 --> 00:01:58.001
+les applications. Si vous êtes un utilisateur Mac, voici une bonne solution au problème.
+
+24
+00:01:59.000 --> 00:02:02.001
+Voici un Mac 2 avec 5 megabytes de mémoire en ce moment. Utiliser ce produit appelé
+
+25
+00:02:02.001 --> 00:02:07.001
+Virtual 2.0, je peux juste entrer ici et mettre 14 megabytes dans le Mac ici.
+
+26
+00:02:07.001 --> 00:02:11.000
+Cela signifie que nous pouvons exécuter toutes ces applications en même temps. Tout simplement pour
+
+27
+00:02:11.000 --> 00:02:14.000
+Prouvez que je fais vraiment cela, vous pouvez voir que nous sommes dans Excel en ce moment et je fais un
+
+28
+00:02:14.000 --> 00:02:16.001
+La recalculation. Donc, vous voyez que Excel est vraiment en cours.
+
+29
+00:02:17.000 --> 00:02:20.001
+Alors que Excel est en cours, je peux entrer ici et dire, regardons ce qui est
+
+30
+00:02:20.001 --> 00:02:24.000
+de poursuivre dans PageMaker, qui est aussi à la hauteur et à la marche, manger toutes sortes de
+
+31
+00:02:24.000 --> 00:02:28.000
+La mémoire en même temps. Et au-delà de cela, en même temps, je pourrais être
+
+32
+00:02:28.000 --> 00:02:32.000
+figurant mes impôts avec Macintax crunching chiffres lourdement, manger beaucoup de
+
+33
+00:02:32.000 --> 00:02:36.001
+La mémoire. Et pas seulement cela, je peux ensuite tirer, disons, cette image de peinture pixel d&#x27;un
+
+34
+00:02:36.001 --> 00:02:40.001
+Le Frog. La bonté sait combien la mémoire que cela mange.
+
+35
+00:02:40.001 --> 00:02:44.001
+Et puis je pourrais aussi courir Mathematica, qui ne fonctionnerait pas sur la plupart des Mac 2s tous
+
+36
+00:02:44.001 --> 00:02:46.001
+Pour eux-mêmes, si nous n&#x27;avons pas ajouté tout ce souvenir.
+
+37
+00:02:47.000 --> 00:02:49.001
+Revenons au monde DOS, cependant, sur lequel nous allons vraiment nous concentrer
+
+38
+00:02:49.001 --> 00:02:51.000
+sur . Donnez-nous une leçon historique rapide.
+
+39
+00:02:51.001 --> 00:02:54.000
+Quelle est la raison du problème avec cette barrière 640K ?
+
+40
+00:02:54.001 --> 00:02:59.001
+En 1979, lorsque Intel a introduit le 8088, la mémoire adressable n&#x27;était que 640K.
+
+41
+00:02:59.001 --> 00:03:05.000
+Il a été gelé de cette façon avec seulement la mémoire 384K utilisée pour la ROM 640K adressable.
+
+42
+00:03:05.000 --> 00:03:09.000
+Et puis, vous n&#x27;avez pas beaucoup de programmes intenses lourds. En fait, la plupart des
+
+43
+00:03:09.000 --> 00:03:13.001
+Les programmes n&#x27;ont utilisé que 100 000 mémoires et vous pourriez utiliser le reste pour la RAM.
+
+44
+00:03:14.000 --> 00:03:17.000
+Comme résultat direct de ce qui s&#x27;est passé dans l&#x27;industrie informatique, plus
+
+45
+00:03:17.000 --> 00:03:21.000
+Sofistication, nous avons eu besoin maintenant de passer au-delà de 640K.
+
+46
+00:03:21.001 --> 00:03:25.000
+En fait, certains programmes utilisent presque ce 640K complet juste pour fonctionner. Et ainsi,
+
+47
+00:03:25.001 --> 00:03:27.001
+Par conséquent, vous devez regarder d&#x27;autres méthodes.
+
+48
+00:03:27.001 --> 00:03:30.000
+Dans ce cas, nous allons aujourd&#x27;hui regarder quelques autres logiciels et matériels
+
+49
+00:03:30.000 --> 00:03:31.001
+Il y a des trucs pour surmonter cette barrière.
+
+50
+00:03:31.001 --> 00:03:34.000
+précisément . Nous allons chercher plusieurs solutions pour
+
+51
+00:03:34.000 --> 00:03:36.000
+Accès et gestion de la mémoire supplémentaire.
+
+52
+00:03:36.001 --> 00:03:39.001
+Nous examinerons les solutions logicielles, les solutions matérielles, et nous verrons comment
+
+53
+00:03:39.001 --> 00:03:42.001
+système d&#x27;exploitation comme OS2 peut accéder jusqu&#x27;à un gigabyte de
+
+54
+00:03:42.001 --> 00:03:44.000
+La mémoire sans aide extérieure.
+
+55
+00:03:44.001 --> 00:03:48.000
+Maintenant, comme Tim a expliqué, nous avons besoin de produits de gestion de la mémoire en raison des
+
+56
+00:03:48.000 --> 00:03:51.001
+Problème de mémoire dans le processeur Intel 8088.
+
+57
+00:03:51.001 --> 00:03:55.001
+Donc, nous allons commencer par une visite à Intel pour en savoir plus sur les origines
+
+58
+00:03:55.001 --> 00:03:57.000
+de la barrière 640K.
+
+59
+00:03:59.000 --> 00:04:03.000
+Les problèmes avec l&#x27;accès à plus de mémoire ont commencé avec les limites de la
+
+60
+00:04:03.000 --> 00:04:05.001
+Processeur Intel 8088.
+
+61
+00:04:06.000 --> 00:04:10.000
+Même si le processeur contient plus d&#x27;un méga-batte d&#x27;espace d&#x27;adresse, seulement 640K
+
+62
+00:04:10.000 --> 00:04:12.000
+Il est disponible pour les 2 applications.
+
+63
+00:04:12.001 --> 00:04:15.001
+Le reste de l&#x27;espace de mémoire accessible a été dédié au système ROM.
+
+64
+00:04:16.001 --> 00:04:19.000
+L’Intel annonce les nouveaux 286 et 386
+
+65
+00:04:19.000 --> 00:04:21.000
+Chip, le problème est resté.
+
+66
+00:04:21.000 --> 00:04:26.001
+Le 286 pourrait gérer 16 méga-bits de RAM, et le 386 peut gérer 4 gigabytes,
+
+67
+00:04:27.000 --> 00:04:30.001
+mais les limitations du logiciel d&#x27;application existant et le manque d&#x27;un nouveau
+
+68
+00:04:30.001 --> 00:04:34.000
+L&#x27;environnement d&#x27;exploitation standard signifie que la plupart des utilisateurs d&#x27;ordinateurs continuent de fonctionner
+
+69
+00:04:34.000 --> 00:04:40.001
+286 et 386 machines comme les 8088s rapides sans profiter de l&#x27;accès à
+
+70
+00:04:40.001 --> 00:04:42.000
+La mémoire élargie et élargi.
+
+71
+00:04:42.001 --> 00:04:45.000
+C’est ce qu’on appelle le fonctionnement de votre CPU en mode réel.
+
+72
+00:04:45.000 --> 00:04:50.000
+Pour atteindre l’espace mémoire au-dessus d’un megabyte, les 286 et 386 chips doivent
+
+73
+00:04:50.000 --> 00:04:52.000
+fonctionne dans ce qu’on appelle le mode protégé.
+
+74
+00:04:52.001 --> 00:04:54.000
+Mike Bemis de l’Intel.
+
+75
+00:04:54.001 --> 00:04:59.000
+La solution typique pour passer la barrière 640K serait d&#x27;utiliser un DOS
+
+76
+00:04:59.000 --> 00:05:04.000
+extender, et ce qui vous permet de faire est un lien dans un morceau de logiciel utilitaire
+
+77
+00:05:04.000 --> 00:05:09.000
+avec une application, et qui mettra le processeur dans le mode protégé et
+
+78
+00:05:09.000 --> 00:05:12.001
+Cela vous permet d’accéder à plus de mémoire que le 640K typique.
+
+79
+00:05:13.000 --> 00:05:17.000
+Mais le fonctionnement de votre PC dans le mode protégé peut avoir ses propres problèmes, car la plupart des
+
+80
+00:05:17.000 --> 00:05:19.001
+Les applications DOS veulent fonctionner dans le mode réel et ainsi
+
+81
+00:05:19.001 --> 00:05:21.000
+incompatible avec le mode protégé.
+
+82
+00:05:21.001 --> 00:05:26.000
+Il semble qu&#x27;une solution simple est d&#x27;avoir accès à ce 384K perdu.
+
+83
+00:05:26.000 --> 00:05:29.001
+situé entre la limite de 640K de DOS et la limite d&#x27;un megabytes de la
+
+84
+00:05:29.001 --> 00:05:32.000
+Le processeur, la zone appelée mémoire étendue.
+
+85
+00:05:32.001 --> 00:05:36.001
+Mais même cela nécessite une correction logicielle hardware complexe, et Mike Bemis dit que c&#x27;est
+
+86
+00:05:36.001 --> 00:05:40.000
+Il ne vaut pas la peine d’effort par rapport aux avantages de l’ouverture de la mémoire étendue.
+
+87
+00:05:40.000 --> 00:05:43.001
+Extendu, avant tout, il est plus facile à accéder. Il est direct
+
+88
+00:05:43.001 --> 00:05:45.001
+à l’accès. Vous n’avez pas besoin de matériel spécial.
+
+89
+00:05:45.001 --> 00:05:48.001
+Vous n&#x27;avez pas besoin des conducteurs de logiciels spéciaux qui vous permettent de parler à travers le
+
+90
+00:05:48.001 --> 00:05:54.001
+Frame page, et il est extensible tout le chemin jusqu&#x27;à quatre gigabytes
+
+91
+00:05:54.001 --> 00:05:56.000
+dans le cas du 386 processeur.
+
+92
+00:05:57.000 --> 00:06:00.000
+Malgré les améliorations dans la gestion de la mémoire des microprocesseurs Intel les plus récents,
+
+93
+00:06:01.000 --> 00:06:04.001
+Il semble que la solution ultime pour l&#x27;accès à la mémoire se trouve dans la nouvelle opération
+
+94
+00:06:04.001 --> 00:06:06.000
+Systèmes tels que OS2 ou Unix.
+
+95
+00:06:06.001 --> 00:06:09.000
+Pour les Chroniques informatiques, je suis Maria Gabriel.
+
+96
+00:06:15.000 --> 00:06:15.001
+[...]
+
+97
+00:06:20.001 --> 00:06:24.001
+L’un des produits logiciels les plus populaires de l’année dernière a été élargi
+
+98
+00:06:24.001 --> 00:06:26.000
+Gestion de la mémoire de QuarterDeck.
+
+99
+00:06:26.001 --> 00:06:28.000
+Et ici pour montrer la dernière version du produit est
+
+100
+00:06:28.000 --> 00:06:30.000
+Gary Saxer de QuarterDeck.
+
+101
+00:06:30.001 --> 00:06:35.000
+Et aussi ici avec nous pour montrer 386 Max, sa dernière version est Patrick
+
+102
+00:06:35.000 --> 00:06:37.000
+Le démon de la qualité. Le Tim ?
+
+103
+00:06:37.001 --> 00:06:42.000
+Gary, ce type de logiciel est souvent considéré comme un dispositif de conversion, et il est
+
+104
+00:06:42.000 --> 00:06:44.000
+Un directeur de gestion de la mémoire.
+
+105
+00:06:44.001 --> 00:06:48.000
+Pouvez-vous nous donner une idée de ce que les exemples utilisateurs pourraient être?
+
+106
+00:06:48.001 --> 00:06:51.000
+Le meilleur exemple pour cela sont les chauffeurs de réseau.
+
+107
+00:06:52.000 --> 00:06:54.001
+La plupart des gens veulent avoir leur réseau disponible tout le temps.
+
+108
+00:06:54.001 --> 00:06:58.000
+Même si vous exécutez un environnement multitasking comme Windows ou Deskview, vous
+
+109
+00:06:58.000 --> 00:07:00.000
+Ils veulent encore le réseau là-bas, toutes ces lettres de conduite là-dedans.
+
+110
+00:07:00.001 --> 00:07:03.000
+Les chauffeurs de réseau, cependant, vont prendre la mémoire de vous.
+
+111
+00:07:03.000 --> 00:07:07.000
+Ce que vous aimeriez faire est de retrouver cette mémoire, et ainsi en la mettant et en gérant
+
+112
+00:07:07.000 --> 00:07:12.000
+la mémoire entre 640K et 1024K, et en utilisant le pilote de réseau là-bas, vous
+
+113
+00:07:12.000 --> 00:07:15.000
+Ensuite, obtenez plus de mémoire inférieure à 640K pour vos programmes DOS réguliers.
+
+114
+00:07:15.000 --> 00:07:18.001
+Bon, montre-nous comment vous le feriez avec le produit de QuarterDeck.
+
+115
+00:07:18.001 --> 00:07:22.000
+Nous utilisons l&#x27;un de nos produits qui vient avec QAMM386 appelé Manifest.
+
+116
+00:07:22.001 --> 00:07:24.000
+Il nous permet d’aller à l’intérieur de la machine.
+
+117
+00:07:24.001 --> 00:07:27.000
+Ici vous pouvez voir, par exemple, il nous montre que nous avons 539K.
+
+118
+00:07:28.000 --> 00:07:32.000
+Vous pouvez me voir bouger le souris autour un peu là-bas. 539K Le reste
+
+119
+00:07:32.000 --> 00:07:34.000
+la mémoire inférieure à 640K est gérée par DOS
+
+120
+00:07:34.000 --> 00:07:35.001
+Et d’autres choses que les deux font.
+
+121
+00:07:36.000 --> 00:07:39.000
+Maintenant, au-dessus de 640K, l’EGA utilise une certaine mémoire.
+
+122
+00:07:40.000 --> 00:07:43.000
+Si nous avions un moniteur monochrome, il aurait utilisé ce point juste ici, le 32K.
+
+123
+00:07:43.000 --> 00:07:44.000
+Je n’ai pas un.
+
+124
+00:07:44.001 --> 00:07:48.000
+Puis la prochaine zone est utilisée pour le texte de couleur, ce qui est ce que nous regardons,
+
+125
+00:07:48.000 --> 00:07:52.001
+et cette prochaine grande zone est utilisée pour différents ROMs, ROMs de disque, ROM de vidéo, etc.
+
+126
+00:07:52.001 --> 00:07:55.000
+Je n&#x27;ai qu&#x27;une ROM vidéo là, donc j&#x27;ai une zone de 160K
+
+127
+00:07:55.000 --> 00:07:56.001
+Ce n&#x27;est pas utilisé, puis le système ROM.
+
+128
+00:07:56.001 --> 00:08:00.001
+Nous avons également certains programmes chargés en dessous de 640K, et c&#x27;est ainsi que nous le savons.
+
+129
+00:08:00.001 --> 00:08:02.001
+C&#x27;est ainsi que nous savons que nous avons 539K.
+
+130
+00:08:03.000 --> 00:08:07.000
+Si nous prenons un coup d’œil à cet élément appelé Hints sur ici que le Manifeste nous donne, un
+
+131
+00:08:07.000 --> 00:08:09.000
+Il s’agit de l’installation de QAMM386.
+
+132
+00:08:10.000 --> 00:08:11.000
+Vous ne devriez pas être surpris du tout.
+
+133
+00:08:11.001 --> 00:08:15.000
+L&#x27;idée ici est que le Manifest vous aide à découvrir
+
+134
+00:08:15.000 --> 00:08:17.000
+Ce que vous êtes supposé faire.
+
+135
+00:08:17.000 --> 00:08:19.001
+Elle tient ta main, comme c&#x27;était, tout au long du chemin.
+
+136
+00:08:20.000 --> 00:08:22.000
+Ce que nous devons faire en ce moment, c’est gérer cette mémoire.
+
+137
+00:08:22.000 --> 00:08:28.001
+QAMM386 va convertir la mémoire étendue en mémoires étendues, et il est également
+
+138
+00:08:28.001 --> 00:08:30.001
+Il nous donnera une haute gestion de la RAM.
+
+139
+00:08:31.000 --> 00:08:33.000
+Veuillez noter comment la carte mémoire a changé maintenant depuis que j&#x27;ai redémarré.
+
+140
+00:08:33.000 --> 00:08:37.001
+Voici la zone graphique EGA, et cette zone auparavant inutilisée est maintenant haute RAM.
+
+141
+00:08:38.000 --> 00:08:41.000
+Et cette zone apparaît maintenant RAM élevé et le cadre de page.
+
+142
+00:08:41.001 --> 00:08:45.000
+Cependant, les programmes résidents de la mémoire sont tous encore chargés en dessous de 640K.
+
+143
+00:08:45.001 --> 00:08:47.000
+C’est un dilemme intéressant ici.
+
+144
+00:08:47.000 --> 00:08:51.000
+Nous avons le conducteur de Magellan et le mouse conducteur, etc., là, et 537K.
+
+145
+00:08:51.000 --> 00:08:54.000
+Tout est bien, donc nous sommes allés en arrière par 2K, mais nous y arriverons.
+
+146
+00:08:54.001 --> 00:08:57.001
+Veuillez noter que nous avons également une région 31K et 96K disponibles.
+
+147
+00:08:58.001 --> 00:09:01.000
+Maintenant, quand il était facile de savoir ce qu&#x27;il faut faire, vous
+
+148
+00:09:01.000 --> 00:09:02.001
+Je vais tout charger dans un grand endroit.
+
+149
+00:09:02.001 --> 00:09:06.000
+Nous avons un programme appelé Optimize, qui Manifest vous donnera une indication et vous dit
+
+150
+00:09:06.000 --> 00:09:08.000
+Vous allez courir ici, et je vais le courir en ce moment.
+
+151
+00:09:08.001 --> 00:09:13.000
+Le travail d&#x27;Optimize est de regarder la taille, la taille du chargement et le résident
+
+152
+00:09:13.000 --> 00:09:16.001
+de la taille, de chacun de ces programmes il est chargé dans la mémoire, et découvre le
+
+153
+00:09:16.001 --> 00:09:18.001
+La meilleure façon possible de télécharger ces programmes.
+
+154
+00:09:19.000 --> 00:09:21.001
+Je vais essayer et arrêter l&#x27;écran ici comme il arrive avec le
+
+155
+00:09:21.001 --> 00:09:23.001
+Auto-exec fichier ici afin que vous puissiez voir.
+
+156
+00:09:23.001 --> 00:09:26.000
+Remarque, par exemple, vous pouvez voir le chauffeur de souris là-bas, vous pourrez voir le sed
+
+157
+00:09:26.000 --> 00:09:30.001
+conducteur, vous pouvez voir le conducteur de clavier, le conducteurs de Magellan, ils sont tous chargés
+
+158
+00:09:30.001 --> 00:09:32.001
+Un peu de souvenir avec un peu de choses supplémentaires au début.
+
+159
+00:09:33.000 --> 00:09:35.000
+Et puis, là-bas près du sommet de l&#x27;écran, il a dit qu&#x27;il a essayé
+
+160
+00:09:35.000 --> 00:09:37.001
+729 combinaisons différentes.
+
+161
+00:09:37.001 --> 00:09:40.000
+Donc, il était littéralement en cours ces essais pour voir ce qui était optimal?
+
+162
+00:09:40.000 --> 00:09:42.001
+Oui, il a dit de mettre le chauffeur ANSI ici et le chauffant de souris ici.
+
+163
+00:09:42.001 --> 00:09:44.000
+Eh bien, cela ne fonctionne pas aussi bien que de mettre
+
+164
+00:09:44.000 --> 00:09:45.001
+Le conducteur de souris ici et le conducteur ANSI ici.
+
+165
+00:09:45.001 --> 00:09:48.001
+Et puis la troisième étape, c’est qu’elle sort et l’essaye.
+
+166
+00:09:48.001 --> 00:09:51.000
+Il peut ne pas fonctionner, il le fait généralement, mais il ne peut pas
+
+167
+00:09:51.000 --> 00:09:52.001
+Il travaille, donc il sort en fait et l&#x27;essaye.
+
+168
+00:09:53.000 --> 00:09:58.000
+Donc, nous sommes allés de 539K à 537K, et si nous prenons maintenant un coup d’œil, nous avons
+
+169
+00:09:58.000 --> 00:10:00.000
+591K
+
+170
+00:10:00.001 --> 00:10:03.001
+Et encore, tous ces conducteurs sont encore chargés, buffers et sed et ANSI et
+
+171
+00:10:03.001 --> 00:10:06.001
+clavier et Magellan, ils sont tous chargés, en fait, j&#x27;ai encore 73K de mémoire
+
+172
+00:10:06.001 --> 00:10:08.000
+Disponible au-dessus de 640K.
+
+173
+00:10:08.001 --> 00:10:11.001
+Ensuite, ce que vous pourriez vouloir faire est d&#x27;exécuter d&#x27;autres types de programmes.
+
+174
+00:10:11.001 --> 00:10:15.001
+Maintenant, nous pouvons faire toutes ces sortes de choses que nous avons vu jusqu&#x27;à présent sur un 8088 ou
+
+175
+00:10:15.001 --> 00:10:18.001
+8086 utilisant un produit appelé Cram que nous avons, QRAM.
+
+176
+00:10:19.000 --> 00:10:21.000
+Ceci est un 386, bien sûr, nous utilisons QAMM 386.
+
+177
+00:10:22.000 --> 00:10:24.000
+Une autre chose que nous allons faire est Microsoft Windows.
+
+178
+00:10:24.001 --> 00:10:27.000
+Vous pouvez voir que même si nous avons les programmes résidents, y compris le souris
+
+179
+00:10:27.000 --> 00:10:31.000
+conducteur, chargé haut, j&#x27;ai toujours Microsoft Windows chargé, et je peux fonctionner
+
+180
+00:10:31.000 --> 00:10:32.001
+D’autres très grands Windows aussi.
+
+181
+00:10:32.001 --> 00:10:35.000
+Ici vous pouvez voir que j&#x27;ai un programme 564K.
+
+182
+00:10:35.001 --> 00:10:38.001
+Dans cette fenêtre juste ici, j&#x27;ai aussi un programme 564K.
+
+183
+00:10:38.001 --> 00:10:40.001
+En fait, j’exécute Microsoft Windows à l’intérieur de Densho.
+
+184
+00:10:40.001 --> 00:10:41.001
+Un vrai multitasking.
+
+185
+00:10:41.001 --> 00:10:45.001
+True multitasking des programmes basés sur DOS tout en gérant la mémoire.
+
+186
+00:10:45.001 --> 00:10:46.001
+Le truc est de le gérer.
+
+187
+00:10:46.001 --> 00:10:48.001
+Ok, c’est juste ça. Combien coûte ce produit ?
+
+188
+00:10:49.000 --> 00:10:50.001
+Le DESQ est... Résumé 386.
+
+189
+00:10:51.000 --> 00:10:51.001
+C’est ce que nous venons de voir.
+
+190
+00:10:52.000 --> 00:10:54.001
+Le DESQ 386 est de 229,95 $.
+
+191
+00:10:56.000 --> 00:10:58.000
+QAMM 386 est de 99,95 $.
+
+192
+00:10:58.000 --> 00:10:58.001
+Ok bien, très bien !
+
+193
+00:10:58.001 --> 00:11:01.000
+Maintenant, je veux vous demander de changer le petit interrupteur sur le dos de notre moniteur.
+
+194
+00:11:01.000 --> 00:11:04.001
+Parce que Patrick, je veux vous tourner, et l&#x27;approche que vous avez est
+
+195
+00:11:04.001 --> 00:11:06.000
+Un produit nommé 386 Max.
+
+196
+00:11:06.001 --> 00:11:10.000
+Et je veux que vous, comme vous le lancez ici, nous disiez comment il est différent et nous montriez
+
+197
+00:11:10.000 --> 00:11:13.000
+Comment utiliser 386 Max pour résoudre le même type de problème.
+
+198
+00:11:13.000 --> 00:11:16.000
+Eh bien, là où nous commençons ici, nous sommes à la fin de notre processus de maximisation.
+
+199
+00:11:16.001 --> 00:11:20.000
+C&#x27;est le processus dans lequel nous prenons le contrôle de l&#x27;exécution du système
+
+200
+00:11:20.000 --> 00:11:24.001
+fichiers afin que nous puissions découvrir comment l&#x27;utilisateur final utilise la mémoire conventionnelle,
+
+201
+00:11:25.000 --> 00:11:26.001
+Qu’est-ce qui utilise la mémoire résidentielle ?
+
+202
+00:11:27.000 --> 00:11:31.000
+Et en faisant cela, nous pouvons prendre les mêmes décisions pour l&#x27;utilisateur final.
+
+203
+00:11:31.000 --> 00:11:35.001
+Et c&#x27;est ce qui est important sur notre produit, c&#x27;était que nous avons pris le niveau de
+
+204
+00:11:35.001 --> 00:11:38.001
+la sophistication qui est nécessaire pour faire usage de cette dose élevée
+
+205
+00:11:38.001 --> 00:11:40.001
+La mémoire, et nous avons réduit cela énormément.
+
+206
+00:11:41.001 --> 00:11:46.000
+Dans le passé, les gens auraient besoin de travailler, même les personnes les plus sophistiquées,
+
+207
+00:11:46.000 --> 00:11:49.001
+Cela prend parfois des heures pour prendre ce type de décisions de configuration, et ensuite
+
+208
+00:11:49.001 --> 00:11:52.000
+Je ne suis pas sûr qu&#x27;ils ont pris les meilleures décisions.
+
+209
+00:11:52.001 --> 00:11:54.001
+Vous dites que vous n&#x27;avez pas besoin d&#x27;être un génial hacker pour l&#x27;utiliser.
+
+210
+00:11:54.001 --> 00:11:56.001
+Non, vous ne le faites pas. Vous ne faites pas.
+
+211
+00:11:57.000 --> 00:12:01.000
+Et il y a une chose que je voudrais me concentrer ici, c&#x27;est une
+
+212
+00:12:01.000 --> 00:12:02.001
+La technologie que nous appelons FlexFrame.
+
+213
+00:12:03.001 --> 00:12:07.000
+Il s’agit du fait que lorsque les programmes résidents sont chargés dans la mémoire, ils utilisent un
+
+214
+00:12:07.000 --> 00:12:10.001
+Il y a beaucoup plus d’espace quand ils initialisent que quand ils sont réellement résidents.
+
+215
+00:12:11.000 --> 00:12:14.000
+Et cela est invisible à un utilisateur final et peut le rendre difficile lorsque vous essayez de
+
+216
+00:12:14.000 --> 00:12:17.000
+Les programmes de douhorn dans les espaces très étroits dans la mémoire à haute dose.
+
+217
+00:12:18.000 --> 00:12:22.000
+Bon, j&#x27;ai une imprimante de ce qu&#x27;un programme aurait l&#x27;air
+
+218
+00:12:22.000 --> 00:12:23.001
+Comme il est en réalité chargé dans la mémoire.
+
+219
+00:12:24.000 --> 00:12:27.001
+Donc si vous remarquez ce que je vais essayer de souligner la ligne ici afin que nous puissions voir.
+
+220
+00:12:28.001 --> 00:12:34.001
+Le spoiler PK, il utilise plus de 47 000 bytes lorsqu&#x27;il est initialisé, alors que seulement
+
+221
+00:12:34.001 --> 00:12:36.001
+Utilisez 18 000 bytes lorsque vous êtes résident.
+
+222
+00:12:37.000 --> 00:12:41.000
+Donc, si vous avez un espace disponible de 20 kilobytes en haute
+
+223
+00:12:41.000 --> 00:12:43.000
+-Dose, ce programme ne pouvait pas s&#x27;adapter.
+
+224
+00:12:43.001 --> 00:12:45.001
+Vous recevrez normalement un message qui dit, ne peut pas s&#x27;adapter.
+
+225
+00:12:46.000 --> 00:12:50.000
+Eh bien, ce que nous pouvons faire est que nous sommes en mesure d&#x27;attribuer dynamiquement la page EMS
+
+226
+00:12:50.000 --> 00:12:54.001
+le cadre, le cartographier, et rendre cette mémoire disponible, ce qui est un 64K supplémentaire de
+
+227
+00:12:54.001 --> 00:12:59.000
+la mémoire, rendre cette mémoires disponibles pendant l&#x27;initialisation afin que ce programme puisse
+
+228
+00:12:59.000 --> 00:13:02.001
+utilisez ce qui, initialisez, et puis quand il devient résident, le cadre de page EMS peut
+
+229
+00:13:02.001 --> 00:13:06.000
+puis être réinitialisé et disponible pour servir d&#x27;autres finalités EMS.
+
+230
+00:13:09.000 --> 00:13:13.001
+Et encore une fois, nous offrons également cette utilisation de mémoire à haute dose dans un Windows 3.0
+
+231
+00:13:13.001 --> 00:13:15.001
+un environnement de mode amélioré, ce qui est important.
+
+232
+00:13:16.000 --> 00:13:19.001
+Un autre problème qui survient lors de l&#x27;exécution dans un environnement de mode amélioré de 386
+
+233
+00:13:19.001 --> 00:13:23.000
+Windows est que vous n&#x27;avez qu&#x27;un seul logiciel résident chargé.
+
+234
+00:13:23.000 --> 00:13:27.000
+Et si vous avez besoin des ressources de ce programme pour être disponible dans plusieurs DOS
+
+235
+00:13:27.000 --> 00:13:30.001
+fenêtres, beaucoup de fois que vous allez le trouver simplement ne fonctionne pas ou
+
+236
+00:13:30.001 --> 00:13:32.000
+Vous obtenez des résultats erronés.
+
+237
+00:13:33.000 --> 00:13:36.001
+Nous avons fait quelque chose appelé les données d&#x27;exemple, ce qui nous permet de savoir si un programme
+
+238
+00:13:36.001 --> 00:13:41.000
+est effectivement chargé haut ou bas, nous pouvons garantir à l&#x27;utilisateur final qu&#x27;il va
+
+239
+00:13:41.000 --> 00:13:45.000
+avoir des données uniques disponibles pour ce programme résident dans chaque fenêtre DOS.
+
+240
+00:13:46.000 --> 00:13:50.001
+L&#x27;exemple de cela, un exemple assez simple, est que je vais ouvrir deux DOS
+
+241
+00:13:50.001 --> 00:13:57.000
+fenêtres, et alors ce que je ferai est que je vais utiliser ANSI
+
+242
+00:13:57.000 --> 00:14:02.001
+.sys pour changer les couleurs de l&#x27;écran, et vous remarquerez que lorsque nous revenons à ce
+
+243
+00:14:02.001 --> 00:14:06.001
+Ces changements ne sont pas réfléchis dans les autres fenêtres DOS.
+
+244
+00:14:07.000 --> 00:14:11.000
+Donc, si nous déplaçons cette fenêtre DOS en dessous, vous pouvez voir que ces changements n&#x27;ont pas
+
+245
+00:14:11.000 --> 00:14:13.000
+Il s’agit de l’autre fenêtre ouverte.
+
+246
+00:14:13.001 --> 00:14:16.000
+Bon, Patrick, merci beaucoup, et Gary, deux produits impressionnants.
+
+247
+00:14:16.000 --> 00:14:20.001
+Eh bien, une approche pour permettre aux applications logicielles d’accéder à plus de RAM est de
+
+248
+00:14:20.001 --> 00:14:23.000
+Construire dans un extensor DOS dans l&#x27;application.
+
+249
+00:14:23.000 --> 00:14:26.000
+C&#x27;est l&#x27;approche que Autodesk a pris avec AutoCAD, et voici un rapport.
+
+250
+00:14:29.000 --> 00:14:34.000
+La conception d&#x27;un hôtel est un processus de travail qui nécessite des milliers de blueprints, mais
+
+251
+00:14:34.000 --> 00:14:38.000
+La société San Francisco de Hornberger et Worstell a trouvé un moyen de réduire la
+
+252
+00:14:38.000 --> 00:14:41.001
+papier avec un programme de conception assisté par ordinateur qui peut accéder
+
+253
+00:14:41.001 --> 00:14:43.000
+Toutes les mémoires du PC.
+
+254
+00:14:44.000 --> 00:14:49.001
+AutoCAD Release 11 de Autodesk utilise FarLapse 386 DOS extender.
+
+255
+00:14:50.000 --> 00:14:54.001
+Avec l&#x27;extension, AutoCAD peut transférer les données en blocs de 8 kilobytes à un
+
+256
+00:14:54.001 --> 00:14:57.000
+temps, ou 8 fois plus que avec des dos réguliers.
+
+257
+00:14:57.001 --> 00:15:01.001
+Les architectes peuvent utiliser toute la mémoire pour stocker les plus grands dessins
+
+258
+00:15:02.000 --> 00:15:04.001
+Il n&#x27;y a pas besoin de se déplacer en arrière et en avant sur le disque dur.
+
+259
+00:15:05.000 --> 00:15:09.000
+Lorsque nous travaillons sur de grands projets, nous avons souvent besoin de zoom pour voir un
+
+260
+00:15:09.000 --> 00:15:10.001
+Une petite partie du projet.
+
+261
+00:15:10.001 --> 00:15:16.001
+Afin d’éviter que l’écran se reproduise,
+
+262
+00:15:18.000 --> 00:15:22.001
+l&#x27;extension DOS nous aide à rentrer autour du dessin beaucoup plus rapidement, et nous pouvons
+
+263
+00:15:22.001 --> 00:15:27.000
+Zoom de petite zone à grande zone à une autre petite zone très rapidement.
+
+264
+00:15:27.001 --> 00:15:31.000
+L&#x27;extendant DOS fonctionne dans le mode protégé du 386 chip.
+
+265
+00:15:31.001 --> 00:15:34.001
+Il prend comme le système d&#x27;exploitation pour les emplois nécessaires
+
+266
+00:15:34.001 --> 00:15:36.000
+Plus d’un megabytes de RAM.
+
+267
+00:15:36.000 --> 00:15:40.001
+La dernière version d&#x27;AutoCAD nécessite au moins 2 méga-bits de RAM.
+
+268
+00:15:41.000 --> 00:15:45.000
+Mais avec l&#x27;extension DOS, de grandes tâches informatiques, comme architecturales
+
+269
+00:15:45.000 --> 00:15:47.000
+Les salariés n’ont pas besoin de travailler lentement.
+
+270
+00:15:47.001 --> 00:15:51.000
+L’extension DOS nous a permis de travailler beaucoup plus vite.
+
+271
+00:15:52.001 --> 00:15:56.001
+Au début, nous étions limités aux restrictions DOS d&#x27;une barrière de 640K.
+
+272
+00:15:57.001 --> 00:16:01.001
+Maintenant que nous avons le dos extender, l&#x27;ensemble du dessin, ainsi que la
+
+273
+00:16:01.001 --> 00:16:03.001
+Les programmes sont chargés dans la mémoire.
+
+274
+00:16:03.001 --> 00:16:07.000
+Cela nous fait travailler beaucoup plus vite que nous l’avons fait auparavant.
+
+275
+00:16:07.001 --> 00:16:10.000
+Pour les Chroniques informatiques, je suis Maria Gabriel.
+
+276
+00:16:22.000 --> 00:16:26.000
+Une autre approche pour résoudre le problème de la mémoire, surtout si vous n&#x27;avez qu&#x27;un
+
+277
+00:16:26.000 --> 00:16:29.001
+286 machine, est un add-on matériel comme l&#x27;All Charge Card.
+
+278
+00:16:29.001 --> 00:16:33.000
+Et ici pour nous montrer comment cela fonctionne est Shelly Sofer of All Computers, Inc.
+
+279
+00:16:33.001 --> 00:16:37.000
+Margaret Johnson, ingénieur des systèmes de Microsoft, qui va
+
+280
+00:16:37.000 --> 00:16:38.001
+Découvrez la puissance de la mémoire de OS2.
+
+281
+00:16:40.001 --> 00:16:44.000
+Shelly, jusqu&#x27;à présent, nous avons principalement regardé les approches logicielles.
+
+282
+00:16:44.001 --> 00:16:46.001
+Mais vous avez une solution matérielle. Pourquoi
+
+283
+00:16:46.001 --> 00:16:48.000
+Une solution hardware serait-elle une meilleure approche ?
+
+284
+00:16:48.001 --> 00:16:53.000
+Eh bien, si vous avez un ordinateur 286, vous avez vraiment besoin d&#x27;un matériel pour vous permettre de
+
+285
+00:16:53.000 --> 00:16:54.001
+Il y a plus de 640K.
+
+286
+00:16:55.000 --> 00:16:59.000
+Le 386 dispose déjà du matériel de gestion de la mémoire intégré,
+
+287
+00:16:59.000 --> 00:17:00.001
+Ainsi, vous pouvez vous débarrasser avec seulement le logiciel.
+
+288
+00:17:01.000 --> 00:17:05.001
+Mais la carte de charge ajoute la gestion de la mémoire à un 286, en l’ajoutant.
+
+289
+00:17:06.000 --> 00:17:08.000
+Shelly, disons qu&#x27;il a effectivement utilisé la carte de charge.
+
+290
+00:17:08.000 --> 00:17:11.000
+Eh bien, une fois que la carte de charge est installée, elle est complètement contrôlée par
+
+291
+00:17:11.000 --> 00:17:13.000
+logiciel, similaire à ce que nous avons vu auparavant.
+
+292
+00:17:14.000 --> 00:17:17.001
+Et j&#x27;ai une carte de mémoire ici que nous fournissons une utilité appelée All Menu.
+
+293
+00:17:18.000 --> 00:17:23.001
+Vous voyez la zone soulignée là-bas, toutes ces T&#x27;s.
+
+294
+00:17:23.001 --> 00:17:26.001
+Cela me montre que j&#x27;ai une mémoire supérieure à 640K.
+
+295
+00:17:27.000 --> 00:17:32.001
+Pour l&#x27;instant, j&#x27;ai Sidekick chargé haut, et il pourrait être un réseau si je
+
+296
+00:17:32.001 --> 00:17:34.001
+Commencez avec Novel, inférieur à 3,000, ou Banyan.
+
+297
+00:17:36.000 --> 00:17:40.000
+Et cela me permet, j&#x27;ai chargé cela au-dessus de 640K.
+
+298
+00:17:40.001 --> 00:17:46.000
+Maintenant, je veux revenir à DOS et courir très rapidement Check Disk pour vous montrer comment
+
+299
+00:17:46.000 --> 00:17:53.000
+Deux mémoires gratuites que j’ai. 590 et 480 bytes gratuits.
+
+300
+00:17:53.001 --> 00:17:55.001
+Mon fils est tout à fait résident.
+
+301
+00:17:56.000 --> 00:18:02.000
+Maintenant, une fois que le matériel est installé, il vous permet de faire sur votre 286 ce que nous avons
+
+302
+00:18:02.000 --> 00:18:03.001
+On le voit en 386.
+
+303
+00:18:04.000 --> 00:18:09.001
+Par exemple, si je voulais multitask et que j&#x27;exécutais mon Lotus 123, ceci
+
+304
+00:18:09.001 --> 00:18:11.000
+Le Lotus est pleinement fonctionnel.
+
+305
+00:18:12.000 --> 00:18:15.000
+J&#x27;ai un statut de feuille de travail pour montrer que j&#x27;ai beaucoup de mémoire conventionnelle
+
+306
+00:18:15.000 --> 00:18:16.001
+Plus de mémoire élargie.
+
+307
+00:18:16.001 --> 00:18:19.000
+Et mon Sidekick est aussi résident.
+
+308
+00:18:20.000 --> 00:18:21.000
+Mais je peux aussi multiplier maintenant.
+
+309
+00:18:21.001 --> 00:18:27.001
+Oui oui. Ce que je vais faire est d&#x27;écrire une formule très simple et de copier cette formule,
+
+310
+00:18:28.000 --> 00:18:29.001
+8 000 cellules à travers la feuille de diffusion.
+
+311
+00:18:30.000 --> 00:18:32.001
+Maintenant, vous pouvez voir à la gauche supérieure de l&#x27;écran, Lotus me dit
+
+312
+00:18:32.001 --> 00:18:34.000
+à attendre. Il se calcule.
+
+313
+00:18:34.001 --> 00:18:39.000
+Mais alors qu&#x27;il est en recalculation, je vais ouvrir mon DBase 3 plus.
+
+314
+00:18:40.001 --> 00:18:42.001
+Et je vais commencer à séparer ma base de données.
+
+315
+00:18:42.001 --> 00:18:46.001
+J&#x27;ai donc DBase 3 plus en cours. Et vous pouvez voir maintenant que Lotus est recalculé.
+
+316
+00:18:46.001 --> 00:18:47.000
+En même temps.
+
+317
+00:18:47.001 --> 00:18:48.001
+Je suis de retour dans mon lotus.
+
+318
+00:18:49.000 --> 00:18:49.001
+Vous allez à Sidekick ?
+
+319
+00:18:50.000 --> 00:18:55.000
+Allez à Sidekick. Ce que je vais faire, c&#x27;est copier ces 8
+
+320
+00:18:55.000 --> 00:18:57.000
+Des milliers de cellules à travers la feuille de diffusion.
+
+321
+00:18:57.001 --> 00:18:59.001
+Lotus est de nouveau en train de recalculer. Dbase est
+
+322
+00:18:59.001 --> 00:19:01.001
+courir . Je pense que je dois faire quelque chose en deux.
+
+323
+00:19:02.000 --> 00:19:05.001
+Il est très simple d’ouvrir une fenêtre. Et là, je vais juste scroller à travers un catalogue.
+
+324
+00:19:06.000 --> 00:19:09.000
+Et vous faites cela sur ce qui était une machine 286, que vous avez modifiée.
+
+325
+00:19:09.000 --> 00:19:13.001
+Maintenant, lorsque vous me dites que j&#x27;ai besoin d&#x27;aller plonger dans les processeurs hors de mes panneaux maternels
+
+326
+00:19:13.001 --> 00:19:17.000
+Et je suis nerveux maintenant, montre-moi à quel point il est difficile d&#x27;installer cette chose.
+
+327
+00:19:17.000 --> 00:19:21.000
+Eh bien, la carte de charge, nous incluons en fait tous les outils dont vous avez besoin.
+
+328
+00:19:21.001 --> 00:19:25.000
+Très simple, dans ce cas, voici mon 286 tableau de système.
+
+329
+00:19:25.001 --> 00:19:27.000
+J’ai juste mis l’outil.
+
+330
+00:19:27.001 --> 00:19:30.000
+et Pull. Le CPU est sorti.
+
+331
+00:19:30.001 --> 00:19:33.001
+Puis je reçois le modèle de carte de charge pour mon ordinateur.
+
+332
+00:19:34.001 --> 00:19:36.000
+C’est la carte de charge elle-même.
+
+333
+00:19:36.000 --> 00:19:40.001
+Plongez le dans. Prenez le CPU. Retournez-le au sommet.
+
+334
+00:19:42.000 --> 00:19:43.000
+Je viens d&#x27;exploiter ma machine.
+
+335
+00:19:43.001 --> 00:19:45.001
+Ok bien, ça semble raisonnable. Et qu’est-ce que tout cela coûte ?
+
+336
+00:19:46.000 --> 00:19:47.001
+La carte de rémunération est à 299 $.
+
+337
+00:19:48.000 --> 00:19:52.000
+C&#x27;est vrai, nous voulons maintenant nous tourner vers une autre approche avec OS2.
+
+338
+00:19:52.000 --> 00:19:54.000
+Nous avons vraiment regardé, si vous voulez, à la fixation, je
+
+339
+00:19:54.000 --> 00:19:55.001
+Je pense que c’est le problème des deux.
+
+340
+00:19:56.000 --> 00:19:58.001
+Et avec OS2, vous êtes vraiment un type de démarrage à partir de scratch
+
+341
+00:19:58.001 --> 00:20:00.000
+Pour faire face à ce problème de mémoire, n’est-ce pas vous ?
+
+342
+00:20:00.001 --> 00:20:04.001
+Vous pariez ! OS2 est le premier système d&#x27;exploitation conçu pour un PC qui profite
+
+343
+00:20:04.001 --> 00:20:09.001
+Les capacités mini et mainframe. Il a été conçu de la terre en haut pour s&#x27;en sortir.
+
+344
+00:20:09.001 --> 00:20:11.000
+de ces limites de deux.
+
+345
+00:20:11.001 --> 00:20:13.001
+Voyons toutes ces solutions que vous avez proposées.
+
+346
+00:20:14.000 --> 00:20:18.000
+Nous sommes restreints à la barrière 640K. Nous avons eu une mémoire élargie.
+
+347
+00:20:18.001 --> 00:20:21.001
+Nous avons EMS 3.2, EMS 4.0. Nous allons ensuite à l’extension.
+
+348
+00:20:21.001 --> 00:20:24.001
+Nous avons le gestionnaire de la mémoire étendue. Il y a N15H.
+
+349
+00:20:24.001 --> 00:20:27.000
+Je veux dire, ils sont tous en conflit, et ils font tous des choses différentes.
+
+350
+00:20:27.001 --> 00:20:33.001
+OS2 vous donne juste une surface directe de 16 megabyte, ou 1 gigabyte
+
+351
+00:20:33.001 --> 00:20:35.000
+Gestion de la mémoire virtuelle.
+
+352
+00:20:35.000 --> 00:20:38.001
+Donc, nous avons un système d&#x27;exploitation propre qui va vraiment au-delà de la barrière 640K.
+
+353
+00:20:39.000 --> 00:20:40.001
+Un terrain de jeu propre du get-go.
+
+354
+00:20:41.000 --> 00:20:45.000
+Parlez-nous dans un exemple ici quels seront les avantages de cet accès à
+
+355
+00:20:45.000 --> 00:20:46.001
+Les ressources que OS2 nous offre.
+
+356
+00:20:46.001 --> 00:20:49.000
+Pour comprendre les avantages, il faut aussi comprendre
+
+357
+00:20:49.000 --> 00:20:50.001
+Les autres caractéristiques sophistiquées.
+
+358
+00:20:50.001 --> 00:20:54.000
+Et c&#x27;est la priorité des capacités multi-tasking préventives
+
+359
+00:20:54.000 --> 00:20:55.001
+OS2 basé sur les filets.
+
+360
+00:20:56.000 --> 00:20:57.001
+Il faut aussi comprendre un autre
+
+361
+00:20:57.001 --> 00:20:59.001
+La pensée. Il y a eu une confusion avec cela.
+
+362
+00:21:00.001 --> 00:21:03.001
+OS2 est vraiment idéal pour ces environnements de bureau
+
+363
+00:21:03.001 --> 00:21:05.000
+Ils travaillent avec des applications distribuées.
+
+364
+00:21:05.001 --> 00:21:08.000
+Beaucoup de données sur une base de données DB2, par exemple.
+
+365
+00:21:08.001 --> 00:21:12.001
+Nous voyons que nos comptes d&#x27;entreprise sont extrêmement intéressés par OS2 pour répondre aux besoins de
+
+366
+00:21:12.001 --> 00:21:17.000
+Récupérer les données d&#x27;un mainframe ou d&#x27;autres serveurs et les mettre tous ensemble
+
+367
+00:21:17.000 --> 00:21:19.000
+dans une grande application sophistiquée.
+
+368
+00:21:19.001 --> 00:21:22.000
+Le système d’information exécutif, et nous allons vers le
+
+369
+00:21:22.000 --> 00:21:24.000
+Informations sur votre approche des doigts.
+
+370
+00:21:24.000 --> 00:21:25.000
+Je vais le voir, Margaret.
+
+371
+00:21:25.000 --> 00:21:29.001
+très bien. Pour le moment, je recueille le scénario que je suis un gestionnaire de produits
+
+372
+00:21:29.001 --> 00:21:31.001
+Et mon produit est des pantalons fancy.
+
+373
+00:21:32.000 --> 00:21:35.000
+Et je travaille dans un environnement où j&#x27;ai accès aux données de mainframe.
+
+374
+00:21:35.000 --> 00:21:38.001
+Et c&#x27;est toujours en train de me télécharger en temps réel par ce
+
+375
+00:21:38.001 --> 00:21:40.000
+3270 Programme d’émulation.
+
+376
+00:21:41.000 --> 00:21:44.001
+Pendant ce temps, je crée mon layout dans PageMaker, qui est assez
+
+377
+00:21:44.001 --> 00:21:46.000
+Une application très sophistiquée.
+
+378
+00:21:46.001 --> 00:21:51.000
+Donc, je vais aller plus loin et prendre mes données de mainframe et mettre cela dans un fichier.
+
+379
+00:21:53.000 --> 00:21:55.000
+Dans un scénario, il est aussi facile que de fermer l&#x27;application,
+
+380
+00:21:55.001 --> 00:21:57.000
+Mais en réalité, c’est un peu différent.
+
+381
+00:21:58.000 --> 00:22:02.001
+Mais puisque nous sommes dans le pays du scénario, je vais avancer et mettre cette documentation,
+
+382
+00:22:04.000 --> 00:22:06.001
+Ce fichier 200K, à l&#x27;intérieur de PageMaker.
+
+383
+00:22:07.000 --> 00:22:11.000
+Maintenant, si c&#x27;était Windows ou d&#x27;autres applications DOS, je verrais un verre d&#x27;heure ou
+
+384
+00:22:11.000 --> 00:22:12.001
+Je voudrais vraiment sortir pour obtenir quelques copies.
+
+385
+00:22:13.001 --> 00:22:14.001
+Peut-être qu&#x27;il ne pouvait même pas s&#x27;adapter à tout cela.
+
+386
+00:22:14.001 --> 00:22:19.000
+Mais avec PageMaker, en raison de la capacité des filets et filets permettant de
+
+387
+00:22:19.000 --> 00:22:24.001
+plusieurs sources d&#x27;exécution dans une application, je peux faire d&#x27;autres choses dans
+
+388
+00:22:24.001 --> 00:22:28.000
+PageMaker ou je peux aller et utiliser d&#x27;autres applications OS2.
+
+389
+00:22:28.001 --> 00:22:33.000
+Par exemple, le programme de moniteur de CPU, qui surveille réellement l&#x27;utilisation de notre CPU,
+
+390
+00:22:33.000 --> 00:22:36.000
+Je partage le temps avec cette page.
+
+391
+00:22:36.001 --> 00:22:40.001
+Donc, en réalité, nous obtenons un nouveau système d&#x27;exploitation avec multitasking
+
+392
+00:22:40.001 --> 00:22:42.001
+fonctionnalités pour la plate-forme DOS.
+
+393
+00:22:42.001 --> 00:22:45.000
+Pour ces environnements, pour ces stations de travail.
+
+394
+00:22:45.001 --> 00:22:48.001
+Et je prendrais un pas de plus en disant à l&#x27;utilisateur sophistiqué à ce sujet
+
+395
+00:22:48.001 --> 00:22:53.000
+point, pour ces stations de travail dans un réseau de zone locale ou un réseau d’espace large
+
+396
+00:22:53.000 --> 00:22:55.001
+Environnement ou applications de serveur.
+
+397
+00:22:55.001 --> 00:22:58.001
+Par exemple, OS2 est la base de notre réseau d&#x27;exploitation
+
+398
+00:22:58.001 --> 00:23:00.001
+Le système, Land Manager 2.0.
+
+399
+00:23:00.001 --> 00:23:04.000
+Maintenant, quel est l&#x27;état de cette version de OS2 en ce moment, Margaret?
+
+400
+00:23:04.001 --> 00:23:09.000
+La version actuelle qui est en expédition est OS2 1. 21 et c&#x27;est ce que la Terre
+
+401
+00:23:09.000 --> 00:23:10.001
+Le directeur est au sommet d’aujourd’hui.
+
+402
+00:23:10.001 --> 00:23:13.001
+OK ! Merci beaucoup à vous. Merci à toi Shelly.
+
+403
+00:23:14.000 --> 00:23:15.001
+C’est notre regard sur la gestion de la mémoire élevée.
+
+404
+00:23:16.000 --> 00:23:18.000
+Restez maintenant à l&#x27;écoute pour les Informatiques de cette semaine.
+
+405
+00:23:28.000 --> 00:23:33.000
+Dans le fichier Random Access cette semaine, les accessoires informatiques ont introduit un nouveau
+
+406
+00:23:33.000 --> 00:23:35.001
+dispositif d&#x27;entrée pour PC qui est parfait pour les présentations.
+
+407
+00:23:36.000 --> 00:23:38.000
+Il s&#x27;agit essentiellement d&#x27;une souris de contrôle à distance qui
+
+408
+00:23:38.000 --> 00:23:40.000
+Il fonctionne comme un écran touch interactif.
+
+409
+00:23:40.000 --> 00:23:43.001
+Le matériel est composé d&#x27;une caméra qui projette l&#x27;image PC sur un
+
+410
+00:23:43.001 --> 00:23:45.000
+écran de projection LCD.
+
+411
+00:23:45.001 --> 00:23:47.001
+Vous utilisez ensuite un indicateur électronique avec intégré
+
+412
+00:23:47.001 --> 00:23:49.001
+boutons de souris pour contrôler le logiciel.
+
+413
+00:23:50.000 --> 00:23:52.001
+Le dispositif d&#x27;entrée de haute technologie est appelé les Proxima Cyclops.
+
+414
+00:23:53.000 --> 00:23:57.000
+BMC Micro Industries a développé un nouveau type de scanner à la main, qui vous permet de
+
+415
+00:23:57.000 --> 00:23:59.000
+Écran d’images sans élever le scanner.
+
+416
+00:24:00.000 --> 00:24:04.000
+Le logiciel de scanner se souvient de l&#x27;endroit où se trouve le scanner, de sorte que vous pouvez scanner un
+
+417
+00:24:04.000 --> 00:24:07.000
+colonne d&#x27;une grande page, puis juste glisser et scanner la prochaine
+
+418
+00:24:07.000 --> 00:24:09.000
+Colonne dans un mouvement continu.
+
+419
+00:24:09.000 --> 00:24:13.001
+En utilisant ce mouvement zigzag, vous pouvez scanner une page jusqu&#x27;à 11 par 18 sans s&#x27;arrêter.
+
+420
+00:24:14.000 --> 00:24:17.001
+Le scanner à main multi-directionnel est en forme de bar et vend pour 299 $.
+
+421
+00:24:18.001 --> 00:24:22.000
+Eh bien, il y a encore un nouveau paquet de programmation axé sur les objets qui vous permet de
+
+422
+00:24:22.000 --> 00:24:25.000
+Développer des applications complexes sans utiliser aucun code.
+
+423
+00:24:25.001 --> 00:24:29.001
+On l’appelle le cerveau. Il utilise des menus pull-down et des commandes anglaises plaines.
+
+424
+00:24:30.000 --> 00:24:34.000
+Vous pouvez créer des objets de faible, moyenne et élevée, et le package est automatiquement
+
+425
+00:24:34.000 --> 00:24:37.001
+Il maintient un dictionnaire d&#x27;objets utilisés pour assurer la cohérence du design.
+
+426
+00:24:37.001 --> 00:24:42.000
+Vous pouvez également importer d&#x27;autres routines de programme écrites dans les langues de haut niveau.
+
+427
+00:24:42.001 --> 00:24:45.001
+Le cerveau est vendu par la société Ingenio. C&#x27;est dû au début de la prochaine
+
+428
+00:24:45.001 --> 00:24:47.001
+année de . Le prix est de 795 $.
+
+429
+00:24:48.001 --> 00:24:52.001
+Jetez un coup d’œil aux dix meilleurs titres de logiciels de cette semaine pour PC, PC Connection
+
+430
+00:24:52.001 --> 00:24:56.001
+Adobe Type Manager pour Windows 3. 0 est toujours dans le numéro 1
+
+431
+00:24:56.001 --> 00:24:58.000
+L’étape est suivie par TurboTax.
+
+432
+00:24:59.000 --> 00:25:03.000
+QuarterDEX est en troisième place, et PC Globe est en quatrième place.
+
+433
+00:25:03.000 --> 00:25:08.000
+En cinquième place est Quicken, en sortant les dix premiers sont PC USA, Microsoft
+
+434
+00:25:08.000 --> 00:25:11.000
+Entertainment Pack pour Windows, Facelift pour Windows
+
+435
+00:25:11.000 --> 00:25:13.001
+InfoSelect et le nouveau Print Shop Companion.
+
+436
+00:25:14.001 --> 00:25:18.001
+AutoCAD annonce que la 11e édition d&#x27;Autodesk sera la dernière édition de la version populaire
+
+437
+00:25:18.001 --> 00:25:21.000
+programme pour soutenir 286 machines ou inférieures.
+
+438
+00:25:21.001 --> 00:25:25.000
+L&#x27;entreprise dit que le programme devient trop compliqué pour fonctionner à acceptable
+
+439
+00:25:25.000 --> 00:25:27.001
+La vitesse est limitée par les plus anciens processeurs.
+
+440
+00:25:28.001 --> 00:25:30.001
+La sortie de l&#x27;Autodesk 11 est prévue en mars.
+
+441
+00:25:31.000 --> 00:25:35.000
+HumanCAD a annoncé un nouveau programme pour fournir aux concepteurs des images humaines
+
+442
+00:25:35.000 --> 00:25:37.001
+des modèles qui sont anatomiquement et ergonomiquement corrects.
+
+443
+00:25:38.000 --> 00:25:41.001
+Le programme est conçu pour être utilisé en conjonction avec un logiciel CAD spécialisé.
+
+444
+00:25:42.000 --> 00:25:46.001
+Le programme PC, appelé Mannequin, permettra aux concepteurs de tester les objets de conception
+
+445
+00:25:46.001 --> 00:25:49.000
+Voyez s’ils travaillent ergonomiquement avec le corps humain.
+
+446
+00:25:49.001 --> 00:25:52.001
+Le programme sera livré en janvier et vendu pour moins de 700 $.
+
+447
+00:25:53.000 --> 00:25:56.000
+Il est temps maintenant pour la révision logicielle de cette semaine avec Paul Schindler.
+
+448
+00:25:57.000 --> 00:26:00.001
+Vous n&#x27;avez pas besoin d&#x27;être Sherlock Holmes pour découvrir que votre bras serait beau
+
+449
+00:26:00.001 --> 00:26:02.001
+Je suis fatiguée si tu devrais le garder tout le temps.
+
+450
+00:26:03.000 --> 00:26:06.000
+Cependant, pour les personnes atteintes de vision, il est vraiment difficile de lire la
+
+451
+00:26:06.000 --> 00:26:07.001
+Petit type sur un écran PC.
+
+452
+00:26:08.000 --> 00:26:12.000
+Les utilisateurs de Macintosh ont eu des solutions pour cela pendant un certain temps, mais maintenant PC
+
+453
+00:26:12.000 --> 00:26:13.001
+Les utilisateurs ont iRelief.
+
+454
+00:26:14.000 --> 00:26:18.000
+Il y a maintenant deux versions de ce grand type de processeur de mots, une pour les ordinateurs portables et
+
+455
+00:26:18.000 --> 00:26:22.000
+Un pour les PC. iRelief est un processeur de mots ASCII très simple et il
+
+456
+00:26:22.000 --> 00:26:24.000
+Il ne prétend pas être autre chose.
+
+457
+00:26:24.000 --> 00:26:27.001
+Il apparaît automatiquement dans la taille que vous voulez. Vous pouvez parcourir
+
+458
+00:26:27.001 --> 00:26:29.000
+Le menu choisit un par un.
+
+459
+00:26:29.001 --> 00:26:33.000
+Dans l&#x27;option de menu vidéo, vos choix se déroulent de jumbo à minuscule, ce qui est
+
+460
+00:26:33.000 --> 00:26:35.000
+Normal, avec beaucoup de degrés entre.
+
+461
+00:26:35.001 --> 00:26:39.000
+Il a aussi des couleurs et celles-ci sont plus importantes que la plupart des gens pensent.
+
+462
+00:26:39.001 --> 00:26:42.001
+Ils peuvent faire une différence pour les personnes avec une détérioration de la vision spécifique de la couleur.
+
+463
+00:26:43.000 --> 00:26:46.000
+Vous pouvez également modifier l&#x27;espace et la vitesse d&#x27;éclairage du cursor.
+
+464
+00:26:46.001 --> 00:26:47.001
+L’impression est rudimentaire.
+
+465
+00:26:48.000 --> 00:26:51.000
+Si vous avez une imprimante laser, vous pouvez produire un grand type de sortie.
+
+466
+00:26:51.000 --> 00:26:54.001
+Sinon, vous avez toutes les fonctions d&#x27;édition habituelles, y compris le nombre de mots et
+
+467
+00:26:54.001 --> 00:26:58.000
+Rechercher et remplacer. iRelief est seulement 300 $ de
+
+468
+00:26:58.000 --> 00:26:59.001
+SkiSoft à Lexington, au Massachusetts.
+
+469
+00:27:00.000 --> 00:27:02.000
+Pour les Chroniques informatiques, je suis Paul Schindler.
+
+470
+00:27:03.000 --> 00:27:05.001
+Mirror Technologies a développé une affiche de page complète
+
+471
+00:27:05.001 --> 00:27:07.000
+Utiliser avec le Macintosh Classic.
+
+472
+00:27:07.001 --> 00:27:11.001
+Étant donné que le Classic n&#x27;a pas de slot élargi, l&#x27;écran utilise un
+
+473
+00:27:11.001 --> 00:27:13.001
+Le tableau vidéo qui s&#x27;ajoute au tableau logique.
+
+474
+00:27:13.001 --> 00:27:18.001
+Un écran de 15 pouces est disponible pour moins de 700 $ et un écran double page de 19 pouces.
+
+475
+00:27:18.001 --> 00:27:20.000
+Il est vendu pour moins de 900 $.
+
+476
+00:27:21.000 --> 00:27:24.000
+Enfin, la popularité du diplôme en informatique
+
+477
+00:27:24.000 --> 00:27:25.001
+Il est tombé sur les campus.
+
+478
+00:27:26.000 --> 00:27:28.001
+Le ministère de l&#x27;éducation a annoncé que le nombre de diplômés
+
+479
+00:27:28.001 --> 00:27:32.000
+Les diplômes décernés en Informatique et Informatique ont
+
+480
+00:27:32.000 --> 00:27:33.001
+Il est tombé pour la troisième année consécutive.
+
+481
+00:27:34.000 --> 00:27:37.001
+Selon le Washington Post, les étudiants entrant en informatique disent que
+
+482
+00:27:37.001 --> 00:27:39.001
+Le plus grand est à la fois dépensant du temps et aveugle.
+
+483
+00:27:40.000 --> 00:27:41.000
+Mais encore une fois, qu’est-ce qui n’est pas majeur ?
+
+484
+00:27:41.000 --> 00:27:44.001
+C&#x27;est ça pour les chronicles informatiques de cette semaine. Je suis Marie Gabriel.
+
+485
+00:28:11.000 --> 00:28:16.000
+Sur CANT, OH 44240, veuillez indiquer la date du programme.
+
+486
+00:28:41.000 --> 00:29:00.000
+Merci de regarder.

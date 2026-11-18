@@ -1,0 +1,2029 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:27.001
+[...]
+
+2
+00:00:31.000 --> 00:00:36.000
+As interfaces de usuário foram gráficas, correspondência de negócios foi gráfica, e
+
+3
+00:00:36.000 --> 00:00:38.001
+Agora, a programação em si está indo gráfico.
+
+4
+00:00:39.000 --> 00:00:42.000
+Este é o Multiscope, um debugger gráfico para OS2.
+
+5
+00:00:42.001 --> 00:00:44.000
+Este não é o velho móvel de seu pai.
+
+6
+00:00:44.000 --> 00:00:49.000
+Esta é uma nova geração de ferramentas de programação, ambientes e idiomas.
+
+7
+00:00:49.001 --> 00:00:53.001
+Hoje, vamos olhar para as novas linguagens de programação orientadas a objetos neste
+
+8
+00:00:53.001 --> 00:00:55.000
+Edição das crônicas de computador.
+
+9
+00:01:09.001 --> 00:01:14.000
+As crônicas de computador são feitas possíveis em parte pelos Software Publishers
+
+10
+00:01:14.000 --> 00:01:18.000
+A Associação, que lembra que a pirataria de software é um delito federal.
+
+11
+00:01:18.001 --> 00:01:21.000
+Quando algumas pessoas roubam software, todo mundo perde.
+
+12
+00:01:22.000 --> 00:01:26.000
+O financiamento adicional é fornecido pela CompuServe, pela PC Connection e pela Mac.
+
+13
+00:01:26.000 --> 00:01:32.000
+Conexão, por Byte Magazine e Bix, o Byte Information Exchange, e por Intel
+
+14
+00:01:32.000 --> 00:01:34.000
+Empresa, Desenvolvimento de Computadores Pessoais.
+
+15
+00:01:39.001 --> 00:01:41.000
+Bem-vindo às crônicas de computador.
+
+16
+00:01:41.000 --> 00:01:43.001
+Eu sou Stuart Chafee, e comigo esta semana é Jan Lewis.
+
+17
+00:01:44.000 --> 00:01:46.000
+Jan, estamos falando de programação orientada a objetos
+
+18
+00:01:46.000 --> 00:01:47.001
+linguagem, uma nova abordagem para a programação.
+
+19
+00:01:48.000 --> 00:01:49.001
+Este é um exemplo interessante que tenho aqui.
+
+20
+00:01:49.001 --> 00:01:52.001
+É um programa relativamente simples chamado Inglaterra, mas permite que você programa até mesmo
+
+21
+00:01:52.001 --> 00:01:54.001
+Ainda que você não saiba nada sobre programação.
+
+22
+00:01:54.001 --> 00:01:56.000
+Ele automaticamente escreve o código para você.
+
+23
+00:01:56.000 --> 00:01:58.000
+Por exemplo, estou apenas entrando em um diálogo aqui.
+
+24
+00:01:58.000 --> 00:02:00.000
+Eu digo, eu quero W, escrever um programa.
+
+25
+00:02:00.000 --> 00:02:00.001
+O que eu quero fazer?
+
+26
+00:02:01.000 --> 00:02:03.001
+Bem, vamos dizer que eu quero usar um comando de matemática, qual?
+
+27
+00:02:03.001 --> 00:02:05.000
+Vamos dizer que quero gerar um número aleatório.
+
+28
+00:02:05.000 --> 00:02:05.001
+Eu peguei dois.
+
+29
+00:02:06.000 --> 00:02:07.001
+Vamos dizer um número aleatório de zero para um.
+
+30
+00:02:08.000 --> 00:02:10.000
+Eu peguei um, atribuí-lo a uma variável.
+
+31
+00:02:10.000 --> 00:02:12.001
+Eu vou dizer X, e há a linha de código que é escrita para mim.
+
+32
+00:02:12.001 --> 00:02:14.001
+Eu realmente não sei o que o código é, mas ele me diz
+
+33
+00:02:14.001 --> 00:02:16.000
+Esta é a primeira instrução.
+
+34
+00:02:16.000 --> 00:02:17.001
+E você pode fazer coisas sérias com isso.
+
+35
+00:02:17.001 --> 00:02:20.000
+Por exemplo, eu posso voltar e executar um programa que eu escrevi antes
+
+36
+00:02:20.000 --> 00:02:22.001
+para a geração de contas.
+
+37
+00:02:24.000 --> 00:02:25.000
+E lá você vai.
+
+38
+00:02:25.000 --> 00:02:27.001
+E este é um programa bastante complicado, na verdade,
+
+39
+00:02:27.001 --> 00:02:29.000
+que me verifica em algumas coisas.
+
+40
+00:02:29.001 --> 00:02:33.001
+E o que é interessante, se eu quiser desbloqueá-lo, eu posso entrar aqui para Ver Programa,
+
+41
+00:02:34.000 --> 00:02:35.001
+Veja o programa e a memória, e há todo o
+
+42
+00:02:35.001 --> 00:02:37.000
+O código que o programa escreveu para mim foi lá.
+
+43
+00:02:37.000 --> 00:02:39.000
+E eu posso entrar e descobrir como mudar isso e assim por diante.
+
+44
+00:02:40.001 --> 00:02:43.001
+Jen, estamos falando sobre, como eu disse, as línguas OOP agora.
+
+45
+00:02:44.000 --> 00:02:46.001
+E é um pouco complicado, eu sei, mas você pode explicar em termos simples
+
+46
+00:02:46.001 --> 00:02:49.000
+O que é programação orientada a objetos em comparação
+
+47
+00:02:49.000 --> 00:02:50.001
+Programação Procedural Antigo?
+
+48
+00:02:50.001 --> 00:02:50.001
+com certeza.
+
+49
+00:02:51.000 --> 00:02:53.001
+Tecnicamente, esta não é uma linguagem orientada a objetos.
+
+50
+00:02:53.001 --> 00:02:53.001
+É certo.
+
+51
+00:02:53.001 --> 00:02:55.000
+No entanto, ele demonstra os benefícios.
+
+52
+00:02:55.001 --> 00:02:58.001
+Primeiro de tudo, você pode desenvolver um aplicativo sem saber como escrever código.
+
+53
+00:02:59.000 --> 00:03:01.001
+Em segundo lugar, você pode desenvolver para o ambiente gráfico de interface do usuário.
+
+54
+00:03:02.000 --> 00:03:04.001
+E, em terceiro lugar, você pode facilmente alterar ou desbloquear esse código.
+
+55
+00:03:05.000 --> 00:03:08.000
+O objeto em si, o conceito é a loja de objetos
+
+56
+00:03:08.000 --> 00:03:10.000
+funcionalidade e os dados.
+
+57
+00:03:10.000 --> 00:03:11.001
+E depois, para ativá-lo, alguém o envia a
+
+58
+00:03:11.001 --> 00:03:13.001
+A mensagem, e ela só vai embora nesse ponto.
+
+59
+00:03:13.001 --> 00:03:17.000
+Uma das razões pelas quais os idiomas de programação orientados a objetos estão em aumento,
+
+60
+00:03:17.001 --> 00:03:22.000
+devido à grande complexidade e tamanho dos programas de hoje, para encontrar um simples
+
+61
+00:03:22.000 --> 00:03:25.001
+A aplicação que tem meio milhão de linhas de código simplesmente não é incomum.
+
+62
+00:03:26.000 --> 00:03:29.000
+Assim que a complexidade e o tamanho dos programas aumentam, temos que
+
+63
+00:03:29.000 --> 00:03:31.000
+Conheça formas de torná-lo mais gerenciável.
+
+64
+00:03:31.001 --> 00:03:33.001
+Jen, vamos dar uma olhada em várias línguas OOP hoje.
+
+65
+00:03:33.001 --> 00:03:38.000
+Vamos olhar para Smalltalk e Actor, C++, Objective-C, e Prograf.
+
+66
+00:03:38.000 --> 00:03:41.000
+Quando você fala de linguagens de programação, o nome de uma empresa
+
+67
+00:03:41.000 --> 00:03:42.001
+Isso vem à mente, e isso é Borland.
+
+68
+00:03:43.000 --> 00:03:46.001
+Borland, é claro, fez um negócio de vendas de Turbo C, Turbo Pascal, agora
+
+69
+00:03:46.001 --> 00:03:48.000
+Turbo Debugger e Turbo Assembler.
+
+70
+00:03:48.001 --> 00:03:52.000
+Começamos com uma visita à sede de Borland em Scotts Valley, Califórnia.
+
+71
+00:03:54.000 --> 00:03:59.001
+A Borland International é particularmente mais conhecida por seus produtos de língua Turbo, como
+
+72
+00:03:59.001 --> 00:04:04.001
+como Turbo Pascal e Turbo C, dois ambientes de programação estruturados que têm
+
+73
+00:04:04.001 --> 00:04:07.000
+Vendeu mais de um milhão de cópias.
+
+74
+00:04:08.000 --> 00:04:11.001
+Eles fazem parte do que o presidente de Borland Philippe Kahn chama de
+
+75
+00:04:11.001 --> 00:04:13.000
+Primeira revolução de software.
+
+76
+00:04:13.001 --> 00:04:18.000
+Apesar das semelhanças, as duas línguas têm mercados diferentes.
+
+77
+00:04:19.000 --> 00:04:24.000
+Pascal é mais de uma ferramenta universitária, na verdade, que é usado muito para ensinar
+
+78
+00:04:24.000 --> 00:04:27.001
+cursos de ciência da computação e estruturas de dados ou as classes de primeiro nível.
+
+79
+00:04:28.000 --> 00:04:31.001
+E, espero, agora está mudando para as escolas secundárias e substituindo as bases.
+
+80
+00:04:33.000 --> 00:04:35.000
+C é mais do que uma linguagem de programação de sistemas.
+
+81
+00:04:35.000 --> 00:04:37.001
+Muitos softwares comerciais são escritos desta forma.
+
+82
+00:04:38.000 --> 00:04:42.000
+Basicamente, a maioria dos programadores C também conhece Pascal e pode programar em Pascal porque
+
+83
+00:04:42.000 --> 00:04:45.001
+começou a tomar as primeiras estruturas de dados de classe, provavelmente, ou
+
+84
+00:04:45.001 --> 00:04:47.001
+Classe de programação na Universidade de Pascal.
+
+85
+00:04:47.001 --> 00:04:49.000
+A maioria das pessoas aprende o Pascal.
+
+86
+00:04:49.000 --> 00:04:53.001
+É fundamentalmente sintaxe limpa e uma ótima maneira de fazer as coisas.
+
+87
+00:04:54.000 --> 00:04:56.000
+É uma grande linguagem hobbyista.
+
+88
+00:04:56.001 --> 00:04:59.000
+C é mais do que a linguagem de um programador de sistema.
+
+89
+00:04:59.000 --> 00:05:02.000
+E se você apenas programar algumas horas por semana, três ou quatro horas
+
+90
+00:05:02.000 --> 00:05:03.001
+Uma semana, o Pascal é uma ótima língua.
+
+91
+00:05:04.000 --> 00:05:04.001
+C é um pouco difícil.
+
+92
+00:05:06.001 --> 00:05:10.001
+Borland está agora avançando o que considera a próxima revolução em software
+
+93
+00:05:10.001 --> 00:05:15.001
+design, chamado de programação orientada a objetos, um ambiente que
+
+94
+00:05:15.001 --> 00:05:18.000
+Código reutilizável e extensível.
+
+95
+00:05:18.001 --> 00:05:24.000
+Em particular, as ferramentas orientadas a objetos enfatizam a arquitetura subjacente da
+
+96
+00:05:24.000 --> 00:05:28.000
+O projeto do programa, usando uma abordagem de bloco de construção modular.
+
+97
+00:05:28.001 --> 00:05:32.000
+Eu acho que talvez um dos primeiros benefícios é o fato de que o objeto-orientado
+
+98
+00:05:32.000 --> 00:05:35.000
+Programação força a arquitetura de software cuidadosa.
+
+99
+00:05:36.000 --> 00:05:40.000
+Quando você está construindo um pedaço de software, uma das coisas mais difíceis, se
+
+100
+00:05:40.000 --> 00:05:44.000
+Você está em si mesmo, é às vezes, se você é um tipo de bom programador, é forçar
+
+101
+00:05:44.000 --> 00:05:48.000
+Você só precisa pensar muito sobre isso, arquiteto
+
+102
+00:05:48.000 --> 00:05:50.000
+casa antes de começar a construí-la.
+
+103
+00:05:50.001 --> 00:05:55.001
+Programação orientada a objetos, forçando-o a deslocar as suas hierarquias de classe, e
+
+104
+00:05:55.001 --> 00:05:58.000
+CETERA, força você a pensar realmente pelas coisas.
+
+105
+00:06:00.000 --> 00:06:05.000
+Programação orientada a objetos da presidência de Borland como a última melhoria real
+
+106
+00:06:05.000 --> 00:06:08.001
+em software, um passo que já foi tentado antes.
+
+107
+00:06:08.001 --> 00:06:15.001
+Algumas pessoas tentaram fazer outra mutação ocorrer com as línguas Lisp, com
+
+108
+00:06:15.001 --> 00:06:19.000
+Prolog, et cetera, mas isso realmente não funcionou porque essas línguas não poderiam
+
+109
+00:06:19.000 --> 00:06:24.000
+Tudo o que as outras línguas poderiam fazer muito praticamente, e ao mesmo tempo
+
+110
+00:06:24.000 --> 00:06:27.001
+tempo, construir o suficiente de novos benefícios que as pessoas iria mudar para eles.
+
+111
+00:06:28.000 --> 00:06:29.001
+Por isso, eles se tornaram ferramentas de nicho.
+
+112
+00:06:30.000 --> 00:06:35.001
+Acredito que a atual revolução de programação orientada a objetos, em certa medida,
+
+113
+00:06:35.001 --> 00:06:40.001
+será tão bem sucedido quanto a programação estruturada, mas sem ter que
+
+114
+00:06:40.001 --> 00:06:43.001
+Mude essas línguas, estendendo-as.
+
+115
+00:06:56.000 --> 00:07:00.001
+Junte-se a nós no estúdio agora é George Bosworth, cofundador e vice-fundador de George
+
+116
+00:07:00.001 --> 00:07:05.000
+Presidente da DigiTalk junto com George, Bruce Neuberger com o Whitewater Group.
+
+117
+00:07:05.000 --> 00:07:05.000
+[...]
+
+118
+00:07:05.001 --> 00:07:09.001
+Bruce, antes mesmo de começar, há dois tipos de
+
+119
+00:07:09.001 --> 00:07:11.000
+linguagens de programação orientadas a objetos.
+
+120
+00:07:11.000 --> 00:07:14.001
+Um é o tipo puro, o que foi construído do chão para ser objeto.
+
+121
+00:07:14.001 --> 00:07:17.000
+orientado, como o seu e como a pequena conversa.
+
+122
+00:07:17.000 --> 00:07:19.001
+O outro é a linguagem procedural reforçada.
+
+123
+00:07:20.000 --> 00:07:24.000
+Para o seu tipo, que é construído do chão para ser objeto-orientado, é
+
+124
+00:07:24.000 --> 00:07:27.001
+mais fácil para um iniciante que não tenha o fundo ou línguas processuais, ou
+
+125
+00:07:27.001 --> 00:07:30.000
+Ainda é melhor para um programador existente?
+
+126
+00:07:30.001 --> 00:07:34.000
+Tudo depende do fundo da pessoa, mas descobrimos que se alguém
+
+127
+00:07:34.000 --> 00:07:39.000
+completamente salta os pés primeiro para a programação orientada a objetos, é um sink ou
+
+128
+00:07:39.000 --> 00:07:41.000
+nadam e, na maioria das vezes, nadam.
+
+129
+00:07:41.001 --> 00:07:45.000
+George, vamos começar por olhar para Smalltalk, que está funcionando aqui
+
+130
+00:07:45.000 --> 00:07:47.000
+no ambiente de apresentação de gerenciamento, certo?
+
+131
+00:07:47.001 --> 00:07:48.000
+Isso é correto.
+
+132
+00:07:48.001 --> 00:07:51.001
+E diga-nos sobre Smalltalk e, em seguida, mostre-nos como você usaria SmalltalK.
+
+133
+00:07:52.000 --> 00:07:55.000
+Bem, Smalltalk, e esta é uma implementação particular para a apresentação
+
+134
+00:07:55.000 --> 00:07:58.000
+O gerenciador é uma linguagem orientada a objetos.
+
+135
+00:07:59.000 --> 00:08:02.001
+Ele pioneiu muitos conceitos em programação orientada a objetos, e é por isso que
+
+136
+00:08:02.001 --> 00:08:05.001
+Muitos interesses foram reunidos ao longo dos anos.
+
+137
+00:08:05.001 --> 00:08:07.000
+Na verdade, isso vai para trás, não é mesmo?
+
+138
+00:08:07.000 --> 00:08:09.000
+Ah, sim, vai voltar cinco dias e assim por diante.
+
+139
+00:08:09.001 --> 00:08:11.000
+Tudo bem, mostre-nos como você usaria Smalltalk 5 aqui.
+
+140
+00:08:11.001 --> 00:08:15.000
+Bem, nesta janela particular, é uma janela de demonstração gráfica.
+
+141
+00:08:15.000 --> 00:08:16.000
+Podemos fazer várias coisas.
+
+142
+00:08:16.000 --> 00:08:16.001
+Podemos tirar fotos.
+
+143
+00:08:17.001 --> 00:08:20.001
+Estas imagens particulares que você está vendo são geradas pelo subjacente
+
+144
+00:08:20.001 --> 00:08:22.000
+Gestor de apresentação gráfico modelos.
+
+145
+00:08:22.001 --> 00:08:26.000
+Este pedaço de texto é gerado pela tecnologia de fonte subjacente dentro
+
+146
+00:08:26.000 --> 00:08:29.001
+Gestor de apresentação, mas o que fizemos aqui é que realmente surpreendemos
+
+147
+00:08:29.001 --> 00:08:32.001
+É um objeto que podemos manipular.
+
+148
+00:08:32.001 --> 00:08:36.000
+Neste caso, eu posso tirá-lo em torno e, na verdade, jogá-la muito como um Frisbee.
+
+149
+00:08:38.000 --> 00:08:42.000
+Mas uma das coisas que é muito interessante sobre ambientes orientados a objetos,
+
+150
+00:08:42.001 --> 00:08:45.000
+Em particular, em Smalltalk, o que eu gosto é a capacidade de modificar
+
+151
+00:08:45.000 --> 00:08:47.000
+coisas, mesmo quando as coisas estão correndo.
+
+152
+00:08:47.000 --> 00:08:51.000
+Então, o que eu gostaria de fazer é entrar e talvez desenhar algo ligeiramente diferente aqui.
+
+153
+00:08:51.001 --> 00:08:55.000
+E para fazer isso, o que temos que fazer é localizar a peça de código que é
+
+154
+00:08:55.000 --> 00:08:56.001
+Fazer o que vemos e depois mudá-lo.
+
+155
+00:08:57.000 --> 00:09:01.000
+Esta janela particular que eu apenas coloquei na tela é uma janela que
+
+156
+00:09:01.000 --> 00:09:02.001
+Permite-nos modificar o código.
+
+157
+00:09:03.000 --> 00:09:04.001
+Ele nos permite ver todo o código-fonte no sistema.
+
+158
+00:09:04.001 --> 00:09:09.001
+E o que eu estou fazendo é que eu vou para a peça de código que realmente trouxe isso.
+
+159
+00:09:12.001 --> 00:09:14.001
+É chamado de demo gráfico, não surpreendentemente.
+
+160
+00:09:15.000 --> 00:09:18.000
+E o particular pedaço de código que levou isso, não
+
+161
+00:09:18.000 --> 00:09:19.001
+surpreendentemente, é chamado Smalltalk.
+
+162
+00:09:21.000 --> 00:09:25.000
+Então, o que vamos fazer é que vamos descer aqui e mudá-lo agora porque eu não sou.
+
+163
+00:09:25.000 --> 00:09:27.000
+necessariamente o maior típico do mundo.
+
+164
+00:09:27.000 --> 00:09:33.001
+Vamos ir e recolher um pedaço de texto que eu escrevi anteriormente e apenas copiá-lo e
+
+165
+00:09:33.001 --> 00:09:38.000
+Deixe isso no código que estamos correndo.
+
+166
+00:09:39.001 --> 00:09:42.000
+Então você está modificando o programa enquanto o programa está em andamento.
+
+167
+00:09:42.000 --> 00:09:42.000
+É certo.
+
+168
+00:09:42.000 --> 00:09:46.000
+O que estou fazendo agora é esta simples parte de edição de texto que diz o que ele queria
+
+169
+00:09:46.000 --> 00:09:49.001
+Faça e eu estou mudando para ser algo diferente do que era.
+
+170
+00:09:49.001 --> 00:09:51.000
+Nesse caso, mudou o texto.
+
+171
+00:09:51.000 --> 00:09:52.000
+Vou mudar o tamanho.
+
+172
+00:09:52.001 --> 00:09:55.000
+Eu também vou sair aqui e mudar a cor.
+
+173
+00:09:57.000 --> 00:10:02.000
+E se eu sou tão bom quanto tipista como espero ser às vezes, então é apenas uma questão
+
+174
+00:10:02.000 --> 00:10:03.001
+pedindo ao sistema para compilá-lo.
+
+175
+00:10:04.001 --> 00:10:06.000
+E neste momento, está agora no sistema.
+
+176
+00:10:06.001 --> 00:10:11.000
+E acabou com um processo de compilação agora e está dinâmicamente ligado a
+
+177
+00:10:11.000 --> 00:10:13.001
+O sistema para que agora possamos tentar e executar este pedaço de código.
+
+178
+00:10:15.000 --> 00:10:17.000
+O que eu estou fazendo agora é pedir para executá-lo.
+
+179
+00:10:17.000 --> 00:10:20.000
+E neste momento, ele vai para a fonte de saída e render isso
+
+180
+00:10:20.000 --> 00:10:22.000
+A nova linha que colocamos.
+
+181
+00:10:22.001 --> 00:10:23.000
+E aí está.
+
+182
+00:10:23.000 --> 00:10:24.000
+Vermelho como esperávamos.
+
+183
+00:10:24.001 --> 00:10:26.000
+Um pouco mais pequeno, mas mais longo.
+
+184
+00:10:26.000 --> 00:10:27.001
+E é outro objeto com o qual você pode jogar.
+
+185
+00:10:27.001 --> 00:10:28.000
+É outro objeto.
+
+186
+00:10:28.000 --> 00:10:29.001
+Eu posso levá-lo como o primeiro.
+
+187
+00:10:30.000 --> 00:10:30.001
+Manipule-o e jogue-o.
+
+188
+00:10:31.000 --> 00:10:34.000
+E para os que estavam observadores, vocês perceberam que eu estava fazendo tudo isso.
+
+189
+00:10:34.000 --> 00:10:40.000
+O primeiro ainda estava em torno, o que é indicativo da versatilidade de pequeno-tux e
+
+190
+00:10:40.000 --> 00:10:41.001
+PMs e capacidades multitasking.
+
+191
+00:10:41.001 --> 00:10:45.001
+Bruce, eu quero voltar para o ator agora e a nova versão do ator 2.0 e nos dizer
+
+192
+00:10:45.001 --> 00:10:48.000
+Como isso é diferente do que acabamos de ver aqui em termos de uma língua OOP.
+
+193
+00:10:48.001 --> 00:10:51.001
+Bem, bem, é muito semelhante à maneira como usamos programação orientada a objetos.
+
+194
+00:10:52.000 --> 00:10:53.001
+É o ambiente que é um pouco diferente.
+
+195
+00:10:54.000 --> 00:10:57.001
+Estamos executando no Microsoft Windows que geralmente pode executar uma máquina menor.
+
+196
+00:10:58.001 --> 00:11:02.001
+E a nossa sintaxe é um pouco mais tradicional, então C e Pascal
+
+197
+00:11:02.001 --> 00:11:04.000
+Os programadores podem achá-lo muito leitor.
+
+198
+00:11:04.001 --> 00:11:07.001
+Tudo bem, vamos ao lado do ator 2. 0 aqui e mostre-nos como usá-lo.
+
+199
+00:11:07.001 --> 00:11:08.000
+OK e certo.
+
+200
+00:11:08.001 --> 00:11:09.000
+Esta é a nossa nova versão.
+
+201
+00:11:10.000 --> 00:11:11.001
+E isso vem diretamente em Windows.
+
+202
+00:11:11.001 --> 00:11:13.000
+É um programa do Windows.
+
+203
+00:11:14.000 --> 00:11:18.000
+E podemos ver a tela de introdução do ator aqui.
+
+204
+00:11:20.000 --> 00:11:24.000
+Ok, então podemos realmente entrar neste espaço de trabalho e começar a executar código.
+
+205
+00:11:24.001 --> 00:11:25.001
+O que estamos olhando neste espaço de trabalho?
+
+206
+00:11:26.000 --> 00:11:28.000
+Bem, estamos olhando para algum código que cria uma nova janela.
+
+207
+00:11:28.000 --> 00:11:28.001
+OK  ⁇
+
+208
+00:11:28.001 --> 00:11:29.001
+Isso é chamado de janela edit.
+
+209
+00:11:30.000 --> 00:11:30.001
+pressionamos uma linha.
+
+210
+00:11:31.000 --> 00:11:35.000
+Temos uma linha de código para criá-lo e uma linha para exibê-lo na tela.
+
+211
+00:11:35.000 --> 00:11:37.000
+E pode ser redesenhado e inserido.
+
+212
+00:11:38.000 --> 00:11:42.000
+E você pode ver que estamos em meio caminho para falar processador aqui e isso é
+
+213
+00:11:42.000 --> 00:11:45.000
+algo que vem predefinido no ator diretamente fora da caixa.
+
+214
+00:11:45.001 --> 00:11:48.001
+Se reduzirmos a janela um pouco abaixo, você pode ver que ela até está escorregando.
+
+215
+00:11:49.001 --> 00:11:53.000
+Uma das boas ferramentas de diagnóstico no ator é o que chamamos de inspetor.
+
+216
+00:11:54.000 --> 00:11:57.000
+E, na verdade, podemos destacar o nome dessa janela
+
+217
+00:11:57.000 --> 00:11:59.000
+Objeto e clique em Inspecção.
+
+218
+00:12:00.000 --> 00:12:03.000
+E isso vai trazer o inspetor que nos mostra todos os
+
+219
+00:12:03.000 --> 00:12:05.000
+dados que realmente compõem essa janela.
+
+220
+00:12:05.001 --> 00:12:10.001
+Por exemplo, a sua localização rectangular na tela, sua nota, e até mesmo
+
+221
+00:12:10.001 --> 00:12:12.000
+O texto que eu acabava de escrever.
+
+222
+00:12:13.000 --> 00:12:16.000
+Então eu posso aprender muito sobre os objetos em meu sistema a qualquer momento.
+
+223
+00:12:17.000 --> 00:12:18.001
+A próxima coisa que vou fazer é criar outra
+
+224
+00:12:18.001 --> 00:12:20.000
+Tipo de janela chamado uma janela de gráfico.
+
+225
+00:12:20.001 --> 00:12:24.000
+E isso é um pouco mais sofisticado de um programa e ele mostra
+
+226
+00:12:24.000 --> 00:12:25.001
+gráficos de negócios no ecrã.
+
+227
+00:12:26.001 --> 00:12:29.001
+Podemos abrir um arquivo como gostaríamos em qualquer outro aplicativo.
+
+228
+00:12:30.000 --> 00:12:34.000
+E este é um arquivo de gráfico em particular e isso mostra um gráfico de barra vertical.
+
+229
+00:12:34.001 --> 00:12:39.000
+E podemos mudar isso para um gráfico de pie e você pode ver que ele resiste e redonda
+
+230
+00:12:39.000 --> 00:12:40.001
+E é bastante colorido.
+
+231
+00:12:41.000 --> 00:12:43.000
+É um tipo de aplicação padrão.
+
+232
+00:12:43.000 --> 00:12:44.000
+Você pode criar um ator.
+
+233
+00:12:44.001 --> 00:12:46.001
+Esta foi uma das bibliotecas predefinidas?
+
+234
+00:12:47.000 --> 00:12:48.000
+Na verdade, isso não é.
+
+235
+00:12:48.000 --> 00:12:50.001
+Este é um dos programas de amostra que distribuímos para o nosso
+
+236
+00:12:50.001 --> 00:12:52.001
+Clientes em uma base necessária.
+
+237
+00:12:53.000 --> 00:12:55.000
+Mas é uma boa amostra do que você pode fazer em um ator.
+
+238
+00:12:55.001 --> 00:12:58.000
+O que vou fazer é que vou mover isso para o lado e vou
+
+239
+00:12:58.000 --> 00:13:02.000
+lançar nossa janela de navegador que é semelhante ao pequeno talk one e
+
+240
+00:13:02.000 --> 00:13:03.001
+Isso nos permite olhar para o nosso código.
+
+241
+00:13:04.000 --> 00:13:07.001
+I&#x27;m going to scroll down to the chart classes and you can see the hierarchical
+
+242
+00:13:07.001 --> 00:13:09.000
+relação entre os gráficos.
+
+243
+00:13:10.000 --> 00:13:12.000
+O gráfico é a super classe e tem três descendentes.
+
+244
+00:13:12.000 --> 00:13:14.000
+diferentes tipos de gráficos.
+
+245
+00:13:14.000 --> 00:13:16.000
+Assim, todos eles podem herdar as propriedades do gráfico.
+
+246
+00:13:16.000 --> 00:13:16.001
+E exatamente.
+
+247
+00:13:17.001 --> 00:13:19.000
+Agora vou destacar a classe gráfica
+
+248
+00:13:19.000 --> 00:13:21.000
+E nós vamos trazer a rotina de desenho.
+
+249
+00:13:21.001 --> 00:13:23.001
+Ele realmente nos mostra o código-fonte aqui abaixo.
+
+250
+00:13:24.000 --> 00:13:25.001
+Você pode ver que é uma síntese bastante tradicional.
+
+251
+00:13:26.000 --> 00:13:31.001
+O que vou fazer rapidamente é adicionar em uma linha de código que apenas traz o que nós
+
+252
+00:13:31.001 --> 00:13:35.001
+Chame uma caixa de erro ou uma caixa do diálogo e vai dizer hello world.
+
+253
+00:13:38.000 --> 00:13:40.000
+E podemos fazer isso em cerca de uma linha de código.
+
+254
+00:13:41.001 --> 00:13:46.001
+Nós clicamos em aceitar e que compila em e agora assim que eu voltar para o meu gráfico
+
+255
+00:13:46.001 --> 00:13:52.000
+janela e começa a redraw eu tenho a caixa de diálogo Hello World e eu tenho
+
+256
+00:13:52.000 --> 00:13:54.000
+Na verdade, mudou o programa.
+
+257
+00:13:54.001 --> 00:13:58.000
+Então há uma boa introdução ao ambiente do ator e eu gostaria de rapidamente
+
+258
+00:13:58.000 --> 00:14:00.000
+Mostre-lhe um programa de amostra escrito em ator.
+
+259
+00:14:00.001 --> 00:14:05.001
+Eu vou excluir esse arquivo que eu acabou de criar e este é um programa chamado Astro.
+
+260
+00:14:06.000 --> 00:14:10.000
+Foi desenvolvido por professores de física na Universidade de Maryland e é
+
+261
+00:14:10.000 --> 00:14:12.001
+usada por cursoware em um curso de física.
+
+262
+00:14:12.001 --> 00:14:14.001
+De fato, um não-programador faz isso.
+
+263
+00:14:14.001 --> 00:14:15.000
+E exatamente.
+
+264
+00:14:15.001 --> 00:14:19.001
+E o Windows é conhecido por ter um ambiente de programação bastante complicado e
+
+265
+00:14:19.001 --> 00:14:23.001
+Eles foram capazes de fazer isso com não tanto trabalho.
+
+266
+00:14:23.001 --> 00:14:26.001
+Aqui está um tutorial astronômico.
+
+267
+00:14:26.001 --> 00:14:28.000
+A barra de rolamento no fundo, o que isso faz?
+
+268
+00:14:28.000 --> 00:14:32.000
+Isso realmente aumentaria a velocidade, então mantenha-se e vamos enviar o sol
+
+269
+00:14:32.000 --> 00:14:34.000
+sistema em um mundo.
+
+270
+00:14:34.001 --> 00:14:38.000
+Ele também tem um sistema de ajuda construído e as pessoas podem escorregar através dele.
+
+271
+00:14:38.001 --> 00:14:42.000
+Então isso lhe dá uma ideia de um programa final real que foi desenvolvido em ator.
+
+272
+00:14:42.001 --> 00:14:43.001
+Bruce muito obrigado.
+
+273
+00:14:43.001 --> 00:14:47.000
+Agora, é claro, a programação orientada a objetos ocorre e diferente do PC
+
+274
+00:14:47.000 --> 00:14:50.001
+Windows compatível e ambiente de gerenciamento de apresentação para o Macintosh
+
+275
+00:14:50.001 --> 00:14:54.000
+Há um aplicativo Mac e um novo sistema de desenvolvimento de software chamado Prograph.
+
+276
+00:14:54.001 --> 00:14:55.000
+Aqui está um relatório.
+
+277
+00:14:57.000 --> 00:15:01.000
+O Macintosh é um programa natural orientado para objetos.
+
+278
+00:15:01.001 --> 00:15:04.000
+Hypercards e hipertexto são exemplos.
+
+279
+00:15:04.000 --> 00:15:06.000
+de ambientes orientados a objetos.
+
+280
+00:15:06.001 --> 00:15:10.000
+A interface gráfica do Mac muitas vezes confunde as pessoas a pensar que
+
+281
+00:15:10.000 --> 00:15:11.001
+É a programação orientada a objetos.
+
+282
+00:15:12.000 --> 00:15:16.001
+Há uma tendência às vezes para as pessoas dizer bem que o Macintosh é um objeto
+
+283
+00:15:16.001 --> 00:15:18.001
+computador orientado porque ele tem todas essas
+
+284
+00:15:18.001 --> 00:15:20.000
+Objetos gráficos localizados em torno da tela.
+
+285
+00:15:20.001 --> 00:15:23.000
+Folhas que parecem folhas de arquivo para ícones e assim por diante.
+
+286
+00:15:23.000 --> 00:15:27.001
+E embora estes possam ser chamados objetos em um sentido, eles não estão no estritamente
+
+287
+00:15:27.001 --> 00:15:30.000
+Programação orientada a objetos, pois eles não são porque eles realmente não
+
+288
+00:15:30.000 --> 00:15:31.001
+ter um comportamento individualista.
+
+289
+00:15:32.001 --> 00:15:35.001
+São simplesmente representações gráficas que o usuário pode clicar e
+
+290
+00:15:35.001 --> 00:15:37.001
+Algumas coisas acontecem porque o sistema sabe como fazer isso.
+
+291
+00:15:38.001 --> 00:15:42.001
+O aplicativo Mac da Apple é um exemplo de uma linguagem de programação orientada a objetos.
+
+292
+00:15:43.000 --> 00:15:46.000
+Mas o novo sistema de desenvolvimento orientado a objetos para o Mac é
+
+293
+00:15:46.000 --> 00:15:48.000
+Programa do TGS Systems.
+
+294
+00:15:48.001 --> 00:15:53.000
+A Apple disse muito alto e muito claro a todos os desenvolvedores que você
+
+295
+00:15:53.000 --> 00:15:57.000
+deve aprender a usar técnicas de programação orientada a objetos e especificamente as suas
+
+296
+00:15:57.000 --> 00:15:59.000
+Um ambiente orientado a objetos que é chamado de aplicativo Mac.
+
+297
+00:16:00.000 --> 00:16:03.001
+Ou você não será capaz de programar a próxima geração de Macintosh.
+
+298
+00:16:04.000 --> 00:16:08.000
+Um programa Prograph é criado construindo o que parece um gráfico de fluxo de dados.
+
+299
+00:16:09.000 --> 00:16:13.000
+Prograph tem um debugger de código-fonte incorporado e um programa Prograf pode ser
+
+300
+00:16:13.000 --> 00:16:15.000
+executado dentro do modo de design.
+
+301
+00:16:15.001 --> 00:16:20.001
+Como uma linguagem orientada a objetos, o Prograph possui uma hierarquia de classes de sistema.
+
+302
+00:16:20.001 --> 00:16:24.000
+que corresponde aos elementos típicos de interface das aplicações de Macintosh.
+
+303
+00:16:25.000 --> 00:16:29.000
+Trabalhar com Prograph requer aprender um estilo diferente de pensamento, mas uma vez
+
+304
+00:16:29.000 --> 00:16:32.001
+Você pode facilmente e rapidamente construir uma aplicação complexa.
+
+305
+00:16:33.000 --> 00:16:36.001
+A programação orientada a objetos permite que os programadores construam coisas muito mais eficientemente.
+
+306
+00:16:37.001 --> 00:16:40.001
+Cada aplicação que você cria em um ambiente orientado a objetos especificamente se você
+
+307
+00:16:40.001 --> 00:16:43.000
+Não mude radicalmente o tipo de coisa que você está fazendo pode construir
+
+308
+00:16:43.000 --> 00:16:47.000
+significativamente sobre o trabalho anterior que você fez, sobre os objetos anteriores que
+
+309
+00:16:47.000 --> 00:16:48.001
+Você construiu, nas bibliotecas anteriores que você criou.
+
+310
+00:16:48.001 --> 00:16:53.000
+Assim, cada um torna-se mais fácil em um quadro de tempo mais curto e mais sofisticado.
+
+311
+00:16:54.000 --> 00:16:56.001
+Para as crônicas de computador, eu sou Maria Gabriel.
+
+312
+00:17:09.000 --> 00:17:12.001
+Junte-se a nós no estúdio agora é Bill Edwards, líder de grupo para o próximo
+
+313
+00:17:12.001 --> 00:17:14.000
+Projeto da Frame Technology Corporation.
+
+314
+00:17:14.001 --> 00:17:17.001
+Depois de Bill, Sam Druker, gerente de pesquisa e desenvolvimento da Zortec Incorporated.
+
+315
+00:17:17.001 --> 00:17:23.001
+Bill, você está desenvolvendo produtos usando Objective-C que é fundamentalmente um
+
+316
+00:17:23.001 --> 00:17:28.001
+Extensão orientada a objetos de uma língua existente, C. Você pode me dar uma
+
+317
+00:17:28.001 --> 00:17:31.000
+Por que você está usando uma linguagem orientada a objetos?
+
+318
+00:17:32.000 --> 00:17:35.001
+Bem, a principal vantagem dos programas orientados a objetos em geral é a sua capacidade
+
+319
+00:17:35.001 --> 00:17:40.001
+para encapsular a complexidade de um programa em objetos como um programa
+
+320
+00:17:40.001 --> 00:17:44.000
+pode pedir a um objeto para realizar uma ação sem saber como
+
+321
+00:17:44.000 --> 00:17:45.001
+Objeto vai implementá-lo.
+
+322
+00:17:46.000 --> 00:17:47.000
+E Sam, você concorda com isso?
+
+323
+00:17:47.000 --> 00:17:48.000
+Sim e absolutamente.
+
+324
+00:17:48.001 --> 00:17:52.001
+Quando você usa programação orientada a objetos, você pode usar uma interface objetos assim
+
+325
+00:17:52.001 --> 00:17:57.000
+separar as coisas das partes que realmente não precisam saber.
+
+326
+00:17:57.001 --> 00:18:00.000
+Por exemplo, um sistema gráfico clássico poderia ser chamado a um objeto e o
+
+327
+00:18:00.000 --> 00:18:02.000
+O cliente não tem ideia de como essas coisas são implementadas.
+
+328
+00:18:02.001 --> 00:18:04.001
+Tudo bem, Sam, você desenvolveu C++.
+
+329
+00:18:05.001 --> 00:18:07.001
+E diga-nos o que acrescenta a C e depois mostra
+
+330
+00:18:07.001 --> 00:18:09.000
+Vamos falar um pouco sobre o que o C++ parece.
+
+331
+00:18:09.000 --> 00:18:09.000
+com certeza.
+
+332
+00:18:09.000 --> 00:18:13.000
+C++ adiciona a C a capacidade de definir seus próprios tipos de dados.
+
+333
+00:18:13.000 --> 00:18:17.000
+Por exemplo, neste programa, definimos um tipo de diretório aqui.
+
+334
+00:18:18.000 --> 00:18:22.000
+E o que isso fez é abstrato os detalhes de como o sistema operacional real
+
+335
+00:18:22.000 --> 00:18:26.000
+Vá para fora e descobrir quais arquivos estão em sua subdirectoria neste único objeto.
+
+336
+00:18:27.001 --> 00:18:31.001
+Este objeto, parece muito como C e, na medida em que C é relacionado, é.
+
+337
+00:18:32.000 --> 00:18:35.001
+Bem lá, tomamos o objeto e pedimos que nos diga o que o primeiro diretório
+
+338
+00:18:35.001 --> 00:18:38.000
+É, ou o primeiro arquivo nesse diretório
+
+339
+00:18:38.000 --> 00:18:39.001
+É, e então nós perguntamos o que os próximos são.
+
+340
+00:18:40.000 --> 00:18:44.000
+É como C, exceto que adicionamos esta abstração para retirar da sua
+
+341
+00:18:44.000 --> 00:18:46.001
+programa exatamente o que está acontecendo no nível do sistema operacional.
+
+342
+00:18:47.000 --> 00:18:50.001
+Tudo bem, Bill, agora você está usando Objective-C na Tecnologia de Frame para fazer o seu
+
+343
+00:18:50.001 --> 00:18:54.000
+trabalho de desenvolvimento e diz-nos como o Objetivo-C funciona e dá-nos alguns
+
+344
+00:18:54.000 --> 00:18:56.000
+Exemplos, se você puder, com o FrameMaker.
+
+345
+00:18:56.001 --> 00:18:56.001
+com certeza.
+
+346
+00:18:56.001 --> 00:19:00.000
+Uma das coisas que você deve saber sobre Objetivo-C é isso, ou sobre O próximo
+
+347
+00:19:00.000 --> 00:19:03.000
+Por outro lado, é que eles forneceram não apenas Objetivo-C, mas
+
+348
+00:19:03.000 --> 00:19:04.001
+Muitos outros elementos que são necessários.
+
+349
+00:19:04.001 --> 00:19:11.000
+Um está fazendo programação orientada a objetos, debugers de nível de objeto, também predefinido
+
+350
+00:19:11.000 --> 00:19:14.001
+classes, algo chamado kit de aplicação, kit de ferramentas, e kit de música,
+
+351
+00:19:14.001 --> 00:19:16.001
+Não precisamos escrever esses objetos por nós mesmos.
+
+352
+00:19:17.000 --> 00:19:17.001
+E o Interface Builder?
+
+353
+00:19:18.000 --> 00:19:22.001
+Sim, esse é o último elemento que eles incluíram, que é um programa que
+
+354
+00:19:22.001 --> 00:19:25.001
+permite-nos criar rapidamente a interface para o FrameMaker.
+
+355
+00:19:26.000 --> 00:19:28.001
+O que você vê na tela agora é um dos diálogos
+
+356
+00:19:28.001 --> 00:19:30.001
+Caixas que aparecem em nosso produto.
+
+357
+00:19:30.001 --> 00:19:32.001
+O que acontece é a informação de licença.
+
+358
+00:19:34.000 --> 00:19:37.001
+Tudo aqui é um objeto, incluindo o logotipo do quadro acima à direita.
+
+359
+00:19:38.000 --> 00:19:45.000
+Se eu olhar para o construtor de interface, agora construtores de interface
+
+360
+00:19:45.000 --> 00:19:47.000
+Existe esse mesmo diálogo.
+
+361
+00:19:48.000 --> 00:19:49.000
+Cada um deles é um objeto.
+
+362
+00:19:49.000 --> 00:19:53.000
+Eu realmente posso clicar e tirá-los e projetar a interface de qualquer maneira que eu quiser.
+
+363
+00:19:53.001 --> 00:19:58.001
+Uma vez que eu faço isso corretamente, eu posso concluir isso em FrameMaker e nós acabamos tendo
+
+364
+00:19:58.001 --> 00:20:01.000
+um produto concluído.
+
+365
+00:20:01.000 --> 00:20:04.000
+No entanto, o que é importante perceber é que isso não é estático.
+
+366
+00:20:04.000 --> 00:20:08.000
+O que está sendo criado são, na verdade, objetos aos quais podemos enviar mensagens.
+
+367
+00:20:08.000 --> 00:20:15.000
+Isso pode ser mostrado neste programa Objetivo-C aqui, que no topo, é
+
+368
+00:20:15.000 --> 00:20:18.000
+passando por vários códigos para encontrar esse diálogo
+
+369
+00:20:18.000 --> 00:20:19.001
+Caixa, para encontrar o logotipo específico.
+
+370
+00:20:20.000 --> 00:20:24.000
+A linha aqui que eu enfatizo é um objetivo C, clássico Objetivo-C
+
+371
+00:20:24.000 --> 00:20:27.001
+declaração, onde há um objeto na esquerda, o logotipo do quadro, e estamos enviando
+
+372
+00:20:27.001 --> 00:20:31.000
+A mensagem move2 para ele, para dizer que move 250 pixels
+
+373
+00:20:31.000 --> 00:20:32.001
+para a direita e zero para cima e para baixo.
+
+374
+00:20:33.000 --> 00:20:39.001
+O resultado disso é que você pode ver que a caixa de diálogo que eu tenho
+
+375
+00:20:39.001 --> 00:20:41.001
+Aqui, o logotipo do frame mudou.
+
+376
+00:20:44.001 --> 00:20:48.000
+Ok, novamente, para que você possa lidar com esse objeto, não precisa realmente saber o que é
+
+377
+00:20:48.000 --> 00:20:50.000
+Vamos para baixo, mas apenas dizer que aqui é o que eu quero alcançar.
+
+378
+00:20:50.000 --> 00:20:50.001
+Isso é certo.
+
+379
+00:20:50.001 --> 00:20:53.000
+Ele sabe como se manifestar e sabe como mover-se.
+
+380
+00:20:54.001 --> 00:20:58.001
+Tudo bem, Sam, quais são as consequências aqui para um desenvolvedor de ter algo
+
+381
+00:20:58.001 --> 00:21:00.000
+Disponível como programação orientada a objetos?
+
+382
+00:21:00.000 --> 00:21:02.000
+Como isso torna o desenvolvimento de software diferente?
+
+383
+00:21:03.000 --> 00:21:06.001
+Isso faz com que o desenvolvimento de software seja diferente na sua
+
+384
+00:21:06.001 --> 00:21:09.000
+Os programas são muito mais compartimentalizados.
+
+385
+00:21:09.001 --> 00:21:12.000
+Ou seja, os detalhes que são relevantes para uma seção do programa nunca
+
+386
+00:21:12.000 --> 00:21:15.000
+aparecem em uma seção do programa para a qual não são relevantes.
+
+387
+00:21:15.000 --> 00:21:18.000
+Então, todas as coisas do meu sistema operacional estão em um só lugar.
+
+388
+00:21:18.000 --> 00:21:20.000
+Todas as minhas chamadas gráficas estão em outro lugar.
+
+389
+00:21:20.001 --> 00:21:24.000
+Então, se eu tiver que mudar parte do programa, como você faz em qualquer software, parte do
+
+390
+00:21:24.000 --> 00:21:26.001
+Manutenção normal, não afeta o seu programa inteiro.
+
+391
+00:21:26.001 --> 00:21:28.001
+Isso só muda as coisas que são locais
+
+392
+00:21:28.001 --> 00:21:30.001
+Qualquer que seja que você tenha sido afetado.
+
+393
+00:21:30.001 --> 00:21:32.000
+Isso também torna o desgaste muito mais fácil.
+
+394
+00:21:32.000 --> 00:21:32.001
+É o que faz.
+
+395
+00:21:33.000 --> 00:21:35.000
+E em C++, suponha que você é um programador C.
+
+396
+00:21:35.001 --> 00:21:37.000
+Você pode trabalhar facilmente em C++?
+
+397
+00:21:37.001 --> 00:21:38.001
+Você pode ir de um para o outro?
+
+398
+00:21:39.000 --> 00:21:39.001
+absolutamente .
+
+399
+00:21:40.000 --> 00:21:44.000
+C++ é um superseto completo de C. Na verdade, eu posso mostrar-lhe como
+
+400
+00:21:44.000 --> 00:21:46.000
+Mude um programa C em C++.
+
+401
+00:21:46.001 --> 00:21:49.000
+Você precisa ser um programador C para usá-lo?
+
+402
+00:21:49.001 --> 00:21:50.000
+E sim.
+
+403
+00:21:51.000 --> 00:21:53.000
+C é realmente o primeiro passo para C++.
+
+404
+00:21:53.001 --> 00:21:55.000
+Bem, descreva o que você está fazendo na tela agora, Sam.
+
+405
+00:21:55.000 --> 00:21:59.000
+Se eu tivesse um programa C chamado coisa. c, então este comando mudaria a
+
+406
+00:21:59.000 --> 00:22:00.001
+Programa C em um programa C++.
+
+407
+00:22:01.000 --> 00:22:01.000
+É isso que é.
+
+408
+00:22:01.001 --> 00:22:02.000
+É isso que é.
+
+409
+00:22:02.001 --> 00:22:04.001
+Ok, não é muito difícil descobrir isso.
+
+410
+00:22:05.000 --> 00:22:08.001
+Como sobre o Bill, do ponto de vista de um usuário final, quais são os benefícios para um fim
+
+411
+00:22:08.001 --> 00:22:14.000
+usuário de ter desenvolvedores têm acesso a idiomas de programação orientados a objetos?
+
+412
+00:22:15.000 --> 00:22:16.001
+No caso do Objetivo-C,
+
+413
+00:22:16.001 --> 00:22:18.000
+Ele tem algo chamado de vinculação dinâmica.
+
+414
+00:22:18.000 --> 00:22:23.000
+O que isso significa é, no caso do nosso produto de frame maker, o produto que obtém
+
+415
+00:22:23.000 --> 00:22:27.000
+entregue aos clientes é uma combinação do código que temos escrito e o que
+
+416
+00:22:27.000 --> 00:22:29.000
+A próxima empresa construiu, entregou.
+
+417
+00:22:29.000 --> 00:22:34.000
+Se o próximo decidir em uma data posterior que eles querem melhorar o seu código, todos eles
+
+418
+00:22:34.000 --> 00:22:38.000
+A necessidade é enviar aos clientes esses objetos atualizados, e
+
+419
+00:22:38.000 --> 00:22:39.001
+De repente, o frame maker beneficia disso.
+
+420
+00:22:40.000 --> 00:22:43.000
+Sua conduta muda porque estamos usando os objetos que
+
+421
+00:22:43.000 --> 00:22:45.000
+O próximo enviou aos seus clientes.
+
+422
+00:22:45.001 --> 00:22:50.000
+E Sam, qual é o próximo passo aqui na criação de programação orientada a objetos como
+
+423
+00:22:50.000 --> 00:22:53.001
+Um bom passo em frente para tornar mais fácil manipular o código?
+
+424
+00:22:53.001 --> 00:22:54.001
+O que vai acontecer depois, você acha?
+
+425
+00:22:55.001 --> 00:22:56.001
+Bem, isso é realmente difícil de dizer.
+
+426
+00:22:56.001 --> 00:22:59.000
+Para emprestar uma frase, se você não se importar usando essa palavra.
+
+427
+00:22:59.000 --> 00:23:02.000
+É sempre difícil dizer o que vai acontecer na indústria de computadores.
+
+428
+00:23:02.001 --> 00:23:05.001
+Mas no que diz respeito à programação orientada a objetos, agora que temos viável
+
+429
+00:23:05.001 --> 00:23:08.000
+Ferramentas e ferramentas de sistema, vamos ver muito mais
+
+430
+00:23:08.000 --> 00:23:09.001
+coisas como a interface construidor no seguinte.
+
+431
+00:23:10.001 --> 00:23:12.000
+Vamos ver que isso se espalhou para muito mais
+
+432
+00:23:12.000 --> 00:23:13.001
+plataformas para muito mais usos, eu acho.
+
+433
+00:23:14.001 --> 00:23:15.001
+Senhores, muito obrigado a vocês.
+
+434
+00:23:15.001 --> 00:23:18.000
+Esse é o nosso olhar para os idiomas de programação orientados a objetos.
+
+435
+00:23:18.000 --> 00:23:21.000
+Nós estaremos de volta em apenas um minuto com as notícias do computador desta semana.
+
+436
+00:23:33.000 --> 00:23:37.000
+No arquivo de acesso aleatório desta semana, Hewlett Packard tem
+
+437
+00:23:37.000 --> 00:23:38.001
+Apresentação do LaserJet 3.
+
+438
+00:23:38.001 --> 00:23:43.000
+De acordo com a HP, esta impressora LaserJet oferece alta qualidade de impressão, escalagem de letra,
+
+439
+00:23:43.001 --> 00:23:47.001
+e gráficos mais rápidos todos a US $ 300 menos do que o LaserJet 2.
+
+440
+00:23:47.001 --> 00:23:52.000
+O LaserJet 3 é compatível com a série 2 e custa menos de $ 2400.
+
+441
+00:23:53.000 --> 00:23:57.000
+A Lotus e a IBM anunciaram conjuntamente um novo painel de divulgação projetado para facilitar
+
+442
+00:23:57.000 --> 00:23:58.001
+Computação de Spreadsheet Enterprise.
+
+443
+00:23:59.000 --> 00:24:03.001
+Isso permite aos usuários integrar computadores pessoais e aplicações de mainframe e
+
+444
+00:24:03.001 --> 00:24:06.000
+recursos de tap, como os bancos de dados relativos da IBM.
+
+445
+00:24:07.000 --> 00:24:13.001
+O novo spreadsheet é chamado Lotus 123M e é baseado em 123 Release 3. 123M vai
+
+446
+00:24:13.001 --> 00:24:17.001
+ser exclusivamente comercializado e apoiado pela IBM para o System370.
+
+447
+00:24:18.000 --> 00:24:20.000
+Os preços dependem do tamanho do processador.
+
+448
+00:24:20.001 --> 00:24:24.001
+O custo de um Macintosh SE e Laser Rider 2 acabou de diminuir.
+
+449
+00:24:25.000 --> 00:24:30.000
+Apple Computer cai entre 10 e 17 por cento em todos os Macintosh SE
+
+450
+00:24:30.000 --> 00:24:35.000
+e SE 30 computadores, bem como o Laser Rider 2 NT e NTX.
+
+451
+00:24:35.000 --> 00:24:37.001
+Isso significa poupança entre US $ 300 e US $ 1000.
+
+452
+00:24:38.001 --> 00:24:43.000
+A IBM também anunciou uma redução de preços de 5 a 28 por cento em todas as suas impressoras Pro.
+
+453
+00:24:44.000 --> 00:24:48.000
+As poupanças nos 6 impressores de impacto variam de $50 a $170 off.
+
+454
+00:24:48.001 --> 00:24:52.000
+Nesta semana, um visitante pergunta ao Dr. John sobre transferência de arquivos de seu
+
+455
+00:24:52.000 --> 00:24:53.001
+Desktop velho para um novo laptop.
+
+456
+00:24:54.000 --> 00:24:57.001
+Existe uma maneira fácil de fazê-lo sem comprar uma utilidade de transferência?
+
+457
+00:24:59.000 --> 00:25:03.000
+Como o seu desktop é uma das máquinas mais antigas, as chances são os discetes
+
+458
+00:25:03.000 --> 00:25:05.000
+O que ele usa não se encaixa no seu laptop.
+
+459
+00:25:05.001 --> 00:25:08.000
+Portanto, a melhor maneira de conectá-los juntos é usando
+
+460
+00:25:08.000 --> 00:25:09.001
+Um cabo de série como este.
+
+461
+00:25:09.001 --> 00:25:11.001
+Vai entre os seus dois portos com.
+
+462
+00:25:12.000 --> 00:25:15.001
+Agora, uma vez que você tem eles conectados juntos, você precisará usar algum tipo de
+
+463
+00:25:15.001 --> 00:25:19.001
+um utilitário como o LAPLINK 3 para conectar os arquivos de um para o outro.
+
+464
+00:25:20.000 --> 00:25:24.000
+Transferir os arquivos usando este tipo de utilidade funciona muito bem.
+
+465
+00:25:24.000 --> 00:25:27.000
+Se você decidir não usar um utilitário como esse, sua alternativa
+
+466
+00:25:27.000 --> 00:25:29.000
+Use um comando de cópia DOS.
+
+467
+00:25:29.001 --> 00:25:33.001
+Se você usa um comando de cópia DOS, no entanto, certifique-se de que você usa o comando do modo
+
+468
+00:25:33.001 --> 00:25:38.000
+antecipadamente para corresponder a saída dos dois portos, caso contrário você vai ficar em nenhum lugar.
+
+469
+00:25:38.001 --> 00:25:41.000
+Para as crônicas de computador, eu sou o Dr. São João.
+
+470
+00:25:42.000 --> 00:25:46.000
+Hewlett-Packard é o primeiro a oferecer um computador construído em torno do 486 da Intel
+
+471
+00:25:46.000 --> 00:25:47.001
+Chip e Tecnologia da ESA.
+
+472
+00:25:48.000 --> 00:25:52.001
+A nova série Vectra 486 inclui quatro modelos, cada um com dois megabytes de RAM.
+
+473
+00:25:53.001 --> 00:25:55.000
+Os preços variam de US$ 10 a US$ 20 mil.
+
+474
+00:25:56.000 --> 00:25:59.001
+Steve Jobs disse aos jornalistas que uma versão colorida do seu próximo computador
+
+475
+00:25:59.001 --> 00:26:01.000
+Será introduzida mais tarde neste ano.
+
+476
+00:26:01.000 --> 00:26:05.001
+Jobs é citado como dizendo que a cor próxima foi atrasada enquanto espera para o desenvolvimento
+
+477
+00:26:05.001 --> 00:26:07.001
+32 bits por pixel.
+
+478
+00:26:08.000 --> 00:26:12.001
+Jobs também prometeu que as próximas máquinas irão suportar a foto 3D do RenderMan do Pixar
+
+479
+00:26:12.001 --> 00:26:14.000
+Software gráfico realista.
+
+480
+00:26:14.001 --> 00:26:18.000
+Nesta semana, vamos dar uma olhada nos principais programas de software vendidos para o
+
+481
+00:26:18.000 --> 00:26:19.001
+Mac, de acordo com MacConnection.
+
+482
+00:26:20.000 --> 00:26:24.001
+O Mac Attack continua a liderar a lista, seguido pelo Adobe Type Manager, o Symantec
+
+483
+00:26:24.001 --> 00:26:28.000
+A aplicação antivírus é chamada SAM, Quicken e Grammatic.
+
+484
+00:26:28.001 --> 00:26:33.001
+Também no Top 10 desta semana, ThinkSee, Programação Orientada a Objetos, Microsoft
+
+485
+00:26:33.001 --> 00:26:39.001
+Word, Sum2, Utilidades da Symantec para Mac, Sistemas de Segurança Depois de Escuro e TypoLine
+
+486
+00:26:39.001 --> 00:26:44.000
+para o ATM. 20 anos atrás, Timothy Leary encorajou o
+
+487
+00:26:44.000 --> 00:26:45.001
+uso de drogas para a expansão da mente.
+
+488
+00:26:46.001 --> 00:26:48.001
+Agora ele diz que os computadores servem o mesmo propósito.
+
+489
+00:26:49.000 --> 00:26:52.000
+Leary diz que, em vez de drogas, hoje ele usa computadores para
+
+490
+00:26:52.000 --> 00:26:53.001
+Explore e descubra o seu cérebro.
+
+491
+00:26:54.000 --> 00:26:57.001
+Leary, que atualmente opera um negócio de software, falou recentemente sobre
+
+492
+00:26:57.001 --> 00:26:59.000
+Estudantes da Universidade Estadual de Fresno.
+
+493
+00:26:59.001 --> 00:27:02.000
+Ele recomendou que eles usassem computadores para expandir seus
+
+494
+00:27:02.000 --> 00:27:04.000
+pensamentos e aprender a questionar a autoridade.
+
+495
+00:27:04.001 --> 00:27:06.000
+É isso que é para as crônicas de computador desta semana.
+
+496
+00:27:06.001 --> 00:27:07.001
+Eu sou Maria Gabriel.
+
+497
+00:27:09.000 --> 00:27:13.000
+As crônicas de computador são feitas possíveis em parte por CompuServe, que oferece
+
+498
+00:27:13.000 --> 00:27:16.000
+Informações on-line relacionadas ao tema de hoje.
+
+499
+00:27:16.001 --> 00:27:17.001
+Membro do tipo Go Chronicles.
+
+500
+00:27:18.001 --> 00:27:20.000
+Os não-membros pedem mais informações.
+
+501
+00:27:20.000 --> 00:27:25.000
+O financiamento adicional é fornecido pela Software Publishers Association, por PC
+
+502
+00:27:25.000 --> 00:27:29.001
+Connection e Mac Connection, por Byte Magazine e VIX, a Informação Byte
+
+503
+00:27:29.001 --> 00:27:33.001
+Exchange, e pela Intel Corporation, Personal Computer Enhancement.
+
+504
+00:27:34.000 --> 00:27:39.000
+Para uma transcrição das crônicas de computador desta semana, envie $4 para PTV Publicações,
+
+505
+00:27:39.001 --> 00:27:43.001
+Post Office Box 701, Kent, Ohio, 44240.
+
+506
+00:27:44.000 --> 00:27:45.001
+Por favor, indique a data do programa.
+
+507
+00:27:50.000 --> 00:28:12.001
+Obrigado por você.
