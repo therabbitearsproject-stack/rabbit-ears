@@ -1,0 +1,1305 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:29.001
+[...]
+
+2
+00:00:50.001 --> 00:00:56.001
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+3
+00:00:56.001 --> 00:01:01.001
+prazer em fornecer fundos importantes para as crônicas de computador, a história
+
+4
+00:01:01.001 --> 00:01:04.000
+desta evolução contínua.
+
+5
+00:01:13.001 --> 00:01:17.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e este é Gary Kildall.
+
+6
+00:01:18.000 --> 00:01:22.000
+Nosso tema hoje é a quinta geração, os computadores do futuro. Estes são
+
+7
+00:01:22.000 --> 00:01:25.000
+Algumas vezes conhecidas como sistemas especializados ou computadores que lidam com a arte
+
+8
+00:01:25.000 --> 00:01:30.000
+Inteligência . Eles são às vezes chamados KIPs, K-I-P-S, informações de conhecimento
+
+9
+00:01:30.000 --> 00:01:34.000
+sistemas de processamento, ou às vezes para sistemas curtos apenas baseados em conhecimentos.
+
+10
+00:01:34.001 --> 00:01:38.000
+E o nosso convidado hoje será Edward Feigenbaum. Ele é um dos pais fundadores
+
+11
+00:01:38.000 --> 00:01:41.001
+do campo da inteligência artificial e hoje um dos líderes mundiais
+
+12
+00:01:41.001 --> 00:01:47.000
+especialistas neste campo. Gary Feigenbaum a chama de quinta geração. É este
+
+13
+00:01:47.000 --> 00:01:52.001
+apenas um mais avanço tecnológico ou a quinta geração realmente representa
+
+14
+00:01:52.001 --> 00:01:55.000
+Uma espécie de salto quântico em um outro tipo de computação?
+
+15
+00:01:56.000 --> 00:02:00.000
+É claro que isso representa um salto quântico. As principais mudanças evolutivas
+
+16
+00:02:00.000 --> 00:02:04.000
+Durante os últimos 40 anos, os computadores têm sido referidos como
+
+17
+00:02:04.000 --> 00:02:08.001
+gerações . Mas a quinta geração é realmente um slogan japonês que se baseia
+
+18
+00:02:08.001 --> 00:02:13.000
+seu esforço em um programa nacional de 10 anos para produzir o que você chama, o que é
+
+19
+00:02:13.000 --> 00:02:17.000
+são chamados de sistemas de processamento de informações de conhecimento ou KIPs. No coração do
+
+20
+00:02:17.000 --> 00:02:22.000
+Estes sistemas KIP são sistemas baseados no conhecimento, software baseado no conhecimento e
+
+21
+00:02:22.000 --> 00:02:25.000
+É uma tecnologia que realmente cresceu no campo do nosso próprio país.
+
+22
+00:02:25.000 --> 00:02:29.001
+Inteligência Artificial. Hoje vamos olhar para o conhecimento baseado
+
+23
+00:02:29.001 --> 00:02:33.000
+sistemas ou sistemas de peritos e também olhar para o que ameaça o quinto
+
+24
+00:02:33.000 --> 00:02:39.001
+A geração vai para os Estados Unidos. Indústria da Computação. Temos aqui um pequeno segmento que
+
+25
+00:02:39.001 --> 00:02:44.001
+demonstra o uso de computadores na sociedade de hoje. Este é um exemplo de fato
+
+26
+00:02:44.001 --> 00:02:48.001
+robótica e veremos como aplicações mais avançadas como a nossa sessão vai além
+
+27
+00:02:48.001 --> 00:02:55.000
+Hoje em dia. Este computador tape bibliotecário é um robô. Ele responde às ordens de
+
+28
+00:02:55.000 --> 00:02:59.001
+Todos os departamentos da Universidade de Stanford. Carregar e descarregar rodas de tape,
+
+29
+00:03:00.000 --> 00:03:04.001
+armazená-los em slots precisos em um shelf. Ele realiza o que seria um terrível e
+
+30
+00:03:04.001 --> 00:03:09.000
+tarefa repetitiva para um ser humano. É um computador controlado e segue
+
+31
+00:03:09.000 --> 00:03:14.001
+instruções, mas não tomam decisões. O robô não pode aconselhar o operador
+
+32
+00:03:14.001 --> 00:03:19.000
+Por exemplo, sobre a melhor maneira de armazenar seus tapetes ou o que fazer se alguém for mal colocado
+
+33
+00:03:19.000 --> 00:03:23.001
+ou danificado. Ele realiza uma tarefa simples da mesma forma todas as vezes.
+
+34
+00:03:24.001 --> 00:03:29.000
+Mas suponha que a máquina poderia dar conselhos que, em vez de simplesmente processar dados ou
+
+35
+00:03:29.000 --> 00:03:33.001
+respondendo a um mandamento que tinha o suficiente conhecimento armazenado para manipular fatos e fazer uma
+
+36
+00:03:33.001 --> 00:03:38.001
+Decisão . Este novo tipo de computador, um que pode usar inteligentemente o
+
+37
+00:03:38.001 --> 00:03:42.001
+As informações armazenadas dentro dela estão sendo desenvolvidas. Muitas vezes referido como o
+
+38
+00:03:42.001 --> 00:03:47.000
+5a geração, é o próximo passo em fazer a abordagem da máquina e
+
+39
+00:03:47.000 --> 00:03:52.001
+duplicar a maneira como um ser humano pensa. Uma sugestão do que podemos ter em breve
+
+40
+00:03:52.001 --> 00:03:57.001
+Existe hoje no que se chama um sistema de especialistas. Exige dois tipos de
+
+41
+00:03:57.001 --> 00:04:03.000
+do conhecimento. Primeiro, fatos documentados e segundo, conhecimento heurístico ou o mesmo
+
+42
+00:04:03.000 --> 00:04:07.000
+tipo de habilidade que um especialista humano precisa para fazer um bom julgamento com base em
+
+43
+00:04:07.000 --> 00:04:12.001
+experiência e prática. Construindo esse talento quase intangível em um computador
+
+44
+00:04:12.001 --> 00:04:17.000
+A memória é chamada de engenharia do conhecimento e o país que primeiro mestre que
+
+45
+00:04:17.000 --> 00:04:22.000
+A tecnologia estará em uma posição global única. A corrida para alcançar esse
+
+46
+00:04:22.000 --> 00:04:23.001
+A posição já começou.
+
+47
+00:04:32.000 --> 00:04:36.000
+Nossa convidada hoje é Edward Feigenbaum, professor de ciência da computação em Stanford
+
+48
+00:04:36.000 --> 00:04:40.000
+Universidade e autor do livro, A Quinta Geração. Juntando-nos também é Herb
+
+49
+00:04:40.000 --> 00:04:42.000
+Lechner da SRI International.
+
+50
+00:04:42.001 --> 00:04:45.001
+Herb aparece frequentemente neste programa para emprestar sua experiência
+
+51
+00:04:45.001 --> 00:04:47.000
+para o assunto. O Gary?
+
+52
+00:04:48.000 --> 00:04:51.000
+Bem, acho que é uma honra real ter Ed aqui hoje falando sobre sistemas de especialistas.
+
+53
+00:04:51.001 --> 00:04:54.000
+Se alguma vez houver um especialista, um sistema especialista tem que estar aqui hoje.
+
+54
+00:04:55.000 --> 00:04:59.000
+É um tema, eu acho, muito emocionante para mim, especialmente porque é provavelmente um
+
+55
+00:04:59.000 --> 00:05:03.001
+das mais promissoras novas áreas de software que vimos vir sobre o
+
+56
+00:05:03.001 --> 00:05:06.000
+do horizonte. A inteligência artificial parece ser uma dessas áreas que é um tipo de
+
+57
+00:05:06.000 --> 00:05:10.001
+movimentos, coisas que há dez anos foram temas de discussão e tendem a
+
+58
+00:05:10.001 --> 00:05:14.001
+tornando-se aplicativos práticos. Os sistemas baseados no conhecimento tendem a
+
+59
+00:05:14.001 --> 00:05:16.000
+estar nessa categoria agora.
+
+60
+00:05:16.001 --> 00:05:18.001
+Você pode nos dar uma ideia de que conhecimento baseado
+
+61
+00:05:18.001 --> 00:05:20.000
+Os sistemas, os sistemas de especialistas estão tudo a respeito?
+
+62
+00:05:24.001 --> 00:05:29.001
+Os computadores, como você sabe, são dispositivos de processamento de símbolo geral capazes de
+
+63
+00:05:29.001 --> 00:05:34.000
+manipulação de qualquer tipo de símbolos cujos números constituem um
+
+64
+00:05:34.000 --> 00:05:39.001
+classe, mas os computadores são muito mais gerais do que isso. Sabemos sobre o
+
+65
+00:05:39.001 --> 00:05:45.001
+geral da computação desde pelo menos o tempo de touring na década de 1930. e
+
+66
+00:05:45.001 --> 00:05:51.000
+Na verdade, eu o rastreei de volta às intuições que Babbage tinha que foram relatadas
+
+67
+00:05:51.000 --> 00:05:57.000
+por Ada Lovelace, após o qual a linguagem de programação Ada é nomeada. Em 1842, a
+
+68
+00:05:57.000 --> 00:06:03.000
+Lovelace escreveu que o motor analítico de Babbage constituiu o link
+
+69
+00:06:03.000 --> 00:06:09.000
+entre o mundo mecânico e o mundo dos conceitos mais abstractos. Essa
+
+70
+00:06:09.000 --> 00:06:13.000
+Atualmente, na terminologia moderna é chamado o sistema de símbolos físicos.
+
+71
+00:06:13.000 --> 00:06:18.000
+hipótese e é a base para o trabalho da inteligência artificial. Em Artificial
+
+72
+00:06:18.000 --> 00:06:24.000
+Inteligência como ciência, falamos sobre o uso de computadores para processar simbólico
+
+73
+00:06:24.000 --> 00:06:30.001
+Conhecimento usando métodos de inferência lógica, métodos de referência simbólicos. Em outros
+
+74
+00:06:30.001 --> 00:06:35.001
+Estamos falando de inferência e não de cálculo na tradição.
+
+75
+00:06:35.001 --> 00:06:39.001
+Sensação → Estamos falando de conhecimento e não de números no sentido tradicional.
+
+76
+00:06:41.000 --> 00:06:45.001
+Quando falamos de conhecimento, não queremos dizer apenas o conhecimento de um campo.
+
+77
+00:06:45.001 --> 00:06:50.001
+que está disponível na literatura aberta, é publicado em livros de texto, é
+
+78
+00:06:50.001 --> 00:06:54.001
+comunemente acordado por especialistas no campo, é entregue em palestras, mas
+
+79
+00:06:54.001 --> 00:06:57.001
+Estamos também falando de um tipo muito mais sutil de conhecimento que chamamos de
+
+80
+00:06:57.001 --> 00:07:02.000
+conhecimento heurístico de um campo, o conhecimento experiencial, o não-rigoroso
+
+81
+00:07:02.000 --> 00:07:07.001
+do conhecimento. George Polia, o grande matemático de Stanford em popularizar isso em
+
+82
+00:07:07.001 --> 00:07:12.001
+Os anos 50, chamados de raciocínio heurístico, a arte da boa imaginação, e nós gostaríamos de
+
+83
+00:07:12.001 --> 00:07:18.000
+Investir em computadores com a arte da boa imaginação. As pessoas que fazem isso para
+
+84
+00:07:18.000 --> 00:07:24.000
+As aplicações práticas são chamadas de engenheiros de conhecimento. Eles construem e testam e
+
+85
+00:07:24.000 --> 00:07:29.000
+programas de revisão e esses programas são chamados de sistemas de especialistas ou conhecimentos
+
+86
+00:07:29.000 --> 00:07:35.001
+dos sistemas. Normalmente, o objetivo do designer de sistemas especializado é projetar um programa
+
+87
+00:07:35.001 --> 00:07:42.000
+cujo comportamento corresponderá ao comportamento ou excederá a qualidade do comportamento
+
+88
+00:07:42.000 --> 00:07:48.000
+de profissionais humanos, especialistas em um campo. Estes são os programas que
+
+89
+00:07:48.000 --> 00:07:54.001
+Normalmente são chamados sistemas de especialistas. O trabalho dos especialistas tem sido realizado desde então.
+
+90
+00:07:54.001 --> 00:08:01.000
+em 1965, o início da segunda década da inteligência artificial
+
+91
+00:08:01.000 --> 00:08:07.000
+Pesquisa neste país. No momento em que os sistemas especializados trabalham desenvolvidos, o
+
+92
+00:08:07.000 --> 00:08:12.001
+O campo da inteligência artificial focou-se no conceito de generalidade como
+
+93
+00:08:12.001 --> 00:08:16.001
+Inteligência significativa. Não o desempenho, mas a generalidade, a capacidade de
+
+94
+00:08:16.001 --> 00:08:21.000
+programa para mudar sua atenção de uma área para a outra facilmente e resolver
+
+95
+00:08:21.000 --> 00:08:27.001
+os problemas. Os sistemas de especialistas pessoas inicialmente em Stanford e mais tarde em outro
+
+96
+00:08:27.001 --> 00:08:32.001
+lugar tomou a outra abordagem que se você queria criar programas que eram
+
+97
+00:08:32.001 --> 00:08:38.000
+muito inteligente, que realizou no nível de peritos humanos, você teve que
+
+98
+00:08:38.000 --> 00:08:44.001
+Conheça uma grande quantidade de conhecimento sobre um campo. O resultado principal de 17 ou 18
+
+99
+00:08:44.001 --> 00:08:51.001
+anos de trabalho nesta área agora é simplesmente que o conhecimento é poder.
+
+100
+00:08:53.000 --> 00:08:58.000
+A principal fonte de poder em sistemas de especialistas é o conhecimento que eles contêm
+
+101
+00:08:58.000 --> 00:09:03.000
+e da única importância secundária é o procedimento de inferência que eles usam para
+
+102
+00:09:03.000 --> 00:09:05.000
+desenhar as linhas de raciocínio.
+
+103
+00:09:06.000 --> 00:09:10.001
+Isso parece ser verdade em todas as áreas da inteligência artificial, não apenas
+
+104
+00:09:10.001 --> 00:09:16.001
+sistemas de especialistas e, na verdade, você pode vê-lo no trabalho que continua em
+
+105
+00:09:16.001 --> 00:09:20.001
+compreensão da língua natural onde uma grande quantidade de conhecimento mundial precisa ser
+
+106
+00:09:20.001 --> 00:09:26.000
+presente para os programas para desambigar as linguagens naturais. Nós vemos isso
+
+107
+00:09:26.000 --> 00:09:32.000
+também nos programas de visão AI, compreensão da imagem. É muito difícil de
+
+108
+00:09:32.000 --> 00:09:37.001
+compreender uma imagem, a menos que você saiba algo sobre o mundo representado em
+
+109
+00:09:37.001 --> 00:09:40.001
+O que um rio parece, o que uma estrada ferroviária parece, a cidade...
+
+110
+00:09:40.001 --> 00:09:42.000
+Como parece, como parece uma nuvem.
+
+111
+00:09:44.000 --> 00:09:48.000
+Todo esse foco no conhecimento realmente levou ao que se chama a mudança para um
+
+112
+00:09:48.000 --> 00:09:52.001
+paradigma baseada em conhecimento na IA e que é provavelmente o único evento maior
+
+113
+00:09:52.001 --> 00:09:58.000
+Isso ocorreu na segunda e terceira década do trabalho da AI. O contexto em torno
+
+114
+00:09:58.000 --> 00:10:02.000
+O problema é realmente importante ou é uma parte muito importante dessa solução.
+
+115
+00:10:02.000 --> 00:10:08.001
+É muito difícil entender os problemas, alcançar metas, entender
+
+116
+00:10:08.001 --> 00:10:12.001
+As notas e os sinais, a menos que você tenha muito conhecimento. Se tomarmos
+
+117
+00:10:12.001 --> 00:10:17.000
+sistema especialista em particular, é justo dizer que este é algo agora que é
+
+118
+00:10:17.000 --> 00:10:20.001
+mudando do ambiente universitário para a indústria que está se tornando
+
+119
+00:10:20.001 --> 00:10:25.000
+industrialmente aceitável agora para usar sistemas de especialistas? Você tem algum comentário sobre
+
+120
+00:10:25.000 --> 00:10:29.001
+Isso ? Bem, é sobre isso que toda a emoção está. Vemos uma espécie de frenética.
+
+121
+00:10:29.001 --> 00:10:36.000
+tempo em andamento, artigos de jornais e programas de televisão e tudo o que sobre o assunto de
+
+122
+00:10:36.000 --> 00:10:40.001
+Inteligência Artificial. Isso é causado por essa transição. Estamos começando a ver
+
+123
+00:10:40.001 --> 00:10:46.000
+A industrialização da AI. Estamos começando a ver o tipo de transição que
+
+124
+00:10:46.000 --> 00:10:51.000
+ocorreu no final dos anos 40 e início dos anos 50 do laboratório à indústria e
+
+125
+00:10:51.000 --> 00:10:56.001
+Computação em geral. Ed, quais são algumas das aplicações que viram o
+
+126
+00:10:56.001 --> 00:11:01.000
+luz do dia usando essas inteligência baseada no conhecimento e artificial
+
+127
+00:11:01.000 --> 00:11:06.000
+Técnicas ? Até agora, há centenas de deles, então eu posso apenas esquimar a superfície.
+
+128
+00:11:06.001 --> 00:11:13.000
+O avô de todas essas aplicações foi iniciado em 1965 em Stanford por
+
+129
+00:11:13.000 --> 00:11:18.000
+Professor Lederberg na Escola de Medicina e Professor Jurassic em Química e
+
+130
+00:11:18.000 --> 00:11:24.001
+a mim mesmo. Esta foi uma aplicação para a análise química onde os dados de
+
+131
+00:11:24.001 --> 00:11:29.001
+instrumentos físicos foram analisados em termos de estruturas químicas que podem
+
+132
+00:11:29.001 --> 00:11:34.000
+Com base nesses dados, um programa chamado o Programa Dendroil.
+
+133
+00:11:34.000 --> 00:11:41.000
+Por isso, existem várias aplicações de acompanhamento no campo dos programas para
+
+134
+00:11:41.000 --> 00:11:47.001
+Interpretar dados de instrumento de forma inteligente. Depois disso,
+
+135
+00:11:47.001 --> 00:11:53.001
+Houve numerosas aplicações para processos de diagnóstico e aconselhamento terapêutico
+
+136
+00:11:53.001 --> 00:12:00.000
+em medicina. Por exemplo, em Stanford, o programa Mycen para consulta sobre
+
+137
+00:12:00.000 --> 00:12:07.000
+Diagnóstico e terapia de doenças infecciosas. Um esforço mais recente para
+
+138
+00:12:07.000 --> 00:12:12.001
+consulte clínicos, oncólogos sobre a prescrição da quimioterapia do câncer em
+
+139
+00:12:12.001 --> 00:12:18.001
+Clínica de Câncer de Stanford. Programação na Universidade de Pittsburgh
+
+140
+00:12:18.001 --> 00:12:23.000
+Diagnóstico diferencial na medicina interna. Na verdade, isso é um espetáculo
+
+141
+00:12:23.000 --> 00:12:29.000
+um programa que sabe algumas centenas de mil coisas sobre a medicina interna,
+
+142
+00:12:29.000 --> 00:12:33.001
+conhece cerca de 500 doenças diferentes, 3.500 sinais e sintomas diferentes de
+
+143
+00:12:33.001 --> 00:12:38.000
+doença, e faz um trabalho extremamente bom no diagnóstico diferencial. Além de
+
+144
+00:12:38.000 --> 00:12:43.000
+Assim, as indústrias usaram sistemas especializados para fins de engenharia. O que
+
+145
+00:12:43.000 --> 00:12:47.001
+Configuração de computadores de ordens do cliente ou sistemas de equipamento de negócios.
+
+146
+00:12:49.000 --> 00:12:54.000
+A utilização de sistemas especializados para ajudar no projeto de circuitos integrados.
+
+147
+00:12:55.001 --> 00:13:00.001
+O uso de sistemas especializados para o diagnóstico de falhas de equipamento. Por exemplo,
+
+148
+00:13:01.000 --> 00:13:05.000
+falhas de equipamentos de computador. Sobre esse assunto, Ed, deixe-me interromper um segundo. I
+
+149
+00:13:05.000 --> 00:13:08.001
+pense que você tem um programa que você trabalhou no chamado Drilling Advisor, que ajuda
+
+150
+00:13:08.001 --> 00:13:13.000
+Análise de uma situação geológica como essa. Vamos fazer uma pausa para apenas
+
+151
+00:13:13.000 --> 00:13:17.000
+um segundo, mas quando voltarmos, vai passar por nós através deste particular
+
+152
+00:13:17.000 --> 00:13:19.001
+O sistema de especialistas chamado Drilling Advisor que vem para o próximo.
+
+153
+00:13:27.000 --> 00:13:33.000
+Ed, queremos tentar demonstrar como um desses sistemas especializados funcionaria, e
+
+154
+00:13:33.000 --> 00:13:36.000
+Eu sei que um de seus produtos é algo que eu acho que você chama Drilling Advisor. Talvez
+
+155
+00:13:36.000 --> 00:13:42.000
+Você pode dar-nos uma breve introdução a este programa. Stuart, sistemas de especialistas
+
+156
+00:13:42.000 --> 00:13:46.001
+são caracterizados por ter um valor acrescentado extremamente elevado. No caso do
+
+157
+00:13:46.001 --> 00:13:51.001
+O valor acrescentado é em termos de captura, repetição e
+
+158
+00:13:51.001 --> 00:13:56.001
+Distribuição da experiência. Companhia Elph Occutane, o petróleo nacional francês
+
+159
+00:13:56.001 --> 00:14:01.001
+A empresa, tem um problema no que diz respeito à drenagem de poços de petróleo. Drillagem
+
+160
+00:14:01.001 --> 00:14:03.000
+Os problemas podem ser muito caros.
+
+161
+00:14:04.000 --> 00:14:08.000
+Elph Occutane tem poucos especialistas no mundo para capturar e diagnosticar
+
+162
+00:14:08.000 --> 00:14:12.001
+Todos os problemas enfrentados pelas equipes de drenagem. Esses problemas de drenagem podem
+
+163
+00:14:12.001 --> 00:14:17.001
+ocorrem no outro lado do mundo da França, por exemplo, e eles estão depois de
+
+164
+00:14:17.001 --> 00:14:21.001
+um sistema de especialistas que pode capturar a experiência e colocá-la ali no
+
+165
+00:14:21.001 --> 00:14:28.001
+Duração de Riga. O Elph Occutane Drilling Advisor foi feito em colaboração com
+
+166
+00:14:28.001 --> 00:14:34.000
+uma startup de negócios da Silicon Valley chamada TechKnowledge que faz o conhecimento
+
+167
+00:14:34.000 --> 00:14:37.001
+Sistemas de engenharia personalizados do tipo que você verá. Ok, talvez nós possamos rolar.
+
+168
+00:14:37.001 --> 00:14:40.001
+Temos uma breve demonstração agora por cerca de um minuto e meio de realmente como
+
+169
+00:14:40.001 --> 00:14:45.000
+Este programa funciona. Podemos olhar para isso agora mesmo. Um sistema de conhecimento
+
+170
+00:14:45.000 --> 00:14:49.000
+Atualmente em desenvolvimento, a TechKnowledge fornece conselhos sobre problemas
+
+171
+00:14:49.000 --> 00:14:54.000
+Encontrou-se durante a erva de óleo. A versão do campo deste sistema ajudará
+
+172
+00:14:54.000 --> 00:14:57.000
+A tripulação de petróleo bem drenado para evitar ou corrigir acidentes que
+
+173
+00:14:57.000 --> 00:14:58.001
+ocorre durante o processo de drenagem.
+
+174
+00:15:00.000 --> 00:15:05.001
+Uma vez que um recipiente de petróleo offshore pode custar mais de US $ 100.000 por dia para operar, o tempo
+
+175
+00:15:05.001 --> 00:15:10.001
+e o equipamento perdido devido a acidentes pode representar até 2% do total
+
+176
+00:15:10.001 --> 00:15:14.001
+O custo de drenar um bem porque poucos indivíduos possuem o conhecimento,
+
+177
+00:15:15.000 --> 00:15:19.001
+experiência, e julgamento para lidar adequadamente com os incidentes de borracha. A disponibilidade
+
+178
+00:15:19.001 --> 00:15:24.001
+de um consultor na forma de um sistema de especialistas baseado em conhecimentos é esperado para
+
+179
+00:15:24.001 --> 00:15:29.001
+reduzir o tempo e o equipamento perdidos, ajudar a treinar a tripulação para lidar com problemas, e
+
+180
+00:15:29.001 --> 00:15:35.000
+Reduz significativamente o custo de drenar um óleo bem. A Tecnologia de Conhecimentos
+
+181
+00:15:35.000 --> 00:15:40.001
+O prototipo do conselheiro é um especialista no diagnóstico de problemas de ligamento. O Sticking
+
+182
+00:15:40.001 --> 00:15:47.000
+ocorre quando a borracha corrente está ligada para cima ou para baixo. A esquerda superior
+
+183
+00:15:47.000 --> 00:15:52.000
+da tela é dedicada a um diálogo tipado entre o usuário e o conhecimento
+
+184
+00:15:52.000 --> 00:15:57.000
+do sistema. Toda a metade direita da tela serve no protótipo para exibir
+
+185
+00:15:57.000 --> 00:16:01.000
+O funcionamento interno do sistema de conhecimento. Isso é usado principalmente para
+
+186
+00:16:01.000 --> 00:16:06.000
+e o debugging. Na parte inferior esquerda da tela, o ambiente de drenagem atual é
+
+187
+00:16:06.000 --> 00:16:11.000
+Diagramação . Isso inclui representações de seis principais causas de estancamento.
+
+188
+00:16:12.001 --> 00:16:16.001
+Iniciando uma sessão com um consultor de borracha, o usuário seleciona o nome do
+
+189
+00:16:16.001 --> 00:16:22.000
+bem bem . O sistema, em seguida, recebe de seu disco qualquer informação que tenha
+
+190
+00:16:22.000 --> 00:16:26.000
+já foi informado sobre isso bem, incluindo quaisquer problemas enfrentados.
+
+191
+00:16:27.001 --> 00:16:32.000
+Depois de determinar que este é um bo vertical, o conselheiro de drenagem solicita
+
+192
+00:16:32.000 --> 00:16:35.000
+Informações sobre a camada e as formações relevantes no poço.
+
+193
+00:16:53.000 --> 00:16:58.000
+Usando um formato semelhante, o usuário informa o sistema que um problema de ligamento tem
+
+194
+00:16:58.000 --> 00:17:04.000
+ocorreu durante uma tentativa de reparar a corrente de borracha a 4.000 metros. O que
+
+195
+00:17:04.000 --> 00:17:08.001
+O conselheiro de borracha agora concentra a sua atenção no problema imediato, designado
+
+196
+00:17:08.001 --> 00:17:14.001
+Episódio 1 na tela. Em primeiro lugar, o sistema requer informações sobre o
+
+197
+00:17:14.001 --> 00:17:18.000
+fluido de borracha e aprende que o borracho deixou de rotar.
+
+198
+00:17:19.001 --> 00:17:23.001
+Bem, Ed, daquela porção que vemos agora, como é esse conhecimento representado na
+
+199
+00:17:23.001 --> 00:17:27.000
+programa, e como o programa usa esse conhecimento? O conselheiro de borracha é
+
+200
+00:17:27.000 --> 00:17:30.001
+o que é chamado de sistema baseado em regras, e o conhecimento é representado na forma
+
+201
+00:17:30.001 --> 00:17:37.001
+de regras que contêm dois lados, um if-side e um then-side. O caso se
+
+202
+00:17:37.001 --> 00:17:42.000
+A página contém uma série de condições que eu gosto de considerar como relevância
+
+203
+00:17:42.000 --> 00:17:46.001
+condições deste pedaço de conhecimento. Se essas condições forem satisfeitas, então
+
+204
+00:17:46.001 --> 00:17:51.000
+Essa regra será levada da base do conhecimento e construída na linha de
+
+205
+00:17:51.000 --> 00:17:55.000
+A razão. A parte então contém a conclusão que pode ser tirada sobre a base
+
+206
+00:17:55.000 --> 00:18:00.000
+das evidências que estão no lado if. Agora, a forma como é usado está em um esquema
+
+207
+00:18:00.000 --> 00:18:06.000
+chamada cadeia direcionada à meta para trás, na qual o programa funciona para trilha
+
+208
+00:18:06.000 --> 00:18:10.001
+através das regras de um objetivo a ser alcançado a alguns fatos conhecidos como
+
+209
+00:18:10.001 --> 00:18:14.000
+a ser acumulado do usuário na consola. Ok, temos um pouco mais
+
+210
+00:18:14.000 --> 00:18:18.000
+do diálogo, vamos olhar para ele e ver como ele funciona. Voltar para o
+
+211
+00:18:18.000 --> 00:18:23.001
+Diálogo, o consultor de drenagem está pedindo ao usuário para o ponto livre, o ponto
+
+212
+00:18:23.001 --> 00:18:28.001
+sob o qual a corrente de borracha não está apertada. Neste caso, a informação é
+
+213
+00:18:28.001 --> 00:18:35.000
+Não conhecido . O usuário indica que a camada de areia é permeável e que o
+
+214
+00:18:35.000 --> 00:18:41.001
+A gravidade específica do fluido de drenagem é 1. 24 . No entanto, quando o sistema exige
+
+215
+00:18:41.001 --> 00:18:47.001
+fluido gravidade específica da camada de areia, o usuário fica confuso. Enquanto
+
+216
+00:18:47.001 --> 00:18:52.000
+As perguntas anteriores indicaram uma linha sensível de raciocínio, o usuário não
+
+217
+00:18:52.000 --> 00:18:57.000
+compreender a relevância desta questão para o problema geral. Em vez de
+
+218
+00:18:57.000 --> 00:19:00.000
+Responder a pergunta, os usuários tipos por que.
+
+219
+00:19:01.001 --> 00:19:06.000
+O conselheiro de borracha então apresenta uma explicação sobre a razão específica de que o
+
+220
+00:19:06.000 --> 00:19:12.000
+A pergunta é feita para ajudar a determinar a força de toque. Isso é seguido por
+
+221
+00:19:12.000 --> 00:19:15.000
+uma descrição mais detalhada do estado atual do raciocínio do sistema,
+
+222
+00:19:16.000 --> 00:19:19.001
+incluindo os vários fatores que devem ser usados para calcular o estímulo total
+
+223
+00:19:19.001 --> 00:19:26.000
+A força. Ok, Ed, esta parte onde o usuário pode perguntar ao computador por que, como
+
+224
+00:19:26.000 --> 00:19:31.000
+Isso funciona? Isso parece uma parte muito importante de um sistema de especialistas. Nós
+
+225
+00:19:31.000 --> 00:19:36.001
+consideramos esses sistemas de peritos como assistentes aos profissionais humanos e acreditamos que
+
+226
+00:19:36.001 --> 00:19:41.001
+que não serão usados a menos que possam explicar ao usuário humano como são
+
+227
+00:19:41.001 --> 00:19:48.000
+A razão. Portanto, temos esses programas de explicação como pedaços de conhecimento
+
+228
+00:19:48.000 --> 00:19:52.001
+engenharia no sistema que permite que o sistema seja uma caixa transparente.
+
+229
+00:19:52.001 --> 00:19:57.000
+Nós lançamos caixas negras. Gostamos que o usuário seja capaz de passar pela caixa
+
+230
+00:19:57.000 --> 00:20:00.001
+Compreender como o sistema funciona. Neste caso, o
+
+231
+00:20:00.001 --> 00:20:06.000
+O programa olha para trás sobre a cadeia de regras que se acumularam devido à
+
+232
+00:20:06.000 --> 00:20:11.001
+procedimento de cadeia para trás e, em seguida, girar as regras que levaram a
+
+233
+00:20:11.001 --> 00:20:13.001
+programação até um certo ponto na consulta.
+
+234
+00:20:14.000 --> 00:20:18.000
+Você sabe, como ainda temos algum tempo aqui, acho que vale a pena discutir
+
+235
+00:20:18.000 --> 00:20:23.000
+Alguns minutos desta ameaça que você vê na quinta geração do computador japonês
+
+236
+00:20:23.000 --> 00:20:30.000
+dos sistemas. Você pode nos dar alguma ideia do que está acontecendo lá? O governo japonês
+
+237
+00:20:30.000 --> 00:20:34.001
+trabalhando através da Agência Japonesa de Planejamento de Tecnologia, MITI, o Ministério da
+
+238
+00:20:34.001 --> 00:20:37.000
+O comércio e a indústria internacionais estabeleceram
+
+239
+00:20:37.000 --> 00:20:43.001
+Um maior
+
+240
+00:20:43.001 --> 00:20:47.000
+financiamento, e um montante equivalente de financiamento da indústria durante um período de 10 anos,
+
+241
+00:20:48.000 --> 00:20:53.000
+destinados à produção de hardware e software e aplicações no que eles chamam de
+
+242
+00:20:53.000 --> 00:20:58.000
+indústria do conhecimento, aplicativos semelhantes ao que já vimos aqui,
+
+243
+00:20:58.000 --> 00:21:04.000
+experiência embalada, sistemas baseados em conhecimentos de todos os tipos. O Japão em geral
+
+244
+00:21:04.000 --> 00:21:09.000
+A estratégia é uma coisa muito interessante. Falta a participação de mercado
+
+245
+00:21:09.000 --> 00:21:15.000
+O líder mundial, o IBM.
+
+246
+00:21:16.000 --> 00:21:19.001
+O que você tem que fazer é ganhar uma posição em uma área em que a IBM não tem sido
+
+247
+00:21:19.001 --> 00:21:24.000
+Atividade, e isso é inteligência artificial. Os japoneses querem chegar lá.
+
+248
+00:21:24.000 --> 00:21:29.000
+Primeiro e rápido para que eles possam ganhar uma boa ponta do mercado antes da IBM despertar
+
+249
+00:21:29.000 --> 00:21:34.000
+em cima. Estamos à frente dos japoneses agora em sistemas de especialistas? Realmente rápido, tem
+
+250
+00:21:34.000 --> 00:21:35.001
+Tivemos apenas alguns segundos? Bem, eu acho que somos.
+
+251
+00:21:35.001 --> 00:21:39.000
+Estamos em frente por algum tempo, acho que com um esforço dedicado na parte de
+
+252
+00:21:39.000 --> 00:21:43.000
+Para os japoneses, seria melhor nos movermos bastante rápido se quiséssemos permanecer em frente. E nós
+
+253
+00:21:43.000 --> 00:21:44.001
+Está fora do tempo, lamento dizer.
+
+254
+00:21:44.001 --> 00:21:48.000
+Muito obrigado por estar conosco Ed Feigenbaum e Herb Blechner, e espero
+
+255
+00:21:48.000 --> 00:21:50.001
+Você vai se juntar a nós novamente para outra edição das Crônicas de Computador.
+
+256
+00:22:26.000 --> 00:22:32.000
+Micro Focus, criadores de ferramentas de programação visual para o desenvolvimento de software, é
+
+257
+00:22:32.000 --> 00:22:38.000
+prazer em fornecer fundos importantes para as crônicas de computador, a história deste
+
+258
+00:22:38.000 --> 00:22:50.001
+Evolução contínua.
+
+259
+00:23:05.000 --> 00:23:10.000
+O acesso aleatório é possível por uma subvenção da Byte, o Small Systems Journal,
+
+260
+00:23:10.001 --> 00:23:15.000
+Publicações de uma revista mensal sobre tecnologia de microcomputadores e inovação
+
+261
+00:23:15.000 --> 00:23:17.000
+projetos no mundo da computação.
+
+262
+00:23:21.000 --> 00:23:25.001
+No arquivo de acesso aleatório de hoje, parece haver um grande esforço em curso por
+
+263
+00:23:25.001 --> 00:23:30.001
+Os fabricantes de chips de computador americanos voltaram a ganhar sua liderança sobre os japoneses. O que
+
+264
+00:23:30.001 --> 00:23:33.000
+O governo federal está trabalhando com uma nova organização comercial chamada
+
+265
+00:23:33.000 --> 00:23:36.001
+Semiconductor Research Corporation ou SRC.
+
+266
+00:23:37.000 --> 00:23:41.001
+Mais de 20 grandes corporações de eletrônicos estão envolvidas na SRC com
+
+267
+00:23:41.001 --> 00:23:47.001
+O objetivo é produzir o primeiro chip de 4 megabytes do mundo até 1988. Nosso
+
+268
+00:23:47.001 --> 00:23:51.001
+empresas usadas para controlar o mercado de chips de 16k com cerca de dois terços das vendas globais,
+
+269
+00:23:52.000 --> 00:23:57.000
+Mas os fabricantes japoneses dominaram no mercado de chips de 64k com 70 por cento.
+
+270
+00:23:58.000 --> 00:24:02.000
+Chip experts dizem que o chip de 4 megabytes vai precisar de conexões eletrônicas
+
+271
+00:24:02.000 --> 00:24:08.000
+Um micron ou menos. Se você não sabe, um micrão é cerca de 1.1100, a largura de
+
+272
+00:24:08.000 --> 00:24:13.001
+Um cabelo humano. A Associação da Indústria de Semicondutores diz que os tempos de boom estão de volta para
+
+273
+00:24:13.001 --> 00:24:17.000
+Criadores de chip. Estima-se que as empresas americanas vendam cerca de 11 bilhões de dólares
+
+274
+00:24:17.000 --> 00:24:21.001
+Valor do dólar dos semicondutores este ano, um aumento de cerca de 16 por cento sobre
+
+275
+00:24:21.001 --> 00:24:28.001
+no ano passado. Enquanto isso, o Semicondutor Nacional em Santa Clara relata um excelente
+
+276
+00:24:28.001 --> 00:24:33.000
+Primeiro trimestre com renda líquida de 41 centavos por ação. Isso vem de menos de um
+
+277
+00:24:33.000 --> 00:24:38.000
+cent uma parte há um ano, e a Intel e os micro dispositivos avançados mostraram muito forte
+
+278
+00:24:38.000 --> 00:24:43.001
+Quartos do quarto. Apenas há algumas semanas, Fortune Computers estava falando que
+
+279
+00:24:43.001 --> 00:24:47.001
+Não estaria seguindo os passos de Osborne, mas esta semana Fortune foi
+
+280
+00:24:47.001 --> 00:24:52.001
+Realizar um pouco. O seu fundador e CEO, Gary Friedman, renunciou a pedido do
+
+281
+00:24:52.001 --> 00:24:56.001
+Conselho de Diretores. Fortune sofreu uma perda de US$ 3 milhões no último ano
+
+282
+00:24:56.001 --> 00:25:01.001
+Quartal da. A sua ação, que tinha vendido uma ação por US$ 22 no início deste ano, agora está em queda.
+
+283
+00:25:01.001 --> 00:25:08.001
+Em torno de US$ 8.50. O que é novo? Bem, você provavelmente já viu esses novos anúncios de TV
+
+284
+00:25:08.001 --> 00:25:13.000
+para o e-mail da MCI. MCI, que tem sido desafiador para Ma Bell por um longo tempo
+
+285
+00:25:13.000 --> 00:25:18.000
+O negócio de telemóveis à distância, está agora desafiando o escritório postal com seu novo e-mail MCI
+
+286
+00:25:18.000 --> 00:25:22.001
+serviço para proprietários de computadores pessoais. O MCI diz que o seu sistema irá interagir com o
+
+287
+00:25:22.001 --> 00:25:27.000
+post office e serviços de courier para que você possa até mesmo enviar e-mail para
+
+288
+00:25:27.000 --> 00:25:29.000
+pessoas que não possuem computadores pessoais.
+
+289
+00:25:31.001 --> 00:25:35.000
+Coleco finalmente mostrou uma versão de produção de seu computador atômico para
+
+290
+00:25:35.000 --> 00:25:36.001
+A Sociedade de Computadores de Boston.
+
+291
+00:25:37.000 --> 00:25:41.001
+Relatórios dizem que o processador de palavras muito tweeted não é muito sofisticado. Coleção
+
+292
+00:25:41.001 --> 00:25:45.001
+indicado em um pacote de utilidade devido a sair no próximo ano, o que irá melhorar a sua palavra
+
+293
+00:25:45.001 --> 00:25:50.000
+de processamento . A última palavra é que o envio de átomos, finalmente, deve ser feito em
+
+294
+00:25:50.000 --> 00:25:56.000
+no final deste mês. Se você comprou um desses computadores portáteis que você pode
+
+295
+00:25:56.000 --> 00:25:59.001
+Em um avião, você pode querer verificar com as companhias aéreas. Muitos computadores
+
+296
+00:25:59.001 --> 00:26:03.001
+Os usuários são informados de não quando eles retiram o velho teclado e colocam-no em seu
+
+297
+00:26:03.001 --> 00:26:07.001
+O tempo. Algumas companhias aéreas estão preocupadas com a interferência de rádio com o avião
+
+298
+00:26:07.001 --> 00:26:13.001
+Sistema de navegação. De acordo com o LA Times, a TWA e a República dizem que é bom usar
+
+299
+00:26:13.001 --> 00:26:18.000
+Os portáteis, mas United, PSA, Oriente, Continental e Ocidente proibiram o
+
+300
+00:26:18.000 --> 00:26:23.000
+Usar computadores portáteis durante o voo. Nolan Bushnell está de volta.
+
+301
+00:26:23.000 --> 00:26:27.000
+Se você esqueceu, ele é o cara que inventou jogos de vídeo e fundou Atari,
+
+302
+00:26:27.000 --> 00:26:31.001
+Então vendeu para Fortune, por uma fortuna, para Warner Communications. bem
+
+303
+00:26:31.001 --> 00:26:36.000
+O contrato não competitivo de Bushnell de sete anos expirou este mês e a palavra é que
+
+304
+00:26:36.000 --> 00:26:41.000
+Ele está em breve saindo com jogos de vídeo com dois discos de laser. Ele também está em robôs e
+
+305
+00:26:41.000 --> 00:26:45.000
+Ele está trabalhando em robôs para servir pizza em seu teatro Pizza Time.
+
+306
+00:26:45.000 --> 00:26:49.001
+Os restaurantes. Se você perdeu, por outro lado, uma decisão judicial importante sobre copywriting
+
+307
+00:26:49.001 --> 00:26:53.000
+O software saiu dos EUA. Tribunal de Apelação em Filadélfia há algumas semanas.
+
+308
+00:26:54.000 --> 00:26:58.001
+A Apple acusou a Franklin Computers de copiar seu programa de sistema operacional. O que
+
+309
+00:26:58.001 --> 00:27:02.001
+O tribunal decidiu que o programa, mesmo assim como estendido em um chip de silício, era copiável.
+
+310
+00:27:02.001 --> 00:27:08.001
+E assim não podia ser copiado sem compensação ao seu criador. O que é o melhor
+
+311
+00:27:08.001 --> 00:27:10.000
+Programa de vendas nos dias atuais?
+
+312
+00:27:10.001 --> 00:27:15.000
+O Lotus 123 chegou ao topo dos gráficos de software. Nos primeiros seis meses
+
+313
+00:27:15.000 --> 00:27:20.000
+No ano passado, a Lotus vendeu mais de 12 milhões de dólares em valor de 123 e sucesso.
+
+314
+00:27:20.000 --> 00:27:24.000
+A competição das raças. Cerca de 30 empresas de software anunciaram planos para o que
+
+315
+00:27:24.000 --> 00:27:27.001
+As versões de 123 serão melhoradas.
+
+316
+00:27:29.000 --> 00:27:31.001
+Por fim, com computadores e software multiplicando como
+
+317
+00:27:31.001 --> 00:27:33.001
+Os coelhos, o inevitável aconteceu.
+
+318
+00:27:33.001 --> 00:27:38.000
+Algumas agências de publicidade estão pensando em colocar anúncios em discos de software ou
+
+319
+00:27:38.000 --> 00:27:42.001
+em redes de computadores. Serviço de Informação Dow Jones diz que vai começar a fazer
+
+320
+00:27:42.001 --> 00:27:47.000
+algo assim. A melhor hipótese é que os anúncios iniciais serão apenas texto e serão
+
+321
+00:27:47.000 --> 00:27:52.000
+Promover software revistas de computador e serviços financeiros. É por isso que é
+
+322
+00:27:52.000 --> 00:27:55.001
+A semana de acesso aleatório, uma cápsula olha para o que está acontecendo no mundo da
+
+323
+00:27:55.001 --> 00:27:59.000
+de computação . Certifique-se de assistir ao Random Access após cada edição do
+
+324
+00:27:59.000 --> 00:28:05.000
+Crônicas de computador. O acesso aleatório é possível através de uma subvenção da Byte,
+
+325
+00:28:07.000 --> 00:28:11.001
+Pequena revista mensal sobre microcomputadores e projetos inovadores
+
+326
+00:28:11.001 --> 00:28:13.000
+no mundo da computação.

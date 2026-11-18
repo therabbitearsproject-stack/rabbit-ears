@@ -1,0 +1,1597 @@
+WEBVTT
+
+1
+00:00:51.001 --> 00:00:57.000
+El micrófono.
+
+2
+00:00:57.000 --> 00:01:03.000
+Los creadores de herramientas de programación visual para el desarrollo de software están encantados de
+
+3
+00:01:03.000 --> 00:01:07.000
+proporcionar financiamiento importante para las crónicas informáticas, la historia
+
+4
+00:01:07.000 --> 00:01:09.000
+de esta evolución continua.
+
+5
+00:01:17.000 --> 00:01:18.001
+Bienvenido a las crónicas informáticas.
+
+6
+00:01:19.000 --> 00:01:21.000
+Yo soy Stuart Chafay y este es Gary Kildall.
+
+7
+00:01:22.000 --> 00:01:25.000
+En el programa de hoy vamos a hablar de software integrado, el nuevo
+
+8
+00:01:25.000 --> 00:01:27.001
+una variedad de programas de negocios que todos trabajan juntos.
+
+9
+00:01:28.000 --> 00:01:31.001
+Y cuando mencionamos el software integrado, probablemente piensa en la Lisa de Apple.
+
+10
+00:01:32.000 --> 00:01:34.001
+Bueno, en solo unos minutos vamos a hablar con el hombre detrás de la
+
+11
+00:01:34.001 --> 00:01:36.000
+El proyecto Lisa, John Couch.
+
+12
+00:01:37.000 --> 00:01:40.001
+Pero primero, Gary, realmente había software integrado antes de Lisa, ¿no estaba allí?
+
+13
+00:01:41.000 --> 00:01:43.001
+Bueno, estamos realmente hablando de dos temas interrelacionados diferentes.
+
+14
+00:01:43.001 --> 00:01:45.001
+Una de ellas es la aplicación integrada y la
+
+15
+00:01:45.001 --> 00:01:47.000
+Otra es el uso de la interfaz visual.
+
+16
+00:01:48.000 --> 00:01:51.000
+Las aplicaciones integradas generalmente son el término que se aplica a las empresas
+
+17
+00:01:51.000 --> 00:01:55.000
+aplicaciones que trabajan juntos como un sistema de procesamiento de palabras, una hoja de referencia,
+
+18
+00:01:55.000 --> 00:01:59.000
+un paquete de dibujo gráfico y se integran cuando utilizan datos comunes
+
+19
+00:01:59.000 --> 00:02:00.001
+formatos y formatos de comando comunes.
+
+20
+00:02:01.001 --> 00:02:03.001
+El segundo tema es realmente la interfaz visual.
+
+21
+00:02:04.000 --> 00:02:07.001
+La interfaz visual realmente utiliza una nueva tecnología de gráficos de alta resolución para
+
+22
+00:02:07.001 --> 00:02:11.000
+hacer que el programa utilice nuestra interfaz un poco más mejorado y
+
+23
+00:02:11.000 --> 00:02:13.000
+animado y un poco más divertido para tratar con.
+
+24
+00:02:14.000 --> 00:02:17.001
+Así que la Lisa y también la visión que veremos hoy son verdaderamente descendientes
+
+25
+00:02:17.001 --> 00:02:24.000
+de la obra que hizo Alan Kay
+
+26
+00:02:24.000 --> 00:02:25.001
+y Smalltalk en Xerox PARC.
+
+27
+00:02:26.000 --> 00:02:30.001
+Bueno, antes de conocer a John Couch y Lisa, vamos a dar un vistazo al fondo.
+
+28
+00:02:30.001 --> 00:02:32.000
+Principio de la integración de las funciones de trabajo.
+
+29
+00:02:34.001 --> 00:02:37.001
+Integrar las diferentes ramas de una organización para trabajar en
+
+30
+00:02:37.001 --> 00:02:39.000
+La unión nunca ha sido sencilla.
+
+31
+00:02:39.001 --> 00:02:44.000
+Si cada tarea o departamento es aislado, hacerlos trabajar juntos requiere claridad
+
+32
+00:02:44.000 --> 00:02:46.001
+Canales de comunicación accesibles.
+
+33
+00:02:47.000 --> 00:02:51.000
+Al menos, todos ellos necesitan un lenguaje común para asignar claramente empleos,
+
+34
+00:02:51.000 --> 00:02:55.000
+coordinar las tareas y hacer los cambios lo más rápido y directo posible.
+
+35
+00:02:56.000 --> 00:02:58.001
+En este sentido, el software informático tiene un largo camino para ir.
+
+36
+00:02:59.000 --> 00:03:03.000
+Hasta muy recientemente, el tipo de programas de software disponibles para las empresas, para
+
+37
+00:03:03.000 --> 00:03:08.000
+Por ejemplo, se realizan funciones únicas, separadas como el procesamiento de palabras o gráficos.
+
+38
+00:03:08.001 --> 00:03:12.001
+Con software integrado, varias funciones se pueden combinar en un único paquete.
+
+39
+00:03:12.001 --> 00:03:15.001
+Disponible en el mismo terminal utilizando el mismo idioma.
+
+40
+00:03:16.001 --> 00:03:21.001
+Una base de datos común permite a un operador realizar varias tareas simultáneamente y
+
+41
+00:03:21.001 --> 00:03:25.001
+para cambiar rápidamente de una tarea a otra dividindo la pantalla o
+
+42
+00:03:25.001 --> 00:03:27.000
+Crear ventanas que superan.
+
+43
+00:03:28.001 --> 00:03:32.001
+El software integrado tiene sus aplicaciones comerciales de rutina, registros de negocios,
+
+44
+00:03:32.001 --> 00:03:35.001
+Gestión de oficinas, discos, la burocracia corporativa.
+
+45
+00:03:36.001 --> 00:03:41.000
+Pero el concepto de integración de programas y direcciones de programa es parte de un largo
+
+46
+00:03:41.000 --> 00:03:45.000
+-Rango de objetivos críticos para el desarrollo de ordenadores más gestionables, con el fin de
+
+47
+00:03:45.000 --> 00:03:46.001
+La máquina es más fácil de usar.
+
+48
+00:03:47.001 --> 00:03:51.001
+El software integrado es un paso en esa dirección, utilizando un bajo nivel de artificialidad
+
+49
+00:03:51.001 --> 00:03:55.000
+Inteligencia para manipular varios programas como herramientas.
+
+50
+00:03:56.000 --> 00:03:59.001
+Paradoxalmente, cuanto más sencillo es un programa para el usuario, más
+
+51
+00:03:59.001 --> 00:04:01.000
+complejo debe ser para la máquina.
+
+52
+00:04:02.000 --> 00:04:06.001
+Y para algunos expertos, los pequeños ordenadores de hoy en día todavía son demasiado inmaturos para usar
+
+53
+00:04:06.001 --> 00:04:08.001
+El software integrado con eficacia.
+
+54
+00:04:19.001 --> 00:04:24.000
+Se une a nosotros ahora es John Couch, el creador de LISA, anteriormente con Apple, y ahora
+
+55
+00:04:24.000 --> 00:04:25.001
+Hacer unas pocas cosas por sí mismo.
+
+56
+00:04:26.000 --> 00:04:27.000
+Bienvenido a las crónicas informáticas, John.
+
+57
+00:04:27.001 --> 00:04:27.001
+Muchas gracias Gary.
+
+58
+00:04:28.001 --> 00:04:33.001
+Bueno, John, como mencioné anteriormente en el segmento de apertura que la máquina LISA
+
+59
+00:04:33.001 --> 00:04:36.000
+Parece estar relacionado con Smalltalk y la estrella de Xerox.
+
+60
+00:04:36.000 --> 00:04:40.001
+Recuerdo que hace más de 10 años fui a Xerox Park y vi un alto
+
+61
+00:04:40.001 --> 00:04:42.001
+La resolución se muestra así.
+
+62
+00:04:42.001 --> 00:04:44.001
+¿Puedes darnos una idea de lo que es la genealógica?
+
+63
+00:04:44.001 --> 00:04:45.001
+¿Cómo terminamos con una LISA?
+
+64
+00:04:46.001 --> 00:04:51.001
+Bueno, realmente se remonta a 1978 cuando se unió a Apple Computer y se fue a trabajar
+
+65
+00:04:51.001 --> 00:04:53.001
+Steve Jobs en un grupo llamado New Products.
+
+66
+00:04:54.000 --> 00:04:57.000
+Nuestro trabajo fue muy sencillo definir los nuevos productos con un personal
+
+67
+00:04:57.000 --> 00:04:58.001
+computadora de los años 80.
+
+68
+00:04:59.000 --> 00:05:03.001
+Y tratamos en ese momento particular de abordar algunas de las preocupaciones que
+
+69
+00:05:03.001 --> 00:05:07.001
+Tiene en términos del crecimiento de la industria de la computadora personal a través de la Apple II.
+
+70
+00:05:08.000 --> 00:05:12.000
+Uno de ellos, por supuesto, era que sentimos que las máquinas eran demasiado difíciles de usar.
+
+71
+00:05:12.001 --> 00:05:16.000
+Es necesario que, una persona, aprenda un nuevo idioma, un comando.
+
+72
+00:05:16.000 --> 00:05:17.001
+lenguaje para utilizar la máquina.
+
+73
+00:05:18.000 --> 00:05:20.000
+Y había muy poca integración entre las aplicaciones.
+
+74
+00:05:20.001 --> 00:05:24.001
+Fue muy difícil llevar datos de una aplicación a otra.
+
+75
+00:05:25.000 --> 00:05:29.000
+Y aquellos sistemas que fueron integrados se integraron en lo que yo llamo en el archivo
+
+76
+00:05:29.000 --> 00:05:32.000
+nivel, donde se puede escribir información en un archivo y leer
+
+77
+00:05:32.000 --> 00:05:33.001
+El archivo en otra aplicación.
+
+78
+00:05:34.001 --> 00:05:37.000
+Pero luego, de nuevo, fueron forzados a pasar por el intérprete de mando, a través de
+
+79
+00:05:37.000 --> 00:05:39.001
+el lenguaje de comando, para aprender cómo utilizar ese sistema.
+
+80
+00:05:40.000 --> 00:05:46.000
+Vimos el trabajo de Xerox, muchos de nosotros, durante la escuela de grad como usted y vino a
+
+81
+00:05:46.000 --> 00:05:51.001
+la conclusión de que podríamos construir un ordenador personal, aprovechando el
+
+82
+00:05:51.001 --> 00:05:56.000
+nueva tecnología en términos de la pantalla bitmap, reemplaza el intérprete de comando
+
+83
+00:05:56.000 --> 00:05:58.000
+Todo con un lenguaje gráfico.
+
+84
+00:05:58.000 --> 00:06:01.001
+En otras palabras, emulando la forma en que las personas trabajan en una oficina en lugar de preguntar
+
+85
+00:06:01.001 --> 00:06:07.000
+para cambiar la forma en que hacen las cosas y utilizar la misma interfaz de usuario para proporcionar
+
+86
+00:06:07.000 --> 00:06:10.000
+La integración en términos de transferencia de datos de una aplicación a otra.
+
+87
+00:06:10.001 --> 00:06:12.001
+Ahora, el verdadero fracaso aquí estaba en el precio.
+
+88
+00:06:12.001 --> 00:06:16.001
+La estrella de Xerox es una máquina muy costosa y el alquiler es relativamente
+
+89
+00:06:16.001 --> 00:06:19.001
+Es barato, pero todavía está criticado por ser alto precio.
+
+90
+00:06:19.001 --> 00:06:20.000
+Y justo.
+
+91
+00:06:21.000 --> 00:06:24.000
+Es realmente interesante porque si miras a la estrella, sí, era de alto precio,
+
+92
+00:06:24.000 --> 00:06:28.000
+y creo que el verdadero beneficio de la estrella fue la interfaz de usuario alternada, la
+
+93
+00:06:28.000 --> 00:06:30.000
+Desplazamiento del intérprete de comando.
+
+94
+00:06:30.001 --> 00:06:35.000
+En realidad había muy poca integración cuando definimos la integración en términos de
+
+95
+00:06:35.000 --> 00:06:38.000
+transferir datos de una aplicación a otra en la estrella original.
+
+96
+00:06:38.000 --> 00:06:39.001
+No hubo espaldas.
+
+97
+00:06:40.000 --> 00:06:43.001
+Fue una integración fundamental entre gráficos y texto, y
+
+98
+00:06:43.001 --> 00:06:45.000
+Es ahí donde se detuvo la integración.
+
+99
+00:06:45.001 --> 00:06:51.001
+Nuestro objetivo era construir una arquitectura de software así, y lo que quiero decir
+
+100
+00:06:51.001 --> 00:06:53.000
+La arquitectura es como una casa.
+
+101
+00:06:53.001 --> 00:06:56.000
+Es lo que la casa parece a la persona exterior.
+
+102
+00:06:56.000 --> 00:06:57.001
+¿Es un país francés o es un tutor inglés?
+
+103
+00:06:58.000 --> 00:07:00.000
+Y cómo se construye en términos de la estructura de datos.
+
+104
+00:07:00.001 --> 00:07:05.000
+Nuestro objetivo era definir una arquitectura de software que definiría el camino para
+
+105
+00:07:05.000 --> 00:07:10.000
+movimiento de datos al mismo tiempo utilizando una interfaz gráfica de usuario tal que
+
+106
+00:07:10.000 --> 00:07:13.000
+La integración fue una piedra angular de esa arquitectura.
+
+107
+00:07:13.000 --> 00:07:15.001
+En otras palabras, usted podría tomar datos no sólo de el procesamiento de palabras, negocios
+
+108
+00:07:15.001 --> 00:07:20.000
+gráficos, pero desde las placas, así como paquetes contables y cualquier otro
+
+109
+00:07:20.000 --> 00:07:23.000
+una pieza de software que debía ser escrita en un sistema Lisa, se
+
+110
+00:07:23.000 --> 00:07:24.001
+ser capaz de cortar y pegar esos datos.
+
+111
+00:07:25.000 --> 00:07:27.000
+¿Qué tipo de usuario tenéis en cuenta?
+
+112
+00:07:27.000 --> 00:07:28.001
+¿Cuándo has diseñado algo como Lisa?
+
+113
+00:07:30.001 --> 00:07:32.001
+Para decirte la verdad, teníamos en mente a nosotros mismos.
+
+114
+00:07:33.000 --> 00:07:38.000
+Una de las cosas sobre Apple Computer es que hay esto sobre el deseo de construir
+
+115
+00:07:38.000 --> 00:07:39.001
+productos que nosotros mismos buscamos.
+
+116
+00:07:40.000 --> 00:07:42.000
+Y, ya sabes, originalmente Steve Jobs y Steve Jobs
+
+117
+00:07:42.000 --> 00:07:43.001
+Wozniak quería un ordenador personal.
+
+118
+00:07:44.000 --> 00:07:46.001
+No podían dejarse salir y comprar uno, por lo que construyeron uno por sí mismos.
+
+119
+00:07:46.001 --> 00:07:48.000
+Y el Apple 2.
+
+120
+00:07:49.000 --> 00:07:53.001
+Y mirando la estrella de Xerox, queríamos un ordenador que era
+
+121
+00:07:53.001 --> 00:07:55.001
+integrado, que era más fácil de usar.
+
+122
+00:07:55.001 --> 00:07:58.001
+Hemos establecido un objetivo para un tiempo de aprendizaje de menos de media hora.
+
+123
+00:07:59.001 --> 00:08:02.001
+Pensamos que esa era la limitación en términos de
+
+124
+00:08:02.001 --> 00:08:04.001
+Introducción al mercado de los ordenadores personales.
+
+125
+00:08:05.000 --> 00:08:10.000
+que aunque hemos vendido más de un millón de Apple 2s, que todavía hay 32 y un
+
+126
+00:08:10.000 --> 00:08:15.000
+medio millón de personas en la oficina hoy en día que podrían beneficiarse de una
+
+127
+00:08:15.000 --> 00:08:16.001
+como un ordenador personal.
+
+128
+00:08:17.000 --> 00:08:21.000
+Y el único factor limitante era que eran difíciles de usar, les preguntamos
+
+129
+00:08:21.000 --> 00:08:24.000
+para aprender algo nuevo, no tenían tiempo para hacerlo, y no podían
+
+130
+00:08:24.000 --> 00:08:27.001
+Integra las funciones típicas que realizan en su trabajo diario.
+
+131
+00:08:28.000 --> 00:08:31.000
+Así que nuestro primer objetivo era construir un producto que nosotros mismos queríamos.
+
+132
+00:08:32.000 --> 00:08:36.000
+Si usted recuerda, creo que Apple se fue con los escritores de impresión en 1979 y el tipo de
+
+133
+00:08:36.000 --> 00:08:39.001
+Construimos nuestra empresa sobre la tecnología de la computadora personal.
+
+134
+00:08:40.000 --> 00:08:44.000
+Crecemos de 7 millones a un millón con al menos un ordenador personal en
+
+135
+00:08:44.000 --> 00:08:47.001
+la mesa de todos y al menos uno en casa y en algunos casos dos o
+
+136
+00:08:47.001 --> 00:08:49.000
+3 en un entorno.
+
+137
+00:08:50.000 --> 00:08:53.000
+Quiero volver sólo por un minuto a, mencionas que había media hora
+
+138
+00:08:53.000 --> 00:08:55.000
+tiempo de aprendizaje para el ELISA.
+
+139
+00:08:55.001 --> 00:08:59.001
+También se ha criticado que una media hora de tiempo de aprendizaje se hace a través de todo el
+
+140
+00:08:59.001 --> 00:09:03.001
+gráficos que son un tipo de cutesy orientado, el lid que abre
+
+141
+00:09:03.001 --> 00:09:05.000
+en el lixo puede y cosas así.
+
+142
+00:09:05.001 --> 00:09:07.000
+Y esto tiende a ser tiresómico.
+
+143
+00:09:07.001 --> 00:09:13.000
+¿Es eso tiresómico y realmente llega en el camino cuando alguien aprende el ELISA bien?
+
+144
+00:09:13.000 --> 00:09:15.001
+¿Es verdadera esa crítica?
+
+145
+00:09:17.000 --> 00:09:20.000
+No lo veo y no lo he visto.
+
+146
+00:09:21.000 --> 00:09:25.001
+Creo que algunas de las cosas que he visto, he usado este sistema yo mismo
+
+147
+00:09:25.001 --> 00:09:29.001
+Estoy fuera de Apple desde junio.
+
+148
+00:09:30.000 --> 00:09:33.001
+He puesto un plan financiero completo que ahora está alrededor de dos pulgadas de espesor.
+
+149
+00:09:33.001 --> 00:09:36.001
+Y por lo tanto, yo mismo he utilizado este sistema extensamente.
+
+150
+00:09:37.000 --> 00:09:41.000
+Y sin duda he aprendido mucho sobre dónde me gustaría ver integrado
+
+151
+00:09:41.000 --> 00:09:45.001
+software va y dónde creo que la industria del software en general va y
+
+152
+00:09:45.001 --> 00:09:47.001
+Limitaciones de la arquitectura ELISA.
+
+153
+00:09:49.000 --> 00:09:50.001
+Pero no veo eso en absoluto.
+
+154
+00:09:50.001 --> 00:09:54.001
+Creo que el lavado puede ser sólo algo que elegimos como un
+
+155
+00:09:54.001 --> 00:09:56.000
+Alternativa a decir borrar sus archivos.
+
+156
+00:09:56.001 --> 00:09:59.000
+Simplemente recoger un documento y lanzarlo en el lavabo puede.
+
+157
+00:10:00.000 --> 00:10:02.001
+Todo el mundo sabe cómo tirar el papel.
+
+158
+00:10:03.000 --> 00:10:08.000
+¿La integración del software, como lo coloca en ELISA, depende de
+
+159
+00:10:08.000 --> 00:10:09.001
+¿En cualquier avance tecnológica?
+
+160
+00:10:09.001 --> 00:10:13.001
+¿Había que resolver algún problema particular para llegar a este nivel de integración?
+
+161
+00:10:14.000 --> 00:10:14.001
+Yo creo así.
+
+162
+00:10:14.001 --> 00:10:20.000
+Creo que si miras el software, al menos mi visión del software había estado en
+
+163
+00:10:20.000 --> 00:10:23.000
+particular como las lenguas de programación, tendrás a tratar con aritmética
+
+164
+00:10:23.000 --> 00:10:25.000
+operadores, añadir, subtractar, multiplicar y dividir.
+
+165
+00:10:25.001 --> 00:10:28.000
+Y los tipos de datos tienden a ser muy fijos.
+
+166
+00:10:28.001 --> 00:10:30.001
+Los números enteros son números reales y por lo tanto
+
+167
+00:10:30.001 --> 00:10:32.000
+Adicionar, subtractar en dos números enteros.
+
+168
+00:10:32.000 --> 00:10:36.000
+Es un cálculo muy bien definido por el resultado de agregar dos números enteros
+
+169
+00:10:36.000 --> 00:10:38.000
+combinados o multiplicando dos números enteros.
+
+170
+00:10:38.000 --> 00:10:42.001
+Cuando miramos las estructuras de datos para el sistema ELISA, no
+
+171
+00:10:42.001 --> 00:10:45.001
+Simplemente números numéricos o números de puntos flotantes.
+
+172
+00:10:45.001 --> 00:10:49.001
+Tendían a ser líneas de texto, diciendo las cosas que usted trata con el procesamiento de palabras,
+
+173
+00:10:50.000 --> 00:10:53.001
+estructuras de datos que representan gráficos de alta resolución, estructuras
+
+174
+00:10:53.001 --> 00:10:55.000
+que potencialmente podría representar la voz.
+
+175
+00:10:56.000 --> 00:10:57.001
+Así que eran estructuras de datos muy únicas.
+
+176
+00:10:58.000 --> 00:11:01.001
+y las operaciones sobre esas estructuras de datos, que serían estructuras árboles o
+
+177
+00:11:01.001 --> 00:11:05.001
+listas vinculadas, algo de esta naturaleza, o no simplemente añadir, subtractar y multiplicar,
+
+178
+00:11:05.001 --> 00:11:10.001
+fueron muy complejas funciones de mapeo para mapear una estructura de datos que
+
+179
+00:11:10.001 --> 00:11:14.000
+representan, digamos, un gráfico de pie en un procesador de palabras que no
+
+180
+00:11:14.000 --> 00:11:15.001
+Comprender los gráficos en absoluto.
+
+181
+00:11:16.000 --> 00:11:19.001
+John, sólo tenemos un par de minutos, por desgracia, para demostrar esto.
+
+182
+00:11:19.001 --> 00:11:21.000
+A mí me parece que quiero empujarte por ahí.
+
+183
+00:11:21.000 --> 00:11:24.001
+Puedes mostrarnos con el ELISA aquí un ejemplo de cómo vas a moverse
+
+184
+00:11:24.001 --> 00:11:26.000
+de un programa de software a otro.
+
+185
+00:11:27.000 --> 00:11:30.001
+Lo que tengo en la pantalla es un número de ventanas y creo que es casi una
+
+186
+00:11:30.001 --> 00:11:34.001
+de convertirse en las palabras buzz de la integración y ventanas de 1983.
+
+187
+00:11:35.000 --> 00:11:39.000
+Pero tenemos el ratón y tenemos el pull down, lo que llamamos pull down menus.
+
+188
+00:11:39.000 --> 00:11:41.000
+Y estos son los menús tradicionales, excepto
+
+189
+00:11:41.000 --> 00:11:43.000
+No tomamos la propiedad en la pantalla.
+
+190
+00:11:43.000 --> 00:11:47.000
+Y entonces tenemos una serie de ventanas, en este caso particular, aplicaciones.
+
+191
+00:11:47.001 --> 00:11:49.001
+Y puedes tener tantos en la pantalla como quieras.
+
+192
+00:11:51.000 --> 00:11:53.001
+Basicamente, apuntamos a algo, lo seleccionamos.
+
+193
+00:11:53.001 --> 00:11:56.000
+Puedes decir el objeto seleccionado porque está en blanco aquí.
+
+194
+00:11:56.001 --> 00:12:00.000
+Y si yo quisiera ir a otro lugar en la pantalla, sería simplemente un
+
+195
+00:12:00.000 --> 00:12:03.000
+El tema de escribir, de señalar a eso, empujando el botón.
+
+196
+00:12:03.000 --> 00:12:06.001
+Y el control se ha transferido ahora de esa aplicación particular a
+
+197
+00:12:06.001 --> 00:12:08.000
+Esta aplicación para que pueda volver.
+
+198
+00:12:08.001 --> 00:12:12.000
+Y puedo mover estas ventanas alrededor en la pantalla como puedo moviendo cualquier
+
+199
+00:12:12.000 --> 00:12:13.001
+de los objetos en la pantalla.
+
+200
+00:12:14.000 --> 00:12:17.000
+Puedo medirlos en cualquier tamaño o forma particular.
+
+201
+00:12:17.001 --> 00:12:19.001
+Puedo escurrir con ellos, en ellos, y hacer lo que sea.
+
+202
+00:12:20.000 --> 00:12:23.000
+Esta aplicación particular que ocurre que traigo conmigo, tengo en un ordenador
+
+203
+00:12:23.000 --> 00:12:25.000
+La tienda se llama Computer Kingdom.
+
+204
+00:12:25.001 --> 00:12:27.001
+Se trata de las ventas de 1982.
+
+205
+00:12:28.001 --> 00:12:30.001
+Y puedo ampliar esto un poco.
+
+206
+00:12:31.000 --> 00:12:34.000
+Y puedes ver que tengo ventas el mes, las ventas de hardware,
+
+207
+00:12:34.001 --> 00:12:36.000
+Ventas de software, y algunas ventas de entrenamiento.
+
+208
+00:12:36.001 --> 00:12:38.001
+Y el objeto era simplemente para señalar los datos.
+
+209
+00:12:39.000 --> 00:12:40.001
+Nuestro objetivo era señalar las cosas.
+
+210
+00:12:41.000 --> 00:12:45.001
+Y por lo tanto, simplemente digo a los datos, como para las ventas desde enero hasta enero.
+
+211
+00:12:45.001 --> 00:12:47.001
+Decembro para hardware y software.
+
+212
+00:12:48.000 --> 00:12:49.000
+Voy a las verbas.
+
+213
+00:12:49.001 --> 00:12:53.000
+Consideramos que esto es el noun y los menús descendentes para ser verbos.
+
+214
+00:12:53.001 --> 00:12:56.000
+Y haré una copia de esos datos particulares.
+
+215
+00:12:57.000 --> 00:13:01.000
+Y ahora puedo mover la ventana al lado y buscar un poco de papel gráfico.
+
+216
+00:13:01.001 --> 00:13:04.000
+Simplemente póngase en el papel gráfico, seleccionando el botón del ratón.
+
+217
+00:13:04.001 --> 00:13:09.000
+Y ahora la aplicación que hace gráficos se cargará en el sistema.
+
+218
+00:13:10.000 --> 00:13:16.000
+Y puedo simplemente decir, bien, me gustaría que esos datos se fusionen X y Y.
+
+219
+00:13:16.001 --> 00:13:21.000
+Por lo tanto, simplemente voy hacia abajo y simplemente digo pastas.
+
+220
+00:13:21.001 --> 00:13:23.000
+Y los datos se conservan allí.
+
+221
+00:13:23.001 --> 00:13:27.001
+Y como se puede ver que los datos eran el número de dígitos era realmente más largo
+
+222
+00:13:27.001 --> 00:13:30.000
+que se ajusta en esa zona particular.
+
+223
+00:13:31.000 --> 00:13:33.000
+Así que simplemente moveré la columna a lo largo del lado.
+
+224
+00:13:34.001 --> 00:13:37.001
+Moviendo la cabeza de la columna a la derecha, como usted haría.
+
+225
+00:13:39.001 --> 00:13:40.001
+Y luego hay un gráfico.
+
+226
+00:13:41.000 --> 00:13:43.000
+Y si quiero ver el gráfico, puedo ver el grafismo.
+
+227
+00:13:43.000 --> 00:13:45.001
+Y si no estoy interesado en mis datos, puedo moverlo.
+
+228
+00:13:46.000 --> 00:13:47.000
+Puedo pasar por eso.
+
+229
+00:13:47.001 --> 00:13:48.001
+Y usted ve un gráfico de pie.
+
+230
+00:13:48.001 --> 00:13:49.001
+Tengo que interrumpir.
+
+231
+00:13:49.001 --> 00:13:51.001
+Yo sé que te dijeron que te tardó tres años en descubrir esto.
+
+232
+00:13:51.001 --> 00:13:52.001
+Y te dieron tres minutos para explicarlo.
+
+233
+00:13:54.000 --> 00:13:56.001
+Sin embargo, llegando en solo un minuto, vamos a dar un vistazo a
+
+234
+00:13:56.001 --> 00:13:58.001
+Vision, otra versión de software integrado.
+
+235
+00:13:58.001 --> 00:13:59.001
+Y eso será el siguiente.
+
+236
+00:14:06.001 --> 00:14:08.001
+En la actualidad, se encuentra Bill Coleman.
+
+237
+00:14:08.001 --> 00:14:12.001
+Es gerente de grupo en VisiCorp involucrado en el desarrollo de Vision, que es
+
+238
+00:14:12.001 --> 00:14:14.000
+Versión de software integrado de VisiCorp.
+
+239
+00:14:14.001 --> 00:14:15.000
+Yo lo tomé, Bill.
+
+240
+00:14:15.000 --> 00:14:16.001
+Y quizás nos puedes dar una demostración de la visión.
+
+241
+00:14:17.000 --> 00:14:19.000
+Sí, llamamos Vision el gerente de aplicaciones.
+
+242
+00:14:19.000 --> 00:14:23.000
+Es un sistema de software en el que se pueden instalar aplicaciones y
+
+243
+00:14:23.000 --> 00:14:25.000
+La integración está prevista.
+
+244
+00:14:26.000 --> 00:14:28.000
+Con la visión, usted la manipula con un ratón.
+
+245
+00:14:28.001 --> 00:14:30.000
+Hay una línea de mando global.
+
+246
+00:14:31.000 --> 00:14:36.001
+Los comandos están siempre disponibles para realmente manejar y utilizar las ventanas, todos
+
+247
+00:14:36.001 --> 00:14:38.000
+Comunicación entre las ventanas.
+
+248
+00:14:38.001 --> 00:14:41.001
+Te daré una demostración de manipular la ventana.
+
+249
+00:14:42.000 --> 00:14:46.001
+Usted hace una selección simplemente seleccionando con el ratón.
+
+250
+00:14:46.001 --> 00:14:50.000
+Seleccione el promptado para seleccionar la ventana que desea abrir.
+
+251
+00:14:50.000 --> 00:14:53.000
+Estas ocurren cerrando las ventanas que ya he abierto para esta demostración.
+
+252
+00:14:53.001 --> 00:14:54.001
+Se abrirá la ventana de servicios.
+
+253
+00:14:56.000 --> 00:15:00.000
+Si notas que mientras algo está pasando, obtendrás un vaso de hora.
+
+254
+00:15:00.000 --> 00:15:01.000
+Ahora hemos abierto una ventana.
+
+255
+00:15:01.000 --> 00:15:04.000
+Esta ventana sucede que sean todos los servicios disponibles al usuario en Vision.
+
+256
+00:15:04.001 --> 00:15:07.000
+Voy a manipular esta ventana sólo para mostrarle cómo se pueden manipular.
+
+257
+00:15:07.000 --> 00:15:07.001
+Esto es abierto.
+
+258
+00:15:08.000 --> 00:15:10.000
+Se puede utilizar la pantalla completa.
+
+259
+00:15:10.001 --> 00:15:13.000
+Hay muchas veces cuando estás entrando texto o usando tu
+
+260
+00:15:13.000 --> 00:15:14.001
+Dispone, usted va a querer usar la pantalla completa.
+
+261
+00:15:14.001 --> 00:15:18.001
+Puedes enmarcarlo a cualquier tamaño o ubicación simplemente seleccionándolo, determinando el
+
+262
+00:15:18.001 --> 00:15:21.000
+La ubicación y el tamaño que quieres que sea.
+
+263
+00:15:21.000 --> 00:15:23.001
+Se recomputará y se colocará en una ventana de ese tamaño.
+
+264
+00:15:25.001 --> 00:15:29.001
+Todas las ventanas tienen básicamente tres componentes usables.
+
+265
+00:15:29.001 --> 00:15:32.001
+Hay el área de contenido en el que la aplicación realmente funciona.
+
+266
+00:15:32.001 --> 00:15:36.000
+Hay la zona de menú en la que el menú funciona como usted indica
+
+267
+00:15:36.000 --> 00:15:37.001
+Algo que es selectivo en el universo.
+
+268
+00:15:38.000 --> 00:15:42.001
+Hay algo llamado una hoja de opciones, que puede configurar esta opción o
+
+269
+00:15:42.001 --> 00:15:44.000
+En este caso, la ventana de servicios, Vision
+
+270
+00:15:44.000 --> 00:15:46.000
+a sí mismo, para operar de la manera que le gustaría.
+
+271
+00:15:46.000 --> 00:15:48.001
+Quizás has oído hablar de la bebida que se está pasando.
+
+272
+00:15:48.001 --> 00:15:50.000
+Voy a esclarecer esto.
+
+273
+00:15:50.001 --> 00:15:52.001
+Hay una opción por debajo aquí puedo cambiar así
+
+274
+00:15:52.001 --> 00:15:54.000
+No tengo que escuchar a los bebés en mi oficina.
+
+275
+00:15:54.001 --> 00:15:55.000
+Ahora será sólo flash.
+
+276
+00:15:55.000 --> 00:15:58.000
+Si hago algo correcto una vez, hago alguna cosa equivocada tres veces.
+
+277
+00:15:59.000 --> 00:16:01.000
+Cuando lo hago, puedo dejarlo.
+
+278
+00:16:02.000 --> 00:16:06.000
+Otra capacidad de Vision, como en muchas aplicaciones, integrada
+
+279
+00:16:06.000 --> 00:16:08.000
+Las aplicaciones, la ayuda está siempre disponible.
+
+280
+00:16:08.001 --> 00:16:09.000
+Sólo seleccione ayuda.
+
+281
+00:16:09.001 --> 00:16:10.001
+Encuentra algo en lo que quieres ayudar.
+
+282
+00:16:10.001 --> 00:16:12.001
+No sé cuál es el comando de inicio.
+
+283
+00:16:13.000 --> 00:16:15.001
+Se abrirá otra ventana en el centro de la pantalla, por desgracia, sobre
+
+284
+00:16:15.001 --> 00:16:19.001
+Este, que describirá las especificaciones sobre esto.
+
+285
+00:16:20.000 --> 00:16:22.001
+Puedes encontrar más o menos información que pasa.
+
+286
+00:16:23.001 --> 00:16:24.001
+Vamos a salir de esa ventana.
+
+287
+00:16:27.000 --> 00:16:33.001
+Se abrirá una ventana gráfica, que tiene un programa gráfico en funcionamiento.
+
+288
+00:16:34.001 --> 00:16:37.001
+Se abrirá una ventana de espaldas.
+
+289
+00:16:38.001 --> 00:16:41.000
+Estas son dos aplicaciones que he instalado anteriormente en el sistema.
+
+290
+00:16:41.001 --> 00:16:42.000
+He abierto la ventana.
+
+291
+00:16:42.000 --> 00:16:44.000
+Tienen aplicaciones en funcionamiento.
+
+292
+00:16:44.001 --> 00:16:46.000
+Hay cosas que puedes hacer.
+
+293
+00:16:48.000 --> 00:16:51.001
+Puedes realizar todas las funciones de hoja y gráficos normales.
+
+294
+00:16:52.001 --> 00:16:55.001
+Pero al usar estas ventanas, ahora puedes transferir datos de uno a otro.
+
+295
+00:16:56.000 --> 00:16:57.000
+Voy a transferir algunos datos.
+
+296
+00:16:58.000 --> 00:17:00.000
+Basicamente selecciona la transferencia.
+
+297
+00:17:00.001 --> 00:17:03.000
+Seleccione la ventana en la que desea transferir.
+
+298
+00:17:04.000 --> 00:17:06.000
+Selecciona los datos reales que desea transferir.
+
+299
+00:17:06.000 --> 00:17:08.000
+Dijo que quiero transferir una columna de números aquí.
+
+300
+00:17:16.000 --> 00:17:18.000
+Estos son los datos que voy a transferir.
+
+301
+00:17:18.000 --> 00:17:19.000
+Y lo destacará ahora.
+
+302
+00:17:19.001 --> 00:17:21.000
+Y lo transferiré a esta solicitud.
+
+303
+00:17:22.001 --> 00:17:25.000
+Bueno, Bill, tengo que interrumpir porque nosotros
+
+304
+00:17:25.000 --> 00:17:26.001
+Quiero hablar un poco de esto.
+
+305
+00:17:27.001 --> 00:17:29.000
+Estamos hablando de software integrado.
+
+306
+00:17:29.001 --> 00:17:31.000
+Quizás, John, puedes hablar de esto.
+
+307
+00:17:31.001 --> 00:17:34.001
+Lotus123 es un programa que escuchamos mucho sobre ahora como ejemplo.
+
+308
+00:17:34.001 --> 00:17:37.000
+¿Cómo sería Lotus diferente, porque
+
+309
+00:17:37.000 --> 00:17:38.001
+Por ejemplo, ¿qué nos mostró Lisa, o Visian?
+
+310
+00:17:38.001 --> 00:17:40.001
+OK, creo que es muy simple.
+
+311
+00:17:41.000 --> 00:17:42.000
+Lotus es una aplicación.
+
+312
+00:17:43.000 --> 00:17:46.001
+Basicamente, lo que han hecho es que han implementado la hoja de difusión, los gráficos,
+
+313
+00:17:46.001 --> 00:17:49.000
+y algunas bases de datos intrínsecas dentro de una sola aplicación.
+
+314
+00:17:49.001 --> 00:17:51.001
+Está vinculada por esa aplicación particular.
+
+315
+00:17:52.000 --> 00:17:55.000
+Y su estructura de datos es por lo tanto conocida sobre los tres diferentes tipos de datos.
+
+316
+00:17:56.000 --> 00:18:00.001
+No hay integración más allá de eso, digamos, a un paquete contable o cualquier otro
+
+317
+00:18:00.001 --> 00:18:02.001
+El software puede ser escrito por cualquiera.
+
+318
+00:18:02.001 --> 00:18:06.001
+Penso con Lisa y si tengo razón con Visian, estos son los sistemas mismos.
+
+319
+00:18:07.000 --> 00:18:08.000
+Son las arquitecturas en sí.
+
+320
+00:18:08.001 --> 00:18:13.000
+Y proporcionan una interfaz a otras aplicaciones para que pueda instalar
+
+321
+00:18:13.000 --> 00:18:16.001
+aplicaciones adicionales en el medio ambiente y, por lo tanto, cortar y pegar
+
+322
+00:18:16.001 --> 00:18:19.000
+información de ellos a otros.
+
+323
+00:18:19.000 --> 00:18:20.000
+Esto plantea una buena pregunta.
+
+324
+00:18:21.000 --> 00:18:25.001
+¿Tienes en cuenta Visian y Lisa, son ambos realmente sistemas cerrados en el sentido
+
+325
+00:18:25.001 --> 00:18:30.000
+que usted proporciona las aplicaciones, o que usted define cómo estas interfaces son
+
+326
+00:18:30.000 --> 00:18:33.000
+De hecho, se establece para que una compañía X pueda entrar allí y escribir una aplicación
+
+327
+00:18:33.000 --> 00:18:37.000
+que corre, digamos, bajo Lisa y utiliza todas aquellas instalaciones que ya has definido?
+
+328
+00:18:37.001 --> 00:18:38.001
+Yo creo, yo creo.
+
+329
+00:18:39.000 --> 00:18:40.000
+Ambos son sistemas abiertos.
+
+330
+00:18:40.001 --> 00:18:45.000
+Ambos estamos en el mercado proporcionando un kit de herramientas que permite las aplicaciones
+
+331
+00:18:45.000 --> 00:18:47.000
+los desarrolladores para escribir sus aplicaciones.
+
+332
+00:18:48.000 --> 00:18:51.000
+Y como John mencionó, ambos sistemas proporcionan mucho más
+
+333
+00:18:51.000 --> 00:18:52.001
+más que los servicios por debajo.
+
+334
+00:18:52.001 --> 00:18:56.001
+Ellos proporcionan las herramientas y las estructuras de tal manera que un desarrollador pueda utilizar la
+
+335
+00:18:56.001 --> 00:19:00.001
+las instalaciones del sistema para que la interfaz y el uso del ratón y el
+
+336
+00:19:00.001 --> 00:19:02.001
+uso de los menús y todas las instalaciones
+
+337
+00:19:02.001 --> 00:19:04.000
+están proporcionados y que son consistentes.
+
+338
+00:19:04.001 --> 00:19:07.000
+Un usuario no tendrá que liberarse de una aplicación a otra.
+
+339
+00:19:07.001 --> 00:19:08.001
+Lo mismo sucede con Lisa.
+
+340
+00:19:08.001 --> 00:19:12.000
+Sí, creo que, usted sabe, cuando Lisa fue introducida, fue introducido con siete
+
+341
+00:19:12.000 --> 00:19:16.000
+aplicaciones, una aplicación terminal también, en cuanto a la toma de datos a
+
+342
+00:19:16.000 --> 00:19:18.000
+Base de datos central y luego moverla en el procesador de palabras.
+
+343
+00:19:19.000 --> 00:19:21.001
+Y hay un kit de herramientas, y el kit de las herramientas está disponible.
+
+344
+00:19:22.000 --> 00:19:25.001
+Y permite a un usuario decir que escribe un paquete contable o un paquet legal.
+
+345
+00:19:25.001 --> 00:19:30.000
+Y en lugar de tener que tratar de incorporar el procesamiento de palabras en un paquete legal,
+
+346
+00:19:30.001 --> 00:19:34.000
+pueden utilizar el procesamiento de palabras o uno o varios paquetes de procesamiento
+
+347
+00:19:34.000 --> 00:19:38.000
+que han sido escritos para Lisa y obtener la integración a través de la arquitectura
+
+348
+00:19:38.000 --> 00:19:41.000
+En lugar de, usted sabe, tratar de construirlo en el cuchillo de una aplicación.
+
+349
+00:19:41.001 --> 00:19:43.001
+Dice, cuánto grande puede obtener una aplicación antes de que funcione
+
+350
+00:19:43.001 --> 00:19:45.000
+¿En las condiciones fronterizas del hardware?
+
+351
+00:19:46.001 --> 00:19:50.000
+Un esquema alternativo, creo, es uno que la mesa o el cuarteto de la gente tiene
+
+352
+00:19:50.000 --> 00:19:51.001
+Venga con lo que se llama desk DESQ.
+
+353
+00:19:52.000 --> 00:19:56.001
+Y su idea es basicamente poner una capa de software por encima de lo existente.
+
+354
+00:19:56.001 --> 00:19:59.000
+aplicaciones, como los procesos de palabra que ya existen.
+
+355
+00:19:59.001 --> 00:20:02.001
+¿Crees que esto es una especie de enfoque de patchwork en este momento?
+
+356
+00:20:03.000 --> 00:20:04.001
+¿Se va a salir, o es que un enfoque que es realmente
+
+357
+00:20:04.001 --> 00:20:06.001
+¿Será un éxito a largo plazo?
+
+358
+00:20:07.000 --> 00:20:08.000
+¿Quieres responder esto?
+
+359
+00:20:09.000 --> 00:20:10.000
+Creo que tiene su lugar.
+
+360
+00:20:10.001 --> 00:20:12.000
+No es un nivel de integración.
+
+361
+00:20:12.001 --> 00:20:17.001
+Lo que hace es que proporciona una manera de que puede ver los portales a los actuales existentes
+
+362
+00:20:17.001 --> 00:20:21.000
+aplicaciones, por lo que no hay, hay poca o ninguna integración para la
+
+363
+00:20:21.000 --> 00:20:23.000
+El punto de vista del usuario en la forma en que utilizaría los programas.
+
+364
+00:20:24.000 --> 00:20:26.001
+Y hay muy, muy poca capacidad para transferir datos.
+
+365
+00:20:27.000 --> 00:20:30.001
+Tanto Visián como Lisa tienen mucho conocimiento de la estructura de datos, por lo que pueden
+
+366
+00:20:30.001 --> 00:20:33.000
+transferir mucho más que sólo los pequeños datos que ves en la pantalla.
+
+367
+00:20:33.000 --> 00:20:36.000
+Yo lo veo como- Basicamente, sin embargo, en Desqo es que hacen transferencias que se cortan y
+
+368
+00:20:36.000 --> 00:20:39.000
+Pasar por justo, creando líneas de comando básicamente.
+
+369
+00:20:39.000 --> 00:20:42.000
+Derecho, y básicamente es una integración con el nivel de archivo, y ellos ponen un
+
+370
+00:20:42.000 --> 00:20:45.001
+de los intérpretes que habían escondido un poco de la
+
+371
+00:20:45.001 --> 00:20:47.001
+El usuario, por lo tanto, es una especie de compromiso.
+
+372
+00:20:48.000 --> 00:20:50.000
+Sólo tenemos unos minutos, y yo sé que queremos entrar en un
+
+373
+00:20:50.000 --> 00:20:52.000
+Un poco sobre lo que está sucediendo, John.
+
+374
+00:20:52.000 --> 00:20:54.000
+¿Dónde ves la integración del software?
+
+375
+00:20:54.000 --> 00:20:58.000
+Bueno, creo que, usted sabe, basado en la experiencia que tuve con Lisa y siendo
+
+376
+00:20:58.000 --> 00:21:03.000
+involucrado en el negocio del software durante 15 años, que es seguro, hay un
+
+377
+00:21:03.000 --> 00:21:04.001
+El programa que llamamos programación por ejemplo.
+
+378
+00:21:05.001 --> 00:21:10.000
+Y esto es, en lugar de, número uno, en vez de transferir los datos a través de un
+
+379
+00:21:10.000 --> 00:21:13.001
+conducir, a través de un tubo, como lo hacemos en Lisa y algunos de los otros sistemas, el
+
+380
+00:21:13.001 --> 00:21:16.001
+Los sistemas residen en un sistema de gestión de bases de datos para que
+
+381
+00:21:16.001 --> 00:21:18.000
+Los datos siempre están presentes.
+
+382
+00:21:18.001 --> 00:21:20.000
+Esto te permite hacer dos cosas.
+
+383
+00:21:20.000 --> 00:21:22.001
+Uno, nos permite ir hacia lo que me referiría a
+
+384
+00:21:22.001 --> 00:21:24.000
+como aplicaciones inteligentes.
+
+385
+00:21:24.001 --> 00:21:29.000
+Aplicaciones que saben quién es el personal ejecutivo o quién es la región occidental
+
+386
+00:21:29.000 --> 00:21:32.001
+Las personas de ventas son porque residen en la propia base de datos,
+
+387
+00:21:32.001 --> 00:21:34.000
+En lugar de tener que transferir esa información.
+
+388
+00:21:34.001 --> 00:21:39.001
+En segundo lugar, el área de programación por ejemplo, donde una vez que haya definido un
+
+389
+00:21:39.001 --> 00:21:45.001
+camino, por ejemplo, usted dice, he llamado la base de datos de Dow Jones y he cortado el
+
+390
+00:21:45.001 --> 00:21:49.001
+información de Dow Jones en una hoja de referencia y luego la colocé en un informe.
+
+391
+00:21:49.001 --> 00:21:52.001
+Una vez que has definido ese camino, entonces puedes conseguir ese camino.
+
+392
+00:21:53.000 --> 00:21:54.001
+Ahora es una aplicación.
+
+393
+00:21:55.000 --> 00:21:58.000
+Creó esa aplicación mediante la programación por ejemplo.
+
+394
+00:21:59.000 --> 00:22:01.001
+John, Bill, Gary, todos estamos fuera del tiempo, tengo miedo.
+
+395
+00:22:01.001 --> 00:22:04.001
+Muchas gracias por unirse a nosotros esta semana y esperamos veros.
+
+396
+00:22:04.001 --> 00:22:07.000
+Una vez más, en la próxima edición de las Crónicas Informáticas.
+
+397
+00:22:49.001 --> 00:22:56.000
+Micro Focus, creadores de herramientas de programación visual para el desarrollo de software, es
+
+398
+00:22:56.000 --> 00:23:01.000
+contento de proporcionar grandes fondos para las Crónicas de Computadores, la historia
+
+399
+00:23:01.000 --> 00:23:03.000
+de esta evolución continua.

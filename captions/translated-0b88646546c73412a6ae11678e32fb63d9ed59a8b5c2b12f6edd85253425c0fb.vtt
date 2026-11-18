@@ -1,0 +1,1341 @@
+WEBVTT
+
+1
+00:00:16.000 --> 00:00:21.000
+investidores olhar para esta bolsa de câmbio ticker tape para recolher dados e fazer uma
+
+2
+00:00:21.000 --> 00:00:25.000
+Decisão sobre se comprar ou vender ativos, mas como eles tomam essa decisão
+
+3
+00:00:25.000 --> 00:00:30.000
+Cada vez mais eles e os gerentes de todos os tipos estão se convertendo em programas de computador.
+
+4
+00:00:30.000 --> 00:00:36.000
+Avaliação de alternativas e avaliação de riscos no processo de tomada de decisão hoje
+
+5
+00:00:36.000 --> 00:00:39.001
+Vamos olhar para o software de suporte de decisão nesta edição
+
+6
+00:00:39.001 --> 00:00:41.000
+A crônica do computador
+
+7
+00:01:02.001 --> 00:01:07.000
+a crônica do computador é possível em parte por compuserve com um
+
+8
+00:01:07.000 --> 00:01:12.000
+Relatórios de parede da biblioteca de referência on-line na companhia aérea de compras em casa
+
+9
+00:01:12.000 --> 00:01:18.001
+jogos de reserva e centenas de outros serviços compuserve ajudar as pessoas a obter
+
+10
+00:01:18.001 --> 00:01:25.001
+A maior parte do financiamento adicional dos computadores é fornecida pelos editores da McGraw Hill
+
+11
+00:01:25.001 --> 00:01:30.001
+um bit bit detalhados artigos técnicos sobre novos softwares e idiomas de hardware
+
+12
+00:01:30.001 --> 00:01:32.001
+Cobre os desenvolvimentos em tecnologia de computador
+
+13
+00:01:38.000 --> 00:01:42.000
+Bem-vindo ao computador Chronicles I&#x27;m Stuart Chiffay e este é Gary
+
+14
+00:01:42.000 --> 00:01:45.000
+morto todos Gary eu estou tentando decidir se comprar ou não este computador eu não
+
+15
+00:01:45.000 --> 00:01:49.000
+Eu realmente preciso dela, por outro lado, eu quero que me ajude a tomar uma decisão que eu
+
+16
+00:01:49.000 --> 00:01:51.001
+ocorre ter algum software de suporte de decisão comigo aqui uma moeda ou como
+
+17
+00:01:51.001 --> 00:01:58.000
+hardware bem talvez seja trabalho duro de qualquer forma cabeçoe eu comprá-lo tails eu não e é
+
+18
+00:01:58.000 --> 00:02:01.001
+Eu só salvei-me quinze centenas de bucks terrível isso é óbvio um
+
+19
+00:02:01.001 --> 00:02:04.001
+A forma primária de tomar uma decisão tudo isso foi alterado por computadores e
+
+20
+00:02:04.001 --> 00:02:08.001
+software de suporte de decisão a primeira pergunta que eu gostaria de lhe perguntar é o que é o
+
+21
+00:02:08.001 --> 00:02:12.000
+Diferença entre software de suporte de decisão e o que chamamos de sistema de especialistas
+
+22
+00:02:12.000 --> 00:02:15.000
+Bem, o software de suporte de decisão de Stuart realmente foi ao redor por um longo tempo
+
+23
+00:02:15.000 --> 00:02:18.000
+existem técnicas iniciais chamadas de programação linear, por exemplo, usando o
+
+24
+00:02:18.000 --> 00:02:22.000
+Problemas de transporte movendo caminhões em torno de carga do que você faz é você dá
+
+25
+00:02:22.000 --> 00:02:25.001
+o valor máximo mínimo e, em seguida, a análise passa e dá-lhe um
+
+26
+00:02:25.001 --> 00:02:29.000
+A solução ideal que você tem para fornecer todos os números de agora, é claro, sistemas especializados
+
+27
+00:02:29.000 --> 00:02:33.001
+são baseados em regras, por exemplo, onde você obtém uma coleção de regras médicos que
+
+28
+00:02:33.001 --> 00:02:36.001
+pode fazer um diagnóstico de uma determinada área, por exemplo, e eles criarão uma
+
+29
+00:02:36.001 --> 00:02:40.001
+Modelo matemático possível e usar algumas das mesmas ferramentas de apoio à decisão
+
+30
+00:02:40.001 --> 00:02:44.000
+Como exemplo de programação linear, a diferença é, obviamente, a
+
+31
+00:02:44.000 --> 00:02:48.000
+Os sistemas de especialistas são muito adaptados a áreas específicas como o diagnóstico médico.
+
+32
+00:02:48.000 --> 00:02:52.000
+e, portanto, é preciso muito esforço para colocar esses sistemas em conjunto e muito
+
+33
+00:02:52.000 --> 00:02:55.000
+de trabalho para fazê-los trabalhar corretamente, para que não vemos tantas dessas decisões
+
+34
+00:02:55.000 --> 00:02:58.001
+software de suporte que tipo de ferramenta fundamental todo mundo pode usar bem nosso foco
+
+35
+00:02:58.001 --> 00:03:02.000
+Hoje é sobre o software de suporte de decisão e vamos olhar para vários diferentes
+
+36
+00:03:02.000 --> 00:03:07.000
+Estratégias de software incluindo uma matriz de decisão uma árvore de decisão e Monte Carlo
+
+37
+00:03:07.000 --> 00:03:10.001
+Simulações agora para tentar entender melhor essa diferença entre um especialista
+
+38
+00:03:10.001 --> 00:03:14.001
+sistema e software de suporte de decisões que vamos começar por olhar para
+
+39
+00:03:14.001 --> 00:03:20.001
+um sistema de especialistas desenvolvido por alguns alunos da Universidade de Stanford em apenas o
+
+40
+00:03:20.001 --> 00:03:25.001
+Nos últimos anos, os sistemas de especialistas evoluíram consideravelmente a partir de experiências em
+
+41
+00:03:25.001 --> 00:03:31.001
+Inteligência artificial para ferramentas práticas baseadas em computadores na Universidade de Stanford
+
+42
+00:03:31.001 --> 00:03:36.001
+Professor Ray Levitt está ensinando os alunos a desenvolver novas aplicações usando
+
+43
+00:03:36.001 --> 00:03:42.000
+O sistema de especialistas mostra que vemos idiomas de programação de inteligência artificial que
+
+44
+00:03:42.000 --> 00:03:48.000
+foram desenvolvidos para o mainframe e exigiram a ciência informática usual
+
+45
+00:03:48.000 --> 00:03:52.001
+intermédio em uma camisa branca para operar sendo capaz de ser usado por engenheiros com
+
+46
+00:03:52.001 --> 00:03:58.000
+apenas um fundo de computador muito modesto para que pudéssemos se livrar de um dos links em
+
+47
+00:03:58.000 --> 00:04:02.001
+A cadeia de desenvolvimento de uma aplicação com um shell chamado insight professor
+
+48
+00:04:02.001 --> 00:04:08.000
+Os estudantes de Levitt criaram sistemas de especialistas como este conselheiro seísmico que
+
+49
+00:04:08.000 --> 00:04:12.001
+fornecer soluções baseadas em um número limitado de seleções as respostas do usuário
+
+50
+00:04:12.001 --> 00:04:17.000
+questões sobre os atributos físicos do edifício com base em uma escala de
+
+51
+00:04:17.000 --> 00:04:22.000
+probabilidade em resposta o programa determinará a viabilidade e provável
+
+52
+00:04:22.000 --> 00:04:28.000
+custo de tornar a estrutura segura se o usuário precisa de mais informações ou não
+
+53
+00:04:28.000 --> 00:04:33.000
+compreender uma pergunta que ele pode chamar uma tela de explicação que o usuário está interagindo
+
+54
+00:04:33.000 --> 00:04:37.001
+com um sistema baseado em conhecimento que, com base nas respostas dos usuários, chamará outros
+
+55
+00:04:37.001 --> 00:04:44.001
+programas ou pesquisas de banco de dados ou alguns programas computacionais
+
+56
+00:04:44.001 --> 00:04:49.000
+possivelmente alguns gráficos e, em seguida, devolver o controle de volta ao sistema especializado para
+
+57
+00:04:49.000 --> 00:04:53.001
+Descobrimos que o sistema de programação de perigos experto, como os que eu mostrei
+
+58
+00:04:53.001 --> 00:04:58.001
+Você antes são ferramentas muito úteis eles são um tipo de quarto
+
+59
+00:04:58.001 --> 00:05:00.000
+línguas de geração se você quiser
+
+60
+00:05:13.000 --> 00:05:17.001
+Juntando-nos no estúdio agora é Mike Doyle com Kepner Trigo incorporado e
+
+61
+00:05:17.001 --> 00:05:21.000
+Ao lado de Mike é Bill Barton com a Palisade Corporation Gary Mike você tem um
+
+62
+00:05:21.000 --> 00:05:24.001
+produto chamado auxílio de decisão para o qual é um pacote de software de suporte de decisão
+
+63
+00:05:24.001 --> 00:05:28.000
+O que é um cliente típico para esse pacote clientes típicos não seria metal
+
+64
+00:05:28.000 --> 00:05:32.001
+gestores e R&amp;D e fabricação e é para ajudar a tomar decisões sobre como
+
+65
+00:05:32.001 --> 00:05:35.001
+Eles alocam recursos e coisas que estão bem, você pode nos mostrar o que é
+
+66
+00:05:35.001 --> 00:05:40.001
+Foi certamente o que eu fiz é levado para cima a tela e o que está indo
+
+67
+00:05:40.001 --> 00:05:44.000
+através de uma série de passos aqui que resultaria em chegar com o melhor
+
+68
+00:05:44.000 --> 00:05:47.001
+A escolha do equilíbrio aqui no fundo do que faríamos e passamos por isso
+
+69
+00:05:47.001 --> 00:05:51.000
+Um ponto particular seria listar nossos objetivos e quebrá-los em necessidade e
+
+70
+00:05:51.000 --> 00:05:54.001
+Quer uma das coisas críticas ou uma das questões-chave está na espera
+
+71
+00:05:54.001 --> 00:05:59.000
+Objetivos e podemos considerar que o objetivo deste é dar um peso
+
+72
+00:05:59.000 --> 00:06:04.001
+em valor para os objetivos desejados ou os benefícios da decisão que nós como dez pontos
+
+73
+00:06:04.001 --> 00:06:09.000
+a escala aqui e em passar por nós determinaremos o mais importante desejo e
+
+74
+00:06:09.000 --> 00:06:12.001
+Então, passe e compare os outros, para que isso vá para baixo, o que isso faz é
+
+75
+00:06:12.001 --> 00:06:15.001
+apenas para configurar o exemplo Rookley tentando responder aqui que pergunta neste
+
+76
+00:06:15.001 --> 00:06:19.001
+A decisão específica aqui é uma escolha de um método para aumentar a participação de mercado para
+
+77
+00:06:19.001 --> 00:06:25.000
+a para a nossa empresa química foto está bem e o que isso faz é dar essa relação
+
+78
+00:06:25.000 --> 00:06:29.001
+separação lá, de modo que não estamos dando um caminho anormal a um menor
+
+79
+00:06:29.001 --> 00:06:33.000
+de menor importância, pois estes objetivos já foram estabelecidos na
+
+80
+00:06:33.000 --> 00:06:36.001
+programa ou você inserir-los como você sabe que você inseriria os objetivos que
+
+81
+00:06:36.001 --> 00:06:40.000
+Os resultados da decisão particular que você está tentando fazer bem uma vez
+
+82
+00:06:40.000 --> 00:06:44.001
+Nós fizemos que vamos passar através da lista de nossas alternativas e, em seguida, o próximo
+
+83
+00:06:44.001 --> 00:06:47.001
+A coisa que faríamos seria descer aqui para olhar para
+
+84
+00:06:47.001 --> 00:06:51.001
+a fim de fazer o screening, a finalidade da screening é, essencialmente, fazer uma
+
+85
+00:06:51.001 --> 00:06:55.001
+separação entre os que devem ser incluídos em qualquer alternativa que você
+
+86
+00:06:55.001 --> 00:07:00.000
+finalmente selecionar e outros que estão ansiosos para obter graus específicos assim
+
+87
+00:07:00.000 --> 00:07:03.001
+muitas vezes regulamentos governamentais e coisas semelhantes se, por exemplo,
+
+88
+00:07:03.001 --> 00:07:08.000
+não foi medida até que 2.0 lá, na medida em que a quota de mercado então seria
+
+89
+00:07:08.000 --> 00:07:12.000
+eliminado como uma alternativa, então você estabeleceu algumas regras dizem que o mercado
+
+90
+00:07:12.000 --> 00:07:18.001
+A parte deve aumentar pelo menos pelo fator direito, então o que fazemos é depois
+
+91
+00:07:18.001 --> 00:07:23.000
+Nós concluímos que iríamos de volta no próximo passo seria passar por aqui
+
+92
+00:07:23.000 --> 00:07:28.000
+para comparar os desejos e o que estamos fazendo comparando os desejar é estabelecer um
+
+93
+00:07:28.000 --> 00:07:33.000
+valor numérico para o que já estabelecemos um valor relativo agora que
+
+94
+00:07:33.000 --> 00:07:36.001
+O que vamos fazer é tomar cada uma das alternativas e escaneá-la contra estas
+
+95
+00:07:36.001 --> 00:07:42.001
+um objetivo para descobrir exatamente como ele se encaixa que ok estamos completos em
+
+96
+00:07:42.001 --> 00:07:49.001
+que vamos voltar e qualquer decisão é ameaçada
+
+97
+00:07:49.001 --> 00:07:55.001
+seriamente se não tivéssemos determinado o que os riscos seriam envolvidos em
+
+98
+00:07:55.001 --> 00:07:59.000
+Este processo passa por avaliar quais os riscos são e determinar quando
+
+99
+00:07:59.000 --> 00:08:04.000
+As ações podem ser tomadas e então a coisa final aqui seria fazer o seu final.
+
+100
+00:08:04.000 --> 00:08:10.000
+A escolha que levaria à tela todas as alternativas
+
+101
+00:08:10.000 --> 00:08:15.000
+que você escolheu aqui mostrando o que lhe é dado o seu mais alto
+
+102
+00:08:15.000 --> 00:08:19.001
+pontuação pesada com o pior risco envolvido em cada um desses e
+
+103
+00:08:19.001 --> 00:08:23.000
+avalia o problema para que o preço mais baixo por unidade fosse a escolha ideal aqui a
+
+104
+00:08:23.000 --> 00:08:26.001
+um pouco antes da publicidade com os riscos identificados com ela e
+
+105
+00:08:26.001 --> 00:08:29.001
+Talvez em uma variedade de recomendações que podemos olhar como um passe de gelo-cremes
+
+106
+00:08:29.001 --> 00:08:33.001
+A camisa é transferida para a fatura de um segundo de fatura se você pode colocar em risco quanto tempo
+
+107
+00:08:33.001 --> 00:08:36.001
+Normalmente, isso levaria alguém para correr através desse processo que escorregamos através dele.
+
+108
+00:08:36.001 --> 00:08:40.001
+apenas um verdadeiro pequeno resumo rápido de que minha experiência em trabalhar com clientes é
+
+109
+00:08:40.001 --> 00:08:45.000
+Dependendo da natureza da decisão pode ser em qualquer lugar de talvez um
+
+110
+00:08:45.000 --> 00:08:49.000
+de um par de horas a dois dias, dependendo dos dados que haviam de ser e
+
+111
+00:08:49.000 --> 00:08:53.000
+Quão sofisticado o usuário tem que ser para trabalhar com isso e estabelecer todos os
+
+112
+00:08:53.000 --> 00:08:56.000
+Uma das belezas reais sobre isso é que você não tem
+
+113
+00:08:56.000 --> 00:09:01.000
+ser muito sofisticado no programa isso é muito simples e
+
+114
+00:09:01.000 --> 00:09:05.001
+permite que as pessoas se concentrem principalmente em dados e não tenham que se preocupar com o
+
+115
+00:09:05.001 --> 00:09:08.001
+complicações de executar o programa e o que é um pedaço de software como esse custo
+
+116
+00:09:08.001 --> 00:09:15.000
+Isso é $250 como você faz a fatura você quase aqui com o risco sim velocidade
+
+117
+00:09:15.000 --> 00:09:21.000
+digitando lá você pode falar e digitando sim certamente dizer-nos um pouco sobre o risco em risco
+
+118
+00:09:21.000 --> 00:09:27.000
+é um pacote de simulação de Monte Carlo que é basicamente destinado a fazer uma grande
+
+119
+00:09:27.000 --> 00:09:32.001
+Número de que-se cenários milhares ainda e depois resumindo esses resultados
+
+120
+00:09:32.001 --> 00:09:37.000
+significativamente o que você pode ver aqui na tela é um modelo financeiro muito simples
+
+121
+00:09:37.000 --> 00:09:41.001
+Isso é um ou dois ou três discos absolutamente e é isso que é muito bom
+
+122
+00:09:41.001 --> 00:09:46.000
+ponto para fazer porque este é um verdadeiro anúncio de loteria e significa que você é geralmente
+
+123
+00:09:46.000 --> 00:09:50.000
+trabalhar em um ou dois três como normal as capacidades do anúncio e estão lá quando
+
+124
+00:09:50.000 --> 00:09:55.000
+Você precisa deles de outra forma é um dois três é tão necessário o que você pode ver onde
+
+125
+00:09:55.000 --> 00:10:01.000
+o cursor está localizado é uma entrada de custo de design e você vai notar acima que é
+
+126
+00:10:01.000 --> 00:10:06.001
+foi inserido como em uniforme este é um dos conjuntos de especial em funções adicionadas
+
+127
+00:10:06.001 --> 00:10:11.001
+por um risco para um ou dois três para permitir que você faça algo muito especial e que é
+
+128
+00:10:11.001 --> 00:10:18.001
+adicionar ou inserir uma variedade de valores possíveis em uma única célula e
+
+129
+00:10:18.001 --> 00:10:22.001
+O que é essencialmente dizer é que o valor nessa célula poderia ser
+
+130
+00:10:22.001 --> 00:10:27.000
+A mesma probabilidade entre trinta mil e setenta mil em risco dá-lhe
+
+131
+00:10:27.000 --> 00:10:32.001
+um conjunto inteiro de diferentes tipos de distribuição e você pode adicionar o máximo que você deseja
+
+132
+00:10:32.001 --> 00:10:37.000
+para um dado spreadsheet ok, bem, como você entra em risco, então bem, aqui é
+
+133
+00:10:37.000 --> 00:10:42.000
+É aqui que um menu especial vem com um hotkey que permite que você faça todas as coisas.
+
+134
+00:10:42.000 --> 00:10:46.000
+configurações que você precisa para iniciar uma simulação o que eu fiz é configurado para
+
+135
+00:10:46.000 --> 00:10:50.000
+Parâmetros aqui antes do tempo o número de tipo de amostragem de iterações assim e assim
+
+136
+00:10:50.000 --> 00:10:55.001
+Vamos ver o que acontece e os valores são mostrados aleatoriamente para cada
+
+137
+00:10:55.001 --> 00:11:00.001
+a célula que contém uma dessas distribuições em funções e, em seguida, a folha é
+
+138
+00:11:00.001 --> 00:11:06.000
+sendo recalculado o que acontece então é que o anúncio de risco e coleta todos os
+
+139
+00:11:06.000 --> 00:11:10.001
+valores para as células que você escolheu para a saída armazená-las no disco e, em seguida, passa
+
+140
+00:11:10.001 --> 00:11:16.001
+depois de um ou dois três é temporariamente fechado para esta rotina companheira que
+
+141
+00:11:16.001 --> 00:11:21.001
+É essencialmente a nossa rotina de produção de todos [...] Telegrama bem o que isso está fazendo
+
+142
+00:11:21.001 --> 00:11:26.001
+que resume todos esses milhares de cenários que foram conduzidos pela
+
+143
+00:11:26.001 --> 00:11:31.001
+computador e é apresentá-los gráficamente como uma distribuição de probabilidade e
+
+144
+00:11:31.001 --> 00:11:35.000
+Ele afirma que eu fiz dois mil testes não apenas enquanto nós estavam correndo estes eram
+
+145
+00:11:35.000 --> 00:11:39.000
+Resultados anteriores nós apenas jogou uma pequena amostra antes este é o resultado de antes
+
+146
+00:11:39.000 --> 00:11:43.001
+sobre e a maneira básica que o tomador de decisão interpretaria este resultado é a
+
+147
+00:11:43.001 --> 00:11:48.001
+reconhecer que no eixo x este eixo inferior aqui todos os resultados possíveis e
+
+148
+00:11:48.001 --> 00:11:51.001
+as altitudes das barras dão-lhe uma indicação da probabilidade relativa de
+
+149
+00:11:51.001 --> 00:11:56.001
+Eles ocorrem agora em risco faz mais do que apenas dar-lhe gráficos bonitos para um
+
+150
+00:11:56.001 --> 00:12:00.001
+distribuição que também lhe dá um monte de estatísticas de suporte, tais como o mínimo
+
+151
+00:12:00.001 --> 00:12:07.000
+média máxima e momentos mais altos e muito mais além disso você também pode
+
+152
+00:12:07.000 --> 00:12:11.000
+Entre e mude a aparência do seu spreadsheet o que vou fazer aqui é
+
+153
+00:12:11.000 --> 00:12:16.000
+aumentar o número de barras isso é realmente deixando você entrar e controlar o
+
+154
+00:12:16.000 --> 00:12:21.000
+nível de detalhes que você vai ver outra característica muito importante que em
+
+155
+00:12:21.000 --> 00:12:26.001
+O risco é que permite que você selecione para a saída uma variedade de células se você selecionar
+
+156
+00:12:26.001 --> 00:12:30.001
+uma série de células como eu fiz aqui ela entra e calcula uma distribuição para
+
+157
+00:12:30.001 --> 00:12:35.000
+cada célula e, em seguida, exibe-as gráficamente e, na verdade, resume-as mostrando
+
+158
+00:12:35.000 --> 00:12:41.000
+Você simplesmente a tendência da média de uma desviação padrão de ambos os lados e, em seguida, a
+
+159
+00:12:41.000 --> 00:12:45.000
+O quinto e o noventa e cinco por cento que você sabe apenas cerca de 15 segundos deixaram como seria
+
+160
+00:12:45.000 --> 00:12:50.000
+Um usuário típico usa algo como em risco há uma série de problemas que
+
+161
+00:12:50.000 --> 00:12:54.001
+Seria aplicável a isso qualquer coisa que você basicamente está fazendo em lotes seria
+
+162
+00:12:54.001 --> 00:12:58.001
+Análise de investimentos de jogo justo projecções de perda de seguro assim em e o que você quer
+
+163
+00:12:58.001 --> 00:13:02.000
+para fazer com uma variedade de valores em vez de um valor específico e uma projeção
+
+164
+00:13:02.000 --> 00:13:06.000
+Comentário final uma vez feito você está automaticamente de volta para 123 onde você deixou
+
+165
+00:13:06.000 --> 00:13:09.001
+Obrigado, senhores, muito além dos sistemas de apoio às decisões e
+
+166
+00:13:09.001 --> 00:13:14.000
+sistemas de especialistas que às vezes ouvimos a frase conhecimento engenharia bem Wendy
+
+167
+00:13:14.000 --> 00:13:17.001
+A floresta tem um relatório sobre um produto de engenharia de conhecimento de uma empresa chamada
+
+168
+00:13:17.001 --> 00:13:23.001
+A tecnologia torna o que é considerado o Rolls-Royce de decisão
+
+169
+00:13:23.001 --> 00:13:29.001
+software de suporte o sistema especialista seu sistema especializado shell pode ser feito em um
+
+170
+00:13:29.001 --> 00:13:34.001
+especialista informático em praticamente qualquer assunto como este conselheiro de choque nervoso
+
+171
+00:13:34.001 --> 00:13:40.000
+criado pela Universidade da Colômbia Britânica como uma ferramenta de ensino este programa
+
+172
+00:13:40.000 --> 00:13:45.001
+perguntas analisa as respostas e decide se um cliente tem razões para
+
+173
+00:13:45.001 --> 00:13:50.001
+tecnologias de choque nervoso sistemas de especialistas também foram usados para tal
+
+174
+00:13:50.001 --> 00:13:56.001
+diversas aplicações como a análise de ondas cerebrais nos testes de drogas dos trabalhadores e por
+
+175
+00:13:56.001 --> 00:14:01.000
+Federal Express para manter o rastreamento das peças reservas necessárias para manter sua frota na
+
+176
+00:14:01.000 --> 00:14:08.000
+Os benefícios de um sistema de especialistas variam do que chamamos humanos.
+
+177
+00:14:08.000 --> 00:14:12.001
+melhorias de qualidade as pessoas são treinadas mais facilmente, o que torna o seu trabalho mais fácil para
+
+178
+00:14:12.001 --> 00:14:18.000
+poupança real de linha de fundo, por exemplo, em um piso de loja se você puder diagnosticar uma
+
+179
+00:14:18.000 --> 00:14:23.000
+problema de máquina em cinco minutos versus cinco horas que você tem formado salvou um
+
+180
+00:14:23.000 --> 00:14:30.000
+incrível quantidade de tempo de saída, bem como provavelmente partes que você substitui
+
+181
+00:14:30.000 --> 00:14:34.000
+partes corretas em vez de verificar aleatoriamente partes diferentes e, em seguida, encontrar
+
+182
+00:14:34.000 --> 00:14:38.001
+A tecnologia, em última análise, cresceu de uma startup para uma empresa de produção.
+
+183
+00:14:38.001 --> 00:14:42.001
+mais de vinte milhões de dólares por ano em apenas seis anos que lhe diz
+
+184
+00:14:42.001 --> 00:14:47.000
+algo sobre a importância de suas ferramentas de software como um funcionário aqui colocá-lo
+
+185
+00:14:47.000 --> 00:14:52.001
+Vamos finalmente passar da etapa de Buck Rogers para a aplicação prática em Palo
+
+186
+00:14:52.001 --> 00:14:55.000
+Conheça as crônicas do computador I&#x27;m Wendy Woods
+
+187
+00:15:07.000 --> 00:15:11.000
+Juntando-se a nós no estúdio agora é Peter McNamee ele é um associado sênior com o
+
+188
+00:15:11.000 --> 00:15:15.001
+Grupo de decisão estratégica aparece Jared Taylor West Coast editor de PC
+
+189
+00:15:15.001 --> 00:15:19.000
+A revista e Gary Jared acaba de escrever um artigo em função na revista sobre
+
+190
+00:15:19.000 --> 00:15:23.000
+software de suporte de decisão faz com que ele seja um especialista eu acho que tudo bem Jared o que são alguns
+
+191
+00:15:23.000 --> 00:15:28.001
+das técnicas que são usadas para o software de suporte indecisivo bem no
+
+192
+00:15:28.001 --> 00:15:33.000
+Artigo que escrevemos na revista e, de fato, o que vemos hoje lá
+
+193
+00:15:33.000 --> 00:15:38.000
+São três tipos diferentes que recentemente se tornaram populares em microcomputadores um
+
+194
+00:15:38.000 --> 00:15:42.001
+É uma matriz de decisão que foi a primeira que vimos a outra é Monte Carlo
+
+195
+00:15:42.001 --> 00:15:48.000
+análise e o que vamos ver agora é a análise da árvore de decisão e eles são aplicáveis
+
+196
+00:15:48.000 --> 00:15:52.001
+para diferentes tipos de problemas e acho que é relevante dizer que o
+
+197
+00:15:52.001 --> 00:15:57.000
+O primeiro programa que vimos que é uma matriz de decisão é o mais inerente
+
+198
+00:15:57.000 --> 00:16:02.000
+compreensível é uma maneira sofisticada de estabelecer os benefícios e minúsculos de uma
+
+199
+00:16:02.000 --> 00:16:05.001
+a decisão e a conclusão com base no fato de que os outros dois são mais
+
+200
+00:16:05.001 --> 00:16:10.000
+sofisticado e envolve uma certa quantidade de análise estatística e você tem
+
+201
+00:16:10.000 --> 00:16:13.001
+Para ser um especialista em estatísticas para ser capaz de usar isso você não tem que ser um
+
+202
+00:16:13.001 --> 00:16:19.000
+especialista que você deve provavelmente ser melhor baseado em estatísticas para fazer o máximo de
+
+203
+00:16:19.000 --> 00:16:23.001
+uso apropriado da análise de Monte Carlo, mas no caso de árvores de decisão você pode
+
+204
+00:16:23.001 --> 00:16:28.001
+Tenha uma espécie de sensação intestinal de que é provável que você vá dessa forma ou da mesma forma, bem.
+
+205
+00:16:28.001 --> 00:16:33.000
+Peter mostra-nos uma árvore de decisão em seu caso é chamado de super árvores, bem que eu coloque
+
+206
+00:16:33.000 --> 00:16:38.000
+na tela aqui um exemplo muito simples de uma árvore de decisão que podemos
+
+207
+00:16:38.000 --> 00:16:42.001
+Veja em nossa prática de consultoria é uma decisão de pesquisa e desenvolvimento basicamente
+
+208
+00:16:42.001 --> 00:16:47.001
+onde você está olhando para uma decisão de pesquisa se você vai adiante ou não se você não
+
+209
+00:16:47.001 --> 00:16:51.000
+Não se preocupe com nada se você progredir você pode ver o sucesso da pesquisa ou
+
+210
+00:16:51.000 --> 00:16:56.000
+fracasso de pesquisa com sucesso de pesquisa você provavelmente iria adiante desenvolvê-lo e
+
+211
+00:16:56.000 --> 00:17:00.000
+Em seguida, someplace a linha que você tem uma decisão que você realmente traz para o mercado
+
+212
+00:17:00.000 --> 00:17:04.000
+Ou você simplesmente deixá-lo na armadilha se você trazê-lo para a força de mercado
+
+213
+00:17:04.000 --> 00:17:10.000
+Claro que vai voltar e dizer-lhe que é ótimo, está bem ou esquece-se de
+
+214
+00:17:10.000 --> 00:17:14.001
+Um par de números que você pode ver aqui algumas probabilidades é uma chance de 40% de sucesso
+
+215
+00:17:14.001 --> 00:17:19.000
+20% da chance de um grande mercado que vem basicamente dos decisores
+
+216
+00:17:20.000 --> 00:17:24.001
+A experiência do estado do conhecimento é a intuição genérica normalmente não é derivada
+
+217
+00:17:24.001 --> 00:17:27.001
+Às vezes são, mas geralmente não são derivados das estatísticas geralmente
+
+218
+00:17:27.001 --> 00:17:31.000
+Eles lidam com eventos futuros e é realmente o seu nível intestinal que o controla
+
+219
+00:17:31.000 --> 00:17:35.000
+Aqui parece que você está apenas multiplicando números aqui em todas as ramas de
+
+220
+00:17:35.000 --> 00:17:38.000
+A árvore tem que ser mais para ela do que isso obviamente oh há muito mais para ele
+
+221
+00:17:38.000 --> 00:17:41.001
+Mais do que isso, mas deixe-me apenas mostrar-lhe uma coisa que é bastante simples como você faz
+
+222
+00:17:41.001 --> 00:17:46.001
+Avalie três resultados como este plus 30 plus 10 minus 10 que você pode imaginar
+
+223
+00:17:46.001 --> 00:17:50.000
+Há milhões de dólares para uma grande empresa basicamente o que você faz é você
+
+224
+00:17:50.000 --> 00:17:54.000
+multiplique os tempos de probabilidade do resultado e adicione-os a ponto 2 vezes 30 pontos
+
+225
+00:17:54.000 --> 00:17:58.000
+5 vezes 10 pontos 3 vezes menos 10 e você obtém um valor esperado de 8 que é
+
+226
+00:17:58.000 --> 00:18:02.000
+Muito como se você tivesse uma moeda flip em uma conta de dez dólares você diria que vale a pena
+
+227
+00:18:02.000 --> 00:18:07.001
+5 dólares para mim oito parece melhor do que menos 11 você poderia ver, então você poderia
+
+228
+00:18:07.001 --> 00:18:13.001
+Escolha o ramo de mercado traz os oito para a frente e novamente multiplicando o ponto quatro
+
+229
+00:18:13.001 --> 00:18:17.001
+oito pontos seis vezes menos um você obtém dois pontos seis que da
+
+230
+00:18:17.001 --> 00:18:22.001
+O ponto de vista do gerente de pesquisa é o valor que ele associaria com o negócio
+
+231
+00:18:22.001 --> 00:18:27.000
+melhor do que zero provavelmente vai adiante talvez algum ajuste para o risco que é um todo
+
+232
+00:18:27.000 --> 00:18:33.001
+diferentes tópicos, o que mais você pode nos mostrar sobre como você iria entrar nisso
+
+233
+00:18:33.001 --> 00:18:39.000
+Bom, eu vou te dizer um pouco mais sobre o programa basicamente ele tem o
+
+234
+00:18:39.000 --> 00:18:45.001
+Loto comum, como o menu ou estrutura, é inserir informações
+
+235
+00:18:45.001 --> 00:18:49.000
+Avalie onde os números saem aqui no final vem do bem que você pode ter
+
+236
+00:18:49.000 --> 00:18:53.001
+muito parecido com a avaliação de Monte Carlo uma folha de lotes esta não é uma
+
+237
+00:18:53.001 --> 00:19:00.000
+drop-in em lotus, mas ele executa lotus ou ifs ou sinfonia ou multi-plano ou excel e
+
+238
+00:19:00.000 --> 00:19:04.000
+Então a análise está tentando amamentar toda a informação dessas árvores e em uma
+
+239
+00:19:04.000 --> 00:19:09.000
+Uma árvore muito maior há muita informação, deixe-me apenas mostrar-lhe uma trama que é
+
+240
+00:19:09.000 --> 00:19:15.000
+É muito simples aqui e eu vou apenas colocar a distribuição de probabilidade em um
+
+241
+00:19:15.000 --> 00:19:22.000
+Formulário histograma você não tem que ir adiante OK, então você vai gravar o mesmo
+
+242
+00:19:22.000 --> 00:19:26.000
+tipos de resultados que vimos em números naquela árvore antes de corrigir que é exatamente
+
+243
+00:19:26.000 --> 00:19:31.001
+O que eu vou fazer há muita adaptação que você pode fazer para a saída aqui, mas
+
+244
+00:19:31.001 --> 00:19:36.000
+Há a mesma árvore que vimos antes aqui é o histograma forma bastante simples, mas
+
+245
+00:19:36.000 --> 00:19:40.001
+Nós encontramos que nós sempre redigir nossos resultados depois há 60% de probabilidade de
+
+246
+00:19:40.001 --> 00:19:45.001
+falha de pesquisa aqui é o pior de todos os resultados possíveis sucesso de pesquisa
+
+247
+00:19:45.001 --> 00:19:50.000
+falha do mercado e aqui estão os bons resultados do mercado, e é claro que são muito
+
+248
+00:19:50.000 --> 00:19:53.000
+árvore mais complexo que deve preencher e se tornar uma distribuição suave de probabilidade
+
+249
+00:19:53.000 --> 00:19:57.001
+Eu vou voltar à minha pergunta se eu olhar há um layman para olhar para
+
+250
+00:19:57.001 --> 00:20:00.001
+Estes gráficos ele parece um multiplicador atravessando o gráfico o que o outro é fazer
+
+251
+00:20:00.001 --> 00:20:05.000
+Além disso, para você bem, uma coisa que você pode fazer é que apenas isso direto e nós
+
+252
+00:20:05.000 --> 00:20:10.000
+chamá-lo rollback multiplicar através dos gráficos que você pode reordenar os nódulos na
+
+253
+00:20:10.000 --> 00:20:15.000
+árvore e deixe-me fazer isso aqui e depois dizer-lhe por que você pode querer fazer isso
+
+254
+00:20:15.000 --> 00:20:20.000
+Suponha que eu possa sair e fazer um estudo de mercado e descobrir o que o
+
+255
+00:20:20.000 --> 00:20:23.001
+O mercado realmente está antes que eu faça a minha decisão de R&amp;D antes de eu mergulhar meu milhão
+
+256
+00:20:23.001 --> 00:20:27.000
+Dólares bem óbvio que seria bom se eu sei que vai ser um mau mercado para cima
+
+257
+00:20:27.000 --> 00:20:31.001
+Provavelmente não vai fazê-lo, mas quanto bom quanto vou gastar naquilo que é
+
+258
+00:20:31.001 --> 00:20:35.000
+Vale a pena ver o que vale a pena para você e, basicamente, isso significa que eu resolvo o meu
+
+259
+00:20:35.000 --> 00:20:39.001
+a incerteza antes que eu faça a minha decisão de pesquisa e você pode notar aqui a
+
+260
+00:20:39.001 --> 00:20:43.001
+O valor esperado desta árvore que o número médio é de quatro milhões de dólares em vez disso
+
+261
+00:20:43.001 --> 00:20:50.000
+de 2.6 para o máximo para uma pesquisa de mercado foi 1.6 milhões de dólares para que você
+
+262
+00:20:50.000 --> 00:20:54.001
+um tipo de simplesmente girar o gráfico e é isso que é o verdadeiro poder de uma decisão
+
+263
+00:20:54.001 --> 00:20:58.000
+árvore você pode começar a fazer perguntas como essas e encontramos que as empresas são
+
+264
+00:20:58.000 --> 00:21:02.000
+quase universalmente colocando o dinheiro no erro, eles fazem pesquisas sobre as coisas
+
+265
+00:21:02.000 --> 00:21:06.001
+Eles realmente não têm que investigar mais e eles perdem o óbvio e assim por diante.
+
+266
+00:21:06.001 --> 00:21:10.000
+Esta é uma maneira que as pessoas podem realmente estruturar seus esforços de pesquisa e decidir
+
+267
+00:21:10.000 --> 00:21:16.000
+Quando você tem que viver com a incerteza e ir adiante Jared o que são os tipos
+
+268
+00:21:16.000 --> 00:21:21.001
+de clientes caveats aqui e usando software de suporte de decisões eu quero dizer que
+
+269
+00:21:21.001 --> 00:21:25.001
+Caveat estável é o caveat padrão com qualquer programa de computador e que é
+
+270
+00:21:25.001 --> 00:21:30.000
+enxofre no lixo se você não pensar cuidadosamente sobre a informação que você está
+
+271
+00:21:30.000 --> 00:21:34.000
+colocando no programa você vai obter lixo como resultado, mas eu acho que um
+
+272
+00:21:34.000 --> 00:21:39.000
+Um dos aspectos mais importantes de todos esses programas é o fato de que
+
+273
+00:21:39.000 --> 00:21:43.001
+para fazer uma árvore de decisão séria ou análise de matriz ou estabelecer um Monte Carlo
+
+274
+00:21:43.001 --> 00:21:48.000
+O modelo que você tem que, pelo menos, ter pensado em todos os aspectos da decisão
+
+275
+00:21:48.000 --> 00:21:52.000
+faz você pensar de forma lógica para que você não saia desse processo de decisão
+
+276
+00:21:52.000 --> 00:21:56.000
+Você ainda tem que avaliar esses critérios num sentido que é o que é chamado
+
+277
+00:21:56.000 --> 00:22:00.001
+Decisão de suporte não é a decisão de fazer o software bem, muito obrigado
+
+278
+00:22:00.001 --> 00:22:04.000
+Peter e Jared estamos fora do tempo que é o nosso programa sobre software de suporte à decisão
+
+279
+00:22:04.000 --> 00:22:05.001
+Obrigado por estar conosco, espero te ver novamente.
+
+280
+00:22:05.001 --> 00:22:07.001
+Próximo artigoCrônica do computador
+
+281
+00:22:17.001 --> 00:22:23.000
+No arquivo de acesso aleatório desta semana, a nova onda de Hewlett Packard finalmente sai nova
+
+282
+00:22:23.000 --> 00:22:27.000
+A onda é um ambiente de aplicação orientado a objetos que funciona sob a Microsoft.
+
+283
+00:22:27.000 --> 00:22:31.001
+Windows foi introduzido pela primeira vez há cerca de dois anos e embora o desenvolvedor
+
+284
+00:22:31.001 --> 00:22:36.001
+Kit está disponível desde março de 1988 este último lançamento marca pela primeira vez
+
+285
+00:22:36.001 --> 00:22:40.001
+Os usuários serão realmente capazes de usar uma nova onda para trabalhar com vários MS-DOS e
+
+286
+00:22:40.001 --> 00:22:47.001
+Windows aplicações nova onda 1. 0 vende por $195 e requer um PC com janelas
+
+287
+00:22:47.001 --> 00:22:53.001
+e pelo menos três megabytes de memória expandida agora você pode usar VGA EGA Apple
+
+288
+00:22:53.001 --> 00:22:58.000
+mono e monitores multi-scanner no Mac uma empresa fledgling chamada lapis
+
+289
+00:22:58.000 --> 00:23:02.001
+Tecnologias revelaram um novo tipo de placa de vídeo para Macintosh SE e Mac
+
+290
+00:23:02.001 --> 00:23:07.000
+2 que permite que os Macs usem uma seleção de diferentes páginas completas e outros vídeos
+
+291
+00:23:07.000 --> 00:23:11.001
+A utilização destes monitores permitirá que os usuários vejam partes de um
+
+292
+00:23:11.001 --> 00:23:16.000
+A folha ou layout da página normalmente deixam invisíveis porque ultrapassam o Mac.
+
+293
+00:23:16.000 --> 00:23:22.001
+O servidor de exibição de capacidade de tela como o programa é chamado vai custar US $ 449 para o SE
+
+294
+00:23:22.001 --> 00:23:29.000
+e $499 para a nova versão do ônibus quando é um documento não um documento quando é
+
+295
+00:23:29.000 --> 00:23:33.000
+armazenado em um computador na Casa Branca na Casa branca um documento não é
+
+296
+00:23:33.000 --> 00:23:37.000
+considerado oficial até que tenha sido impresso em papel, mas vários grupos estão indo para
+
+297
+00:23:37.000 --> 00:23:40.001
+para o tribunal para tentar mudar que eles estavam preocupados com as dificuldades que enfrentam
+
+298
+00:23:40.001 --> 00:23:45.001
+Durante a investigação contra o Irã, parece que muitas comunicações compartilham
+
+299
+00:23:45.001 --> 00:23:49.001
+Oliver North Robert McFarland e Admiral John Poindexter foram confinados para
+
+300
+00:23:49.001 --> 00:23:53.001
+e-mail enquanto algumas dessas comunicações ainda podem existir em eletrônico
+
+301
+00:23:53.001 --> 00:23:57.001
+Os meios de comunicação que eles não foram liberados pela Casa Branca porque eles não estavam no papel e
+
+302
+00:23:57.001 --> 00:24:02.001
+O que não está no papel não é considerado oficial como a Apple aproxima a divulgação da sua
+
+303
+00:24:02.001 --> 00:24:07.001
+Primeiro portátil em 20 de setembro, a competição também está levantando um tarry
+
+304
+00:24:07.001 --> 00:24:11.001
+O laptop estático que será lançado em outubro será entre os principais concorrentes
+
+305
+00:24:11.001 --> 00:24:16.001
+O st-type stacy deve ser capaz de executar programas Macintosh com a ajuda
+
+306
+00:24:16.001 --> 00:24:22.001
+de um cartucho especial a partir de gadgets por pequenos os cartuchos GCR de espectro de US $ 300
+
+307
+00:24:22.001 --> 00:24:27.000
+entrar no porto estático e permite que os programas do Macintosh sejam carregados e executados no
+
+308
+00:24:27.000 --> 00:24:32.000
+máquina a estação vem com uma unidade de três e meio polegadas e uma unidade LCD padrão
+
+309
+00:24:32.000 --> 00:24:37.000
+Megabytes de memória e um microprocessador de oito megahertz sessenta e oito mil
+
+310
+00:24:37.000 --> 00:24:41.000
+Estacy terá um preço de base de quinze centenas de dólares ou dois mil com o
+
+311
+00:24:41.000 --> 00:24:47.000
+Opcional 20 meg drive de acordo com um jornal japonês IBM Japão está desenvolvendo um
+
+312
+00:24:47.000 --> 00:24:51.001
+computador pessoal e um protótipo de fornecimento para clientes selecionados
+
+313
+00:24:51.001 --> 00:24:57.000
+O protótipo pesa menos de seis quilos como um microprocessador de 16 bits.
+
+314
+00:24:57.000 --> 00:25:02.000
+e funciona por mais de duas horas com a bateria completa da IBM Japan
+
+315
+00:25:02.000 --> 00:25:05.001
+Os vendedores são citados como dizem que seu PC de tamanho de notebook será lançado e
+
+316
+00:25:05.001 --> 00:25:10.000
+Até o final deste ano, uma empresa japonesa desenvolveu um computador baseado
+
+317
+00:25:10.000 --> 00:25:14.001
+processador de palavras que pode lidar com inglês espanhol alemão russo francês e
+
+318
+00:25:14.001 --> 00:25:19.001
+O português tudo no mesmo documento conduz as corporações máquina consiste em um
+
+319
+00:25:19.001 --> 00:25:25.000
+CRT monocromo layout de teclado personalizado e disco onboard, mas a maioria
+
+320
+00:25:25.000 --> 00:25:29.000
+É importante que ele inclua uma impressora que pode imprimir em romano ou cirílico.
+
+321
+00:25:29.000 --> 00:25:33.000
+sem a necessidade de alterar as letras para que mais de uma língua possa ser impressa em
+
+322
+00:25:33.000 --> 00:25:37.000
+O mesmo documento inicial de envio da máquina de quarenta e cem dólares será
+
+323
+00:25:37.000 --> 00:25:42.000
+Começa no próximo mês de junho e, finalmente, apenas no tempo para os alunos de volta à escola Smith
+
+324
+00:25:42.000 --> 00:25:46.001
+Corona está oferecendo um novo processador de palavras pessoais do laptop que se encaixa em algum lugar
+
+325
+00:25:46.001 --> 00:25:52.001
+Entre um impressor e um PC o laptop PWP 7000 vem com uma qualidade de letra
+
+326
+00:25:52.001 --> 00:25:57.001
+Daisy roda impressora processamento de palavra completa e capacidade de folheto opcional
+
+327
+00:25:57.001 --> 00:26:01.001
+Ele pesa um pouco mais de seis quilos e pode se comunicar através de um 1200 baud haze.
+
+328
+00:26:01.001 --> 00:26:06.000
+compatível modem a unidade de nove centenas de dólares está disponível imediatamente e que é
+
+329
+00:26:06.000 --> 00:26:12.000
+I&#x27;m Kate McGargy vai ver você na próxima semana
+
+330
+00:26:12.000 --> 00:26:16.001
+As crônicas de computador são feitas possíveis em parte por McGraw-Hill editores de bit
+
+331
+00:26:16.001 --> 00:26:23.001
+Revista e Bix o intercâmbio de informações batidas em impressão e on-line batida e BIX
+
+332
+00:26:23.001 --> 00:26:28.000
+Servir profissionais de computador em todo o mundo com informações detalhadas sobre o novo hardware
+
+333
+00:26:28.000 --> 00:26:33.001
+software e tecnologias para uma transcrição das crônicas de computador desta semana
+
+334
+00:26:33.001 --> 00:26:40.001
+Enviar quatro dólares para PTV publicações caixa de correio 701 Kent Ohio
+
+335
+00:26:40.001 --> 00:26:44.001
+44240 Por favor indique a data do programa
