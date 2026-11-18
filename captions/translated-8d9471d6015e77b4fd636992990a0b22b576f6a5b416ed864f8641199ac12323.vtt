@@ -1,0 +1,1973 @@
+WEBVTT
+
+1
+00:00:18.000 --> 00:00:23.000
+Katakanlah Anda adalah George Morrow dan Anda memiliki koleksi lebih dari 70.000 78 RPM
+
+2
+00:00:23.000 --> 00:00:25.001
+rekaman dan seseorang memberitahu Anda, apa yang Anda miliki oleh Hoagy
+
+3
+00:00:25.001 --> 00:00:27.001
+Carmichael dari tahun 1930?
+
+4
+00:00:27.001 --> 00:00:32.000
+Baik, Anda membutuhkan ruangan lain dengan ukuran ini penuh dengan kartu 3x5 dalam waktu sekitar seminggu atau
+
+5
+00:00:32.000 --> 00:00:36.000
+Sebuah komputer pribadi, seorang manajer database, dan Anda mendapatkan jawaban dalam beberapa detik.
+
+6
+00:00:36.001 --> 00:00:38.001
+6 dan Stuart. Siapakah yang kamu inginkan?
+
+7
+00:00:39.000 --> 00:00:42.000
+Nah, aku tidak tahu. Hari ini kita akan melihat salah satu yang paling kuat
+
+8
+00:00:42.000 --> 00:00:45.001
+aplikasi pada komputer pribadi, database management, pada ini
+
+9
+00:00:45.001 --> 00:00:47.000
+edisi dari The Computer Chronicles.
+
+10
+00:01:10.001 --> 00:01:15.000
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+11
+00:01:15.000 --> 00:01:18.001
+-Sistem komputer yang kompatibel termasuk pemrosesan kata dengan koreksi spelling,
+
+12
+00:01:18.001 --> 00:01:23.000
+perangkat lunak komunikasi, dan modem Haze-kompatibel 1200 dan 2400 VOD.
+
+13
+00:01:23.000 --> 00:01:28.000
+Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara. Leading Edge yang mengarah pada
+
+14
+00:01:28.000 --> 00:01:31.001
+Jalan menuju usia informasi. Pembiayaan tambahan disediakan oleh
+
+15
+00:01:31.001 --> 00:01:33.000
+McGraw-Hill, penerbit dari Byte.
+
+16
+00:01:34.000 --> 00:01:37.001
+Artikel teknis rinci Byte tentang perkakasan, perangkat lunak, dan bahasa yang baru
+
+17
+00:01:37.001 --> 00:01:40.000
+perkembangan teknologi komputer di seluruh dunia.
+
+18
+00:01:45.001 --> 00:01:48.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay.
+
+19
+00:01:48.001 --> 00:01:51.000
+Dan ini adalah Gary Kildall. Gary, kami memiliki sejenis museum
+
+20
+00:01:51.000 --> 00:01:52.001
+Perangkat penyimpanan informasi di sini.
+
+21
+00:01:52.001 --> 00:01:55.001
+Anda tahu, buku alamat lama yang baik. Anda memiliki nama dan nomor Anda di
+
+22
+00:01:55.001 --> 00:01:58.001
+di sana. Jika Anda mungkin memiliki sistem Rolodex yang sedikit lebih rumit di sini.
+
+23
+00:01:59.001 --> 00:02:02.000
+File yang Anda simpan di file drawer Anda, desktop Anda atau sesuatu seperti itu. Mungkin
+
+24
+00:02:02.000 --> 00:02:04.001
+Salah satu kotak besar dengan ABCD turun di sana.
+
+25
+00:02:05.000 --> 00:02:07.001
+Semua ini adalah cara yang agak primitif untuk menyimpan informasi, jelas. Mereka mengambil
+
+26
+00:02:07.001 --> 00:02:09.000
+Ada banyak ruangan. Mereka sangat sulit untuk diperbarui.
+
+27
+00:02:09.001 --> 00:02:12.001
+Anda hanya dapat menyusunnya di satu dimensi, biasanya secara alfabetis dan sebagainya.
+
+28
+00:02:13.000 --> 00:02:15.000
+Itulah sebabnya kami memiliki komputer dan manajer database, untungnya.
+
+29
+00:02:15.000 --> 00:02:20.001
+Ada dua versi dasar dari manajer database. Database Relatif dan Flat
+
+30
+00:02:20.001 --> 00:02:22.001
+Pengelola file Menjelaskan perbedaan di antara mereka.
+
+31
+00:02:23.000 --> 00:02:25.001
+Nah, Stuart, manajer file rata pada dasarnya hanya mengambil urutan rekaman,
+
+32
+00:02:26.000 --> 00:02:28.000
+nama, alamat, apa pun, urutan mereka, buat daftar surat.
+
+33
+00:02:28.001 --> 00:02:31.000
+Operasi yang sangat sederhana. Sistem perhubungan ini didasarkan pada
+
+34
+00:02:31.000 --> 00:02:33.000
+teori matematika yang lengkap.
+
+35
+00:02:33.001 --> 00:02:35.000
+Setiap bagian dari informasi dianggap sebagai
+
+36
+00:02:35.000 --> 00:02:38.000
+Jadual yang Setiap baris dari tabel disebut tuple akhir.
+
+37
+00:02:38.000 --> 00:02:39.001
+Dalam matematika, itu disebut hubungan dan
+
+38
+00:02:39.001 --> 00:02:41.001
+Itulah di mana nama sistem relasional berasal.
+
+39
+00:02:41.001 --> 00:02:44.000
+Dalam hal ini, RODEX dapat dianggap sebagai
+
+40
+00:02:44.000 --> 00:02:46.000
+Jadual yang Nama, alamat dan nomor telepon.
+
+41
+00:02:46.001 --> 00:02:49.001
+Dapatkan laporan penjualan di sini, wilayah geografis di sini.
+
+42
+00:02:50.000 --> 00:02:53.001
+Kita bisa mengambil tabel ini, mengekstrak nama, mengambil tabel yang sama, meletakkannya
+
+43
+00:02:53.001 --> 00:02:57.000
+bersama-sama dan mendapatkan tabel baru, mengambil tabel area geografis
+
+44
+00:02:57.000 --> 00:02:59.000
+dan membuat tabel lain dan sebagainya.
+
+45
+00:02:59.000 --> 00:03:01.001
+Dan akhirnya Anda mungkin mendapatkan daftar mailing dari itu.
+
+46
+00:03:02.000 --> 00:03:04.000
+Okay, Gary, kita akan melihat beberapa rating teratas
+
+47
+00:03:04.000 --> 00:03:06.000
+Manajer database dalam kedua kategori.
+
+48
+00:03:06.000 --> 00:03:09.001
+Kami akan melihat versi terbaru dari DBase dan RBase. Mari kita lihat Q &amp; A.
+
+49
+00:03:09.001 --> 00:03:11.000
+dan file profesional PFS.
+
+50
+00:03:11.000 --> 00:03:14.001
+Sekarang, ketika Anda berbicara tentang manajer database, aplikasi bisnis, Anda cenderung untuk
+
+51
+00:03:14.001 --> 00:03:17.000
+Bayangkan Anda sedang berbicara tentang dunia MS-DOS IBM.
+
+52
+00:03:17.000 --> 00:03:19.001
+Banyak penggemar Macintosh yang berpikir cara terbaik untuk melakukannya
+
+53
+00:03:19.001 --> 00:03:21.001
+Manajemen database adalah pada Mac.
+
+54
+00:03:22.000 --> 00:03:24.001
+Kami akan memulai dengan sebuah laporan tentang sebuah perusahaan yang cukup besar yang menggunakan
+
+55
+00:03:24.001 --> 00:03:26.001
+Macintosh untuk pengelolaan database.
+
+56
+00:03:30.000 --> 00:03:35.000
+Di balik setiap PC yang sukses, ada sebuah program perangkat lunak yang mempercepat
+
+57
+00:03:35.000 --> 00:03:38.000
+mengangkat atau mengganti tugas yang sebelumnya dilakukan secara manual.
+
+58
+00:03:38.000 --> 00:03:43.000
+Perusahaan akuntansi Pete Marwick di San Francisco telah menemukan cara untuk melakukan keduanya
+
+59
+00:03:43.000 --> 00:03:47.000
+dan membuat link komunikasi baru pada saat yang sama.
+
+60
+00:03:47.001 --> 00:03:52.000
+Departemen Seni Grafik Pete Marwick telah menggantikan paste-up dan billing sheets
+
+61
+00:03:52.000 --> 00:03:57.000
+dengan jaringan Macintosh penuh, menggabungkan database Helix multi-user dari Odesta dengan
+
+62
+00:03:57.000 --> 00:04:02.001
+MacDraw dan LaserWriter untuk memesan, menghitung dan membuat presentasi grafis di
+
+63
+00:04:02.001 --> 00:04:04.000
+kurang dari 24 jam.
+
+64
+00:04:05.000 --> 00:04:10.001
+Database Helix yang beroperasi melalui jaringan Apple Talk berfungsi seperti jaringan elektronik.
+
+65
+00:04:10.001 --> 00:04:13.001
+garis pengumpulan, dengan fitur tambahan untuk bergerak di mana-mana
+
+66
+00:04:13.001 --> 00:04:15.001
+arah atau kecepatan yang diperlukan.
+
+67
+00:04:16.001 --> 00:04:20.001
+Ketika pesanan kerja diterima, mereka dimasukkan ke dalam database oleh klien
+
+68
+00:04:20.001 --> 00:04:23.001
+Akun, tanggal masuk dan deskripsi subjek.
+
+69
+00:04:24.000 --> 00:04:28.000
+Sketsa kasar klien digambarkan dan disimpan secara digital
+
+70
+00:04:28.000 --> 00:04:29.001
+pada cakera untuk pencetakan kemudian.
+
+71
+00:04:29.001 --> 00:04:34.001
+File bergerak melalui tahap yang berbeda, mengumpulkan biaya secara otomatis
+
+72
+00:04:34.001 --> 00:04:37.000
+sesuai dengan waktu yang dihabiskan pada setiap tugas.
+
+73
+00:04:37.001 --> 00:04:42.001
+Jaringan memungkinkan setiap pengguna yang diberi izin untuk memverifikasi penyelesaian setiap langkah
+
+74
+00:04:42.001 --> 00:04:44.001
+sebelum pencetakan terakhir.
+
+75
+00:04:46.000 --> 00:04:50.001
+Di Pete Marwick, Macintoshes hampir sama umumnya dengan akuntan, tetapi dalam satu
+
+76
+00:04:50.001 --> 00:04:53.001
+Departemen mereka telah menemukan cara untuk mengubah database pelanggan
+
+77
+00:04:53.001 --> 00:04:55.001
+masuk ke jaringan departemen.
+
+78
+00:05:07.001 --> 00:05:11.000
+Bersama kami sekarang di studio adalah Dennis Travens, manajer produksi Dennis dengan
+
+79
+00:05:11.000 --> 00:05:13.001
+Jaringan televisi instruksi Universitas Stanford.
+
+80
+00:05:14.000 --> 00:05:17.001
+Juga dengan kami adalah Jim Hubbard, broker properti dengan Realtors nomor satu.
+
+81
+00:05:17.001 --> 00:05:17.001
+dan Gary.
+
+82
+00:05:18.001 --> 00:05:20.000
+Dennis, Anda dan Jim adalah pengguna database.
+
+83
+00:05:20.000 --> 00:05:21.001
+Daripada mencoba untuk mempromosikan produk.
+
+84
+00:05:22.000 --> 00:05:25.001
+Bagaimanakah Anda menggunakan database dalam garis kerja Anda tertentu?
+
+85
+00:05:25.001 --> 00:05:29.000
+Di Stanford Instructional Television Network, kami menyiarkan komputer secara langsung
+
+86
+00:05:29.000 --> 00:05:33.000
+ilmu dan teknik kursus di Silicon Valley langsung dari kami
+
+87
+00:05:33.000 --> 00:05:35.000
+ruang kelas di kampus.
+
+88
+00:05:35.001 --> 00:05:40.001
+Pekerjaan saya sebagai manajer produksi video adalah untuk mengelola enam studio yang berbeda.
+
+89
+00:05:40.001 --> 00:05:44.001
+di hari dengan berbagai profesor dan staf yang berbeda datang, siswa
+
+90
+00:05:44.001 --> 00:05:46.000
+teknis dan berbagai persyaratan.
+
+91
+00:05:46.000 --> 00:05:49.000
+Jadi saya menggunakan database untuk memantau semua yang selain semua yang berbeda
+
+92
+00:05:49.000 --> 00:05:52.000
+proses akuntansi yang diperlukan.
+
+93
+00:05:52.000 --> 00:05:54.001
+Ok ya. Dan Jim, Anda berada di bisnis properti, Anda tahu?
+
+94
+00:05:55.000 --> 00:05:56.000
+Dan bagaimana Anda menggunakan database?
+
+95
+00:05:57.000 --> 00:06:02.000
+Database ini digunakan untuk menjejaki pemilik properti yang saya bekerja dengan.
+
+96
+00:06:02.000 --> 00:06:07.000
+Saya mengambil area lima, enam ratus orang dan memasukkan informasi itu ke dalam
+
+97
+00:06:07.000 --> 00:06:11.000
+database tentang alamat mereka dan jenis hal ini bersama dengan telepon mereka
+
+98
+00:06:11.000 --> 00:06:14.001
+Nombor sehingga saya dapat menjejaki kontak yang saya miliki dengan mereka.
+
+99
+00:06:14.001 --> 00:06:18.001
+Di samping itu, saya menggunakan database untuk melakukan mailing.
+
+100
+00:06:18.001 --> 00:06:23.000
+Saya membuat label email dan saya juga membuat mailing menggabungkan dengan alamat mereka.
+
+101
+00:06:23.001 --> 00:06:25.000
+Sekarang kalian semua menggunakan sistem yang berbeda.
+
+102
+00:06:25.001 --> 00:06:26.001
+Kami akan memulai, Dennis, dengan Anda.
+
+103
+00:06:26.001 --> 00:06:28.000
+Anda menggunakan PFS Professional File.
+
+104
+00:06:28.001 --> 00:06:28.001
+Itu adalah benar.
+
+105
+00:06:29.000 --> 00:06:30.000
+dan menunjukkan kepada kami bagaimana Anda menggunakannya dan kemudian
+
+106
+00:06:30.000 --> 00:06:32.000
+Akhirnya saya ingin Anda menjelaskan mengapa Anda memilihnya.
+
+107
+00:06:32.000 --> 00:06:32.001
+Ok ya.
+
+108
+00:06:33.000 --> 00:06:37.001
+Apa yang saya miliki di sini adalah outline dari database yang saya gunakan yang memantau
+
+109
+00:06:37.001 --> 00:06:39.001
+Semua orang di studio.
+
+110
+00:06:40.000 --> 00:06:41.000
+Saya akan mengumpulkan beberapa data.
+
+111
+00:06:41.000 --> 00:06:45.001
+Beberapa baris pertama memiliki informasi khusus tentang apa nomor pekerjaan.
+
+112
+00:06:45.001 --> 00:06:47.000
+Kami melewati semua fungsi.
+
+113
+00:06:47.000 --> 00:06:52.000
+Saya juga memiliki bagian dalam database saya yang menjejaki lembar waktu.
+
+114
+00:06:52.001 --> 00:06:55.001
+Siswa individu akan masuk, masukkan nama mereka offline.
+
+115
+00:06:56.000 --> 00:06:59.000
+Mereka kemudian akan mengumpulkan semua jam khusus mereka.
+
+116
+00:06:59.000 --> 00:07:00.001
+Saya bisa mengumpulkan mereka di bawah ini.
+
+117
+00:07:01.000 --> 00:07:02.000
+Kemudian kita bisa melanjutkan.
+
+118
+00:07:02.000 --> 00:07:04.000
+Apa yang saya buat di sini juga adalah kartu kredit.
+
+119
+00:07:04.000 --> 00:07:09.000
+Saya melewati dan ada bidang yang berbeda di sini di mana saya dapat memasukkan beberapa dan
+
+120
+00:07:09.000 --> 00:07:14.000
+Menghitung dengan tepat apa jumlah dolar yang sebenarnya dari yang spesifik ...
+
+121
+00:07:14.000 --> 00:07:16.001
+Anda memiliki banyak dan banyak lapangan di sini untuk masing-masing rekaman ini.
+
+122
+00:07:16.001 --> 00:07:17.000
+Ya, aku melakukannya
+
+123
+00:07:17.001 --> 00:07:23.001
+Salah satu hal lain yang dapat saya lakukan di sini adalah saya dapat membuat laporan menggunakan
+
+124
+00:07:23.001 --> 00:07:28.000
+Aktivitas database standar.
+
+125
+00:07:28.001 --> 00:07:30.000
+Mari kita lalui di sini sekali lagi.
+
+126
+00:07:32.000 --> 00:07:36.000
+Aku akan melewati sini dan mengajukan laporan
+
+127
+00:07:36.000 --> 00:07:39.000
+dengan menggunakan makro.
+
+128
+00:07:39.000 --> 00:07:42.000
+Saya akan pergi ke sini, memanggil daftar makro yang saya ciptakan
+
+129
+00:07:42.000 --> 00:07:43.001
+di depan waktu untuk biaya saya.
+
+130
+00:07:43.001 --> 00:07:45.001
+Saya akan membuat laporan crosstab.
+
+131
+00:07:46.001 --> 00:07:49.001
+Anda pada dasarnya mendapatkan laporan yang akan menggabungkan semua informasi itu,
+
+132
+00:07:49.001 --> 00:07:52.000
+Singkatnya tentang apa biaya yang Anda lakukan untuk membuat produksi tertentu.
+
+133
+00:07:52.001 --> 00:07:53.000
+Ya, itu memang benar.
+
+134
+00:07:54.000 --> 00:07:56.001
+Kami harus berhenti di sini untuk memastikan bahwa kami
+
+135
+00:07:56.001 --> 00:07:58.000
+Ini akan dicetak di layar.
+
+136
+00:07:58.000 --> 00:08:03.000
+Kami melewati dan ini bisa pergi ke layar atau printer.
+
+137
+00:08:03.001 --> 00:08:06.000
+Berapa banyak rekaman yang biasanya Anda aktif pada satu waktu?
+
+138
+00:08:06.001 --> 00:08:08.001
+Saya memiliki sebanyak 365.
+
+139
+00:08:09.000 --> 00:08:11.000
+Kami memiliki sistem kuartal, jadi saya bisa memiliki 300 untuk
+
+140
+00:08:11.000 --> 00:08:13.000
+400 rekaman yang berbeda bekerja pada satu waktu.
+
+141
+00:08:13.001 --> 00:08:17.000
+Salah satu alasan yang paling kuat saya suka file profesional adalah karena itu adalah bagian dari
+
+142
+00:08:17.000 --> 00:08:18.001
+Keluarga profesional PFS.
+
+143
+00:08:18.001 --> 00:08:22.001
+Ini memungkinkan saya untuk membuang ini ke dalam program spreadsheet.
+
+144
+00:08:22.001 --> 00:08:25.000
+Saya menggunakan spreadsheet sebagai akun standar.
+
+145
+00:08:25.000 --> 00:08:26.001
+Anda dapat menggunakannya untuk melakukan kelas Anda.
+
+146
+00:08:27.000 --> 00:08:27.001
+Itu adalah benar.
+
+147
+00:08:28.000 --> 00:08:29.001
+Jim, Anda menggunakan sesuatu yang lain.
+
+148
+00:08:30.000 --> 00:08:32.000
+Anda memutuskan untuk menggunakan Q&amp;A dari Symantec.
+
+149
+00:08:32.000 --> 00:08:34.001
+Beritahu saya mengapa Anda menggunakan manajer database tertentu itu.
+
+150
+00:08:35.000 --> 00:08:38.000
+Q&amp;A adalah manajer database yang sangat kuat.
+
+151
+00:08:38.001 --> 00:08:42.000
+Biasanya saya menjalankan di mana-mana dari 2.000 hingga 3.000 properti.
+
+152
+00:08:42.001 --> 00:08:47.000
+Dalam sifat-sifat ini, saya mengikuti kali terakhir saya mengirimkan mereka dan juga
+
+153
+00:08:47.000 --> 00:08:49.000
+informasi tentang properti tertentu.
+
+154
+00:08:49.000 --> 00:08:51.001
+Ukuran kamar tidur, jenis hal ini.
+
+155
+00:08:52.001 --> 00:08:57.001
+Saya dapat mengakses database, mengumpulkan informasi, dan saya dapat
+
+156
+00:08:57.001 --> 00:08:59.000
+Sebuah email, ikuti orang.
+
+157
+00:09:00.000 --> 00:09:03.000
+Terutama, bisnis saya adalah orang, jadi saya harus tahu apa yang sedang terjadi.
+
+158
+00:09:04.000 --> 00:09:07.000
+Jim, produk yang Anda gunakan, Q&amp;A dari Symantec, diiklankan untuk
+
+159
+00:09:07.000 --> 00:09:08.001
+memiliki komponen kecerdasan buatan.
+
+160
+00:09:09.000 --> 00:09:10.000
+Ini adalah bahasa alami.
+
+161
+00:09:10.000 --> 00:09:11.000
+Anda bisa menggunakan bahasa alami.
+
+162
+00:09:11.000 --> 00:09:14.000
+Dapatkah Anda menunjukkan kepada kami bagaimana ini digunakan dalam pekerjaan Anda tertentu?
+
+163
+00:09:14.001 --> 00:09:15.001
+Tentu saja, aku akan senang dengan itu.
+
+164
+00:09:16.000 --> 00:09:20.000
+Saya akan mengunggah beberapa formulir di sini bahwa saya membuat email pada kedua bulan ini.
+
+165
+00:09:20.001 --> 00:09:25.001
+Saya bisa menulis dalam bahasa Inggris biasa, tunjukkan saya semua formulir yang dikirim, katakan, 4-2
+
+166
+00:09:25.001 --> 00:09:27.001
+1987, dan hit kembali.
+
+167
+00:09:29.001 --> 00:09:33.000
+Ini datang pada bentuk, yang mempertanyakan apa itu.
+
+168
+00:09:34.000 --> 00:09:37.000
+Ini adalah jenis parsing kalimat itu untuk melihat apakah ia memahami setiap kata.
+
+169
+00:09:37.001 --> 00:09:39.000
+Ini memiliki pertanyaan tentang apa yang Anda maksud dengan bentuk.
+
+170
+00:09:39.000 --> 00:09:39.001
+Itu yang benar.
+
+171
+00:09:40.000 --> 00:09:46.000
+Jadi ia mengatakan, apakah itu bagian dari kamus bangunan atau kamus, atau ada
+
+172
+00:09:46.000 --> 00:09:47.001
+Apakah ada informasi lain yang diperlukan?
+
+173
+00:09:48.001 --> 00:09:52.001
+Dan jika saya bertanya, sekarang itu kata mail.
+
+174
+00:09:53.000 --> 00:09:56.001
+Dia tidak memahami kata yang dikirim, dan mungkin alasan mengapa dia tidak
+
+175
+00:09:56.001 --> 00:10:00.000
+Memahami itu adalah bahwa di lapangan, itu memiliki tanggal yang dikirim.
+
+176
+00:10:01.000 --> 00:10:07.000
+Jadi jika saya berpikir, jika saya mengubah itu dan memasukkan data email, itu akan bekerja.
+
+177
+00:10:07.000 --> 00:10:09.001
+Jadi kalimat itu sendiri agak sensitif
+
+178
+00:10:09.001 --> 00:10:11.000
+Untuk bidang data apa yang Anda miliki.
+
+179
+00:10:11.000 --> 00:10:14.001
+Ini harus menjadi bagian dari lapangan, dari database, bukan?
+
+180
+00:10:15.000 --> 00:10:19.000
+Dan Anda dapat mengajarkan program untuk menerima formulir yang dikirim, misalnya.
+
+181
+00:10:19.000 --> 00:10:19.001
+Itu adalah benar.
+
+182
+00:10:22.000 --> 00:10:25.000
+Jadi jika saya menambahkan tanggal...
+
+183
+00:10:26.000 --> 00:10:28.000
+Nah, Anda harus menahan diri di sana.
+
+184
+00:10:29.001 --> 00:10:30.001
+Anda pikir dia akan mengerti itu?
+
+185
+00:10:31.000 --> 00:10:32.001
+Saya pikir itu harus. Mari kita lihat apa yang terjadi sekarang.
+
+186
+00:10:33.000 --> 00:10:34.001
+Karena itu terjadi sebagai nama lapangan, Anda memiliki email negara.
+
+187
+00:10:36.001 --> 00:10:39.000
+Jadi ia tidak belajar dari kali terakhir Anda memberitahunya apa yang Anda maksud bentuk adalah.
+
+188
+00:10:40.001 --> 00:10:44.001
+Okay, kau memang benar. Dia mengerti pada saat itu.
+
+189
+00:10:44.001 --> 00:10:48.000
+Jadi ia mengerti itu karena itu adalah bagian dari database
+
+190
+00:10:48.000 --> 00:10:50.000
+itu sendiri, atau medan di database.
+
+191
+00:10:50.001 --> 00:10:52.001
+Karena itu semua adalah pemahaman.
+
+192
+00:10:54.000 --> 00:10:56.000
+Jadi ide itu... Nah, pertama-tama, ini berjalan keluar floppy
+
+193
+00:10:56.000 --> 00:10:57.001
+Disk, jadi itu sedikit lebih lambat dari ...
+
+194
+00:10:57.001 --> 00:10:59.000
+Ini sedikit tidak menguntungkan dalam hal ini.
+
+195
+00:10:59.001 --> 00:11:04.000
+Ok ya. Ada formulir yang merupakan semua properti yang saya kirim
+
+196
+00:11:04.000 --> 00:11:06.000
+pada hari kedua bulan ini.
+
+197
+00:11:07.001 --> 00:11:10.001
+Okay, dan kebajikan Q &amp; A, benar-benar, dan kami pasti tidak menunjukkan yang terbaik
+
+198
+00:11:10.001 --> 00:11:14.000
+Contohnya di sini, adalah kemampuan Anda untuk hanya memasukkan jenis bahasa alami ini.
+
+199
+00:11:14.000 --> 00:11:16.001
+dan temukan database Anda dan dapatkan laporan kembali
+
+200
+00:11:16.001 --> 00:11:18.000
+berbagai bidang dan dimensi.
+
+201
+00:11:18.001 --> 00:11:19.000
+dengan benar. secara mutlak.
+
+202
+00:11:20.001 --> 00:11:24.000
+Dan karena Anda menggunakan ini dalam praktek penjualan properti Anda, saya maksudkan,
+
+203
+00:11:24.000 --> 00:11:25.001
+Anda senang dengan apa yang ini lakukan untuk Anda.
+
+204
+00:11:25.001 --> 00:11:29.000
+Ia melakukan pekerjaan yang sangat baik. Ini memiliki prosesor kata yang bagus, dan tentu saja,
+
+205
+00:11:29.000 --> 00:11:33.000
+Kecerdasan buatan bagus untuk berubah dan menambah, seperti yang kita lakukan di sini.
+
+206
+00:11:33.001 --> 00:11:37.001
+Dan juga, itu bagus untuk membuat laporan. Ketika saya membuat email, saya suka menyimpan
+
+207
+00:11:37.001 --> 00:11:39.001
+Tindakan dari siapa saya mengirimkan properti kepada.
+
+208
+00:11:39.001 --> 00:11:44.000
+Jadi saya dapat meminta kecerdasan buatan untuk menjalankan laporan tertentu atau menjalankan
+
+209
+00:11:44.000 --> 00:11:46.000
+melaporkan, yang akan saya lakukan sekarang dan menunjukkan kepada Anda.
+
+210
+00:11:50.001 --> 00:11:54.001
+Ok ya. Jadi Anda mengatakan menjalankan laporan mailing, yang berarti
+
+211
+00:11:54.001 --> 00:11:56.001
+Apa yang ? Tunjukkan email apa yang keluar.
+
+212
+00:11:56.001 --> 00:12:00.001
+Ini akan menjadi segalanya yang telah saya buat email. Ini akan memberi saya laporan.
+
+213
+00:12:01.000 --> 00:12:03.000
+Ok ya. Baiklah, Anda menyesatkan itu, dan itu tidak dapat menemukan yang satu keluar.
+
+214
+00:12:03.000 --> 00:12:07.000
+Ok ya. Ia meminta saya untuk mengedit itu sehingga saya dapat menekan.
+
+215
+00:12:13.000 --> 00:12:17.001
+Ok ya. Jadi Anda sudah mengubah kata sekarang. Mari kita lihat apakah dia mengerti itu.
+
+216
+00:12:19.000 --> 00:12:22.000
+Dan itu dikatakan, saya akan melakukan yang berikut, menjalankan laporan mailing, katakan ya, dan
+
+217
+00:12:22.000 --> 00:12:26.000
+meluncurkan laporan yang menunjukkan semua sifat yang telah saya kirim,
+
+218
+00:12:27.000 --> 00:12:29.000
+Termasuk tanggal yang saya kirimkan.
+
+219
+00:12:29.001 --> 00:12:32.001
+Dan kemudian teori, Gary, saya kira, adalah itu seharusnya lebih sederhana daripada memiliki
+
+220
+00:12:32.001 --> 00:12:34.000
+Anda memiliki struktur komando yang rumit.
+
+221
+00:12:34.000 --> 00:12:36.001
+Dan tentu saja, itu adalah ekspansi yang orang
+
+222
+00:12:36.001 --> 00:12:38.001
+memiliki . Jadi lebih mudah untuk mencoba dan belajar itu.
+
+223
+00:12:38.001 --> 00:12:40.001
+Tapi Anda harus mengetikkan kata yang benar dan Anda harus menggunakan kata yang tepat, dll.
+
+224
+00:12:41.000 --> 00:12:43.001
+Baiklah, tuan-tuan, terima kasih banyak sekali. Dalam sekejap, kita akan melihat yang terbaru.
+
+225
+00:12:43.001 --> 00:12:45.001
+versi DBase dan RBase.
+
+226
+00:12:46.000 --> 00:12:49.000
+Pertama sekali, ketika Anda mencoba untuk memilih manajer database tertentu, kadang-kadang
+
+227
+00:12:49.000 --> 00:12:51.001
+Sulit untuk menemukan satu program yang melakukan semua yang Anda inginkan.
+
+228
+00:12:51.001 --> 00:12:55.001
+Nah, kami menemukan seorang optometris di San Bruno, California, yang menggunakan beberapa database
+
+229
+00:12:55.001 --> 00:12:58.000
+Manajer dalam bisnisnya, Wendy Woods, sebagai laporan.
+
+230
+00:12:59.000 --> 00:13:04.000
+Peneliti Dr. Gordon Epstein membutuhkan sistem komputer untuk menangani kebutuhan
+
+231
+00:13:04.000 --> 00:13:06.000
+Berlatih di San Bruno, California.
+
+232
+00:13:07.000 --> 00:13:12.000
+Dia mencoba, tetapi tidak puas dengan salah satu perangkat lunak yang dirancang khusus untuk
+
+233
+00:13:12.000 --> 00:13:15.000
+dengan optometri. Maka ia mengumpulkan dirinya sendiri.
+
+234
+00:13:16.000 --> 00:13:20.000
+Nama tersuai IBase, produk database DBase Ashton Tate
+
+235
+00:13:20.000 --> 00:13:21.001
+Ia adalah karyawan kantornya.
+
+236
+00:13:21.001 --> 00:13:26.000
+Dengan itu, stafnya dapat memantau inventory, akun pasien, jadwal
+
+237
+00:13:26.000 --> 00:13:28.000
+Pendaftaran dan banyak lagi.
+
+238
+00:13:28.000 --> 00:13:34.000
+Komputer adalah alat di mana saya dapat membuat aturan. Dan jika mereka tidak taat
+
+239
+00:13:34.000 --> 00:13:35.001
+Peraturan, maka mesin tidak menghitung.
+
+240
+00:13:36.001 --> 00:13:42.000
+Dan itu juga merupakan cara komunikasi antara kita karena mereka dapat memberi nasihat kepada saya tentang
+
+241
+00:13:42.000 --> 00:13:44.001
+Bagaimana mereka ingin program ini beroperasi.
+
+242
+00:13:45.001 --> 00:13:49.001
+Semua ini membutuhkan banyak penelitian, dan pekerjaan belum selesai.
+
+243
+00:13:49.001 --> 00:13:55.000
+Dokter baru-baru ini menambahkan informasi VP baru dari perangkat lunak paperback ke sistemnya.
+
+244
+00:13:55.001 --> 00:13:59.001
+Dengan itu, dia dapat membandingkan waktu yang dibutuhkan, misalnya, untuk menerima bekalan dari
+
+245
+00:13:59.001 --> 00:14:04.000
+pembeli yang berbeda, atau menentukan kegiatan mana yang membawa paling banyak uang.
+
+246
+00:14:04.000 --> 00:14:08.001
+Seperti banyak perusahaan, optometris berada di persimpangan. ditangkap di antara
+
+247
+00:14:08.001 --> 00:14:13.000
+perubahan teknologi dan batas-batas paket perangkat lunak yang berbeda, ada yang hebat
+
+248
+00:14:13.000 --> 00:14:18.000
+Permasalahan yang membingungkan, itulah sebabnya Dr. Epstein, seperti ribuan orang lain, harus
+
+249
+00:14:18.000 --> 00:14:21.000
+menjadi baik dalam komputer seperti dia dalam profesi.
+
+250
+00:14:22.000 --> 00:14:25.001
+Di San Bruno, California, untuk Computer Chronicles, saya Wendy Woods.
+
+251
+00:14:36.001 --> 00:14:41.000
+Dengan kami di studio sekarang adalah Tom Kozik, Direktor Aplikasi dengan Ashton Tate.
+
+252
+00:14:41.001 --> 00:14:44.001
+Dan di samping Tom adalah Lynne Luchenin, pengarah
+
+253
+00:14:44.001 --> 00:14:46.000
+Produk database lanjutan di MicroRIM.
+
+254
+00:14:46.001 --> 00:14:49.001
+Tom, dua produk yang baru saya lihat, PFS Professional File, Q
+
+255
+00:14:49.001 --> 00:14:51.001
+&amp;A, atau manajer file rata.
+
+256
+00:14:51.001 --> 00:14:54.001
+Bagaimana sistem relatif berbeda dari manajer file rata?
+
+257
+00:14:54.001 --> 00:14:58.000
+Baiklah, sistem relasi memanfaatkan fakta bahwa banyak data sering
+
+258
+00:14:58.000 --> 00:15:00.001
+disimpan di departemen yang berbeda atau set informasi yang berbeda.
+
+259
+00:15:01.000 --> 00:15:03.000
+Jadi Anda dapat menghubungkan informasi dari satu
+
+260
+00:15:03.000 --> 00:15:04.001
+file, dan informasi adalah umum dalam file lain.
+
+261
+00:15:05.000 --> 00:15:09.000
+Contoh umum yang sering digunakan adalah invois untuk pesanan. Ada yang umum
+
+262
+00:15:09.000 --> 00:15:11.000
+Jumlah, umumnya, disimpan antara dua keping
+
+263
+00:15:11.000 --> 00:15:12.001
+informasi yang membuatnya berhubungan.
+
+264
+00:15:13.000 --> 00:15:16.000
+Dan dengan demikian, seorang manajer database relatif menghubungkan dua file bersama-sama pada
+
+265
+00:15:16.000 --> 00:15:18.000
+informasi ketika Anda membutuhkan informasi tersebut.
+
+266
+00:15:18.001 --> 00:15:21.001
+Ok ya. Ok, sekarang, DBase 3 Plus adalah, tentu saja, salah satu dari mereka, dan salah satu yang paling
+
+267
+00:15:21.001 --> 00:15:24.000
+dikenal, jenis kakek dari manajer database.
+
+268
+00:15:24.000 --> 00:15:27.000
+Tunjukkan sedikit dari versi terbaru ini dari DBase 3.
+
+269
+00:15:27.000 --> 00:15:28.001
+Semua yang benar. Apa yang kita lihat sekarang adalah manajer.
+
+270
+00:15:28.001 --> 00:15:30.000
+Driven Assistant dalam DBase 3 Plus.
+
+271
+00:15:31.000 --> 00:15:35.000
+Dan apa yang akan saya lakukan adalah hanya mengumpulkan file yang disebut file pandangan.
+
+272
+00:15:36.000 --> 00:15:39.000
+Seringkali, pengguna menggunakan file yang sama dalam dan keluar hari dalam, hari keluar.
+
+273
+00:15:39.001 --> 00:15:42.001
+Dan kita akan mengatur layar untuk itu, menentukan jenis
+
+274
+00:15:42.001 --> 00:15:44.000
+Perintah, indeks file dalam perintah tertentu.
+
+275
+00:15:44.001 --> 00:15:47.001
+Nah, Anda dapat menyimpan semua pengaturan tersebut ke dalam satu jenis file yang disebut file pandangan
+
+276
+00:15:47.001 --> 00:15:49.001
+dan hanya memulihkan semua pengaturan itu dalam satu tembakan.
+
+277
+00:15:50.001 --> 00:15:53.000
+Nah, dengan cara yang ingin Anda lihat pada file tertentu. dengan tepat.
+
+278
+00:15:53.000 --> 00:15:56.000
+Sekarang, melewati, saya dapat menemukan rekaman yang diberikan di dalam ini
+
+279
+00:15:56.000 --> 00:15:57.001
+database dengan berbagai cara.
+
+280
+00:15:58.000 --> 00:16:00.001
+Saya dapat menemukannya dan menjelaskan kondisi yang ingin saya temukan di bawah.
+
+281
+00:16:01.000 --> 00:16:02.000
+Dalam hal ini, saya bisa keluar dan mencari
+
+282
+00:16:02.000 --> 00:16:03.001
+Itu karena saya tahu apa yang saya cari.
+
+283
+00:16:04.000 --> 00:16:07.000
+Dalam hal ini, saya tahu file yang dipesan oleh nomor pelanggan.
+
+284
+00:16:07.001 --> 00:16:09.000
+Jadi saya hanya bisa mengetikkan nomor pelanggan.
+
+285
+00:16:13.001 --> 00:16:16.001
+0 0 292 Ok ya. 1017 . Apapun jumlahnya.
+
+286
+00:16:17.000 --> 00:16:18.001
+Ya, itu adalah angka, sesuatu seperti itu.
+
+287
+00:16:19.001 --> 00:16:20.000
+Kembali ke akhbar.
+
+288
+00:16:20.000 --> 00:16:22.000
+Dan sekarang saya menempatkan pada rekaman itu.
+
+289
+00:16:22.000 --> 00:16:24.000
+Saya dapat mengatakan melalui garis status di sepanjang bagian bawah layar.
+
+290
+00:16:24.001 --> 00:16:27.000
+Anda belum melihat catatan, tetapi garis status memberitahu Anda bahwa Anda menemukan itu.
+
+291
+00:16:27.000 --> 00:16:28.001
+dengan benar. Rangkaian status memberitahu saya apa rekaman
+
+292
+00:16:28.001 --> 00:16:30.000
+Saya menunjuk di luar seluruh database.
+
+293
+00:16:31.000 --> 00:16:34.000
+Pilih fungsi edit, dan saya dapat melihat saya berada di salah satu layar yang dibuat sebelumnya.
+
+294
+00:16:34.001 --> 00:16:35.001
+Saya bisa melihat rekaman dan saya bisa
+
+295
+00:16:35.001 --> 00:16:37.001
+halaman melalui beberapa layar yang telah saya ciptakan.
+
+296
+00:16:38.000 --> 00:16:41.000
+Dan Anda dapat membuat layar ini menggunakan fitur asisten atau dengan kami.
+
+297
+00:16:41.000 --> 00:16:43.000
+aplikasi generator, hanya melukis apa yang Anda inginkan pada
+
+298
+00:16:43.000 --> 00:16:44.001
+layar dan pilih medan yang ingin Anda letakkan di sana.
+
+299
+00:16:45.000 --> 00:16:46.000
+Mari kita keluar dari sana untuk satu detik.
+
+300
+00:16:46.000 --> 00:16:49.000
+Dan Anda dapat menemukan informasi atau menurunkan informasi.
+
+301
+00:16:49.000 --> 00:16:50.001
+Tentu saja, DBase adalah paket yang dimaksudkan
+
+302
+00:16:50.001 --> 00:16:52.000
+Mengendalikan berjuta-juta rekaman sekaligus.
+
+303
+00:16:52.001 --> 00:16:54.001
+Dan sangat sulit untuk bekerja dengan begitu banyak keping informasi.
+
+304
+00:16:55.000 --> 00:16:58.000
+Jadi Anda dapat menyaring informasi dengan membuat apa yang dikenal sebagai pertanyaan.
+
+305
+00:16:59.000 --> 00:17:01.000
+Memilih pertanyaan, dan kita akan maju dan memanggil satu kronik.
+
+306
+00:17:04.000 --> 00:17:04.001
+Kembali ke akhbar.
+
+307
+00:17:05.000 --> 00:17:07.001
+Dan kami didorong dengan apa yang kami sebut sistem pertanyaan lanjutan kami.
+
+308
+00:17:07.001 --> 00:17:10.001
+Saya dapat memilih medan, dan saya dapat menemukan informasi pada nomor
+
+309
+00:17:10.001 --> 00:17:12.000
+berbagai jenis informasi.
+
+310
+00:17:12.000 --> 00:17:16.001
+Dalam hal ini, pilih operator, dan saya dapat menemukan informasi yang sepadan, tidak
+
+311
+00:17:16.001 --> 00:17:18.001
+Pertandingan, mungkin dimulai dengan karakter, berakhir dengan karakter.
+
+312
+00:17:19.000 --> 00:17:20.001
+Dalam hal ini, saya akan mengambil sesuatu yang sederhana.
+
+313
+00:17:20.001 --> 00:17:21.000
+Ini mengandung satu kata.
+
+314
+00:17:21.001 --> 00:17:25.000
+Saya ingat bahwa ada kata di luar sana yang mengandung kata, atau rekaman keluar
+
+315
+00:17:25.000 --> 00:17:26.001
+Di dalamnya terdapat kelompok kata.
+
+316
+00:17:27.001 --> 00:17:31.001
+Simak dalam kelompok dalam kutipan karena itu adalah informasi teks.
+
+317
+00:17:32.001 --> 00:17:33.001
+Kembali ke akhbar.
+
+318
+00:17:34.000 --> 00:17:37.001
+Sekarang saya dapat memutar kursor untuk menampilkan, dan DBase akan mencari melalui
+
+319
+00:17:37.001 --> 00:17:39.001
+Database dan menemukan rekaman yang memenuhi kondisi tersebut.
+
+320
+00:17:40.000 --> 00:17:43.001
+Setelah itu, saya kemudian bisa mengatakan, okay, tetapkan filter ke file ini, dan DBase akan
+
+321
+00:17:43.001 --> 00:17:46.001
+membatasi database hanya pada rekaman yang memenuhi kondisi ini.
+
+322
+00:17:46.001 --> 00:17:48.001
+Jadi lebih mudah untuk bekerja dengan set data yang lebih kecil sekaligus.
+
+323
+00:17:49.001 --> 00:17:51.000
+Mari kita maju dan keluar.
+
+324
+00:17:54.000 --> 00:17:57.001
+Selama saya berjalan melalui fitur-fitur sistem, DBase membangun sebuah
+
+325
+00:17:57.001 --> 00:17:59.000
+garis komando di bagian bawah layar.
+
+326
+00:17:59.001 --> 00:18:03.001
+Misalnya, jika saya mengatakan untuk memilih pandangan lain, itu mengatakan set view untuk, dan
+
+327
+00:18:03.001 --> 00:18:05.000
+Kami akan membangun perintah di bagian bawah layar.
+
+328
+00:18:05.001 --> 00:18:07.000
+Ini adalah perintah yang sama yang akan dicetak oleh pengguna dalam
+
+329
+00:18:07.000 --> 00:18:09.000
+Pada titik segera jika mereka sedang menjalankan program.
+
+330
+00:18:09.000 --> 00:18:10.001
+Jadi itu mendorong Anda sepanjang jalan.
+
+331
+00:18:11.000 --> 00:18:14.000
+Anda juga dapat melangkah melalui perintah yang saya gunakan sejak saya berada di DBase,
+
+332
+00:18:15.000 --> 00:18:18.000
+dan mereka disimpan dalam buffer sejarah, dan saya bahkan dapat menyimpan mereka ke file lain
+
+333
+00:18:18.000 --> 00:18:20.000
+dan pada dasarnya menulis program dengan berjalan melalui semua menu.
+
+334
+00:18:21.001 --> 00:18:24.001
+Tom, saya tahu Anda juga memiliki aspek kode keamanan dari hal ini yang dapat Anda lakukan.
+
+335
+00:18:24.001 --> 00:18:26.000
+Kita sebenarnya tidak punya waktu untuk melakukannya.
+
+336
+00:18:26.000 --> 00:18:30.000
+Jika Anda dapat keluar dari DBase 3, dan saya ingin berbicara dengan Lyn sedikit tentang RBase.
+
+337
+00:18:30.001 --> 00:18:33.000
+RBase adalah biggie lain, tentu saja, dalam database relatif.
+
+338
+00:18:33.000 --> 00:18:35.000
+Bagaimana pendekatan RBase berbeda dari DBase?
+
+339
+00:18:35.001 --> 00:18:40.000
+Nah, saya pikir mungkin cara utama bahwa kita berbeda adalah bahwa kita memberikan
+
+340
+00:18:40.000 --> 00:18:44.000
+alat tambahan dengan database yang memungkinkan pengguna untuk mengautomatikkan beberapa
+
+341
+00:18:44.000 --> 00:18:47.001
+fungsi yang mereka lakukan, seperti kami memiliki Application Express, yang memungkinkan
+
+342
+00:18:47.001 --> 00:18:49.000
+Anda dapat mengautomatikkan aplikasi Anda.
+
+343
+00:18:49.001 --> 00:18:54.000
+Kami memiliki Forms Express, yang memungkinkan Anda untuk membuat formulir yang sangat kompleks tanpa
+
+344
+00:18:54.000 --> 00:18:58.000
+Programming, atau Laporan, laporan yang sangat kompleks tanpa programming.
+
+345
+00:18:58.000 --> 00:19:00.000
+Ok ya. Apakah Anda memiliki masalah keluar dari DBase 3?
+
+346
+00:19:00.000 --> 00:19:01.000
+Tidak, aku hanya melangkah keluar sekarang.
+
+347
+00:19:01.000 --> 00:19:01.001
+Tidak baiklah.
+
+348
+00:19:03.000 --> 00:19:07.000
+Jadi apa yang akan saya minta Anda lakukan sebaik sahaja Tom keluar dari DBase, adalah memberikan
+
+349
+00:19:07.000 --> 00:19:08.001
+Kami memberikan contoh dari beberapa hal ini.
+
+350
+00:19:09.000 --> 00:19:11.001
+Lyn, apa penambahbaikan besar di RBase System
+
+351
+00:19:11.001 --> 00:19:13.000
+5 tentang produk asli RBase?
+
+352
+00:19:14.000 --> 00:19:16.001
+Nah, ada banyak perubahan yang berbeda.
+
+353
+00:19:17.000 --> 00:19:20.001
+Forms Express dan Reports Express dan Application Express
+
+354
+00:19:20.001 --> 00:19:22.000
+benar-benar memperluas produk ini.
+
+355
+00:19:23.000 --> 00:19:25.001
+Ini berarti, kami telah menambahkan kapasitas multi-user.
+
+356
+00:19:26.000 --> 00:19:28.001
+Ada semua jenis fungsi finansial baru yang berakar dalam produk ini.
+
+357
+00:19:28.001 --> 00:19:31.001
+Jadi kami mendapat RBase dan berlari sekarang.
+
+358
+00:19:31.001 --> 00:19:35.001
+Tentu saja . Apa yang akan saya pilih adalah Application Express, dan apa yang sudah saya lakukan adalah
+
+359
+00:19:35.001 --> 00:19:39.000
+membuat aplikasi, dan saya akan benar-benar masuk dan mengubah
+
+360
+00:19:39.000 --> 00:19:41.001
+Aplikasi yang sudah saya ciptakan.
+
+361
+00:19:41.001 --> 00:19:42.000
+Inilah yang disebut demo.
+
+362
+00:19:43.001 --> 00:19:47.000
+Ini adalah membaca dalam file ASCII ke dalam buffer.
+
+363
+00:19:47.000 --> 00:19:50.000
+Kami akan mengubah tindakan menu untuk menu utama.
+
+364
+00:19:53.001 --> 00:19:58.001
+Kami akan meninjau, kami tidak perlu meninjak semua tindakan.
+
+365
+00:19:58.001 --> 00:20:01.000
+Kita hanya akan membuat perubahan pada satu tindakan tertentu.
+
+366
+00:20:02.000 --> 00:20:03.001
+Ini akan menjadi aksi nomor lima.
+
+367
+00:20:07.001 --> 00:20:09.001
+Apakah dia mencoba untuk menurunkan laporan cetak?
+
+368
+00:20:11.000 --> 00:20:11.001
+Aku akan mengatakan tidak.
+
+369
+00:20:20.000 --> 00:20:21.000
+Di sana kita pergi.
+
+370
+00:20:23.000 --> 00:20:26.001
+Sama seperti ketika kita membangun aplikasi, kita akan benar-benar
+
+371
+00:20:26.001 --> 00:20:28.000
+Mengubah aplikasi dengan cara yang sama.
+
+372
+00:20:28.001 --> 00:20:31.001
+Kami hanya menekankan tindakan yang kami inginkan ini khusus
+
+373
+00:20:31.001 --> 00:20:33.000
+Menu untuk laporan cetak.
+
+374
+00:20:33.001 --> 00:20:35.001
+Kami memilih tabel yang kami ingin bekerja dengan.
+
+375
+00:20:35.001 --> 00:20:38.000
+Kami dapat menggunakan laporan yang sudah kami ciptakan.
+
+376
+00:20:38.000 --> 00:20:39.001
+Kami memiliki pilihan untuk mengeditnya.
+
+377
+00:20:40.000 --> 00:20:43.000
+Kami dapat menyusun informasi di tingkat naik atau turun.
+
+378
+00:20:44.000 --> 00:20:50.000
+Kami dapat memilih atau mengambil bagian dari total basis pelanggan untuk laporan kami,
+
+379
+00:20:50.000 --> 00:20:53.000
+Dan kemudian kita dapat menyelesaikan tindakan kita.
+
+380
+00:20:57.000 --> 00:21:01.001
+Kami tidak perlu membuat perubahan lain, dan kami akan menyimpan aplikasi kami.
+
+381
+00:21:02.000 --> 00:21:03.001
+Apa yang sebenarnya dia lakukan adalah menulis.
+
+382
+00:21:04.000 --> 00:21:06.000
+Ia sebenarnya menulis prosedur pada saat ini.
+
+383
+00:21:06.001 --> 00:21:11.000
+Daripada menulis semua kode ini, itu sebenarnya menulisnya untuk kita.
+
+384
+00:21:11.000 --> 00:21:13.001
+Keuntungan bagi pengguna adalah bahwa itu adalah kode bebas bug.
+
+385
+00:21:13.001 --> 00:21:16.000
+Kita tidak perlu masuk dan membuangnya.
+
+386
+00:21:16.001 --> 00:21:17.000
+[...]
+
+387
+00:21:19.001 --> 00:21:23.001
+Apa yang akan kita lakukan sekarang datang dari Application Express, dan bagaimana kita memilih RBase dari
+
+388
+00:21:23.001 --> 00:21:28.001
+menu utama, aplikasi yang kita sedang bekerja dan
+
+389
+00:21:28.001 --> 00:21:30.000
+Modifikasi akan muncul di layar.
+
+390
+00:21:31.000 --> 00:21:34.000
+Saya kira dalam kedua kasus Anda, Anda benar-benar membuat program ini, database ini
+
+391
+00:21:34.000 --> 00:21:38.000
+manajer, lebih mudah digunakan dan tidak perlu cukup canggih seorang programmer untuk
+
+392
+00:21:38.000 --> 00:21:40.001
+Dapatkan di mana saja sebagai pengguna akhir dari produk ini.
+
+393
+00:21:41.000 --> 00:21:42.001
+Ini adalah pertanyaan, saya pikir, untuk kalian berdua.
+
+394
+00:21:43.001 --> 00:21:47.000
+[...] telah diminta strategi jangka panjang bahwa mereka akan memiliki hubungan
+
+395
+00:21:47.000 --> 00:21:49.000
+Sistem database dan standardisasi pada SQL.
+
+396
+00:21:49.001 --> 00:21:51.000
+Apa efeknya pada perusahaan Anda?
+
+397
+00:21:52.000 --> 00:21:55.000
+Nah, kami telah mengumumkan bahwa kami akan mengikuti dua jalur yang berbeda.
+
+398
+00:21:55.000 --> 00:21:59.000
+Kami akan terus mengembangkan perangkat lunak untuk jalan, menjadi 8088 dan 8086
+
+399
+00:21:59.000 --> 00:22:02.000
+- berbasis mesin, dan kami akan memanfaatkan lingkungan baru juga
+
+400
+00:22:02.000 --> 00:22:06.000
+Seperti yang diikuti sistem operasi baru di lingkungan 8082, 8086, 8083 juga.
+
+401
+00:22:06.001 --> 00:22:06.001
+[...]
+
+402
+00:22:07.000 --> 00:22:12.000
+Nah, tidak hanya IBM telah mengumumkan database SQL, tetapi itu sebenarnya apa itu
+
+403
+00:22:12.000 --> 00:22:15.000
+mengumumkan sebagai database yang diwarisi sebagai bagian dari sistem operasi.
+
+404
+00:22:15.000 --> 00:22:15.000
+dengan benar. Ya ya.
+
+405
+00:22:15.001 --> 00:22:16.000
+Ok ya.
+
+406
+00:22:16.000 --> 00:22:19.001
+Dan apa yang Microrim lakukan sekarang, seperti yang telah kami tunjukkan dengan Application Express,
+
+407
+00:22:19.001 --> 00:22:22.001
+Apakah kita benar-benar mengembangkan alat-alat yang dapat dipasang pada database.
+
+408
+00:22:23.000 --> 00:22:25.000
+Kami telah memilih dasar kami sebagai struktur itu.
+
+409
+00:22:25.001 --> 00:22:27.001
+Mengapa tidak dapat digunakan untuk database lain?
+
+410
+00:22:27.001 --> 00:22:29.000
+dengan benar. Tom Lynn, terima kasih banyak.
+
+411
+00:22:29.000 --> 00:22:31.000
+Ini adalah pandangan singkat kami tentang manajer database.
+
+412
+00:22:31.001 --> 00:22:32.000
+Tetap Bersama Kami
+
+413
+00:22:32.000 --> 00:22:34.000
+Kami akan mendapatkan berita komputer minggu ini dalam sekejap.
+
+414
+00:22:43.001 --> 00:22:47.000
+Dalam File Akses Random minggu ini, jika Anda menunggu dalam baris untuk Toshiba
+
+415
+00:22:47.000 --> 00:22:50.000
+T3100 portabel Anda mungkin berada di dalam untuk menunggu lama.
+
+416
+00:22:50.001 --> 00:22:54.000
+Toshiba mengumumkan minggu ini bahwa berdasarkan tarif baru pada laptop Jepang,
+
+417
+00:22:54.001 --> 00:22:59.000
+Ia tidak akan lagi mengekspor T3100 atau T1100 ke Amerika Serikat.
+
+418
+00:22:59.001 --> 00:23:02.001
+Tarif baru 100% benar-benar menghargai orang Jepang
+
+419
+00:23:02.001 --> 00:23:04.001
+Laptop dari Amerika Serikat Pasar yang
+
+420
+00:23:05.000 --> 00:23:09.000
+Berita baiknya adalah data umum telah merilis laptop baru, DG12T.
+
+421
+00:23:09.000 --> 00:23:13.001
+Ini memiliki layar LCD super berputar dengan lampu belakang yang dapat dialihkan atau dihapus.
+
+422
+00:23:13.001 --> 00:23:15.000
+dan 10M hard drive.
+
+423
+00:23:15.001 --> 00:23:19.001
+Ini memiliki CPU dua kecepatan, satu drive floppy, dan beratnya di 12 pound.
+
+424
+00:23:20.000 --> 00:23:22.001
+Ini adalah waktu yang baik untuk membeli IBM XT.
+
+425
+00:23:23.000 --> 00:23:27.000
+Dengan pengenalan PC PS2, IBM telah menurunkan harga pada XT.
+
+426
+00:23:27.001 --> 00:23:31.000
+Sekarang Anda dapat membeli XT, termasuk monitor monochrome, untuk kurang dari $ 1.000.
+
+427
+00:23:31.001 --> 00:23:33.000
+Ini adalah wilayah klon.
+
+428
+00:23:33.001 --> 00:23:37.001
+Laporan utama pertama pada komputer baru IBM PS2 adalah keluar dari komputer masa depan,
+
+429
+00:23:38.000 --> 00:23:41.001
+perusahaan penelitian yang berbasis di Dallas, dan IBM mendapat gelar yang baik.
+
+430
+00:23:41.001 --> 00:23:46.000
+Laporan 35 halaman mengatakan pertanyaan sekarang bukan apakah, tetapi kapan IBM akan
+
+431
+00:23:46.000 --> 00:23:49.000
+Mengembalikan kepemimpinan Anda di bidang komputer pribadi.
+
+432
+00:23:50.000 --> 00:23:53.001
+Sementara itu, kembali ke ranch klon, pembuat klon bekerja keras.
+
+433
+00:23:53.001 --> 00:23:56.001
+Phoenix Technology mengatakan mungkin memiliki PS2 yang kompatibel
+
+434
+00:23:56.001 --> 00:23:59.000
+ROMBIUS chipset dalam waktu 6 bulan.
+
+435
+00:23:59.001 --> 00:24:03.001
+Chips dan teknologi dan sistem surga, dua lagi akan menjadi penyedia klon
+
+436
+00:24:03.001 --> 00:24:07.001
+Dikatakan bahwa PS2 memiliki mesin terpisah dan di bawah analisis
+
+437
+00:24:07.001 --> 00:24:09.000
+Di pagi hari, pengumuman IBM.
+
+438
+00:24:09.001 --> 00:24:13.001
+Selain itu, pengembang kartu keras baru saja mengumumkan 40 megabyte baru
+
+439
+00:24:13.001 --> 00:24:15.000
+Versi dari hard drive pada satu papan.
+
+440
+00:24:15.000 --> 00:24:17.001
+Ini sekarang keluar dan harga $ 1.195.
+
+441
+00:24:18.001 --> 00:24:21.001
+Waktu untuk melihat perangkat lunak dalam ulasan minggu ini dari Paul Schindler.
+
+442
+00:24:22.001 --> 00:24:25.001
+Anda tahu, Anda juga bisa membuang data Anda jika Anda menyimpannya pada cakera keras
+
+443
+00:24:25.001 --> 00:24:30.000
+Anda tidak pernah kembali, karena begitu pasti seperti gempa besar di California atau yang berikutnya
+
+444
+00:24:30.000 --> 00:24:33.000
+New York Blockkout, suatu hari cakera keras Anda akan pergi ke selatan
+
+445
+00:24:33.000 --> 00:24:35.000
+Dan Anda akan ditinggalkan memegang beg.
+
+446
+00:24:35.000 --> 00:24:39.001
+Jika Anda ingin Apple Macintosh dengan cakera keras, Anda membutuhkan sandaran HFS.
+
+447
+00:24:40.000 --> 00:24:43.000
+Sekarang, ia membuka dengan grafis animasi yang bagus yang menunjukkan
+
+448
+00:24:43.000 --> 00:24:44.001
+jelas apa yang dilakukan program ini.
+
+449
+00:24:44.001 --> 00:24:48.000
+Ini menyimpan semua jenis file dari hard disk hingga floppies.
+
+450
+00:24:48.001 --> 00:24:50.000
+Backup HFS adalah fleksibel.
+
+451
+00:24:50.001 --> 00:24:54.000
+Anda memutuskan apa yang harus disimpan, mengubah file atau file yang dipilih.
+
+452
+00:24:54.001 --> 00:24:57.001
+Selain itu, Anda dapat mencetak daftar file dan menelusuri banyak informasi tentang mereka
+
+453
+00:24:57.001 --> 00:24:59.000
+Mac biasanya tidak mengungkapkan.
+
+454
+00:24:59.000 --> 00:25:03.000
+Tentu saja, sandaran HFS memberitahu Anda berapa banyak cakera yang diperlukan sebelum Anda memulai
+
+455
+00:25:03.000 --> 00:25:05.000
+Backup sehingga Anda dapat format cukup untuk menyelesaikan.
+
+456
+00:25:06.000 --> 00:25:10.000
+HFS backup untuk Apple Macintosh, $50 dari Personal Computer
+
+457
+00:25:10.000 --> 00:25:12.000
+Peripherals Corporation dari Tampa, Florida.
+
+458
+00:25:12.001 --> 00:25:15.000
+Untuk Chronicles Computer, saya adalah Paul Schindler.
+
+459
+00:25:15.001 --> 00:25:18.001
+Semua pembuat operasi cakera di PageMaker akan menjadi publik dengan
+
+460
+00:25:18.001 --> 00:25:20.001
+$ 32 juta penawaran saham.
+
+461
+00:25:21.000 --> 00:25:22.001
+Dua juta saham akan dimasukkan ke pasar.
+
+462
+00:25:23.000 --> 00:25:26.001
+Digital Research telah mengumumkan kemasukan ke bidang penerbitan desktop
+
+463
+00:25:26.001 --> 00:25:28.000
+dengan Gem Desktop Publisher.
+
+464
+00:25:28.001 --> 00:25:33.000
+DRI mengatakan Anda dapat menjalankan Gem DTP setelah membaca hanya dua halaman manual.
+
+465
+00:25:33.001 --> 00:25:38.001
+Ini berjalan pada PC 512K dan juga akan berjalan pada komputer IBM PS2 yang baru.
+
+466
+00:25:39.001 --> 00:25:43.001
+Sebuah sekolah tinggi di Alabama memutuskan untuk menggunakan beberapa perangkat lunak penerbitan desktop untuk
+
+467
+00:25:43.001 --> 00:25:45.001
+Membuat formulir kartu laporan putih Anda sendiri.
+
+468
+00:25:46.000 --> 00:25:50.000
+Masalahnya adalah beberapa hacker mendapatkan ke PC kelas mereka dan menggandakan
+
+469
+00:25:50.000 --> 00:25:52.001
+melaporkan kartu dan mulai menjual penutup kepada siswa lain.
+
+470
+00:25:52.001 --> 00:25:56.000
+Hackers telah diusir dan sekolah sedang merancang yang baru,
+
+471
+00:25:56.000 --> 00:25:58.000
+Kartu laporan yang terbukti palsu.
+
+472
+00:25:58.001 --> 00:26:01.000
+Di Jerman, mesin poker komputer sangat populer.
+
+473
+00:26:01.000 --> 00:26:05.000
+Ada 160.000 dari mereka tersebar di seluruh negara, tetapi beberapa Jerman
+
+474
+00:26:05.000 --> 00:26:08.001
+hacker menghancurkan kode mesin dan dapat memprediksi mesin
+
+475
+00:26:08.001 --> 00:26:11.000
+sekuel permainan, menciptakan sekelompok pemenang.
+
+476
+00:26:11.001 --> 00:26:15.001
+Hacker telah menjual penemuan mereka kepada pemain dan programmer Jerman.
+
+477
+00:26:15.001 --> 00:26:17.001
+Hal ini dilakukan untuk memprogram ulang mesin.
+
+478
+00:26:18.000 --> 00:26:21.000
+Akhirnya, apa yang dilakukan eksekutif dengan PC mereka bagaimanapun?
+
+479
+00:26:21.000 --> 00:26:26.001
+Nah, sebuah studi oleh Epix, sebuah rumah perangkat lunak PC, menemukan bahwa 40% eksekutif menggunakan
+
+480
+00:26:26.001 --> 00:26:30.000
+PC kantor mereka untuk bermain game, rata-rata 15 menit sehari.
+
+481
+00:26:30.001 --> 00:26:33.001
+Dan eksekutif Epix mengatakan dia tidak yakin itu ide yang buruk.
+
+482
+00:26:33.001 --> 00:26:36.001
+Dia mengatakan mengambil istirahat yang dibutuhkan dan bermain game mungkin
+
+483
+00:26:36.001 --> 00:26:38.000
+Meningkatkan produktivitas keseluruhan.
+
+484
+00:26:38.001 --> 00:26:41.000
+Itulah yang terjadi pada kronik minggu ini. Kita akan berjumpa denganmu lain kali.
+
+485
+00:26:43.001 --> 00:26:47.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pengembang IBM
+
+486
+00:26:47.001 --> 00:26:51.000
+-Sistem komputer yang kompatibel, termasuk pemrosesan kata dengan koreksi spelling,
+
+487
+00:26:51.001 --> 00:26:55.001
+Software komunikasi, dan modem Haze-kompatibel 1200 dan 2400 VOD.
+
+488
+00:26:56.000 --> 00:26:58.001
+Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+489
+00:26:59.001 --> 00:27:02.000
+Leading Edge memimpin jalan menuju era informasi.
+
+490
+00:27:03.000 --> 00:27:05.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, menerbitkan byte.
+
+491
+00:27:06.000 --> 00:27:08.000
+Artikel teknis terperinci Byte mencakup yang terbaru di
+
+492
+00:27:08.000 --> 00:27:10.000
+Teknologi mikro komputer di seluruh dunia.
+
+493
+00:27:11.000 --> 00:27:12.001
+Bite adalah standar internasional.
