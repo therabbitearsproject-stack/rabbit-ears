@@ -1075,3 +1075,12 @@ The older channels (1–24) don't use it yet.
 - The original claude.ai artifact showed only static: its sandbox blocks requests to archive.org.
 - Moved the page to GitHub Pages, where archive.org answers normally (it allows requests from any site).
 - First version: 8 channels synced to a shared clock, so everyone on a channel sees the same thing.
+
+
+## 2026-11-17 — Playback interruption diagnosis and startup recovery
+
+Owner reported a temporary all-channel fuzz interruption; playback recovered before diagnosis completed. Reviewed all69 existing anonymous errors. Most recent recorded error was Deep Space startup timeout at21:37:49 Central; no error near the later report and no matching deployment (last deployment04:28 Central). Existing logs do not establish the exact incident cause. Fresh real Chromium played channel97 with advancing video/readyState4 and no media/page error. Sample and recently failing Archive files returned206video/mp4.
+
+Fixed two separately reproduced startup weaknesses: playback metadata now bypasses the shared background guide limiter and retains its own12-second deadline; catalog loading bounds both response headers and JSON body, ignores late completions and preserves current catalog/show on refresh failure. No episode substitution or programming changes. Existing anonymous timeout diagnostics now also record readyState, networkState, media error code, online/visibility status; no new personal identifiers or logging destination. iOS/Android consume this live playback path; app-specific inspection found no independent cause. Coverage includes saturated guide requests, stalled catalog bodies, late replies, captions/clocks/scheduling preservation and real mobile-width Chromium recovery.
+
+Catalog failures previously disappeared in an empty catch. They now emit a bounded anonymous catalog event with headers/body stage, HTTP status, online state and exception type. Local verification:21 loader/media/real Chromium checks plus17 scheduling tests passed; no new physical phone or outage-cause claim.

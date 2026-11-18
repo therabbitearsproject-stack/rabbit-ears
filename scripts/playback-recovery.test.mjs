@@ -10,12 +10,12 @@ const files=[{name:'Episode.mp4',length:2700,source:'original',audio_codec:'aac'
  {name:'Episode.ia.mp4',original:'Episode.mp4',length:2700,source:'derivative',format:'h.264 IA',width:720,height:400},
  {name:'Other.ia.mp4',length:2700,source:'derivative',format:'h.264 IA'}];
 const flush=async()=>{for(let i=0;i<12;i++)await Promise.resolve();};
-function fixture(fetcher){
+function fixture(fetcher,{limited}={}){
  const timers=new Map(),loads=[],errors=[],captions=[],saved=new Map();let timerId=0;
  const span={textContent:''},button={hidden:true},status={hidden:true,querySelector:q=>q==='span'?span:button},power={hidden:true};
  const vid={duration:2700,readyState:4,currentTime:0,pause(){},load(){loads.push(this.src);},play(){return Promise.resolve();}};
- const ctx=vm.createContext({console,AbortSignal,Date,Map,Set,Promise,document:{hidden:false},vid,snow:{style:{opacity:'1'}},
- fetch:fetcher,store:{get:(k,d)=>saved.get(k)??d,set:(k,v)=>saved.set(k,v)},hash:x=>x,limited:fn=>fn(),
+ const ctx=vm.createContext({console,AbortSignal,Date,Map,Set,Promise,document:{hidden:false},navigator:{onLine:true},vid,snow:{style:{opacity:'1'}},
+ fetch:fetcher,store:{get:(k,d)=>saved.get(k)??d,set:(k,v)=>saved.set(k,v)},hash:x=>x,limited:limited||((fn)=>fn()),
  $:id=>id==='playbackStatus'?status:power,setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id),
  resetReport(){},applyCaptions(){captions.push(ctx.activeSegment.media);},reError:(...args)=>errors.push(args),
  tune(){throw Error('Playback must not retune the channel');},channels:()=>[{name:'Test97'}],cur:0,tuneId:1,mediaToken:0,
@@ -27,6 +27,26 @@ function fixture(fetcher){
  return {ctx,vid,loads,errors,captions,span,button,status,power,timers,async start(){ctx.syncMedia();await flush();},async error(){vid.error={code:4};vid.onerror();await flush();}};
 }
 const response=x=>({ok:true,json:async()=>x});
+
+test('playback metadata never waits behind saturated background guide lookups',async()=>{
+ let lookups=0;
+ const f=fixture(async url=>{
+  if(url.startsWith('assets/'))return response({copies:{}});
+  lookups++;return response({files});
+ },{limited:()=>new Promise(()=>{})});
+ await f.start();
+ assert.equal(lookups,1,'Playback must begin its own bounded metadata request');
+ assert.deepEqual(f.loads,['Episode.ia.mp4']);
+});
+
+test('playback errors record bounded player and connection state without extra user data',async()=>{
+ const f=fixture(async url=>response(url.startsWith('assets/')?{copies:{}}:{files}));
+ await f.start();
+ f.ctx.navigator.onLine=false;f.vid.networkState=3;f.vid.readyState=0;
+ await f.error();
+ assert.match(f.errors[0][1],/ready=0;net=3;code=4;online=false;visible=true/);
+ assert.ok(f.errors[0][1].length<300);
+});
 
 test('same-origin verified copy works even when Archive metadata is unavailable and preserves captions/clock',async()=>{
  const f=fixture(async url=>{assert.equal(url,'assets/playback-copies.json');return response({copies:{'collection|Episode.mp4':{file:'Episode.ia.mp4',duration:2700}}});});

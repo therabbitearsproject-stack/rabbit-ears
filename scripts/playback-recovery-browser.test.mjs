@@ -11,7 +11,7 @@ test('real mobile page recovers an unsupported file in place and stops after alt
  const root=path.resolve('.'),html=await readFile('index.html','utf8'),catalog=JSON.parse(await readFile('catalog.json','utf8'));
  const site=siteCode({html,catalog,commercialTiming:await readFile('commercial-timing.js','utf8'),mediaCompatibility:await readFile('media-compatibility.js','utf8')});
  const ch=site.BUILT_IN.find(c=>c.no===97),[slot]=await site.lineup(ch,Date.now()/1000,1),fixed=(slot.v0+60)*1000;
- const source=slot.m.file,alternate=source.replace(/(?:\.ia)?\.mp4$/i,'.ia.mp4');assert.notEqual(source,alternate);
+ const source=slot.m.file,alternate=source.replace(/\.mp4$/i,'.qa-compatible.mp4');assert.notEqual(source,alternate);
  const types={'.html':'text/html','.js':'text/javascript','.json':'application/json','.css':'text/css','.svg':'image/svg+xml'};
  const server=createServer(async(req,res)=>{try{const pathname=new URL(req.url,'http://localhost').pathname,file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));if(!file.startsWith(root+path.sep))throw Error('path');res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.end(await readFile(file));}catch{res.writeHead(404);res.end();}});
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
@@ -27,6 +27,12 @@ test('real mobile page recovers an unsupported file in place and stops after alt
   });
   await page.addInitScript(({fixed,dur})=>{
    Date.now=()=>fixed;localStorage.setItem('re_welcomed','true');window.qaLoads=[];
+   // This fixture supplies media events explicitly. Setting the native src can
+   // otherwise start a real request despite mocked load(), racing the synthetic
+   // failure with context.route's blocked-network error.
+   const sources=new WeakMap();
+   Object.defineProperty(HTMLMediaElement.prototype,'src',{configurable:true,
+    get(){return sources.get(this)||'';},set(value){sources.set(this,new URL(value,location.href).href);}});
    HTMLMediaElement.prototype.load=function(){qaLoads.push(this.src);};HTMLMediaElement.prototype.pause=function(){};
    HTMLMediaElement.prototype.play=function(){return Promise.resolve();};
    Object.defineProperty(HTMLMediaElement.prototype,'duration',{get(){return dur;}});
@@ -34,7 +40,10 @@ test('real mobile page recovers an unsupported file in place and stops after alt
   await page.goto(origin+'/#ch97');await page.waitForFunction(()=>qaLoads.length>0);
   metadataReady=true;
   await page.evaluate(()=>{const v=document.getElementById('vid');Object.defineProperty(v,'error',{configurable:true,value:{code:4}});v.dispatchEvent(new Event('error'));});
-  await page.waitForFunction(()=>qaLoads.length===2);
+  await page.waitForFunction(()=>qaLoads.length===2,null,{timeout:10000}).catch(async error=>{
+   error.message+='\nPlayback fixture: '+JSON.stringify(await page.evaluate(()=>({loads:qaLoads,segment:currentSegment(),active:activeSegment,status:document.getElementById('playbackStatus').textContent,errors:reErrQ})));
+   throw error;
+  });
   const recovered=await page.evaluate(()=>({src:document.getElementById('vid').src,media:activeSegment.media,position:currentSegment().position,program:playing.m.id,status:document.getElementById('playbackStatus').textContent}));
   assert.equal(decodeURIComponent(recovered.src.split('/').slice(5).join('/')),alternate);
   assert.equal(recovered.media.video,source);assert.equal(recovered.media.id,slot.m.id);assert.equal(recovered.program,slot.m.id);assert.equal(Math.round(recovered.position),60);
