@@ -1,0 +1,1473 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:29.001
+Ia mengambil waktu sekitar 20 detik untuk peluru untuk mendapatkan
+
+2
+00:00:29.001 --> 00:00:31.000
+dari barel senjata itu ke sasaran.
+
+3
+00:00:31.000 --> 00:00:36.001
+Itu cukup cepat. Namun dalam 20 detik yang sama, ini 8386 mikroprosesor
+
+4
+00:00:36.001 --> 00:00:42.001
+Intel dapat melakukan 200 ribu pengiraan. Itu juga cukup cepat. Hari ini kita adalah
+
+5
+00:00:42.001 --> 00:00:46.001
+Anda akan melihat keseluruhan generasi baru dari 386 berbasis komputer.
+
+6
+00:00:46.001 --> 00:00:49.001
+dalam jalur cepat di edisi ini dari Computer Chronicles.
+
+7
+00:01:13.000 --> 00:01:17.001
+The Computer Chronicles dibuat mungkin oleh Leading Edge, pembuat IBM
+
+8
+00:01:17.001 --> 00:01:22.000
+sistem komputer yang kompatibel, termasuk Lotus look-like spreadsheet, kata
+
+9
+00:01:22.000 --> 00:01:26.000
+pemrosesan dengan koreksi spelling, perangkat lunak komunikasi, dan Hayes kompatibel
+
+10
+00:01:26.000 --> 00:01:31.000
+Ada 1200 modem. Leading Edge dengan lebih dari 1.000 pusat layanan di seluruh negara.
+
+11
+00:01:33.000 --> 00:01:36.001
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte, Byte&#x27;s
+
+12
+00:01:36.001 --> 00:01:40.001
+Artikel teknis terperinci tentang perangkat keras, perangkat lunak, dan bahasa yang baru
+
+13
+00:01:40.001 --> 00:01:43.000
+perkembangan teknologi komputer di seluruh dunia.
+
+14
+00:01:48.000 --> 00:01:53.001
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay, Gary Kildall pergi
+
+15
+00:01:53.001 --> 00:01:57.001
+yang bekerja. George Morrow bersama saya hari ini adalah Jan Lewis yang juga presiden
+
+16
+00:01:57.001 --> 00:02:02.001
+kelompok penelitian Palo Alto. Ini adalah apa yang terjadi, yang 8386
+
+17
+00:02:02.001 --> 00:02:07.000
+Mikroprosesor dari Intel. Sekarang, tidak ada sistem operasi nyata, belum ada perangkat lunak nyata,
+
+18
+00:02:07.000 --> 00:02:11.001
+Namun, orang-orang sedang menunggu di garis untuk membeli komputer dengan 386 di dalamnya. Bercakap lebih lanjut tentang
+
+19
+00:02:11.001 --> 00:02:15.000
+Itu mungkin lebih dari apa-apa sejak IBM PC keluar. Apakah ini banyak hype atau
+
+20
+00:02:15.000 --> 00:02:18.001
+Apakah ini benar-benar perkembangan besar dari komputer pribadi? Oh, ini bukan hanya hype,
+
+21
+00:02:19.000 --> 00:02:22.001
+dan Stuart. Ini adalah lompatan kuantum di komputer pribadi. Pada saat ini orang-orang
+
+22
+00:02:22.001 --> 00:02:26.000
+berdiri di garis untuk mendapatkan sistem ini hanya untuk kecepatan mentah yang ditawarkan.
+
+23
+00:02:26.001 --> 00:02:32.000
+Aplikasi grafis, telekomunikasi, CAD CAM membutuhkan banyak kecepatan, tetapi
+
+24
+00:02:32.000 --> 00:02:35.001
+janji nyata dari chip ini berada dalam aplikasi yang akan turun
+
+25
+00:02:35.001 --> 00:02:39.001
+Dalam perjalanan berikutnya, mari kita katakan dua hingga lima tahun. Sebuah jenis perangkat lunak yang baru
+
+26
+00:02:39.001 --> 00:02:43.001
+dan aplikasi. Jan, kita akan melihat ke Compaq DeskPro 386 yang baru.
+
+27
+00:02:44.000 --> 00:02:48.000
+Kami juga akan melihat Zenith Z386 yang baru. Kami akan berbicara dengan orang-orang dari Intel tentang
+
+28
+00:02:48.000 --> 00:02:52.000
+chip dan kita akan berbicara dengan pengembang perangkat lunak tentang aplikasi masa depan di 386
+
+29
+00:02:52.000 --> 00:02:55.001
+dengan komputer. Pertama-tama, kita akan membawa Gary ke dalam tindakan. Kami akan pergi
+
+30
+00:02:55.001 --> 00:03:00.000
+kunjungi bengkel Gary Kildall di Monterey, California untuk preview melihat apa yang
+
+31
+00:03:00.000 --> 00:03:06.001
+Sebuah komputer 386 benar-benar dapat melakukan itu. Tidak banyak pengenalan hardware yang diterima sebagai
+
+32
+00:03:06.001 --> 00:03:13.000
+Banyak perhatian sebagai mikroprosesor baru Intel 386. Chip 32-bit yang cepat sudah
+
+33
+00:03:13.000 --> 00:03:17.001
+tersedia di sejumlah mesin desktop pada harga yang pasti memasukkannya ke dalam
+
+34
+00:03:17.001 --> 00:03:22.001
+kategori mikrokomputer. The Knowledge Set Corporation di Monterey, California
+
+35
+00:03:22.001 --> 00:03:28.001
+Baru-baru ini membeli 386 micro untuk membantu pengembang perangkat lunak CD-ROM mereka. Jadi
+
+36
+00:03:28.001 --> 00:03:34.000
+jauh, mesin menjalankan tes kompilasi sekitar tiga kali lebih cepat dari AT dan
+
+37
+00:03:34.000 --> 00:03:40.000
+juga bersinar dalam kalkulasi intens grafis paparan. 386 Mekanisme yang
+
+38
+00:03:40.000 --> 00:03:44.001
+yang kita gunakan di sini penting dalam lingkungan pengembangan karena memungkinkan kita untuk mendapatkan
+
+39
+00:03:44.001 --> 00:03:49.000
+Melalui tugas-tugas pemrograman kita jauh lebih cepat daripada yang kita bisa lakukan sebelumnya.
+
+40
+00:03:49.000 --> 00:03:55.000
+Bahkan, kami akan menggunakan VACS mungkin untuk pengembangan program. Kami sekarang adalah
+
+41
+00:03:55.000 --> 00:04:01.001
+menggunakan 386 jauh lebih banyak untuk setiap insinyur. Kita tidak perlu memiliki api halon
+
+42
+00:04:01.001 --> 00:04:05.000
+Sistem Extinguisher atau kamar komputer yang memiliki penghawa dingin di dalamnya
+
+43
+00:04:05.000 --> 00:04:08.000
+dan hal-hal dari jenis operasi yang sangat mahal untuk menjalankan mesin yang lebih besar.
+
+44
+00:04:09.000 --> 00:04:14.000
+Menutup jurang antara minis dan mikros pasti akan mempengaruhi harga dan kemungkinan
+
+45
+00:04:14.000 --> 00:04:18.000
+Meningkatkan pengembangan aplikasi baru. Alasan bahwa kita adalah
+
+46
+00:04:18.000 --> 00:04:23.001
+Untuk itu, tidak banyak yang harus diperhatikan, karena 386
+
+47
+00:04:23.001 --> 00:04:28.000
+Hal ini membuatnya mudah diakses oleh sejumlah besar orang. Sekarang Anda bisa
+
+48
+00:04:28.000 --> 00:04:32.001
+Pertimbangkan konstruksi mengatakan sistem pakar yang bisa Anda jual. Namun, meskipun semua
+
+49
+00:04:32.001 --> 00:04:38.001
+Advertising, chip 32-bit bukan teknologi baru. Tetapi para pengembang melihat khusus
+
+50
+00:04:38.001 --> 00:04:43.001
+berjanji dalam ronde pengenalan baru ini. Yang menarik adalah bahwa 386 memiliki
+
+51
+00:04:43.001 --> 00:04:48.001
+tumbuh dari dunia IBM PC dan itu bukan hanya 386 yang penting di sini. Itu adalah
+
+52
+00:04:48.001 --> 00:04:54.001
+ide yang sekarang diterima dalam masyarakat kita, dalam masyarakat komputer yang mengkonsumsi sebagai
+
+53
+00:04:54.001 --> 00:04:59.000
+menjadi langkah selanjutnya untuk bergerak. Itu berarti bahwa ketika kita bergerak ke dalam mesin
+
+54
+00:04:59.000 --> 00:05:02.000
+Dengan demikian, fungsi dasar yang
+
+55
+00:05:02.000 --> 00:05:03.001
+Harus diperbaiki secara signifikan.
+
+56
+00:05:16.001 --> 00:05:20.000
+Yang menyertai kami sekarang di studio adalah Michael Swavely. Michael adalah wakil presiden dari
+
+57
+00:05:20.000 --> 00:05:24.001
+Pemasaran untuk komputer kompak, pembuat desktop kompak pro 386. Juga dengan kami
+
+58
+00:05:24.001 --> 00:05:26.001
+dari kompak adalah Lynn Parsons yang akan beroperasi
+
+59
+00:05:26.001 --> 00:05:28.001
+386 dalam pernyataan tersebut. dengan Jan?
+
+60
+00:05:28.001 --> 00:05:32.001
+Mike mesin ini telah dijual seperti hotcakes. Siapa yang membelinya dan apa yang
+
+61
+00:05:32.001 --> 00:05:36.001
+Apakah mereka menggunakannya? Ya, Jan mereka telah menjual dengan baik di seluruh rentang
+
+62
+00:05:36.001 --> 00:05:41.000
+Pelanggan menemukan bahwa mereka memenuhi kebutuhan mereka. Sebagian besar pelanggan ini adalah
+
+63
+00:05:41.000 --> 00:05:45.000
+Sungguh mencari kekuatan dan kinerja yang 386 membawa kepada mereka.
+
+64
+00:05:45.000 --> 00:05:50.000
+aplikasi apakah mereka sangat besar spreadsheets, sangat besar database, atau
+
+65
+00:05:50.000 --> 00:05:56.000
+lebih khusus aplikasi seperti CAD, CAE, server file jaringan, atau bahkan
+
+66
+00:05:56.000 --> 00:05:59.001
+Sistem multi pengguna kecil yang mengoperasikan ZNEX. Jadi saya pikir itu benar-benar kecepatan seperti Jan
+
+67
+00:05:59.001 --> 00:06:02.001
+yang disebutkan pada awal acara yang pengguna sedang mencari sekarang. Aku ingin
+
+68
+00:06:02.001 --> 00:06:06.001
+untuk mencoba untuk memberi penonton kita perasaan tentang kecepatan mesin ini. Anda memiliki A
+
+69
+00:06:06.001 --> 00:06:09.000
+macro yang sangat kompleks di sini yang akan Anda jalankan di spreadsheet.
+
+70
+00:06:09.000 --> 00:06:14.000
+Beritahu kami tentang demo. Ini adalah sekitar 5000 sel spreadsheet dan ini adalah
+
+71
+00:06:14.000 --> 00:06:21.000
+Makro yang sangat rumit berjalan di bawah Lotus 1 2 3. Baiklah, mari kita hanya jenis berlari
+
+72
+00:06:21.000 --> 00:06:25.001
+Macro ini sekarang Lynn dan kita akan melihat berapa lama ia mengambil masa. Baiklah, seperti yang bisa Anda katakan
+
+73
+00:06:25.001 --> 00:06:31.000
+itu adalah makro yang sangat kompleks bahkan untuk 1 2 3 dan mengisi di spreadsheet membuat beberapa
+
+74
+00:06:31.000 --> 00:06:36.000
+kemudian kembali dan melakukan beberapa perbandingan dan kemudian mengembalikan
+
+75
+00:06:36.000 --> 00:06:41.001
+spreadsheet beberapa item lain seperti itu dan mengambil total besar dari semua
+
+76
+00:06:41.001 --> 00:06:48.001
+sekitar 16 detik untuk menyelesaikan spreadsheet yang sangat kompleks ini. Dan di sana itu
+
+77
+00:06:48.001 --> 00:06:53.000
+adalah . Di sana ia ada. Kami melihat ia pergi ke sekitar 500 baris di sana. Lebih dari 5000
+
+78
+00:06:53.000 --> 00:06:59.000
+Sel-sel ini bekerja dengan contoh khusus ini. Untuk benar-benar mendapatkan rasa
+
+79
+00:06:59.000 --> 00:07:02.001
+kecepatan perbandingan di sini Lynn Saya akan meminta Anda dapat mengatur kompak
+
+80
+00:07:02.001 --> 00:07:06.001
+Untuk menjalankan dalam mode 8088 pada 4.77 megahertz. Jadi jika Lynn Anda akan melakukannya dan menjalankan itu
+
+81
+00:07:06.001 --> 00:07:10.000
+macro yang sama pada spreadsheet yang sama kita akan menjalankan jam di atasnya dan melihat apa yang
+
+82
+00:07:10.000 --> 00:07:13.001
+Perbedaan itu. Ok ya. Anda tahu ini menimbulkan pertanyaan yang menarik meskipun
+
+83
+00:07:13.001 --> 00:07:19.000
+Apakah kecepatan 386 ini menua AT dan 286? Tidak, aku tidak berpikir
+
+84
+00:07:19.000 --> 00:07:24.000
+Ia sudah usang. Akan ada perbedaan harga yang signifikan untuk tambahan
+
+85
+00:07:24.000 --> 00:07:29.001
+hasil dari 386 dan saya pikir kedua produk berbasis 286 dan
+
+86
+00:07:29.001 --> 00:07:33.001
+386 produk berbasis akan memiliki tempat di pasar untuk beberapa berikutnya
+
+87
+00:07:33.001 --> 00:07:38.000
+dari tahun. Ok, maafkan saya Anda baru saja mulai menjalankan demo sekarang di ini di
+
+88
+00:07:38.000 --> 00:07:41.001
+mode yang lebih lambat sehingga kita menjalankan jam di atas ini kita akan melihat berapa lama ia mengambil masa. Ok ya. Mike yang
+
+89
+00:07:41.001 --> 00:07:46.000
+Bagaimana dengan masalah kompatibilitas ini saya maksudkan seberapa gugup pengguna harus menjadi itu
+
+90
+00:07:46.000 --> 00:07:48.001
+Kami melihat di sini contoh kompatibilitas yang Anda dapat memasukkannya ke dalam
+
+91
+00:07:48.001 --> 00:07:55.001
+8088 mode semua perangkat lunak yang ada akan berjalan pada ini? Ya pada dasarnya kompak adalah mengambil
+
+92
+00:07:55.001 --> 00:08:00.000
+reputasi yang dibangun untuk memberikan ketidaksesuaian tertinggi pada ini
+
+93
+00:08:00.000 --> 00:08:05.000
+produk seperti yang kita lakukan dengan setiap produk baru yang kita memperkenalkan dan pengguna harus merasakan
+
+94
+00:08:05.000 --> 00:08:08.001
+Sangat nyaman dengan kompatibilitas produk. Beberapa pengguna sekarang adalah
+
+95
+00:08:08.001 --> 00:08:14.001
+Ia khawatir tentang apa yang akan dilakukan IBM dan suatu hari IBM akan mengumumkan mesin 386 dan
+
+96
+00:08:14.001 --> 00:08:17.001
+Semua orang mengatakan apa pergerakan kotor di sisi kompak untuk berada di sana terlebih dahulu
+
+97
+00:08:17.001 --> 00:08:22.000
+Dan betapa takutnya perusahaan ini betapa berisiko pergerakan itu sebenarnya? Kami tidak
+
+98
+00:08:22.000 --> 00:08:26.001
+rasa seperti itu adalah langkah berisiko pada semua kita percaya bahwa standar industri yang memiliki
+
+99
+00:08:26.001 --> 00:08:31.000
+telah ditubuhkan untuk perangkat lunak untuk pasar bisnis jelas ada
+
+100
+00:08:31.000 --> 00:08:36.000
+Dan apa yang telah kita lakukan di sini dengan Despro 386 adalah inovasi di dalam yang ada
+
+101
+00:08:36.000 --> 00:08:39.000
+dengan cara yang berbeda dengan mencoba untuk keluar dari
+
+102
+00:08:39.000 --> 00:08:40.001
+Standar dan melakukan sesuatu yang berbeda.
+
+103
+00:08:40.001 --> 00:08:46.001
+Sekarang IBM dapat atau mungkin tidak memasuki pasar pada titik apa pun di masa depan.
+
+104
+00:08:46.001 --> 00:08:52.000
+Pasar akan menilai apa yang IBM bawa ke pasar dengan cara yang sama seperti ia menilai mana-mana
+
+105
+00:08:52.000 --> 00:08:55.001
+produsen produk baru lainnya. Dan Anda tidak khawatir bahwa mereka mendapatkan
+
+106
+00:08:55.001 --> 00:08:58.001
+di sana pada standar yang sedikit berbeda dari milikmu dan memiliki
+
+107
+00:08:58.001 --> 00:09:02.000
+Pertempuran di dalamnya? Tidak terutama karena mereka harus hidup di dalam pasar
+
+108
+00:09:02.000 --> 00:09:06.001
+realiti dan realiti adalah bahwa bisnis Amerika telah membuat
+
+109
+00:09:06.001 --> 00:09:12.000
+Investasi dalam standar industri dan untuk IBM atau orang lain. Mereka mungkin memiliki
+
+110
+00:09:12.000 --> 00:09:16.000
+Mereka menguburkan diri dalam standar ini di sini. Hal ini masih berjalan di jalan
+
+111
+00:09:16.000 --> 00:09:20.000
+Jan Anda tahu kami masih menonton versi yang lebih lambat dari NXT jika Anda ingin dan masih
+
+112
+00:09:20.000 --> 00:09:24.000
+Apa yang dikira kembali ini masih mengatakan tunggu tunggu sementara kita menunggu Mike
+
+113
+00:09:24.001 --> 00:09:28.000
+Pertanyaan lain ketika Anda melihat orang-orang mengatakan dengan baik di mana yang sebenarnya
+
+114
+00:09:28.000 --> 00:09:31.000
+aplikasi di mana adalah kekuatan nyata Jan sedang berbicara tentang grafik semua
+
+115
+00:09:31.000 --> 00:09:34.000
+Apa hal-hal baru yang bisa kita lakukan saat itu akan terjadi? Ya, saya pikir itu
+
+116
+00:09:34.000 --> 00:09:38.000
+Pengenalan Despro 386 telah meluncurkan awal dari itu dan jujur
+
+117
+00:09:38.000 --> 00:09:42.001
+Ada ratusan perusahaan di luar industri saat ini bekerja pada yang baru
+
+118
+00:09:42.001 --> 00:09:47.000
+kemampuan perangkat keras kemampuan perangkat lunak baru untuk benar-benar memberikan semua
+
+119
+00:09:47.000 --> 00:09:52.000
+Manfaat dari arsitektur 386 untuk pelanggan. Jadi saya pikir kita akan mulai melihat
+
+120
+00:09:52.000 --> 00:09:57.000
+dari mereka. Apa yang kamu ketahui telah melakukannya? Apakah ia melakukannya? Dan pada jam tangan saya ia mengambil dua
+
+121
+00:09:57.000 --> 00:10:02.000
+Minit dan 17 detik untuk melakukan apa yang mengambil waktu 16 detik ketika Anda melakukannya
+
+122
+00:10:02.000 --> 00:10:06.000
+dengan 386 chip. Ya, sekitar delapan setengah kali lebih lama.
+
+123
+00:10:06.000 --> 00:10:09.000
+Sangat mengesankan, terima kasih banyak. Sekarang seperti Mike mengatakan beberapa perusahaan perangkat lunak
+
+124
+00:10:09.000 --> 00:10:12.001
+sudah bekerja pada aplikasi untuk 386 salah satu dari yang pertama keluar dari pintu
+
+125
+00:10:12.001 --> 00:10:18.001
+Sun Microsystems dan Wendy Woods memiliki laporan tentang itu. Anda sedang memandang
+
+126
+00:10:18.001 --> 00:10:24.000
+Beberapa program berjalan sekaligus pada PC berbasis 386. Jendela adalah yang
+
+127
+00:10:24.000 --> 00:10:30.000
+manifestasi alat pemrograman yang disebut berita dari Sun Microsystems. Sebelumnya
+
+128
+00:10:30.000 --> 00:10:35.000
+Produk ini hanya tersedia untuk digunakan di stasiun kerja Sun. Maafkan saya untuk
+
+129
+00:10:35.000 --> 00:10:36.001
+Tapi mengapa berita ini?
+
+130
+00:10:37.001 --> 00:10:42.000
+Karena Matahari bertaruh bahwa 386 akan menjadi pervasif seperti chip yang
+
+131
+00:10:42.000 --> 00:10:47.000
+PC hari ini. Dengan masuk ke sana terlebih dahulu dengan produk tetingkap yang dapat menjadi
+
+132
+00:10:47.000 --> 00:10:52.001
+disesuaikan dengan banyak mesin Sun berharap untuk membuat berita standar jendela baru. Jika
+
+133
+00:10:52.001 --> 00:10:59.000
+Anda melihat keduanya dalam CAD CAM menerbitkan jenis pasar, 386 akan menjadi
+
+134
+00:10:59.000 --> 00:11:04.000
+seorang pemain. Berita akan menjadi kita percaya komponen dalam masing-masing dari mereka. dalam
+
+135
+00:11:04.000 --> 00:11:07.001
+pelanggan tambahan yang memiliki Sun&#x27;s akan dapat menggunakan aplikasi yang sama dari
+
+136
+00:11:07.001 --> 00:11:12.000
+kedua Sun dan pada 386 sedang berjalan berita dan itulah lagi mengapa ia menarik untuk
+
+137
+00:11:12.000 --> 00:11:16.001
+Berita Terkait Komunitas 386 Berita ini juga unik dalam hal bahwa itu parsial
+
+138
+00:11:16.001 --> 00:11:21.000
+dibangun dengan PostScript, model gambar yang canggih yang memungkinkan pengguna
+
+139
+00:11:21.000 --> 00:11:24.001
+Untuk memanipulasi ukuran dan skala setiap jendela.
+
+140
+00:11:25.000 --> 00:11:31.000
+Apakah berita Sun di 386 akan sukses seperti yang diharapkan perusahaan? Hanya waktu
+
+141
+00:11:31.000 --> 00:11:36.000
+akan mengatakan tetapi fakta adalah ada dua belas perusahaan perangkat lunak yang baik banyak dari
+
+142
+00:11:36.000 --> 00:11:41.001
+nama-nama besar mereka sudah menggunakan berita untuk menulis aplikasi mereka untuk 386 dan
+
+143
+00:11:41.001 --> 00:11:45.000
+Ini bercerita tentang tingkat kepercayaan mereka. Untuk komputer
+
+144
+00:11:45.000 --> 00:11:47.000
+Saya adalah Wendy Woods.
+
+145
+00:12:00.001 --> 00:12:04.001
+Dengan kami sekarang di studio adalah Bob Dilworth, presiden dari Zenith Data Systems,
+
+146
+00:12:04.001 --> 00:12:09.000
+Salah satunya adalah komputer Zenith Z386. Juga dengan kami di studio adalah Holden Alst
+
+147
+00:12:09.000 --> 00:12:13.000
+Dari Zenith yang akan beroperasi 386 untuk kita. dengan Jan? Bob bagaimana dengan Anda
+
+148
+00:12:13.000 --> 00:12:18.000
+mesin berbeda dari desktop kompak Pro 386 yang baru saja kita lihat? Mereka sangat
+
+149
+00:12:18.000 --> 00:12:22.001
+Seperti itu ada beberapa fitur yang kita berdua pada dasarnya harus merancang tanpa mengetahui
+
+150
+00:12:22.001 --> 00:12:27.001
+apa yang dilakukan satu sama lain dan jelas kedua perusahaan tertarik untuk mencoba
+
+151
+00:12:27.001 --> 00:12:33.001
+untuk melindungi standar di mana kita bisa tetapi kita unik dalam cara kita menangani memori
+
+152
+00:12:33.001 --> 00:12:38.001
+Kami akan memiliki beberapa kelebihan dalam cache memori hal-hal seperti itu yang membuatnya sedikit
+
+153
+00:12:38.001 --> 00:12:44.001
+sedikit berbeda tetapi keduanya sangat cepat mesin MS-DOS benar-benar apa yang... adalah
+
+154
+00:12:44.001 --> 00:12:48.001
+Apakah mesin sekarang ini adalah produk pada saat ini? Ini adalah produk yang keluar
+
+155
+00:12:48.001 --> 00:12:54.001
+Dan kami mengirim sampel awal terutama kepada beberapa pelanggan kami yang ada. Siapa yang
+
+156
+00:12:54.001 --> 00:12:59.000
+Sekarang mereka membeli mesin ini dan untuk apa mereka menggunakannya? Secara umum
+
+157
+00:12:59.000 --> 00:13:04.001
+berbicara adalah orang-orang yang membutuhkan kecepatan atau membutuhkan banyak akses memori atau kecepatannya
+
+158
+00:13:04.001 --> 00:13:10.000
+dan mengendalikan database file yang besar. Apakah ada pasar nyata untuk mesin 386
+
+159
+00:13:10.000 --> 00:13:13.001
+hanya berdasarkan kecepatan dan memori atau apakah itu akan benar-benar bergantung pada yang baru lebih
+
+160
+00:13:13.001 --> 00:13:17.000
+aplikasi yang canggih untuk jenis mesin ini untuk benar-benar bergerak? Tentu saja yang
+
+161
+00:13:17.000 --> 00:13:22.001
+Aplikasi baru dan beberapa aplikasi baru akan mendorong pasar tetapi sudah kita
+
+162
+00:13:22.001 --> 00:13:28.001
+melihat paket perangkat lunak yang canggih yang dapat diunduh bahkan pada produk 286 dan
+
+163
+00:13:28.001 --> 00:13:34.001
+Jadi mereka membutuhkan itu 386 untuk benar-benar mendapatkan untuk membuat paket snap dan itu seperti apa pun
+
+164
+00:13:34.001 --> 00:13:40.001
+sistem komputer kita dapat melakukan hari-hari yang bernilai kerja dalam detik dan Anda ingin itu untuk
+
+165
+00:13:40.001 --> 00:13:44.000
+Datang lebih cepat dan lebih cepat. Ok, mari kita coba tunjukkan beberapa snap di sini dan Holden kita adalah
+
+166
+00:13:44.000 --> 00:13:47.000
+Saya akan meminta Anda untuk menjalankan ini kita sekarang saya kira apa yang ada di sini 10 halaman
+
+167
+00:13:47.000 --> 00:13:48.001
+Dokumen dalam kata bintang? Itu memang benar.
+
+168
+00:13:48.001 --> 00:13:53.000
+Tidak dikenal sebagai pergerakan cepat tidak perlu benar dan apa yang akan kita lakukan apa yang
+
+169
+00:13:53.000 --> 00:13:57.001
+Apakah Anda akan berdemonstrasi? Saya percaya kami akan memperbaiki dokumen yang kami buat
+
+170
+00:13:57.001 --> 00:14:00.000
+beberapa kesalahan di suatu tempat sehingga Anda akan melewati dan ya Anda telah mendapatkan Anda
+
+171
+00:14:00.000 --> 00:14:04.001
+membingungkan kata memori m-e-m-o-r-i dan Anda melupakan periode di ruang
+
+172
+00:14:04.001 --> 00:14:09.000
+dengan sentuhan itu. Nah, sekarang saya akan tahu sejak kami mempersiapkan ini di sini untuk Anda bahwa
+
+173
+00:14:09.000 --> 00:14:13.001
+kesalahan ini terjadi 90 kali dalam dokumen ini jadi saya ingin Anda melakukan pencarian dan
+
+174
+00:14:13.001 --> 00:14:15.000
+mengganti dan memperbaiki agar kita lihat berapa lama ia mengambil
+
+175
+00:14:15.000 --> 00:14:17.001
+Untuk memperbaiki hal itu, Holden melangkah lebih jauh.
+
+176
+00:14:20.000 --> 00:14:26.000
+Ia sedang mengalir tepat di sepanjang. Itu yang cepat. Dan saya kira jika Anda adalah bintang kata biasa
+
+177
+00:14:26.000 --> 00:14:29.000
+pengguna dan jika Anda menjalankan itu pada mesin yang lebih lambat Anda tahu ia mengambil banyak lebih lama. ya ya
+
+178
+00:14:29.000 --> 00:14:34.000
+Ini adalah proses yang tepat waktu. Untuk melakukan 90 pencarian dan menggantikan di sana daripada itu. Anda menyadari
+
+179
+00:14:34.000 --> 00:14:37.001
+mengubah garis pada saat yang sama ketika ia melewati 90 kejadian ini.
+
+180
+00:14:37.001 --> 00:14:41.000
+Itu benar karena apa yang Anda koreksi lebih lama dari kata asli.
+
+181
+00:14:41.000 --> 00:14:45.001
+Itu memang benar. Dan saya kira kita melihat kita, saya kira itu memberitahu Anda halaman apa yang Anda
+
+182
+00:14:45.001 --> 00:14:51.000
+hampir menyelesaikan dokumen itu di sana. Setiap perasaan perbandingan dalam kecepatan Bob sebagai
+
+183
+00:14:51.000 --> 00:14:54.000
+Untuk seberapa cepat ini adalah daripada jika anda melakukan ini pada tiga hingga empat kali
+
+184
+00:14:54.000 --> 00:14:59.000
+Lebih cepat dari pada masalah 286 dan tentu saja jauh lebih cepat pada masalah 8080. Kemenangan I
+
+185
+00:14:59.000 --> 00:15:02.000
+Saya ingin meminta Anda untuk melakukan satu lagi hal untuk mencoba untuk menunjukkan kecepatan di sini. Aku melihat yang
+
+186
+00:15:02.000 --> 00:15:05.001
+kata zenith adalah kata terakhir dalam dokumen dan tidak terjadi di tempat lain di dalam
+
+187
+00:15:05.001 --> 00:15:08.001
+Dokumen yang Mari kita lihat berapa lama itu akan mengambil jika kita ingin melakukan pencarian dan
+
+188
+00:15:08.001 --> 00:15:12.001
+menggantikan kata zenith. Dengan kata lain, lihat berapa lama yang diperlukan untuk melewati
+
+189
+00:15:12.001 --> 00:15:19.000
+10 halaman tersebut. Saya pikir lebih baik memberitahu penonton untuk menonton
+
+190
+00:15:19.000 --> 00:15:24.000
+Sangat berhati-hati karena saya telah melihat hal ini dilakukan sebelumnya. Jangan membukanya.
+
+191
+00:15:27.000 --> 00:15:34.000
+dan pergi pergi. telah melakukannya. Lebih cepat dari yang dapat dilihat mata. Bob yang
+
+192
+00:15:34.000 --> 00:15:37.000
+Bagaimana dengan IBM? Semua orang berbicara tentang menunggu
+
+193
+00:15:37.000 --> 00:15:38.001
+dengan IBM. Apa yang akan terjadi dengan IBM?
+
+194
+00:15:38.001 --> 00:15:43.001
+Apa yang Anda pikirkan akan terjadi di sana. Tentu saja Saya pikir sebenarnya Anda tahu kami
+
+195
+00:15:43.001 --> 00:15:47.001
+membaca akhbar dan membaca semua dokumen yang sama semua orang lain membaca dan benar-benar
+
+196
+00:15:47.001 --> 00:15:51.001
+Jangan punya keuntungan apa pun. Kami berharap mereka akhirnya akan menggunakan chip dalam
+
+197
+00:15:51.001 --> 00:15:57.000
+Ada beberapa fashion. Mereka tidak tahu kapan dan seberapa cepat. Dan kita semua hanya harus
+
+198
+00:15:57.000 --> 00:16:01.000
+Tunggu dan lihat. Apa yang Anda pikir konsekuensi akan menjadi kepada pengguna ketika
+
+199
+00:16:01.000 --> 00:16:04.001
+Jenis-jenis aplikasi baru ini datang. Apa yang dimaksud dengan ketersediaan
+
+200
+00:16:04.001 --> 00:16:08.001
+Gen 386 menggambarkan ini sebagai lompatan kuantum dalam komputasi pribadi. Apa itu yang akan
+
+201
+00:16:08.001 --> 00:16:11.001
+untuk bermaksud kepada pengusaha kepada pengguna korporat dan sebagainya dalam hal apa yang Anda
+
+202
+00:16:11.001 --> 00:16:16.000
+Anda benar-benar bisa melakukan bahwa Anda tidak dapat melakukan apa pun sekarang selain melakukannya lebih cepat. Saya pikir bahwa
+
+203
+00:16:16.000 --> 00:16:20.000
+langkah berikutnya dalam banyak paket perangkat lunak dan Anda perlu untuk jenis stop dan
+
+204
+00:16:20.000 --> 00:16:26.001
+orang membeli aplikasi yang kemudian didukung oleh perangkat lunak yang akhirnya
+
+205
+00:16:26.001 --> 00:16:31.001
+Hardware diperlukan untuk menjalankan aplikasi. Jadi kita benar-benar tidak memacu pasar
+
+206
+00:16:31.001 --> 00:16:36.000
+dengan bagian dari hardware. Apa yang benar-benar mendorong pasar adalah perangkat lunak. dan dalam
+
+207
+00:16:36.000 --> 00:16:40.001
+Dalam kasus khusus ini saya pikir kita akan melihat paket perangkat lunak di mana untuk membuat
+
+208
+00:16:40.001 --> 00:16:45.001
+Mereka mudah digunakan Anda tahu jenis produk kecerdasan buatan yang akan
+
+209
+00:16:45.001 --> 00:16:48.001
+memerlukan kekuatan dan kecepatan untuk membuat
+
+210
+00:16:48.001 --> 00:16:50.000
+Sebuah aplikasi yang dapat diterima.
+
+211
+00:16:50.001 --> 00:16:53.000
+Bob Holden sangat berterima kasih untuk bergabung dengan kami sekarang dalam sekejap kami akan
+
+212
+00:16:53.000 --> 00:16:57.000
+Berbicara dengan tamu dari Intel dan Phoenix Technologies dan berbicara tentang masa depan
+
+213
+00:16:57.000 --> 00:16:58.001
+dari 386. Tetap Bersama Kami
+
+214
+00:17:12.001 --> 00:17:17.000
+Bersama kami sekarang di studio adalah Neil Colvin Presiden dan CEO Phoenix
+
+215
+00:17:17.000 --> 00:17:21.000
+Teknologi dan duduk di sebelah Neil adalah Dana Crilley manajer pemasaran untuk
+
+216
+00:17:21.000 --> 00:17:26.001
+8386 pada Intel. Dana the 386 dianggap sebagai kegagalan besar dalam kehidupan pribadi.
+
+217
+00:17:26.001 --> 00:17:32.000
+Pengkomputeran Dapatkah Anda memberi kami beberapa latar belakang di 386 dan mengapa semua yang baik
+
+218
+00:17:32.000 --> 00:17:38.001
+Mungkin saja. Pertama dari semua 386 adalah generasi 32-bit dari arsitektur 86
+
+219
+00:17:38.001 --> 00:17:43.001
+teknologi yang 8088 generasi PC didasarkan pada dan setelah itu 286
+
+220
+00:17:43.001 --> 00:17:48.000
+Generasi PC didasarkan pada 286. 386 adalah anggota keluarga 32-bit.
+
+221
+00:17:48.000 --> 00:17:52.001
+dan menawarkan tidak hanya kompatibilitas dengan mesin generasi sebelumnya seperti
+
+222
+00:17:52.001 --> 00:17:56.000
+juga meningkatkan kinerja atas apa yang dapat dilakukan mesin-mesin tersebut, tetapi
+
+223
+00:17:56.000 --> 00:18:00.001
+menawarkan arsitektur yang jauh lebih kaya dari mana pengembang perangkat lunak akan dapat
+
+224
+00:18:00.001 --> 00:18:05.001
+Untuk membuat lebih banyak hal yang tersedia untuk pengguna akhir. Dan kita tahu hardware
+
+225
+00:18:05.001 --> 00:18:08.001
+biasanya membawa perangkat lunak di sini dan tentu saja itu adalah salah satu masalah yang kita bicarakan
+
+226
+00:18:08.001 --> 00:18:10.000
+Untuk menggunakannya 386.
+
+227
+00:18:10.001 --> 00:18:14.000
+Sekarang bagaimana dengan sistem operasi khususnya apa yang akan terjadi di sana
+
+228
+00:18:14.000 --> 00:18:18.001
+Dengan 386 untuk mengambil keuntungan dari itu? Yang pertama adalah teknologi Unix.
+
+229
+00:18:18.001 --> 00:18:23.001
+Kegiatan ini sudah berjalan dengan baik untuk 386. Sistem Unix 5 diluncurkan 3 port untuk
+
+230
+00:18:23.001 --> 00:18:28.000
+386 berada di situs beta hari ini di lebih dari 50 OEM yang berbeda yang sedang mengembangkan
+
+231
+00:18:28.000 --> 00:18:33.001
+produk berdasarkan Unix dan 386 dan sertifikasi dari AT&amp;T harus terjadi di
+
+232
+00:18:33.001 --> 00:18:37.000
+pada suku pertama tahun depan. Selain itu, beberapa OEM juga sedang dikembangkan.
+
+233
+00:18:37.000 --> 00:18:43.000
+produk yang mengelilingi 386 Unix dengan berbagai fitur serta ISVs salah satu
+
+234
+00:18:43.000 --> 00:18:49.000
+yang akan kita lihat hari ini dengan Neil berjalan DOS di atas Unix ada beberapa
+
+235
+00:18:49.000 --> 00:18:52.001
+perusahaan yang melakukannya termasuk Locus serta Phoenix dan interaktif dan
+
+236
+00:18:52.001 --> 00:18:56.001
+Selain itu ada teknologi tetingkap yang diletakkan pada 386 Unix dari Sun
+
+237
+00:18:56.001 --> 00:19:01.001
+Mikrosistem dan lainnya. Jadi untuk pasar Unix, komputer mini dan
+
+238
+00:19:01.001 --> 00:19:05.001
+Pemasaran stasiun kerja lingkungan perangkat lunak untuk 386 sudah sangat baik
+
+239
+00:19:05.001 --> 00:19:10.000
+dibangun dan siap untuk datang ke pasar di banyak mesin. Kau telah memimpin kami
+
+240
+00:19:10.000 --> 00:19:13.001
+ke Neil sekarang jadi mari kita bicara tentang produk Anda yang disebut VPIX saya percaya dan
+
+241
+00:19:13.001 --> 00:19:18.000
+Apa yang ia lakukan? Baik VPIX adalah integrasi lingkungan Unix untuk 386
+
+242
+00:19:18.000 --> 00:19:22.001
+dan lingkungan PC DOS PC yang kita semua begitu akrab dengan.
+
+243
+00:19:22.001 --> 00:19:27.001
+Ini memungkinkan Anda untuk menjalankan tugas PC apa pun di bawah Unix sebagai tugas Unix. Dan apa yang menjadi
+
+244
+00:19:27.001 --> 00:19:31.000
+Jadi, apakah itu akan menjadi keuntungan dari 386? Ini memberi Anda kemampuan untuk memiliki
+
+245
+00:19:31.000 --> 00:19:35.000
+yang terbaik dari kedua dunia Anda dapat menjalankan pekerjaan Unix Anda yang biasanya CAD CAM tinggi
+
+246
+00:19:35.000 --> 00:19:38.000
+Tingkat kejuruteraan hal-hal seperti itu dan kemudian pada saat yang sama beralih segera
+
+247
+00:19:38.000 --> 00:19:42.000
+untuk menjalankan beberapa aplikasi jenis DOS yang lebih populer seperti Lotus atau
+
+248
+00:19:42.000 --> 00:19:45.001
+Meningkatkan DBASE Dapatkah Anda memberi kami demonstrasi VPIX dan
+
+249
+00:19:45.001 --> 00:19:47.000
+Tuliskan setup yang Anda miliki di sini Neil?
+
+250
+00:19:48.000 --> 00:19:55.000
+Nah, apa yang kami miliki di sini adalah kami memiliki terminal serial dan jenis IBM EGA biasa.
+
+251
+00:19:55.000 --> 00:19:59.000
+Terminal dan serial terminal terikat di atas RS232 link ke prosesor.
+
+252
+00:20:00.001 --> 00:20:03.001
+Anda bermain dua orang di sini. Saya bermain dua orang ini adalah dua pengguna Unix
+
+253
+00:20:03.001 --> 00:20:07.001
+Sistem jadi sebenarnya kita menjalankan dua tugas Unix yang terpisah pada saat yang sama. Untuk
+
+254
+00:20:07.001 --> 00:20:12.000
+Contohnya jika saya mengetik perintah Unix standar di sini kita melihat kita menjalankan Unix
+
+255
+00:20:12.000 --> 00:20:16.000
+Sistem dengan struktur file tipe Unix. Ok ya. Dan apa yang akan saya lakukan adalah pada EGA saya akan
+
+256
+00:20:16.000 --> 00:20:20.000
+Mulai menggunakan Virtual PC. Jika saya bisa mencetak. Ok ya.
+
+257
+00:20:23.000 --> 00:20:27.000
+Ini seolah-olah kita sedang memulai PC biasa atau PC yang kompatibel. Kami naik dengan
+
+258
+00:20:27.000 --> 00:20:30.000
+ROM sign-on pesan kita sebenarnya muat di PC DOS dan sekarang kita naik dan berjalan
+
+259
+00:20:30.000 --> 00:20:36.001
+Pada PC virtual. Salah satu hal yang bisa kita lakukan adalah kita bisa benar-benar menghancurkan ini
+
+260
+00:20:36.001 --> 00:20:41.000
+jenis lingkungan dalam arti bahwa kita dapat menjalankan lingkungan operasi lain
+
+261
+00:20:41.000 --> 00:20:45.001
+Seperti Microsoft Windows tepat di atas PC virtual ini. Kami akan memulai Microsoft
+
+262
+00:20:45.001 --> 00:20:50.001
+Windows di sini dan saya akan memilih tugas Microsoft Windows yang sebenarnya. Salah satu dari mereka yang
+
+263
+00:20:50.001 --> 00:20:53.001
+Hanya jenis berjalan semua dengan sendirinya ada jam yang dapat Anda letakkan di jendela
+
+264
+00:20:53.001 --> 00:20:57.001
+Dan ia duduk di sini dalam waktu comms. Jadi kami menjalankan Microsoft Windows di bawah MS-DOS
+
+265
+00:20:57.001 --> 00:21:00.000
+dan pada saat yang sama. Pada saat yang sama kita adalah
+
+266
+00:21:00.000 --> 00:21:01.001
+Anda masih menjalankan Unix di terminal lain.
+
+267
+00:21:02.000 --> 00:21:05.001
+Saya dapat melakukan pekerjaan Unix lain di sini jika saya ingin layar lain atau
+
+268
+00:21:05.001 --> 00:21:10.000
+Sesuatu seperti itu atau saya dapat memulai PC virtual lain di terminal ini. ini
+
+269
+00:21:10.000 --> 00:21:14.000
+Terminal bukan layar PC, itu adalah terminal serial. Aku masih bisa mengangkat seperti itu
+
+270
+00:21:14.000 --> 00:21:16.001
+Aplikasi seperti Lotus 1, 2, 3 pada saat yang sama.
+
+271
+00:21:21.000 --> 00:21:25.000
+Dan di sana ia ada. dengan benar. Ok ya. Dan saya pikir Anda juga bisa menunjukkan
+
+272
+00:21:25.000 --> 00:21:27.000
+saya . Ok ya. Kami memiliki Lotus di sana.
+
+273
+00:21:27.000 --> 00:21:29.001
+Kami memiliki Microsoft Windows berjalan di sana. Anda juga bisa menunjukkan kepada saya
+
+274
+00:21:29.001 --> 00:21:34.001
+Sebenarnya bagaimana kita dapat melihat dua direktori Unix dan MS-DOS yang berbeda. dengan benar. Salah satu
+
+275
+00:21:34.001 --> 00:21:38.000
+Dari hal-hal yang sangat menarik adalah, dan mari kita berhenti Lotus di sini sangat cepat,
+
+276
+00:21:40.000 --> 00:21:47.000
+Sebenarnya, kita sebenarnya menggunakan
+
+277
+00:21:47.000 --> 00:21:52.000
+Struktur file yang sama untuk kedua aplikasi. Begitu juga dengan Unix. Di sini kami
+
+278
+00:21:52.000 --> 00:21:57.000
+memiliki file Unix dan kami akan dengan cepat menutup operasi Windows di sini.
+
+279
+00:22:04.001 --> 00:22:07.001
+Kembali ke lingkungan standar DOS. Seperti biasa di sini, mesin adalah banyak
+
+280
+00:22:07.001 --> 00:22:11.001
+Lebih cepat dari pria. Ya, itu bagian paling lambat dari sistem ini. Dan jika saya melakukan a
+
+281
+00:22:11.001 --> 00:22:14.001
+komando direktori standar DOS di sini, kita sebenarnya melihat persis sama
+
+282
+00:22:14.001 --> 00:22:18.000
+mengumpulkan file dalam kedua kasus. Dalam hal ini, kita melihatnya dari dua titik.
+
+283
+00:22:18.000 --> 00:22:21.000
+Dari sudut pandang dan di sini kita melihatnya dari sudut pandangan Unix. Danya, biarlah aku
+
+284
+00:22:21.000 --> 00:22:24.000
+Tanyakan, kami telah mendengar banyak tentang mode yang berbeda dalam menjalankan 386 virtual
+
+285
+00:22:24.000 --> 00:22:28.000
+mode dan mode yang dilindungi dan sebagainya. menjelaskan hal itu. Apa artinya semua itu? Baiklah
+
+286
+00:22:28.000 --> 00:22:32.000
+Pertama sekali, benar-benar ada satu mode di prosesor yang digunakan oleh semua orang dan
+
+287
+00:22:32.000 --> 00:22:35.001
+Ini adalah mode yang dilindungi dari prosesor. kemampuan virtual dan kemampuan
+
+288
+00:22:35.001 --> 00:22:41.000
+kemampuan untuk menjalankan mesin virtual 86 di atas Unix semuanya terkandung di dalam
+
+289
+00:22:41.000 --> 00:22:46.000
+mode yang dilindungi. Jadi kapasitas virtual adalah subset dari mode yang dilindungi dan
+
+290
+00:22:46.000 --> 00:22:50.001
+dapat dipilih dan pada tugas oleh tugas atau pengguna oleh basis pengguna di dalam yang dilindungi
+
+291
+00:22:50.001 --> 00:22:55.000
+dengan mode. Bagaimana dengan mode yang dilindungi? Ini berarti seluruh arsitektur mesin,
+
+292
+00:22:55.000 --> 00:23:01.000
+Arsitektur memori 32-bit dan virtual dari prosesor. Jadi itu berarti bahwa
+
+293
+00:23:01.000 --> 00:23:05.000
+Apakah aplikasi, misalnya, tidak dapat menutup sistem operasi? Itu adalah salah satu
+
+294
+00:23:05.000 --> 00:23:08.001
+Salah satu alasan yang kita sebut mode yang dilindungi adalah karena ada beberapa intrinsik
+
+295
+00:23:08.001 --> 00:23:13.001
+fitur dalam chip yang memungkinkan perlindungan, terlebih dahulu, dari aplikasi
+
+296
+00:23:13.001 --> 00:23:17.000
+dapat menyakiti sistem operasi dan juga dari aplikasi untuk menjadi
+
+297
+00:23:17.000 --> 00:23:21.001
+dapat menyakiti aplikasi lain. Selain itu, ada juga perlindungan dari
+
+298
+00:23:21.001 --> 00:23:25.000
+Dalam aplikasi dapat melakukan hal-hal yang salah pada mesin. Ada yang
+
+299
+00:23:25.000 --> 00:23:29.000
+perlindungan di semua area yang berbeda dalam multitasking 32-bit penuh
+
+300
+00:23:29.000 --> 00:23:32.000
+lingkungan yang Sangat cepat, teman-teman, sekitar 30 detik. Apa masa depan di sini?
+
+301
+00:23:32.000 --> 00:23:35.001
+Apa yang dimaksud dengan mesin 386 untuk pengguna turun garis sekarang setelah kita mendapatkan
+
+302
+00:23:35.001 --> 00:23:39.000
+Aplikasi yang akan datang? Jadi, saya pikir itu berarti bahwa aplikasi yang akan
+
+303
+00:23:39.000 --> 00:23:41.001
+menjadi tersedia dalam beberapa tahun ke depan akan jauh lebih
+
+304
+00:23:41.001 --> 00:23:43.000
+lebih kuat dari aplikasi yang kita miliki hari ini.
+
+305
+00:23:43.000 --> 00:23:47.000
+Banyak dari mereka yang kami harapkan akan menggabungkan banyak teknik kecerdasan buatan
+
+306
+00:23:47.000 --> 00:23:52.001
+untuk memungkinkan mesin untuk diformulasikan kepada pengguna sekarang dan bukannya sebaliknya dalam
+
+307
+00:23:52.001 --> 00:23:55.001
+masa lalu . Sayang, terima kasih banyak, John. Terima kasih telah bersama kami di sini.
+
+308
+00:23:55.001 --> 00:23:57.001
+Kami punya banyak waktu. Kami akan kembali dalam satu menit
+
+309
+00:23:57.001 --> 00:23:59.000
+dengan berita komputer minggu ini.
+
+310
+00:24:10.000 --> 00:24:14.000
+Dalam File Akses Random minggu ini, sudah tiba masanya bagi semua prognosticator IBM untuk
+
+311
+00:24:14.000 --> 00:24:18.001
+terbukti benar atau salah. Rumor mengalir selama berbulan-bulan pada akhir 1986 bahwa 1987
+
+312
+00:24:18.001 --> 00:24:22.001
+akan melihat Big Blue keluar dengan PC low-end baru yang ditujukan pada pasar pendidikan,
+
+313
+00:24:23.000 --> 00:24:28.000
+Sebuah mesin 286 baru, dan sebuah komputer berbasis 386 baru. Tapi sementara semua orang
+
+314
+00:24:28.000 --> 00:24:32.000
+Menunggu untuk melihat apa yang baru, tampaknya IBM telah memanggilnya keluar pada yang asli
+
+315
+00:24:32.000 --> 00:24:37.000
+PC, komputer yang revolusioner bisnis komputer pribadi. Sumber mengatakan
+
+316
+00:24:37.000 --> 00:24:40.001
+yang produksi IBM PC telah berhenti dan bahwa fasilitas produksi
+
+317
+00:24:40.001 --> 00:24:45.000
+yang akan diputar kembali untuk generasi baru PC yang diharapkan tahun ini. Namun, meskipun
+
+318
+00:24:45.000 --> 00:24:49.001
+laporan bahwa produksi PC berakhir, PC asli IBM masih bertanggung jawab untuk sekitar
+
+319
+00:24:49.001 --> 00:24:51.001
+7% dari total penjualan PC.
+
+320
+00:24:53.000 --> 00:24:56.001
+Tahun 1987 akan menjadi tahun apa? Pada tahun lalu, ketika semua penulis
+
+321
+00:24:56.001 --> 00:25:00.001
+Apakah tahun 1986 akan menjadi tahun kecerdasan buatan? Baiklah, itu
+
+322
+00:25:00.001 --> 00:25:04.001
+Dia tidak keluar dengan cara itu. Produk AI secara umum telah menjadi kekecewaan dan
+
+323
+00:25:04.001 --> 00:25:08.001
+Harga saham perusahaan AI jatuh ke bawah tiga tahun pada akhir 1986,
+
+324
+00:25:09.000 --> 00:25:13.001
+Menurun rata-rata 26% dari tahun lalu. Salah satu faktor utama di masa depan adalah
+
+325
+00:25:13.001 --> 00:25:17.000
+Aplikasi kecerdasan buatan akan menjadi peran Departemen Pertahanan,
+
+326
+00:25:17.000 --> 00:25:21.001
+yang sampai saat ini telah menjadi penyokong utama penelitian AI, terutama untuk
+
+327
+00:25:21.001 --> 00:25:27.001
+mendukung Star Wars atau SDI. Sebuah studi baru-baru ini oleh Rider College di New Jersey menyimpulkan
+
+328
+00:25:27.001 --> 00:25:32.000
+bahwa siswa yang menggunakan komputer dan prosesor kata mendapatkan gelar yang lebih baik pada
+
+329
+00:25:32.000 --> 00:25:36.000
+lebih dari siswa yang menggunakan penulisan teks. Penelitian ini menunjukkan bahwa pada empat titik
+
+330
+00:25:36.000 --> 00:25:40.001
+skala, kertas dibuat pada prosesor kata rata-rata 3.1, sementara kertas dibuat di
+
+331
+00:25:40.001 --> 00:25:45.001
+Tipewriter rata-rata hanya 2.6. Hasil lain yang menarik adalah bahwa dalam sampel
+
+332
+00:25:45.001 --> 00:25:50.001
+200 kertas, tidak ada siswa yang menggunakan prosesor kata gagal kertas, dan kertas pada
+
+333
+00:25:50.001 --> 00:25:54.000
+Prosesor kata cenderung lebih lama dari yang tertulis. Akhirnya, dan ini adalah
+
+334
+00:25:54.000 --> 00:26:00.000
+Sebuah kejutan, 76% kertas yang dibuat pada komputer ditulis oleh wanita. Pembuat Hukum
+
+335
+00:26:00.000 --> 00:26:03.001
+di Montana telah muncul dengan gagasan baru untuk database online yang menyenaraikan semua
+
+336
+00:26:03.001 --> 00:26:07.001
+perhitungan di depan Dewan Undang-Undang Negeri, nama sponsor, jadwal
+
+337
+00:26:07.001 --> 00:26:12.000
+untuk perbicaraan komite, dan status undang-undang. Pengguna membayar biaya rata $100
+
+338
+00:26:12.000 --> 00:26:16.000
+untuk akses tak terbatas ke sistem. Waktu untuk program minggu ini
+
+339
+00:26:16.000 --> 00:26:17.001
+untuk review. Ini adalah Paul Schindler.
+
+340
+00:26:21.001 --> 00:26:26.000
+Kau pergi, jangan mengganggu aku. Oh, itu adalah Anda. Okay, saya akan membiarkan Anda masuk sedikit
+
+341
+00:26:26.000 --> 00:26:31.000
+rahasia yang Semua keraguan yang saya miliki tentang komputer Atari ST telah dihapus ketika saya melihat
+
+342
+00:26:31.000 --> 00:26:35.001
+Time Bandit, koleksi yang hanya spektakuler dari permainan jenis maze yang mengambil penuh
+
+343
+00:26:35.001 --> 00:26:40.000
+Keuntungan dari kemampuan grafis warna dari Atari. Ada 16 yang terpisah.
+
+344
+00:26:40.000 --> 00:26:44.000
+permainan termasuk dalam paket tunggal ini, masing-masing dapat dimainkan pada 16
+
+345
+00:26:44.000 --> 00:26:48.001
+Tingkat yang berbeda. Orang-orang ini bahkan membuat memilih permainan apa yang harus dimainkan dalam permainan.
+
+346
+00:26:49.000 --> 00:26:52.001
+Jika Anda tidak berhati-hati selama proses pemilihan, Anda akan dipindahkan oleh
+
+347
+00:26:52.001 --> 00:26:58.000
+Spasial untuk permainan yang bukan pilihan Anda. Lihatlah grafis ini dengan baik. Mereka adalah
+
+348
+00:26:58.000 --> 00:27:01.001
+Anda mungkin tidak muncul dengan jelas di layar Anda, tetapi pergelangan tangan bahkan lebih bercahaya. dan yang
+
+349
+00:27:01.001 --> 00:27:05.000
+monster yang mengejar Anda di masjid-masjid ini menutupi jalur dari hantu ke sesuatu
+
+350
+00:27:05.000 --> 00:27:09.000
+Ini terlihat seperti tomato. Masalah dengan kebanyakan permainan adalah kelelahan.
+
+351
+00:27:09.001 --> 00:27:12.001
+Dengan Time Bandits, ada begitu banyak pilihan yang sulit untuk dibayangkan dengan memakainya.
+
+352
+00:27:13.000 --> 00:27:18.000
+Hats off ke Mitch Tron dari Pontiac, Michigan, distributor dari $ 40 Atari ini
+
+353
+00:27:18.000 --> 00:27:25.000
+Permainan yang Untuk penulis perjalanan komputer, ia keluar dengan apa yang mungkin pertama
+
+354
+00:27:25.000 --> 00:27:29.000
+Buku lengkap didistribusikan secara eksklusif pada cakera floppy. Ini disebut West Coast.
+
+355
+00:27:29.000 --> 00:27:33.001
+Berwisata ke California, dan dijual sejak 1995. Penulis Lee Foster mengatakan bahwa
+
+356
+00:27:33.001 --> 00:27:37.000
+jauh lebih praktis dari buku cetak, update dan edisi baru lebih murah,
+
+357
+00:27:37.000 --> 00:27:40.001
+Dan pembaca hanya dapat mengeluarkan bab yang mereka benar-benar inginkan dan mencetaknya.
+
+358
+00:27:41.000 --> 00:27:44.000
+Ann mengatakan Foster, setelah mendasari dan menulis di seluruh halaman, Anda dapat
+
+359
+00:27:44.000 --> 00:27:49.000
+Selalu mencetak salinan segar dari komputer Anda. Akhirnya, seorang ilmuwan komputer
+
+360
+00:27:49.000 --> 00:27:53.000
+di Bell Labs mengatakan dia telah melakukan banyak penelitian tentang Leonardo da Vinci
+
+361
+00:27:53.000 --> 00:27:57.000
+melukis Mona Lisa dan sketsa artis itu sendiri, dan dia menyimpulkan bahwa
+
+362
+00:27:57.000 --> 00:28:02.001
+Vinci sendiri adalah model untuk Mona Lisa. Menurutnya, analisis komputer dari
+
+363
+00:28:02.001 --> 00:28:07.000
+Struktur wajah Da Vinci dan Mona Lisa menunjukkan bahwa mereka identik. Dia mengatakan
+
+364
+00:28:07.000 --> 00:28:10.001
+Kisah bahwa model adalah seorang wanita bernama Mona Lisa Garradini hanya didasarkan pada
+
+365
+00:28:10.001 --> 00:28:15.000
+rumor yang terdengar. Selain itu, dia mengatakan bahwa Leonardo da Vinci mungkin gay dan
+
+366
+00:28:15.000 --> 00:28:17.001
+Mona Lisa mungkin adalah potret fantasi diri.
+
+367
+00:28:17.001 --> 00:28:20.000
+Itulah yang terjadi pada kronik minggu ini. Kita akan berjumpa denganmu lain kali.
+
+368
+00:29:17.001 --> 00:29:25.000
+[...]

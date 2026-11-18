@@ -1,0 +1,1697 @@
+WEBVTT
+
+1
+00:00:25.000 --> 00:00:29.001
+C&#x27;est le plus grand tunnel éolien du monde ici à la recherche Ames de la NASA.
+
+2
+00:00:31.001 --> 00:00:35.001
+Il a été utilisé pour tester l&#x27;aérodynamique des nouveaux avions pour simuler
+
+3
+00:00:35.001 --> 00:00:37.000
+les conditions réelles du vol.
+
+4
+00:00:37.001 --> 00:00:41.000
+Mais quand il s&#x27;agit d&#x27;avions expérimentaux comme le nouveau avion aérospatial national,
+
+5
+00:00:41.001 --> 00:00:45.001
+qui peuvent voyager à des vitesses jusqu’au 25 mars, ce tunnel de vent devient inutile.
+
+6
+00:00:46.000 --> 00:00:50.000
+Ces types de simulations ne peuvent être exécutées que sur un ordinateur, sur un superordinateur.
+
+7
+00:00:51.000 --> 00:00:55.001
+Aujourd’hui, nous examinons l’incroyable vitesse et la puissance des supercomputés sur ce point.
+
+8
+00:00:55.001 --> 00:00:57.000
+Édition des Chroniques informatiques.
+
+9
+00:01:20.001 --> 00:01:25.000
+Les Chroniques informatiques sont rendues possibles par Leading Edge, créateurs d’IBM
+
+10
+00:01:25.000 --> 00:01:28.001
+-des systèmes informatiques compatibles, y compris le traitement des mots avec la correction de l&#x27;écriture,
+
+11
+00:01:28.001 --> 00:01:33.000
+logiciel de communication, et modèles Haze-compatible 1200 et 2400 VOD.
+
+12
+00:01:33.001 --> 00:01:36.000
+Leading Edge avec plus de 1000 centres de service à travers le pays.
+
+13
+00:01:37.000 --> 00:01:39.001
+Leading Edge, conduit le chemin vers l’âge de l’information.
+
+14
+00:01:40.001 --> 00:01:43.000
+Un financement supplémentaire est fourni par McGraw-Hill, éditeurs de Byte.
+
+15
+00:01:44.000 --> 00:01:48.000
+Articles techniques détaillés de Byte sur les nouveaux matériels, logiciels et langues couverts
+
+16
+00:01:48.000 --> 00:01:50.000
+Des développements dans les technologies informatiques dans le monde entier.
+
+17
+00:01:56.000 --> 00:02:00.000
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chifay et c&#x27;est Gary Kildall.
+
+18
+00:02:00.001 --> 00:02:04.000
+Gary, c’est évidemment pas un ordinateur. C’est un modèle de l’aérospace national.
+
+19
+00:02:04.000 --> 00:02:05.001
+Plane, ce que j&#x27;ai juste parlé.
+
+20
+00:02:05.001 --> 00:02:09.000
+On l’appelle l’Orient Express. Il est conçu pour aller à des vitesses plus rapides
+
+21
+00:02:09.000 --> 00:02:10.001
+plus de 15 000 kilomètres par heure.
+
+22
+00:02:11.000 --> 00:02:13.000
+Cela signifie San Francisco à New York en 12 minutes.
+
+23
+00:02:13.001 --> 00:02:16.001
+Maintenant, vous êtes un pilote en plus d&#x27;être un expert informatique, donc je veux vous demander,
+
+24
+00:02:16.001 --> 00:02:20.001
+Quand ces ingénieurs aéronautiques parlent de simulation aérodynamique, ce qui est
+
+25
+00:02:20.001 --> 00:02:23.000
+Ils tentent de découvrir et pourquoi ils ont besoin d&#x27;un superordinateur pour le faire?
+
+26
+00:02:23.000 --> 00:02:25.000
+Eh bien, tout d&#x27;abord, Stuart, je n&#x27;ai jamais volé quelque chose qui ressemble même
+
+27
+00:02:25.000 --> 00:02:28.000
+C’est une chose comme ça, et je ne suis pas un ingénieur aéronautique.
+
+28
+00:02:28.000 --> 00:02:30.001
+Mais je comprends ce qu&#x27;ils ont à faire, c&#x27;est qu&#x27;il faut compter la pression et
+
+29
+00:02:30.001 --> 00:02:34.000
+La tension sur toute la surface de l&#x27;avion tout au long du vol
+
+30
+00:02:34.000 --> 00:02:36.001
+enveloppe, allant d’un tirage à, effectivement, son
+
+31
+00:02:36.001 --> 00:02:38.000
+L&#x27;espace extérieur et le retour à un atterrissage.
+
+32
+00:02:38.001 --> 00:02:42.000
+Ainsi, ce qu&#x27;ils font, c&#x27;est qu&#x27;il utilise un grand superordinateur qui est équivalent, disons, à 50 000
+
+33
+00:02:42.000 --> 00:02:46.000
+PCs, et vous allez et comptez chaque point dans l&#x27;avion, la pression et
+
+34
+00:02:46.000 --> 00:02:48.000
+stress, puis vous le faites pour l&#x27;ensemble du vol enveloppe
+
+35
+00:02:48.000 --> 00:02:49.001
+Analyser les résultats, faire les changements.
+
+36
+00:02:50.000 --> 00:02:52.001
+Mais ce qui me concerne vraiment, cependant, si cela ne prend que 12 minutes pour aller
+
+37
+00:02:52.001 --> 00:02:54.001
+Dans tous les pays, alors que vais-je faire avec mon ordinateur portable?
+
+38
+00:02:55.000 --> 00:02:58.000
+Non, nous ne parlerons pas des ordinateurs portables. Nous allons parler de
+
+39
+00:02:58.000 --> 00:02:59.001
+Le plus récent dans les superordinateurs aujourd&#x27;hui.
+
+40
+00:02:59.001 --> 00:03:03.001
+En fait, nous verrons le système de superordinateur le plus récent et le plus puissant du monde, le
+
+41
+00:03:03.001 --> 00:03:05.001
+C’est le centre de recherche Ames de la NASA.
+
+42
+00:03:05.001 --> 00:03:10.000
+Nous commençons par une visite à la facilité de simulation aérodynamique numérique en
+
+43
+00:03:10.000 --> 00:03:13.001
+Mountain View, Californie, où le cœur du système est un nouveau Cray-2.
+
+44
+00:03:14.001 --> 00:03:15.000
+[...]
+
+45
+00:03:18.000 --> 00:03:18.001
+[...]
+
+46
+00:03:19.001 --> 00:03:25.001
+Le 9 mars 1987, le centre de recherche Ames de la NASA à Mountain View, en Californie,
+
+47
+00:03:25.001 --> 00:03:29.001
+Il a inauguré un nouveau centre de conception d&#x27;avions supercomputé assisté.
+
+48
+00:03:29.001 --> 00:03:34.000
+La cérémonie colorée a signalé la détermination de la NASA d’être à l’avant-garde de
+
+49
+00:03:34.000 --> 00:03:36.000
+dynamique de fluide comptable.
+
+50
+00:03:37.001 --> 00:03:41.001
+Il y a sept ans, le Centre de recherche Ames a lancé un effort agressif
+
+51
+00:03:41.001 --> 00:03:43.001
+dans la dynamique des fluides comptables.
+
+52
+00:03:45.000 --> 00:03:50.000
+C’est-à-dire la solution des équations mathématiques qui régissent la
+
+53
+00:03:50.000 --> 00:03:51.001
+flux de liquides et de gaz.
+
+54
+00:03:53.000 --> 00:03:59.000
+Les visionnaires qui ont conçu ce programme savaient que le design de l&#x27;avion était un essai.
+
+55
+00:03:59.000 --> 00:04:03.001
+et le processus d&#x27;erreur et un qui a nécessité des milliers d&#x27;heures de test de tunnel éolien.
+
+56
+00:04:05.000 --> 00:04:09.001
+Ils croyaient que les techniques de simulation informatique pouvaient être dévisées et que
+
+57
+00:04:09.001 --> 00:04:13.000
+Ces techniques pourraient accélérer le processus de conception de l&#x27;avion.
+
+58
+00:04:13.001 --> 00:04:17.000
+Jusqu&#x27;à présent, les ordinateurs dans le design aéronautique
+
+59
+00:04:17.000 --> 00:04:18.001
+Ils nous ont permis de mieux faire les choses.
+
+60
+00:04:19.001 --> 00:04:24.001
+Ils ont conduit à l’amélioration des conceptions et à une plus grande efficacité dans le processus de conception.
+
+61
+00:04:25.001 --> 00:04:30.000
+Mais avec les véhicules qui sont maintenant sur la boîte de dessin, comme l&#x27;aérospace
+
+62
+00:04:30.000 --> 00:04:35.000
+l&#x27;avion, par exemple, l&#x27;autorisation de la NASA, ce n&#x27;est pas une question de faire les choses mieux,
+
+63
+00:04:35.001 --> 00:04:37.001
+C’est une question de les faire en tout cas.
+
+64
+00:04:37.001 --> 00:04:44.000
+Au cœur de la NAS, ou le simulateur aérodynamique numérique, est le Cray-2, un
+
+65
+00:04:44.000 --> 00:04:49.000
+La machine à quatre processeurs effectue régulièrement 250 millions d&#x27;opérations de points flottants
+
+66
+00:04:49.000 --> 00:04:54.001
+par seconde, avec une vitesse de brouillard supérieure à 1. 7 milliards de calculs par seconde.
+
+67
+00:04:55.000 --> 00:05:01.000
+La mémoire principale contient 256 millions de mots 64 bits. Il a la puissance de traitement de
+
+68
+00:05:01.000 --> 00:05:03.000
+Il y a environ 50 000 PC.
+
+69
+00:05:03.000 --> 00:05:07.001
+Pour garder la machine compacte froide, les circuits sont immers en fluor liquide inerte.
+
+70
+00:05:08.001 --> 00:05:12.001
+La NASA s&#x27;attend à des vitesses encore plus élevées lorsque un second superordinateur sera ajouté tardivement
+
+71
+00:05:12.001 --> 00:05:16.001
+1987, le rapprochant de son objectif à long terme de 10
+
+72
+00:05:16.001 --> 00:05:18.000
+1 milliard d’opérations par seconde.
+
+73
+00:05:18.001 --> 00:05:23.000
+La puissance massive du matériel NAS vise à résoudre les équations complexes
+
+74
+00:05:23.000 --> 00:05:25.000
+des fluides simulés.
+
+75
+00:05:25.000 --> 00:05:31.001
+Le problème fondamental que nous attaquons est de pouvoir simuler le flux au-dessus
+
+76
+00:05:31.001 --> 00:05:35.001
+Une configuration complète de l’avion. C’est le fuselage, les ailes, le cou.
+
+77
+00:05:36.001 --> 00:05:41.001
+Et de le faire d’une manière qui capte les physiques essentielles du champ de flux,
+
+78
+00:05:42.000 --> 00:05:46.000
+qui est assez complexe. Et en général, il s&#x27;agit d&#x27;un champ de flux turbulent, donc le flux
+
+79
+00:05:46.000 --> 00:05:48.000
+C’est chaotique et très complexe.
+
+80
+00:05:48.000 --> 00:05:53.000
+En outre, nous avons pu créer de nouveaux champs de flux qui n’ont jamais été réalisés
+
+81
+00:05:53.000 --> 00:05:58.001
+avant dans les zones intérieures à un moteur, par exemple, les flux à l&#x27;intérieur
+
+82
+00:05:58.001 --> 00:06:00.000
+Le moteur principal du shuttle.
+
+83
+00:06:01.000 --> 00:06:05.001
+La simulation aérodynamique est devenue la façon préférée de concevoir des avions qui
+
+84
+00:06:05.001 --> 00:06:08.000
+Dans le cas contraire, il est nécessaire d&#x27;effectuer une étendue d&#x27;essai du tunnel éolien.
+
+85
+00:06:08.001 --> 00:06:12.001
+Le superordinateur peut graphiquement récupérer les forces physiques sur une
+
+86
+00:06:12.001 --> 00:06:16.001
+Le design d&#x27;ailes ou de fuselage à travers un processus appelé traction des particules.
+
+87
+00:06:16.001 --> 00:06:21.001
+L&#x27;ingénieur sélectionne des points le long de la conception de laquelle pour libérer les particules. par
+
+88
+00:06:21.001 --> 00:06:24.001
+En traçant le flux de ces particules, il peut découvrir
+
+89
+00:06:24.001 --> 00:06:26.000
+zones de turbulence ou de stress.
+
+90
+00:06:26.001 --> 00:06:29.001
+La prochaine étape est de faire les changements nécessaires pour améliorer la
+
+91
+00:06:29.001 --> 00:06:31.000
+Les performances aérodynamiques de l’avion.
+
+92
+00:06:31.001 --> 00:06:36.001
+Sans le test de vol simulé, le seul moyen de détecter les défauts est de créer un
+
+93
+00:06:36.001 --> 00:06:39.001
+d&#x27;une série de modèles et de les tester de temps en temps dans un tunnel éolien.
+
+94
+00:06:39.001 --> 00:06:43.001
+Vous avez toujours à décider de façon conceptuelle sur votre modèle, vous avez encore à faire un
+
+95
+00:06:43.001 --> 00:06:46.000
+le design, mais le design reste toujours en mathématiques
+
+96
+00:06:46.000 --> 00:06:48.001
+forme, et il est facilement changable.
+
+97
+00:06:48.001 --> 00:06:52.001
+Donc, vous mettez votre modèle dans l&#x27;ordinateur, obtenez vos résultats, regardez-les et
+
+98
+00:06:52.001 --> 00:06:57.000
+Changez votre modèle. C’est ce que nous appelons le coup et le fil dans un tunnel de vent, le coup
+
+99
+00:06:57.000 --> 00:06:59.001
+et enregistrer dans un ordinateur plutôt que de couper et enregistre dans un tunnel éolien.
+
+100
+00:06:59.001 --> 00:07:05.000
+Les avantages de la simulation aérodynamique sont dramatiques. Le structurel
+
+101
+00:07:05.000 --> 00:07:10.000
+L&#x27;analyse de l&#x27;avion le plus récent de Boeing, le 7J7, ne prend que 10 heures
+
+102
+00:07:10.000 --> 00:07:16.000
+temps de superordinateur, comparé à 12 jours de temps de l&#x27;ordinateur pour les 747 et 21
+
+103
+00:07:16.000 --> 00:07:20.001
+mois pour le premier avion B-47 jet quand une règle de slide était le seul ordinateur.
+
+104
+00:07:20.001 --> 00:07:25.001
+Mais les simulations de superordinateur fournissent plus que simplement la vitesse. Le système NAS
+
+105
+00:07:25.001 --> 00:07:30.000
+l’uniquité réside dans sa capacité à simuler des expériences qui sont impossibles ou
+
+106
+00:07:30.000 --> 00:07:34.000
+impractique à recréer sur la Terre, comme le comportement du booster du shuttle
+
+107
+00:07:34.000 --> 00:07:38.000
+Le rocket ou les effets de voyager à 25 fois la vitesse du son.
+
+108
+00:07:38.000 --> 00:07:45.000
+L&#x27;effort de simulation aérodynamique numérique est déjà en cours de
+
+109
+00:07:45.000 --> 00:07:49.001
+compter le champ de flux autour d&#x27;un véhicule qui va partir comme un avion,
+
+110
+00:07:50.000 --> 00:07:53.001
+Mais au lieu d&#x27;équilibrer à 40 000 pieds comme vous le faites dans un typique
+
+111
+00:07:53.001 --> 00:07:58.001
+jet transcontinental, vous continuez à aller 50 000, 100 000, 500
+
+112
+00:07:58.001 --> 00:08:00.001
+Des milliers de pieds dans l’espace.
+
+113
+00:08:00.001 --> 00:08:06.000
+Et ce type de véhicule ne peut être conçu que avec le
+
+114
+00:08:06.000 --> 00:08:08.000
+La capacité que nous avons ici à Ames.
+
+115
+00:08:08.001 --> 00:08:13.001
+Les équations qui régissent la dynamique fluide sont connues depuis les années 1840, mais les
+
+116
+00:08:13.001 --> 00:08:18.000
+La complexité de ces équations non linéaires est telle que certaines n&#x27;ont jamais été résolues jusqu&#x27;à ce que
+
+117
+00:08:18.000 --> 00:08:22.000
+Les superordinateurs fournissent la vitesse nécessaire et la puissance de numérisation.
+
+118
+00:08:22.000 --> 00:08:26.000
+Il y a quelques flux très intéressants que nous n&#x27;avons jamais pu calculer
+
+119
+00:08:26.000 --> 00:08:28.001
+Jusqu’à l’arrivée des ordinateurs à grande vitesse.
+
+120
+00:08:31.000 --> 00:08:35.001
+Un cas intéressant est le flux près de la vitesse du son, qui est appelé
+
+121
+00:08:35.001 --> 00:08:42.000
+Le flux transonique. Les mathématiciens ont essayé pendant 20 ans de résoudre ce champ de flux
+
+122
+00:08:42.000 --> 00:08:47.000
+avec des techniques mathématiques normales,
+
+123
+00:08:47.000 --> 00:08:49.000
+Et ils ne pouvaient jamais obtenir une réponse.
+
+124
+00:08:49.000 --> 00:08:53.000
+Et ce n&#x27;était pas jusqu&#x27;à ce que l&#x27;ordinateur soit assez grand pour que les gens puissent modéliser ce
+
+125
+00:08:53.000 --> 00:08:55.001
+l&#x27;ordinateur que nous pouvons obtenir les réponses à ces questions.
+
+126
+00:08:56.001 --> 00:09:01.000
+La puissance informatique immense de Cray 2 de NAS est inutile sans
+
+127
+00:09:01.000 --> 00:09:06.000
+interface humaine compréhensible, qui, dans ce cas, dépend fortement des graphiques.
+
+128
+00:09:06.000 --> 00:09:12.001
+Laissez-moi dire que l&#x27;utilisation des graphiques est essentielle parce qu&#x27;elle est très, très importante
+
+129
+00:09:12.001 --> 00:09:19.000
+que l&#x27;utilisateur, qui est par la suite un aérodynamique hautement formé, obtient l&#x27;image
+
+130
+00:09:19.000 --> 00:09:21.000
+La physique du phénomène.
+
+131
+00:09:22.000 --> 00:09:28.000
+Et encore une fois, il peut utiliser une méthode d&#x27;essai et d&#x27;erreur en faisant un changement que vous pouvez
+
+132
+00:09:28.000 --> 00:09:31.001
+Voir et voir ce qu’il a d’effet.
+
+133
+00:09:32.001 --> 00:09:36.001
+L&#x27;accent de NAS sur l&#x27;amitié à l&#x27;utilisateur s&#x27;étend au fonctionnement uniforme du réseau
+
+134
+00:09:36.001 --> 00:09:38.001
+Système et architecture ouverte.
+
+135
+00:09:39.000 --> 00:09:44.000
+UNIX est le système commun pour tous les 8 000 utilisateurs, que la porte soit via
+
+136
+00:09:44.000 --> 00:09:45.001
+PC ou mainframe.
+
+137
+00:09:47.000 --> 00:09:50.000
+Vous pouvez faire des choses dans une station de travail comme si vous ouvriez une fenêtre dans votre station de travaux,
+
+138
+00:09:50.001 --> 00:09:52.001
+et c&#x27;est une fenêtre sur le superordinateur pendant que vous ouvrez une
+
+139
+00:09:52.001 --> 00:09:54.001
+fenêtre d’un autre ordinateur.
+
+140
+00:09:55.000 --> 00:10:02.000
+Et ces types d’outils plus sophistiqués que l’on regarde dans la
+
+141
+00:10:02.000 --> 00:10:05.000
+L’environnement de la station de travail est en train de s’inscrire
+
+142
+00:10:05.000 --> 00:10:06.001
+l’ensemble de l’environnement supercomputé.
+
+143
+00:10:07.000 --> 00:10:12.000
+Nous avons pensé que cela était important parce que nous avons vu la nécessité de différentes classes de
+
+144
+00:10:12.000 --> 00:10:15.001
+les ordinateurs dans un environnement supercomputé pour soutenir les gros nombre de crunchers.
+
+145
+00:10:15.001 --> 00:10:20.001
+Mais nous avons également vu qu&#x27;il était important de fournir une base que nous pouvons grandir de sorte que nous
+
+146
+00:10:20.001 --> 00:10:23.001
+Vous pouvez ajouter des mises à jour de matériel et de logiciel sans avoir à changer.
+
+147
+00:10:23.001 --> 00:10:25.001
+le système d’exploitation sous l’utilisateur.
+
+148
+00:10:26.001 --> 00:10:30.000
+Depuis que le premier tunnel aérien a été construit il y a plus de 100 ans, l&#x27;aérodynamique
+
+149
+00:10:30.000 --> 00:10:32.000
+Le test n&#x27;a changé que dans son raffinement.
+
+150
+00:10:33.000 --> 00:10:36.001
+Les concepteurs peuvent tester à des vitesses plus élevées en utilisant des techniques de modélisation plus sophistiquées.
+
+151
+00:10:37.000 --> 00:10:40.001
+Et alors que l&#x27;arrivée des superordinateurs a rendu possible de simuler beaucoup de
+
+152
+00:10:40.001 --> 00:10:44.000
+Les aspects de la réalité, il y a une limite au niveau des détails.
+
+153
+00:10:45.001 --> 00:10:51.001
+L&#x27;ordinateur est très bon à obtenir des données très préliminaires, et il peut être très
+
+154
+00:10:51.001 --> 00:10:56.001
+Regardez rapidement un espace de conception très large, beaucoup, beaucoup de conceptions.
+
+155
+00:10:57.001 --> 00:11:02.001
+Et puis le tunnel éolien est très bon à obtenir des données très précises sur extrêmement
+
+156
+00:11:02.001 --> 00:11:05.000
+Des configurations complexes.
+
+157
+00:11:06.001 --> 00:11:10.000
+Et c&#x27;est comme si elle pouvait le faire au niveau de détails de la tête de rivet où le
+
+158
+00:11:10.000 --> 00:11:12.001
+L&#x27;ordinateur, nous n&#x27;avons pas assez de puissance informatique pour le faire.
+
+159
+00:11:12.001 --> 00:11:17.001
+Les capacités de simulation centrales à l&#x27;aérodynamique future ont ouvert de nouvelles
+
+160
+00:11:17.001 --> 00:11:19.001
+Possibilités dans d’autres sciences aussi.
+
+161
+00:11:20.001 --> 00:11:23.001
+Les chercheurs peuvent maintenant étudier des événements qui sont trop complexes pour se reproduire.
+
+162
+00:11:23.001 --> 00:11:26.000
+physiquement ou qui s’étend au-delà des limites terrestres.
+
+163
+00:11:27.000 --> 00:11:32.000
+NAS peut imiter le climat sur d&#x27;autres planètes, examiner la dynamique de l&#x27;explosion
+
+164
+00:11:32.000 --> 00:11:36.001
+des étoiles, et même des galaxies en collision.
+
+165
+00:11:42.001 --> 00:11:47.000
+Enfin, les scientifiques à Ames attendent que le système NAS devienne une sorte de
+
+166
+00:11:47.000 --> 00:11:50.000
+conseiller aérodynamique, tout comme les systèmes d&#x27;experts basés
+
+167
+00:11:50.000 --> 00:11:52.000
+sur l’intelligence artificielle.
+
+168
+00:11:52.001 --> 00:11:59.000
+On peut conceptuellement concevoir d’être réellement en mesure d’utiliser
+
+169
+00:11:59.000 --> 00:12:05.001
+un système qui combine vraiment les aspects de la façon dont je la dessine avec la façon de
+
+170
+00:12:05.001 --> 00:12:09.000
+Je fais l&#x27;analyse pour savoir quel type de design est et puis iterer sur cela.
+
+171
+00:12:09.000 --> 00:12:13.001
+Nous avons, en fait, fait du travail dans ce domaine, mais, vous savez, raisonnablement primitif,
+
+172
+00:12:13.001 --> 00:12:16.001
+Pas pour le tout, l’idée de concevoir un aéronef entier.
+
+173
+00:12:17.000 --> 00:12:23.000
+C&#x27;est une direction de la recherche qui prend le moment et est
+
+174
+00:12:23.000 --> 00:12:24.001
+extrêmement intéressant.
+
+175
+00:12:25.000 --> 00:12:30.000
+Et vous pouvez en penser en tant qu&#x27;aérodynamique expérimenté.
+
+176
+00:12:30.000 --> 00:12:34.001
+Le multi-million dollar NAS facilité est le point de départ pour ce qui a
+
+177
+00:12:34.001 --> 00:12:36.000
+On l’appelle une nouvelle ère de l’aérodynamique.
+
+178
+00:12:37.000 --> 00:12:41.000
+Et pour les scientifiques de NAS, le succès ultime du projet dépend toujours
+
+179
+00:12:41.000 --> 00:12:43.000
+Il y a un ultimatum dans la supercomputation.
+
+180
+00:12:44.000 --> 00:12:49.001
+Maintenant, au cours des années 1970, ce pays a maintenu son leadership dans la simulation
+
+181
+00:12:49.001 --> 00:12:54.001
+la capacité principalement parce que nous avons eu la leadership dans la disponibilité
+
+182
+00:12:54.001 --> 00:12:56.000
+Des ordinateurs scientifiques à grande échelle.
+
+183
+00:12:56.000 --> 00:13:00.001
+Nos ingénieurs et nos scientifiques avaient accès à des installations qui n&#x27;étaient pas disponibles.
+
+184
+00:13:00.001 --> 00:13:03.000
+à nos concurrents commerciaux.
+
+185
+00:13:03.001 --> 00:13:08.000
+Maintenant, cette situation a changé au début des années 80. Elle a commencé à s’effondrer avec le
+
+186
+00:13:08.000 --> 00:13:12.000
+Installation des États-Unis supercomputés en Europe et au Japon, et aussi avec le
+
+187
+00:13:12.000 --> 00:13:14.000
+Japonais très agressivement et avec succès
+
+188
+00:13:14.000 --> 00:13:16.000
+Développer ses propres superordinateurs.
+
+189
+00:13:17.001 --> 00:13:22.000
+Nous croyons que le programme NAS aide à restaurer et à maintenir un USA clair.
+
+190
+00:13:22.000 --> 00:13:26.000
+Leadership en fournissant un site d&#x27;essai précoce pour la comptabilité nouvellement développée
+
+191
+00:13:26.000 --> 00:13:28.000
+Technologie et produits.
+
+192
+00:13:37.000 --> 00:13:41.001
+Aucune discussion sur les supercomputés ne serait complète sans parler de
+
+193
+00:13:41.001 --> 00:13:46.001
+superconducteurs, matériel qui permet à l&#x27;électricité de voyager plus rapidement et
+
+194
+00:13:46.001 --> 00:13:48.000
+plus froid que jamais.
+
+195
+00:13:48.000 --> 00:13:53.000
+Dans les laboratoires de recherche et sur les campus dans le monde entier, les scientifiques sont littéralement
+
+196
+00:13:53.000 --> 00:13:56.001
+travailler autour de l’horloge pour surmonter les breakthroughs qui se produisent
+
+197
+00:13:56.001 --> 00:13:58.001
+tous les jours dans ce champ explosif.
+
+198
+00:13:59.000 --> 00:14:02.001
+L&#x27;Université de Californie à Berkeley est la maison de plusieurs tels
+
+199
+00:14:02.001 --> 00:14:04.001
+Les scientifiques, y compris le Dr. par Paul Richards.
+
+200
+00:14:04.001 --> 00:14:11.000
+Il s’agit vraiment de détails très techniques et pratiques. pour construire
+
+201
+00:14:11.000 --> 00:14:16.001
+Un ordinateur superconduit, chaque composant qui y entre doit fonctionner
+
+202
+00:14:16.001 --> 00:14:20.000
+bien et à être pratique dans le sens qu&#x27;il peut être construit
+
+203
+00:14:20.000 --> 00:14:22.000
+à grande échelle et dans de nombreux nombres.
+
+204
+00:14:22.001 --> 00:14:26.001
+Et il y a un peu de hang-up avec la mémoire.
+
+205
+00:14:26.001 --> 00:14:32.001
+La mémoire est le principal problème, et c’est critique. Les superconducteurs ne peuvent pas
+
+206
+00:14:32.001 --> 00:14:36.000
+conservant les données ainsi que les semi-conducteurs à base de silicone
+
+207
+00:14:36.000 --> 00:14:37.001
+Découverte dans les superordinateurs d’aujourd’hui.
+
+208
+00:14:38.001 --> 00:14:43.000
+Et avant que la recherche va beaucoup plus loin, un nouveau type de cellule de mémoire basé sur
+
+209
+00:14:43.000 --> 00:14:45.001
+Le superconducteur doit être inventé.
+
+210
+00:14:46.001 --> 00:14:51.000
+Pendant ce temps, les superconducteurs recevront une application commerciale plus rapide en analogue à
+
+211
+00:14:51.000 --> 00:14:55.001
+convertisseurs numériques, ou simplement mettre, des appareils d&#x27;entrée tels que
+
+212
+00:14:55.001 --> 00:14:57.000
+détecteurs de rayonnement infrarouge.
+
+213
+00:14:57.001 --> 00:15:02.000
+Ils seront également utilisés dans les recherches électromagnétiques qui pourraient finalement conduire à
+
+214
+00:15:02.000 --> 00:15:05.001
+trains de levitation ou des voitures électriques pratiques.
+
+215
+00:15:05.001 --> 00:15:10.000
+Il peut y avoir des années avant de voir les superconducteurs utilisés dans la transmission d&#x27;énergie,
+
+216
+00:15:10.001 --> 00:15:14.001
+la construction de super-trains, ou la réduction de superordinateurs.
+
+217
+00:15:15.000 --> 00:15:17.001
+Mais ça se passera, et la course se poursuit.
+
+218
+00:15:18.000 --> 00:15:21.000
+À UC Berkeley, pour The Computer Chronicles, je suis Wendy Woods.
+
+219
+00:15:24.000 --> 00:15:24.001
+[...]
+
+220
+00:15:31.000 --> 00:15:35.001
+Lorsque j Robert Oppenheimer est arrivé pour la première fois à Los Alamos, au Nouveau-Mexique, dans les années 1940.
+
+221
+00:15:35.001 --> 00:15:40.000
+Pour travailler sur le dispositif nucléaire de la Trinité, tout ce qu&#x27;il avait à travailler avec était un mécanique.
+
+222
+00:15:40.000 --> 00:15:44.000
+calculateur qui fonctionne à une vitesse d&#x27;une opération arithmétique par seconde.
+
+223
+00:15:44.000 --> 00:15:49.000
+Eh bien, les scientifiques d&#x27;aujourd&#x27;hui dans les laboratoires nationaux de Los Alamos ont des superordinateurs qui
+
+224
+00:15:49.000 --> 00:15:52.000
+Il fonctionne à une vitesse de 800 millions d’opérations par seconde.
+
+225
+00:15:52.001 --> 00:15:56.000
+En fait, il y a probablement plus de superordinateurs ici à Los Alamos
+
+226
+00:15:56.000 --> 00:15:58.000
+plus que n&#x27;importe où dans le monde.
+
+227
+00:15:59.000 --> 00:16:03.000
+Los Alamos a été le terrain de test pour le premier superordinateur Cray-1 dans le monde.
+
+228
+00:16:03.000 --> 00:16:06.001
+1976, et le laboratoire continue d&#x27;effectuer l&#x27;une des premières productions
+
+229
+00:16:06.001 --> 00:16:08.001
+Unités, numéro de série 4.
+
+230
+00:16:08.001 --> 00:16:13.000
+Aujourd&#x27;hui, le centre informatique du laboratoire dispose d&#x27;un total de 18 processeurs supercomputés
+
+231
+00:16:13.000 --> 00:16:17.001
+distribué parmi huit machines, dont plusieurs Cray XMPs.
+
+232
+00:16:18.000 --> 00:16:21.001
+Plus de 8 000 utilisateurs ont accès à 40 milliards de bits de stockage.
+
+233
+00:16:22.000 --> 00:16:26.000
+Le réseau de sécurité à plusieurs niveaux séparera physiquement les ordinateurs qui travaillent sur
+
+234
+00:16:26.000 --> 00:16:29.001
+Les calculs classifiés de ceux qui fonctionnent avec des codes non classés.
+
+235
+00:16:29.001 --> 00:16:34.001
+Le Centre informatique de Los Alamos affirme qu&#x27;ils effectuent plus de calculs en 24
+
+236
+00:16:34.001 --> 00:16:39.000
+des heures qui ont été réalisées par toute l&#x27;humanité avant 1970.
+
+237
+00:16:39.001 --> 00:16:44.001
+Nous avons toujours été en avant. Nos besoins ont toujours besoin de machines
+
+238
+00:16:44.001 --> 00:16:48.000
+Plus vite que ce qui était disponible, et nous sommes toujours dans cette position. Nous avons besoin
+
+239
+00:16:48.000 --> 00:16:51.001
+Les machines actuelles sont 100 fois plus rapides que tout ce que nous pouvons acheter.
+
+240
+00:16:51.001 --> 00:16:57.000
+Les laboratoires nationaux de Los Alamos ont été créés en 1943 pour travailler sur les entreprises
+
+241
+00:16:57.000 --> 00:17:01.000
+Le projet militaire le plus secret de tous les temps, la bombe atomique,
+
+242
+00:17:01.001 --> 00:17:03.000
+Il est connu sous le nom de Project Y.
+
+243
+00:17:03.001 --> 00:17:07.001
+Le rôle de recherche principal du laboratoire reste dans la recherche sur les armes nucléaires,
+
+244
+00:17:08.000 --> 00:17:12.000
+la conception de chefs de guerre de missiles, détonant des armes souterraines au test de Nevada
+
+245
+00:17:12.000 --> 00:17:15.001
+site, et maintenant concevoir SDI, ou Star Wars, appareils.
+
+246
+00:17:15.001 --> 00:17:21.000
+Mais la recherche sur le temps de paix du laboratoire s&#x27;est étendue pour inclure un large spectre de
+
+247
+00:17:21.000 --> 00:17:25.001
+- les projets liés aux armes aussi, et les superordinateurs jouent un rôle clé.
+
+248
+00:17:26.000 --> 00:17:32.001
+Ce que nous essayons de faire est de simuler Mère Nature sur un ordinateur. Nous
+
+249
+00:17:32.001 --> 00:17:36.001
+Ils tentent d’effectuer des expériences mathématiques au contraire.
+
+250
+00:17:36.001 --> 00:17:38.000
+Il faut les mettre dans un laboratoire.
+
+251
+00:17:38.000 --> 00:17:42.000
+Nous ne sommes pas au point, les machines ne sont pas assez rapides encore, pour vraiment nous permettre
+
+252
+00:17:42.000 --> 00:17:48.000
+pour le faire. Je pense que nous approchons réellement de cette zone, et certaines zones de
+
+253
+00:17:48.000 --> 00:17:50.000
+La science est plus avancée que les autres.
+
+254
+00:17:50.001 --> 00:17:53.000
+Mais nous approchons réellement du point où nous pouvons
+
+255
+00:17:53.000 --> 00:17:55.000
+Simulez la nature sur les ordinateurs.
+
+256
+00:17:55.000 --> 00:18:00.000
+L’une des nombreuses simulations informatiques prometteuses est l’analyse des réacteurs transitoires.
+
+257
+00:18:00.000 --> 00:18:05.000
+Le code ou le TRAC. Le programme TRAC simule les échecs potentiels des réacteurs nucléaires,
+
+258
+00:18:05.001 --> 00:18:08.000
+C’est un peu comme l’incident de l’île de trois milles.
+
+259
+00:18:08.001 --> 00:18:13.000
+Comme le simulateur de la NASA, TRAC repose sur une interface graphique pour indiquer visuellement
+
+260
+00:18:13.000 --> 00:18:17.000
+Ce qui se passe. L&#x27;échelle de couleur indique la présence ou l&#x27;absence de refroidissement
+
+261
+00:18:17.000 --> 00:18:21.000
+L&#x27;eau, où le bleu indique l&#x27;eau et le rouge indique le vapeur.
+
+262
+00:18:21.000 --> 00:18:25.000
+Un scénario modifié montre ce qui aurait pu arriver si l&#x27;accident avait été
+
+263
+00:18:25.000 --> 00:18:29.000
+bien traitées ! Bien que le modèle n&#x27;ait pas été conçu pour prédire le cours d&#x27;un
+
+264
+00:18:29.000 --> 00:18:33.000
+défaillance du réacteur, il peut intégrer les informations du capteur et les présenter graphiquement,
+
+265
+00:18:33.001 --> 00:18:37.000
+aider l’opérateur à prendre des mesures correctives avant qu’il ne soit trop tard.
+
+266
+00:18:37.000 --> 00:18:41.001
+Dans le passé, ce qui s&#x27;est passé était, lorsque vous avez obtenu vos résultats d&#x27;un ordinateur, vous
+
+267
+00:18:41.001 --> 00:18:46.001
+Avoir, sur les petits ordinateurs, vous avez une page de chiffres que vous essayez d&#x27;interpréter.
+
+268
+00:18:48.000 --> 00:18:51.001
+Et puisque les machines sont devenues plus sophistiquées, elles ont pu expérimenter plus en détail
+
+269
+00:18:51.001 --> 00:18:55.001
+données, et vous avez commencé à recevoir de vastes listes d&#x27;imprimantes. et
+
+270
+00:18:55.001 --> 00:18:57.000
+C’est très difficile à interpréter.
+
+271
+00:18:57.001 --> 00:19:01.001
+Je veux dire que les êtres humains ne sont tout simplement pas équipés pour interpréter cela. Quels êtres humains
+
+272
+00:19:01.001 --> 00:19:05.000
+Ils sont équipés pour interpréter sont des images visuelles.
+
+273
+00:19:06.000 --> 00:19:10.001
+Recréer la réalité, ou événements potentiellement réels, peut être aussi effrayant qu&#x27;il est
+
+274
+00:19:10.001 --> 00:19:15.001
+Excellent à regarder. Ce modèle simule un hiver nucléaire, le climat prévu
+
+275
+00:19:15.001 --> 00:19:18.001
+Ce changement se produirait après un holocauste nucléaire.
+
+276
+00:19:19.001 --> 00:19:23.000
+Les particules de fumée dans l&#x27;atmosphère bloqueraient la lumière du soleil d&#x27;une grande portion
+
+277
+00:19:23.000 --> 00:19:27.000
+de la Terre tout en permettant la chaleur radiationnelle à échapper. Le résultat serait
+
+278
+00:19:27.000 --> 00:19:29.000
+Un refroidissement anormal de l’atmosphère terrestre.
+
+279
+00:19:29.000 --> 00:19:34.000
+Les particules bleues représentent le mouvement de la fumée dans l&#x27;atmosphère inférieure jusqu&#x27;à 10
+
+280
+00:19:34.000 --> 00:19:37.001
+kilomètres au-dessus de la surface de la Terre. Le jaune indique comment la fumée
+
+281
+00:19:37.001 --> 00:19:40.000
+Dispersé à des altitudes supérieures à 10 kilomètres.
+
+282
+00:19:41.001 --> 00:19:45.001
+Paradoxalement, l&#x27;installation de superordinateur du laboratoire joue un rôle principal dans la modélisation
+
+283
+00:19:45.001 --> 00:19:49.000
+Les explosions nucléaires qui créaient un hiver nucléique.
+
+284
+00:19:49.001 --> 00:19:52.000
+Il y a beaucoup d&#x27;expériences que vous pouvez faire dans un laboratoire
+
+285
+00:19:52.000 --> 00:19:54.001
+Vous ne pouvez pas regarder ce qui se passe.
+
+286
+00:19:55.000 --> 00:20:00.000
+Par exemple, une explosion nucléaire à Nevada, vous ne pouvez pas vous tenir là et regarder que
+
+287
+00:20:00.000 --> 00:20:04.001
+Il se passe. Alors, si vous pouvez simuler cela sur un ordinateur, vous pouvez réellement regarder
+
+288
+00:20:04.001 --> 00:20:07.000
+l’interaction des matériaux. Vous pouvez voir ce qui se passe.
+
+289
+00:20:07.001 --> 00:20:12.001
+Et si vous avez bien fait vos mathématiques et votre physique, ce que vous regardez
+
+290
+00:20:12.001 --> 00:20:14.000
+C’est exactement ce qui se passe.
+
+291
+00:20:14.000 --> 00:20:19.001
+La clarté d&#x27;une simulation pictorielle sur un écran de couleur peut être trompeuse. Alors que
+
+292
+00:20:19.001 --> 00:20:23.001
+l&#x27;image est attrayante, les équations et les algorithmes fondamentaux sont
+
+293
+00:20:23.001 --> 00:20:25.000
+responsable de sa précision.
+
+294
+00:20:25.001 --> 00:20:30.000
+Si vous n&#x27;avez pas de bonne science, un superordinateur ne vous aidera pas. Et vous
+
+295
+00:20:30.000 --> 00:20:34.001
+Il faut maintenir la science élégante.
+
+296
+00:20:34.001 --> 00:20:40.001
+Ce que nous faisons est de chercher des codes, des programmes informatiques qui utilisent beaucoup de temps,
+
+297
+00:20:40.001 --> 00:20:45.000
+et aller au propriétaire et essayer de les aider à rendre les codes plus efficaces.
+
+298
+00:20:45.001 --> 00:20:50.000
+Et en faisant cela, nous regardons les algorithmes et ce qui se passe.
+
+299
+00:20:50.000 --> 00:20:54.001
+Certaines des plus belles simulations à Los Alamos font partie d&#x27;un projet qui
+
+300
+00:20:54.001 --> 00:20:59.000
+est explorant l&#x27;interaction d&#x27;un jet de gaz à grande vitesse lorsqu&#x27;il est injecté dans un gaz de
+
+301
+00:20:59.000 --> 00:21:03.000
+une densité différente, soit jusqu&#x27;à 100 000 fois plus dense à
+
+302
+00:21:03.000 --> 00:21:04.001
+vitesses de 10 Mach ou plus.
+
+303
+00:21:05.000 --> 00:21:09.000
+Ce phénomène, qui a été observé dans l&#x27;espace extérieur, fait partie d&#x27;une recherche
+
+304
+00:21:09.000 --> 00:21:11.001
+Projet dans la physique fondamentale de la nature.
+
+305
+00:21:11.001 --> 00:21:18.001
+Nous connaissons beaucoup plus d’équations que nous ne pouvons résoudre. Et ce que vous avez été forcés à
+
+306
+00:21:18.001 --> 00:21:23.001
+le passé, et nous sommes encore obligés de le faire, de faire de plus en plus simplifiant
+
+307
+00:21:23.001 --> 00:21:27.001
+Les hypothèses, jusqu’à ce que nous finissons enfin avec un ensemble traçable d’équations.
+
+308
+00:21:27.001 --> 00:21:33.000
+Maintenant, si la puissance informatique augmente considérablement, et avec un traitement parallèle et
+
+309
+00:21:33.000 --> 00:21:37.000
+plus rapides et de nouvelles technologies, vous vous attendez à aller encore plus loin.
+
+310
+00:21:37.001 --> 00:21:44.001
+Ce qui vous permet alors d’aller vers les équations plus fondamentales sans
+
+311
+00:21:44.001 --> 00:21:48.001
+l&#x27;hypothèse simplifiant, de sorte que pour la première fois vous avez vraiment une chance
+
+312
+00:21:48.001 --> 00:21:53.000
+Les lois de la nature comme nous les connaissons.
+
+313
+00:21:53.000 --> 00:21:57.001
+La flexibilité d&#x27;un modèle simulé permet aux scientifiques de changer rapidement le
+
+314
+00:21:57.001 --> 00:22:02.001
+variables de vitesse, de densité et de pression d&#x27;un experiment qui n&#x27;a pas de tunnel de vent
+
+315
+00:22:02.001 --> 00:22:06.001
+sur la Terre pourrait recréer, et les exigences informatiques sont massives.
+
+316
+00:22:07.000 --> 00:22:11.001
+Les calculs que nous avons effectués seulement dans les deux premiers mois de l&#x27;année exigés comme
+
+317
+00:22:11.001 --> 00:22:16.000
+beaucoup de temps informatique que je pouvais probablement utiliser dans le
+
+318
+00:22:16.000 --> 00:22:17.001
+la partie précédente de ma vie.
+
+319
+00:22:17.001 --> 00:22:23.001
+Donc, en principe, ce qui vous permet vraiment de laisser votre imagination courir et vraiment
+
+320
+00:22:23.001 --> 00:22:30.000
+commencer à traiter les problèmes de physique fondamentale, de sorte que vous n&#x27;essayez pas de harper comme un
+
+321
+00:22:30.000 --> 00:22:34.000
+Le butterfly d&#x27;une fleur à l&#x27;autre et juste disparaître un peu.
+
+322
+00:22:34.001 --> 00:22:39.001
+Mais je pense avec les ressources qui sont disponibles dans le laboratoire, si nous les partageons
+
+323
+00:22:39.001 --> 00:22:45.000
+Avec un type d&#x27;environnement dont nous avons vraiment besoin maintenant, on peut vraiment dégager profondément
+
+324
+00:22:45.000 --> 00:22:46.001
+dans une zone particulière.
+
+325
+00:22:47.000 --> 00:22:51.001
+Carl Heinz Winkler espère un moment où ses expériences ne seront pas restreintes
+
+326
+00:22:51.001 --> 00:22:56.001
+par les limitations du matériel ou du logiciel, mais par sa propre imagination, qu’il croit
+
+327
+00:22:56.001 --> 00:22:59.001
+Cela nécessitera un changement radical dans l’architecture informatique.
+
+328
+00:23:00.001 --> 00:23:06.001
+Eh bien, en termes de performances pour un CPU individuel, je pense que les superordinateurs
+
+329
+00:23:06.001 --> 00:23:09.000
+Nous avons déjà un record phénoménal.
+
+330
+00:23:09.000 --> 00:23:13.001
+Donc, si vous obtenez une performance supplémentaire d&#x27;un facteur de deux ou
+
+331
+00:23:13.001 --> 00:23:15.001
+Trois, ce n’est que remarquable.
+
+332
+00:23:16.001 --> 00:23:20.001
+Ainsi, afin d’obtenir les commandes de magnitude plus haute performance que nous avons vraiment besoin,
+
+333
+00:23:21.000 --> 00:23:25.000
+Vous êtes nécessairement contraint à des machines de traitement parallèles.
+
+334
+00:23:25.000 --> 00:23:29.000
+Cela signifie que vous avez besoin de centaines de processeurs pour faire le travail en parallèle.
+
+335
+00:23:29.000 --> 00:23:33.001
+Nous espérons donc que les systèmes seront mis en place dans les trois à cinq prochaines années, ce qui
+
+336
+00:23:33.001 --> 00:23:38.000
+Il y a plusieurs centaines de fois dans la traversée, l&#x27;une d&#x27;entre elles, vous savez, maintenant
+
+337
+00:23:38.000 --> 00:23:39.001
+Des processeurs de plus de 10 ans.
+
+338
+00:23:40.001 --> 00:23:43.001
+Comme les supercomputés sont ici, ils sont
+
+339
+00:23:43.001 --> 00:23:45.000
+Rien en comparaison avec ce qui vient.
+
+340
+00:23:45.001 --> 00:23:50.001
+Le nouveau Cray 3 Supercomputer est en cours de conception. Il sera disponible en 1990,
+
+341
+00:23:51.000 --> 00:23:56.001
+et il fonctionnera à des vitesses 500 fois plus rapides qu&#x27;un Cray 1, et il sera petit
+
+342
+00:23:56.001 --> 00:23:58.000
+Il suffit de s&#x27;adapter à votre bureau.
+
+343
+00:23:59.000 --> 00:24:02.001
+Mais si un informatique ici dit qu&#x27;en 1990, vous serez en mesure d&#x27;obtenir la
+
+344
+00:24:02.001 --> 00:24:05.001
+La vitesse d&#x27;un Cray 1 sur un PC de bureau.
+
+345
+00:24:06.000 --> 00:24:09.000
+C’est notre regard sur les supercomputés. Nous reviendrons en une minute
+
+346
+00:24:09.000 --> 00:24:11.000
+Les nouvelles informatiques de cette semaine.
+
+347
+00:24:22.001 --> 00:24:26.001
+Je suis Susan Chase pour Stuart Chafee. Dans le fichier Access par hasard, ce
+
+348
+00:24:26.001 --> 00:24:29.001
+La semaine dernière, les nouvelles supercomputées continuent de faire des titres.
+
+349
+00:24:29.001 --> 00:24:33.001
+Dans le laboratoire national de Los Alamos, le travail est en cours pour développer un
+
+350
+00:24:33.001 --> 00:24:36.001
+Modèle informatique mathématique pour déterminer la propagation de l&#x27;AIDS
+
+351
+00:24:36.001 --> 00:24:38.000
+Une épidémie aux États-Unis.
+
+352
+00:24:38.000 --> 00:24:41.001
+Ce modèle prédit la propagation de l’infection et le développement de
+
+353
+00:24:41.001 --> 00:24:43.000
+L’AIDS dans différents groupes de population.
+
+354
+00:24:44.001 --> 00:24:49.000
+Et à la recherche de super vitesse sans le super coût? Les ordinateurs Sky de Lowell,
+
+355
+00:24:49.000 --> 00:24:53.000
+Massachusetts produit un produit appelé le Vortex AT Board, qui peut être
+
+356
+00:24:53.000 --> 00:24:54.001
+Installé sur votre ordinateur personnel.
+
+357
+00:24:55.000 --> 00:24:58.000
+Le bureau permet à un AT de travailler près des niveaux de superordinateur
+
+358
+00:24:58.000 --> 00:24:59.001
+pour une fraction du coût.
+
+359
+00:24:59.001 --> 00:25:05.000
+Dans la gamme de 10 000 $, la boîte n&#x27;est pas destinée à l&#x27;utilisateur occasionnel, mais c&#x27;est un
+
+360
+00:25:05.000 --> 00:25:08.000
+Petit prix pour les entreprises qui veulent posséder leur propre superordinateur.
+
+361
+00:25:09.000 --> 00:25:12.001
+Dans d&#x27;autres informations, il y a des rapports de problèmes de matériel avec IBM
+
+362
+00:25:12.001 --> 00:25:14.001
+Les modèles PS2 50 et 60.
+
+363
+00:25:15.001 --> 00:25:19.000
+Les développeurs de logiciels rapportent des erreurs de souris phantom et de clavier, qui ont
+
+364
+00:25:19.000 --> 00:25:21.000
+Cela a finalement entraîné l’échec de la carte mère.
+
+365
+00:25:21.001 --> 00:25:25.000
+En outre, il y a des rapports d&#x27;erreurs intermédiaires sur le disque dur lorsque
+
+366
+00:25:25.000 --> 00:25:26.001
+Résultats pour DOS 3.3.
+
+367
+00:25:26.001 --> 00:25:31.001
+IBM, cependant, est en train de s’attaquer à ses machines. Les services sont remplacés par les
+
+368
+00:25:31.001 --> 00:25:35.000
+système dans les machines défectueuses, et l&#x27;entreprise a contracté Microsoft
+
+369
+00:25:35.000 --> 00:25:37.000
+Résoudre les problèmes en 2.
+
+370
+00:25:37.001 --> 00:25:40.001
+C’est le moment de la révision du logiciel de cette semaine. Voilà Paul Schindler.
+
+371
+00:25:44.001 --> 00:25:49.000
+Ah, la chanson de Jiminy Cricket de Walt Disney&#x27;s Pinocchio.
+
+372
+00:25:49.000 --> 00:25:54.001
+Dans ce cas, la star, cependant, est le cricket, Cricket Graph. C’est probablement la
+
+373
+00:25:54.001 --> 00:25:58.000
+Le meilleur paquet de graphiques d&#x27;affaires est désormais disponible pour l&#x27;Apple Macintosh.
+
+374
+00:25:59.000 --> 00:26:02.000
+Comme la plupart des paquets graphiques, vous pouvez importer des données d&#x27;un autre endroit ou
+
+375
+00:26:02.000 --> 00:26:03.001
+Commencez par remplir une table.
+
+376
+00:26:04.000 --> 00:26:07.001
+Ce graphique est un échantillon de ce que vous pouvez produire avec le paquet. Vous avez un
+
+377
+00:26:07.001 --> 00:26:13.000
+Choisir 12 types de graphes différents. Parmi eux se trouvent le scatter, la ligne et la zone,
+
+378
+00:26:13.001 --> 00:26:17.001
+bar et colonne étagées ou à côté par côté, et pie graphiques.
+
+379
+00:26:17.001 --> 00:26:21.000
+Et pour les scientifiques, il y a des graphiques polars et QC.
+
+380
+00:26:22.000 --> 00:26:25.001
+Cricket Graph montre plus de flexibilité que la plupart des paquets. Cela vous permet de facilement
+
+381
+00:26:25.001 --> 00:26:28.000
+Sélectionnez les informations que vous voulez parcourir sur chaque axe.
+
+382
+00:26:28.001 --> 00:26:32.000
+Il redécouvre rapidement ses graphiques, et il offre beaucoup de
+
+383
+00:26:32.000 --> 00:26:33.001
+variations dans chaque type de graphique.
+
+384
+00:26:34.000 --> 00:26:38.000
+Maintenant, vous décidez si vous voulez votre sortie à l&#x27;écran, à une imprimante, à un
+
+385
+00:26:38.000 --> 00:26:40.000
+Un processeur de mots ou un programme d’édition de bureau.
+
+386
+00:26:40.001 --> 00:26:42.001
+Cricket Graph pour l&#x27;Apple Macintosh est de 200 $
+
+387
+00:26:42.001 --> 00:26:44.001
+Cricket Software à Philadelphie.
+
+388
+00:26:44.001 --> 00:26:47.001
+Pour les Chroniques informatiques, je suis Paul Schindler.
+
+389
+00:26:48.000 --> 00:26:51.000
+Une nouvelle conférence pour les professionnels de l&#x27;informatique a été annoncée. Le monde
+
+390
+00:26:51.000 --> 00:26:55.000
+Le Congrès sur l&#x27;informatique débute à Chicago en mars 1988.
+
+391
+00:26:56.000 --> 00:27:00.000
+La conférence, organisée par le Groupe Interface de Comdex, vise à
+
+392
+00:27:00.000 --> 00:27:04.000
+les fabricants et les professionnels responsables de l&#x27;acquisition et
+
+393
+00:27:04.000 --> 00:27:06.000
+La mise en œuvre des systèmes d’affaires.
+
+394
+00:27:07.000 --> 00:27:11.001
+Asher Technologies de Roswell, Géorgie a sorti avec un produit homogène pour
+
+395
+00:27:11.001 --> 00:27:15.000
+Un portable IBM compatible. Le JT-FACS se connecte à la
+
+396
+00:27:15.000 --> 00:27:16.001
+par l’intermédiaire du port de série.
+
+397
+00:27:17.000 --> 00:27:20.001
+Il mesure un demi-inch par six pouces et vend pour moins de 500 $.
+
+398
+00:27:21.001 --> 00:27:26.000
+Tout d’abord, il y avait un design informatique aidé. Maintenant, il y a l’écriture informatique aidée.
+
+399
+00:27:26.000 --> 00:27:31.000
+Une société appelée TextGen de San Mateo, en Californie, a développé un programme
+
+400
+00:27:31.000 --> 00:27:33.000
+Le même nom qui écrit des lettres pour vous.
+
+401
+00:27:33.000 --> 00:27:36.001
+TextGen crée une lettre de vos réponses à une série de multiples choix
+
+402
+00:27:36.001 --> 00:27:40.000
+Les questions. Si vous n&#x27;aimez pas la lettre, TextGen essayera à nouveau ou
+
+403
+00:27:40.000 --> 00:27:42.000
+Vous pouvez modifier votre lettre manuellement.
+
+404
+00:27:43.000 --> 00:27:47.000
+Enfin, savez-vous quel pays mène le monde dans le nombre de ordinateurs par
+
+405
+00:27:47.000 --> 00:27:51.000
+Personnalité ? Ou qui a plus d&#x27;employés à l&#x27;étranger, le Département d&#x27;Etat ou IBM?
+
+406
+00:27:52.000 --> 00:27:55.000
+Les réponses à ces questions et plus peuvent être trouvées dans le futur
+
+407
+00:27:55.000 --> 00:27:57.000
+L’industrie informatique d’Almanac.
+
+408
+00:27:57.000 --> 00:28:01.000
+La société basée à Dallas appelle le livre un guide d&#x27;insider pour les gens,
+
+409
+00:28:01.000 --> 00:28:05.000
+les entreprises, les produits et les tendances dans l&#x27;industrie informatique, mais aussi servent de
+
+410
+00:28:05.000 --> 00:28:06.001
+Un amour pour les amoureux de la triviale.
+
+411
+00:28:07.000 --> 00:28:11.000
+Pour répondre aux questions précédentes, l’U. et S. conduit le monde dans le nombre de
+
+412
+00:28:11.000 --> 00:28:15.001
+Des ordinateurs par personne avec 146 utilisés pour chaque 1000 personnes.
+
+413
+00:28:16.000 --> 00:28:20.001
+Et IBM a plus de 160 000 employés à l&#x27;étranger par rapport à la
+
+414
+00:28:20.001 --> 00:28:22.001
+16 000 de l’Etat.
+
+415
+00:28:22.001 --> 00:28:25.000
+Et c&#x27;est ça pour les Chroniques informatiques de cette semaine.
+
+416
+00:28:28.000 --> 00:28:32.001
+Les Chroniques informatiques sont rendues possibles par Leading Edge, créateurs d’IBM
+
+417
+00:28:32.001 --> 00:28:36.001
+-des systèmes informatiques compatibles, y compris la brochure Lotus Lookalike, le mot
+
+418
+00:28:36.001 --> 00:28:40.001
+Traitement avec la correction d&#x27;épilation, logiciels de communication et Hayes
+
+419
+00:28:40.001 --> 00:28:42.000
+Modèles 1200-baud compatibles.
+
+420
+00:28:42.001 --> 00:28:46.000
+Leading Edge avec plus de 1000 centres de service à travers le pays.
+
+421
+00:28:47.000 --> 00:28:51.000
+Un financement supplémentaire est fourni par McGraw-Hill, éditeurs de Byte.
+
+422
+00:28:51.001 --> 00:28:55.001
+Articles techniques détaillés de Byte sur les nouveaux matériels, logiciels et langues couverts
+
+423
+00:28:55.001 --> 00:28:57.001
+Des développements dans les technologies informatiques dans le monde entier.
+
+424
+00:29:16.000 --> 00:29:35.000
+... et mille personnes.

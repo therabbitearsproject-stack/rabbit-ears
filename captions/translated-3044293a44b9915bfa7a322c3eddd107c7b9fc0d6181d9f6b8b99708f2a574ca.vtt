@@ -1,0 +1,1577 @@
+WEBVTT
+
+1
+00:00:10.001 --> 00:00:14.000
+Begitulah cara beberapa orang membeli saham. Mereka bertemu dengan broker investasi mereka,
+
+2
+00:00:14.001 --> 00:00:18.000
+Dia memberi mereka beberapa nasihat, mereka memberi dia beberapa komisi, dan dia menjaga
+
+3
+00:00:18.000 --> 00:00:22.001
+dan transaksi tersebut. Tapi hari ini Anda dapat melakukan semua ini di rumah sendiri pada Anda sendiri.
+
+4
+00:00:22.001 --> 00:00:26.001
+komputer jika Anda memiliki perangkat lunak yang tepat. Hari ini kita akan melihat investasi.
+
+5
+00:00:26.001 --> 00:00:29.001
+Software pada edisi ini dari Computer Chronicles.
+
+6
+00:00:51.000 --> 00:00:56.000
+Komputer Chronicles dimungkinkan sebagian oleh grant dari AFIMS, yang
+
+7
+00:00:56.000 --> 00:01:02.000
+Federasi Masyarakat Pemrosesan Informasi Amerika. PBB, sponsor dari OAC
+
+8
+00:01:02.000 --> 00:01:07.000
+86, konferensi terkemuka di negara ini tentang teknologi bisnis. Untuk konferensi
+
+9
+00:01:07.000 --> 00:01:13.001
+informasi panggilan 800-OAC-1986, mengeksplorasi solusi bisnis hari ini.
+
+10
+00:01:14.000 --> 00:01:19.000
+Pembiayaan tambahan disediakan oleh McGraw-Hill, penerbit Byte. oleh byte
+
+11
+00:01:19.000 --> 00:01:23.000
+artikel teknis terperinci tentang perangkat keras, perangkat lunak dan bahasa baru yang meliputi
+
+12
+00:01:23.000 --> 00:01:28.001
+terkini dalam teknologi mikro komputer di seluruh dunia. BITTE adalah standar internasional.
+
+13
+00:01:34.001 --> 00:01:38.000
+Selamat datang ke Komputer Chronicles, saya Stuart Chafay dan ini adalah Gary Kildall.
+
+14
+00:01:38.001 --> 00:01:41.001
+Gary, ini adalah permainan yang disebut The Wizard of Wall Street. Ini adalah pasar saham
+
+15
+00:01:41.001 --> 00:01:45.000
+permainan simulasi dan saya dapat memanggil laporan penelitian di industri tertentu seperti
+
+16
+00:01:45.000 --> 00:01:46.001
+Misalnya, industri penerbangan di sana.
+
+17
+00:01:47.000 --> 00:01:50.000
+Ketika saya mendapatkan semua informasi yang saya butuhkan dan semua uang lucu yang saya miliki itu saya
+
+18
+00:01:50.000 --> 00:01:53.001
+Untuk bermain permainan dengan di sini, saya bisa benar-benar pergi ke papan besar di sini.
+
+19
+00:01:54.000 --> 00:01:56.001
+Anda dapat melihat pita ticker pertukaran saham yang berjalan di atas, berbagai
+
+20
+00:01:56.001 --> 00:02:00.001
+indeks pasar saham untuk memberitahu saya apa yang sedang terjadi, acara berita yang mempengaruhi
+
+21
+00:02:00.001 --> 00:02:04.000
+Pasar yang Ini adalah permainan tetapi semakin banyak investor yang benar menggunakan mereka.
+
+22
+00:02:04.000 --> 00:02:07.001
+komputer pribadi untuk mengelola portfolio mereka, untuk benar-benar menjalankan transaksi
+
+23
+00:02:07.001 --> 00:02:11.000
+dari rumah mereka. Apakah Anda mempercayai komputer untuk memberitahu Anda bagaimana untuk berinvestasi
+
+24
+00:02:11.000 --> 00:02:15.000
+dengan uang? Saya pikir saya ingin melihat hasil dari saran tetapi jika kita semua mengikuti
+
+25
+00:02:15.000 --> 00:02:18.000
+nasihat dari satu program yang tidak akan membawa ke pasar yang sangat menarik.
+
+26
+00:02:18.001 --> 00:02:23.000
+Ada banyak nilai yang saya pikirkan dalam layanan online, perdagangan saham instan,
+
+27
+00:02:23.001 --> 00:02:27.000
+informasi sejarah tentang saham, nilai saham saat ini, hal-hal yang
+
+28
+00:02:27.000 --> 00:02:30.000
+Sukses yang Saya akan menggunakan itu dan saya juga akan menggunakan program seperti ini, simulasi untuk
+
+29
+00:02:30.000 --> 00:02:33.001
+Belajar tentang terminologi. Gary, hari ini kita akan memeriksa yang terakhir
+
+30
+00:02:33.001 --> 00:02:37.001
+dan perangkat lunak investasi terpanas dan baru. Salah satu hal yang dimiliki komputer pribadi
+
+31
+00:02:37.001 --> 00:02:41.000
+yang dilakukan adalah membuatnya mungkin bagi hampir semua orang untuk menjadi investor yang berpengetahuan
+
+32
+00:02:41.000 --> 00:02:44.000
+Dan kita akan mulai dengan melihat seorang investor yang mungkin tidak berada di
+
+33
+00:02:44.000 --> 00:02:50.001
+Pasar sama sekali jika tidak untuk komputer. John Ekridge bukanlah contoh khas dari
+
+34
+00:02:50.001 --> 00:02:55.001
+Investor pasar saham penuh waktu. Dia tidak memakai tali pinggang, tetap voluminous
+
+35
+00:02:55.001 --> 00:03:01.000
+buku catatan atau menunggang kuda sendiri di lantai perdagangan. Alat-alat hari ini terdiri dari
+
+36
+00:03:01.000 --> 00:03:06.001
+dari penerima kutipan saham portabel dan komputer pribadi. John menyerah pada
+
+37
+00:03:06.001 --> 00:03:10.001
+praktek broker tradisional ketika dia menyadari bahwa dia dapat berinvestasi untuk dirinya sendiri
+
+38
+00:03:10.001 --> 00:03:15.001
+di rumah, dibebaskan dari beban pelanggan dan bergerak sebagai balasan untuk beberapa
+
+39
+00:03:15.001 --> 00:03:21.001
+tanggung jawab lainnya. Meskipun dia tidak memotong semua garis komunikasi ke seluruhnya
+
+40
+00:03:21.001 --> 00:03:26.001
+Broker layanan, John melakukan sebagian besar penelitian di komputer yang mengumpulkan data
+
+41
+00:03:26.001 --> 00:03:32.000
+dari layanan online, menjejaki dan memperbarui stok dalam portfolio, dan grafis
+
+42
+00:03:32.000 --> 00:03:37.001
+kinerja stok yang dipilih dalam beberapa hari atau tahun. tentang satu-satunya alat lain
+
+43
+00:03:37.001 --> 00:03:42.001
+Di kantornya ada sebuah surat kabar dan trek kutipan, sebuah radio kutipa saham real-time.
+
+44
+00:03:42.001 --> 00:03:49.001
+dan penerima. Layanan online biaya sekitar 250 per bulan. Sebagai pertukaran, John mendapat
+
+45
+00:03:49.001 --> 00:03:55.000
+Hubungan waktu nyata ke lantai perdagangan, layanan yang sangat disesuaikan dan hanya beberapa
+
+46
+00:03:55.000 --> 00:03:59.001
+yang menyesal. Saya pikir ketika Anda bekerja sendirian dan Anda bekerja di rumah dan Anda tidak memiliki co
+
+47
+00:03:59.001 --> 00:04:06.000
+-pekerja di sekitar Anda bahwa beberapa feedback itu hilang dan itu adalah salah satu dari
+
+48
+00:04:06.000 --> 00:04:07.001
+Sebab saya masih memiliki broker standar.
+
+49
+00:04:09.000 --> 00:04:12.001
+Membeli stok dari ruang tamu Anda mungkin tidak memiliki beberapa kegembiraan Wall
+
+50
+00:04:12.001 --> 00:04:16.001
+Jalan, tetapi itu memiliki beberapa tarikan istimewa sendiri.
+
+51
+00:04:16.001 --> 00:04:18.000
+K-neck, apa pendapatmu?
+
+52
+00:04:30.000 --> 00:04:34.000
+Bersama kami sekarang di studio adalah Charles Speer, pengerusi dan CEO Speer
+
+53
+00:04:34.000 --> 00:04:38.001
+Sekuritas, Inc. Di Los Angeles dan juga bersama kami adalah John Fryerson, presiden
+
+54
+00:04:38.001 --> 00:04:42.000
+Investasi di sini di San Francisco. dengan Gary? Chuck, bagaimana dengan komputer
+
+55
+00:04:42.000 --> 00:04:43.001
+Apakah Anda benar-benar membantu investor kecil saat ini?
+
+56
+00:04:44.001 --> 00:04:48.000
+Baiklah, sebuah komputer dengan cara tertentu adalah mesin ATM untuk industri broker karena
+
+57
+00:04:48.000 --> 00:04:53.000
+Ia meletakkan di tangan konsumen kekayaan informasi yang tidak pernah ada sebelumnya.
+
+58
+00:04:53.000 --> 00:04:58.000
+Dan itu memberi dia akses ke pasar sehingga dia dapat melakukan perdagangan otomatis.
+
+59
+00:04:58.000 --> 00:05:01.000
+Okay, sekarang Anda memiliki contoh hanya perdagangan otomatis yang berjalan di sini, bukan?
+
+60
+00:05:01.000 --> 00:05:06.000
+Nah, saya memiliki perangkat lunak Speer Security yang pada menu utama menunjukkan variasi
+
+61
+00:05:06.000 --> 00:05:09.001
+dari hal-hal yang Ini menunjukkan bahwa Anda dapat mengakses kutipan, bahwa Anda bisa melihat
+
+62
+00:05:09.001 --> 00:05:14.000
+portfolio yang diposting sampai kedua, yang dapat Anda lihat rekaman pajak Anda
+
+63
+00:05:14.000 --> 00:05:17.000
+dan ketika Anda siap untuk melakukan perdagangan yang Anda dapat memasukkan detail perdagangan, dapatkan
+
+64
+00:05:17.000 --> 00:05:18.001
+Perdagangan dilakukan dan lihat diterbitkan.
+
+65
+00:05:19.000 --> 00:05:22.000
+Okay, Chuck, mari kita mulai dari awal. Supaya saya tertarik untuk berinvestasi
+
+66
+00:05:22.000 --> 00:05:25.000
+di beberapa stok di bidang komputer dan saya sedang memikirkan untuk memutuskan antara
+
+67
+00:05:25.000 --> 00:05:30.000
+Apple, misalnya, dan Lotus dan saya ingin pergi menggunakan perangkat lunak ini untuk mencoba untuk mendapatkan
+
+68
+00:05:30.000 --> 00:05:33.000
+Jawaban apa yang akan menjadi investasi yang lebih baik saat ini. Bagaimana itu akan membantu
+
+69
+00:05:33.000 --> 00:05:38.001
+dengan saya? Semua benar, sistem ini memiliki database sekitar 3.300 perusahaan dan Anda dapat
+
+70
+00:05:38.001 --> 00:05:43.000
+membandingkan 50 item yang berbeda, sedikit lebih dari 50 item, dalam berbagai cara,
+
+71
+00:05:43.000 --> 00:05:48.000
+perusahaan per perusahaan, kelompok industri, dll. Jadi, kita akan masuk
+
+72
+00:05:48.000 --> 00:05:49.001
+Dan kami akan meminta untuk melakukannya. Jadi saya ingin melihat Apple Lotus.
+
+73
+00:05:52.000 --> 00:05:55.001
+Ok, sekarang kita online sekarang, kan? Ya, kami adalah Kami online ke sumber
+
+74
+00:05:55.001 --> 00:05:58.000
+Telecomputing di McLean, Virginia. Ok ya.
+
+75
+00:06:02.000 --> 00:06:06.000
+Dan Anda meminta dia untuk melakukan apa sekarang? Saya minta dia pindah dari
+
+76
+00:06:06.000 --> 00:06:12.001
+menu utama dan pergi ke informasi yang disediakan ke sistem oleh Media
+
+77
+00:06:12.001 --> 00:06:16.001
+di kota Richmond. Media Umum mempertahankan informasi keuangan dan ada
+
+78
+00:06:16.001 --> 00:06:20.001
+layar mereka dan kami mengatakan kepada itu, kami tertarik untuk melakukan beberapa stok
+
+79
+00:06:20.001 --> 00:06:26.001
+dengan analisis. Ini akan kembali setelah screens yang diperlukan dari pengacara yang mengatakan ini
+
+80
+00:06:26.001 --> 00:06:31.000
+adalah... Jangan menyalahkan saya jika Anda kehilangan uang. Kemudian kita akan pergi... Kami diminta untuk meletakkan
+
+81
+00:06:31.000 --> 00:06:37.000
+Simbol saham masuk dan kami akan meminta itu untuk Apple. Baiklah dan Lotus. Okay, dan sekarang itu adalah
+
+82
+00:06:37.000 --> 00:06:39.001
+Pergi ke... Jadi, apakah itu menarik file Apple sekarang? Ini akan menarik Apple
+
+83
+00:06:39.001 --> 00:06:44.000
+file yang Ini akan memberi kita satu lagi dari titik-titik ini dan kita akan memberitahu
+
+84
+00:06:44.000 --> 00:06:48.000
+dan lotus. Jika kita ingin membuat kelompok industri, kita hanya perlu memasukkan angka
+
+85
+00:06:48.000 --> 00:06:52.000
+dari kelompok itu di dan ada direktori di sini dan itu memuaskan. Jadi apa yang
+
+86
+00:06:52.000 --> 00:06:55.001
+Apakah kita bisa mendapatkan informasi dari hal ini? Pertama sekali, mari kita katakan bahwa
+
+87
+00:06:55.001 --> 00:06:59.000
+Saya tertarik untuk mengetahui bagaimana sekuritas ini telah berjalan baru-baru ini. Saya ingin untuk
+
+88
+00:06:59.000 --> 00:07:03.001
+tahu apa yang terjadi pada mereka minggu lalu, satu terhadap yang lain, dan saya ingin tahu
+
+89
+00:07:03.001 --> 00:07:06.001
+Bagaimanakah mereka secara historis bertindak. Saya bertanya apakah saya tertarik dengan
+
+90
+00:07:06.001 --> 00:07:10.001
+melihat mereka berturut-turut dalam peratusan dengan hanya beberapa. Tidak perlu dan itu
+
+91
+00:07:10.001 --> 00:07:16.000
+memberitahu saya bahwa minggu lalu Apple sedikit naik, Lotus turun, empat minggu terakhir,
+
+92
+00:07:16.000 --> 00:07:21.000
+13 minggu terakhir, 52 minggu terakhir. Sekarang, bagaimana Anda akan membuat sebuah
+
+93
+00:07:21.000 --> 00:07:24.001
+Bertransaksi di saham? Nah, jika saya ingin melakukan transaksi. Aku bisa menghentikanmu
+
+94
+00:07:24.001 --> 00:07:27.000
+Sebelum Anda sampai ke itu? Saya pikir saya ingin tahu apa yang dilakukan oleh insider dalam
+
+95
+00:07:27.000 --> 00:07:30.001
+kedua perusahaan tersebut. Nah, apa yang kita ingin lakukan di sana adalah apa yang terjadi di
+
+96
+00:07:30.001 --> 00:07:35.000
+Pada layar 11. Jadi kami telah meminta itu untuk layar 11. Dia ingin tahu apakah aku
+
+97
+00:07:35.000 --> 00:07:42.000
+Saya tertarik dengan ranking mereka dan saya telah mengatakan tidak. Lalu ia kembali dan berkata 45
+
+98
+00:07:42.000 --> 00:07:46.000
+,000 saham Apple dibeli oleh insider dalam periode laporan terakhir, 84
+
+99
+00:07:46.000 --> 00:07:48.001
+Seribu saham Lotus dijual. Ok ya.
+
+100
+00:07:49.000 --> 00:07:55.001
+Sekarang Anda bertanya tentang melakukan perdagangan. Apa yang ingin kita lakukan adalah bergerak.
+
+101
+00:07:55.001 --> 00:08:01.001
+Keluar dari aspek ini dari sistem dan kembali ke investasi.
+
+102
+00:08:03.001 --> 00:08:07.000
+Jadi saya dapat mengambil informasi itu dan pergi terus ke depan dan melakukan transaksi sekarang. Baiklah
+
+103
+00:08:07.000 --> 00:08:10.001
+Beberapa hal yang bisa Anda lakukan. Anda dapat meminta pendapat penelitian Wall Street dan
+
+104
+00:08:10.001 --> 00:08:13.001
+Lihat apa pendapat broker lain tentang saham. Anda dapat meminta pendapat saya sendiri karena
+
+105
+00:08:13.001 --> 00:08:17.001
+itu dibawa di sini juga, tetapi kita akan ingin pergi ke tiga, Spear Securities
+
+106
+00:08:17.001 --> 00:08:22.000
+perdagangan online. Yang perlu diperhatikan adalah bahwa teknologi ini
+
+107
+00:08:22.000 --> 00:08:27.000
+mendukung pasar yang beroperasi 24 jam sehari. layar akan meminta hal yang sama.
+
+108
+00:08:27.000 --> 00:08:30.001
+Beberapa pertanyaan yang akan ditanyakan broker Anda di telepon. Berikan yang
+
+109
+00:08:30.001 --> 00:08:34.000
+informasi, tekan kunci pengembalian. Dalam 30 detik Anda akan memiliki perdagangan dan jika
+
+110
+00:08:34.000 --> 00:08:37.000
+Itu tengah malam, Anda masih akan mendapatkannya selagi itu adalah Bursa Saham New York
+
+111
+00:08:37.000 --> 00:08:41.001
+Penyimpanan yang terdaftar. John, bagaimana ini mempengaruhi broker lokal? Ya, saya pikir yang
+
+112
+00:08:41.001 --> 00:08:45.001
+broker lokal dalam beberapa tahap terancam hari ini karena apa yang terjadi adalah
+
+113
+00:08:45.001 --> 00:08:49.001
+Revolusi elektronik telah meletakkan di tangan investor individu yang
+
+114
+00:08:49.001 --> 00:08:54.000
+informasi yang pada masa lalu adalah bidang eksperti eksklusif dari
+
+115
+00:08:54.000 --> 00:08:57.001
+dengan broker individu. Jadi apa yang Anda miliki adalah orang-orang hari ini yang membeli-belah
+
+116
+00:08:57.001 --> 00:09:01.001
+perusahaan untuk menemukan siapa yang akan memberikan mereka biaya transaksi terendah, mengambil
+
+117
+00:09:01.001 --> 00:09:06.001
+Penjimatan, yang sangat besar dalam beberapa kasus. Ini bisa 75 sampai 85% di atas standar
+
+118
+00:09:06.001 --> 00:09:11.001
+Komisi penuh dari masa lalu. Mereka mengambil simpanan itu dan pergi dan mampu
+
+119
+00:09:11.001 --> 00:09:15.001
+untuk berinvestasi dalam perangkat lunak dan mencetak ke dalam database yang sesuai
+
+120
+00:09:15.001 --> 00:09:17.000
+kepentingan dan kebutuhan khusus mereka sendiri.
+
+121
+00:09:17.001 --> 00:09:22.001
+Ini adalah perubahan yang menarik. Ini mungkin satu-satunya area untuk penggunaan komputer rumah yang
+
+122
+00:09:22.001 --> 00:09:27.000
+Dia benar-benar menawarkan layanan yang nyata hari ini. Orang-orang telah melihat, apa yang dapat kita lakukan
+
+123
+00:09:27.000 --> 00:09:30.001
+Dengan komputer di rumah? Ada 40 juta investor, investor individu,
+
+124
+00:09:30.001 --> 00:09:35.000
+yang sebagai kelompok memiliki lebih banyak komputer peratusan-mengerti dari mungkin kelompok lain
+
+125
+00:09:35.000 --> 00:09:40.000
+Untuk komputer rumah. Dan di sini adalah area di mana mereka benar-benar mendapatkan nilai tambah di mana
+
+126
+00:09:40.000 --> 00:09:44.000
+Membayar mereka untuk menggunakan komputer mereka di rumah. Satu-satunya hal yang dibutuhkan
+
+127
+00:09:44.000 --> 00:09:49.000
+untuk terjadi hanyalah pendidikan untuk menunjukkan kepada mereka apa perangkat lunak yang tersedia dan bagaimana untuk
+
+128
+00:09:49.000 --> 00:09:52.000
+menggunakannya dan bagaimana menggunanya untuk tujuan investasi. John, ketika Anda berbicara tentang
+
+129
+00:09:52.000 --> 00:09:55.001
+Anda termasuk biaya percakapan dan biaya online dan
+
+130
+00:09:55.001 --> 00:10:00.001
+hal seperti itu? Sesungguhnya aku adalah Pada kenyataannya, bagi investor biasa, saya tidak melihat
+
+131
+00:10:00.001 --> 00:10:05.001
+yang harus mereka gunakan pada biaya online mungkin lebih dari $ 50 mungkin akan
+
+132
+00:10:05.001 --> 00:10:11.001
+menjadi tinggi, $ 25 hingga $ 50 per bulan. Mereka akan menjimatkan dalam satu perdagangan yang berulang kali. Jika
+
+133
+00:10:11.001 --> 00:10:15.000
+Ada yang memiliki sedikit untuk mengatakan seperti $ 10.000 di pasar dan mereka berdagang dua atau tiga
+
+134
+00:10:15.000 --> 00:10:19.000
+waktu setahun, mereka akan menghemat cukup dalam komisi ketika mereka berdagang bisnis
+
+135
+00:10:19.000 --> 00:10:23.000
+melalui spear atau Schwab atau cepat dan kasar Anda tahu perusahaan broker diskon
+
+136
+00:10:23.000 --> 00:10:27.000
+lebih dari biaya yang dikompensasi dan membayar untuk layanan ini.
+
+137
+00:10:27.000 --> 00:10:30.000
+Kami akan kembali ke ini dalam satu menit. Pertama, salah satu yang terbaru
+
+138
+00:10:30.000 --> 00:10:33.001
+kerutan dalam perangkat lunak investasi adalah gadget yang memungkinkan Anda untuk memantau apa yang sedang terjadi
+
+139
+00:10:33.001 --> 00:10:36.001
+di Wall Street dalam waktu nyata di komputer Anda saat Anda melakukan sesuatu yang lain
+
+140
+00:10:36.001 --> 00:10:39.000
+untuk aplikasi. Wendy Woods memiliki laporan.
+
+141
+00:10:41.000 --> 00:10:45.001
+Lotus Information Network Pioneer dengan Jenis Sistem Pengiriman Baru
+
+142
+00:10:45.001 --> 00:10:50.000
+Data investasi yang sensitif. Tidak seperti kebanyakan layanan yang menawarkan up-to-the-minute
+
+143
+00:10:50.000 --> 00:10:55.000
+data stok dan komoditas ke komputer melalui garis telepon, sinyal Lotus
+
+144
+00:10:55.000 --> 00:11:01.000
+paket mengumpulkan data ini dari subband radio FM oleh penerima FM yang menghubungkan
+
+145
+00:11:01.000 --> 00:11:07.001
+masuk ke port serial PC. Sehingga 250 pengguna -masalah yang diprogram, terus dipantau dan
+
+146
+00:11:07.001 --> 00:11:11.001
+berubah, kemudian dapat dipaparkan dalam berbagai format pada layar PC.
+
+147
+00:11:12.000 --> 00:11:17.001
+Sistem kami adalah sistem yang berterusan sehingga update terjadi kedua demi kedua.
+
+148
+00:11:17.001 --> 00:11:23.000
+Karena transaksi terjadi secara berkelanjutan sepanjang hari perdagangan. Bahkan
+
+149
+00:11:23.000 --> 00:11:27.001
+Ketika komputer dimatikan, produk kami sebenarnya mempertahankan informasi di
+
+150
+00:11:27.001 --> 00:11:34.001
+mode latar belakang dan sebenarnya akan mengikuti portofolio Anda termasuk peringatan
+
+151
+00:11:34.001 --> 00:11:39.001
+Anda jika perubahan terjadi yang Anda hadapi untuk mengawasi, seperti yang saya katakan, bahkan ketika
+
+152
+00:11:39.001 --> 00:11:44.000
+Produk ini digunakan untuk tujuan lain. Ini adalah pusat otak untuk sinyal
+
+153
+00:11:44.000 --> 00:11:51.000
+Diterbitkan di 12 kota di Amerika Serikat. Live quotes on 23,000 topik yang diperdagangkan dari semua
+
+154
+00:11:51.000 --> 00:11:54.001
+Pertukaran utama datang di sini untuk komputer ini Berlin Game California
+
+155
+00:11:54.001 --> 00:11:56.001
+Kemudahan melalui garis panjang.
+
+156
+00:11:57.001 --> 00:12:01.001
+Dari sini, informasi dikirim ke satelit ekvator di mana ia diambil.
+
+157
+00:12:01.001 --> 00:12:06.001
+sampai 12 stasiun radio di seluruh negara yang menyiarkan sinyal. Lotus »
+
+158
+00:12:07.000 --> 00:12:11.001
+teknologi milik, dengan cara ini, juga memungkinkan data, sekali dimuat ke PC,
+
+159
+00:12:12.001 --> 00:12:16.000
+untuk digunakan dalam spreadsheets seperti 123 dan Symphony.
+
+160
+00:12:16.001 --> 00:12:20.001
+Produk ini hanya keluar selama beberapa bulan dan meskipun Lotus menolak untuk
+
+161
+00:12:20.001 --> 00:12:25.000
+mendedahkan angka penjualan, perusahaan mengklaim produk yang telah dijual di luar
+
+162
+00:12:25.000 --> 00:12:31.000
+dengan harapan. Untuk Computer Chronicles, saya Wendy Woods. Stuart, itu adalah salah satu
+
+163
+00:12:31.000 --> 00:12:34.000
+cara terbaru untuk menerima kutipan saham dan saya faham, John, bahwa Dow
+
+164
+00:12:34.000 --> 00:12:37.001
+Jones New Service adalah salah satu cara tertua untuk menerima kutipan. Itu adalah. Sesungguhnya ia
+
+165
+00:12:37.001 --> 00:12:41.001
+adalah salah satu pelopor bersama dengan sumber dan CompuServe dan sekarang ada
+
+166
+00:12:41.001 --> 00:12:45.001
+Layanan lain yang bersaing disebut View Data dari Florida. Tetapi apa yang mereka lakukan
+
+167
+00:12:45.001 --> 00:12:49.000
+mengumpulkan informasi dengan biaya yang cukup tinggi kepada mereka untuk mengembangkan,
+
+168
+00:12:49.000 --> 00:12:54.001
+Anda tahu, database sehingga pengguna dapat mengetik dan mendapatkan jenis ini segera
+
+169
+00:12:54.001 --> 00:12:57.001
+dari informasi. Dalam erti kata lain, semuanya keluar dari ketidakcocokan. Kami berbicara tentang itu a
+
+170
+00:12:57.001 --> 00:13:02.001
+sedikit lebih awal. industri broker 10 tahun yang lalu pergi dari, Anda tahu,
+
+171
+00:13:02.001 --> 00:13:07.000
+struktur komisi tinggi untuk satu di mana Anda dapat membeli layanan transaksi
+
+172
+00:13:07.000 --> 00:13:11.000
+secara terpisah dari layanan data. Jika Anda ingin melihat, misalnya, Dow
+
+173
+00:13:11.000 --> 00:13:15.000
+Jones, apa yang mereka lakukan bukan hanya membawa informasi investor bersama, kita
+
+174
+00:13:15.000 --> 00:13:19.000
+menarik menu utama mereka, tetapi mereka telah mengikat hal-hal seperti berita dunia dan
+
+175
+00:13:19.000 --> 00:13:23.000
+dengan olahraga. Anda dapat berbelanja melalui mereka sekarang. Anda dapat menempah reservasi penerbangan.
+
+176
+00:13:23.001 --> 00:13:26.001
+Jadi individu di rumah dengan komputer tiba-tiba memiliki
+
+177
+00:13:26.001 --> 00:13:28.000
+Nilai yang ditambahkan alasan untuk memiliki itu.
+
+178
+00:13:28.000 --> 00:13:30.001
+John, Anda pikir ini adalah tempat yang baik untuk individu
+
+179
+00:13:30.001 --> 00:13:32.000
+Bagaimana dengan Dow Jones New Service?
+
+180
+00:13:32.000 --> 00:13:36.001
+Itu adalah. Itu relatif murah untuk melakukannya. Banyak paket perangkat lunak seperti
+
+181
+00:13:36.001 --> 00:13:42.001
+Chuck, seperti program equalizer Charles Schwab, perangkat lunak Dow Jones
+
+182
+00:13:42.001 --> 00:13:46.001
+sendiri, yang memiliki program terminal, mereka memiliki program graf saham,
+
+183
+00:13:47.000 --> 00:13:51.000
+Manajemen portfolio, atau salah satu paket komunikasi yang tersedia
+
+184
+00:13:51.000 --> 00:13:55.000
+Untuk hampir setiap komputer hari ini akan memungkinkan Anda mengakses berita Dow Jones
+
+185
+00:13:55.000 --> 00:13:58.000
+Layanan Pemulihan Dan biasanya ketika Anda melakukannya, Anda mendapatkan satu jam atau
+
+186
+00:13:58.000 --> 00:14:00.000
+2 waktu akses gratis.
+
+187
+00:14:00.000 --> 00:14:04.000
+John, berikan kami pengenalan singkat tentang apa yang dapat kami dapatkan di pasar saham. I
+
+188
+00:14:04.000 --> 00:14:06.001
+Lihat kutipan ini dari rata-rata pasar. Nah, mari kita pergi salah satu yang paling menarik
+
+189
+00:14:06.001 --> 00:14:11.000
+layanan yang ditawarkan adalah layanan yang disebut Invest, yang sebenarnya memberikan Anda
+
+190
+00:14:11.000 --> 00:14:14.001
+melalui Dow Jones news retrieval, kemampuan untuk menempel ke apa pun
+
+191
+00:14:14.001 --> 00:14:17.001
+Broker mengatakan tentang saham yang Anda minat. Misalnya, Anda
+
+192
+00:14:17.001 --> 00:14:24.000
+Mereka menatap komputer Apple. Jadi kita akan punch dalam dan kita menemukan bahwa Apple
+
+193
+00:14:24.000 --> 00:14:28.001
+telah diikuti oleh sejumlah analis yang berbeda baru-baru ini. Sebenarnya, jika Anda
+
+194
+00:14:28.001 --> 00:14:33.001
+ingin melewati, Anda melihat ada tiga halaman dari hanya daftar
+
+195
+00:14:33.001 --> 00:14:37.001
+secara kronologis dari laporan terbaru kembali ke yang kembali beberapa
+
+196
+00:14:37.001 --> 00:14:41.000
+Beberapa bulan, salah satu layanan. Mari kita katakan kita ingin melihat apa yang Payne Weber adalah
+
+197
+00:14:41.000 --> 00:14:45.000
+berfikir . Ini adalah nomor tiga dalam daftar. Kami akan masuk dan meminta nomor tiga.
+
+198
+00:14:45.000 --> 00:14:48.000
+Dan itu datang dan kita bisa memilih untuk mengunduh sama ada keseluruhan
+
+199
+00:14:48.000 --> 00:14:50.000
+Laporan atau data harga saham.
+
+200
+00:14:51.000 --> 00:14:53.000
+Mari kita katakan kita hanya ingin mendapatkan pendapat mereka, Payne
+
+201
+00:14:53.000 --> 00:14:54.001
+pendapat dari Weber. Sekarang bisa jadi beige.
+
+202
+00:14:55.001 --> 00:14:59.000
+Ini bisa menjadi salah satu perusahaan broker utama lainnya yang terikat dalam
+
+203
+00:14:59.000 --> 00:15:02.000
+layanan atau melalui berita Dow Jones, yang kita bisa pergi dan mendapatkan Merrill Lynch
+
+204
+00:15:02.000 --> 00:15:07.001
+penyelidikan . Jadi apa yang Anda miliki di tangan Anda sekarang adalah kemampuan untuk melewati
+
+205
+00:15:07.001 --> 00:15:11.001
+broker dan untuk mendapatkan nilai penuh untuk komisi dolar Anda menghabiskan karena Anda
+
+206
+00:15:11.001 --> 00:15:16.001
+akan menghabiskan dengan broker diskon untuk membayar biaya transaksi sewa. dan
+
+207
+00:15:16.001 --> 00:15:20.000
+Kemudian Anda pergi dan Anda hanya mendapatkan data yang benar-benar Anda inginkan. Tidak ada broker
+
+208
+00:15:20.000 --> 00:15:24.000
+bernilai dalam arti bahwa mereka menyerap banyak informasi yang biasanya
+
+209
+00:15:24.000 --> 00:15:27.000
+Jika Anda melihat semua hasil ini, Anda harus melakukannya sendiri. Baiklah, Anda
+
+210
+00:15:27.000 --> 00:15:31.000
+Ada dua jenis orang yang berbeda. Anda memiliki jenis orang yang benar-benar berubah
+
+211
+00:15:31.000 --> 00:15:35.000
+Keputusan investasi dipindahkan ke orang lain yang profesional. Dan kemudian kamu
+
+212
+00:15:35.000 --> 00:15:39.000
+memiliki kerangka yang semakin meningkat dari orang-orang yang pengguna komputer, di sisi lain, yang suka melakukan
+
+213
+00:15:39.000 --> 00:15:43.000
+hal-hal untuk diri sendiri. Namun, apa yang belum tersedia sampai baru-baru ini adalah
+
+214
+00:15:43.000 --> 00:15:47.001
+Alat untuk melakukannya. Sekarang apa yang mereka miliki melalui Dow Jones atau melalui Standard &amp;
+
+215
+00:15:47.001 --> 00:15:51.001
+kelompok pasar miskin, layanan ini, adalah mereka dapat mengakses waktu nyata, data yang sama di
+
+216
+00:15:51.001 --> 00:15:55.000
+yang dapat dilakukan oleh seorang broker atau profesional lain. Jadi jika mereka benar-benar
+
+217
+00:15:55.000 --> 00:16:00.001
+Tertarik untuk melakukannya sendiri, sekarang mereka dapat melakukinya. Dan itu menarik karena
+
+218
+00:16:00.001 --> 00:16:04.001
+Anda dapat duduk di rumah dan menjadi bagian dari komunitas keuangan internasional di
+
+219
+00:16:04.001 --> 00:16:08.001
+yang sama dengan siapa saja yang berada dalam bisnis. Chuck, Anda adalah broker.
+
+220
+00:16:09.000 --> 00:16:13.001
+Sekarang berapa banyak uang yang dapat saya katakan dengan menggunakan jenis layanan ini dan berinvestasi
+
+221
+00:16:13.001 --> 00:16:18.000
+di internet ? Nah, pendekatan jenis ini terhadap bisnis memiliki pendekatan yang sangat berbeda
+
+222
+00:16:18.000 --> 00:16:21.001
+ekonomi terhadapnya daripada pendekatan tradisional terhadap bisnis. Ini adalah yang
+
+223
+00:16:21.001 --> 00:16:27.000
+cabang tersebut. Semua PC yang telah dijual dapat menjadi cabang. Dan karena kita tidak memiliki
+
+224
+00:16:27.000 --> 00:16:30.001
+biaya yang terkait dengan tanaman fisik di suatu tempat, komisi kami cenderung menjadi
+
+225
+00:16:30.001 --> 00:16:36.000
+85 sampai 90 persen dari yang akan Anda bayar untuk jenis diskon tradisional
+
+226
+00:16:36.000 --> 00:16:40.001
+broker yang Dan di suatu tempat sekitar 25 sampai 30 persen dari apa yang akan Anda bayar biaya penuh
+
+227
+00:16:40.001 --> 00:16:43.001
+broker yang Jadi dengan kata lain, kita membayar bahkan kurang dari yang kita akan diskon
+
+228
+00:16:43.001 --> 00:16:47.001
+broker karena, seperti yang Anda katakan, PC menjadi cabang Anda dalam arti. Itu memang benar.
+
+229
+00:16:48.000 --> 00:16:52.000
+Saya ingin, dengan mendengarkan ke mana industri kita pergi, sesuatu yang saya benar-benar
+
+230
+00:16:52.000 --> 00:16:57.000
+Seperti yang perlu diperhatikan adalah bahwa sistem ini tampaknya mengancam cara broker
+
+231
+00:16:57.000 --> 00:16:59.000
+Layanan ini secara tradisional disampaikan.
+
+232
+00:16:59.001 --> 00:17:03.001
+Tetapi jika Anda memiliki broker yang memberi Anda saran dan Anda menghasilkan uang dengan itu, Anda
+
+233
+00:17:03.001 --> 00:17:07.001
+telah menemukan sumber daya yang paling berharga dalam bisnis. Dan itu adalah
+
+234
+00:17:07.001 --> 00:17:09.000
+Seseorang yang benar-benar harus Anda gantung.
+
+235
+00:17:09.001 --> 00:17:12.000
+Baiklah, tuan-tuan, kami akan mengambil istirahat dalam hanya satu menit. Kami akan benar
+
+236
+00:17:12.000 --> 00:17:15.001
+Kembali ke Kami akan melihat program $49 yang memberi Anda angka dan
+
+237
+00:17:15.001 --> 00:17:19.000
+Grafik yang mungkin akan membantu Anda memilih pemenang di Wall Street. Jadi tinggal bersama kami.
+
+238
+00:17:31.000 --> 00:17:35.000
+Yang menyertai kami sekarang di studio adalah Richard Carlin. Richard adalah Presiden dan CEO dari
+
+239
+00:17:35.000 --> 00:17:38.001
+Teleskop terintegrasi dari Houston, Texas. Dan kembali dengan kami adalah John Frierson,
+
+240
+00:17:38.001 --> 00:17:43.000
+Presiden dari Investasi. dengan Gary? Richard, saya ingin melihat langsung pada Anda
+
+241
+00:17:43.000 --> 00:17:48.000
+produk yang disebut Telescan Analyzer. yang baik. Ya, produk kami memungkinkan seseorang untuk
+
+242
+00:17:48.000 --> 00:17:52.001
+Dapatkan informasi stok bersejarah dan paparkan pada layar dengan sangat cepat.
+
+243
+00:17:52.001 --> 00:17:56.001
+Kami dapat mendapatkan graf dari stok apa pun dan menampilkan di layar kurang dari 15
+
+244
+00:17:56.001 --> 00:18:01.000
+dalam detik. Ini hanya menunjukkan graf yang kami ambil dari database kami menunjukkan
+
+245
+00:18:01.000 --> 00:18:07.000
+Sejarah Dow Jones Industrial Average kembali ke 1973. Dan seperti yang dapat Anda lihat,
+
+246
+00:18:07.000 --> 00:18:13.000
+Dow telah berjalan lurus untuk waktu yang lama. Pada tahun 1982, ia melanggar
+
+247
+00:18:13.000 --> 00:18:17.001
+Sejak saat itu, ia telah mencapai ketinggian sepanjang waktu. Namun, jika kita mengambil keuntungan dari
+
+248
+00:18:17.001 --> 00:18:21.001
+Salah satu fitur dari Telescan Analyzer kami, dan itulah kemampuan untuk menyesuaikan
+
+249
+00:18:21.001 --> 00:18:28.001
+Untuk inflasi, kita dapat melihat Dow sekarang setelah menyesuaikan untuk konsumen
+
+250
+00:18:28.001 --> 00:18:33.000
+Indeks harga Dan apa yang kita temukan bukanlah pasar saham yang menabrak semua puncak baru,
+
+251
+00:18:33.001 --> 00:18:37.001
+Tapi pasar yang baru saja mulai berputar setelah sangat, sangat lama
+
+252
+00:18:37.001 --> 00:18:42.001
+Periode penurunan dalam istilah nyata. Sekarang Richard, ini lagi terhubung dengan
+
+253
+00:18:42.001 --> 00:18:44.001
+Sistem komputer lain melalui.
+
+254
+00:18:44.001 --> 00:18:48.000
+Ya, ini adalah database kami sendiri di Houston, Texas. Dan kemudian data tersebut adalah
+
+255
+00:18:48.000 --> 00:18:51.001
+disampaikan secara lokal ke mesin ini dan disajikan sebagai grafis, apakah itu benar?
+
+256
+00:18:52.000 --> 00:18:55.001
+Ya, itu adalah Okay, sekarang di awal program, kami meminta Anda beberapa informasi
+
+257
+00:18:55.001 --> 00:19:00.000
+tentang perdagangan insider. Sekarang anggap saya ingin mengambil sistem Anda dan mengatakan, betapa baiknya
+
+258
+00:19:00.000 --> 00:19:03.001
+Apakah instruksi adalah perdagangan insider di saham tertentu? Saya bisa menggunakan teleskop untuk
+
+259
+00:19:03.001 --> 00:19:08.001
+Lakukan itu? Ya, Anda bisa Di sini saya memanggil graf dari Toys R Us
+
+260
+00:19:08.001 --> 00:19:11.000
+dan menunjukkan perdagangan insider.
+
+261
+00:19:11.000 --> 00:19:15.001
+Di bagian bawah, kami memiliki garis, dan ini menunjukkan sejarah perdagangan insider. dan
+
+262
+00:19:15.001 --> 00:19:19.001
+Sejauh yang saya tahu, kami memiliki satu-satunya layanan yang menunjukkan ini. Apa yang dapat Anda lihat adalah
+
+263
+00:19:19.001 --> 00:19:23.001
+Ketika berada di atas garis, Anda memiliki pembelian bersih oleh insider atau pejabat perusahaan.
+
+264
+00:19:24.000 --> 00:19:27.001
+Ketika berada di bawah garis, Anda memiliki penjualan bersih. Dan seperti yang dapat dilihat di Toys R Us,
+
+265
+00:19:28.000 --> 00:19:32.001
+Ketika Anda melihat sejarah, Anda menemukan pembelian di setiap dasar utama, dan kemudian Anda
+
+266
+00:19:32.001 --> 00:19:37.000
+Menemukan jualan di setiap puncak utama. Jadi dengan... Sebuah stok yang baik untuk mengikuti insider
+
+267
+00:19:37.000 --> 00:19:40.000
+Aksi yang Ya, dengan mengikuti insiders, Anda dapat membuat beberapa uang di stok ini.
+
+268
+00:19:41.000 --> 00:19:44.000
+Okay, sekarang saya pikir fitur lain yang Anda miliki di sini, kita dapat melihat
+
+269
+00:19:44.000 --> 00:19:47.001
+penilaian saham, apakah itu berlebihan dan kurang dihargai dan sebagainya. Berikan aku
+
+270
+00:19:47.001 --> 00:19:51.001
+Contoh dari salah satu dari mereka. Nah, apa yang kami lakukan adalah kami mengambil hingga lima
+
+271
+00:19:51.001 --> 00:19:56.001
+nilai dasar, dividen, pendapatan, nilai buku, aliran tunai, pengeluaran modal,
+
+272
+00:19:57.000 --> 00:20:01.001
+dan penjualan, dan kami telah mengubahnya menjadi representasi grafis. Jadi Anda bisa mengambil
+
+273
+00:20:01.001 --> 00:20:07.000
+Satu pandangan pada stok dan menentukan apakah itu berlebihan atau kurang dihargai. Dan ini
+
+274
+00:20:07.000 --> 00:20:11.000
+menunjukkan Kellogg, salah satu stok makanan di luar sana yang sangat, sangat populer.
+
+275
+00:20:11.001 --> 00:20:14.001
+Dan ini hanya menunjukkan over dan undervaluation kita
+
+276
+00:20:14.001 --> 00:20:16.001
+saluran yang dihasilkan dari dasar-dasar
+
+277
+00:20:17.000 --> 00:20:20.001
+Dan bagi orang rata-rata yang tidak tahu banyak tentang ini, pada satu pandangan mereka
+
+278
+00:20:20.001 --> 00:20:25.000
+Dapatkah Anda melihat, apakah saham itu berlebihan? Apakah itu kurang dihargai? Atau saat ini,
+
+279
+00:20:25.001 --> 00:20:27.000
+Oh ya, mari kita lihat. Ya, yang sangat berlebihan.
+
+280
+00:20:27.000 --> 00:20:30.000
+Mari kita perhatikan. Baiklah, Anda memiliki contoh di mana kita dapat melihat sesuatu yang
+
+281
+00:20:30.000 --> 00:20:34.001
+yang tidak dihargai, sesuatu yang harus kita beli. Ya, ini menunjukkan sesuatu yang sangat kurang dihargai
+
+282
+00:20:34.001 --> 00:20:39.000
+kelompok, semikonduktor, dan ini menunjukkan setengah konduktor nasional. Dan sekali lagi, Anda
+
+283
+00:20:39.000 --> 00:20:42.001
+Anda dapat melihat di mana stok secara historis telah berlebihan, di mana ia kurang bernilai.
+
+284
+00:20:43.000 --> 00:20:46.000
+Dan sekali lagi, kita menemukan posisi yang sangat kurang dihargai saat ini.
+
+285
+00:20:46.001 --> 00:20:51.000
+John, apakah ada perangkat lunak di sekitar sekarang yang sedang mengambil langkah berikutnya? Maksudnya, di mana
+
+286
+00:20:51.000 --> 00:20:54.001
+Kami memiliki jenis sistem pakar di mana bukannya saya harus menganalisis data,
+
+287
+00:20:54.001 --> 00:20:58.000
+Ia akan kembali dan berkata, beli ini, jual ini. Apakah kita berada di tahap yang
+
+288
+00:20:58.000 --> 00:21:02.000
+Menggunakan komputer ? Kami berada di tahap itu. Kita tidak benar-benar memiliki terobosan yang nyata
+
+289
+00:21:02.000 --> 00:21:06.000
+Produk inovatif masih ada di pasar, tetapi mereka hanya beberapa bulan jauh.
+
+290
+00:21:06.000 --> 00:21:11.000
+Dan apa yang akan tersedia adalah sistem yang akan memungkinkan Anda untuk
+
+291
+00:21:11.000 --> 00:21:16.000
+keterampilan interpretasi, baik Anda sendiri atau mungkin meminjam dari orang lain yang
+
+292
+00:21:16.000 --> 00:21:19.001
+dipertimbangkan sebagai seorang ahli, untuk memungkinkan Anda untuk melewati proses pemeriksaan
+
+293
+00:21:19.001 --> 00:21:23.001
+atau proses pemilihan sehingga Anda dapat memilih stok untuk melihat di sini. Kau tahu, aku
+
+294
+00:21:23.001 --> 00:21:27.001
+mengambil halaman dari buku Lou Brookhiser dan katakan, bahkan dengan berlebihan dan
+
+295
+00:21:27.001 --> 00:21:30.000
+menurunkan nilai menampilkan pada layar saat ini, tidak ada jaminan
+
+296
+00:21:30.000 --> 00:21:37.000
+Di dunia yang hari ini
+
+297
+00:21:37.000 --> 00:21:41.001
+orang di rumah dengan komputer, investor individu, memiliki kemampuan untuk
+
+298
+00:21:41.001 --> 00:21:46.000
+sekurang-kurangnya bersatu dengan mana-mana profesional dalam mampu menganalisis dan membawa
+
+299
+00:21:46.000 --> 00:21:49.001
+Penghakiman sendiri yang harus dipikul. Investasi akan selalu menjadi seni dan bukan ilmu.
+
+300
+00:21:49.001 --> 00:21:54.001
+Tetapi dengan eksposur baru kepada kecerdasan buatan yang datang ke dalam yang baru
+
+301
+00:21:54.001 --> 00:21:59.001
+generasi perangkat lunak, itu hanya akan berkembang dan meningkatkan kemampuan yang
+
+302
+00:21:59.001 --> 00:22:03.001
+Ada yang punya. Tapi yang menarik adalah di mana ia berada hari ini. Anda tidak perlu melompat
+
+303
+00:22:03.001 --> 00:22:08.000
+Seperti yang kita ketahui, Telescan atau Spears Access atau Dow Jones.
+
+304
+00:22:08.000 --> 00:22:12.000
+Berita Retrieval yang kami lihat atau produk lain yang ada di sekitar, mereka hari ini
+
+305
+00:22:12.000 --> 00:22:15.001
+Berikan seseorang alasan untuk memiliki komputer di rumah dan mencoba dan menggunakannya.
+
+306
+00:22:16.000 --> 00:22:19.001
+Dan ekonomi ada di sana yang dapat Anda simpan pada perdagangan melalui perusahaan seperti,
+
+307
+00:22:19.001 --> 00:22:23.001
+Seperti yang kami katakan, Schwab atau Spear atau orang lain dan ambil itu dari uang dan, Anda tahu,
+
+308
+00:22:23.001 --> 00:22:28.000
+benar-benar mendapatkan produk ini. Perangkat lunak saya terhadap perangkat lunak Anda di masa depan. Kami adalah
+
+309
+00:22:28.000 --> 00:22:32.001
+di luar waktu. Ok ya. Apakah komputer benar-benar mendemokrasi proses investasi ini? dapat
+
+310
+00:22:32.001 --> 00:22:36.000
+Apakah Anda begitu pintar seperti analis waktu besar di Wall Street? Pembicara kami, George
+
+311
+00:22:36.000 --> 00:22:40.000
+Morrow, memiliki beberapa pemikiran akhir tentang peluang dan resiko
+
+312
+00:22:40.000 --> 00:22:46.000
+investasi komputer. Bukankah itu ajaib? Tempat duduk di bursa saham di sebelah kanan
+
+313
+00:22:46.000 --> 00:22:51.000
+kita sendiri dan semua melalui sihir mikrokomputer, jutaan kita
+
+314
+00:22:51.000 --> 00:22:56.001
+Berinvestasi dalam simpanan iris kami dengan satu klik switch. Dan apa yang lebih baik timing? dan yang
+
+315
+00:22:56.001 --> 00:23:01.000
+Pasar bull terbesar ketiga abad ini. Pertimbangkan keberuntungan yang harus dibuat. Pertimbangkan
+
+316
+00:23:01.000 --> 00:23:05.001
+dari kebangkrutan yang akan datang. Dua kali terakhir kami mengundurkan diri ke lumpur dinding
+
+317
+00:23:05.001 --> 00:23:10.000
+Jalan, itu sangat menarik dan menguntungkan sampai beruang pasar bergerak ke dalam dan membuang
+
+318
+00:23:10.000 --> 00:23:14.001
+Semua itu keluar dengan sebotol paw. Dan kali ini, kita lebih dalam dalam hutang daripada sebelumnya
+
+319
+00:23:14.001 --> 00:23:18.001
+Sebelumnya sebagai konsumen. Hanya ada dua cara yang pasti untuk mendapatkan keuntungan dalam stok.
+
+320
+00:23:19.000 --> 00:23:22.000
+Beli dengan hati-hati dan tahan selama bertahun-tahun jika perlu atau
+
+321
+00:23:22.000 --> 00:23:23.001
+menjadi agen yang mengendalikan perdagangan.
+
+322
+00:23:24.001 --> 00:23:28.000
+Sayangnya, kita yang lain kehilangan sebagian besar waktu. Dan banyak dari
+
+323
+00:23:28.000 --> 00:23:29.001
+Ini sangat mirip dengan perjudian.
+
+324
+00:23:30.001 --> 00:23:34.000
+Sebenarnya, jika saya berada di depan komisi game di Nevada, saya akan menuntut
+
+325
+00:23:34.000 --> 00:23:38.000
+waktu yang sama pada semua komputer ini untuk membawa permainan kami kesempatan untuk Anda hanya
+
+326
+00:23:38.000 --> 00:23:42.000
+Seperti rumah-rumah broker yang membawa Anda milik mereka. Setelah semua, kami berdua berada di
+
+327
+00:23:42.000 --> 00:23:47.000
+Sama halnya dengan uang Anda. Begitulah cara saya melihatnya. Saya adalah George Morrow.
+
+328
+00:23:57.001 --> 00:24:02.000
+Dalam file akses rawak minggu ini, IRS sekali lagi terjun ke dalam risiko
+
+329
+00:24:02.000 --> 00:24:06.000
+air dari komputasi. Kali ini, Kementerian Keuangan adalah
+
+330
+00:24:06.000 --> 00:24:10.001
+Bereksperimen dengan pendaftaran online. H&amp;R Block dan lima pembuat pajak lainnya memiliki
+
+331
+00:24:10.001 --> 00:24:15.001
+diperbolehkan untuk mendaftarkan pelanggan 1040s secara elektronik dalam tiga bagian dari
+
+332
+00:24:15.001 --> 00:24:19.001
+negara, Raleigh-Durham, Cincinnati, dan Phoenix. Pendaftaran online hanya
+
+333
+00:24:19.001 --> 00:24:25.000
+tersedia untuk pembayar pajak yang menuntut pengembalian, formulir W2, dan tandatangan pembayar cukai masih
+
+334
+00:24:25.000 --> 00:24:30.001
+harus dikirim melalui mail. IBM RT-PC mungkin mesin baru, tetapi para peneliti
+
+335
+00:24:30.001 --> 00:24:35.001
+Carnegie Mellon University telah menggunakan 25 RT-PC dalam jaringan kampus untuk
+
+336
+00:24:35.001 --> 00:24:40.000
+Beberapa bulan, dan RT mendapat gelar yang baik. Salah satu fitur menarik dari yang baru
+
+337
+00:24:40.000 --> 00:24:45.000
+Komputer IBM RISC adalah chip memori virtual 40 bit yang dapat memberikan
+
+338
+00:24:45.000 --> 00:24:50.000
+1 triliun byte memori pengguna. Sebuah lembaran lisensi di tempat parkir Apple membaca
+
+339
+00:24:50.000 --> 00:24:54.000
+OpenMac, tapi Apple sekarang mengatakan OpenMac nyata tidak akan siap tahun ini, seperti
+
+340
+00:24:54.000 --> 00:24:58.001
+yang awalnya dijanjikan. Versi baru dari Mac dengan slot internal sekarang menjadi
+
+341
+00:24:58.001 --> 00:25:04.000
+Bercakap tentang tahun 1987. Microsoft dan Lotus bersetuju untuk bekerja sama untuk
+
+342
+00:25:04.000 --> 00:25:08.000
+mengembangkan perangkat lunak aplikasi baru yang menggabungkan antarmuka Windows Microsoft,
+
+343
+00:25:08.001 --> 00:25:12.001
+Dan pengembang perangkat lunak lain tampaknya meminjam dukungan untuk Windows. oleh Ashton Tate,
+
+344
+00:25:12.001 --> 00:25:16.001
+MicroRim, Live Video Text, dan lain-lain mengatakan mereka sedang mengembangkan produk baru untuk
+
+345
+00:25:16.001 --> 00:25:21.000
+Gunakan antara muka Windows. Dalam proses pembaharuan legislatif, yang
+
+346
+00:25:21.000 --> 00:25:25.000
+Pertempuran untuk kredit pajak berkelanjutan untuk penelitian dan pengembangan komputer sekarang bergerak
+
+347
+00:25:25.000 --> 00:25:28.000
+di Senat, di mana Komite Keuangan memulai pendengaran tentang reformasi pajak
+
+348
+00:25:28.000 --> 00:25:33.000
+dan Bill. Versi House saat ini mencakup kredit pajak R &amp; D, tetapi teknologi tinggi
+
+349
+00:25:33.000 --> 00:25:37.000
+Lobby khawatir tentang nasibnya di Senat yang dikendalikan Republikan. Waktu untuk
+
+350
+00:25:37.000 --> 00:25:41.001
+ulasan perangkat lunak minggu ini, dan di sini adalah Paul Schindler. Bahkan jika Anda tidak pernah
+
+351
+00:25:41.001 --> 00:25:46.000
+bekerja di tempat dengan kartu waktu, adegan ini harus familiar dengan Anda. Ia harus
+
+352
+00:25:46.000 --> 00:25:50.001
+Mudah difahami, bahkan orang yang paling lambat dapat menggunakan rak kartu waktu. Baiklah
+
+353
+00:25:50.001 --> 00:25:55.000
+Itulah yang Paul Heckle ingat ketika dia menciptakan ZoomRacks. Yang terbesar
+
+354
+00:25:55.000 --> 00:25:59.000
+masalah dengan perangkat lunak manajemen database adalah bahwa orang tidak dapat mendapatkan gambar di
+
+355
+00:25:59.000 --> 00:26:03.000
+Mereka berpikir tentang bagaimana hal-hal itu akan terlihat jika itu di atas kertas. Spreadsheet adalah
+
+356
+00:26:03.000 --> 00:26:08.001
+mudah, proses kata mudah, manajer database sulit. Jadi, kami memiliki
+
+357
+00:26:08.001 --> 00:26:12.000
+dari ZoomRacks Garis pertama dari setiap kartu ditunjukkan pada ringkasan.
+
+358
+00:26:12.001 --> 00:26:16.000
+Dengan satu keystroke, Anda dapat melihat kartu. Satu lagi keystroke mengambil
+
+359
+00:26:16.000 --> 00:26:21.000
+Kembali ke rack. Perhatikan kata-kata yang kelihatan lucu. ZoomRacks menggunakan fitur khusus
+
+360
+00:26:21.000 --> 00:26:22.001
+Smart zoom untuk membuat singkatan.
+
+361
+00:26:23.000 --> 00:26:27.001
+Contohnya, ini mengatakan Press-Rells-Ettin. Ini jelas edisi pers, seperti
+
+362
+00:26:27.001 --> 00:26:31.001
+Kita lihat di kartu penuh. Anda bergerak di sekitar rak dengan kunci pistol atau dengan mencetak
+
+363
+00:26:31.001 --> 00:26:36.001
+dan angka. Kami berpindah ke daftar kontak dan menganggap bahwa HCK adalah Heckle sendiri.
+
+364
+00:26:37.000 --> 00:26:42.000
+Kami memang benar. ZoomRacks tidak sempurna, tetapi itu menarik dan relatif
+
+365
+00:26:42.000 --> 00:26:48.000
+Murah di $ 125 dari QuickView Systems di Los Altos, California. Untuk komputer
+
+366
+00:26:48.000 --> 00:26:52.001
+Saya adalah Paul Schindler. Seorang ahli komputer Prancis mendesak United
+
+367
+00:26:52.001 --> 00:26:57.000
+Negara-negara untuk meletakkan apa yang dia sebut bom lembut ke dalam perangkat lunak yang canggih untuk mencegah
+
+368
+00:26:57.000 --> 00:27:02.000
+Rusia tidak menggunakan perangkat lunak untuk tujuan militer. Thierry Breton mengatakan,
+
+369
+00:27:02.001 --> 00:27:06.000
+Meskipun mudah untuk mengontrol ekspor perangkat keras, hampir mustahil untuk
+
+370
+00:27:06.000 --> 00:27:10.001
+mengontrol ekspor perangkat lunak. Karena itu, dia mengatakan bahwa satu-satunya pertahanan adalah lembut
+
+371
+00:27:10.001 --> 00:27:16.000
+Bom yang dirancang untuk meledakkan sebuah program jika digunakan dengan cara yang tidak disengaja. dan yang
+
+372
+00:27:16.000 --> 00:27:19.001
+Militer bukan satu-satunya yang khawatir tentang keamanan sistem komputernya.
+
+373
+00:27:19.001 --> 00:27:23.000
+Di New York, sebuah perusahaan bernama Dataport sedang membangun lembah dua setengah hektar.
+
+374
+00:27:23.000 --> 00:27:30.000
+di bawah tempat tidur pengguna komputer utama daerah. Dataporta yang
+
+375
+00:27:30.000 --> 00:27:35.000
+Vault juga akan menyewa sistem backup komputer panas dan dingin untuk mengambil alih dalam kasus
+
+376
+00:27:35.000 --> 00:27:39.001
+dari keadaan darurat. Pembeli supermarket di Williamsport, Pennsylvania sedang membawa
+
+377
+00:27:39.001 --> 00:27:43.001
+kartu plastik kecil dengan strip magnet di atasnya, tetapi mereka bukan kartu kredit.
+
+378
+00:27:43.001 --> 00:27:46.000
+Mereka adalah alat berkomputer baru untuk peneliti pasar
+
+379
+00:27:46.000 --> 00:27:47.001
+Untuk mengetahui apa yang dibeli orang.
+
+380
+00:27:48.000 --> 00:27:51.001
+Setiap kali pelanggan memeriksa keluar dari supermarket, kartu dimasukkan dan
+
+381
+00:27:51.001 --> 00:27:56.000
+mencatat pembelian pelanggan yang sebenarnya. Para peneliti mengatakan bahwa komputer baru ini
+
+382
+00:27:56.000 --> 00:28:00.001
+Sistem ini jauh lebih akurat dari sistem harian lama dalam satu tes. Dibandingkan dengan
+
+383
+00:28:00.001 --> 00:28:05.001
+hasil komputer dengan hasil harian, hanya satu pertiga konsumen yang mengatakan
+
+384
+00:28:05.001 --> 00:28:09.001
+Mereka telah membeli kilat beku Kellogg sebenarnya telah membelinya. Aku berpikir
+
+385
+00:28:09.001 --> 00:28:12.001
+Mereka akan berbohong ke arah yang lain. Itulah yang terjadi pada kronik minggu ini.
+
+386
+00:28:13.000 --> 00:28:18.000
+Kita akan berjumpa denganmu lain kali. Komputer Chronicles dibuat mungkin sebagian oleh
+
+387
+00:28:18.000 --> 00:28:22.001
+Fasilitas dari AFIPs, Federasi Masyarakat Pemrosesan Informasi Amerika.
+
+388
+00:28:23.000 --> 00:28:28.001
+AFIP, sponsor OAC 86, konferensi terkemuka di negara ini tentang bisnis
+
+389
+00:28:28.001 --> 00:28:33.001
+dan teknologi. Untuk informasi konferensi, hubungi 800-OAC-1986.
+
+390
+00:28:34.001 --> 00:28:39.000
+Mengeksplorasi solusi bisnis saat ini. Pembiayaan tambahan disediakan oleh McGraw
+
+391
+00:28:39.000 --> 00:28:44.000
+-Hill, penerbit dari Byte. Artikel teknis rinci Byte tentang perangkat lunak baru,
+
+392
+00:28:44.001 --> 00:28:49.000
+Perangkat lunak dan bahasa mencakup teknologi mikrokomputer terbaru di seluruh dunia.
+
+393
+00:28:50.000 --> 00:28:51.001
+Bite adalah standar internasional.
+
+394
+00:29:15.001 --> 00:29:16.000
+[...]
