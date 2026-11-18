@@ -1,0 +1,1565 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.000
+[...]
+
+2
+00:00:05.000 --> 00:00:22.000
+Gracias a ustedes.
+
+3
+00:00:42.001 --> 00:00:48.001
+Micro Focus, creadores de herramientas de programación visual para el desarrollo de software, es
+
+4
+00:00:48.001 --> 00:00:53.001
+contento de proporcionar financiamiento importante para la Crónica de la Computación, la historia
+
+5
+00:00:53.001 --> 00:00:55.001
+de esta evolución continua.
+
+6
+00:01:05.001 --> 00:01:09.001
+Bienvenido a las crónicas informáticas. Yo soy Stuart Chafay, y estoy sentado esta semana
+
+7
+00:01:09.001 --> 00:01:14.001
+Gary Kildall es Herb Luckner de SRI. Herb, nuestro tema hoy es ergonómica,
+
+8
+00:01:14.001 --> 00:01:18.000
+o ingeniería de factores humanos, mirando cómo los ordenadores y las personas pueden trabajar mejor
+
+9
+00:01:18.000 --> 00:01:23.000
+Juntos . Y la mayoría de las personas no pueden reconocer este monstruo aquí. Este es un Apple I
+
+10
+00:01:23.000 --> 00:01:28.000
+El ordenador de vuelta en 1977. Te suministras el lumbre por ti mismo, por el camino. Es el
+
+11
+00:01:28.000 --> 00:01:33.001
+No muy amable al usuario. Ha realizado un estudio en la SRI sobre ergonomía. ¿Qué fueron los
+
+12
+00:01:33.001 --> 00:01:37.000
+¿Los resultados de ese estudio? No tuvimos nada tan crudo para trabajar con,
+
+13
+00:01:37.000 --> 00:01:40.001
+Stuart, pero descubrimos que hay áreas en las que podemos mejorar al hombre
+
+14
+00:01:40.001 --> 00:01:45.001
+Interfaz de máquina. Se distinguen de elementos de hardware específicos, como el diseño de
+
+15
+00:01:45.001 --> 00:01:49.001
+las teclas y la altura de los personajes, a los muebles, al general
+
+16
+00:01:49.001 --> 00:01:56.001
+espacio de trabajo, la habitación para el diseño del trabajo, el calor, el nivel de ruido, la iluminación, y
+
+17
+00:01:56.001 --> 00:02:02.000
+todo el camino a las cuestiones de personal como asegurar que la gente va a
+
+18
+00:02:02.000 --> 00:02:06.000
+El uso del equipo forma parte del proceso de selección y toma de decisiones. Bueno, en
+
+19
+00:02:06.000 --> 00:02:09.001
+el programa de hoy vamos a ver el capítulo más reciente de Apple, mirando el
+
+20
+00:02:09.001 --> 00:02:14.000
+Macintosh y cómo se acerca a los problemas ergonómicos. En primer lugar, vamos a tomar una
+
+21
+00:02:14.000 --> 00:02:17.000
+ver algunos problemas de ingeniería humana en los que las consecuencias son más
+
+22
+00:02:17.000 --> 00:02:23.001
+más grave que sólo estrés del ojo o inconveniente. El
+
+23
+00:02:23.001 --> 00:02:28.001
+instrumentos aéreos sofisticados desarrollados en los años 1940 y 50 creados por el hombre
+
+24
+00:02:28.001 --> 00:02:32.001
+problemas de interfaz que eran completamente nuevos para los diseñadores industriales.
+
+25
+00:02:33.001 --> 00:02:37.000
+Los dispositivos mecánicos dieron camino a los electromecánicos y electrónicamente controlados
+
+26
+00:02:37.000 --> 00:02:41.001
+mecanismos, generando más información, más rápidamente, y poniendo más
+
+27
+00:02:41.001 --> 00:02:46.001
+Cargas sobre el operador. En sus primeros días, la ergonómica se preocupó por la
+
+28
+00:02:46.001 --> 00:02:50.001
+seguridad de las personas que utilizan estos dispositivos en aplicaciones donde un error podría
+
+29
+00:02:50.001 --> 00:02:55.001
+Causar lesiones o pérdida de vida. Como el uso del diseño ergonómico se ha vuelto más común,
+
+30
+00:02:56.000 --> 00:02:59.000
+se propaga rápidamente a otros entornos de trabajo con el objetivo de aumentar
+
+31
+00:02:59.000 --> 00:03:05.000
+productividad y reducir la fatiga y el estrés. Entre los usuarios de computadoras, algunos grandes
+
+32
+00:03:05.000 --> 00:03:10.000
+las preocupaciones que surgieron en los años 70. Dolor muscular, estrés, y en particular el ojo
+
+33
+00:03:10.000 --> 00:03:14.000
+La fatiga son las quejas de salud más comunes. Sentarse frente a un video
+
+34
+00:03:14.000 --> 00:03:18.001
+la muestra fue un cambio radical para la mayoría de los trabajadores y llevó a estudios sobre cómo el ojo
+
+35
+00:03:18.001 --> 00:03:25.000
+Responde a los estímulos de CRT. En este experimento, un rayo infrarrojo sigue el ojo.
+
+36
+00:03:25.000 --> 00:03:29.001
+movimiento a través de la pantalla, medición de las respuestas pupilares y capacidad de foco
+
+37
+00:03:29.001 --> 00:03:35.001
+Cuando se enfrentan con personajes de diferentes polaridades, agudez o contraste. El
+
+38
+00:03:35.001 --> 00:03:40.000
+la irritación resultante de la luz de la pantalla, otra fuente importante de quejas, es
+
+39
+00:03:40.000 --> 00:03:44.001
+medida por este test, en el que diferentes patrones en diferentes niveles de contraste son
+
+40
+00:03:44.001 --> 00:03:49.001
+Proyectado en una pantalla CRT. A medida que cada patrón cambia, el sujeto busca su
+
+41
+00:03:49.001 --> 00:03:54.000
+Reflexión en la pantalla. La diferencia entre un anti-glare y un reflejo
+
+42
+00:03:54.000 --> 00:03:59.001
+La pantalla es fácil de demostrar. Ergonomía desarrollada a medida que los diseñadores se convirtieron en conscientes de
+
+43
+00:03:59.001 --> 00:04:04.000
+Una relación obvia. La eficiencia de una máquina depende de la eficiencia
+
+44
+00:04:04.000 --> 00:04:08.000
+Se puede tratar. En un campo donde los problemas a veces son físicos y
+
+45
+00:04:08.000 --> 00:04:13.000
+a veces psicológica, el objetivo es el mismo, para adaptar el diseño de la máquina
+
+46
+00:04:13.000 --> 00:04:15.000
+El pensamiento y el movimiento humano.
+
+47
+00:04:26.000 --> 00:04:30.001
+Nuestros huéspedes en el estudio ahora son Wanda Smith, gerente de factores humanos
+
+48
+00:04:30.001 --> 00:04:35.000
+ingeniería en Hewlett-Packard y Karen Kessel, un consultor de ergonómica y
+
+49
+00:04:35.000 --> 00:04:38.000
+Editor del informe ergonómico de Office Systems. ¿La hierba?
+
+50
+00:04:38.001 --> 00:04:43.000
+Karen, no todo el mundo puede estar familiarizado con nuestro uso del término ergonómica. Algunos
+
+51
+00:04:43.000 --> 00:04:47.000
+las personas creen que tiene algo que ver con la interacción entre las personas y
+
+52
+00:04:47.000 --> 00:04:50.000
+computadoras, pero hay interacciones de software y hay físicas
+
+53
+00:04:50.000 --> 00:04:53.000
+las interacciones. ¿Cómo se define la ergonómica en este sentido?
+
+54
+00:04:54.000 --> 00:04:59.000
+Bueno, básicamente de esta manera, debe considerar todo el diseño de la estación de trabajo, y
+
+55
+00:04:59.000 --> 00:05:04.001
+que, por supuesto, incluye el terminal y el funcionamiento del sistema, que es ambos
+
+56
+00:05:04.001 --> 00:05:11.000
+El software y la tarea. Lo que intentamos hacer es mirar al usuario
+
+57
+00:05:11.000 --> 00:05:18.000
+Pregunta: ¿Cuáles son las necesidades del usuario? ¿Cómo se limita al usuario en esta tarea? Cómo
+
+58
+00:05:18.000 --> 00:05:24.000
+¿Están limitados en lo que son sus capacidades de memoria, por ejemplo, y intentan
+
+59
+00:05:24.000 --> 00:05:31.000
+adaptar el medio ambiente para que lo mejor se ajuste a ellos. Wanda, cuando usted
+
+60
+00:05:31.000 --> 00:05:34.001
+mirando a un terminal de ordenador o teclado, más o menos le recuerda un
+
+61
+00:05:34.001 --> 00:05:38.001
+tipwriter, es uno de los problemas que las personas son de tipo capturado en ese tipwriter
+
+62
+00:05:38.001 --> 00:05:43.000
+modo y no realmente pensar que esta es una máquina realmente diferente para usar?
+
+63
+00:05:43.001 --> 00:05:47.000
+Sí, creo que hay algo que llamamos transferencia de problemas de formación,
+
+64
+00:05:47.000 --> 00:05:51.001
+Especialmente con personas que nunca han utilizado un terminal antes. En otras palabras, a
+
+65
+00:05:51.001 --> 00:05:56.000
+la tecla se acercó a un ordenador, y a veces esto es evidente cuando las personas
+
+66
+00:05:56.000 --> 00:06:00.000
+continuamente golpear el retorno o un botón en la derecha que podría borrar todo el
+
+67
+00:06:00.000 --> 00:06:05.000
+los datos. Como de costumbre piensan que el botón de vuelta como devolver el elemento de tipo
+
+68
+00:06:05.000 --> 00:06:09.000
+de vuelta al lado izquierdo del papel, y lo que sucede con un terminal es que usted
+
+69
+00:06:09.000 --> 00:06:12.001
+De hecho, devolver el cursor al lado izquierdo del terminal. Así que hay una
+
+70
+00:06:12.001 --> 00:06:17.000
+problema con la transferencia de entrenamiento, pero parece que se superan muy rápidamente. No
+
+71
+00:06:17.000 --> 00:06:21.001
+hace mucho tiempo había un poco de preocupación expresada por los usuarios de VDT sobre su
+
+72
+00:06:21.001 --> 00:06:25.000
+seguridad y sobre el confort físico del uso de un terminal VDT.
+
+73
+00:06:25.001 --> 00:06:29.000
+He notado algunos cambios desde entonces, las teclas descartables y todo, pero qué
+
+74
+00:06:29.000 --> 00:06:34.000
+¿Realmente se traspasó allí? De hecho, hace varios años, la preocupación de
+
+75
+00:06:34.000 --> 00:06:37.001
+Los usuarios fueron atraídos a la atención de los fabricantes, y había algunos
+
+76
+00:06:37.001 --> 00:06:42.001
+la legislación comenzó en Europa, y como resultado de la preocupación principalmente, pero también
+
+77
+00:06:42.001 --> 00:06:46.001
+de la legislación, hubo un número de cambios en el diseño del producto que realmente
+
+78
+00:06:46.001 --> 00:06:51.000
+mejor acomoda al usuario y hace que el sistema entero sea más adaptable y más
+
+79
+00:06:51.000 --> 00:06:56.000
+Flexible para el usuario. Karen, mirando el lado hardware un segundo, qué son los
+
+80
+00:06:56.000 --> 00:07:00.000
+¿Tienes problemas ergonómicos aquí? Pensamos en cosas como pantallas y teclados
+
+81
+00:07:00.000 --> 00:07:05.001
+Y lo demás? Bueno, iluminación, calidad del carácter,
+
+82
+00:07:08.000 --> 00:07:14.000
+otros aspectos de la estación de trabajo física que incluyen cosas como si usted es
+
+83
+00:07:14.000 --> 00:07:18.001
+utilizar su terminal una buena parte del tiempo y también tener que obtener información
+
+84
+00:07:18.001 --> 00:07:22.001
+de un teléfono, no quieres poner el teléfono a través de la habitación, quieres
+
+85
+00:07:22.001 --> 00:07:25.001
+está cerca de usted, por lo que está considerando toda la estación de trabajo.
+
+86
+00:07:26.000 --> 00:07:33.000
+En particular, con respecto al VDT, estamos preocupados por la calidad de la pantalla. ¿Qué
+
+87
+00:07:33.000 --> 00:07:35.000
+¿Debería ser como el teclado?
+
+88
+00:07:36.000 --> 00:07:40.000
+¿Qué pasa en el lado del software? Parece un problema más sutil, ¿no?
+
+89
+00:07:40.001 --> 00:07:45.001
+También es una cuestión más difícil, porque entonces estás haciendo preguntas sobre el
+
+90
+00:07:45.001 --> 00:07:51.000
+Capacidades cognitivas del usuario. Algunas veces se pregunta, dado un cierto
+
+91
+00:07:51.000 --> 00:07:58.000
+Objetivo, ¿qué etapa es el usuario que va a pasar para llegar allí?
+
+92
+00:07:58.001 --> 00:08:01.001
+En realidad, ¿de qué estarán pensando? Estás tratando de anticipar
+
+93
+00:08:01.001 --> 00:08:05.001
+Ellos y usted está tratando de diseñar un sistema que mejor los acomoda.
+
+94
+00:08:06.000 --> 00:08:10.000
+Eso es muy difícil. Y supongo que tenemos que ser un poco flexibles. Todos los usuarios
+
+95
+00:08:10.000 --> 00:08:14.001
+No son lo mismo. Son personas altas y personas cortas. y exactamente. Varios usuarios
+
+96
+00:08:14.001 --> 00:08:20.001
+Venga a la situación de VDT con diferentes tipos de conocimientos.
+
+97
+00:08:20.001 --> 00:08:26.000
+Tenemos asientos ajustables, pero me pregunto si tenemos software ajustable. de Wanda,
+
+98
+00:08:26.000 --> 00:08:30.000
+Hablando de problemas cognitivos, tienes una demostración aquí con el HBO Ryan
+
+99
+00:08:30.000 --> 00:08:41.000
+El ordenador. Cuéntanos lo que está ahí. Esta es una demostración de un ordenador. Este
+
+100
+00:08:41.000 --> 00:08:47.000
+El tipo de información puede ser cambiado a multi-color para seleccionar el
+
+101
+00:08:47.000 --> 00:08:52.001
+información en la pantalla que la diferencia de otras partes de la actividad
+
+102
+00:08:52.001 --> 00:08:55.001
+Esto se llevará a cabo durante la planificación del tiempo de esta persona.
+
+103
+00:08:56.000 --> 00:08:59.001
+Así que lo que vimos primero fue un gráfico negro y blanco, que no era demasiado fácil para
+
+104
+00:08:59.001 --> 00:09:03.000
+El decifero. Bueno, fue fácil ver la información, pero no fue fácil
+
+105
+00:09:03.000 --> 00:09:07.000
+Diferenciar la información. Una de las ventajas de esta muestra es que
+
+106
+00:09:07.000 --> 00:09:14.000
+tiene 4,029 colores y podemos variar los colores en partes de este
+
+107
+00:09:14.000 --> 00:09:21.000
+para mostrar áreas que necesitan ser diferenciadas y que
+
+108
+00:09:21.000 --> 00:09:25.001
+Ayuda al usuario a discriminar partes de la información
+
+109
+00:09:25.001 --> 00:09:27.000
+en la pantalla de otras secciones.
+
+110
+00:09:27.001 --> 00:09:32.000
+Puedes ver que yo he codado el color el camino crítico en esta zona roja. Yo tengo
+
+111
+00:09:32.000 --> 00:09:33.001
+El color codifica el tiempo escuro en verde.
+
+112
+00:09:33.001 --> 00:09:40.001
+Y ahora lo que haré es que colorearé los acontecimientos con un amarillo para discriminar a los
+
+113
+00:09:40.001 --> 00:09:45.000
+partes particulares de la pantalla o los eventos de otros. Puedes ver que es un tipo de
+
+114
+00:09:45.000 --> 00:09:48.001
+Un color amarillo y amarillo. Esto hace que sea más fácil de leer.
+
+115
+00:09:48.001 --> 00:09:51.000
+Usted tiene otra demostración sobre el procesamiento de texto, que creo que vale la pena ver
+
+116
+00:09:51.000 --> 00:09:57.001
+en el. Sí sí. Muchas personas no se dan cuenta de que se pueden usar pantallas multicolores para
+
+117
+00:09:57.001 --> 00:10:02.001
+aplicaciones como el procesamiento de texto. La mayoría de las veces piensan en
+
+118
+00:10:02.001 --> 00:10:04.000
+Displays multicolores para CAD-CAM.
+
+119
+00:10:04.001 --> 00:10:13.001
+Y lo que realmente voy a hacer ahora es traer un menú que te muestra algo
+
+120
+00:10:13.001 --> 00:10:19.000
+que he diseñado para mostrar cómo discriminar secciones de información en un
+
+121
+00:10:19.000 --> 00:10:25.001
+La letra se utiliza con una dimensión multicolor. La mayoría de las personas escriben una carta a una
+
+122
+00:10:25.001 --> 00:10:31.000
+cliente, digamos que tengo una cuenta de envío, lo que quiero hacer es descubrir
+
+123
+00:10:31.000 --> 00:10:46.000
+¿Qué partes de la carta son información crítica y qué partes de esta carta
+
+124
+00:10:46.000 --> 00:10:50.000
+Hay [...] un par de segundos para poner en marcha el programa. Pero es una aplicación
+
+125
+00:10:50.000 --> 00:10:52.000
+Eso es nuevo. Es diferente de CAD-CAM.
+
+126
+00:10:52.000 --> 00:10:57.000
+Y estamos empezando a utilizar pantallas multicolores para estudiar el visual y el cognitivo
+
+127
+00:10:57.000 --> 00:11:02.000
+las respuestas de la gente, que, como Karen dijo antes, es un problema mucho más difícil
+
+128
+00:11:02.000 --> 00:11:05.001
+más que el diseño de hardware. Esta aplicación sería, por ejemplo, que usted quiso
+
+129
+00:11:05.001 --> 00:11:07.001
+¿Editar una carta estándar? Sí sí.
+
+130
+00:11:07.001 --> 00:11:13.001
+Sí sí. Puede ser utilizado para la edición. Usted puede usar codificación multicolor para
+
+131
+00:11:13.001 --> 00:11:18.000
+Definición de términos técnicos en un informe que usted puede querer poner en un glosario.
+
+132
+00:11:18.000 --> 00:11:22.001
+Este es un ejemplo donde el texto estándar es color codificado en azul. El
+
+133
+00:11:22.001 --> 00:11:26.000
+información que normalmente cambia cuando hace una nueva carta quizá a una nueva
+
+134
+00:11:26.000 --> 00:11:28.000
+El cliente es color codificado en amarillo.
+
+135
+00:11:28.000 --> 00:11:33.001
+Y la información que es crítica es el color codificado en tipo de color marrón. y
+
+136
+00:11:33.001 --> 00:11:37.000
+Quizás si notas la última línea dice que continúa no recibiendo de esto
+
+137
+00:11:37.000 --> 00:11:39.000
+El pago amenaza los futuros pedidos.
+
+138
+00:11:39.001 --> 00:11:45.000
+Y esto alertará al operador de entrada de datos al hecho de que esta persona también
+
+139
+00:11:45.000 --> 00:11:49.001
+no ha hecho su pago o hay algún problema alertándolo al hecho de que
+
+140
+00:11:49.001 --> 00:11:51.001
+Tal vez no queremos enviar las órdenes de esa persona en el
+
+141
+00:11:51.001 --> 00:11:53.001
+futuro o al menos decir los pagos recibidos.
+
+142
+00:11:53.001 --> 00:11:57.000
+[...] la última cosa en hacer tu demostración, veo que tienes un tipo de rueda,
+
+143
+00:11:57.001 --> 00:12:00.001
+En cuanto a la ergonómica, en el teclado. Este es el tipo de
+
+144
+00:12:00.001 --> 00:12:02.000
+Un ratón de una especie, ¿no es?
+
+145
+00:12:02.000 --> 00:12:07.000
+Eso es un ratón. Lo que hace de hecho, se mueve el cursor alrededor de la
+
+146
+00:12:07.000 --> 00:12:10.001
+muestra para que pueda colocar diferentes tipos de información en
+
+147
+00:12:10.001 --> 00:12:12.000
+diferentes puntos en la pantalla.
+
+148
+00:12:12.001 --> 00:12:16.000
+Ahora, una de las ventajas de una rueda de tambor diseñada en una tecla es que
+
+149
+00:12:16.000 --> 00:12:21.000
+No requiere mucho espacio en la tableta como un ratón o tal vez
+
+150
+00:12:21.000 --> 00:12:23.000
+otro tipo de dispositivo de interfaz.
+
+151
+00:12:23.001 --> 00:12:27.001
+Una de las cosas que nos interesan como ingeniero de factores humanos es qué tipo de
+
+152
+00:12:27.001 --> 00:12:32.000
+El dispositivo debe ser utilizado para un usuario típico en una aplicación específica.
+
+153
+00:12:32.001 --> 00:12:35.001
+Y ese es el tipo de análisis que pasamos por el diseño de una
+
+154
+00:12:35.001 --> 00:12:37.000
+Productos para usuarios específicos.
+
+155
+00:12:38.000 --> 00:12:41.000
+Bueno . En un instante, vamos a ver uno de los capítulos más recientes en Apple
+
+156
+00:12:41.000 --> 00:12:45.000
+Con el diseño ergonómico, el Macintosh. Y eso está llegando más adelante.
+
+157
+00:12:55.001 --> 00:12:59.001
+En la actualidad, se encuentra Susan Care. Susan es un diseñador de iconos con el Macintosh
+
+158
+00:12:59.001 --> 00:13:03.001
+Grupo de software y Jerry Manick, quien es gerente de diseño de productos para Macintosh.
+
+159
+00:13:04.001 --> 00:13:08.001
+Estamos hablando, Jerry, sobre la ergonómica en este espectáculo. Cómo el Mac se ha dirigido a algunos
+
+160
+00:13:08.001 --> 00:13:10.001
+¿Cuáles son los problemas ergonómicos que hablamos?
+
+161
+00:13:11.001 --> 00:13:17.001
+Hay ciertos criterios de diseño básicos que usamos para las teclas, el ángulo de
+
+162
+00:13:17.001 --> 00:13:21.000
+las teclas, el ángulo de la pantalla del frente del Macintosh.
+
+163
+00:13:22.000 --> 00:13:27.000
+Tomados de la literatura, queríamos que Macintosh pudiera ser utilizado por los
+
+164
+00:13:27.000 --> 00:13:31.001
+99o porcentaje masculino y femenino. También, nosotros
+
+165
+00:13:31.001 --> 00:13:33.001
+Sabía que los niños estarían usando el Macintosh.
+
+166
+00:13:34.001 --> 00:13:39.001
+Que casi decidió el arreglo del tubo por encima de la esquina de disco.
+
+167
+00:13:40.001 --> 00:13:44.000
+Queríamos que la tecla fuera muy ligera, para poder moverse fácilmente.
+
+168
+00:13:46.000 --> 00:13:50.000
+Macintosh en sí, queríamos que el caso sea lo más pequeño posible porque es un
+
+169
+00:13:50.000 --> 00:13:54.000
+Unidad portátil . Queremos una declaración muy fuerte de la transportabilidad,
+
+170
+00:13:54.000 --> 00:13:56.000
+Por lo tanto, el manejo en la parte superior.
+
+171
+00:13:58.000 --> 00:14:03.000
+Queríamos que la tecla pudiera ser fácilmente conectada y desconectada. El
+
+172
+00:14:03.000 --> 00:14:09.001
+El cordón de carbón de cuatro telas se une al frente de Macintosh para que sea fácil de usar.
+
+173
+00:14:09.001 --> 00:14:11.001
+recopilación de ellos.
+
+174
+00:14:13.000 --> 00:14:19.001
+El disco es bastante único. Nos hemos ido lejos de los discos soft floppy que
+
+175
+00:14:19.001 --> 00:14:23.001
+puede ser fácilmente dañado por el calor o traer algo magnético cerca de él.
+
+176
+00:14:23.001 --> 00:14:30.001
+Este sello de plástico duro en el disco, en el disquete, completamente
+
+177
+00:14:30.001 --> 00:14:35.000
+Protege los medios dentro y se puede usar, llevado en su bolsillo sin preocupación
+
+178
+00:14:35.000 --> 00:14:36.001
+que se vuelven sucios o dañados.
+
+179
+00:14:37.001 --> 00:14:42.000
+También hace que el disco sea muy fiable en cualquier, prácticamente cualquier clima. Tú
+
+180
+00:14:42.000 --> 00:14:44.000
+Se puede asegurar que no perderá los datos utilizando esto.
+
+181
+00:14:44.001 --> 00:14:47.001
+Cuéntanos sobre el ratón. Esto ha sido, obviamente, una parte clave de
+
+182
+00:14:47.001 --> 00:14:49.000
+Lisa y ahora la tecnología Mac.
+
+183
+00:14:49.001 --> 00:14:54.001
+El ratón es un dispositivo de puntuación de cursor muy eficiente. Hubo mucho de
+
+184
+00:14:54.001 --> 00:14:58.001
+Estudios sobre cómo es la forma más eficaz de señalar el cursor.
+
+185
+00:15:00.000 --> 00:15:04.000
+De hecho, el ratón está diseñado para ser utilizado todo el camino desde un niño hasta un adulto.
+
+186
+00:15:04.000 --> 00:15:06.000
+con un toque muy ligero en tu mano.
+
+187
+00:15:07.000 --> 00:15:12.000
+Los primeros ratones, incluso de Apple, tenían tres botones o dos botones en la parte superior. Nosotros
+
+188
+00:15:12.000 --> 00:15:15.001
+trabajó muy duro para obtener sólo el botón para ser un único botón sin tener que
+
+189
+00:15:15.001 --> 00:15:19.000
+Si la persona se recuerda a la derecha o a la izquierda.
+
+190
+00:15:19.000 --> 00:15:25.000
+Sólo haga clic y como Susan le mostrará más tarde, la función está terminada.
+
+191
+00:15:26.000 --> 00:15:31.000
+Susan, eres un diseñador de iconos entre otras cosas. ¿Has aprendido algo
+
+192
+00:15:31.000 --> 00:15:35.001
+de la experiencia sobre Lisa en cuanto a la eficacia de las iconas, cómo
+
+193
+00:15:35.001 --> 00:15:37.000
+Para usarlos, ¿cómo se adaptan?
+
+194
+00:15:38.001 --> 00:15:43.001
+Sin duda, creo que una de las mejores experiencias es ver a una persona que nunca es
+
+195
+00:15:43.001 --> 00:15:49.001
+Uso de una Lisa antes o un Mac antes y incluso
+
+196
+00:15:49.001 --> 00:15:51.000
+Nunca he utilizado un ordenador antes.
+
+197
+00:15:51.001 --> 00:15:55.001
+Es posible, fácilmente posible, enseñar a la mayoría de las personas a utilizar uno de estos
+
+198
+00:15:55.001 --> 00:15:57.000
+computadoras en unos 20 minutos.
+
+199
+00:15:57.000 --> 00:16:03.000
+Mucho de esto es porque usted puede explicar lo que una icona significa y
+
+200
+00:16:03.000 --> 00:16:04.001
+Una persona puede recordarlo fácilmente.
+
+201
+00:16:05.000 --> 00:16:10.000
+Nosotros particularmente usamos Lisa como un salto de punto y hacemos algunos refinamientos y
+
+202
+00:16:10.000 --> 00:16:12.000
+Adiciones para algunas nuevas características.
+
+203
+00:16:13.000 --> 00:16:16.000
+Bueno, su área, las iconas, son otra de las claves ergonómicas
+
+204
+00:16:16.000 --> 00:16:17.001
+Los aspectos, supongo, del uso de un Mac.
+
+205
+00:16:18.000 --> 00:16:22.000
+Puedes correr a través de una demostración aquí, Susan, y mostrarnos cómo usamos la
+
+206
+00:16:22.000 --> 00:16:24.001
+Icones para llegar de lugar a lugar. Cuéntanos
+
+207
+00:16:24.001 --> 00:16:26.000
+¿Dónde estamos justo en este momento con Mac?
+
+208
+00:16:26.000 --> 00:16:31.000
+Lo que ves ahora es la imagen, la icona que obtendrás cuando simplemente conectas a Mac
+
+209
+00:16:31.000 --> 00:16:35.000
+y devolverlo. Te convierte en una imagen del disco.
+
+210
+00:16:35.001 --> 00:16:38.000
+Y una pregunta marca decir, ¿dónde está mi discoteca?
+
+211
+00:16:38.000 --> 00:16:43.000
+Dicen que necesito algo. Así que todo lo que haces es, sólo coincide en una manera, así
+
+212
+00:16:43.000 --> 00:16:46.001
+No hay manera de romperlo o hacer un error. ¡Sólo pulse en ella!
+
+213
+00:16:47.001 --> 00:16:52.000
+Obtendrá una imagen de un contenido de Mac para que sepa que todo está bien
+
+214
+00:16:52.000 --> 00:16:54.000
+Y usted está bienvenido.
+
+215
+00:16:55.000 --> 00:17:01.000
+Es sólo así que la persona que utiliza el Mac recibe información todo el tiempo visualmente así
+
+216
+00:17:01.000 --> 00:17:02.001
+No hay que traducir nada.
+
+217
+00:17:03.000 --> 00:17:06.000
+Un pequeño reloj para decirle, sólo espere un segundo.
+
+218
+00:17:06.000 --> 00:17:10.001
+Las cosas están ocurriendo. Usted ha reemplazado el horario de sal, si tiene [...]
+
+219
+00:17:11.000 --> 00:17:14.000
+Nos movemos hacia los años 80.
+
+220
+00:17:14.000 --> 00:17:14.001
+¿Qué tenemos ahora?
+
+221
+00:17:14.001 --> 00:17:21.000
+Así que lo que tenemos ahora es una imagen en la pantalla del disco que ponemos en el
+
+222
+00:17:21.000 --> 00:17:24.001
+El slot. Y puede ser con el ratón, se puede mover.
+
+223
+00:17:25.000 --> 00:17:27.001
+Y ya está mostrando el nombre de ese disco.
+
+224
+00:17:28.000 --> 00:17:34.000
+Y justo. Y se destaca en el sentido de que es invertido para que Mac conozca
+
+225
+00:17:34.000 --> 00:17:37.001
+¿Quieres hacer algo con este disco?
+
+226
+00:17:37.001 --> 00:17:44.000
+Y sus opciones de lo que usted puede querer hacer están listadas en los menús ocultos que
+
+227
+00:17:44.000 --> 00:17:48.000
+operar un poco como las sombras de la ventana cuando mueve su cursor.
+
+228
+00:17:48.001 --> 00:17:51.000
+Así que vamos a retirar el menú de archivos. Eso nos diría ahora qué.
+
+229
+00:17:51.001 --> 00:17:55.000
+Y justo. Que nuestras elecciones, podríamos saber algo sobre este disco o nosotros
+
+230
+00:17:55.000 --> 00:17:57.000
+Sólo se puede abrir o se puede extinguir.
+
+231
+00:17:57.000 --> 00:18:03.000
+Pero si lo abrimos, simplemente diga abierto, y de inmediato obtendrás lo que llamamos una ventana.
+
+232
+00:18:03.000 --> 00:18:08.000
+que muestra gráficamente y en palabras lo que es
+
+233
+00:18:08.000 --> 00:18:10.000
+contenidos en el disco y en la máquina.
+
+234
+00:18:10.001 --> 00:18:15.000
+Así que puedes ver que hay una imagen de una pintura de mano que simboliza una pintura
+
+235
+00:18:15.000 --> 00:18:18.000
+programa y una escritura manual para el procesador de palabras.
+
+236
+00:18:18.000 --> 00:18:24.001
+Y un par de memorias que ya estaban escritas, algunas carpetas. Dijo que quieres
+
+237
+00:18:24.001 --> 00:18:30.000
+almacenar un documento o dos en una carpeta. Es análogo a la vida.
+
+238
+00:18:30.000 --> 00:18:32.001
+Sólo colocó la pieza de papel en el paquete.
+
+239
+00:18:33.000 --> 00:18:36.000
+Ahora tienes algo que ir al panel de control aquí. Me muestra lo que es.
+
+240
+00:18:37.000 --> 00:18:42.001
+Siempre está disponible una serie de accesorios de escritorio. Así que se mueve el cursor
+
+241
+00:18:42.001 --> 00:18:45.001
+Para controlar el panel, deja que se desprende del botón del ratón.
+
+242
+00:18:46.000 --> 00:18:47.000
+¿Y qué tenemos?
+
+243
+00:18:48.000 --> 00:18:54.001
+Así que esto parece un poco como un dashboard. A continuación te mostramos el sistema en una
+
+244
+00:18:54.001 --> 00:18:59.000
+número de formas para su nivel de confort o sólo sus preferencias personales.
+
+245
+00:19:00.000 --> 00:19:02.001
+El ordenador funcionará sin importar la configuración.
+
+246
+00:19:03.000 --> 00:19:04.001
+¿Cuáles son los controles que tienes?
+
+247
+00:19:04.001 --> 00:19:09.000
+Aquí hay un poco de control de volumen. Puedes ver el orador. Cada vez y ahora
+
+248
+00:19:09.000 --> 00:19:14.001
+Usted oye un buceo con el Mac cuando lo activa o a veces durante las aplicaciones.
+
+249
+00:19:14.001 --> 00:19:18.001
+Si usted está en casa por sí mismo y está escuchando el estereo, puede que desee
+
+250
+00:19:18.001 --> 00:19:21.000
+Saber que siempre escucharás a esos bicos.
+
+251
+00:19:21.000 --> 00:19:26.000
+Si eres un estudiante que trabaja en la biblioteca, puedes moverlo para que solo el bar
+
+252
+00:19:26.000 --> 00:19:28.000
+Flamará así que no hay ruido en absoluto.
+
+253
+00:19:28.001 --> 00:19:34.000
+Diga algunas de las otras características permita ajustar la tasa de repetición del teclado o un menú
+
+254
+00:19:34.000 --> 00:19:38.001
+flash o la cantidad de tiempo entre los doble clics, que puede variar con el
+
+255
+00:19:38.001 --> 00:19:40.000
+edad de la persona que utiliza el teclado.
+
+256
+00:19:40.000 --> 00:19:42.001
+Voy a apresurarte porque quiero ver tanto de esto como podemos en el tiempo.
+
+257
+00:19:42.001 --> 00:19:44.001
+Nosotros tenemos. Mostrarme la nota y cómo funciona.
+
+258
+00:19:46.000 --> 00:19:49.001
+Descargue el panel de control simplemente haciendo clic en él.
+
+259
+00:19:50.001 --> 00:19:56.000
+Notepad le permite, mientras usted está trabajando en cualquier aplicación así como sólo esto
+
+260
+00:19:56.000 --> 00:20:01.001
+lo que llamamos el buscador, que es como un directorio, ser capaz de capturar el
+
+261
+00:20:01.001 --> 00:20:03.000
+Descargar la tecla y escribir una nota a sí mismo.
+
+262
+00:20:05.000 --> 00:20:12.000
+Recuerda leer la página 12. Y usted podría
+
+263
+00:20:12.000 --> 00:20:15.000
+Diga que lo quedes o que lo podéis mover.
+
+264
+00:20:16.000 --> 00:20:18.001
+Mostrarme cómo flip las páginas de la nota. Es una especie de impresionante.
+
+265
+00:20:20.000 --> 00:20:24.000
+Podemos ir a la página 2 donde dice que otra nota uno se deja para
+
+266
+00:20:24.000 --> 00:20:26.000
+a sí mismo. Flip a la página 3.
+
+267
+00:20:27.000 --> 00:20:30.000
+Hasta ocho páginas de notas que podrían ayudarle en su trabajo o
+
+268
+00:20:30.000 --> 00:20:31.001
+Recuerda los acontecimientos sociales.
+
+269
+00:20:31.001 --> 00:20:35.000
+Uno de los artículos fue Scrapbook.
+
+270
+00:20:35.001 --> 00:20:42.000
+Y justo. Scrapbook le permite mantenerse literalmente, usted está solo hasta
+
+271
+00:20:42.000 --> 00:20:49.000
+El 256. Usted está limitado sólo por la cantidad de memoria que tiene imágenes o mensajes libres o
+
+272
+00:20:49.000 --> 00:20:55.000
+Los documentos siempre disponibles para los términos que usamos son cortados y pasados.
+
+273
+00:20:55.000 --> 00:20:58.000
+Tal vez usted puede ir a Mac justo y luego podríamos construir en la forma en que usted usaría eso.
+
+274
+00:20:58.000 --> 00:21:03.000
+Y justo. Así que para abrir una aplicación de procesador de palabras, se puede hacer clic en el Mac a la derecha
+
+275
+00:21:03.000 --> 00:21:07.001
+y decir abierto. Si desea acceder a un documento que se inicia automáticamente
+
+276
+00:21:07.001 --> 00:21:13.000
+La aplicación . El mismo procedimiento, por lo que es fácil de usar.
+
+277
+00:21:14.000 --> 00:21:16.001
+Y ahora estás cargando el proceso de palabra.
+
+278
+00:21:16.001 --> 00:21:22.001
+Cargar el procesador de palabras y al documento específico que seleccionaste.
+
+279
+00:21:22.001 --> 00:21:27.001
+Creo que uno de los beneficios de Macintosh es que las cosas suceden tan rápidamente.
+
+280
+00:21:28.000 --> 00:21:32.001
+Es particularmente adecuado al patrón ergonómico de la interacción del usuario
+
+281
+00:21:32.001 --> 00:21:34.000
+rápidamente con el dispositivo.
+
+282
+00:21:34.001 --> 00:21:40.000
+Es simplemente muy directo, no una secuencia complicada de órdenes para recordar. Nosotros podemos,
+
+283
+00:21:40.001 --> 00:21:44.000
+Hay un viejo poco de texto de muestra. Así es como la palabra
+
+284
+00:21:44.000 --> 00:21:46.000
+El procesador aparece para usted.
+
+285
+00:21:46.000 --> 00:21:53.000
+Un controlador le permite establecer formatos, que es un objeto particularmente familiar. Te digo
+
+286
+00:21:53.000 --> 00:21:57.001
+Queremos pasar de espacio único a doble. Sólo haga clic en el
+
+287
+00:21:57.001 --> 00:21:59.000
+Imagen más amplia si lo desea.
+
+288
+00:21:59.000 --> 00:22:03.000
+Y puedes justificar o centrar. No vamos a tener tiempo en realidad, pero usted
+
+289
+00:22:03.000 --> 00:22:06.000
+Podría haber sacado fotos de Mac Paint desde el scrapbook
+
+290
+00:22:06.000 --> 00:22:07.001
+Y luego las insertar en el documento.
+
+291
+00:22:07.001 --> 00:22:14.000
+Pasearlos en simplemente diciendo pasta del menú. Si quieres cambiar una palabra para
+
+292
+00:22:14.000 --> 00:22:18.001
+Hay que ser valiente, sólo decir valiente. Cambiar una letra a
+
+293
+00:22:18.001 --> 00:22:21.000
+Algo como el antiguo inglés.
+
+294
+00:22:21.000 --> 00:22:23.001
+Sé que estás divertido, Susan, pero voy a tener que detenerte.
+
+295
+00:22:23.001 --> 00:22:26.000
+Es difícil cuando es tu bebé no estar ocupado.
+
+296
+00:22:26.001 --> 00:22:30.000
+Bueno, muchas gracias por mostrar a Mac a nosotros y gracias por unirse a nosotros
+
+297
+00:22:30.000 --> 00:22:31.001
+en esta edición de las crónicas informáticas.
+
+298
+00:23:10.000 --> 00:23:16.000
+Micro Focus, creadores de herramientas de programación visual para el desarrollo de software, es
+
+299
+00:23:16.000 --> 00:23:21.001
+contento de proporcionar grandes fondos para las crónicas de ordenador, la historia
+
+300
+00:23:21.001 --> 00:23:23.000
+de esta evolución continua.
+
+301
+00:23:26.000 --> 00:24:01.001
+En el archivo de acceso aleatorio, el ordenador pronto será más que un
+
+302
+00:24:01.001 --> 00:24:04.001
+herramientas de enseñanza en las universidades. Se está convirtiendo en la propia universidad.
+
+303
+00:24:05.000 --> 00:24:08.000
+Una compañía llamada Telelearning Systems ha anunciado la creación de la primera
+
+304
+00:24:08.000 --> 00:24:11.000
+universidad informática nacional, que ofrece créditos y grados
+
+305
+00:24:11.000 --> 00:24:12.001
+para realizar cursos en un ordenador.
+
+306
+00:24:13.001 --> 00:24:16.001
+Telelearning Systems trabajará con siete principales colegios y universidades
+
+307
+00:24:16.001 --> 00:24:18.001
+alrededor del país para ofrecer los cursos informáticos.
+
+308
+00:24:18.001 --> 00:24:22.001
+Las escuelas están ubicadas en Ohio, Nebraska, California, Wisconsin, Nueva Jersey, y
+
+309
+00:24:22.001 --> 00:24:25.000
+en Nueva York. Se llama la Universidad Electrónica.
+
+310
+00:24:26.001 --> 00:24:29.001
+Cuatro compañías japonesas de ordenadores han anunciado un gran fracaso en el chip
+
+311
+00:24:29.001 --> 00:24:32.001
+Tecnología, el primer chip ROM de un megabito del mundo.
+
+312
+00:24:32.001 --> 00:24:37.000
+El chip es de 15 mil de un pulgón de espesor, pero puede contener un millón de bits de
+
+313
+00:24:37.000 --> 00:24:40.000
+información, el equivalente de alrededor de 70 páginas de material impreso.
+
+314
+00:24:40.000 --> 00:24:44.000
+El chip, que es más pequeño que la cabeza de un tambor, tiene casi medio millar.
+
+315
+00:24:44.000 --> 00:24:48.001
+La conducción conductiva en ella. El chip fue desarrollado por Hitachi N.E.C. Toshiba y
+
+316
+00:24:48.001 --> 00:24:51.000
+Laboratorio Eléctrico NTT de Tokio.
+
+317
+00:24:52.001 --> 00:24:55.001
+Los científicos del Laboratorio de Lawrence Livermore en California dicen que
+
+318
+00:24:55.001 --> 00:25:00.001
+reveló el ordenador más rápido del mundo, un nuevo supercomputador Cray XMP, que puede
+
+319
+00:25:00.001 --> 00:25:03.000
+200 millones de cálculos por segundo.
+
+320
+00:25:03.000 --> 00:25:06.001
+Los científicos del Laboratorio de Livermore utilizarán el supercomputador Cray para
+
+321
+00:25:06.001 --> 00:25:09.001
+La investigación sobre el llamado sistema de defensa de Star Wars.
+
+322
+00:25:10.001 --> 00:25:14.000
+Texas Instruments ha anunciado una nueva interfaz de voz para su línea profesional
+
+323
+00:25:14.000 --> 00:25:17.000
+de los ordenadores. El dispositivo permitirá a los usuarios comunicarse con el ordenador por
+
+324
+00:25:17.000 --> 00:25:19.000
+hasta 50 órdenes diferentes.
+
+325
+00:25:19.001 --> 00:25:23.001
+La interfaz de voz cuesta $2600 y estará disponible en abril.
+
+326
+00:25:24.000 --> 00:25:27.001
+Y KPRO ha anunciado que pronto comercializará un nuevo IBM-compatible
+
+327
+00:25:27.001 --> 00:25:29.001
+Computador portátil de tamaño notebook.
+
+328
+00:25:29.001 --> 00:25:32.001
+KPRO dice que será predecible en el alto final, más caro
+
+329
+00:25:32.001 --> 00:25:34.000
+de los modelos actuales de KPRO.
+
+330
+00:25:35.000 --> 00:25:38.000
+Mientras tanto, el gigante IBM, parece estar avanzando para asegurar su dominante
+
+331
+00:25:38.000 --> 00:25:39.001
+Participación en el mercado de informática personal.
+
+332
+00:25:39.001 --> 00:25:43.000
+Hay rumores de que IBM pronto se dirigirá a los clones. La introducción de
+
+333
+00:25:43.000 --> 00:25:45.000
+La IBM lleva un paso en esa dirección.
+
+334
+00:25:45.001 --> 00:25:49.000
+Otros movimientos rumorosos incluyen un gran aumento de la producción de productos, una caída en
+
+335
+00:25:49.000 --> 00:25:51.001
+precio, distribución más amplia, y la posibilidad de una nueva
+
+336
+00:25:51.001 --> 00:25:53.001
+Un ordenador que sería más difícil de imitar.
+
+337
+00:25:53.001 --> 00:25:58.000
+Para apreciar el tamaño de la dominación de IBM, el aumento de las ventas de computadoras de IBM
+
+338
+00:25:58.000 --> 00:26:01.000
+El año pasado, sólo el incremento, fue de 6 mil millones de dólares.
+
+339
+00:26:02.001 --> 00:26:06.000
+Y IBM logró una gran victoria la semana pasada. La Escuela de Negocios de Harvard ha decidido
+
+340
+00:26:06.000 --> 00:26:09.000
+IBM es el ordenador necesario para todos los estudiantes.
+
+341
+00:26:09.001 --> 00:26:12.001
+La escuela de negocios anunció que a partir del próximo semestre, todos los estudiantes serán
+
+342
+00:26:12.001 --> 00:26:16.000
+Se espera que posee un portátil IBM para su uso en las tareas domésticas.
+
+343
+00:26:16.001 --> 00:26:20.000
+Harvard College, sin embargo, decidió ir con Apple y está haciendo Macintosh
+
+344
+00:26:20.000 --> 00:26:21.001
+El ordenador oficial del estudiante.
+
+345
+00:26:21.001 --> 00:26:25.000
+Apple, por lo tanto, fue acusado la semana pasada por accionistas que se quejan de supuestos
+
+346
+00:26:25.000 --> 00:26:27.000
+Los errores en el ordenador de Lisa.
+
+347
+00:26:27.001 --> 00:26:31.001
+El pacto de acción de clase también denuncia que los funcionarios de Apple han vendido más de 2 millones
+
+348
+00:26:31.001 --> 00:26:34.001
+acciones de acciones antes del anuncio de los beneficios más bajos de la empresa.
+
+349
+00:26:35.001 --> 00:26:37.001
+Bueno, si te gusta el ajedrez y los Dungeons &amp; Dragons, puedes
+
+350
+00:26:37.001 --> 00:26:39.001
+como Archon, un nuevo juego de software.
+
+351
+00:26:39.001 --> 00:26:42.001
+Este es el tema de la revisión de software de esta semana. Aquí está Paul Schindler.
+
+352
+00:26:46.000 --> 00:26:50.001
+juegos . Algunas personas no las toman muy en serio hoy en día, aunque sabemos, por
+
+353
+00:26:50.001 --> 00:26:54.000
+Por ejemplo, que el ajedrez se tomó bastante en serio en la India, donde fue
+
+354
+00:26:54.000 --> 00:26:56.000
+inventado hace 13 siglos.
+
+355
+00:26:56.000 --> 00:27:01.000
+También sabemos que los niños que caen miles de millones en los juegos de arcade juegan por los guardas. Bueno, así
+
+356
+00:27:01.000 --> 00:27:04.001
+Una empresa en San Mateo, California, se llama Electronic Arts.
+
+357
+00:27:05.000 --> 00:27:09.001
+Se dice que los juegos en los ordenadores domésticos, por razones técnicas, no pueden esperar
+
+358
+00:27:09.001 --> 00:27:11.001
+Compara la experiencia de los juegos en un arcade.
+
+359
+00:27:11.001 --> 00:27:16.001
+Bueno, alguien se olvida para decirle a la gente en Electronic Arts. Hoy vamos a mirar
+
+360
+00:27:16.001 --> 00:27:18.000
+En su juego se llama Archon.
+
+361
+00:27:19.001 --> 00:27:22.001
+Ahora, ya que estaba jugando con un conjunto de ajedrez cuando empezamos, podrías pensar que Archon
+
+362
+00:27:22.001 --> 00:27:24.001
+Es un juego de ajedrez. Eso no es.
+
+363
+00:27:24.001 --> 00:27:28.001
+Hay muchos juegos de ajedrez, pero hay pocos juegos con hombres y mujeres de
+
+364
+00:27:28.001 --> 00:27:30.001
+magia, las fuerzas de luz y oscuridad.
+
+365
+00:27:31.000 --> 00:27:35.001
+Todo el catálogo de software de la Tierra llama a Archon una cruz adictiva entre
+
+366
+00:27:35.001 --> 00:27:37.001
+Dungeons &amp; Dragons y el ajedrez.
+
+367
+00:27:37.001 --> 00:27:42.000
+Bueno, con los goblins, los unicórnios y los gráficos coloridos, puede ser difícil
+
+368
+00:27:42.000 --> 00:27:44.001
+para ver la semejanza hasta que lo juegues un poco.
+
+369
+00:27:45.001 --> 00:27:49.000
+Electronic Arts acredita a los autores de Archon, así que también lo haremos. Hay Ann
+
+370
+00:27:49.000 --> 00:27:51.001
+Westfall, John Freeman y Paul Reich III.
+
+371
+00:27:52.000 --> 00:27:57.000
+Archon cuesta $40 de Electronic Arts. Para el acceso aleatorio, soy Paul Schindler.
+
+372
+00:27:58.001 --> 00:28:01.000
+Y la próxima semana, Paul mira a Ofix, una nueva palabra de bajo costo
+
+373
+00:28:01.000 --> 00:28:03.000
+Programa de procesamiento y filtración.
+
+374
+00:28:03.000 --> 00:28:05.000
+¿Recuerdas que la tienda de películas en el
+
+375
+00:28:05.000 --> 00:28:06.001
+¿Es un barrio que vendía principalmente los registros?
+
+376
+00:28:06.001 --> 00:28:10.000
+Bueno, pronto se puede hablar de la tienda de software que usaba para vender libros.
+
+377
+00:28:11.000 --> 00:28:14.000
+El software se extiende fuera de la tienda de ordenadores y en las librerías.
+
+378
+00:28:14.000 --> 00:28:16.001
+Dos grandes librerías ya están llevando software.
+
+379
+00:28:17.000 --> 00:28:20.001
+Y sólo la semana pasada, un gran editor de libros, Addison Wesley, entró en el negocio
+
+380
+00:28:20.001 --> 00:28:24.000
+de la distribución del software de Infocom a las librerías minoristas.
+
+381
+00:28:25.000 --> 00:28:28.001
+Por último, si estás en la autoevaluación, tratando de descubrir quién eres real,
+
+382
+00:28:29.000 --> 00:28:30.001
+Hay un nuevo programa de software para ayudarle.
+
+383
+00:28:30.001 --> 00:28:34.000
+Así que se llama Unbecoming a Hero. El programa te lleva a través de una extensa
+
+384
+00:28:34.000 --> 00:28:36.000
+una serie de preguntas que te ayudarán a saber qué son las
+
+385
+00:28:36.000 --> 00:28:37.001
+los valores más importantes para ti.
+
+386
+00:28:38.000 --> 00:28:41.000
+El programa también le permite crear un modelo de rol y luego le ayuda a entender
+
+387
+00:28:41.000 --> 00:28:43.000
+¿Por qué admires ese tipo de persona?
+
+388
+00:28:43.001 --> 00:28:45.001
+Costo $30 y se corre en una manzana.
+
+389
+00:28:46.001 --> 00:28:49.000
+Y eso es para el archivo de acceso aleatorio de esta semana. Yo soy Stuart Chafay.
+
+390
+00:28:50.001 --> 00:28:54.001
+El acceso aleatorio se hace posible mediante una subvención de Popular Computing,
+
+391
+00:28:55.000 --> 00:28:56.001
+La revista McGraw-Hill.

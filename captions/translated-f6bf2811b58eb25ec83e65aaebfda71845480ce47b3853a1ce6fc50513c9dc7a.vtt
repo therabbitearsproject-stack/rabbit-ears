@@ -1,0 +1,2057 @@
+WEBVTT
+
+1
+00:00:13.001 --> 00:00:16.001
+Ini adalah tiga kantong sampah raksasa.
+
+2
+00:00:17.000 --> 00:00:21.001
+Ini adalah kompak sampah dan inilah yang semuanya terlihat setelah
+
+3
+00:00:21.001 --> 00:00:23.000
+Hal ini telah dihancurkan oleh hal ini.
+
+4
+00:00:24.000 --> 00:00:28.001
+Sekarang di sini kami memiliki tiga cakera penuh dengan file grafis, kompresor file dan di sini
+
+5
+00:00:28.001 --> 00:00:31.001
+Apa yang semua terlihat setelah itu dihancurkan oleh perangkat lunak.
+
+6
+00:00:31.001 --> 00:00:33.000
+Ide yang sama, masalah yang sama.
+
+7
+00:00:33.000 --> 00:00:36.001
+Tidak cukup tanah untuk semua sampah kita, tidak pernah cukup keras
+
+8
+00:00:36.001 --> 00:00:38.000
+Ruang disk untuk semua file kami.
+
+9
+00:00:38.001 --> 00:00:42.001
+Jadi hari ini kita akan membuang sampah tetapi kita akan melihat yang terbaru dalam file
+
+10
+00:00:42.001 --> 00:00:46.001
+teknologi kompresi pada edisi ini dari Computer Chronicles.
+
+11
+00:01:01.000 --> 00:01:05.000
+Komputer Chronicles dimungkinkan sebagian oleh Software Publishers
+
+12
+00:01:05.000 --> 00:01:10.001
+Persatuan yang mengingatkan Anda adalah pertahanan federal untuk menyalin perangkat lunak dan oleh PC
+
+13
+00:01:10.001 --> 00:01:14.001
+Koneksi dan koneksi Mac dan oleh Byte Magazine dan
+
+14
+00:01:14.001 --> 00:01:16.001
+Bix adalah pertukaran informasi byte.
+
+15
+00:01:20.000 --> 00:01:22.000
+Selamat Datang ke Komputer Chronicles
+
+16
+00:01:22.000 --> 00:01:24.001
+Saya adalah Stuart Chafay dan dengan saya minggu ini adalah Jan Lewis.
+
+17
+00:01:25.000 --> 00:01:28.001
+Jan di komputer kami di sini kami memiliki file di sini Anda dapat melihat yang disebut demo doc dan
+
+18
+00:01:28.001 --> 00:01:31.000
+Saat ini ia mengambil kira-kira 60K ruang.
+
+19
+00:01:31.001 --> 00:01:35.000
+Saya juga memiliki di sini program kompresi file yang disebut LHA.
+
+20
+00:01:35.000 --> 00:01:38.000
+Ini adalah program domain publik yang dapat Anda dapatkan di papan buletin dan kami berada di
+
+21
+00:01:38.000 --> 00:01:42.000
+Proses kompresi yang 60K file sekarang dan itu hampir selesai.
+
+22
+00:01:42.000 --> 00:01:44.000
+Kami akan melaporkan kepada kami berapa banyak yang kami mampu
+
+23
+00:01:44.000 --> 00:01:45.001
+untuk mengkompresi file itu dan itu selesai.
+
+24
+00:01:46.000 --> 00:01:48.000
+Ini telah turun ke 28% dari ukuran aslinya.
+
+25
+00:01:48.001 --> 00:01:51.001
+Ada versi kompresi dari file, ia mengambil 17K sekarang.
+
+26
+00:01:52.000 --> 00:01:55.000
+Kami tahu tidak ada makan siang gratis, tidak ada mesin pergerakan kekal.
+
+27
+00:01:55.000 --> 00:01:56.001
+Tapi ke mana 40K itu pergi?
+
+28
+00:01:56.001 --> 00:01:57.000
+Bagaimana kita melakukannya?
+
+29
+00:01:57.000 --> 00:02:01.001
+Cara umum algoritma ini bekerja adalah mereka mencari yang berulang.
+
+30
+00:02:01.001 --> 00:02:05.000
+pattern bit dan mereka menyederhanakan mereka atau mengkompresi mereka.
+
+31
+00:02:05.001 --> 00:02:09.000
+Sekarang jelas mereka akan menjadi trade-off tetapi biasanya pengguna memiliki beberapa
+
+32
+00:02:09.000 --> 00:02:10.001
+mengendalikan apa yang terjadi pada trade-off tersebut.
+
+33
+00:02:10.001 --> 00:02:13.000
+Misalnya, berapa banyak kompresi yang Anda inginkan?
+
+34
+00:02:13.000 --> 00:02:16.001
+Apakah Anda perlu mengkompresi dengan faktor 40 atau faktor 2 misalnya?
+
+35
+00:02:17.001 --> 00:02:20.001
+Hal kedua adalah jenis kecepatan apa yang Anda butuhkan untuk dekompresi?
+
+36
+00:02:20.001 --> 00:02:24.001
+Misalnya, untuk membuat full motion video Anda membutuhkan 30 frame per detik dan
+
+37
+00:02:24.001 --> 00:02:27.000
+Dekompresi harus sangat cepat dalam hal ini.
+
+38
+00:02:27.001 --> 00:02:31.001
+Jadi hal ketiga adalah jenis kerugian dan resolusi apa yang dapat Anda toleran?
+
+39
+00:02:31.001 --> 00:02:33.001
+Contoh yang baik adalah file audio.
+
+40
+00:02:34.000 --> 00:02:37.000
+Biasanya Anda dapat kehilangan beberapa frekuensi dan masih keluar dengan suara yang baik
+
+41
+00:02:37.000 --> 00:02:39.000
+Jadi Anda bisa mendapatkan sesuatu di sana.
+
+42
+00:02:39.001 --> 00:02:43.000
+Baik Jan hari ini kita akan melihat beberapa pendekatan yang berbeda untuk kompresi file,
+
+43
+00:02:43.000 --> 00:02:47.001
+utilitas perangkat lunak dan add-ons perangkat keras dan kami akan memotong banyak file di Mac
+
+44
+00:02:47.001 --> 00:02:49.000
+dan pada 486 PC.
+
+45
+00:02:50.000 --> 00:02:54.000
+Sekarang ketika Anda berurusan dengan gambar video seperti Jan mengatakan masalah ukuran file dan
+
+46
+00:02:54.000 --> 00:02:56.001
+kecepatan dekompresi file menjadi sangat penting.
+
+47
+00:02:57.000 --> 00:03:00.001
+Kami akan memulai dengan kunjungan ke SuperMac Technology di Sunnyvale, California
+
+48
+00:03:00.001 --> 00:03:05.000
+Untuk mempelajari tentang dua produk kompresi yang disebut Realtime dan Video Spicket.
+
+49
+00:03:06.001 --> 00:03:13.000
+Masalah terbesar untuk menyimpan video pada komputer akan harus dikompresi.
+
+50
+00:03:13.000 --> 00:03:17.001
+Video itu sesuai dengan cakera komputer nomor satu.
+
+51
+00:03:18.000 --> 00:03:22.001
+Ada solusi analog di masa lalu di mana Anda hanya memiliki video analog di
+
+52
+00:03:22.001 --> 00:03:27.001
+jendela yang berguna jika Anda memiliki video yang dimainkan dari cakera laser tetapi
+
+53
+00:03:27.001 --> 00:03:31.000
+Titik masalahnya adalah bahwa Anda benar-benar tidak dapat melakukan apa-apa dengan video.
+
+54
+00:03:31.001 --> 00:03:35.001
+Anda tidak dapat memanipulasi video dan Anda tidak bisa menyimpan video di cakera dan
+
+55
+00:03:35.001 --> 00:03:37.000
+memasukkannya ke program-program lain.
+
+56
+00:03:38.000 --> 00:03:41.000
+Itulah sebabnya SuperMac mengembangkan Video Spicket dalam waktu nyata.
+
+57
+00:03:42.001 --> 00:03:47.001
+Realtime sebenarnya telah diubah nama Premier dan lisensi untuk Adobe Systems.
+
+58
+00:03:48.000 --> 00:03:52.001
+Ini adalah editor video digital yang memungkinkan Anda memilih video dan klip audio, membawa
+
+59
+00:03:52.001 --> 00:03:55.001
+Mereka masuk ke Mac Anda dan kemudian menambahkan efek khusus.
+
+60
+00:03:56.000 --> 00:03:59.000
+Ada kelebihan yang jelas untuk menggabungkan video dengan komputer.
+
+61
+00:03:59.001 --> 00:04:05.000
+Video pada komputer di tingkat konsumen akan memungkinkan Anda, misalnya, untuk menembak
+
+62
+00:04:05.000 --> 00:04:09.000
+beberapa film rumah dan digitalisasi film rumah Anda dan bekerja dengan mereka di
+
+63
+00:04:09.000 --> 00:04:14.001
+komputer, mengambil file yang dipilih secara individu dari film-film tersebut dan mungkin menyimpannya
+
+64
+00:04:14.001 --> 00:04:16.000
+dan menyelamatkan mereka dengan berbagai cara.
+
+65
+00:04:16.000 --> 00:04:20.001
+Premier sebenarnya adalah film konstruksi set yang bekerja dengan QuickTime Apple.
+
+66
+00:04:21.000 --> 00:04:25.001
+Video Spicket dari SuperMac adalah penangkap bingkai digital yang memungkinkan Anda menangkap
+
+67
+00:04:25.001 --> 00:04:29.001
+dan kompresi gambar video tanpa menggunakan seluruh hard drive Anda.
+
+68
+00:04:30.000 --> 00:04:34.001
+Sementara video digital menawarkan beberapa keuntungan yang jelas untuk tape video analog,
+
+69
+00:04:34.001 --> 00:04:39.001
+Orang-orang di SuperMac mengatakan akan ada beberapa saat sebelum kita semua menggunakan kamera digital.
+
+70
+00:04:40.000 --> 00:04:45.001
+Video digital berbasis komputer hanya dapat menggantikan tape video ketika kompresi
+
+71
+00:04:45.001 --> 00:04:49.001
+menjadi cukup bagus dan kualitas gambar menjadi cukup baik
+
+72
+00:04:49.001 --> 00:04:51.000
+untuk benar-benar membuat hal itu menjadi kenyataan.
+
+73
+00:04:51.000 --> 00:04:54.001
+Saya tidak berpikir bahwa itu adalah sesuatu yang akan terjadi di tahun atau dua berikutnya.
+
+74
+00:04:54.001 --> 00:04:57.000
+Untuk Chronicles Computer, saya adalah Maria Gabriel.
+
+75
+00:05:09.001 --> 00:05:13.000
+Kami akan melihat sekarang dua pendekatan yang berbeda untuk file kompresi pada
+
+76
+00:05:13.000 --> 00:05:16.000
+PC Anda di sini untuk menunjukkan kepada kami solusi perangkat lunak yang disebut PK-Zip.
+
+77
+00:05:17.000 --> 00:05:19.001
+Ia adalah Mr. PK Phil Katz, Presiden PK-Wear
+
+78
+00:05:20.000 --> 00:05:24.000
+Juga dengan kami untuk menunjukkan kepada kami solusi perangkat keras adalah Gary Clow dari Stack Electronics.
+
+79
+00:05:24.001 --> 00:05:24.001
+dengan Jan?
+
+80
+00:05:25.000 --> 00:05:29.001
+Gary, melihat beberapa produk kompresi ini, kita melihat solusi perangkat keras
+
+81
+00:05:29.001 --> 00:05:31.000
+Dan kita melihat solusi software.
+
+82
+00:05:31.001 --> 00:05:34.000
+Anda dapat menjelaskan apa perbedaan dan apa manfaat dan
+
+83
+00:05:34.000 --> 00:05:35.001
+Keuntungan untuk keduanya?
+
+84
+00:05:35.001 --> 00:05:39.001
+Nah, sebenarnya ada saat-saat di mana Anda ingin menggunakan perangkat lunak dalam kasus di mana
+
+85
+00:05:39.001 --> 00:05:42.001
+Anda tidak memiliki cara untuk mendapatkan perangkat keras ke sistem Anda, misalnya, pada laptop
+
+86
+00:05:42.001 --> 00:05:45.000
+atau mesin notebook di mana tidak ada cara untuk mendapatkan hardware.
+
+87
+00:05:45.001 --> 00:05:47.001
+Atau ada saat-saat ketika Anda ingin hardware untuk kecepatan,
+
+88
+00:05:48.000 --> 00:05:49.001
+Namun, pada dasarnya ia turun ke kecepatan.
+
+89
+00:05:50.000 --> 00:05:51.001
+Hardware memberikan Anda kecepatan maksimum.
+
+90
+00:05:52.000 --> 00:05:54.000
+Dan kami akan melihat itu dalam hanya satu menit ketika Anda menunjukkan kepada kami produk stack Anda.
+
+91
+00:05:54.001 --> 00:05:58.001
+Alright Phil, mari kita berbalik kepada Anda dan Anda memiliki PK-Zip yang terkenal dan menunjukkan
+
+92
+00:05:58.001 --> 00:06:00.000
+Kami tahu bagaimana Anda menggunakannya dan apa yang benar-benar dilakukan.
+
+93
+00:06:00.001 --> 00:06:03.000
+PK-Zip adalah utilitas arsip tujuan umum.
+
+94
+00:06:03.000 --> 00:06:06.000
+Ini digunakan pada banyak sistem online seperti CompuServe.
+
+95
+00:06:06.000 --> 00:06:09.001
+Ini juga digunakan untuk distribusi banyak program perangkat lunak komersial.
+
+96
+00:06:10.000 --> 00:06:13.000
+Di sini pada layar saya memiliki beberapa jenis file yang berbeda.
+
+97
+00:06:13.000 --> 00:06:17.000
+Saya memiliki file Windows Bitmap, saya memiliki file database dan file teks sederhana.
+
+98
+00:06:17.001 --> 00:06:24.001
+Apa yang akan saya lakukan sekarang adalah mengangkat jendela ini
+
+99
+00:06:24.001 --> 00:06:29.000
+dan menjalankan PK-Zip untuk mengkompresi file yang baru saja saya tunjukkan.
+
+100
+00:06:31.000 --> 00:06:35.000
+Dan PK-Zip akan menunjukkan persentase file yang dikompresi dan kemudian total
+
+101
+00:06:35.000 --> 00:06:36.001
+Jumlah simpanan saat dilakukan.
+
+102
+00:06:40.000 --> 00:06:41.000
+Dan apa yang kita miliki?
+
+103
+00:06:41.001 --> 00:06:45.001
+Dan ini adalah file yang dikompresi, file zip yang dibuat oleh PK-Zip.
+
+104
+00:06:46.001 --> 00:06:51.000
+File Bitmap yang kita baru saja dikompresi, misalnya, biasanya 150K dan sekarang
+
+105
+00:06:51.000 --> 00:06:55.000
+dikompresi ke 18K, 89% simpanan.
+
+106
+00:06:55.001 --> 00:06:59.001
+Secara keseluruhan file zip mengandung banyak jenis file yang berbeda, file yang dapat diimplementasikan,
+
+107
+00:06:59.001 --> 00:07:05.001
+file database, file grafis dan apa yang digunakan untuk mengambil sedikit lebih dari satu megabyte
+
+108
+00:07:05.001 --> 00:07:10.000
+Ruang sekarang dikompresi menjadi sekitar 1. 2 megabyte atau 1 sepuluh dari ukuran asli.
+
+109
+00:07:10.000 --> 00:07:12.000
+Jadi sebenarnya 11 megabytes menjadi 1.2.
+
+110
+00:07:12.001 --> 00:07:13.000
+Itu adalah benar.
+
+111
+00:07:15.001 --> 00:07:21.000
+Kami juga memiliki utilitas yang disebut PK-SFX yang memungkinkan seseorang untuk mengambil kompresi
+
+112
+00:07:21.000 --> 00:07:23.001
+Zip file dan mengubahnya menjadi file standar yang dapat diimplementasikan.
+
+113
+00:07:24.000 --> 00:07:28.000
+Dengan cara ini informasi yang dikompresi dapat dipindahkan kepada seseorang yang tidak
+
+114
+00:07:28.000 --> 00:07:32.000
+perlu memiliki utilitas PK-Wear tetapi ingin menyelamatkan
+
+115
+00:07:32.000 --> 00:07:33.001
+ruang disk atau waktu transfer.
+
+116
+00:07:35.000 --> 00:07:40.000
+Dan ini adalah standar MS-DOS executable yang saya jalankan sekarang yang sebenarnya
+
+117
+00:07:40.000 --> 00:07:42.000
+Mengekstrak data yang dikompresi dari dalam diri.
+
+118
+00:07:43.001 --> 00:07:45.001
+Okay, apa lagi yang bisa kita lakukan dengan ini?
+
+119
+00:07:46.000 --> 00:07:51.000
+Kami juga memiliki utilitas yang disebut PK-Lite yang dapat mengambil setiap standar DOS eksekutif
+
+120
+00:07:51.000 --> 00:07:58.000
+program, aplikasi dan kompresi yang dapat diimplementasikan ke kompresi lain
+
+121
+00:07:58.000 --> 00:08:00.000
+Jika Anda menggunakannya secara otomatis, maka
+
+122
+00:08:00.000 --> 00:08:02.000
+Mengekstrak ke dalam memori dan berjalan normal.
+
+123
+00:08:02.000 --> 00:08:05.001
+Ini memungkinkan Anda untuk menyimpan semua program eksekusi Anda dalam format yang dikompresi.
+
+124
+00:08:05.001 --> 00:08:07.000
+Jadi Anda dapat menjalankannya dari versi kompresi.
+
+125
+00:08:07.000 --> 00:08:12.000
+Memang benar, dan itu sangat berguna pada laptop dan mesin di mana ruang cakera terbatas
+
+126
+00:08:12.000 --> 00:08:14.000
+dan eksekutif berjalan sama seperti yang asli.
+
+127
+00:08:14.001 --> 00:08:14.001
+Ahhhhhhh
+
+128
+00:08:15.001 --> 00:08:16.000
+Dan apa lagi yang ia lakukan?
+
+129
+00:08:16.001 --> 00:08:17.001
+Ada beberapa trik lain yang saya pikirkan.
+
+130
+00:08:18.000 --> 00:08:21.000
+Nah, kami memiliki beberapa produk yang berkaitan dengan kompresi data.
+
+131
+00:08:22.000 --> 00:08:25.001
+Salah satu produk terbaru kami adalah perpustakaan kompresi data yang memungkinkan setiap
+
+132
+00:08:25.001 --> 00:08:29.000
+Program aplikasi untuk mengintegrasikan teknologi kompresi kami
+
+133
+00:08:29.000 --> 00:08:30.001
+dalam program aplikasi mereka.
+
+134
+00:08:31.000 --> 00:08:34.001
+Kami juga memiliki menu yang didorong versi perangkat lunak kami dan
+
+135
+00:08:34.001 --> 00:08:36.000
+utilitas kompresi lainnya.
+
+136
+00:08:36.001 --> 00:08:37.000
+[...]
+
+137
+00:08:37.000 --> 00:08:39.000
+Phil, jika saya dapat meminta Anda untuk keluar dari Windows di sini
+
+138
+00:08:39.000 --> 00:08:40.001
+Sekarang kita bisa beralih ke Gary dan melihat.
+
+139
+00:08:41.000 --> 00:08:43.000
+Sekarang Anda benar-benar menggunakan perangkat keras dan perangkat lunak dalam apa yang Anda
+
+140
+00:08:43.000 --> 00:08:44.001
+Anda melakukan dengan produk stack Anda, bukan?
+
+141
+00:08:44.001 --> 00:08:45.000
+Itu memang benar.
+
+142
+00:08:45.000 --> 00:08:48.000
+Kami memiliki satu versi yang perangkat lunak hanya untuk laptop dan laptop dan kemudian kami
+
+143
+00:08:48.000 --> 00:08:52.000
+memiliki berbagai produk yang memiliki papan co-processor dengan data kami
+
+144
+00:08:52.000 --> 00:08:54.000
+Kompresi sirkuit terintegrasi di atasnya.
+
+145
+00:08:54.000 --> 00:08:58.000
+Ini sebenarnya chip data kompresi co-processor yang telah kami desain sendiri
+
+146
+00:08:58.000 --> 00:09:01.001
+dan kami memiliki satu untuk sistem 8-bit dan XT bus, AT bus
+
+147
+00:09:01.001 --> 00:09:03.000
+sistem dan sistem saluran mikro.
+
+148
+00:09:03.001 --> 00:09:06.000
+Jujur, saya pikir kami memiliki, kami kembali ke C-prompter lama dan jika Anda dapat
+
+149
+00:09:06.000 --> 00:09:07.001
+Bangun dan tunjukkan kepada kami apa yang ia lakukan.
+
+150
+00:09:08.000 --> 00:09:10.001
+Yang bagus, apa yang akan saya lakukan adalah masuk ke asisten komando kami.
+
+151
+00:09:10.001 --> 00:09:14.000
+Ini datang dengan stack dan memungkinkan Anda untuk mendapatkan akses ke semua stack
+
+152
+00:09:14.000 --> 00:09:15.001
+Perintah utilitas yang akan datang.
+
+153
+00:09:16.000 --> 00:09:18.000
+Apa yang akan kita lakukan adalah melakukan instalasi di sini.
+
+154
+00:09:18.001 --> 00:09:21.001
+Sekarang orang membeli produk kami karena mereka benar-benar ingin menginstal
+
+155
+00:09:21.001 --> 00:09:23.000
+Disk keras lainnya pada sistem mereka.
+
+156
+00:09:23.001 --> 00:09:27.000
+Mereka benar-benar tidak perlu tahu tentang kompresi atau memahami kompresi data.
+
+157
+00:09:27.001 --> 00:09:30.001
+Mereka benar-benar hanya ingin menambah kapasitas ke sistem mereka.
+
+158
+00:09:31.000 --> 00:09:36.001
+Jadi saya telah memilih opsi di sini untuk memasang stacker pada drive stacker kosong atau
+
+159
+00:09:36.001 --> 00:09:38.000
+Membangun drive stacker kosong.
+
+160
+00:09:38.000 --> 00:09:41.001
+Sekarang jika Anda sudah memiliki data pada hard disk Anda, Anda dapat memilih opsi lain
+
+161
+00:09:41.001 --> 00:09:46.000
+dan kita akan pergi ke sana dan sebenarnya mengambil data yang Anda miliki, memindahkannya
+
+162
+00:09:46.000 --> 00:09:50.000
+untuk drive stacker dan secara beransur-ansur membangun drive stack yang mengambil
+
+163
+00:09:50.000 --> 00:09:51.001
+ruang lama saat file dihapus.
+
+164
+00:09:51.001 --> 00:09:53.000
+Jadi Anda tidak perlu memiliki drive kosong untuk melakukan ini?
+
+165
+00:09:53.000 --> 00:09:54.000
+Anda tidak perlu.
+
+166
+00:09:54.000 --> 00:09:58.001
+Dalam hal ini, kami memiliki drive 600 megabytes dengan 256 megabithes gratis.
+
+167
+00:09:58.001 --> 00:10:01.000
+Saya hanya akan melakukan apa yang bisa dilakukan pengguna biasa.
+
+168
+00:10:01.000 --> 00:10:03.001
+Mengambil segmen 20 megabyte dari drive.
+
+169
+00:10:03.001 --> 00:10:05.001
+Jadi berpura-pura kita memiliki drive 20 megabyte.
+
+170
+00:10:05.001 --> 00:10:06.000
+Itu memang benar.
+
+171
+00:10:06.001 --> 00:10:07.001
+Dan kita akan mengubahnya menjadi 40.
+
+172
+00:10:07.001 --> 00:10:08.000
+[...]
+
+173
+00:10:08.001 --> 00:10:11.000
+Jadi saya akan menunjukkan kepada semua orang seberapa cepat dan mudah Anda dapat menginstal
+
+174
+00:10:11.000 --> 00:10:12.001
+40 megabyte drive pada sistem Anda.
+
+175
+00:10:13.000 --> 00:10:14.001
+Saya baru saja menyentuh instalasi yang dibuat.
+
+176
+00:10:15.000 --> 00:10:17.001
+Sekarang apa yang Anda lihat datang di sini adalah cakera kecepatan Norton.
+
+177
+00:10:18.000 --> 00:10:22.000
+Ini datang bersama-sama dengan produk kami dan itu keluar dan mengoptimalkan Anda
+
+178
+00:10:22.000 --> 00:10:26.001
+cakera yang ada untuk memastikan bahwa ketika cakera stacker dibuat, itu semua dalam
+
+179
+00:10:26.001 --> 00:10:28.000
+Sebuah area yang sempit di cakera.
+
+180
+00:10:28.000 --> 00:10:30.000
+Jadi Anda mendapatkan prestasi maksimum dengan cara ini.
+
+181
+00:10:30.000 --> 00:10:32.001
+Dia telah membersihkan drive yang ada dengan 20 megabyte.
+
+182
+00:10:32.001 --> 00:10:36.000
+Saya telah melakukannya sekarang dan yang sebenarnya dibuat atau sebenarnya dibersihkan
+
+183
+00:10:36.000 --> 00:10:37.001
+Lebih dari 600 megabyte.
+
+184
+00:10:38.000 --> 00:10:38.000
+Ok ya.
+
+185
+00:10:38.001 --> 00:10:40.000
+Sekarang Anda harus benar-benar memulai ulang sistem dan
+
+186
+00:10:40.000 --> 00:10:42.000
+Hal ini dilakukan secara otomatis untuk Anda.
+
+187
+00:10:42.000 --> 00:10:44.001
+Dan alasannya adalah kami beroperasi sebagai driver perangkat.
+
+188
+00:10:44.001 --> 00:10:46.000
+Kami adalah driver dua perangkat.
+
+189
+00:10:46.001 --> 00:10:48.001
+Dan apa yang berarti bahwa kompresi terjadi
+
+190
+00:10:48.001 --> 00:10:50.000
+secara otomatis dan transparan.
+
+191
+00:10:50.001 --> 00:10:53.001
+Ini memberi Anda drive baru untuk digunakan sama seperti Anda akan drive DOS.
+
+192
+00:10:54.000 --> 00:10:57.000
+Jadi tidak ada perintah untuk berjalan ke file kompresi atau file decompress.
+
+193
+00:10:57.001 --> 00:10:59.001
+Semua file disimpan dikompresi pada drive.
+
+194
+00:10:59.001 --> 00:11:02.001
+Dan efeknya tentu saja menggandakan kapasitas pada cakera Anda.
+
+195
+00:11:02.001 --> 00:11:02.001
+[...]
+
+196
+00:11:02.001 --> 00:11:04.001
+Kami di sini untuk memulai kembali sekarang dan mari kita lihat apa yang terjadi di sini.
+
+197
+00:11:05.000 --> 00:11:08.001
+Pada dasarnya maka Anda akan mengeluarkan perintah yang merupakan perintah DOS pada dasarnya dan
+
+198
+00:11:08.001 --> 00:11:11.000
+Ia akan melakukan kompresi secara transparan.
+
+199
+00:11:11.000 --> 00:11:12.000
+Itu memang benar.
+
+200
+00:11:12.001 --> 00:11:14.000
+Dan Anda baru saja melihat betapa sulitnya untuk menginstal
+
+201
+00:11:14.000 --> 00:11:15.001
+40 megabyte drive pada sistem Anda.
+
+202
+00:11:15.001 --> 00:11:16.000
+Baiklah pergi ke depan.
+
+203
+00:11:16.000 --> 00:11:16.000
+Mari kita buktikan itu.
+
+204
+00:11:16.000 --> 00:11:19.000
+Jadi sekarang kita memiliki drive D dan itu adalah drive baru kita.
+
+205
+00:11:19.000 --> 00:11:20.001
+Saya akan tunjukkan kepada Anda DOS check disk.
+
+206
+00:11:21.000 --> 00:11:23.000
+Anda dapat melihat apa yang dikatakan tepat di sana. 40 megabyte drive.
+
+207
+00:11:23.001 --> 00:11:27.001
+Saya akan menyalin sekumpulan file dari drive C dan stack
+
+208
+00:11:27.001 --> 00:11:29.001
+mengalihkan direktori ke drive D ini.
+
+209
+00:11:30.000 --> 00:11:32.000
+Sekarang Anda mungkin tidak menyadari apa yang terjadi tetapi Anda melihat
+
+210
+00:11:32.000 --> 00:11:33.001
+Nama-nama file yang mengklik di sana.
+
+211
+00:11:34.000 --> 00:11:36.000
+Itu adalah megabyte file sebenarnya.
+
+212
+00:11:36.001 --> 00:11:38.000
+Dan setiap kali ia menulis salah satu file itu.
+
+213
+00:11:38.000 --> 00:11:39.001
+Ia melakukan semua kompresi tepat di sana.
+
+214
+00:11:39.001 --> 00:11:41.000
+Itu adalah kompresi seluruh file.
+
+215
+00:11:41.000 --> 00:11:42.001
+Jadi Anda bisa melihat seberapa cepat itu.
+
+216
+00:11:42.001 --> 00:11:44.000
+Itu adalah megabyte file di sana.
+
+217
+00:11:44.001 --> 00:11:46.000
+Sekarang apa yang kami miliki, saya telah menunjukkan kepada Anda dua di sana.
+
+218
+00:11:46.001 --> 00:11:50.001
+Jika Anda hanya meletakkan S di depan dan melakukan DIR, Anda melihat di kolom paling kanan.
+
+219
+00:11:50.001 --> 00:11:53.000
+Di sana itu adalah persamaan kompresi untuk setiap file.
+
+220
+00:11:53.001 --> 00:11:56.000
+Di bagian bawah layar, Anda akan melihat
+
+221
+00:11:56.000 --> 00:11:57.001
+Perbandingan kompresi untuk seluruh direktori.
+
+222
+00:11:58.000 --> 00:12:00.001
+Sekarang orang mengatakan ini harus terlalu baik untuk menjadi benar.
+
+223
+00:12:01.000 --> 00:12:02.000
+Saya tidak melihat perbedaan di sini.
+
+224
+00:12:02.000 --> 00:12:03.001
+Saya hanya memiliki lebih banyak kapasitas.
+
+225
+00:12:03.001 --> 00:12:07.000
+Saya akan menunjukkan kepada Anda bagaimana ini bekerja dan fakta bahwa
+
+226
+00:12:07.000 --> 00:12:08.001
+Ini sama seperti dua disk.
+
+227
+00:12:08.001 --> 00:12:10.001
+Saya akan masuk dan mengedit salah satu file ini.
+
+228
+00:12:11.000 --> 00:12:15.000
+Saya memiliki huruf titik teks di bagian bawah dan ada sedikit program yang dipanggil
+
+229
+00:12:15.000 --> 00:12:17.000
+Sebut saja yang datang dengan Stacker.
+
+230
+00:12:18.000 --> 00:12:19.000
+Aku akan memanggilnya.
+
+231
+00:12:19.000 --> 00:12:21.001
+Sekarang saya ingin Anda mengukur berapa lama yang dibutuhkan untuk membaca ini
+
+232
+00:12:21.001 --> 00:12:23.001
+file karena dalam bentuk kompresi.
+
+233
+00:12:23.001 --> 00:12:24.001
+Kami akan benar-benar memecahkannya.
+
+234
+00:12:24.001 --> 00:12:27.001
+Saya akan memuat program ini dan memecahkan file ini.
+
+235
+00:12:27.001 --> 00:12:31.000
+Ketika Anda melihatnya dilemparkan ke layar, seluruh file telah dikompresi.
+
+236
+00:12:32.000 --> 00:12:32.000
+Mulai dari
+
+237
+00:12:32.001 --> 00:12:33.001
+Hentikan jam tangan Anda.
+
+238
+00:12:34.001 --> 00:12:36.000
+Itulah seberapa cepatnya itu.
+
+239
+00:12:37.000 --> 00:12:41.000
+Hanya untuk membuktikan bahwa kita benar-benar melakukan sesuatu di sini, saya akan menunjukkan kepada Anda bagaimana
+
+240
+00:12:41.000 --> 00:12:45.000
+cepat itu sebenarnya mengkompresi data karena kita akan mengubahnya.
+
+241
+00:12:45.000 --> 00:12:51.000
+Saya akan masuk ke sini dan saya akan mengubah ini ke Stacker 2.0.
+
+242
+00:12:51.000 --> 00:12:54.001
+Nah, sekarang saya akan menyimpan file ini dan kapan ia akan harus
+
+243
+00:12:54.001 --> 00:12:56.000
+Memindahkan seluruh file.
+
+244
+00:12:56.001 --> 00:12:58.000
+Di sana ia pergi dan ia kembali ke dua prompt.
+
+245
+00:12:58.001 --> 00:13:00.000
+Gary, Anda menggunakan SEdit yang merupakan program Anda.
+
+246
+00:13:00.001 --> 00:13:04.000
+Jika Anda telah menggunakan aplikasi independen, mari kita katakan WordPerfect pada file itu
+
+247
+00:13:04.000 --> 00:13:08.000
+dan WordPerfect juga telah dikompresi, apakah itu juga telah dilakukan?
+
+248
+00:13:08.001 --> 00:13:09.000
+Apakah akan cepat?
+
+249
+00:13:09.000 --> 00:13:12.000
+Kadang-kadang mereka sebenarnya mengisi lebih cepat karena itu adalah
+
+250
+00:13:12.000 --> 00:13:14.000
+Mengambil kurang revolusi dari cakera.
+
+251
+00:13:14.000 --> 00:13:17.001
+Ini mengambil setengah ruang pada cakera dan karena Anda melakukannya dalam waktu nyata,
+
+252
+00:13:17.001 --> 00:13:21.000
+Tidak ada keterlambatan tambahan, terutama pada operasi membaca.
+
+253
+00:13:21.000 --> 00:13:23.000
+Mari kita lihat apakah Anda benar-benar menyimpan file baru itu.
+
+254
+00:13:23.000 --> 00:13:26.001
+Okay, sekarang di suatu tempat di sini saya mendapatkan Stacker di bawah.
+
+255
+00:13:26.001 --> 00:13:27.001
+Ini adalah file yang berbeda.
+
+256
+00:13:27.001 --> 00:13:31.000
+Jadi saya akan benar-benar pergi ke sana dan menghapus itu, meletakkannya kembali di mana ia berada.
+
+257
+00:13:31.000 --> 00:13:32.001
+Saya benar-benar menulisnya lagi.
+
+258
+00:13:33.000 --> 00:13:35.000
+Jadi jika saya menjalankan direktori, Anda akan melihat file di sana.
+
+259
+00:13:35.001 --> 00:13:37.001
+Sekarang saya akan menunjukkan kepada Anda betapa kompatibel kami dengan DOS.
+
+260
+00:13:38.000 --> 00:13:40.000
+Biarkan saya benar-benar menghapus file yang sama.
+
+261
+00:13:43.000 --> 00:13:44.001
+Okay, saya akan berlari Esther lagi.
+
+262
+00:13:44.001 --> 00:13:45.001
+Anda lihat tidak ada di sana.
+
+263
+00:13:45.001 --> 00:13:47.001
+Sekarang saya akan memanggil Norton Unerase.
+
+264
+00:13:48.001 --> 00:13:49.001
+Tentu saja, dia menemukan itu.
+
+265
+00:13:50.000 --> 00:13:52.001
+Jadi saya akan kuror di sini, katakan Unerase itu.
+
+266
+00:13:52.001 --> 00:13:53.001
+Ia membutuhkan surat pertama.
+
+267
+00:13:54.000 --> 00:13:54.001
+Aku membekalkannya.
+
+268
+00:13:54.001 --> 00:13:55.000
+Ia telah pulih.
+
+269
+00:13:56.000 --> 00:13:58.000
+Kami akan keluar dan saya akan membuat Esther lagi.
+
+270
+00:14:00.001 --> 00:14:02.001
+Seperti yang Anda ketahui, tidak ada cermin.
+
+271
+00:14:03.000 --> 00:14:03.001
+Di sana ia ada.
+
+272
+00:14:03.001 --> 00:14:04.001
+Gary, Phil, terima kasih banyak.
+
+273
+00:14:05.000 --> 00:14:05.001
+Keduanya sangat mengesankan.
+
+274
+00:14:06.000 --> 00:14:10.000
+Nah, masalah dengan gambar grafis berwarna-warni yang indah adalah mereka mengambil banyak
+
+275
+00:14:10.000 --> 00:14:11.001
+ruang disk dan banyak waktu akses.
+
+276
+00:14:11.001 --> 00:14:16.000
+Di Seabold Desktop Publishing Conference, yang baru-baru ini diadakan di San Jose, kami mengambil
+
+277
+00:14:16.000 --> 00:14:18.001
+Lihat beberapa produk kompresi baru yang dirancang
+
+278
+00:14:18.001 --> 00:14:20.000
+Terutama untuk file grafis.
+
+279
+00:14:22.000 --> 00:14:26.000
+Pengguna komputer ingin alat kompresi file sehingga mereka dapat menghemat penyimpanan
+
+280
+00:14:26.000 --> 00:14:27.001
+ruang dan waktu transfer.
+
+281
+00:14:28.000 --> 00:14:33.000
+Di sini di konferensi Seabold, 25.000 peserta melihat berbagai
+
+282
+00:14:33.000 --> 00:14:34.001
+Produk yang hanya melakukan hal itu.
+
+283
+00:14:35.000 --> 00:14:38.001
+Waktu transfer adalah masalah ketika Anda perlu mengirimkan gambar melalui
+
+284
+00:14:38.001 --> 00:14:40.001
+jaringan atau di seluruh dunia.
+
+285
+00:14:40.001 --> 00:14:44.001
+Teknologi Storm menunjukkan satu solusi untuk masalah ini.
+
+286
+00:14:45.000 --> 00:14:46.000
+Akhbar bekerja dengan batas waktu.
+
+287
+00:14:46.001 --> 00:14:49.000
+Mereka ingin mendapatkan informasi mereka di sana secepat mungkin.
+
+288
+00:14:49.001 --> 00:14:54.000
+Jadi di Korbachev, kudeta terjadi di Moskow di mana orang-orang sudah ada untuk
+
+289
+00:14:54.000 --> 00:14:58.001
+gambar, kompresi mereka, mengirimkan mereka sehingga kami memiliki informasi ini sebagai
+
+290
+00:14:58.001 --> 00:15:02.000
+Sebaik-baiknya tersedia untuk kami di edisi berikutnya dari surat kabar.
+
+291
+00:15:02.001 --> 00:15:06.001
+Tetapi bagi banyak aplikasi komputer, kualitas sama pentingnya dengan waktu.
+
+292
+00:15:06.001 --> 00:15:10.001
+Di bangku perangkat lunak buatan tangan, mereka mengatakan Anda bisa mendapatkan keduanya.
+
+293
+00:15:11.000 --> 00:15:15.001
+Misalnya, sebuah file normal 640 by 480 yang Anda scan di
+
+294
+00:15:15.001 --> 00:15:17.001
+Itu akan menjadi sekitar satu megabyte dalam ukuran.
+
+295
+00:15:18.000 --> 00:15:22.000
+Baik, memampatkan file menggunakan kompresi JPEG mengurangi ukuran file untuk
+
+296
+00:15:22.000 --> 00:15:26.000
+Di mana saja antara 120th dan 125th dari ukuran.
+
+297
+00:15:26.000 --> 00:15:28.001
+Jadi sekarang Anda sedang berbicara untuk memiliki file yang mungkin 40K.
+
+298
+00:15:29.000 --> 00:15:31.000
+Mengirim file 40K melalui modem adalah jelas
+
+299
+00:15:31.000 --> 00:15:33.000
+Lebih baik untuk menghantar satu megabyte file.
+
+300
+00:15:33.001 --> 00:15:36.001
+Harus ada perdagangan untuk tahap kompresi file itu.
+
+301
+00:15:37.000 --> 00:15:41.001
+Tetapi Daniel Kemp dari Radius mengatakan kualitas yang Anda kehilangan hampir tidak diperhatikan
+
+302
+00:15:41.001 --> 00:15:43.001
+Jika Anda menggunakan produk yang tepat.
+
+303
+00:15:44.000 --> 00:15:49.001
+Kelemahan jelas bahwa Anda kehilangan data ketika Anda mengkompresi, tetapi
+
+304
+00:15:49.001 --> 00:15:55.001
+Manfaat dari itu adalah Anda dapat mendapatkan hampir kualitas yang sama.
+
+305
+00:15:56.000 --> 00:15:59.000
+Anda akan kehilangan, tentu saja, pengguna memilih antara kualitas gambar dan
+
+306
+00:15:59.000 --> 00:16:04.000
+perbandingan kompresi, tetapi Anda dapat mendapatkan kualitas yang hampir sama pada
+
+307
+00:16:04.000 --> 00:16:05.001
+Fraksi dari ukuran gambar.
+
+308
+00:16:06.001 --> 00:16:10.001
+Generasi terbaru produk kompresi file yang ditujukan untuk pasar grafik
+
+309
+00:16:10.001 --> 00:16:15.001
+mencoba untuk memecahkan masalah waktu versus kualitas dengan memberikan pengguna kontrol atas
+
+310
+00:16:15.001 --> 00:16:18.000
+Apa bagian dari file gambar grafis untuk dikompresi.
+
+311
+00:16:19.000 --> 00:16:23.000
+Satu lagi fitur yang sangat penting adalah bahwa itu benar-benar memungkinkan Anda untuk memilih yang berbeda
+
+312
+00:16:23.000 --> 00:16:26.001
+area di dalam gambar sehingga Anda sebagai pengguna dapat memutuskan
+
+313
+00:16:26.001 --> 00:16:28.001
+area mana yang Anda ingin memiliki kualitas terbaik.
+
+314
+00:16:29.000 --> 00:16:33.000
+Ini sangat penting jika, misalnya, Anda memiliki teks dan logo dalam gambar di mana
+
+315
+00:16:33.000 --> 00:16:36.001
+Anda benar-benar ingin memiliki kualitas terbaik dan sebagai
+
+316
+00:16:36.001 --> 00:16:38.000
+Pengguna yang benar-benar ingin memilih itu.
+
+317
+00:16:38.001 --> 00:16:43.000
+Produk kompresi file di sini di konferensi Siebold bervariasi dari perangkat lunak
+
+318
+00:16:43.000 --> 00:16:45.000
+Penyelesaian untuk hardware add-ins.
+
+319
+00:16:45.001 --> 00:16:49.000
+Pendekatan perangkat lunak lebih murah, pendekatan perangkat keras lebih cepat.
+
+320
+00:16:49.001 --> 00:16:52.001
+Untuk Chronicles Computer, saya adalah Maria Gabriel.
+
+321
+00:17:06.001 --> 00:17:11.000
+Untuk pengguna Macintosh, ada beberapa produk kompresi file yang baik dan di sini untuk
+
+322
+00:17:11.000 --> 00:17:15.000
+menunjukkan kami hal-hal di deluxe adalah David Shargel dari Aladdin Systems dan juga dengan kami
+
+323
+00:17:15.000 --> 00:17:18.001
+Marshall Goldberg dari Sigma Designs yang akan menunjukkan dua kali lipat.
+
+324
+00:17:20.000 --> 00:17:21.001
+Marshall, sebelumnya kami melihat beberapa kompresi PC
+
+325
+00:17:21.001 --> 00:17:23.001
+produk dan kita akan melihat Mac mereka.
+
+326
+00:17:24.000 --> 00:17:27.000
+Sekarang ada sesuatu tentang Macintosh atau bus baru yang membuatnya lebih sulit,
+
+327
+00:17:27.000 --> 00:17:29.001
+lebih mudah, berbeda atau ada hal-hal yang harus Anda lakukan
+
+328
+00:17:29.001 --> 00:17:31.001
+Pertimbangkan ketika Anda mengimplementasikan produk?
+
+329
+00:17:32.001 --> 00:17:34.000
+Pada dasarnya mereka sama.
+
+330
+00:17:34.000 --> 00:17:38.000
+Tentu saja Anda membutuhkan perangkat lunak Macintosh dan insinyur macintosh yang baik yang kami miliki.
+
+331
+00:17:38.000 --> 00:17:41.001
+Namun, hal ini sangat mirip dengan bagaimana keduanya bekerja sama.
+
+332
+00:17:42.000 --> 00:17:43.000
+Di dalam bus baru?
+
+333
+00:17:43.000 --> 00:17:45.000
+Hmm-hmm, di bus baru atau di Macintosh yang berbeda.
+
+334
+00:17:45.001 --> 00:17:49.000
+Mari kita beralih ke hal-hal di deluxe kemudian David dan banyak dari kita terbiasa dengan hal- hal
+
+335
+00:17:49.000 --> 00:17:51.001
+dari hari-hari awal perkongsian kata.
+
+336
+00:17:52.000 --> 00:17:53.001
+Tunjukkan produk baru dan apa yang dapat dilakukan.
+
+337
+00:17:54.000 --> 00:17:56.001
+Apa yang akan saya jelaskan adalah salah satu perbedaan utama antara
+
+338
+00:17:56.001 --> 00:17:58.000
+versi sebelumnya dan versi saat ini yang
+
+339
+00:17:58.000 --> 00:18:00.000
+Ini adalah menu sihir yang menemukan perpanjangan.
+
+340
+00:18:01.000 --> 00:18:04.001
+Apa yang kami biarkan Anda lakukan adalah berada di pencari Macintosh dan pilih file atau
+
+341
+00:18:04.001 --> 00:18:06.000
+folder atau kombinasi dari mereka.
+
+342
+00:18:06.000 --> 00:18:10.000
+Dalam hal ini saya akan memilih folder yang memiliki sejumlah dokumen grafis
+
+343
+00:18:10.000 --> 00:18:12.001
+Dan kami sedang memproses dokumen dan saya akan pergi ke
+
+344
+00:18:12.001 --> 00:18:14.000
+Menu sihir dan pilih item perintah.
+
+345
+00:18:15.000 --> 00:18:18.000
+Apa yang akan terjadi sekarang adalah bahwa hal-hal di deluxe secara otomatis akan
+
+346
+00:18:18.000 --> 00:18:21.001
+muncul dan mulai mengkompresi semua file tersebut, memelihara direktori atau
+
+347
+00:18:21.001 --> 00:18:24.000
+memotong file dan mengkompresi ke dalam satu arkib.
+
+348
+00:18:24.001 --> 00:18:28.000
+Apa yang kita kemudian bisa lakukan adalah pergi ke arkib itu jika kita memilih itu.
+
+349
+00:18:28.001 --> 00:18:32.000
+Kami dapat mengirimkannya langsung ke seseorang atau jika saya akan melakukannya sekarang, di sini adalah
+
+350
+00:18:32.000 --> 00:18:34.001
+Arkib baru kami dengan dua kali klik pada itu kami akan masuk
+
+351
+00:18:34.001 --> 00:18:36.000
+Hal ini dilakukan dengan aplikasi deluxe.
+
+352
+00:18:37.000 --> 00:18:39.001
+Saya akan menjelaskan bahwa kita dapat memanipulasi arkib ini.
+
+353
+00:18:40.000 --> 00:18:43.001
+Berikut adalah jendela yang muncul dengan folder dokumen kami dan
+
+354
+00:18:43.001 --> 00:18:45.001
+Di dalamnya ada benda-benda lain yang muncul.
+
+355
+00:18:46.001 --> 00:18:49.000
+Salah satu mekanisme untuk memanipulasi sebuah arkib
+
+356
+00:18:49.000 --> 00:18:51.000
+Saya bisa membuat beberapa file.
+
+357
+00:18:51.000 --> 00:18:53.000
+Dalam hal ini saya akan membuat file yang saya akan
+
+358
+00:18:53.000 --> 00:18:54.001
+mengirimkan ke layanan output.
+
+359
+00:18:57.000 --> 00:19:00.001
+Saya hanya dapat mengambil dokumen grafis yang saya butuhkan untuk mengirimkan
+
+360
+00:19:00.001 --> 00:19:02.000
+dan menariknya ke folder lain.
+
+361
+00:19:02.001 --> 00:19:06.001
+Kami juga dapat menamakan, menyalin, memindahkan hal-hal di dalam arkib.
+
+362
+00:19:07.000 --> 00:19:09.001
+Jika kantor layanan Anda tidak memiliki barang-barang di, Anda dapat membuatnya
+
+363
+00:19:09.001 --> 00:19:11.000
+Mengekstrak diri saat Anda membuat salinan?
+
+364
+00:19:11.000 --> 00:19:12.000
+Ya kamu bisa.
+
+365
+00:19:12.000 --> 00:19:15.001
+Ini menambahkan sedikit overhead ke file tetapi sebagian besar kantor layanan yang
+
+366
+00:19:15.001 --> 00:19:19.000
+menggunakan Macintosh untuk menggunakannya atau membuangnya yang merupakan produk freeware dari kita.
+
+367
+00:19:20.000 --> 00:19:23.001
+Kami juga menyediakan optimisator kompresi yang meningkatkan kompresi.
+
+368
+00:19:23.001 --> 00:19:25.000
+dengan format file tertentu.
+
+369
+00:19:26.000 --> 00:19:27.000
+Jadi tergantung pada jenis file yang Anda
+
+370
+00:19:27.000 --> 00:19:28.001
+Berurusan dengan Anda menggunakan pendekatan yang berbeda.
+
+371
+00:19:30.000 --> 00:19:33.001
+Misalnya, file audio atau file Photoshop yang bisa menjadi cukup besar.
+
+372
+00:19:34.000 --> 00:19:37.001
+Kami juga mencakup modul jpeg untuk kompresi grafis 24 bit.
+
+373
+00:19:38.001 --> 00:19:42.001
+David untuk pengguna yang mungkin menemukan ini sedikit rumit ada online
+
+374
+00:19:42.001 --> 00:19:44.000
+Apakah jenis panduan ini membantu Anda melalui proses ini?
+
+375
+00:19:44.001 --> 00:19:46.001
+Kami memiliki sesuatu yang disebut dokumentasi online.
+
+376
+00:19:46.001 --> 00:19:50.001
+Kami pada dasarnya menyediakan hampir seluruh manual online yang mudah diakses
+
+377
+00:19:50.001 --> 00:19:52.001
+Kedua menu sihir atau dalam aplikasi itu sendiri.
+
+378
+00:19:53.001 --> 00:19:53.001
+Okay yang hebat.
+
+379
+00:19:53.001 --> 00:19:56.001
+Saya akan meminta Anda untuk keluar dari benda-benda itu jika Anda bisa dan menggosok tikus di atas
+
+380
+00:19:56.001 --> 00:19:59.000
+untuk Marshall sehingga kita dapat melihat dua kali lipat.
+
+381
+00:19:59.000 --> 00:20:01.000
+Sementara dia melakukan itu Marshall Anda memiliki papan di sana.
+
+382
+00:20:01.000 --> 00:20:04.000
+Sekali lagi, kita beralih dari solusi perangkat lunak murni ke perangkat keras software.
+
+383
+00:20:04.000 --> 00:20:06.000
+Tentukan dan jelaskan apa yang ada pada kartu.
+
+384
+00:20:06.001 --> 00:20:10.000
+Baik double up adalah kartu bus baru yang akan bekerja di komputer Mac 2 seri.
+
+385
+00:20:10.001 --> 00:20:14.000
+Ia menggunakan chip kompresi stack untuk kompresi yang sangat cepat.
+
+386
+00:20:14.001 --> 00:20:18.000
+Kami menikah itu dengan sebuah program yang benar-benar bagus yang disebut disk doubler yang membuat
+
+387
+00:20:18.000 --> 00:20:19.001
+Kompresi sangat mudah pada Macintosh.
+
+388
+00:20:20.000 --> 00:20:22.001
+Jadi antara kemudahan penggunaan dan kecepatan Anda
+
+389
+00:20:22.001 --> 00:20:24.000
+Anda dapat mengkompresi segala sesuatu pada drive.
+
+390
+00:20:24.000 --> 00:20:25.000
+Anda dapat menggandakan kapasitas.
+
+391
+00:20:25.000 --> 00:20:27.001
+Dan jenis mendapatkan kembali ke pertanyaan Jan itu benar-benar chip stack yang sama yang kita
+
+392
+00:20:27.001 --> 00:20:29.000
+Saya melihat ketika kami memamerkan PC sebelumnya.
+
+393
+00:20:29.001 --> 00:20:30.000
+Ya dengan tepat.
+
+394
+00:20:30.000 --> 00:20:32.000
+Baiklah, tunjukkan kepada kami dua kali lipat dan apa yang dapat Anda lakukan dengan itu.
+
+395
+00:20:32.001 --> 00:20:32.001
+Tentu saja
+
+396
+00:20:33.001 --> 00:20:36.001
+Berikut adalah folder penuh dengan file yang saya buat dengan Microsoft Word.
+
+397
+00:20:37.001 --> 00:20:42.000
+Saya dapat memilih salah satu file ini atau bahkan folder penuh dengan file dan pilih
+
+398
+00:20:42.000 --> 00:20:43.001
+Kompresi dari menu double disk.
+
+399
+00:20:44.000 --> 00:20:46.000
+Ketika saya membuat disk dupbler dengan cepat menggunakan papan
+
+400
+00:20:46.000 --> 00:20:48.000
+Untuk mengkompresi segalanya dalam folder.
+
+401
+00:20:49.000 --> 00:20:52.001
+Sekarang setelah mereka dikompresi, file terlihat seperti yang mereka lakukan sebelumnya kecuali bahwa
+
+402
+00:20:52.001 --> 00:20:55.000
+DD muncul di ikon sehingga Anda dapat
+
+403
+00:20:55.000 --> 00:20:56.001
+Katakan bahwa itu sedang dikompresi dengan program.
+
+404
+00:20:57.000 --> 00:21:01.000
+Sekarang di samping itu saya dapat memilih folder penuh dalam kasus ini Microsoft Word
+
+405
+00:21:01.000 --> 00:21:04.001
+memproses program dan saya dapat mengkompresi semua yang ada dalam folder.
+
+406
+00:21:07.000 --> 00:21:08.001
+Sekarang apa yang bisa terjadi adalah ini.
+
+407
+00:21:08.001 --> 00:21:11.001
+Saya dapat mengambil salah satu file yang saya telah dikompresi seperti ini.
+
+408
+00:21:12.000 --> 00:21:17.000
+Ketika saya dua kali klik pada itu untuk memulai program disk dupler datang dalam memperluas
+
+409
+00:21:17.000 --> 00:21:21.000
+file memperluas Microsoft Word dan memulai program untuk saya secara otomatis.
+
+410
+00:21:21.001 --> 00:21:24.001
+Ia melakukannya begitu mudah dan begitu cepat sehingga saya dapat mengkompresi
+
+411
+00:21:24.001 --> 00:21:26.001
+Semua yang membuatku lebih mampu.
+
+412
+00:21:27.000 --> 00:21:31.000
+Sekarang jika saya memilih membuka dari menu file yang merupakan cara standar yang pengguna Mac
+
+413
+00:21:31.000 --> 00:21:34.001
+Membuka file semua file yang dikompresi terlihat seperti normal.
+
+414
+00:21:34.001 --> 00:21:39.000
+Jadi saya dapat memilih salah satu dari ini misalnya file besar ini dan itu secara otomatis
+
+415
+00:21:39.000 --> 00:21:40.001
+Membangun dan membuka untuk saya.
+
+416
+00:21:41.001 --> 00:21:44.000
+Jadi sekali lagi dari sudut pandang pengguna itu bisa sepenuhnya transparan.
+
+417
+00:21:44.001 --> 00:21:45.001
+Ya begitu banyak.
+
+418
+00:21:46.000 --> 00:21:50.000
+Sekarang ketika saya berhenti dari program lagi, semuanya akan secara otomatis dikompresi kembali.
+
+419
+00:21:54.001 --> 00:21:55.001
+Ok apa lagi?
+
+420
+00:21:56.000 --> 00:22:00.001
+Baik di samping menjadi sangat mudah untuk digunakan ada satu kotak seting kecil dan saya
+
+421
+00:22:00.001 --> 00:22:03.000
+Anda dapat membukanya melalui menu DD dan memilih pengaturan.
+
+422
+00:22:04.000 --> 00:22:08.001
+Ini dapat memungkinkan saya menggunakan metode perangkat lunak yang dibangun ke dalam disk dupler atau
+
+423
+00:22:08.001 --> 00:22:13.000
+Metode terkecil yang mencoba semua tiga metode untuk memberi saya yang paling kecil
+
+424
+00:22:13.000 --> 00:22:14.001
+Hasil yang biasanya adalah lembaga.
+
+425
+00:22:15.001 --> 00:22:19.001
+Selain itu, saya dapat memilih fitur verifikasi file yang membaca kembali
+
+426
+00:22:19.001 --> 00:22:22.000
+semua yang dikirim ke disk untuk benar-benar yakin bahwa
+
+427
+00:22:22.000 --> 00:22:23.001
+Setiap byte data adalah aman.
+
+428
+00:22:24.001 --> 00:22:29.000
+Kami merekomendasikan ini untuk drive pencarian sampingan misalnya dan sebagai produk pengiriman
+
+429
+00:22:29.000 --> 00:22:32.001
+Kami termasuk disk checker yang merupakan program yang dapat Anda jalankan untuk menguji hard
+
+430
+00:22:32.001 --> 00:22:34.000
+Disk drive untuk memastikan bahwa mereka beroperasi dengan benar.
+
+431
+00:22:35.000 --> 00:22:38.001
+David Marshall hanya berbicara tentang tiga pendekatan yang berbeda dalam programnya.
+
+432
+00:22:38.001 --> 00:22:41.000
+Anda memiliki optimis di mana Anda berbicara tentang pendekatan yang berbeda.
+
+433
+00:22:42.000 --> 00:22:44.001
+Jan pada awal program menjelaskan prinsip dasar
+
+434
+00:22:44.001 --> 00:22:46.001
+Algorithm yang mengkompresi file.
+
+435
+00:22:46.001 --> 00:22:49.001
+Mengapa kita perlu tiga atau tujuh cara yang berbeda untuk melakukannya?
+
+436
+00:22:49.001 --> 00:22:54.000
+Biasanya ada perdagangan langsung dalam jumlah kecepatan terhadap kompresi dan
+
+437
+00:22:54.000 --> 00:22:57.000
+Ada beberapa algoritma yang tersedia untuk
+
+438
+00:22:57.000 --> 00:22:59.000
+memberikan kompromi jenis ini.
+
+439
+00:22:59.001 --> 00:23:02.001
+Biasanya ketika Anda melakukan telekomunikasi Anda ingin memiliki yang paling kompak
+
+440
+00:23:02.001 --> 00:23:05.000
+file sementara jika Anda melakukan sesuatu seperti menyelamatkan disk
+
+441
+00:23:05.000 --> 00:23:06.001
+Kecepatan ruang sangat penting.
+
+442
+00:23:07.001 --> 00:23:10.000
+Saat ini, Marshall sedang berbicara tentang perdagangan.
+
+443
+00:23:10.000 --> 00:23:12.000
+Sepertinya itu semua berita baik yang kita dengar.
+
+444
+00:23:12.000 --> 00:23:15.000
+Saya maksudkan Anda hanya secara ajaib mengubah 20 meg drive menjadi 40 meg drive.
+
+445
+00:23:15.000 --> 00:23:17.000
+Saya pikir harus ada beberapa kekurangan, beberapa
+
+446
+00:23:17.000 --> 00:23:19.001
+Berisiko, ada yang negatif untuk ini tidak ada?
+
+447
+00:23:19.001 --> 00:23:20.000
+Oh tidak sama sekali.
+
+448
+00:23:20.001 --> 00:23:23.000
+Hal yang paling penting untuk mengembangkan produk ini adalah
+
+449
+00:23:23.000 --> 00:23:24.001
+untuk memastikan bahwa itu dapat diandalkan dan aman.
+
+450
+00:23:25.000 --> 00:23:28.001
+Algorithm yang kita gunakan Lempel’s I’ve been around sejak awal 70s yang sama
+
+451
+00:23:28.001 --> 00:23:32.001
+yang telah Anda lihat pada produk PC dan kami menguji produk dengan ketat menggunakan
+
+452
+00:23:32.001 --> 00:23:37.000
+tes seperti checksum dan file sementara sehingga bahkan jika daya terputus untuk
+
+453
+00:23:37.000 --> 00:23:41.000
+komputer saat mengkompresi atau memperluas file benar-benar aman dalam
+
+454
+00:23:41.000 --> 00:23:43.000
+Selain program disk checker yang kami tambahkan
+
+455
+00:23:43.000 --> 00:23:44.001
+untuk media verifikasi keamanan.
+
+456
+00:23:45.000 --> 00:23:47.000
+Terima kasih banyak-banyak untuk keduanya yang sangat mengesankan.
+
+457
+00:23:47.000 --> 00:23:48.001
+Inilah pandangan kita tentang kompresi file.
+
+458
+00:23:49.000 --> 00:23:52.001
+Tetap bersemangat sekarang untuk berita komputer minggu ini di Random Access.
+
+459
+00:24:01.000 --> 00:24:06.001
+Dalam file Random Access minggu ini, IBM telah memperkenalkan pembunuh klon baru.
+
+460
+00:24:06.001 --> 00:24:09.000
+386SX versi PS1.
+
+461
+00:24:09.001 --> 00:24:15.001
+Sistem baru datang dengan 16 megahertz 386 prosesor, monitor warna VGA, 40
+
+462
+00:24:15.001 --> 00:24:21.000
+Megabyte hard drive, 2 megabyte RAM, internal 2400 baud modem, Microsoft
+
+463
+00:24:21.000 --> 00:24:26.000
+kerja dan harga ritel langganan yang menakjubkan adalah $ 1699 .
+
+464
+00:24:26.001 --> 00:24:29.000
+IBM juga akan mengikuti kompetisi laptop.
+
+465
+00:24:29.001 --> 00:24:35.000
+Big Blue telah menurunkan harga laptop model PS2 L40 sekitar 25 persen.
+
+466
+00:24:35.000 --> 00:24:39.000
+Harga sekarang adalah $ 3995 turun dari $ 5245.
+
+467
+00:24:40.000 --> 00:24:44.001
+IBM juga menurunkan harga pada aksesori laptop dan pembaruan memori.
+
+468
+00:24:45.000 --> 00:24:49.000
+IBM dan Apple kembali dari altar minggu lalu dengan
+
+469
+00:24:49.000 --> 00:24:50.001
+Selengkapnya tentang novel baru mereka.
+
+470
+00:24:50.001 --> 00:24:54.000
+Kedua perusahaan mengumumkan lima bidang utama di mana mereka akan
+
+471
+00:24:54.000 --> 00:24:55.001
+Bersama-sama membangun teknologi baru.
+
+472
+00:24:56.000 --> 00:25:01.000
+Daftar terkemuka adalah komputer multimedia, perangkat lunak berorientasi objek, jaringan baru
+
+473
+00:25:01.000 --> 00:25:06.001
+utilitas untuk membuat lebih mudah untuk menghubungkan Mac dan IBM kompatibel dan operasi baru
+
+474
+00:25:06.001 --> 00:25:10.000
+Platform yang akan bekerja di kedua sistem menggunakan perangkat keras RISC.
+
+475
+00:25:10.001 --> 00:25:14.001
+Dalam promosi besar untuk Motorola, Apple dan IBM mengatakan mereka akan bersama-sama mengembangkan sebuah
+
+476
+00:25:14.001 --> 00:25:20.001
+Microprocessor didasarkan pada chip Motorola Power PC, satu chip RISC CPU.
+
+477
+00:25:21.000 --> 00:25:24.001
+Apple dan IBM mengatakan mereka berencana untuk menggunakan chip di masa depan mereka
+
+478
+00:25:24.001 --> 00:25:26.000
+komputer dan stasiun kerja.
+
+479
+00:25:27.000 --> 00:25:29.001
+Dengan jatuh com dek tepat di sekitar sudut, ada banyak
+
+480
+00:25:29.001 --> 00:25:31.000
+Produk baru yang akan diumumkan.
+
+481
+00:25:31.001 --> 00:25:35.001
+Compaq memimpin daftar dengan laptop berwarna baru yang disebut 486C.
+
+482
+00:25:36.000 --> 00:25:41.001
+Selain 486 prosesor dan kapasitas 256 warna, Compaq baru datang
+
+483
+00:25:41.001 --> 00:25:46.000
+Dengan 120 megabyte hard drive dan standar 4 megs RAM.
+
+484
+00:25:46.001 --> 00:25:50.000
+Compaq 486C hanya berjalan di AC.
+
+485
+00:25:50.000 --> 00:25:53.000
+Perusahaan mengatakan komputer ini ditujukan untuk pasar teknis.
+
+486
+00:25:53.001 --> 00:25:55.001
+Harga daftar hanya di bawah $ 10.000.
+
+487
+00:25:56.001 --> 00:26:00.001
+Slate Systems telah mengambil langkah berikutnya ke arah buku elektronik dengan memperkenalkan
+
+488
+00:26:00.001 --> 00:26:05.000
+Penbook, sistem penerbitan elektronik baru yang dirancang untuk komputer berbasis pensel.
+
+489
+00:26:05.001 --> 00:26:10.001
+Sistem ini akan berjalan pada IBM atau Macintosh dan termasuk pen penulis dan pen
+
+490
+00:26:10.001 --> 00:26:15.000
+utilitas pembaca yang dapat mengubah file PostScript menjadi dapat dibaca di
+
+491
+00:26:15.000 --> 00:26:16.001
+Sebuah layar komputer berbasis pen.
+
+492
+00:26:17.000 --> 00:26:21.000
+Slate mengatakan akan sama mudahnya membaca dokumen penbook di layar Slate.
+
+493
+00:26:21.000 --> 00:26:23.000
+Membacanya di atas kertas dalam sebuah buku.
+
+494
+00:26:23.001 --> 00:26:28.000
+Grid Systems baru saja mengumumkan 9600 baud internal pertama
+
+495
+00:26:28.000 --> 00:26:29.001
+Modem untuk laptop.
+
+496
+00:26:30.000 --> 00:26:33.000
+Modem baru Grid adalah modem data dan faks.
+
+497
+00:26:33.000 --> 00:26:35.001
+Ini juga akan bekerja di komputer Grid pen baru.
+
+498
+00:26:35.001 --> 00:26:37.000
+Harga adalah sekitar $ 1.000.
+
+499
+00:26:37.001 --> 00:26:39.001
+Itu karena kapal tidak lama setelah com dekks.
+
+500
+00:26:40.000 --> 00:26:44.000
+Melihat 10 judul perangkat lunak teratas minggu ini untuk Mac, MacConnection
+
+501
+00:26:44.000 --> 00:26:48.000
+Laporan bahwa Norton Utilities untuk Mac berada di posisi nomor satu dengan
+
+502
+00:26:48.000 --> 00:26:50.001
+Quicken 3.0 untuk Mac dalam detik.
+
+503
+00:26:51.000 --> 00:26:55.000
+Ketiga adalah After Dark dan More After Dark Bundle diikuti oleh Microsoft Flight
+
+504
+00:26:55.000 --> 00:26:58.000
+Simulator dan After Dark 2.0 U.
+
+505
+00:26:59.000 --> 00:27:03.001
+Top 10 judul Mac adalah SAM, Kidpix, Distubler, More After Dark
+
+506
+00:27:03.001 --> 00:27:05.001
+dan di It Picker dari Microseeds.
+
+507
+00:27:05.001 --> 00:27:10.000
+Akhirnya, dengan Ashton Tate akan diambil alih oleh Borland, yang ditakutkan merah jambu
+
+508
+00:27:10.000 --> 00:27:11.001
+Kabar gembira membuat pusingan minggu lalu.
+
+509
+00:27:12.000 --> 00:27:15.000
+Ashton Tate mengumumkan diskon sekitar 8 persen dari
+
+510
+00:27:15.000 --> 00:27:16.001
+Jumlah karyawan, sekitar 100 karyawan.
+
+511
+00:27:17.000 --> 00:27:20.001
+Semua layoffs berada di ibu pejabat Ashton Tate di Torrance, California.
+
+512
+00:27:21.000 --> 00:27:22.001
+Itulah yang dimaksud dengan komputer minggu ini.
+
+513
+00:27:23.000 --> 00:27:24.000
+Saya adalah Maria Gabriel.
+
+514
+00:27:35.001 --> 00:27:56.001
+Terima kasih untuk menonton.
