@@ -1,0 +1,1973 @@
+WEBVTT
+
+1
+00:00:10.000 --> 00:00:14.000
+Sabemos que as empresas de software beta testam seus negócios sérios
+
+2
+00:00:14.000 --> 00:00:16.000
+programas, mas o que é o software de jogos?
+
+3
+00:00:16.001 --> 00:00:18.000
+Como eles funcionam os bugs desses?
+
+4
+00:00:18.000 --> 00:00:22.001
+Bem, em quartos como este aqui no PBI Software em Foster City,
+
+5
+00:00:23.000 --> 00:00:26.001
+Califórnia, onde os designers e testadores saem de teclas, joystiques e
+
+6
+00:00:26.001 --> 00:00:29.000
+para garantir que os jogos funcionem corretamente.
+
+7
+00:00:29.000 --> 00:00:33.001
+Na verdade, o R&amp;D que entra no design de jogos é muitas vezes tão complicado quanto o
+
+8
+00:00:33.001 --> 00:00:35.001
+trabalho que entra em um programa de negócios sério.
+
+9
+00:00:36.000 --> 00:00:39.001
+Hoje, continuamos a nossa análise de duas partes sobre o software de jogos sobre este
+
+10
+00:00:39.001 --> 00:00:41.001
+Edição das crônicas de computador.
+
+11
+00:01:03.000 --> 00:01:08.000
+As crônicas de computador são feitas possíveis em parte por CompuServe, com uma
+
+12
+00:01:08.000 --> 00:01:12.001
+biblioteca de referência on-line, Wall Street relatórios, compras em casa, companhia aérea
+
+13
+00:01:12.001 --> 00:01:15.001
+reservas, jogos e centenas de outros serviços.
+
+14
+00:01:17.001 --> 00:01:20.001
+CompuServe, ajudando as pessoas a obter o máximo dos computadores.
+
+15
+00:01:23.001 --> 00:01:27.001
+Financiamento adicional é fornecido por McGraw-Hill, editores de Byte, Byte&#x27;s
+
+16
+00:01:27.001 --> 00:01:31.001
+artigos técnicos detalhados sobre novos hardware, software e idiomas de cobertura
+
+17
+00:01:31.001 --> 00:01:34.000
+desenvolvimentos em tecnologias informáticas em todo o mundo.
+
+18
+00:01:48.000 --> 00:01:50.000
+Bem-vindo às crônicas de computador.
+
+19
+00:01:50.000 --> 00:01:53.000
+Eu sou Stuart Chafay, e meu oponente acima aqui é Gary Kildall.
+
+20
+00:01:53.000 --> 00:01:57.000
+Estamos jogando um jogo incrível chamado Falcon, onde cada um voando nossos próprios F-16.
+
+21
+00:01:57.001 --> 00:02:01.001
+Esses dois PCs estão conectados pelos portos de comunicação para que eu veja Gary no meu
+
+22
+00:02:01.001 --> 00:02:03.001
+Na tela, ele vê o meu avião em sua tela.
+
+23
+00:02:04.000 --> 00:02:07.001
+Isso também, Gary tem uma caixa preta de registro de voo aqui para que quando eu acidente,
+
+24
+00:02:07.001 --> 00:02:10.001
+Como eu sempre faço, eu posso voltar e olhar para o registro de vôo, ver o que
+
+25
+00:02:10.001 --> 00:02:12.000
+Eu fiz e vejo o tipo de erro que cometi.
+
+26
+00:02:12.000 --> 00:02:15.001
+Estes jogos são tão sofisticados, mas alguns pais, penso, se preocupam que talvez
+
+27
+00:02:15.001 --> 00:02:17.001
+As crianças passam muito tempo jogando jogos de computador.
+
+28
+00:02:17.001 --> 00:02:18.000
+O que você acha?
+
+29
+00:02:18.001 --> 00:02:20.000
+Os jogos podem ser muito, muito educativos.
+
+30
+00:02:20.000 --> 00:02:23.000
+Por exemplo, talvez a primeira introdução do menino em um computador, pressionando o
+
+31
+00:02:23.000 --> 00:02:24.001
+botões, correndo um rato ao redor, coisas como isso.
+
+32
+00:02:24.001 --> 00:02:26.001
+Há coisas óbvias como o olho da mão
+
+33
+00:02:26.001 --> 00:02:28.001
+Coordenação, que é uma coisa muito importante para aprender.
+
+34
+00:02:29.000 --> 00:02:31.001
+Coisas como resolver problemas através de táticas e estratégias
+
+35
+00:02:31.001 --> 00:02:33.001
+que ajudam a vencer o jogo, coisas desse tipo.
+
+36
+00:02:34.001 --> 00:02:36.000
+Também os próprios jogos, asteroides.
+
+37
+00:02:36.000 --> 00:02:37.000
+Você se lembra dos asteroides?
+
+38
+00:02:37.001 --> 00:02:39.000
+Eles têm as rochas voando pelo espaço.
+
+39
+00:02:39.000 --> 00:02:40.001
+Crianças aprendem sobre gravidade
+
+40
+00:02:40.001 --> 00:02:42.001
+efeitos, uma espécie de prática física em um sentido.
+
+41
+00:02:43.000 --> 00:02:44.001
+Simuladores de vôo aprendem sobre voar.
+
+42
+00:02:45.000 --> 00:02:47.001
+Mas você sabe, eu tenho experiência prática em casa que me diz o
+
+43
+00:02:47.001 --> 00:02:49.000
+As crianças também não conseguem falar nestas coisas.
+
+44
+00:02:49.001 --> 00:02:52.000
+Gary, vamos dar uma olhada em alguns dos mais quentes novos jogos para dois
+
+45
+00:02:52.000 --> 00:02:54.000
+Macintosh e o IBM PC.
+
+46
+00:02:54.001 --> 00:02:58.001
+Entre eles, Chuck Yeager&#x27;s Advanced Flight Trainer, uma simulação de helicóptero
+
+47
+00:02:58.001 --> 00:03:02.000
+Apache Strike e um trecho de um jogo de golfe chamado Mean 18.
+
+48
+00:03:02.001 --> 00:03:05.000
+Agora, como Gary disse, jogos de computador podem ser educacionais.
+
+49
+00:03:05.000 --> 00:03:08.001
+Vamos começar por ir para uma escola onde um professor está usando o computador
+
+50
+00:03:08.001 --> 00:03:10.000
+Jogos para ensinar seus filhos.
+
+51
+00:03:13.001 --> 00:03:18.000
+O software educacional veio um longo caminho desde os primeiros ensaios de matemática e brincadeira
+
+52
+00:03:18.000 --> 00:03:20.001
+Encontrou seu caminho para as escolas primárias.
+
+53
+00:03:20.001 --> 00:03:25.000
+Os professores agora têm uma escolha de jogos de aventura de papel que ambos
+
+54
+00:03:25.000 --> 00:03:27.000
+entreter e ensinar.
+
+55
+00:03:27.001 --> 00:03:32.000
+Na Crocker Middle School perto de San Francisco, a professora Donna Howard usa um jogo
+
+56
+00:03:32.000 --> 00:03:36.000
+O outro lado que simula conflitos internacionais.
+
+57
+00:03:36.001 --> 00:03:39.001
+Nós fazemos muitos tipos diferentes de estratégias de resolução de problemas.
+
+58
+00:03:40.000 --> 00:03:44.000
+E alguns dos objetivos da classe são aprender a negociar, aprender a
+
+59
+00:03:44.000 --> 00:03:47.001
+Trabalhar em um grupo cooperativo e tomar decisões juntos.
+
+60
+00:03:48.001 --> 00:03:52.000
+Outra coisa é poder organizar suas informações e extrapolar
+
+61
+00:03:52.000 --> 00:03:54.001
+informações a partir dessas informações uma vez que você tiver organizado.
+
+62
+00:03:55.000 --> 00:03:57.000
+E este jogo é uma boa configuração para isso.
+
+63
+00:03:58.000 --> 00:04:02.001
+Cada equipe de quatro alunos tenta construir uma ponte para o país da outra equipe
+
+64
+00:04:02.001 --> 00:04:05.001
+e deve competir pelos recursos e dinheiro necessários.
+
+65
+00:04:06.001 --> 00:04:10.001
+Os jogadores dividem o seu tempo entre o computador e uma mesa de conferências onde
+
+66
+00:04:10.001 --> 00:04:13.000
+Planejar a estratégia e analisar o seu progresso.
+
+67
+00:04:13.001 --> 00:04:18.000
+Eu descobri em meus anos de ensino que os alunos querem ser colocados em uma situação
+
+68
+00:04:18.000 --> 00:04:22.001
+onde eles estão agindo algo, onde eles realmente têm que fazer esse tipo de
+
+69
+00:04:22.001 --> 00:04:24.001
+coisas e há algum tipo de recompensa, assim como há em
+
+70
+00:04:24.001 --> 00:04:26.001
+Você e eu quando estamos negociando.
+
+71
+00:04:26.001 --> 00:04:28.001
+Há uma recompensa, há uma carrotada no final da nossa negociação.
+
+72
+00:04:30.000 --> 00:04:35.000
+E viver é um melhor professor do que ler sobre ele e recitar fatos.
+
+73
+00:04:36.000 --> 00:04:40.000
+Os estudantes de Donna Howard podem não estar prontos para o Departamento de Estado, mas seus
+
+74
+00:04:40.000 --> 00:04:42.000
+O jogo de classe parece ter um efeito.
+
+75
+00:04:42.001 --> 00:04:47.000
+Durante a recente Cimeira de Reagan Gorbachev, eles discutiram as estratégias possíveis
+
+76
+00:04:47.000 --> 00:04:48.001
+usados pelos dois lados.
+
+77
+00:04:49.000 --> 00:04:52.000
+Não é ruim para um grupo de crianças em sua adolescência precoce.
+
+78
+00:05:05.000 --> 00:05:08.000
+Hoje em dia, Peter Merrill, da PBI Software, está no estúdio.
+
+79
+00:05:08.000 --> 00:05:11.001
+Peter criou o jogo Conquista Estratégica ao lado de Peter Eric
+
+80
+00:05:11.001 --> 00:05:13.000
+Zacher do Silicon Beach Software.
+
+81
+00:05:14.000 --> 00:05:16.001
+Peter, falamos sobre as crianças ficando todos apegados em jogos de computador.
+
+82
+00:05:16.001 --> 00:05:18.000
+Seu jogo é diferente?
+
+83
+00:05:18.001 --> 00:05:19.001
+Oh, muito definitivamente.
+
+84
+00:05:19.001 --> 00:05:22.001
+É um jogo que os adultos realmente gostam de jogar.
+
+85
+00:05:23.001 --> 00:05:24.000
+Qual é a ideia por trás dela?
+
+86
+00:05:24.001 --> 00:05:30.000
+Bem, é um jogo de guerra de estratégia e, além disso, tenho o mapa.
+
+87
+00:05:30.001 --> 00:05:34.001
+O branco representa a água, o cinza representa a terra.
+
+88
+00:05:35.000 --> 00:05:39.000
+O preto é uma área sobre a qual não sabemos nada.
+
+89
+00:05:39.000 --> 00:05:43.001
+Vamos descobrir sobre isso ao mover algumas das nossas peças para o preto
+
+90
+00:05:43.001 --> 00:05:45.000
+local e, em seguida, tornaria-se visível.
+
+91
+00:05:45.001 --> 00:05:47.001
+Portanto, esta não é realmente a Terra, esta é um planeta mítico.
+
+92
+00:05:48.001 --> 00:05:52.001
+É um jogo que geramos com um gerador de números aleatórios.
+
+93
+00:05:54.001 --> 00:05:58.001
+Aqui agora, neste jogo atual que estou jogando, eu tenho
+
+94
+00:05:58.001 --> 00:06:00.000
+Quatro ilhas aqui.
+
+95
+00:06:01.000 --> 00:06:04.001
+O inimigo possui essas duas ilhas aqui.
+
+96
+00:06:05.000 --> 00:06:08.001
+A minha estratégia é conquistar esta ilha.
+
+97
+00:06:09.000 --> 00:06:13.001
+Para fazer isso, eu tenho carregado tropas de transporte com tropas
+
+98
+00:06:13.001 --> 00:06:15.001
+E eu os lançei aqui.
+
+99
+00:06:16.001 --> 00:06:20.000
+Isso cria muita confusão e o atraia por aqui.
+
+100
+00:06:20.000 --> 00:06:25.000
+Enquanto isso, eu carreguei um conjunto inteiro de mais transportes de tropas e dumped
+
+101
+00:06:25.000 --> 00:06:27.000
+Eles vão embora por aqui.
+
+102
+00:06:27.001 --> 00:06:30.001
+Eu vou para a próxima tela e veremos os detalhes disso.
+
+103
+00:06:31.001 --> 00:06:34.001
+Este é o ecrã que você normalmente usa ao jogar o jogo.
+
+104
+00:06:34.001 --> 00:06:36.001
+Esta é a ilha que estamos tentando capturar.
+
+105
+00:06:37.001 --> 00:06:39.000
+Meu ecrã de fumaça estava aqui.
+
+106
+00:06:39.001 --> 00:06:44.001
+O computador, para fins de demonstração, está jogando ao meu lado.
+
+107
+00:06:46.000 --> 00:06:48.001
+E você tem coisas como um porta-aviões aqui.
+
+108
+00:06:49.000 --> 00:06:50.001
+Estes são aviões que voam ao redor.
+
+109
+00:06:51.000 --> 00:06:54.000
+Você pode ouvir os sons dos jatos enquanto eles se movem.
+
+110
+00:06:55.000 --> 00:06:57.000
+Então, você normalmente iria mover esses jets com um ponto e clique?
+
+111
+00:06:58.000 --> 00:06:58.000
+Sim e exatamente.
+
+112
+00:06:58.001 --> 00:07:01.000
+Um ponto e clique assim.
+
+113
+00:07:02.000 --> 00:07:03.000
+Abaixo temos cidades.
+
+114
+00:07:04.000 --> 00:07:07.000
+Estas peças de luz são minhas peças.
+
+115
+00:07:07.000 --> 00:07:09.001
+As peças escuras são as peças inimigas.
+
+116
+00:07:11.000 --> 00:07:14.001
+Esses exércitos estão agora entrando e tentando capturar essas cidades.
+
+117
+00:07:15.000 --> 00:07:16.000
+Ele diz que você acabou de capturá-los.
+
+118
+00:07:16.001 --> 00:07:23.001
+Então a chave para o jogo é capturar cidades porque as cidades fazem mais peças.
+
+119
+00:07:23.001 --> 00:07:30.001
+Quanto mais cidades você capta, mais você tem, mais poderoso você é.
+
+120
+00:07:31.001 --> 00:07:33.001
+Peter, qual é o objeto da linha de fundo do jogo agora?
+
+121
+00:07:34.000 --> 00:07:38.001
+O que você tem que fazer é capturar todas as cidades e isso permite que você vença o mundo.
+
+122
+00:07:38.001 --> 00:07:39.001
+Você quer conquistar o mundo.
+
+123
+00:07:39.001 --> 00:07:40.001
+Isso é exatamente certo.
+
+124
+00:07:40.001 --> 00:07:41.000
+Como qualquer jogo bom.
+
+125
+00:07:41.001 --> 00:07:43.000
+Pedro, eu quero pedir-lhe para obter o seu
+
+126
+00:07:43.000 --> 00:07:44.001
+Programar lá fora e carregar o próximo.
+
+127
+00:07:45.000 --> 00:07:46.000
+Eu quero falar com Eric por apenas um segundo.
+
+128
+00:07:46.001 --> 00:07:47.001
+Temos dois jogos que você vai mostrar-nos.
+
+129
+00:07:47.001 --> 00:07:50.001
+O primeiro é chamado Beyond Dark Castle, que você descreve como um tipo de
+
+130
+00:07:50.001 --> 00:07:52.001
+Cartoon interativo, que é uma ótima frase.
+
+131
+00:07:52.001 --> 00:07:53.001
+Diga-me o que você quer dizer com isso.
+
+132
+00:07:54.000 --> 00:07:58.000
+Por isso eu quero dizer que é como uma experiência de cartoon em que você controla as ações
+
+133
+00:07:58.000 --> 00:08:00.000
+O personagem principal na tela.
+
+134
+00:08:01.000 --> 00:08:05.001
+Há uma grande quantidade de animação detalhada e soundtrack digitalizado como cartoon que
+
+135
+00:08:05.001 --> 00:08:08.001
+faz com que seja muito como um desenho animado para as pessoas que estão olhando você jogar.
+
+136
+00:08:09.000 --> 00:08:11.000
+Ok, eu vou mostrar isso.
+
+137
+00:08:12.000 --> 00:08:15.001
+Estamos no modo de prática do jogo no meio do swamp, que é um dos
+
+138
+00:08:15.001 --> 00:08:17.000
+14 quartos, e eu vou adiante e levá-lo.
+
+139
+00:08:18.001 --> 00:08:22.001
+Há um olho ardente que tenho que destruir antes que ele me destrua.
+
+140
+00:08:22.001 --> 00:08:23.001
+Quais são as suas armas lá?
+
+141
+00:08:24.000 --> 00:08:27.001
+Estou jogando rochas agora, mas em um dos outros quartos há um especial
+
+142
+00:08:27.001 --> 00:08:32.000
+Spell eu posso adquirir de um feiticeiro para ter capacidades de bola de fogo que são rochas.
+
+143
+00:08:32.000 --> 00:08:33.000
+É uma boa conquista estratégica.
+
+144
+00:08:33.001 --> 00:08:34.000
+E não.
+
+145
+00:08:36.000 --> 00:08:38.001
+Bem, e você está tentando chegar ao fim para obter o ...
+
+146
+00:08:38.001 --> 00:08:40.001
+Para obter um dos órbitos mágicos que eu preciso para ganhar o jogo.
+
+147
+00:08:41.000 --> 00:08:44.000
+Eu só me dei um pouco de gás. Estou no modo de prática, então posso fazer isso
+
+148
+00:08:44.000 --> 00:08:45.001
+por todo o helicóptero.
+
+149
+00:08:46.000 --> 00:08:49.001
+No final deste swamp, há um guarda-chuva onde um
+
+150
+00:08:49.001 --> 00:08:51.001
+Os cinco órbitos mágicos são armazenados.
+
+151
+00:08:51.001 --> 00:08:53.000
+Bem, e este pequeno homem voando com o seu
+
+152
+00:08:53.000 --> 00:08:54.001
+Um pequeno helicóptero privado, é isso?
+
+153
+00:08:55.000 --> 00:08:55.001
+Isso é certo.
+
+154
+00:08:55.001 --> 00:08:56.000
+OK  ⁇
+
+155
+00:08:57.000 --> 00:08:59.000
+E eu acredito que estamos quase lá. Aqui estamos nós.
+
+156
+00:08:59.000 --> 00:08:59.000
+Tudo bem .
+
+157
+00:08:59.001 --> 00:09:02.000
+E eu vou apenas colocar meu pacote de chopper aqui.
+
+158
+00:09:04.000 --> 00:09:05.000
+O detalhe .
+
+159
+00:09:05.001 --> 00:09:06.001
+Pegue o rato para cima.
+
+160
+00:09:09.001 --> 00:09:10.001
+Ele o recebeu.
+
+161
+00:09:12.000 --> 00:09:15.001
+Tenho cuidado com o... enviou a guarda agora, e agora eu vou
+
+162
+00:09:15.001 --> 00:09:17.000
+Levanta-se e reivindica a órbita.
+
+163
+00:09:20.001 --> 00:09:20.001
+[...]
+
+164
+00:09:21.001 --> 00:09:24.001
+E tudo o que eu preciso fazer agora é voar de volta e colocá-lo em um pedestal no
+
+165
+00:09:24.001 --> 00:09:26.000
+Anteroom, e então ir para obter os outros quatro.
+
+166
+00:09:27.000 --> 00:09:28.000
+Tudo bem, acho que é uma boa descrição, um
+
+167
+00:09:28.000 --> 00:09:30.000
+desenhos de desenhos interativos. Isso é realmente bastante apertado.
+
+168
+00:09:30.001 --> 00:09:32.000
+Quero perguntar sobre o outro jogo que você tem.
+
+169
+00:09:32.000 --> 00:09:33.001
+É o que se chama Apache Strike.
+
+170
+00:09:34.000 --> 00:09:37.000
+E você voou um helicóptero, mas não é realmente uma simulação de helicótero, não é?
+
+171
+00:09:37.000 --> 00:09:40.001
+Não, não é realmente. É uma fantasia de ação, é o que eu chamaria.
+
+172
+00:09:41.000 --> 00:09:44.001
+O objetivo real que tínhamos no desenho do Apache Strike foi obter um verdadeiro bem.
+
+173
+00:09:44.001 --> 00:09:47.000
+Ação sentir, e realmente obter o seu pulso pounding.
+
+174
+00:09:48.000 --> 00:09:50.000
+OK  ⁇  Faça o meu pulso de ponta, Eric.
+
+175
+00:09:50.000 --> 00:09:52.000
+Ok, eu vou avançar e comece. Vou começar no nível
+
+176
+00:09:52.000 --> 00:09:54.001
+20, onde há um pouco de ação.
+
+177
+00:09:57.000 --> 00:09:57.001
+Tudo bem, o que está acontecendo aqui, Eric?
+
+178
+00:09:57.001 --> 00:09:58.001
+Os nossos sistemas vão.
+
+179
+00:09:58.001 --> 00:10:01.000
+Eu voo o helicóptero agora usando o mouse, e
+
+180
+00:10:01.000 --> 00:10:02.001
+É um dos helicópteros inimigos.
+
+181
+00:10:04.000 --> 00:10:06.000
+E estes são esquiadores que eu estou voando através.
+
+182
+00:10:07.001 --> 00:10:08.001
+E para onde você está dirigido?
+
+183
+00:10:09.000 --> 00:10:14.000
+Estou tentando encontrar o computador de defesa estratégica que guarda na mão direita
+
+184
+00:10:14.000 --> 00:10:16.000
+O lado da tela... do radar.
+
+185
+00:10:16.001 --> 00:10:21.001
+Ou seja, você dá. ... é o carregamento em distância para o computador de defesa estratégica.
+
+186
+00:10:21.001 --> 00:10:23.000
+Agora eu estou 47 blocos longe.
+
+187
+00:10:24.000 --> 00:10:26.000
+E vemos apenas um ecrã quebrado à direita. O que aconteceu lá?
+
+188
+00:10:26.000 --> 00:10:31.000
+Esta é a minha tela de radar, que é normalmente muito útil para ter, mas como você pode
+
+189
+00:10:31.000 --> 00:10:36.001
+Veja, este programa permitirá que partes do seu equipamento sejam danificadas, o que acrescenta
+
+190
+00:10:36.001 --> 00:10:38.000
+O desafio nos níveis mais difíceis.
+
+191
+00:10:38.001 --> 00:10:39.001
+Você simplesmente não sabe para onde vai, certo?
+
+192
+00:10:39.001 --> 00:10:40.000
+Isso é certo.
+
+193
+00:10:42.000 --> 00:10:44.000
+E agora vou tentar e obter este tanque.
+
+194
+00:10:44.000 --> 00:10:47.000
+Qual é a voz que ouvimos?
+
+195
+00:10:47.001 --> 00:10:51.000
+Isso é Linda, o computador de avaliação de danos narrativos como a vida.
+
+196
+00:10:53.001 --> 00:10:56.000
+E essa é, na verdade, a voz digitalizada de... e oops.
+
+197
+00:10:57.000 --> 00:10:57.001
+É Linda [...]
+
+198
+00:10:58.000 --> 00:10:59.000
+Um dos programadores da Silicon Beach.
+
+199
+00:11:01.000 --> 00:11:03.000
+Nós pedimos que você converse e voe um chopper no
+
+200
+00:11:03.000 --> 00:11:04.001
+ao mesmo tempo. Eu percebo que isso é difícil.
+
+201
+00:11:07.000 --> 00:11:09.001
+Ok, então você está tentando rastrear isso o que aqui?
+
+202
+00:11:09.001 --> 00:11:13.000
+Computador de Defesa Estratégica. É o computador central
+
+203
+00:11:13.000 --> 00:11:14.001
+controle das defesas da cidade.
+
+204
+00:11:15.001 --> 00:11:20.001
+E a missão em cada nível é voar através das defesas do inimigo para o
+
+205
+00:11:20.001 --> 00:11:22.001
+centro da cidade e depois destruir o Computador de Defesa Estratégica.
+
+206
+00:11:27.000 --> 00:11:30.001
+Você disse que você está jogando no nível 20. Quantos níveis há neste jogo?
+
+207
+00:11:31.000 --> 00:11:34.001
+Você pode subir indefinidamente. Temos 500 níveis programados.
+
+208
+00:11:34.001 --> 00:11:35.001
+Você acha que alguém vai chegar lá alguma vez?
+
+209
+00:11:36.000 --> 00:11:37.000
+Espero que seja assim.
+
+210
+00:11:38.000 --> 00:11:42.001
+Você pode começar no nível 120 ou 40. Estou se aproximando de verdade agora.
+
+211
+00:11:44.000 --> 00:11:46.001
+Espero que Linda em breve diga que o SDC foi visto e nós saberemos.
+
+212
+00:11:46.001 --> 00:11:48.000
+Como você sabe que está se aproximando de...
+
+213
+00:11:48.000 --> 00:11:48.001
+inimigo por trás.
+
+214
+00:11:49.001 --> 00:11:49.001
+Oh garoto
+
+215
+00:11:51.001 --> 00:11:51.001
+[...]
+
+216
+00:11:52.001 --> 00:11:53.000
+Oh é!
+
+217
+00:11:54.000 --> 00:11:56.000
+Você está realmente tendo uma operação suave e
+
+218
+00:11:56.000 --> 00:11:57.001
+Movimento de imagem suave. Parece verdadeiramente, realmente bom.
+
+219
+00:11:58.000 --> 00:11:58.001
+Como você consegue isso de qualquer forma?
+
+220
+00:11:59.001 --> 00:12:03.000
+O que é isso é animação 3D com remoção de superfície escondida.
+
+221
+00:12:03.001 --> 00:12:07.000
+E os inimigos também têm superfícies removidas e são sombrios.
+
+222
+00:12:07.000 --> 00:12:10.001
+A história de Bill Applin... Os programadores relataram bastante sucesso aqui para obter 20 quadros de
+
+223
+00:12:10.001 --> 00:12:12.001
+Isso acontece por segundo. Isso faz com que o jogo seja muito suave.
+
+224
+00:12:13.000 --> 00:12:13.001
+Sim, isso parece muito bom.
+
+225
+00:12:13.001 --> 00:12:16.000
+Eric, qual é o próximo passo? Qual é a próxima coisa tecnológica que é
+
+226
+00:12:16.000 --> 00:12:17.001
+Será que vai fazer jogos ainda melhores do que eles são agora?
+
+227
+00:12:18.000 --> 00:12:21.000
+Há uma nova tecnologia no horizonte chamada Compact Disk Interactive.
+
+228
+00:12:21.000 --> 00:12:23.001
+Na verdade, é um tipo de tecnologia de entretenimento em casa.
+
+229
+00:12:23.001 --> 00:12:28.000
+E eu acho que tem a possibilidade de introduzir vídeo e muito
+
+230
+00:12:28.000 --> 00:12:30.000
+de possibilidades interessantes.
+
+231
+00:12:30.001 --> 00:12:32.000
+Quais são as projeções atuais sobre quando isso vai acontecer
+
+232
+00:12:32.000 --> 00:12:33.001
+Para chegar até ao ponto de produtos de consumo?
+
+233
+00:12:34.000 --> 00:12:38.000
+Talvez o final de 1988 seja o que eu ouço.
+
+234
+00:12:38.001 --> 00:12:41.001
+E o CDI jogador realmente se conecta ao stereo e ao
+
+235
+00:12:41.001 --> 00:12:43.000
+Televisão e contém.
+
+236
+00:12:43.000 --> 00:12:44.000
+Você está trabalhando ativamente nisso agora?
+
+237
+00:12:44.001 --> 00:12:44.001
+E sim.
+
+238
+00:12:45.000 --> 00:12:46.000
+Peter, real rápido, o que é o próximo?
+
+239
+00:12:46.001 --> 00:12:48.001
+Oh, com computadores mais rápidos, mais AI
+
+240
+00:12:48.001 --> 00:12:50.000
+E você simplesmente nunca sabe o que está ao redor do canto.
+
+241
+00:12:50.000 --> 00:12:53.001
+Okay, Gary e eu jogávamos Falcon contra o outro.
+
+242
+00:12:53.001 --> 00:12:55.000
+O programa começa aqui na mesma sala.
+
+243
+00:12:55.000 --> 00:12:58.001
+Hoje em dia, você pode realmente jogar um jogo de computador em tempo real contra um oponente
+
+244
+00:12:58.001 --> 00:13:01.001
+em qualquer lugar do país. Wendy Woods nos diz como.
+
+245
+00:13:02.000 --> 00:13:07.000
+Esta é a ilha de Kismi, um tipo de jogo Dungeons e Dragons.
+
+246
+00:13:07.001 --> 00:13:11.001
+E Michael Orkin, um estadista que está projetando e jogando sua parte de jogos,
+
+247
+00:13:12.000 --> 00:13:17.000
+está jogando pela primeira vez com outras duas pessoas, a 2.000 quilômetros de distância, em real
+
+248
+00:13:17.000 --> 00:13:19.000
+tempo através da rede CompuServe.
+
+249
+00:13:19.000 --> 00:13:22.001
+Este é um exemplo do que é chamado de jogo multi-usuário.
+
+250
+00:13:23.000 --> 00:13:26.001
+Várias pessoas podem estar on-line jogando qualquer um dos jogos ao mesmo tempo.
+
+251
+00:13:27.001 --> 00:13:30.001
+Eles não são seus jogos de tipo arcade com gráficos incríveis.
+
+252
+00:13:31.000 --> 00:13:35.001
+Sua visão visual consiste dos caracteres básicos que podem ser enviados através da
+
+253
+00:13:35.001 --> 00:13:37.001
+Linhas telefônicas para todos os tipos de computadores.
+
+254
+00:13:38.001 --> 00:13:42.001
+Brackets ângulos, carates, dashes e sinais do dólar representam portas,
+
+255
+00:13:43.000 --> 00:13:44.001
+O tesouro ou o altar, por exemplo.
+
+256
+00:13:45.001 --> 00:13:48.001
+Mas os gráficos não são o ponto de venda para jogos multi-usuário.
+
+257
+00:13:49.000 --> 00:13:52.001
+É diferente . É divertido fazê-lo dessa maneira.
+
+258
+00:13:53.000 --> 00:13:57.001
+E se você está jogando por si mesmo, é claro, você pode apenas um tipo de loucura em torno
+
+259
+00:13:57.001 --> 00:13:59.001
+E faça tudo da maneira que você quer fazer.
+
+260
+00:13:59.001 --> 00:14:02.001
+Se você está fazendo isso com algumas outras pessoas, então elas querem ser
+
+261
+00:14:02.001 --> 00:14:04.000
+Faça as coisas da sua maneira.
+
+262
+00:14:04.000 --> 00:14:06.001
+E então você pode, na verdade, que é um tipo de diversão também, eu acho, se você entrar em
+
+263
+00:14:06.001 --> 00:14:09.000
+conflitos com as pessoas com as quais você está jogando o jogo.
+
+264
+00:14:09.001 --> 00:14:12.001
+A imaginação é uma grande parte do apelo desses jogos.
+
+265
+00:14:12.001 --> 00:14:16.000
+Os jogadores podem assumir as identidades do seu alter ego.
+
+266
+00:14:17.000 --> 00:14:20.001
+Ter um jogo como este pode ser caro, mas há muita coisa.
+
+267
+00:14:20.001 --> 00:14:24.001
+pessoas dispostas a fazer esse investimento, ou CompuServe não teria planejado
+
+268
+00:14:24.001 --> 00:14:28.001
+oferecer ainda mais do que os 30 jogos on-line agora em um futuro próximo.
+
+269
+00:14:29.001 --> 00:14:31.001
+Para as crônicas de computador, eu sou Wendy Woods.
+
+270
+00:14:34.001 --> 00:14:35.000
+[...]
+
+271
+00:14:44.001 --> 00:14:48.000
+Juntando-nos no estúdio agora é Ned Lerner, o criador e designer de
+
+272
+00:14:48.000 --> 00:14:49.001
+O treinador de voo avançado de Chuck Yeager.
+
+273
+00:14:50.000 --> 00:14:53.001
+E ao lado de Ned é John Carell, um dos desenvolvedores de um
+
+274
+00:14:53.001 --> 00:14:55.000
+Um jogo de golfe chamado Mean 18.
+
+275
+00:14:55.001 --> 00:14:57.000
+Ned, você falou sobre seu programa como um voo
+
+276
+00:14:57.000 --> 00:14:58.001
+Um treinador em vez de um simulador de vôo. Qual é a diferença?
+
+277
+00:15:00.000 --> 00:15:04.000
+Este programa tem mais ênfase na instrução de voo do que os programas anteriores.
+
+278
+00:15:04.001 --> 00:15:07.001
+Tem uma sequência de instruções de voo
+
+279
+00:15:07.001 --> 00:15:09.001
+projetado por um instrutor de voo profissional.
+
+280
+00:15:09.001 --> 00:15:11.000
+Ok, então vamos olhar para isso.
+
+281
+00:15:11.000 --> 00:15:14.000
+Bom, eu vou começar a voar em um F-18
+
+282
+00:15:14.000 --> 00:15:16.000
+Hornet, e eu comecei em um hangar.
+
+283
+00:15:16.001 --> 00:15:20.000
+Eu vou dar-me um pouco de poder e começar a prestar atenção ao programa.
+
+284
+00:15:23.000 --> 00:15:25.000
+É uma espécie de mútuo
+
+285
+00:15:25.000 --> 00:15:26.001
+do aeroporto. Você vai ter que falar um pouco, Ned.
+
+286
+00:15:28.000 --> 00:15:30.000
+Este não é o Egito, estamos vendo aqui por um minuto.
+
+287
+00:15:30.000 --> 00:15:35.001
+Sim, esta é uma paisagem fantástica. É como o Egito ou a base aérea de Nellis.
+
+288
+00:15:36.000 --> 00:15:40.000
+É um bom lugar para voar. O avião não está muito ao redor e ninguém para ferir.
+
+289
+00:15:42.000 --> 00:15:44.001
+Claro que você não vai me avaliar aqui. Posso dizer pelo lado.
+
+290
+00:15:44.001 --> 00:15:50.000
+Este avião é uma excelente operação e uma aceleração extremamente boa.
+
+291
+00:15:50.001 --> 00:15:52.001
+Vou voltar e pegar o caminho aqui.
+
+292
+00:15:54.001 --> 00:15:56.001
+Nós realmente conseguimos o efeito, não é?
+
+293
+00:15:56.001 --> 00:15:58.000
+Sim, eu também poderia levar isso.
+
+294
+00:15:59.001 --> 00:16:00.001
+E aí está Chuck Ager.
+
+295
+00:16:02.000 --> 00:16:07.000
+O que mais você pode nos mostrar sobre isso?
+
+296
+00:16:08.000 --> 00:16:10.000
+Temos formação voando, eu acho que voamos junto com Chuck?
+
+297
+00:16:10.001 --> 00:16:13.001
+Sim, eu posso mostrar isso. Existem quatro modos diferentes do programa.
+
+298
+00:16:13.001 --> 00:16:14.001
+Uma delas é a formação de voo.
+
+299
+00:16:17.000 --> 00:16:20.000
+Oh, você está me levando lá fora.
+
+300
+00:16:20.001 --> 00:16:25.001
+Você tenta ficar o mais perto possível e o truque é olhar para suas asas e
+
+301
+00:16:25.001 --> 00:16:28.000
+Siga a maneira como eles são banqueados.
+
+302
+00:16:28.001 --> 00:16:29.001
+E para mantê-los na sua tela também.
+
+303
+00:16:30.001 --> 00:16:32.000
+E tentar e concentrar e falar ao mesmo tempo.
+
+304
+00:16:33.001 --> 00:16:37.001
+Eu acho que você mencionou que você tem 100 horas neste jogo, certo?
+
+305
+00:16:39.001 --> 00:16:44.000
+Quanto ajuda alguém realmente aprender a voar? Isso serve uma tendência.
+
+306
+00:16:44.000 --> 00:16:48.000
+Faz um bom trabalho. Se você não sabe muito sobre voar, você aprende um
+
+307
+00:16:48.000 --> 00:16:50.000
+Muito sobre a forma como o avião funciona.
+
+308
+00:16:50.000 --> 00:16:52.000
+E você também aprende como todos os instrumentos funcionam.
+
+309
+00:16:52.001 --> 00:16:57.000
+E eu acho que pode economizar 50 horas de tempo de sala de aula ou algo.
+
+310
+00:16:57.001 --> 00:17:00.001
+Que papel, se houver, Chuck Ager realmente desempenhou no design deste?
+
+311
+00:17:01.001 --> 00:17:07.000
+Chuck Ager é o piloto mais famoso do mundo e ele é uma razão, ele sabe
+
+312
+00:17:07.000 --> 00:17:09.000
+Quase tudo o que ele tem que saber sobre voar.
+
+313
+00:17:09.000 --> 00:17:12.000
+Ele é um especialista em aviões e ele nos ajudou a escolher os aviões
+
+314
+00:17:12.000 --> 00:17:14.000
+Estamos a utilizar para o programa.
+
+315
+00:17:14.000 --> 00:17:18.001
+Ele também é um especialista em treinamento de aviões e ele nos ajudou a estabelecer isso.
+
+316
+00:17:19.000 --> 00:17:22.000
+Você está voando um F-18 e você tem um SR-71 e o mundo também [...]
+
+317
+00:17:22.001 --> 00:17:26.001
+Simulamos uma ampla variedade de aviões. Tudo sobre a Guerra Mundial e
+
+318
+00:17:26.001 --> 00:17:31.001
+Sopwith Camels para os aviões de teste experimentais e o X-1.
+
+319
+00:17:32.000 --> 00:17:35.001
+Craft da Segunda Guerra Mundial, quase tudo o que você gostaria de tentar eu acho.
+
+320
+00:17:35.001 --> 00:17:36.000
+Soa como muita diversão.
+
+321
+00:17:36.001 --> 00:17:39.000
+É aí que o SR-71, você pode apenas voar para o espaço.
+
+322
+00:17:39.000 --> 00:17:41.001
+Você pode voar para o espaço e perder algo.
+
+323
+00:17:42.000 --> 00:17:43.001
+Você não tem mais controle. Não há mais ar.
+
+324
+00:17:43.001 --> 00:17:47.000
+John, eu posso entender o simulador de vôo. Como simular o golfe
+
+325
+00:17:47.000 --> 00:17:48.001
+Em um computador? Isso parece mais difícil de imaginar.
+
+326
+00:17:49.000 --> 00:17:53.001
+Bem, é realmente provavelmente um pouco mais fácil do que Ned fez com seu programa.
+
+327
+00:17:54.001 --> 00:17:57.000
+Nossos cachorros não precisam de muita concentração para jogar.
+
+328
+00:17:57.001 --> 00:17:59.001
+É tudo o que eu vou ser capaz de descrever enquanto jogamos.
+
+329
+00:18:00.001 --> 00:18:03.001
+O que tentamos fazer foi fornecer ao usuário uma visão tridimensional.
+
+330
+00:18:03.001 --> 00:18:06.001
+Quando eu entrar no jogo, você verá exatamente sobre o que estou falando.
+
+331
+00:18:07.000 --> 00:18:08.001
+É um pouco mais fácil mostrar do que descrever.
+
+332
+00:18:09.000 --> 00:18:10.000
+Ok, bem e certo.
+
+333
+00:18:11.000 --> 00:18:14.001
+Antes que você realmente comece com o, realmente com o começo, com o jogo,
+
+334
+00:18:15.000 --> 00:18:18.001
+Você tem a opção de ir à prática T como você vê aqui, praticando seu
+
+335
+00:18:18.001 --> 00:18:22.001
+conduzir, ir praticar verde ou praticar em sua posição, praticar qualquer
+
+336
+00:18:22.001 --> 00:18:25.000
+Os 18 buracos, ou eu começo o jogo.
+
+337
+00:18:25.000 --> 00:18:26.000
+E vamos começar o jogo aqui.
+
+338
+00:18:26.001 --> 00:18:29.001
+O que vamos fazer é que vamos reiniciar um jogo e jogar que eu realmente
+
+339
+00:18:29.001 --> 00:18:32.000
+Começou em Pebble Beach, que é um dos cursos que vem com ele.
+
+340
+00:18:32.000 --> 00:18:36.001
+Aqui você pode ver uma visão geral de Pebble Beach, o 18o buraco, e, como você pode observar, o
+
+341
+00:18:36.001 --> 00:18:40.001
+Regulação T são 533 yards, Pro T são 543 yards.
+
+342
+00:18:40.001 --> 00:18:42.001
+Estamos jogando do Pro T.
+
+343
+00:18:43.000 --> 00:18:44.001
+E é por cinco.
+
+344
+00:18:44.001 --> 00:18:45.001
+E é um par de cinco.
+
+345
+00:18:46.000 --> 00:18:49.001
+O computador, como você pode ver abaixo na parte de texto da tela, é
+
+346
+00:18:49.001 --> 00:18:52.001
+Recomendo um motorista com base na distância que deixei para o buraco.
+
+347
+00:18:53.001 --> 00:18:57.001
+Se você alguma vez ficar preso, você também pode pressionar para escapar a qualquer momento, e isso vai
+
+348
+00:18:57.001 --> 00:19:00.001
+lembra-te de todos os diferentes comandos-chave que você precisa para jogar.
+
+349
+00:19:01.000 --> 00:19:04.001
+Mas, essencialmente, a fim de fazer um ataque inteiro, o
+
+350
+00:19:04.001 --> 00:19:06.001
+Exige apenas três tapetes da barra espacial.
+
+351
+00:19:06.001 --> 00:19:08.001
+O primeiro começa com o meu retorno.
+
+352
+00:19:09.000 --> 00:19:10.001
+O segundo começa a minha descida.
+
+353
+00:19:10.001 --> 00:19:14.001
+E o terceiro é, na verdade, o tempo mais crucial para, crucial em termos de
+
+354
+00:19:14.001 --> 00:19:18.000
+tempo vai, para determinar se eu vou bater a bola diretamente ou hook,
+
+355
+00:19:18.000 --> 00:19:20.001
+O que significa ir para a esquerda, esquina, vá para a direita.
+
+356
+00:19:20.001 --> 00:19:21.001
+E aqui quero ir.
+
+357
+00:19:21.001 --> 00:19:26.001
+I&#x27;m going to tap it right now to start, tap it again, tap It again.
+
+358
+00:19:26.001 --> 00:19:28.001
+Então eu estava um pouco tarde, o que significa que a bola está indo para
+
+359
+00:19:28.001 --> 00:19:30.001
+sempre tão ligeiramente à direita.
+
+360
+00:19:31.000 --> 00:19:33.001
+Então, há realmente alguma coordenação física que você tem
+
+361
+00:19:33.001 --> 00:19:35.000
+para fazer aqui no que diz respeito ao tempo do gesto.
+
+362
+00:19:35.000 --> 00:19:36.001
+Na verdade, você está atingindo a barra espacial três vezes.
+
+363
+00:19:37.000 --> 00:19:37.000
+É certo.
+
+364
+00:19:37.001 --> 00:19:40.000
+Portanto, é uma entrada de teclado simples, o que torna fácil de aprender para as pessoas.
+
+365
+00:19:40.001 --> 00:19:43.000
+Mas, ao mesmo tempo, requer algum tempo crítico, que dará
+
+366
+00:19:43.000 --> 00:19:46.000
+pessoas alguns desafios ao longo do curso, de jogar o jogo.
+
+367
+00:19:47.000 --> 00:19:49.001
+Agora nos encontramos na posição em que eu batei a bola, e eu tenho
+
+368
+00:19:49.001 --> 00:19:51.001
+294 metros deixados para o buraco.
+
+369
+00:19:51.001 --> 00:19:54.001
+O computador está recomendando as três árvores porque é o, é o
+
+370
+00:19:54.001 --> 00:19:56.001
+Um clube que me dará a distância máxima.
+
+371
+00:19:57.000 --> 00:19:58.000
+Então eu vou tentar bater novamente.
+
+372
+00:19:58.000 --> 00:20:02.001
+Mais uma vez, é três tapetes da barra espacial uma vez , duas vezes , três vezes.
+
+373
+00:20:03.000 --> 00:20:06.001
+E mais uma vez, eu peguei um pouco tarde, o que significa que estou escorregando para a direita.
+
+374
+00:20:06.001 --> 00:20:09.000
+Você pode ver a bola viajando lá e lá.
+
+375
+00:20:09.000 --> 00:20:10.001
+Parece que eu poderia acabar por trás da árvore.
+
+376
+00:20:11.000 --> 00:20:14.001
+E, por outro lado, há realmente uma árvore lá no 18o buraco na praia de Pebble.
+
+377
+00:20:14.001 --> 00:20:15.001
+Esse é o verdadeiro curso.
+
+378
+00:20:15.001 --> 00:20:18.000
+É certo. Agora vou fazer algo aqui um pouco diferente.
+
+379
+00:20:18.000 --> 00:20:21.000
+Vamos voltar para essa visão original e o computador está indo
+
+380
+00:20:21.000 --> 00:20:23.000
+Descubra onde eu acabei de atingir as minhas duas últimas tiras.
+
+381
+00:20:26.001 --> 00:20:28.000
+Sim é. Estamos atrás da árvore.
+
+382
+00:20:29.000 --> 00:20:32.000
+OK  ⁇  Então, o que eu tenho que fazer então é dirigir um pouco e eu vou
+
+383
+00:20:32.000 --> 00:20:33.001
+Pressione a chave do cursor esquerdo.
+
+384
+00:20:33.001 --> 00:20:34.001
+Parece que me enganam.
+
+385
+00:20:37.001 --> 00:20:40.000
+Portanto, vamos dirigir pressionando a chave do cursor esquerdo novamente.
+
+386
+00:20:40.000 --> 00:20:42.000
+Eu posso voltar a procurar o direito ou a ação.
+
+387
+00:20:42.001 --> 00:20:46.000
+E se eu quiser, eu posso ir em uma rotação completa de 360 graus.
+
+388
+00:20:46.001 --> 00:20:50.000
+O computador está recomendando um pedaço, o que me dá um máximo total
+
+389
+00:20:50.000 --> 00:20:51.001
+distância de cerca de 100 yards.
+
+390
+00:20:52.001 --> 00:20:55.000
+Então eu vou atingir cerca de 70% do poder do clube.
+
+391
+00:20:56.001 --> 00:20:58.000
+E, novamente, requer três tapetes de velocidade.
+
+392
+00:20:58.000 --> 00:20:59.001
+Agora como você faz isso? Você disse que você vai atingir 70%.
+
+393
+00:20:59.001 --> 00:21:03.001
+É certo. A barra de energia que está na parte da mão esquerda da tela vai
+
+394
+00:21:03.001 --> 00:21:05.001
+de 0 a 100%.
+
+395
+00:21:05.001 --> 00:21:09.001
+Então eu vou parar isso em cerca de 70% , que é em torno do sétimo branco
+
+396
+00:21:09.001 --> 00:21:11.000
+Observe que você vê lá no ecrã.
+
+397
+00:21:12.001 --> 00:21:13.001
+Espero que eu possa fazer isso.
+
+398
+00:21:14.000 --> 00:21:15.000
+É lá que vamos.
+
+399
+00:21:16.001 --> 00:21:19.001
+E eu intencionalmente esmagou-o um pouco, porque
+
+400
+00:21:19.001 --> 00:21:21.000
+Eu tive que dirigir para a esquerda do buraco.
+
+401
+00:21:21.001 --> 00:21:22.001
+de Whoa. Você parece bastante bom.
+
+402
+00:21:23.000 --> 00:21:24.001
+O bom. Então estamos em três.
+
+403
+00:21:27.001 --> 00:21:29.000
+Agora vamos para um topo do verde.
+
+404
+00:21:29.000 --> 00:21:31.001
+Ele me mostrará onde a minha bola está em relação ao buraco.
+
+405
+00:21:31.001 --> 00:21:35.000
+Se houvesse outras pessoas jogando, isso mostraria o resto das bolas dos jogadores.
+
+406
+00:21:35.000 --> 00:21:37.000
+Eu não quero acelerar seu jogo, mas você tem 30 segundos para fazer isso acontecer.
+
+407
+00:21:37.001 --> 00:21:38.001
+É certo. São 28 pés.
+
+408
+00:21:39.000 --> 00:21:41.001
+Se eu tivesse que apontar, eu moveria a chave do cursor para cima e para baixo.
+
+409
+00:21:43.000 --> 00:21:45.000
+E parece que tenho um tiro direto em mim.
+
+410
+00:21:45.001 --> 00:21:49.001
+Minha barra de energia à esquerda está agora em incrementos de oito pés, então eu preciso
+
+411
+00:21:49.001 --> 00:21:51.000
+para atingir cerca de três e meia.
+
+412
+00:21:53.001 --> 00:21:54.001
+Oh, eu o golpeei.
+
+413
+00:21:58.000 --> 00:21:59.000
+Desculpe, isso foi bastante próximo.
+
+414
+00:21:59.001 --> 00:22:00.001
+Você tem mais um tiro em andamento.
+
+415
+00:22:00.001 --> 00:22:02.000
+OK  ⁇  Bem, vamos acabar com isso.
+
+416
+00:22:02.001 --> 00:22:06.000
+E eu acabava com uma ave.
+
+417
+00:22:08.000 --> 00:22:09.000
+Aqui está o meu scorecard.
+
+418
+00:22:09.000 --> 00:22:12.001
+Agora, você tem quatro cursos incorporados em MEAN-18.
+
+419
+00:22:12.001 --> 00:22:14.000
+Você pode realmente projetar seu próprio curso, no entanto, você não pode?
+
+420
+00:22:14.000 --> 00:22:17.001
+Isso é certo, porque MEAN-18 vem com um arquiteto de curso que permite que as pessoas
+
+421
+00:22:17.001 --> 00:22:21.000
+Modificar um curso existente ou criar um curso completamente novo.
+
+422
+00:22:21.001 --> 00:22:24.001
+E como em Gomfort, você acha que é satisfatório jogar o jogo desta maneira?
+
+423
+00:22:24.001 --> 00:22:28.000
+Eu acho que é muito simples, e as pessoas que nem mesmo realmente jogam
+
+424
+00:22:28.000 --> 00:22:29.001
+O golfe também gosta de jogar.
+
+425
+00:22:29.001 --> 00:22:32.000
+Duas simulações interessantes. Obrigado Ned. Obrigado John.
+
+426
+00:22:32.000 --> 00:22:34.000
+É por isso que olhamos para os jogos. Esperamos vê-lo de novo
+
+427
+00:22:34.000 --> 00:22:36.000
+Na semana que vem, em The Computer Chronicles.
+
+428
+00:22:45.001 --> 00:22:49.001
+No arquivo de acesso aleatório desta semana, os CPUs na notícia.
+
+429
+00:22:49.001 --> 00:22:53.001
+Em primeiro lugar, a Intel apresentou um novo microprocessador 386SS.
+
+430
+00:22:54.000 --> 00:22:59.000
+Ele possui 386 compatibilidade de software de 32 bits, mas com um ônibus de 16 bits mais lento.
+
+431
+00:22:59.001 --> 00:23:03.001
+O 386SX será cerca de 30 por cento mais barato do que o normal 386
+
+432
+00:23:03.001 --> 00:23:05.001
+chip, e é cerca de metade do tamanho.
+
+433
+00:23:05.001 --> 00:23:08.000
+O 386SX vai funcionar em 16 megahertz.
+
+434
+00:23:08.000 --> 00:23:12.000
+No Centro de Microelectronica da Carolina do Norte, os pesquisadores
+
+435
+00:23:12.000 --> 00:23:14.001
+Foi construído um superchip chamado Blitzen.
+
+436
+00:23:14.001 --> 00:23:18.001
+Tem 1,1 milhão de transistores em um chip de um centímetro quadrado.
+
+437
+00:23:18.001 --> 00:23:22.001
+É descrito como um grande processador paralelo e um dos mais
+
+438
+00:23:22.001 --> 00:23:24.000
+chips lógicos complexos já construídos.
+
+439
+00:23:24.001 --> 00:23:28.001
+E em Gazelle Microcircuits em Santa Clara, Califórnia, um fracasso em
+
+440
+00:23:28.001 --> 00:23:33.001
+gallium arsenida chip, que não requer circuito especial ou potência, e assim por diante
+
+441
+00:23:33.001 --> 00:23:36.000
+Pode ser usado em um saco projetado para um chip de silicone.
+
+442
+00:23:36.000 --> 00:23:41.000
+Pesquisadores dizem que os novos chips de arsenídeo de gallium custam apenas cerca de US$ 50 cada e podem
+
+443
+00:23:41.000 --> 00:23:44.000
+Aumenta a velocidade de processamento em mais de 25%.
+
+444
+00:23:44.001 --> 00:23:48.000
+Pesquisa digital está tentando retornar ao mundo DOS com uma nova operação
+
+445
+00:23:48.000 --> 00:23:49.001
+O sistema é chamado DR-DOS.
+
+446
+00:23:50.000 --> 00:23:55.000
+DRI diz que é totalmente compatível com MS-DOS 3. 3 e tem alguns
+
+447
+00:23:55.000 --> 00:23:56.001
+Os recursos MS-DOS não têm.
+
+448
+00:23:56.001 --> 00:24:02.000
+DRI anunciou que começará com a venda de DR-DOS em ROM com base em OEM com um preço
+
+449
+00:24:02.000 --> 00:24:04.001
+Metade do MS-DOS da Microsoft.
+
+450
+00:24:04.001 --> 00:24:10.000
+A Compaq vem com dois novos computadores. Um é um 25 megahertz mais rápido
+
+451
+00:24:10.000 --> 00:24:11.001
+A versão do Desco Pro 386.
+
+452
+00:24:12.001 --> 00:24:16.001
+O novo 386-25 é relatado para ser até 60% mais rápido do que
+
+453
+00:24:16.001 --> 00:24:18.001
+O novo modelo da IBM é o PS2 Model 70.
+
+454
+00:24:19.000 --> 00:24:23.000
+O outro novo Compaq é o 386S, que é o primeiro computador construído em torno
+
+455
+00:24:23.000 --> 00:24:25.000
+O novo chip da Intel 386SX.
+
+456
+00:24:25.001 --> 00:24:28.001
+Agora é hora para a revisão de software desta semana. Aqui está o Paul Schindler.
+
+457
+00:24:29.000 --> 00:24:32.001
+Não, não estou em nostalgia por filmes maus dos anos 50.
+
+458
+00:24:33.000 --> 00:24:37.001
+Estou pronto para ler este livro de comédia 3D que vem com um dos textos mais famosos
+
+459
+00:24:37.001 --> 00:24:40.001
+Jogos de todos, Leather Goddesses of Phobos, agora disponível
+
+460
+00:24:40.001 --> 00:24:42.000
+Em uma nova versão do Macintosh.
+
+461
+00:24:42.001 --> 00:24:47.001
+Infocom, a empresa responsável por este divertido e suavemente escatológico
+
+462
+00:24:47.001 --> 00:24:51.000
+A aventura, também escreveu Zork, outro texto popular aventura.
+
+463
+00:24:51.001 --> 00:24:54.001
+Além do software, você obtém o livro de comédia 3D acima mencionado.
+
+464
+00:24:54.001 --> 00:24:59.000
+Você também recebe uma folha de placas de scratch e sniff marcadas sob penalidade de
+
+465
+00:24:59.000 --> 00:25:02.000
+A morte inexplicavelmente dolorosa nas mãos das Deuses da Corpo de Phobos.
+
+466
+00:25:02.001 --> 00:25:05.001
+Não espalhe e espalhem até que a história te diga fazer isso.
+
+467
+00:25:06.000 --> 00:25:10.001
+E, sombras de sua juventude, você recebe um livro de dicas invisível no qual você usa uma
+
+468
+00:25:10.001 --> 00:25:13.000
+verdadeiramente marcador mágico para fazer as pistas aparecer.
+
+469
+00:25:13.001 --> 00:25:16.000
+Agora, não há muito para mostrar em um jogo de texto,
+
+470
+00:25:16.000 --> 00:25:18.000
+A menos que possamos mostrar-lhe seu senso de humor.
+
+471
+00:25:18.000 --> 00:25:21.000
+Há três sabores, tame, sugestivo e levd.
+
+472
+00:25:21.000 --> 00:25:23.001
+Para ser levado, você tem que ser acima de 21.
+
+473
+00:25:24.000 --> 00:25:27.000
+Se você diz que você é 13 e, em seguida, mudar sua mente e dizer que você está 21, você
+
+474
+00:25:27.000 --> 00:25:29.000
+Responda assim.
+
+475
+00:25:30.000 --> 00:25:34.001
+Deuses da pele de Phobos, $50 para o Macintosh para o duro para ofender
+
+476
+00:25:34.001 --> 00:25:36.001
+Informações em Cambridge, Massachusetts.
+
+477
+00:25:37.000 --> 00:25:39.000
+Para as crônicas de computador, eu sou Paul Schindler.
+
+478
+00:25:40.000 --> 00:25:44.001
+A IBM confirmou que está desenvolvendo um programa de comércio para incentivar os proprietários de
+
+479
+00:25:44.001 --> 00:25:48.000
+PCs, XTs e ATs para negociar até um PS2.
+
+480
+00:25:48.000 --> 00:25:52.000
+Analistas dizem que a IBM também espera acelerar a aceitação do PS2
+
+481
+00:25:52.000 --> 00:25:53.001
+Como o novo padrão DOS.
+
+482
+00:25:54.001 --> 00:25:58.000
+A revista Macintosh está hoje informando que a Apple vai sair com quatro
+
+483
+00:25:58.000 --> 00:25:59.001
+Novos Macs nos próximos 18 meses.
+
+484
+00:26:00.000 --> 00:26:04.001
+A revista diz que haverá um laptop Mac, um Mac de três slots, um Color SE, e um
+
+485
+00:26:04.001 --> 00:26:08.001
+O Mac multi-user chamou-se a Torre que irá conter uma CPU em pé.
+
+486
+00:26:09.001 --> 00:26:12.001
+Finalmente, prepare-se para levantar o seu telefone de carro para uma máquina de fax.
+
+487
+00:26:12.001 --> 00:26:17.000
+NEC diz que vai sair com uma máquina de fax portátil que pode funcionar em 12
+
+488
+00:26:17.000 --> 00:26:20.001
+Volts e pode receber ou enviar documentos por telefone celular.
+
+489
+00:26:21.000 --> 00:26:24.000
+O preço é de 2.400 dólares e é devido a este outono.
+
+490
+00:26:24.001 --> 00:26:26.001
+Isso é para o acesso aleatório. Eu sou Cynthia Steele.
+
+491
+00:26:42.001 --> 00:27:12.001
+Obrigado por você.
+
+492
+00:27:12.001 --> 00:27:36.001
+Obrigado por você.
+
+493
+00:27:42.001 --> 00:27:48.001
+[...]

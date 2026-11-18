@@ -1,0 +1,1429 @@
+WEBVTT
+
+1
+00:00:22.001 --> 00:00:28.000
+Micro Focus, créateurs d&#x27;outils de programmation visuelle pour le développement de logiciels.
+
+2
+00:00:28.000 --> 00:00:31.000
+Le chroniqueur informatique est heureux de fournir un financement majeur
+
+3
+00:00:31.000 --> 00:00:33.000
+Pour le chroniqueur informatique.
+
+4
+00:00:33.001 --> 00:00:36.001
+C’est l’histoire de cette évolution continue.
+
+5
+00:00:42.000 --> 00:00:46.001
+Bienvenue dans les chronicles informatiques. Je suis Stuart Chafay et c&#x27;est Gary Kildall.
+
+6
+00:00:47.001 --> 00:00:51.000
+Sur le programme d&#x27;aujourd&#x27;hui, nous allons parler des dispositifs de stockage de masse, des disques
+
+7
+00:00:51.000 --> 00:00:55.000
+Disques, disques floppy, Winchester, et certaines des dernières technologies pour
+
+8
+00:00:55.000 --> 00:00:57.001
+Améliorer le stockage de masse des données informatiques.
+
+9
+00:00:57.001 --> 00:01:02.000
+Et nous rencontrerons Alan Shugart, l&#x27;un des pionniers de la technologie disque.
+
+10
+00:01:02.001 --> 00:01:06.001
+Gary, nous appelons un disque un périphérique, mais en réalité, il me semble que tout le monde
+
+11
+00:01:06.001 --> 00:01:09.001
+périphériques, un disque est vraiment une partie clé d&#x27;un système informatique.
+
+12
+00:01:09.001 --> 00:01:12.000
+Il n&#x27;y a vraiment pas trop d&#x27;applications sérieuses que vous pouvez
+
+13
+00:01:12.000 --> 00:01:13.001
+fonctionner sur un ordinateur sans disque.
+
+14
+00:01:14.000 --> 00:01:18.000
+C’est absolument vrai. Le modèle traditionnel d&#x27;un ordinateur comprend une sauvegarde
+
+15
+00:01:18.000 --> 00:01:22.001
+un dispositif de stockage, une unité de traitement centrale, et la mémoire principale ou la mémerie centrale.
+
+16
+00:01:23.000 --> 00:01:26.001
+Et c&#x27;était vraiment l&#x27;escalade de ces trois composants qui ont réellement conduit à
+
+17
+00:01:26.001 --> 00:01:28.001
+La révolution du micro-ordinateur est en premier lieu.
+
+18
+00:01:29.000 --> 00:01:33.001
+Au début des années 1970, nous avions déjà une mémoire semi-conductrice qui remplaçait le noyau.
+
+19
+00:01:33.001 --> 00:01:38.000
+stockage et les entreprises qui ont commencé à produire ces microprocesseurs chips.
+
+20
+00:01:38.001 --> 00:01:41.001
+Et ce n&#x27;était pas vraiment jusqu&#x27;à ce qu&#x27;un disque floppy arriva autour que nous avions un complet
+
+21
+00:01:41.001 --> 00:01:44.001
+système informatique qui pourrait être utilisé pour faire des choses utiles, comme vous avez mentionné.
+
+22
+00:01:45.001 --> 00:01:49.000
+C&#x27;est intéressant que le disque est vraiment la seule partie de cela, la seule
+
+23
+00:01:49.000 --> 00:01:51.001
+composant de ce système où il est encore mécanique.
+
+24
+00:01:52.001 --> 00:01:54.001
+Il serait intéressant de parler à nos experts.
+
+25
+00:01:54.001 --> 00:01:56.000
+Aujourd’hui et voir où ils pensent qu’il va aller.
+
+26
+00:01:56.000 --> 00:01:58.000
+Est-ce que nous allons rester avec le stockage mécanique ou est-ce qu&#x27;il va
+
+27
+00:01:58.000 --> 00:01:59.001
+Devenir un semi-conducteur aussi ?
+
+28
+00:02:00.000 --> 00:02:03.001
+Ok, avant de rencontrer nos invités, nous allons prendre un petit coup d&#x27;oeil à l&#x27;histoire
+
+29
+00:02:03.001 --> 00:02:05.001
+La technologie de stockage de masse.
+
+30
+00:02:07.000 --> 00:02:10.001
+Les progrès dans le domaine du stockage de mémoire de masse pour les ordinateurs ont été ciblés
+
+31
+00:02:10.001 --> 00:02:12.001
+Trois besoins fondamentaux.
+
+32
+00:02:12.001 --> 00:02:17.000
+Le volume et la densité des informations et la vitesse d&#x27;accès à ces informations.
+
+33
+00:02:18.000 --> 00:02:22.000
+Dans les années 1950, le stockage de données informatiques a emprunté la technologie d&#x27;enregistrement utilisée
+
+34
+00:02:22.000 --> 00:02:24.001
+par des ingénieurs sonores, tape magnétique.
+
+35
+00:02:24.001 --> 00:02:27.001
+Comme son prédécesseur le plus ancien, le récorder du fil, l&#x27;oxyde
+
+36
+00:02:27.001 --> 00:02:29.001
+Les données sont stockées séquentiellement.
+
+37
+00:02:30.000 --> 00:02:33.001
+Pour atteindre l&#x27;information stockée à la fin d&#x27;un rouleau signifie courir à travers tout
+
+38
+00:02:33.001 --> 00:02:35.001
+Il est stocké sur la bande jusqu&#x27;à ce point.
+
+39
+00:02:35.001 --> 00:02:39.001
+Avec des disques de tape plus rapides, le seul moyen de rendre les données plus accessibles était de
+
+40
+00:02:39.001 --> 00:02:42.000
+Modifier le format du média d’enregistrement.
+
+41
+00:02:43.000 --> 00:02:46.001
+Le stockage du disque, qui permettait l’accès aléatoire à l’information, était déjà sous
+
+42
+00:02:46.001 --> 00:02:50.001
+développement au milieu des années 50, mais la popularité et le potentiel de cette technique
+
+43
+00:02:50.001 --> 00:02:52.001
+Il n&#x27;a été clair que dans la dernière décennie.
+
+44
+00:02:53.000 --> 00:02:58.000
+Les plateaux 24 pouces d&#x27;origine n&#x27;étaient conservés que 5 pouces. 25 pouces en diamètre, tandis que le bit
+
+45
+00:02:58.000 --> 00:03:02.001
+La densité a augmenté de 3 900 fois, de quelques milliers de bits à presque 8
+
+46
+00:03:02.001 --> 00:03:04.000
+1 million de bits par pouce carré.
+
+47
+00:03:04.000 --> 00:03:08.000
+Les améliorations qui ont conduit à ce progrès ont aujourd’hui donné voie à de nouvelles approches
+
+48
+00:03:08.000 --> 00:03:11.000
+Ce qui promet une nouvelle augmentation dramatique de la densité de stockage.
+
+49
+00:03:12.000 --> 00:03:16.000
+Les ténèbres de film sont plus petites, plus sensibles à la lecture et à l&#x27;écriture, rendues possibles par
+
+50
+00:03:16.000 --> 00:03:18.000
+technologie développée dans la fabrication de chips.
+
+51
+00:03:19.000 --> 00:03:22.001
+En raison de leurs composants plus jeunes, ils peuvent lire les bits enregistrés beaucoup plus près
+
+52
+00:03:22.001 --> 00:03:26.001
+ensemble sur des traces plus étroites, environ 12 millions par centimètre carré.
+
+53
+00:03:27.000 --> 00:03:30.001
+Un autre développement appelé l&#x27;enregistrement perpendiculaire magnetise la surface du disque
+
+54
+00:03:30.001 --> 00:03:34.000
+avec des pulsations enregistrées verticalement, les bits de données enregistrés sur
+
+55
+00:03:34.000 --> 00:03:36.000
+La fin plutôt que la fin horizontale.
+
+56
+00:03:36.001 --> 00:03:40.001
+Encore une fois, l’effet est dramatique. Ce petit changement dans l’alignement des données
+
+57
+00:03:40.001 --> 00:03:44.000
+Cela signifie une augmentation de deux à trois fois de la capacité de stockage.
+
+58
+00:03:50.001 --> 00:03:53.001
+C’est Alan Shugart qui nous rejoint. Il est l’un des pionniers
+
+59
+00:03:53.001 --> 00:03:55.000
+dans l’industrie du disque.
+
+60
+00:03:55.001 --> 00:03:59.000
+Alan a travaillé avec IBM, puis il a fondé sa propre société Shugart Corporation,
+
+61
+00:03:59.000 --> 00:04:01.000
+Et puis il a commencé une autre entreprise, Seagate.
+
+62
+00:04:01.000 --> 00:04:02.001
+Bienvenue dans les Chroniques informatiques.
+
+63
+00:04:03.001 --> 00:04:03.001
+Merci à vous.
+
+64
+00:04:04.001 --> 00:04:08.000
+Alan, je ne sais pas si vous le savez, mais j&#x27;ai reçu mon premier disque de votre
+
+65
+00:04:08.000 --> 00:04:10.000
+société précédente, Shugart Associates, et les
+
+66
+00:04:10.000 --> 00:04:11.001
+Il m’a donné libre à l’époque.
+
+67
+00:04:12.000 --> 00:04:13.000
+Je ne le fais plus, non ?
+
+68
+00:04:13.000 --> 00:04:16.001
+Je me souviens de ça. Je me souviens de ça. Je me suis opposé à tout renoncer.
+
+69
+00:04:17.000 --> 00:04:20.000
+Je pense que c&#x27;était 10 000 heures sur un test drive. Ils sont
+
+70
+00:04:20.000 --> 00:04:21.001
+Il m&#x27;a donné un nouvel ensemble de portions pour y aller, aussi.
+
+71
+00:04:24.000 --> 00:04:28.001
+Pensez-vous que le disque floppy était vraiment instrumental dans
+
+72
+00:04:28.001 --> 00:04:30.000
+La révolution du micro-ordinateur ?
+
+73
+00:04:31.000 --> 00:04:36.000
+Il n&#x27;y a aucun doute dans mon esprit que l&#x27;introduction du floppy de 8 pouces a réellement été prouvée
+
+74
+00:04:36.000 --> 00:04:40.001
+la technologie, mais l&#x27;introduction du floppy 5-1-1-inch a réellement élargi la
+
+75
+00:04:40.001 --> 00:04:42.001
+Le marché et prévu pour la grande explosion.
+
+76
+00:04:43.000 --> 00:04:44.000
+Aucune question en tout cas.
+
+77
+00:04:44.001 --> 00:04:49.000
+Nous avons maintenant ces appareils qui sont appelés disques Winchester ou disques dur,
+
+78
+00:04:49.000 --> 00:04:54.001
+Et ils semblent sortir de Seagate, bien sûr, comme une première entreprise dans le
+
+79
+00:04:54.001 --> 00:04:58.000
+dans cette zone. Comment les systèmes de disque dur vont-ils affecter l&#x27;informatique personnelle?
+
+80
+00:04:58.000 --> 00:05:02.001
+Eh bien, je pense que ce que le système de disque dur fait est vraiment complémentaire à la
+
+81
+00:05:02.001 --> 00:05:07.000
+floppy, et ce qu&#x27;il va faire est d&#x27;étendre la capacité de petit bureau
+
+82
+00:05:07.000 --> 00:05:12.000
+Les ordinateurs pour effectuer des tâches très grandes qui nécessitent beaucoup de stockage.
+
+83
+00:05:13.000 --> 00:05:17.000
+Vous ne voyez pas de petits ordinateurs de bureau avec des systèmes de disque dur qui ne
+
+84
+00:05:17.000 --> 00:05:20.000
+Il y a aussi un mini floppy.
+
+85
+00:05:21.000 --> 00:05:23.001
+Il y a un moyen d&#x27;obtenir des données d&#x27;un système informatique à l&#x27;autre.
+
+86
+00:05:23.001 --> 00:05:26.000
+et absolument. Il s’agit d’entrée-output et de sauvegarde.
+
+87
+00:05:26.000 --> 00:05:31.000
+Une des critiques pour l&#x27;utilisation des disques durs dans les petits ordinateurs, quand vous les déplacez
+
+88
+00:05:31.000 --> 00:05:33.001
+Les gens s’inquiètent de la fiabilité.
+
+89
+00:05:34.000 --> 00:05:35.001
+Quel est ton sentiment à ce sujet ? Y a-t-il un problème avec
+
+90
+00:05:35.001 --> 00:05:38.000
+Transporter les disques Winchester autour?
+
+91
+00:05:38.001 --> 00:05:43.000
+Certainement, un disque Winchester est beaucoup plus susceptible d&#x27;être endommagé par le choc et
+
+92
+00:05:43.000 --> 00:05:48.000
+vibration plus qu&#x27;un floppy, et c&#x27;est parce que les médias et les têtes magnétiques ont
+
+93
+00:05:48.000 --> 00:05:51.000
+Pour rester là tout le temps, et les chefs sont en contact avec les médias.
+
+94
+00:05:51.000 --> 00:05:54.001
+Si vous l&#x27;éteignez trop, vous pourriez avoir des problèmes, où dans le
+
+95
+00:05:54.001 --> 00:05:59.000
+floppy, vous pouvez retirer la tête du disque floppie lui-même lorsque vous le transportez.
+
+96
+00:05:59.000 --> 00:06:02.000
+Le Winchester est donc beaucoup plus délicat.
+
+97
+00:06:02.000 --> 00:06:03.001
+Est-ce quelque chose qui va être un
+
+98
+00:06:03.001 --> 00:06:05.001
+Le problème sera-t-il traité à l’avenir ?
+
+99
+00:06:05.001 --> 00:06:10.000
+Je pense qu&#x27;ils vont devenir meilleurs et meilleurs. Je pense que le nouveau
+
+100
+00:06:10.000 --> 00:06:15.001
+Les versions deviennent beaucoup plus résistantes au choc avec des chargeurs d&#x27;air plus solides
+
+101
+00:06:15.001 --> 00:06:17.000
+Et ainsi de suite, même si je pense qu&#x27;ils vont mieux.
+
+102
+00:06:18.000 --> 00:06:22.000
+Eh bien, l&#x27;une des choses que nous avons ici est un disque floppy de 5-1-1-4 pouces, et
+
+103
+00:06:22.000 --> 00:06:26.000
+C’est assez courant. Il apparaît sur les ordinateurs personnels.
+
+104
+00:06:27.001 --> 00:06:33.001
+Il y a beaucoup d’appareils mécaniques. Il y a peu de ballons et de têtes
+
+105
+00:06:33.001 --> 00:06:37.000
+qui apparaît ici, et il y a un panneau pour décoder l&#x27;ensemble du circuit, ou le
+
+106
+00:06:37.000 --> 00:06:39.000
+des informations qui viennent de la tête.
+
+107
+00:06:40.000 --> 00:06:44.000
+Et il semble qu&#x27;il y ait beaucoup de mécaniques là-bas, le type du modèle T de
+
+108
+00:06:44.000 --> 00:06:45.001
+Computing dans une certaine mesure.
+
+109
+00:06:45.001 --> 00:06:50.001
+Au-delà, nous avons une boîte de mémoire de bulle. Cela arrive à
+
+110
+00:06:50.001 --> 00:06:52.000
+Il est fabriqué par Intel Corporation.
+
+111
+00:06:53.000 --> 00:06:58.000
+Et il s&#x27;agit d&#x27;un module de mémoire de bulle lui-même qui est un chip de 1 megabit.
+
+112
+00:06:58.001 --> 00:07:03.001
+Maintenant, certaines personnes diraient que ce type d&#x27;appareil va être remplacé
+
+113
+00:07:03.001 --> 00:07:07.001
+Un appareil de mémoire semi-conducteur.
+
+114
+00:07:07.001 --> 00:07:08.001
+Quels sont vos sentiments à ce sujet, Al ?
+
+115
+00:07:08.001 --> 00:07:14.000
+Eh bien, je ne pense pas que ça se passera. Aujourd&#x27;hui, le disque floppy disque théoriquement a un
+
+116
+00:07:14.000 --> 00:07:17.001
+Capacité de stockage illimité parce que vous pouvez continuer à supprimer la tête du disque et
+
+117
+00:07:17.001 --> 00:07:19.001
+Mettre dans la tête un nouveau disque.
+
+118
+00:07:19.001 --> 00:07:24.000
+Il dispose donc d’une capacité d’enregistrement hors ligne illimité, ce qui
+
+119
+00:07:24.000 --> 00:07:25.001
+Il n’y a pas de mémoire bubble.
+
+120
+00:07:26.001 --> 00:07:31.001
+Donc sur une base de coût par bit, je ne pense pas que vous allez jamais battre le disque magnétique
+
+121
+00:07:31.001 --> 00:07:35.000
+stockage avec des appareils similaires à des semiconducteurs ou des mémoires de bulle.
+
+122
+00:07:35.000 --> 00:07:39.001
+Al, vous avez dit que le disque de 5-1⁄4-inch était vraiment la taille qui a été
+
+123
+00:07:39.001 --> 00:07:41.000
+L’ordinateur personnel se déplace.
+
+124
+00:07:42.000 --> 00:07:45.000
+Nous voyons ici un ordinateur qui utilise un 3-1⁄2-inch, et voici un 3
+
+125
+00:07:45.000 --> 00:07:46.001
+1⁄2 pouce micro floppy.
+
+126
+00:07:47.000 --> 00:07:50.000
+Vous voyez cette taille comme un remplacement du format 5-1⁄4-inch?
+
+127
+00:07:51.000 --> 00:07:55.001
+Non, je ne fais pas. Je pense qu&#x27;il y a un marché pour la plus petite taille, et je ne sais pas
+
+128
+00:07:55.001 --> 00:08:00.000
+Si c&#x27;est le 3-1⁄2 ou le 3-1, le 3 ou le 3-3.
+
+129
+00:08:00.001 --> 00:08:04.001
+Il semble qu&#x27;il y ait beaucoup de différents formats qui veulent devenir la norme.
+
+130
+00:08:04.001 --> 00:08:08.000
+Il peut y avoir plus d&#x27;un standard, mais je ne vois pas qu&#x27;ils remplaceront jamais
+
+131
+00:08:08.000 --> 00:08:12.001
+le 5-1⁄4-inch mini floppy parce que les programmes du monde sont écrits sur mini
+
+132
+00:08:12.001 --> 00:08:17.000
+floppies, et vous ne serez jamais en mesure, dans votre imagination la plus sauvage,
+
+133
+00:08:18.000 --> 00:08:20.001
+Transcrivez tous ces programmes sur des disques plus petits.
+
+134
+00:08:20.001 --> 00:08:22.000
+C’est juste que ça ne va pas être fait.
+
+135
+00:08:23.000 --> 00:08:26.000
+Vous savez, il vaut la peine de passer une minute à parler d’un autre.
+
+136
+00:08:26.000 --> 00:08:30.000
+La technologie qui semble venir ces jours-ci, et c&#x27;est l&#x27;un des disques vidéo.
+
+137
+00:08:31.000 --> 00:08:33.001
+Il arrive que j’ai un sur la table.
+
+138
+00:08:33.001 --> 00:08:34.001
+Comme un magicien avec vous.
+
+139
+00:08:38.001 --> 00:08:39.001
+Les Beatles complètes.
+
+140
+00:08:41.000 --> 00:08:44.000
+Et il dit ici que si vous retirez ces petites choses, vous obtenez un...
+
+141
+00:08:45.000 --> 00:08:48.000
+Nous avons tout simplement appris à tout le monde comment obtenir un disque vidéo là-bas.
+
+142
+00:08:49.000 --> 00:08:55.000
+Il s&#x27;agit d&#x27;un disque vidéo RCA, et
+
+143
+00:08:55.000 --> 00:08:57.000
+C’est un disque vidéo linéaire.
+
+144
+00:08:57.000 --> 00:09:01.001
+Il n&#x27;est pas construit pour être un appareil d&#x27;accès aléatoire, au moins la façon dont il est enregistré.
+
+145
+00:09:03.000 --> 00:09:07.001
+Et je pense qu&#x27;ils disent qu&#x27;il a quelque chose comme 10 gigabytes? C’est juste ça ?
+
+146
+00:09:08.000 --> 00:09:08.001
+[...] on peut imaginer.
+
+147
+00:09:08.001 --> 00:09:09.000
+Un gigabytes !
+
+148
+00:09:09.001 --> 00:09:10.000
+Un grand nombre en tout cas.
+
+149
+00:09:10.001 --> 00:09:15.000
+Et c’est l’équivalent de l’Encyclopedia Britannica.
+
+150
+00:09:15.001 --> 00:09:20.000
+Maintenant, y a-t-il une application pour ce genre de chose, dit-on, en informatique personnelle
+
+151
+00:09:20.000 --> 00:09:22.000
+Un dispositif de stockage ?
+
+152
+00:09:23.000 --> 00:09:25.001
+Je ne pense pas encore, sauf éventuellement pour un certain stockage d&#x27;archives.
+
+153
+00:09:25.001 --> 00:09:30.001
+Le problème avec ce type de technologie est l&#x27;un des taux d&#x27;erreur.
+
+154
+00:09:31.000 --> 00:09:35.000
+Enregistrement de type amusant pour audio ou vidéo, vous pouvez avoir beaucoup de
+
+155
+00:09:35.000 --> 00:09:37.001
+Les erreurs, et vos yeux et vos oreilles ne peuvent pas les entendre.
+
+156
+00:09:38.000 --> 00:09:41.001
+et les taux d&#x27;erreur associés à ce type de technologie,
+
+157
+00:09:41.001 --> 00:09:43.000
+Il y a plusieurs ordres de grandeur.
+
+158
+00:09:44.000 --> 00:09:48.000
+Moins fiable que l&#x27;informatique d&#x27;affaires requiert.
+
+159
+00:09:49.000 --> 00:09:53.000
+Les disques, la fiabilité des données des disques sont plusieurs commandes de
+
+160
+00:09:53.000 --> 00:09:56.000
+Magnitude meilleure que vous pouvez obtenir sur ce type de technologie.
+
+161
+00:09:56.001 --> 00:09:59.001
+Il s’agit d’un disque vidéo non optique.
+
+162
+00:10:00.000 --> 00:10:03.001
+On l’appelle CED. C&#x27;est la version RCA du disque vidéo.
+
+163
+00:10:03.001 --> 00:10:09.001
+Oui oui. Qu’en est-il d’un appareil optique, un disque laser ? C’est plus fiable ?
+
+164
+00:10:09.001 --> 00:10:15.000
+Eh bien, je pense que la mémoire optique que vous voyez annoncé dans le papier tout le temps
+
+165
+00:10:15.000 --> 00:10:18.001
+Il s’agit vraiment d’un stockage d’archives.
+
+166
+00:10:18.001 --> 00:10:20.001
+Vous l’écrivez, et ensuite il demeure le même pour toujours.
+
+167
+00:10:21.001 --> 00:10:24.001
+Et je pense qu&#x27;il y a un lieu dans les systèmes informatiques pour l&#x27;optique
+
+168
+00:10:24.001 --> 00:10:26.000
+La mémoire pour le stockage des archives.
+
+169
+00:10:26.001 --> 00:10:32.000
+Mais mon jugement de la mémoire optique qui a une capacité à mettre à jour, comme vous pouvez le faire
+
+170
+00:10:32.000 --> 00:10:36.000
+Avec le stockage du disque magnétique, il est encore dans la phase de curiosité du laboratoire.
+
+171
+00:10:36.001 --> 00:10:41.001
+Qu&#x27;est-ce que j&#x27;ai entendu parler de l&#x27;enregistrement magnétique perpendiculaire comme moyen de
+
+172
+00:10:41.001 --> 00:10:45.000
+organiser les données sur un disque afin que vous puissiez obtenir plus de volume, plus de densité.
+
+173
+00:10:45.000 --> 00:10:47.000
+Dites-moi ce qui est et où c’est.
+
+174
+00:10:48.001 --> 00:10:54.000
+Eh bien, lorsque vous stockez des données sur une surface magnétique d&#x27;un disque, que faites-vous
+
+175
+00:10:54.000 --> 00:10:58.000
+Est-ce que vous plongez les petits magnétiques que vous ne pouvez pas vraiment voir, mais il y a
+
+176
+00:10:58.000 --> 00:11:01.000
+Petits magnétiques dans le disque qui se trouvent sur leurs côtés, et vous enregistrez
+
+177
+00:11:01.000 --> 00:11:03.001
+quelque chose, vous flip cette magnétique, et puis vous pouvez détecter
+
+178
+00:11:03.001 --> 00:11:05.000
+Ensuite, vous flipez ce magnétique.
+
+179
+00:11:06.000 --> 00:11:10.000
+Et il n&#x27;y a que tant de petits magnétiques qui sont plates que vous pouvez obtenir sur la
+
+180
+00:11:10.000 --> 00:11:13.000
+surface particulière d&#x27;un disque, et c&#x27;est la capacité de densité d&#x27;enregistrement.
+
+181
+00:11:14.000 --> 00:11:17.000
+Si vous pouvez en quelque sorte obtenir ces petits magnétiques debout à la fin,
+
+182
+00:11:17.001 --> 00:11:19.000
+C’est comme un cord de bois.
+
+183
+00:11:19.001 --> 00:11:22.000
+Vous pouvez obtenir plus de bois debout sur la fin que vous pouvez se coucher plat.
+
+184
+00:11:22.001 --> 00:11:26.000
+Et si vous pouvez les obtenir debout à la fin, puis les flip et détecter le flip,
+
+185
+00:11:26.000 --> 00:11:29.000
+Vous pouvez obtenir plus de stockage de données dans une zone donnée que vous
+
+186
+00:11:29.000 --> 00:11:30.001
+Tout le monde peut se coucher avec eux.
+
+187
+00:11:30.001 --> 00:11:33.000
+Et je pense que l&#x27;enregistrement vertical est certainement dans les cartes.
+
+188
+00:11:33.001 --> 00:11:39.000
+En ce qui concerne le 5 1⁄4-inch mini floppy, à nouveau, d&#x27;une manière, vous pouvez obtenir plus sur
+
+189
+00:11:39.000 --> 00:11:42.000
+Il y a à utiliser les deux côtés du disque, et il y a une certaine controverse sur
+
+190
+00:11:42.000 --> 00:11:45.001
+Que ce soit ou non, c&#x27;est une bonne idée et si un disque à deux côtés est aussi fiable.
+
+191
+00:11:46.000 --> 00:11:46.001
+Quel est votre point de vue sur cela ?
+
+192
+00:11:47.001 --> 00:11:52.001
+Eh bien, je ne suis pas sûr de ce qui est disponible maintenant, s&#x27;il est plus fiable ou si c&#x27;est
+
+193
+00:11:52.001 --> 00:11:55.000
+moins fiable ou pas, mais il n&#x27;y a pas de raison fondamentale.
+
+194
+00:11:55.001 --> 00:11:57.001
+Je ne crois pas pourquoi un double-side ne devrait pas être le même
+
+195
+00:11:57.001 --> 00:11:59.001
+Confiable en tant qu’un seul côté.
+
+196
+00:11:59.001 --> 00:12:04.001
+Je pense que peut-être certains vendeurs dans l&#x27;industrie ont étendu la technologie plus loin
+
+197
+00:12:04.001 --> 00:12:06.001
+Ce qu’ils devaient et ne faisaient pas autre chose.
+
+198
+00:12:07.000 --> 00:12:11.000
+Et en conséquence, un floppy de densité double-site, double-track a un mauvais nom.
+
+199
+00:12:11.001 --> 00:12:14.001
+Et dans certains de ces cas, ils ne sont probablement pas aussi fiables qu&#x27;un bon vieux 48
+
+200
+00:12:14.001 --> 00:12:18.001
+-track-per-inch à côté unique, mais il n&#x27;y a pas de technique fondamentale
+
+201
+00:12:18.001 --> 00:12:20.001
+Pourquoi ils ne devraient pas être aussi fiables.
+
+202
+00:12:22.001 --> 00:12:27.000
+Et du point de vue d’un utilisateur, il y a une grande différence dans la qualité de
+
+203
+00:12:27.000 --> 00:12:29.000
+Un disque mini floppy que vous achetez ?
+
+204
+00:12:30.001 --> 00:12:32.000
+Gee, je ne sais pas. Je n’achète pas beaucoup.
+
+205
+00:12:33.001 --> 00:12:39.000
+Mais je veux dire, dans la technologie de la fabrication, le milieu lui-même, je veux, vous
+
+206
+00:12:39.000 --> 00:12:41.001
+savoir, il y a différents rangs de prix et ainsi de suite, et du point de vue d&#x27;un utilisateur
+
+207
+00:12:41.001 --> 00:12:43.000
+Est-ce que tout le monde est le même ou pas le même ?
+
+208
+00:12:43.000 --> 00:12:46.000
+Je ne pouvais vraiment pas vous dire. Je suis sûre que Gary est plus familière avec ce que je suis,
+
+209
+00:12:46.000 --> 00:12:50.000
+Mais je n&#x27;utilise pas beaucoup de floppies, et donc je ne pouvais vraiment pas vous dire.
+
+210
+00:12:50.000 --> 00:12:51.000
+Gary, tu peux me le dire ?
+
+211
+00:12:51.001 --> 00:12:55.000
+Je n&#x27;ai pas eu de problèmes particuliers avec
+
+212
+00:12:55.000 --> 00:12:57.000
+Les médias que j’ai traversés au fil des ans.
+
+213
+00:12:57.000 --> 00:12:59.001
+J’ai trouvé une fiabilité inhérente dans tout cela.
+
+214
+00:13:00.000 --> 00:13:03.001
+Je pense, comme Alan a mentionné, il est basé principalement sur le type d&#x27;électronique
+
+215
+00:13:03.001 --> 00:13:05.000
+Les gens se mettent dans ces machines.
+
+216
+00:13:05.001 --> 00:13:07.001
+Ok, les gars, et nous allons prendre une courte pause.
+
+217
+00:13:07.001 --> 00:13:11.000
+En un moment, nous serons rejoints par un homme de Memorex, et vous serez
+
+218
+00:13:11.000 --> 00:13:14.000
+Vous pouvez décider pour vous-même s&#x27;il est ici vivant ou sur le tape.
+
+219
+00:13:22.000 --> 00:13:25.000
+Il s’agit de Frank Sordello de Memorex.
+
+220
+00:13:25.000 --> 00:13:29.000
+Frank est le vice-président des entreprises pour la technologie là-bas, comme Alan Shugart.
+
+221
+00:13:29.000 --> 00:13:31.001
+Frank était avec IBM de retour quand, je crois.
+
+222
+00:13:32.000 --> 00:13:36.000
+Et aussi, Frank est titulaire de 38 brevets en magnétique
+
+223
+00:13:36.000 --> 00:13:37.001
+Technologie d’enregistrement et de disque.
+
+224
+00:13:38.000 --> 00:13:38.001
+Gary, tu veux commencer ?
+
+225
+00:13:39.000 --> 00:13:41.000
+Avec un fond comme celui-ci, je suis sûr que vous pouvez donner
+
+226
+00:13:41.000 --> 00:13:43.000
+Une très bonne idée de ce qui se passe.
+
+227
+00:13:43.000 --> 00:13:46.000
+Frank, vous avez un certain nombre de différents types de panneaux ici.
+
+228
+00:13:46.000 --> 00:13:47.001
+Pouvez-vous nous dire un peu de ce que vous avez ?
+
+229
+00:13:47.001 --> 00:13:48.000
+et certainement.
+
+230
+00:13:49.001 --> 00:13:55.000
+La plaque avec le substrat gros que nous voyons ici est notre dernier produit
+
+231
+00:13:55.000 --> 00:13:57.000
+Plateau de diamètre de 14 pouces.
+
+232
+00:13:58.000 --> 00:14:04.000
+Pour la société Memorex, il s&#x27;agit du 3680 1. 2 gigabytes par
+
+233
+00:14:04.000 --> 00:14:06.000
+Le fichier spindle disque.
+
+234
+00:14:06.000 --> 00:14:07.001
+Peut-on le récupérer, peut-être Frank ?
+
+235
+00:14:07.001 --> 00:14:09.000
+Nous recevons une image de ce que vous parlez.
+
+236
+00:14:09.001 --> 00:14:09.001
+et certainement.
+
+237
+00:14:10.001 --> 00:14:16.001
+Les éléments clés avec la dernière technologie de fichiers de disque de haute performance sont :
+
+238
+00:14:16.001 --> 00:14:21.000
+les adjectifs gros et minces, gros substrates, c&#x27;est la grosseur de la
+
+239
+00:14:21.000 --> 00:14:25.000
+Substrate d&#x27;aluminium, et les têtes de film minces qui vont avec elle.
+
+240
+00:14:26.000 --> 00:14:30.001
+Avec cela, nous pouvons stocker cette capacité que j’ai mentionnée, qui est
+
+241
+00:14:30.001 --> 00:14:36.000
+équivalent à tous les mots et lettres dans quatre ensembles complets d&#x27;encyclopédie,
+
+242
+00:14:36.000 --> 00:14:40.001
+Britannica, Americana, Book of Knowledge, et peut-être même les Funkenwagnalls.
+
+243
+00:14:41.000 --> 00:14:42.001
+Sur ce plateau ?
+
+244
+00:14:42.001 --> 00:14:45.001
+Non, sur neuf plaques d&#x27;un singe dans l&#x27;appareil.
+
+245
+00:14:47.001 --> 00:14:49.001
+Et puis, qu’est-ce que nous avons ici ?
+
+246
+00:14:50.000 --> 00:14:56.000
+Eh bien, il s&#x27;agit d&#x27;un substrat plus mince, substrat d&#x27;aluminium de 75 millimètres, huit pouces
+
+247
+00:14:56.000 --> 00:15:00.001
+Plateau de disque qui est utilisé dans certains des produits les plus petits de la journée.
+
+248
+00:15:01.000 --> 00:15:06.001
+Et voici les panneaux de disque de cinq et un quart pouces qui sont utilisés dans le
+
+249
+00:15:06.001 --> 00:15:08.000
+C’est ce qu’on appelle les Winchester mini drives.
+
+250
+00:15:08.000 --> 00:15:11.000
+C’est ce que nous parlons ici.
+
+251
+00:15:11.001 --> 00:15:11.001
+Oui oui.
+
+252
+00:15:12.000 --> 00:15:15.001
+C’est un oxide particulaire tout comme ces plaques sont.
+
+253
+00:15:16.000 --> 00:15:20.000
+Ce sont des plateaux de cinéma minces, qui est la prochaine génération de plateaux.
+
+254
+00:15:21.001 --> 00:15:26.001
+Maintenant, vous avez mentionné, Frank, médium gros ici et tête de film mince
+
+255
+00:15:26.001 --> 00:15:28.001
+La technologie . Dites-nous ce qui est exact.
+
+256
+00:15:28.001 --> 00:15:32.001
+Tout à droite, les têtes sont essentiellement un ongle d&#x27;encre avec des câbles enveloppés autour d&#x27;eux.
+
+257
+00:15:32.001 --> 00:15:36.000
+La technologie se compose de la taille du ongle.
+
+258
+00:15:36.001 --> 00:15:42.000
+Pour placer 15 000 bits par pouce le long de la circonférence de la plaque,
+
+259
+00:15:42.001 --> 00:15:45.001
+la taille du ongle, la couverture équivalente autour de la
+
+260
+00:15:45.001 --> 00:15:47.001
+Les ongles doivent être très, très petits.
+
+261
+00:15:48.001 --> 00:15:53.001
+Actuellement, les produits de tête ferrite, et actuellement au cours des huit dernières années, ont
+
+262
+00:15:53.001 --> 00:15:58.000
+Il est fabriqué en laissant et en brisant et en mécanisant les dimensions géométriques de
+
+263
+00:15:58.000 --> 00:16:00.000
+C’est ce qu’on appelle, cité, ongle, non cité.
+
+264
+00:16:00.001 --> 00:16:06.001
+L&#x27;industrie des semi-conducteurs nous a enseigné comment mettre un ordinateur sur un chip en utilisant
+
+265
+00:16:06.001 --> 00:16:11.000
+photolithographie et techniques de dépôt, techniques de déposition de film minces.
+
+266
+00:16:11.001 --> 00:16:16.000
+Par conséquent, la technologie de tête de film mince consiste à fabriquer l&#x27;équivalent
+
+267
+00:16:16.000 --> 00:16:23.000
+de l&#x27;enveloppe, en utilisant la photolithographie pour obtenir les dimensions qui sont dans la
+
+268
+00:16:23.000 --> 00:16:27.001
+millions de tonnes d&#x27;un pouce, et répétitivité et production en masse.
+
+269
+00:16:28.000 --> 00:16:30.000
+Est-ce qu&#x27;un petit film est en tête
+
+270
+00:16:30.000 --> 00:16:31.001
+Il y a ? Peut-être que vous pourriez nous montrer ce que ça ressemble.
+
+271
+00:16:31.001 --> 00:16:37.000
+Oui oui. Il s&#x27;agit de l&#x27;assemblage du bras de tête d&#x27;enregistrement magnétique de 3680s.
+
+272
+00:16:38.000 --> 00:16:44.000
+Il y a quatre têtes à la fin. Les deux premiers services sur la surface inférieure
+
+273
+00:16:44.000 --> 00:16:46.000
+sur le disque supérieur.
+
+274
+00:16:46.000 --> 00:16:50.001
+Les deux bas servent la surface supérieure du disque inférieur.
+
+275
+00:16:52.000 --> 00:16:59.000
+Ces têtes sont composées d&#x27;un slider à air, qui a un paire d&#x27;ailes
+
+276
+00:16:59.000 --> 00:17:05.000
+ou ski, et à l&#x27;arrière, très difficile à voir, mais peut être vu dans les photos,
+
+277
+00:17:05.001 --> 00:17:09.001
+Les micro photographies sont des éléments de film minces qui ont été déposés.
+
+278
+00:17:11.000 --> 00:17:16.000
+Ces appareils peuvent enregistrer 12. 5 millions de bits pour chaque
+
+279
+00:17:16.000 --> 00:17:17.001
+1 cm de surface du disque.
+
+280
+00:17:19.000 --> 00:17:21.001
+Fred, vous sentez-vous que vous allez atteindre tout type de limitations mécaniques?
+
+281
+00:17:21.001 --> 00:17:24.000
+voici à un moment donné, ou vous serez en mesure de simplement garder
+
+282
+00:17:24.000 --> 00:17:25.001
+Est-ce que cela est plus dense, plus densif ?
+
+283
+00:17:26.000 --> 00:17:31.000
+Bien, nous avons projeté dans nos plans stratégiques quelles sont les limites.
+
+284
+00:17:32.000 --> 00:17:35.000
+Il y a trois mesures clés dans n&#x27;importe quel produit de fichier disque.
+
+285
+00:17:35.000 --> 00:17:39.000
+Ils sont composés du nombre de traces par pouce le long du rayon du disque.
+
+286
+00:17:39.001 --> 00:17:41.001
+Le deuxième est le nombre de bits par pouce.
+
+287
+00:17:41.001 --> 00:17:43.000
+autour de la circonférence du disque.
+
+288
+00:17:43.001 --> 00:17:47.000
+Et le troisième paramètre clé est le produit des deux, les traces
+
+289
+00:17:47.000 --> 00:17:48.001
+par inch les bits par inch.
+
+290
+00:17:49.001 --> 00:17:53.001
+Sur les produits actuels qui sont fabriqués en masse avec des têtes de film minces et avancées
+
+291
+00:17:53.001 --> 00:18:00.001
+médias particulaires, nous avons 800 traces par pouce, 15,200
+
+292
+00:18:00.001 --> 00:18:04.000
+bits par pouce, et le produit sort 12. 5 millions de bits par inch carré.
+
+293
+00:18:04.000 --> 00:18:10.000
+Grâce à des ténèbres de cinéma plus fines et des médias de cinématographique plus fines qui seront
+
+294
+00:18:10.000 --> 00:18:16.000
+Début bientôt, que la densité aérienne changera par un facteur de 16 fois.
+
+295
+00:18:16.001 --> 00:18:23.000
+Nous avons les principes par lesquels nous pouvons augmenter la densité aérienne de 16 fois en
+
+296
+00:18:23.000 --> 00:18:27.000
+l&#x27;ordre de 200 millions de bits par inch carré.
+
+297
+00:18:27.001 --> 00:18:31.000
+Quel est le facteur de coût impliqué dans cette technologie de tête mince?
+
+298
+00:18:31.000 --> 00:18:36.000
+Eh bien, si nous regardons la tête d&#x27;enregistrement, elle se compose de deux parties, l&#x27;air portant
+
+299
+00:18:36.000 --> 00:18:40.000
+Slider, qui est la partie la plus grande que vous voyez, puis le transducteur magnétique,
+
+300
+00:18:40.000 --> 00:18:43.001
+Ce que j&#x27;ai appelé le ongle de baisse plus tôt, partie qui est sur le dos.
+
+301
+00:18:44.000 --> 00:18:50.000
+Si nous le comparons aux chefs de ferrite de Winchester de la production de masse d&#x27;aujourd&#x27;hui et
+
+302
+00:18:50.000 --> 00:18:55.001
+Les technologies plus anciennes, nous trouvons que le coût de l&#x27;air portant le slider est environ le même.
+
+303
+00:18:56.000 --> 00:19:01.000
+Le transducteur aura finalement un coût inférieur tout comme le coût des tubes de vide
+
+304
+00:19:01.000 --> 00:19:03.000
+moins que les dispositifs d’État solides.
+
+305
+00:19:03.001 --> 00:19:09.001
+Le facteur pour le coût du produit cinq, six ans à partir de maintenant sera dans l&#x27;ordre de 3 à
+
+306
+00:19:09.001 --> 00:19:13.000
+5 % moins, mais pas beaucoup moins.
+
+307
+00:19:13.001 --> 00:19:19.000
+Cependant, si vous avez essayé de fabriquer une tête de ferrite pour effectuer à la capacité
+
+308
+00:19:19.000 --> 00:19:24.000
+de la tête du film mince, alors l&#x27;image de coût serait inversée.
+
+309
+00:19:24.000 --> 00:19:28.000
+Lorsque nous parlons de la technologie de tête cinématographique mince, qui ne concerne que
+
+310
+00:19:28.000 --> 00:19:31.000
+Les disques dur de Winchester, ou cela a-t-il une application pour les floppies?
+
+311
+00:19:31.000 --> 00:19:33.001
+Il s’applique à tous les enregistrements magnétiques.
+
+312
+00:19:34.001 --> 00:19:40.000
+Les matériaux de film minces, qui se prêtent si bien pour l&#x27;enregistrement magnétique,
+
+313
+00:19:40.001 --> 00:19:44.001
+Ils sont relativement doux et, par conséquent, ils ont un problème de port.
+
+314
+00:19:45.001 --> 00:19:52.000
+Le disque rigide dispose des slides portant l&#x27;air, qui permettent aux têtes de voler à 13
+
+315
+00:19:52.000 --> 00:19:56.000
+Jusqu&#x27;à 15 millions d&#x27;un centimètre au-dessus de la surface, il n&#x27;y a donc pas de déchets.
+
+316
+00:19:56.001 --> 00:19:59.000
+Par conséquent, les ténèbres cinématographiques font leur premier debut là.
+
+317
+00:19:59.001 --> 00:20:04.000
+Lorsque le problème de la portée est résolu, les ténèbres de film fin trouveront son chemin à travers
+
+318
+00:20:04.000 --> 00:20:06.001
+floppies, disques de tape, tout enregistrement magnétique.
+
+319
+00:20:06.001 --> 00:20:09.001
+Pour essayer d&#x27;apprécier cette distance, je pense que vous avez une analogie sur un
+
+320
+00:20:09.001 --> 00:20:11.001
+L’avion, n’est-ce pas vous, pour nous aider à comprendre cela ?
+
+321
+00:20:11.001 --> 00:20:13.000
+Oui, c’est un classique.
+
+322
+00:20:13.001 --> 00:20:17.001
+Les produits de huit ans auparavant, la hauteur volante était de 20 millions de
+
+323
+00:20:17.001 --> 00:20:24.001
+Un centimètre, au-dessus de la surface de la Terre.
+
+324
+00:20:25.001 --> 00:20:30.001
+Les produits qui sont exposés ici, volant à 13 micro-inch, cette dimension est
+
+325
+00:20:30.001 --> 00:20:33.001
+plus près de 1 sixième d&#x27;un centimètre au-dessus de la surface de la Terre.
+
+326
+00:20:34.001 --> 00:20:38.000
+Alan, de votre point de vue et de votre fin de l&#x27;entreprise, c&#x27;est un
+
+327
+00:20:38.000 --> 00:20:40.000
+Un facteur majeur dans ce que vous faites ?
+
+328
+00:20:41.000 --> 00:20:45.001
+Actuellement, actuellement, ce n&#x27;est pas, parce que les densités d&#x27;enregistrement que nous avons,
+
+329
+00:20:45.001 --> 00:20:48.001
+Ce que nous avons besoin dans nos produits, nous n’avons pas besoin de ce type de technologie.
+
+330
+00:20:48.001 --> 00:20:52.001
+À un moment donné dans le futur, nous espérons que les ténèbres cinématographiques seront utilisées dans notre
+
+331
+00:20:52.001 --> 00:20:55.000
+Des produits très petits et très coûteux aussi.
+
+332
+00:20:55.001 --> 00:21:02.001
+Il est intéressant de noter que ceci est 1. 2 gigabytes par spindle, ce qui est,
+
+333
+00:21:03.000 --> 00:21:06.001
+Si nous revenons à notre discussion originale sur les disques vidéo, c&#x27;est juste sur
+
+334
+00:21:06.001 --> 00:21:08.001
+La même taille que ce disque vidéo, environ.
+
+335
+00:21:09.001 --> 00:21:13.000
+Et il y a eu beaucoup de discussion dans l&#x27;industrie sur la façon dont vous faites quelques
+
+336
+00:21:13.000 --> 00:21:15.001
+la simulation des disques vidéo, et peut-être que cela fait partie de la réponse, est dans votre
+
+337
+00:21:15.001 --> 00:21:18.000
+2 gigabytes par spindle.
+
+338
+00:21:19.001 --> 00:21:22.000
+Très vite, nous n’avons que très peu de temps. Cette
+
+339
+00:21:22.000 --> 00:21:23.001
+C&#x27;est quelque chose que j&#x27;ai pensé que ça vaut la peine de regarder.
+
+340
+00:21:24.000 --> 00:21:27.001
+C&#x27;est une carte laser, que nous avons juste à regarder, qui semble avoir deux
+
+341
+00:21:27.001 --> 00:21:29.000
+Megabytes d’informations à ce sujet.
+
+342
+00:21:29.001 --> 00:21:32.001
+Frank, voyez-vous les appareils de stockage optique en remplacement de
+
+343
+00:21:32.001 --> 00:21:34.000
+Un dispositif de stockage magnétique ?
+
+344
+00:21:35.000 --> 00:21:41.001
+Oui, quand une chose se produit, quand l&#x27;érasable, en temps réel érasable,
+
+345
+00:21:42.000 --> 00:21:47.001
+Tout comme l&#x27;enregistrement magnétique est éteint en temps réel, les médias optiques font son début,
+
+346
+00:21:48.000 --> 00:21:53.000
+Je crois alors que nous verrons le déclin exponentiel au moment de l&#x27;enregistrement magnétique.
+
+347
+00:21:54.000 --> 00:22:00.001
+L&#x27;enregistrement optique nous donne la promesse de plus de 2 milliards de bits
+
+348
+00:22:00.001 --> 00:22:02.000
+par centimètre carré.
+
+349
+00:22:03.000 --> 00:22:09.000
+Les premiers appareils optiques non érasables sont dans la gamme d&#x27;un quart de milliard,
+
+350
+00:22:09.000 --> 00:22:13.000
+C’est-à-dire, 250 millions à 500 millions de bits par centimètre carré déjà.
+
+351
+00:22:13.001 --> 00:22:15.001
+Frank, j&#x27;ai besoin d&#x27;interrompre parce que nous sommes hors de temps.
+
+352
+00:22:15.001 --> 00:22:19.000
+Frank Sordello de Memorex et Alan Shugart de Seagate, merci beaucoup d&#x27;être
+
+353
+00:22:19.000 --> 00:22:21.000
+avec nous, et j&#x27;espère que vous nous rejoindrez la semaine prochaine
+
+354
+00:22:21.000 --> 00:22:22.001
+Une autre édition de The Computer Chronicles.
+
+355
+00:23:02.001 --> 00:23:08.000
+Les créateurs d&#x27;outils de programmation visuelle pour le développement de logiciels sont heureux de
+
+356
+00:23:08.000 --> 00:23:12.000
+fournir un financement majeur pour The Computer Chronicles, l&#x27;histoire
+
+357
+00:23:12.000 --> 00:23:14.000
+de cette évolution continue.
