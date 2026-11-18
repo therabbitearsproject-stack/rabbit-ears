@@ -1,0 +1,1985 @@
+WEBVTT
+
+1
+00:00:10.001 --> 00:00:14.001
+Olhe para os livros de computador em qualquer livraria e você certamente encontrará um
+
+2
+00:00:14.001 --> 00:00:19.000
+Escudo cheio de livros em macros porque macros são grandes ferramentas, mas muito poucos
+
+3
+00:00:19.000 --> 00:00:20.001
+As pessoas realmente sabem como usá-las.
+
+4
+00:00:21.000 --> 00:00:24.001
+Na verdade, neste livro, o autor diz que os macros mudaram minha vida.
+
+5
+00:00:25.000 --> 00:00:26.001
+Mas os macros também podem mudar sua vida.
+
+6
+00:00:26.001 --> 00:00:30.000
+Continue a olhar enquanto apresentamos um guia para macros sobre isso
+
+7
+00:00:30.000 --> 00:00:31.001
+Edição das crônicas de computador.
+
+8
+00:00:54.001 --> 00:00:59.001
+As crônicas de computador são feitas possíveis por Leading Edge, fabricantes da IBM
+
+9
+00:00:59.001 --> 00:01:04.000
+Sistemas de computador compatíveis, incluindo Lotus look-alike
+
+10
+00:01:04.000 --> 00:01:08.000
+Processamento com correção de espelhos, software de comunicação e Hayes compatível
+
+11
+00:01:08.000 --> 00:01:13.000
+1 mil modem. Leading Edge com mais de 1000 centros de serviço em todo o país.
+
+12
+00:01:15.000 --> 00:01:18.000
+O financiamento adicional é fornecido por McGraw Hill, editores da Byte.
+
+13
+00:01:18.001 --> 00:01:22.001
+Artigos técnicos detalhados da Byte sobre novos hardware, software e cobertura de idiomas
+
+14
+00:01:22.001 --> 00:01:24.001
+desenvolvimentos em tecnologias informáticas em todo o mundo.
+
+15
+00:01:31.001 --> 00:01:35.000
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e este é Gary Kildall.
+
+16
+00:01:35.000 --> 00:01:37.000
+Gary eu estava olhando para macro livros
+
+17
+00:01:37.000 --> 00:01:39.000
+antes e esta é uma das coisas que eu estava olhando.
+
+18
+00:01:39.000 --> 00:01:42.001
+Há cerca de 75 macros diferentes neste livro que variam de um menu completo
+
+19
+00:01:42.001 --> 00:01:47.000
+sistema de banco de dados conduzido para um macro que ajuda você a escrever outros macros. Muito de
+
+20
+00:01:47.000 --> 00:01:50.001
+As pessoas pensam em um macro como apenas uma série de comandos em um teclado, mas na verdade
+
+21
+00:01:50.001 --> 00:01:53.001
+Os macros realmente se tornaram uma espécie de linguagem de programação, não é?
+
+22
+00:01:53.001 --> 00:01:56.001
+Bem, Stuart isso é porque eles vieram de idiomas de programação. No início do
+
+23
+00:01:56.001 --> 00:01:59.001
+dias de assembléia língua que levou talvez 50 ou 100 instruções para fazer apenas
+
+24
+00:01:59.001 --> 00:02:02.001
+As coisas mais simples. Então, o que um programador faria é apenas colocar um
+
+25
+00:02:02.001 --> 00:02:04.000
+Nome na sequência das instruções.
+
+26
+00:02:04.001 --> 00:02:07.001
+Cada vez que o assembleia viu esse nome, saem as instruções. E assim é
+
+27
+00:02:07.001 --> 00:02:11.000
+tipo de subroutina na forma como ela parece, mas é muito diferente na
+
+28
+00:02:11.000 --> 00:02:15.000
+subroutina porque se expande a cada vez que você vê a palavra. E o que aconteceu com
+
+29
+00:02:15.000 --> 00:02:19.001
+O curso com programas de aplicação é que agora um operador, um usuário pode adicionar
+
+30
+00:02:19.001 --> 00:02:22.000
+comando adicional e estrutura para o programa de base.
+
+31
+00:02:22.001 --> 00:02:25.001
+Gary vamos conhecer o autor deste livro particular hoje e dar uma olhada
+
+32
+00:02:25.001 --> 00:02:28.000
+em alguns dos macros que podem ajudá-lo como um usuário de computador. Vamos conhecer alguns
+
+33
+00:02:28.000 --> 00:02:32.000
+pessoas comuns que escreveram alguns macros muito poderosos para seu próprio uso e
+
+34
+00:02:32.000 --> 00:02:35.001
+Vamos dar uma olhada em um jogo de aventura que você joga em um spreadsheet, um jogo escrito
+
+35
+00:02:35.001 --> 00:02:37.000
+Tudo em sinfonia macros.
+
+36
+00:02:37.001 --> 00:02:40.001
+Agora você não precisa ser um gênio de computador para escrever um macro como encontramos
+
+37
+00:02:40.001 --> 00:02:42.000
+Este é o relatório da Wendy Woods.
+
+38
+00:02:44.001 --> 00:02:49.001
+Uma bateria que faz operação especializada na técnica japonesa Raku pode ser a
+
+39
+00:02:49.001 --> 00:02:54.000
+No último lugar, a maioria das pessoas esperaria encontrar computadores. Mas Evans cerâmica em
+
+40
+00:02:54.000 --> 00:02:58.001
+distante Healesburg, Califórnia é realmente um lugar assim graças à diligência de
+
+41
+00:02:58.001 --> 00:03:04.001
+Leslie Airy, o livro. Evans Ceramics emprega 25 pessoas e embarca cerca de US$ 100
+
+42
+00:03:04.001 --> 00:03:08.001
+Valor de mil cerâmicas fina todos os meses. Isso é um monte de bookkeeping.
+
+43
+00:03:09.000 --> 00:03:15.000
+O que fazemos agora é que lidamos com todos os nossos descontos, pagamentos, listas de fornecedores,
+
+44
+00:03:16.001 --> 00:03:23.001
+pagamento, nossa entrada de ordem de faturação. Há apenas muito pouco que não está lá.
+
+45
+00:03:24.000 --> 00:03:28.001
+Eu não acho que, como nossa empresa cresceu, podíamos ter mantido o nosso pessoal para onde
+
+46
+00:03:28.001 --> 00:03:33.000
+É sem o computador. Quando eu comecei eu não sabia nada sobre computadores, exceto
+
+47
+00:03:33.000 --> 00:03:39.000
+Como ligá-los e eu tenho os manuais e eu leio e tudo o que tenho que fazer é
+
+48
+00:03:39.000 --> 00:03:45.001
+Digite o que eu quero e, em seguida, toque no teclado direito e Alt F9 e uma letra ou
+
+49
+00:03:45.001 --> 00:03:50.000
+Um número que eu tenho nomeado e ele vai executar todas as teclas novamente.
+
+50
+00:03:51.000 --> 00:03:55.000
+O processo de fazer o salário sozinho costumava levar um dia. Os macros de Leslie
+
+51
+00:03:55.000 --> 00:03:59.001
+programado em seu software integrado agora faz o salário em apenas dois
+
+52
+00:03:59.001 --> 00:04:04.001
+às horas. Leslie programa um macro para qualquer tarefa que leva mais de cinco teclas
+
+53
+00:04:04.001 --> 00:04:09.000
+e seu trabalho tornou a automação do salário tão simples que até mesmo um novo escritório
+
+54
+00:04:09.000 --> 00:04:10.001
+Os trabalhadores podem aprender com facilidade.
+
+55
+00:04:11.001 --> 00:04:15.001
+Evan Ceramics tem uma filosofia interessante. Eles acreditam que seus funcionários são
+
+56
+00:04:15.001 --> 00:04:19.001
+seus ativos mais valiosos e quanto menos tempo eles têm para fazer repetitivamente
+
+57
+00:04:19.001 --> 00:04:23.000
+Quanto mais tempo eles precisam ser felizes e produtivos.
+
+58
+00:04:35.001 --> 00:04:39.000
+Junte-se a nós agora é o autor do livro Gary e eu estava apenas olhando para Alan
+
+59
+00:04:39.000 --> 00:04:41.001
+Simpson e sentado ao lado de Alan é Lynn Hughes um financeiro
+
+60
+00:04:41.001 --> 00:04:43.001
+Analista com TimeNet. O Gary?
+
+61
+00:04:44.000 --> 00:04:47.000
+Alan não é apenas um autor, mas também ensina cursos de computador, então eu pensei que eu poderia
+
+62
+00:04:47.000 --> 00:04:49.000
+Que ele nos ensine sobre o que todos os macros são sobre.
+
+63
+00:04:49.001 --> 00:04:53.000
+Bem, em um nutshell um macro é projetado para salvar você alguns
+
+64
+00:04:53.000 --> 00:04:55.000
+trabalho, salve-lhe alguns keystrokes.
+
+65
+00:04:55.000 --> 00:04:58.001
+Por exemplo, você pode ter que inserir regularmente a hora e a data em um
+
+66
+00:04:58.001 --> 00:05:03.001
+O spreadsheet. Ao criar um macro, você pode digitar uma chave única que irá digitar na
+
+67
+00:05:03.001 --> 00:05:05.001
+A data atual e a data atual.
+
+68
+00:05:05.001 --> 00:05:08.000
+Agora você pode fazer muitos macros como este para escrever
+
+69
+00:05:08.000 --> 00:05:10.000
+milhares de tecidos, se necessário.
+
+70
+00:05:10.001 --> 00:05:14.000
+Outra possibilidade é que você pode usar macros para estender o
+
+71
+00:05:14.000 --> 00:05:15.001
+construído nas capacidades de Lotus.
+
+72
+00:05:16.001 --> 00:05:20.001
+Por exemplo, Lotus não tem maneira de apenas exibir o dia da semana para um
+
+73
+00:05:20.001 --> 00:05:26.001
+data específica, mas criando um macro você pode apenas ter um
+
+74
+00:05:26.001 --> 00:05:28.000
+Uma fórmula que explica isso.
+
+75
+00:05:28.001 --> 00:05:31.000
+Então aqui escrevo uma chave e percebo que hoje é sábado.
+
+76
+00:05:31.000 --> 00:05:34.000
+Então você tem, essencialmente, um pequeno programa lá que é figurado fora do
+
+77
+00:05:34.000 --> 00:05:35.001
+meses e dias e assim por diante e dias de computador agora.
+
+78
+00:05:35.001 --> 00:05:38.001
+O que acontece é a data de série, os módulos para a data da série.
+
+79
+00:05:38.001 --> 00:05:41.000
+Que é uma função que não estava sentado no Lotus até que você criou o macro.
+
+80
+00:05:41.000 --> 00:05:42.000
+É algo que devemos criar.
+
+81
+00:05:43.001 --> 00:05:49.001
+Você pode fazê-lo e criar capacidades que
+
+82
+00:05:49.001 --> 00:05:54.000
+Não foram apenas naturalmente construídos em Lotus.
+
+83
+00:05:55.000 --> 00:05:58.001
+Por exemplo, todos sabem que o Lotus faz slides e um usuário experiente pode ir
+
+84
+00:05:58.001 --> 00:06:01.001
+de slide para slide, selecionando as opções de menu corretas.
+
+85
+00:06:01.001 --> 00:06:06.001
+Ao fazer um macro para fazer que você pode criar um pequeno slideshow macro que por
+
+86
+00:06:06.001 --> 00:06:11.001
+pressionando uma única chave tira uma série de slides ou gráficos e você pode simplesmente ir
+
+87
+00:06:11.001 --> 00:06:17.001
+através do seu descanso pressionando uma única chave novamente e trabalhando o seu caminho de volta para o
+
+88
+00:06:17.001 --> 00:06:19.000
+Obras originais.
+
+89
+00:06:20.000 --> 00:06:23.000
+Quantas teclas você está economizando lá em um exemplo como este por exemplo?
+
+90
+00:06:23.001 --> 00:06:25.001
+Neste exemplo, talvez 50 ou 60 keystrokes.
+
+91
+00:06:26.000 --> 00:06:28.000
+Você se transformou em um golpe da barra espacial.
+
+92
+00:06:29.000 --> 00:06:32.000
+E, mais uma vez, é útil para as pessoas, o usuário que
+
+93
+00:06:32.000 --> 00:06:33.001
+Não tem experiência com 1, 2, 3.
+
+94
+00:06:34.000 --> 00:06:40.001
+A aplicação mais sofisticada provavelmente é de desenvolver completamente
+
+95
+00:06:40.001 --> 00:06:45.001
+Sistema de menu personalizado que um iniciante pode usar.
+
+96
+00:06:46.000 --> 00:06:48.000
+Por exemplo, aqui está um para gerenciar uma base de dados.
+
+97
+00:06:49.000 --> 00:06:53.001
+Nós levamos o menu personalizado e os menus Lotus estão agora desaparecidos.
+
+98
+00:06:53.001 --> 00:06:55.000
+Eles são invisíveis ao usuário.
+
+99
+00:06:55.000 --> 00:06:56.000
+Você pode obtê-los se quiser.
+
+100
+00:06:56.001 --> 00:07:01.000
+E este menu personalizado permite-nos facilmente adicionar novos registros a esta base de dados que
+
+101
+00:07:01.000 --> 00:07:03.000
+É possível conter nomes e endereços.
+
+102
+00:07:03.001 --> 00:07:06.001
+Divida-os em código zip ou ordem alfabética.
+
+103
+00:07:07.001 --> 00:07:09.001
+Escolha registros especiais.
+
+104
+00:07:10.001 --> 00:07:13.001
+Imprimir etiquetas de correio, um diretório ou letras de formulário.
+
+105
+00:07:14.001 --> 00:07:16.000
+Salve o trabalho atual.
+
+106
+00:07:16.001 --> 00:07:20.000
+Então, essencialmente, qualquer um pode usar isso sem saber quaisquer comandos e este
+
+107
+00:07:20.000 --> 00:07:22.000
+Ele salva centenas e centenas de tecidos.
+
+108
+00:07:22.001 --> 00:07:24.001
+Como é o corpo do macro?
+
+109
+00:07:25.001 --> 00:07:29.001
+Bem, este é um bastante grande, então é um pouco mais complicado do que a maioria.
+
+110
+00:07:31.000 --> 00:07:33.000
+Mas posso mostrar-lhe a estrutura básica.
+
+111
+00:07:34.000 --> 00:07:37.000
+O que você fez aqui realmente Alan é realmente escrever uma nova aplicação, um novo pedaço de
+
+112
+00:07:37.000 --> 00:07:39.000
+Software dentro do Lotus usando os macros.
+
+113
+00:07:40.000 --> 00:07:43.001
+E aqui está o código, os macros para esse sistema personalizado.
+
+114
+00:07:44.000 --> 00:07:45.001
+Este é o nome dela.
+
+115
+00:07:45.001 --> 00:07:46.001
+Este é um menu.
+
+116
+00:07:47.000 --> 00:07:47.001
+O menu ajuda.
+
+117
+00:07:48.001 --> 00:07:51.000
+E estes são os nomes das subroutinas que lidam com os diferentes empregos.
+
+118
+00:07:51.000 --> 00:07:54.000
+Voltar para a última linha lá.
+
+119
+00:07:54.001 --> 00:07:59.001
+A palavra menu principal então é conhecida como 123 como parte de seu sistema macro.
+
+120
+00:07:59.001 --> 00:07:59.001
+É certo.
+
+121
+00:08:00.000 --> 00:08:03.000
+E ele substitui os nomes reais no próprio menu.
+
+122
+00:08:03.001 --> 00:08:06.001
+Bem, é um novo menu que o Lotus está ciente de está lá.
+
+123
+00:08:07.000 --> 00:08:08.001
+Alright Alan, como Gary disse que você é um
+
+124
+00:08:08.001 --> 00:08:10.000
+Cientista de computador, você sabe tudo isso.
+
+125
+00:08:10.001 --> 00:08:12.000
+Esperamos que você possa escrever macros.
+
+126
+00:08:12.000 --> 00:08:13.000
+Eu quero voltar a Lynn agora.
+
+127
+00:08:13.000 --> 00:08:17.000
+Lynn é uma pessoa normal que é apenas um usuário de computadores, mas ela foi capaz de descobrir
+
+128
+00:08:17.000 --> 00:08:19.001
+Como escrever um macro muito complexo com centenas e centenas de linhas.
+
+129
+00:08:19.001 --> 00:08:21.001
+Então Lynn se você pode tomar o teclado aqui.
+
+130
+00:08:22.000 --> 00:08:24.001
+Diga-nos o que seu problema foi e como você foi sobre resolvê-lo.
+
+131
+00:08:25.001 --> 00:08:31.000
+Estou trabalhando com uma estrutura orçamental muito grande para o nosso plano operacional de 1987.
+
+132
+00:08:31.001 --> 00:08:37.000
+E a nossa empresa é tão altamente estruturada, a estrutura é tão complexa que é
+
+133
+00:08:37.000 --> 00:08:39.000
+Apenas uma enorme quantidade de informações para trabalhar com.
+
+134
+00:08:39.001 --> 00:08:43.001
+E eu tenho estabelecido uma base de dados para lidar com a declaração de lucro e perda do nosso
+
+135
+00:08:43.001 --> 00:08:45.000
+Plano operacional de 1987.
+
+136
+00:08:45.000 --> 00:08:51.001
+E porque um ganho da estrutura é tão complexo, você tem que definir uma folha de trabalho
+
+137
+00:08:51.001 --> 00:08:55.001
+para inserir informações em sua base de dados ou para imprimir um relatório ou
+
+138
+00:08:55.001 --> 00:08:57.001
+para navegar através de suas informações.
+
+139
+00:08:58.000 --> 00:09:03.001
+E se você estava fazendo uma folha de trabalho separada para cada 125 departamentos e 30 rolos
+
+140
+00:09:03.001 --> 00:09:07.001
+Ups e não importa o que isso traduz, você estaria lá por horas.
+
+141
+00:09:07.001 --> 00:09:09.001
+Então, este macro economiza um pouco de tempo.
+
+142
+00:09:09.001 --> 00:09:10.000
+Oh absolutamente.
+
+143
+00:09:10.001 --> 00:09:12.000
+Então, o que o macro faz do que você escreveu?
+
+144
+00:09:13.000 --> 00:09:18.000
+O que faz é que formata a folha de trabalho para mim para que eu possa imprimir
+
+145
+00:09:18.000 --> 00:09:20.001
+Informações que estão dentro da base de dados ou entram novas
+
+146
+00:09:20.001 --> 00:09:22.000
+Números do orçamento para a base de dados.
+
+147
+00:09:22.001 --> 00:09:23.000
+Por que você não mostra isso?
+
+148
+00:09:24.001 --> 00:09:26.001
+O arquivo de banco de dados é chamado de orçamento.
+
+149
+00:09:28.000 --> 00:09:32.000
+E o que vamos fazer, vamos recuperar o arquivo que é chamado clint.
+
+150
+00:09:35.000 --> 00:09:38.001
+E isso vai demorar um momento, porque é uma grande folha de trabalho.
+
+151
+00:09:39.001 --> 00:09:42.000
+E o que eu fiz foi que eu carreguei o macro na
+
+152
+00:09:42.000 --> 00:09:44.000
+trabalho para que possamos ter uma olhada nisso.
+
+153
+00:09:46.001 --> 00:09:47.000
+Bem, o que temos agora?
+
+154
+00:09:47.001 --> 00:09:49.001
+Bem, este é o painel de entrada.
+
+155
+00:09:50.000 --> 00:09:53.000
+E se você pode ver a pergunta no fundo da tela ela está me perguntando
+
+156
+00:09:53.000 --> 00:09:54.001
+Orçamento para número de departamento.
+
+157
+00:09:55.000 --> 00:09:57.000
+E isso é um impulso que eu tenho lá.
+
+158
+00:09:58.001 --> 00:10:03.000
+E ele me pedirá que coloque a chave em um número de departamento e depois
+
+159
+00:10:03.000 --> 00:10:04.001
+Faça o meu trabalho com base nisso.
+
+160
+00:10:07.000 --> 00:10:08.001
+Temos o nosso número de departamento.
+
+161
+00:10:08.001 --> 00:10:11.000
+Agora é me perguntar quantos meses, um a doze.
+
+162
+00:10:11.000 --> 00:10:14.000
+Qualquer coisa menos de doze meses me dará uma escolha de quartos.
+
+163
+00:10:14.001 --> 00:10:17.000
+Então vamos colocar um lá e apenas ter um olhar.
+
+164
+00:10:17.001 --> 00:10:18.001
+Aqui está o nosso menu.
+
+165
+00:10:20.000 --> 00:10:26.000
+Agora você pode ver como eu mude o cursor não só muda a minha escolha de menu, mas também
+
+166
+00:10:26.000 --> 00:10:29.000
+Descrição direta sob a mudança é também me diz o que é
+
+167
+00:10:29.000 --> 00:10:30.001
+Nesse menu de escolha.
+
+168
+00:10:31.000 --> 00:10:32.001
+Esta é toda parte das complicações que você fez no próprio macro.
+
+169
+00:10:33.000 --> 00:10:35.000
+Isso é certo, sim, eu construí no macro.
+
+170
+00:10:35.000 --> 00:10:36.001
+Então, vamos escolher o primeiro trimestre.
+
+171
+00:10:38.001 --> 00:10:43.000
+Agora o que ele está fazendo é formatar com base no que eu disse.
+
+172
+00:10:43.000 --> 00:10:46.000
+Eu vou criar o orçamento para o departamento três quatro zero
+
+173
+00:10:46.000 --> 00:10:47.001
+4 de janeiro a março.
+
+174
+00:10:48.001 --> 00:10:51.001
+Em janeiro, fevereiro e março, por exemplo, é
+
+175
+00:10:51.001 --> 00:10:53.000
+Você está pronto para entrar em números huh?
+
+176
+00:10:53.001 --> 00:10:54.000
+Isso é correto.
+
+177
+00:10:54.001 --> 00:10:57.001
+Se você olhar para baixo no fundo da tela, você verá uma linha justamente acima do
+
+178
+00:10:57.001 --> 00:11:01.001
+A barra de comando e diz SD zero comma T quatro.
+
+179
+00:11:01.001 --> 00:11:05.001
+O que o T4 é um endereço.
+
+180
+00:11:05.001 --> 00:11:09.001
+É a célula T quatro dentro da folha de trabalho e é aí que eu tenho armazenado o
+
+181
+00:11:09.001 --> 00:11:12.000
+Definição e que é divisão três quatro oh quatro.
+
+182
+00:11:12.000 --> 00:11:15.000
+É realmente uma tarefa bastante complexa que está sendo executada.
+
+183
+00:11:15.000 --> 00:11:17.000
+É bastante claro que o macro é muito abrangente.
+
+184
+00:11:17.001 --> 00:11:21.000
+Você aprendeu a fazer tudo isso por si mesmo e você não teve nenhuma ajuda para fazê-lo.
+
+185
+00:11:21.000 --> 00:11:22.001
+Não foi um erro violino.
+
+186
+00:11:22.001 --> 00:11:25.000
+Então você sugere que outras pessoas tentem fazer macros por conta própria?
+
+187
+00:11:25.001 --> 00:11:27.000
+Oh absolutamente, absolutamente.
+
+188
+00:11:27.000 --> 00:11:28.001
+A poupança de tempo é imensurável.
+
+189
+00:11:29.000 --> 00:11:29.001
+Na verdade é.
+
+190
+00:11:29.001 --> 00:11:34.000
+Quando você está falando sobre o tempo tipicamente no passado as pessoas pensam em macros como
+
+191
+00:11:34.000 --> 00:11:37.000
+ser relativamente lento em comparação com o código compilado e coisas semelhantes.
+
+192
+00:11:37.001 --> 00:11:39.001
+Qual é o efeito que Alan tem no que diz respeito ao tempo?
+
+193
+00:11:40.000 --> 00:11:41.001
+Depende do que você a compara.
+
+194
+00:11:42.000 --> 00:11:45.000
+Se você compará-lo com o código compilado como você disse C programação ou
+
+195
+00:11:45.000 --> 00:11:47.000
+Pascal até parece muito lento.
+
+196
+00:11:47.001 --> 00:11:50.001
+Mas quando você compará-lo com o que é necessário para fazê-lo por conta própria e
+
+197
+00:11:50.001 --> 00:11:52.000
+Todas essas coisas são muito rápidas.
+
+198
+00:11:52.001 --> 00:11:54.001
+Em termos de tempo, quanto tempo isso faz
+
+199
+00:11:54.001 --> 00:11:56.000
+Você já escreveu esse macro?
+
+200
+00:11:56.000 --> 00:12:00.000
+Agora que eu escrevi isso eu diria 50% de um dia médio.
+
+201
+00:12:01.001 --> 00:12:06.000
+Então você diz quatro horas por dia no trabalho, desenvolvendo este único programa dentro?
+
+202
+00:12:06.000 --> 00:12:08.001
+Este ano, nesta época do ano.
+
+203
+00:12:08.001 --> 00:12:14.000
+Sim, tenho outros que me economizam mais 50% em cada tarefa.
+
+204
+00:12:14.000 --> 00:12:16.000
+E você escreveu isso dentro do VP Planner.
+
+205
+00:12:16.000 --> 00:12:16.001
+Isso é correto.
+
+206
+00:12:16.001 --> 00:12:18.000
+Então, olhamos para o Lotus 1, 2, 3, 4.
+
+207
+00:12:18.000 --> 00:12:19.000
+Muito obrigado muito.
+
+208
+00:12:19.000 --> 00:12:21.000
+Agora você não precisa apenas trabalhar com o Lotus ou no mundo de
+
+209
+00:12:21.000 --> 00:12:23.000
+MS-DOS para usar macros.
+
+210
+00:12:23.000 --> 00:12:26.001
+Esses usuários do Macintosh também podem usar macros, como descobrimos neste relatório.
+
+211
+00:12:29.000 --> 00:12:32.000
+Desvalorizado, subestimado e subutilizado.
+
+212
+00:12:32.001 --> 00:12:35.000
+Ou assim os fãs de teclado macros diria.
+
+213
+00:12:35.001 --> 00:12:40.000
+Em um ambiente operacional diferente, como o Macintosh, os macros têm um novo
+
+214
+00:12:40.000 --> 00:12:43.001
+significado tanto no tipo de aplicação quanto na sua facilidade de uso.
+
+215
+00:12:44.001 --> 00:12:49.000
+Em toda a loja de computadores Macintosh em Palo Alto, Califórnia, um Macintush
+
+216
+00:12:49.000 --> 00:12:54.000
+O grupo de usuários está a aproveitar a interface especial do Mac explorando uma
+
+217
+00:12:54.000 --> 00:12:58.000
+A gama completa de macros para usar dentro de um popular programa de folheto chamado Excel.
+
+218
+00:12:59.001 --> 00:13:03.000
+Nicholas DePaul usa o programa para organizar o horário de dia para dia do pessoal.
+
+219
+00:13:03.001 --> 00:13:07.000
+Ele pode configurar uma folha com um macro que estabelece coluna e linha
+
+220
+00:13:07.000 --> 00:13:11.001
+tamanhos, títulos e formatos.
+
+221
+00:13:13.001 --> 00:13:17.001
+Ele tem reduzido substancialmente o número de keystrokes necessários para calcular a
+
+222
+00:13:17.001 --> 00:13:20.001
+Trends e traduz as informações em um gráfico.
+
+223
+00:13:22.001 --> 00:13:27.000
+E quando ele precisa colocar uma entrada em um script corajoso ou italiano, ele pode fazê-lo com
+
+224
+00:13:27.000 --> 00:13:29.001
+75 por cento menos quebra-cabeça
+
+225
+00:13:30.001 --> 00:13:34.001
+A natureza especial do uso de macros em um Mac torna-se óbvia quando você quer
+
+226
+00:13:34.001 --> 00:13:37.000
+Criar um usando o modo de aprendizagem do programa.
+
+227
+00:13:37.001 --> 00:13:41.001
+Basta excluir os atributos dos diferentes menus, iniciar a função de gravação
+
+228
+00:13:41.001 --> 00:13:45.001
+e veja o código aparecer em inglês plano enquanto você entra em cada teclado.
+
+229
+00:13:45.001 --> 00:13:49.000
+Macros são projetados para tirar parte do trabalho de manusear através de um programa.
+
+230
+00:13:49.001 --> 00:13:52.000
+Por que a criação do macro deve ser uma função também?
+
+231
+00:13:53.000 --> 00:13:57.000
+Consolidando comandos, simplificando teclas e reduzindo a repetição.
+
+232
+00:13:57.001 --> 00:14:01.001
+Embora os macros tenham crescido em popularidade à medida que mais usuários descobrem suas vantagens,
+
+233
+00:14:02.000 --> 00:14:04.001
+O seu potencial total ainda não está a ser alcançado.
+
+234
+00:14:16.001 --> 00:14:20.000
+Agora nos junta no estúdio é Michael Lunsford, presidente do Macro Pack
+
+235
+00:14:20.000 --> 00:14:23.000
+Internacional e autor de 101 Macros para Lotus 123.
+
+236
+00:14:23.001 --> 00:14:28.000
+Sentar ao lado de Michael é Daniel Gestiger, o editor de macros para a Lotus Magazine.
+
+237
+00:14:28.001 --> 00:14:30.001
+Michael, você fez um negócio de vender macros.
+
+238
+00:14:31.000 --> 00:14:31.001
+O que você está vendendo?
+
+239
+00:14:32.000 --> 00:14:33.001
+É um pacote de software.
+
+240
+00:14:33.001 --> 00:14:35.001
+Ele é chamado de 101 Macros para o Lotus 123.
+
+241
+00:14:36.000 --> 00:14:38.000
+Ele vem com um manual que descreve todos os macros.
+
+242
+00:14:38.001 --> 00:14:43.001
+E o que você vê aqui é a primeira tela que você pode olhar se você
+
+243
+00:14:43.001 --> 00:14:45.000
+Vá e veja os próprios macros.
+
+244
+00:14:46.000 --> 00:14:47.000
+Aqui está uma coluna de números.
+
+245
+00:14:47.000 --> 00:14:50.000
+Vamos dizer que em Lotus você quer ir para frente e colocar o
+
+246
+00:14:50.000 --> 00:14:51.001
+A soma no fundo desta coluna de números.
+
+247
+00:14:51.001 --> 00:14:54.001
+Normalmente você digita a, s-u-m, parênteses, colocado no
+
+248
+00:14:54.001 --> 00:14:56.000
+A diferença entre esses números em parênteses próximas.
+
+249
+00:14:56.001 --> 00:14:59.001
+Eu não gostava de fazer isso, então eu criei um macro, chamado meu macro adicional.
+
+250
+00:14:59.001 --> 00:15:02.000
+Eu só peguei o alt-a e o bingo e faço isso para mim.
+
+251
+00:15:02.001 --> 00:15:03.001
+Aqui está o próprio macro.
+
+252
+00:15:04.001 --> 00:15:07.000
+Você pode ver que isso é típico para mim em algumas parentesas.
+
+253
+00:15:07.000 --> 00:15:10.001
+Ele diz ao cursor para subir, até o fundo da coluna, terminar até o topo
+
+254
+00:15:10.001 --> 00:15:15.000
+da coluna, períodos de fechamento no cursor, fim para baixo, pinturas na faixa, fechamento
+
+255
+00:15:15.000 --> 00:15:16.001
+As parentesas e o retorno.
+
+256
+00:15:17.001 --> 00:15:19.001
+Muito simples macro, mas eu coloquei isso em todas as minhas folhas.
+
+257
+00:15:20.000 --> 00:15:20.001
+É muito, muito útil.
+
+258
+00:15:21.001 --> 00:15:24.001
+Digamos que você quer colocar em uma combinação de número de letra
+
+259
+00:15:24.001 --> 00:15:26.000
+Como a 123 Main Street.
+
+260
+00:15:26.001 --> 00:15:28.001
+Você chegou ao retorno, mas você esqueceu o apóstolo.
+
+261
+00:15:28.001 --> 00:15:30.000
+Ele bate em você, coloca você no modo.
+
+262
+00:15:31.000 --> 00:15:34.000
+Eu só bater o alt-b e isso coloca na apostrofia para mim.
+
+263
+00:15:35.001 --> 00:15:39.000
+Vamos dizer que eu quero copiar de uma célula para outra célula no Lotus.
+
+264
+00:15:39.001 --> 00:15:41.000
+O cursor sempre volta para o
+
+265
+00:15:41.000 --> 00:15:43.001
+Célula, mas às vezes você gosta de dizer que a célula.
+
+266
+00:15:44.000 --> 00:15:46.001
+Então, o que eu fiz, eu criei um macro onde eu me darei uma escolha.
+
+267
+00:15:47.000 --> 00:15:52.001
+Eu posso tirar uma cópia e ficar, e agora que eu copiar para aqui, ela fica colocada.
+
+268
+00:15:52.001 --> 00:15:53.001
+Não salta de volta.
+
+269
+00:15:53.001 --> 00:15:55.001
+E há um movimento macro que fará a mesma coisa.
+
+270
+00:15:57.001 --> 00:15:58.001
+Como é a aceitação disso?
+
+271
+00:15:59.000 --> 00:16:00.000
+Você tem muitos clientes?
+
+272
+00:16:00.000 --> 00:16:02.001
+As vendas foram muito, muito boas.
+
+273
+00:16:04.000 --> 00:16:04.000
+Muito bom .
+
+274
+00:16:04.001 --> 00:16:07.001
+Definitivamente identificar quais os problemas que você está descrevendo e usando com isso.
+
+275
+00:16:07.001 --> 00:16:08.000
+[...]
+
+276
+00:16:08.001 --> 00:16:09.001
+Isso resolve muitas frustrações.
+
+277
+00:16:10.000 --> 00:16:12.000
+Por exemplo, há um go return macro aqui.
+
+278
+00:16:12.000 --> 00:16:15.001
+Se você quiser visitar uma localização remota da sua folha de entrada com este ir de volta
+
+279
+00:16:15.001 --> 00:16:18.000
+macro com um único keystroke, você pode saltar de volta para onde você estava.
+
+280
+00:16:18.001 --> 00:16:21.000
+Ou se você tem três principais locais que você quer visitar e
+
+281
+00:16:21.000 --> 00:16:23.000
+Eu uso minha casa alternada toggle.
+
+282
+00:16:23.001 --> 00:16:25.001
+Eu nomei os locais casa um, casa dois, casa três.
+
+283
+00:16:26.000 --> 00:16:28.000
+E depois, atingindo alt-h, eu posso ir para casa um.
+
+284
+00:16:28.001 --> 00:16:30.000
+Alt-h volta para casa dois.
+
+285
+00:16:30.001 --> 00:16:31.001
+Alt-h volta para casa três.
+
+286
+00:16:31.001 --> 00:16:34.000
+Então eu nunca sou mais do que dois pontos-chave longe de uma localização primária.
+
+287
+00:16:34.001 --> 00:16:37.001
+Uma das coisas que é tão óbvia aqui que você está vendendo, você está vender uma
+
+288
+00:16:37.001 --> 00:16:40.000
+O pacote macro e a fonte dos macros estão aqui.
+
+289
+00:16:40.001 --> 00:16:43.001
+Nos tempos antigos, quando muitos programas básicos eram vendidos como aplicativos,
+
+290
+00:16:44.000 --> 00:16:47.000
+Os desenvolvedores estão realmente preocupados com o envio de seus programas de origem básica
+
+291
+00:16:47.000 --> 00:16:49.001
+Por razões de direitos autorais, coisas como essas.
+
+292
+00:16:49.001 --> 00:16:50.001
+Há um problema com isso?
+
+293
+00:16:50.001 --> 00:16:52.001
+Tudo isso é uma arquitetura totalmente aberta.
+
+294
+00:16:53.001 --> 00:16:57.000
+Estes são macros que você pode ver, você pode carregá-los em sua própria folha de entrada,
+
+295
+00:16:57.000 --> 00:17:00.001
+Você pode mudá-los, modificá-las, aprender com eles.
+
+296
+00:17:00.001 --> 00:17:02.000
+Mais uma boa aplicação aqui.
+
+297
+00:17:02.000 --> 00:17:06.000
+Você pode usar isso para descobrir como um macro é escrito ou como um
+
+298
+00:17:06.000 --> 00:17:08.000
+O macro é feito.
+
+299
+00:17:08.001 --> 00:17:12.000
+Aqui está um macro, por exemplo, que você pode estar interessado em como é feito.
+
+300
+00:17:12.001 --> 00:17:14.000
+É chamado de salto de venda para o topo da página.
+
+301
+00:17:14.001 --> 00:17:17.001
+São apenas 18 baixos e 18 ups.
+
+302
+00:17:17.001 --> 00:17:19.000
+Muito, muito simples, mas veja o que faz.
+
+303
+00:17:19.001 --> 00:17:22.000
+Vamos dizer que você está no fundo da tela e você quer ver
+
+304
+00:17:22.000 --> 00:17:23.001
+O que está na tela abaixo.
+
+305
+00:17:23.001 --> 00:17:27.001
+Uma maneira de fazê-lo é bater o bloqueio de rolamento, rolar o seu caminho para o topo
+
+306
+00:17:27.001 --> 00:17:29.000
+Em seguida, desligue o lock.
+
+307
+00:17:29.000 --> 00:17:31.001
+Eu não gostava de fazer isso, então eu criei este salto macro.
+
+308
+00:17:32.001 --> 00:17:35.000
+Eu só peguei o alt J e isso me coloca para o topo.
+
+309
+00:17:35.001 --> 00:17:38.001
+Não importa onde estou na tela, mesmo um terço do caminho para baixo, alt
+
+310
+00:17:38.001 --> 00:17:40.000
+J sempre me sairá para o topo.
+
+311
+00:17:40.000 --> 00:17:42.001
+Michael, você escreveu um macro aqui que permite que você faça algum processamento de palavras
+
+312
+00:17:42.001 --> 00:17:44.001
+trabalho dentro de carga para mostrar-nos que um.
+
+313
+00:17:46.000 --> 00:17:48.000
+É chamado meu memo macro branco.
+
+314
+00:17:50.000 --> 00:17:52.001
+Eu vou mostrar-lhe primeiro o próprio macro.
+
+315
+00:17:52.001 --> 00:17:55.000
+É certo aqui, é muito simples, muito simples.
+
+316
+00:17:57.001 --> 00:17:59.001
+Eu o liguei a um modelo de memo branco.
+
+317
+00:18:00.000 --> 00:18:02.000
+Você pode mudar isso, claro, para o seu próprio nome da empresa.
+
+318
+00:18:02.001 --> 00:18:05.001
+O que ele faz é que ele vai para baixo aqui e coloca na data de hoje.
+
+319
+00:18:06.000 --> 00:18:09.000
+Leve você para o para vender, a cópia vende, o de vender e o assunto vende.
+
+320
+00:18:10.000 --> 00:18:12.001
+Em seguida, vai para a área de texto.
+
+321
+00:18:14.000 --> 00:18:15.001
+Agora você pode apagar.
+
+322
+00:18:16.001 --> 00:18:19.001
+Quando você chegar ao ponto em que você gostaria de ver o que o parágrafo parece
+
+323
+00:18:19.001 --> 00:18:22.000
+Ou, se você está no final do parágrafo, você acaba de bater de volta e
+
+324
+00:18:22.000 --> 00:18:23.001
+Isso justifica em um parágrafo para você.
+
+325
+00:18:23.001 --> 00:18:25.001
+Você pode fazer algum processamento de palavras.
+
+326
+00:18:26.000 --> 00:18:31.001
+Eu posso continuar a escrever o segundo parágrafo e quando eu estou tudo feito, você
+
+327
+00:18:31.001 --> 00:18:33.000
+Voltar para esta área principal.
+
+328
+00:18:33.000 --> 00:18:36.001
+Ele imprime esta parte aqui em itálicos duplos, esta parte aí em duplos
+
+329
+00:18:36.001 --> 00:18:39.001
+A greve enfatiza, o texto em corajoso, todos completamente macro-drived.
+
+330
+00:18:39.001 --> 00:18:42.000
+Você vende esses macros em um disco, agora como posso obter o
+
+331
+00:18:42.000 --> 00:18:43.001
+macros dentro do meu spreadsheet?
+
+332
+00:18:44.000 --> 00:18:45.001
+Ok, eu fiz isso real fácil de fazer.
+
+333
+00:18:46.001 --> 00:18:49.000
+Vamos dizer que esta é uma área branca do seu próprio spreadsheet.
+
+334
+00:18:49.001 --> 00:18:51.001
+O que você faz é simplesmente fazer uma combinação de arquivos.
+
+335
+00:18:51.001 --> 00:18:54.001
+Você simplesmente diz que o arquivo slash combina cópia denominada faixa.
+
+336
+00:18:55.000 --> 00:18:57.001
+Vamos dizer que você quer o macro do arquivo amac.
+
+337
+00:18:57.001 --> 00:18:59.001
+Faça isso, obtém esse arquivo, obtêm esse
+
+338
+00:18:59.001 --> 00:19:01.000
+macro e coloque-o diretamente lá em seu spreadsheet.
+
+339
+00:19:01.001 --> 00:19:02.000
+Isso é ótimo.
+
+340
+00:19:02.001 --> 00:19:04.001
+Tudo bem, agora quero conversar com você Daniel.
+
+341
+00:19:04.001 --> 00:19:07.000
+Até agora, nós realmente limitamos a discussão de macros para
+
+342
+00:19:07.000 --> 00:19:08.001
+Lotus 1, 2, 3 ou folhas.
+
+343
+00:19:08.001 --> 00:19:11.001
+Você trabalha no mundo da sinfonia em que você tem um processador de palavras para jogar com
+
+344
+00:19:11.001 --> 00:19:13.000
+e um gerente de banco de dados para jogar com.
+
+345
+00:19:14.000 --> 00:19:16.001
+Qual é o poder acrescentado que você pode tirar dos macros nesse universo maior?
+
+346
+00:19:17.001 --> 00:19:23.001
+Trabalhando em um ambiente integrado como a sinfonia, você tem apenas sobre qualquer coisa
+
+347
+00:19:23.001 --> 00:19:26.001
+Você teria que estar à sua disposição no seu trabalho diário.
+
+348
+00:19:28.001 --> 00:19:32.001
+As comunicações como exemplo permitem que você baixe informações de
+
+349
+00:19:32.001 --> 00:19:34.000
+um mainframe ou outra fonte de informação.
+
+350
+00:19:35.001 --> 00:19:40.000
+Quando você derramar um macro sobre isso, você pode partilhar a informação para baixo em um
+
+351
+00:19:40.000 --> 00:19:43.001
+formulário usável pelo spreadsheet, fazer análise de dados, imprimir relatórios
+
+352
+00:19:43.001 --> 00:19:45.001
+com base nessa informação e assim por diante.
+
+353
+00:19:45.001 --> 00:19:46.001
+Faça tudo isso sob um macro.
+
+354
+00:19:47.000 --> 00:19:52.001
+Tudo sob um controle macro, tudo dentro de um ambiente padronizado para que o menu
+
+355
+00:19:52.001 --> 00:19:57.001
+estruturas, teclas e assim por diante são muito semelhantes e basicamente lhe dão um
+
+356
+00:19:57.001 --> 00:20:01.000
+Uma maneira mais fácil de abordar o desenvolvimento de aplicativos em geral.
+
+357
+00:20:01.000 --> 00:20:04.001
+Daniel, você tem um macro de geração de relatório, eu acho, que você está trabalhando.
+
+358
+00:20:04.001 --> 00:20:05.000
+É isso certo?
+
+359
+00:20:05.001 --> 00:20:05.001
+É certo.
+
+360
+00:20:06.000 --> 00:20:08.000
+Nós temos isso neste computador agora.
+
+361
+00:20:09.001 --> 00:20:13.001
+Algo como vimos anteriormente permite que você entre endereços
+
+362
+00:20:13.001 --> 00:20:15.000
+E assim por diante em uma base de dados.
+
+363
+00:20:15.001 --> 00:20:21.001
+Como a sinfonia é configurada para trabalhar com informações de banco de dados, podemos olhar para um
+
+364
+00:20:21.001 --> 00:20:23.001
+Base de dados aqui na folha de trabalho.
+
+365
+00:20:24.001 --> 00:20:25.000
+É lá que está.
+
+366
+00:20:25.000 --> 00:20:28.000
+Estes são simplesmente endereços de pessoas.
+
+367
+00:20:29.000 --> 00:20:33.000
+Também podemos olhar para as informações através da janela de forma simfônica.
+
+368
+00:20:34.000 --> 00:20:36.001
+É uma forma mais familiar de trabalhar com o
+
+369
+00:20:36.001 --> 00:20:38.000
+Informações se você estiver familiarizado com a sinfonia.
+
+370
+00:20:38.000 --> 00:20:43.000
+Assim, você pode imprimir etiquetas de endereço e assim por diante.
+
+371
+00:20:43.000 --> 00:20:46.000
+Então, uma vez mais, você costumou fazer uma maneira de manipulação e correio.
+
+372
+00:20:46.001 --> 00:20:47.000
+E exatamente.
+
+373
+00:20:47.000 --> 00:20:51.001
+É tudo alimentado por macros para que você veja um familiar menu de visualização na parte superior do menu.
+
+374
+00:20:51.001 --> 00:20:55.000
+a tela, mas estas são todas as opções que eu tenho criado em vez de
+
+375
+00:20:55.000 --> 00:20:56.001
+Esta simfonia normalmente ofereceria ao usuário.
+
+376
+00:20:56.001 --> 00:21:01.001
+Agora você também tem um pouco mais interessante ou eu posso dizer mais divertido uso de macros
+
+377
+00:21:01.001 --> 00:21:03.000
+É um jogo de aventura em que você está trabalhando.
+
+378
+00:21:03.000 --> 00:21:03.001
+Isso é correto?
+
+379
+00:21:04.000 --> 00:21:04.000
+[...]
+
+380
+00:21:04.001 --> 00:21:10.001
+Eu vejo o ambiente integrado como um lugar ideal para acompanhar todos os
+
+381
+00:21:10.001 --> 00:21:13.000
+As diferentes variáveis que você precisa seguir
+
+382
+00:21:13.000 --> 00:21:14.001
+Criando um jogo de aventura.
+
+383
+00:21:16.000 --> 00:21:21.001
+E o jogo de aventura é um jogo que permite ou cria um ambiente para você, um
+
+384
+00:21:21.001 --> 00:21:25.000
+ambiente imaginário que lhe permite correr nesse ambiente fazendo as coisas
+
+385
+00:21:25.000 --> 00:21:30.001
+e espero que você saia um pouco mais rico, ainda vivo no final do
+
+386
+00:21:30.001 --> 00:21:32.000
+jogo ou qualquer coisa, dependendo da natureza do jogo.
+
+387
+00:21:32.000 --> 00:21:35.001
+Então você está escrevendo um jogo de aventura inteiro usando macros em sinfonia.
+
+388
+00:21:36.000 --> 00:21:39.001
+Isso é certo e eu tenho sido capaz de incorporar muitos dos diferentes ambientes
+
+389
+00:21:39.001 --> 00:21:41.000
+Na tela de abertura aqui.
+
+390
+00:21:41.000 --> 00:21:42.000
+Comece com o macro.
+
+391
+00:21:42.001 --> 00:21:46.001
+A tela de abertura é uma janela de folha de trabalho com algum texto em
+
+392
+00:21:46.001 --> 00:21:48.000
+É uma forma de descrever a situação.
+
+393
+00:21:48.001 --> 00:21:51.000
+Uma janela onde a sinfonia vai falar de volta para mim.
+
+394
+00:21:51.001 --> 00:21:52.001
+Ele vai dizer o que você quer
+
+395
+00:21:52.001 --> 00:21:54.001
+Aqui está o que aconteceu e as coisas assim.
+
+396
+00:21:54.001 --> 00:21:57.001
+E então outra janela abaixo que é uma janela de comunicação que
+
+397
+00:21:57.001 --> 00:22:01.000
+Na verdade, exibe texto sem ter que colocá-lo na folha de trabalho em absoluto.
+
+398
+00:22:01.001 --> 00:22:05.000
+Agora está me perguntando o que você faz em resposta a um cenário imaginário.
+
+399
+00:22:06.000 --> 00:22:09.000
+Qual a vantagem de escrever isso na sinfonia macro?
+
+400
+00:22:09.000 --> 00:22:10.000
+Que benefício você obtém?
+
+401
+00:22:10.001 --> 00:22:12.001
+A vantagem para mim é que tenho simfonia.
+
+402
+00:22:13.001 --> 00:22:17.000
+Mas também que a maioria das ferramentas que você precisa são
+
+403
+00:22:17.000 --> 00:22:18.001
+Já existem no pacote integrado.
+
+404
+00:22:19.000 --> 00:22:22.001
+Se você está trabalhando com um programa linear como básico ou C ou algum outro pacote,
+
+405
+00:22:23.000 --> 00:22:27.000
+Você teria que criar o ambiente em que as coisas acontecem, bem como todos os
+
+406
+00:22:27.000 --> 00:22:29.000
+ferramentas que são utilizadas nesse ambiente.
+
+407
+00:22:29.000 --> 00:22:32.000
+A maior parte do trabalho já está feito para você.
+
+408
+00:22:32.000 --> 00:22:33.001
+Muitos trabalhos já foram feitos para você.
+
+409
+00:22:33.001 --> 00:22:35.001
+Eu acho que, como dissemos no começo, Gary, é realmente um idioma de programação.
+
+410
+00:22:36.000 --> 00:22:38.000
+Não é apenas uma situação em que você recebe um monte de keystrokes.
+
+411
+00:22:38.000 --> 00:22:41.001
+Foi muito além do conceito original de teclas armazenadas.
+
+412
+00:22:42.000 --> 00:22:43.000
+Michael, Daniel, muito obrigado.
+
+413
+00:22:43.001 --> 00:22:43.001
+Mantenha-se conosco
+
+414
+00:22:43.001 --> 00:22:46.000
+Nós estaremos de volta em apenas um minuto com as notícias do computador desta semana.
+
+415
+00:22:56.000 --> 00:23:00.001
+No arquivo de acesso aleatório esta semana, o tempo come-dex cai novamente como vendedores
+
+416
+00:23:00.001 --> 00:23:02.001
+Mostrar seus mais recentes produtos de hardware e software.
+
+417
+00:23:03.000 --> 00:23:06.000
+Cerca de 1.300 expositores estão no show come-dex em Las Vegas.
+
+418
+00:23:06.001 --> 00:23:10.001
+Os destaques do show incluem o novo pacote de computadores baseados em 386, de baixo custo
+
+419
+00:23:10.001 --> 00:23:16.000
+impressoras a laser, software de publicação de desktop, clones de PC de baixo custo, e um novo 5-1⁄4
+
+420
+00:23:16.000 --> 00:23:19.000
+-Drive de disco floppy que tem 10 megabytes.
+
+421
+00:23:19.001 --> 00:23:22.000
+Nós teremos um relatório especial de cronogramas de computador sobre todos os
+
+422
+00:23:22.000 --> 00:23:23.001
+Notícias do come-dex mais tarde deste mês.
+
+423
+00:23:24.000 --> 00:23:28.000
+Os japoneses parecem ficar sérios sobre o microprocessador de 32 bits, um mundo
+
+424
+00:23:28.000 --> 00:23:32.001
+O mercado agora dominado pelos fabricantes de chips americanos Fujitsu e Hitachi anunciaram um
+
+425
+00:23:32.001 --> 00:23:35.000
+Empresa conjunta para desenvolver seu próprio chip de 32 bits.
+
+426
+00:23:35.001 --> 00:23:39.000
+Isso segue a recusa dos fabricantes de chips americanos de licenciar seus chips
+
+427
+00:23:39.000 --> 00:23:40.001
+desenhos para o japonês.
+
+428
+00:23:41.000 --> 00:23:44.001
+A parceria da Hitachi Fujitsu vem logo após um anúncio apenas alguns
+
+429
+00:23:44.001 --> 00:23:49.000
+Há algumas semanas, a Fujitsu estava comprando 80% do fabricante de chips americano Fairchild.
+
+430
+00:23:49.001 --> 00:23:52.001
+A Fujitsu já possui 49% da Amdahl.
+
+431
+00:23:53.000 --> 00:23:56.001
+O negócio de hardware de computador ainda pode ser deslumbrante, mas o principal da indústria
+
+432
+00:23:56.001 --> 00:23:59.000
+As empresas de software tornaram-se repentinamente darlings de Wall Street.
+
+433
+00:23:59.001 --> 00:24:03.001
+Ashton Tate, Lotus e Microsoft estão todos negociando em ou perto de todo o seu tempo
+
+434
+00:24:03.001 --> 00:24:07.000
+de alta, com os analistas predicionando fortes exposições do quarto trimestre.
+
+435
+00:24:07.000 --> 00:24:11.001
+Ex-chefe da Lotus, Mitch Kapoor, surgiu após sua saída da empresa
+
+436
+00:24:11.001 --> 00:24:13.001
+Fundou-se como estudante no MIT.
+
+437
+00:24:14.001 --> 00:24:18.001
+Kapoor diz que está estudando redes semânticas e representação do conhecimento, duas chaves
+
+438
+00:24:18.001 --> 00:24:20.001
+aspectos da inteligência artificial.
+
+439
+00:24:21.001 --> 00:24:25.001
+Um relatório da Universidade de Cornell diz que se você quer um sucesso garantido
+
+440
+00:24:25.001 --> 00:24:29.000
+Carreira, obter um PhD em Ciência da Computação e Engenharia.
+
+441
+00:24:29.001 --> 00:24:33.001
+O relatório diz que apenas 400 desses graus são concedidos anualmente, e que há
+
+442
+00:24:33.001 --> 00:24:37.001
+São 1.200 postos de trabalho esperando para esses graduados, com salários rangando até
+
+443
+00:24:37.001 --> 00:24:39.001
+100 mil dólares por ano.
+
+444
+00:24:40.000 --> 00:24:43.001
+Tempo para a revisão de software desta semana, e aqui está o nosso revisor Paul Schindler.
+
+445
+00:24:45.001 --> 00:24:46.000
+Olá meu bebê.
+
+446
+00:24:46.001 --> 00:24:47.001
+Que a sua garota chame minha garota.
+
+447
+00:24:48.000 --> 00:24:48.001
+Vamos fazer almoço.
+
+448
+00:24:49.000 --> 00:24:50.001
+Claro que, na verdade, eu estou apenas praticando
+
+449
+00:24:50.001 --> 00:24:52.001
+Para o dia em que Hollywood compra meu roteiro.
+
+450
+00:24:53.000 --> 00:24:54.000
+Mas tenho que te dizer alguma coisa.
+
+451
+00:24:54.000 --> 00:24:58.000
+Hollywood não vai nem ler seu script se não parece exatamente certo.
+
+452
+00:24:58.001 --> 00:25:00.001
+As Escrituras seguem regras muito precisas.
+
+453
+00:25:00.001 --> 00:25:04.001
+As pausas de página nunca ocorrem entre o nome do personagem e o diálogo.
+
+454
+00:25:05.000 --> 00:25:07.001
+As interrupções dentro do diálogo devem ocorrer no final de uma sentença.
+
+455
+00:25:08.000 --> 00:25:10.000
+As páginas nunca devem terminar com um título de cena.
+
+456
+00:25:10.001 --> 00:25:12.000
+As cenas devem ser numeradas.
+
+457
+00:25:12.001 --> 00:25:15.000
+A palavra continuada deve estar no topo e no fundo de qualquer
+
+458
+00:25:15.000 --> 00:25:17.000
+Página em que uma cena continua.
+
+459
+00:25:17.001 --> 00:25:21.000
+Estas são regras complexas, coisas que nenhum processador de palavra normal pode fazer.
+
+460
+00:25:21.001 --> 00:25:25.001
+Os escritores de script precisam de um escritor de Screenplay Systems em Burbank, Califórnia.
+
+461
+00:25:26.000 --> 00:25:27.001
+O escritor não tem tela para mostrar.
+
+462
+00:25:27.001 --> 00:25:30.000
+Ele simplesmente transforma arquivos em verdadeiros scripts de Hollywood.
+
+463
+00:25:30.001 --> 00:25:34.001
+Você pode pagar um script típico profissional de US $ 300 para escrever o seu script a cada vez,
+
+464
+00:25:34.001 --> 00:25:36.001
+Se você pode encontrar um onde você mora.
+
+465
+00:25:37.000 --> 00:25:41.001
+Ou você pode pagar US $ 300 uma vez e nunca se preocupar com isso mais uma vez.
+
+466
+00:25:42.000 --> 00:25:46.001
+Cerca de 2.000 escritores usam scriptor para produzir cerca de 70% de todos os scripts de TV.
+
+467
+00:25:47.000 --> 00:25:51.000
+Agora olhe, as chances são que ninguém vai ler o seu script de qualquer forma, mas eu tenho certeza de que você
+
+468
+00:25:51.000 --> 00:25:53.000
+Eles não vão ler se não parece certo.
+
+469
+00:25:53.000 --> 00:25:54.001
+Tente um escritor.
+
+470
+00:25:55.000 --> 00:25:57.001
+Para as crônicas de computador, eu sou Paul Schindler.
+
+471
+00:25:58.001 --> 00:26:02.001
+O Wall Street Journal relata que o Northeastern Software, um grande anunciante em
+
+472
+00:26:02.001 --> 00:26:06.000
+revistas de computador para o software de encomenda de correio, registou falência.
+
+473
+00:26:06.001 --> 00:26:10.000
+Foram relatadas muitas queixas de pessoas que haviam pedido software
+
+474
+00:26:10.000 --> 00:26:13.001
+do Nordeste, eles tinham seus cheques em dinheiro, mas nunca viram o software.
+
+475
+00:26:14.001 --> 00:26:18.000
+IBM e Carnegie Mellon University esta semana revelaram o que eles dizem é o mais
+
+476
+00:26:18.000 --> 00:26:20.000
+campus informático no país.
+
+477
+00:26:20.001 --> 00:26:25.000
+Cabling do campus CMU está agora completo com o objetivo de rede 10,000
+
+478
+00:26:25.000 --> 00:26:26.001
+PCs até o fim da década.
+
+479
+00:26:27.000 --> 00:26:31.000
+A IBM também tem uma empresa conjunta com a CMU para desenvolver inteligência artificial
+
+480
+00:26:31.000 --> 00:26:33.000
+Aplicações para computadores pessoais.
+
+481
+00:26:34.001 --> 00:26:38.001
+Um estudo da Stanford Business School descobriu que os principais executivos estão usando computadores
+
+482
+00:26:38.001 --> 00:26:41.001
+cerca de sete horas por semana, muito mais do que se pensava anteriormente.
+
+483
+00:26:42.000 --> 00:26:47.000
+E 93% deles usam computadores pessoais em vez de grandes terminais de sistema. 55
+
+484
+00:26:47.000 --> 00:26:50.000
+Por cento desses execs também têm computadores domésticos.
+
+485
+00:26:51.001 --> 00:26:54.001
+Finalmente, se você é um fã do Rocky Horror Picture Show, você pode agora
+
+486
+00:26:54.001 --> 00:26:56.001
+Faça o tempo em seu PC.
+
+487
+00:26:57.000 --> 00:27:00.000
+Há um novo jogo de computador chamado o Rocky Horror Picture Show.
+
+488
+00:27:00.000 --> 00:27:03.001
+É uma espécie de jogo de aventura, e está disponível para o Commodore.
+
+489
+00:27:04.000 --> 00:27:05.000
+Isso é para as crônicas desta semana.
+
+490
+00:27:05.000 --> 00:27:06.000
+Vamos te ver a próxima vez.
+
+491
+00:27:16.001 --> 00:27:20.000
+Lookalike spreadsheet, processamento de palavras com correção de espelhos, comunicação
+
+492
+00:27:20.000 --> 00:27:25.001
+software, e Haze-compatível 1200 baud modem, líder em frente com mais de 1
+
+493
+00:27:25.001 --> 00:27:27.000
+milhares de centros de serviço em todo o país.
+
+494
+00:27:29.000 --> 00:27:32.000
+O financiamento adicional é fornecido por McGraw-Hill, editores da Byte.
+
+495
+00:27:32.001 --> 00:27:36.001
+Artigos técnicos detalhados da Byte sobre novos hardware, software e linguagens de cobertura
+
+496
+00:27:36.001 --> 00:27:39.000
+desenvolvimentos em tecnologias informáticas em todo o mundo.

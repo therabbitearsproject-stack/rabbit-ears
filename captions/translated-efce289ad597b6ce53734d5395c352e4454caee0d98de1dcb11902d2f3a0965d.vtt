@@ -1,0 +1,1885 @@
+WEBVTT
+
+1
+00:00:14.001 --> 00:00:20.000
+Esta é a loja Nordstrom em San Francisco. É um dos 74 Nordstroms todos
+
+2
+00:00:20.000 --> 00:00:23.000
+ao redor do país com vendas anuais de quase US $ 3.5 bilhões.
+
+3
+00:00:23.001 --> 00:00:27.001
+Nordstroms mantém um inventário de itens quase o dobro do típico
+
+4
+00:00:27.001 --> 00:00:29.001
+Loja especializada ou loja de departamentos.
+
+5
+00:00:29.001 --> 00:00:33.000
+Isso significa uma base de dados gigante para acompanhar o inventário e as vendas.
+
+6
+00:00:34.000 --> 00:00:35.001
+Então, quando eles vieram olhando para um computador
+
+7
+00:00:35.001 --> 00:00:37.000
+ambiente, foi um negócio sério.
+
+8
+00:00:37.001 --> 00:00:40.001
+Eles olharam para o OS2, eles olharão para o Unix, mas eles se estabeleceram em
+
+9
+00:00:40.001 --> 00:00:42.000
+Windows NT da Microsoft.
+
+10
+00:00:42.001 --> 00:00:48.000
+Por que ? Bem, vamos tentar descobrir hoje enquanto tentamos no Windows NT nesta edição
+
+11
+00:00:48.000 --> 00:00:49.001
+das crônicas de computador.
+
+12
+00:01:04.001 --> 00:01:09.000
+As crônicas de computador são trazidas para você em parte pela Intel Microprocessor Technology
+
+13
+00:01:09.000 --> 00:01:11.000
+O software de hoje e de amanhã.
+
+14
+00:01:12.000 --> 00:01:13.001
+Intel, o computador dentro.
+
+15
+00:01:14.001 --> 00:01:19.000
+O financiamento adicional é fornecido pela Associação de Publicações de Software, fornecedores
+
+16
+00:01:19.000 --> 00:01:21.001
+de materiais educacionais para ajudar a gerenciar software.
+
+17
+00:01:22.000 --> 00:01:23.001
+Não copie esse floppy.
+
+18
+00:01:24.001 --> 00:01:27.000
+Hewlett Packard, Divisão de Computadores Pessoais.
+
+19
+00:01:32.001 --> 00:01:36.001
+Bem-vindo às crônicas de computador. Eu sou Stuart Chafay e comigo hoje é Mike
+
+20
+00:01:36.001 --> 00:01:39.000
+Nash, gerente de produto do Windows NT com a Microsoft.
+
+21
+00:01:40.000 --> 00:01:44.000
+Mike, eu tenho o Windows 3.1 executando aqui no meu HP Vector. Você tem Windows
+
+22
+00:01:44.000 --> 00:01:45.001
+NT correndo lá em sua máquina.
+
+23
+00:01:46.000 --> 00:01:48.000
+Eles parecem quase idênticos. Qual é a diferença?
+
+24
+00:01:48.001 --> 00:01:51.000
+A ideia é fazê-los parecer o mais parecido possível.
+
+25
+00:01:51.001 --> 00:01:54.001
+Ambos usam o mesmo gerente de programa familiar e, na verdade, muitas das ferramentas
+
+26
+00:01:54.001 --> 00:01:56.001
+O gerenciador de arquivos é o mesmo.
+
+27
+00:01:56.001 --> 00:01:57.001
+Na verdade, você pode lançá-lo em sua máquina.
+
+28
+00:01:57.001 --> 00:02:00.001
+Eu lanço o meu arquivo gerente em 3. 1o Você está lançando o seu em NT.
+
+29
+00:02:00.001 --> 00:02:03.001
+São basicamente as mesmas. Tenho algumas coisas adicionais que
+
+30
+00:02:03.001 --> 00:02:05.001
+Não existe no Windows 3.1.
+
+31
+00:02:05.001 --> 00:02:09.000
+Por exemplo, eu posso ter nomes de arquivos longos. Um arquivo como o nome de algo como o
+
+32
+00:02:09.000 --> 00:02:11.000
+As crônicas de computador podem ter espaço nele.
+
+33
+00:02:11.000 --> 00:02:12.001
+Quaisquer personagens especiais que eu quero usar.
+
+34
+00:02:13.001 --> 00:02:17.000
+Você também notará que o Windows NT gerará automaticamente um nome de arquivo curto para
+
+35
+00:02:17.000 --> 00:02:20.000
+que os aplicativos DOS mais antigos podem ser 100% compatíveis no Windows NT.
+
+36
+00:02:21.000 --> 00:02:23.001
+O Windows NT também é projetado para ser um sistema operacional seguro.
+
+37
+00:02:23.001 --> 00:02:25.001
+Na verdade, temos todo o apoio para controlar a
+
+38
+00:02:25.001 --> 00:02:27.000
+permissões e ver quem pode olhar para um arquivo.
+
+39
+00:02:27.001 --> 00:02:29.001
+O plano de crônicas de computador pode ser visto por qualquer pessoa.
+
+40
+00:02:29.001 --> 00:02:33.000
+Queremos garantir que todos os usuários de energia tenham pleno acesso a isso.
+
+41
+00:02:33.000 --> 00:02:37.000
+Vamos simplesmente entrar, escolher os usuários de potência da lista, adicionar
+
+42
+00:02:37.000 --> 00:02:39.001
+Dê-lhes o controle total.
+
+43
+00:02:40.000 --> 00:02:41.001
+Agora eles podem acessar este arquivo de qualquer maneira que eles querem.
+
+44
+00:02:43.000 --> 00:02:46.001
+Agora, enquanto o Windows NT executa todas as aplicações padrão do Windows que você nunca teria
+
+45
+00:02:46.001 --> 00:02:50.000
+Windows NT é projetado para executar mais de uma aplicação ao mesmo tempo.
+
+46
+00:02:50.000 --> 00:02:51.001
+Ele parecia o mesmo na superfície, mas você estava
+
+47
+00:02:51.001 --> 00:02:53.000
+executar todas essas outras operações por baixo.
+
+48
+00:02:53.001 --> 00:02:54.001
+E no fundo, exatamente.
+
+49
+00:02:55.001 --> 00:02:57.001
+O Windows NT também é projetado para ser um sistema muito gerenciável.
+
+50
+00:02:57.001 --> 00:03:01.000
+Então, se realmente lançarmos o monitor de desempenho, você verá que eu realmente posso
+
+51
+00:03:01.000 --> 00:03:03.000
+Verificar e controlar exatamente como o sistema está sendo usado.
+
+52
+00:03:03.001 --> 00:03:07.001
+Neste caso, estou monitorando a utilização da CPU em total e vendo como está sendo
+
+53
+00:03:07.001 --> 00:03:10.000
+compartilhado entre os aplicativos e entre o sistema.
+
+54
+00:03:10.001 --> 00:03:14.000
+Bem, hoje vamos olhar para o Windows NT para ver o que mais ele pode fazer.
+
+55
+00:03:14.000 --> 00:03:18.000
+E vamos olhar para várias novas aplicações escritas especificamente para NT para ver como
+
+56
+00:03:18.000 --> 00:03:21.000
+O ambiente NT melhora o desempenho da aplicação.
+
+57
+00:03:21.000 --> 00:03:25.000
+Primeiro, vamos visitar os Microsoft Labs em Redmond, Washington para
+
+58
+00:03:25.000 --> 00:03:26.001
+Conheça a equipe de desenvolvimento.
+
+59
+00:03:28.000 --> 00:03:33.000
+A equipe do Windows NT na sede da Microsoft em Redmond quase não tinha tempo para
+
+60
+00:03:33.000 --> 00:03:36.001
+Férias curtas antes de começar o trabalho sobre melhorias de produtos.
+
+61
+00:03:36.001 --> 00:03:41.001
+Antes do próximo grande lançamento, chamado Cairo, está pronto, a Microsoft
+
+62
+00:03:41.001 --> 00:03:43.000
+Será lançado o NT Upgrades.
+
+63
+00:03:44.000 --> 00:03:50.000
+Estamos sentados para tentar descobrir como obter uma atualização com uma espécie de
+
+64
+00:03:50.000 --> 00:03:55.000
+Algumas pequenas funcionalidades, espaço duplo, e algumas melhores redes, empresa
+
+65
+00:03:55.000 --> 00:03:59.000
+Suporte de rede e melhor desempenho.
+
+66
+00:04:00.000 --> 00:04:05.000
+E, em seguida, descubra como chegar à próxima facilidade de utilização de recursos em um sem fios
+
+67
+00:04:05.000 --> 00:04:11.000
+período de tempo curto sem interromper as aplicações atuais que estão em andamento.
+
+68
+00:04:11.001 --> 00:04:15.001
+Os engenheiros de sistemas reconstruem e testam o sistema operacional NT diariamente.
+
+69
+00:04:16.001 --> 00:04:20.000
+Há um laboratório de teste de interoperabilidade onde eles estão construindo conexões para
+
+70
+00:04:20.000 --> 00:04:22.000
+OS2 e Novell servidores.
+
+71
+00:04:22.000 --> 00:04:27.000
+Os testes de Ongoing são executados para a compatibilidade de software, mas a ênfase especial é colocada
+
+72
+00:04:27.000 --> 00:04:32.000
+compatibilidade de hardware, já que o NT funciona em uma variedade de plataformas.
+
+73
+00:04:32.001 --> 00:04:37.000
+Todas as máquinas que passaram o teste foram colocadas na nossa lista de compatibilidade de hardware
+
+74
+00:04:37.000 --> 00:04:42.001
+e tivemos mais de 1.600 máquinas em nosso teste de compatibilidade de hardware, o que é, eu
+
+75
+00:04:42.001 --> 00:04:45.000
+É um registro para qualquer sistema operacional.
+
+76
+00:04:46.000 --> 00:04:50.001
+Os gerentes do programa dizem que o Cairo vai trazer um novo nível de capacidade intuitiva para a NT.
+
+77
+00:04:50.001 --> 00:04:57.001
+Cairo fará mais fácil para as pessoas dizer apenas dar-me os dados de vendas para o
+
+78
+00:04:57.001 --> 00:05:01.000
+No mês de dezembro e o sistema vai cuidar de encontrar os dados.
+
+79
+00:05:01.001 --> 00:05:07.000
+Também permitirá que as pessoas construam soluções onde possam trabalhar com os dados.
+
+80
+00:05:07.000 --> 00:05:08.001
+exatamente da maneira que eles querem.
+
+81
+00:05:08.001 --> 00:05:11.001
+Eles não precisam se preocupar com a aplicação em que estão sendo executados.
+
+82
+00:05:11.001 --> 00:05:14.001
+Eles não precisam se preocupar com a estrutura exata dos dados.
+
+83
+00:05:15.000 --> 00:05:18.001
+As coisas vão fluir mais suavemente na maneira que as pessoas querem.
+
+84
+00:05:18.001 --> 00:05:21.001
+Para as crônicas de computador, eu sou Jonelle Patterson.
+
+85
+00:05:48.001 --> 00:05:53.000
+[...] é a mesma interface de usuário consistente do Windows, mas, claro, é o Windows
+
+86
+00:05:53.000 --> 00:05:56.000
+NT que está a correr aqui e está a funcionar em um microprocessador diferente.
+
+87
+00:05:56.000 --> 00:05:58.001
+Tudo bem, então o que temos aqui sobre este NetPower PC?
+
+88
+00:05:58.001 --> 00:06:00.000
+Eles dizem que a CN acredita.
+
+89
+00:06:00.001 --> 00:06:03.000
+Se eu usar esta pequena utilidade aqui, eu posso mostrar-lhe o que
+
+90
+00:06:03.000 --> 00:06:04.001
+hardware que temos instalado nesta máquina.
+
+91
+00:06:06.000 --> 00:06:08.000
+Se eu escolher hardware, você pode ver que o meu tipo de CPU é
+
+92
+00:06:08.000 --> 00:06:10.000
+É um microprocessador MIPS.
+
+93
+00:06:10.000 --> 00:06:12.000
+Portanto, não estamos executando um 486 ou um Pentium aqui.
+
+94
+00:06:12.000 --> 00:06:14.001
+Este é um MIPS R4000 e estamos executando NT.
+
+95
+00:06:15.000 --> 00:06:15.000
+É correto.
+
+96
+00:06:15.000 --> 00:06:17.001
+Qual a vantagem de ser capaz de fazer isso?
+
+97
+00:06:17.001 --> 00:06:21.000
+A vantagem de ser capaz de fazer isso é que você pode integrar uma nova geração
+
+98
+00:06:21.000 --> 00:06:24.001
+Aplicativos de 32 bits com as suas aplicações mais populares.
+
+99
+00:06:25.000 --> 00:06:28.001
+Por exemplo, como o Excel, 123 para Windows, ou WordPerfect.
+
+100
+00:06:28.001 --> 00:06:31.000
+Então eu estou correndo, você está correndo o Excel de 16 bits aqui.
+
+101
+00:06:31.000 --> 00:06:35.000
+Eu estou executando o Excel de 16 bits e no fundo, tenho uma aplicação de 32 bits
+
+102
+00:06:35.000 --> 00:06:38.000
+PVWave, que é usado para visualizar dados.
+
+103
+00:06:38.001 --> 00:06:41.001
+Então, o que vou fazer é esconder esses dados aqui.
+
+104
+00:06:42.000 --> 00:06:43.001
+Assim, esses dados vêm do Excel.
+
+105
+00:06:43.001 --> 00:06:48.000
+Estes são dados provenientes de Excel, Excel para PVWave, 16 bits para 32 bits.
+
+106
+00:06:48.001 --> 00:06:51.001
+E eu vou desenhar essa informação para que possamos vê-la em uma forma diferente.
+
+107
+00:06:52.000 --> 00:06:54.001
+E como você pode ver, como os gráficos começam a rolar na tela aqui,
+
+108
+00:06:54.001 --> 00:06:56.000
+Estes são pontos bastante complexos.
+
+109
+00:06:57.000 --> 00:07:00.000
+Então, o que você pode fazer é usar o seu Excel familiar, que você poderia ter sido
+
+110
+00:07:00.000 --> 00:07:02.001
+Em seu modo 3.1 ou qualquer outra coisa.
+
+111
+00:07:03.000 --> 00:07:06.001
+Com NT, você pode realmente falar agora sobre este aplicativo 32-bit PVWave.
+
+112
+00:07:07.000 --> 00:07:07.001
+absolutamente .
+
+113
+00:07:08.000 --> 00:07:10.000
+Em essência, o que você está fazendo aqui é realmente usar o melhor
+
+114
+00:07:10.000 --> 00:07:12.000
+Ferramentas para o trabalho apropriado.
+
+115
+00:07:12.000 --> 00:07:14.001
+OK  ⁇  Vamos voltar para a próxima plataforma aqui.
+
+116
+00:07:14.001 --> 00:07:16.001
+Você tem uma máquina digital, então eu não vou adivinhar.
+
+117
+00:07:16.001 --> 00:07:18.001
+Mostre-me novamente o que o CPU estamos executando aqui.
+
+118
+00:07:18.001 --> 00:07:20.000
+OK  ⁇  Vou usar nossa pequena utilidade novamente.
+
+119
+00:07:20.001 --> 00:07:24.000
+E se eu selecionar a opção de hardware, ele me diz que tipo de CPU eu estou executando.
+
+120
+00:07:24.001 --> 00:07:27.000
+E aqui diz que eu estou executando um processador DEC alfa.
+
+121
+00:07:27.000 --> 00:07:29.000
+Então, aqui, o NT está correndo sob um chip alfa.
+
+122
+00:07:29.000 --> 00:07:29.001
+É correto.
+
+123
+00:07:29.001 --> 00:07:31.001
+E mostre-me o que posso fazer com isso.
+
+124
+00:07:32.000 --> 00:07:34.001
+OK  ⁇  O que eu estou fazendo aqui é Hyperion, que é uma empresa
+
+125
+00:07:34.001 --> 00:07:36.001
+- Aplicação de nível de gestão financeira.
+
+126
+00:07:36.001 --> 00:07:40.001
+E o que me permite fazer é visualizar minha empresa
+
+127
+00:07:40.001 --> 00:07:42.000
+Muito fácil, muito gráfico.
+
+128
+00:07:42.001 --> 00:07:43.001
+Nós estamos usando a interface do Windows aqui.
+
+129
+00:07:44.000 --> 00:07:47.001
+Posso fazer coisas como pegar e descer secções da minha empresa.
+
+130
+00:07:47.001 --> 00:07:52.001
+Então, se eu dizer que quero mover a produção do Portugal e mover-a para os americanos
+
+131
+00:07:52.001 --> 00:07:56.001
+região, e então eu posso ir e ter um olhar atrasado e ver se eu consolido que
+
+132
+00:07:56.001 --> 00:07:58.000
+informações, o que isso significa em meus números.
+
+133
+00:07:58.001 --> 00:08:02.000
+Então, se terminarmos aqui, eu salvo a mudança para a minha organização.
+
+134
+00:08:03.001 --> 00:08:05.000
+Alguns problemas de rato lá.
+
+135
+00:08:05.001 --> 00:08:06.001
+Nós escolhemos a consolidação.
+
+136
+00:08:07.001 --> 00:08:09.000
+Escolhemos a corporação total aqui.
+
+137
+00:08:10.000 --> 00:08:12.000
+Eu escolho opções, consolido tudo.
+
+138
+00:08:12.000 --> 00:08:14.000
+E olhamos para baixo aqui, e isso está consolidando
+
+139
+00:08:14.000 --> 00:08:15.001
+12 megabytes de dados, e acabou.
+
+140
+00:08:16.000 --> 00:08:19.001
+Então você realmente recalculou essa folha de diâmetro gigante em alguns segundos.
+
+141
+00:08:19.001 --> 00:08:20.001
+Em alguns segundos.
+
+142
+00:08:21.000 --> 00:08:23.001
+Para o Windows 3. 1, que normalmente levaria vários minutos.
+
+143
+00:08:24.000 --> 00:08:25.000
+O bem. Muito obrigado Ray.
+
+144
+00:08:25.000 --> 00:08:29.000
+Vamos passar da portabilidade para a escalabilidade e falar com Mike novamente.
+
+145
+00:08:29.000 --> 00:08:31.001
+E Mike, o que você vai nos mostrar sobre escalabilidade?
+
+146
+00:08:32.000 --> 00:08:35.001
+Bem, a escalabilidade tem muito a ver com a forma como podemos aproveitar o novo hardware.
+
+147
+00:08:36.000 --> 00:08:38.001
+O que eu tenho executado aqui é a versão do servidor do Windows NT, um produto chamado
+
+148
+00:08:38.001 --> 00:08:40.001
+Microsoft Windows NT Server Avançado.
+
+149
+00:08:41.000 --> 00:08:44.000
+E o Windows NT Advanced Server é muito mais do que apenas um arquivo e servidor de impressão.
+
+150
+00:08:44.000 --> 00:08:46.000
+Na verdade, é projetado para ser um servidor de aplicativos.
+
+151
+00:08:46.000 --> 00:08:49.001
+Assim, podemos executar aplicações de servidor e ter vários usuários compartilhando informações.
+
+152
+00:08:50.001 --> 00:08:54.000
+O que estamos fazendo aqui é executar o SQL Server em um quatro CPU compacto ProLiant 4000.
+
+153
+00:08:54.001 --> 00:08:58.000
+E, na verdade, como você pode ver a partir desses números de processamento de transações, nós somos
+
+154
+00:08:58.000 --> 00:09:00.001
+É capaz de entregar cerca de 290 transações por segundo.
+
+155
+00:09:01.000 --> 00:09:05.000
+E apenas para referência, um mini-computador faz cerca de meio a alto 200s e
+
+156
+00:09:05.000 --> 00:09:06.001
+Na verdade, o alto fim da mini-classe de computador.
+
+157
+00:09:07.000 --> 00:09:11.000
+Então, o que você está dizendo é usar uma máquina de processador de piso como este e NT em um
+
+158
+00:09:11.000 --> 00:09:13.001
+relativamente baixo custo, podemos realmente obter mini desempenho de computador.
+
+159
+00:09:13.001 --> 00:09:16.001
+E exatamente. E tem muito a ver com a capacidade do Windows NT de compartilhar a carga,
+
+160
+00:09:16.001 --> 00:09:18.000
+Se você quiser, através dos quatro CPUs.
+
+161
+00:09:18.001 --> 00:09:20.000
+Na verdade, quero ver como fazemos isso.
+
+162
+00:09:21.000 --> 00:09:24.000
+No monitor de desempenho, eu realmente posso monitorar a utilização da CPU.
+
+163
+00:09:25.000 --> 00:09:27.001
+O que eu quero fazer é realmente olhar para como estamos compartilhando a carga através
+
+164
+00:09:27.001 --> 00:09:30.000
+Estes quatro CPUs no sistema.
+
+165
+00:09:31.000 --> 00:09:32.000
+Veja aqui o histograma.
+
+166
+00:09:33.000 --> 00:09:35.000
+O que você pode ver é que estamos estendendo bastante uniformemente a carga através dos quatro.
+
+167
+00:09:35.000 --> 00:09:37.001
+Assim, cada cor representa um dos chips Pentium dentro do compacto.
+
+168
+00:09:38.000 --> 00:09:38.001
+E exatamente.
+
+169
+00:09:39.001 --> 00:09:41.001
+Agora, o SQL Server é projetado para ser muito fácil de usar também.
+
+170
+00:09:42.000 --> 00:09:44.000
+Queremos torná-lo possível para as pessoas que talvez não saibam tanto sobre
+
+171
+00:09:44.000 --> 00:09:48.001
+Servidores de aplicativos para utilizar soluções baseadas em Windows NT e SQL Server.
+
+172
+00:09:48.001 --> 00:09:51.000
+Na verdade, este é o SQL Server Manager.
+
+173
+00:09:51.001 --> 00:09:54.000
+Eu realmente posso iniciar e parar o SQL Server usando um
+
+174
+00:09:54.000 --> 00:09:55.001
+Fácil e intuitivo parar a luz.
+
+175
+00:09:56.000 --> 00:09:59.001
+E como você vai ver, como eu dou duplo clique e parar o servidor, ele automaticamente vai
+
+176
+00:09:59.001 --> 00:10:03.000
+trazer o processamento de transações e a utilização do CPU direito a zero.
+
+177
+00:10:03.000 --> 00:10:05.001
+Tudo bem . Por outro lado, o ponto de escalabilidade é que o NT pode
+
+178
+00:10:05.001 --> 00:10:07.001
+Um tipo de trabalho com o hardware que tem.
+
+179
+00:10:07.001 --> 00:10:09.000
+Você coloca isso aqui com quatro Pentiums.
+
+180
+00:10:09.000 --> 00:10:10.001
+Ele vai se esforçar para aproveitar isso.
+
+181
+00:10:11.000 --> 00:10:13.000
+Pode funcionar com um chip PC, et cetera.
+
+182
+00:10:13.000 --> 00:10:13.001
+E exatamente.
+
+183
+00:10:14.000 --> 00:10:15.000
+Tudo bem . Agora, se você está usando avançado
+
+184
+00:10:15.000 --> 00:10:17.000
+Servidor, eu considero o ponto é gerenciamento de rede.
+
+185
+00:10:17.000 --> 00:10:20.001
+Mostre-me algumas das outras ferramentas de gerenciamento de rede no NT Advanced Server.
+
+186
+00:10:20.001 --> 00:10:21.000
+Muito bom ponto.
+
+187
+00:10:21.000 --> 00:10:24.001
+Então, o que estamos tentando fazer aqui é fazer o melhor de que arquivos servidores e
+
+188
+00:10:24.001 --> 00:10:28.000
+Os servidores de nuvem tradicionais do PC fizeram e realmente combinam isso com o melhor do que
+
+189
+00:10:28.000 --> 00:10:30.000
+Muitos computadores e mainframes fizeram em termos de gerenciabilidade.
+
+190
+00:10:30.001 --> 00:10:32.001
+Uma grande parte do gerenciamento do sistema é
+
+191
+00:10:32.001 --> 00:10:34.000
+Os usuários que precisam acessá-lo.
+
+192
+00:10:34.001 --> 00:10:36.001
+Entre aqui e veja a sua conta aqui.
+
+193
+00:10:37.000 --> 00:10:39.000
+Nós realmente criamos um que olha para os grupos que você é um membro de e
+
+194
+00:10:39.000 --> 00:10:42.000
+Mostrar que você é um membro da crônica do computador e do grupo de usuários de domínio.
+
+195
+00:10:42.000 --> 00:10:44.000
+Queremos fazer de você um administrador aqui também.
+
+196
+00:10:44.000 --> 00:10:48.000
+Ao simplesmente pegar e descer o grupo de administradores no seu perfil, eu posso
+
+197
+00:10:48.000 --> 00:10:50.000
+automaticamente lhe dá todos os direitos e privilégios
+
+198
+00:10:50.000 --> 00:10:52.000
+que o administrador do sistema teria.
+
+199
+00:10:53.000 --> 00:10:55.001
+Também procuramos controlar outros parâmetros da sua conta, como o
+
+200
+00:10:55.001 --> 00:10:57.000
+horas que você está autorizado a entrar no sistema.
+
+201
+00:10:57.001 --> 00:10:59.000
+Na verdade, por alguma razão, nós desabilitamos o seu
+
+202
+00:10:59.000 --> 00:11:01.000
+Possibilidade de inscrição na terça-feira à noite.
+
+203
+00:11:01.000 --> 00:11:02.000
+Queremos reafirmar isso.
+
+204
+00:11:02.001 --> 00:11:03.001
+Só toque na caixa de permissão.
+
+205
+00:11:04.000 --> 00:11:06.000
+Você automaticamente obtém a capacidade de se conectar a qualquer momento.
+
+206
+00:11:08.000 --> 00:11:10.000
+Quais outros recursos de gerenciamento de rede você pode me mostrar?
+
+207
+00:11:10.000 --> 00:11:13.001
+Outro aspecto importante da gestão de rede é a capacidade de gerenciar grupos de
+
+208
+00:11:13.001 --> 00:11:16.000
+servidores e estações de trabalho juntos a partir de um único ponto de gestão.
+
+209
+00:11:16.001 --> 00:11:19.001
+Então temos um produto aqui, um processo aqui chamado o gerente de servidor, que permite
+
+210
+00:11:19.001 --> 00:11:22.000
+Vamos desligar e olhar para qualquer servidor no sistema.
+
+211
+00:11:22.001 --> 00:11:25.001
+Vou olhar novamente para estes quatro CPUs por linha que estamos usando hoje.
+
+212
+00:11:26.000 --> 00:11:27.001
+Vamos ver e ver o que os usuários estão conectados a ele.
+
+213
+00:11:28.000 --> 00:11:31.000
+Você pode ver que apenas o administrador da outra máquina está ligado aqui.
+
+214
+00:11:32.001 --> 00:11:35.001
+Podemos olhar e ver os pontos de participação, os arquivos que estão sendo executados nesta máquina.
+
+215
+00:11:35.001 --> 00:11:40.000
+Podemos olhar e ver todas as ações que são permitidas a partir desta máquina.
+
+216
+00:11:41.001 --> 00:11:44.001
+Eu também posso ver quais serviços estão funcionando aqui.
+
+217
+00:11:45.001 --> 00:11:48.000
+Eu realmente posso olhar para ver todas as aplicações e baseado em servidor
+
+218
+00:11:48.000 --> 00:11:50.000
+processos que estão sendo executados nesta máquina.
+
+219
+00:11:53.001 --> 00:11:56.000
+A próxima coisa que é realmente interessante sobre o Windows NT
+
+220
+00:11:56.000 --> 00:11:57.001
+É algo que se chama o Event Viewer.
+
+221
+00:11:58.000 --> 00:12:02.001
+O Microsoft Windows NT Advanced Server naves com este produto que permite que você
+
+222
+00:12:02.001 --> 00:12:05.000
+olhar e ver todas as coisas que aconteceram no sistema.
+
+223
+00:12:05.000 --> 00:12:07.001
+Para longe, você quer manter os registros.
+
+224
+00:12:08.000 --> 00:12:13.001
+Podemos olhar e ver uma fragmentação detalhada de cada instância de qualquer coisa
+
+225
+00:12:13.001 --> 00:12:15.000
+Isso ocorreu nesta máquina desde que foi inicialmente lançado.
+
+226
+00:12:16.001 --> 00:12:17.001
+Tem razão, Mike Obrigado muito.
+
+227
+00:12:18.001 --> 00:12:22.001
+Tudo bem . Como vimos, o Windows NT não é tão uma atualização para o Windows 3.1 como
+
+228
+00:12:22.001 --> 00:12:27.000
+É um concorrente para outras plataformas de computação de alto nível como Unix e OS2.
+
+229
+00:12:27.000 --> 00:12:30.001
+Estamos falando com alguns usuários que estão trabalhando nessas plataformas para ver o que
+
+230
+00:12:30.001 --> 00:12:32.000
+Eles pensam em Windows NT.
+
+231
+00:12:32.000 --> 00:12:37.001
+Uma estação de trabalho da Unix dá ao artista comercial Lee Seiler o poder que ele precisa para
+
+232
+00:12:37.001 --> 00:12:40.001
+O trabalho de design multimídia ele faz aqui no seu estúdio Berkeley.
+
+233
+00:12:41.001 --> 00:12:46.000
+Seiler desenvolveu seu próprio software de gráficos de computador para o Atari ST, então
+
+234
+00:12:46.000 --> 00:12:48.000
+Ele foi transferido para a plataforma Unix.
+
+235
+00:12:48.001 --> 00:12:53.000
+Seiler diz que sua própria interface amigável funciona em um indigo de gráficos de silício
+
+236
+00:12:53.000 --> 00:12:56.001
+dá-lhe mais poder e velocidade do que ele já viu em qualquer
+
+237
+00:12:56.001 --> 00:12:58.001
+Sistema baseado em Windows NT.
+
+238
+00:12:58.001 --> 00:13:04.000
+O problema agora provavelmente não é NT em si mesmo, mas o fato está correndo
+
+239
+00:13:04.000 --> 00:13:08.001
+O que eu diria é uma plataforma de hardware de baixo poder de cavalo.
+
+240
+00:13:09.000 --> 00:13:16.000
+Até que os PCs ou qualquer sistema que eles estão indo para executar isso em obter
+
+241
+00:13:16.000 --> 00:13:22.001
+até ao poder de cavalo dos sistemas de risco que você encontra em gráficos de silício e
+
+242
+00:13:22.001 --> 00:13:26.001
+Nos sistemas solares, eles simplesmente não têm o poder.
+
+243
+00:13:26.001 --> 00:13:31.000
+E agora com os vendedores da Unix orientados para o mercado de multimídia de desktop, é possível
+
+244
+00:13:31.000 --> 00:13:34.000
+ter alta potência em uma gama de preços acessíveis.
+
+245
+00:13:34.001 --> 00:13:38.000
+Agora com a tecnologia ser o que é e ser capaz de sair e dizer
+
+246
+00:13:38.000 --> 00:13:43.001
+algo no bairro de como $5,000 indie, você pode agora comprar uma máquina
+
+247
+00:13:43.001 --> 00:13:48.001
+Isso acontece em 135 milhões de operações por segundo.
+
+248
+00:13:48.001 --> 00:13:54.000
+Unix, que exigia um grande sistema poderoso apenas para existir,
+
+249
+00:13:54.000 --> 00:13:55.001
+Agora tem um ambiente ideal.
+
+250
+00:13:56.000 --> 00:14:00.001
+Na sede de seguros do Fundo do Firemen em San Rafael, os desenvolvedores do sistema
+
+251
+00:14:00.001 --> 00:14:03.001
+Prefira o sistema operacional OS2 da IBM.
+
+252
+00:14:04.000 --> 00:14:07.001
+Eles estão usando OS2 corporate-wide desde 1989.
+
+253
+00:14:07.001 --> 00:14:13.001
+Nossa decisão de usar o OS2 e mais a nossa decisão de ir ao servidor de cliente foi baseada em
+
+254
+00:14:13.001 --> 00:14:16.000
+A nossa capacidade de escrever aplicações críticas de missão.
+
+255
+00:14:17.000 --> 00:14:22.000
+Assim, nós escrevemos as aplicações que apoiam a assinatura em nosso
+
+256
+00:14:22.000 --> 00:14:26.000
+comercial, em nosso pessoal, e também em nossos centros de lucro especializados.
+
+257
+00:14:27.000 --> 00:14:29.000
+Nós também temos escrito reivindicações de ajuste de aplicativos.
+
+258
+00:14:29.000 --> 00:14:34.000
+E dentro da organização dos sistemas, agora temos todo o nosso desenvolvimento mainframe
+
+259
+00:14:34.000 --> 00:14:40.000
+A melhoria é efetivamente realizada em uma base de servidor de cliente usando OS2.
+
+260
+00:14:40.001 --> 00:14:45.000
+Os agentes do Fundo da empresa são capazes de emitir políticas, formulários de processamento e cartas, e
+
+261
+00:14:45.000 --> 00:14:47.001
+Descrição automática das funções do seu escritório.
+
+262
+00:14:48.000 --> 00:14:51.000
+A produtividade de todas as divisões, incluindo reivindicações
+
+263
+00:14:51.000 --> 00:14:53.000
+A adaptação aumentou drasticamente.
+
+264
+00:14:53.000 --> 00:14:58.000
+Em reclamações mais ajustadas, teremos em algum lugar de 60 a 70 ativos
+
+265
+00:14:58.000 --> 00:14:59.001
+Dicas de arquivos que eles vão lidar com.
+
+266
+00:15:00.000 --> 00:15:04.000
+E tomamos a tecnologia do servidor do cliente, OS2, e escrevemos o front-end
+
+267
+00:15:04.000 --> 00:15:09.001
+aplicando-se ao nosso sistema de processamento de reclamações mainframe existente, para automatizar muito
+
+268
+00:15:09.001 --> 00:15:12.001
+dos procedimentos de fluxo de trabalho que um ajustador de reclamação tem que lidar.
+
+269
+00:15:12.001 --> 00:15:16.001
+Como a programação de aplicativos é feita no desktop, os usuários finais são capazes de obter
+
+270
+00:15:16.001 --> 00:15:19.000
+Participação inicial no processo de desenvolvimento.
+
+271
+00:15:19.001 --> 00:15:24.000
+O Fundo da empresa absorveu completamente o OS2 em suas funções corporativas,
+
+272
+00:15:24.001 --> 00:15:27.000
+Eles não estão procurando fazer uma mudança para o Windows NT.
+
+273
+00:15:27.001 --> 00:15:30.000
+Não estamos seriamente olhando para o Windows NT atualmente.
+
+274
+00:15:31.000 --> 00:15:34.001
+Nós tomamos a decisão de ir com OS2 e sofremos através de alguns dos crescentes
+
+275
+00:15:34.001 --> 00:15:40.000
+dor, mas agora não têm nenhuma queixa ou nenhuma razão real para nos fazer olhar diferente.
+
+276
+00:15:40.001 --> 00:15:43.001
+Estamos sinceramente muito felizes com o que o OS2 nos oferece.
+
+277
+00:15:44.000 --> 00:15:46.000
+Para as crônicas de computador, eu sou Jonelle Patterson.
+
+278
+00:15:58.000 --> 00:16:03.000
+Se você quer a velocidade de 32 bits do Windows NT, é provavelmente porque você está
+
+279
+00:16:03.000 --> 00:16:07.000
+Interessado em aplicações computacionais intensas, como gráficos ou CAD.
+
+280
+00:16:07.001 --> 00:16:09.000
+Então, é isso que vamos mostrar-lhe a seguir.
+
+281
+00:16:09.000 --> 00:16:13.000
+Ajudado por Michael Gibbons de Altzis, e também se juntando a nós, Glenn Burnett
+
+282
+00:16:13.000 --> 00:16:14.001
+Sistemas Bentley e Intergraph.
+
+283
+00:16:14.001 --> 00:16:16.000
+Michael, vamos começar com você.
+
+284
+00:16:16.001 --> 00:16:19.001
+Você está com Altzis, e você tem uma tecnologia chamada Virtuoso, que você tem
+
+285
+00:16:19.001 --> 00:16:24.000
+Em seguida, aplicou-se ao novo Altus Freehand 4. 0 escrito especificamente para NT, que é
+
+286
+00:16:24.000 --> 00:16:26.001
+A primeira aplicação de design gráfico para NT.
+
+287
+00:16:26.001 --> 00:16:30.000
+Mostre-nos alguns dos poderes de executar este tipo de programa de design sob NT.
+
+288
+00:16:30.001 --> 00:16:33.000
+Primeiro de tudo, Stuart, é o Inspetor,
+
+289
+00:16:33.001 --> 00:16:35.000
+que lhe dá uma interface muito boa.
+
+290
+00:16:36.000 --> 00:16:38.001
+E o que vamos fazer é que vamos trazer em algum texto.
+
+291
+00:16:39.001 --> 00:16:42.001
+Nós já temos o texto, e vamos trazer uma imagem.
+
+292
+00:16:42.001 --> 00:16:44.000
+Porque você está lançando um anúncio ou algo agora, certo?
+
+293
+00:16:44.000 --> 00:16:44.001
+[...]
+
+294
+00:16:44.001 --> 00:16:47.000
+E você já tem algum texto, e você tem um título lá.
+
+295
+00:16:47.000 --> 00:16:47.001
+É correto.
+
+296
+00:16:47.001 --> 00:16:50.000
+Então, o que vamos fazer é colocar um documento que temos
+
+297
+00:16:50.000 --> 00:16:51.001
+já criado com Freehand.
+
+298
+00:16:52.001 --> 00:16:58.001
+E se você notar, simplesmente por duplo clique, o cursor se transforma em um ícone de canto.
+
+299
+00:16:58.001 --> 00:17:01.001
+Eu vou escalar, colocar e escalar isso de acordo.
+
+300
+00:17:03.001 --> 00:17:05.001
+E este é um documento muito complexo.
+
+301
+00:17:06.000 --> 00:17:07.001
+E em poucos segundos, o boom.
+
+302
+00:17:08.001 --> 00:17:12.001
+Bem, agora o que vamos fazer é que vamos abrir um painel de inspecção novamente.
+
+303
+00:17:12.001 --> 00:17:18.001
+E vamos ligar o texto, como você verá aqui, para outro contêiner.
+
+304
+00:17:21.001 --> 00:17:24.000
+E vamos entrar e vamos ajustar a cópia.
+
+305
+00:17:29.000 --> 00:17:32.001
+Então vamos tentar encher essa cópia em torno do gráfico que você tirou?
+
+306
+00:17:32.001 --> 00:17:33.000
+É correto.
+
+307
+00:17:33.001 --> 00:17:40.001
+E levando em consideração toda a letra espaçando, o currículo, é bastante complexo.
+
+308
+00:17:40.001 --> 00:17:43.001
+E não importa os segundos devido à velocidade da NT.
+
+309
+00:17:44.000 --> 00:17:45.000
+Claro, e aí está.
+
+310
+00:17:46.000 --> 00:17:48.000
+E agora também temos outra característica aqui.
+
+311
+00:17:48.000 --> 00:17:52.001
+É uma característica de camadas onde temos uma tabela que presetamos em outro programa.
+
+312
+00:17:53.001 --> 00:17:55.001
+E clicando, temos isso.
+
+313
+00:17:56.000 --> 00:17:58.001
+Então, na direita inferior, você apenas adicionou uma nova camada a este gráfico.
+
+314
+00:17:59.000 --> 00:17:59.001
+[...]
+
+315
+00:17:59.001 --> 00:18:00.000
+Isso é correto.
+
+316
+00:18:00.001 --> 00:18:03.001
+Tudo bem, agora você tem algo chamado de tecnologia de páginas múltiplas dentro aqui,
+
+317
+00:18:03.001 --> 00:18:05.000
+Também é uma ferramenta muito poderosa.
+
+318
+00:18:05.001 --> 00:18:06.000
+Mostre-nos o que isso é.
+
+319
+00:18:06.000 --> 00:18:08.000
+Esta é a primeira, eu acho que você é o primeiro programa gráfico para ter isso.
+
+320
+00:18:08.000 --> 00:18:10.000
+Em qualquer plataforma, sim, isso é certo.
+
+321
+00:18:11.000 --> 00:18:15.000
+Multidão de páginas irá permitir que você tome, para esta empresa particular
+
+322
+00:18:15.000 --> 00:18:16.001
+Aqui, fizemos um layout de página.
+
+323
+00:18:17.000 --> 00:18:19.001
+Agora eles precisam de cartões, cartões de negócios e envelopes.
+
+324
+00:18:20.001 --> 00:18:23.001
+Então, simplesmente clicando em, por exemplo, número dois, vamos entrar.
+
+325
+00:18:24.000 --> 00:18:25.001
+Temos uma letra de cabeça estabelecida.
+
+326
+00:18:26.000 --> 00:18:29.001
+O botão de opções aqui permitirá adicionar páginas, duplicar ou remover.
+
+327
+00:18:31.000 --> 00:18:33.001
+Você também pode entrar e ver que temos um cartão de negócios aqui.
+
+328
+00:18:33.001 --> 00:18:36.000
+Podemos duplicar isso várias vezes.
+
+329
+00:18:40.001 --> 00:18:44.000
+E novamente, o que vamos fazer é que vamos selecionar todos, e você pode ver o completo
+
+330
+00:18:44.000 --> 00:18:46.000
+O layout que temos aqui.
+
+331
+00:18:47.000 --> 00:18:48.001
+É um pouco pequeno, mas você tem a foto.
+
+332
+00:18:48.001 --> 00:18:49.001
+Então você pode fazer todo o pouco.
+
+333
+00:18:49.001 --> 00:18:52.001
+Tome o seu design gráfico, coloque-o no anúncio, coloquem-o na sua cabeça de letra, coloquemos-o em
+
+334
+00:18:52.001 --> 00:18:55.001
+seu cartão de negócios, e assim por diante, todos usando o mesmo ambiente.
+
+335
+00:18:55.001 --> 00:18:56.000
+Isso é correto.
+
+336
+00:18:56.001 --> 00:18:57.000
+Tudo bem, muito obrigado Michael.
+
+337
+00:18:57.000 --> 00:18:57.001
+Obrigado por você.
+
+338
+00:18:57.001 --> 00:18:59.000
+Vamos passar aqui para Glenn agora e olhar para
+
+339
+00:18:59.000 --> 00:19:00.001
+Outra aplicação no NT.
+
+340
+00:19:00.001 --> 00:19:04.001
+E eu acho que a pergunta para você, como eu tinha para Michael, qual é o benefício?
+
+341
+00:19:04.001 --> 00:19:07.000
+Você escreveu MicroStation apenas para NT, e
+
+342
+00:19:07.000 --> 00:19:08.001
+Qual é o poder extra que você obtém disso?
+
+343
+00:19:08.001 --> 00:19:11.001
+Bem, a força extra vem tanto na frente e na velocidade, e na
+
+344
+00:19:11.001 --> 00:19:15.001
+retorno final na capacidade de tornar este produto software portátil para outros
+
+345
+00:19:15.001 --> 00:19:17.000
+as plataformas que se tornam disponíveis.
+
+346
+00:19:17.000 --> 00:19:20.000
+Então a vantagem que vimos da portabilidade antes, você escreve para NT, você é
+
+347
+00:19:20.000 --> 00:19:22.000
+automaticamente em todas essas plataformas e em todas estas lojas.
+
+348
+00:19:22.000 --> 00:19:23.000
+Sim, com uma compilação rápida, você aposta.
+
+349
+00:19:23.001 --> 00:19:25.000
+Tudo bem, então mostre-nos um pouco sobre MicroStation
+
+350
+00:19:25.000 --> 00:19:26.001
+e que parte do poder dela é.
+
+351
+00:19:26.001 --> 00:19:31.001
+Bem, a MicroStation é um programa CAD muito poderoso que usa as capacidades do ícone
+
+352
+00:19:31.001 --> 00:19:37.000
+do Windows e T, bem como a capacidade de retirar nossos ícones para que eu possa
+
+353
+00:19:37.000 --> 00:19:41.000
+arrange o meu escritório para um método eficiente onde torna fácil para mim
+
+354
+00:19:41.000 --> 00:19:42.001
+uso ou usuários para usar.
+
+355
+00:19:44.000 --> 00:19:47.001
+Eu tenho aqui um design que chamamos de design de dimensão.
+
+356
+00:19:48.000 --> 00:19:50.001
+Imediatamente, quero mostrar-lhe o quão fácil é desligar.
+
+357
+00:19:51.000 --> 00:19:55.000
+Neste ponto de vista, você vê todas as linhas dotted são nossa dimensão, nossa construção
+
+358
+00:19:55.000 --> 00:19:57.000
+elementos que definem as restrições.
+
+359
+00:19:57.001 --> 00:20:00.000
+Eu simplesmente rapidamente desviar aqueles globalmente, independentemente de seu nível.
+
+360
+00:20:01.000 --> 00:20:05.000
+Vou captar todos os elementos deste ponto de vista aqui e
+
+361
+00:20:05.000 --> 00:20:06.001
+Mude a cor graficamente.
+
+362
+00:20:07.000 --> 00:20:11.000
+Eu simplesmente vou escolher uma cor na paleta de cores e bingo, há as nossas cores.
+
+363
+00:20:12.000 --> 00:20:17.000
+Estando orientada pela dimensão, eu posso modificar a própria dimensão e
+
+364
+00:20:17.000 --> 00:20:18.001
+Como você vê, eu estou mudando a dimensão.
+
+365
+00:20:19.000 --> 00:20:23.001
+O design inteiro muda, e você vai notar que ele muda em todas as vistas também.
+
+366
+00:20:23.001 --> 00:20:24.000
+[...]
+
+367
+00:20:25.000 --> 00:20:28.001
+Isso lhe dá o poder, e especialmente em 3D, isso lhe dá a força para
+
+368
+00:20:28.001 --> 00:20:30.001
+Design em múltiplas perspectivas.
+
+369
+00:20:31.001 --> 00:20:33.001
+Eu vou abrir um arquivo de design diferente.
+
+370
+00:20:33.001 --> 00:20:37.000
+Eu simplesmente vou para cima e a MicroStation salva arquivos de design anteriores que eu tinha sido
+
+371
+00:20:37.000 --> 00:20:44.000
+em, capturar outro, captar nossa paleta de tags, mostrar-lhe que podemos modificar
+
+372
+00:20:44.000 --> 00:20:48.000
+dados existentes que não são gráficos para dados gráficos.
+
+373
+00:20:48.000 --> 00:20:52.001
+Por exemplo, este é um pedaço de propriedade, o proprietário, o
+
+374
+00:20:52.001 --> 00:20:55.000
+O número de lotes e o valor.
+
+375
+00:20:55.001 --> 00:20:59.001
+I&#x27;m going to pick on the value here, and I&#x27;ll change it from $225,000
+
+376
+00:20:59.001 --> 00:21:01.001
+para US$ 250 mil.
+
+377
+00:21:02.000 --> 00:21:06.000
+Assim que eu faço isso, você vai notar sobre aqui, isso vai mudar automaticamente.
+
+378
+00:21:06.001 --> 00:21:08.001
+Assim, você pode mudar o texto sem afetar o
+
+379
+00:21:08.001 --> 00:21:10.000
+gráficos e entrar na parte gráfica dela.
+
+380
+00:21:10.000 --> 00:21:15.000
+Bem, mas também estou atribuindo dados a esses gráficos para GIS,
+
+381
+00:21:16.000 --> 00:21:18.000
+Sistemas de Informação Geográfica.
+
+382
+00:21:18.000 --> 00:21:19.001
+Então, o que mais você pode fazer com a MicroStation?
+
+383
+00:21:20.000 --> 00:21:24.000
+Vou avançar e ir para um arquivo de design adicional e mostrar-lhe o
+
+384
+00:21:24.000 --> 00:21:25.001
+Fornecimento de energia da MicroStation.
+
+385
+00:21:26.001 --> 00:21:29.001
+Você verá a primeira coisa que vem é um bitmap de fundo.
+
+386
+00:21:29.001 --> 00:21:34.001
+Podemos aplicar bitmaps a objetos, e isso pode ser difícil de ver no momento,
+
+387
+00:21:34.001 --> 00:21:37.000
+Mas temos um design arquitetônico aqui.
+
+388
+00:21:38.000 --> 00:21:41.001
+Vou te mostrar, abrindo uma visão menor, vou render isso
+
+389
+00:21:41.001 --> 00:21:43.000
+para você e mostrar-lhe nossas capacidades.
+
+390
+00:21:44.000 --> 00:21:47.001
+Ver, render, você pode ver que temos uma série de rendering diferentes.
+
+391
+00:21:47.001 --> 00:21:50.001
+Esta é a versão de mesh de fio, você vai render esse desenho agora.
+
+392
+00:21:51.000 --> 00:21:51.001
+E eu vou fazê-lo fundo.
+
+393
+00:21:53.000 --> 00:21:56.000
+O que você vai ver é que vai mapear algumas luzes.
+
+394
+00:21:56.001 --> 00:21:59.001
+Atualmente, atualizamos cada um dos poligonos individuais.
+
+395
+00:21:59.001 --> 00:22:01.000
+que vemos no fundo aqui.
+
+396
+00:22:01.001 --> 00:22:07.000
+Você verá a água na piscina realmente tem um mapa de textura para ele, então você obtém uma
+
+397
+00:22:07.000 --> 00:22:08.001
+Sinta-se como se fosse, na verdade, a água.
+
+398
+00:22:08.001 --> 00:22:10.001
+E vemos as sombras que são lançadas por
+
+399
+00:22:10.001 --> 00:22:12.000
+Algo que ainda não colocamos lá.
+
+400
+00:22:12.000 --> 00:22:12.001
+É correto.
+
+401
+00:22:13.000 --> 00:22:16.000
+O cálculo é feito, então é exibindo o cálculo.
+
+402
+00:22:16.001 --> 00:22:21.000
+Essas sombras estão disponíveis a partir dessas nuvens de luz que estão aqui.
+
+403
+00:22:23.001 --> 00:22:25.001
+Você também vê a textura nas paredes.
+
+404
+00:22:27.000 --> 00:22:28.001
+Temos um mapa de textura.
+
+405
+00:22:29.000 --> 00:22:31.000
+Alguns tipos de paredes estucco que podemos ver lá.
+
+406
+00:22:31.000 --> 00:22:31.001
+Correto e Correto.
+
+407
+00:22:32.000 --> 00:22:36.001
+E as plantas que você vê no fundo são bitmaps com transparência que
+
+408
+00:22:36.001 --> 00:22:41.000
+são aplicados a polígonos que se sentam no fundo para dar ao seu usuário ou ao seu
+
+409
+00:22:41.000 --> 00:22:44.000
+cliente a capacidade de ver o que seu design vai ser como
+
+410
+00:22:44.000 --> 00:22:45.001
+Mesmo antes que seja feito.
+
+411
+00:22:47.001 --> 00:22:51.001
+Você também verá como esta janela é atualizada novamente aqui que temos transparência.
+
+412
+00:22:52.000 --> 00:22:55.001
+Estamos colocando uma espécie de vidro ligado lá.
+
+413
+00:22:56.000 --> 00:22:59.000
+E se as coisas se renderam completamente, o que, um minuto ou algo demorou?
+
+414
+00:22:59.000 --> 00:23:00.000
+Apenas um minuto, sim.
+
+415
+00:23:00.000 --> 00:23:02.001
+Normalmente você vai esperar muito tempo para ver esse rendering.
+
+416
+00:23:02.001 --> 00:23:03.000
+Sim e exatamente.
+
+417
+00:23:03.001 --> 00:23:06.000
+Também temos a capacidade de fazer animações.
+
+418
+00:23:06.001 --> 00:23:08.000
+Tenho uma animação carregada aqui.
+
+419
+00:23:08.001 --> 00:23:09.001
+É de uma sala de estar.
+
+420
+00:23:10.000 --> 00:23:11.001
+E, mais uma vez, eu vou apenas jogar essa animação.
+
+421
+00:23:12.000 --> 00:23:13.001
+E você vê que temos o fã voltando.
+
+422
+00:23:14.000 --> 00:23:15.000
+Você pode fazer passeios, bordas planas.
+
+423
+00:23:15.000 --> 00:23:16.000
+E as sombras dos fãs.
+
+424
+00:23:16.001 --> 00:23:18.000
+Exatamente, exatamente e exatamente.
+
+425
+00:23:18.001 --> 00:23:22.000
+Assim, a Micro Station é um ambiente CAD muito poderoso para
+
+426
+00:23:22.000 --> 00:23:23.001
+múltiplas disciplinas de design.
+
+427
+00:23:23.001 --> 00:23:25.000
+Aproveite a plataforma NT.
+
+428
+00:23:25.001 --> 00:23:25.001
+absolutamente .
+
+429
+00:23:26.000 --> 00:23:27.000
+É certo, muito obrigado.
+
+430
+00:23:27.000 --> 00:23:28.001
+Esse é o nosso olhar para o Windows NT.
+
+431
+00:23:29.000 --> 00:23:32.000
+Mantenha-se atento agora para as Notícias de Computação desta semana em Random Access.
+
+432
+00:23:41.001 --> 00:23:42.000
+[...]
+
+433
+00:23:45.000 --> 00:23:49.000
+No arquivo Random Access desta semana, muitos novos produtos e tecnologia
+
+434
+00:23:49.000 --> 00:23:50.001
+Notícias sobre Fall Comdex.
+
+435
+00:23:51.000 --> 00:23:54.000
+Vamos ter um relatório completo sobre o Comdex deste ano em um próximo show.
+
+436
+00:23:54.001 --> 00:23:58.001
+Computador da Apple capturou títulos do Comdex com o anúncio de sua combinação
+
+437
+00:23:58.001 --> 00:24:00.000
+Macintosh máquina do Windows.
+
+438
+00:24:00.000 --> 00:24:05.000
+O Quadra 610 DOS compatível, codificado com o Houdini, permitirá aos usuários mudar entre
+
+439
+00:24:05.000 --> 00:24:08.001
+Sistema 7, DOS e Windows com o toque de um hotkey.
+
+440
+00:24:09.000 --> 00:24:12.001
+A Quadra compatível com DOS vai vender por cerca de US$ 500 mais do que
+
+441
+00:24:12.001 --> 00:24:14.001
+Modelo Quadra 610.
+
+442
+00:24:15.001 --> 00:24:20.000
+A Philips Consumer Electronics diz que seu novo monitor Brilliance 2130 representa uma
+
+443
+00:24:20.000 --> 00:24:22.001
+Grande avanço na tecnologia de exibição.
+
+444
+00:24:23.000 --> 00:24:27.000
+É o primeiro monitor que estende a tecnologia digital para todo o interior.
+
+445
+00:24:27.000 --> 00:24:28.001
+Sinais que controlam o desempenho da imagem.
+
+446
+00:24:28.001 --> 00:24:33.000
+O Brilliance 2130 oferece alto contraste e cores brilhantes
+
+447
+00:24:33.000 --> 00:24:34.001
+com baixa distorção da imagem.
+
+448
+00:24:35.000 --> 00:24:40.000
+O novo monitor digital tem um preço de 3.500 dólares e começa a ser enviado em janeiro.
+
+449
+00:24:41.000 --> 00:24:44.001
+O Texas Instruments adicionou um novo notebook de cores à sua linha de companheiros de viagens.
+
+450
+00:24:45.000 --> 00:24:50.001
+O TM4000 coleta um processador 486 DX2 e possui um teclado semelhante
+
+451
+00:24:50.001 --> 00:24:52.000
+para um computador desktop.
+
+452
+00:24:52.001 --> 00:24:54.001
+Os preços começam em torno de US$ 3.500.
+
+453
+00:24:55.000 --> 00:25:00.000
+Hewlett Packard coloca muito em seu novo Omnibook 425, o mais novo membro da
+
+454
+00:25:00.000 --> 00:25:01.001
+A família do PC.
+
+455
+00:25:02.000 --> 00:25:06.000
+O sistema baseado no 486 vem carregado com uma suite de aplicativos do Windows.
+
+456
+00:25:06.001 --> 00:25:12.000
+O Omnibook 425 pesa em 2. 9 quilos e funciona em 4 baterias AA.
+
+457
+00:25:13.000 --> 00:25:17.001
+A empresa IBM PC está comercializando agressivamente sua linha de servidor PS2
+
+458
+00:25:17.001 --> 00:25:19.001
+Preços até 26%.
+
+459
+00:25:20.000 --> 00:25:25.000
+Os preços dos servidores do PS2 agora variam de US$ 2800 a US$ 11.000.
+
+460
+00:25:26.000 --> 00:25:31.000
+Blockbuster Video irá oferecer software e hardware CD-ROM para aluguer em 50
+
+461
+00:25:31.000 --> 00:25:32.001
+As lojas da Califórnia do Norte.
+
+462
+00:25:33.000 --> 00:25:37.000
+A Blockbuster planeja tomar o programa de aluguer de CD-ROM em todo o país se
+
+463
+00:25:37.000 --> 00:25:38.001
+que ocorrem durante o programa piloto.
+
+464
+00:25:39.001 --> 00:25:42.001
+Os novos meios de comunicação da Compton já assinaram para oferecer seu CD-ROM
+
+465
+00:25:42.001 --> 00:25:44.000
+Títulos de software para aluguer.
+
+466
+00:25:45.000 --> 00:25:48.001
+Sega diz que você pode realmente entrar em seus jogos de vídeo favoritos com
+
+467
+00:25:48.001 --> 00:25:50.000
+O novo Controlador de Ativador.
+
+468
+00:25:50.001 --> 00:25:55.001
+Ele transforma os movimentos do seu corpo em ação na tela, permitindo que você se torne o
+
+469
+00:25:55.001 --> 00:25:57.001
+personagem do jogo ou objetos movidos na tela.
+
+470
+00:25:58.001 --> 00:26:01.000
+O Activator funciona com todos os jogos Sega Genesis.
+
+471
+00:26:01.001 --> 00:26:04.001
+É isso que é para as crônicas de computador desta semana. Eu sou Janelle Stelson.
