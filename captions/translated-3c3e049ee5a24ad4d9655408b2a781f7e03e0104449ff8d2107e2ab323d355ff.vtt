@@ -1,0 +1,1577 @@
+WEBVTT
+
+1
+00:00:10.001 --> 00:00:14.000
+É assim que algumas pessoas compram ações. Eles se encontram com seu corretor de investimento,
+
+2
+00:00:14.001 --> 00:00:18.000
+Ele lhes dá algum conselho, eles lhes dão alguma comissão, e ele cuida de
+
+3
+00:00:18.000 --> 00:00:22.001
+A transação . Mas hoje em dia você pode fazer tudo isso em casa por si mesmo em seu
+
+4
+00:00:22.001 --> 00:00:26.001
+computador se você tiver o software certo. Hoje vamos olhar para o investimento.
+
+5
+00:00:26.001 --> 00:00:29.001
+software sobre esta edição do Computer Chronicles.
+
+6
+00:00:51.000 --> 00:00:56.000
+As crônicas de computador são feitas possíveis em parte por uma concessão da AFIMS, o
+
+7
+00:00:56.000 --> 00:01:02.000
+Federação Americana de Sociedades de Processamento de Informação. Avaliações, patrocinadores da OAC
+
+8
+00:01:02.000 --> 00:01:07.000
+86, a conferência líder da nação sobre tecnologia de negócios. Para a conferência
+
+9
+00:01:07.000 --> 00:01:13.001
+Informação chamada 800-OAC-1986, explorando as soluções de negócios de hoje.
+
+10
+00:01:14.000 --> 00:01:19.000
+O financiamento adicional é fornecido por McGraw-Hill, editores da Byte. de byte
+
+11
+00:01:19.000 --> 00:01:23.000
+artigos técnicos detalhados sobre novos hardware, software e idiomas cobrem o
+
+12
+00:01:23.000 --> 00:01:28.001
+mais recente em microcomputadores em todo o mundo. Bite, o padrão internacional.
+
+13
+00:01:34.001 --> 00:01:38.000
+Bem-vindo às crônicas de computador, eu sou Stuart Chafay e este é Gary Kildall.
+
+14
+00:01:38.001 --> 00:01:41.001
+Gary, este é um jogo chamado The Wizard of Wall Street. É um mercado de ações
+
+15
+00:01:41.001 --> 00:01:45.000
+jogo de simulação e eu posso chamar relatórios de pesquisa em uma determinada indústria como
+
+16
+00:01:45.000 --> 00:01:46.001
+A indústria aérea, por exemplo.
+
+17
+00:01:47.000 --> 00:01:50.000
+Quando eu recebo todas as informações que eu preciso e todo o dinheiro engraçado que eu tenho que eu
+
+18
+00:01:50.000 --> 00:01:53.001
+Vamos jogar o jogo com aqui, eu posso realmente ir diretamente para a grande mesa aqui.
+
+19
+00:01:54.000 --> 00:01:56.001
+Você pode ver a faixa de ticker de câmbio de ações passando pelo topo, os vários
+
+20
+00:01:56.001 --> 00:02:00.001
+Indices do mercado de ações para me dizer o que está acontecendo, eventos de notícias que estão afetando
+
+21
+00:02:00.001 --> 00:02:04.000
+O mercado . Este é um jogo, mas cada vez mais investidores reais estão usando seus
+
+22
+00:02:04.000 --> 00:02:07.001
+computadores pessoais para gerenciar seus portfólios, para efetivamente realizar transações
+
+23
+00:02:07.001 --> 00:02:11.000
+das suas casas. Você confiaria em um computador para lhe dizer como investir
+
+24
+00:02:11.000 --> 00:02:15.000
+O dinheiro? Eu acho que gostaria de ver os resultados dos conselhos, mas se todos seguirmos
+
+25
+00:02:15.000 --> 00:02:18.000
+O conselho de um único programa que não levaria a um mercado muito interessante.
+
+26
+00:02:18.001 --> 00:02:23.000
+Há um monte de valor que eu acho nos serviços on-line, a negociação instantânea de ações,
+
+27
+00:02:23.001 --> 00:02:27.000
+informações históricas sobre os estoques, os valores dos estoques atuais, as coisas do
+
+28
+00:02:27.000 --> 00:02:30.000
+A sorte. Eu usaria isso e eu também usaria programas como este, a simulação para
+
+29
+00:02:30.000 --> 00:02:33.001
+Conheça a terminologia. Gary, hoje vamos olhar para o último
+
+30
+00:02:33.001 --> 00:02:37.001
+e o mais quente e novo software de investimento. Uma das coisas que os computadores têm
+
+31
+00:02:37.001 --> 00:02:41.000
+O que é feito torna possível para quase qualquer um ser um investidor conhecido
+
+32
+00:02:41.000 --> 00:02:44.000
+e vamos começar por olhar para um investidor que pode não estar no
+
+33
+00:02:44.000 --> 00:02:50.001
+mercado, se não para computadores. John Ekridge não é o exemplo típico de um
+
+34
+00:02:50.001 --> 00:02:55.001
+Investidor de mercado de ações em tempo integral. Ele não usa pinceles, mantém-se volumoso
+
+35
+00:02:55.001 --> 00:03:01.000
+Notebooks ou saque o próprio cavalo no chão de negociação. Hoje, a sua ferramenta é
+
+36
+00:03:01.000 --> 00:03:06.001
+de um receptor de ações portátil e um computador pessoal. João desistiu do seu
+
+37
+00:03:06.001 --> 00:03:10.001
+Tradicional prática de corretagem quando ele percebeu que ele poderia investir por si mesmo
+
+38
+00:03:10.001 --> 00:03:15.001
+em casa, libertado das cargas dos clientes e movendo em troca por alguns
+
+39
+00:03:15.001 --> 00:03:21.001
+outras responsabilidades. Embora ele não tenha cortado todas as linhas de comunicação para o seu pleno
+
+40
+00:03:21.001 --> 00:03:26.001
+Broker de serviços, John faz a maior parte de sua pesquisa no computador que coleta dados
+
+41
+00:03:26.001 --> 00:03:32.000
+de serviços on-line, rastreando e atualizando os estoques em seu portfólio, e gráficos
+
+42
+00:03:32.000 --> 00:03:37.001
+O desempenho dos estoques selecionados durante dias ou anos. As únicas outras ferramentas
+
+43
+00:03:37.001 --> 00:03:42.001
+No seu escritório há um jornal e a citação, um rádio de citação em tempo real.
+
+44
+00:03:42.001 --> 00:03:49.001
+do receptor. Os serviços online custam cerca de 250 por mês. Em troca, John recebe um
+
+45
+00:03:49.001 --> 00:03:55.000
+ligação em tempo real para o piso de negociação, um serviço muito personalizado e apenas alguns
+
+46
+00:03:55.000 --> 00:03:59.001
+O arrependimento. Eu penso quando você trabalha sozinho e trabalha em uma casa e você não tem co
+
+47
+00:03:59.001 --> 00:04:06.000
+- trabalhadores ao seu redor que alguns desses feedback estão faltando e que é um dos
+
+48
+00:04:06.000 --> 00:04:07.001
+É por isso que ainda tenho um corretor padrão.
+
+49
+00:04:09.000 --> 00:04:12.001
+Comprar estoques de sua sala de estar pode faltar alguma das emoções da parede
+
+50
+00:04:12.001 --> 00:04:16.001
+Rua, mas tem algumas atrações especiais de sua própria.
+
+51
+00:04:16.001 --> 00:04:18.000
+K-neck, o que você acha?
+
+52
+00:04:30.000 --> 00:04:34.000
+Junte-se a nós agora no estúdio é Charles Speer, o presidente e CEO da Speer
+
+53
+00:04:34.000 --> 00:04:38.001
+Empresa de Valores, Inc. Em Los Angeles e também conosco é John Fryerson, o presidente
+
+54
+00:04:38.001 --> 00:04:42.000
+Investir aqui em São Francisco. O Gary? Chuck, como são os computadores
+
+55
+00:04:42.000 --> 00:04:43.001
+Ajudar um pequeno investidor hoje em dia?
+
+56
+00:04:44.001 --> 00:04:48.000
+Bem, um computador de alguma forma é a máquina ATM para a indústria de corretores porque
+
+57
+00:04:48.000 --> 00:04:53.000
+que coloca nas mãos do consumidor uma riqueza de informação nunca antes
+
+58
+00:04:53.000 --> 00:04:58.000
+E ele lhe dá acesso ao mercado para que ele possa fazer um comércio automatizado.
+
+59
+00:04:58.000 --> 00:05:01.000
+Bem, agora você tem um exemplo de apenas um comércio automatizado que está indo aqui, certo?
+
+60
+00:05:01.000 --> 00:05:06.000
+Bem, eu tenho o software de segurança do Speer que no menu principal mostra uma variedade
+
+61
+00:05:06.000 --> 00:05:09.001
+das coisas. Ele mostra que você pode acessar citações, que você poderá olhar para o seu
+
+62
+00:05:09.001 --> 00:05:14.000
+portfólio que é postado até o segundo, que você pode olhar para seus registros fiscais
+
+63
+00:05:14.000 --> 00:05:17.000
+E quando você está pronto para fazer um comércio que você pode entrar no detalhe de comércios, obter
+
+64
+00:05:17.000 --> 00:05:18.001
+O comércio foi feito e veja publicado.
+
+65
+00:05:19.000 --> 00:05:22.000
+Ok, Chuck, vamos começar do começo. Suponho que estou interessado em investir
+
+66
+00:05:22.000 --> 00:05:25.000
+em algum stock no campo do computador e estou pensando em decidir entre
+
+67
+00:05:25.000 --> 00:05:30.000
+Apple, por exemplo, e Lotus e eu quero usar este software para tentar obter um
+
+68
+00:05:30.000 --> 00:05:33.000
+A resposta para qual seria o melhor investimento agora. Como isso ajudaria
+
+69
+00:05:33.000 --> 00:05:38.001
+E eu? O sistema possui uma base de dados de cerca de 3.300 empresas e você pode
+
+70
+00:05:38.001 --> 00:05:43.000
+Compare 50 itens diferentes, um pouco mais de 50 itentos, de uma variedade de maneiras, uma
+
+71
+00:05:43.000 --> 00:05:48.000
+empresa por empresa, grupo de indústria, etc. Então, vamos entrar em
+
+72
+00:05:48.000 --> 00:05:49.001
+E nós vamos pedir para fazer isso. Então eu quero ver o Apple Lotus.
+
+73
+00:05:52.000 --> 00:05:55.001
+Agora estamos online, não é mesmo? Sim, nós somos Estamos on-line para a fonte
+
+74
+00:05:55.001 --> 00:05:58.000
+Telecomunicações em McLean, Virgínia. OK  ⁇
+
+75
+00:06:02.000 --> 00:06:06.000
+E você está pedindo que ele faça o que agora? Eu estou pedindo que ele se mova da
+
+76
+00:06:06.000 --> 00:06:12.001
+menu principal e vá para as informações que são fornecidas ao sistema por Media
+
+77
+00:06:12.001 --> 00:06:16.001
+em Richmond. A mídia geral mantém as informações financeiras e há
+
+78
+00:06:16.001 --> 00:06:20.001
+seu ecrã e estamos dizendo a ele, estamos interessados em fazer alguns estoques
+
+79
+00:06:20.001 --> 00:06:26.001
+da análise. Ele voltará após as telas necessárias do advogado que dizem isso
+
+80
+00:06:26.001 --> 00:06:31.000
+É... Não me culpe se você perde dinheiro. E então vamos... Ele nos pediu para colocar
+
+81
+00:06:31.000 --> 00:06:37.000
+Simbolos de estoque em e nós vamos pedir isso para a Apple. Bem e o Lotus. Ok, e agora é
+
+82
+00:06:37.000 --> 00:06:39.001
+Vamos para... Então, está a retirar o arquivo da Apple agora? Ele está tirando a Apple
+
+83
+00:06:39.001 --> 00:06:44.000
+O arquivo. Ele vai nos dar outro desses pontos de exclamação e nós vamos dizer isso
+
+84
+00:06:44.000 --> 00:06:48.000
+O Lotus. Se acontecer que queremos fazer um grupo de indústria, precisamos apenas colocar o número
+
+85
+00:06:48.000 --> 00:06:52.000
+de esse grupo em e há um diretório aqui e isso é satisfatório. Então o que
+
+86
+00:06:52.000 --> 00:06:55.001
+Qual tipo de informação podemos extrair disso? Bem, em primeiro lugar, vamos dizer que
+
+87
+00:06:55.001 --> 00:06:59.000
+Estou interessado em saber como esses valores mobiliários têm funcionado recentemente. Eu quero que
+
+88
+00:06:59.000 --> 00:07:03.001
+Saiba o que aconteceu com eles na semana passada, um contra o outro, e eu quero saber
+
+89
+00:07:03.001 --> 00:07:06.001
+Como foi feito historicamente. Pergunta-me se estou interessado em
+
+90
+00:07:06.001 --> 00:07:10.001
+Vendo eles classificados em ordem percentual com apenas alguns. Não é necessário e é
+
+91
+00:07:10.001 --> 00:07:16.000
+Diz-me que a semana passada a Apple estava um pouco acima, a Lotus estava abaixo, as últimas quatro semanas,
+
+92
+00:07:16.000 --> 00:07:21.000
+as últimas 13 semanas, as últimas 52 semanas, ano a ano. Como você faria uma
+
+93
+00:07:21.000 --> 00:07:24.001
+Transacções em estoque? Bem, se eu quiser fazer uma transação. Bem, eu posso te parar
+
+94
+00:07:24.001 --> 00:07:27.000
+Antes de chegar a isso? Eu acho que eu quero saber o que os insiders estão fazendo em
+
+95
+00:07:27.000 --> 00:07:30.001
+essas duas empresas. Bem, o que queremos fazer lá é que acontece que está em
+
+96
+00:07:30.001 --> 00:07:35.000
+Ecrã 11. Então, nós pedimos isso para a tela 11. Quer saber se eu sou
+
+97
+00:07:35.000 --> 00:07:42.000
+Interessado em classificar esses e eu disse não. Então ele volta e diz 45
+
+98
+00:07:42.000 --> 00:07:46.000
+,000 ações da Apple foram compradas por insiders no último período de relatório, 84
+
+99
+00:07:46.000 --> 00:07:48.001
+Mil ações de Lotus foram vendidas. OK  ⁇
+
+100
+00:07:49.000 --> 00:07:55.001
+Agora você perguntou sobre fazer um comércio. O que queremos fazer é mover-se
+
+101
+00:07:55.001 --> 00:08:01.001
+sair deste aspecto do sistema e voltar para o investimento.
+
+102
+00:08:03.001 --> 00:08:07.000
+Então eu posso tomar essa informação e ir diretamente para frente e fazer uma transação agora. Bem assim,
+
+103
+00:08:07.000 --> 00:08:10.001
+Algumas coisas que você pode fazer. Você pode pedir a opinião de pesquisa de Wall Street e
+
+104
+00:08:10.001 --> 00:08:13.001
+Veja o que outros corretores pensam sobre o estoque. Você pode pedir a minha opinião porque
+
+105
+00:08:13.001 --> 00:08:17.001
+é levado aqui também, mas nós vamos querer ir para três, Spear Securities
+
+106
+00:08:17.001 --> 00:08:22.000
+Comércio online. O que é importante salientar é que esta tecnologia
+
+107
+00:08:22.000 --> 00:08:27.000
+Apoia um mercado que opera 24 horas por dia. A tela pergunta o mesmo.
+
+108
+00:08:27.000 --> 00:08:30.001
+Uma série de perguntas que o seu corretor no telefone perguntará. Dê o
+
+109
+00:08:30.001 --> 00:08:34.000
+Informações, pressione a chave de retorno. Em 30 segundos você terá um comércio e se
+
+110
+00:08:34.000 --> 00:08:37.000
+É meia-noite, você ainda vai obtê-lo enquanto é uma Bolsa de Nova Iorque
+
+111
+00:08:37.000 --> 00:08:41.001
+Os estoques listados. John, como isso afeta o corretor local? Bem, eu acho que o
+
+112
+00:08:41.001 --> 00:08:45.001
+O corretor local, em certa medida, está ameaçado estes dias porque o que aconteceu é
+
+113
+00:08:45.001 --> 00:08:49.001
+A revolução eletrônica colocou nas mãos de um investidor individual o
+
+114
+00:08:49.001 --> 00:08:54.000
+informações que, no passado, era a área exclusiva de experiência da
+
+115
+00:08:54.000 --> 00:08:57.001
+um corretor individual. E, portanto, o que você tem hoje são as pessoas que estão fazendo compras
+
+116
+00:08:57.001 --> 00:09:01.001
+empresas para descobrir quem vai dar-lhes o menor custo de transação, tomando o
+
+117
+00:09:01.001 --> 00:09:06.001
+economizar, o que é enorme em alguns casos. Pode ser de 75 a 85% acima do padrão
+
+118
+00:09:06.001 --> 00:09:11.001
+Comissão completa do passado. Eles tomam essas poupanças e vão e são capazes de
+
+119
+00:09:11.001 --> 00:09:15.001
+para investir em software e entrar em bases de dados que se encaixam
+
+120
+00:09:15.001 --> 00:09:17.000
+seus próprios interesses e necessidades.
+
+121
+00:09:17.001 --> 00:09:22.001
+É uma mudança emocionante. É provavelmente a única área para o uso de computadores domésticos que
+
+122
+00:09:22.001 --> 00:09:27.000
+Ele realmente oferece um serviço genuíno hoje. As pessoas estão olhando, o que podemos fazer
+
+123
+00:09:27.000 --> 00:09:30.001
+Com um computador em casa? Há 40 milhões de investidores, investidors individuais,
+
+124
+00:09:30.001 --> 00:09:35.000
+Quem, como um grupo, possui mais computadores percentualmente mais do que provavelmente qualquer outro grupo
+
+125
+00:09:35.000 --> 00:09:40.000
+para computadores domésticos. E aqui está uma área onde eles realmente recebem um valor acrescentado onde
+
+126
+00:09:40.000 --> 00:09:44.000
+Ele paga-lhes para usar seu computador em casa. O único elemento que necessita
+
+127
+00:09:44.000 --> 00:09:49.000
+a ocorrer é apenas a educação para mostrar-lhes que software está disponível e como
+
+128
+00:09:49.000 --> 00:09:52.000
+Usá-lo e como usá-la para fins de investimento. John, quando você fala de um
+
+129
+00:09:52.000 --> 00:09:55.001
+poupanças, você inclui o custo de negociação e as taxas on-line e
+
+130
+00:09:55.001 --> 00:10:00.001
+coisas desse tipo? Eu sou realmente. Na verdade, para o investidor comum, eu não vejo
+
+131
+00:10:00.001 --> 00:10:05.001
+que eles precisariam usar em taxas on-line talvez mais de $ 50 provavelmente seria
+
+132
+00:10:05.001 --> 00:10:11.001
+Seja alto, de $ 25 a $ 50 por mês. Eles vão economizar em um único comércio que muitas vezes. Se o
+
+133
+00:10:11.001 --> 00:10:15.000
+Alguém tem pouco a dizer como $ 10.000 no mercado e eles negociam dois ou três
+
+134
+00:10:15.000 --> 00:10:19.000
+vezes por ano, eles vão economizar o suficiente em comissão quando estão negociando negócios
+
+135
+00:10:19.000 --> 00:10:23.000
+através de uma espinha ou Schwab ou um rápido e cruel você conhece uma empresa de corretagem de desconto
+
+136
+00:10:23.000 --> 00:10:27.000
+para mais do que compensar os custos e pagar por esses serviços.
+
+137
+00:10:27.000 --> 00:10:30.000
+Vamos voltar a isso em apenas um minuto. Em primeiro lugar, uma das mais recentes
+
+138
+00:10:30.000 --> 00:10:33.001
+rugas em software de investimento é um gadget que lhe permite monitorar o que está acontecendo
+
+139
+00:10:33.001 --> 00:10:36.001
+em Wall Street em tempo real no seu computador enquanto você está fazendo algo diferente
+
+140
+00:10:36.001 --> 00:10:39.000
+A aplicação . Wendy Woods tem um relatório.
+
+141
+00:10:41.000 --> 00:10:45.001
+A Lotus Information Network está pioneando um novo tipo de sistema de entrega por tempo
+
+142
+00:10:45.001 --> 00:10:50.000
+Dados de investimento sensíveis. Ao contrário da maioria dos serviços que oferecem up-to-minute
+
+143
+00:10:50.000 --> 00:10:55.000
+dados de estoque e mercadorias para computadores através das linhas telefônicas, sinal de Lotus
+
+144
+00:10:55.000 --> 00:11:01.000
+O pacote coloca esses dados de um subband de rádio FM por um receptor FM que coloca
+
+145
+00:11:01.000 --> 00:11:07.001
+Em um portão de série PC. Até 250 usuários - problemas programados, constantemente monitorados e
+
+146
+00:11:07.001 --> 00:11:11.001
+alterado, pode então ser exibido em vários formatos na tela do PC.
+
+147
+00:11:12.000 --> 00:11:17.001
+O nosso sistema é um sistema contínuo para que as atualizações aconteçam segundo por segundo.
+
+148
+00:11:17.001 --> 00:11:23.000
+Como as transações ocorrem em uma base contínua ao longo do dia de negociação. Até mesmo
+
+149
+00:11:23.000 --> 00:11:27.001
+Quando o computador está apagado, o nosso produto mantém a informação em um
+
+150
+00:11:27.001 --> 00:11:34.001
+modo de fundo e, de fato, manterá o rastreamento do seu portfólio, incluindo alerta
+
+151
+00:11:34.001 --> 00:11:39.001
+se as mudanças ocorrem que você prefere observar, como eu digo, mesmo quando o
+
+152
+00:11:39.001 --> 00:11:44.000
+O produto é usado para outro propósito. Este é o centro do cérebro para sinais
+
+153
+00:11:44.000 --> 00:11:51.000
+transmissão em 12 cidades dos EUA. Citações ao vivo sobre 23.000 questões que são negociadas de todos
+
+154
+00:11:51.000 --> 00:11:54.001
+As principais trocas vêm aqui para este computador Berlim Game California
+
+155
+00:11:54.001 --> 00:11:56.001
+facilidade através de longas linhas.
+
+156
+00:11:57.001 --> 00:12:01.001
+A partir daí, a informação é enviada para o satélite equatorial onde é recolhida.
+
+157
+00:12:01.001 --> 00:12:06.001
+12 estações de rádio em todo o país que transmitem o sinal. O Lotus
+
+158
+00:12:07.000 --> 00:12:11.001
+A tecnologia proprietária, por outro lado, também permite que os dados, uma vez carregados em um PC,
+
+159
+00:12:12.001 --> 00:12:16.000
+para ser usado em folhas como 123 e Symphony.
+
+160
+00:12:16.001 --> 00:12:20.001
+O produto só está fora por alguns meses e embora a Lotus se recuse a
+
+161
+00:12:20.001 --> 00:12:25.000
+divulgar dados de vendas, a empresa afirma que o produto vendeu além dos seus
+
+162
+00:12:25.000 --> 00:12:31.000
+as expectativas . Para as crônicas de computador, eu sou Wendy Woods. Stuart, esse é um dos
+
+163
+00:12:31.000 --> 00:12:34.000
+As mais recentes maneiras de receber quotas de ações e eu entendo, John, que o Dow
+
+164
+00:12:34.000 --> 00:12:37.001
+Jones New Service é uma das formas mais antigas de receber citações. Isso é. Na verdade é
+
+165
+00:12:37.001 --> 00:12:41.001
+foi um dos pioneiros juntamente com a fonte e CompuServe e agora há
+
+166
+00:12:41.001 --> 00:12:45.001
+Outro serviço que compete chama-se View Data Out of Florida. Mas o que eles fizeram
+
+167
+00:12:45.001 --> 00:12:49.000
+foram coletadas as informações a custos bastante elevados para que eles tenham desenvolvido,
+
+168
+00:12:49.000 --> 00:12:54.001
+Você sabe, as bases de dados para que o usuário possa entrar e obter este tipo imediato
+
+169
+00:12:54.001 --> 00:12:57.001
+da informação. Em certo sentido, tudo saiu do desconforto. Nós falamos sobre essa a
+
+170
+00:12:57.001 --> 00:13:02.001
+Um pouco mais cedo. A indústria de corretores, há 10 anos, foi, você sabe, a partir do
+
+171
+00:13:02.001 --> 00:13:07.000
+estrutura de alta comissão para um em que você pode comprar serviços de transação
+
+172
+00:13:07.000 --> 00:13:11.000
+separadamente dos serviços de dados. Se você quiser dar uma olhada, por exemplo, Dow
+
+173
+00:13:11.000 --> 00:13:15.000
+Jones, o que eles fizeram não é apenas trazer informações de investidores juntos, somos
+
+174
+00:13:15.000 --> 00:13:19.000
+tirando o seu menu principal, mas eles têm ligado as coisas como notícias mundiais e
+
+175
+00:13:19.000 --> 00:13:23.000
+do esporte. Você pode fazer compras através deles agora. Você pode reservar reservas de companhias aéreas.
+
+176
+00:13:23.001 --> 00:13:26.001
+Assim, o indivíduo em casa com um computador de repente tem um
+
+177
+00:13:26.001 --> 00:13:28.000
+valor acrescentado a razão de ter isso.
+
+178
+00:13:28.000 --> 00:13:30.001
+John, você acha que este é um bom lugar para um indivíduo
+
+179
+00:13:30.001 --> 00:13:32.000
+Como começar com o Dow Jones New Service?
+
+180
+00:13:32.000 --> 00:13:36.001
+Isso é. É relativamente barato fazer isso. Muitos dos pacotes de software como
+
+181
+00:13:36.001 --> 00:13:42.001
+Chuck, como o programa de equalizador Charles Schwab, o software Dow Jones
+
+182
+00:13:42.001 --> 00:13:46.001
+em si, que tem um programa terminal, eles têm um programa de gráficos de estoque,
+
+183
+00:13:47.000 --> 00:13:51.000
+gerenciamento de portfólio, ou qualquer dos pacotes de comunicações disponíveis
+
+184
+00:13:51.000 --> 00:13:55.000
+Para quase qualquer computador hoje irá permitir-lhe o acesso às notícias do Dow Jones
+
+185
+00:13:55.000 --> 00:13:58.000
+Serviço de recuperação. E, geralmente, quando você faz isso, você recebe uma hora ou
+
+186
+00:13:58.000 --> 00:14:00.000
+Dois dias de acesso livre.
+
+187
+00:14:00.000 --> 00:14:04.000
+John, dê-nos uma breve introdução do que podemos obter no mercado de ações. I
+
+188
+00:14:04.000 --> 00:14:06.001
+Veja esta citação da média de mercado. Vamos um dos mais interessantes
+
+189
+00:14:06.001 --> 00:14:11.000
+serviços que são prestados é um serviço chamado Invest, que realmente lhe dá
+
+190
+00:14:11.000 --> 00:14:14.001
+através do recrutamento de notícias Dow Jones, a capacidade de tapping em que topo
+
+191
+00:14:14.001 --> 00:14:17.001
+Os corretores estão dizendo sobre ativos que você tem interesse em. Por exemplo, você
+
+192
+00:14:17.001 --> 00:14:24.000
+Ele olhou para o computador da Apple. Então vamos entrar e encontramos que a Apple
+
+193
+00:14:24.000 --> 00:14:28.001
+Foi seguido recentemente por vários analistas. Na verdade, se você
+
+194
+00:14:28.001 --> 00:14:33.001
+Queria passar, você vê que existem três páginas de apenas a lista
+
+195
+00:14:33.001 --> 00:14:37.001
+cronologicamente do mais recente relatório de volta para o que vai de volta alguns
+
+196
+00:14:37.001 --> 00:14:41.000
+meses, um dos serviços. Vamos dizer que quisemos ver o que Payne Weber era
+
+197
+00:14:41.000 --> 00:14:45.000
+O pensamento . É o número três na lista. Vamos entrar e pedir o número 3.
+
+198
+00:14:45.000 --> 00:14:48.000
+E isso vem e podemos escolher baixar ou o todo.
+
+199
+00:14:48.000 --> 00:14:50.000
+relatório ou os dados de preços de ações.
+
+200
+00:14:51.000 --> 00:14:53.000
+Vamos dizer que só quisemos obter a sua opinião, Payne
+
+201
+00:14:53.000 --> 00:14:54.001
+A opinião de Weber. Agora pode ser beige.
+
+202
+00:14:55.001 --> 00:14:59.000
+Poderia ser qualquer uma das outras grandes empresas de corretagem que estão ligadas ao
+
+203
+00:14:59.000 --> 00:15:02.000
+serviço ou através das notícias Dow Jones, que podemos ir e obter Merrill Lynch
+
+204
+00:15:02.000 --> 00:15:07.001
+A pesquisa. Então, o que você tem em suas próprias mãos agora é a capacidade de superar o
+
+205
+00:15:07.001 --> 00:15:11.001
+corretor e para obter o valor total para o dólar de comissão que você gasta porque você é
+
+206
+00:15:11.001 --> 00:15:16.001
+vai gastá-lo com um corretor de desconto para pagar a taxa de transação de leilão. e
+
+207
+00:15:16.001 --> 00:15:20.000
+Então você vai e você só recebe os dados que você realmente quer. Não é o corretor
+
+208
+00:15:20.000 --> 00:15:24.000
+significativo no sentido de que eles assimilam uma grande quantidade de informações que normalmente
+
+209
+00:15:24.000 --> 00:15:27.000
+Se você está olhando para todos esses resultados, você teria que fazer isso sozinho. Bem, você
+
+210
+00:15:27.000 --> 00:15:31.000
+Há dois tipos diferentes de pessoas. Você tem o tipo de pessoa que realmente se transforma
+
+211
+00:15:31.000 --> 00:15:35.000
+Decisões de investimento para outra pessoa que é profissional. E então você
+
+212
+00:15:35.000 --> 00:15:39.000
+ter um quadro crescente de pessoas que são usuários de computadores, por outro lado, que gostam de fazer
+
+213
+00:15:39.000 --> 00:15:43.000
+coisas para si mesmos. Mas o que eles não tinham disponível até recentemente foi o
+
+214
+00:15:43.000 --> 00:15:47.001
+Ferramentas para fazer isso. Agora o que eles têm através do Dow Jones ou através do Standard &amp;
+
+215
+00:15:47.001 --> 00:15:51.001
+O grupo de mercados pobres, esses serviços, é que eles podem acessar em tempo real, os mesmos dados em
+
+216
+00:15:51.001 --> 00:15:55.000
+O mesmo tempo que um corretor ou outro profissional pode. Se eles realmente são
+
+217
+00:15:55.000 --> 00:16:00.001
+Eles estão interessados em fazer isso por si mesmos, agora eles podem fazer isso. É emocionante porque
+
+218
+00:16:00.001 --> 00:16:04.001
+Você pode se sentar em casa e fazer parte da comunidade financeira internacional em um
+
+219
+00:16:04.001 --> 00:16:08.001
+equilíbrio com qualquer pessoa que esteja no negócio. Chuck, você é um corretor.
+
+220
+00:16:09.000 --> 00:16:13.001
+Quanto dinheiro eu posso dizer agora usando esses tipos de serviços e investir
+
+221
+00:16:13.001 --> 00:16:18.000
+em linha? Bem, esse tipo de abordagem para o negócio tem um radical diferente
+
+222
+00:16:18.000 --> 00:16:21.001
+econômica para isso do que a abordagem tradicional para o negócio. Esta é a
+
+223
+00:16:21.001 --> 00:16:27.000
+A Branca. Todos esses PCs que foram vendidos podem ser ramos. E desde que não temos
+
+224
+00:16:27.000 --> 00:16:30.001
+os custos associados a uma planta física em algum lugar, nossas comissões tendem a ser
+
+225
+00:16:30.001 --> 00:16:36.000
+85 a 90 por cento daqueles que você cobraria para o tipo tradicional de desconto
+
+226
+00:16:36.000 --> 00:16:40.001
+um broker. E em algum lugar cerca de 25 a 30 por cento do que você pagaria o custo total
+
+227
+00:16:40.001 --> 00:16:43.001
+dos corretores. Então, em outras palavras, estamos pagando ainda menos do que teríamos um desconto
+
+228
+00:16:43.001 --> 00:16:47.001
+corretor porque, como você diz, o PC se torna sua sucursal em um sentido. Isso é certo.
+
+229
+00:16:48.000 --> 00:16:52.000
+Eu gostaria de, ao ouvir para onde a nossa indústria está indo, algo que eu realmente
+
+230
+00:16:52.000 --> 00:16:57.000
+O que deve ser observado é que este sistema parece ameaçar o caminho de corretagem
+
+231
+00:16:57.000 --> 00:16:59.000
+Os serviços são tradicionalmente oferecidos.
+
+232
+00:16:59.001 --> 00:17:03.001
+Mas se você tem um corretor que lhe dá conselhos e você ganha dinheiro com ele, você
+
+233
+00:17:03.001 --> 00:17:07.001
+Eles encontraram o recurso mais valioso no negócio. E isso é
+
+234
+00:17:07.001 --> 00:17:09.000
+Alguém que você realmente deve pendurar.
+
+235
+00:17:09.001 --> 00:17:12.000
+Bem, senhores, vamos fazer uma pausa em apenas um minuto. Vamos ter razão
+
+236
+00:17:12.000 --> 00:17:15.001
+de volta . Vamos dar uma olhada em um programa de $49 que lhe dá números e
+
+237
+00:17:15.001 --> 00:17:19.000
+Os gráficos que podem ajudá-lo a escolher um vencedor em Wall Street. Então fique conosco.
+
+238
+00:17:31.000 --> 00:17:35.000
+O que nos acompanha no estúdio é Richard Carlin. Richard é presidente e CEO da
+
+239
+00:17:35.000 --> 00:17:38.001
+Telescan Incorporated de Houston, Texas. E de volta conosco é John Frierson,
+
+240
+00:17:38.001 --> 00:17:43.000
+Presidente da Investigação. O Gary? Richard, eu gostaria de olhar imediatamente para o seu
+
+241
+00:17:43.000 --> 00:17:48.000
+O produto é chamado Telescan Analyzer. O bom. Nosso produto permite que uma pessoa
+
+242
+00:17:48.000 --> 00:17:52.001
+Obtenha informações históricas de estoque e mostre-as na tela muito rapidamente.
+
+243
+00:17:52.001 --> 00:17:56.001
+Podemos obter qualquer gráfico de qualquer estoque e exibir no ecrã menos de 15
+
+244
+00:17:56.001 --> 00:18:01.000
+Os segundos. Isso apenas mostra um gráfico que temos recuperado de nossa base de dados mostrando
+
+245
+00:18:01.000 --> 00:18:07.000
+A média industrial de Dow Jones remonta a 1973. E como você pode ver,
+
+246
+00:18:07.000 --> 00:18:13.000
+O Dow está indo frio por um longo período de tempo. Em 1982, ele quebrou
+
+247
+00:18:13.000 --> 00:18:17.001
+Desde então, e desde então, está a atingir as altitudes de todos os tempos. No entanto, se aproveitarmos o
+
+248
+00:18:17.001 --> 00:18:21.001
+Uma das características do nosso Telescan Analyzer, e essa é a capacidade de ajustar
+
+249
+00:18:21.001 --> 00:18:28.001
+para a inflação, podemos olhar para o Dow agora depois de ajustar para o consumidor
+
+250
+00:18:28.001 --> 00:18:33.000
+Índice de Preço. E o que encontramos não é um mercado de ações que está atingindo todos os novos altos,
+
+251
+00:18:33.001 --> 00:18:37.001
+Mas um mercado que está apenas agora começando a girar depois de um muito, muito longo
+
+252
+00:18:37.001 --> 00:18:42.001
+período de declínio em termos reais. Agora, Richard, isso está novamente ligado a
+
+253
+00:18:42.001 --> 00:18:44.001
+outro sistema de computador através.
+
+254
+00:18:44.001 --> 00:18:48.000
+Sim, isso é para nossa própria base de dados em Houston, Texas. Em seguida, os dados são
+
+255
+00:18:48.000 --> 00:18:51.001
+transmitido localmente para esta máquina e apresentado como um gráfico, é isso certo?
+
+256
+00:18:52.000 --> 00:18:55.001
+Sim, é que é. Bem, agora antes no programa, pedimos-lhe algumas informações
+
+257
+00:18:55.001 --> 00:19:00.000
+Comércio em Insider. Agora suponha que eu quero tomar o seu sistema e dizer, o quão bom a
+
+258
+00:19:00.000 --> 00:19:03.001
+A orientação é a negociação de insider em uma ação específica? Poderia usar o telescópio para
+
+259
+00:19:03.001 --> 00:19:08.001
+Faça isso? Sim, você poderia. Aqui estou a chamar um gráfico de Toys R Us
+
+260
+00:19:08.001 --> 00:19:11.000
+Apresentação de Insider Trading.
+
+261
+00:19:11.000 --> 00:19:15.001
+No fundo, temos uma linha, e isso mostra a história do comércio interior. e
+
+262
+00:19:15.001 --> 00:19:19.001
+Até onde eu sei, temos o único serviço que mostra isso. O que você pode ver é
+
+263
+00:19:19.001 --> 00:19:23.001
+Quando está acima da linha, você tem compras líquidas por intermediários ou funcionários corporativos.
+
+264
+00:19:24.000 --> 00:19:27.001
+Quando está abaixo da linha, você tem venda líquida. E como pode ser visto em Jogos R Nós,
+
+265
+00:19:28.000 --> 00:19:32.001
+Quando você olha para a história, você encontra a compra em cada grande fundo, e então você
+
+266
+00:19:32.001 --> 00:19:37.000
+Encontre vendas em todos os principais toques. Assim por... Um bom estoque para acompanhar um insider
+
+267
+00:19:37.000 --> 00:19:40.000
+Ação de ação. Sim, seguindo os insiders, você poderia ganhar algum dinheiro neste estoque.
+
+268
+00:19:41.000 --> 00:19:44.000
+Bem, agora eu acho que outra característica que você tem aqui, podemos olhar para o
+
+269
+00:19:44.000 --> 00:19:47.001
+Avaliação de um estoque, se é sobrevalorizado e subvalorado e assim por diante. Dê-me
+
+270
+00:19:47.001 --> 00:19:51.001
+Um exemplo de um desses. Bem, o que fizemos é que tomamos até cinco
+
+271
+00:19:51.001 --> 00:19:56.001
+valores fundamentais, dividendos, lucros, valor do livro, fluxo de caixa, gasto de capital,
+
+272
+00:19:57.000 --> 00:20:01.001
+e vendas, e nós o convertimos em uma representação gráfica. Então você pode tomar
+
+273
+00:20:01.001 --> 00:20:07.000
+Um olhar para um estoque e determinar se ele está acima ou subestimado. E este
+
+274
+00:20:07.000 --> 00:20:11.000
+mostra Kellogg, um dos estoques de alimentos lá fora que são muito, muito populares.
+
+275
+00:20:11.001 --> 00:20:14.001
+E isso só mostra a nossa sobre e subestimação
+
+276
+00:20:14.001 --> 00:20:16.001
+canais gerados a partir dos fundamentos.
+
+277
+00:20:17.000 --> 00:20:20.001
+E para a pessoa média que não sabe muito sobre isso, em um olhar eles
+
+278
+00:20:20.001 --> 00:20:25.000
+Você pode ver, o estoque é sobrevalorizado? É subestimado? Ou agora mesmo,
+
+279
+00:20:25.001 --> 00:20:27.000
+Ah, vamos olhar para fora. Sim, muito sobrevalorizado.
+
+280
+00:20:27.000 --> 00:20:30.000
+Vamos olhar para fora. Bem, você tem um exemplo onde podemos ver algo que é
+
+281
+00:20:30.000 --> 00:20:34.001
+subestimado, algo que devemos comprar. Sim, isso mostra um pouco subestimado
+
+282
+00:20:34.001 --> 00:20:39.000
+grupo, os semicondutores, e isso mostra o semicondo nacional. Mais uma vez, você
+
+283
+00:20:39.000 --> 00:20:42.001
+Você pode ver onde o estoque foi historicamente sobrevalorizado, onde é subvalorado.
+
+284
+00:20:43.000 --> 00:20:46.000
+E, novamente, estamos encontrando uma posição muito subestimada agora.
+
+285
+00:20:46.001 --> 00:20:51.000
+John, há algum software em torno agora que está indo o próximo passo? Ou seja, onde
+
+286
+00:20:51.000 --> 00:20:54.001
+Temos um tipo de sistema de especialistas onde, em vez de ter que analisar os dados,
+
+287
+00:20:54.001 --> 00:20:58.000
+Ele vai voltar e dizer, comprar isso, vender isso. Estamos nessa fase de
+
+288
+00:20:58.000 --> 00:21:02.000
+Usando os computadores? Estamos nessa fase. Nós realmente não temos o verdadeiro avanço
+
+289
+00:21:02.000 --> 00:21:06.000
+Os produtos inovadores ainda estão no mercado, mas estão apenas meses longe.
+
+290
+00:21:06.000 --> 00:21:11.000
+E o que vai estar disponível são sistemas que permitirá que você coloque
+
+291
+00:21:11.000 --> 00:21:16.000
+habilidades de interpretação, seja você próprio ou talvez emprestando a outra pessoa que é
+
+292
+00:21:16.000 --> 00:21:19.001
+considerado como um especialista, para permitir que você passe pelo processo de screening
+
+293
+00:21:19.001 --> 00:21:23.001
+ou o processo de seleção para que você possa selecionar estoques para olhar aqui. Você sabe, eu
+
+294
+00:21:23.001 --> 00:21:27.001
+Tome uma página do livro de Lou Brookhiser e diga, mesmo com sobrevalorizado e
+
+295
+00:21:27.001 --> 00:21:30.000
+subvalorizado exibindo na tela agora, não há garantias
+
+296
+00:21:30.000 --> 00:21:37.000
+No mundo que hoje
+
+297
+00:21:37.000 --> 00:21:41.001
+A pessoa em casa com seu computador, o investidor individual, tem a capacidade de
+
+298
+00:21:41.001 --> 00:21:46.000
+pelo menos estar em par com qualquer profissional em ser capaz de analisar e trazer
+
+299
+00:21:46.000 --> 00:21:49.001
+seu próprio julgamento a ser levado. Investir será sempre uma arte e não uma ciência.
+
+300
+00:21:49.001 --> 00:21:54.001
+Mas com a nova exposição à inteligência artificial que vem para a nova
+
+301
+00:21:54.001 --> 00:21:59.001
+geração de software, ele vai apenas multiplicar e melhorar a capacidade de
+
+302
+00:21:59.001 --> 00:22:03.001
+Alguém tem. Mas o que é emocionante é onde está hoje. Você não tem que saltar
+
+303
+00:22:03.001 --> 00:22:08.000
+É possível ver algo como o Telescan ou o Spears Access ou o Dow Jones.
+
+304
+00:22:08.000 --> 00:22:12.000
+Notícias Retrieval que olhamos ou outros produtos que estão ao redor, eles hoje
+
+305
+00:22:12.000 --> 00:22:15.001
+Dê a alguém uma razão para ter um computador em casa e provar e usá-lo.
+
+306
+00:22:16.000 --> 00:22:19.001
+E as economias estão lá que você pode economizar no comércio através de empresas como,
+
+307
+00:22:19.001 --> 00:22:23.001
+Como dissemos, Schwab ou Spear ou outros e tome isso do dinheiro e, você sabe,
+
+308
+00:22:23.001 --> 00:22:28.000
+Compre realmente esses produtos. O meu software contra o seu software no futuro. Nós somos
+
+309
+00:22:28.000 --> 00:22:32.001
+fora do tempo. OK  ⁇  Os computadores realmente democratizam esse processo de investimento? pode
+
+310
+00:22:32.001 --> 00:22:36.000
+Você é tão inteligente quanto esse grande analista do tempo em Wall Street? O nosso comentário, George
+
+311
+00:22:36.000 --> 00:22:40.000
+Morrow, tem alguns pensamentos finais sobre as oportunidades e os riscos de
+
+312
+00:22:40.000 --> 00:22:46.000
+Investimento informático. Não é maravilhoso? Uma cadeira na bolsa de câmbio à direita
+
+313
+00:22:46.000 --> 00:22:51.000
+nosso próprio den e tudo através da magia do microcomputador, milhões de nós
+
+314
+00:22:51.000 --> 00:22:56.001
+Investir em nossas poupanças de iris com um clique de um switch. E qual melhor horário? O que
+
+315
+00:22:56.001 --> 00:23:01.000
+O terceiro maior mercado de bolas do século. Pense nas fortunas que devem ser feitas. Pense em
+
+316
+00:23:01.000 --> 00:23:05.001
+A falência que vem. As duas últimas vezes que sucumbimos ao Louro do Muro
+
+317
+00:23:05.001 --> 00:23:10.000
+Rua, foi muito emocionante e lucrativo até que os ursos do mercado se moveram e se esvaziaram
+
+318
+00:23:10.000 --> 00:23:14.001
+Tudo isso com um pedaço de pau. E desta vez, estamos mais profundos na dívida do que nunca
+
+319
+00:23:14.001 --> 00:23:18.001
+antes dos consumidores. Existem apenas duas maneiras seguras de lucrar em ações.
+
+320
+00:23:19.000 --> 00:23:22.000
+Compre cuidadosamente e mantenha-se por anos, se necessário ou
+
+321
+00:23:22.000 --> 00:23:23.001
+Seja o agente que conduz o comércio.
+
+322
+00:23:24.001 --> 00:23:28.000
+Infelizmente, o resto de nós perde a maior parte do tempo. E muito de
+
+323
+00:23:28.000 --> 00:23:29.001
+É muito parecido com o jogo.
+
+324
+00:23:30.001 --> 00:23:34.000
+Na verdade, se eu estivesse à frente da comissão de jogos em Nevada, eu estaria exigindo
+
+325
+00:23:34.000 --> 00:23:38.000
+tempo igual em todos esses computadores para trazer nossos jogos de sorte para o seu
+
+326
+00:23:38.000 --> 00:23:42.000
+Como as casas de corretores estão trazendo você o seu. Depois de tudo, nós dois somos
+
+327
+00:23:42.000 --> 00:23:47.000
+O mesmo, o seu dinheiro. É assim que eu vejo. Eu sou George Morrow.
+
+328
+00:23:57.001 --> 00:24:02.000
+No arquivo de acesso aleatório desta semana, o IRS está novamente mergulhando no risco
+
+329
+00:24:02.000 --> 00:24:06.000
+água da computação. Desta vez, o Serviço Interno de Renda é
+
+330
+00:24:06.000 --> 00:24:10.001
+Experimentando com a inscrição online. H&amp;R Block e cinco outros preparadores fiscais têm
+
+331
+00:24:10.001 --> 00:24:15.001
+autorizado a enviar os seus clientes 1040s eletronicamente em três partes do
+
+332
+00:24:15.001 --> 00:24:19.001
+País, Raleigh-Durham, Cincinnati e Phoenix. A inscrição online é apenas
+
+333
+00:24:19.001 --> 00:24:25.000
+disponíveis aos contribuintes que reivindicam um reembolso, formulários W2 e assinaturas do contribuinte ainda
+
+334
+00:24:25.000 --> 00:24:30.001
+Deve ser enviado por correio. O IBM RT-PC pode ser uma nova máquina, mas os pesquisadores
+
+335
+00:24:30.001 --> 00:24:35.001
+Carnegie Mellon University tem usado 25 RT-PCs em uma rede de campus para
+
+336
+00:24:35.001 --> 00:24:40.000
+Alguns meses, e o RT tem bons graus. Uma característica atraente do novo
+
+337
+00:24:40.000 --> 00:24:45.000
+O IBM RISC é o seu chip de memória virtual de 40 bits que pode fornecer até um
+
+338
+00:24:45.000 --> 00:24:50.000
+Trilhões de bytes de memória do usuário. Uma placa de licença na loja de estacionamento da Apple lê
+
+339
+00:24:50.000 --> 00:24:54.000
+OpenMac, mas a Apple agora diz que o verdadeiro OpenMac não estará pronto este ano, como
+
+340
+00:24:54.000 --> 00:24:58.001
+originalmente prometido. A nova versão do Mac com slots internos agora está sendo
+
+341
+00:24:58.001 --> 00:25:04.000
+Falaram sobre 1987. A Microsoft e a Lotus concordaram em trabalhar juntos para
+
+342
+00:25:04.000 --> 00:25:08.000
+Desenvolver novo software de aplicação que incorpora a interface do Windows da Microsoft,
+
+343
+00:25:08.001 --> 00:25:12.001
+e outros desenvolvedores de software parecem estar prestando suporte para o Windows. Ashton Tate é,
+
+344
+00:25:12.001 --> 00:25:16.001
+MicroRim, Live Video Text e outros dizem que estão desenvolvendo novos produtos para
+
+345
+00:25:16.001 --> 00:25:21.000
+Aproveite a interface do Windows. Na nossa atualização legislativa, o
+
+346
+00:25:21.000 --> 00:25:25.000
+A luta por créditos fiscais contínuos para pesquisa e desenvolvimento de computadores agora se move
+
+347
+00:25:25.000 --> 00:25:28.000
+No Senado, onde o Comitê Financeiro inicia audições sobre a reforma fiscal
+
+348
+00:25:28.000 --> 00:25:33.000
+O Bill. A versão House atualmente inclui o crédito fiscal de R&amp;D, mas a alta tecnologia
+
+349
+00:25:33.000 --> 00:25:37.000
+O lobby está preocupado com o seu destino no Senado controlado pelos republicanos. Tempo para
+
+350
+00:25:37.000 --> 00:25:41.001
+A revisão do software desta semana, e aqui está Paul Schindler. Mesmo que você nunca tenha
+
+351
+00:25:41.001 --> 00:25:46.000
+Trabalhando em um lugar com cartões de tempo, esta cena deve ser familiar para você. Deve ser
+
+352
+00:25:46.000 --> 00:25:50.001
+É fácil de entender, mesmo as pessoas mais lentas podem usar um rack de cartão de tempo. Bem assim,
+
+353
+00:25:50.001 --> 00:25:55.000
+É isso que Paul Heckle tinha em mente quando ele criou ZoomRacks. O maior
+
+354
+00:25:55.000 --> 00:25:59.000
+O problema com o software de gerenciamento de banco de dados é que as pessoas não podem obter uma imagem em
+
+355
+00:25:59.000 --> 00:26:03.000
+A sua mente sobre como as coisas seriam se fossem em papel. Os spreadsheets são
+
+356
+00:26:03.000 --> 00:26:08.001
+fácil, os processos de palavras são fáceis, os gerentes de banco de dados são difíceis. Assim, temos
+
+357
+00:26:08.001 --> 00:26:12.000
+Os ZoomRacks. A primeira linha de cada cartão aparece em um resumo.
+
+358
+00:26:12.001 --> 00:26:16.000
+Com um único teclado, você pode olhar para um cartão. Mais um keystroke toma
+
+359
+00:26:16.000 --> 00:26:21.000
+Você está de volta para o rack. Observe que as palavras parecem engraçadas. ZoomRacks usa um especial
+
+360
+00:26:21.000 --> 00:26:22.001
+Um zoom inteligente para fazer abreviações.
+
+361
+00:26:23.000 --> 00:26:27.001
+Por exemplo, diz isso Press-Rells-Ettin. Esta é uma publicação de imprensa, como
+
+362
+00:26:27.001 --> 00:26:31.001
+Vemos no cartão completo. Você se move ao redor do rack com chaves de fogo ou por impressão
+
+363
+00:26:31.001 --> 00:26:36.001
+Números . Nós passamos para a lista de contato e assumimos que o HCK é o próprio Heckle.
+
+364
+00:26:37.000 --> 00:26:42.000
+Temos razão. ZoomRacks não é perfeito, mas é interessante e é relativamente
+
+365
+00:26:42.000 --> 00:26:48.000
+barato a US$ 125 de QuickView Systems em Los Altos, Califórnia. Para o computador
+
+366
+00:26:48.000 --> 00:26:52.001
+Chronicles, eu sou Paul Schindler. Um especialista em computador francês está pedindo ao United
+
+367
+00:26:52.001 --> 00:26:57.000
+Estados para colocar o que ele chama de bombas soft em software sofisticado para evitar o
+
+368
+00:26:57.000 --> 00:27:02.000
+Os russos não usam o software para fins militares. Thierry Breton diz:
+
+369
+00:27:02.001 --> 00:27:06.000
+Embora seja fácil controlar a exportação de hardware, é praticamente impossível
+
+370
+00:27:06.000 --> 00:27:10.001
+Controlar a exportação de software. Por isso, ele diz que a única defesa é uma
+
+371
+00:27:10.001 --> 00:27:16.000
+A bomba foi projetada para explodir um programa se usada de forma não intencionada. O que
+
+372
+00:27:16.000 --> 00:27:19.001
+O exército não é o único que se preocupa com a segurança de seus sistemas de computador.
+
+373
+00:27:19.001 --> 00:27:23.000
+Em Nova Iorque, uma empresa chamada Dataport está construindo uma varanda de dois e meio acres
+
+374
+00:27:23.000 --> 00:27:30.000
+sob a cama dos principais usuários de computadores do distrito. O portão de dados
+
+375
+00:27:30.000 --> 00:27:35.000
+Vault também vai hospedar hot e frio backup sistemas de computador para assumir em caso de
+
+376
+00:27:35.000 --> 00:27:39.001
+de uma emergência. Compradores de supermercado em Williamsport, Pensilvânia estão transportando
+
+377
+00:27:39.001 --> 00:27:43.001
+pequenos cartões plásticos com faixas magnéticas sobre eles, mas eles não são cartões de crédito.
+
+378
+00:27:43.001 --> 00:27:46.000
+Eles são uma nova ferramenta informática para pesquisadores de mercado
+
+379
+00:27:46.000 --> 00:27:47.001
+Descubra o que as pessoas estão comprando.
+
+380
+00:27:48.000 --> 00:27:51.001
+Cada vez que o cliente verifica fora do supermercado, o cartão é inserido e
+
+381
+00:27:51.001 --> 00:27:56.000
+registar as compras reais do cliente. Pesquisadores dizem que este novo computador
+
+382
+00:27:56.000 --> 00:28:00.001
+O sistema é muito mais preciso do que o velho sistema diário em um teste. Comparando o
+
+383
+00:28:00.001 --> 00:28:05.001
+resultados informáticos com resultados diários, apenas um terço dos consumidores que disseram
+
+384
+00:28:05.001 --> 00:28:09.001
+Eles tinham comprado as folhas congeladas de Kellogg, eles tinham realmente comprado. Eu pensei
+
+385
+00:28:09.001 --> 00:28:12.001
+Estão mentindo na outra direção. Isso é para as crônicas desta semana.
+
+386
+00:28:13.000 --> 00:28:18.000
+Vamos te ver a próxima vez. As crônicas de computador são feitas possíveis em parte por uma
+
+387
+00:28:18.000 --> 00:28:22.001
+A Associação Americana de Sociedades de Processamento de Informação (AFIPs, American Federation of Information Processing Societies).
+
+388
+00:28:23.000 --> 00:28:28.001
+AFIPs, patrocinadores da OAC 86, a conferência líder da nação sobre negócios
+
+389
+00:28:28.001 --> 00:28:33.001
+da tecnologia. Para informações de conferência, ligue para 800-OAC-1986.
+
+390
+00:28:34.001 --> 00:28:39.000
+Explorar as soluções de negócios de hoje. Financiamento adicional é fornecido pela McGraw
+
+391
+00:28:39.000 --> 00:28:44.000
+-Hill, editores da Byte. artigos técnicos detalhados da Byte sobre o novo hardware,
+
+392
+00:28:44.001 --> 00:28:49.000
+O software e as línguas cobrem as mais recentes tecnologias de microcomputadores em todo o mundo.
+
+393
+00:28:50.000 --> 00:28:51.001
+Bite, o padrão internacional.
+
+394
+00:29:15.001 --> 00:29:16.000
+[...]
