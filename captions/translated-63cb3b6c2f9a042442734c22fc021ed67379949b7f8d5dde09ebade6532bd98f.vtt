@@ -1,0 +1,1409 @@
+WEBVTT
+
+1
+00:00:46.001 --> 00:00:52.001
+Micro Focus, pengembang alat pemrograman visual untuk pengembangan perangkat lunak, adalah
+
+2
+00:00:52.001 --> 00:00:57.001
+dengan senang hati memberikan dana besar untuk Computer Chronicle, cerita
+
+3
+00:00:57.001 --> 00:00:59.001
+dari evolusi yang berlanjut ini.
+
+4
+00:01:09.000 --> 00:01:13.000
+Selamat Datang ke Komputer Chronicles Saya adalah Stuart Chafay dan ini adalah Herb Lechner,
+
+5
+00:01:13.000 --> 00:01:16.001
+Seperti halnya Gary Kildall minggu ini. Tidak benar. Gary akan menjadi
+
+6
+00:01:16.001 --> 00:01:20.000
+dengan kita, tetapi di sisi lain dari meja hari ini karena subjek kita adalah
+
+7
+00:01:20.000 --> 00:01:24.000
+sistem operasi . Dan seperti yang Anda mungkin tahu, Gary Kildall adalah pencipta CPM,
+
+8
+00:01:24.001 --> 00:01:29.000
+Sistem operasi utama yang digunakan saat ini. Sistem Operasi Herb Yang Baik
+
+9
+00:01:29.000 --> 00:01:33.000
+masalah yang sulit karena sebagai pengguna komputer kita semua berurusan dengan sistem operasi,
+
+10
+00:01:33.001 --> 00:01:37.000
+Jujur saja, tidak banyak dari kita yang benar-benar memahami apa itu. Berikan kami singkat
+
+11
+00:01:37.000 --> 00:01:40.001
+Pengenalan umum pada sistem operasi. “Stuart, saya pikir saya sedang bekerja.
+
+12
+00:01:40.001 --> 00:01:44.001
+sistem yang paling menarik ketika mereka tidak bekerja dan yang Anda tidak ingin
+
+13
+00:01:44.001 --> 00:01:49.000
+terjadi . Tapi di sisi mesin kecil, sistem operasi mengelola komputer
+
+14
+00:01:49.000 --> 00:01:53.001
+sumber daya dan mereka menyelamatkan programmer sejumlah besar usaha nitty gritty
+
+15
+00:01:53.001 --> 00:01:58.000
+dan menyediakan lingkungan operasi standar untuk memungkinkan aplikasi untuk berjalan
+
+16
+00:01:58.000 --> 00:02:03.000
+pada berbagai mesin dan pada konfigurasi yang berbeda. Di sisi mesin besar,
+
+17
+00:02:03.000 --> 00:02:07.000
+sistem operasi menjadi sangat canggih dan secara harfiah mengelola komputer
+
+18
+00:02:07.000 --> 00:02:12.000
+sumber daya dengan cara yang dapat mereka capai potensi mereka. Baiklah, sebelum kita
+
+19
+00:02:12.000 --> 00:02:16.001
+datang ke Gary dan tetamu lain kami, kami akan membawa Anda ke dalam sebuah komputer untuk
+
+20
+00:02:16.001 --> 00:02:19.000
+Perhatikan apa yang dilakukan sistem operasi.
+
+21
+00:02:25.001 --> 00:02:28.001
+Salam, bolehkah saya membantu Anda? Ya, di mana kita berada?
+
+22
+00:02:29.000 --> 00:02:32.001
+Nah, Anda berdiri di dalam sebuah mikrokomputer Apple IIe. Dan siapa kamu? Aku adalah
+
+23
+00:02:32.001 --> 00:02:36.001
+Bruce Tognazini, saya seorang insinyur dengan komputer Apple dan saya di sini untuk memeriksa
+
+24
+00:02:36.001 --> 00:02:39.001
+dan pastikan semuanya sempurna di komputer ini karena kami memiliki laporan
+
+25
+00:02:39.001 --> 00:02:43.001
+Hanya dalam beberapa detik saja, salah satu pemilik kami akan melakukan hal ini.
+
+26
+00:02:43.001 --> 00:02:47.001
+Komputer di atas. Dan apa saja benda-benda ini? Ini adalah bagian-bagian yang membentuk
+
+27
+00:02:47.001 --> 00:02:52.000
+Komputer Apple, chip tertentu yang Anda berdiri, atau maaf, dipanggil
+
+28
+00:02:52.000 --> 00:02:56.001
+mikroprosesor dan itu adalah hampir jantung komputer, jenis
+
+29
+00:02:56.001 --> 00:03:01.000
+Moderator dari talk show yang sedang berlangsung. Dan ini dua chip di bawah ini, ini
+
+30
+00:03:01.000 --> 00:03:05.001
+adalah chip ROM yang sangat penting yang memiliki bahasa dasar yang terintegrasi dan
+
+31
+00:03:05.001 --> 00:03:10.001
+kernel dari sistem operasi. Dan kemudian ini delapan chip di sini adalah RAM
+
+32
+00:03:10.001 --> 00:03:15.000
+chip dan mereka memegang informasi yang masuk dari cakera dan
+
+33
+00:03:15.000 --> 00:03:19.001
+Jenis-jenis pengguna dan program dan sebagainya. Bruce, kami mencoba untuk mencari tahu
+
+34
+00:03:19.001 --> 00:03:23.001
+apa yang dilakukan sistem operasi dan mungkin Anda dapat membantu menjelaskan itu. Tentu saja, satu
+
+35
+00:03:23.001 --> 00:03:27.000
+sistem operasi pada dasarnya menjalankan seluruh komputer sekali ia masuk, tetapi
+
+36
+00:03:27.000 --> 00:03:30.001
+Pada saat ini, ia tidak membalikkan segalanya. Saya melihat pengguna akan mengklik pada
+
+37
+00:03:30.001 --> 00:03:34.001
+switch, itu semua benar, itu hanya sekitar 12 volt. Kekuatan cahaya terus berjalan dan
+
+38
+00:03:34.001 --> 00:03:39.000
+kemudian mikroprosesor kecil di sini memiliki tugas untuk memeriksa dirinya dan kemudian
+
+39
+00:03:39.000 --> 00:03:44.001
+Mengalihkan kontrol ke chip ROM ini. Chip ROM ini pada gilirannya memiliki chip yang sangat kecil.
+
+40
+00:03:44.001 --> 00:03:49.000
+program yang kembali ke belakang komputer dan memeriksa dan melihat
+
+41
+00:03:49.000 --> 00:03:53.000
+apakah itu dapat menemukan kartu controller disk, yang tentu saja dapat karena
+
+42
+00:03:53.000 --> 00:03:58.001
+Ada satu plug di sini. Dan pada kartu kontrol cakera ada ROM lain dan ini
+
+43
+00:03:58.001 --> 00:04:03.000
+ROM sekarang mengambil kontrol dari yang satu dan mulai membawa ke cakera beroperasi
+
+44
+00:04:03.000 --> 00:04:07.001
+sistem keluar dari drive disk melalui kabel putih ini. Anda mungkin telah melihat cakera
+
+45
+00:04:07.001 --> 00:04:12.000
+mengemudi saat Anda berada di jalan Anda di sini dan kemudian yang turun dan dimulai
+
+46
+00:04:12.000 --> 00:04:17.001
+Mengisi chip RAM ini di sini. Mengisi sekitar lima hingga seperempat dari RAM
+
+47
+00:04:17.001 --> 00:04:22.000
+Chip dengan sistem operasi disk. Ia membawa dalam bahasa apa pun dan mungkin apa pun
+
+48
+00:04:22.000 --> 00:04:28.001
+program yang ingin dilakukan pengguna. Setelah sekitar 15 sampai 30 detik, semuanya selesai.
+
+49
+00:04:28.001 --> 00:04:33.000
+layar memberikan pesan kepada pengguna dan kemudian pengguna dapat pergi bekerja. baik baik baik
+
+50
+00:04:33.000 --> 00:04:35.000
+Saya harus kembali ke kronik komputer,
+
+51
+00:04:35.000 --> 00:04:36.001
+Terima kasih banyak. Tentu saja, terima kasih
+
+52
+00:04:50.001 --> 00:04:56.000
+Sistem operasi adalah sebuah program komputer yang canggih yang membuat komputer
+
+53
+00:04:56.000 --> 00:05:00.001
+lebih mudah digunakan dan beroperasi dengan lebih efisien. Sistem operasi terkadang
+
+54
+00:05:00.001 --> 00:05:06.000
+yang disebut perangkat lunak sistem atau program sistem, seperti kontras dengan aplikasi
+
+55
+00:05:06.000 --> 00:05:08.001
+program yang menjadi subjek pelajaran kemudian.
+
+56
+00:05:10.000 --> 00:05:14.001
+Sistem operasi menyediakan hingga tujuh fungsi, yang tidak semuanya hadir dalam
+
+57
+00:05:14.001 --> 00:05:19.001
+Sistem operasi komputer yang lebih kecil. Salah satu fungsi dari semua sistem operasi adalah untuk
+
+58
+00:05:19.001 --> 00:05:24.000
+menetapkan cara user interface dengan komputer. Sebagai contoh, bagaimana data
+
+59
+00:05:24.000 --> 00:05:27.000
+disimpan pada file dan bagaimana program dimulai.
+
+60
+00:05:28.000 --> 00:05:31.001
+Fungsi kedua dari sistem operasi adalah untuk memungkinkan beberapa
+
+61
+00:05:31.001 --> 00:05:33.000
+pengguna untuk berbagi perangkat keras yang sama.
+
+62
+00:05:34.001 --> 00:05:39.000
+Fungsi ketiga adalah untuk mengelola file data sehingga data dapat dibagikan antara beberapa
+
+63
+00:05:39.000 --> 00:05:44.000
+pengguna atau aplikasi. Pengguna berpotensi dapat dirancang dan
+
+64
+00:05:44.000 --> 00:05:45.001
+akses yang tidak diizinkan dihindari.
+
+65
+00:05:47.000 --> 00:05:52.000
+Fungsi penting keempat adalah pengendalian semua data input dan output. Sejak
+
+66
+00:05:52.000 --> 00:05:56.001
+banyak aplikasi akan berjalan di komputer dan berbagi perangkat penyimpanan, itu adalah
+
+67
+00:05:56.001 --> 00:06:00.001
+diperlukan untuk memiliki kontrol bersama tentang bagaimana data disimpan, diakses, dan
+
+68
+00:06:00.001 --> 00:06:06.000
+dikembalikan . Fungsi kelima adalah untuk menyediakan pemulihan kesalahan untuk sistem komputer.
+
+69
+00:06:07.000 --> 00:06:10.001
+Jika terjadi kesalahan dalam proses membaca data dari perangkat input, untuk
+
+70
+00:06:10.001 --> 00:06:16.000
+Misalnya, sistem akan mencoba untuk memeriksa kembali data beberapa kali sampai kesalahan
+
+71
+00:06:16.000 --> 00:06:22.000
+proses pemulihan atau bypass yang dimulai. Sistem akuntansi adalah operasi keenam
+
+72
+00:06:22.000 --> 00:06:27.000
+Fungsi Sistem Fungsi ini memantau sumber daya mesin sehingga biaya dapat
+
+73
+00:06:27.000 --> 00:06:32.000
+disertakan di antara beberapa pengguna. Berapa banyak waktu CPU yang digunakan oleh masing-masing
+
+74
+00:06:32.000 --> 00:06:37.000
+Apakah aplikasi? Berapa banyak rekaman cakera dan tape ditulis dan dibaca oleh masing-masing
+
+75
+00:06:37.000 --> 00:06:42.001
+Permohonan dan sebagainya. Fungsi terakhir menyediakan penyelenggaraan akuntansi. Itu
+
+76
+00:06:42.001 --> 00:06:46.000
+memantau kesalahan mesin yang dapat diperbaiki untuk membantu penyelenggaraan dan
+
+77
+00:06:46.000 --> 00:06:47.001
+penggantian komponen yang gagal.
+
+78
+00:06:49.000 --> 00:06:53.000
+Sistem operasi yang tersedia untuk mikrokomputer saat ini semakin dekat dengan
+
+79
+00:06:53.000 --> 00:06:58.000
+penyempurnaan sistem yang dijelaskan di sini dan menjadi subjek video
+
+80
+00:06:58.000 --> 00:06:59.001
+bagian dari program ini.
+
+81
+00:07:00.001 --> 00:07:04.001
+Gary Kildall menampilkan salah satu yang terbaru di segmen berikutnya. Mari kita bergabung dengannya sekarang.
+
+82
+00:07:09.000 --> 00:07:13.001
+Bersama kami sekarang adalah Gary Kildall, tidak asing dengan program ini. Tentu saja, Gary adalah
+
+83
+00:07:13.001 --> 00:07:17.001
+Pencipta CPM, sejumlah Kronik Komputer, dan juga Ketua
+
+84
+00:07:17.001 --> 00:07:19.000
+Direktur Eksekutif Kajian Digital.
+
+85
+00:07:19.001 --> 00:07:24.000
+Dan dengan Gary adalah Tony Fanning dengan Departemen Teknik Korporat HP
+
+86
+00:07:24.000 --> 00:07:29.000
+Labs di Hewlett-Packard, dan Tony bekerja terutama dengan MS-DOS. dengan herba? Gary, dalam
+
+87
+00:07:29.000 --> 00:07:33.001
+melihat kejayaan besar CPM 80, Anda dapat memberitahu kami sedikit tentang bagaimana
+
+88
+00:07:33.001 --> 00:07:37.000
+Ide itu dimulai dan bagaimana ia menjadi apa yang sekarang?
+
+89
+00:07:37.001 --> 00:07:41.000
+Nah, saya kira saya adalah jenis yang dikenal sebagai orang sistem operasi, tetapi secara realistis,
+
+90
+00:07:41.001 --> 00:07:45.000
+Saya benar-benar memulai kembali pada awal komputer dan sebagian besar tertarik pada
+
+91
+00:07:45.000 --> 00:07:50.000
+bahasa pemrograman dan bukannya sistem operasi. Saya bekerja sama dengan Intel.
+
+92
+00:07:50.000 --> 00:07:55.000
+Perusahaan, bekerja pada bahasa yang disebut PLM yang digunakan pada awal
+
+93
+00:07:55.000 --> 00:08:00.000
+dengan microprocessor. Dan perlu untuk memiliki beberapa jenis sistem operasi untuk
+
+94
+00:08:00.000 --> 00:08:04.001
+mendukung bahasa tersebut. Itulah dari mana nama itu berasal. CPM adalah kontrol
+
+95
+00:08:04.001 --> 00:08:07.001
+Program untuk mikrokomputer seperti yang dinamakan PLM
+
+96
+00:08:07.001 --> 00:08:09.001
+Bahasa pemrograman untuk mikrokomputer.
+
+97
+00:08:10.001 --> 00:08:15.000
+Dan kami menggunakan kertas kertas pada saat itu, dan kami perlu memiliki sesuatu yang lain
+
+98
+00:08:15.000 --> 00:08:20.000
+Untuk menyimpan program di samping kertas kertas. Itu adalah proses yang agak membosankan. dan begitu
+
+99
+00:08:20.000 --> 00:08:25.000
+cakera floppy datang sekitar, dan CPM berada di perangkat lunak yang membuat mereka floppie
+
+100
+00:08:25.000 --> 00:08:27.001
+Disk yang dapat digunakan dalam sistem komputer kecil.
+
+101
+00:08:28.000 --> 00:08:33.000
+Gary, sistem operasi adalah sedikit misteri untuk banyak pengguna komputer biasa
+
+102
+00:08:33.000 --> 00:08:36.000
+yang hanya mengambil keuntungan dari itu tetapi tidak pernah benar-benar masuk ke dalamnya. Kamu bisa
+
+103
+00:08:36.000 --> 00:08:41.001
+memberikan deskripsi yang kasar tentang apa yang dilakukan sistem operasi di dalam
+
+104
+00:08:41.001 --> 00:08:47.000
+dengan komputer? Pada dasarnya, ada tiga tingkat perangkat lunak. Anda ingin berpikir
+
+105
+00:08:47.000 --> 00:08:49.000
+dengan cara yang Anda bekerja di komputer pribadi.
+
+106
+00:08:49.001 --> 00:08:53.001
+Salah satu dari mereka adalah tingkat instruksi mesin. Itu hanya jika Anda memutar
+
+107
+00:08:53.001 --> 00:08:58.000
+mesin, Anda tidak meletakkan cakera apa pun yang ada di dalamnya. Mesin ini mampu
+
+108
+00:08:58.000 --> 00:09:02.001
+Memahami beberapa instruksi. Ini adalah instruksi mesin. Tetapi Anda memiliki
+
+109
+00:09:02.001 --> 00:09:04.000
+untuk meletakkan sesuatu di dalamnya untuk membuat hal itu berfungsi.
+
+110
+00:09:04.000 --> 00:09:08.001
+Tahap kedua adalah apa yang disebut software sistem, dan yang terletak tepat di atas
+
+111
+00:09:08.001 --> 00:09:12.000
+bahasa mesin itu sendiri. Dan tingkat ketiga adalah aplikasi perangkat lunak, dan
+
+112
+00:09:12.000 --> 00:09:14.001
+Itu yang sebenarnya Anda pergi ke toko dan membeli, adalah aplikasi
+
+113
+00:09:14.001 --> 00:09:18.001
+dengan software. Dan kemudian aplikasi software kemudian menggunakan sistem software sebagai
+
+114
+00:09:18.001 --> 00:09:23.001
+dan Yayasan. Software sistem kemudian menjalankan mesin menggunakan instruksi mesin.
+
+115
+00:09:25.000 --> 00:09:28.001
+Jadi di lapisan tengah dari perangkat lunak sistem, Anda menemukan beberapa hal seperti
+
+116
+00:09:28.001 --> 00:09:33.001
+bahasa pemrograman, utilitas, dan sistem operasi. Sekarang sistem operasi
+
+117
+00:09:33.001 --> 00:09:39.000
+Ini adalah jenis polisi lalu lintas. Ini memantau file atau bagaimana file Anda
+
+118
+00:09:39.000 --> 00:09:43.001
+disimpan, bagaimana layar Anda diperlakukan, dan keyboard diperlakuk, dan hal-hal
+
+119
+00:09:43.001 --> 00:09:48.001
+jenis yang demikian. Dan itu hanya dasar untuk pemain rekaman yang dipilih ketika
+
+120
+00:09:48.001 --> 00:09:51.001
+Anda sedang bermain rekaman. Nah, Anda memiliki perspektif sebagai pengembang, Gary.
+
+121
+00:09:52.000 --> 00:09:56.001
+Tony, Anda adalah pengguna sistem operasi. Apa yang ingin Anda temukan sebagai pengguna
+
+122
+00:09:56.001 --> 00:10:02.001
+Sebuah sistem operasi? Tentu saja, saya sangat tertarik secara teknis pada
+
+123
+00:10:02.001 --> 00:10:07.000
+sistem operasi dan bagaimana ia bekerja. Tapi sebenarnya ketika saya menggunakannya, saya ingin
+
+124
+00:10:07.000 --> 00:10:11.001
+sistem operasi untuk menjadi transparan bagi saya. Aku tidak ingin melihatnya. Aku hanya ingin
+
+125
+00:10:11.001 --> 00:10:16.001
+Gunakan sebuah aplikasi. Dan saya tahu Anda bertanya pertanyaan sebelumnya tentang apa yang harus
+
+126
+00:10:16.001 --> 00:10:20.001
+Ada yang mencari? Nah, apa yang kamu coba lakukan? Jika aku mencoba melakukan sesuatu
+
+127
+00:10:20.001 --> 00:10:24.000
+seperti, misalnya, pemrosesan kata, saya ingin sistem operasi untuk
+
+128
+00:10:24.000 --> 00:10:25.001
+menghilang dan tidak mengganggu saya.
+
+129
+00:10:27.001 --> 00:10:32.001
+Sekarang Anda bekerja terutama dengan MS-DOS, Tony. Bagaimana hal itu akan berbeda
+
+130
+00:10:32.001 --> 00:10:34.000
+Apa itu, katakanlah, CPM Gary?
+
+131
+00:10:35.001 --> 00:10:40.000
+Dalam banyak cara, ia melakukan hal-hal yang sama seperti yang dilakukan oleh CPM Gary. Saya pikir
+
+132
+00:10:40.000 --> 00:10:44.000
+Gary dapat memberitahu Anda tentang beberapa varian CPM yang sangat berbeda
+
+133
+00:10:44.000 --> 00:10:45.001
+dari apa yang dilakukan MS-DOS saat ini.
+
+134
+00:10:47.001 --> 00:10:53.000
+Ini pada dasarnya hal yang sama. Ini memungkinkan Anda untuk menjaga file, menjaga
+
+135
+00:10:53.000 --> 00:10:58.001
+memindahkan data dari satu tempat ke tempat lain, menjaga seluruh manusia
+
+136
+00:10:58.001 --> 00:11:02.001
+antara muka antara Anda, jari Anda, komputer, program yang berjalan di.
+
+137
+00:11:03.000 --> 00:11:06.000
+Gary, kami telah melalui beberapa generasi sekarang, katakanlah, CPM.
+
+138
+00:11:07.000 --> 00:11:11.000
+Dan masing-masing menambah sesuatu. Dapatkah Anda menjelaskan kepada kami apa yang ditambahkan setiap kali?
+
+139
+00:11:11.001 --> 00:11:14.000
+Bagaimana Anda meningkatkan sistem operasi setiap kali Anda keluar dengan versi baru?
+
+140
+00:11:14.001 --> 00:11:18.000
+Nah, kunci nyata untuk perangkat lunak sistem apa pun adalah mencoba untuk memenuhi apa yang Anda lakukan.
+
+141
+00:11:18.000 --> 00:11:21.001
+dengan perangkat lunak tersebut dengan sistem komputer, kemampuan komputer
+
+142
+00:11:21.001 --> 00:11:25.001
+sistem yang Anda miliki. Dan apa yang terjadi, saya pikir, awal-awal di mikrokomputer
+
+143
+00:11:25.001 --> 00:11:30.001
+Saat ini, sistem komputer besar memiliki memori 16K. Oleh karena itu, ide ini adalah untuk
+
+144
+00:11:30.001 --> 00:11:35.000
+mengatur sistem operasi yang hanya menggunakan bagian yang sangat kecil dari
+
+145
+00:11:35.000 --> 00:11:39.001
+memori yang Sekarang, ketika Anda menambahkan lebih banyak memori, prosesor yang lebih cepat, maka Anda mendapatkan lebih banyak
+
+146
+00:11:39.001 --> 00:11:41.001
+Fungsi yang Anda tambahkan ke sistem operasi.
+
+147
+00:11:41.001 --> 00:11:48.000
+Seperti yang Anda lakukan untuk operator. Dan apa yang terjadi dengan, baik, yang 8
+
+148
+00:11:48.000 --> 00:11:54.000
+Sistem bit, misalnya, semuanya sekarang 64K. Ini adalah ukuran memori maksimum. dan
+
+149
+00:11:54.000 --> 00:11:59.000
+Bahkan pada mesin 16-bit, ukuran memori rata-rata adalah, mari kita katakan, 128, 256,
+
+150
+00:11:59.000 --> 00:12:01.001
+Jumlahnya 512K. Kami bergerak ke arah itu.
+
+151
+00:12:02.000 --> 00:12:06.000
+Dan apa yang terjadi adalah sistem operasi berkembang, mendapat lebih banyak fungsi untuk
+
+152
+00:12:06.000 --> 00:12:13.000
+Gunakan area memori yang lebih besar. Salah satu atribut awal dari CPM dan
+
+153
+00:12:13.000 --> 00:12:17.001
+Beberapa sistem operasi lainnya adalah bahwa mereka sederhana dan bersih dan halus. dan
+
+154
+00:12:17.001 --> 00:12:21.000
+sekarang dengan komputer menjadi lebih besar dan pertumbuhan ini terjadi bahwa Anda
+
+155
+00:12:21.000 --> 00:12:25.000
+Dalam hal ini, apakah kita akan melihat kerumitan dan kompleksitas berkembang di
+
+156
+00:12:25.000 --> 00:12:30.001
+Sistem Operasi ? Nah, itu pasti benar bahwa sangat mudah untuk menambahkan apa yang
+
+157
+00:12:30.001 --> 00:12:33.001
+memanggil gelembung dan jeritan ke sistem operasi, hal-hal yang benar-benar tidak menambahkan
+
+158
+00:12:33.001 --> 00:12:37.001
+banyak untuk fungsi hanya karena ada lebih banyak ruang memori. Dan saya pikir
+
+159
+00:12:37.001 --> 00:12:40.001
+Ini adalah masalah yang benar-benar penting adalah bagaimana Anda menambahkan jenis fungsi yang tepat?
+
+160
+00:12:42.000 --> 00:12:47.001
+Apa yang kita lihat sekarang dengan mesin 16-bit dan sistem memori besar adalah bahwa kita akan melihat
+
+161
+00:12:47.001 --> 00:12:51.000
+hal-hal seperti persaingan dan kita akan dapat menunjukkan beberapa dari itu hari ini. Itu yang
+
+162
+00:12:51.000 --> 00:12:55.001
+adalah, sistem komputer besar memiliki sistem operasi kontemporer atau multitasking
+
+163
+00:12:55.001 --> 00:13:00.000
+Ini adalah apa yang disebut bisnis komputer besar selama bertahun-tahun. Dan itulah ide untuk menjadi
+
+164
+00:13:00.000 --> 00:13:03.000
+Mampu menggunakan sistem komputer untuk melakukan lebih dari satu hal sekaligus. Tetapi
+
+165
+00:13:03.000 --> 00:13:08.001
+Jika Anda melihat dari komputer kecil, mikrokomputer hari-hari ke hari ini, Anda melihat
+
+166
+00:13:08.001 --> 00:13:11.001
+Apa yang terjadi adalah bahwa kami dimulai dengan satu tugas di satu pengguna Anda
+
+167
+00:13:11.001 --> 00:13:15.000
+Sistem yang Jadi apa yang terjadi sekarang adalah kita datang bersama dan bersaing atau
+
+168
+00:13:15.000 --> 00:13:18.000
+ide untuk melakukan pencetakan Anda saat Anda melakukan pemrosesan kata Anda, untuk
+
+169
+00:13:18.000 --> 00:13:23.000
+Contohnya, adalah yang kita temukan dalam fungsi tambahan yang
+
+170
+00:13:23.000 --> 00:13:27.000
+ditambahkan Gary, Anda berpikir saya bersaing CPM di sini di atas pada IBM PC kanan
+
+171
+00:13:27.000 --> 00:13:29.000
+sekarang . Mungkin Anda hanya bisa berjalan melalui sedikit dan menunjukkan kepada kami
+
+172
+00:13:29.000 --> 00:13:30.001
+Apa saja komponen dari sistem ini.
+
+173
+00:13:30.001 --> 00:13:37.000
+Nah, sekarang gagasan sistem yang kompetitif dan CPM yang kompeten adalah apa yang
+
+174
+00:13:37.000 --> 00:13:42.000
+yang disebut sistem waktu nyata. Ini berarti, ia dapat beralih antara program dalam
+
+175
+00:13:42.000 --> 00:13:47.000
+waktu yang singkat dan, misalnya, dapat menerima data melalui modem sementara
+
+176
+00:13:47.000 --> 00:13:52.001
+Anda sedang melihat operasi direktori. Sekarang apa yang akan saya lakukan di sini adalah saya akan menggunakan
+
+177
+00:13:52.001 --> 00:13:56.001
+keyboard untuk beralih antara apa yang kita sebut layar virtual.
+
+178
+00:13:56.001 --> 00:14:01.000
+Ini berarti, Anda dapat membayangkan sekarang bahwa Anda melihat empat konsol yang berbeda seperti saya
+
+179
+00:14:01.000 --> 00:14:06.001
+Beralih dari konsol ke konsol. Jadi jika kita mengatakan konsol sifar adalah yang kita
+
+180
+00:14:06.001 --> 00:14:10.000
+melihat sekarang dan yang terjadi ditunjukkan di sisi kiri bawah dari
+
+181
+00:14:10.000 --> 00:14:15.001
+dan layar. Konsol satu, Anda akan melihat terjadi menjadi paparan lokasi memori.
+
+182
+00:14:16.000 --> 00:14:23.000
+Konsol dua, saya beralih menjadi terjadi menjadi direktori dan konsol tiga adalah sebuah
+
+183
+00:14:23.000 --> 00:14:29.000
+Merupakan layar gratis baru. Sekarang saya akan memulai perintah di sini. Aku akan memulai debugger
+
+184
+00:14:29.000 --> 00:14:35.000
+untuk mendapatkan sesuatu pergi dan itu memuat keluar dari cakera dan itu juga memberi saya
+
+185
+00:14:35.000 --> 00:14:37.001
+cepat-cepat memberitahu saya ia siap untuk pergi. Sekarang saya hanya akan mengatakan menunjukkan semua
+
+186
+00:14:37.001 --> 00:14:41.001
+memori sehingga kita akan memiliki sesuatu yang aktif berjalan di sana. Saat ini, saat hal itu sedang berlangsung,
+
+187
+00:14:41.001 --> 00:14:45.001
+Saya akan beralih kembali dan Anda dapat melihat bahwa kami berada dalam operasi direktori di sini dan sebagainya.
+
+188
+00:14:45.001 --> 00:14:52.000
+Saya hanya akan memulai yang satu lagi di konsol ini dan seperti itu, saya lebih baik
+
+189
+00:14:52.000 --> 00:14:57.001
+Tuliskan langsung di sini. Ini tampaknya merupakan kelemahan dalam sistem seperti
+
+190
+00:14:57.001 --> 00:15:02.001
+operator yang Dan kemudian seperti ini berlangsung, saya akan maju dan beralih kembali dan kita dapat
+
+191
+00:15:02.001 --> 00:15:06.001
+lihat apa yang kita, sekarang kita mendapatkan paparan direktori sekarang dan saya akan
+
+192
+00:15:06.001 --> 00:15:10.001
+Tukar kembali dan Anda dapat melihat program lain ini masih aktif diproses. Okay
+
+193
+00:15:10.001 --> 00:15:15.000
+Itu sudah selesai. Beralih kembali ke layar asli. Sekarang ini adalah sangat
+
+194
+00:15:15.000 --> 00:15:21.000
+Demonstrasi pendek dari konsep multitasking atau persaingan tetapi
+
+195
+00:15:21.000 --> 00:15:24.000
+cara yang sebenarnya akan digunakan untuk mengatakan dalam bisnis adalah bahwa Anda akan memiliki kata Anda
+
+196
+00:15:24.000 --> 00:15:28.000
+prosesor bekerja pada satu layar dan kemudian sementara Anda akan beralih untuk mengatakan
+
+197
+00:15:28.000 --> 00:15:34.000
+layar lain untuk melakukan pemeriksaan spelling atau menerima data melalui modem. Oleh karena itu,
+
+198
+00:15:34.000 --> 00:15:38.000
+efeknya adalah bahwa Anda mendapatkan beberapa sistem mikro komputer di depan Anda pada
+
+199
+00:15:38.000 --> 00:15:43.000
+dengan desk. Sekarang ini adalah cara sistem operasi bergerak sekarang karena
+
+200
+00:15:43.000 --> 00:15:46.000
+Hal ini berarti setengah megabyte memori di dalam mesin. Kami ingin untuk
+
+201
+00:15:46.000 --> 00:15:49.001
+memastikan bahwa kita menggunakan mesin itu secara efektif karena apa yang kita lihat
+
+202
+00:15:49.001 --> 00:15:55.000
+Saat ini dengan komputer jenis ini benar-benar mainframe yang datang ke bawah untuk
+
+203
+00:15:55.000 --> 00:15:57.001
+Anda meja jadi kami ingin memastikan kami memiliki kemampuan itu.
+
+204
+00:15:58.001 --> 00:16:03.001
+Unix dan Xenix mungkin terdengar seperti dua karakter dari episode Star Trek.
+
+205
+00:16:03.001 --> 00:16:06.001
+Tetapi sebenarnya mereka adalah dua sistem operasi yang sangat elegan dan kita akan
+
+206
+00:16:06.001 --> 00:16:08.000
+Lihatlah mereka dalam sekejap saja.
+
+207
+00:16:17.001 --> 00:16:23.000
+Sistem operasi untuk sistem komputer yang lebih besar berkembang seiring waktu dan
+
+208
+00:16:23.000 --> 00:16:28.000
+terutama digunakan untuk meningkatkan efisiensi hardware. Tugas utama mereka adalah untuk menjaga CPU
+
+209
+00:16:28.000 --> 00:16:33.001
+dan penyimpanan utama yang paling produktif mungkin dengan jadwal sebanyak pengguna yang berbeda dan
+
+210
+00:16:33.001 --> 00:16:38.001
+aplikasi melalui sistem hardware sebanyak mungkin. Salah satu cara ini adalah
+
+211
+00:16:38.001 --> 00:16:43.001
+Hal ini dilakukan melalui multitasking atau kompetisi. Ini adalah komputer
+
+212
+00:16:43.001 --> 00:16:49.001
+Kemampuan untuk menjalankan beberapa aplikasi sekaligus. Sebagian besar aplikasi yang menggunakan Fair
+
+213
+00:16:49.001 --> 00:16:56.000
+Jumlah I.O. Jangan menggunakan CPU secara efektif. CPU sering menunggu idle
+
+214
+00:16:56.000 --> 00:17:01.000
+Untuk program aplikasi untuk mendapatkan data dari I.O yang lebih lambat. peralatan yang Operasi yang
+
+215
+00:17:01.000 --> 00:17:07.000
+sistem melakukan multitasking dengan memungkinkan program aplikasi untuk berjalan sampai
+
+216
+00:17:07.000 --> 00:17:12.001
+Ia menuntut I.O. Sistem operasi kemudian menghentikan pemrosesan CPU untuk
+
+217
+00:17:12.001 --> 00:17:17.001
+aplikasi dan memulai aplikasi lain yang berlanjut sampai ia membutuhkan I.O.
+
+218
+00:17:18.000 --> 00:17:21.001
+Sistem operasi akan memulai sebanyak aplikasi yang
+
+219
+00:17:21.001 --> 00:17:23.001
+Yang perlu dilakukan untuk menjaga CPU sibuk.
+
+220
+00:17:24.001 --> 00:17:28.000
+Setelah I.O. Permintaan yang dipenuhi sistem operasi akan
+
+221
+00:17:28.000 --> 00:17:30.001
+memulai kembali permohonan yang ditangguhkan.
+
+222
+00:17:31.001 --> 00:17:35.001
+Ini hanya satu contoh dari jenis fungsi yang relatif canggih.
+
+223
+00:17:35.001 --> 00:17:41.000
+dilakukan oleh sistem operasi. UNIX, sistem operasi yang awalnya
+
+224
+00:17:41.000 --> 00:17:46.000
+diperkenalkan untuk banyak komputer tetapi yang dengan cepat menemukan aplikasi dalam mikro,
+
+225
+00:17:46.000 --> 00:17:49.001
+Ini adalah tema dari segmen berikutnya. Jadi mari kita kembali ke program kami.
+
+226
+00:17:53.001 --> 00:17:57.001
+Gene Yates adalah presiden Yates Ventures, sebuah perusahaan.
+
+227
+00:17:57.001 --> 00:18:02.000
+yang terlibat dalam penelitian terutama melibatkan sistem operasi UNIX.
+
+228
+00:18:02.000 --> 00:18:05.000
+Selamat Datang ke Komputer Chronicles Sampaikan terima kasih Beritahu kami sedikit tentang
+
+229
+00:18:05.000 --> 00:18:10.000
+UNIX dan apa yang terutama dibandingkan dengan CPM dan MS-DOS, hal-hal lain yang kita miliki
+
+230
+00:18:10.000 --> 00:18:14.000
+sedang berbicara tentang. UNIX adalah sistem operasi standar yang
+
+231
+00:18:14.000 --> 00:18:18.001
+Pengguna komputer akan menemukan lebih menarik untuk mereka karena variasi
+
+232
+00:18:18.001 --> 00:18:23.000
+dari perangkat lunak aplikasi dan berbagai merek komputer yang dapat dipilih oleh
+
+233
+00:18:23.000 --> 00:18:28.001
+Berjalan dengan sistem operasi standar sebagai dasar sistem komputer mereka. dan
+
+234
+00:18:28.001 --> 00:18:34.000
+UNIX sangat unik karena berjalan pada mikrokomputer, mini komputer,
+
+235
+00:18:34.001 --> 00:18:39.000
+dan bingkai utama dari sistem terkecil hingga terbesar dari personal IBM
+
+236
+00:18:39.000 --> 00:18:44.001
+Komputer untuk sebuah supercomputer besar besar Cray. UNIX tersedia untuk semua
+
+237
+00:18:44.001 --> 00:18:49.000
+dan mereka. UNIX juga sangat mudah untuk jaringan sehingga Anda dapat menghubungkan ini berbeda
+
+238
+00:18:49.000 --> 00:18:54.000
+merek dan ukuran komputer bersama-sama dengan mudah. Dan jika kedua komputer menggunakan UNIX,
+
+239
+00:18:55.000 --> 00:18:59.001
+Anda dapat menemukan diri Anda mengirim email, transfer file, berbagi
+
+240
+00:18:59.001 --> 00:19:04.000
+aplikasi perangkat lunak sangat cepat, lebih seperti dengan banyak yang lain
+
+241
+00:19:04.000 --> 00:19:09.001
+produk yang Satu lagi aspek utama dari UNIX adalah bahwa itu adalah multi-user. Itu berarti bahwa
+
+242
+00:19:09.001 --> 00:19:14.001
+Lebih dari satu pengguna dapat mengakses beberapa program yang berbeda pada saat yang sama dengan
+
+243
+00:19:14.001 --> 00:19:19.000
+dan Unix. Jadi satu orang di terminal ke komputer dapat menggunakan sistem akuntansi,
+
+244
+00:19:19.000 --> 00:19:23.000
+sementara orang lain pada saat yang sama melakukan pemrosesan kata, sementara orang yang lain
+
+245
+00:19:23.000 --> 00:19:27.000
+orang yang mengirim email, masing-masing menjalankan aplikasi yang berbeda di
+
+246
+00:19:27.000 --> 00:19:32.001
+menggunakan komputer yang sama, hanya terminal yang berbeda. Jin, seperti yang saya
+
+247
+00:19:32.001 --> 00:19:38.000
+UNIX tumbuh di Bell Labs dan kemudian untuk sementara waktu lisensi hanya untuk
+
+248
+00:19:38.000 --> 00:19:43.000
+Universitas dan organisasi non-profit. Apakah ini disokong secara komersial?
+
+249
+00:19:43.000 --> 00:19:47.001
+sekarang ? Nah, UNIX memiliki sejarah yang panjang dan pertama kali diperkenalkan di sebagian besar
+
+250
+00:19:47.001 --> 00:19:53.001
+bentuk primitif pada tahun 1969. “Tidak sampai sistem Bell deregulasi, saya pikir.
+
+251
+00:19:53.001 --> 00:19:59.000
+Kita semua menyadari perbuatan besar dengan ATT, bahwa yang ATT benar-benar bisa menjual
+
+252
+00:19:59.000 --> 00:20:03.001
+dan mendukung produk tersebut. Mereka secara hukum tidak dapat melakukan banyak dengan itu karena mereka adalah
+
+253
+00:20:03.001 --> 00:20:08.000
+dihindari dari memasuki industri komputer sampai deregulasi. Namun yang terbaru
+
+254
+00:20:08.000 --> 00:20:13.001
+Versi UNIX disebut System 5, yang merupakan versi keenam yang pernah dirilis.
+
+255
+00:20:13.001 --> 00:20:18.000
+oleh mereka dan sejumlah nama yang berbeda, didukung secara komersial.
+
+256
+00:20:18.000 --> 00:20:22.001
+Dan meskipun produk masih perlu diperbaiki dan diperbaiki untuk yang kecil
+
+257
+00:20:22.001 --> 00:20:27.000
+sistem dan mulai pengguna akhir, ATT tampaknya membuat beberapa pertempuran besar ke arah
+
+258
+00:20:27.000 --> 00:20:33.001
+yang itu. Bagaimana cara membandingkan ZNIX dengan UNIX? Baiklah, baiklah yang
+
+259
+00:20:33.001 --> 00:20:39.001
+Perangkat lunak UNIX dari ATT dijual dalam dua bentuk. Bahkan sudah lisensi.
+
+260
+00:20:40.001 --> 00:20:45.001
+Lisensi kode sumber adalah lisensi yang mahal, sangat mahal yang memungkinkan Anda mengambil
+
+261
+00:20:45.001 --> 00:20:50.000
+perangkat lunak dan sebenarnya mengubahnya atau menyesuaikannya atau membuatnya berbeda untuk Anda
+
+262
+00:20:50.000 --> 00:20:54.000
+jenis komputer tertentu. Perusahaan komputer adalah perusahaan perangkat lunak yang
+
+263
+00:20:54.000 --> 00:20:58.001
+Lisensi kode sumber dan Microsoft adalah salah satu perusahaan tersebut. Microsoft memiliki
+
+264
+00:20:58.001 --> 00:21:03.001
+telah membeli kode sumber UNIX dan telah menyesuaikannya, mengubahnya, memperbaikinya, apa pun,
+
+265
+00:21:04.000 --> 00:21:07.000
+Hal ini dilakukan pada berbagai jenis mikrokomputer.
+
+266
+00:21:07.001 --> 00:21:14.000
+Ini berjalan pada Tandy System 16, Apple Lisa, Fortune Systems 3216. Itu adalah
+
+267
+00:21:14.000 --> 00:21:21.000
+Mereka mengatakan mereka akan memperkenalkan itu untuk IBM PC XT. Jadi ZNIX hanyalah UNIX dengan
+
+268
+00:21:21.000 --> 00:21:27.001
+sedikit peningkatan untuk komputer pribadi atau untuk mikrokomputer. Tony, Anda memiliki
+
+269
+00:21:27.001 --> 00:21:34.001
+Menggunakan Unix Saya selalu jenis yang terkait UNIX dengan jalur komputer mini PDP dan
+
+270
+00:21:34.001 --> 00:21:38.001
+Gene baru saja memberitahu kami bahwa itu tumbuh naik dan turun. Apa yang telah menjadi milikmu
+
+271
+00:21:38.001 --> 00:21:42.000
+pengalaman dengan UNIX dan berapa lama Anda menggunakannya? Oh, saya pikir saya telah menggunakannya
+
+272
+00:21:42.000 --> 00:21:46.000
+sekitar lima tahun yang membuat saya relatif baru datang dibandingkan dengan banyak
+
+273
+00:21:46.000 --> 00:21:50.000
+orang-orang yang telah menggunakannya, tetapi membuat saya lebih tua-timer dengan
+
+274
+00:21:50.000 --> 00:21:55.001
+Pengguna Mikrokomputer Saya belum benar-benar menggunakannya untuk pada mikrokomputer
+
+275
+00:21:55.001 --> 00:22:02.000
+yang agak menakjubkan. Seperti yang saya katakan sebelumnya, saya menggunakan MS-DOS pada berbagai
+
+276
+00:22:02.000 --> 00:22:07.000
+dengan komputer. MS-DOS diyakini bergerak ke arah
+
+277
+00:22:07.000 --> 00:22:08.001
+Menonton lebih dan lebih seperti Unix.
+
+278
+00:22:10.000 --> 00:22:14.000
+Anda mungkin ingin memberitahu kami tentang apa yang benar-benar berarti. Saya benar-benar penasaran untuk melihat
+
+279
+00:22:14.000 --> 00:22:20.000
+Seperti apa yang akan terjadi pada peluncuran berikutnya. Memang sulit, karena sampai saat ini yang paling
+
+280
+00:22:20.000 --> 00:22:27.000
+pemacu energi dan shaker menuju mikrokomputer UNIX telah menjadi perusahaan yang tidak
+
+281
+00:22:27.000 --> 00:22:34.000
+ATT karena ATT tidak diizinkan. Microsoft dan beberapa lagi.
+
+282
+00:22:34.000 --> 00:22:39.001
+Perusahaan juga masuk ke dalamnya. Kita bisa membayangkan bahwa ATT akan memperkenalkan sebuah
+
+283
+00:22:39.001 --> 00:22:42.000
+seluruh rangkaian komputer. Mereka akan menjadi sebuah komputer
+
+284
+00:22:42.000 --> 00:22:43.001
+perusahaan yang sudah cukup baik.
+
+285
+00:22:43.001 --> 00:22:48.001
+Jika mereka memperkenalkan micros, minis, dan mainframe semua berjalan UNIX, kita harus
+
+286
+00:22:48.001 --> 00:22:53.001
+menganggap bahwa apakah mereka melakukannya segera atau agak singkat, mereka harus mencoba
+
+287
+00:22:53.001 --> 00:22:57.001
+untuk menawarkan fitur komersial yang pengguna akan menuntut karena benar
+
+288
+00:22:57.001 --> 00:23:02.000
+sekarang biaya lebih banyak untuk sebuah perusahaan komputer untuk mendukung, memegang tangan dari
+
+289
+00:23:02.000 --> 00:23:07.000
+Memulai pengguna UNIX dari yang dilakukan untuk MS-DOS atau produk CPM86.
+
+290
+00:23:07.001 --> 00:23:11.001
+Gary, Tony mengatakan MS-DOS bergerak ke arah
+
+291
+00:23:11.001 --> 00:23:13.000
+dan Unix. Kami adalah CPM dalam gambar ini.
+
+292
+00:23:13.001 --> 00:23:18.000
+Saya pikir pengaruh dari UNIX telah menjadi yang sangat baik dalam
+
+293
+00:23:18.000 --> 00:23:21.001
+industri mikrokomputer, terutama di sekitar alat UNIX, bahasa C,
+
+294
+00:23:21.001 --> 00:23:27.001
+Keuangan dan hal-hal seperti itu. Ada juga pekerjaan yang kita lakukan dengan UNIX
+
+295
+00:23:27.001 --> 00:23:33.001
+Kami bekerja sama dengan Intel. Kami akan melihat beberapa penawaran dari jenis ini.
+
+296
+00:23:34.001 --> 00:23:40.001
+Kami percaya bahwa pada dasarnya bahwa sistem UNIX adalah untuk berbagai orang,
+
+297
+00:23:40.001 --> 00:23:45.000
+Segmen tertentu dari pasar adalah pasar yang sangat penting. Kita juga merasakan bahwa dalam
+
+298
+00:23:45.000 --> 00:23:47.001
+CPM dan CPM yang bersaing, bahwa ada lebih dari satu komersial
+
+299
+00:23:47.001 --> 00:23:51.001
+orientasi terhadap sistem operasi tersebut. Jadi ada matriks dari operasi ini
+
+300
+00:23:51.001 --> 00:23:55.001
+Sistem-sistem yang bersifat komplementar dalam banyak cara. Saya merasa bahwa ketika
+
+301
+00:23:55.001 --> 00:23:59.001
+Ada yang membeli CPM, mereka membelinya dan mereka tidak menyentuhnya. Mereka meletakkannya di atas mereka
+
+302
+00:23:59.001 --> 00:24:04.000
+komputer dan berharap bahwa itu menjadi tidak terlihat bagi mereka, kecuali untuk melakukan fungsi
+
+303
+00:24:04.000 --> 00:24:09.001
+Mereka inginkan . Saya tidak percaya ada dua sistem UNIX yang sama, setidaknya seperti yang saya lakukan sebelumnya.
+
+304
+00:24:09.001 --> 00:24:14.001
+berdasarkan yang disentuh dengan itu, yang tampaknya diubah, digunakan oleh pengembang sistem, dan
+
+305
+00:24:14.001 --> 00:24:17.001
+diserang dengan. Apakah ini merupakan perbedaan antara
+
+306
+00:24:17.001 --> 00:24:19.000
+Dua pasar untuk sistem ini?
+
+307
+00:24:19.001 --> 00:24:25.000
+Nah, Anda harus ingat bahwa CPM86 dan versi CPM baru diperbaiki
+
+308
+00:24:25.000 --> 00:24:32.000
+dan versi yang semakin fungsional dari produk mikrokomputer.
+
+309
+00:24:32.001 --> 00:24:37.001
+UNIX adalah produk mini-komputer yang didirikan. Ini adalah produk sistem besar, dan
+
+310
+00:24:37.001 --> 00:24:42.000
+Oleh karena itu, ia memiliki 400 program terintegrasi yang melakukan segalanya dari
+
+311
+00:24:42.000 --> 00:24:49.000
+Tipe ke email ke pemrosesan teks ke kalender ke metrik
+
+312
+00:24:49.000 --> 00:24:54.001
+Untuk fungsi konversi inci ke alat pemrograman yang luas. Itu adalah yang sangat besar
+
+313
+00:24:54.001 --> 00:24:59.000
+sistem, tapi itu sangat modular. Ini seperti blok bangunan atau blok alfabet dari
+
+314
+00:24:59.000 --> 00:25:02.001
+dari masa kecil. Anda dapat mengambil blok ini dan Anda dapat menggabungkannya dalam banyak yang berbeda.
+
+315
+00:25:02.001 --> 00:25:08.001
+dengan cara. Jadi orang-orang yang membeli UNIX biasanya, misalnya, komputer UNIX saya duduk di
+
+316
+00:25:08.001 --> 00:25:13.001
+Desk saya, saya telah dihapus, dikeluarkan dari itu sekitar dua pertiga program karena
+
+317
+00:25:13.001 --> 00:25:17.000
+Aku tidak menggunakannya. Saya tidak melakukan pengembangan program. Saya tidak melakukan tiping,
+
+318
+00:25:17.001 --> 00:25:21.001
+Dan saya hanya menyimpan bagian-bagian yang saya suka. Dan hal yang bagus tentang UNIX adalah bahwa itu adalah
+
+319
+00:25:21.001 --> 00:25:26.000
+Jenis-jenis sistem operasi yang dilakukan oleh diri sendiri. Anda dapat menggunakan semua utilitas ini.
+
+320
+00:25:26.000 --> 00:25:30.000
+yang tersedia dan membuat sistem kecil Anda sendiri bersama. Ia mengambil lebih banyak
+
+321
+00:25:30.000 --> 00:25:34.000
+belajar dan keahlian untuk dapat melakukannya daripada dengan CPM. Lebih sulit untuk
+
+322
+00:25:34.000 --> 00:25:38.000
+Memahami produk Wahai orang-orang, kita sudah keluar dari waktu. Gary Kildall dari Digital Research
+
+323
+00:25:38.000 --> 00:25:42.000
+Untuk hari ini. Tony Fanning dari HP Labs dan Gene Yates dari Yates Ventures. Terima kasih untuk
+
+324
+00:25:42.000 --> 00:25:44.000
+Bersama kami, dan terima kasih telah menyertai kami
+
+325
+00:25:44.000 --> 00:25:45.001
+edisi ini dari Computer Chronicles.
+
+326
+00:25:50.001 --> 00:25:55.000
+Ini adalah waktu yang sangat menarik untuk pencipta dan pengguna sistem operasi, dan
+
+327
+00:25:55.000 --> 00:26:00.000
+Masa depan terlihat sangat cerah. Ada banyak orang yang sangat populer.
+
+328
+00:26:00.000 --> 00:26:06.000
+Sistem operasi komputer. CPM dan MS-DOS juga ada. Sekarang UNIX juga menjadi
+
+329
+00:26:06.000 --> 00:26:11.001
+tersedia untuk micros. Popularitas sistem ini telah menyebar sebagian besar melalui
+
+330
+00:26:11.001 --> 00:26:16.001
+karya pengembang perangkat lunak pihak ketiga dan desainer perangkat keras. Di sisi lain
+
+331
+00:26:16.001 --> 00:26:21.001
+Tangan, ada beberapa sistem properti yang berkembang seperti Apple-DOS dan TRS
+
+332
+00:26:21.001 --> 00:26:23.000
+- Dos, yang didukung dengan baik.
+
+333
+00:26:24.000 --> 00:26:27.000
+Oleh karena itu, masih ada standar yang menyatakan bahwa seluruh
+
+334
+00:26:27.000 --> 00:26:29.000
+Industri ini bersedia mendukung.
+
+335
+00:26:30.001 --> 00:26:34.001
+Seperti seluruh industri komputer, pengembangan sistem operasi adalah dalam
+
+336
+00:26:34.001 --> 00:26:39.000
+keadaan perubahan yang konstan. Ketika kemampuan baru ditambahkan ke sistem hardware,
+
+337
+00:26:39.001 --> 00:26:45.000
+seperti cakera keras, port telekomunikasi, dan cakera laser, sistem operasi
+
+338
+00:26:45.000 --> 00:26:50.001
+harus diperbaharui untuk menyesuaikannya. Ketika desain hardware baru dimasukkan ke dalam
+
+339
+00:26:50.001 --> 00:26:55.001
+16 bit microprocessor, desainer harus membuat sistem operasi baru untuk mengambil
+
+340
+00:26:55.001 --> 00:27:01.000
+Manfaat penuh dari peningkatan daya pemrosesan. Dan sekarang, yang baru 32-bit
+
+341
+00:27:01.000 --> 00:27:05.001
+Mikroprosesor dengan kecepatan dan efisiensi yang meningkat menantang
+
+342
+00:27:05.001 --> 00:27:07.000
+Pembuat perangkat lunak sistem.
+
+343
+00:27:08.000 --> 00:27:12.001
+akan ada persaingan yang berterusan dan berkembang di tingkat sistem, seperti
+
+344
+00:27:12.001 --> 00:27:17.000
+Hal ini terjadi di tingkat hardware dan aplikasi. Beberapa dari kompetisi ini
+
+345
+00:27:17.000 --> 00:27:21.001
+akan fokus pada penciptaan sistem operasi yang menyediakan program aplikasi
+
+346
+00:27:21.001 --> 00:27:28.000
+dan portabilitas. Ini adalah kemampuan untuk program aplikasi untuk berjalan pada banyak jenis
+
+347
+00:27:28.000 --> 00:27:32.001
+dengan komputer. Dalam pelajaran berikutnya, kita akan menemukan dunia aplikasi
+
+348
+00:27:32.001 --> 00:27:38.000
+pengembangan dan program utilitas. Pastikan dan baca bab 8 dalam teks Anda, dan
+
+349
+00:27:38.000 --> 00:27:40.001
+Aku akan melihatmu kemudian. Saya adalah Herb Luckner.
+
+350
+00:27:48.001 --> 00:28:22.000
+[...] Pengembangan kata pertama dengan senang hati memberikan dana besar untuk
+
+351
+00:28:22.000 --> 00:28:26.000
+Komputer Chronicles, kisah evolusi yang berterusan ini.
+
+352
+00:28:47.001 --> 00:28:49.001
+[...]
