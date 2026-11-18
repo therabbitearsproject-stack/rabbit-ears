@@ -1,0 +1,2201 @@
+WEBVTT
+
+1
+00:00:08.001 --> 00:00:10.001
+¿Qué tenemos que recuperar?
+
+2
+00:00:11.001 --> 00:00:11.001
+Sí sí.
+
+3
+00:00:12.001 --> 00:00:13.000
+La mamá.
+
+4
+00:00:13.001 --> 00:00:15.000
+Mejor de nuevo más tarde.
+
+5
+00:00:15.001 --> 00:00:16.001
+Vamos a intentar.
+
+6
+00:00:17.001 --> 00:00:17.001
+[...]
+
+7
+00:00:18.001 --> 00:00:23.000
+La cosa más caliente en los juguetes de estos días son las muñecas y los huevos que hablan y escuchan,
+
+8
+00:00:23.000 --> 00:00:27.000
+Y lo más reciente en los PCs puede ser los ordenadores que hablan y escuchan.
+
+9
+00:00:27.000 --> 00:00:30.000
+¿Y los chips de discurso se mueven de las tiendas de juguetes a las tiendes de ordenador?
+
+10
+00:00:30.001 --> 00:00:34.000
+Descubriremos hoy mientras miramos la síntesis del discurso y el reconocimiento de la voz
+
+11
+00:00:34.000 --> 00:00:36.001
+En la edición actual de The Computer Chronicles.
+
+12
+00:00:58.001 --> 00:01:03.000
+Las crónicas de ordenador se hacen posibles por Leading Edge, creadores de IBM
+
+13
+00:01:03.000 --> 00:01:07.000
+- Sistemas informáticos compatibles, incluyendo el procesamiento de palabras con la corrección de la grabación,
+
+14
+00:01:07.001 --> 00:01:12.000
+software de comunicación, y modems compatibles con Haze, Leading Edge con más de 1.000
+
+15
+00:01:12.000 --> 00:01:16.001
+Centros de servicios en todo el país, Leading Edge lleva el camino a la era de la información.
+
+16
+00:01:19.001 --> 00:01:23.001
+La financiación adicional está proporcionada por McGraw Hill, editores de Byte, Byte&#x27;s
+
+17
+00:01:23.001 --> 00:01:27.000
+artículos técnicos detallados sobre el nuevo hardware, el software y las lenguas cubiertas
+
+18
+00:01:27.000 --> 00:01:29.001
+Desarrollo de la tecnología informática en todo el mundo.
+
+19
+00:01:37.000 --> 00:01:38.001
+Bienvenido a las crónicas informáticas.
+
+20
+00:01:38.001 --> 00:01:41.000
+Yo soy Stuart Chafay, y conmigo esta semana es George Morrow.
+
+21
+00:01:41.001 --> 00:01:45.000
+George, si quiero comunicarme con este ordenador, tengo que usar uno de estos
+
+22
+00:01:45.000 --> 00:01:49.001
+dispositivos, una tecla, que la mayoría de las personas usan, especialmente un ratón, un joystick, un toque
+
+23
+00:01:49.001 --> 00:01:53.000
+tableta, un trackball, o lo que algunas personas piensan es la cosa más intuitiva, una
+
+24
+00:01:53.000 --> 00:01:55.001
+pantalla táctil, donde puedo evitar cualquiera de estos dispositivos y sólo
+
+25
+00:01:55.001 --> 00:01:57.000
+toque en la pantalla del ordenador real.
+
+26
+00:01:57.001 --> 00:01:59.000
+Pero cuando te comuniqué, ¿qué hago?
+
+27
+00:01:59.000 --> 00:01:59.001
+Yo hablo.
+
+28
+00:02:00.000 --> 00:02:02.000
+Eso es lo más natural, pero no puedo hablar con este ordenador.
+
+29
+00:02:02.001 --> 00:02:03.000
+Eso es cierto, Stuart.
+
+30
+00:02:03.000 --> 00:02:06.000
+Pero hablar es probablemente la forma menos precisa de comunicarse.
+
+31
+00:02:06.001 --> 00:02:10.000
+Cuando hablas a esta pantalla, tienes una red, y tienes que obtener tu
+
+32
+00:02:10.000 --> 00:02:13.000
+El dedo en el lugar correcto en esa red, o no significa lo que debería significar.
+
+33
+00:02:13.001 --> 00:02:16.000
+Cuando te hablo, no tengo que terminar una frase.
+
+34
+00:02:16.001 --> 00:02:19.001
+Puedo llegar a medio camino a través de ella con partículas en peligro, onda mi mano, y
+
+35
+00:02:19.001 --> 00:02:21.000
+Usted sabe exactamente lo que quiero decir.
+
+36
+00:02:21.000 --> 00:02:24.001
+Pero estas máquinas no tienen la capacidad de procesamiento para procesar
+
+37
+00:02:24.001 --> 00:02:26.001
+y comprender aquellas cosas como lo hacemos.
+
+38
+00:02:26.001 --> 00:02:29.001
+George, hoy vamos a ver los últimos desarrollos en el discurso
+
+39
+00:02:29.001 --> 00:02:31.001
+Tecnología de síntesis y reconocimiento de voz.
+
+40
+00:02:31.001 --> 00:02:35.000
+Y vamos a comenzar con una revisión del estado actual de la arte en
+
+41
+00:02:35.000 --> 00:02:38.000
+utilizar la palabra hablada para la entrada y salida del ordenador.
+
+42
+00:02:40.000 --> 00:02:45.000
+Para todos aquellos usuarios de ordenadores que nunca aprenden a escribir, que desprecian las teclas, o
+
+43
+00:02:45.000 --> 00:02:49.000
+que sólo quieren una forma más rápida de introducir datos, entrada de voz y salida son
+
+44
+00:02:49.000 --> 00:02:50.001
+Se han convertido en alternativas realistas.
+
+45
+00:02:51.001 --> 00:02:56.000
+Kurtzweil Applied Intelligence Corporation tiene un sistema vocal activado que
+
+46
+00:02:56.000 --> 00:02:58.000
+Tiene hasta 1.000 palabras.
+
+47
+00:02:58.001 --> 00:03:03.001
+El Dr. Alan Robbins, un radiólogo de Boston, ha adaptado el sistema Kurtzweil a
+
+48
+00:03:03.001 --> 00:03:06.001
+dictar, editar y imprimir informes de diagnóstico de rayos X.
+
+49
+00:03:07.001 --> 00:03:11.001
+El sistema se adapta a su voz, después de la cual se puede entrenar para reconocer
+
+50
+00:03:11.001 --> 00:03:14.001
+la equivalencia verbal de los macros de teclado.
+
+51
+00:03:15.000 --> 00:03:19.000
+Una frase corta provocará una entrada más completa en el archivo del paciente.
+
+52
+00:03:20.000 --> 00:03:24.001
+IBM está desarrollando un reconocedor de habla para aplicaciones de oficina, basado en un
+
+53
+00:03:24.001 --> 00:03:27.001
+Un modelo de 25 millones de palabras.
+
+54
+00:03:28.000 --> 00:03:33.001
+El reconocedor del discurso de AT evalúa las entradas verbales comparándolas con el candidato
+
+55
+00:03:33.001 --> 00:03:35.000
+palabras almacenadas en el modelo.
+
+56
+00:03:35.001 --> 00:03:42.001
+La versión anterior de este sistema se implementó en una colección
+
+57
+00:03:42.001 --> 00:03:48.001
+computadoras que cubren un largo período de espacio.
+
+58
+00:03:50.000 --> 00:03:54.000
+La otra mitad de la tecnología de voz informática es el lenguaje sintético.
+
+59
+00:03:54.000 --> 00:03:58.001
+La compañía Robertson Breathing Curric...
+
+60
+00:03:58.001 --> 00:04:02.001
+El texto de llamada de Speech Plus es un simulador de texto a voz que se convierte
+
+61
+00:04:02.001 --> 00:04:04.000
+ASCII entra en el discurso.
+
+62
+00:04:05.000 --> 00:04:10.000
+GTE de California y Michigan Bell abrazaron la idea de una base de datos rápida
+
+63
+00:04:10.000 --> 00:04:15.000
+El retorno, cuando la claridad es más importante que las subtletas de la intonación.
+
+64
+00:04:27.001 --> 00:04:30.001
+Se unen a nosotros en el estudio ahora es Charlie Cochran, Vicepresidente de
+
+65
+00:04:30.001 --> 00:04:32.000
+Marketing y sistemas de habla electrónica.
+
+66
+00:04:32.001 --> 00:04:32.001
+¿Por qué George?
+
+67
+00:04:33.001 --> 00:04:36.001
+Charlie, las rugas aquí es uno de estos animales que hablan como hemos visto, y
+
+68
+00:04:36.001 --> 00:04:38.000
+Tiene sus cosas en ella, lo entiendo.
+
+69
+00:04:38.001 --> 00:04:39.001
+Espero que no sean grabadores.
+
+70
+00:04:39.001 --> 00:04:40.001
+Oh, no, eso no es.
+
+71
+00:04:41.000 --> 00:04:43.000
+Es un juguete de rayos que habla de uno de los grandes
+
+72
+00:04:43.000 --> 00:04:45.000
+Los fabricantes de juguetes, Coleco, para ser exactos.
+
+73
+00:04:45.001 --> 00:04:50.000
+En ese juego particular, hay un sistema basado en microprocesadores que hace alrededor de un
+
+74
+00:04:50.000 --> 00:04:55.000
+miles de frases de ese sistema con herramientas en él, y es básicamente la
+
+75
+00:04:55.000 --> 00:04:56.001
+circuito que estás viendo aquí en la placa de circuito impreso junto a mí.
+
+76
+00:04:57.000 --> 00:04:58.001
+Pero esto es un único chip de Intel.
+
+77
+00:04:59.000 --> 00:05:00.001
+¿Estás me diciendo que este es todo el software entonces?
+
+78
+00:05:00.001 --> 00:05:04.001
+Bueno, como notas, no hay un chip de síntesis de habla en él, y así sucesivamente.
+
+79
+00:05:04.001 --> 00:05:07.000
+de software en el ROM aquí, y en realidad
+
+80
+00:05:07.000 --> 00:05:10.000
+fabricar el lenguaje utilizando el microprocesador.
+
+81
+00:05:10.000 --> 00:05:11.000
+¿Todo el tiempo de dominio?
+
+82
+00:05:11.000 --> 00:05:15.000
+Todo el tiempo de dominio y todos a bajas tasas de bit, un uso muy eficiente de la memoria.
+
+83
+00:05:15.000 --> 00:05:17.000
+¿Cuántos bits por...
+
+84
+00:05:17.000 --> 00:05:19.001
+¿Cuáles son mis requisitos de almacenamiento en esta cosa, Charlie?
+
+85
+00:05:19.001 --> 00:05:22.000
+Alrededor de 600 bytes por palabra.
+
+86
+00:05:22.001 --> 00:05:23.000
+Yo veo.
+
+87
+00:05:23.001 --> 00:05:26.000
+Y así se puede imaginar lo que sería en cuanto al almacenamiento de datos.
+
+88
+00:05:26.000 --> 00:05:26.001
+Es muy eficiente.
+
+89
+00:05:27.000 --> 00:05:28.000
+¿Podemos ver alguna de ellas?
+
+90
+00:05:28.001 --> 00:05:28.001
+Seguro .
+
+91
+00:05:29.000 --> 00:05:30.000
+Aquí, vamos a sacar las rugas.
+
+92
+00:05:30.000 --> 00:05:30.001
+Deshacerse de las rugas.
+
+93
+00:05:31.000 --> 00:05:31.001
+Vaya al ordenador.
+
+94
+00:05:32.000 --> 00:05:35.000
+Bueno, lo que voy a hacer es registrar un mensaje corto, y usted va a verlo
+
+95
+00:05:35.000 --> 00:05:37.000
+digitalizado en la pantalla y ver la forma de onda.
+
+96
+00:05:37.001 --> 00:05:39.000
+Hijo, fue una gran semana para mí.
+
+97
+00:05:41.000 --> 00:05:41.001
+No lo vimos.
+
+98
+00:05:42.001 --> 00:05:43.000
+Oh, ahí está eso.
+
+99
+00:05:43.000 --> 00:05:43.001
+Allí está.
+
+100
+00:05:43.001 --> 00:05:44.000
+Por Goliat, está ahí.
+
+101
+00:05:44.000 --> 00:05:44.001
+Déjame jugarlo.
+
+102
+00:05:45.000 --> 00:05:46.000
+Hijo, fue una gran semana para mí.
+
+103
+00:05:46.001 --> 00:05:48.000
+¿Ahora esto no está comprimido o comprimado?
+
+104
+00:05:48.000 --> 00:05:50.001
+No, es un discurso digitalizado.
+
+105
+00:05:50.001 --> 00:05:53.001
+Lo hemos digitalizado estrictamente, y ahora voy a tomar esos datos, y voy a
+
+106
+00:05:53.001 --> 00:05:56.001
+Comprimirlo hasta unos 5.000 bits por segundo
+
+107
+00:05:56.001 --> 00:05:58.000
+100,000 bits por segundo.
+
+108
+00:06:01.000 --> 00:06:04.000
+De hecho, la compresó hasta alrededor de 4.000 bits por segundo.
+
+109
+00:06:04.000 --> 00:06:05.000
+Yo jugaré el discurso original.
+
+110
+00:06:05.001 --> 00:06:07.000
+Hijo, fue una gran semana para mí.
+
+111
+00:06:07.000 --> 00:06:08.000
+Voy a jugar el discurso comprimido.
+
+112
+00:06:08.001 --> 00:06:09.001
+Hijo, fue una gran semana para mí.
+
+113
+00:06:10.000 --> 00:06:11.001
+Sí, hay una diferencia, pero no es malo.
+
+114
+00:06:12.000 --> 00:06:12.001
+Eso es correcto.
+
+115
+00:06:12.001 --> 00:06:15.000
+Ahora, supongo que no estoy muy contento con eso.
+
+116
+00:06:15.000 --> 00:06:16.000
+¿Hay algo que puedo hacer?
+
+117
+00:06:16.000 --> 00:06:20.000
+Sí, si usted verá aquí, este producto particular es tal que usted puede editar que
+
+118
+00:06:20.000 --> 00:06:22.000
+particular forma de onda y hacer que suena muy hermosa.
+
+119
+00:06:22.000 --> 00:06:23.001
+Y aquí hay algunas de las cosas que puedes hacer.
+
+120
+00:06:24.000 --> 00:06:27.001
+Hay una lista de comandos por los que puede cambiar estas cosas y hacer muchas cosas.
+
+121
+00:06:27.001 --> 00:06:29.000
+cosas diferentes a la forma de onda del discurso.
+
+122
+00:06:30.001 --> 00:06:35.000
+Y puedes, como puedes ver, señalar períodos de plazas, voces versus no contados, y
+
+123
+00:06:35.000 --> 00:06:37.001
+Hay muchas cosas que se pueden hacer para editar y
+
+124
+00:06:37.001 --> 00:06:39.000
+Hacer que suena tan natural como le gusta.
+
+125
+00:06:39.001 --> 00:06:41.001
+Charlie, además de hablar con los perros ahora, qué son los
+
+126
+00:06:41.001 --> 00:06:43.000
+¿Las aplicaciones serias de la tecnología?
+
+127
+00:06:43.000 --> 00:06:46.001
+Todo está bien, bien, algunas de las cosas que verás, que estás viendo en el mercado ahora,
+
+128
+00:06:47.000 --> 00:06:48.001
+son sistemas de alerta de voz en los aviones.
+
+129
+00:06:49.000 --> 00:06:51.000
+Estás viendo productos de entretenimiento, hablando slot
+
+130
+00:06:51.000 --> 00:06:53.000
+Máquinas, máquinas de arcade, y lo que usted tiene.
+
+131
+00:06:53.001 --> 00:06:56.001
+En la nave espacial, hay un montón de sistemas de recuerdos que son verbal cuando
+
+132
+00:06:56.001 --> 00:06:59.000
+La gente tiene muchos datos en sus dedos y así sucesivamente.
+
+133
+00:06:59.000 --> 00:07:00.000
+En las tasas de almacenamiento están hablando
+
+134
+00:07:00.000 --> 00:07:02.000
+Por lo tanto, es un dispositivo de producción muy eficiente.
+
+135
+00:07:02.000 --> 00:07:06.000
+En una computadora, en un ordenador, por ejemplo, como un Apple II GS, por exemplo,
+
+136
+00:07:06.000 --> 00:07:10.000
+con el sistema sonoro que tienen, nuestra voz particular podría ayudar a las personas a aprender
+
+137
+00:07:10.000 --> 00:07:12.001
+las lenguas extranjeras y las cosas para escuchar lo pronunció correctamente.
+
+138
+00:07:13.000 --> 00:07:16.000
+Con bajas tasas de bit, no usaría mucho de la memoria de un disco floppy.
+
+139
+00:07:16.001 --> 00:07:18.001
+¿Ves alguna aplicación de negocios específica?
+
+140
+00:07:18.001 --> 00:07:21.000
+¿Utilizar algún software que pueda volver a hablar con usted?
+
+141
+00:07:21.000 --> 00:07:23.000
+Oh, una de las cosas que estamos trabajando con algunos de los más grandes
+
+142
+00:07:23.000 --> 00:07:24.001
+Las empresas son mensajes vocales.
+
+143
+00:07:25.001 --> 00:07:29.000
+Y en un computador, donde un ordenador, si quieres hablar, si quiero hablar
+
+144
+00:07:29.000 --> 00:07:33.000
+a ti y tú quisiste oír mi mensaje en mi voz, podíamos hablar en esto
+
+145
+00:07:33.000 --> 00:07:38.000
+ordenador, comprimir en tiempo real, usted recibiría la mensaje de vuelta de la computadora,
+
+146
+00:07:38.000 --> 00:07:42.001
+Lo sabes, remanufactado en mi voz.
+
+147
+00:07:43.000 --> 00:07:43.001
+Así que entenderías eso.
+
+148
+00:07:43.001 --> 00:07:45.001
+Y hay muchas personas interesadas en hacer esto ahora mismo.
+
+149
+00:07:45.001 --> 00:07:50.000
+¿Puedes crear nuevos mensajes de la información que ya tienes?
+
+150
+00:07:50.000 --> 00:07:50.001
+Sí sí.
+
+151
+00:07:51.000 --> 00:07:51.000
+Eso es genial.
+
+152
+00:07:51.001 --> 00:07:52.001
+Sólo nos quedaba un poco de tiempo.
+
+153
+00:07:52.001 --> 00:07:55.001
+Creo que tienes un predecorado uno, Humphrey Bogard o John F. Kennedy aquí
+
+154
+00:07:55.001 --> 00:07:57.000
+para mostrarnos cómo limpiar el discurso comprimido.
+
+155
+00:07:57.000 --> 00:07:57.001
+Eso es justo.
+
+156
+00:07:58.000 --> 00:08:00.000
+A bajas tasas de bit como los 5.000 bits por
+
+157
+00:08:00.000 --> 00:08:01.001
+En segundo lugar, aquí está lo que puedes obtener si te gusta.
+
+158
+00:08:02.001 --> 00:08:07.000
+Siempre sabía que los microprocesadores podrían ser utilizados mejor, hijo.
+
+159
+00:08:07.001 --> 00:08:09.000
+¿Y cuál es el grado de compresión en esto?
+
+160
+00:08:09.000 --> 00:08:10.001
+Esto es de 4.000 bits por segundo.
+
+161
+00:08:12.000 --> 00:08:13.000
+Muchas gracias Charlie.
+
+162
+00:08:13.000 --> 00:08:15.001
+En sólo un minuto, vamos a dar un vistazo a una aplicación donde usted puede usar
+
+163
+00:08:15.001 --> 00:08:18.001
+Discurso sintetizado para acceder a su ordenador desde una ubicación remota.
+
+164
+00:08:19.000 --> 00:08:19.001
+Así que permanezcan con nosotros.
+
+165
+00:08:31.001 --> 00:08:34.000
+Con nosotros en el estudio ahora es Michael O&#x27;Malley,
+
+166
+00:08:34.001 --> 00:08:36.000
+Presidente de Berkeley Speech Technologies.
+
+167
+00:08:36.001 --> 00:08:36.001
+de George.
+
+168
+00:08:37.000 --> 00:08:39.001
+Hemos visto un discurso digitalizado.
+
+169
+00:08:40.000 --> 00:08:42.000
+Usted tiene un ejemplo de discurso sintetizado, ¿no?
+
+170
+00:08:42.001 --> 00:08:42.001
+Sí sí.
+
+171
+00:08:42.001 --> 00:08:46.000
+Este es un sistema que le permite obtener información a través del teléfono y leer
+
+172
+00:08:46.000 --> 00:08:50.000
+información que está en su ordenador que se almacena como texto ASCII.
+
+173
+00:08:50.001 --> 00:08:52.000
+¿Y viene como un discurso sintetizado?
+
+174
+00:08:52.000 --> 00:08:54.000
+Se produce como sintetizado o dicimos el lenguaje informático en general.
+
+175
+00:08:55.000 --> 00:08:58.000
+Y, por ejemplo, un tipo de información que desea obtener muy a menudo
+
+176
+00:08:58.000 --> 00:08:59.001
+Los nombres y las direcciones.
+
+177
+00:09:00.000 --> 00:09:02.001
+Y podríamos comenzar intentando obtener sus nombres.
+
+178
+00:09:03.000 --> 00:09:03.001
+Y ahí está.
+
+179
+00:09:03.001 --> 00:09:07.001
+Por ejemplo, supongo que queríamos encontrar el nombre de Stuart Chafay.
+
+180
+00:09:08.000 --> 00:09:12.001
+Así que escribimos en Stuart C-H-E-I-F-E -T y dice, Stuart Chifet.
+
+181
+00:09:13.000 --> 00:09:16.000
+Bueno, probablemente muchas personas te llaman Stuart Chifet.
+
+182
+00:09:16.000 --> 00:09:18.001
+Puede que no te guste eso.
+
+183
+00:09:18.001 --> 00:09:23.000
+Así que entonces podemos agregar tu nombre a nuestro diccionario escribiendo en.
+
+184
+00:09:23.000 --> 00:09:24.000
+Y enseñarle cómo pronunciarlo correctamente.
+
+185
+00:09:24.000 --> 00:09:25.000
+Y enseñarle cómo pronunciarlo correctamente.
+
+186
+00:09:25.001 --> 00:09:28.000
+Así que usted va a usar fonemas para hacerlo, ¿verdad?
+
+187
+00:09:28.000 --> 00:09:28.000
+Sí sí.
+
+188
+00:09:29.000 --> 00:09:35.001
+Así que C-H-E-I-F-E T es un sha-a-f
+
+189
+00:09:35.001 --> 00:09:40.000
+-A con un estrés en la A.
+
+190
+00:09:42.001 --> 00:09:47.001
+Ahora, si escribo en
+
+191
+00:09:47.001 --> 00:09:52.001
+Stuart Chafay, dice tu nombre correctamente.
+
+192
+00:09:53.000 --> 00:09:55.001
+George tiene un nombre que es más, creo, escocés.
+
+193
+00:09:55.001 --> 00:09:59.000
+Y probablemente funciona bastante bien con sólo las reglas por sí mismas.
+
+194
+00:10:00.001 --> 00:10:01.000
+debe ser.
+
+195
+00:10:03.000 --> 00:10:04.000
+Es más [...]
+
+196
+00:10:04.001 --> 00:10:05.000
+Muy bueno .
+
+197
+00:10:05.000 --> 00:10:08.000
+OK, ahora nos muestra cómo accedería a un ordenador personal a través de una piedra de toque
+
+198
+00:10:08.000 --> 00:10:10.001
+Póngase en contacto y reciba un número de teléfono o una dirección.
+
+199
+00:10:11.001 --> 00:10:14.000
+Bueno, así que estamos llevando a cabo nuestro programa.
+
+200
+00:10:15.000 --> 00:10:18.001
+Y la idea aquí es que quizás estás en un aeropuerto o estás en tu
+
+201
+00:10:18.001 --> 00:10:21.000
+El coche con teléfono móvil.
+
+202
+00:10:21.001 --> 00:10:24.001
+Y no puedes recordar el nombre y la dirección del chico que vas a ver.
+
+203
+00:10:25.000 --> 00:10:29.000
+Así que usted llama usando un payphone con cualquier tipo de teléfono touchton.
+
+204
+00:10:30.001 --> 00:10:35.000
+Y usted escribe, utilizando los tochtones, el nombre de la persona, o
+
+205
+00:10:35.000 --> 00:10:36.001
+Tanto el nombre como se puede recordar.
+
+206
+00:10:37.000 --> 00:10:39.000
+Ahora vamos a decir que queríamos encontrar la dirección de Stuart.
+
+207
+00:10:39.001 --> 00:10:42.000
+Y puedo recordar su, no recuerda cómo estirar su último
+
+208
+00:10:42.000 --> 00:10:44.000
+Nombre, pero su primer nombre que recuerdo es Stuart.
+
+209
+00:10:44.000 --> 00:10:46.000
+Puedo recordar que es un productor, ejecutivo.
+
+210
+00:10:46.000 --> 00:10:48.000
+productor, Harrisburg, Pennsylvania, algo así.
+
+211
+00:10:48.001 --> 00:10:51.000
+Simulamos un anillo.
+
+212
+00:10:52.000 --> 00:10:56.000
+Hola, este es el Berkeley Speech Technologies Remote Phone Book.
+
+213
+00:10:57.000 --> 00:10:58.000
+Es un discurso grabado.
+
+214
+00:10:58.000 --> 00:10:59.000
+Es un discurso grabado.
+
+215
+00:10:59.000 --> 00:11:00.001
+Es muy importante combinarlos.
+
+216
+00:11:00.001 --> 00:11:01.001
+Seguido por el signo de libras.
+
+217
+00:11:03.000 --> 00:11:06.000
+Así que ahora yo escribo, vamos a decir Stuart.
+
+218
+00:11:06.001 --> 00:11:11.001
+S, T, E y W.
+
+219
+00:11:11.001 --> 00:11:13.000
+Usted está escribiendo en esas cartas fuera del teléfono touchstone.
+
+220
+00:11:13.000 --> 00:11:15.000
+Los he entrado en la tecla touchstone.
+
+221
+00:11:15.001 --> 00:11:19.000
+Y el software está haciendo sentido de los números para cargar.
+
+222
+00:11:19.000 --> 00:11:25.000
+El productor ejecutivo, WITFPB, Post Office Box
+
+223
+00:11:25.000 --> 00:11:32.000
+2954, Harrisburg, Pennsylvania, 17105, teléfono
+
+224
+00:11:32.000 --> 00:11:36.000
+Número 7172366000.
+
+225
+00:11:36.001 --> 00:11:37.001
+Un poco rápido.
+
+226
+00:11:37.001 --> 00:11:38.001
+Bueno, un par de comentarios.
+
+227
+00:11:38.001 --> 00:11:42.000
+Se dice 2954 y 6000.
+
+228
+00:11:42.001 --> 00:11:45.000
+Es la forma en que la gente lee los números.
+
+229
+00:11:45.001 --> 00:11:46.001
+Hemos hecho mucho trabajo por teléfono.
+
+230
+00:11:46.001 --> 00:11:48.000
+Números que se leen de manera diferente a las direcciones.
+
+231
+00:11:48.000 --> 00:11:50.000
+Y las cantidades del dólar se leen de manera diferente.
+
+232
+00:11:50.001 --> 00:11:54.000
+Así que podemos leer todos esos números de la manera en que encontramos a los típicos estadounidenses.
+
+233
+00:11:54.001 --> 00:11:56.001
+Lo hará dependiendo de si hay un signo de dólar delante de él.
+
+234
+00:11:56.001 --> 00:11:57.000
+muy diferente.
+
+235
+00:11:57.000 --> 00:12:00.000
+Si usted pone un signo del dólar delante, usted lo lee con miles y así sucesivamente.
+
+236
+00:12:00.001 --> 00:12:01.001
+Y en Inglaterra, sería completamente diferente.
+
+237
+00:12:02.000 --> 00:12:04.000
+Por lo tanto, cada país y cada cultura lee los números de manera diferente.
+
+238
+00:12:04.001 --> 00:12:08.000
+Ahora, un problema que tienes con nombres como mi propio, O&#x27;Malley, tiene un
+
+239
+00:12:08.000 --> 00:12:10.000
+Apostrofe en ella, y eso no está en el tochtone.
+
+240
+00:12:10.000 --> 00:12:10.001
+Por eso usamos la estrella.
+
+241
+00:12:10.001 --> 00:12:11.001
+Tienes que hacer otras cosas.
+
+242
+00:12:11.001 --> 00:12:12.000
+Tienes que hacer otras cosas.
+
+243
+00:12:12.000 --> 00:12:15.000
+No tendremos tiempo para toda la impresión, pero puedes usar la estrella como un
+
+244
+00:12:15.000 --> 00:12:17.000
+Wildcard, básicamente, para escribir en un nombre como éste.
+
+245
+00:12:17.000 --> 00:12:19.001
+Y una vez más, puede acceder a cualquier archivo ASCII.
+
+246
+00:12:19.001 --> 00:12:21.001
+Me parece que no se entró de ninguna manera inusual.
+
+247
+00:12:22.000 --> 00:12:25.000
+Y usted podría tener su ordenador llamando una base de datos, mantenerlo localmente, y luego
+
+248
+00:12:25.000 --> 00:12:27.000
+Te llamarás y te lo leerás.
+
+249
+00:12:27.001 --> 00:12:28.000
+Michael, muchas gracias.
+
+250
+00:12:28.000 --> 00:12:30.000
+Volveremos en un minuto con una mirada
+
+251
+00:12:30.000 --> 00:12:31.001
+Dos sistemas de reconocimiento de voz.
+
+252
+00:12:32.000 --> 00:12:32.001
+Así que permanezcan con nosotros.
+
+253
+00:12:44.001 --> 00:12:47.000
+Ahora en el estudio está Janet Baker.
+
+254
+00:12:47.000 --> 00:12:48.001
+Janet es el presidente de Dragon Systems.
+
+255
+00:12:49.000 --> 00:12:51.001
+Y George, ella aparece con algo llamado Voice Scribe 1000.
+
+256
+00:12:52.000 --> 00:12:52.001
+reconocimiento de voz.
+
+257
+00:12:53.001 --> 00:12:56.001
+Janet, para aquellos de nosotros que han estado en este negocio por un tiempo, pensamos en esto
+
+258
+00:12:56.001 --> 00:12:59.001
+Como alguien sólo habla en ella como un clero de entrada de orden.
+
+259
+00:12:59.001 --> 00:13:01.000
+¿Se ha movido más allá de eso?
+
+260
+00:13:01.000 --> 00:13:04.001
+Seguramente tiene, y eso es donde está la emoción hoy en día.
+
+261
+00:13:05.000 --> 00:13:09.001
+Estamos realmente en el borde de una nueva era en el reconocimiento del discurso que es
+
+262
+00:13:09.001 --> 00:13:12.001
+comenzar, permitiéndonos hacer una dictadura limitada, y pronto
+
+263
+00:13:12.001 --> 00:13:14.001
+para hacer una dictadura completa.
+
+264
+00:13:15.000 --> 00:13:17.000
+¿Quién utilizará este tipo de tecnología?
+
+265
+00:13:18.000 --> 00:13:22.000
+En realidad, en este momento, el área en la que tiene el mayor beneficio es para
+
+266
+00:13:22.000 --> 00:13:25.001
+profesionales que son muy cortos en las habilidades de entrada de datos, que probablemente no tienen
+
+267
+00:13:25.001 --> 00:13:29.000
+personal secretario dedicado disponible, y los que necesitan
+
+268
+00:13:29.000 --> 00:13:30.001
+expresar su experiencia en el texto.
+
+269
+00:13:30.001 --> 00:13:34.000
+y muy pagados. En otras palabras, un tiempo como un abogado, médico.
+
+270
+00:13:34.000 --> 00:13:35.001
+Y entonces, ¿qué tenemos aquí?
+
+271
+00:13:36.000 --> 00:13:37.001
+Esto parece algo para un cirujano.
+
+272
+00:13:38.000 --> 00:13:38.001
+Es realmente.
+
+273
+00:13:39.001 --> 00:13:42.001
+Y, de hecho, es de un gran hospital en Boston.
+
+274
+00:13:43.000 --> 00:13:44.001
+Y lo que es un informe quirúrgico.
+
+275
+00:13:45.000 --> 00:13:46.000
+Me voy adelante y te mostro.
+
+276
+00:13:47.001 --> 00:13:49.000
+La fecha. Entra en
+
+277
+00:13:50.000 --> 00:13:52.001
+El paciente. de James Stor.
+
+278
+00:13:53.001 --> 00:13:56.000
+Entra en Número de unidad.
+
+279
+00:13:56.000 --> 00:14:01.000
+Uno, siete, tres y hifen.
+
+280
+00:14:01.001 --> 00:14:06.000
+nueve, seis, cinco, hyphen, ocho.
+
+281
+00:14:07.000 --> 00:14:08.001
+Entra en El servicio.
+
+282
+00:14:10.000 --> 00:14:14.000
+La palabra capitalizada. y ortopédicos. La cirugía .
+
+283
+00:14:16.000 --> 00:14:20.001
+Entra en El piso. La palabra capitalizada.
+
+284
+00:14:21.001 --> 00:14:23.001
+en blanco. cinco .
+
+285
+00:14:23.001 --> 00:14:29.000
+Entra en El cirujano. de Wexler.
+
+286
+00:14:30.001 --> 00:14:35.000
+Entra en Asistente del cirujano. los nazis.
+
+287
+00:14:36.000 --> 00:14:39.001
+Entra en diagnóstico preoperativo.
+
+288
+00:14:41.000 --> 00:14:43.001
+La palabra capitalizada. Y justo.
+
+289
+00:14:45.000 --> 00:14:48.001
+de Thigh. El comma. El grado.
+
+290
+00:14:49.000 --> 00:14:53.001
+Número 2 . El sarcoma.
+
+291
+00:14:54.001 --> 00:14:57.001
+Incluye la arteria femoral.
+
+292
+00:15:00.000 --> 00:15:03.000
+Entra en Diagnóstico postoperativo.
+
+293
+00:15:04.001 --> 00:15:08.001
+lo mismo. Entra en El procedimiento.
+
+294
+00:15:10.001 --> 00:15:13.000
+La palabra capitalizada. El paciente.
+
+295
+00:15:14.000 --> 00:15:18.001
+sobrevivieron . El general. El endotracheal.
+
+296
+00:15:20.000 --> 00:15:22.000
+la anestesia . Periódico .
+
+297
+00:15:23.000 --> 00:15:28.000
+Entrando en Ahora, supongo que hice un error, o que hiciste un error.
+
+298
+00:15:28.000 --> 00:15:30.000
+Aquí, Janet, mientras usted estaba entrando la información.
+
+299
+00:15:30.000 --> 00:15:31.001
+¿Cómo volver y hacer un cambio y editarlo?
+
+300
+00:15:32.000 --> 00:15:33.001
+Es muy fácil de hacer.
+
+301
+00:15:35.001 --> 00:15:38.000
+diagnóstico preoperativo. Entrando en
+
+302
+00:15:39.001 --> 00:15:41.001
+Moviendo hacia arriba. hacia atrás.
+
+303
+00:15:43.000 --> 00:15:45.000
+hacia atrás. Insertar la palabra.
+
+304
+00:15:47.001 --> 00:15:48.001
+El Spindle. La célula.
+
+305
+00:15:50.000 --> 00:15:52.000
+El espacio. Entrando en
+
+306
+00:15:53.001 --> 00:15:55.001
+Y eso es eso. muy sencillo.
+
+307
+00:15:55.001 --> 00:15:56.000
+Dejo que te pongas una pregunta.
+
+308
+00:15:56.001 --> 00:15:59.000
+Un par de veces cuando parecía que no estaba seguro qué palabra
+
+309
+00:15:59.000 --> 00:16:00.001
+Esto es lo que hace el pop-up menú.
+
+310
+00:16:01.000 --> 00:16:01.001
+Explica lo que estaba pasando allí.
+
+311
+00:16:02.000 --> 00:16:05.000
+Eso es justo. Es una lista muy breve ordenada.
+
+312
+00:16:05.000 --> 00:16:07.000
+Si la palabra más alta es correcta, no hago nada.
+
+313
+00:16:07.001 --> 00:16:09.001
+Sólo implicitamente lo pone correctamente.
+
+314
+00:16:10.000 --> 00:16:10.001
+Necesita elección número uno.
+
+315
+00:16:10.001 --> 00:16:14.001
+Pero si es equivocado, si la palabra superior en realidad no es correcta, sino la tercera o cuarta.
+
+316
+00:16:14.001 --> 00:16:17.001
+Uno es, yo golpeo a los tres o cuatro, y se pone en línea en la palabra correcta.
+
+317
+00:16:17.001 --> 00:16:19.000
+muy sensible . Todo lo que hay es para ella.
+
+318
+00:16:19.000 --> 00:16:20.000
+Janet, muchas gracias.
+
+319
+00:16:20.000 --> 00:16:23.000
+Bueno, podemos ver las letras del alfabeto en la pantalla, pero qué una voz
+
+320
+00:16:23.000 --> 00:16:27.000
+El sistema de reconocimiento está realmente trabajando con los bloques de construcción llamados fonemas
+
+321
+00:16:27.000 --> 00:16:28.001
+Y algo que se llama un motor fonético.
+
+322
+00:16:28.001 --> 00:16:30.001
+Tenemos un informe sobre esto de Wendy Woods.
+
+323
+00:16:32.000 --> 00:16:35.001
+Una de las razones por las que el desarrollo de los sistemas de reconocimiento de voz ha ido así
+
+324
+00:16:35.001 --> 00:16:40.000
+lentamente, la mayoría de los desarrolladores están tratando de conseguir que los ordenadores entiendan las palabras.
+
+325
+00:16:40.001 --> 00:16:43.001
+Y puedes imaginar cuán difícil es una tarea que es mirando
+
+326
+00:16:43.001 --> 00:16:45.001
+en el tamaño de este diccionario.
+
+327
+00:16:46.000 --> 00:16:50.000
+Bueno, uno de los enfoques más revolucionarios es conseguir que los ordenadores entiendan
+
+328
+00:16:50.000 --> 00:16:55.001
+sonidos, fonemas, las unidades básicas del discurso humano, de las que solo existen
+
+329
+00:16:55.001 --> 00:16:57.000
+Alrededor de 40 en inglés.
+
+330
+00:16:58.001 --> 00:17:02.000
+Tanto los programadores como los estadistas deben ser incentivados contra la transferencia.
+
+331
+00:17:03.000 --> 00:17:06.001
+El motor fonético de Tarzana, los sistemas de habla de California
+
+332
+00:17:06.001 --> 00:17:09.000
+Reconocemos estos fonemas.
+
+333
+00:17:09.000 --> 00:17:13.000
+Payroll, roll, roll y roll.
+
+334
+00:17:13.001 --> 00:17:16.001
+Los entiende como longitudes de onda, los convierte en código,
+
+335
+00:17:17.000 --> 00:17:18.001
+y los traduce en texto.
+
+336
+00:17:19.000 --> 00:17:20.001
+Pagar, pagar, pagar y pagar.
+
+337
+00:17:20.001 --> 00:17:23.000
+El sistema tiene un diccionario fonético, que es
+
+338
+00:17:23.000 --> 00:17:24.001
+Es como el diccionario en tu escritorio.
+
+339
+00:17:26.000 --> 00:17:28.001
+En tu escritorio, miras una palabra por su
+
+340
+00:17:28.001 --> 00:17:30.000
+que se pronuncie y se sabe cómo pronunciarlo.
+
+341
+00:17:30.001 --> 00:17:32.000
+El diccionario fonético está cambiado.
+
+342
+00:17:32.001 --> 00:17:35.001
+Miramos cómo se pronuncia una palabra y digamos cómo reproducirla.
+
+343
+00:17:36.000 --> 00:17:39.000
+Un simple ejemplo podría ser la palabra seis versus sticks.
+
+344
+00:17:39.001 --> 00:17:42.000
+El sonido X es realmente un sonido KS.
+
+345
+00:17:42.001 --> 00:17:45.000
+En las botas, lo jugamos KS, en seis, lo jogamos X.
+
+346
+00:17:45.001 --> 00:17:49.000
+No hay manera en inglés de predecir esas cosas salvo tener un diccionario.
+
+347
+00:17:49.000 --> 00:17:52.000
+que te cuenta cómo hemos escogido para reproducir esas palabras.
+
+348
+00:17:52.001 --> 00:17:57.000
+Desafortunadamente, el software del sistema es lento y no entiende las palabras
+
+349
+00:17:57.000 --> 00:17:58.001
+Las frases fuera del contexto.
+
+350
+00:17:59.000 --> 00:18:02.001
+Pero varios principales fabricantes ya están impresionados lo suficiente
+
+351
+00:18:02.001 --> 00:18:04.000
+Comprar las cantidades del motor.
+
+352
+00:18:04.000 --> 00:18:07.001
+También habrá una versión independiente para los propietarios de PC.
+
+353
+00:18:08.001 --> 00:18:12.001
+Y Speech Systems planea ser el primero en comercializar a un verdadero escritor de habla, un
+
+354
+00:18:12.001 --> 00:18:15.001
+máquina de dictadura que no requiere un secretario.
+
+355
+00:18:16.001 --> 00:18:18.001
+Para las crónicas informáticas, soy Wendy Woods.
+
+356
+00:18:26.001 --> 00:18:32.001
+La música que nos une ahora en el estudio es Robert Russo,
+
+357
+00:18:32.001 --> 00:18:34.000
+Vicepresidente de ventas y marketing.
+
+358
+00:18:34.001 --> 00:18:37.000
+Y junto a Bob es Steve Betancourt, director de
+
+359
+00:18:37.000 --> 00:18:38.001
+Marketing internacional con Votan.
+
+360
+00:18:38.001 --> 00:18:41.000
+¿Por qué George? Robert, Votan pone en funcionamiento las fonéticas.
+
+361
+00:18:41.001 --> 00:18:43.000
+¿Es eso justo? No exactamente.
+
+362
+00:18:44.000 --> 00:18:45.001
+Nuestra tecnología es un poco diferente de la fonética.
+
+363
+00:18:46.000 --> 00:18:50.001
+almacenamos los templados de palabras reales en nuestro panel de voz y hacemos comparaciones de los
+
+364
+00:18:50.001 --> 00:18:54.000
+Modelaciones para las palabras habladas en el micrófono en tiempo real.
+
+365
+00:18:54.000 --> 00:18:56.001
+Tenéis algunas demostraciones realmente interesantes para nosotros.
+
+366
+00:18:56.001 --> 00:18:57.001
+Bueno, espero que sean.
+
+367
+00:18:57.001 --> 00:19:00.000
+Son una especie de indicación de lo que Votan ha hecho
+
+368
+00:19:00.000 --> 00:19:02.000
+en la industria en los últimos cinco años.
+
+369
+00:19:02.000 --> 00:19:05.001
+Bob, lo que queremos ver es la aplicación de este elemento de reconocimiento de voz en un
+
+370
+00:19:05.001 --> 00:19:07.000
+Tipo de entorno normal del empresario.
+
+371
+00:19:07.001 --> 00:19:09.000
+Y darnos algunos ejemplos allí.
+
+372
+00:19:09.001 --> 00:19:13.001
+OK, pretendo que soy un ejecutivo que llegó a su oficina por la mañana y yo
+
+373
+00:19:13.001 --> 00:19:17.000
+Quiero hablar con mi ordenador para obtener cierta información.
+
+374
+00:19:18.000 --> 00:19:18.001
+Buen desayuno .
+
+375
+00:19:19.001 --> 00:19:20.000
+Hola a Bob.
+
+376
+00:19:21.000 --> 00:19:21.001
+Calendario por favor.
+
+377
+00:19:22.001 --> 00:19:26.000
+Tienes una cita de 10 horas con Jim Murgano y almuerzo con tu esposa.
+
+378
+00:19:26.001 --> 00:19:30.000
+Hoy es el 10 de enero de 1987.
+
+379
+00:19:30.001 --> 00:19:34.000
+Y el tiempo es 5.10 p.m.
+
+380
+00:19:34.001 --> 00:19:38.001
+Ahora puedo ir y recibir mensajes de correo electrónico o mensajes vocales.
+
+381
+00:19:39.000 --> 00:19:41.000
+Voy a ir y recibir un correo electrónico para usted.
+
+382
+00:19:41.001 --> 00:19:42.001
+¿Cualquier mensaje?
+
+383
+00:19:43.001 --> 00:19:45.001
+Por favor, póngase en contacto, comprobando para nuevos mensajes.
+
+384
+00:19:50.000 --> 00:19:51.001
+¿Y qué está haciendo ahora, Bob?
+
+385
+00:19:52.001 --> 00:19:55.001
+Busca la base de datos y los archivos para diferentes
+
+386
+00:19:55.001 --> 00:19:57.000
+mensajes de correo electrónico o mensajes voicemail.
+
+387
+00:19:57.000 --> 00:19:58.001
+¿Qué, el comité de voz por la noche o algo?
+
+388
+00:19:58.001 --> 00:20:02.000
+Sí, tienes dos mensajes de voicemail y un mensaje de correo electrónico.
+
+389
+00:20:02.001 --> 00:20:08.000
+El primer mensaje de voicemail fue recibido a las 6. 30 p.m. de...
+
+390
+00:20:08.000 --> 00:20:08.000
+de Bill White.
+
+391
+00:20:08.001 --> 00:20:14.001
+El segundo mensaje de voicemail fue recibido a las 7. 10 p.m. de...
+
+392
+00:20:15.000 --> 00:20:16.000
+¿Te interesa responder?
+
+393
+00:20:17.000 --> 00:20:17.000
+Sí sí.
+
+394
+00:20:18.000 --> 00:20:19.000
+¿Qué función le gustaría?
+
+395
+00:20:19.001 --> 00:20:20.000
+El correo electrónico.
+
+396
+00:20:21.000 --> 00:20:24.000
+Por favor, permanezca mientras el archivo está siendo recuperado y mostrado.
+
+397
+00:20:24.001 --> 00:20:25.001
+¿Qué función le gustaría?
+
+398
+00:20:27.000 --> 00:20:28.000
+La voz apagada.
+
+399
+00:20:28.001 --> 00:20:30.001
+Recuerda tu mensaje en el tono.
+
+400
+00:20:31.001 --> 00:20:35.000
+Mortimer, me disculpo que no está de acuerdo con la cuota de $1.5 millones.
+
+401
+00:20:35.001 --> 00:20:37.001
+Por lo tanto, vamos a hacer 2 millones de dólares en lugar.
+
+402
+00:20:39.001 --> 00:20:40.001
+Yo soy más fuerte, mi vendedor.
+
+403
+00:20:40.001 --> 00:20:42.001
+Su mensaje es...
+
+404
+00:20:42.001 --> 00:20:46.000
+Mortimer, me disculpo que no está de acuerdo con la cuota de $1.5 millones.
+
+405
+00:20:46.001 --> 00:20:48.001
+Vamos a hacer 2 millones de dólares en lugar.
+
+406
+00:20:49.001 --> 00:20:51.000
+¿Quieres que el mensaje sea enviado?
+
+407
+00:20:51.001 --> 00:20:52.000
+Sí sí.
+
+408
+00:20:53.000 --> 00:20:53.001
+A quién?
+
+409
+00:20:54.000 --> 00:20:54.001
+Las ventas de Oriente.
+
+410
+00:20:55.000 --> 00:20:57.001
+El mensaje enviado. ¿Hay algo más?
+
+411
+00:20:58.001 --> 00:20:58.001
+Sí sí.
+
+412
+00:20:59.000 --> 00:21:00.001
+¿Qué función le gustaría?
+
+413
+00:21:01.000 --> 00:21:01.001
+llamar a casa.
+
+414
+00:21:02.000 --> 00:21:03.000
+Ahora hablamos de casa.
+
+415
+00:21:05.000 --> 00:21:06.000
+¿Puedo moverme ahora, Bob?
+
+416
+00:21:06.000 --> 00:21:07.000
+Supongo que estoy trabajando en una plataforma.
+
+417
+00:21:07.001 --> 00:21:10.000
+¿Puedo utilizar esto para la entrada de datos hablada, entrada de los datos en una hoja de referencia?
+
+418
+00:21:10.001 --> 00:21:11.001
+Es una aplicación, sí.
+
+419
+00:21:12.000 --> 00:21:13.000
+Es una aplicación que podemos hacer.
+
+420
+00:21:13.000 --> 00:21:14.000
+Puedo llevarlo arriba.
+
+421
+00:21:14.000 --> 00:21:15.000
+Bueno, así que...
+
+422
+00:21:15.000 --> 00:21:18.001
+Así que estás haciendo algo como SuperCalc y realmente estás haciendo entrada de datos
+
+423
+00:21:18.001 --> 00:21:20.001
+Y está entrando en el programa a través de sus cosas.
+
+424
+00:21:21.000 --> 00:21:21.000
+Sí sí.
+
+425
+00:21:21.001 --> 00:21:23.000
+¿Estás esperando para llamar a casa ahora?
+
+426
+00:21:23.000 --> 00:21:24.000
+Así que, ¿qué está sucediendo?
+
+427
+00:21:24.000 --> 00:21:25.000
+Se espera que el menú vuelva a casa.
+
+428
+00:21:25.000 --> 00:21:27.001
+Ya está de vuelta al menú. OK, vamos a SuperCalc y probamos eso.
+
+429
+00:21:28.000 --> 00:21:28.001
+El SuperCalc.
+
+430
+00:21:29.000 --> 00:21:31.000
+Ahora descarga la demo de SuperCalc.
+
+431
+00:21:31.001 --> 00:21:33.000
+Es importante tener en cuenta que esta será una
+
+432
+00:21:33.000 --> 00:21:35.000
+demostración de reconocimiento continuo.
+
+433
+00:21:35.000 --> 00:21:38.000
+Usted notará que no hay necesidad de pausas entre cualquier
+
+434
+00:21:38.000 --> 00:21:39.001
+de las inscripciones que Bob hará.
+
+435
+00:21:40.001 --> 00:21:42.001
+¿Es esto debido al templo y la entrada de la ...
+
+436
+00:21:42.001 --> 00:21:46.000
+Es principalmente debido al proceso algorítmico que hemos desarrollado en Votan
+
+437
+00:21:46.000 --> 00:21:47.001
+como parte de nuestra tecnología de alto nivel.
+
+438
+00:21:48.000 --> 00:21:51.000
+¿Puedes poner estos templados sobre las frases?
+
+439
+00:21:51.000 --> 00:21:54.000
+y correcto. Es un sistema formado por el usuario y, de nuevo, permite
+
+440
+00:21:54.000 --> 00:21:55.001
+flexibilidad en cualquier lenguaje, etc.
+
+441
+00:21:55.001 --> 00:21:58.000
+Por lo tanto, tenemos una hoja de difusión aquí. Trabajar con ella.
+
+442
+00:22:00.000 --> 00:22:03.000
+En noviembre, los ingresos totales. 4, 7 y 5 entran.
+
+443
+00:22:06.001 --> 00:22:10.000
+En octubre, los costes directos. 4, 7 y 6 entran.
+
+444
+00:22:11.001 --> 00:22:13.000
+En noviembre, la empresa ha superado.
+
+445
+00:22:14.001 --> 00:22:16.001
+Perdón, pero tienes una llamada telefónica en línea 1.
+
+446
+00:22:17.000 --> 00:22:17.001
+Eso es genial.
+
+447
+00:22:18.000 --> 00:22:18.001
+Toma un mensaje.
+
+448
+00:22:20.001 --> 00:22:20.001
+El gráfico.
+
+449
+00:22:21.000 --> 00:22:22.001
+Esto es parte de la función interactiva.
+
+450
+00:22:22.001 --> 00:22:25.000
+Tenemos la capacidad de gestionar el teléfono simultáneamente con las aplicaciones.
+
+451
+00:22:25.000 --> 00:22:26.001
+Otra cosa que quiero que me muestras.
+
+452
+00:22:26.001 --> 00:22:26.001
+El regreso.
+
+453
+00:22:28.001 --> 00:22:29.000
+Bob es...
+
+454
+00:22:29.000 --> 00:22:33.000
+Usted tiene una cosa interesante en la que puede usar la entrada de voz en lugar de un ratón en
+
+455
+00:22:33.000 --> 00:22:35.000
+un sentido y una aplicación de tipo Mac. ¿Puedes sacarlo arriba?
+
+456
+00:22:35.001 --> 00:22:36.000
+Sí el señor.
+
+457
+00:22:37.000 --> 00:22:37.001
+El Quit.
+
+458
+00:22:38.001 --> 00:22:39.000
+¿Estás seguro?
+
+459
+00:22:39.001 --> 00:22:40.000
+Sí sí.
+
+460
+00:22:41.001 --> 00:22:43.001
+Steve, mientras MacDraw está cargando, déjame hacerle una pregunta.
+
+461
+00:22:43.001 --> 00:22:45.000
+Ahora tienes algo de acuerdo con Apple, no
+
+462
+00:22:45.000 --> 00:22:46.001
+¿Tú, para darles la tecnología vocal de Votan?
+
+463
+00:22:46.001 --> 00:22:49.001
+Y justo. Estamos muy entusiasmados por una oportunidad que tenemos para llevar esta tecnología
+
+464
+00:22:49.001 --> 00:22:52.001
+En algunos productos de Apple, y se ve muy, muy bueno.
+
+465
+00:22:53.000 --> 00:22:54.001
+Bueno, vamos a ver MacDraw ahora.
+
+466
+00:22:55.000 --> 00:22:56.001
+Estamos acostumbrados a la interfaz de usuario de tipo Mac con el
+
+467
+00:22:56.001 --> 00:22:58.001
+Mouse, pero usted va a usar el micrófono, ¿verdad?
+
+468
+00:22:58.001 --> 00:23:00.000
+Sí el señor. Voy a pasar por ella rápidamente.
+
+469
+00:23:00.001 --> 00:23:02.001
+Un usuario normal iría mucho más lento, obviamente.
+
+470
+00:23:04.000 --> 00:23:10.001
+Archivo, nuevo, devolución, editar, cortar, devolver, font,
+
+471
+00:23:11.000 --> 00:23:17.000
+Nueva York, retorno, layout, reducido a ajustarse, regreso,
+
+472
+00:23:18.001 --> 00:23:22.000
+archivo, cierre, devolver y dejar.
+
+473
+00:23:22.001 --> 00:23:24.001
+Dijo sí a salir, no a seguir.
+
+474
+00:23:25.000 --> 00:23:25.000
+Sí sí.
+
+475
+00:23:26.001 --> 00:23:27.000
+¡Qué gran ratón!
+
+476
+00:23:27.000 --> 00:23:29.001
+Esto es impresionante y más rápido que un ratón. Muchas gracias mucho.
+
+477
+00:23:29.001 --> 00:23:32.000
+Volveremos en un minuto con las noticias informáticas de esta semana.
+
+478
+00:23:43.001 --> 00:23:47.001
+En el archivo de acceso aleatorio esta semana, su TV y su PC
+
+479
+00:23:47.001 --> 00:23:49.001
+Pronto serán capaces de hablar entre sí.
+
+480
+00:23:49.001 --> 00:23:53.001
+Dos nuevos productos que acaba de anunciar esta semana puede crear una nueva aplicación
+
+481
+00:23:53.001 --> 00:23:55.001
+El mercado es más grande que la publicación de escritorio.
+
+482
+00:23:56.000 --> 00:24:00.000
+Una compañía llamada A Squared ha anunciado un panel de vídeo para la Amiga y la Apple
+
+483
+00:24:00.000 --> 00:24:04.000
+2GS que permitirá que el ordenador capte y manipule señales de vídeo.
+
+484
+00:24:04.001 --> 00:24:08.001
+Esto significa que un usuario de ordenador doméstico podría potencialmente tener el poder de un $100,000
+
+485
+00:24:08.001 --> 00:24:11.000
+Sistema de gráficos de vídeo utilizado por las estaciones de televisión.
+
+486
+00:24:11.001 --> 00:24:14.001
+El otro nuevo producto viene de Amiga, el Genlock 1300.
+
+487
+00:24:15.000 --> 00:24:20.000
+Esto permitirá a un usuario de Amiga mezclar las señales de TV, vídeo y audio estereotipo con el
+
+488
+00:24:20.000 --> 00:24:22.000
+texto, sonido y gráficos generados por el ordenador.
+
+489
+00:24:22.001 --> 00:24:25.001
+Es esencialmente un sistema de publicación de vídeo de escritorio.
+
+490
+00:24:26.000 --> 00:24:29.001
+Una compañía japonesa, Nippon Telegraph y Telephone, está prevista para anunciar el
+
+491
+00:24:29.001 --> 00:24:32.001
+Desarrollo de un chip RAM dinámico de 16 megabytes.
+
+492
+00:24:33.000 --> 00:24:36.001
+El chip de capacidad más grande ahora en uso en general es el chip de 1 megabit.
+
+493
+00:24:37.000 --> 00:24:41.000
+El chip DRAM de 16 megas podría contener alrededor de 700 páginas de texto.
+
+494
+00:24:41.001 --> 00:24:45.001
+Los expertos dicen que el chip de 16 megas probablemente no se convertirá en un producto hasta 1990.
+
+495
+00:24:47.000 --> 00:24:50.000
+Tandy es el nuevo rey de la colina en las ventas de PC al por menor.
+
+496
+00:24:50.000 --> 00:24:55.001
+Tandy subió tanto a Apple como a IBM en el cuarto trimestre de 1986, capturando 37
+
+497
+00:24:55.001 --> 00:24:59.001
+El porcentaje de las ventas de computadoras al por menor, en comparación con el 24% para Apple
+
+498
+00:24:59.001 --> 00:25:01.000
+Sólo un 12 por ciento para IBM.
+
+499
+00:25:02.000 --> 00:25:05.001
+Hay informes de que Atari tiene problemas con su bajo coste recientemente anunciado
+
+500
+00:25:05.001 --> 00:25:10.001
+PC clone, hang ups se dice que son aprobación de la FCC y un acuerdo final con el digital
+
+501
+00:25:10.001 --> 00:25:13.001
+Investigación para el uso del sistema operativo gem.
+
+502
+00:25:14.000 --> 00:25:16.000
+Compaq tiene un nuevo conjunto portátil para el lanzamiento.
+
+503
+00:25:16.000 --> 00:25:20.001
+Tendrá conductores de tamaño completo de 5.25 pulgadas, una pantalla plana de gas plasma
+
+504
+00:25:20.001 --> 00:25:22.001
+Un disco duro de 20 megabytes.
+
+505
+00:25:23.000 --> 00:25:25.000
+El precio se reportó a unos 4.000 dólares.
+
+506
+00:25:25.001 --> 00:25:28.001
+El tiempo para una revisión de software y aquí es Paul Schindler.
+
+507
+00:25:31.000 --> 00:25:34.001
+Sabes, he intentado buscar un trabajo de esa manera y he tratado de buscar un
+
+508
+00:25:34.001 --> 00:25:37.001
+Trabajo utilizando un nuevo paquete de software llamado Super Job Search.
+
+509
+00:25:37.001 --> 00:25:40.000
+Creo que el paquete de software es mucho más útil.
+
+510
+00:25:40.001 --> 00:25:44.000
+Lo más importante en una búsqueda de trabajo es ser organizado y
+
+511
+00:25:44.000 --> 00:25:47.000
+Eso es lo que Peter K. La búsqueda de trabajo de Studdner.
+
+512
+00:25:47.001 --> 00:25:48.001
+Esto te ayuda a ser organizado.
+
+513
+00:25:49.000 --> 00:25:51.000
+De hecho, hace que sea fácil de organizar.
+
+514
+00:25:51.000 --> 00:25:54.001
+Te guía paso a paso a través del relleno de un formulario que
+
+515
+00:25:54.001 --> 00:25:56.000
+Describe cada visita de caza de trabajo.
+
+516
+00:25:56.001 --> 00:26:00.001
+Desde esta única forma, Super Job Search puede producir 59 informes diferentes.
+
+517
+00:26:01.000 --> 00:26:03.000
+Describe a un potencial empleador o reclutador.
+
+518
+00:26:03.001 --> 00:26:07.000
+El programa le ayuda a seguir las actualizaciones y le agradece las cartas.
+
+519
+00:26:07.000 --> 00:26:10.001
+Te pregunta a quién más has contactado y tiene espacio para las notas.
+
+520
+00:26:11.000 --> 00:26:14.001
+Además, mantiene el rastro de la gama salarial que discutió y su impuesto
+
+521
+00:26:14.001 --> 00:26:16.000
+Descuento de los gastos de caza de trabajo.
+
+522
+00:26:17.000 --> 00:26:21.000
+Este manual de $30 incluye formularios que van con el software así como mucho
+
+523
+00:26:21.000 --> 00:26:22.001
+Consejos prácticos de caza de trabajo.
+
+524
+00:26:23.000 --> 00:26:26.001
+Este es el tipo de software utilitario sensible que espero ver más de.
+
+525
+00:26:26.001 --> 00:26:28.000
+Un buen libro con buen software.
+
+526
+00:26:28.001 --> 00:26:32.000
+Super Job Search es $60 de Gemma Nair Limited en Los Ángeles.
+
+527
+00:26:32.000 --> 00:26:34.001
+Para las crónicas informáticas, soy Paul Schindler.
+
+528
+00:26:35.000 --> 00:26:39.000
+Computer Land está intentando una nueva máquina de software que almacena programas
+
+529
+00:26:39.000 --> 00:26:43.001
+en un CD-ROM y luego los escribe a un escritorio blanco cuando decida comprarlos.
+
+530
+00:26:43.001 --> 00:26:46.001
+La máquina se llama hands-on y se espera que aparezca en
+
+531
+00:26:46.001 --> 00:26:48.001
+Cientos de tiendas de computadoras.
+
+532
+00:26:49.000 --> 00:26:51.001
+La línea de fondo es que las tiendas serán capaces de llevar un más amplio
+
+533
+00:26:51.001 --> 00:26:53.001
+Variedad de títulos de software.
+
+534
+00:26:54.000 --> 00:26:57.001
+Digital Equipment Corporation ha anunciado otro nuevo producto, esta vez un
+
+535
+00:26:57.001 --> 00:27:01.000
+MicroVax 2000 de bajo costo que venderá por alrededor de $ 10.000.
+
+536
+00:27:02.000 --> 00:27:07.000
+El ordenador de escritorio de 32 bits puede funcionar hasta 16 terminales en una red de área local.
+
+537
+00:27:08.000 --> 00:27:12.000
+El Centro de Investigación de Xerox Palo Alto es famoso por su innovación y ahora es el XeroX PARC
+
+538
+00:27:12.000 --> 00:27:16.001
+está trabajando en otro nuevo concepto, reuniones informáticas, donde cada participante
+
+539
+00:27:16.001 --> 00:27:20.001
+en la reunión contribuye no por hablar, sino por entrar directamente en comentarios sobre
+
+540
+00:27:20.001 --> 00:27:23.000
+un ordenador que está corriendo y graba la reunión.
+
+541
+00:27:23.001 --> 00:27:27.000
+El sistema se llama CoLab y los desarrolladores dicen que puede hacer una reunión
+
+542
+00:27:27.000 --> 00:27:28.001
+5 veces más productivo.
+
+543
+00:27:29.001 --> 00:27:32.000
+Por último, la cita informática de la semana, cuál es la diferencia
+
+544
+00:27:32.000 --> 00:27:34.000
+¿Entre hardware y software?
+
+545
+00:27:34.000 --> 00:27:38.000
+La respuesta, el hardware es algo que si lo usa lo suficiente durante mucho tiempo, se rompe.
+
+546
+00:27:39.000 --> 00:27:41.001
+El software es algo que si lo usa lo suficiente, funciona.
+
+547
+00:27:42.000 --> 00:27:44.000
+Eso es para las crónicas de esta semana, te veremos la próxima vez.
+
+548
+00:28:11.001 --> 00:28:14.001
+Nuevos hardware, software y idiomas cubren los desarrollos en
+
+549
+00:28:14.001 --> 00:28:16.000
+Tecnología informática en todo el mundo.
+
+550
+00:28:41.001 --> 00:29:01.000
+Gracias por ver.
