@@ -54004,6 +54004,65 @@
       "translated": false,
       "task": "transcribe",
       "translationModel": null
+    },
+    "14d1e59becfbd3d909cac1b93eb2e762c60e9053576af5ff2013e3c8da832e8b": {
+      "jobId": "14d1e59becfbd3d909cac1b93eb2e762c60e9053576af5ff2013e3c8da832e8b",
+      "identitySha256": "14d1e59becfbd3d909cac1b93eb2e762c60e9053576af5ff2013e3c8da832e8b",
+      "archiveId": "appleseed-2004-r4br-dvdiso",
+      "video": "AppleSeed/AppleSeed.mp4",
+      "duration": 6329.3,
+      "language": "auto",
+      "detectedLanguage": "ja",
+      "sourceUrl": "https://archive.org/download/appleseed-2004-r4br-dvdiso/AppleSeed/AppleSeed.mp4",
+      "status": "auto-generated",
+      "file": "auto-14d1e59becfbd3d909cac1b93eb2e762c60e9053576af5ff2013e3c8da832e8b.vtt",
+      "sha256": "206e5e7bfd70c7bf83e38b6b380417bacc33099dff42720ba9f862795b54ef97",
+      "cues": 537,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-20T17:51:55.776507+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "c26d03d50be12e0f307b14f7bdf955c97fcfbe46a7332f3cd36bcb74c99d585b",
+      "outputLanguage": "en",
+      "sourceLanguage": "ja",
+      "sourceLanguages": [
+        "ja",
+        "en",
+        "de"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
+    },
+    "14dc970ce7581c6ad8090966976241e999cf998ad753c12a872327fa5be50785": {
+      "jobId": "14dc970ce7581c6ad8090966976241e999cf998ad753c12a872327fa5be50785",
+      "identitySha256": "14dc970ce7581c6ad8090966976241e999cf998ad753c12a872327fa5be50785",
+      "archiveId": "project-a-ko-ita",
+      "video": "Project A-ko [BD-RIP REMUX] (ITA).mp4",
+      "duration": 4982.4,
+      "language": "auto",
+      "detectedLanguage": "ja",
+      "sourceUrl": "https://archive.org/download/project-a-ko-ita/Project%20A-ko%20%5BBD-RIP%20REMUX%5D%20(ITA).mp4",
+      "status": "auto-generated",
+      "file": "auto-14dc970ce7581c6ad8090966976241e999cf998ad753c12a872327fa5be50785.vtt",
+      "sha256": "6b57b700c06ccb8859b23aba7046aeefee16f7d8d6be44f8b909b0da42eb1b58",
+      "cues": 559,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-20T17:48:25.540966+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "b654c7df32623f5321c0445eb062a64ee5c64973888fff87701068d347047987",
+      "outputLanguage": "en",
+      "sourceLanguage": "ja",
+      "sourceLanguages": [
+        "ja",
+        "ko",
+        "en",
+        "es"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
     }
   }
 }
