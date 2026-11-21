@@ -12,6 +12,10 @@ Newest entries at the top. Each entry: what changed, why, and anything left open
 
 ---
 
+## 2026-11-21 — Roku 1.0.3: ready for the store
+
+The Roku app now says it supports input launch (`supports_input_launch=1`), which the Channel Store checks so voice search and "play on Roku" deep links can open a channel. Build bumped to 1.0.3; nothing else changed.
+
 ## 2026-11-10 — IMDb matching runs on its own
 
 The first IMDb lookups never finished: each new push restarts the site's publish, and the slow lookups got cancelled with it. They now run in their own workflow (`.github/workflows/imdb.yml`, nightly and on demand) that saves matches to `scripts/imdb-cache.json` and then starts a publish. The publish itself only copies the saved matches into `catalog.json`, which takes seconds.
