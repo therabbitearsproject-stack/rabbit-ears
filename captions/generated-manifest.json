@@ -69003,6 +69003,61 @@
       "translated": false,
       "task": "transcribe",
       "translationModel": null
+    },
+    "1abc18085b84a3087ce7607787393300d8071329e59a96bd2d997db08b61ec17": {
+      "jobId": "1abc18085b84a3087ce7607787393300d8071329e59a96bd2d997db08b61ec17",
+      "identitySha256": "1abc18085b84a3087ce7607787393300d8071329e59a96bd2d997db08b61ec17",
+      "archiveId": "green_hornet_ep11",
+      "video": "ep11_512kb.mp4",
+      "duration": 1131.5,
+      "language": "auto",
+      "detectedLanguage": "en",
+      "sourceUrl": "https://archive.org/download/green_hornet_ep11/ep11_512kb.mp4",
+      "status": "auto-generated",
+      "file": "auto-1abc18085b84a3087ce7607787393300d8071329e59a96bd2d997db08b61ec17.vtt",
+      "sha256": "6d80c8026cd92187f3afed327ec154931f9c684277ec561fe03305f7688298ab",
+      "cues": 174,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3-turbo",
+      "generatedAt": "2026-11-22T07:03:42.010141+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "e2f7d784562fc76aef8df90ba134d9bff52a96b855c0dc13747c316b39df5546",
+      "outputLanguage": "en",
+      "sourceLanguage": "en",
+      "sourceLanguages": [
+        "en"
+      ],
+      "translated": false,
+      "task": "transcribe",
+      "translationModel": null
+    },
+    "1abc51e9dbbd9a7b3d3f874e2e0ffa11de012a34ea1d3cac43dc4f5e76307ec1": {
+      "jobId": "1abc51e9dbbd9a7b3d3f874e2e0ffa11de012a34ea1d3cac43dc4f5e76307ec1",
+      "identitySha256": "1abc51e9dbbd9a7b3d3f874e2e0ffa11de012a34ea1d3cac43dc4f5e76307ec1",
+      "archiveId": "s-01-e-05-the-secret-engine-part-1-trans-lux-edition",
+      "video": "S01E05 - The Secret Engine (Part 1) - Trans-Lux Edition.mp4",
+      "duration": 1491,
+      "language": "auto",
+      "detectedLanguage": "en",
+      "sourceUrl": "https://archive.org/download/s-01-e-05-the-secret-engine-part-1-trans-lux-edition/S01E05%20-%20The%20Secret%20Engine%20(Part%201)%20-%20Trans-Lux%20Edition.mp4",
+      "status": "auto-generated",
+      "file": "auto-1abc51e9dbbd9a7b3d3f874e2e0ffa11de012a34ea1d3cac43dc4f5e76307ec1.vtt",
+      "sha256": "dfa3497990a0df1c367b4083e4333b335f3462d9a94ada6f0c4313e83ca0885b",
+      "cues": 214,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-22T07:07:12.892539+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "e2eed49b9f445ab21f6505e5b3e84e4767f2f4320f7681bd81409b3b1db3ca8c",
+      "outputLanguage": "en",
+      "sourceLanguage": "en",
+      "sourceLanguages": [
+        "en",
+        "pt"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
     }
   }
 }
