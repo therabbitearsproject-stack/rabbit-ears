@@ -82326,6 +82326,63 @@
       "translated": false,
       "task": "transcribe",
       "translationModel": null
+    },
+    "1f9f26fc936c0ffc4700123649d4291d911d051a5a2c0172f767a91a2568355c": {
+      "jobId": "1f9f26fc936c0ffc4700123649d4291d911d051a5a2c0172f767a91a2568355c",
+      "identitySha256": "1f9f26fc936c0ffc4700123649d4291d911d051a5a2c0172f767a91a2568355c",
+      "archiveId": "2-armitage-iii-dual-matrix",
+      "video": "2 Armitage III Dual-Matrix.mp4",
+      "duration": 5400.7,
+      "language": "auto",
+      "detectedLanguage": "ja",
+      "sourceUrl": "https://archive.org/download/2-armitage-iii-dual-matrix/2%20Armitage%20III%20Dual-Matrix.mp4",
+      "status": "auto-generated",
+      "file": "auto-1f9f26fc936c0ffc4700123649d4291d911d051a5a2c0172f767a91a2568355c.vtt",
+      "sha256": "d610963fe52515e3988d698ef379711b1d6338834ea1ad3eab87d51a382300c5",
+      "cues": 569,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-23T12:01:10.828418+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "fa42c6cce6091c516b027e8649601171c91383c7cdd8f563903131349e7aafd9",
+      "outputLanguage": "en",
+      "sourceLanguage": "ja",
+      "sourceLanguages": [
+        "ja",
+        "ko",
+        "en"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
+    },
+    "1fa50b511d522af81ed056f8e2eb9e3d5f9f5e124842fabd104ea64b91c5e729": {
+      "jobId": "1fa50b511d522af81ed056f8e2eb9e3d5f9f5e124842fabd104ea64b91c5e729",
+      "identitySha256": "1fa50b511d522af81ed056f8e2eb9e3d5f9f5e124842fabd104ea64b91c5e729",
+      "archiveId": "SesameStreetTheBestOfElmoAndFiesta1999UKVHS",
+      "video": "Sesame Street -The Best of Elmo and Fiesta (1999, UK VHS).mp4",
+      "duration": 3726.2,
+      "language": "auto",
+      "detectedLanguage": "en",
+      "sourceUrl": "https://archive.org/download/SesameStreetTheBestOfElmoAndFiesta1999UKVHS/Sesame%20Street%20-The%20Best%20of%20Elmo%20and%20Fiesta%20(1999%2C%20UK%20VHS).mp4",
+      "status": "auto-generated",
+      "file": "auto-1fa50b511d522af81ed056f8e2eb9e3d5f9f5e124842fabd104ea64b91c5e729.vtt",
+      "sha256": "909f0094707c9c4540b12cc8ca71e75c096cb3123c24be9b4e73c45a2a5467da",
+      "cues": 451,
+      "engine": "whisper.cpp Vulkan (AMD GPU)",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-23T11:56:31.998872+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "31500e0ccbee41cf85a5e4f2b731f56b2661017c7a7162e540080587b5d38b2a",
+      "outputLanguage": "en",
+      "sourceLanguage": "en",
+      "sourceLanguages": [
+        "en",
+        "es"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
     }
   }
 }
