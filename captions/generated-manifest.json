@@ -103669,6 +103669,62 @@
       "translated": false,
       "task": "transcribe",
       "translationModel": null
+    },
+    "2550d9d8453be718867e0f4c156cfb12192451513166ce10429834aaa7435f0f": {
+      "jobId": "2550d9d8453be718867e0f4c156cfb12192451513166ce10429834aaa7435f0f",
+      "identitySha256": "2550d9d8453be718867e0f4c156cfb12192451513166ce10429834aaa7435f0f",
+      "archiveId": "the-explorers-bbc-1975-8-episodes",
+      "video": "The.Explorers.ep1.The.Story.of.Roald.Amundsen.1975.mp4",
+      "duration": 2901.4,
+      "language": "auto",
+      "detectedLanguage": "en",
+      "sourceUrl": "https://archive.org/download/the-explorers-bbc-1975-8-episodes/The.Explorers.ep1.The.Story.of.Roald.Amundsen.1975.mp4",
+      "status": "auto-generated",
+      "file": "auto-2550d9d8453be718867e0f4c156cfb12192451513166ce10429834aaa7435f0f.vtt",
+      "sha256": "bc6a39f98c1baf9442a2ead9e43cd4f40bc181e5fbf02852281144464e4b8b1b",
+      "cues": 353,
+      "engine": "whisper.cpp Vulkan (AMD GPU)",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-27T08:19:43.334995+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "6413a3214cffa4eb38e4bee162a56d2ca6235269b2d54fc69a99369ad5881239",
+      "outputLanguage": "en",
+      "sourceLanguage": "en",
+      "sourceLanguages": [
+        "en",
+        "no"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
+    },
+    "2f07f8b78682088ab3563ecc7148f51d23ecd3154cc213f13eeada39dd0516a6": {
+      "jobId": "2f07f8b78682088ab3563ecc7148f51d23ecd3154cc213f13eeada39dd0516a6",
+      "identitySha256": "2f07f8b78682088ab3563ecc7148f51d23ecd3154cc213f13eeada39dd0516a6",
+      "archiveId": "episodio-1_20240426",
+      "video": "EPISODIO 1.mp4",
+      "duration": 1607.5,
+      "language": "auto",
+      "detectedLanguage": "ja",
+      "sourceUrl": "https://archive.org/download/episodio-1_20240426/EPISODIO%201.mp4",
+      "status": "auto-generated",
+      "file": "auto-2f07f8b78682088ab3563ecc7148f51d23ecd3154cc213f13eeada39dd0516a6.vtt",
+      "sha256": "700649cff60c67de5512fe88c357b0f39d7a3e8701379c9527b229d0d2eaa8c1",
+      "cues": 426,
+      "engine": "faster-whisper 1.2.1 CUDA int8_float16 batched",
+      "model": "large-v3 + large-v3-turbo",
+      "generatedAt": "2026-11-27T08:22:25.559289+00:00",
+      "targetLanguage": "en",
+      "supersedesJobId": "027ba18cb6d1643519207a8f9ee956f20168959c81927090408859ea8f2bb334",
+      "outputLanguage": "en",
+      "sourceLanguage": "ja",
+      "sourceLanguages": [
+        "ja",
+        "ko"
+      ],
+      "translated": true,
+      "task": "translate",
+      "translationModel": "large-v3"
     }
   }
 }
