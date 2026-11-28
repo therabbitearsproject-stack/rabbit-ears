@@ -1,0 +1,1393 @@
+WEBVTT
+
+00:00:15.840 --> 00:00:18.460
+This week at the Internet Café, the hacker culture.
+
+00:00:18.540 --> 00:00:20.800
+Are they demons or saviors?
+
+00:00:21.130 --> 00:00:23.150
+Would you trust your files to this man?
+
+00:00:23.550 --> 00:00:25.670
+What is the cult of the dead cow?
+
+00:00:26.000 --> 00:00:28.240
+And why don't these guys use their real names?
+
+00:00:28.380 --> 00:00:29.920
+Plus free software aside.
+
+00:00:30.000 --> 00:00:35.700
+cyber blast of four megabytes of cool stuff if you've got a tv modem hackers tonight at the
+
+00:00:35.700 --> 00:00:43.100
+internet cafe the internet cafe is made possible in part by intel one idea always leads to another
+
+00:00:43.100 --> 00:00:48.020
+now there are connected cd-roms that link rich multimedia with related information on the
+
+00:00:48.020 --> 00:00:54.880
+internet for connected cd-roms it's the intel pentium processor hi and welcome to the internet
+
+00:00:54.880 --> 00:00:59.880
+cafe i'm steward chaffee i'd like you to meet my friends jane and andrew and we're here to cyber
+
+00:01:00.000 --> 00:01:03.640
+Cafe in San Francisco called CoffeeNet, and we're talking about hackers tonight. We're
+
+00:01:03.640 --> 00:01:06.620
+going to meet some hackers tonight, and it's kind of timely because we just read that
+
+00:01:06.620 --> 00:01:11.220
+some hackers got into the CIA's website. So it makes you really wonder if it's easy to
+
+00:01:11.220 --> 00:01:14.900
+break into and alter the homepage that's run by the Central Intelligence Agency, how
+
+00:01:14.900 --> 00:01:19.120
+safe is your company's website, your personal website, personal information that's out
+
+00:01:19.120 --> 00:01:22.000
+there on the net, your credit card and that kind of stuff. It's kind of scary.
+
+00:01:22.140 --> 00:01:25.800
+It really is. And, you know, it was interesting for me when we were going to all the websites
+
+00:01:25.800 --> 00:01:29.800
+and looking at all the things, especially that CIA website. It's really trying to get an
+
+00:01:29.800 --> 00:01:29.920
+understand.
+
+00:01:30.000 --> 00:01:31.480
+of what's making these guys tick.
+
+00:01:31.640 --> 00:01:32.820
+Why are they doing what they're doing?
+
+00:01:33.020 --> 00:01:35.220
+I mean, is it really about a political agenda
+
+00:01:35.220 --> 00:01:36.320
+and freedom of information,
+
+00:01:36.320 --> 00:01:37.900
+or are these guys just having fun?
+
+00:01:39.840 --> 00:01:41.300
+I'm also excited because we're going to talk
+
+00:01:41.300 --> 00:01:42.160
+not only to hackers,
+
+00:01:42.300 --> 00:01:44.700
+but to corporate security network experts,
+
+00:01:44.760 --> 00:01:46.780
+and these are guys who spend their days
+
+00:01:46.780 --> 00:01:49.060
+trying to keep hackers out of their networks.
+
+00:01:49.320 --> 00:01:50.760
+And we're going to look at some of the tools
+
+00:01:50.760 --> 00:01:52.880
+that they have developed to catch hackers
+
+00:01:52.880 --> 00:01:55.200
+and also see how hackers may be using
+
+00:01:55.200 --> 00:01:57.840
+those same tools themselves to get into systems.
+
+00:01:57.980 --> 00:01:59.640
+And at the same time, the same guy is a hacker,
+
+00:01:59.640 --> 00:01:59.980
+and he's a...
+
+00:02:00.000 --> 00:02:04.140
+corporate security consultant at the same time all right we in fact are going to meet some of the
+
+00:02:04.140 --> 00:02:08.460
+most notorious infamous hackers in the world tonight and we're going to visit some very weird
+
+00:02:08.460 --> 00:02:14.240
+websites where the hackers hang out we're here with dan farmer who is a corporate network security
+
+00:02:14.240 --> 00:02:19.180
+expert and has been a consultant for many large computer companies and we're going to talk a
+
+00:02:19.180 --> 00:02:23.560
+little bit about what network security means i'm just curious how you got started in the security
+
+00:02:23.560 --> 00:02:29.450
+business? Well, back in 89, which is kind of like the stone ages.
+
+00:02:30.000 --> 00:02:31.980
+That's a long time ago, a long time ago.
+
+00:02:32.060 --> 00:02:33.460
+In your teens, I take it.
+
+00:02:33.620 --> 00:02:35.920
+Not quite. I wish it were.
+
+00:02:36.520 --> 00:02:38.140
+But I was actually finishing up school.
+
+00:02:38.280 --> 00:02:40.470
+I was kind of programming and going to school at halftime.
+
+00:02:40.890 --> 00:02:43.270
+And I was one credit short of graduation,
+
+00:02:43.270 --> 00:02:46.830
+so I took a summer class and wrote a program called COPS.
+
+00:02:47.230 --> 00:02:48.870
+Now, did you finish school? I have to ask that.
+
+00:02:48.890 --> 00:02:51.410
+I finished school, yes. I got my bachelor's paper.
+
+00:02:52.340 --> 00:02:53.820
+What did COPS do?
+
+00:02:54.040 --> 00:02:55.960
+Well, COPS was a security audit program.
+
+00:02:56.220 --> 00:02:59.300
+It basically diagnosed a Unix computer
+
+00:02:59.300 --> 00:02:59.980
+and told you what.
+
+00:03:00.000 --> 00:03:06.200
+was wrong or right about the system and i gave it away attracted some interest in uh industry and
+
+00:03:06.200 --> 00:03:10.860
+and government and i got a call from cert which is the computer emergency response team
+
+00:03:10.860 --> 00:03:17.400
+to get a job uh out in carmage mullen now is cert a government agency uh no cert was a federally funded
+
+00:03:17.400 --> 00:03:23.220
+research uh company and essentially they would get government money but they were free to do
+
+00:03:23.220 --> 00:03:27.480
+research or whatever they want wanted with they were actually part of a larger organization
+
+00:03:27.480 --> 00:03:29.180
+called the Software Engineering Institute.
+
+00:03:30.030 --> 00:03:34.510
+Great. So tell me kind of what the average day would be like for a corporate network security person.
+
+00:03:36.550 --> 00:03:38.970
+Well, you know, I don't really know what an average day is.
+
+00:03:38.970 --> 00:03:42.570
+Okay, what would be an exciting day, a day that would just really get your blood flowing?
+
+00:03:42.810 --> 00:03:44.410
+Well, there's good days and bad days.
+
+00:03:44.690 --> 00:03:49.210
+A bad day might be that you get a page or a phone call at 3 a.m.
+
+00:03:49.210 --> 00:03:54.650
+and someone says that, you know, someone's just broken into our main corporate computers.
+
+00:03:54.650 --> 00:03:57.650
+And what are you going to do about it? You know, save the day.
+
+00:03:57.650 --> 00:03:59.370
+and then you have to scramble around looking for
+
+00:03:59.370 --> 00:03:59.930
+trying to
+
+00:04:00.000 --> 00:04:04.020
+track down intruders are great now what do you usually use to track down intruders are there
+
+00:04:04.020 --> 00:04:11.150
+software tools that you're using or well it's it's kind of like um uh this little combat you have with
+
+00:04:11.150 --> 00:04:16.710
+the the the enemy so to speak and you use the same kind of tools that they're using to uh try to track
+
+00:04:16.710 --> 00:04:20.070
+them down while they're trying little cat mouse game while they're trying to run away from you
+
+00:04:20.070 --> 00:04:25.030
+you're trying to chase them sometimes vice versa if they if you're trying to sneak up on them
+
+00:04:25.030 --> 00:04:29.970
+sometimes they turn on you and attack you and uh but usually since you know the computer
+
+00:04:30.000 --> 00:04:35.300
+is better, you have hopefully a better knowledge of your systems, you can kick them off or try
+
+00:04:35.300 --> 00:04:40.680
+to get them out. Last year, you were involved in releasing a software program on the internet
+
+00:04:40.680 --> 00:04:45.120
+called SATAN. Can you tell me a little bit about that? Yeah, sure. Well, SATAN was an acronym. It's
+
+00:04:45.120 --> 00:04:49.760
+a security administrator tool for analyzing networks. And kind of like the name sounds,
+
+00:04:49.780 --> 00:04:54.640
+it was a tool that you could point at points on the network, machines on the network, anywhere in
+
+00:04:54.640 --> 00:04:58.540
+the world, actually, from wherever you were, and you could analyze the security of the systems. And
+
+00:04:58.540 --> 00:04:59.980
+that we could tell you if there were vulnerable.
+
+00:05:00.060 --> 00:05:04.080
+if they could be broken into with a very easy-to-use graphical interface.
+
+00:05:04.280 --> 00:05:06.560
+Great. Now, I understand there was a lot of controversy about this
+
+00:05:06.560 --> 00:05:08.080
+because you released it free on the Internet,
+
+00:05:08.080 --> 00:05:10.900
+so it wasn't just available for network folks.
+
+00:05:11.020 --> 00:05:13.480
+It was also available, I guess, for hackers as well.
+
+00:05:13.640 --> 00:05:13.920
+That's right.
+
+00:05:14.220 --> 00:05:20.590
+Well, my co-author, Vietse Venema, and myself are both very big on education
+
+00:05:20.590 --> 00:05:23.470
+and giving information about security to people.
+
+00:05:24.090 --> 00:05:26.750
+Part of the problems we had with a lot of the security world
+
+00:05:26.750 --> 00:05:29.910
+is people like to keep tight to their chest all the...
+
+00:05:30.000 --> 00:05:33.720
+the secrets, because they think if you know about some way of breaking the system, they'll
+
+00:05:33.720 --> 00:05:34.320
+be in trouble.
+
+00:05:34.560 --> 00:05:40.100
+But we thought that the tool would actually help out people because they could then know
+
+00:05:40.100 --> 00:05:41.040
+how to defend themselves.
+
+00:05:41.620 --> 00:05:46.660
+And as it turned out, with all the press and the furor and everything, people actually focused
+
+00:05:46.660 --> 00:05:51.880
+on security and tightened up their systems and, I would hope, used the tool for good
+
+00:05:51.880 --> 00:05:52.180
+use.
+
+00:05:52.320 --> 00:05:56.860
+So you didn't hear of any hackers that used it to get into firewalls and things?
+
+00:05:56.860 --> 00:05:57.660
+Yeah, almost none at all.
+
+00:05:58.040 --> 00:05:59.800
+There was so much hype before.
+
+00:06:00.000 --> 00:06:04.260
+I think everyone was so afraid that they all fixed their machines before that.
+
+00:06:04.440 --> 00:06:04.600
+Right, right, right.
+
+00:06:05.180 --> 00:06:06.320
+Now, what about that hype?
+
+00:06:06.340 --> 00:06:10.740
+It seems like there was a little bit of an unorthodox way that you released this program.
+
+00:06:11.160 --> 00:06:13.400
+I mean, first the name, Satan, come on.
+
+00:06:13.520 --> 00:06:19.340
+Yeah, well, I mean, with any product, the name is two-thirds of what the value of the product is.
+
+00:06:19.400 --> 00:06:26.310
+We were a little afraid that if we released it, that people, and we didn't tell people about it,
+
+00:06:26.370 --> 00:06:29.890
+that people would then blame us for kind of sneaking this hacker.
+
+00:06:30.000 --> 00:06:36.190
+tool in the net. And it's not like we planned all the hype. You can't orchestrate this kind
+
+00:06:36.190 --> 00:06:40.930
+of media machine. Right. But you did issue a warning in advance. Is that correct? That's
+
+00:06:40.930 --> 00:06:47.290
+right. But it was just a general net posting saying, look, we're doing this. We're releasing
+
+00:06:47.290 --> 00:06:51.310
+this tool. This is what it does. You know, fairly clear language. We didn't try to incite
+
+00:06:51.310 --> 00:06:57.330
+people. But I don't know, I started getting some press from some of the major newspapers,
+
+00:06:57.350 --> 00:06:59.970
+getting on the front page and all this television started.
+
+00:07:00.000 --> 00:07:04.600
+descending on me, and I could barely move without hitting a camera.
+
+00:07:06.160 --> 00:07:09.250
+But I think overall the thing was actually a very positive thing
+
+00:07:09.250 --> 00:07:11.350
+because all the press was a positive thing
+
+00:07:11.350 --> 00:07:16.330
+because it allowed people to, again, get more awareness of the whole subject.
+
+00:07:16.530 --> 00:07:18.310
+What's the next program that you're working on?
+
+00:07:19.540 --> 00:07:21.440
+Well, it's kind of a technical thing,
+
+00:07:21.500 --> 00:07:26.350
+but essentially it's a way of managing or devising a policy structure
+
+00:07:26.350 --> 00:07:29.980
+for large-scale networks on Unicom.
+
+00:07:30.280 --> 00:07:32.520
+And what kind of a name have you given this one?
+
+00:07:33.300 --> 00:07:34.660
+Undecided doesn't get it.
+
+00:07:35.440 --> 00:07:36.060
+Great, great.
+
+00:07:36.240 --> 00:07:38.100
+It won't be anything quite as flashy, though.
+
+00:07:38.220 --> 00:07:39.520
+I've learned my lesson.
+
+00:07:40.300 --> 00:07:42.050
+Okay, great. Well, thanks.
+
+00:07:42.330 --> 00:07:54.060
+Greetings from the loft.
+
+00:07:54.240 --> 00:07:57.400
+Current stock tip in the hacking community seems to be dealing with security dynamics of Massachusetts.
+
+00:07:57.660 --> 00:07:59.960
+The makers of SecureID scramble to security problems in their...
+
+00:08:00.000 --> 00:08:03.180
+one-time password token cards were presented to the net in the form of white paper from
+
+00:08:03.180 --> 00:08:08.680
+ftp.secnet.com. The stock tip for security dynamics, NASDAQ ticker SDTI, seems to be
+
+00:08:08.680 --> 00:08:12.940
+sell short. With any luck, they will fix their problems in their product and, yet again,
+
+00:08:13.080 --> 00:08:16.060
+we'll have a case of technology progressing due to hackers and security professionals
+
+00:08:16.060 --> 00:08:20.130
+worldwide. So, Aleph, tell me, what kind of information
+
+00:08:20.130 --> 00:08:25.270
+can we find at underground.org? On the ground, you can find security papers, security tools,
+
+00:08:26.150 --> 00:08:29.890
+database of security vulnerabilities, links to a lot of security.
+
+00:08:30.000 --> 00:08:37.850
+web pages, other hacker homepages, recent news, calendar of security events, information
+
+00:08:37.850 --> 00:08:41.110
+about hacker conferences, some graphics and pictures.
+
+00:08:41.590 --> 00:08:43.430
+So it's quite a large amount of information.
+
+00:08:43.630 --> 00:08:46.950
+So it sounds like there's almost two worlds that you're playing to, that security side
+
+00:08:46.950 --> 00:08:49.310
+and then the hacker underground, basically.
+
+00:08:49.750 --> 00:08:50.670
+Yeah, there's a bit of both.
+
+00:08:51.290 --> 00:08:53.170
+There is a need for that.
+
+00:08:53.450 --> 00:08:56.090
+There needs to be an exchange of information between both.
+
+00:08:56.330 --> 00:08:59.870
+And really, the information is neutral.
+
+00:09:00.000 --> 00:09:04.120
+You know, it can either be used for hacking or it can be used for securing.
+
+00:09:04.580 --> 00:09:06.080
+I mean, all it is is information.
+
+00:09:06.340 --> 00:09:09.000
+So why did you create underground.org?
+
+00:09:09.140 --> 00:09:10.980
+Underground just started as my personal homepage.
+
+00:09:11.620 --> 00:09:16.880
+Found a couple of interesting sites on the net I wanted to keep track of that were useful to me.
+
+00:09:17.060 --> 00:09:19.120
+Found some good tools that I liked.
+
+00:09:19.590 --> 00:09:22.130
+And people started coming to check my page.
+
+00:09:22.290 --> 00:09:25.050
+And they would send me emails saying how useful it was to them.
+
+00:09:25.430 --> 00:09:27.710
+And just over time it kept growing and growing until what it is today.
+
+00:09:27.850 --> 00:09:29.150
+And it's been four years since then.
+
+00:09:29.150 --> 00:09:29.870
+I said, no, no.
+
+00:09:30.280 --> 00:09:33.900
+So it's pretty exciting. In fact, I checked out some of the places in underground.org,
+
+00:09:33.960 --> 00:09:37.940
+and there were some discussions and stories in the newspapers about various hackers
+
+00:09:37.940 --> 00:09:39.440
+and all of the different things that they did.
+
+00:09:39.660 --> 00:09:42.560
+And thinking about that, I mean, recently we had that break-in
+
+00:09:42.560 --> 00:09:45.180
+with the Swedish hackers getting into the CIA web page
+
+00:09:45.180 --> 00:09:48.280
+and making some pretty significant changes to that page.
+
+00:09:48.280 --> 00:09:53.400
+And one of the things that they did, Aleph, was put a link to your homepage, underground.org.
+
+00:09:53.760 --> 00:09:55.280
+Any idea why they would have done that?
+
+00:09:55.540 --> 00:09:59.980
+Well, I think they, yes, if you ask anybody on the...
+
+00:10:00.000 --> 00:10:02.940
+that we're going to find information about security.
+
+00:10:03.480 --> 00:10:05.040
+You know, they'll point you to all websites,
+
+00:10:05.120 --> 00:10:06.320
+and probably one of them would be underground.
+
+00:10:06.640 --> 00:10:08.640
+So I think it was just a statement, you know,
+
+00:10:08.680 --> 00:10:09.900
+they broke into the CIA's website.
+
+00:10:10.680 --> 00:10:12.400
+They showed them they had no security,
+
+00:10:12.800 --> 00:10:14.700
+and, you know, and they're showing them, well, you know,
+
+00:10:15.270 --> 00:10:16.810
+go here to learn something about security.
+
+00:10:17.410 --> 00:10:18.650
+So you're sure that, you know,
+
+00:10:18.730 --> 00:10:20.850
+you didn't have anything to do with that CIA stuff?
+
+00:10:20.850 --> 00:10:22.190
+No, I'm sure of it, yes.
+
+00:10:22.350 --> 00:10:23.050
+I will remember.
+
+00:10:23.230 --> 00:10:23.930
+Oh, okay, okay.
+
+00:10:24.130 --> 00:10:26.350
+So now another thing, the Department of Justice
+
+00:10:26.350 --> 00:10:27.750
+had the same thing happen to them.
+
+00:10:27.850 --> 00:10:28.170
+Yes, it did.
+
+00:10:28.170 --> 00:10:29.450
+They got broken into as well.
+
+00:10:29.450 --> 00:10:29.730
+So.
+
+00:10:30.000 --> 00:10:32.900
+I guess what that says is that these websites are pretty vulnerable.
+
+00:10:33.500 --> 00:10:33.580
+Yeah.
+
+00:10:33.920 --> 00:10:36.180
+Yeah, a lot of people are actually scared.
+
+00:10:36.440 --> 00:10:37.660
+It's like they're the wandering wallets.
+
+00:10:38.680 --> 00:10:42.400
+Information that the CIA has in their computer is not going to be able to break in.
+
+00:10:43.580 --> 00:10:47.780
+But the CIA has their own network separate of the Internet, which is not connected to the Internet.
+
+00:10:48.060 --> 00:10:52.500
+You would need to get into a dial-up server or actually physically go into their offices
+
+00:10:52.500 --> 00:10:54.640
+and use one of their computers to do all that kind of information.
+
+00:10:54.940 --> 00:10:59.360
+But it's a different picture for all these corporations that are connecting their intranets to the Internet,
+
+00:10:59.360 --> 00:10:59.940
+Well,
+
+00:11:00.000 --> 00:11:05.400
+the time the only thing protecting their network is a firewall and a firewall is a pretty static
+
+00:11:05.400 --> 00:11:10.120
+thing you buy it you install it and you leave it there you know and a month from now or a year from
+
+00:11:10.120 --> 00:11:15.180
+now a new security problem may arise that the firewall vendor maybe didn't think about and uh
+
+00:11:15.180 --> 00:11:19.840
+maybe there are people only will then so the fear is not you know a make-believe there really is a
+
+00:11:19.840 --> 00:11:23.740
+serious issue in terms of being able to get through yes it's also not really you know you
+
+00:11:23.990 --> 00:11:28.470
+don't have to be paranoid about it there's nothing in life this is a hundred percent and security is
+
+00:11:28.470 --> 00:11:29.610
+It's obviously not one of them.
+
+00:11:30.460 --> 00:11:33.120
+But it's something that evolves, and it's something that you have to keep up with.
+
+00:11:33.380 --> 00:11:38.120
+You cannot just go up and secure a machine and say, oh, there, it'll be secure in a year.
+
+00:11:38.300 --> 00:11:42.120
+And you should know because you were one of the hackers getting into that place.
+
+00:11:42.220 --> 00:11:43.420
+Yes, we experimented for a while.
+
+00:11:43.640 --> 00:11:44.400
+So what do you think?
+
+00:11:44.460 --> 00:11:45.800
+What's the psychology behind it?
+
+00:11:45.880 --> 00:11:50.960
+I mean, is it really all about freedom of information and being able to show that there's no security out there?
+
+00:11:50.960 --> 00:11:52.840
+There's a bit of bravado.
+
+00:11:53.200 --> 00:11:55.240
+There's a bit of showing your peers that you can do it.
+
+00:11:55.320 --> 00:11:56.780
+There's obviously learning.
+
+00:11:57.890 --> 00:11:59.600
+So just a bit of
+
+00:12:00.030 --> 00:12:04.810
+everything. Is it an innocent game or is it, you know, is it serious business? It starts as an
+
+00:12:04.810 --> 00:12:12.390
+innocent game. Some people may go the wrong way and end up in jail. Some other people, and which
+
+00:12:12.390 --> 00:12:16.610
+is most of the people I know, you know, eventually end up with jobs in corporations doing the same
+
+00:12:16.610 --> 00:12:20.370
+thing they did before, just getting paid for doing it. So something like what you're doing now, I mean
+
+00:12:20.370 --> 00:12:24.670
+basically talking about all those security things. And there's another place at that website,
+
+00:12:24.790 --> 00:12:28.070
+something called BugTrack. Can you tell me a little bit about that? Yes, BugTrack is a security
+
+00:12:28.070 --> 00:12:29.890
+mailing list I maintain is
+
+00:12:30.000 --> 00:12:31.760
+one of the largest security mailing lists on the net.
+
+00:12:31.940 --> 00:12:34.040
+There's probably a few thousand subscribers to it.
+
+00:12:34.340 --> 00:12:36.780
+We have a policy of full disclosure,
+
+00:12:36.860 --> 00:12:40.420
+which means when a new security vulnerability is discovered,
+
+00:12:40.540 --> 00:12:42.460
+we usually publish full details about it.
+
+00:12:43.200 --> 00:12:47.950
+And the reason we do this is because normally when an organization such as SIRT,
+
+00:12:48.090 --> 00:12:52.710
+which is federally funded to do such a thing as published adversaries
+
+00:12:52.710 --> 00:12:53.650
+and security vulnerabilities,
+
+00:12:54.710 --> 00:12:58.090
+they do it a very long time after they've been told about the security problem.
+
+00:12:58.730 --> 00:12:59.810
+so for example
+
+00:13:00.000 --> 00:13:02.860
+Somebody would go up to SIRT and tell them, we found a bug.
+
+00:13:03.240 --> 00:13:06.200
+SIRT will talk to the vendors, and they'll learn those who know about it,
+
+00:13:06.240 --> 00:13:08.700
+but they'll take several months to publish a solution to the problem.
+
+00:13:08.980 --> 00:13:12.400
+And by this time, the probability is that hackers know about it,
+
+00:13:12.480 --> 00:13:14.020
+and they're out there breaking into machines.
+
+00:13:14.320 --> 00:13:18.080
+So BugTrack is kind of almost pushing the vendors to fix those problems faster?
+
+00:13:18.420 --> 00:13:21.360
+Exactly, by putting fear on their heart to make them publish.
+
+00:13:21.360 --> 00:13:23.280
+But then the hackers are going to BugTrack, too.
+
+00:13:23.480 --> 00:13:25.500
+So, I mean, they're finding out some of those problems
+
+00:13:25.500 --> 00:13:27.600
+and really even pushing the security break.
+
+00:13:27.600 --> 00:13:29.400
+Yes, I mean, it is a trade-off.
+
+00:13:30.000 --> 00:13:36.880
+You trade off a bit of that security to have independents, you know, come up with patches as fast as possible.
+
+00:13:37.140 --> 00:13:41.960
+But if you think about it, most likely the most elite hackers already had the security problems.
+
+00:13:42.160 --> 00:13:44.060
+So they were already there before you guys even got there.
+
+00:13:44.420 --> 00:13:45.500
+So give me some ideas.
+
+00:13:45.680 --> 00:13:50.960
+If I wanted to get information about hacker psychology or, you know, what being a hacker would be all about,
+
+00:13:51.020 --> 00:13:53.340
+or let's say I wanted to understand a little bit more about security,
+
+00:13:53.380 --> 00:13:54.760
+where are some websites that you'd recommend us to look at?
+
+00:13:54.760 --> 00:13:59.480
+I would check something like tolisksandria.com, which is the website of a hacker magazine.
+
+00:13:59.480 --> 00:13:59.960
+And I would check.
+
+00:14:00.000 --> 00:14:04.870
+Check things like root.org, which is loose need of computer hackers.
+
+00:14:05.420 --> 00:14:05.760
+Great.
+
+00:14:06.000 --> 00:14:10.100
+If you wanted to just learn more about general security, I would check something like COAST,
+
+00:14:11.240 --> 00:14:13.080
+the University of Purdue.
+
+00:14:13.320 --> 00:14:15.800
+They have a security department there and they do a lot of research.
+
+00:14:15.980 --> 00:14:18.500
+They keep a large archive of security tools and papers.
+
+00:14:18.800 --> 00:14:21.100
+I would check things like CERT.
+
+00:14:21.430 --> 00:14:22.110
+Thanks a lot.
+
+00:14:22.230 --> 00:14:25.630
+I really appreciate spending the time and getting a little bit more information about
+
+00:14:25.630 --> 00:14:27.790
+the background on security and hacking.
+
+00:14:27.930 --> 00:14:28.250
+No problem.
+
+00:14:28.430 --> 00:14:29.170
+Thank you.
+
+00:14:31.120 --> 00:14:33.980
+On tonight's Cyber Blast, we're going to send you four cool programs.
+
+00:14:34.200 --> 00:14:37.040
+That's right, our Cyber Blast is dumping data so fast
+
+00:14:37.040 --> 00:14:40.520
+that we can send you four complete programs in less than two minutes.
+
+00:14:41.380 --> 00:14:45.040
+Now, what you're seeing over here is the actual data coming into your computer right now.
+
+00:14:45.200 --> 00:14:49.200
+We're sending you these programs in the TV signal at about two megabytes per minute.
+
+00:14:49.420 --> 00:14:53.160
+If you don't have a TV modem, you can also get these files off of our website
+
+00:14:53.160 --> 00:14:54.920
+on your regular telephone modem.
+
+00:14:55.140 --> 00:14:58.160
+Now, doing it that way will take you at least a half an hour of connection time.
+
+00:14:58.280 --> 00:14:59.940
+But with our super-fast Cyber...
+
+00:14:59.940 --> 00:14:59.960
+Thank you.
+
+00:15:00.000 --> 00:15:05.000
+podcast technology. We're able to do this in less than two minutes. Let me tell you what we're
+
+00:15:05.000 --> 00:15:09.080
+sending you. First of all, do you think you're a hacker? We're downloading to you the official
+
+00:15:09.080 --> 00:15:13.020
+hacker test. Answer the questions and the program will tell you whether or not you have a right to
+
+00:15:13.020 --> 00:15:17.180
+call yourself a hacker. Now if you're worried about other hackers, we're also sending you the
+
+00:15:17.180 --> 00:15:23.180
+latest version of Virus Scanner from McAfee. It's been updated to check for 257 new viruses which
+
+00:15:23.180 --> 00:15:27.480
+have been added since the previous version of the program. Next, we're going to let you hack away at
+
+00:15:27.480 --> 00:15:29.960
+a golf ball. We're downloading Golf Score Analyst.
+
+00:15:30.000 --> 00:15:34.860
+it's a great program for keeping track of all your golf stats and analyzing your strengths and
+
+00:15:34.860 --> 00:15:41.040
+weaknesses. Finally, just for fun, we're sending you ScreenPix by GaltWare. This cool utility lets
+
+00:15:41.040 --> 00:15:46.580
+you easily turn any graphics file or files in any format into a screensaver. Remember, we're sending
+
+00:15:46.580 --> 00:15:51.260
+all four programs to you in under two minutes. Now, to download these files this fast, you do
+
+00:15:51.260 --> 00:15:56.340
+need a TV modem. If you need information on how to use or find a TV modem, just check out the
+
+00:15:56.340 --> 00:15:59.960
+the Internet Cafe section of our website at www.pnc.com.
+
+00:16:00.000 --> 00:16:05.900
+Pctv.com. TV Modem uses the broad bandwidth of the television signal rather than the limited
+
+00:16:05.900 --> 00:16:10.720
+capacity of a phone line. That's how we're able to send you so much data so quickly. In fact,
+
+00:16:10.880 --> 00:16:15.940
+we're sending this to you at about one megabyte every 30 seconds. So it looks like the download
+
+00:16:15.940 --> 00:16:20.260
+is just about complete. Have fun with your four new programs. Remember, if you need more information,
+
+00:16:20.360 --> 00:16:27.200
+check out our website. It's www.pctv.com. That wraps up this Cyber Blast of the Internet Cafe.
+
+00:16:27.550 --> 00:16:28.610
+I'm Giles Bateman.
+
+00:16:30.090 --> 00:16:33.010
+All right, so you guys are members of the Cult of the Dead Cow,
+
+00:16:33.170 --> 00:16:34.390
+kind of a pretty select group.
+
+00:16:34.510 --> 00:16:36.690
+There's about 12 members, I guess.
+
+00:16:37.200 --> 00:16:40.840
+And this is a website and a group of what, hackers?
+
+00:16:41.000 --> 00:16:42.500
+Do you call yourself a hackers organization?
+
+00:16:42.860 --> 00:16:45.840
+I think we're primarily hackers that don't hack anymore.
+
+00:16:46.380 --> 00:16:50.380
+We're an electronic zine for the hack-free community, people like us.
+
+00:16:50.820 --> 00:16:51.100
+Okay.
+
+00:16:51.420 --> 00:16:52.780
+Now, why don't you hack anymore?
+
+00:16:52.980 --> 00:16:55.700
+I think most of us have outgrown it to an extent.
+
+00:16:55.920 --> 00:16:58.900
+We started very early, in the early 80s, when it was really exciting.
+
+00:17:00.190 --> 00:17:04.190
+fresh and these days it just isn't that way when you say outgrown is that because you're older or
+
+00:17:04.190 --> 00:17:10.850
+like the world is different i think the world is different it used to be that one person on his own
+
+00:17:10.850 --> 00:17:17.210
+could exploit or discover features of computer systems that were still in development things
+
+00:17:17.210 --> 00:17:22.510
+that were constantly renewing themselves now the both of the computer technologies have settled
+
+00:17:22.510 --> 00:17:29.380
+down and also you know it's much more difficult to do something on an individual basis so you talk
+
+00:17:29.380 --> 00:17:29.840
+about hackers
+
+00:17:30.000 --> 00:17:31.260
+And freaks, what do you mean by freaks?
+
+00:17:32.170 --> 00:17:34.630
+Well, freaks are generally people concerned with the phone system,
+
+00:17:34.890 --> 00:17:37.690
+the interworking of the phone system and the network that comprises that system.
+
+00:17:38.960 --> 00:17:41.200
+I know, so the hack, I mean, we still hear a lot about hackers.
+
+00:17:41.340 --> 00:17:43.660
+You guys are saying, I mean, it's really not much fun anymore.
+
+00:17:43.800 --> 00:17:48.170
+Is hackers just like a social, cultural, rebellious thing these days?
+
+00:17:48.350 --> 00:17:50.390
+You're not really a hacker, you just call yourself a hacker?
+
+00:17:50.840 --> 00:17:51.980
+I think it may be that way.
+
+00:17:52.400 --> 00:17:54.700
+I'm sure it's exciting for the kids that are up and coming now,
+
+00:17:54.780 --> 00:17:58.060
+but I don't think they feel nearly what we felt back in the early 80s
+
+00:17:58.060 --> 00:17:59.970
+when it was a whole new world.
+
+00:18:00.060 --> 00:18:03.500
+out there. I mean, what did you feel back in the 80s when you started hacking? What was your
+
+00:18:03.500 --> 00:18:09.300
+motivation? What was exciting? It's an entire new world of electronics to explore, you know,
+
+00:18:09.400 --> 00:18:13.020
+and it's something that, it's a world that hadn't been explored by anyone. It was just wide open.
+
+00:18:13.260 --> 00:18:17.860
+Was it power in a way for a kind of, you know, anxiety-ridden teenager to think,
+
+00:18:17.980 --> 00:18:22.340
+hey, I can break into this thing? Maybe so, but the rush of discovery is something that you really
+
+00:18:22.340 --> 00:18:27.220
+can't put into words. Today, though, I mean, there isn't much to discover anymore. You can
+
+00:18:27.220 --> 00:18:29.900
+subscribe to 2600 or blacklisted and get all the information.
+
+00:18:30.000 --> 00:18:31.900
+you need, there's not much to find on your own.
+
+00:18:32.260 --> 00:18:33.820
+So it's just matured kind of too much
+
+00:18:33.820 --> 00:18:35.960
+to really make it difficult for you,
+
+00:18:35.980 --> 00:18:36.900
+I guess. It's not as satisfying?
+
+00:18:37.320 --> 00:18:39.660
+Not as satisfying, yeah. Let me talk about your website.
+
+00:18:39.880 --> 00:18:41.820
+I mean, the Cult of the Dead Cal CDC was a really
+
+00:18:41.820 --> 00:18:43.880
+interesting website. The first thing I noticed, you go on there
+
+00:18:43.880 --> 00:18:45.980
+and you spent the first, like, eight pages bragging
+
+00:18:45.980 --> 00:18:47.880
+about your press clippings. I mean,
+
+00:18:48.380 --> 00:18:49.960
+is this like a big put-on? I mean, you guys
+
+00:18:49.960 --> 00:18:51.780
+just playing with everybody out there and they all think you're
+
+00:18:51.780 --> 00:18:53.900
+terrible guys, but you're just, like, pulling everybody's
+
+00:18:53.900 --> 00:18:55.900
+chain? Well, I think we are playing
+
+00:18:55.900 --> 00:18:57.880
+with people to an extent, but if
+
+00:18:57.880 --> 00:18:59.820
+you dig past it, you find actual information
+
+00:19:00.000 --> 00:19:06.560
+there and on the other hand you know it's really not about the technical information you know we've
+
+00:19:06.560 --> 00:19:12.260
+been promulgating files with fiction and other things and that's really led to our longevity but
+
+00:19:12.410 --> 00:19:18.470
+most people log on to cdc i mean are they looking for for hacker technical stuff or is it really
+
+00:19:18.470 --> 00:19:23.370
+just another easy i'm really not sure what most people are looking for i know a lot of people are
+
+00:19:23.370 --> 00:19:29.770
+looking for hacker stuff really we get mail you know 50 75 pieces of mail a day from kids who want
+
+00:19:29.770 --> 00:19:29.930
+John.
+
+00:19:30.000 --> 00:19:34.220
+or they want us to hack their school computer system or whatever, you know.
+
+00:19:34.550 --> 00:19:37.590
+So, I mean, still, it's a lot of teenage boys, basically, coming into this
+
+00:19:37.590 --> 00:19:41.160
+and, like, doing their destructive, malicious kind of thing.
+
+00:19:41.320 --> 00:19:44.220
+I think it's a lot of them, and it's also an established fan base that we have,
+
+00:19:44.420 --> 00:19:47.080
+the old school people that remember us from back when they came up
+
+00:19:47.080 --> 00:19:48.920
+and have followed us along the way, our friends.
+
+00:19:49.180 --> 00:19:52.760
+But you say the content on the site, I mean, there's a lot of just good, serious writing in there, right?
+
+00:19:52.780 --> 00:19:53.700
+It has nothing to do with hacking.
+
+00:19:53.940 --> 00:19:54.580
+Oh, that's true.
+
+00:19:54.800 --> 00:19:58.040
+There's also a lot of spurious, you know, bizarre fiction.
+
+00:19:58.440 --> 00:19:59.420
+Yeah, there's all kinds.
+
+00:20:00.060 --> 00:20:06.060
+Now, there's a lot of, you know, there's a lot of four-letter words and a lot of sort of scary, intimidating sort of stuff in there.
+
+00:20:07.000 --> 00:20:09.320
+Is that just, again, just to have fun and play with it?
+
+00:20:09.420 --> 00:20:13.540
+I mean, you sort of trying to scare people off or just titillate them?
+
+00:20:13.640 --> 00:20:14.740
+I think it's a parody.
+
+00:20:15.000 --> 00:20:16.940
+It's a counterbalance to the rest of the hack world.
+
+00:20:17.100 --> 00:20:18.300
+It takes us up way too seriously.
+
+00:20:18.480 --> 00:20:19.020
+That's what it is.
+
+00:20:19.020 --> 00:20:20.400
+You just having fun with folks there.
+
+00:20:20.990 --> 00:20:22.830
+But there is a serious aspect to it.
+
+00:20:22.910 --> 00:20:24.670
+I mean, you're really getting a message across.
+
+00:20:24.750 --> 00:20:29.970
+When you guys go out there and hack, I mean, aren't you trying to make people aware that the net is really not?
+
+00:20:30.000 --> 00:20:34.320
+a secure safe place no matter what people say oh absolutely i think a lot of companies are trying
+
+00:20:34.320 --> 00:20:38.240
+to sell you on the idea that the internet's completely safe that you can throw information
+
+00:20:38.240 --> 00:20:42.180
+around as long as it's not a credit card number that's just not true there's already too much
+
+00:20:42.180 --> 00:20:48.230
+information available too readily on the net and uh you know we're trying to point out that anyone
+
+00:20:48.230 --> 00:20:53.030
+can get to it now now hackers and cdc i mean you guys have been called terrible things by the media
+
+00:20:53.030 --> 00:20:57.960
+sickos and evil people of one sort or another i mean you guys i mean i take it from what you're
+
+00:20:57.960 --> 00:20:59.700
+You're saying you don't think of yourselves as bad.
+
+00:21:00.120 --> 00:21:05.460
+people, right? I don't think of myself as a bad person. But there may be others out there. Oh,
+
+00:21:05.620 --> 00:21:12.170
+but I think there are plenty of people who are happy with that title, actually. Because they
+
+00:21:12.170 --> 00:21:19.110
+just like feeling that or because it's accurate? Both. I'm sure it's both. In a way, do you guys
+
+00:21:19.110 --> 00:21:24.150
+provide a service, though? I mean, the hacker part of you in that, I mean, the industry learns stuff
+
+00:21:24.150 --> 00:21:28.770
+from you because it's like, I've got odd kind of spy versus spy thing going. I mean, you discover a
+
+00:21:28.770 --> 00:21:29.970
+You discover a hole.
+
+00:21:30.000 --> 00:21:32.080
+which really then helps somebody else solve it, right?
+
+00:21:32.180 --> 00:21:34.560
+So, I mean, are you doing a service by being a hacker in a way?
+
+00:21:34.720 --> 00:21:35.560
+I think incidentally.
+
+00:21:36.400 --> 00:21:37.680
+That certainly has happened.
+
+00:21:37.980 --> 00:21:39.240
+We certainly don't mean to do it,
+
+00:21:39.280 --> 00:21:42.340
+but I think security has definitely evolved in the period of time,
+
+00:21:42.500 --> 00:21:46.060
+you know, since we got into hacking the last 10 or 12 years.
+
+00:21:46.880 --> 00:21:48.580
+It's a completely different world.
+
+00:21:48.660 --> 00:21:52.520
+Although we do sponsor HoHoCon every year, our convention in December,
+
+00:21:52.720 --> 00:21:55.580
+and that does a lot to help out the security people.
+
+00:21:55.760 --> 00:21:59.800
+They get to see the kinds of things that hackers have been up to in the last year.
+
+00:22:00.000 --> 00:22:03.600
+Is that an adversary relationship between the hackers and the security people,
+
+00:22:03.720 --> 00:22:05.440
+or is there sort of a symbiotic relationship?
+
+00:22:05.580 --> 00:22:08.740
+What we've actually tried to do is get the security people and the hackers together
+
+00:22:08.740 --> 00:22:13.080
+so the security can see these kids and realize they're just ordinary, interested kids
+
+00:22:13.080 --> 00:22:15.680
+and not hate them in the same ways that they have, and vice versa.
+
+00:22:16.700 --> 00:22:21.550
+I think we've done some good towards bringing those two sides together a little bit.
+
+00:22:21.590 --> 00:22:25.450
+Do you think it's unfair, then, the sort of demonization of the hackers in the media?
+
+00:22:25.570 --> 00:22:29.290
+I mean, you say hacker, and most people think bad guy, criminal, crook, breaking into something.
+
+00:22:29.290 --> 00:22:29.930
+but
+
+00:22:30.000 --> 00:22:36.020
+In a way, I think you're really saying, Reed, that the computer industry sort of benefits from the work that hackers do, in a sense.
+
+00:22:36.260 --> 00:22:40.640
+Well, I think many hackers actually deserve, you know, any demonization that they get.
+
+00:22:40.900 --> 00:22:46.640
+But, you know, by and large, most of the hackers aren't out to destroy the world, you know.
+
+00:22:46.760 --> 00:22:48.700
+If they were, it would have been destroyed by now.
+
+00:22:49.000 --> 00:22:49.980
+All right. Thanks a lot, guys.
+
+00:22:50.100 --> 00:22:50.300
+Thank you.
+
+00:22:50.640 --> 00:22:59.940
+Hi, this is Death Veggie, Minister of Propaganda.
+
+00:23:00.000 --> 00:23:01.780
+for Cult of the Dead Cow Communications,
+
+00:23:02.000 --> 00:23:04.080
+bringing you our Media Global Domination update
+
+00:23:04.080 --> 00:23:05.360
+for October 1996.
+
+00:23:05.940 --> 00:23:07.740
+We here at CDC are proud to announce
+
+00:23:07.740 --> 00:23:09.140
+that Operation Mad Cow,
+
+00:23:09.620 --> 00:23:12.160
+as initiated by our British Commando Geneticist team,
+
+00:23:12.520 --> 00:23:13.780
+is a complete success.
+
+00:23:14.000 --> 00:23:16.680
+There are now more dead cows in England than ever before.
+
+00:23:17.400 --> 00:23:18.920
+Our plans are progressing well on schedule,
+
+00:23:18.960 --> 00:23:21.100
+and by this rate, we should be in full control
+
+00:23:21.100 --> 00:23:23.080
+of this measly little planet that you call Earth
+
+00:23:23.080 --> 00:23:24.160
+by the year 2003.
+
+00:23:24.720 --> 00:23:25.580
+Have a nice day.
+
+00:23:25.950 --> 00:23:26.830
+All right, let's be honest,
+
+00:23:26.910 --> 00:23:28.170
+it's almost two o'clock in the morning
+
+00:23:28.170 --> 00:23:29.130
+here in the Internet Cafe.
+
+00:23:29.130 --> 00:23:29.930
+WE'VE SPENT A LOT OF
+
+00:23:30.000 --> 00:23:34.460
+time with these hackers tonight more than the people on the on tv have seen uh i want to ask
+
+00:23:34.460 --> 00:23:37.780
+you jane you were kind of dubious and i think a little uncomfortable about this whole hacker
+
+00:23:37.780 --> 00:23:41.300
+subject when we started now that you've spent a lot of time with these guys what do you think now
+
+00:23:41.300 --> 00:23:44.780
+well you know it's really interesting because when we're surfing the sites you know we see
+
+00:23:44.780 --> 00:23:49.380
+some things that are a little edgy out there and then talking to these guys it was quite a different
+
+00:23:49.380 --> 00:23:55.100
+experience i wouldn't do anything like that i'm into security you know so it's kind of almost like
+
+00:23:55.100 --> 00:23:59.060
+everybody's having their moms watching the tv they're kind of i think maybe we got we got a
+
+00:23:59.060 --> 00:23:59.920
+a little sort of con
+
+00:24:00.000 --> 00:24:03.420
+I would say con, but I mean, everybody was like, oh, we're helping the security of the net.
+
+00:24:03.580 --> 00:24:06.080
+But, of course, these guys know why they're helping, because they know what you can do.
+
+00:24:06.380 --> 00:24:10.080
+Also, I think some of these guys told me kind of off camera, well, when I was 14, 15, 16,
+
+00:24:10.220 --> 00:24:12.540
+and they weren't going to send me to jail, I was doing more hacking.
+
+00:24:13.140 --> 00:24:17.660
+And also, growing up, frankly, it's sort of like the hippies in the 60s in Chicago at the Democratic Convention.
+
+00:24:17.720 --> 00:24:20.900
+They wear suits, and they have real jobs, and they have wives, and houses, and mortgages,
+
+00:24:21.020 --> 00:24:22.420
+and they sort of act differently now.
+
+00:24:22.460 --> 00:24:23.740
+But these guys didn't get haircuts.
+
+00:24:24.240 --> 00:24:25.300
+Well, Dan didn't, sir.
+
+00:24:25.760 --> 00:24:26.540
+That's for sure.
+
+00:24:26.860 --> 00:24:27.960
+He was a great guy.
+
+00:24:27.960 --> 00:24:29.980
+He was really at the forefront of...
+
+00:24:30.000 --> 00:24:34.280
+the whole networking and security issues front had to teach himself kind of take that hacker
+
+00:24:34.280 --> 00:24:39.900
+mentality and learn what to do on the net uh released this program satan that uh turned out
+
+00:24:39.900 --> 00:24:44.900
+to be a really popular program that actually helps corporations you know keep hackers out yeah yeah
+
+00:24:44.900 --> 00:24:48.820
+interesting one last point i'd like to make on the cult of the dead cows the guys i spoke to
+
+00:24:49.220 --> 00:24:53.060
+that's as you said very edgy there's a lot of four-letter words bad stuff but if you get past
+
+00:24:53.060 --> 00:24:56.700
+that it is a very well done website a lot of good content some of the best writing i've seen
+
+00:24:56.700 --> 00:24:59.980
+on the web, so there's kind of prejudice on the web, too, even though they say they're
+
+00:25:00.420 --> 00:25:01.680
+Hey, thanks for joining us.
+
+00:25:01.780 --> 00:25:05.460
+Get your coffee mug, your TV browser here same time next week
+
+00:25:05.460 --> 00:25:07.200
+and join us again at the Internet Cafe.
+
+00:25:08.040 --> 00:25:10.940
+The Internet Cafe is made possible in part by Intel.
+
+00:25:11.310 --> 00:25:13.170
+One idea always leads to another.
+
+00:25:13.690 --> 00:25:16.250
+Now there are connected CD-ROMs that link rich multimedia
+
+00:25:16.250 --> 00:25:18.410
+with related information on the Internet.
+
+00:25:18.750 --> 00:25:22.200
+For connected CD-ROMs, it's the Intel Pentium Processor.
